@@ -2,19 +2,112 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain
+	EditorTemplateOrder: Terrain, Crater
 
 Terrain:
 	TerrainType@Clear:
 		Type: Clear
+	TerrainType@Blocked:
+		Type: Blocked
 	TerrainType@Ore:
 		Type: Ore
 
 Templates:
-	Template@255:
-		Id: 255
+	Template@0:
+		Id: 0
 		Images: blank.png
 		Size: 1,1
 		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@1:
+		Id: 1
+		Images: crater1.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@2:
+		Id: 2
+		Images: crater2.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@3:
+		Id: 3
+		Images: crater3.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@4:
+		Id: 4
+		Images: crater4.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@5:
+		Id: 5
+		Images: crater5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@6:
+		Id: 6
+		Images: crater6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@7:
+		Id: 7
+		Images: crater7.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@8:
+		Id: 8
+		Images: crater8.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@9:
+		Id: 9
+		Images: crater9.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@10:
+		Id: 10
+		Images: crater10.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@11:
+		Id: 11
+		Images: crater11.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@12:
+		Id: 12
+		Images: crater12.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@13:
+		Id: 13
+		Images: crater13.png
+		Size: 1,1
+		Categories: Crater
 		Tiles:
 			0: Clear

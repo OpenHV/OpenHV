@@ -8,6 +8,7 @@ Packages:
 	$ra: ra
 	./mods/common: common
 	hv|bits
+	hv|bits/terrain
 	ra|uibits
 
 MapFolders:
