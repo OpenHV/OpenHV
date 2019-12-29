@@ -1,0 +1,4 @@
+resources:
+	Defaults:
+		Length: 1
+	blank: blank.png

@@ -1,0 +1,94 @@
+^BaseWorld:
+	AlwaysVisible:
+	ActorMap:
+	ScreenMap:
+	Selection:
+	MusicPlaylist:
+	TerrainGeometryOverlay:
+	DebugVisualizations:
+	TerrainRenderer:
+	Locomotor@IMMOBILE:
+		Name: immobile
+		TerrainSpeeds:
+	Faction@0:
+		Name: MegaCorp
+		InternalName: megacorp
+		Side: MegaCorp
+		Selectable: true
+	ResourceType@0:
+		Type: Ore
+		Name: Valuable Minerals
+		PipColor: Yellow
+		ResourceType: 1
+		TerrainType: Ore
+		Palette: terrain
+		Sequences: blank
+		MaxDensity: 1
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear
+		AllowUnderActors: true
+	PaletteFromGimpOrJascFile@terrain:
+		Name: terrain
+		Filename: palette.pal
+	PaletteFromPng@cursor:
+		Name: cursor
+		Filename: cursor.png
+		CursorPalette: true
+	PaletteFromGimpOrJascFile@chrome:
+		Name: chrome
+		Filename: palette.pal
+		AllowModifiers: false
+	PaletteFromGimpOrJascFile@colorpicker:
+		Name: colorpicker
+		Filename: palette.pal
+		AllowModifiers: false
+	Selection:
+
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	DebugVisualizationCommands:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	ProductionQueueFromSelection:
+		ProductionPaletteWidget: PRODUCTION_PALETTE
+	CustomTerrainDebugOverlay:
+	DomainIndex:
+	WarheadDebugOverlay:
+	SpawnMapActors:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 5
+	MapOptions:
+		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownDisplayOrder: 3
+	CreateMPPlayers:
+	MPStartUnits@mcvonly:
+		Class: none
+		ClassName: Dummy
+		Factions: megacorp
+		BaseActor: DummyActor
+	MPStartLocations:
+		SeparateTeamSpawnsCheckboxDisplayOrder: 6
+	SpawnMPUnits:
+		DropdownDisplayOrder: 1
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	RadarPings:
+	StartGameNotification:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	LoadWidgetAtGameStart:
+	ScriptTriggers:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorResourceLayer:
+	EditorSelectionLayer:
+	LoadWidgetAtGameStart: 

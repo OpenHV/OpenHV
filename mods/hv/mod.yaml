@@ -15,6 +15,11 @@ MapFolders:
 
 Rules:
 	hv|rules.yaml
+	hv|rules/world.yaml
+
+Sequences:
+	hv|sequences/map.yaml
+	hv|sequences/ui.yaml
 
 TileSets:
 	hv|tileset.yaml
@@ -75,6 +80,7 @@ Music:
 	hv|audio/music.yaml
 
 Notifications:
+	hv|audio/notifications.yaml
 
 Translations:
 	hv|english.yaml

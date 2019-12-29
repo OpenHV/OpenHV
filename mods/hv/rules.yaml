@@ -1,32 +1,3 @@
-World:
-	TerrainRenderer:
-	AlwaysVisible:
-	ActorMap:
-	ScreenMap:
-	LoadWidgetAtGameStart:
-	Faction@0:
-		Name: MegaCorp
-		InternalName: megacorp
-		Side: MegaCorp
-		Selectable: False
-	PaletteFromGimpOrJascFile@terrain:
-		Name: terrain
-		Filename: palette.pal
-	PaletteFromPng@cursor:
-		Name: cursor
-		Filename: cursor.png
-		CursorPalette: true
-	PaletteFromGimpOrJascFile@chrome:
-		Name: chrome
-		Filename: palette.pal
-		AllowModifiers: false
-	PaletteFromGimpOrJascFile@colorpicker:
-		Name: colorpicker
-		Filename: palette.pal
-		AllowModifiers: false
-	Selection:
-	MusicPlaylist:
-
 DummyActor:
 	BodyOrientation:
 	HitShape:
@@ -45,3 +16,4 @@ Player:
 EditorPlayer:
 	AlwaysVisible:
 	Shroud:
+

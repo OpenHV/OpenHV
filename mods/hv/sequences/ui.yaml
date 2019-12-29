@@ -1,0 +1,18 @@
+overlay:
+	Defaults: blank.png
+		Offset: 0, -15
+	build-valid-temperate:
+	build-valid-snow:
+	build-valid-urban:
+	build-invalid:
+	target-select:
+	target-invalid:
+	target-valid-snow:
+	target-valid-temperate:
+	target-valid-urban:
+
+editor-overlay:
+	Defaults: blank.png
+		Offset: 0, -15
+	copy:
+	paste:
