@@ -11,9 +11,7 @@ World:
 		Selectable: False
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
-		Tileset: PLANET
 		Filename: palette.pal
-		ShadowIndex: 255
 	PaletteFromPng@cursor:
 		Name: cursor
 		Filename: cursor.png
@@ -22,7 +20,6 @@ World:
 		Name: chrome
 		Filename: palette.pal
 		AllowModifiers: false
-		ShadowIndex: 255
 	Selection:
 	MusicPlaylist:
 

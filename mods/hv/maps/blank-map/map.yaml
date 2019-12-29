@@ -21,6 +21,6 @@ Players:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
-		Faction: example
+		Faction: megacorp
 
 Actors:
