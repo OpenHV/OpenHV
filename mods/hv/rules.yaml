@@ -1,0 +1,46 @@
+World:
+	TerrainRenderer:
+	AlwaysVisible:
+	ActorMap:
+	ScreenMap:
+	LoadWidgetAtGameStart:
+	Faction@0:
+		Name: MegaCorp
+		InternalName: megacorp
+		Side: MegaCorp
+		Selectable: False
+	PaletteFromGimpOrJascFile@terrain:
+		Name: terrain
+		Tileset: PLANET
+		Filename: palette.pal
+		ShadowIndex: 255
+	PaletteFromPng@cursor:
+		Name: cursor
+		Filename: cursor.png
+		CursorPalette: true
+	PaletteFromGimpOrJascFile@chrome:
+		Name: chrome
+		Filename: palette.pal
+		AllowModifiers: false
+		ShadowIndex: 255
+	Selection:
+	MusicPlaylist:
+
+DummyActor:
+	BodyOrientation:
+	HitShape:
+	AlwaysVisible:
+
+Player:
+	AlwaysVisible:
+	TechTree:
+	PlaceBuilding:
+	SupportPowerManager:
+	PlayerResources:
+	DeveloperMode:
+	Shroud:
+	FrozenActorLayer:
+
+EditorPlayer:
+	AlwaysVisible:
+	Shroud:

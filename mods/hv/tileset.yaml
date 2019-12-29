@@ -1,0 +1,16 @@
+General:
+	Name: Planet
+	Id: PLANET
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+
+Templates:
+	Template@255:
+		Id: 255
+		Images: blank.png
+		Size: 1,1
+		Category: Terrain
+		Tiles:
+			0: Clear
