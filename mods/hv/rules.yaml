@@ -20,6 +20,10 @@ World:
 		Name: chrome
 		Filename: palette.pal
 		AllowModifiers: false
+	PaletteFromGimpOrJascFile@colorpicker:
+		Name: colorpicker
+		Filename: palette.pal
+		AllowModifiers: false
 	Selection:
 	MusicPlaylist:
 
