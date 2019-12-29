@@ -81,6 +81,11 @@ Translations:
 
 Hotkeys:
 	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	ra|hotkeys.yaml
 
 LoadScreen: BlankLoadScreen
 
