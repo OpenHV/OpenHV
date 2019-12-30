@@ -151,6 +151,8 @@ MapGrid:
 
 SpriteFormats: PngSheet
 
+SoundFormats: Wav
+
 SpriteSequenceFormat: DefaultSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
