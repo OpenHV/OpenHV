@@ -13,6 +13,8 @@ Packages:
 	./mods/common: common
 	hv|bits
 	hv|bits/terrain
+	hv|bits/audio
+	hv|bits/audio/cc0
 	ra|uibits
 	hv|uibits
 
