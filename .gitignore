@@ -16,3 +16,4 @@ DOCUMENTATION.md
 Lua-API.md
 StyleCopViolations.xml
 .DS_Store
+.directory
