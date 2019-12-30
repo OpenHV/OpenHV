@@ -209,3 +209,101 @@ Templates:
 		Categories: Crater
 		Tiles:
 			0: Clear
+	Template@28:
+		Id: 28
+		Images: crtr2wtr1.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@29:
+		Id: 29
+		Images: crtr2wtr2.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@30:
+		Id: 30
+		Images: crtr2wtr3.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@31:
+		Id: 31
+		Images: crtr2wtr4.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@32:
+		Id: 32
+		Images: crtr2wtr5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@33:
+		Id: 33
+		Images: crtr2wtr6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@34:
+		Id: 34
+		Images: crtr2wtr7.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@35:
+		Id: 35
+		Images: crtr2wtr8.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@36:
+		Id: 36
+		Images: crtr2wtr9.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@37:
+		Id: 37
+		Images: crtr2wtr10.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@38:
+		Id: 38
+		Images: crtr2wtr11.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@39:
+		Id: 39
+		Images: crtr2wtr12.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@40:
+		Id: 40
+		Images: crtr2wtr13.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@41:
+		Id: 41
+		Images: crtr2wtr14.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
