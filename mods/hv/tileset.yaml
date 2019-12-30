@@ -111,3 +111,101 @@ Templates:
 		Categories: Crater
 		Tiles:
 			0: Clear
+	Template@14:
+		Id: 14
+		Images: ctr2lav1.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@15:
+		Id: 15
+		Images: ctr2lav2.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@16:
+		Id: 16
+		Images: ctr2lav3.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@17:
+		Id: 17
+		Images: ctr2lav4.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@18:
+		Id: 18
+		Images: ctr2lav5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@19:
+		Id: 19
+		Images: ctr2lav6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@20:
+		Id: 20
+		Images: ctr2lav7.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@21:
+		Id: 21
+		Images: ctr2lav8.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@22:
+		Id: 22
+		Images: ctr2lav9.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@23:
+		Id: 23
+		Images: ctr2lav10.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@24:
+		Id: 24
+		Images: ctr2lav11.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@25:
+		Id: 25
+		Images: ctr2lav12.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@26:
+		Id: 26
+		Images: ctr2lav13.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
+	Template@27:
+		Id: 27
+		Images: ctr2lav14.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Clear
