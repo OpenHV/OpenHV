@@ -11,6 +11,8 @@ Terrain:
 		Type: Blocked
 	TerrainType@Ore:
 		Type: Ore
+	TerrainType@Road:
+		Type: Road
 
 Templates:
 	Template@0:
@@ -321,3 +323,59 @@ Templates:
 		Categories: Crater
 		Tiles:
 			0: Clear
+	Template@44:
+		Id: 44
+		Images: crtrrdst1.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@45:
+		Id: 45
+		Images: crtrrdst2.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@46:
+		Id: 46
+		Images: crtrrdst3.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@47:
+		Id: 47
+		Images: crtrrdst4.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@48:
+		Id: 48
+		Images: crtrrdst5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@49:
+		Id: 49
+		Images: crtrrdst6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@50:
+		Id: 50
+		Images: crtrrdst7.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@51:
+		Id: 51
+		Images: crtrrdst8.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
