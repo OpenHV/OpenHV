@@ -3,3 +3,4 @@ Metrics:
 	ColorPickerActorType: DummyActor
 	ClickDisabledSound:
 	ClickSound:
+	ChatLineSound:
