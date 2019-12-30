@@ -2,6 +2,10 @@ Metadata:
 	Title: OpenHV
 	Version: {DEV_VERSION}
 
+ModCredits:
+	ModTabTitle: OpenHV
+	ModCreditsFile: hv|CREDITS
+
 Packages:
 	.
 	$hv: hv
