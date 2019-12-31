@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater
+	EditorTemplateOrder: Terrain, Crater, Cliff
 
 Terrain:
 	TerrainType@Clear:
@@ -559,5 +559,96 @@ Templates:
 		Images: crtrroad26.png
 		Size: 1,1
 		Categories: Crater
+		Tiles:
+			0: Road
+	Template@78:
+		Id: 78
+		Images: grasclif1.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@79:
+		Id: 79
+		Images: grasclif2.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@80:
+		Id: 80
+		Images: grasclif3.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@81:
+		Id: 81
+		Images: grasclif4.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@82:
+		Id: 82
+		Images: grasclif5.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@83:
+		Id: 83
+		Images: grasclif6.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@84:
+		Id: 84
+		Images: grasclif7.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@85:
+		Id: 85
+		Images: grasclif8.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@86:
+		Id: 86
+		Images: grasclif9.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@87:
+		Id: 87
+		Images: grasclif10.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@88:
+		Id: 88
+		Images: grasclif11.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@89:
+		Id: 89
+		Images: grasclif12.png
+		Size: 1,1
+		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@90:
+		Id: 90
+		Images: grasclif13.png
+		Size: 1,1
+		Categories: Cliff
 		Tiles:
 			0: Road
