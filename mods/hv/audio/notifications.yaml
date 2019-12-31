@@ -2,6 +2,8 @@ Speech:
 	DefaultVariant: .wav
 	Notifications:
 		StartGame:
+		GameLoaded:
+		GameSaved:
 
 Sounds:
 	DefaultVariant: .wav
