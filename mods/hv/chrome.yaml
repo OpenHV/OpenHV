@@ -1,2 +1,109 @@
 logos: logo.png
 	logo: 0, 0, 64, 64
+
+flags: buttons.png
+	megacorp: 60,112,30,15
+
+sidebar-megacorp: chrome.png
+	background-top: 0,167,238,290
+	background-iconrow: 0,457,238,47
+	background-bottom: 0,504,238,8
+	background-supportoverlay: 0,75,64,48
+
+sidebar-button-megacorp: chrome.png
+	background: 59,31,22,22
+	border-r: 81,31,3,22
+	border-l: 56,31,3,22
+	border-b: 59,53,22,3
+	border-t: 59,28,22,3
+	corner-tl: 56,28,3,3
+	corner-tr: 81,28,3,3
+	corner-bl: 56,53,3,3
+	corner-br: 81,53,3,3
+sidebar-button-megacorp-hover: chrome.png
+	background: 59,3,22,22
+	border-r: 81,3,3,22
+	border-l: 56,3,3,22
+	border-b: 59,25,22,3
+	border-t: 59,0,22,3
+	corner-tl: 56,0,3,3
+	corner-tr: 81,0,3,3
+	corner-bl: 56,25,3,3
+	corner-br: 81,25,3,3
+sidebar-button-megacorp-pressed: chrome.png
+	background: 59,31,22,22
+	border-r: 81,31,3,22
+	border-l: 56,31,3,22
+	border-b: 59,53,22,3
+	border-t: 59,28,22,3
+	corner-tl: 56,28,3,3
+	corner-tr: 81,28,3,3
+	corner-bl: 56,53,3,3
+	corner-br: 81,53,3,3
+sidebar-button-megacorp-highlighted: chrome.png
+	background: 87,31,22,22
+	border-r: 109,31,3,22
+	border-l: 84,31,3,22
+	border-b: 87,53,22,3
+	border-t: 87,28,22,3
+	corner-tl: 84,28,3,3
+	corner-tr: 109,28,3,3
+	corner-bl: 84,53,3,3
+	corner-br: 109,53,3,3
+sidebar-button-megacorp-highlighted-hover: chrome.png
+	background: 87,3,22,22
+	border-r: 109,3,3,22
+	border-l: 84,3,3,22
+	border-b: 87,25,22,3
+	border-t: 87,0,22,3
+	corner-tl: 84,0,3,3
+	corner-tr: 109,0,3,3
+	corner-bl: 84,25,3,3
+	corner-br: 109,25,3,3
+sidebar-button-megacorp-highlighted-pressed: chrome.png
+	background: 87,31,22,22
+	border-r: 109,31,3,22
+	border-l: 84,31,3,22
+	border-b: 87,53,22,3
+	border-t: 87,28,22,3
+	corner-tl: 84,28,3,3
+	corner-tr: 109,28,3,3
+	corner-bl: 84,53,3,3
+	corner-br: 109,53,3,3
+sidebar-button-megacorp-disabled: chrome.png
+	background: 171,3,22,22
+	border-r: 193,3,3,22
+	border-l: 168,3,3,22
+	border-b: 171,25,22,3
+	border-t: 171,0,22,3
+	corner-tl: 168,0,3,3
+	corner-tr: 193,0,3,3
+	corner-bl: 168,25,3,3
+	corner-br: 193,25,3,3
+sidebar-button-megacorp-highlighted-disabled: chrome.png
+	background: 171,3,22,22
+	border-r: 193,3,3,22
+	border-l: 168,3,3,22
+	border-b: 171,25,22,3
+	border-t: 171,0,22,3
+	corner-tl: 168,0,3,3
+	corner-tr: 193,0,3,3
+	corner-bl: 168,25,3,3
+	corner-br: 193,25,3,3
+
+command-button-megacorp: chrome.png
+	background: 59,31,22,22
+command-button-megacorp-hover: chrome.png
+	background: 59,3,22,22
+command-button-megacorp-pressed: chrome.png
+	background: 59,31,22,22
+command-button-megacorp-highlighted: chrome.png
+	background: 87,31,22,22
+command-button-megacorp-highlighted-hover: chrome.png
+	background: 87,3,22,22
+command-button-megacorp-highlighted-pressed: chrome.png
+	background: 87,31,22,22
+command-button-megacorp-disabled: chrome.png
+	background: 59,31,22,22
+command-button-megacorp-highlighted-disabled: chrome.png
+	background: 87,31,22,22

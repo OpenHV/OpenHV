@@ -25,6 +25,13 @@
 		InternalName: megacorp
 		Side: MegaCorp
 		Selectable: true
+		Description: A large corporation with a sizeable mercenary battle team.
+	Faction@RANDOM:
+		Name: Any
+		InternalName: Random
+		RandomFactionMembers: megacorp
+		Side: Random
+		Description: Random Corporation\nA random corporation will be chosen when the game starts.
 	ResourceType@0:
 		Type: Ore
 		Name: Valuable Minerals
@@ -88,7 +95,7 @@ World:
 		Class: none
 		ClassName: Dummy
 		Factions: megacorp
-		BaseActor: DummyActor
+		BaseActor: tank5
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
@@ -102,10 +109,3 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
-
-EditorWorld:
-	Inherits: ^BaseWorld
-	EditorActorLayer:
-	EditorResourceLayer:
-	EditorSelectionLayer:
-	LoadWidgetAtGameStart: 

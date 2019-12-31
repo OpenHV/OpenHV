@@ -1,3 +1,6 @@
+^BasePlayer:
+	AlwaysVisible:
+
 ^ExistsInWorld:
 	AppearsOnRadar:
 	CombatDebugOverlay:

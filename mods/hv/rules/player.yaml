@@ -1,0 +1,21 @@
+Player:
+	Inherits: ^BasePlayer
+	MissionObjectives:
+	ConquestVictoryConditions:
+	PowerManager:
+	Shroud:
+	TechTree:
+	PlaceBuilding:
+	SupportPowerManager:
+	PlayerResources:
+	DeveloperMode:
+		CheckboxDisplayOrder: 10
+	FrozenActorLayer:
+	BaseAttackNotifier:
+		Notification:
+	PlayerStatistics:
+	PlaceBeacon:
+	GrantConditionOnPrerequisiteManager:
+	EnemyWatcher:
+	PlayerExperience:
+	GameSaveViewportManager:

@@ -12,3 +12,11 @@ editor-overlay:
 		Offset: 0, -15
 	copy:
 	paste:
+
+mpspawn:
+	idle: mpspawn.png
+		Length: *
+
+clock:
+	idle: blank.png # TODO
+		Length: *
