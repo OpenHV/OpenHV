@@ -379,3 +379,185 @@ Templates:
 		Categories: Crater
 		Tiles:
 			0: Road
+	Template@52:
+		Id: 52
+		Images: crtrroad1.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@53:
+		Id: 53
+		Images: crtrroad2.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@54:
+		Id: 54
+		Images: crtrroad3.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@55:
+		Id: 55
+		Images: crtrroad4.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@56:
+		Id: 56
+		Images: crtrroad5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@57:
+		Id: 57
+		Images: crtrroad6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@58:
+		Id: 58
+		Images: crtrroad7.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@59:
+		Id: 59
+		Images: crtrroad8.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@60:
+		Id: 60
+		Images: crtrroad9.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@61:
+		Id: 61
+		Images: crtrroad10.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@62:
+		Id: 62
+		Images: crtrroad11.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@63:
+		Id: 63
+		Images: crtrroad12.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@64:
+		Id: 64
+		Images: crtrroad13.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@65:
+		Id: 65
+		Images: crtrroad14.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@66:
+		Id: 66
+		Images: crtrroad15.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@67:
+		Id: 67
+		Images: crtrroad16.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@68:
+		Id: 68
+		Images: crtrroad17.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@69:
+		Id: 69
+		Images: crtrroad18.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@70:
+		Id: 70
+		Images: crtrroad19.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@71:
+		Id: 71
+		Images: crtrroad20.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@72:
+		Id: 72
+		Images: crtrroad21.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@73:
+		Id: 73
+		Images: crtrroad22.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@74:
+		Id: 74
+		Images: crtrroad23.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@75:
+		Id: 75
+		Images: crtrroad24.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@76:
+		Id: 76
+		Images: crtrroad25.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
+	Template@77:
+		Id: 77
+		Images: crtrroad26.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Road
