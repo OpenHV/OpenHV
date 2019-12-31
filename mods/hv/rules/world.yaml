@@ -10,6 +10,16 @@
 	Locomotor@IMMOBILE:
 		Name: immobile
 		TerrainSpeeds:
+	Locomotor@WHEELED:
+		Name: wheeled
+		TerrainSpeeds:
+			Clear: 90
+			Road: 100
+	Locomotor@TRACKED:
+		Name: tracked
+		TerrainSpeeds:
+			Clear: 80
+			Road: 100
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp
@@ -30,6 +40,13 @@
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal
+	PaletteFromGimpOrJascFile@player:
+		Name: player
+		Filename: palette.pal
+		TransparentIndex: 255
+	PlayerColorPalette:
+		BasePalette: player
+		RemapIndex: 1 # TODO
 	PaletteFromPng@cursor:
 		Name: cursor
 		Filename: cursor.png

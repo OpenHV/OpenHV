@@ -24,10 +24,13 @@ MapFolders:
 Rules:
 	hv|rules.yaml
 	hv|rules/world.yaml
+	hv|rules/defaults.yaml
+	hv|rules/vehicles.yaml
 
 Sequences:
 	hv|sequences/map.yaml
 	hv|sequences/ui.yaml
+	hv|sequences/vehicles.yaml
 
 TileSets:
 	hv|tileset.yaml

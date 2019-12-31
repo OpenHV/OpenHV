@@ -1,0 +1,66 @@
+^ExistsInWorld:
+	AppearsOnRadar:
+	CombatDebugOverlay:
+	GivesExperience:
+		PlayerExperienceModifier: 1
+	ScriptTriggers:
+	ConditionManager:
+	RenderDebugState:
+
+^SpriteActor:
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	RenderSprites:
+
+^GlobalBounty:
+	GrantConditionOnPrerequisite@GLOBALBOUNTY:
+		Condition: global-bounty
+		Prerequisites: global-bounty
+	GivesBounty:
+		RequiresCondition: global-bounty
+
+^SelectableCombatUnit:
+	Selectable:
+		Priority: 10
+		PriorityModifiers: Ctrl
+
+^Vehicle:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@bounty: ^GlobalBounty
+	Inherits@selection: ^SelectableCombatUnit
+	Huntable:
+	OwnerLostAction:
+		Action: Kill
+	DrawLineToTarget:
+	UpdatesPlayerStatistics:
+	Mobile:
+		Locomotor: wheeled
+		TurnSpeed: 5
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 20, 20
+	Targetable:
+		TargetTypes: Ground, Vehicle
+	Passenger:
+		CargoType: Vehicle
+	AttackMove:
+	HiddenUnderFog:
+	ProximityCaptor:
+		Types: Vehicle
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Vehicle
+	MustBeDestroyed:
+	WithFacingSpriteBody:
+	BodyOrientation:
+	HitShape:
+	MapEditorData:
+		Categories: Vehicle
+
+^TrackedVehicle:
+	Inherits: ^Vehicle
+	Mobile:
+		Locomotor: tracked

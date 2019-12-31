@@ -1,0 +1,15 @@
+TANK5:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Light Tank
+		GenericName: Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 22000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 118

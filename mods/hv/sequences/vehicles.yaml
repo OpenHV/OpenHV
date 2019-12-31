@@ -1,0 +1,3 @@
+tank5:
+	idle: tank5.png
+		Facings: 8
