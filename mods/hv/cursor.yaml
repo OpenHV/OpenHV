@@ -1,6 +1,282 @@
 Cursors:
 	cursor.png: cursor
+		scroll-t:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-tr:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-r:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-br:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-b:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-bl:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-l:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-tl:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-t-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-tr-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-r-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-br-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-b-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-bl-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-l-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		scroll-tl-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		select:
+			Start: 0
+			X: 0
+			Y: 0
 		default:
+			Start: 0
+			X: 0
+			Y: 0
+		default-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		generic-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		generic-blocked-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		move:
+			Start: 0
+			X: 0
+			Y: 0
+		move-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		move-rough:
+			Start: 0
+			X: 0
+			Y: 0
+		move-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		move-blocked-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		attack:
+			Start: 0
+			X: 0
+			Y: 0
+		attack-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		attackoutsiderange:
+			Start: 0
+			X: 0
+			Y: 0
+		attackoutsiderange-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		harvest:
+			Start: 0
+			X: 0
+			Y: 0
+		harvest-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		enter:
+			Start: 0
+			X: 0
+			Y: 0
+		enter-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		enter-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		enter-blocked-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		guard:
+			Start: 0
+			X: 0
+			Y: 0
+		guard-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		capture:
+			Start: 0
+			X: 0
+			Y: 0
+		capture-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		ability:
+			Start: 0
+			X: 0
+			Y: 0
+		ability-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-all:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-t-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-tr-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-r-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-br-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-b-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-bl-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-l-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		joystick-tl-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		deploy:
+			Start: 0
+			X: 0
+			Y: 0
+		deploy-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		goldwrench:
+			Start: 0
+			X: 0
+			Y: 0
+		goldwrench-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		sell:
+			Start: 0
+			X: 0
+			Y: 0
+		sell-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		repair:
+			Start: 0
+			X: 0
+			Y: 0
+		repair-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		sell2:
+			Start: 0
+			X: 0
+			Y: 0
+		powerdown-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		powerdown:
+			Start: 0
+			X: 0
+			Y: 0
+		attackmove:
+			Start: 0
+			X: 0
+			Y: 0
+		attackmove-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		attackmove-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		attackmove-blocked-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		assaultmove:
+			Start: 0
+			X: 0
+			Y: 0
+		assaultmove-minimap:
+			Start: 0
+			X: 0
+			Y: 0
+		assaultmove-blocked:
+			Start: 0
+			X: 0
+			Y: 0
+		assaultmove-blocked-minimap:
 			Start: 0
 			X: 0
 			Y: 0
