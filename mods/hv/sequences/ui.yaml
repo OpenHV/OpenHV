@@ -1,5 +1,5 @@
 overlay:
-	Defaults: blank.png
+	Defaults: blank.png # TODO
 		Offset: 0, -15
 	build-valid-planet:
 	build-invalid:
@@ -8,7 +8,7 @@ overlay:
 	target-valid-planet:
 
 editor-overlay:
-	Defaults: blank.png
+	Defaults: blank.png # TODO
 		Offset: 0, -15
 	copy:
 	paste:
@@ -20,3 +20,9 @@ mpspawn:
 clock:
 	idle: blank.png # TODO
 		Length: *
+
+moveflsh:
+	idle: blank.png # TODO
+		Length: *
+		Tick: 80
+		ZOffset: 2047
