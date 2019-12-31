@@ -1,7 +1,7 @@
 MpSpawn:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: (multiplayer player starting point)
+		Name: Multiplayer spawn point
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
