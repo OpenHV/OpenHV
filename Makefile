@@ -114,19 +114,23 @@ utility: engine-dependencies engine
 
 core:
 	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
+ifneq ("$(wildcard ./*.sln)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:restore \;
-ifeq ($(WIN32), $(filter $(WIN32),true yes y on 1))
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration="Release-x86" \;
-else
-	@$(MSBUILD) -t:build -p:Configuration=Release
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration=Release \;
+	ifeq ($(WIN32), $(filter $(WIN32),true yes y on 1))
+		@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration="Release-x86" \;
+	else
+		@$(MSBUILD) -t:build -p:Configuration=Release
+		@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration=Release \;
+	endif
 endif
 
 all: engine-dependencies engine core
 
 clean: engine
 	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
+ifneq ("$(wildcard ./*.sln)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:clean \;
+endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 	@printf "The engine has been cleaned.\n"
 
