@@ -10,6 +10,7 @@ Player:
 	PlayerResources:
 	DeveloperMode:
 		CheckboxDisplayOrder: 10
+		CheckboxEnabled: true
 	FrozenActorLayer:
 	BaseAttackNotifier:
 		Notification:
