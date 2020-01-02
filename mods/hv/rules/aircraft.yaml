@@ -17,6 +17,11 @@ COPTER2:
 		Speed: 128
 		AltitudeVelocity: 0c58
 		IdleBehavior: Land
+	WithFacingSpriteBody:
+		RequiresCondition: !airborne
+	WithFacingSpriteBody@FLY:
+		Sequence: fly
+		RequiresCondition: airborne
 	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 40,36

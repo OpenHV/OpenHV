@@ -1,3 +1,7 @@
 copter2:
 	idle: copter2.png
 		Facings: 8
+	fly: copter2b.png
+		Length: 4
+		Facings: 8
+		Tick: 100
