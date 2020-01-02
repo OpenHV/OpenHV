@@ -25,6 +25,11 @@ COPTER2:
 	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 40,36
+	Cargo:
+		Types: Vehicle
+		MaxWeight: 4
+		PipCount: 4
+		AfterUnloadDelay: 40
 
 COPTER:
 	Inherits: ^Helicopter

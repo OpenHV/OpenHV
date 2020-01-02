@@ -26,3 +26,17 @@ moveflsh:
 		Length: *
 		Tick: 80
 		ZOffset: 2047
+
+pips:
+	pip-empty: pips.png
+		Start: 0
+	pip-green: pips.png
+		Start: 1
+	pip-yellow: pips.png
+		Start: 2
+	pip-gray: pips.png
+		Start: 3
+	pip-red: pips.png
+		Start: 4
+	pip-blue: pips.png
+		Start: 5
