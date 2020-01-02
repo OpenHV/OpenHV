@@ -67,3 +67,63 @@
 	Inherits: ^Vehicle
 	Mobile:
 		Locomotor: tracked
+
+^Plane:
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	Inherits@bounty: ^GlobalBounty
+	Inherits@selection: ^SelectableCombatUnit
+	Huntable:
+	OwnerLostAction:
+		Action: Kill
+	DrawLineToTarget:
+	Armor:
+		Type: Light
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: true
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 20,20
+	Aircraft:
+		AirborneCondition: airborne
+	Targetable@GROUND:
+		RequiresCondition: !airborne
+		TargetTypes: Ground, Vehicle
+	Targetable@AIRBORNE:
+		RequiresCondition: airborne
+		TargetTypes: Air
+	HiddenUnderFog:
+		Type: GroundPosition
+	Guard:
+	Guardable:
+	ProximityCaptor:
+		Types: Plane
+	Tooltip:
+		GenericName: Plane
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	WithFacingSpriteBody:
+	MustBeDestroyed:
+	HitShape:
+	MapEditorData:
+		Categories: Aircraft
+
+^Helicopter:
+	Inherits: ^Plane
+	Tooltip:
+		GenericName: Helicopter
+	Aircraft:
+		CanHover: true
+		CruisingCondition: cruising
+		WaitDistanceFromResupplyBase: 4c0
+		TakeOffOnResupply: true
+		VTOL: true
+		LandableTerrainTypes: Clear, Ore, Road
+		InitialFacing: 224
+		CanSlide: True
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+	BodyOrientation:

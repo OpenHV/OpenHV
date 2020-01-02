@@ -27,11 +27,13 @@ Rules:
 	hv|rules/vehicles.yaml
 	hv|rules/editor.yaml
 	hv|rules/player.yaml
+	hv|rules/aircraft.yaml
 
 Sequences:
 	hv|sequences/map.yaml
 	hv|sequences/ui.yaml
 	hv|sequences/vehicles.yaml
+	hv|sequences/aircraft.yaml
 
 TileSets:
 	hv|tileset.yaml

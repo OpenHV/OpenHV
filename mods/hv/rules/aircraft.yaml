@@ -1,0 +1,22 @@
+COPTER2:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Transport Helicopter
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 14000
+	RevealsShroud:
+		MinRange: 6c0
+		Range: 8c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 128
+		AltitudeVelocity: 0c58
+		IdleBehavior: Land
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 40,36
