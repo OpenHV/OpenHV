@@ -25,3 +25,24 @@ COPTER2:
 	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 40,36
+
+COPTER:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Attack Helicopter
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		MinRange: 8c0
+		Range: 10c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 112
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 24,24
