@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass
 
 Terrain:
 	TerrainType@Clear:
@@ -650,5 +650,187 @@ Templates:
 		Images: grasclif13.png
 		Size: 1,1
 		Categories: Cliff
+		Tiles:
+			0: Road
+	Template@91:
+		Id: 91
+		Images: grasroad1.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@92:
+		Id: 92
+		Images: grasroad2.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@93:
+		Id: 93
+		Images: grasroad3.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@94:
+		Id: 94
+		Images: grasroad4.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@95:
+		Id: 95
+		Images: grasroad5.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@96:
+		Id: 96
+		Images: grasroad6.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@97:
+		Id: 97
+		Images: grasroad7.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@98:
+		Id: 98
+		Images: grasroad8.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@99:
+		Id: 99
+		Images: grasroad9.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@100:
+		Id: 100
+		Images: grasroad10.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@101:
+		Id: 101
+		Images: grasroad11.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@102:
+		Id: 102
+		Images: grasroad12.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@103:
+		Id: 103
+		Images: grasroad13.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@104:
+		Id: 104
+		Images: grasroad14.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@105:
+		Id: 105
+		Images: grasroad15.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@106:
+		Id: 106
+		Images: grasroad16.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@107:
+		Id: 107
+		Images: grasroad17.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@108:
+		Id: 108
+		Images: grasroad18.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@109:
+		Id: 109
+		Images: grasroad19.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@110:
+		Id: 110
+		Images: grasroad20.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@111:
+		Id: 111
+		Images: grasroad21.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@112:
+		Id: 112
+		Images: grasroad22.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@113:
+		Id: 113
+		Images: grasroad23.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@114:
+		Id: 114
+		Images: grasroad24.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@115:
+		Id: 115
+		Images: grasroad25.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Road
+	Template@116:
+		Id: 116
+		Images: grasroad26.png
+		Size: 1,1
+		Categories: Grass
 		Tiles:
 			0: Road
