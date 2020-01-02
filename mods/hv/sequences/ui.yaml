@@ -40,3 +40,5 @@ pips:
 		Start: 4
 	pip-blue: pips.png
 		Start: 5
+	groups: digits.png
+		Length: 10
