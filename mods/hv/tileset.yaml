@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava
 
 Terrain:
 	TerrainType@Clear:
@@ -117,21 +117,21 @@ Templates:
 		Id: 14
 		Images: crtr2lav1.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@15:
 		Id: 15
 		Images: crtr2lav2.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@16:
 		Id: 16
 		Images: crtr2lav3.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@17:
@@ -145,91 +145,91 @@ Templates:
 		Id: 18
 		Images: crtr2lav5.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@19:
 		Id: 19
 		Images: crtr2lav6.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Lava
 		Tiles:
 			0: Clear
 	Template@20:
 		Id: 20
 		Images: crtr2lav7.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@21:
 		Id: 21
 		Images: crtr2lav8.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@22:
 		Id: 22
 		Images: crtr2lav9.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@23:
 		Id: 23
 		Images: crtr2lav10.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@24:
 		Id: 24
 		Images: crtr2lav11.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@25:
 		Id: 25
 		Images: crtr2lav12.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@26:
 		Id: 26
 		Images: crtr2lav13.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@27:
 		Id: 27
 		Images: crtr2lav14.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Lava
 		Tiles:
 			0: Clear
 	Template@28:
 		Id: 28
 		Images: crtr2wtr1.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@29:
 		Id: 29
 		Images: crtr2wtr2.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@30:
 		Id: 30
 		Images: crtr2wtr3.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@31:
@@ -243,70 +243,70 @@ Templates:
 		Id: 32
 		Images: crtr2wtr5.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@33:
 		Id: 33
 		Images: crtr2wtr6.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@34:
 		Id: 34
 		Images: crtr2wtr7.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@35:
 		Id: 35
 		Images: crtr2wtr8.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@36:
 		Id: 36
 		Images: crtr2wtr9.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@37:
 		Id: 37
 		Images: crtr2wtr10.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@38:
 		Id: 38
 		Images: crtr2wtr11.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@39:
 		Id: 39
 		Images: crtr2wtr12.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@40:
 		Id: 40
 		Images: crtr2wtr13.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@41:
 		Id: 41
 		Images: crtr2wtr14.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Water
 		Tiles:
 			0: Clear
 	Template@42:
@@ -327,510 +327,510 @@ Templates:
 		Id: 44
 		Images: crtrrdst1.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@45:
 		Id: 45
 		Images: crtrrdst2.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@46:
 		Id: 46
 		Images: crtrrdst3.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@47:
 		Id: 47
 		Images: crtrrdst4.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@48:
 		Id: 48
 		Images: crtrrdst5.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@49:
 		Id: 49
 		Images: crtrrdst6.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@50:
 		Id: 50
 		Images: crtrrdst7.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@51:
 		Id: 51
 		Images: crtrrdst8.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@52:
 		Id: 52
 		Images: crtrroad1.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@53:
 		Id: 53
 		Images: crtrroad2.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@54:
 		Id: 54
 		Images: crtrroad3.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@55:
 		Id: 55
 		Images: crtrroad4.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@56:
 		Id: 56
 		Images: crtrroad5.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@57:
 		Id: 57
 		Images: crtrroad6.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@58:
 		Id: 58
 		Images: crtrroad7.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@59:
 		Id: 59
 		Images: crtrroad8.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@60:
 		Id: 60
 		Images: crtrroad9.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@61:
 		Id: 61
 		Images: crtrroad10.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@62:
 		Id: 62
 		Images: crtrroad11.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@63:
 		Id: 63
 		Images: crtrroad12.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@64:
 		Id: 64
 		Images: crtrroad13.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@65:
 		Id: 65
 		Images: crtrroad14.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@66:
 		Id: 66
 		Images: crtrroad15.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@67:
 		Id: 67
 		Images: crtrroad16.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@68:
 		Id: 68
 		Images: crtrroad17.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@69:
 		Id: 69
 		Images: crtrroad18.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@70:
 		Id: 70
 		Images: crtrroad19.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@71:
 		Id: 71
 		Images: crtrroad20.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@72:
 		Id: 72
 		Images: crtrroad21.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@73:
 		Id: 73
 		Images: crtrroad22.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@74:
 		Id: 74
 		Images: crtrroad23.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@75:
 		Id: 75
 		Images: crtrroad24.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@76:
 		Id: 76
 		Images: crtrroad25.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@77:
 		Id: 77
 		Images: crtrroad26.png
 		Size: 1,1
-		Categories: Crater
+		Categories: Crater, Road
 		Tiles:
 			0: Road
 	Template@78:
 		Id: 78
 		Images: grasclif1.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@79:
 		Id: 79
 		Images: grasclif2.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@80:
 		Id: 80
 		Images: grasclif3.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@81:
 		Id: 81
 		Images: grasclif4.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@82:
 		Id: 82
 		Images: grasclif5.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass
 		Tiles:
 			0: Road
 	Template@83:
 		Id: 83
 		Images: grasclif6.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@84:
 		Id: 84
 		Images: grasclif7.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@85:
 		Id: 85
 		Images: grasclif8.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@86:
 		Id: 86
 		Images: grasclif9.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@87:
 		Id: 87
 		Images: grasclif10.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@88:
 		Id: 88
 		Images: grasclif11.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@89:
 		Id: 89
 		Images: grasclif12.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@90:
 		Id: 90
 		Images: grasclif13.png
 		Size: 1,1
-		Categories: Cliff
+		Categories: Grass, Cliff
 		Tiles:
 			0: Road
 	Template@91:
 		Id: 91
 		Images: grasroad1.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Grass
 		Tiles:
 			0: Road
 	Template@92:
 		Id: 92
 		Images: grasroad2.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@93:
 		Id: 93
 		Images: grasroad3.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@94:
 		Id: 94
 		Images: grasroad4.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@95:
 		Id: 95
 		Images: grasroad5.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@96:
 		Id: 96
 		Images: grasroad6.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@97:
 		Id: 97
 		Images: grasroad7.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@98:
 		Id: 98
 		Images: grasroad8.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@99:
 		Id: 99
 		Images: grasroad9.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@100:
 		Id: 100
 		Images: grasroad10.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@101:
 		Id: 101
 		Images: grasroad11.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@102:
 		Id: 102
 		Images: grasroad12.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@103:
 		Id: 103
 		Images: grasroad13.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@104:
 		Id: 104
 		Images: grasroad14.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@105:
 		Id: 105
 		Images: grasroad15.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@106:
 		Id: 106
 		Images: grasroad16.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@107:
 		Id: 107
 		Images: grasroad17.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@108:
 		Id: 108
 		Images: grasroad18.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@109:
 		Id: 109
 		Images: grasroad19.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@110:
 		Id: 110
 		Images: grasroad20.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@111:
 		Id: 111
 		Images: grasroad21.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@112:
 		Id: 112
 		Images: grasroad22.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@113:
 		Id: 113
 		Images: grasroad23.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@114:
 		Id: 114
 		Images: grasroad24.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@115:
 		Id: 115
 		Images: grasroad25.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@116:
 		Id: 116
 		Images: grasroad26.png
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
