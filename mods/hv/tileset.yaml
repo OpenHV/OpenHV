@@ -595,7 +595,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Road
+			0: Clear
 	Template@83:
 		Id: 83
 		Images: grasclif6.png
