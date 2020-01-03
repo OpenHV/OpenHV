@@ -183,4 +183,3 @@
 	GivesBuildableArea:
 		AreaTypes: building
 	Sellable:
-		RequiresCondition: !build-incomplete

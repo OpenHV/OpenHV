@@ -22,7 +22,6 @@ BASE:
 		Cooldown: 75
 		Range: 14c0
 	WithBuildingPlacedAnimation:
-		RequiresCondition: !build-incomplete
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:

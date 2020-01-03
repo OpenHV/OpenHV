@@ -10,3 +10,4 @@ Sounds:
 	Notifications:
 		ClickSound: klinkp75
 		ClickDisabledSound: klinkp90
+		Beacon:

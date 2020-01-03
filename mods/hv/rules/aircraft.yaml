@@ -9,7 +9,6 @@ COPTER2:
 	Health:
 		HP: 14000
 	RevealsShroud:
-		MinRange: 6c0
 		Range: 8c0
 		Type: GroundPosition
 	Aircraft:
@@ -21,6 +20,7 @@ COPTER2:
 		RequiresCondition: !airborne
 	WithFacingSpriteBody@FLY:
 		Sequence: fly
+		Name: fly
 		RequiresCondition: airborne
 	SelectionDecorations:
 	Selectable:
@@ -42,7 +42,6 @@ COPTER:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		MinRange: 8c0
 		Range: 10c0
 		Type: GroundPosition
 	Aircraft:
