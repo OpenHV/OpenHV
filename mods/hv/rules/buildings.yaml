@@ -1,0 +1,30 @@
+BASE:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
+	Selectable:
+		Bounds: 60,60
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: Main Base
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 210000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+	BaseBuilding:
+	BaseProvider:
+		Cooldown: 75
+		Range: 14c0
+	WithBuildingPlacedAnimation:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		Description: Builds structures

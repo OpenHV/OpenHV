@@ -1,0 +1,14 @@
+base:
+	build: base.png
+		Start: 3
+		Length: 3
+		Tick: 300
+	idle: base.png
+		Length: 3
+		Tick: 300
+	damaged-idle: base.png
+		Start: 7
+		Length: 1
+	damaged-build: base.png
+		Start: 7
+		Length: 1

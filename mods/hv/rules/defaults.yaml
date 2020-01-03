@@ -127,3 +127,60 @@
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	BodyOrientation:
+
+^3x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+
+^Building:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Huntable:
+	OwnerLostAction:
+		Action: Kill
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, Structure
+	Armor:
+		Type: Steel
+	Health:
+		HP: 40000
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	ActorPreviewPlaceBuildingPreview:
+	WithSpriteBody:
+	ShakeOnDeath:
+	Guardable:
+		Range: 3c0
+	Tooltip:
+		GenericName: Structure
+	FrozenUnderFog:
+	MapEditorData:
+		Categories: Building
+	CommandBarBlacklist:
+
+^BaseBuilding:
+	Inherits: ^Building
+	Building:
+		RequiresBaseProvider: true
+		TerrainTypes: Clear, Road
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 4
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1400
+		PlayerExperience: 15
+	GivesBuildableArea:
+		AreaTypes: building
+	Sellable:
+		RequiresCondition: !build-incomplete

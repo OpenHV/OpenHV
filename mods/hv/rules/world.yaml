@@ -117,11 +117,11 @@ World:
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
 	CreateMPPlayers:
-	MPStartUnits@mcvonly:
+	MPStartUnits@base:
 		Class: none
-		ClassName: Dummy
+		ClassName: Base only
 		Factions: megacorp
-		BaseActor: tank5
+		BaseActor: base
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:

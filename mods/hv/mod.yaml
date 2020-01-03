@@ -28,12 +28,14 @@ Rules:
 	hv|rules/editor.yaml
 	hv|rules/player.yaml
 	hv|rules/aircraft.yaml
+	hv|rules/buildings.yaml
 
 Sequences:
 	hv|sequences/map.yaml
 	hv|sequences/ui.yaml
 	hv|sequences/vehicles.yaml
 	hv|sequences/aircraft.yaml
+	hv|sequences/buildings.yaml
 
 TileSets:
 	hv|tileset.yaml
