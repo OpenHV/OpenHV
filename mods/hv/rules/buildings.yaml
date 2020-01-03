@@ -27,3 +27,34 @@ BASE:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		Description: Builds structures
+
+GENERATOR:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x3Shape
+	Selectable:
+		Bounds: 40,60
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 10
+		Prerequisites: base
+		Description: Generates power for other structures.
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Power Plant
+	ProvidesPrerequisite@buildingname:
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 40000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: 100
+	Targetable:
+		TargetTypes: Ground, Structure
+	ScalePowerWithHealth:

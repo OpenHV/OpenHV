@@ -12,3 +12,13 @@ base:
 	damaged-build: base.png
 		Start: 7
 		Length: 1
+generator:
+	idle: generator.png
+		Length: 15
+		Tick: 300
+	damaged-idle: generator.png
+		Start: 15
+		Length: 1
+	damaged-build: generator.png
+		Start: 15
+		Length: 1
