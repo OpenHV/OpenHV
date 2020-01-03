@@ -66,6 +66,7 @@
 		Name: colorpicker
 		Filename: palette.pal
 		AllowModifiers: false
+		TransparentIndex: 255
 	PaletteFromRGBA@shadow:
 		Name: shadow
 		R: 0
