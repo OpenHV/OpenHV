@@ -178,6 +178,7 @@
 	Building:
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road
+		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 4

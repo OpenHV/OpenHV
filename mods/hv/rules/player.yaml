@@ -20,3 +20,9 @@ Player:
 	EnemyWatcher:
 	PlayerExperience:
 	GameSaveViewportManager:
+	ClassicProductionQueue@Building:
+		Type: Building
+		DisplayOrder: 0
+		BuildDurationModifier: 250
+		LowPowerModifier: 300
+		SpeedUp: true

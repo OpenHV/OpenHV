@@ -27,6 +27,10 @@ BASE:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		Description: Builds structures
+	Production:
+		Produces: Building
+	ProductionBar@Building:
+		ProductionType: Building
 
 GENERATOR:
 	Inherits: ^BaseBuilding

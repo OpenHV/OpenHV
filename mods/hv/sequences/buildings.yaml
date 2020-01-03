@@ -12,6 +12,8 @@ base:
 	damaged-build: base.png
 		Start: 7
 		Length: 1
+	icon: blank.png
+
 generator:
 	idle: generator.png
 		Length: 15
@@ -22,3 +24,4 @@ generator:
 	damaged-build: generator.png
 		Start: 15
 		Length: 1
+	icon: blank.png
