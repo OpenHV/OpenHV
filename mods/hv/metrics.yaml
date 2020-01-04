@@ -1,5 +1,5 @@
 Metrics:
-	ColorPickerRemapIndices: 64, 65, 66, 67, 68, 69, 70
+	ColorPickerRemapIndices: 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65
 	ColorPickerActorType: tank5
 	ClickDisabledSound: ClickDisabledSound
 	ClickSound: ClickSound

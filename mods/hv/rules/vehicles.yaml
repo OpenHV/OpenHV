@@ -13,3 +13,49 @@ TANK5:
 		Type: Heavy
 	Mobile:
 		Speed: 118
+
+TRANSPRT:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Transport Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 35000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 142
+		PauseOnCondition: notmobile
+	RevealsShroud:
+		MinRange: 4c0
+		Range: 5c0
+	Cargo:
+		Types: Vehicle
+		MaxWeight: 4
+		PipCount: 4
+		LoadingCondition: notmobile
+	Selectable:
+		DecorationBounds: 40,36
+
+ARTIL:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Artillery
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 2
+		Speed: 85
+		Locomotor: lighttracked
+	RevealsShroud:
+		MinRange: 4c0
+		Range: 5c0

@@ -62,6 +62,10 @@
 	HitShape:
 	MapEditorData:
 		Categories: Vehicle
+	Voiced:
+		VoiceSet: GenericVoice1
+	RenderSprites:
+		PlayerPalette: remap
 
 ^TrackedVehicle:
 	Inherits: ^Vehicle
@@ -110,6 +114,10 @@
 	HitShape:
 	MapEditorData:
 		Categories: Aircraft
+	Voiced:
+		VoiceSet: GenericVoice2
+	RenderSprites:
+		PlayerPalette: remap
 
 ^Helicopter:
 	Inherits: ^Plane
@@ -172,6 +180,8 @@
 	MapEditorData:
 		Categories: Building
 	CommandBarBlacklist:
+	RenderSprites:
+		PlayerPalette: building
 
 ^BaseBuilding:
 	Inherits: ^Building

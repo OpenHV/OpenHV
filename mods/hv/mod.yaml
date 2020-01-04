@@ -15,6 +15,7 @@ Packages:
 	hv|bits/terrain
 	hv|bits/audio
 	hv|bits/audio/cc0
+	hv|bits/audio/graion
 	ra|uibits
 	hv|uibits
 
@@ -100,6 +101,9 @@ Music:
 
 Notifications:
 	hv|audio/notifications.yaml
+
+Voices:
+	hv|audio/voices.yaml
 
 Translations:
 	hv|english.yaml
