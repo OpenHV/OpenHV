@@ -39,6 +39,9 @@ Sequences:
 	hv|sequences/buildings.yaml
 	hv|sequences/weapons.yaml
 
+Weapons:
+	hv|weapons/explosions.yaml
+
 TileSets:
 	hv|tileset.yaml
 

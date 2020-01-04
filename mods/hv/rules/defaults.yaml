@@ -201,3 +201,7 @@
 	GivesBuildableArea:
 		AreaTypes: building
 	Sellable:
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode

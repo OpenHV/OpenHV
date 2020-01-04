@@ -1,0 +1,3 @@
+BuildingExplode:
+	Warhead@Effectf: CreateEffect
+		Explosions: small, medium, large
