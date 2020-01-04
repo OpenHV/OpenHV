@@ -21,7 +21,9 @@ generator:
 	damaged-idle: generator.png
 		Start: 15
 		Length: 1
-	damaged-build: generator.png
-		Start: 15
-		Length: 1
+	icon: blank.png
+
+radar:
+	idle: radar.png
+	damaged-idle: radar.png
 	icon: blank.png

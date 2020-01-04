@@ -62,3 +62,45 @@ GENERATOR:
 	Targetable:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
+
+RADAR:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^3x3Shape
+	Selectable:
+		Bounds: 48,48
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 630,-384,0, 630,384,0, -700,-512,0, -700,512,0
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 90
+		Prerequisites: generator
+		Description: Provides an overview\nof the battlefield.\nRequires power to operate.
+	Valued:
+		Cost: 1800
+	Tooltip:
+		Name: Radar Dome
+	Building:
+		Footprint: == xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+		RequiresCondition: !disabled
+	RevealsShroud@Offline:
+		Range: 5c0
+		RequiresCondition: disabled
+	ProvidesRadar:
+		RequiresCondition: !disabled
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		PlayerPalette: green
