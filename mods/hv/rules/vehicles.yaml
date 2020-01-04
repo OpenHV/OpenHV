@@ -30,7 +30,6 @@ TRANSPRT:
 		Speed: 142
 		PauseOnCondition: notmobile
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 5c0
 	Cargo:
 		Types: Vehicle
@@ -57,5 +56,4 @@ ARTIL:
 		Speed: 85
 		Locomotor: lighttracked
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 5c0
