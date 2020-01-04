@@ -39,3 +39,23 @@ TRANSPRT:
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 40,36
+
+ARTIL:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Artillery
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 2
+		Speed: 85
+		Locomotor: lighttracked
+	RevealsShroud:
+		MinRange: 4c0
+		Range: 5c0

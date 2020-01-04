@@ -5,3 +5,7 @@ tank5:
 transprt:
 	idle: transprt.png
 		Facings: 8
+
+artil:
+	idle: artil.png
+		Facings: 8

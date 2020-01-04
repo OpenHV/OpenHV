@@ -20,6 +20,11 @@
 		TerrainSpeeds:
 			Clear: 80
 			Road: 100
+	Locomotor@LIGHTTRACKED:
+		Name: lighttracked
+		TerrainSpeeds:
+			Clear: 80
+			Road: 100
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp
