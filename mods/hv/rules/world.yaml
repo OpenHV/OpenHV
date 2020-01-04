@@ -53,7 +53,15 @@
 		TransparentIndex: 255
 	PlayerColorPalette:
 		BasePalette: player
-		RemapIndex: 78 # TODO
+		RemapIndex: 0
+	PlayerColorPalette@grey-remap:
+		BasePalette: player
+		BaseName: remap
+		RemapIndex: 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65
+	PlayerColorPalette@blue-remap:
+		BasePalette: player
+		BaseName: building
+		RemapIndex: 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80
 	PaletteFromPng@cursor:
 		Name: cursor
 		Filename: cursor.png
