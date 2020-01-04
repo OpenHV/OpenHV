@@ -53,7 +53,7 @@
 		TransparentIndex: 255
 	PlayerColorPalette:
 		BasePalette: player
-		RemapIndex: 1 # TODO
+		RemapIndex: 78 # TODO
 	PaletteFromPng@cursor:
 		Name: cursor
 		Filename: cursor.png
