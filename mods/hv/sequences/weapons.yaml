@@ -1,0 +1,7 @@
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 2047
+	small: expsmall.png
+	medium: explosn.png
+	large: explobig.png
