@@ -1,3 +1,29 @@
 BuildingExplode:
 	Warhead@Effectf: CreateEffect
 		Explosions: small, medium, large
+
+^Explosion:
+	ValidTargets: Ground, Water, Air
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 5000
+		Versus:
+			None: 90
+			Steel: 75
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground, Air
+
+ArtilleryExplode:
+	Inherits: ^Explosion
+	Warhead@Damage: SpreadDamage
+		Damage: 15000
+	Warhead@Effect: CreateEffect
+		Explosions: medium
+
+UnitExplodeSmall:
+	Inherits: ^Explosion
+	Warhead@Damage: SpreadDamage
+		Damage: 4000
+	Warhead@Effect: CreateEffect
+		Explosions: small

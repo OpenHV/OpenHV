@@ -1,0 +1,47 @@
+^Cannon:
+	ReloadDelay: 50
+	Range: 4c768
+	Projectile: Bullet
+		Speed: 682
+		Image: bullet1
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 4000
+		Versus:
+			None: 30
+			Steel: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+
+^Artillery:
+	Inherits: ^Cannon
+	ReloadDelay: 85
+	Range: 12c0
+	Projectile: Bullet
+		Speed: 204
+		Blockable: false
+		LaunchAngle: 62
+		Inaccuracy: 1c938
+	Warhead@Damage: SpreadDamage
+		Spread: 426
+		Damage: 23000
+		Versus:
+			None: 90
+			Steel: 40
+	Warhead@Effect: CreateEffect
+		Explosions: large
+
+SmallArtillery:
+	Inherits: ^Artillery
+	MinRange: 4c0
+	TargetActorCenter: true
+	Projectile: Bullet
+		ContrailLength: 30
+		Speed: 170
+		Inaccuracy: 1c138
+	Warhead@Damage: SpreadDamage
+		Falloff: 100, 55, 20, 5
+		Versus:
+			None: 60

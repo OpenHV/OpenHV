@@ -41,6 +41,7 @@ TRANSPRT:
 
 ARTIL:
 	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -57,3 +58,13 @@ ARTIL:
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 5c0
+	Armament:
+		Weapon: SmallArtillery
+		LocalOffset: 624,0,208
+	AttackFrontal:
+		TargetFrozenActors: true
+		ForceFireIgnoresActors: true
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 75

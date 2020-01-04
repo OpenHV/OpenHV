@@ -56,6 +56,10 @@
 		Name: player
 		Filename: palette.pal
 		TransparentIndex: 255
+	PaletteFromGimpOrJascFile@effect:
+		Name: effect
+		Filename: palette.pal
+		TransparentIndex: 255
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 0
