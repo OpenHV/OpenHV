@@ -37,15 +37,27 @@
 		RandomFactionMembers: megacorp
 		Side: Random
 		Description: Random Corporation\nA random corporation will be chosen when the game starts.
-	ResourceType@0:
-		Type: Ore
-		Name: Valuable Minerals
-		PipColor: Yellow
+	ResourceType@Gold:
+		Type: gold
+		Name: Gold
+		PipColor: yellow
 		ResourceType: 1
 		TerrainType: Ore
-		Palette: terrain
-		Sequences: blank
-		MaxDensity: 1
+		Palette: effect
+		Sequences: gold
+		MaxDensity: 3
+		ValuePerUnit: 40
+		AllowedTerrainTypes: Clear
+		AllowUnderActors: true
+	ResourceType@Iron:
+		Type: iron
+		Name: Iron
+		PipColor: gray
+		ResourceType: 2
+		TerrainType: Ore
+		Palette: effect
+		Sequences: iron
+		MaxDensity: 3
 		ValuePerUnit: 25
 		AllowedTerrainTypes: Clear
 		AllowUnderActors: true
