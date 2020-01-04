@@ -38,6 +38,8 @@ TRANSPRT:
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 40,36
+	RenderSprites:
+		PlayerPalette: green
 
 ARTIL:
 	Inherits: ^TrackedVehicle
