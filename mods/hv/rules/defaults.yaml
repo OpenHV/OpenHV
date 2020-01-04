@@ -62,6 +62,8 @@
 	HitShape:
 	MapEditorData:
 		Categories: Vehicle
+	Voiced:
+		VoiceSet: GenericVoice1
 
 ^TrackedVehicle:
 	Inherits: ^Vehicle
@@ -110,6 +112,8 @@
 	HitShape:
 	MapEditorData:
 		Categories: Aircraft
+	Voiced:
+		VoiceSet: GenericVoice2
 
 ^Helicopter:
 	Inherits: ^Plane

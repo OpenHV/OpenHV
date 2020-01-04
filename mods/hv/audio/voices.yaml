@@ -1,0 +1,11 @@
+GenericVoice1:
+	DefaultVariant: .wav
+	Voices:
+		Select: generic1select1, generic1select2
+		Action: generic1action1, generic1action2
+
+GenericVoice2:
+	DefaultVariant: .wav
+	Voices:
+		Select: generic2select1, generic2select2
+		Action: generic2action1, generic2action2
