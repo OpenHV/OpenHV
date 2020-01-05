@@ -64,6 +64,7 @@ ARTIL:
 		Weapon: SmallArtillery
 		LocalOffset: 624,0,208
 	AttackFrontal:
+		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
 	Explodes:
