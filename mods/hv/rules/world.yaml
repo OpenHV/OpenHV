@@ -87,10 +87,12 @@
 		BasePalette: player
 		BaseName: green
 		RemapIndex: 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
-	PaletteFromPng@cursor:
+	PaletteFromGimpOrJascFile@cursor:
 		Name: cursor
-		Filename: cursor.png
+		Filename: palette.pal
 		CursorPalette: true
+		AllowModifiers: false
+		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
 		Filename: palette.pal
