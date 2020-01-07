@@ -26,4 +26,5 @@ generator:
 radar:
 	idle: radar.png
 	damaged-idle: radar.png
+		Start: 1
 	icon: blank.png
