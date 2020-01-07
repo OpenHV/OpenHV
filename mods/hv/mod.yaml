@@ -21,6 +21,7 @@ Packages:
 
 MapFolders:
 	hv|maps: System
+	~^maps/hv/{DEV_VERSION}: User
 
 Rules:
 	hv|rules/world.yaml
