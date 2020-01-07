@@ -132,7 +132,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
-		LandableTerrainTypes: Clear, Ore, Road
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass
 		InitialFacing: 224
 		CanSlide: True
 	Hovers@CRUISING:
@@ -190,7 +190,7 @@
 	Inherits: ^Building
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road
+		TerrainTypes: Clear, Road, Crater, Grass
 		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building

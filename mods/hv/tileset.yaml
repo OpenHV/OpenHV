@@ -7,12 +7,32 @@ General:
 Terrain:
 	TerrainType@Clear:
 		Type: Clear
-	TerrainType@Blocked:
-		Type: Blocked
 	TerrainType@Ore:
 		Type: Ore
+	TerrainType@Crater:
+		Type: Crater
+		TargetTypes: Ground
+		Color: 5A2D1B
+	TerrainType@Lava:
+		Type: Lava
+		TargetTypes: Lava
+		Color: 600000
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		Color: 003897
 	TerrainType@Road:
 		Type: Road
+		TargetTypes: Ground
+		Color: 767676
+	TerrainType@Grass:
+		Type: Grass
+		TargetTypes: Ground
+		Color: 186104
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: 5A2D1B
 
 Templates:
 	Template@0:
@@ -28,301 +48,301 @@ Templates:
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@2:
 		Id: 2
 		Images: crater2.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@3:
 		Id: 3
 		Images: crater3.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@4:
 		Id: 4
 		Images: crater4.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@5:
 		Id: 5
 		Images: crater5.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Crater
 	Template@6:
 		Id: 6
 		Images: crater6.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@7:
 		Id: 7
 		Images: crater7.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@8:
 		Id: 8
 		Images: crater8.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@9:
 		Id: 9
 		Images: crater9.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@10:
 		Id: 10
 		Images: crater10.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@11:
 		Id: 11
 		Images: crater11.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@12:
 		Id: 12
 		Images: crater12.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@13:
 		Id: 13
 		Images: crater13.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@14:
 		Id: 14
 		Images: crtr2lav1.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@15:
 		Id: 15
 		Images: crtr2lav2.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@16:
 		Id: 16
 		Images: crtr2lav3.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@17:
 		Id: 17
 		Images: crtr2lav4.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Crater
 	Template@18:
 		Id: 18
 		Images: crtr2lav5.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@19:
 		Id: 19
 		Images: crtr2lav6.png
 		Size: 1,1
 		Categories: Lava
 		Tiles:
-			0: Clear
+			0: Lava
 	Template@20:
 		Id: 20
 		Images: crtr2lav7.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@21:
 		Id: 21
 		Images: crtr2lav8.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@22:
 		Id: 22
 		Images: crtr2lav9.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@23:
 		Id: 23
 		Images: crtr2lav10.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@24:
 		Id: 24
 		Images: crtr2lav11.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@25:
 		Id: 25
 		Images: crtr2lav12.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@26:
 		Id: 26
 		Images: crtr2lav13.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@27:
 		Id: 27
 		Images: crtr2lav14.png
 		Size: 1,1
 		Categories: Crater, Lava
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@28:
 		Id: 28
 		Images: crtr2wtr1.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@29:
 		Id: 29
 		Images: crtr2wtr2.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@30:
 		Id: 30
 		Images: crtr2wtr3.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@31:
 		Id: 31
 		Images: crtr2wtr4.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Water
 	Template@32:
 		Id: 32
 		Images: crtr2wtr5.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@33:
 		Id: 33
 		Images: crtr2wtr6.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@34:
 		Id: 34
 		Images: crtr2wtr7.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@35:
 		Id: 35
 		Images: crtr2wtr8.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@36:
 		Id: 36
 		Images: crtr2wtr9.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@37:
 		Id: 37
 		Images: crtr2wtr10.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@38:
 		Id: 38
 		Images: crtr2wtr11.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@39:
 		Id: 39
 		Images: crtr2wtr12.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@40:
 		Id: 40
 		Images: crtr2wtr13.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@41:
 		Id: 41
 		Images: crtr2wtr14.png
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Clear
+			0: Water
 	Template@42:
 		Id: 42
 		Images: crtrmisc1.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Crater
 	Template@43:
 		Id: 43
 		Images: crtrmisc2.png
 		Size: 1,1
 		Categories: Crater
 		Tiles:
-			0: Clear
+			0: Crater
 	Template@44:
 		Id: 44
 		Images: crtrrdst1.png
@@ -567,91 +587,91 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@79:
 		Id: 79
 		Images: grasclif2.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@80:
 		Id: 80
 		Images: grasclif3.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@81:
 		Id: 81
 		Images: grasclif4.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@82:
 		Id: 82
 		Images: grasclif5.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@83:
 		Id: 83
 		Images: grasclif6.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@84:
 		Id: 84
 		Images: grasclif7.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Grass
 	Template@85:
 		Id: 85
 		Images: grasclif8.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@86:
 		Id: 86
 		Images: grasclif9.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@87:
 		Id: 87
 		Images: grasclif10.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@88:
 		Id: 88
 		Images: grasclif11.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@89:
 		Id: 89
 		Images: grasclif12.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@90:
 		Id: 90
 		Images: grasclif13.png
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Road
+			0: Cliff
 	Template@91:
 		Id: 91
 		Images: grasroad1.png
@@ -840,182 +860,182 @@ Templates:
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@118:
 		Id: 118
 		Images: grass2.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@119:
 		Id: 119
 		Images: grass3.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@120:
 		Id: 120
 		Images: grass4.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@121:
 		Id: 121
 		Images: grass5.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@122:
 		Id: 122
 		Images: grass6.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@123:
 		Id: 123
 		Images: grass7.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@124:
 		Id: 124
 		Images: grass8.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@125:
 		Id: 125
 		Images: grass9.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@126:
 		Id: 126
 		Images: grass10.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@127:
 		Id: 127
 		Images: grass11.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@128:
 		Id: 128
 		Images: grass12.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@129:
 		Id: 129
 		Images: grass13.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Cliff
 	Template@130:
 		Id: 130
 		Images: grass14.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@131:
 		Id: 131
 		Images: grass15.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@132:
 		Id: 132
 		Images: grass16.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@133:
 		Id: 133
 		Images: grass17.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@134:
 		Id: 134
 		Images: grass18.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@135:
 		Id: 135
 		Images: grass19.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@136:
 		Id: 136
 		Images: grass20.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@137:
 		Id: 137
 		Images: grass21.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@138:
 		Id: 138
 		Images: grass22.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@139:
 		Id: 139
 		Images: grass23.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@140:
 		Id: 140
 		Images: grass24.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@141:
 		Id: 141
 		Images: grass25.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@142:
 		Id: 142
 		Images: grass26.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Clear
+			0: Grass
 	Template@143:
 		Id: 143
 		Images: grassrdst1.png

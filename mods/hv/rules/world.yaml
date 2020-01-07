@@ -14,16 +14,25 @@
 		Name: wheeled
 		TerrainSpeeds:
 			Clear: 90
+			Ore: 90
+			Crater: 70
+			Grass: 60
 			Road: 100
 	Locomotor@TRACKED:
 		Name: tracked
 		TerrainSpeeds:
 			Clear: 80
+			Ore: 80
+			Crater: 60
+			Grass: 70
 			Road: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		TerrainSpeeds:
 			Clear: 80
+			Ore: 80
+			Crater: 70
+			Grass: 80
 			Road: 100
 	Faction@0:
 		Name: MegaCorp
