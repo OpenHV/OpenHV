@@ -1016,3 +1016,59 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Clear
+	Template@143:
+		Id: 143
+		Images: grassrdst1.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@144:
+		Id: 144
+		Images: grassrdst2.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@145:
+		Id: 145
+		Images: grassrdst3.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@146:
+		Id: 146
+		Images: grassrdst4.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@147:
+		Id: 147
+		Images: grassrdst5.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@148:
+		Id: 148
+		Images: grassrdst6.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@149:
+		Id: 149
+		Images: grassrdst7.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
+	Template@150:
+		Id: 150
+		Images: grassrdst8.png
+		Size: 1,1
+		Categories: Grass, Road
+		Tiles:
+			0: Road
