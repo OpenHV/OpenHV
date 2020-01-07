@@ -838,90 +838,181 @@ Templates:
 		Id: 117
 		Images: grass1.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@118:
 		Id: 118
 		Images: grass2.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@119:
 		Id: 119
 		Images: grass3.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@120:
 		Id: 120
 		Images: grass4.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@121:
 		Id: 121
 		Images: grass5.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@122:
 		Id: 122
 		Images: grass6.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@123:
 		Id: 123
 		Images: grass7.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@124:
 		Id: 124
 		Images: grass8.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@125:
 		Id: 125
 		Images: grass9.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@126:
 		Id: 126
 		Images: grass10.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@127:
 		Id: 127
 		Images: grass11.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@128:
 		Id: 128
 		Images: grass12.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
 		Tiles:
 			0: Clear
 	Template@129:
 		Id: 129
 		Images: grass13.png
 		Size: 1,1
-		Categories: Grass, Road
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@130:
+		Id: 130
+		Images: grass14.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@131:
+		Id: 131
+		Images: grass15.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@132:
+		Id: 132
+		Images: grass16.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@133:
+		Id: 133
+		Images: grass17.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@134:
+		Id: 134
+		Images: grass18.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@135:
+		Id: 135
+		Images: grass19.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@136:
+		Id: 136
+		Images: grass20.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@137:
+		Id: 137
+		Images: grass21.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@138:
+		Id: 138
+		Images: grass22.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@139:
+		Id: 139
+		Images: grass23.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@140:
+		Id: 140
+		Images: grass24.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@141:
+		Id: 141
+		Images: grass25.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Clear
+	Template@142:
+		Id: 142
+		Images: grass26.png
+		Size: 1,1
+		Categories: Grass
 		Tiles:
 			0: Clear
