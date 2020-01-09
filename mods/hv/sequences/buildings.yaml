@@ -28,3 +28,17 @@ radar:
 	damaged-idle: radar.png
 		Start: 1
 	icon: blank.png
+
+tradplat:
+	idle: tradplat.png
+		Offset: 0,1
+		ZOffset: -1c511
+	damaged-idle: tradplat.png
+		Start: 4
+		Offset: 0,1
+		ZOffset: -1c511
+	active: tradplat.png
+		Frames: 1, 2, 3, 2, 1
+		Offset: 0,1
+		ZOffset: -1c511
+	icon: blank.png
