@@ -1092,3 +1092,94 @@ Templates:
 		Categories: Grass, Road
 		Tiles:
 			0: Road
+	Template@151:
+		Id: 151
+		Images: grs2crtb1.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@152:
+		Id: 152
+		Images: grs2crtb2.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@153:
+		Id: 153
+		Images: grs2crtb3.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@154:
+		Id: 154
+		Images: grs2crtb4.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@155:
+		Id: 155
+		Images: grs2crtb5.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@156:
+		Id: 156
+		Images: grs2crtb6.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@157:
+		Id: 157
+		Images: grs2crtb7.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@158:
+		Id: 158
+		Images: grs2crtb8.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@159:
+		Id: 159
+		Images: grs2crtb9.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@160:
+		Id: 160
+		Images: grs2crtb10.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@161:
+		Id: 161
+		Images: grs2crtb11.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@162:
+		Id: 162
+		Images: grs2crtb12.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
+	Template@163:
+		Id: 163
+		Images: grs2crtb13.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Crater
