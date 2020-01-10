@@ -1183,3 +1183,59 @@ Templates:
 		Categories: Grass, Crater
 		Tiles:
 			0: Crater
+	Template@164:
+		Id: 164
+		Images: grs2crtc1.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@165:
+		Id: 165
+		Images: grs2crtc2.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@166:
+		Id: 166
+		Images: grs2crtc3.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@167:
+		Id: 167
+		Images: grs2crtc4.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@168:
+		Id: 168
+		Images: grs2crtc5.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@169:
+		Id: 169
+		Images: grs2crtc6.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@170:
+		Id: 170
+		Images: grs2crtc7.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@171:
+		Id: 171
+		Images: grs2crtc8.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
