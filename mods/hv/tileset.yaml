@@ -1239,3 +1239,136 @@ Templates:
 		Categories: Grass, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@172:
+		Id: 172
+		Images: grs2crtr1.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@173:
+		Id: 173
+		Images: grs2crtr2.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@174:
+		Id: 174
+		Images: grs2crtr3.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@175:
+		Id: 175
+		Images: grs2crtr4.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Grass
+	Template@176:
+		Id: 176
+		Images: grs2crtr5.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@177:
+		Id: 177
+		Images: grs2crtr6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@178:
+		Id: 178
+		Images: grs2crtr7.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@179:
+		Id: 179
+		Images: grs2crtr8.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@180:
+		Id: 180
+		Images: grs2crtr9.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@181:
+		Id: 181
+		Images: grs2crtr10.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@182:
+		Id: 182
+		Images: grs2crtr11.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@183:
+		Id: 183
+		Images: grs2crtr12.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@184:
+		Id: 184
+		Images: grs2crtr13.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@185:
+		Id: 185
+		Images: grs2crtr14.png
+		Size: 1,1
+		Categories: Grass, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@186:
+		Id: 186
+		Images: grs2crtr15.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@187:
+		Id: 187
+		Images: grs2crtr16.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@188:
+		Id: 188
+		Images: grs2crtr17.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@189:
+		Id: 189
+		Images: grs2crtr18.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@190:
+		Id: 190
+		Images: grs2crtr19.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
