@@ -50,3 +50,5 @@ COPTER:
 	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 24,24
+	RenderSprites:
+		PlayerPalette: green

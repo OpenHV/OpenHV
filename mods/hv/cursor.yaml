@@ -1,69 +1,70 @@
 Cursors:
-	cursor.png: cursor
+	scroll.png: cursor
 		scroll-t:
 			Start: 0
 			X: 0
 			Y: 0
-		scroll-tr:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-r:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-br:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-b:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-bl:
-			Start: 0
+		scroll-tl:
+			Start: 1
 			X: 0
 			Y: 0
 		scroll-l:
-			Start: 0
+			Start: 2
 			X: 0
 			Y: 0
-		scroll-tl:
-			Start: 0
+		scroll-bl:
+			Start: 3
+			X: 0
+			Y: 0
+		scroll-b:
+			Start: 4
+			X: 0
+			Y: 0
+		scroll-br:
+			Start: 5
+			X: 0
+			Y: 0
+		scroll-r:
+			Start: 6
+			X: 0
+			Y: 0
+		scroll-tr:
+			Start: 7
 			X: 0
 			Y: 0
 		scroll-t-blocked:
 			Start: 0
 			X: 0
 			Y: 0
-		scroll-tr-blocked:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-r-blocked:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-br-blocked:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-b-blocked:
-			Start: 0
-			X: 0
-			Y: 0
-		scroll-bl-blocked:
-			Start: 0
+		scroll-tl-blocked:
+			Start: 1
 			X: 0
 			Y: 0
 		scroll-l-blocked:
-			Start: 0
+			Start: 2
 			X: 0
 			Y: 0
-		scroll-tl-blocked:
-			Start: 0
+		scroll-bl-blocked:
+			Start: 3
 			X: 0
 			Y: 0
+		scroll-b-blocked:
+			Start: 4
+			X: 0
+			Y: 0
+		scroll-br-blocked:
+			Start: 5
+			X: 0
+			Y: 0
+		scroll-r-blocked:
+			Start: 6
+			X: 0
+			Y: 0
+		scroll-tr-blocked:
+			Start: 7
+			X: 0
+			Y: 0
+	cursor.png: cursor
 		select:
 			Start: 0
 			X: 0
@@ -104,6 +105,7 @@ Cursors:
 			Start: 0
 			X: 0
 			Y: 0
+	selected.png: cursor
 		attack:
 			Start: 0
 			X: 0
@@ -120,6 +122,7 @@ Cursors:
 			Start: 0
 			X: 0
 			Y: 0
+	cursor.png: cursor
 		harvest:
 			Start: 0
 			X: 0

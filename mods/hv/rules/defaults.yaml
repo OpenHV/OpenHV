@@ -46,6 +46,15 @@
 		Bounds: 20, 20
 	Targetable:
 		TargetTypes: Ground, Vehicle
+	Targetable@REPAIR:
+		RequiresCondition: damaged
+		TargetTypes: Repair
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Repairable:
+		RepairActors: tradplat
+		HpPerStep: 2000
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -121,6 +130,8 @@
 		VoiceSet: GenericVoice2
 	RenderSprites:
 		PlayerPalette: remap
+    Repairable:
+		RepairActors: tradplat
 
 ^Helicopter:
 	Inherits: ^Plane
@@ -132,7 +143,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
-		LandableTerrainTypes: Clear, Ore, Road
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass
 		InitialFacing: 224
 		CanSlide: True
 	Hovers@CRUISING:
@@ -145,6 +156,13 @@
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
+
+^2x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 1024
 
 ^2x3Shape:
 	HitShape:
@@ -190,7 +208,7 @@
 	Inherits: ^Building
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road
+		TerrainTypes: Clear, Road, Crater, Grass
 		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building

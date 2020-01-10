@@ -38,6 +38,8 @@ TRANSPRT:
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 40,36
+	RenderSprites:
+		PlayerPalette: green
 
 ARTIL:
 	Inherits: ^TrackedVehicle
@@ -62,6 +64,7 @@ ARTIL:
 		Weapon: SmallArtillery
 		LocalOffset: 624,0,208
 	AttackFrontal:
+		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
 	Explodes:

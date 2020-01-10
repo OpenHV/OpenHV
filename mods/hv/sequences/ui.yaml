@@ -42,3 +42,11 @@ pips:
 		Start: 5
 	groups: digits.png
 		Length: 10
+
+rallypoint:
+	flag: flag.png
+		Length: 5
+		ZOffset: 3072
+		Tick: 200
+		Offset: -7,-7
+	circles: null.png

@@ -14,16 +14,25 @@
 		Name: wheeled
 		TerrainSpeeds:
 			Clear: 90
+			Ore: 90
+			Crater: 70
+			Grass: 60
 			Road: 100
 	Locomotor@TRACKED:
 		Name: tracked
 		TerrainSpeeds:
 			Clear: 80
+			Ore: 80
+			Crater: 60
+			Grass: 70
 			Road: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		TerrainSpeeds:
 			Clear: 80
+			Ore: 80
+			Crater: 70
+			Grass: 80
 			Road: 100
 	Faction@0:
 		Name: MegaCorp
@@ -37,15 +46,27 @@
 		RandomFactionMembers: megacorp
 		Side: Random
 		Description: Random Corporation\nA random corporation will be chosen when the game starts.
-	ResourceType@0:
-		Type: Ore
-		Name: Valuable Minerals
-		PipColor: Yellow
+	ResourceType@Gold:
+		Type: gold
+		Name: Gold
+		PipColor: yellow
 		ResourceType: 1
 		TerrainType: Ore
-		Palette: terrain
-		Sequences: blank
-		MaxDensity: 1
+		Palette: effect
+		Sequences: gold
+		MaxDensity: 3
+		ValuePerUnit: 40
+		AllowedTerrainTypes: Clear
+		AllowUnderActors: true
+	ResourceType@Iron:
+		Type: iron
+		Name: Iron
+		PipColor: gray
+		ResourceType: 2
+		TerrainType: Ore
+		Palette: effect
+		Sequences: iron
+		MaxDensity: 3
 		ValuePerUnit: 25
 		AllowedTerrainTypes: Clear
 		AllowUnderActors: true
@@ -75,10 +96,12 @@
 		BasePalette: player
 		BaseName: green
 		RemapIndex: 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
-	PaletteFromPng@cursor:
+	PaletteFromGimpOrJascFile@cursor:
 		Name: cursor
-		Filename: cursor.png
+		Filename: palette.pal
 		CursorPalette: true
+		AllowModifiers: false
+		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
 		Filename: palette.pal

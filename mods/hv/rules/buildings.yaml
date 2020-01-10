@@ -104,3 +104,40 @@ RADAR:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
+
+TRADPLAT:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Description: Repairs and sells vehicles for credits.
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Trade Platfrom
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 40,40
+	SelectionDecorations:
+	Health:
+		HP: 80000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+	Reservable:
+	RallyPoint:
+		IsPlayerPalette: false
+		Palette: effect
+	RepairsUnits:
+		HpPerStep: 1000
+		Interval: 7
+		PlayerExperience: 15
+	WithResupplyAnimation:
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:

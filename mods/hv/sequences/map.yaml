@@ -1,4 +1,5 @@
 resources:
 	Defaults:
-		Length: 1
-	blank: blank.png
+		Length: 3
+	gold: gold.png
+	iron: iron.png

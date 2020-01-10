@@ -11,6 +11,7 @@
 		Versus:
 			None: 30
 			Steel: 75
+			Light: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -30,6 +31,8 @@
 		Versus:
 			None: 90
 			Steel: 40
+			Light: 60
+			Heavy: 25
 	Warhead@Effect: CreateEffect
 		Explosions: large
 
