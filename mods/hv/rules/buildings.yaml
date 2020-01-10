@@ -31,6 +31,8 @@ BASE:
 		Produces: Building
 	ProductionBar@Building:
 		ProductionType: Building
+	RenderSprites:
+		PlayerPalette: green
 
 GENERATOR:
 	Inherits: ^BaseBuilding
