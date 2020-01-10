@@ -64,11 +64,12 @@ Cursors:
 			Start: 7
 			X: 0
 			Y: 0
-	cursor.png: cursor
+	select.png: cursor
 		select:
 			Start: 0
 			X: 0
 			Y: 0
+	cursor.png: cursor
 		default:
 			Start: 0
 			X: 0
