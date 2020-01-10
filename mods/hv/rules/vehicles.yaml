@@ -71,3 +71,5 @@ ARTIL:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
+	RenderSprites:
+		PlayerPalette: green
