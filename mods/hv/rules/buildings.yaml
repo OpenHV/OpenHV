@@ -64,6 +64,8 @@ GENERATOR:
 	Targetable:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
+	RenderSprites:
+		PlayerPalette: green
 
 RADAR:
 	Inherits: ^BaseBuilding
