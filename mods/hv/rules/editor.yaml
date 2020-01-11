@@ -20,6 +20,7 @@ EditorWorld:
 	EditorResourceLayer:
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
+	EditorActionManager:
 
 EditorPlayer:
 	AlwaysVisible:

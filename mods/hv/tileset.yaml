@@ -33,7 +33,7 @@ Terrain:
 		Type: Cliff
 		TargetTypes: Ground
 		Color: 5A2D1B
-    TerrainType@Mountain:
+	TerrainType@Mountain:
 		Type: Mountain
 		TargetTypes: Ground
 		Color: B08070
