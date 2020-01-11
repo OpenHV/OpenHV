@@ -205,3 +205,5 @@ MODULE:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
