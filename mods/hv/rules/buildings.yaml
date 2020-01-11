@@ -141,3 +141,6 @@ TRADPLAT:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		PlayerPalette: green
+
