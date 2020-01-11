@@ -59,7 +59,7 @@
 		Sequences: gold
 		MaxDensity: 3
 		ValuePerUnit: 40
-		AllowedTerrainTypes: Clear
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
 	ResourceType@Iron:
 		Type: iron
@@ -71,7 +71,7 @@
 		Sequences: iron
 		MaxDensity: 3
 		ValuePerUnit: 25
-		AllowedTerrainTypes: Clear
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
