@@ -143,7 +143,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Mountain
 		InitialFacing: 224
 		CanSlide: True
 	Hovers@CRUISING:
