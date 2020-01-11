@@ -145,4 +145,3 @@ TRADPLAT:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
-
