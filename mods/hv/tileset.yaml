@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain
 
 Terrain:
 	TerrainType@Clear:
@@ -33,6 +33,10 @@ Terrain:
 		Type: Cliff
 		TargetTypes: Ground
 		Color: 5A2D1B
+    TerrainType@Mountain:
+		Type: Mountain
+		TargetTypes: Ground
+		Color: B08070
 
 Templates:
 	Template@0:
@@ -1372,3 +1376,94 @@ Templates:
 		Categories: Crater
 		Tiles:
 			0: Crater
+	Template@191:
+		Id: 191
+		Images: grs2mnt1.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@192:
+		Id: 192
+		Images: grs2mnt2.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@193:
+		Id: 193
+		Images: grs2mnt3.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@194:
+		Id: 194
+		Images: grs2mnt4.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@195:
+		Id: 195
+		Images: grs2mnt5.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@196:
+		Id: 196
+		Images: grs2mnt6.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@197:
+		Id: 197
+		Images: grs2mnt7.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@198:
+		Id: 198
+		Images: grs2mnt8.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@199:
+		Id: 199
+		Images: grs2mnt9.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@200:
+		Id: 200
+		Images: grs2mnt10.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@201:
+		Id: 201
+		Images: grs2mnt11.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@202:
+		Id: 202
+		Images: grs2mnt12.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
+	Template@203:
+		Id: 203
+		Images: grs2mnt13.png
+		Size: 1,1
+		Categories: Grass, Mountain
+		Tiles:
+			0: Mountain
