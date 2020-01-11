@@ -36,7 +36,7 @@ BASE:
 
 GENERATOR:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x3Shape
+	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 40,60
 	Buildable:
@@ -50,8 +50,8 @@ GENERATOR:
 		Name: Power Plant
 	ProvidesPrerequisite@buildingname:
 	Building:
-		Footprint: xx xx xx
-		Dimensions: 2,3
+		Footprint: xx xx
+		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 40000
