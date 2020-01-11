@@ -76,6 +76,7 @@
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal
+		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@player:
 		Name: player
 		Filename: palette.pal
