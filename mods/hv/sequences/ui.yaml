@@ -52,3 +52,6 @@ rallypoint:
 		Tick: 200
 		Offset: -7,-7
 	circles: null.png
+
+tags:
+	primary: primary.png

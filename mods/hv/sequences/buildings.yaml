@@ -42,3 +42,12 @@ tradplat:
 		Offset: 0,1
 		ZOffset: -1c511
 	icon: blank.png
+
+module:
+	door: module.png # TODO: unused
+		Length: 8
+	idle: module.png
+		Start: 8
+	damaged-idle: module.png
+		Start: 9
+	icon: blank.png
