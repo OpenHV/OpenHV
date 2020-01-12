@@ -3,3 +3,13 @@ resources:
 		Length: 3
 	gold: gold.png
 	iron: iron.png
+
+mpspawn:
+	idle: mpspawn.png
+		Length: *
+
+shroud:
+	fow: dark.png
+		Length: 12
+	full: dark.png
+		Start: 12
