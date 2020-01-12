@@ -105,3 +105,32 @@ SCOUT1:
 		LocalOffset: 128,0,43
 	AttackFrontal:
 	WithMuzzleOverlay:
+
+TYRIANTANK:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Heavy Tank
+		GenericName: Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 33000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 100
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: ^Cannon
+		Recoil: 50
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,0 #to be adjusted
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
