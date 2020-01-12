@@ -13,6 +13,8 @@ TANK5:
 		Type: Heavy
 	Mobile:
 		Speed: 118
+	RevealsShroud:
+		Range: 5c0
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
