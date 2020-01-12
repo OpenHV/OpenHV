@@ -105,6 +105,8 @@ SCOUT1:
 		LocalOffset: 128,0,43 # TODO: to be adjusted
 	AttackFrontal:
 	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
 
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
