@@ -18,6 +18,7 @@
 			Crater: 70
 			Grass: 60
 			Road: 100
+			Mountain: 60
 	Locomotor@TRACKED:
 		Name: tracked
 		TerrainSpeeds:
@@ -26,6 +27,7 @@
 			Crater: 60
 			Grass: 70
 			Road: 100
+			Mountain: 70
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		TerrainSpeeds:
@@ -34,6 +36,7 @@
 			Crater: 70
 			Grass: 80
 			Road: 100
+			Mountain: 70
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp
@@ -56,7 +59,7 @@
 		Sequences: gold
 		MaxDensity: 3
 		ValuePerUnit: 40
-		AllowedTerrainTypes: Clear
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
 	ResourceType@Iron:
 		Type: iron
@@ -68,11 +71,12 @@
 		Sequences: iron
 		MaxDensity: 3
 		ValuePerUnit: 25
-		AllowedTerrainTypes: Clear
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal
+		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@player:
 		Name: player
 		Filename: palette.pal

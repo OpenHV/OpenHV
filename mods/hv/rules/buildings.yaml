@@ -31,10 +31,12 @@ BASE:
 		Produces: Building
 	ProductionBar@Building:
 		ProductionType: Building
+	RenderSprites:
+		PlayerPalette: green
 
 GENERATOR:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x3Shape
+	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 40,60
 	Buildable:
@@ -48,8 +50,8 @@ GENERATOR:
 		Name: Power Plant
 	ProvidesPrerequisite@buildingname:
 	Building:
-		Footprint: xx xx xx
-		Dimensions: 2,3
+		Footprint: xx xx
+		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 40000
@@ -62,6 +64,8 @@ GENERATOR:
 	Targetable:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
+	RenderSprites:
+		PlayerPalette: green
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -141,3 +145,67 @@ TRADPLAT:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		PlayerPalette: green
+
+MODULE:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 48,48
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 490,-470,0, 355,512,0, -355,-512,0, -630,512,0
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 30
+		Prerequisites: generator
+		Description: Does nothing.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Module
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		MinRange: 4c0
+		Range: 5c0
+	RallyPoint:
+		IsPlayerPalette: false
+		Palette: effect
+	Exit@1:
+		SpawnOffset: -170,810,0
+		ExitCell: 1,2
+		ProductionTypes: Infantry
+	Exit@2:
+		SpawnOffset: -725,640,0
+		ExitCell: 0,2
+		ProductionTypes: Infantry
+	Production:
+		Produces: Infantry
+	GrantExternalConditionToProduced:
+		Condition: produced
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
+		ProductionType: Infantry
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, Structure
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green

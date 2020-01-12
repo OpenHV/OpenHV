@@ -12,8 +12,10 @@ mods/*/*.pdb
 /*.pdb
 /*.mdb
 /*.exe
-DOCUMENTATION.md
-Lua-API.md
+traits.md
+weapons.md
+settings.md
+lua.md
 StyleCopViolations.xml
 .DS_Store
 .directory

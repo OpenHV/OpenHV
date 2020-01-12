@@ -104,6 +104,7 @@
 		Bounds: 20,20
 	Aircraft:
 		AirborneCondition: airborne
+		InitialFacing: 192
 	Targetable@GROUND:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -130,7 +131,7 @@
 		VoiceSet: GenericVoice2
 	RenderSprites:
 		PlayerPalette: remap
-    Repairable:
+	Repairable:
 		RepairActors: tradplat
 
 ^Helicopter:
@@ -143,7 +144,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Mountain
 		InitialFacing: 224
 		CanSlide: True
 	Hovers@CRUISING:
