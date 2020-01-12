@@ -163,3 +163,15 @@ check: utility
 test: utility
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-yaml
+	@echo "Checking $(MOD_ID) sprite sequences..."
+	@MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" mono --debug engine/OpenRA.Utility.exe $(MOD_ID) --check-sequence-sprites
+
+docs: utility
+	@echo "Generating trait documentation..."
+	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --docs > traits.md
+	@echo "Generating weapon documentation..."
+	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --weapon-docs > weapons.md
+	@echo "Generating settings documentation..."
+	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --settings-docs > settings.md
+	@echo "Generating Lua documentation..."
+	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --lua-docs > lua.md

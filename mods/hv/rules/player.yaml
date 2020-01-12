@@ -26,3 +26,8 @@ Player:
 		BuildDurationModifier: 250
 		LowPowerModifier: 300
 		SpeedUp: true
+	ClassicProductionQueue@Infantry:
+		Type: Infantry
+		DisplayOrder: 2
+		LowPowerModifier: 300
+		SpeedUp: True

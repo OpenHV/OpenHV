@@ -172,6 +172,7 @@ Cursors:
 			Start: 0
 			X: 0
 			Y: 0
+	drag.png: cursor
 		joystick-all:
 			Start: 0
 			X: 0
@@ -208,6 +209,7 @@ Cursors:
 			Start: 0
 			X: 0
 			Y: 0
+	cursor.png: cursor
 		deploy:
 			Start: 0
 			X: 0
