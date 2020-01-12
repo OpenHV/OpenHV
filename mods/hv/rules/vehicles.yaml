@@ -102,7 +102,7 @@ SCOUT1:
 	Armament:
 		Weapon: LightMaschineGun
 		MuzzleSequence: muzzle
-		LocalOffset: 128,0,43
+		LocalOffset: 128,0,43 # TODO: to be adjusted
 	AttackFrontal:
 	WithMuzzleOverlay:
 
@@ -130,7 +130,9 @@ TYRIANTANK:
 		Recoil: 50
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
-		LocalOffset: 0,0,0 #to be adjusted
+		LocalOffset: 0,0,0 # TODO: to be adjusted
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
