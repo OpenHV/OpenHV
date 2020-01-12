@@ -1,6 +1,7 @@
 BuildingExplode:
 	Warhead@Effectf: CreateEffect
 		Explosions: small, medium, large
+		ImpactSounds: explosion07.wav, explosion08.wav
 
 ^Explosion:
 	ValidTargets: Ground, Water, Air
@@ -13,6 +14,7 @@ BuildingExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground, Air
+		ImpactSounds: explosion02.wav, explosion03.wav
 
 ArtilleryExplode:
 	Inherits: ^Explosion
@@ -20,6 +22,7 @@ ArtilleryExplode:
 		Damage: 15000
 	Warhead@Effect: CreateEffect
 		Explosions: medium
+		ImpactSounds: explosion04.wav, explosion05.wav
 
 UnitExplodeSmall:
 	Inherits: ^Explosion
