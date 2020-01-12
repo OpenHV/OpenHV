@@ -143,7 +143,24 @@
 		B: 0
 		A: 180
 		TransparentIndex: 255
-	Selection:
+	PaletteFromRGBA@shroud:
+		Name: shroud
+		R: 0
+		G: 0
+		B: 0
+		TransparentIndex: 255
+	PaletteFromRGBA@fog:
+		Name: fog
+		R: 0
+		G: 0
+		B: 0
+		A: 140
+		TransparentIndex: 255
+	ShroudRenderer:
+		ShroudVariants: fow
+		FogVariants: fow
+		OverrideFullShroud: full
+		OverrideFullFog: full
 
 World:
 	Inherits: ^BaseWorld

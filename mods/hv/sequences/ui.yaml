@@ -15,10 +15,6 @@ editor-overlay:
 	paste:
 		Start: 1
 
-mpspawn:
-	idle: mpspawn.png
-		Length: *
-
 clock:
 	idle: blank.png # TODO
 		Length: *
