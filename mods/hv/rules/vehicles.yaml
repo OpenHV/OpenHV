@@ -82,11 +82,11 @@ SCOUT1:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
-		Description: Fast reconosaince vehicle.
+		Description: Fast reconnaissance vehicle.
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Scout pod
+		Name: Scout Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -100,7 +100,7 @@ SCOUT1:
 		MinRange: 4c0
 		Range: 8c0
 	Armament:
-		Weapon: LightMaschineGun
+		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
 		LocalOffset: 128,0,43 # TODO: to be adjusted
 	AttackFrontal:
