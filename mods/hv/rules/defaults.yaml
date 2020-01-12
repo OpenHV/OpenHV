@@ -259,3 +259,26 @@
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
 		AssaultMoveCondition: assault-move
+
+^Rock:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	Tooltip:
+		Name: Rock
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: _ x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Stone
+	AppearsOnMapPreview:
+		Terrain: Stone
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral

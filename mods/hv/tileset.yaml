@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone
 
 Terrain:
 	TerrainType@Clear:
@@ -37,6 +37,10 @@ Terrain:
 		Type: Mountain
 		TargetTypes: Ground
 		Color: B08070
+	TerrainType@Stone:
+		Type: Stone
+		TargetTypes: Ground
+		Color: 454545
 
 Templates:
 	Template@0:
@@ -1684,3 +1688,38 @@ Templates:
 		Categories: Grass, Crater
 		Tiles:
 			0: Grass
+	Template@235:
+		Id: 235
+		Images: grssmisc1.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@236:
+		Id: 236
+		Images: grssmisc2.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@237:
+		Id: 237
+		Images: grssmisc3.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@238:
+		Id: 238
+		Images: grssmisc4.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@239:
+		Id: 239
+		Images: grssmisc5.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
