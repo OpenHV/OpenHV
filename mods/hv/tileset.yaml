@@ -1663,3 +1663,24 @@ Templates:
 		Categories: Grass, Lava, Cliff
 		Tiles:
 			0: Cliff
+	Template@232:
+		Id: 232
+		Images: grsscrtr1.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Grass
+	Template@233:
+		Id: 233
+		Images: grsscrtr2.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Grass
+	Template@234:
+		Id: 234
+		Images: grsscrtr3.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Grass
