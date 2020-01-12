@@ -37,7 +37,7 @@ Actors:
 	Actor0: mpspawn
 		Location: 9,8
 		Faction: megacorp
-		Owner: Multi0
+		Owner: Neutral
 	Actor1: copter2
 		Location: 11,10
 		Facing: 92
