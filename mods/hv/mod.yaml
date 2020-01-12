@@ -43,6 +43,7 @@ Sequences:
 Weapons:
 	hv|weapons/explosions.yaml
 	hv|weapons/ballistics.yaml
+	hv|weapons/firearms.yaml
 
 TileSets:
 	hv|tileset.yaml
