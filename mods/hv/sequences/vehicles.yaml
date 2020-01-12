@@ -16,3 +16,14 @@ scout1:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
+
+tyriantank:
+	idle: tyriantank.png
+		Start: 0
+		Facings: 8
+	turret: tyriantank.png
+		Start: 8
+		Facings: 8
+	muzzle: muzzle.png
+		Length: 8
+		Facings: 8
