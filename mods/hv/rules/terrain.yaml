@@ -1,0 +1,11 @@
+GRSSMISC6:
+	Inherits: ^Rock
+	Building:
+		Footprint: x x
+		Dimensions: 1,2
+
+GRSSMISC7:
+	Inherits: ^Rock
+	Building:
+		Footprint: xx _x
+		Dimensions: 2,2

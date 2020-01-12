@@ -31,6 +31,7 @@ Rules:
 	hv|rules/player.yaml
 	hv|rules/aircraft.yaml
 	hv|rules/buildings.yaml
+	hv|rules/terrain.yaml
 
 Sequences:
 	hv|sequences/map.yaml
@@ -39,6 +40,7 @@ Sequences:
 	hv|sequences/aircraft.yaml
 	hv|sequences/buildings.yaml
 	hv|sequences/weapons.yaml
+	hv|sequences/terrain.yaml
 
 Weapons:
 	hv|weapons/explosions.yaml
