@@ -1,4 +1,4 @@
-LightMaschineGun:
+LightMachineGun:
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@Dam: SpreadDamage
