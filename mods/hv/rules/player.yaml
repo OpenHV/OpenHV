@@ -31,3 +31,4 @@ Player:
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		SpeedUp: True
+	PlayerRadarTerrain:
