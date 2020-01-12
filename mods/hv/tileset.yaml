@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone
 
 Terrain:
 	TerrainType@Clear:
@@ -37,6 +37,10 @@ Terrain:
 		Type: Mountain
 		TargetTypes: Ground
 		Color: B08070
+	TerrainType@Stone:
+		Type: Stone
+		TargetTypes: Ground
+		Color: 454545
 
 Templates:
 	Template@0:
@@ -1467,3 +1471,255 @@ Templates:
 		Categories: Grass, Mountain
 		Tiles:
 			0: Mountain
+	Template@204:
+		Id: 204
+		Images: grs2watr1.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@205:
+		Id: 205
+		Images: grs2watr2.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@206:
+		Id: 206
+		Images: grs2watr3.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@207:
+		Id: 207
+		Images: grs2watr4.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Grass
+	Template@208:
+		Id: 208
+		Images: grs2watr5.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@209:
+		Id: 209
+		Images: grs2watr6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@210:
+		Id: 210
+		Images: grs2watr7.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@211:
+		Id: 211
+		Images: grs2watr8.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@212:
+		Id: 212
+		Images: grs2watr9.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@213:
+		Id: 213
+		Images: grs2watr10.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@214:
+		Id: 214
+		Images: grs2watr11.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@215:
+		Id: 215
+		Images: grs2watr12.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@216:
+		Id: 216
+		Images: grs2watr13.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@217:
+		Id: 217
+		Images: grs2watr14.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@218:
+		Id: 218
+		Images: grss2lav1.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@219:
+		Id: 219
+		Images: grss2lav2.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@220:
+		Id: 220
+		Images: grss2lav3.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@221:
+		Id: 221
+		Images: grss2lav4.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Grass
+	Template@222:
+		Id: 222
+		Images: grss2lav5.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@223:
+		Id: 223
+		Images: grss2lav6.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@224:
+		Id: 224
+		Images: grss2lav7.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@225:
+		Id: 225
+		Images: grss2lav8.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+    Template@226:
+		Id: 226
+		Images: grss2lav9.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+    Template@227:
+		Id: 227
+		Images: grss2lav10.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+    Template@228:
+		Id: 228
+		Images: grss2lav11.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+    Template@229:
+		Id: 229
+		Images: grss2lav12.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+    Template@230:
+		Id: 230
+		Images: grss2lav13.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+    Template@231:
+		Id: 231
+		Images: grss2lav14.png
+		Size: 1,1
+		Categories: Grass, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@232:
+		Id: 232
+		Images: grsscrtr1.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Grass
+	Template@233:
+		Id: 233
+		Images: grsscrtr2.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Grass
+	Template@234:
+		Id: 234
+		Images: grsscrtr3.png
+		Size: 1,1
+		Categories: Grass, Crater
+		Tiles:
+			0: Grass
+	Template@235:
+		Id: 235
+		Images: grssmisc1.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@236:
+		Id: 236
+		Images: grssmisc2.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@237:
+		Id: 237
+		Images: grssmisc3.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@238:
+		Id: 238
+		Images: grssmisc4.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
+	Template@239:
+		Id: 239
+		Images: grssmisc5.png
+		Size: 1,1
+		Categories: Grass, Stone
+		Tiles:
+			0: Stone
