@@ -9,3 +9,10 @@ transprt:
 artil:
 	idle: artil.png
 		Facings: 8
+
+scout1:
+	idle: scout1.png
+		Facings: 8
+	muzzle: muzzle.png
+		Length: 8
+		Facings: 8

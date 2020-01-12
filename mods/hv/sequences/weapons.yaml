@@ -5,6 +5,7 @@ explosion:
 	small: expsmall.png
 	medium: explosn.png
 	large: explobig.png
+	sparks: sparks.png
 
 bullet1:
 	idle: bullet1.png

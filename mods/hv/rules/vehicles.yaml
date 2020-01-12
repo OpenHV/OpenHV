@@ -73,3 +73,33 @@ ARTIL:
 		LoadedChance: 75
 	RenderSprites:
 		PlayerPalette: green
+
+SCOUT1:
+	Inherits: ^Vehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 130
+		Description: Fast reconosaince vehicle.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Scout pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+	RevealsShroud:
+		MinRange: 4c0
+		Range: 8c0
+	Armament:
+		Weapon: LightMaschineGun
+		MuzzleSequence: muzzle
+		LocalOffset: 128,0,43
+	AttackFrontal:
+	WithMuzzleOverlay:
