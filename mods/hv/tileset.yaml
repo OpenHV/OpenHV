@@ -1467,3 +1467,101 @@ Templates:
 		Categories: Grass, Mountain
 		Tiles:
 			0: Mountain
+	Template@204:
+		Id: 204
+		Images: grs2watr1.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@205:
+		Id: 205
+		Images: grs2watr2.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@206:
+		Id: 206
+		Images: grs2watr3.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@207:
+		Id: 207
+		Images: grs2watr4.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Grass
+	Template@208:
+		Id: 208
+		Images: grs2watr5.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@209:
+		Id: 209
+		Images: grs2watr6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@210:
+		Id: 210
+		Images: grs2watr7.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@211:
+		Id: 211
+		Images: grs2watr8.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@212:
+		Id: 212
+		Images: grs2watr9.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@213:
+		Id: 213
+		Images: grs2watr10.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@214:
+		Id: 214
+		Images: grs2watr11.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@215:
+		Id: 215
+		Images: grs2watr12.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@216:
+		Id: 216
+		Images: grs2watr13.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
+    Template@217:
+		Id: 217
+		Images: grs2watr14.png
+		Size: 1,1
+		Categories: Grass, Water, Cliff
+		Tiles:
+			0: Cliff
