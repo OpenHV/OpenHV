@@ -1,9 +1,10 @@
 LightMachineGun:
+	Report: machinegunburst01.wav, machinegunburst02.wav
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 2500
 		Versus:
 			None: 150
 			Steel: 10
@@ -15,4 +16,4 @@ LightMachineGun:
 		ValidTargets: Ground
 	ReloadDelay: 30
 	Range: 4c0
-	Burst: 5
+	Burst: 2
