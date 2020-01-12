@@ -1,4 +1,5 @@
 ^Cannon:
+	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 4c768
 	Projectile: Bullet
@@ -15,9 +16,11 @@
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
 
 ^Artillery:
 	Inherits: ^Cannon
+	Report: howitzerfire01.wav
 	ReloadDelay: 85
 	Range: 12c0
 	Projectile: Bullet
@@ -35,6 +38,7 @@
 			Heavy: 25
 	Warhead@Effect: CreateEffect
 		Explosions: large
+		ImpactSounds: explosion04.wav, explosion05.wav
 
 SmallArtillery:
 	Inherits: ^Artillery
