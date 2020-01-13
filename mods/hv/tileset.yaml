@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone, Ice, Snow
 
 Terrain:
 	TerrainType@Clear:
@@ -41,6 +41,14 @@ Terrain:
 		Type: Stone
 		TargetTypes: Ground
 		Color: 454545
+	TerrainType@Ice:
+		Type: Ice
+		TargetTypes: Ground
+		Color: 8090A0
+	TerrainType@Snow:
+		Type: Snow
+		TargetTypes: Ground
+		Color: B0C0D0
 
 Templates:
 	Template@0:
@@ -1723,3 +1731,108 @@ Templates:
 		Categories: Grass, Stone
 		Tiles:
 			0: Stone
+	Template@240:
+		Id: 240
+		Images: ice2snow1.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Snow
+	Template@241:
+		Id: 241
+		Images: ice2snow2.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@242:
+		Id: 242
+		Images: ice2snow3.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Snow
+	Template@243:
+		Id: 243
+		Images: ice2snow4.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@244:
+		Id: 244
+		Images: ice2snow5.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@245:
+		Id: 245
+		Images: ice2snow6.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@246:
+		Id: 246
+		Images: ice2snow7.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@247:
+		Id: 247
+		Images: ice2snow8.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@248:
+		Id: 248
+		Images: ice2snow9.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@249:
+		Id: 249
+		Images: ice2snow10.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@250:
+		Id: 250
+		Images: ice2snow11.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Snow
+	Template@251:
+		Id: 251
+		Images: ice2snow12.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@252:
+		Id: 252
+		Images: ice2snow13.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Snow
+	Template@253:
+		Id: 253
+		Images: ice2snow14.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
+	Template@254:
+		Id: 254
+		Images: ice2snow15.png
+		Size: 1,1
+		Categories: Ice, Snow
+		Tiles:
+			0: Ice
