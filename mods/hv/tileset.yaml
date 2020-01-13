@@ -1836,3 +1836,101 @@ Templates:
 		Categories: Ice, Snow
 		Tiles:
 			0: Ice
+	Template@255:
+		Id: 255
+		Images: ice2watr1.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@256:
+		Id: 256
+		Images: ice2watr2.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@257:
+		Id: 257
+		Images: ice2watr3.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@258:
+		Id: 258
+		Images: ice2watr4.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@259:
+		Id: 259
+		Images: ice2watr5.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@260:
+		Id: 260
+		Images: ice2watr6.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@261:
+		Id: 261
+		Images: ice2watr7.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@262:
+		Id: 262
+		Images: ice2watr8.png
+		Size: 1,1
+		Categories: Water, Ice
+		Tiles:
+			0: Water
+	Template@263:
+		Id: 263
+		Images: ice2watr9.png
+		Size: 1,1
+		Categories: Water, Ice
+		Tiles:
+			0: Water
+	Template@264:
+		Id: 264
+		Images: ice2watr10.png
+		Size: 1,1
+		Categories: Water, Ice
+		Tiles:
+			0: Water
+	Template@265:
+		Id: 265
+		Images: ice2watr11.png
+		Size: 1,1
+		Categories: Water, Ice
+		Tiles:
+			0: Water
+	Template@266:
+		Id: 266
+		Images: ice2watr12.png
+		Size: 1,1
+		Categories: Water, Ice
+		Tiles:
+			0: Water
+	Template@267:
+		Id: 267
+		Images: ice2watr13.png
+		Size: 1,1
+		Categories: Water, Ice
+		Tiles:
+			0: Ice
+	Template@268:
+		Id: 268
+		Images: ice2watr14.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
