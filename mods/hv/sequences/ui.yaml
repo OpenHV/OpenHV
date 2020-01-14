@@ -20,7 +20,7 @@ clock:
 		Length: *
 
 moveflsh:
-	idle: blank.png # TODO
+	idle: click.png
 		Length: *
 		Tick: 80
 		ZOffset: 2047
