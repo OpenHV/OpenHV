@@ -210,3 +210,4 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
+	ResourceLayer:
