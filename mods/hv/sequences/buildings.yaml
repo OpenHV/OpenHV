@@ -51,3 +51,13 @@ module:
 	damaged-idle: module.png
 		Start: 9
 	icon: blank.png
+
+miner2:
+	make: miner2.png
+		Length: 17
+	active: miner2.png
+		Start: 17
+		Length: 3
+		Tick: 300
+	damaged-active: miner2.png
+		Start: 20
