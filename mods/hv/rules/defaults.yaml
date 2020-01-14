@@ -27,6 +27,11 @@
 		Priority: 10
 		PriorityModifiers: Ctrl
 
+^SelectableEconomicUnit:
+	Selectable:
+		Priority: 6
+		PriorityModifiers: Ctrl, Alt
+
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
