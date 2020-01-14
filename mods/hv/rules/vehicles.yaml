@@ -97,7 +97,6 @@ SCOUT1:
 		TurnSpeed: 10
 		Speed: 170
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 8c0
 	Armament:
 		Weapon: LightMachineGun
@@ -160,5 +159,4 @@ MINER:
 		TurnSpeed: 10
 		Speed: 170
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 8c0
