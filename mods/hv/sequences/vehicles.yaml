@@ -27,3 +27,7 @@ tyriantank:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
+
+miner:
+	idle: miner.png
+		Facings: 8

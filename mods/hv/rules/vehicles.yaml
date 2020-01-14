@@ -138,3 +138,27 @@ TYRIANTANK:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+
+MINER:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableEconomicUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 110
+		Description: Builds mining facilities.\n  Unarmed
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Miner
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+	RevealsShroud:
+		MinRange: 4c0
+		Range: 8c0
