@@ -135,8 +135,8 @@ TRADPLAT:
 		Range: 5c0
 	Reservable:
 	RallyPoint:
-		IsPlayerPalette: false
-		Palette: effect
+		IsPlayerPalette: true
+		Palette: green
 	RepairsUnits:
 		HpPerStep: 1000
 		Interval: 7
