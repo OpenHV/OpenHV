@@ -160,3 +160,5 @@ MINER:
 		Speed: 170
 	RevealsShroud:
 		Range: 8c0
+	RenderSprites:
+		PlayerPalette: green
