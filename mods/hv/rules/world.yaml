@@ -67,6 +67,7 @@
 		ValuePerUnit: 40
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
+		AllowUnderBuildings: true
 	ResourceType@Iron:
 		Type: iron
 		Name: Iron
@@ -79,6 +80,7 @@
 		ValuePerUnit: 25
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
+		AllowUnderBuildings: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal

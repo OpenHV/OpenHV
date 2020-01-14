@@ -162,3 +162,6 @@ MINER:
 		Range: 8c0
 	RenderSprites:
 		PlayerPalette: green
+	Transforms:
+		IntoActor: miner2
+		Facing: 96
