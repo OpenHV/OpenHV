@@ -2116,3 +2116,10 @@ Templates:
 		Categories: Ice, Water
 		Tiles:
 			0: Ice
+	Template@295:
+		Id: 295
+		Images: icedent.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
