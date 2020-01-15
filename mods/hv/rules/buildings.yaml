@@ -135,8 +135,8 @@ TRADPLAT:
 		Range: 5c0
 	Reservable:
 	RallyPoint:
-		IsPlayerPalette: false
-		Palette: effect
+		IsPlayerPalette: true
+		Palette: green
 	RepairsUnits:
 		HpPerStep: 1000
 		Interval: 7
@@ -209,3 +209,27 @@ MODULE:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+
+MINER2:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,60
+	Tooltip:
+		Name: Miner
+	CashTrickler:
+	CashTricklerBar:
+	WithSpriteBody:
+		Sequence: active
+	WithMakeAnimation:
+	QuantizeFacingsFromSequence:
+		Sequence: active
+	UpdatesDerrickCount:
+	Building:
+		RequiresBaseProvider: false
+		TerrainTypes: Ore
+		AllowInvalidPlacement: true # TODO allow placement only on ressources
+	-RequiresBuildableArea:
+	-GivesBuildableArea:
+	RevealsShroud:
+		Range: 4c0

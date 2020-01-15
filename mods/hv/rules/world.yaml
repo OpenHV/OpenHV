@@ -19,6 +19,8 @@
 			Grass: 60
 			Road: 100
 			Mountain: 60
+			Ice: 10
+			Snow: 30
 	Locomotor@TRACKED:
 		Name: tracked
 		TerrainSpeeds:
@@ -28,6 +30,8 @@
 			Grass: 70
 			Road: 100
 			Mountain: 70
+			Ice: 30
+			Snow: 50
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		TerrainSpeeds:
@@ -37,6 +41,8 @@
 			Grass: 80
 			Road: 100
 			Mountain: 70
+			Ice: 20
+			Snow: 40
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp
@@ -61,6 +67,7 @@
 		ValuePerUnit: 40
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
+		AllowUnderBuildings: true
 	ResourceType@Iron:
 		Type: iron
 		Name: Iron
@@ -73,6 +80,7 @@
 		ValuePerUnit: 25
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
+		AllowUnderBuildings: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal
@@ -204,3 +212,4 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
+	ResourceLayer:

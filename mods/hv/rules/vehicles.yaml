@@ -97,7 +97,6 @@ SCOUT1:
 		TurnSpeed: 10
 		Speed: 170
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 8c0
 	Armament:
 		Weapon: LightMachineGun
@@ -105,6 +104,8 @@ SCOUT1:
 		LocalOffset: 128,0,43 # TODO: to be adjusted
 	AttackFrontal:
 	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
 
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
@@ -136,3 +137,31 @@ TYRIANTANK:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+
+MINER:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableEconomicUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 110
+		Description: Builds mining facilities.\n  Unarmed
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Miner
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+	RevealsShroud:
+		Range: 8c0
+	RenderSprites:
+		PlayerPalette: green
+	Transforms:
+		IntoActor: miner2
+		Facing: 96
