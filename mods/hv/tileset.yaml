@@ -1934,3 +1934,94 @@ Templates:
 		Categories: Ice
 		Tiles:
 			0: Ice
+	Template@269:
+		Id: 269
+		Images: icebrk1.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@270:
+		Id: 270
+		Images: icebrk2.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@271:
+		Id: 271
+		Images: icebrk3.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@272:
+		Id: 272
+		Images: icebrk4.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@273:
+		Id: 273
+		Images: icebrk5.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@274:
+		Id: 274
+		Images: icebrk6.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@275:
+		Id: 275
+		Images: icebrk7.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@276:
+		Id: 276
+		Images: icebrk8.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@277:
+		Id: 277
+		Images: icebrk9.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@278:
+		Id: 278
+		Images: icebrk10.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@279:
+		Id: 279
+		Images: icebrk11.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@280:
+		Id: 280
+		Images: icebrk12.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@281:
+		Id: 281
+		Images: icebrk13.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
