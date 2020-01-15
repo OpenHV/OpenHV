@@ -55,6 +55,7 @@ module:
 miner2:
 	make: miner2.png
 		Length: 17
+		Tick: 100
 	active: miner2.png
 		Start: 17
 		Length: 3
