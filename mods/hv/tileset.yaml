@@ -2123,3 +2123,59 @@ Templates:
 		Categories: Ice
 		Tiles:
 			0: Ice
+	Template@296:
+		Id: 296
+		Images: icerdest1.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@297:
+		Id: 297
+		Images: icerdest2.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@298:
+		Id: 298
+		Images: icerdest3.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@299:
+		Id: 299
+		Images: icerdest4.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@300:
+		Id: 300
+		Images: icerdest5.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@301:
+		Id: 301
+		Images: icerdest6.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@302:
+		Id: 302
+		Images: icerdest7.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@303:
+		Id: 303
+		Images: icerdest8.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
