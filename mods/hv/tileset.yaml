@@ -1934,3 +1934,346 @@ Templates:
 		Categories: Ice
 		Tiles:
 			0: Ice
+	Template@269:
+		Id: 269
+		Images: icebrk1.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@270:
+		Id: 270
+		Images: icebrk2.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@271:
+		Id: 271
+		Images: icebrk3.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@272:
+		Id: 272
+		Images: icebrk4.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@273:
+		Id: 273
+		Images: icebrk5.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@274:
+		Id: 274
+		Images: icebrk6.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@275:
+		Id: 275
+		Images: icebrk7.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@276:
+		Id: 276
+		Images: icebrk8.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@277:
+		Id: 277
+		Images: icebrk9.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@278:
+		Id: 278
+		Images: icebrk10.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@279:
+		Id: 279
+		Images: icebrk11.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@280:
+		Id: 280
+		Images: icebrk12.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@281:
+		Id: 281
+		Images: icebrk13.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@282:
+		Id: 282
+		Images: icebrk14.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@283:
+		Id: 283
+		Images: icebrk15.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@284:
+		Id: 284
+		Images: icebrk16.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@285:
+		Id: 285
+		Images: icebrk17.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@286:
+		Id: 286
+		Images: icebrk18.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@287:
+		Id: 287
+		Images: icebrk19.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@288:
+		Id: 288
+		Images: icebrk20.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@289:
+		Id: 289
+		Images: icebrk21.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@290:
+		Id: 290
+		Images: icebrk22.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@291:
+		Id: 291
+		Images: icebrk23.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Water
+	Template@292:
+		Id: 292
+		Images: icebrk24.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@293:
+		Id: 293
+		Images: icebrk25.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@294:
+		Id: 294
+		Images: icebrk26.png
+		Size: 1,1
+		Categories: Ice, Water
+		Tiles:
+			0: Ice
+	Template@295:
+		Id: 295
+		Images: icedent.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Ice
+	Template@296:
+		Id: 296
+		Images: icerdest1.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@297:
+		Id: 297
+		Images: icerdest2.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@298:
+		Id: 298
+		Images: icerdest3.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@299:
+		Id: 299
+		Images: icerdest4.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@300:
+		Id: 300
+		Images: icerdest5.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@301:
+		Id: 301
+		Images: icerdest6.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@302:
+		Id: 302
+		Images: icerdest7.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@303:
+		Id: 303
+		Images: icerdest8.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@304:
+		Id: 304
+		Images: iceroad1.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@305:
+		Id: 305
+		Images: iceroad2.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@306:
+		Id: 306
+		Images: iceroad3.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@307:
+		Id: 307
+		Images: iceroad4.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@308:
+		Id: 308
+		Images: iceroad5.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@309:
+		Id: 309
+		Images: iceroad6.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@310:
+		Id: 310
+		Images: iceroad7.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@311:
+		Id: 311
+		Images: iceroad8.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@312:
+		Id: 312
+		Images: iceroad9.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@313:
+		Id: 313
+		Images: iceroad10.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@314:
+		Id: 314
+		Images: iceroad11.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@315:
+		Id: 315
+		Images: iceroad12.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@316:
+		Id: 316
+		Images: iceroad13.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
+	Template@317:
+		Id: 317
+		Images: iceroad14.png
+		Size: 1,1
+		Categories: Ice, Road
+		Tiles:
+			0: Road
