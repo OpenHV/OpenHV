@@ -71,4 +71,6 @@ starport:
 		Start: 22
 	active: starport2.png
 		Length: 5
+	damaged-active: starport2.png
+		Start: 5
 	icon: blank.png
