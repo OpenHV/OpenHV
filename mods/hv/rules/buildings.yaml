@@ -177,8 +177,8 @@ MODULE:
 		MinRange: 4c0
 		Range: 5c0
 	RallyPoint:
-		IsPlayerPalette: false
-		Palette: effect
+		IsPlayerPalette: true
+		Palette: green
 	Exit@1:
 		SpawnOffset: -170,810,0
 		ExitCell: 1,2
