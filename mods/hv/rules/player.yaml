@@ -31,4 +31,9 @@ Player:
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		SpeedUp: True
+	ClassicProductionQueue@Aircraft:
+		Type: Aircraft
+		DisplayOrder: 4
+		LowPowerModifier: 300
+		SpeedUp: True
 	PlayerRadarTerrain:
