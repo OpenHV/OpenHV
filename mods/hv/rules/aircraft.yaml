@@ -30,6 +30,8 @@ COPTER2:
 		MaxWeight: 4
 		PipCount: 4
 		AfterUnloadDelay: 40
+	RenderSprites:
+		PlayerPalette: green
 
 COPTER:
 	Inherits: ^Helicopter
