@@ -8,5 +8,37 @@ explosion:
 	sparks: sparks.png
 
 bullet1:
-	idle: bullet1.png
+	idle: bullets.png
+		Start: 0
+		Facings: 8
+		ZOffset: 1023
+
+bullet2:
+	idle: bullets.png
+		Start: 8
+		Facings: 8
+		ZOffset: 1023
+
+bullet3:
+	idle: bullets.png
+		Start: 16
+		Facings: 8		
+		ZOffset: 1023
+
+bullet4:
+	idle: bullets.png
+		Start: 24
+		Facings: 8
+		ZOffset: 1023
+
+bullet5:
+	idle: bullets.png
+		Start: 32
+		Facings: 8
+		ZOffset: 1023
+
+bullet6:
+	idle: bullets.png
+		Start: 40
+		Facings: 8
 		ZOffset: 1023
