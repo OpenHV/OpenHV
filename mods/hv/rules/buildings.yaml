@@ -177,8 +177,8 @@ MODULE:
 		MinRange: 4c0
 		Range: 5c0
 	RallyPoint:
-		IsPlayerPalette: false
-		Palette: effect
+		IsPlayerPalette: true
+		Palette: green
 	Exit@1:
 		SpawnOffset: -170,810,0
 		ExitCell: 1,2
@@ -233,3 +233,56 @@ MINER2:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
+
+STARPORT:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x3Shape
+	Selectable:
+		Bounds: 40,60
+	Tooltip:
+		Name: Starport
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 120
+		Prerequisites: radar
+		Description: Produces and reloads\nhelicopters.
+	Valued:
+		Cost: 700
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
+	Health:
+		HP: 80000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+	WithResupplyAnimation:
+	Exit@1:
+		SpawnOffset: 0,-256,0
+		ExitCell: 0,0
+		Facing: 224
+	RallyPoint:
+		IsPlayerPalette: true
+		Palette: green
+	Production:
+		Produces: Aircraft, Helicopter
+	Reservable:
+	ProductionBar:
+		ProductionType: Aircraft
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	Power:
+		Amount: -10
+	ProvidesPrerequisite@buildingname:
+	Targetable:
+		TargetTypes: Ground, Structure
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green

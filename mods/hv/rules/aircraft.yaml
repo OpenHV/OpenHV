@@ -4,6 +4,12 @@ COPTER2:
 		Cost: 900
 	Tooltip:
 		Name: Transport Helicopter
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 50
+		Prerequisites: radar
+		Description: Fast Vehicle Transport Helicopter.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -30,6 +36,8 @@ COPTER2:
 		MaxWeight: 4
 		PipCount: 4
 		AfterUnloadDelay: 40
+	RenderSprites:
+		PlayerPalette: green
 
 COPTER:
 	Inherits: ^Helicopter
@@ -37,6 +45,12 @@ COPTER:
 		Cost: 1500
 	Tooltip:
 		Name: Attack Helicopter
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 20
+		Prerequisites: radar
+		Description: Small Helicopter Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
