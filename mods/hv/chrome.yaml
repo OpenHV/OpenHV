@@ -12,59 +12,61 @@
 
 ^LoadScreen:
 	Image: loadscreen.png
+
+sidebar:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 0, 167, 238, 290
-		background-iconrow: 0, 457, 238, 47
-		background-bottom: 0, 504, 238, 8
+		background-top: 438, 128, 244, 288
+		background-iconrow: 438, 409, 244, 50
+		background-bottom: 438, 459, 244, 7
 		background-supportoverlay: 0, 75, 64, 48
 
-sidebar-button-megacorp:
+sidebar-button:
 	Inherits: ^Chrome
 	PanelRegion: 56, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-megacorp-hover:
+sidebar-button-hover:
 	Inherits: ^Chrome
 	PanelRegion: 56, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-megacorp-pressed:
-	Inherits: sidebar-button-megacorp
-sidebar-button-megacorp-highlighted:
+sidebar-button-pressed:
+	Inherits: sidebar-button
+sidebar-button-highlighted:
 	Inherits: ^Chrome
 	PanelRegion: 84, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-megacorp-highlighted-hover:
+sidebar-button-highlighted-hover:
 	Inherits: ^Chrome
 	PanelRegion: 84, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-megacorp-highlighted-pressed:
-	Inherits: sidebar-button-megacorp-highlighted
-sidebar-button-megacorp-disabled:
+sidebar-button-highlighted-pressed:
+	Inherits: sidebar-button-highlighted
+sidebar-button-disabled:
 	Inherits: ^Chrome
 	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-megacorp-highlighted-disabled:
-	Inherits: sidebar-button-megacorp-disabled
+sidebar-button-highlighted-disabled:
+	Inherits: sidebar-button-disabled
 
-command-button-megacorp:
+command-button:
 	Inherits: ^Chrome
 	PanelRegion: 59, 31, 0, 0, 22, 22, 0, 0
 	PanelSides: Center
-command-button-megacorp-hover:
+command-button-hover:
 	Inherits: ^Chrome
 	PanelRegion: 59, 3, 0, 0, 22, 22, 0, 0
 	PanelSides: Center
-command-button-megacorp-pressed:
-	Inherits: command-button-megacorp
-command-button-megacorp-highlighted:
+command-button-pressed:
+	Inherits: command-button
+command-button-highlighted:
 	Inherits: ^Chrome
 	PanelRegion: 87, 31, 0, 0, 22, 22, 0, 0
 	PanelSides: Center
-command-button-megacorp-highlighted-hover:
+command-button-highlighted-hover:
 	Inherits: ^Chrome
 	PanelRegion: 87, 3, 0, 0, 22, 22, 0, 0
 	PanelSides: Center
-command-button-megacorp-highlighted-pressed:
-	Inherits: command-button-megacorp-highlighted
-command-button-megacorp-disabled:
-	Inherits: command-button-megacorp
-command-button-megacorp-highlighted-disabled:
-	Inherits: command-button-megacorp-highlighted
+command-button-highlighted-pressed:
+	Inherits: command-button-highlighted
+command-button-disabled:
+	Inherits: command-button
+command-button-highlighted-disabled:
+	Inherits: command-button-highlighted
 
 sidebar-bits:
 	Inherits: ^Chrome

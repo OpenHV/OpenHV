@@ -101,8 +101,8 @@ ChromeLayout:
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
-	ra|chrome/ingame-observer.yaml
-	ra|chrome/ingame-player.yaml
+	hv|chrome/ingame-observer.yaml
+	hv|chrome/ingame-player.yaml
 	hv|chrome/gamesave-loading.yaml
 
 Music:
