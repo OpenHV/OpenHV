@@ -120,7 +120,7 @@ TRADPLAT:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Trade Platfrom
+		Name: Trade Platform
 	Building:
 		Footprint: ++ ++
 		Dimensions: 2,2
