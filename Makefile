@@ -152,8 +152,10 @@ ifneq ("$(LUA_FILES)","")
 endif
 
 check: utility
+ifneq ("$(MOD_SOLUTION_FILES)","")
 	@echo "Compiling in debug mode..."
 	@$(MSBUILD) -t:build -p:Configuration=Debug
+endif
 	@echo "Checking runtime assemblies..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-runtime-assemblies $(WHITELISTED_OPENRA_ASSEMBLIES) $(WHITELISTED_THIRDPARTY_ASSEMBLIES) $(WHITELISTED_CORE_ASSEMBLIES) $(WHITELISTED_MOD_ASSEMBLIES)
 	@echo "Checking for explicit interface violations..."
