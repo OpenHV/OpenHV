@@ -9,6 +9,10 @@ transprt:
 artil:
 	idle: artil.png
 		Facings: 8
+	muzzle: artlflsh.png
+		Length: 3
+		Facings: 8
+		Tick: 100
 
 scout1:
 	idle: scout1.png

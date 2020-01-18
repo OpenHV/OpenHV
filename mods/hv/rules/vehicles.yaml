@@ -64,11 +64,13 @@ ARTIL:
 		Range: 5c0
 	Armament:
 		Weapon: SmallArtillery
-		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		LocalOffset: 500,0,100
 	AttackFrontal:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
+	WithMuzzleOverlay:
 	Explodes:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
