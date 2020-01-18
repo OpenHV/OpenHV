@@ -4,8 +4,8 @@
 ^Dialog:
 	Image: dialog.png
 
-^Buttons:
-	Image: buttons.png
+^Glyphs:
+	Image: glyphs.png
 
 ^Logo:
 	Image: logo.png
@@ -265,21 +265,22 @@ dialog5:
 	PanelSides: Center
 
 lobby-bits:
-	Inherits: ^Buttons
+	Inherits: ^Glyphs
 	Regions:
-		spawn-unclaimed: 159, 5, 23, 22
-		spawn-claimed: 127, 5, 23, 22
-		admin: 187, 5, 7, 5
-		colorpicker: 127, 5, 23, 22
-		huepicker: 194, 0, 7, 15
-		protected: 201, 0, 12, 13
-		protected-disabled: 212, 0, 12, 13
-		authentication: 199, 16, 12, 13
-		authentication-disabled: 212, 16, 12, 13
-		admin-registered: 224, 0, 16, 16
-		admin-anonymous: 240, 0, 16, 16
-		player-registered: 224, 16, 16, 16
-		player-anonymous: 240, 16, 16, 16
+		spawn-unclaimed: 91, 119, 22, 22
+		spawn-claimed: 68, 119, 22, 22
+		admin: 170, 0, 6, 5
+		colorpicker: 68, 119, 22, 22
+		huepicker: 136, 0, 7, 15
+		kick: 153, 0, 11, 11
+		protected: 0, 17, 12, 13
+		protected-disabled: 17, 17, 12, 13
+		authentication: 34, 17, 12, 13
+		authentication-disabled: 51, 17, 12, 13
+		admin-registered: 0, 51, 16, 16
+		admin-anonymous: 34, 51, 16, 16
+		player-registered: 17, 51, 16, 16
+		player-anonymous: 51, 51, 16, 16
 
 reload-icon:
 	Inherits: ^Chrome
@@ -298,50 +299,77 @@ reload-icon:
 		disabled-10: 672, 64, 16, 16
 		disabled-11: 688, 64, 16, 16
 
-strategic:
-	Inherits: ^Buttons
+lobby-bits:
+	Inherits: ^Glyphs
 	Regions:
-		unowned: 127, 5, 23, 22
-		critical_unowned: 127, 27, 23, 22
-		enemy_owned: 159, 27, 23, 22
-		player_owned: 159, 49, 23, 22
+		spawn-unclaimed: 91, 119, 22, 22
+		spawn-claimed: 68, 119, 22, 22
+		admin: 170, 0, 6, 5
+		colorpicker: 68, 119, 22, 22
+		huepicker: 136, 0, 7, 15
+		kick: 153, 0, 11, 11
+		protected: 0, 17, 12, 13
+		protected-disabled: 17, 17, 12, 13
+		authentication: 34, 17, 12, 13
+		authentication-disabled: 51, 17, 12, 13
+		admin-registered: 0, 51, 16, 16
+		admin-anonymous: 34, 51, 16, 16
+		player-registered: 17, 51, 16, 16
+		player-anonymous: 51, 51, 16, 16
+
+reload-icon:
+	Inherits: ^Glyphs
+	Regions:
+		enabled: 0, 34, 16, 16
+		disabled-0: 17, 34, 16, 16
+		disabled-1: 34, 34, 16, 16
+		disabled-2: 51, 34, 16, 16
+		disabled-3: 68, 34, 16, 16
+		disabled-4: 85, 34, 16, 16
+		disabled-5: 102, 34, 16, 16
+		disabled-6: 119, 34, 16, 16
+		disabled-7: 136, 34, 16, 16
+		disabled-8: 153, 34, 16, 16
+		disabled-9: 170, 34, 16, 16
+		disabled-10: 187, 34, 16, 16
+		disabled-11: 204, 34, 16, 16
+
+strategic:
+	Inherits: ^Glyphs
+	Regions:
+		unowned: 68, 119, 22, 22
+		critical_unowned: 114, 119, 22, 22
+		enemy_owned: 137, 119, 22, 22
+		player_owned: 183, 119, 22, 22
 
 flags:
-	Inherits: ^Buttons
+	Inherits: ^Glyphs
 	Regions:
-		soviet: 0, 112, 30, 15
-		megacorp: 30, 112, 30, 15
-		Random: 60, 112, 30, 15
-		RandomAllies: 30, 172, 30, 15
-		RandomSoviet: 0, 172, 30, 15
-		spectator: 60, 112, 30, 15
-		russia: 0, 127, 30, 15
-		ukraine: 30, 127, 30, 15
-		england: 60, 127, 30, 15
-		germany: 0, 142, 30, 15
-		spain: 30, 142, 30, 15
-		france: 60, 142, 30, 15
-		turkey: 0, 157, 30, 15
-		greece: 30, 157, 30, 15
+		Random: 226, 241, 30, 15
+		spectator: 226, 241, 30, 15
+		megacorp: 226, 241, 30, 15
 
 music:
-	Inherits: ^Buttons
+	Inherits: ^Glyphs
 	Regions:
-		pause: 0, 193, 25, 25
-		stop: 25, 193, 25, 25
-		play: 55, 193, 25, 25
-		next: 82, 193, 25, 25
-		prev: 110, 193, 25, 25
-		fastforward: 131, 193, 25, 25
-		slowmo: 159, 193, 25, 25
+		pause: 0, 0, 16, 16
+		stop: 17, 0, 16, 16
+		play: 34, 0, 16, 16
+		next: 51, 0, 16, 16
+		prev: 68, 0, 16, 16
+		fastforward: 85, 0, 16, 16
 
 scrollbar:
-	Inherits: ^Buttons
+	Inherits: ^Glyphs
 	Regions:
-		down_arrow: 116, 140, 16, 16
-		down_pressed: 116, 140, 16, 16
-		up_arrow: 132, 140, 16, 16
-		up_pressed: 132, 140, 16, 16
+		down_arrow: 68, 17, 16, 16
+		down_pressed: 85, 17, 16, 16
+		up_arrow: 102, 17, 16, 16
+		up_pressed: 119, 17, 16, 16
+		right_arrow: 136, 17, 16, 16
+		right_pressed: 153, 17, 16, 16
+		left_arrow: 170, 17, 16, 16
+		left_pressed: 187, 17, 16, 16
 
 progressbar-bg:
 	Inherits: button-pressed
@@ -451,12 +479,12 @@ checkbox:
 	Inherits: button-pressed
 
 checkbox-bits:
-	Inherits: ^Buttons
+	Inherits: ^Glyphs
 	Regions:
-		checked: 100, 157, 16, 16
-		checked-disabled: 100, 173, 16, 16
-		crossed: 116, 157, 16, 16
-		crossed-disabled: 116, 173, 16, 16
+		checked: 187, 0, 16, 16
+		checked-disabled: 204, 0, 16, 16
+		crossed: 221, 0, 16, 16
+		crossed-disabled: 238, 0, 16, 16
 
 checkbox-hover:
 	Inherits: ^Dialog
