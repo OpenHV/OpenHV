@@ -2284,3 +2284,94 @@ Templates:
 		Categories: Ice
 		Tiles:
 			0: Stone
+	Template@319:
+		Id: 319
+		Images: lava1.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Mountain
+	Template@320:
+		Id: 320
+		Images: lava2.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@321:
+		Id: 321
+		Images: lava3.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Mountain
+	Template@322:
+		Id: 322
+		Images: lava4.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@323:
+		Id: 323
+		Images: lava5.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@324:
+		Id: 324
+		Images: lava6.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@325:
+		Id: 325
+		Images: lava7.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@326:
+		Id: 326
+		Images: lava8.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@327:
+		Id: 327
+		Images: lava9.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@328:
+		Id: 328
+		Images: lava10.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@329:
+		Id: 329
+		Images: lava11.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Mountain
+	Template@330:
+		Id: 330
+		Images: lava12.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
+	Template@331:
+		Id: 331
+		Images: lava13.png
+		Size: 1,1
+		Categories: Lava, Mountain
+		Tiles:
+			0: Lava
