@@ -16,7 +16,6 @@ Packages:
 	hv|bits/audio
 	hv|bits/audio/cc0
 	hv|bits/audio/graion
-	ra|uibits
 	hv|uibits
 
 MapFolders:
@@ -54,7 +53,6 @@ Cursors:
 	hv|cursor.yaml
 
 Chrome:
-	ra|chrome.yaml
 	hv|chrome.yaml
 
 Assemblies:
@@ -167,7 +165,7 @@ Fonts:
 		Size: 24
 		Ascender: 18
 	Title:
-		Font: ra|ZoodRangmah.ttf
+		Font: common|FreeSansBold.ttf
 		Size: 48
 		Ascender: 26
 
