@@ -117,12 +117,12 @@ core:
 	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:restore \;
-	ifeq ($(WIN32), $(filter $(WIN32),true yes y on 1))
-		@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration="Release-x86" \;
-	else
-		@$(MSBUILD) -t:build -p:Configuration=Release
-		@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration=Release \;
-	endif
+ifeq ($(WIN32), $(filter $(WIN32),true yes y on 1))
+	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration="Release-x86" \;
+else
+	@$(MSBUILD) -t:build -p:Configuration=Release
+	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration=Release \;
+endif
 endif
 
 all: engine-dependencies engine core
