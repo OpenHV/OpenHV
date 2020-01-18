@@ -297,19 +297,19 @@ FACTORY2:
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds Tanks.
-	Valued:
 		Cost: 1000
+	Valued:
 	Tooltip:
-		Name: Heavy Factory
 	Building:
 		Footprint: xx xx
+		Name: Heavy Factory
 		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 35000
-	Armor:
 		Type: Steel
 	RevealsShroud:
+	Armor:
 		Range: 4c768
 	RallyPoint:
 		Offset: 0,3
@@ -323,10 +323,10 @@ FACTORY2:
 	ProductionBar:
 		ProductionType: Vehicle
 	Power:
-		Amount: -150
 	ProvidesPrerequisite@buildingname:
 	WithDecoration@primary:
 		RequiresSelection: true
+		Amount: -150
 		Image: tags
 		Sequence: primary
 		ReferencePoint: Top
@@ -334,3 +334,54 @@ FACTORY2:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+
+TURRET:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		UseTargetableCellsOffsets: false
+		Bounds: 32,32
+	HitShape:
+		TargetableOffsets: 0,0,0, 430,-284,0, 430,284,0, -500,-412,0, -500,412,0
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 90
+		Prerequisites: generator
+		Description: Defence.\nRequires power to operate.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Turret
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: -100,-300,0
+	Targetable:
+	Health:
+		TargetTypes: Ground, Structure
+		HP: 5000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	ProvidesRadar:
+		RequiresCondition: disabled
+	Power:
+		Amount: -60
+		RequiresCondition: !disabled
+	ProvidesPrerequisite@buildingname:
+		Weapon: ^TurretCannon
+	Armament:
+		LocalOffset: 1200,50,0
+	AttackTurreted:
+	WithSpriteTurret:
+	WithTurretAttackAnimation:
+	Turreted:
+		Sequence: shoot
+		TurnSpeed: 30
+	RenderSprites:
+		PlayerPalette: green	

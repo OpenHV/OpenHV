@@ -59,3 +59,23 @@ SmallArtillery:
 		Falloff: 100, 55, 20, 5
 		Versus:
 			None: 60
+
+^TurretCannon:
+	Report: tankfire01.wav
+	ReloadDelay: 50
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 682
+		Image: bullet3
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 5000
+		Versus:
+			None: 30
+			Steel: 75
+			Light: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion02.wav
