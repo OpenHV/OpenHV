@@ -60,6 +60,7 @@
 	Repairable:
 		RepairActors: tradplat
 		HpPerStep: 2000
+		NearEnough: 0c768
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -276,7 +277,7 @@
 	WithSpriteBody:
 	Building:
 		Footprint: _ x
-		Dimensions: 1,1
+		Dimensions: 1,2
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Stone

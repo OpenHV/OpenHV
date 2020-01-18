@@ -51,3 +51,13 @@ rallypoint:
 
 tags:
 	primary: primary.png
+
+beacon:
+	Defaults:
+		ZOffset: 2535
+	arrow: flag.png
+		Length: 5
+		Offset: 1,-12
+	circles: null.png
+		Length: *
+		ZOffset: 2047

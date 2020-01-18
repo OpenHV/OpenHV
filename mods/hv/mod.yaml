@@ -16,7 +16,6 @@ Packages:
 	hv|bits/audio
 	hv|bits/audio/cc0
 	hv|bits/audio/graion
-	ra|uibits
 	hv|uibits
 
 MapFolders:
@@ -54,7 +53,6 @@ Cursors:
 	hv|cursor.yaml
 
 Chrome:
-	ra|chrome.yaml
 	hv|chrome.yaml
 
 Assemblies:
@@ -101,9 +99,9 @@ ChromeLayout:
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
-	ra|chrome/ingame-observer.yaml
-	ra|chrome/ingame-player.yaml
-	ra|chrome/gamesave-loading.yaml
+	hv|chrome/ingame-observer.yaml
+	hv|chrome/ingame-player.yaml
+	hv|chrome/gamesave-loading.yaml
 
 Music:
 	hv|audio/music.yaml
@@ -123,7 +121,7 @@ Hotkeys:
 	common|hotkeys/production-common.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
-	ra|hotkeys.yaml
+	hv|hotkeys.yaml
 
 LoadScreen: BlankLoadScreen
 
@@ -167,7 +165,7 @@ Fonts:
 		Size: 24
 		Ascender: 18
 	Title:
-		Font: ra|ZoodRangmah.ttf
+		Font: common|FreeSansBold.ttf
 		Size: 48
 		Ascender: 26
 
