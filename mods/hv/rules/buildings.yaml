@@ -122,7 +122,7 @@ TRADPLAT:
 	Tooltip:
 		Name: Trade Platfrom
 	Building:
-		Footprint: xx xx
+		Footprint: ++ ++
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 40,40
