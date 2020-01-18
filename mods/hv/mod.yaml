@@ -103,7 +103,7 @@ ChromeLayout:
 	common|chrome/playerprofile.yaml
 	ra|chrome/ingame-observer.yaml
 	ra|chrome/ingame-player.yaml
-	ra|chrome/gamesave-loading.yaml
+	hv|chrome/gamesave-loading.yaml
 
 Music:
 	hv|audio/music.yaml

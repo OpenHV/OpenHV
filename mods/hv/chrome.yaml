@@ -7,10 +7,11 @@
 ^Buttons:
 	Image: buttons.png
 
-^LoadScreen:
+^Logo:
 	Image: logo.png
 
-sidebar-megacorp:
+^LoadScreen:
+	Image: loadscreen.png
 	Inherits: ^Chrome
 	Regions:
 		background-top: 0, 167, 238, 290
@@ -479,9 +480,14 @@ scrollheader-selected:
 scrollitem-nohover:
 
 logos:
-	Inherits: ^LoadScreen
+	Inherits: ^Logo
 	Regions:
 		logo: 0, 0, 64, 64
+
+loadscreen-stripe:
+	Inherits: ^LoadScreen
+	Regions:
+		logo: 0, 0, 256, 256
 
 dropdown:
 	Inherits: ^Dialog
