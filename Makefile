@@ -36,6 +36,7 @@ WHITELISTED_MOD_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | 
 MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
+MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
 
 MSBUILD = msbuild -verbosity:m -nologo
 
@@ -114,7 +115,7 @@ utility: engine-dependencies engine
 
 core:
 	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
-ifneq ("$(wildcard ./*.sln)","")
+ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:restore \;
 	ifeq ($(WIN32), $(filter $(WIN32),true yes y on 1))
 		@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration="Release-x86" \;
@@ -128,7 +129,7 @@ all: engine-dependencies engine core
 
 clean: engine
 	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
-ifneq ("$(wildcard ./*.sln)","")
+ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:clean \;
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
