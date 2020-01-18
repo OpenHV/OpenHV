@@ -2466,3 +2466,59 @@ Templates:
 		Categories: Lava
 		Tiles:
 			0: Lava
+	Template@345:
+		Id: 345
+		Images: lavardest1.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@346:
+		Id: 346
+		Images: lavardest2.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@347:
+		Id: 347
+		Images: lavardest3.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@348:
+		Id: 348
+		Images: lavardest4.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@349:
+		Id: 349
+		Images: lavardest5.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@350:
+		Id: 350
+		Images: lavardest6.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@351:
+		Id: 351
+		Images: lavardest7.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@352:
+		Id: 352
+		Images: lavardest8.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
