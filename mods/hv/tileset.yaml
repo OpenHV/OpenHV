@@ -2522,3 +2522,87 @@ Templates:
 		Categories: Lava, Road
 		Tiles:
 			0: Road
+	Template@353:
+		Id: 353
+		Images: lavaroad1.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@354:
+		Id: 354
+		Images: lavaroad2.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@355:
+		Id: 355
+		Images: lavaroad3.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@356:
+		Id: 356
+		Images: lavaroad4.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@357:
+		Id: 357
+		Images: lavaroad5.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@358:
+		Id: 358
+		Images: lavaroad6.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@359:
+		Id: 359
+		Images: lavaroad7.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@360:
+		Id: 360
+		Images: lavaroad8.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@361:
+		Id: 361
+		Images: lavaroad9.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@362:
+		Id: 362
+		Images: lavaroad10.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@363:
+		Id: 363
+		Images: lavaroad11.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@364:
+		Id: 364
+		Images: lavaroad12.png
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
