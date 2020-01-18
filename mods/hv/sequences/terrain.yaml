@@ -9,3 +9,8 @@ icicle1:
 
 icicle2:
 	idle: icicle2.png
+
+lavabubl:
+	idle: lavabubl.png
+		Tick: 100
+		Length: *

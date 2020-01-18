@@ -21,3 +21,22 @@ ICICLE2:
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+
+LAVABUBL:
+	Inherits@1: ^SpriteActor
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Lava
+	AppearsOnMapPreview:
+		Terrain: Lava
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
