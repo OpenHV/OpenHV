@@ -5,3 +5,9 @@ grssmisc6:
 grssmisc7:
 	idle: grssmisc7.png
 		Offset: 0,-13
+
+icicle1:
+	idle: icicle1.png
+
+icicle2:
+	idle: icicle2.png

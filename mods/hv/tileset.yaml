@@ -2277,3 +2277,10 @@ Templates:
 		Categories: Ice, Road
 		Tiles:
 			0: Road
+	Template@318:
+		Id: 318
+		Images: icicle3.png
+		Size: 1,1
+		Categories: Ice
+		Tiles:
+			0: Stone

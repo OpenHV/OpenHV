@@ -9,3 +9,15 @@ GRSSMISC7:
 	Building:
 		Footprint: xx _x
 		Dimensions: 2,2
+
+ICICLE1:
+	Inherits: ^Rock
+	Building:
+		Footprint: __ __ xx
+		Dimensions: 2,3
+
+ICICLE2:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
