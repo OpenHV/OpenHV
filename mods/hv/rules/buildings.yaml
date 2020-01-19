@@ -337,6 +337,8 @@ FACTORY2:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
 
 FACTORY3:
 	Inherits: ^BaseBuilding
