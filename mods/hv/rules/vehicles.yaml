@@ -7,7 +7,7 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: factory3
 		BuildPaletteOrder: 20
 		Description: Can't shoot anything. #TODO: obviously
 	UpdatesPlayerStatistics:
@@ -31,7 +31,7 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: factory3
 		BuildPaletteOrder: 30
 		Description: Can transport smaller vehicles. #TODO: find a better role
 	UpdatesPlayerStatistics:
@@ -64,7 +64,7 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory2
+		Prerequisites: radar, factory3
 		BuildPaletteOrder: 50
 		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
@@ -135,7 +135,7 @@ TYRIANTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: factory3
 		BuildPaletteOrder: 40
 		Description: Tank with rotating turret.
 	UpdatesPlayerStatistics:

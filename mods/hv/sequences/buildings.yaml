@@ -75,11 +75,11 @@ starport:
 		Start: 5
 	icon: blank.png
 
-factory2:
-	idle: factory2.png
+factory3:
+	idle: factory3.png
 		Length: 11
 		Tick: 300
-	damaged-idle: factory2.png
+	damaged-idle: factory3.png
 		Start: 11
 		Length: 1
 	icon: blank.png

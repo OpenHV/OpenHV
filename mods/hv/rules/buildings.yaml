@@ -289,7 +289,7 @@ STARPORT:
 	RenderSprites:
 		PlayerPalette: green
 
-FACTORY2:
+FACTORY3:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Selectable:
