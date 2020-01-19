@@ -137,37 +137,37 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: common|FreeSans.ttf
-		Size: 10
-		Ascender: 8
-	TinyBold:
-		Font: common|FreeSansBold.ttf
-		Size: 10
-		Ascender: 8
-	Small:
-		Font: common|FreeSans.ttf
-		Size: 12
+		Font: hv|terminal-grotesque.ttf
+		Size: 11
 		Ascender: 9
+	TinyBold:
+		Font: hv|terminal-grotesque.ttf
+		Size: 11
+		Ascender: 9
+	Small:
+		Font: hv|terminal-grotesque.ttf
+		Size: 13
+		Ascender: 10
 	Regular:
-		Font: common|FreeSans.ttf
-		Size: 14
-		Ascender: 11
+		Font: hv|terminal-grotesque.ttf
+		Size: 15
+		Ascender: 12
 	Bold:
-		Font: common|FreeSansBold.ttf
-		Size: 14
-		Ascender: 11
+		Font: hv|terminal-grotesque.ttf
+		Size: 15
+		Ascender: 12
 	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size: 18
-		Ascender: 14
+		Font: hv|terminal-grotesque.ttf
+		Size: 20
+		Ascender: 15
 	BigBold:
-		Font: common|FreeSansBold.ttf
-		Size: 24
-		Ascender: 18
+		Font: hv|terminal-grotesque.ttf
+		Size: 26
+		Ascender: 20
 	Title:
-		Font: common|FreeSansBold.ttf
-		Size: 48
-		Ascender: 26
+		Font: hv|terminal-grotesque.ttf
+		Size: 52
+		Ascender: 28
 
 MapGrid:
 	TileSize: 20, 20
