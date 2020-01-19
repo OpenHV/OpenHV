@@ -315,6 +315,8 @@ FACTORY2:
 		Range: 4c768
 	RallyPoint:
 		Offset: 0,3
+		IsPlayerPalette: true
+		Palette: green
 	Exit@1:
 		SpawnOffset: 256,192,0
 		ExitCell: 0,2
@@ -362,6 +364,8 @@ FACTORY3:
 		Range: 4c768
 	RallyPoint:
 		Offset: 0,3
+		IsPlayerPalette: true
+		Palette: green
 	Exit@1:
 		SpawnOffset: 256,192,0
 		ExitCell: 0,2
