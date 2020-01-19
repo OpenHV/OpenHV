@@ -151,7 +151,7 @@ TYRIANTANK:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: ^Cannon
+		Weapon: TyrianTankCannon
 		Recoil: 50
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
