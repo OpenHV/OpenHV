@@ -10,3 +10,5 @@ Authors:
   * ccbysmgfire01.wav
 - Marvin
   * ccbyheavygunfire01.wav
+- WEL
+  * ccbysmgfire02.wav
