@@ -9,7 +9,6 @@ ModCredits:
 Packages:
 	.
 	$hv: hv
-	$ra: ra
 	./mods/common: common
 	hv|bits
 	hv|bits/terrain

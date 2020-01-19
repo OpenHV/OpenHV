@@ -213,3 +213,5 @@ World:
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
 	ResourceLayer:
+	ResourceRenderer:
+		RenderTypes: gold, iron

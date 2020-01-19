@@ -212,7 +212,7 @@ MODULE:
 
 MINER2:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^2x3Shape
 	Selectable:
 		Bounds: 40,60
 	Tooltip:
@@ -226,9 +226,11 @@ MINER2:
 		Sequence: active
 	UpdatesDerrickCount:
 	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Ore
-		AllowInvalidPlacement: true # TODO allow placement only on ressources
+		TerrainTypes: Clear, Road, Crater, Grass, Ore
+		AllowInvalidPlacement: true # TODO CanPlaceBuilding explicitly prevents placing upon tiles with resources
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
 	RevealsShroud:
