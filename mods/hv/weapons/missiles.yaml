@@ -35,6 +35,7 @@
 
 AntiGroundRocket:
 	Inherits: ^AntiGroundMissile
+	Report: rocketlaunch01.wav
 	ReloadDelay: 60
 	MinRange: 1c256
 	Burst: 4
@@ -53,6 +54,7 @@ AntiGroundRocket:
 
 AntiAirRocket:
 	Inherits: ^AntiAirMissile
+	Report: rocketlaunch01.wav
 	ReloadDelay: 60
 	MinRange: 1c256
 	Burst: 2
