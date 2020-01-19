@@ -7,6 +7,7 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 20
 		Description: Can't shoot anything. #TODO: obviously
@@ -31,6 +32,7 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
+		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 30
 		Description: Can transport smaller vehicles. #TODO: find a better role
@@ -67,6 +69,7 @@ ARTIL:
 		Prerequisites: radar, factory3
 		BuildPaletteOrder: 50
 		Description: Mobile long range weapon.
+		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -102,6 +105,8 @@ SCOUT1:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -138,6 +143,7 @@ TYRIANTANK:
 		Prerequisites: factory3
 		BuildPaletteOrder: 40
 		Description: Tank with rotating turret.
+		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -169,6 +175,8 @@ MINER:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
 		Description: Builds mining facilities.\n  Unarmed
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
 	Valued:
 		Cost: 1100
 	Tooltip:

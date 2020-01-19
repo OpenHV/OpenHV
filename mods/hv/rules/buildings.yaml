@@ -289,6 +289,53 @@ STARPORT:
 	RenderSprites:
 		PlayerPalette: green
 
+FACTORY2:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Prerequisites: base
+		Queue: Building
+		BuildPaletteOrder: 90
+		Description: Builds Vehicles.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Light Factory
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 35000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c768
+	RallyPoint:
+		Offset: 0,3
+	Exit@1:
+		SpawnOffset: 256,192,0
+		ExitCell: 0,2
+		ProductionTypes: Wheeled, Vehicle
+	Production:
+		Produces: Wheeled, Vehicle
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
+		ProductionType: Vehicle
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+
 FACTORY3:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
@@ -318,12 +365,13 @@ FACTORY3:
 	Exit@1:
 		SpawnOffset: 256,192,0
 		ExitCell: 0,2
+		ProductionTypes: Tracked, Vehicle
 	Production:
-		Produces: Vehicle
+		Produces: Tracked, Vehicle
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
-		ProductionType: Vehicle
+		ProductionType: Infantry
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
