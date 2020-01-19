@@ -378,6 +378,7 @@ TURRET:
 	ProvidesPrerequisite@buildingname:
 		Weapon: ^TurretCannon
 	Armament:
+		Weapon: TurretCannon
 		LocalOffset: 1200,50,0
 	AttackTurreted:
 	WithSpriteTurret:
@@ -386,4 +387,4 @@ TURRET:
 		Sequence: shoot
 		TurnSpeed: 30
 	#RenderSprites:
-	#	PlayerPalette: gree
+	#	PlayerPalette: green

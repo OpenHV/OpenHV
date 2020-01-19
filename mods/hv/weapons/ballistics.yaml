@@ -60,7 +60,7 @@ SmallArtillery:
 		Versus:
 			None: 60
 
-^TurretCannon:
+TurretCannon:
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 8c0
