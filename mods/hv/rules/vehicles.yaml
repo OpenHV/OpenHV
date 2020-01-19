@@ -5,6 +5,11 @@ TANK5:
 	Tooltip:
 		Name: Light Tank
 		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory2
+		BuildPaletteOrder: 20
+		Description: Can't shoot anything. #TODO: obviously
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -24,6 +29,11 @@ TRANSPRT:
 		Cost: 850
 	Tooltip:
 		Name: Transport Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory2
+		BuildPaletteOrder: 30
+		Description: Can transport smaller vehicles. #TODO: find a better role
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -52,6 +62,11 @@ ARTIL:
 		Cost: 850
 	Tooltip:
 		Name: Artillery
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: radar, factory2
+		BuildPaletteOrder: 50
+		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -118,6 +133,11 @@ TYRIANTANK:
 	Tooltip:
 		Name: Heavy Tank
 		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory2
+		BuildPaletteOrder: 40
+		Description: Tank with rotating turret.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -131,7 +151,7 @@ TYRIANTANK:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: ^Cannon
+		Weapon: TyrianTankCannon
 		Recoil: 50
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle

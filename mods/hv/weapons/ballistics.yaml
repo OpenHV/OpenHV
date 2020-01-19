@@ -18,6 +18,13 @@
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 
+TyrianTankCannon:
+	Inherits: ^Cannon
+	ReloadDelay: 70
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			Heavy: 115
+
 ^Artillery:
 	Inherits: ^Cannon
 	Report: howitzerfire01.wav
