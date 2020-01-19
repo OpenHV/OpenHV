@@ -28,9 +28,11 @@ BASE:
 	Buildable:
 		Description: Builds structures
 	Production:
-		Produces: Building
+		Produces: Building, Defense
 	ProductionBar@Building:
 		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
 	RenderSprites:
 		PlayerPalette: green
 
@@ -390,3 +392,50 @@ FACTORY3:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+
+TURRET:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 32,32
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: generator
+		Description: Base defense.\nRequires power to operate.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Turret
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: -100,100,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 10000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	Power:
+		Amount: -60
+	ProvidesPrerequisite@buildingname:
+	Armament:
+		Weapon: TurretCannon
+		LocalOffset: 1200,50,0
+	AttackTurreted:
+		PauseOnCondition: disabled
+	WithSpriteTurret:
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 30
