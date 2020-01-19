@@ -15,6 +15,7 @@ Packages:
 	hv|bits/terrain
 	hv|bits/audio
 	hv|bits/audio/cc0
+	hv|bits/audio/cc-by-30
 	hv|bits/audio/graion
 	hv|uibits
 
