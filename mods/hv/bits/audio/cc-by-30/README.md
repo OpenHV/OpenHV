@@ -10,5 +10,7 @@ Authors:
   * ccbysmgfire01.wav
 - Marvin
   * ccbyheavygunfire01.wav
+- Mike Koenig
+  * ccbylaserfire01.wav
 - WEL
   * ccbysmgfire02.wav
