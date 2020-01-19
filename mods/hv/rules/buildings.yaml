@@ -439,3 +439,5 @@ TURRET:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 30
+	RenderSprites:
+		PlayerPalette: green
