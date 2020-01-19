@@ -12,5 +12,6 @@ Authors:
   * ccbyheavygunfire01.wav
 - Mike Koenig
   * ccbylaserfire01.wav
+  * ccbymissilelaunch01.wav
 - WEL
   * ccbysmgfire02.wav
