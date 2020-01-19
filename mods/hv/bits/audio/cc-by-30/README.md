@@ -8,3 +8,5 @@ Authors:
   * ccbygrenadelaunch01.wav
 - GunGuru
   * ccbysmgfire01.wav
+- Marvin
+  * ccbyheavygunfire01.wav
