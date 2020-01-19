@@ -4,5 +4,7 @@ See the individual commits for source links.
 
 Authors:
 
+- Daniel Simon
+  * ccbygrenadelaunch01.wav
 - GunGuru
   * ccbysmgfire01.wav
