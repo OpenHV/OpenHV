@@ -1,0 +1,70 @@
+^AntiGroundMissile:
+	ReloadDelay: 50
+	Range: 5c0
+	MinRange: 0c512
+	Projectile: Missile
+		Speed: 213
+		Arm: 2
+		Blockable: false
+		ContrailLength: 10
+		Inaccuracy: 128
+		Image: bullet6
+		Shadow: true
+		HorizontalRateOfTurn: 5
+		RangeLimit: 6c0
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 5000
+		ValidTargets: Ground, Water, Air
+		Versus:
+			None: 10
+			Steel: 74
+			Light: 34
+			Heavy: 100
+			Concrete: 50
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Trees
+
+^AntiAirMissile:
+	Inherits: ^AntiGroundMissile
+	ValidTargets: Air
+	Warhead@Effect: CreateEffect
+		ImpactActors: false
+
+AntiGroundRocket:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 60
+	MinRange: 1c256
+	Burst: 4
+	BurstDelays: 14
+	Projectile: Missile
+		Speed: 256
+		HorizontalRateOfTurn: 10
+		RangeLimit: 8c512
+	Warhead@1Dam: SpreadDamage
+		Damage: 6000
+		Versus:
+			None: 30
+			Steel: 90
+			Light: 90
+			Concrete: 100
+
+AntiAirRocket:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 60
+	MinRange: 1c256
+	Burst: 2
+	BurstDelays: 10
+	Projectile: Missile
+		Speed: 384
+		Inaccuracy: 128
+		HorizontalRateOfTurn: 10
+		RangeLimit: 7c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+		ValidTargets: Air
+		Versus:
+			Steel: 75
+			Light: 75

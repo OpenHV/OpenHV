@@ -44,6 +44,7 @@ Weapons:
 	hv|weapons/explosions.yaml
 	hv|weapons/ballistics.yaml
 	hv|weapons/firearms.yaml
+	hv|weapons/missiles.yaml
 
 TileSets:
 	hv|tileset.yaml

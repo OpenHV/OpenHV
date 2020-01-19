@@ -10,7 +10,12 @@ TANK5:
 		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 20
-		Description: Can't shoot anything. #TODO: obviously
+		Description: Shoots rockets.
+	Armament@PRIMARY:
+		Weapon: AntiAirRocket
+	Armament@SECONDARY:
+		Weapon: AntiGroundRocket
+	AttackFrontal:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
