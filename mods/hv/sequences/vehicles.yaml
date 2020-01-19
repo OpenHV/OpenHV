@@ -1,10 +1,12 @@
 tank5:
 	idle: tank5.png
 		Facings: 8
+	icon: blank.png
 
 transprt:
 	idle: transprt.png
 		Facings: 8
+	icon: blank.png
 
 artil:
 	idle: artil.png
@@ -13,6 +15,7 @@ artil:
 		Length: 3
 		Facings: 8
 		Tick: 100
+	icon: blank.png
 
 scout1:
 	idle: scout1.png
@@ -20,6 +23,7 @@ scout1:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
+	icon: blank.png
 
 tyriantank:
 	idle: tyriantank.png
@@ -31,7 +35,9 @@ tyriantank:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
+	icon: blank.png
 
 miner:
 	idle: miner.png
 		Facings: 8
+	icon: blank.png

@@ -74,3 +74,12 @@ starport:
 	damaged-active: starport2.png
 		Start: 5
 	icon: blank.png
+
+factory2:
+	idle: factory2.png
+		Length: 11
+		Tick: 300
+	damaged-idle: factory2.png
+		Start: 11
+		Length: 1
+	icon: blank.png
