@@ -2606,3 +2606,94 @@ Templates:
 		Categories: Lava, Road
 		Tiles:
 			0: Road
+	Template@365:
+		Id: 365
+		Images: mnt2crtb1.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Mountain
+	Template@366:
+		Id: 366
+		Images: mnt2crtb2.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
+	Template@367:
+		Id: 367
+		Images: mnt2crtb3.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Mountain
+	Template@368:
+		Id: 368
+		Images: mnt2crtb4.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
+	Template@369:
+		Id: 369
+		Images: mnt2crtb5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@370:
+		Id: 370
+		Images: mnt2crtb6.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
+	Template@371:
+		Id: 371
+		Images: mnt2crtb7.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
+	Template@372:
+		Id: 372
+		Images: mnt2crtb8.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
+	Template@373:
+		Id: 373
+		Images: mnt2crtb9.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Mountain
+	Template@374:
+		Id: 374
+		Images: mnt2crtb10.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Mountain
+	Template@375:
+		Id: 375
+		Images: mnt2crtb11.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Mountain
+	Template@376:
+		Id: 376
+		Images: mnt2crtb12.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
+	Template@377:
+		Id: 377
+		Images: mnt2crtb13.png
+		Size: 1,1
+		Categories: Mountain, Crater
+		Tiles:
+			0: Crater
