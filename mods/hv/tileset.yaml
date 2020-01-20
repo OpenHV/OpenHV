@@ -2697,3 +2697,59 @@ Templates:
 		Categories: Mountain, Crater
 		Tiles:
 			0: Crater
+	Template@378:
+		Id: 378
+		Images: mnt2crtc1.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@379:
+		Id: 379
+		Images: mnt2crtc2.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@380:
+		Id: 380
+		Images: mnt2crtc3.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@381:
+		Id: 381
+		Images: mnt2crtc4.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@382:
+		Id: 382
+		Images: mnt2crtc5.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@383:
+		Id: 383
+		Images: mnt2crtc6.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@384:
+		Id: 384
+		Images: mnt2crtc7.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@385:
+		Id: 385
+		Images: mnt2crtc8.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
