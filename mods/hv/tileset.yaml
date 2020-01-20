@@ -2753,3 +2753,101 @@ Templates:
 		Categories: Mountain, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@386:
+		Id: 386
+		Images: mnt2crtr1.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@387:
+		Id: 387
+		Images: mnt2crtr2.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@388:
+		Id: 388
+		Images: mnt2crtr3.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@389:
+		Id: 389
+		Images: mnt2crtr4.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Mountain
+	Template@390:
+		Id: 390
+		Images: mnt2crtr5.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@391:
+		Id: 391
+		Images: mnt2crtr6.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Crater
+	Template@392:
+		Id: 392
+		Images: mnt2crtr7.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@393:
+		Id: 393
+		Images: mnt2crtr8.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@394:
+		Id: 394
+		Images: mnt2crtr9.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@395:
+		Id: 395
+		Images: mnt2crtr10.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@396:
+		Id: 396
+		Images: mnt2crtr11.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@397:
+		Id: 397
+		Images: mnt2crtr12.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@398:
+		Id: 398
+		Images: mnt2crtr13.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@399:
+		Id: 399
+		Images: mnt2crtr14.png
+		Size: 1,1
+		Categories: Mountain, Crater, Cliff
+		Tiles:
+			0: Cliff
