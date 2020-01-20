@@ -1,3 +1,6 @@
+cave:
+	idle: cave.png
+
 grssmisc6:
 	idle: grssmisc6.png
 

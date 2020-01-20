@@ -1,3 +1,9 @@
+CAVE:
+	Inherits: ^Rock
+	Building:
+		Footprint: ==== ==== xxxx xxxx xxxx
+		Dimensions: 4,5
+
 GRSSMISC6:
 	Inherits: ^Rock
 	Building:
