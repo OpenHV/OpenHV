@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone, Ice, Snow
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone, Ice, Snow, Sand
 
 Terrain:
 	TerrainType@Clear:
@@ -49,6 +49,10 @@ Terrain:
 		Type: Snow
 		TargetTypes: Ground
 		Color: B0C0D0
+	TerrainType@Sand:
+		Type: Sand
+		TargetTypes: Ground
+		Color: D0A090
 
 Templates:
 	Template@0:
@@ -2949,3 +2953,87 @@ Templates:
 		Categories: Mountain, Lava, Cliff
 		Tiles:
 			0: Lava
+	Template@414:
+		Id: 414
+		Images: mnt2sand1.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Mountain
+	Template@415:
+		Id: 415
+		Images: mnt2sand2.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Mountain
+	Template@416:
+		Id: 416
+		Images: mnt2sand3.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Mountain
+	Template@417:
+		Id: 417
+		Images: mnt2sand4.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
+	Template@418:
+		Id: 418
+		Images: mnt2sand5.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
+	Template@419:
+		Id: 419
+		Images: mnt2sand6.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
+	Template@420:
+		Id: 420
+		Images: mnt2sand7.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
+	Template@421:
+		Id: 421
+		Images: mnt2sand8.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Mountain
+	Template@422:
+		Id: 422
+		Images: mnt2sand9.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
+	Template@423:
+		Id: 423
+		Images: mnt2sand10.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Mountain
+	Template@424:
+		Id: 424
+		Images: mnt2sand11.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
+	Template@425:
+		Id: 425
+		Images: mnt2sand12.png
+		Size: 1,1
+		Categories: Mountain, Sand
+		Tiles:
+			0: Sand
