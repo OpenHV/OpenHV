@@ -2851,3 +2851,101 @@ Templates:
 		Categories: Mountain, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@400:
+		Id: 400
+		Images: mnt2lava1.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Mountain
+	Template@401:
+		Id: 401
+		Images: mnt2lava2.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@402:
+		Id: 402
+		Images: mnt2lava3.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Mountain
+	Template@403:
+		Id: 403
+		Images: mnt2lava4.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Mountain
+	Template@404:
+		Id: 404
+		Images: mnt2lava5.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Lava
+	Template@405:
+		Id: 405
+		Images: mnt2lava6.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@406:
+		Id: 406
+		Images: mnt2lava7.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@407:
+		Id: 407
+		Images: mnt2lava8.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Lava
+	Template@408:
+		Id: 408
+		Images: mnt2lava9.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Lava
+	Template@409:
+		Id: 409
+		Images: mnt2lava10.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@410:
+		Id: 410
+		Images: mnt2lava11.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Lava
+	Template@411:
+		Id: 411
+		Images: mnt2lava12.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Mountain
+	Template@412:
+		Id: 412
+		Images: mnt2lava13.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Lava
+	Template@413:
+		Id: 413
+		Images: mnt2lava14.png
+		Size: 1,1
+		Categories: Mountain, Lava, Cliff
+		Tiles:
+			0: Lava
