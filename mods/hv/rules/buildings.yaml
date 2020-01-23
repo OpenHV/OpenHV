@@ -441,3 +441,46 @@ TURRET:
 		TurnSpeed: 30
 	RenderSprites:
 		PlayerPalette: green
+
+FIELD:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 130
+		Prerequisites: generator
+		BuildLimit: 1
+		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\nRequires power to operate.\nMaximum 1 can be built.
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Force Field Generator
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 40,40
+	SelectionDecorations:
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+	GrantExternalConditionPower@FORCEFIELD:
+		PauseOnCondition: disabled
+		ChargeInterval: 3000
+		Description: Force Field
+		LongDesc: Makes a group of units invulnerable\nfor 30 seconds.
+		Duration: 750
+		Range: 3
+		DisplayRadarPing: True
+		Condition: shield
+		SupportPowerPaletteOrder: 10
+		Icon: shield
+	SupportPowerChargeBar:
+	Power:
+		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: false

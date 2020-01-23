@@ -167,6 +167,13 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
+	PaletteFromRGBA@shield:
+		Name: shield
+		R: 0
+		G: 0
+		B: 128
+		A: 128
+		TransparentIndex: 255
 	ShroudRenderer:
 		ShroudVariants: fow
 		FogVariants: fow

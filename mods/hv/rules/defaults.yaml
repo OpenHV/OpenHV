@@ -37,6 +37,7 @@
 	Inherits@2: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -95,6 +96,7 @@
 	Inherits@4: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -288,3 +290,15 @@
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+^ForceFieldCompatible:
+	WithColoredOverlay@FORCEFIELD:
+		RequiresCondition: shield
+		Palette: shield
+	DamageMultiplier@FORCEFIELD:
+		RequiresCondition: shield
+		Modifier: 0
+	TimedConditionBar:
+		Condition: shield
+	ExternalCondition@FORCEFIELD:
+		Condition: shield

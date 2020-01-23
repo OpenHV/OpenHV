@@ -61,3 +61,6 @@ beacon:
 	circles: null.png
 		Length: *
 		ZOffset: 2047
+
+icon:
+	shield: blank.png

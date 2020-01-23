@@ -105,3 +105,14 @@ turret:
 		Start: 10
 		Facings: 8
 	icon: blank.png
+
+field:
+	idle: field.png
+	active: field.png
+		Length: 5
+		Tick: 300
+	damaged-idle: field.png
+		Start: 5
+	damaged-active: field.png
+		Start: 5
+	icon: blank.png
