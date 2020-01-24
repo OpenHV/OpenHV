@@ -3037,3 +3037,101 @@ Templates:
 		Categories: Mountain, Sand
 		Tiles:
 			0: Sand
+	Template@426:
+		Id: 426
+		Images: mnt2watr1.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Mountain
+	Template@427:
+		Id: 427
+		Images: mnt2watr2.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@428:
+		Id: 428
+		Images: mnt2watr3.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Mountain
+	Template@429:
+		Id: 429
+		Images: mnt2watr4.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@430:
+		Id: 430
+		Images: mnt2watr5.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Water
+	Template@431:
+		Id: 431
+		Images: mnt2watr6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@432:
+		Id: 432
+		Images: mnt2watr7.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@433:
+		Id: 433
+		Images: mnt2watr8.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Water
+	Template@434:
+		Id: 434
+		Images: mnt2watr9.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Water
+	Template@435:
+		Id: 435
+		Images: mnt2watr10.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@436:
+		Id: 436
+		Images: mnt2watr11.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@437:
+		Id: 437
+		Images: mnt2watr12.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Cliff
+	Template@438:
+		Id: 438
+		Images: mnt2watr13.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Water
+	Template@439:
+		Id: 439
+		Images: mnt2watr14.png
+		Size: 1,1
+		Categories: Mountain, Water, Cliff
+		Tiles:
+			0: Water
