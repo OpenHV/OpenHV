@@ -563,3 +563,5 @@ STORAGE:
 		Sequence: stages
 	Power:
 		Amount: -10
+	RenderSprites:
+		PlayerPalette: green
