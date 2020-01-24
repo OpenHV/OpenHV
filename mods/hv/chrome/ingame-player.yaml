@@ -449,7 +449,7 @@ Container@PLAYER_WIDGETS:
 							ImageName: background-bottom
 				LogicTicker@PRODUCTION_TICKER:
 				ProductionPalette@PRODUCTION_PALETTE:
-					X: 42
+					X: 50
 					Y: 1
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
