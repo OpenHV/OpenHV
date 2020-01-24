@@ -140,4 +140,5 @@ artilleryturret:
 	shoot: artilery2.png
 		Start: 10
 		Facings: 8
+		Tick: 300
 	icon: blank.png
