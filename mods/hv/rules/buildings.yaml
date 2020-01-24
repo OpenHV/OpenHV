@@ -563,5 +563,52 @@ STORAGE:
 		Sequence: stages
 	Power:
 		Amount: -10
+
+ARTILLERYTURRET:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 32,32
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0 #TODO Adjust that
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: generator
+		Description: Advanced base defense.\nRequires power to operate.
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Artillery Turret
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: -70,-750,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 15000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	Power:
+		Amount: -120
+	ProvidesPrerequisite@buildingname:
+	Armament:
+		Weapon: TurretArtillery
+		LocalOffset: 1700,0,100 #TODO Adjust that
+	AttackTurreted:
+		PauseOnCondition: disabled
+	WithSpriteTurret:
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 15
 	RenderSprites:
 		PlayerPalette: green

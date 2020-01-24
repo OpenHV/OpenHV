@@ -128,3 +128,16 @@ storage:
 	damaged-stages: storage.png
 		Start: 14
 	icon: blank.png
+
+artilleryturret:
+	idle: artilery2.png
+		Start: 0
+	damaged-idle: artilery2.png
+		Start: 1
+	turret: artilery2.png
+		Start: 2
+		Facings: 8
+	shoot: artilery2.png
+		Start: 10
+		Facings: 8
+	icon: blank.png
