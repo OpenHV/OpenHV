@@ -128,3 +128,27 @@ Nuclear:
 		ValidTargets: Ground, Air
 		Versus:
 			Concrete: 25
+
+TurretArtillery:
+	Report: heavycannonfire01.wav
+	ReloadDelay: 200
+	MinRange: 5c0
+	Range: 20c0
+	Projectile: Bullet
+		Speed: 204
+		Blockable: false
+		LaunchAngle: 100
+		Inaccuracy: 2c0
+		Image: bullet2
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		Spread: 426
+		Damage: 30000
+		Versus:
+			None: 90
+			Steel: 40
+			Light: 60
+			Heavy: 25
+	Warhead@Effect: CreateEffect
+		Explosions: large
+		ImpactSounds: explosion07.wav, explosion08.wav
