@@ -172,9 +172,9 @@ stance-icons:
 sidebar-observer:
 	Inherits: ^Chrome
 	Regions:
-		background: 512, 167, 238, 287
-		replay-bottom: 512, 454, 238, 40
-		observer-bottom: 512, 495, 238, 8
+		background: 438, 128, 244, 288
+		replay-bottom: 438, 459, 244, 7
+		observer-bottom: 438, 459, 244, 7
 
 sidebar-button-observershroud:
 sidebar-button-observershroud-pressed:
