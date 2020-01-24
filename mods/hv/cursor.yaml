@@ -123,6 +123,14 @@ Cursors:
 			Start: 0
 			X: 0
 			Y: 0
+		ability:
+			Start: 0
+			X: 0
+			Y: 0
+		ability-minimap:
+			Start: 0
+			X: 0
+			Y: 0
 	cursor.png: cursor
 		harvest:
 			Start: 0
@@ -161,14 +169,6 @@ Cursors:
 			X: 0
 			Y: 0
 		capture-minimap:
-			Start: 0
-			X: 0
-			Y: 0
-		ability:
-			Start: 0
-			X: 0
-			Y: 0
-		ability-minimap:
 			Start: 0
 			X: 0
 			Y: 0

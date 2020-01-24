@@ -79,3 +79,52 @@ TurretCannon:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion02.wav
+
+Nuclear:
+	ValidTargets: Ground, Air
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c0
+		Damage: 15000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		Versus:
+			Steel: 25
+			Concrete: 25
+	Warhead@DamageArea1: SpreadDamage
+		Spread: 2c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 5
+		ValidTargets: Ground, Air
+		Versus:
+			Steel: 25
+			Concrete: 25
+	Warhead@EffectArea1: CreateEffect
+		ImpactSounds: explosion07.wav
+		Delay: 5
+		ImpactActors: false
+	Warhead@DamageArea2: SpreadDamage
+		Spread: 3c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 10
+		ValidTargets: Ground, Air
+		Versus:
+			Steel: 50
+			Concrete: 25
+	Warhead@DamageArea3: SpreadDamage
+		Spread: 4c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 15
+		ValidTargets: Ground, Air
+		Versus:
+			Concrete: 25
+	Warhead@DamageArea4: SpreadDamage
+		Spread: 5c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 20
+		ValidTargets: Ground, Air
+		Versus:
+			Concrete: 25

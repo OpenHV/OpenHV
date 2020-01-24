@@ -174,6 +174,8 @@
 		B: 128
 		A: 128
 		TransparentIndex: 255
+	FlashPaletteEffect@nuke:
+		Type: Nuke
 	ShroudRenderer:
 		ShroudVariants: fow
 		FogVariants: fow

@@ -116,3 +116,7 @@ field:
 	damaged-active: field.png
 		Start: 5
 	icon: blank.png
+
+silo:
+	idle: silo.png
+	icon: blank.png

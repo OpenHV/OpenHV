@@ -22,7 +22,7 @@ bullet2:
 bullet3:
 	idle: bullets.png
 		Start: 16
-		Facings: 8		
+		Facings: 8
 		ZOffset: 1023
 
 bullet4:
@@ -41,4 +41,12 @@ bullet6:
 	idle: bullets.png
 		Start: 40
 		Facings: 8
+		ZOffset: 1023
+
+nuclear:
+	up: bullets.png
+		Start: 40
+		ZOffset: 1023
+	down: bullets.png
+		Start: 44
 		ZOffset: 1023
