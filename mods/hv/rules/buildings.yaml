@@ -531,3 +531,35 @@ SILO:
 		Amount: -150
 	MustBeDestroyed:
 		RequiredForShortGame: false
+
+STORAGE:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 35
+		Description: Stores excess refined\ngold and iron.
+	Valued:
+		Cost: 300
+	Targetable:
+		TargetTypes: Ground, Structure
+	Tooltip:
+		Name: Storage
+	-GivesBuildableArea:
+	-MustBeDestroyed:
+	Health:
+		HP: 30000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	StoresResources:
+		PipCount: 4
+		Capacity: 4000
+	-WithSpriteBody:
+	WithResourceLevelSpriteBody:
+		Sequence: stages
+	Power:
+		Amount: -10

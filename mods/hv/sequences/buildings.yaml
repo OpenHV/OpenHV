@@ -120,3 +120,11 @@ field:
 silo:
 	idle: silo.png
 	icon: blank.png
+
+storage:
+	idle: storage.png
+	stages: storage.png
+		Length: 14
+	damaged-stages: storage.png
+		Start: 14
+	icon: blank.png
