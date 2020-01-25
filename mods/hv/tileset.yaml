@@ -3618,3 +3618,192 @@ Templates:
 		Categories: Mountain, Cliff
 		Tiles:
 			0: Cliff
+	Template@508:
+		Id: 508
+		Images: road1.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@509:
+		Id: 509
+		Images: road2.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@510:
+		Id: 510
+		Images: road3.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@511:
+		Id: 511
+		Images: road4.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@512:
+		Id: 512
+		Images: road5.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@513:
+		Id: 513
+		Images: road6.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@514:
+		Id: 514
+		Images: road7.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@515:
+		Id: 515
+		Images: road8.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@516:
+		Id: 516
+		Images: road9.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@517:
+		Id: 517
+		Images: road10.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@518:
+		Id: 518
+		Images: road11.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@519:
+		Id: 519
+		Images: road12.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@520:
+		Id: 520
+		Images: road13.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@521:
+		Id: 521
+		Images: road14.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@522:
+		Id: 522
+		Images: road15.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@523:
+		Id: 523
+		Images: road16.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@524:
+		Id: 524
+		Images: road17.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@525:
+		Id: 525
+		Images: road18.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@526:
+		Id: 526
+		Images: road19.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@527:
+		Id: 527
+		Images: road20.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@528:
+		Id: 528
+		Images: road21.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@529:
+		Id: 529
+		Images: road22.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@530:
+		Id: 530
+		Images: road23.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@531:
+		Id: 531
+		Images: road24.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@532:
+		Id: 532
+		Images: road24.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@533:
+		Id: 533
+		Images: road25.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@534:
+		Id: 534
+		Images: road26.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
