@@ -3345,3 +3345,185 @@ Templates:
 		Categories: Mountain, Road
 		Tiles:
 			0: Road
+	Template@469:
+		Id: 469
+		Images: mntroad1.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@470:
+		Id: 470
+		Images: mntroad2.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@471:
+		Id: 471
+		Images: mntroad3.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@472:
+		Id: 472
+		Images: mntroad4.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@473:
+		Id: 473
+		Images: mntroad5.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@474:
+		Id: 474
+		Images: mntroad6.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@475:
+		Id: 475
+		Images: mntroad7.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@476:
+		Id: 476
+		Images: mntroad8.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@477:
+		Id: 477
+		Images: mntroad9.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@478:
+		Id: 478
+		Images: mntroad10.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@479:
+		Id: 479
+		Images: mntroad11.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@480:
+		Id: 480
+		Images: mntroad12.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@481:
+		Id: 481
+		Images: mntroad13.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@482:
+		Id: 482
+		Images: mntroad14.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@483:
+		Id: 483
+		Images: mntroad15.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@484:
+		Id: 484
+		Images: mntroad16.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@485:
+		Id: 485
+		Images: mntroad17.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@486:
+		Id: 486
+		Images: mntroad18.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@487:
+		Id: 487
+		Images: mntroad19.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@488:
+		Id: 488
+		Images: mntroad20.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@489:
+		Id: 489
+		Images: mntroad21.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@490:
+		Id: 490
+		Images: mntroad22.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@491:
+		Id: 491
+		Images: mntroad23.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@492:
+		Id: 492
+		Images: mntroad24.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@493:
+		Id: 493
+		Images: mntroad25.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@494:
+		Id: 494
+		Images: mntroad26.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
