@@ -3527,3 +3527,94 @@ Templates:
 		Categories: Mountain, Road
 		Tiles:
 			0: Road
+	Template@495:
+		Id: 495
+		Images: mountains1.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@496:
+		Id: 496
+		Images: mountains2.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@497:
+		Id: 497
+		Images: mountains3.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@498:
+		Id: 498
+		Images: mountains4.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@499:
+		Id: 499
+		Images: mountains5.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@500:
+		Id: 500
+		Images: mountains6.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@501:
+		Id: 501
+		Images: mountains7.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@502:
+		Id: 502
+		Images: mountains8.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@503:
+		Id: 503
+		Images: mountains9.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@504:
+		Id: 504
+		Images: mountains10.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@505:
+		Id: 505
+		Images: mountains11.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@506:
+		Id: 506
+		Images: mountains12.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@507:
+		Id: 507
+		Images: mountains13.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
