@@ -3289,3 +3289,59 @@ Templates:
 			1: Stone
 			2: Stone
 			3: Stone
+	Template@461:
+		Id: 461
+		Images: mntrdst1.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@462:
+		Id: 462
+		Images: mntrdst2.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@463:
+		Id: 463
+		Images: mntrdst3.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@464:
+		Id: 464
+		Images: mntrdst4.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@465:
+		Id: 465
+		Images: mntrdst5.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@466:
+		Id: 466
+		Images: mntrdst6.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@467:
+		Id: 467
+		Images: mntrdst7.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
+	Template@468:
+		Id: 468
+		Images: mntrdst8.png
+		Size: 1,1
+		Categories: Mountain, Road
+		Tiles:
+			0: Road
