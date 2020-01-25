@@ -20,9 +20,10 @@ artil:
 scout1:
 	idle: scout1.png
 		Facings: 8
-	muzzle: muzzle.png
-		Length: 8
+	muzzle: muzzle2.png
+		Length: 3
 		Facings: 8
+		Tick: 50
 	icon: blank.png
 
 tyriantank:

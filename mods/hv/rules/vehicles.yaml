@@ -130,7 +130,7 @@ SCOUT1:
 	Armament:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
-		LocalOffset: 128,0,43 # TODO: to be adjusted
+		LocalOffset: 0,0,0 # TODO: to be adjusted
 	AttackFrontal:
 	WithMuzzleOverlay:
 	RenderSprites:
