@@ -3135,3 +3135,94 @@ Templates:
 		Categories: Mountain, Water, Cliff
 		Tiles:
 			0: Water
+	Template@440:
+		Id: 440
+		Images: mntcliff1.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@441:
+		Id: 441
+		Images: mntcliff2.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@442:
+		Id: 442
+		Images: mntcliff3.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@443:
+		Id: 443
+		Images: mntcliff4.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@444:
+		Id: 444
+		Images: mntcliff5.png
+		Size: 1,1
+		Categories: Mountain
+		Tiles:
+			0: Mountain
+	Template@445:
+		Id: 445
+		Images: mntcliff6.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@446:
+		Id: 446
+		Images: mntcliff7.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@447:
+		Id: 447
+		Images: mntcliff8.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@448:
+		Id: 448
+		Images: mntcliff9.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@449:
+		Id: 449
+		Images: mntcliff10.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@450:
+		Id: 450
+		Images: mntcliff11.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@451:
+		Id: 451
+		Images: mntcliff12.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
+	Template@452:
+		Id: 452
+		Images: mntcliff13.png
+		Size: 1,1
+		Categories: Mountain, Cliff
+		Tiles:
+			0: Cliff
