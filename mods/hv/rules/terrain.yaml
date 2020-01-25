@@ -46,3 +46,15 @@ LAVABUBL:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+MNTMISC8:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+MNTMISC9:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1

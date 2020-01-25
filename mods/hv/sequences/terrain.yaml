@@ -17,3 +17,9 @@ lavabubl:
 	idle: lavabubl.png
 		Tick: 100
 		Length: *
+
+mntmisc8:
+	idle: mntmisc8.png
+
+mntmisc9:
+	idle: mntmisc9.png
