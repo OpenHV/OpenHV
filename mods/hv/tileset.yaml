@@ -4192,3 +4192,24 @@ Templates:
 		Categories: Sand, Lava
 		Tiles:
 			0: Cliff
+	Template@590:
+		Id: 590
+		Images: sandcrtr1.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@591:
+		Id: 591
+		Images: sandcrtr2.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@592:
+		Id: 592
+		Images: sandcrtr3.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
