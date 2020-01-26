@@ -4094,3 +4094,101 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Cliff
+	Template@576:
+		Id: 576
+		Images: sand2lav1.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@577:
+		Id: 577
+		Images: sand2lav2.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@578:
+		Id: 578
+		Images: sand2lav3.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@579:
+		Id: 579
+		Images: sand2lav4.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@580:
+		Id: 580
+		Images: sand2lav5.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@581:
+		Id: 581
+		Images: sand2lav6.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@582:
+		Id: 582
+		Images: sand2lav7.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@583:
+		Id: 583
+		Images: sand2lav8.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@584:
+		Id: 584
+		Images: sand2lav9.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@585:
+		Id: 585
+		Images: sand2lav10.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@586:
+		Id: 586
+		Images: sand2lav11.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@587:
+		Id: 587
+		Images: sand2lav12.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@588:
+		Id: 588
+		Images: sand2lav13.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@589:
+		Id: 589
+		Images: sand2lav14.png
+		Size: 1,1
+		Categories: Sand, Lava
+		Tiles:
+			0: Cliff
