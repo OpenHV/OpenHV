@@ -3807,3 +3807,87 @@ Templates:
 		Categories: Road
 		Tiles:
 			0: Road
+	Template@535:
+		Id: 535
+		Images: roaddest1.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@536:
+		Id: 536
+		Images: roaddest2.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@537:
+		Id: 537
+		Images: roaddest3.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@538:
+		Id: 538
+		Images: roaddest4.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@539:
+		Id: 539
+		Images: roaddest5.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@540:
+		Id: 540
+		Images: roaddest6.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@541:
+		Id: 541
+		Images: roaddest7.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@542:
+		Id: 542
+		Images: roaddest8.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@543:
+		Id: 543
+		Images: roaddest9.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@544:
+		Id: 544
+		Images: roaddest10.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@545:
+		Id: 545
+		Images: roaddest11.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@546:
+		Id: 546
+		Images: roaddest12.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
