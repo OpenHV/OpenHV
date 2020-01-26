@@ -6,6 +6,8 @@ base:
 	idle: base.png
 		Length: 3
 		Tick: 300
+	idle-overlay: base-shadow.png
+		ZOffset: -2000
 	damaged-idle: base.png
 		Start: 7
 		Length: 1
@@ -18,25 +20,40 @@ generator:
 	idle: generator.png
 		Length: 15
 		Tick: 300
+	idle-overlay: generator-shadow.png
+		ZOffset: -2000
 	damaged-idle: generator.png
 		Start: 15
 		Length: 1
+	damaged-idle-overlay: generator-shadow.png
+		Start: 1
+		ZOffset: -2000
 	icon: blank.png
 
 radar:
 	idle: radar.png
+	idle-overlay: radar-shadow.png
+		ZOffset: -2000
 	damaged-idle: radar.png
 		Start: 1
+	damaged-idle-overlay: radar-shadow.png
+		Start: 1
+		ZOffset: -2000
 	icon: blank.png
 
 tradplat:
 	idle: tradplat.png
 		Offset: 0,1
 		ZOffset: -1c511
+	idle-overlay: tradplat-shadow.png
+		ZOffset: -2000
 	damaged-idle: tradplat.png
 		Start: 4
 		Offset: 0,1
 		ZOffset: -1c511
+	damaged-idle-overlay: tradplat-shadow.png
+		Start: 1
+		ZOffset: -2000
 	active: tradplat.png
 		Frames: 1, 2, 3, 2, 1
 		Offset: 0,1
@@ -48,8 +65,14 @@ module:
 		Length: 8
 	idle: module.png
 		Start: 8
+	idle-overlay: module-shadow.png
+		Start: 0
+		ZOffset: -2000
 	damaged-idle: module.png
 		Start: 9
+	damaged-idle-overlay: module-shadow.png
+		Start: 1
+		ZOffset: -2000
 	icon: blank.png
 
 miner2:
@@ -67,8 +90,13 @@ starport:
 	idle: starport.png
 		Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Tick: 200
+	idle-overlay: starport-shadow.png
+		ZOffset: -2000
 	damaged-idle: starport.png
 		Start: 22
+	damaged-idle-overlay: starport-shadow.png
+		Start: 1
+		ZOffset: -2000
 	active: starport2.png
 		Length: 5
 	damaged-active: starport2.png
@@ -79,23 +107,35 @@ factory2:
 	idle: factory2.png
 		Length: 15
 		Tick: 300
+	idle-overlay: factory2-shadow.png
+		ZOffset: -2000
 	damaged-idle: factory2.png
 		Start: 15
 		Length: 1
+	damaged-idle-overlay: factory2-shadow.png
+		Start: 1
+		ZOffset: -2000
 	icon: blank.png
 
 factory3:
 	idle: factory3.png
 		Length: 11
 		Tick: 300
+	idle-overlay: factory3-shadow.png
+		ZOffset: -2000
 	damaged-idle: factory3.png
 		Start: 11
 		Length: 1
+	damaged-idle-overlay: factory3-shadow.png
+		Start: 1
+		ZOffset: -2000
 	icon: blank.png
 
 turret:
 	idle: turret.png
 		Start: 0
+	idle-overlay: turret-shadow.png
+		ZOffset: -2000
 	damaged-idle: turret.png
 		Start: 1
 	turret: turret.png
@@ -108,6 +148,8 @@ turret:
 
 field:
 	idle: field.png
+	idle-overlay: field-shadow.png
+		ZOffset: -2000
 	active: field.png
 		Length: 5
 		Tick: 300
@@ -123,6 +165,8 @@ silo:
 
 storage:
 	idle: storage.png
+	idle-overlay: storage-shadow.png
+		ZOffset: -2000
 	stages: storage.png
 		Length: 14
 	damaged-stages: storage.png
@@ -132,6 +176,8 @@ storage:
 artilleryturret:
 	idle: artilery2.png
 		Start: 0
+	idle-overlay: artilery2-shadow.png
+		ZOffset: -2000
 	damaged-idle: artilery2.png
 		Start: 1
 	turret: artilery2.png

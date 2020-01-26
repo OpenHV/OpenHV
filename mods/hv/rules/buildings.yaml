@@ -35,6 +35,9 @@ BASE:
 		ProductionType: Defense
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -250,50,0
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -68,6 +71,9 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -1500,550,0
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -110,6 +116,9 @@ RADAR:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -300,350,0
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -149,6 +158,9 @@ TRADPLAT:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -250,50,0
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -211,6 +223,9 @@ MODULE:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -950,350,0
 
 MINER2:
 	Inherits: ^BaseBuilding
@@ -290,6 +305,9 @@ STARPORT:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -400,250,0
 
 FACTORY2:
 	Inherits: ^BaseBuilding
@@ -341,6 +359,9 @@ FACTORY2:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -850,300,0
 
 FACTORY3:
 	Inherits: ^BaseBuilding
@@ -392,6 +413,9 @@ FACTORY3:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -1350,350,0
 
 TURRET:
 	Inherits: ^BaseBuilding
@@ -441,6 +465,9 @@ TURRET:
 		TurnSpeed: 30
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -900,250,0
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -484,6 +511,9 @@ FIELD:
 		Amount: -200
 	MustBeDestroyed:
 		RequiredForShortGame: false
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -250,100,0
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -565,6 +595,9 @@ STORAGE:
 		Amount: -10
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -300,150,0
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
@@ -614,3 +647,6 @@ ARTILLERYTURRET:
 		TurnSpeed: 15
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Palette: shadow
+		Offset: -1900,100,0
