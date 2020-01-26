@@ -58,3 +58,21 @@ MNTMISC9:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+
+SANDMISC6:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+SANDMISC7:
+	Inherits: ^Rock
+	Building:
+		Footprint: x_ xx
+		Dimensions: 2,2
+
+SANDMISC8:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1

@@ -23,3 +23,15 @@ mntmisc8:
 
 mntmisc9:
 	idle: mntmisc9.png
+
+sandmisc6:
+	idle: sandmisc6.png
+		Offset: 0, 2
+
+sandmisc7:
+	idle: sandmisc7.png
+		Offset: 0, -2
+
+sandmisc8:
+	idle: sandmisc8.png
+		Offset: 0, -2
