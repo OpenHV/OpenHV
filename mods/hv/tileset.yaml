@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Stone, Ice, Snow, Sand, Plant
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant
 
 Terrain:
 	TerrainType@Clear:
@@ -37,8 +37,8 @@ Terrain:
 		Type: Mountain
 		TargetTypes: Ground
 		Color: B08070
-	TerrainType@Stone:
-		Type: Stone
+	TerrainType@Rock:
+		Type: Rock
 		TargetTypes: Ground
 		Color: 454545
 	TerrainType@Ice:
@@ -1708,37 +1708,37 @@ Templates:
 		Id: 235
 		Images: grssmisc1.png
 		Size: 1,1
-		Categories: Grass, Stone
+		Categories: Grass, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@236:
 		Id: 236
 		Images: grssmisc2.png
 		Size: 1,1
-		Categories: Grass, Stone
+		Categories: Grass, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@237:
 		Id: 237
 		Images: grssmisc3.png
 		Size: 1,1
-		Categories: Grass, Stone
+		Categories: Grass, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@238:
 		Id: 238
 		Images: grssmisc4.png
 		Size: 1,1
-		Categories: Grass, Stone
+		Categories: Grass, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@239:
 		Id: 239
 		Images: grssmisc5.png
 		Size: 1,1
-		Categories: Grass, Stone
+		Categories: Grass, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@240:
 		Id: 240
 		Images: ice2snow1.png
@@ -2291,7 +2291,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@319:
 		Id: 319
 		Images: lava1.png
@@ -3234,9 +3234,9 @@ Templates:
 		Id: 453
 		Images: mntmisc1.png
 		Size: 1,1
-		Categories: Mountain, Stone
+		Categories: Mountain, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@454:
 		Id: 454
 		Images: mntmisc2.png
@@ -3248,9 +3248,9 @@ Templates:
 		Id: 455
 		Images: mntmisc3.png
 		Size: 1,1
-		Categories: Mountain, Stone
+		Categories: Mountain, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@456:
 		Id: 456
 		Images: mntmisc4.png
@@ -3269,9 +3269,9 @@ Templates:
 		Id: 458
 		Images: mntmisc6.png
 		Size: 1,1
-		Categories: Mountain, Stone
+		Categories: Mountain, Rock
 		Tiles:
-			0: Stone
+			0: Rock
 	Template@459:
 		Id: 459
 		Images: mntmisc7.png
@@ -3283,12 +3283,12 @@ Templates:
 		Id: 460
 		Images: mntmisc10.png
 		Size: 2,2
-		Categories: Mountain, Stone
+		Categories: Mountain, Rock
 		Tiles:
-			0: Stone
-			1: Stone
-			2: Stone
-			3: Stone
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
 	Template@461:
 		Id: 461
 		Images: mntrdst1.png
