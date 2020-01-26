@@ -3891,3 +3891,101 @@ Templates:
 		Categories: Road
 		Tiles:
 			0: Road
+	Template@547:
+		Id: 547
+		Images: roadsnw2-1.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@548:
+		Id: 548
+		Images: roadsnw2-2.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@549:
+		Id: 549
+		Images: roadsnw2-3.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@550:
+		Id: 550
+		Images: roadsnw2-4.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@551:
+		Id: 551
+		Images: roadsnw2-5.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@552:
+		Id: 552
+		Images: roadsnw2-6.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@553:
+		Id: 553
+		Images: roadsnw2-7.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@554:
+		Id: 554
+		Images: roadsnw2-8.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@555:
+		Id: 555
+		Images: roadsnw2-9.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@556:
+		Id: 556
+		Images: roadsnw2-10.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@557:
+		Id: 557
+		Images: roadsnw2-11.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@558:
+		Id: 558
+		Images: roadsnw2-12.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@559:
+		Id: 559
+		Images: roadsnw2-13.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@560:
+		Id: 560
+		Images: roadsnw2-14.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
