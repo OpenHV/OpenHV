@@ -4213,3 +4213,38 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
+	Template@593:
+		Id: 593
+		Images: sandmisc1.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@594:
+		Id: 594
+		Images: sandmisc2.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@595:
+		Id: 595
+		Images: sandmisc3.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@596:
+		Id: 596
+		Images: sandmisc4.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@597:
+		Id: 597
+		Images: sandmisc5.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
