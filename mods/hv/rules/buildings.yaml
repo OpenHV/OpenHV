@@ -359,7 +359,7 @@ FACTORY2:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@:
+	WithIdleOverlay:
 		Palette: shadow
 		Offset: -850,300,0
 
@@ -468,7 +468,6 @@ TURRET:
 	WithIdleOverlay:
 		Palette: shadow
 		Offset: -900,250,0
-		PauseOnCondition: damaged
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -653,4 +652,3 @@ ARTILLERYTURRET:
 	WithIdleOverlay:
 		Palette: shadow
 		Offset: -1900,100,0
-		PauseOnCondition: damaged
