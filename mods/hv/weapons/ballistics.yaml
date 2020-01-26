@@ -82,7 +82,11 @@ TurretCannon:
 
 Nuclear:
 	ValidTargets: Ground, Air
-	Warhead@1Dam_impact: SpreadDamage
+	Warhead@Shake: ShakeScreen
+		Duration: 20
+		Intensity: 5
+		Multiplier: 1,1
+	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 15000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
