@@ -46,14 +46,12 @@ tradplat:
 		Offset: 0,1
 		ZOffset: -1c511
 	shadow-overlay: tradplat-shadow.png
-		ZOffset: 1768
 	damaged-idle: tradplat.png
 		Start: 4
 		Offset: 0,1
 		ZOffset: -1c511
 	damaged-shadow-overlay: tradplat-shadow.png
 		Start: 1
-		ZOffset: 1768
 	active: tradplat.png
 		Frames: 1, 2, 3, 2, 1
 		Offset: 0,1
