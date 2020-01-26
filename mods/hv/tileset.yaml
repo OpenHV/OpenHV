@@ -3989,3 +3989,17 @@ Templates:
 		Categories: Road
 		Tiles:
 			0: Road
+	Template@561:
+		Id: 561
+		Images: rock.png
+		Size: 1,1
+		Categories: Rock
+		Tiles:
+			0: Rock
+	Template@562:
+		Id: 562
+		Images: rock2.png
+		Size: 1,1
+		Categories: Rock
+		Tiles:
+			0: Rock
