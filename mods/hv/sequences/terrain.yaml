@@ -20,9 +20,11 @@ lavabubl:
 
 mntmisc8:
 	idle: mntmisc8.png
+		Offset: 0, -2
 
 mntmisc9:
 	idle: mntmisc9.png
+		Offset: 0, -4
 
 sandmisc6:
 	idle: sandmisc6.png
