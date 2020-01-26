@@ -282,9 +282,9 @@
 		Dimensions: 1,2
 	AppearsOnRadar:
 	RadarColorFromTerrain:
-		Terrain: Stone
+		Terrain: Rock
 	AppearsOnMapPreview:
-		Terrain: Stone
+		Terrain: Rock
 	HiddenUnderShroud:
 	MapEditorData:
 		Categories: Decoration

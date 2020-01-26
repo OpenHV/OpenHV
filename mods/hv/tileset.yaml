@@ -2289,7 +2289,7 @@ Templates:
 		Id: 318
 		Images: icicle3.png
 		Size: 1,1
-		Categories: Ice
+		Categories: Snow
 		Tiles:
 			0: Rock
 	Template@319:
