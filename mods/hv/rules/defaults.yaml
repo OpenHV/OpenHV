@@ -61,7 +61,6 @@
 	Repairable:
 		RepairActors: tradplat
 		HpPerStep: 2000
-		NearEnough: 0c768
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
