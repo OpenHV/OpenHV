@@ -30,7 +30,6 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Position relative to body")]
 		public readonly WVec Offset = WVec.Zero;
 
-		[PaletteReference("IsPlayerPalette")]
 		[Desc("Custom palette name")]
 		public readonly string Palette = "shadow";
 
