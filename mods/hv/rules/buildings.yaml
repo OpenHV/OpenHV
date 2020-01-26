@@ -35,8 +35,7 @@ BASE:
 		ProductionType: Defense
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -250,50,0
 
 GENERATOR:
@@ -71,8 +70,7 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -1500,550,0
 
 RADAR:
@@ -116,8 +114,7 @@ RADAR:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -300,350,0
 
 TRADPLAT:
@@ -158,8 +155,7 @@ TRADPLAT:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -250,50,0
 
 MODULE:
@@ -223,8 +219,7 @@ MODULE:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -950,350,0
 
 MINER2:
@@ -305,8 +300,7 @@ STARPORT:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -400,250,0
 
 FACTORY2:
@@ -359,8 +353,7 @@ FACTORY2:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -850,300,0
 
 FACTORY3:
@@ -413,8 +406,7 @@ FACTORY3:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -1350,350,0
 
 TURRET:
@@ -465,8 +457,7 @@ TURRET:
 		TurnSpeed: 30
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -900,250,0
 
 FIELD:
@@ -511,8 +502,7 @@ FIELD:
 		Amount: -200
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -250,100,0
 
 SILO:
@@ -595,8 +585,7 @@ STORAGE:
 		Amount: -10
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -300,150,0
 
 ARTILLERYTURRET:
@@ -647,6 +636,5 @@ ARTILLERYTURRET:
 		TurnSpeed: 15
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
-		Palette: shadow
+	WithShadowOverlay:
 		Offset: -1900,100,0
