@@ -595,6 +595,8 @@ STORAGE:
 		Sequence: stages
 	Power:
 		Amount: -10
+	RenderSprites:
+		PlayerPalette: green
 	WithIdleOverlay:
 		Palette: shadow
 		Offset: -300,150,0
