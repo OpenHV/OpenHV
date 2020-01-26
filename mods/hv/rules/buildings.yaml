@@ -120,7 +120,7 @@ RADAR:
 TRADPLAT:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^3x3Shape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -130,8 +130,8 @@ TRADPLAT:
 	Tooltip:
 		Name: Trade Platform
 	Building:
-		Footprint: ++ ++
-		Dimensions: 2,2
+		Footprint: x+x x+x x+x
+		Dimensions: 3,3
 	Selectable:
 		Bounds: 40,40
 	SelectionDecorations:
