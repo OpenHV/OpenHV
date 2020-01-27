@@ -54,8 +54,10 @@ tradplat:
 		Start: 1
 	active: tradplat.png
 		Frames: 1, 2, 3, 2, 1
+		Length: 5
 		Offset: 0,1
 		ZOffset: -1c511
+		Tick: 100
 	icon: blank.png
 
 module:
