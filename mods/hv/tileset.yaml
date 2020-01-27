@@ -4304,3 +4304,185 @@ Templates:
 		Categories: Sand, Road
 		Tiles:
 			0: Road
+	Template@606:
+		Id: 606
+		Images: sandroad1.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@607:
+		Id: 607
+		Images: sandroad2.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@608:
+		Id: 608
+		Images: sandroad3.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@609:
+		Id: 609
+		Images: sandroad4.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@610:
+		Id: 610
+		Images: sandroad5.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@611:
+		Id: 611
+		Images: sandroad6.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@612:
+		Id: 612
+		Images: sandroad7.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@613:
+		Id: 613
+		Images: sandroad8.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@614:
+		Id: 614
+		Images: sandroad9.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@615:
+		Id: 615
+		Images: sandroad10.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@616:
+		Id: 616
+		Images: sandroad11.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@617:
+		Id: 617
+		Images: sandroad12.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@618:
+		Id: 618
+		Images: sandroad13.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@619:
+		Id: 619
+		Images: sandroad14.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@620:
+		Id: 620
+		Images: sandroad15.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@621:
+		Id: 621
+		Images: sandroad16.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@622:
+		Id: 622
+		Images: sandroad17.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@623:
+		Id: 623
+		Images: sandroad18.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@624:
+		Id: 624
+		Images: sandroad19.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@625:
+		Id: 625
+		Images: sandroad20.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@626:
+		Id: 626
+		Images: sandroad21.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@627:
+		Id: 627
+		Images: sandroad22.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@628:
+		Id: 628
+		Images: sandroad23.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@629:
+		Id: 629
+		Images: sandroad24.png
+		Size: 1,1
+		Categories: Road
+		Tiles:
+			0: Road
+	Template@630:
+		Id: 630
+		Images: sandroad25.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@631:
+		Id: 631
+		Images: sandroad26.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
