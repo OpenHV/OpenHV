@@ -502,6 +502,8 @@ FIELD:
 		Amount: -200
 	MustBeDestroyed:
 		RequiredForShortGame: false
+	RenderSprites:
+		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -250,100,0
 
