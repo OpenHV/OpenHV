@@ -4248,3 +4248,59 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
+	Template@598:
+		Id: 598
+		Images: sandrdst1.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@599:
+		Id: 599
+		Images: sandrdst2.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@600:
+		Id: 600
+		Images: sandrdst3.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@601:
+		Id: 601
+		Images: sandrdst4.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@602:
+		Id: 602
+		Images: sandrdst5.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@603:
+		Id: 603
+		Images: sandrdst6.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@604:
+		Id: 604
+		Images: sandrdst7.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
+	Template@605:
+		Id: 605
+		Images: sandrdst8.png
+		Size: 1,1
+		Categories: Sand, Road
+		Tiles:
+			0: Road
