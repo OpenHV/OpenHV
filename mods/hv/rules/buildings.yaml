@@ -247,6 +247,8 @@ MINER2:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
+	RenderSprites:
+		PlayerPalette: green
 
 STARPORT:
 	Inherits: ^BaseBuilding
