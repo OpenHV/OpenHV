@@ -4584,3 +4584,59 @@ Templates:
 		Categories: Snow, Crater
 		Tiles:
 			0: Crater
+	Template@646:
+		Id: 646
+		Images: sn2-2crc1.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@647:
+		Id: 647
+		Images: sn2-2crc2.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@648:
+		Id: 648
+		Images: sn2-2crc3.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@649:
+		Id: 649
+		Images: sn2-2crc4.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@650:
+		Id: 650
+		Images: sn2-2crc5.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@651:
+		Id: 651
+		Images: sn2-2crc6.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@652:
+		Id: 652
+		Images: sn2-2crc7.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@653:
+		Id: 653
+		Images: sn2-2crc8.png
+		Size: 1,1
+		Categories: Snow, Crater, Cliff
+		Tiles:
+			0: Cliff
