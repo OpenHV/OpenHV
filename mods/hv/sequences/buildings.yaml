@@ -85,6 +85,8 @@ miner2:
 		Tick: 300
 	damaged-active: miner2.png
 		Start: 20
+	silo: miner2.png
+		Start: 21
 
 starport:
 	idle: starport.png
