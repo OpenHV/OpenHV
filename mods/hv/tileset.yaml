@@ -4640,3 +4640,101 @@ Templates:
 		Categories: Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@654:
+		Id: 654
+		Images: sn2-2wtr1.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@655:
+		Id: 655
+		Images: sn2-2wtr2.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@656:
+		Id: 656
+		Images: sn2-2wtr3.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@657:
+		Id: 657
+		Images: sn2-2wtr4.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@658:
+		Id: 658
+		Images: sn2-2wtr5.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@659:
+		Id: 659
+		Images: sn2-2wtr6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@660:
+		Id: 660
+		Images: sn2-2wtr7.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@661:
+		Id: 661
+		Images: sn2-2wtr8.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@662:
+		Id: 662
+		Images: sn2-2wtr9.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@663:
+		Id: 663
+		Images: sn2-2wtr10.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@664:
+		Id: 664
+		Images: sn2-2wtr11.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@665:
+		Id: 665
+		Images: sn2-2wtr12.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@666:
+		Id: 666
+		Images: sn2-2wtr13.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@667:
+		Id: 667
+		Images: sn2-2wtr14.png
+		Size: 1,1
+		Categories: Snow, Cliff, Water
+		Tiles:
+			0: Cliff
