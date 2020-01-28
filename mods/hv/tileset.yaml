@@ -4486,3 +4486,101 @@ Templates:
 		Categories: Sand, Road
 		Tiles:
 			0: Road
+	Template@632:
+		Id: 632
+		Images: sn2-2crb1.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@633:
+		Id: 633
+		Images: sn2-2crb2.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@634:
+		Id: 634
+		Images: sn2-2crb3.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@635:
+		Id: 635
+		Images: sn2-2crb4.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@636:
+		Id: 636
+		Images: sn2-2crb5.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@637:
+		Id: 637
+		Images: sn2-2crb6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@638:
+		Id: 638
+		Images: sn2-2crb7.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@639:
+		Id: 639
+		Images: sn2-2crb8.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@640:
+		Id: 640
+		Images: sn2-2crb9.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@641:
+		Id: 641
+		Images: sn2-2crb10.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@642:
+		Id: 642
+		Images: sn2-2crb11.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@643:
+		Id: 643
+		Images: sn2-2crb12.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@644:
+		Id: 644
+		Images: sn2-2crb13.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@645:
+		Id: 645
+		Images: sn2-2crb14.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
