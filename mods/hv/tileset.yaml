@@ -5326,3 +5326,94 @@ Templates:
 		Categories: Sand, Cliff, Water
 		Tiles:
 			0: Cliff
+	Template@752:
+		Id: 752
+		Images: sndcliff1.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@753:
+		Id: 753
+		Images: sndcliff2.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@754:
+		Id: 754
+		Images: sndcliff3.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@755:
+		Id: 755
+		Images: sndcliff4.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@756:
+		Id: 756
+		Images: sndcliff5.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@757:
+		Id: 757
+		Images: sndcliff6.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@758:
+		Id: 758
+		Images: sndcliff7.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@759:
+		Id: 759
+		Images: sndcliff8.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@760:
+		Id: 760
+		Images: sndcliff9.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@761:
+		Id: 761
+		Images: sndcliff10.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@762:
+		Id: 762
+		Images: sndcliff11.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@763:
+		Id: 763
+		Images: sndcliff12.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@764:
+		Id: 764
+		Images: sndcliff13.png
+		Size: 1,1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
