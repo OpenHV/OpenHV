@@ -4885,3 +4885,101 @@ Templates:
 		Categories: Snow, Road
 		Tiles:
 			0: Road
+	Template@689:
+		Id: 689
+		Images: sn22crtr1.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@690:
+		Id: 690
+		Images: sn22crtr2.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@691:
+		Id: 691
+		Images: sn22crtr3.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@692:
+		Id: 692
+		Images: sn22crtr4.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@693:
+		Id: 693
+		Images: sn22crtr5.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@694:
+		Id: 694
+		Images: sn22crtr6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@695:
+		Id: 695
+		Images: sn22crtr7.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@696:
+		Id: 696
+		Images: sn22crtr8.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@697:
+		Id: 697
+		Images: sn22crtr9.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@698:
+		Id: 698
+		Images: sn22crtr10.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@699:
+		Id: 699
+		Images: sn22crtr11.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@700:
+		Id: 700
+		Images: sn22crtr12.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@701:
+		Id: 701
+		Images: sn22crtr13.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
+	Template@702:
+		Id: 702
+		Images: sn22crtr14.png
+		Size: 1,1
+		Categories: Snow, Cliff, Crater
+		Tiles:
+			0: Cliff
