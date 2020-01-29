@@ -4829,3 +4829,59 @@ Templates:
 		Categories: Snow, Cliff
 		Tiles:
 			0: Cliff
+	Template@681:
+		Id: 681
+		Images: sn2-rdst1.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@682:
+		Id: 682
+		Images: sn2-rdst2.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@683:
+		Id: 683
+		Images: sn2-rdst3.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@684:
+		Id: 684
+		Images: sn2-rdst4.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@685:
+		Id: 685
+		Images: sn2-rdst5.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@686:
+		Id: 686
+		Images: sn2-rdst6.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@687:
+		Id: 687
+		Images: sn2-rdst7.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
+	Template@688:
+		Id: 688
+		Images: sn2-rdst8.png
+		Size: 1,1
+		Categories: Snow, Road
+		Tiles:
+			0: Road
