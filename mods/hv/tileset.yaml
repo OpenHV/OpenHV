@@ -5228,3 +5228,101 @@ Templates:
 		Categories: Sand, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@738:
+		Id: 738
+		Images: snd2watr1.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@739:
+		Id: 739
+		Images: snd2watr2.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@740:
+		Id: 740
+		Images: snd2watr3.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@741:
+		Id: 741
+		Images: snd2watr4.png
+		Size: 1,1
+		Categories: Sand
+		Tiles:
+			0: Sand
+	Template@742:
+		Id: 742
+		Images: snd2watr5.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@743:
+		Id: 743
+		Images: snd2watr6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@744:
+		Id: 744
+		Images: snd2watr7.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@745:
+		Id: 745
+		Images: snd2watr8.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@746:
+		Id: 746
+		Images: snd2watr9.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@747:
+		Id: 747
+		Images: snd2watr10.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@748:
+		Id: 748
+		Images: snd2watr11.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@749:
+		Id: 749
+		Images: snd2watr12.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@750:
+		Id: 750
+		Images: snd2watr13.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
+	Template@751:
+		Id: 751
+		Images: snd2watr14.png
+		Size: 1,1
+		Categories: Sand, Cliff, Water
+		Tiles:
+			0: Cliff
