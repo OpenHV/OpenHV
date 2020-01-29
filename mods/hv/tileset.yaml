@@ -5074,3 +5074,59 @@ Templates:
 		Categories: Sand, Crater
 		Tiles:
 			0: Crater
+	Template@716:
+		Id: 716
+		Images: snd2crtc1.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@717:
+		Id: 717
+		Images: snd2crtc2.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@718:
+		Id: 718
+		Images: snd2crtc3.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@719:
+		Id: 719
+		Images: snd2crtc4.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@720:
+		Id: 720
+		Images: snd2crtc5.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@721:
+		Id: 721
+		Images: snd2crtc6.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@722:
+		Id: 722
+		Images: snd2crtc7.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@723:
+		Id: 723
+		Images: snd2crtc8.png
+		Size: 1,1
+		Categories: Sand, Crater, Cliff
+		Tiles:
+			0: Cliff
