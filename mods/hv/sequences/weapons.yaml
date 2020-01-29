@@ -50,3 +50,9 @@ nuclear:
 	down: bullets.png
 		Start: 44
 		ZOffset: 1023
+
+smoke:
+	idle: smoke.png
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
