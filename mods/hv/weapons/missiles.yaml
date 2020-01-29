@@ -6,12 +6,12 @@
 		Speed: 213
 		Arm: 2
 		Blockable: false
-		ContrailLength: 10
 		Inaccuracy: 128
 		Image: bullet6
 		Shadow: true
 		HorizontalRateOfTurn: 5
 		RangeLimit: 6c0
+		TrailImage: smoke
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 5000
@@ -64,6 +64,7 @@ AntiAirRocket:
 		Inaccuracy: 128
 		HorizontalRateOfTurn: 10
 		RangeLimit: 7c0
+		TrailImage: smoke
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		ValidTargets: Air
