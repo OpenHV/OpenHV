@@ -37,3 +37,12 @@ sandmisc7:
 sandmisc8:
 	idle: sandmisc8.png
 		Offset: 0, -2
+
+craters:
+	Defaults:
+		Length: *
+	cr1: smudges1.png
+	cr2: smudges2.png
+	cr3: smudges3.png
+	cr4: smudges4.png
+	cr5: smudges5.png

@@ -13,6 +13,7 @@ Terrain:
 		Type: Crater
 		TargetTypes: Ground
 		Color: 5A2D1B
+		AcceptsSmudgeType: Crater
 	TerrainType@Lava:
 		Type: Lava
 		TargetTypes: Lava
@@ -29,6 +30,7 @@ Terrain:
 		Type: Grass
 		TargetTypes: Ground
 		Color: 186104
+		AcceptsSmudgeType: Crater
 	TerrainType@Cliff:
 		Type: Cliff
 		TargetTypes: Ground
@@ -49,10 +51,12 @@ Terrain:
 		Type: Snow
 		TargetTypes: Ground
 		Color: B0C0D0
+		AcceptsSmudgeType: Crater
 	TerrainType@Sand:
 		Type: Sand
 		TargetTypes: Ground
 		Color: D0A090
+		AcceptsSmudgeType: Crater
 	TerrainType@Plant:
 		Type: Plant
 		TargetTypes: Ground

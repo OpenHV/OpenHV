@@ -195,6 +195,12 @@ World:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	CustomTerrainDebugOverlay:
 	DomainIndex:
+	SmudgeLayer@CRATER:
+		Type: Crater
+		Sequence: craters
+		SmokeType:
+		SmokeSequence:
+		SmokePercentage: -1
 	WarheadDebugOverlay:
 	SpawnMapActors:
 	MapBuildRadius:
