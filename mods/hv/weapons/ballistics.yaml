@@ -6,6 +6,8 @@
 		Speed: 682
 		Image: bullet1
 		Shadow: true
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 4000
