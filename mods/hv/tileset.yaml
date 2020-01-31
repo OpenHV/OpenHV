@@ -5599,3 +5599,38 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+	Template@791:
+		Id: 791
+		Images: snw2-ct2.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@792:
+		Id: 792
+		Images: snw2-ctr.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@793:
+		Id: 793
+		Images: snw2-rck.png
+		Size: 1,1
+		Categories: Snow, Rock
+		Tiles:
+			0: Rock
+	Template@794:
+		Id: 794
+		Images: snw2-rck2.png
+		Size: 1,1
+		Categories: Snow, Rock
+		Tiles:
+			0: Rock
+	Template@795:
+		Id: 795
+		Images: snw2-rck3.png
+		Size: 1,1
+		Categories: Snow, Rock
+		Tiles:
+			0: Rock
