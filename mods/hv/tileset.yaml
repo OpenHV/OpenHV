@@ -5417,3 +5417,94 @@ Templates:
 		Categories: Sand, Cliff
 		Tiles:
 			0: Cliff
+	Template@765:
+		Id: 765
+		Images: snow1.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@766:
+		Id: 766
+		Images: snow2.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@767:
+		Id: 767
+		Images: snow3.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@768:
+		Id: 768
+		Images: snow4.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@769:
+		Id: 769
+		Images: snow5.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@770:
+		Id: 770
+		Images: snow6.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@771:
+		Id: 771
+		Images: snow7.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@772:
+		Id: 772
+		Images: snow8.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@773:
+		Id: 773
+		Images: snow9.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@774:
+		Id: 774
+		Images: snow10.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@775:
+		Id: 775
+		Images: snow11.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@776:
+		Id: 776
+		Images: snow12.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@777:
+		Id: 777
+		Images: snow13.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
