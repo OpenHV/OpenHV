@@ -5508,3 +5508,94 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+	Template@778:
+		Id: 778
+		Images: snow2-1.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@779:
+		Id: 779
+		Images: snow2-2.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@780:
+		Id: 780
+		Images: snow2-3.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@781:
+		Id: 781
+		Images: snow2-4.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@782:
+		Id: 782
+		Images: snow2-5.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@783:
+		Id: 783
+		Images: snow2-6.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@784:
+		Id: 784
+		Images: snow2-7.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@785:
+		Id: 785
+		Images: snow2-8.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@786:
+		Id: 786
+		Images: snow2-9.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@787:
+		Id: 787
+		Images: snow2-10.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@788:
+		Id: 788
+		Images: snow2-11.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@789:
+		Id: 789
+		Images: snow2-12.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@790:
+		Id: 790
+		Images: snow2-13.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
