@@ -3993,14 +3993,14 @@ Templates:
 		Id: 561
 		Images: rock.png
 		Size: 1,1
-		Categories: Rock
+		Categories: Rock, Snow
 		Tiles:
 			0: Rock
 	Template@562:
 		Id: 562
 		Images: rock2.png
 		Size: 1,1
-		Categories: Rock
+		Categories: Rock, Snow
 		Tiles:
 			0: Rock
 	Template@563:
