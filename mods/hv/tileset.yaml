@@ -5634,3 +5634,101 @@ Templates:
 		Categories: Snow, Rock
 		Tiles:
 			0: Rock
+	Template@796:
+		Id: 796
+		Images: snw2-lav1.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@797:
+		Id: 797
+		Images: snw2-lav2.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@798:
+		Id: 798
+		Images: snw2-lav3.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@799:
+		Id: 799
+		Images: snw2-lav4.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@800:
+		Id: 800
+		Images: snw2-lav5.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@801:
+		Id: 801
+		Images: snw2-lav6.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@802:
+		Id: 802
+		Images: snw2-lav7.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@803:
+		Id: 803
+		Images: snw2-lav8.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@804:
+		Id: 804
+		Images: snw2-lav9.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@805:
+		Id: 805
+		Images: snw2-lav10.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@806:
+		Id: 806
+		Images: snw2-lav11.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@807:
+		Id: 807
+		Images: snw2-lav12.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@808:
+		Id: 808
+		Images: snw2-lav13.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
+	Template@809:
+		Id: 809
+		Images: snw2-lav14.png
+		Size: 1,1
+		Categories: Snow, Lava, Cliff
+		Tiles:
+			0: Cliff
