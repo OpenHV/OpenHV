@@ -5736,3 +5736,94 @@ Templates:
 		Categories: Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
+	Template@810:
+		Id: 810
+		Images: snw2crtb1.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@811:
+		Id: 811
+		Images: snw2crtb2.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@812:
+		Id: 812
+		Images: snw2crtb3.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@813:
+		Id: 813
+		Images: snw2crtb4.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@814:
+		Id: 814
+		Images: snw2crtb5.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@815:
+		Id: 815
+		Images: snw2crtb6.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@816:
+		Id: 816
+		Images: snw2crtb7.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@817:
+		Id: 817
+		Images: snw2crtb8.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@818:
+		Id: 818
+		Images: snw2crtb9.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@819:
+		Id: 819
+		Images: snw2crtb10.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@820:
+		Id: 820
+		Images: snw2crtb11.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@821:
+		Id: 821
+		Images: snw2crtb12.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
+	Template@822:
+		Id: 822
+		Images: snw2crtb13.png
+		Size: 1,1
+		Categories: Snow, Crater
+		Tiles:
+			0: Crater
