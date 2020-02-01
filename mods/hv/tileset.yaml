@@ -6079,3 +6079,87 @@ Templates:
 		Categories: Snow, Cliff, Lava
 		Tiles:
 			0: Cliff
+	Template@859:
+		Id: 859
+		Images: snw2mnt1.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Mountain
+	Template@860:
+		Id: 860
+		Images: snw2mnt2.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
+	Template@861:
+		Id: 861
+		Images: snw2mnt3.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Mountain
+	Template@862:
+		Id: 862
+		Images: snw2mnt4.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
+	Template@863:
+		Id: 863
+		Images: snw2mnt5.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
+	Template@864:
+		Id: 864
+		Images: snw2mnt6.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
+	Template@865:
+		Id: 865
+		Images: snw2mnt7.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
+	Template@866:
+		Id: 866
+		Images: snw2mnt8.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Mountain
+	Template@867:
+		Id: 867
+		Images: snw2mnt9.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Mountain
+	Template@868:
+		Id: 868
+		Images: snw2mnt10.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Mountain
+	Template@869:
+		Id: 869
+		Images: snw2mnt11.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
+	Template@870:
+		Id: 870
+		Images: snw2mnt12.png
+		Size: 1,1
+		Categories: Snow, Mountain
+		Tiles:
+			0: Snow
