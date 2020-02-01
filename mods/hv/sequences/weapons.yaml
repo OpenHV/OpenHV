@@ -5,7 +5,24 @@ explosion:
 	small: expsmall.png
 	medium: explosn.png
 	large: explobig.png
-	sparks: sparks.png
+
+hit:
+	spark_a: sparks.png
+		Start: 0
+		Length: 7
+		Tick: 60
+	spark_b: sparks.png
+		Start: 7
+		Length: 9
+		Tick: 60
+	spark_c: sparks.png
+		Start: 16
+		Length: 8
+		Tick: 60
+	spark_d: sparks.png
+		Start: 24
+		Length: 7
+		Tick: 60
 
 bullet1:
 	idle: bullets.png
