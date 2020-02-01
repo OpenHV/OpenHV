@@ -6352,3 +6352,24 @@ Templates:
 		Categories: Snow, Cliff
 		Tiles:
 			0: Cliff
+	Template@898:
+		Id: 898
+		Images: snwcratr1.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@899:
+		Id: 899
+		Images: snwcratr2.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@900:
+		Id: 900
+		Images: snwcratr3.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
