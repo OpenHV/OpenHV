@@ -26,3 +26,11 @@ EditorWorld:
 EditorPlayer:
 	AlwaysVisible:
 	Shroud:
+
+TRANSPRT.colorpicker:
+	Inherits: TRANSPRT
+	-Buildable:
+	-MapEditorData:
+	RenderSprites:
+		Image: transprt
+		Palette: colorpicker
