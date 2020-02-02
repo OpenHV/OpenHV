@@ -61,6 +61,10 @@ Terrain:
 		Type: Plant
 		TargetTypes: Ground
 		Color: 1F6E03
+	TerrainType@Stone:
+		Type: Stone
+		TargetTypes: Ground
+		Color: 565656
 
 Templates:
 	Template@0:
@@ -6373,3 +6377,101 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+	Template@901:
+		Id: 901
+		Images: stn2crtb1.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Stone
+	Template@902:
+		Id: 902
+		Images: stn2crtb2.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Stone
+	Template@903:
+		Id: 903
+		Images: stn2crtb3.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Stone
+	Template@904:
+		Id: 904
+		Images: stn2crtb4.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@905:
+		Id: 905
+		Images: stn2crtb5.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Crater
+	Template@906:
+		Id: 906
+		Images: stn2crtb6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@907:
+		Id: 907
+		Images: stn2crtb7.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Crater
+	Template@908:
+		Id: 908
+		Images: stn2crtb8.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Crater
+	Template@909:
+		Id: 909
+		Images: stn2crtb9.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Crater
+	Template@910:
+		Id: 910
+		Images: stn2crtb10.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Stone
+	Template@911:
+		Id: 911
+		Images: stn2crtb11.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Stone
+	Template@912:
+		Id: 912
+		Images: stn2crtb12.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Stone
+	Template@913:
+		Id: 913
+		Images: stn2crtb13.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Crater
+	Template@914:
+		Id: 914
+		Images: stn2crtb14.png
+		Size: 1,1
+		Categories: Stone, Crater
+		Tiles:
+			0: Crater

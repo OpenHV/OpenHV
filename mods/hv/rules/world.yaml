@@ -22,6 +22,7 @@
 			Ice: 10
 			Snow: 30
 			Sand: 40
+			Stone: 100
 	Locomotor@TRACKED:
 		Name: tracked
 		TerrainSpeeds:
@@ -34,6 +35,7 @@
 			Ice: 30
 			Snow: 50
 			Sand: 40
+			Stone: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		TerrainSpeeds:
@@ -46,6 +48,7 @@
 			Ice: 20
 			Snow: 40
 			Sand: 30
+			Stone: 100
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp
