@@ -6727,3 +6727,101 @@ Templates:
 		Categories: Stone, Cliff, Lava
 		Tiles:
 			0: Cliff
+	Template@951:
+		Id: 951
+		Images: stn2snwb1.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@952:
+		Id: 952
+		Images: stn2snwb2.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
+	Template@953:
+		Id: 953
+		Images: stn2snwb3.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@954:
+		Id: 954
+		Images: stn2snwb4.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@955:
+		Id: 955
+		Images: stn2snwb5.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@956:
+		Id: 956
+		Images: stn2snwb6.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
+	Template@957:
+		Id: 957
+		Images: stn2snwb7.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
+	Template@958:
+		Id: 958
+		Images: stn2snwb8.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
+	Template@959:
+		Id: 959
+		Images: stn2snwb9.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
+	Template@960:
+		Id: 960
+		Images: stn2snwb10.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@961:
+		Id: 961
+		Images: stn2snwb11.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@962:
+		Id: 962
+		Images: stn2snwb12.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@963:
+		Id: 963
+		Images: stn2snwb13.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
+	Template@964:
+		Id: 964
+		Images: stn2snwb14.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Snow
