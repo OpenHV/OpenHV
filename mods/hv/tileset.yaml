@@ -6475,3 +6475,59 @@ Templates:
 		Categories: Stone, Crater
 		Tiles:
 			0: Crater
+	Template@915:
+		Id: 915
+		Images: stn2crtc1.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@916:
+		Id: 916
+		Images: stn2crtc2.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@917:
+		Id: 917
+		Images: stn2crtc3.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@918:
+		Id: 918
+		Images: stn2crtc4.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@919:
+		Id: 919
+		Images: stn2crtc5.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@920:
+		Id: 920
+		Images: stn2crtc6.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@921:
+		Id: 921
+		Images: stn2crtc7.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@922:
+		Id: 922
+		Images: stn2crtc8.png
+		Size: 1,1
+		Categories: Stone, Crater, Cliff
+		Tiles:
+			0: Cliff
