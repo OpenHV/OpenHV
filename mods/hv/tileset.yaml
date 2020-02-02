@@ -7028,3 +7028,24 @@ Templates:
 		Categories: Stone, Cliff
 		Tiles:
 			0: Cliff
+	Template@994:
+		Id: 994
+		Images: stncratr1.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@995:
+		Id: 995
+		Images: stncratr2.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@996:
+		Id: 996
+		Images: stncratr3.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
