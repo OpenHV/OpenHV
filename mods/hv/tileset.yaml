@@ -6629,3 +6629,101 @@ Templates:
 		Categories: Stone, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@937:
+		Id: 937
+		Images: stn2lav1.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@938:
+		Id: 938
+		Images: stn2lav2.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@939:
+		Id: 939
+		Images: stn2lav3.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@940:
+		Id: 940
+		Images: stn2lav4.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@941:
+		Id: 941
+		Images: stn2lav5.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@942:
+		Id: 942
+		Images: stn2lav6.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@943:
+		Id: 943
+		Images: stn2lav7.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@944:
+		Id: 944
+		Images: stn2lav8.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@945:
+		Id: 945
+		Images: stn2lav9.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@946:
+		Id: 946
+		Images: stn2lav10.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@947:
+		Id: 947
+		Images: stn2lav11.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@948:
+		Id: 948
+		Images: stn2lav12.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@949:
+		Id: 949
+		Images: stn2lav13.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
+	Template@950:
+		Id: 950
+		Images: stn2lav14.png
+		Size: 1,1
+		Categories: Stone, Cliff, Lava
+		Tiles:
+			0: Cliff
