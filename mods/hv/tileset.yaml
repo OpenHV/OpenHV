@@ -6923,3 +6923,108 @@ Templates:
 		Categories: Stone, Cliff, Water
 		Tiles:
 			0: Cliff
+	Template@979:
+		Id: 979
+		Images: stncliff1.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@980:
+		Id: 980
+		Images: stncliff2.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@981:
+		Id: 981
+		Images: stncliff3.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@982:
+		Id: 982
+		Images: stncliff4.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@983:
+		Id: 983
+		Images: stncliff5.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@984:
+		Id: 984
+		Images: stncliff6.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@985:
+		Id: 985
+		Images: stncliff7.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@986:
+		Id: 986
+		Images: stncliff8.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@987:
+		Id: 987
+		Images: stncliff9.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@988:
+		Id: 988
+		Images: stncliff10.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@989:
+		Id: 989
+		Images: stncliff11.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@990:
+		Id: 990
+		Images: stncliff12.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@991:
+		Id: 991
+		Images: stncliff13.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@992:
+		Id: 992
+		Images: stncliff14.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@993:
+		Id: 993
+		Images: stncliff15.png
+		Size: 1,1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
