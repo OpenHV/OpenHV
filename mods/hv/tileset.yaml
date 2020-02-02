@@ -7049,3 +7049,136 @@ Templates:
 		Categories: Stone
 		Tiles:
 			0: Stone
+	Template@997:
+		Id: 997
+		Images: stne2snw1.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@998:
+		Id: 998
+		Images: stne2snw2.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@999:
+		Id: 999
+		Images: stne2snw3.png
+		Size: 1,4
+		Categories: Stone, Snow, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Snow
+	Template@1000:
+		Id: 1000
+		Images: stne2snw4.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1001:
+		Id: 1001
+		Images: stne2snw5.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1002:
+		Id: 1002
+		Images: stne2snw6.png
+		Size: 1,4
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@1003:
+		Id: 1003
+		Images: stne2snw7.png
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
+	Template@1004:
+		Id: 1004
+		Images: stne2snw8.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1005:
+		Id: 1005
+		Images: stne2snw9.png
+		Size: 1,4
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@1006:
+		Id: 1006
+		Images: stne2snw10.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@1007:
+		Id: 1007
+		Images: stne2snw11.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@1008:
+		Id: 1008
+		Images: stne2snw12.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1009:
+		Id: 1009
+		Images: stne2snw13.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1010:
+		Id: 1010
+		Images: stne2snw14.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1011:
+		Id: 1011
+		Images: stne2snw15.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1012:
+		Id: 1012
+		Images: stne2snw16.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@1013:
+		Id: 1013
+		Images: stne2snw17.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
+	Template@1014:
+		Id: 1014
+		Images: stne2snw18.png
+		Size: 1,1
+		Categories: Snow
+		Tiles:
+			0: Snow
