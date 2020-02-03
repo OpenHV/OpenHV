@@ -66,3 +66,33 @@ COPTER:
 		DecorationBounds: 24,24
 	RenderSprites:
 		PlayerPalette: green
+
+BALLOON:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Scout Balloon
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 20
+		Prerequisites: radar
+		Description: Slow reconnaissance air unit.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 18c0
+		Type: GroundPosition
+	Aircraft:
+		Speed: 60
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 24,24
+	-WithShadow:
+	#	Offset: 200, 128, 0
+	#	ZOffset: -129
+	WithShadowOverlay:
+		Offset: -3750,1000,0
