@@ -7322,3 +7322,34 @@ Templates:
 		Categories: Stone, Road
 		Tiles:
 			0: Road
+	Template@1035:
+		Id: 1035
+		Images: stnmisc1.png
+		Size: 2,2
+		Categories: Stone, Rock
+		Tiles:
+			0: Rock
+	Template@1036:
+		Id: 1036
+		Images: stnmisc2.png
+		Size: 2,2
+		Categories: Stone, Rock
+		Tiles:
+			0: Rock
+	Template@1037:
+		Id: 1037
+		Images: stnmisc3.png
+		Size: 2,2
+		Categories: Stone, Rock
+		Tiles:
+			0: Rock
+	Template@1038:
+		Id: 1038
+		Images: stnmisc4.png
+		Size: 2,2
+		Categories: Stone, Rock
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
