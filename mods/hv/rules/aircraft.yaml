@@ -96,3 +96,5 @@ BALLOON:
 	#	ZOffset: -129
 	WithShadowOverlay:
 		Offset: -3750,1000,0
+	RenderSprites:
+		PlayerPalette: green
