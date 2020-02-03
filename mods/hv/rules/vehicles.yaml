@@ -232,6 +232,12 @@ BEAST:
 		WanderMoveRadius: 1
 		MinMoveDelay: 100
 		MaxMoveDelay: 750
+	ScaredyCat:
+		PanicSpeedModifier: 150
+		AttackPanicChance: 80
+	WithShadow:
+		Offset: 50,50,0
+		ZOffset: -1000
 	Voiced:
 		VoiceSet: BeastVoice
 	-Repairable:
