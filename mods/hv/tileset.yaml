@@ -7182,3 +7182,143 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+	Template@1015:
+		Id: 1015
+		Images: stneroad1.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1016:
+		Id: 1016
+		Images: stneroad2.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1017:
+		Id: 1017
+		Images: stneroad3.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1018:
+		Id: 1018
+		Images: stneroad4.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1019:
+		Id: 1019
+		Images: stneroad5.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1020:
+		Id: 1020
+		Images: stneroad6.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1021:
+		Id: 1021
+		Images: stneroad7.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1022:
+		Id: 1022
+		Images: stneroad8.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1023:
+		Id: 1023
+		Images: stneroad9.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1024:
+		Id: 1024
+		Images: stneroad10.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1025:
+		Id: 1025
+		Images: stneroad11.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1026:
+		Id: 1026
+		Images: stneroad12.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1027:
+		Id: 1027
+		Images: stneroad13.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1028:
+		Id: 1028
+		Images: stneroad14.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1029:
+		Id: 1029
+		Images: stneroad15.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1030:
+		Id: 1030
+		Images: stneroad16.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1031:
+		Id: 1031
+		Images: stneroad17.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1032:
+		Id: 1032
+		Images: stneroad18.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1033:
+		Id: 1033
+		Images: stneroad19.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1034:
+		Id: 1034
+		Images: stneroad20.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
