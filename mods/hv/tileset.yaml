@@ -7353,3 +7353,59 @@ Templates:
 			1: Rock
 			2: Rock
 			3: Rock
+	Template@1039:
+		Id: 1039
+		Images: stnrdst1.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1040:
+		Id: 1040
+		Images: stnrdst2.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1041:
+		Id: 1041
+		Images: stnrdst3.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1042:
+		Id: 1042
+		Images: stnrdst4.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1043:
+		Id: 1043
+		Images: stnrdst5.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1044:
+		Id: 1044
+		Images: stnrdst6.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1045:
+		Id: 1045
+		Images: stnrdst7.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
+	Template@1046:
+		Id: 1046
+		Images: stnrdst8.png
+		Size: 1,1
+		Categories: Stone, Road
+		Tiles:
+			0: Road
