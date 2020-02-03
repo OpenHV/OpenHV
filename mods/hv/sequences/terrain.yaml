@@ -46,3 +46,9 @@ craters:
 	cr3: smudges3.png
 	cr4: smudges4.png
 	cr5: smudges5.png
+
+stnrock1:
+	idle: stnrock1.png
+
+stnrock2:
+	idle: stnrock2.png

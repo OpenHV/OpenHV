@@ -76,3 +76,15 @@ SANDMISC8:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+
+STNROCK1:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+STNROCK2:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ _ x
+		Dimensions: 1,3
