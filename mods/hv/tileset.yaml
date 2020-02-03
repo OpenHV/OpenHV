@@ -7409,3 +7409,136 @@ Templates:
 		Categories: Stone, Road
 		Tiles:
 			0: Road
+	Template@1047:
+		Id: 1047
+		Images: stone1.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1048:
+		Id: 1048
+		Images: stone2.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1049:
+		Id: 1049
+		Images: stone3.png
+		Size: 1,4
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Stone
+	Template@1050:
+		Id: 1050
+		Images: stone4.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1051:
+		Id: 1051
+		Images: stone5.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1052:
+		Id: 1052
+		Images: stone6.png
+		Size: 1,4
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@1053:
+		Id: 1053
+		Images: stone7.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1054:
+		Id: 1054
+		Images: stone8.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1055:
+		Id: 1055
+		Images: stone9.png
+		Size: 1,4
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+	Template@1056:
+		Id: 1056
+		Images: stone10.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1057:
+		Id: 1057
+		Images: stone11.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1058:
+		Id: 1058
+		Images: stone12.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1059:
+		Id: 1059
+		Images: stone13.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1060:
+		Id: 1060
+		Images: stone14.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1061:
+		Id: 1061
+		Images: stone15.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1062:
+		Id: 1062
+		Images: stone16.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1063:
+		Id: 1063
+		Images: stone17.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
+	Template@1064:
+		Id: 1064
+		Images: stone18.png
+		Size: 1,1
+		Categories: Stone
+		Tiles:
+			0: Stone
