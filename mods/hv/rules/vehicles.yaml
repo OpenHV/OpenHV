@@ -207,3 +207,40 @@ MINER:
 		IntoActor: miner2
 		Facing: 96
 		Offset: -1,-2
+
+BEAST:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Critter
+		GenericName: Beast
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 25
+		Speed: 80
+	RevealsShroud:
+		Range: 5c0
+	WithDeathAnimation:
+		FallbackSequence: die
+	DeathSounds:
+	WithMoveAnimation:
+	Wanders:
+		WanderMoveRadius: 1
+		MinMoveDelay: 100
+		MaxMoveDelay: 750
+	ScaredyCat:
+		PanicSpeedModifier: 150
+		AttackPanicChance: 80
+	WithShadow:
+		Offset: 50,50,0
+		ZOffset: -1000
+	Voiced:
+		VoiceSet: BeastVoice
+	-Repairable:
+	-Passenger:
+	-MustBeDestroyed:
+	-Explodes:
