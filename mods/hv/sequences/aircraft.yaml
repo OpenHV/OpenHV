@@ -13,3 +13,8 @@ copter:
 		Facings: 8
 		Tick: 100
 	icon: blank.png
+
+balloon:
+	idle: balloon.png
+	shadow-overlay: balloon-shadow.png
+	icon: blank.png
