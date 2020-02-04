@@ -7791,3 +7791,10 @@ Templates:
 		Categories: Swamp, Road
 		Tiles:
 			0: Road
+	Template@1103:
+		Id: 1103
+		Images: swmprock.png
+		Size: 1,1
+		Categories: Swamp, Rock
+		Tiles:
+			0: Rock
