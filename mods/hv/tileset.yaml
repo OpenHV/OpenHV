@@ -7644,3 +7644,10 @@ Templates:
 		Categories: Grass, Cliff, Swamp
 		Tiles:
 			0: Cliff
+	Template@1079:
+		Id: 1079
+		Images: swmpplnt.png
+		Size: 1,1
+		Categories: Swamp
+		Tiles:
+			0: Plant
