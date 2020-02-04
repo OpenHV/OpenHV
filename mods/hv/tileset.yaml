@@ -7707,3 +7707,87 @@ Templates:
 		Categories: Swamp, Road
 		Tiles:
 			0: Road
+	Template@1088:
+		Id: 1088
+		Images: swmproad1.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1089:
+		Id: 1089
+		Images: swmproad2.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1090:
+		Id: 1090
+		Images: swmproad3.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1091:
+		Id: 1091
+		Images: swmproad4.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1092:
+		Id: 1092
+		Images: swmproad5.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1093:
+		Id: 1093
+		Images: swmproad6.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1097:
+		Id: 1097
+		Images: swmproad7.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1098:
+		Id: 1098
+		Images: swmproad8.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1099:
+		Id: 1099
+		Images: swmproad9.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1100:
+		Id: 1100
+		Images: swmproad10.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1101:
+		Id: 1101
+		Images: swmproad11.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1102:
+		Id: 1102
+		Images: swmproad12.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
