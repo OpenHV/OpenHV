@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant, Stone, Swamp
 
 Terrain:
 	TerrainType@Clear:
