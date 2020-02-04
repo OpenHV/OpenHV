@@ -247,6 +247,8 @@ MINER2:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
+	WithShadowOverlay:
+		Offset: -2850,750,0
 	RenderSprites:
 		PlayerPalette: green
 
