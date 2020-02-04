@@ -65,6 +65,10 @@ Terrain:
 		Type: Stone
 		TargetTypes: Ground
 		Color: 565656
+	TerrainType@Swamp:
+		Type: Swamp
+		TargetTypes: Water
+		Color: 2B7D38
 
 Templates:
 	Template@0:
@@ -7542,3 +7546,101 @@ Templates:
 		Categories: Stone
 		Tiles:
 			0: Stone
+	Template@1065:
+		Id: 1065
+		Images: swamp1.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1066:
+		Id: 1066
+		Images: swamp2.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1067:
+		Id: 1067
+		Images: swamp3.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1068:
+		Id: 1068
+		Images: swamp4.png
+		Size: 1,1
+		Categories: Grass
+		Tiles:
+			0: Grass
+	Template@1069:
+		Id: 1069
+		Images: swamp5.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1070:
+		Id: 1070
+		Images: swamp6.png
+		Size: 1,1
+		Categories: Swamp
+		Tiles:
+			0: Swamp
+	Template@1071:
+		Id: 1071
+		Images: swamp7.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1072:
+		Id: 1072
+		Images: swamp8.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1073:
+		Id: 1073
+		Images: swamp9.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1074:
+		Id: 1074
+		Images: swamp10.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1075:
+		Id: 1075
+		Images: swamp11.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1076:
+		Id: 1076
+		Images: swamp12.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1077:
+		Id: 1077
+		Images: swamp13.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
+	Template@1078:
+		Id: 1078
+		Images: swamp14.png
+		Size: 1,1
+		Categories: Grass, Cliff, Swamp
+		Tiles:
+			0: Cliff
