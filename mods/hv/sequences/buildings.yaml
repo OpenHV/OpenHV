@@ -79,7 +79,7 @@ miner2:
 	make: miner2.png
 		Length: 17
 		Tick: 100
-	make-shadow-overlay: miner2.shadow.png
+	make-shadow-overlay: miner2-shadow.png
 		Length: 17
 		Tick: 100
 	active: miner2.png
