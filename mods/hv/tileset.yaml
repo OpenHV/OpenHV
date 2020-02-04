@@ -7651,3 +7651,59 @@ Templates:
 		Categories: Swamp
 		Tiles:
 			0: Plant
+	Template@1080:
+		Id: 1080
+		Images: swmprdst1.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1081:
+		Id: 1081
+		Images: swmprdst2.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1082:
+		Id: 1082
+		Images: swmprdst3.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1083:
+		Id: 1083
+		Images: swmprdst4.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1084:
+		Id: 1084
+		Images: swmprdst5.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1085:
+		Id: 1085
+		Images: swmprdst6.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1086:
+		Id: 1086
+		Images: swmprdst7.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1087:
+		Id: 1087
+		Images: swmprdst8.png
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
