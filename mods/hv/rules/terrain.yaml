@@ -107,3 +107,22 @@ SWMPANI:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+SWMPBUBL:
+	Inherits@1: ^SpriteActor
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Swamp
+	AppearsOnMapPreview:
+		Terrain: Swamp
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral

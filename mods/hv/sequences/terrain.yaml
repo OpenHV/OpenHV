@@ -63,3 +63,8 @@ swmpani:
 				Length: 3
 		Length: *
 		Tick: 1000
+
+swmpbubl:
+	idle: swmpbubl.png
+		Tick: 100
+		Length: *
