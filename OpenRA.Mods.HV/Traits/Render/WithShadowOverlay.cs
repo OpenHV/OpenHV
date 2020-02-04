@@ -21,7 +21,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Renders a decorational shadow on units and buildings.")]
-	public class WithShadowOverlayInfo : ITraitInfo, IRenderActorPreviewSpritesInfo, Requires<RenderSpritesInfo>, Requires<BodyOrientationInfo>
+	public class WithShadowOverlayInfo : PausableConditionalTraitInfo, IRenderActorPreviewSpritesInfo, Requires<RenderSpritesInfo>, Requires<BodyOrientationInfo>
 	{
 		[SequenceReference]
 		[Desc("Sequence name to use")]
@@ -33,10 +33,13 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Custom palette name")]
 		public readonly string Palette = "shadow";
 
-		public object Create(ActorInitializer init) { return new WithShadowOverlay(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new WithShadowOverlay(init.Self, this); }
 
 		public IEnumerable<IActorPreview> RenderPreviewSprites(ActorPreviewInitializer init, RenderSpritesInfo rs, string image, int facings, PaletteReference p)
 		{
+			if (!EnabledByDefault)
+				yield break;
+
 			if (Palette != null)
 				p = init.WorldRenderer.Palette(Palette);
 
@@ -65,22 +68,23 @@ namespace OpenRA.Mods.HV.Traits.Render
 		}
 	}
 
-	public class WithShadowOverlay : INotifyDamageStateChanged
+	public class WithShadowOverlay : PausableConditionalTrait<WithShadowOverlayInfo>, INotifyDamageStateChanged
 	{
 		readonly Animation overlay;
 
 		public WithShadowOverlay(Actor self, WithShadowOverlayInfo info)
+			: base(info)
 		{
 			var rs = self.Trait<RenderSprites>();
 			var body = self.Trait<BodyOrientation>();
 
-			overlay = new Animation(self.World, rs.GetImage(self));
+			overlay = new Animation(self.World, rs.GetImage(self), () => IsTraitPaused);
 			overlay.IsDecoration = true;
 			overlay.PlayRepeating(RenderSprites.NormalizeSequence(overlay, self.GetDamageState(), info.Sequence));
 
 			var anim = new AnimationWithOffset(overlay,
 				() => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(self, self.Orientation))),
-				() => false,
+				() => IsTraitDisabled,
 				p => RenderUtils.ZOffsetFromCenter(self, p, 1));
 
 			rs.Add(anim, info.Palette);

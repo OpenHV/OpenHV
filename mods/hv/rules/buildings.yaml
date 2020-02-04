@@ -234,6 +234,7 @@ MINER2:
 	WithSpriteBody:
 		Sequence: active
 	WithMakeAnimation:
+		Condition: build-incomplete
 	QuantizeFacingsFromSequence:
 		Sequence: active
 	UpdatesDerrickCount:
@@ -248,6 +249,11 @@ MINER2:
 	RevealsShroud:
 		Range: 4c0
 	WithShadowOverlay:
+		Offset: -2850,750,0
+		RequiresCondition: !build-incomplete
+	WithConstructionOverlay:
+		Sequence: make-shadow-overlay
+		Palette: shadow
 		Offset: -2850,750,0
 	RenderSprites:
 		PlayerPalette: green
