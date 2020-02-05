@@ -8148,3 +8148,101 @@ Templates:
 		Categories: Tech, Crater, Lava
 		Tiles:
 			0: Cliff
+	Template@1154:
+		Id: 1154
+		Images: tch2watr1.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1155:
+		Id: 1155
+		Images: tch2watr2.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1156:
+		Id: 1156
+		Images: tch2watr3.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Stone
+	Template@1157:
+		Id: 1157
+		Images: tch2watr4.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1158:
+		Id: 1158
+		Images: tch2watr5.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1159:
+		Id: 1159
+		Images: tch2watr6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1160:
+		Id: 1160
+		Images: tch2watr7.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1161:
+		Id: 1161
+		Images: tch2watr8.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1162:
+		Id: 1162
+		Images: tch2watr9.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1163:
+		Id: 1163
+		Images: tch2watr10.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1164:
+		Id: 1164
+		Images: tch2watr11.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1165:
+		Id: 1165
+		Images: tch2watr12.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Stone
+	Template@1166:
+		Id: 1166
+		Images: tch2watr13.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1167:
+		Id: 1167
+		Images: tch2watr14.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
