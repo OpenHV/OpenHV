@@ -650,3 +650,61 @@ ARTILLERYTURRET:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -1900,100,0
+
+HARBOR:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Prerequisites: base
+		Queue: Building
+		BuildPaletteOrder: 90
+		Description: Builds ships.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Light Factory
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+		TerrainTypes: Water
+	Health:
+		HP: 35000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c768
+	#RallyPoint:
+	#	Offset: 0,4
+	#	IsPlayerPalette: true
+	#	Palette: green
+	#Exit@1:
+	#	SpawnOffset: 0,0,0
+	#	ExitCell: 0,0
+	#	ProductionTypes: Ship
+	#Production:
+	#	Produces: Ship
+	#PrimaryBuilding:
+	#	PrimaryCondition: primary
+	#ProductionBar:
+	#	ProductionType: Ship
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -200,200,0
+	WithIdleOverlay@Entry:
+		Sequence: idle-entry
+	WithIdleOverlay@Production:
+		Sequence: production

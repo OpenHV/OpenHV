@@ -199,3 +199,19 @@ artilleryturret:
 		Facings: 8
 		Tick: 300
 	icon: blank.png
+
+harbor:
+	idle: harbor.png
+	idle-entry: harbor.png
+		Start: 2
+		ZOffset: -2000
+	shadow-overlay: harbor-shadow.png
+		ZOffset: -1768
+	production: harbor.png
+		Start: 3
+		Length: 7
+		#Reverses: True #TODO It doesn't work correctly as it expects more frames
+		Tick: 120
+	damaged-idle: harbor.png
+		Start: 1
+	icon: blank.png
