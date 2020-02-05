@@ -8050,3 +8050,101 @@ Templates:
 		Categories: Tech, Crater
 		Tiles:
 			0: Cliff
+	Template@1140:
+		Id: 1140
+		Images: tch2lava1.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1141:
+		Id: 1141
+		Images: tch2lava2.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1142:
+		Id: 1142
+		Images: tch2lava3.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Stone
+	Template@1143:
+		Id: 1143
+		Images: tch2lava4.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1144:
+		Id: 1144
+		Images: tch2lava5.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1145:
+		Id: 1145
+		Images: tch2lava6.png
+		Size: 1,1
+		Categories: Lava
+		Tiles:
+			0: Lava
+	Template@1146:
+		Id: 1146
+		Images: tch2lava7.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1147:
+		Id: 1147
+		Images: tch2lava8.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1148:
+		Id: 1148
+		Images: tch2lava9.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1149:
+		Id: 1149
+		Images: tch2lava10.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1150:
+		Id: 1150
+		Images: tch2lava11.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1151:
+		Id: 1151
+		Images: tch2lava12.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Stone
+	Template@1152:
+		Id: 1152
+		Images: tch2lava13.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1153:
+		Id: 1153
+		Images: tch2lava14.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
