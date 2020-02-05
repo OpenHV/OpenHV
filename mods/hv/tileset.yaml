@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant, Stone, Swamp
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant, Stone, Swamp, Tech
 
 Terrain:
 	TerrainType@Clear:
@@ -7798,3 +7798,101 @@ Templates:
 		Categories: Swamp, Rock
 		Tiles:
 			0: Rock
+	Template@1104:
+		Id: 1104
+		Images: tch2crtb1.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1105:
+		Id: 1105
+		Images: tch2crtb2.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1106:
+		Id: 1106
+		Images: tch2crtb3.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1107:
+		Id: 1107
+		Images: tch2crtb4.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1108:
+		Id: 1108
+		Images: tch2crtb5.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1109:
+		Id: 1109
+		Images: tch2crtb6.png
+		Size: 1,1
+		Categories: Crater
+		Tiles:
+			0: Crater
+	Template@1110:
+		Id: 1110
+		Images: tch2crtb7.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1111:
+		Id: 1111
+		Images: tch2crtb8.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1112:
+		Id: 1112
+		Images: tch2crtb9.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1113:
+		Id: 1113
+		Images: tch2crtb10.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1114:
+		Id: 1114
+		Images: tch2crtb11.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1115:
+		Id: 1115
+		Images: tch2crtb12.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1116:
+		Id: 1116
+		Images: tch2crtb13.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1117:
+		Id: 1117
+		Images: tch2crtb14.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
