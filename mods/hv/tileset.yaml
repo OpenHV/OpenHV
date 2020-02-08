@@ -8883,3 +8883,94 @@ Templates:
 		Categories: Water, Road
 		Tiles:
 			0: Road
+	Template@1259:
+		Id: 1259
+		Images: watrroad1.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1260:
+		Id: 1260
+		Images: watrroad2.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1261:
+		Id: 1261
+		Images: watrroad3.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1262:
+		Id: 1262
+		Images: watrroad4.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1263:
+		Id: 1263
+		Images: watrroad4.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1264:
+		Id: 1264
+		Images: watrroad5.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1265:
+		Id: 1265
+		Images: watrroad6.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1266:
+		Id: 1266
+		Images: watrroad7.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1267:
+		Id: 1267
+		Images: watrroad8.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1268:
+		Id: 1268
+		Images: watrroad9.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1269:
+		Id: 1269
+		Images: watrroad10.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1270:
+		Id: 1270
+		Images: watrroad11.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1271:
+		Id: 1271
+		Images: watrroad12.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
