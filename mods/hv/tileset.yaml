@@ -8631,3 +8631,185 @@ Templates:
 		Categories: Water
 		Tiles:
 			0: Water
+	Template@1223:
+		Id: 1223
+		Images: water2-1.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1224:
+		Id: 1224
+		Images: water2-2.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1225:
+		Id: 1225
+		Images: water2-3.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1226:
+		Id: 1226
+		Images: water2-4.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1227:
+		Id: 1227
+		Images: water2-5.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1228:
+		Id: 1228
+		Images: water2-6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1229:
+		Id: 1229
+		Images: water2-7.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1230:
+		Id: 1230
+		Images: water2-8.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1231:
+		Id: 1231
+		Images: water2-9.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1232:
+		Id: 1232
+		Images: water2-10.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1233:
+		Id: 1233
+		Images: water2-11.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1234:
+		Id: 1234
+		Images: water2-12.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1235:
+		Id: 1235
+		Images: water2-13.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1236:
+		Id: 1236
+		Images: water2-14.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1237:
+		Id: 1237
+		Images: water2-15.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1238:
+		Id: 1238
+		Images: water2-16.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1239:
+		Id: 1239
+		Images: water2-17.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1240:
+		Id: 1240
+		Images: water2-18.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1241:
+		Id: 1241
+		Images: water2-19.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1242:
+		Id: 1242
+		Images: water2-20.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1243:
+		Id: 1243
+		Images: water2-21.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1244:
+		Id: 1244
+		Images: water2-22.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1245:
+		Id: 1245
+		Images: water2-23.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1246:
+		Id: 1246
+		Images: water2-24.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1247:
+		Id: 1247
+		Images: water2-25.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1248:
+		Id: 1248
+		Images: water2-26.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
