@@ -8344,3 +8344,143 @@ Templates:
 		Categories: Tech
 		Tiles:
 			0: Stone
+	Template@1182:
+		Id: 1182
+		Images: techmsc1.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1183:
+		Id: 1183
+		Images: techmsc2.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1184:
+		Id: 1184
+		Images: techmsc3.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1185:
+		Id: 1185
+		Images: techmsc4.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1186:
+		Id: 1186
+		Images: techmsc5.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1187:
+		Id: 1187
+		Images: techmsc6.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1188:
+		Id: 1188
+		Images: techmsc7.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1189:
+		Id: 1189
+		Images: techmsc8.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1190:
+		Id: 1190
+		Images: techmsc9.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1191:
+		Id: 1191
+		Images: techmsc10.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1192:
+		Id: 1192
+		Images: techmsc11.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1193:
+		Id: 1193
+		Images: techmsc12.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1194:
+		Id: 1194
+		Images: techmsc13.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1195:
+		Id: 1195
+		Images: techmsc14.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1196:
+		Id: 1196
+		Images: techmsc15.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1197:
+		Id: 1197
+		Images: techmsc16.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1198:
+		Id: 1198
+		Images: techmsc17.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1199:
+		Id: 1199
+		Images: techmsc18.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1200:
+		Id: 1200
+		Images: techmsc19.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1201:
+		Id: 1201
+		Images: techmsc20.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
