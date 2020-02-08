@@ -1,0 +1,36 @@
+boat:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Ligth boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		Prerequisites: factory3
+		BuildPaletteOrder: 40
+		Description: A boat with a turret
+		BuildAtProductionType: Tracked
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 33000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 100
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 7
+	Armament:
+		Weapon: TyrianTankCannon
+		Recoil: 50
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,0 # TODO: to be adjusted
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	#RenderSprites:
+	#	PlayerPalette: green
