@@ -8540,3 +8540,87 @@ Templates:
 		Categories: Tech, Road
 		Tiles:
 			0: Road
+	Template@1210:
+		Id: 1210
+		Images: techroad1.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1211:
+		Id: 1211
+		Images: techroad2.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1212:
+		Id: 1212
+		Images: techroad3.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1213:
+		Id: 1213
+		Images: techroad4.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1214:
+		Id: 1214
+		Images: techroad5.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1215:
+		Id: 1215
+		Images: techroad6.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1216:
+		Id: 1216
+		Images: techroad7.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1217:
+		Id: 1217
+		Images: techroad8.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1218:
+		Id: 1218
+		Images: techroad9.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1219:
+		Id: 1219
+		Images: techroad10.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1220:
+		Id: 1220
+		Images: techroad11.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1221:
+		Id: 1221
+		Images: techroad12.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
