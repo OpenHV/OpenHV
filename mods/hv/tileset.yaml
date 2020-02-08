@@ -8337,3 +8337,10 @@ Templates:
 		Categories: Tech, Crater, Cliff
 		Tiles:
 			0: Cliff
+	Template@1181:
+		Id: 1181
+		Images: tech.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
