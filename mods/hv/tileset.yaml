@@ -8624,3 +8624,10 @@ Templates:
 		Categories: Tech, Road
 		Tiles:
 			0: Road
+	Template@1222:
+		Id: 1222
+		Images: water.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
