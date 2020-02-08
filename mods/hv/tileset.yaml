@@ -8484,3 +8484,59 @@ Templates:
 		Categories: Tech
 		Tiles:
 			0: Stone
+	Template@1202:
+		Id: 1202
+		Images: techrdst1.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1203:
+		Id: 1203
+		Images: techrdst2.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1204:
+		Id: 1204
+		Images: techrdst3.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1205:
+		Id: 1205
+		Images: techrdst4.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1206:
+		Id: 1206
+		Images: techrdst5.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1207:
+		Id: 1207
+		Images: techrdst6.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1208:
+		Id: 1208
+		Images: techrdst7.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1209:
+		Id: 1209
+		Images: techrdst8.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
