@@ -1,16 +1,16 @@
 boat:
-	Inherits: ^TrackedVehicle
+	Inherits: ^Ship
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Ligth boat
+		Name: Medium boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
-		Prerequisites: factory3
+		Prerequisites: harbor
 		BuildPaletteOrder: 40
 		Description: A boat with a turret
-		BuildAtProductionType: Tracked
+		BuildAtProductionType: Boat
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

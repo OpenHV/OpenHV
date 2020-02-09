@@ -49,6 +49,10 @@
 			Snow: 40
 			Sand: 30
 			Stone: 100
+	Locomotor@NAVAL:
+		Name: naval
+		TerrainSpeeds:
+			Water: 100
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp

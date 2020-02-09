@@ -331,10 +331,8 @@
 	AttackMove:
 	ProximityCaptor:
 		Types: Ship
-	RepairableNear:
-		RepairActors: harbor
-	GpsDot:
-		String: Ship
+	#RepairableNear:
+	#	RepairActors: harbor
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -344,7 +342,6 @@
 		GenericName: Ship
 	MustBeDestroyed:
 	MapEditorData:
-		ExcludeTilesets: INTERIOR
 		Categories: Naval
 	Voiced:
 		VoiceSet: GenericVoice2

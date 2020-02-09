@@ -664,7 +664,7 @@ HARBOR:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Light Factory
+		Name: Habor
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -676,20 +676,20 @@ HARBOR:
 		Type: Steel
 	RevealsShroud:
 		Range: 4c768
-	#RallyPoint:
-	#	Offset: 0,4
-	#	IsPlayerPalette: true
-	#	Palette: green
-	#Exit@1:
-	#	SpawnOffset: 0,0,0
-	#	ExitCell: 0,0
-	#	ProductionTypes: Ship
-	#Production:
-	#	Produces: Ship
-	#PrimaryBuilding:
-	#	PrimaryCondition: primary
-	#ProductionBar:
-	#	ProductionType: Ship
+	RallyPoint:
+		Offset: 0,4
+		IsPlayerPalette: true
+		Palette: green
+	Exit@1:
+		SpawnOffset: 0,0,0
+		ExitCell: 0,0
+		ProductionTypes: Ship
+	Production:
+		Produces: Ship, Boat
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
+		ProductionType: Ship
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:

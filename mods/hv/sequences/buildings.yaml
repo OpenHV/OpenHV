@@ -210,7 +210,7 @@ harbor:
 	production: harbor.png
 		Start: 3
 		Length: 7
-		Reverses: True #TODO It doesn't work correctly as it expects more frames
+		#Reverses: True #TODO It doesn't work correctly as it expects more frames
 		Tick: 120
 	damaged-idle: harbor.png
 		Start: 1

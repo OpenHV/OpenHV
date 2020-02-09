@@ -1,7 +1,7 @@
 boat:
-	idle: boat2.png
+	idle: boat1.png
 		Facings: 8
-	turret: boat2.png
+	turret: boat1.png
 		Start: 8
 		Facings: 8
 	muzzle: muzzle.png
