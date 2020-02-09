@@ -126,3 +126,161 @@ SWMPBUBL:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+TREEGRS1:
+	Inherits: ^Tree
+
+TREEGRS2:
+	Inherits: ^Tree
+
+TREEGRS3:
+	Inherits: ^Tree
+
+TREEGRS4:
+	Inherits: ^Tree
+
+TREEGRS5:
+	Inherits: ^Tree
+
+TREEGRS6:
+	Inherits: ^Tree
+
+TREEGRS7:
+	Inherits: ^Tree
+
+TREEGRS8:
+	Inherits: ^Tree
+
+TREEGRS9:
+	Inherits: ^Tree
+
+TREEGRS10:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+TREEGRS11:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+TREEGRS12:
+	Inherits: ^Tree
+
+TREEGRS13:
+	Inherits: ^Tree
+
+TREEGRS14:
+	Inherits: ^Tree
+
+TREEGRS15:
+	Inherits: ^Tree
+
+TreeAsh:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	RenderSprites:
+		Palette: terrain
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Stone
+	AppearsOnMapPreview:
+		Terrain: Stone
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	WithSpriteBody:
+	Tooltip:
+		Name: Burnt Tree
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	ScriptTriggers:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+TreeMud:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	RenderSprites:
+		Palette: terrain
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Crater
+	AppearsOnMapPreview:
+		Terrain: Crater
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	WithSpriteBody:
+	Tooltip:
+		Name: Run Over Tree
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	ScriptTriggers:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+TREES1:
+	Inherits: ^Tree
+
+TREES2:
+	Inherits: ^Tree
+
+TREES3:
+	Inherits: ^Tree
+
+TREES4:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+TREES5:
+	Inherits: ^Tree
+
+TREES6:
+	Inherits: ^Tree
+
+TREES7:
+	Inherits: ^Tree
+
+TREES8:
+	Inherits: ^Tree
+
+TREES9:
+	Inherits: ^Tree
+
+TREES10:
+	Inherits: ^Tree
+
+TREES11:
+	Inherits: ^Tree
+
+TREES12:
+	Inherits: ^Tree
+
+TREES13:
+	Inherits: ^Tree
+
+TREES14:
+	Inherits: ^Tree
+
+TREES15:
+	Inherits: ^Tree
+
+TREES16:
+	Inherits: ^Tree
+
+TREES17:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
