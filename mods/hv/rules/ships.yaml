@@ -7,10 +7,10 @@ boat:
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
+		BuildAtProductionType: Ship
 		Prerequisites: harbor
 		BuildPaletteOrder: 40
 		Description: A boat with a turret
-		BuildAtProductionType: Boat
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -19,10 +19,11 @@ boat:
 		Type: Heavy
 	Mobile:
 		Speed: 100
+		TurnSpeed: 15
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 7
+		TurnSpeed: 15
 	Armament:
 		Weapon: TyrianTankCannon
 		Recoil: 50

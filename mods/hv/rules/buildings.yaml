@@ -680,12 +680,12 @@ HARBOR:
 		Offset: 0,4
 		IsPlayerPalette: true
 		Palette: green
-	Exit@1:
+	Exit:
 		SpawnOffset: 0,0,0
 		ExitCell: 0,0
 		ProductionTypes: Ship
 	Production:
-		Produces: Ship, Boat
+		Produces: Ship
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
