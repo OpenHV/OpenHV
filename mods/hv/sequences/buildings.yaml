@@ -202,6 +202,7 @@ artilleryturret:
 
 harbor:
 	idle: harbor.png
+		ZOffset: 1000
 	idle-entry: harbor.png
 		Start: 2
 		ZOffset: -2000
@@ -212,6 +213,8 @@ harbor:
 		Length: 7
 		#Reverses: True #TODO It doesn't work correctly as it expects more frames
 		Tick: 120
+		ZOffset: 1500
 	damaged-idle: harbor.png
 		Start: 1
+		ZOffset: 1000
 	icon: blank.png

@@ -653,7 +653,6 @@ ARTILLERYTURRET:
 
 HARBOR:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 40,40
 	Buildable:
@@ -666,10 +665,14 @@ HARBOR:
 	Tooltip:
 		Name: Habor
 	Building:
-		Footprint: xxx xxx xxx
+		Footprint: xxx x=x x=x
 		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
+		LocalCenterOffset: 150,-512,0
 		TerrainTypes: Water
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
 	Health:
 		HP: 35000
 	Armor:
@@ -677,13 +680,14 @@ HARBOR:
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
-		Offset: 0,4
+		Offset: 1,3
 		IsPlayerPalette: true
 		Palette: green
 	Exit:
-		SpawnOffset: 0,0,0
-		ExitCell: 0,0
+		SpawnOffset: -150,-500,0
+		ExitCell: 1,3
 		ProductionTypes: Ship
+		Facing: 90
 	Production:
 		Produces: Ship
 	PrimaryBuilding:
