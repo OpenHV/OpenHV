@@ -73,3 +73,15 @@ smoke:
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
+
+water_splash:
+	water_splash_a: water_splash.png
+		Start: 0
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+	water_splash_b: water_splash.png
+		Start: 9
+		Length: 9
+		Tick: 60
+		ZOffset: 1000		

@@ -1,0 +1,20 @@
+railgun:
+	Range: 10c0
+	ReloadDelay: 100
+	Report: ray_gun-Mike_Koenig-1169060422.wav
+	Projectile: LaserZap
+		Width: 0c100
+		Shape: Cylindrical
+		ZOffset: 2000
+		Color: FE0303 #DE8200
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 4000
+		Versus:
+			None: 30
+			Steel: 75
+			Light: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav

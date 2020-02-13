@@ -8,3 +8,11 @@ boat:
 		Length: 8
 		Facings: 8	
 	icon: blank.png
+
+heavyboat:
+	idle: boat2.png
+		Facings: 8
+	turret: boat2.png
+		Start: 8
+		Facings: 8
+	icon: blank.png
