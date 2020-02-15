@@ -46,6 +46,7 @@
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 5
+	TeleportNetworkTransportable:
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -158,12 +159,25 @@
 		RequiresCondition: cruising
 	BodyOrientation:
 
-^3x3Shape:
+^1x1Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
-			TopLeft: -1536, -1536
-			BottomRight: 1536, 1536
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+^1x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -512, -1024
+			BottomRight: 512, 1024
+
+^2x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -512
+			BottomRight: 1024, 512
 
 ^2x2Shape:
 	HitShape:
@@ -178,6 +192,13 @@
 		Type: Rectangle
 			TopLeft: -1024, -1536
 			BottomRight: 1024, 1536
+
+^3x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
 
 ^Building:
 	Inherits@1: ^ExistsInWorld
@@ -301,6 +322,52 @@
 		Condition: shield
 	ExternalCondition@FORCEFIELD:
 		Condition: shield
+
+^Tree:
+	Inherits@1: ^SpriteActor
+	Inherits@shape: ^1x1Shape
+	Interactable:
+	Tooltip:
+		Name: Tree
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	Health:
+		HP: 50000
+	Armor:
+		Type: Wood
+	Targetable:
+		TargetTypes: Tree
+	WithDamageOverlay@Burn:
+		DamageTypes: Fire
+		Image: flame
+		Palette: effect
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+	SpawnActorOnDeath@Ash:
+		Actor: TreeAsh
+		DeathType: Fire
+	Crushable:
+		CrushClasses: Tree
+		WarnProbability: 0
+		CrushedByFriendlies: true
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
+		DeathType: Crush
 
 ^Ship:
 	Inherits@1: ^ExistsInWorld

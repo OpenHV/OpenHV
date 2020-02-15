@@ -4,8 +4,9 @@ BuildingExplode:
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 ^Explosion:
-	ValidTargets: Ground, Water, Air
+	ValidTargets: Ground, Water, Air, Tree
 	Warhead@1Dam: SpreadDamage
+		DamageTypes: Fire
 		Spread: 426
 		Damage: 5000
 		Versus:

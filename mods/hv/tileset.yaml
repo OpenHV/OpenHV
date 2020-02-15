@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant, Stone, Swamp
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant, Stone, Swamp, Tech
 
 Terrain:
 	TerrainType@Clear:
@@ -190,13 +190,6 @@ Templates:
 		Categories: Crater, Lava
 		Tiles:
 			0: Cliff
-	Template@17:
-		Id: 17
-		Images: crtr2lav4.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@18:
 		Id: 18
 		Images: crtr2lav5.png
@@ -204,13 +197,6 @@ Templates:
 		Categories: Crater, Lava
 		Tiles:
 			0: Cliff
-	Template@19:
-		Id: 19
-		Images: crtr2lav6.png
-		Size: 1,1
-		Categories: Lava
-		Tiles:
-			0: Lava
 	Template@20:
 		Id: 20
 		Images: crtr2lav7.png
@@ -286,13 +272,6 @@ Templates:
 		Images: crtr2wtr3.png
 		Size: 1,1
 		Categories: Crater, Water
-		Tiles:
-			0: Water
-	Template@31:
-		Id: 31
-		Images: crtr2wtr4.png
-		Size: 1,1
-		Categories: Crater
 		Tiles:
 			0: Water
 	Template@32:
@@ -456,20 +435,6 @@ Templates:
 		Categories: Crater, Road
 		Tiles:
 			0: Road
-	Template@55:
-		Id: 55
-		Images: crtrroad4.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@56:
-		Id: 56
-		Images: crtrroad5.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@57:
 		Id: 57
 		Images: crtrroad6.png
@@ -540,25 +505,11 @@ Templates:
 		Categories: Crater, Road
 		Tiles:
 			0: Road
-	Template@67:
-		Id: 67
-		Images: crtrroad16.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@68:
 		Id: 68
 		Images: crtrroad17.png
 		Size: 1,1
 		Categories: Crater, Road
-		Tiles:
-			0: Road
-	Template@69:
-		Id: 69
-		Images: crtrroad18.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@70:
@@ -575,25 +526,11 @@ Templates:
 		Categories: Crater, Road
 		Tiles:
 			0: Road
-	Template@72:
-		Id: 72
-		Images: crtrroad21.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@73:
 		Id: 73
 		Images: crtrroad22.png
 		Size: 1,1
 		Categories: Crater, Road
-		Tiles:
-			0: Road
-	Template@74:
-		Id: 74
-		Images: crtrroad23.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@75:
@@ -645,13 +582,6 @@ Templates:
 		Categories: Grass, Cliff
 		Tiles:
 			0: Cliff
-	Template@82:
-		Id: 82
-		Images: grasclif5.png
-		Size: 1,1
-		Categories: Grass
-		Tiles:
-			0: Grass
 	Template@83:
 		Id: 83
 		Images: grasclif6.png
@@ -727,20 +657,6 @@ Templates:
 		Images: grasroad3.png
 		Size: 1,1
 		Categories: Grass, Road
-		Tiles:
-			0: Road
-	Template@94:
-		Id: 94
-		Images: grasroad4.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@95:
-		Id: 95
-		Images: grasroad5.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@96:
@@ -820,25 +736,11 @@ Templates:
 		Categories: Grass, Road
 		Tiles:
 			0: Road
-	Template@107:
-		Id: 107
-		Images: grasroad17.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@108:
 		Id: 108
 		Images: grasroad18.png
 		Size: 1,1
 		Categories: Grass, Road
-		Tiles:
-			0: Road
-	Template@109:
-		Id: 109
-		Images: grasroad19.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@110:
@@ -855,25 +757,11 @@ Templates:
 		Categories: Grass, Road
 		Tiles:
 			0: Road
-	Template@112:
-		Id: 112
-		Images: grasroad22.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@113:
 		Id: 113
 		Images: grasroad23.png
 		Size: 1,1
 		Categories: Grass, Road
-		Tiles:
-			0: Road
-	Template@114:
-		Id: 114
-		Images: grasroad24.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@115:
@@ -1156,13 +1044,6 @@ Templates:
 		Categories: Grass, Crater
 		Tiles:
 			0: Crater
-	Template@155:
-		Id: 155
-		Images: grs2crtb5.png
-		Size: 1,1
-		Categories: Grass, Crater
-		Tiles:
-			0: Crater
 	Template@156:
 		Id: 156
 		Images: grs2crtb6.png
@@ -1296,13 +1177,6 @@ Templates:
 		Categories: Grass, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@175:
-		Id: 175
-		Images: grs2crtr4.png
-		Size: 1,1
-		Categories: Grass
-		Tiles:
-			0: Grass
 	Template@176:
 		Id: 176
 		Images: grs2crtr5.png
@@ -1310,13 +1184,6 @@ Templates:
 		Categories: Grass, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@177:
-		Id: 177
-		Images: grs2crtr6.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@178:
 		Id: 178
 		Images: grs2crtr7.png
@@ -1520,13 +1387,6 @@ Templates:
 		Categories: Grass, Water, Cliff
 		Tiles:
 			0: Cliff
-	Template@207:
-		Id: 207
-		Images: grs2watr4.png
-		Size: 1,1
-		Categories: Grass
-		Tiles:
-			0: Grass
 	Template@208:
 		Id: 208
 		Images: grs2watr5.png
@@ -1534,13 +1394,6 @@ Templates:
 		Categories: Grass, Water, Cliff
 		Tiles:
 			0: Cliff
-	Template@209:
-		Id: 209
-		Images: grs2watr6.png
-		Size: 1,1
-		Categories: Water
-		Tiles:
-			0: Water
 	Template@210:
 		Id: 210
 		Images: grs2watr7.png
@@ -1618,13 +1471,6 @@ Templates:
 		Categories: Grass, Lava, Cliff
 		Tiles:
 			0: Cliff
-	Template@221:
-		Id: 221
-		Images: grss2lav4.png
-		Size: 1,1
-		Categories: Grass
-		Tiles:
-			0: Grass
 	Template@222:
 		Id: 222
 		Images: grss2lav5.png
@@ -1632,13 +1478,6 @@ Templates:
 		Categories: Grass, Lava, Cliff
 		Tiles:
 			0: Cliff
-	Template@223:
-		Id: 223
-		Images: grss2lav6.png
-		Size: 1,1
-		Categories: Lava
-		Tiles:
-			0: Lava
 	Template@224:
 		Id: 224
 		Images: grss2lav7.png
@@ -2220,20 +2059,6 @@ Templates:
 		Categories: Ice, Road
 		Tiles:
 			0: Road
-	Template@307:
-		Id: 307
-		Images: iceroad4.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@308:
-		Id: 308
-		Images: iceroad5.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@309:
 		Id: 309
 		Images: iceroad6.png
@@ -2654,13 +2479,6 @@ Templates:
 		Categories: Mountain, Crater
 		Tiles:
 			0: Crater
-	Template@369:
-		Id: 369
-		Images: mnt2crtb5.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@370:
 		Id: 370
 		Images: mnt2crtb6.png
@@ -2794,13 +2612,6 @@ Templates:
 		Categories: Mountain, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@389:
-		Id: 389
-		Images: mnt2crtr4.png
-		Size: 1,1
-		Categories: Mountain, Crater, Cliff
-		Tiles:
-			0: Mountain
 	Template@390:
 		Id: 390
 		Images: mnt2crtr5.png
@@ -2808,13 +2619,6 @@ Templates:
 		Categories: Mountain, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@391:
-		Id: 391
-		Images: mnt2crtr6.png
-		Size: 1,1
-		Categories: Mountain, Crater, Cliff
-		Tiles:
-			0: Crater
 	Template@392:
 		Id: 392
 		Images: mnt2crtr7.png
@@ -2892,25 +2696,11 @@ Templates:
 		Categories: Mountain, Lava, Cliff
 		Tiles:
 			0: Mountain
-	Template@403:
-		Id: 403
-		Images: mnt2lava4.png
-		Size: 1,1
-		Categories: Mountain, Lava, Cliff
-		Tiles:
-			0: Mountain
 	Template@404:
 		Id: 404
 		Images: mnt2lava5.png
 		Size: 1,1
 		Categories: Mountain, Lava, Cliff
-		Tiles:
-			0: Lava
-	Template@405:
-		Id: 405
-		Images: mnt2lava6.png
-		Size: 1,1
-		Categories: Lava
 		Tiles:
 			0: Lava
 	Template@406:
@@ -3074,25 +2864,11 @@ Templates:
 		Categories: Mountain, Water, Cliff
 		Tiles:
 			0: Mountain
-	Template@429:
-		Id: 429
-		Images: mnt2watr4.png
-		Size: 1,1
-		Categories: Mountain
-		Tiles:
-			0: Mountain
 	Template@430:
 		Id: 430
 		Images: mnt2watr5.png
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
-		Tiles:
-			0: Water
-	Template@431:
-		Id: 431
-		Images: mnt2watr6.png
-		Size: 1,1
-		Categories: Water
 		Tiles:
 			0: Water
 	Template@432:
@@ -3179,13 +2955,6 @@ Templates:
 		Categories: Mountain, Cliff
 		Tiles:
 			0: Cliff
-	Template@444:
-		Id: 444
-		Images: mntcliff5.png
-		Size: 1,1
-		Categories: Mountain
-		Tiles:
-			0: Mountain
 	Template@445:
 		Id: 445
 		Images: mntcliff6.png
@@ -3378,20 +3147,6 @@ Templates:
 		Categories: Mountain, Road
 		Tiles:
 			0: Road
-	Template@472:
-		Id: 472
-		Images: mntroad4.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@473:
-		Id: 473
-		Images: mntroad5.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@474:
 		Id: 474
 		Images: mntroad6.png
@@ -3469,25 +3224,11 @@ Templates:
 		Categories: Mountain, Road
 		Tiles:
 			0: Road
-	Template@485:
-		Id: 485
-		Images: mntroad17.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@486:
 		Id: 486
 		Images: mntroad18.png
 		Size: 1,1
 		Categories: Mountain, Road
-		Tiles:
-			0: Road
-	Template@487:
-		Id: 487
-		Images: mntroad19.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@488:
@@ -3504,25 +3245,11 @@ Templates:
 		Categories: Mountain, Road
 		Tiles:
 			0: Road
-	Template@490:
-		Id: 490
-		Images: mntroad22.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@491:
 		Id: 491
 		Images: mntroad23.png
 		Size: 1,1
 		Categories: Mountain, Road
-		Tiles:
-			0: Road
-	Template@492:
-		Id: 492
-		Images: mntroad24.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@493:
@@ -3924,20 +3651,6 @@ Templates:
 		Categories: Road
 		Tiles:
 			0: Road
-	Template@550:
-		Id: 550
-		Images: roadsnw2-4.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@551:
-		Id: 551
-		Images: roadsnw2-5.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@552:
 		Id: 552
 		Images: roadsnw2-6.png
@@ -3948,20 +3661,6 @@ Templates:
 	Template@553:
 		Id: 553
 		Images: roadsnw2-7.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@554:
-		Id: 554
-		Images: roadsnw2-8.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@555:
-		Id: 555
-		Images: roadsnw2-9.png
 		Size: 1,1
 		Categories: Road
 		Tiles:
@@ -3983,20 +3682,6 @@ Templates:
 	Template@558:
 		Id: 558
 		Images: roadsnw2-12.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@559:
-		Id: 559
-		Images: roadsnw2-13.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@560:
-		Id: 560
-		Images: roadsnw2-14.png
 		Size: 1,1
 		Categories: Road
 		Tiles:
@@ -4127,13 +3812,6 @@ Templates:
 		Categories: Sand, Lava
 		Tiles:
 			0: Cliff
-	Template@579:
-		Id: 579
-		Images: sand2lav4.png
-		Size: 1,1
-		Categories: Sand
-		Tiles:
-			0: Sand
 	Template@580:
 		Id: 580
 		Images: sand2lav5.png
@@ -4141,13 +3819,6 @@ Templates:
 		Categories: Sand, Lava
 		Tiles:
 			0: Cliff
-	Template@581:
-		Id: 581
-		Images: sand2lav6.png
-		Size: 1,1
-		Categories: Lava
-		Tiles:
-			0: Lava
 	Template@582:
 		Id: 582
 		Images: sand2lav7.png
@@ -4337,20 +4008,6 @@ Templates:
 		Categories: Sand, Road
 		Tiles:
 			0: Road
-	Template@609:
-		Id: 609
-		Images: sandroad4.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
-	Template@610:
-		Id: 610
-		Images: sandroad5.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@611:
 		Id: 611
 		Images: sandroad6.png
@@ -4428,25 +4085,11 @@ Templates:
 		Categories: Sand, Road
 		Tiles:
 			0: Road
-	Template@622:
-		Id: 622
-		Images: sandroad17.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@623:
 		Id: 623
 		Images: sandroad18.png
 		Size: 1,1
 		Categories: Sand, Road
-		Tiles:
-			0: Road
-	Template@624:
-		Id: 624
-		Images: sandroad19.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@625:
@@ -4463,25 +4106,11 @@ Templates:
 		Categories: Sand, Road
 		Tiles:
 			0: Road
-	Template@627:
-		Id: 627
-		Images: sandroad22.png
-		Size: 1,1
-		Categories: Road
-		Tiles:
-			0: Road
 	Template@628:
 		Id: 628
 		Images: sandroad23.png
 		Size: 1,1
 		Categories: Sand, Road
-		Tiles:
-			0: Road
-	Template@629:
-		Id: 629
-		Images: sandroad24.png
-		Size: 1,1
-		Categories: Road
 		Tiles:
 			0: Road
 	Template@630:
@@ -4531,13 +4160,6 @@ Templates:
 		Images: sn2-2crb5.png
 		Size: 1,1
 		Categories: Snow, Crater
-		Tiles:
-			0: Crater
-	Template@637:
-		Id: 637
-		Images: sn2-2crb6.png
-		Size: 1,1
-		Categories: Crater
 		Tiles:
 			0: Crater
 	Template@638:
@@ -4673,13 +4295,6 @@ Templates:
 		Categories: Snow, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@657:
-		Id: 657
-		Images: sn2-2wtr4.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@658:
 		Id: 658
 		Images: sn2-2wtr5.png
@@ -4687,13 +4302,6 @@ Templates:
 		Categories: Snow, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@659:
-		Id: 659
-		Images: sn2-2wtr6.png
-		Size: 1,1
-		Categories: Water
-		Tiles:
-			0: Water
 	Template@660:
 		Id: 660
 		Images: sn2-2wtr7.png
@@ -4778,13 +4386,6 @@ Templates:
 		Categories: Snow, Cliff
 		Tiles:
 			0: Cliff
-	Template@672:
-		Id: 672
-		Images: sn2-clif5.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@673:
 		Id: 673
 		Images: sn2-clif6.png
@@ -4918,13 +4519,6 @@ Templates:
 		Categories: Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
-	Template@692:
-		Id: 692
-		Images: sn22crtr4.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@693:
 		Id: 693
 		Images: sn22crtr5.png
@@ -4932,13 +4526,6 @@ Templates:
 		Categories: Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
-	Template@694:
-		Id: 694
-		Images: sn22crtr6.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@695:
 		Id: 695
 		Images: sn22crtr7.png
@@ -5023,13 +4610,6 @@ Templates:
 		Categories: Sand, Crater
 		Tiles:
 			0: Sand
-	Template@707:
-		Id: 707
-		Images: snd2crtb5.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@708:
 		Id: 708
 		Images: snd2crtb6.png
@@ -5163,13 +4743,6 @@ Templates:
 		Categories: Sand, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@727:
-		Id: 727
-		Images: snd2crtr4.png
-		Size: 1,1
-		Categories: Sand
-		Tiles:
-			0: Sand
 	Template@728:
 		Id: 728
 		Images: snd2crtr5.png
@@ -5177,13 +4750,6 @@ Templates:
 		Categories: Sand, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@729:
-		Id: 729
-		Images: snd2crtr6.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@730:
 		Id: 730
 		Images: snd2crtr7.png
@@ -5261,13 +4827,6 @@ Templates:
 		Categories: Sand, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@741:
-		Id: 741
-		Images: snd2watr4.png
-		Size: 1,1
-		Categories: Sand
-		Tiles:
-			0: Sand
 	Template@742:
 		Id: 742
 		Images: snd2watr5.png
@@ -5275,13 +4834,6 @@ Templates:
 		Categories: Sand, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@743:
-		Id: 743
-		Images: snd2watr6.png
-		Size: 1,1
-		Categories: Water
-		Tiles:
-			0: Water
 	Template@744:
 		Id: 744
 		Images: snd2watr7.png
@@ -5366,13 +4918,6 @@ Templates:
 		Categories: Sand, Cliff
 		Tiles:
 			0: Cliff
-	Template@756:
-		Id: 756
-		Images: sndcliff5.png
-		Size: 1,1
-		Categories: Sand
-		Tiles:
-			0: Sand
 	Template@757:
 		Id: 757
 		Images: sndcliff6.png
@@ -5667,13 +5212,6 @@ Templates:
 		Categories: Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
-	Template@799:
-		Id: 799
-		Images: snw2-lav4.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@800:
 		Id: 800
 		Images: snw2-lav5.png
@@ -5681,13 +5219,6 @@ Templates:
 		Categories: Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
-	Template@801:
-		Id: 801
-		Images: snw2-lav6.png
-		Size: 1,1
-		Categories: Lava
-		Tiles:
-			0: Lava
 	Template@802:
 		Id: 802
 		Images: snw2-lav7.png
@@ -5770,13 +5301,6 @@ Templates:
 		Images: snw2crtb4.png
 		Size: 1,1
 		Categories: Snow, Crater
-		Tiles:
-			0: Crater
-	Template@814:
-		Id: 814
-		Images: snw2crtb5.png
-		Size: 1,1
-		Categories: Crater
 		Tiles:
 			0: Crater
 	Template@815:
@@ -5926,13 +5450,6 @@ Templates:
 		Categories: Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@836:
-		Id: 836
-		Images: snw2crtr6.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@837:
 		Id: 837
 		Images: snw2crtr7.png
@@ -6010,13 +5527,6 @@ Templates:
 		Categories: Snow, Cliff, Lava
 		Tiles:
 			0: Cliff
-	Template@848:
-		Id: 848
-		Images: snw2lav4.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@849:
 		Id: 849
 		Images: snw2lav5.png
@@ -6024,13 +5534,6 @@ Templates:
 		Categories: Snow, Cliff, Lava
 		Tiles:
 			0: Cliff
-	Template@850:
-		Id: 850
-		Images: snw2lav6.png
-		Size: 1,1
-		Categories: Lava
-		Tiles:
-			0: Lava
 	Template@851:
 		Id: 851
 		Images: snw2lav7.png
@@ -6192,13 +5695,6 @@ Templates:
 		Categories: Snow, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@874:
-		Id: 874
-		Images: snw2watr4.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@875:
 		Id: 875
 		Images: snw2watr5.png
@@ -6206,13 +5702,6 @@ Templates:
 		Categories: Snow, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@876:
-		Id: 876
-		Images: snw2watr6.png
-		Size: 1,1
-		Categories: Water
-		Tiles:
-			0: Water
 	Template@877:
 		Id: 877
 		Images: snw2watr7.png
@@ -6297,13 +5786,6 @@ Templates:
 		Categories: Snow, Cliff
 		Tiles:
 			0: Cliff
-	Template@889:
-		Id: 889
-		Images: snwcliff5.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@890:
 		Id: 890
 		Images: snwcliff6.png
@@ -6402,25 +5884,11 @@ Templates:
 		Categories: Stone, Crater
 		Tiles:
 			0: Stone
-	Template@904:
-		Id: 904
-		Images: stn2crtb4.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@905:
 		Id: 905
 		Images: stn2crtb5.png
 		Size: 1,1
 		Categories: Stone, Crater
-		Tiles:
-			0: Crater
-	Template@906:
-		Id: 906
-		Images: stn2crtb6.png
-		Size: 1,1
-		Categories: Crater
 		Tiles:
 			0: Crater
 	Template@907:
@@ -6556,13 +6024,6 @@ Templates:
 		Categories: Stone, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@926:
-		Id: 926
-		Images: stn2crtr4.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@927:
 		Id: 927
 		Images: stn2crtr5.png
@@ -6570,13 +6031,6 @@ Templates:
 		Categories: Stone, Crater, Cliff
 		Tiles:
 			0: Cliff
-	Template@928:
-		Id: 928
-		Images: stn2crtr6.png
-		Size: 1,1
-		Categories: Crater
-		Tiles:
-			0: Crater
 	Template@929:
 		Id: 929
 		Images: stn2crtr7.png
@@ -6654,13 +6108,6 @@ Templates:
 		Categories: Stone, Cliff, Lava
 		Tiles:
 			0: Cliff
-	Template@940:
-		Id: 940
-		Images: stn2lav4.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@941:
 		Id: 941
 		Images: stn2lav5.png
@@ -6668,13 +6115,6 @@ Templates:
 		Categories: Stone, Cliff, Lava
 		Tiles:
 			0: Cliff
-	Template@942:
-		Id: 942
-		Images: stn2lav6.png
-		Size: 1,1
-		Categories: Lava
-		Tiles:
-			0: Lava
 	Template@943:
 		Id: 943
 		Images: stn2lav7.png
@@ -6752,20 +6192,6 @@ Templates:
 		Categories: Stone, Snow
 		Tiles:
 			0: Stone
-	Template@954:
-		Id: 954
-		Images: stn2snwb4.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
-	Template@955:
-		Id: 955
-		Images: stn2snwb5.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Snow
 	Template@956:
 		Id: 956
 		Images: stn2snwb6.png
@@ -6850,13 +6276,6 @@ Templates:
 		Categories: Stone, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@968:
-		Id: 968
-		Images: stn2watr4.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@969:
 		Id: 969
 		Images: stn2watr5.png
@@ -6864,13 +6283,6 @@ Templates:
 		Categories: Stone, Cliff, Water
 		Tiles:
 			0: Cliff
-	Template@970:
-		Id: 970
-		Images: stn2watr6.png
-		Size: 1,1
-		Categories: Water
-		Tiles:
-			0: Water
 	Template@971:
 		Id: 971
 		Images: stn2watr7.png
@@ -6969,13 +6381,6 @@ Templates:
 		Categories: Stone, Cliff
 		Tiles:
 			0: Cliff
-	Template@985:
-		Id: 985
-		Images: stncliff7.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@986:
 		Id: 986
 		Images: stncliff8.png
@@ -7060,13 +6465,6 @@ Templates:
 		Categories: Stone, Snow
 		Tiles:
 			0: Stone
-	Template@998:
-		Id: 998
-		Images: stne2snw2.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@999:
 		Id: 999
 		Images: stne2snw3.png
@@ -7077,41 +6475,11 @@ Templates:
 			1: Cliff
 			2: Cliff
 			3: Snow
-	Template@1000:
-		Id: 1000
-		Images: stne2snw4.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
-	Template@1001:
-		Id: 1001
-		Images: stne2snw5.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
-	Template@1002:
-		Id: 1002
-		Images: stne2snw6.png
-		Size: 1,4
-		Categories: Stone, Cliff
-		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
 	Template@1003:
 		Id: 1003
 		Images: stne2snw7.png
 		Size: 1,1
 		Categories: Stone, Snow
-		Tiles:
-			0: Stone
-	Template@1004:
-		Id: 1004
-		Images: stne2snw8.png
-		Size: 1,1
-		Categories: Stone
 		Tiles:
 			0: Stone
 	Template@1005:
@@ -7137,34 +6505,6 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-	Template@1008:
-		Id: 1008
-		Images: stne2snw12.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
-	Template@1009:
-		Id: 1009
-		Images: stne2snw13.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
-	Template@1010:
-		Id: 1010
-		Images: stne2snw14.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
-	Template@1011:
-		Id: 1011
-		Images: stne2snw15.png
-		Size: 1,1
-		Categories: Stone
-		Tiles:
-			0: Stone
 	Template@1012:
 		Id: 1012
 		Images: stne2snw16.png
@@ -7203,20 +6543,6 @@ Templates:
 	Template@1017:
 		Id: 1017
 		Images: stneroad3.png
-		Size: 1,1
-		Categories: Stone, Road
-		Tiles:
-			0: Road
-	Template@1018:
-		Id: 1018
-		Images: stneroad4.png
-		Size: 1,1
-		Categories: Stone, Road
-		Tiles:
-			0: Road
-	Template@1019:
-		Id: 1019
-		Images: stneroad5.png
 		Size: 1,1
 		Categories: Stone, Road
 		Tiles:
@@ -7798,3 +7124,1109 @@ Templates:
 		Categories: Swamp, Rock
 		Tiles:
 			0: Rock
+	Template@1104:
+		Id: 1104
+		Images: tch2crtb1.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1105:
+		Id: 1105
+		Images: tch2crtb2.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1106:
+		Id: 1106
+		Images: tch2crtb3.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1108:
+		Id: 1108
+		Images: tch2crtb5.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1110:
+		Id: 1110
+		Images: tch2crtb7.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1111:
+		Id: 1111
+		Images: tch2crtb8.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1112:
+		Id: 1112
+		Images: tch2crtb9.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1113:
+		Id: 1113
+		Images: tch2crtb10.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1114:
+		Id: 1114
+		Images: tch2crtb11.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1115:
+		Id: 1115
+		Images: tch2crtb12.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1116:
+		Id: 1116
+		Images: tch2crtb13.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1117:
+		Id: 1117
+		Images: tch2crtb14.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Crater
+	Template@1118:
+		Id: 1118
+		Images: tch2crtc1.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1119:
+		Id: 1119
+		Images: tch2crtc2.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1120:
+		Id: 1120
+		Images: tch2crtc3.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1121:
+		Id: 1121
+		Images: tch2crtc4.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1122:
+		Id: 1122
+		Images: tch2crtc5.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1123:
+		Id: 1123
+		Images: tch2crtc6.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1124:
+		Id: 1124
+		Images: tch2crtc7.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1125:
+		Id: 1125
+		Images: tch2crtc8.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1126:
+		Id: 1126
+		Images: tch2crtr1.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1127:
+		Id: 1127
+		Images: tch2crtr2.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1128:
+		Id: 1128
+		Images: tch2crtr3.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1130:
+		Id: 1130
+		Images: tch2crtr5.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1132:
+		Id: 1132
+		Images: tch2crtr7.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1133:
+		Id: 1133
+		Images: tch2crtr8.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1134:
+		Id: 1134
+		Images: tch2crtr9.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1135:
+		Id: 1135
+		Images: tch2crtr10.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1136:
+		Id: 1136
+		Images: tch2crtr11.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1137:
+		Id: 1137
+		Images: tch2crtr12.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Stone
+	Template@1138:
+		Id: 1138
+		Images: tch2crtr13.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1139:
+		Id: 1139
+		Images: tch2crtr14.png
+		Size: 1,1
+		Categories: Tech, Crater
+		Tiles:
+			0: Cliff
+	Template@1140:
+		Id: 1140
+		Images: tch2lava1.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1141:
+		Id: 1141
+		Images: tch2lava2.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1142:
+		Id: 1142
+		Images: tch2lava3.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Stone
+	Template@1144:
+		Id: 1144
+		Images: tch2lava5.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1146:
+		Id: 1146
+		Images: tch2lava7.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1147:
+		Id: 1147
+		Images: tch2lava8.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1148:
+		Id: 1148
+		Images: tch2lava9.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1149:
+		Id: 1149
+		Images: tch2lava10.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1150:
+		Id: 1150
+		Images: tch2lava11.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1151:
+		Id: 1151
+		Images: tch2lava12.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Stone
+	Template@1152:
+		Id: 1152
+		Images: tch2lava13.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1153:
+		Id: 1153
+		Images: tch2lava14.png
+		Size: 1,1
+		Categories: Tech, Crater, Lava
+		Tiles:
+			0: Cliff
+	Template@1154:
+		Id: 1154
+		Images: tch2watr1.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1155:
+		Id: 1155
+		Images: tch2watr2.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1156:
+		Id: 1156
+		Images: tch2watr3.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Stone
+	Template@1158:
+		Id: 1158
+		Images: tch2watr5.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1160:
+		Id: 1160
+		Images: tch2watr7.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1161:
+		Id: 1161
+		Images: tch2watr8.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1162:
+		Id: 1162
+		Images: tch2watr9.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1163:
+		Id: 1163
+		Images: tch2watr10.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1164:
+		Id: 1164
+		Images: tch2watr11.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1165:
+		Id: 1165
+		Images: tch2watr12.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Stone
+	Template@1166:
+		Id: 1166
+		Images: tch2watr13.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1167:
+		Id: 1167
+		Images: tch2watr14.png
+		Size: 1,1
+		Categories: Tech, Crater, Water
+		Tiles:
+			0: Cliff
+	Template@1168:
+		Id: 1168
+		Images: tchcliff1.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1169:
+		Id: 1169
+		Images: tchcliff2.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1170:
+		Id: 1170
+		Images: tchcliff3.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1171:
+		Id: 1171
+		Images: tchcliff4.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1173:
+		Id: 1173
+		Images: tchcliff6.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1174:
+		Id: 1174
+		Images: tchcliff7.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1175:
+		Id: 1175
+		Images: tchcliff8.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1176:
+		Id: 1176
+		Images: tchcliff9.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1177:
+		Id: 1177
+		Images: tchcliff10.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1178:
+		Id: 1178
+		Images: tchcliff11.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1179:
+		Id: 1179
+		Images: tchcliff12.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1180:
+		Id: 1180
+		Images: tchcliff13.png
+		Size: 1,1
+		Categories: Tech, Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1181:
+		Id: 1181
+		Images: tech.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1182:
+		Id: 1182
+		Images: techmsc1.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1183:
+		Id: 1183
+		Images: techmsc2.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1184:
+		Id: 1184
+		Images: techmsc3.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1185:
+		Id: 1185
+		Images: techmsc4.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1186:
+		Id: 1186
+		Images: techmsc5.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1187:
+		Id: 1187
+		Images: techmsc6.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1188:
+		Id: 1188
+		Images: techmsc7.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1189:
+		Id: 1189
+		Images: techmsc8.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1190:
+		Id: 1190
+		Images: techmsc9.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1191:
+		Id: 1191
+		Images: techmsc10.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1192:
+		Id: 1192
+		Images: techmsc11.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1193:
+		Id: 1193
+		Images: techmsc12.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1194:
+		Id: 1194
+		Images: techmsc13.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1195:
+		Id: 1195
+		Images: techmsc14.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1196:
+		Id: 1196
+		Images: techmsc15.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1198:
+		Id: 1198
+		Images: techmsc17.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1199:
+		Id: 1199
+		Images: techmsc18.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1200:
+		Id: 1200
+		Images: techmsc19.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1201:
+		Id: 1201
+		Images: techmsc20.png
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Stone
+	Template@1202:
+		Id: 1202
+		Images: techrdst1.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1203:
+		Id: 1203
+		Images: techrdst2.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1204:
+		Id: 1204
+		Images: techrdst3.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1205:
+		Id: 1205
+		Images: techrdst4.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1206:
+		Id: 1206
+		Images: techrdst5.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1207:
+		Id: 1207
+		Images: techrdst6.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1208:
+		Id: 1208
+		Images: techrdst7.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1209:
+		Id: 1209
+		Images: techrdst8.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1210:
+		Id: 1210
+		Images: techroad1.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1211:
+		Id: 1211
+		Images: techroad2.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1212:
+		Id: 1212
+		Images: techroad3.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1213:
+		Id: 1213
+		Images: techroad4.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1214:
+		Id: 1214
+		Images: techroad5.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1215:
+		Id: 1215
+		Images: techroad6.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1216:
+		Id: 1216
+		Images: techroad7.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1217:
+		Id: 1217
+		Images: techroad8.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1218:
+		Id: 1218
+		Images: techroad9.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1219:
+		Id: 1219
+		Images: techroad10.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1220:
+		Id: 1220
+		Images: techroad11.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1221:
+		Id: 1221
+		Images: techroad12.png
+		Size: 1,1
+		Categories: Tech, Road
+		Tiles:
+			0: Road
+	Template@1222:
+		Id: 1222
+		Images: water.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1223:
+		Id: 1223
+		Images: water2-1.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1224:
+		Id: 1224
+		Images: water2-2.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1225:
+		Id: 1225
+		Images: water2-3.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1226:
+		Id: 1226
+		Images: water2-4.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1227:
+		Id: 1227
+		Images: water2-5.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1228:
+		Id: 1228
+		Images: water2-6.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1229:
+		Id: 1229
+		Images: water2-7.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1230:
+		Id: 1230
+		Images: water2-8.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1231:
+		Id: 1231
+		Images: water2-9.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1232:
+		Id: 1232
+		Images: water2-10.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1233:
+		Id: 1233
+		Images: water2-11.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1234:
+		Id: 1234
+		Images: water2-12.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1235:
+		Id: 1235
+		Images: water2-13.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1236:
+		Id: 1236
+		Images: water2-14.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1237:
+		Id: 1237
+		Images: water2-15.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1238:
+		Id: 1238
+		Images: water2-16.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1239:
+		Id: 1239
+		Images: water2-17.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1240:
+		Id: 1240
+		Images: water2-18.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1241:
+		Id: 1241
+		Images: water2-19.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1242:
+		Id: 1242
+		Images: water2-20.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1243:
+		Id: 1243
+		Images: water2-21.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1244:
+		Id: 1244
+		Images: water2-22.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1245:
+		Id: 1245
+		Images: water2-23.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1246:
+		Id: 1246
+		Images: water2-24.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1247:
+		Id: 1247
+		Images: water2-25.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1248:
+		Id: 1248
+		Images: water2-26.png
+		Size: 1,1
+		Categories: Water
+		Tiles:
+			0: Water
+	Template@1249:
+		Id: 1249
+		Images: watrrdst1.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1250:
+		Id: 1250
+		Images: watrrdst2.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1251:
+		Id: 1251
+		Images: watrrdst3.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1252:
+		Id: 1252
+		Images: watrrdst2.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1253:
+		Id: 1253
+		Images: watrrdst3.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1254:
+		Id: 1254
+		Images: watrrdst4.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1255:
+		Id: 1255
+		Images: watrrdst5.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1256:
+		Id: 1256
+		Images: watrrdst6.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1257:
+		Id: 1257
+		Images: watrrdst7.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1258:
+		Id: 1258
+		Images: watrrdst8.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1259:
+		Id: 1259
+		Images: watrroad1.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1260:
+		Id: 1260
+		Images: watrroad2.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1261:
+		Id: 1261
+		Images: watrroad3.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1262:
+		Id: 1262
+		Images: watrroad4.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1263:
+		Id: 1263
+		Images: watrroad4.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1264:
+		Id: 1264
+		Images: watrroad5.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1265:
+		Id: 1265
+		Images: watrroad6.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1266:
+		Id: 1266
+		Images: watrroad7.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1267:
+		Id: 1267
+		Images: watrroad8.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1268:
+		Id: 1268
+		Images: watrroad9.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1269:
+		Id: 1269
+		Images: watrroad10.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1270:
+		Id: 1270
+		Images: watrroad11.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road
+	Template@1271:
+		Id: 1271
+		Images: watrroad12.png
+		Size: 1,1
+		Categories: Water, Road
+		Tiles:
+			0: Road

@@ -1,4 +1,5 @@
 ^Cannon:
+	ValidTargets: Ground, Tree
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 4c768
@@ -15,6 +16,7 @@
 			None: 30
 			Steel: 75
 			Light: 75
+			Wood: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -51,6 +53,7 @@ TyrianTankCannon:
 			Steel: 40
 			Light: 60
 			Heavy: 25
+			Wood: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion04.wav, explosion05.wav
@@ -69,6 +72,7 @@ SmallArtillery:
 			None: 60
 
 TurretCannon:
+	ValidTargets: Ground, Tree
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 8c0
@@ -89,7 +93,7 @@ TurretCannon:
 		ImpactSounds: explosion02.wav
 
 Nuclear:
-	ValidTargets: Ground, Air
+	ValidTargets: Ground, Air, Tree
 	Warhead@Shake: ShakeScreen
 		Duration: 20
 		Intensity: 5
@@ -142,6 +146,7 @@ Nuclear:
 			Concrete: 25
 
 TurretArtillery:
+	ValidTargets: Ground, Tree
 	Report: heavycannonfire01.wav
 	ReloadDelay: 200
 	MinRange: 5c0
@@ -154,6 +159,7 @@ TurretArtillery:
 		Image: bullet2
 		Shadow: true
 	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
 		Spread: 426
 		Damage: 30000
 		Versus:
@@ -161,6 +167,7 @@ TurretArtillery:
 			Steel: 40
 			Light: 60
 			Heavy: 25
+			Wood: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion07.wav, explosion08.wav

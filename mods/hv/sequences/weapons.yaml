@@ -74,6 +74,18 @@ smoke:
 		Tick: 60
 		ZOffset: 1000
 
+flame:
+	idle: flame.png
+		Length: *
+		ZOffset: 512
+	loop: flame.png
+		Length: *
+		ZOffset: 512
+	end: flame.png
+		Length: *
+		ZOffset: 512
+
+
 water_splash:
 	water_splash_a: water_splash.png
 		Start: 0

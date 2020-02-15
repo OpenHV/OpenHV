@@ -25,6 +25,8 @@
 			Stone: 100
 	Locomotor@TRACKED:
 		Name: tracked
+		Crushes: Tree
+		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 80
 			Ore: 80
