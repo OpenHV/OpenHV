@@ -66,12 +66,12 @@ namespace OpenRA.Mods.HV.Traits
 			if (order.Target.Actor == null)
 				return false;
 
-			var teleporttrait = order.Target.Actor.TraitOrDefault<TeleportNetwork>();
+			var teleportNetwork = order.Target.Actor.TraitOrDefault<TeleportNetwork>();
 
-			if (teleporttrait == null)
+			if (teleportNetwork == null)
 				return false;
 
-			if (!HasEnoughCanals(order.Target.Actor, teleporttrait.Info.Type))
+			if (!HasEnoughCanals(order.Target.Actor, teleportNetwork.Info.Type))
 				return false;
 
 			return !order.Target.Actor.IsPrimaryTeleportNetworkExit();
@@ -91,15 +91,15 @@ namespace OpenRA.Mods.HV.Traits
 			if (order.Target.Type != TargetType.Actor)
 				return;
 
-			var targettrait = order.Target.Actor.TraitOrDefault<TeleportNetwork>();
+			var teleportNetwork = order.Target.Actor.TraitOrDefault<TeleportNetwork>();
 
-			if (targettrait == null)
+			if (teleportNetwork == null)
 				return;
 
 			if (!order.Queued)
 				self.CancelActivity();
 
-			self.QueueActivity(new EnterTeleportNetwork(self, order.Target, targettrait.Info.Type));
+			self.QueueActivity(new EnterTeleportNetwork(self, order.Target, teleportNetwork.Info.Type));
 		}
 
 		class TeleportNetworkTransportOrderTargeter : UnitOrderTargeter

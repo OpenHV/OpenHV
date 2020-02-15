@@ -110,9 +110,9 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			IsPrimary = true;
 
-			var pri = manager.PrimaryActor;
-			if (pri != null && !pri.IsDead)
-				pri.Trait<TeleportNetworkPrimaryExit>().RevokePrimary(pri);
+			var primary = manager.PrimaryActor;
+			if (primary != null && !primary.IsDead)
+				primary.Trait<TeleportNetworkPrimaryExit>().RevokePrimary(primary);
 
 			manager.PrimaryActor = self;
 

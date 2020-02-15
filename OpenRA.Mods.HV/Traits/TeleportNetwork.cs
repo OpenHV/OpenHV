@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2007-2020 The OpenHV Developers (see AUTHORS)
+ * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -14,7 +14,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	// TO-DO: Create a proper check for Types of TeleportNetwork and TeleportNetworkManager or lint rule.
+	// TODO: Create a proper check for Types of TeleportNetwork and TeleportNetworkManager or lint rule.
 	[Desc("This actor can teleport actors like Nydus canels in SC1. Assuming static object.")]
 	public class TeleportNetworkInfo : ITraitInfo
 	{
@@ -28,11 +28,11 @@ namespace OpenRA.Mods.HV.Traits
 		public object Create(ActorInitializer init) { return new TeleportNetwork(init, this); }
 	}
 
-	// The teleport network canal does nothing. The actor teleports itself, upon entering.
+	// The teleport network does nothing. The actor teleports itself, upon entering.
 	public class TeleportNetwork : INotifyAddedToWorld, INotifyRemovedFromWorld, INotifyOwnerChanged
 	{
 		public TeleportNetworkInfo Info;
-		TeleportNetworkManager tnm;
+		TeleportNetworkManager teleportNetworkManager;
 
 		public TeleportNetwork(ActorInitializer init, TeleportNetworkInfo info)
 		{
@@ -41,23 +41,22 @@ namespace OpenRA.Mods.HV.Traits
 
 		void IncreaseTeleportNetworkCount(Actor self, Player owner)
 		{
-			// Assign itself as primary, when first one.
-			if (tnm.Count == 0)
+			if (teleportNetworkManager.Count == 0)
 			{
-				var pri = self.TraitOrDefault<TeleportNetworkPrimaryExit>();
+				var primary = self.TraitOrDefault<TeleportNetworkPrimaryExit>();
 
-				if (pri == null)
+				if (primary == null)
 					return;
 
-				pri.SetPrimary(self);
+				primary.SetPrimary(self);
 			}
 
-			tnm.Count++;
+			teleportNetworkManager.Count++;
 		}
 
 		void DecreaseTeleportNetworkCount(Actor self, Player owner)
 		{
-			tnm.Count--;
+			teleportNetworkManager.Count--;
 
 			if (self.IsPrimaryTeleportNetworkExit())
 			{
@@ -65,7 +64,7 @@ namespace OpenRA.Mods.HV.Traits
 				.Where(a => a.Actor.Owner == self.Owner && a.Actor != self);
 
 				if (!actors.Any())
-					tnm.PrimaryActor = null;
+					teleportNetworkManager.PrimaryActor = null;
 				else
 				{
 					var pri = actors.First().Actor;
@@ -76,7 +75,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void INotifyAddedToWorld.AddedToWorld(Actor self)
 		{
-			tnm = self.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == Info.Type);
+			teleportNetworkManager = self.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == Info.Type);
 			IncreaseTeleportNetworkCount(self, self.Owner);
 		}
 
