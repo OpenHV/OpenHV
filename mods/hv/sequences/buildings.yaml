@@ -212,3 +212,16 @@ televatr:
 		Start: 8
 		Length: 8
 	icon: blank.png
+
+televtr2:
+	idle: televtr2.png
+		Start: 7
+	damaged-idle: televtr2.png
+		Start: 14
+	charging: televtr2.png
+		Start: 0
+		Length: 7
+	teleport: televtr2.png
+		Start: 7
+		Length: 7
+	icon: blank.png

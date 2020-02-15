@@ -694,3 +694,12 @@ TELEVATR:
 		ReferencePoint: Top
 		ZOffset: 256
 		RequiresCondition: primary
+
+TELEVTR2:
+	Inherits: TELEVATR
+	Inherits@shape: ^1x2Shape
+	Selectable:
+		Bounds: 20,40
+	Building:
+		Footprint: x x
+		Dimensions: 1,2
