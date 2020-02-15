@@ -24,7 +24,7 @@
 		Explosions: water_splash_a, water_splash_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor-699235037.wav
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 TyrianTankCannon:
 	Inherits: ^Cannon

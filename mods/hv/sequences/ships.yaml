@@ -4,9 +4,10 @@ boat:
 	turret: boat1.png
 		Start: 8
 		Facings: 8
-	muzzle: muzzle.png
-		Length: 8
-		Facings: 8	
+	muzzle: muzzle2.png
+		Length: 3
+		Facings: 8
+		Tick: 50
 	icon: blank.png
 
 heavyboat:

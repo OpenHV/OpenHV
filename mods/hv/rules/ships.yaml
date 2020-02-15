@@ -24,12 +24,13 @@ boat:
 		Range: 5c0
 	Turreted:
 		TurnSpeed: 15
+		Offset: 150,0,100
 	Armament:
 		Weapon: TyrianTankCannon
-		Recoil: 50
+		Recoil: 75
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
-		LocalOffset: 0,0,0 # TODO: to be adjusted
+		LocalOffset: 200,0,-50
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
@@ -64,7 +65,7 @@ heavyboat:
 		TurnSpeed: 10
 	Armament:
 		Weapon: railgun
-		Recoil: 75
+		Recoil: 100
 		RecoilRecovery: 25
 		LocalOffset: 500,0,0 # TODO: to be adjusted
 	AttackTurreted:
