@@ -199,3 +199,16 @@ artilleryturret:
 		Facings: 8
 		Tick: 300
 	icon: blank.png
+
+televatr:
+	idle: televatr.png
+		Start: 15
+	damaged-idle: televatr.png
+		Start: 16
+	charging: televatr.png
+		Start: 0
+		Length: 8
+	teleport: televatr.png
+		Start: 8
+		Length: 8
+	icon: blank.png

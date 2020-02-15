@@ -49,3 +49,5 @@ Player:
 		LowPowerModifier: 300
 		SpeedUp: true
 	PlayerRadarTerrain:
+	TeleportNetworkManager:
+		Type: subspace

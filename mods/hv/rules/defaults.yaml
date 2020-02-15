@@ -46,6 +46,7 @@
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 5
+	TeleportNetworkTransportable:
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -164,6 +165,13 @@
 		Type: Rectangle
 			TopLeft: -512, -512
 			BottomRight: 512, 512
+
+^2x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -512
+			BottomRight: 1024, 512
 
 ^2x2Shape:
 	HitShape:

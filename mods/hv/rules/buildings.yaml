@@ -650,3 +650,47 @@ ARTILLERYTURRET:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -1900,100,0
+
+TELEVATR:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x1Shape
+	Selectable:
+		Bounds: 40,20
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 120
+		Prerequisites: radar
+		BuildLimit: 1
+		Description: Teleports a unit to\nanother televator.\nRequires power to operate.
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Televator
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		RequiresCondition: !disabled
+	Power:
+		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	ProvidesPrerequisite@buildingname:
+	TeleportNetworkPrimaryExit:
+	TeleportNetwork:
+		Type: subspace
+	RallyPoint:
+	Exit:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
