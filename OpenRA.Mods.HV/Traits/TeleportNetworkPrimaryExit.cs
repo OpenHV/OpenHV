@@ -50,8 +50,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("The condition to grant to self while this is the primary building.")]
 		public readonly string PrimaryCondition = "primary";
 
+		[NotificationReference("Speech")]
 		[Desc("The speech notification to play when selecting a primary exit.")]
-		public readonly string SelectionNotification = "PrimaryBuildingSelected";
+		public readonly string SelectionNotification = null;
 
 		public object Create(ActorInitializer init) { return new TeleportNetworkPrimaryExit(init.Self, this); }
 	}
