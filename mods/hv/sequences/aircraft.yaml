@@ -24,3 +24,9 @@ crow:
 		Length: 5
 		Tick: 100
 	icon: blank.png
+
+gull:
+	idle: gull.png
+		Length: 5
+		Tick: 100
+	icon: blank.png

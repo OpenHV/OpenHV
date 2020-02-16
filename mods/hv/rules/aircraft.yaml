@@ -124,3 +124,8 @@ CROW:
 		RenderSelectionBars: False
 	-Voiced:
 	-Targetable@AIRBORNE:
+
+GULL:
+	Inherits: CROW
+	Tooltip:
+		Name: Seagulls
