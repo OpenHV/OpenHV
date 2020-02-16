@@ -16,7 +16,6 @@ Packages:
 	hv|bits/audio/cc0
 	hv|bits/audio/cc-by-30	
 	hv|bits/audio/graion
-	hv|bits/audio/pd
 	hv|uibits
 
 MapFolders:

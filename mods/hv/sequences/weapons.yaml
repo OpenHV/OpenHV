@@ -85,7 +85,6 @@ flame:
 		Length: *
 		ZOffset: 512
 
-
 water_splash:
 	water_splash_a: water_splash.png
 		Start: 0
@@ -96,4 +95,4 @@ water_splash:
 		Start: 9
 		Length: 9
 		Tick: 60
-		ZOffset: 1000		
+		ZOffset: 1000

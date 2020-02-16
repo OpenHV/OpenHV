@@ -716,7 +716,7 @@ HARBOR:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Habor
+		Name: Harbor
 	Building:
 		Footprint: xxx x=x x=x
 		Dimensions: 3,3
