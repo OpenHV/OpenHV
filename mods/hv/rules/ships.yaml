@@ -1,4 +1,4 @@
-boat:
+BOAT:
 	Inherits: ^Ship
 	Valued:
 		Cost: 700
@@ -37,7 +37,7 @@ boat:
 	#RenderSprites:
 	#	PlayerPalette: green
 
-heavyboat:
+HEAVYBOAT:
 	Inherits: ^Ship
 	Valued:
 		Cost: 1500
