@@ -111,6 +111,10 @@ CROW:
 		CruiseAltitude: 2560
 		Repulsable: false
 		Speed: 70
+		CruisingCondition: cruising
+		TurnSpeed: 1
+	Hovers@CRUISING:
+		RequiresCondition: cruising
 	Wanders:
 		WanderMoveRadius: 10
 	WithShadow:
