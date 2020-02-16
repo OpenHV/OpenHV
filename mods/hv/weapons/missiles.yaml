@@ -30,6 +30,12 @@
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 ^AntiAirMissile:
 	Inherits: ^AntiGroundMissile

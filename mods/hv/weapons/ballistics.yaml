@@ -1,5 +1,5 @@
 ^Cannon:
-	ValidTargets: Ground, Tree
+	ValidTargets: Water, Ground, Tree
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 4c768
@@ -57,6 +57,12 @@ TyrianTankCannon:
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion04.wav, explosion05.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 SmallArtillery:
 	Inherits: ^Artillery
@@ -72,7 +78,7 @@ SmallArtillery:
 			None: 60
 
 TurretCannon:
-	ValidTargets: Ground, Tree
+	ValidTargets: Water, Ground, Tree
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 8c0
@@ -91,6 +97,12 @@ TurretCannon:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion02.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 Nuclear:
 	ValidTargets: Ground, Air, Tree
@@ -146,7 +158,7 @@ Nuclear:
 			Concrete: 25
 
 TurretArtillery:
-	ValidTargets: Ground, Tree
+	ValidTargets: Water, Ground, Tree
 	Report: heavycannonfire01.wav
 	ReloadDelay: 200
 	MinRange: 5c0
@@ -171,3 +183,9 @@ TurretArtillery:
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion07.wav, explosion08.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

@@ -15,6 +15,12 @@ LightMachineGun:
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
 		ValidTargets: Ground
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b #TODO Needs smaller Water Splash
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 	ReloadDelay: 30
 	Range: 4c0
 	Burst: 2
