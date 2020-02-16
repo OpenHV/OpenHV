@@ -50,7 +50,7 @@ Player:
 		SpeedUp: true
 	ClassicProductionQueue@Naval:
 		Type: Ship
-		DisplayOrder: 4
+		DisplayOrder: 5
 		LowPowerModifier: 300
 		SpeedUp: true
 	PlayerRadarTerrain:
