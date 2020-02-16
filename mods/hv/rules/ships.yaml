@@ -72,3 +72,27 @@ heavyboat:
 	WithSpriteTurret:
 	#RenderSprites:
 	#	PlayerPalette: green
+
+SEAMNSTR:
+	Inherits: ^Ship
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Sea Monster
+	Health:
+		HP: 70000
+	Armor:
+		Type: Heavy
+	-Mobile:
+	SeaMonster:
+		Speed: 28
+	-QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 2
+	-WithFacingSpriteBody:
+	WithSeaMonsterBody:
+		Sequence: left # Just a work-around to avoid crash
+	-Selectable:
+	Interactable:
+	RejectsOrders:
+	-SelectionDecorations:
