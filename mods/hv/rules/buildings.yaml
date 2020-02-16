@@ -338,7 +338,7 @@ FACTORY2:
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
-		Offset: 0,3
+		Path: 0,3
 		IsPlayerPalette: true
 		Palette: green
 	Exit@1:
@@ -391,7 +391,7 @@ FACTORY3:
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
-		Offset: 0,3
+		Path: 0,3
 		IsPlayerPalette: true
 		Palette: green
 	Exit@1:
@@ -733,7 +733,7 @@ HARBOR:
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
-		Offset: 1,3
+		Path: 1,3
 		IsPlayerPalette: true
 		Palette: green
 	Exit:
