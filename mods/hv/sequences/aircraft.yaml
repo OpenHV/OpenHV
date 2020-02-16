@@ -18,3 +18,9 @@ balloon:
 	idle: balloon.png
 	shadow-overlay: balloon-shadow.png
 	icon: blank.png
+
+crow:
+	idle: crow.png
+		Length: 5
+		Tick: 100
+	icon: blank.png
