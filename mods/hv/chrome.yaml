@@ -235,15 +235,15 @@ observer-scrollitem-hover:
 dialog:
 	Inherits: ^Dialog
 	Regions:
-		background: 0, 0, 480, 480
-		border-r: 489, 0, 9, 192
-		border-l: 480, 0, 9, 192
-		border-b: 0, 489, 191, 9
-		border-t: 0, 480, 191, 9
-		corner-tl: 191, 480, 9, 9
-		corner-tr: 200, 480, 9, 9
-		corner-bl: 191, 489, 9, 9
-		corner-br: 200, 489, 9, 9
+		background: 1, 1, 480, 480
+		border-r: 492, 1, 9, 190
+		border-l: 483, 1, 9, 190
+		border-b: 1, 492, 189, 9
+		border-t: 1, 483, 189, 9
+		corner-tl: 192, 483, 9, 9
+		corner-tr: 201, 483, 9, 9
+		corner-bl: 192, 492, 9, 9
+		corner-br: 201, 492, 9, 9
 
 # Used for Music and Map selection (normal button)
 dialog2:
