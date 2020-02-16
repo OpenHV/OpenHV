@@ -703,3 +703,65 @@ TELEVTR2:
 	Building:
 		Footprint: x x
 		Dimensions: 1,2
+
+HARBOR:
+	Inherits: ^BaseBuilding
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Prerequisites: base
+		Queue: Building
+		BuildPaletteOrder: 90
+		Description: Builds ships.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Harbor
+	Building:
+		Footprint: xxx x=x x=x
+		Dimensions: 3,3
+		LocalCenterOffset: 150,-512,0
+		TerrainTypes: Water
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+	Health:
+		HP: 35000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c768
+	RallyPoint:
+		Offset: 1,3
+		IsPlayerPalette: true
+		Palette: green
+	Exit:
+		SpawnOffset: -150,-500,0
+		ExitCell: 1,3
+		ProductionTypes: Ship
+		Facing: 90
+	Production:
+		Produces: Ship
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
+		ProductionType: Ship
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		ReferencePoint: Top
+		ZOffset: 256
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -200,200,0
+	WithIdleOverlay@Entry:
+		Sequence: idle-entry
+	WithIdleOverlay@Production:
+		Sequence: production

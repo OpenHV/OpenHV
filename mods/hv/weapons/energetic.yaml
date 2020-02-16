@@ -1,0 +1,28 @@
+railgun:
+	Range: 9c0
+	ReloadDelay: 100
+	Report: ray_gun-Mike_Koenig.wav
+	Projectile: LaserZap
+		Width: 0c100
+		Shape: Cylindrical
+		ZOffset: 2000
+		Color: FE0303 #DE8200
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 7500
+		Versus:
+			None: 30
+			Steel: 75
+			Light: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

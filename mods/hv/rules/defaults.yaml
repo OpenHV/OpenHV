@@ -368,3 +368,51 @@
 	SpawnActorOnDeath@Crush:
 		Actor: TreeMud
 		DeathType: Crush
+
+^Ship:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@bounty: ^GlobalBounty
+	Inherits@selection: ^SelectableCombatUnit
+	Inherits@shield: ^ForceFieldCompatible
+	Huntable:
+	OwnerLostAction:
+		Action: Kill
+	DrawLineToTarget:
+	UpdatesPlayerStatistics:
+	Mobile:
+		Locomotor: naval
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 20,20
+	Targetable:
+		TargetTypes: Ground, Water, Ship
+	Targetable@REPAIR:
+		RequiresCondition: damaged
+		TargetTypes: Repair
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	HiddenUnderFog:
+	AttackMove:
+	ProximityCaptor:
+		Types: Ship
+	#RepairableNear:
+	#	RepairActors: harbor
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Ship
+	MustBeDestroyed:
+	MapEditorData:
+		Categories: Naval
+	Voiced:
+		VoiceSet: GenericVoice2
+	RenderSprites:
+		PlayerPalette: remap
+	WithFacingSpriteBody:
+	HitShape:

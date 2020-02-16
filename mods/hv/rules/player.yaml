@@ -48,6 +48,11 @@ Player:
 		DisplayOrder: 4
 		LowPowerModifier: 300
 		SpeedUp: true
+	ClassicProductionQueue@Naval:
+		Type: Ship
+		DisplayOrder: 5
+		LowPowerModifier: 300
+		SpeedUp: true
 	PlayerRadarTerrain:
 	TeleportNetworkManager:
 		Type: subspace

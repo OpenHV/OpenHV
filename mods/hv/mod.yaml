@@ -31,6 +31,7 @@ Rules:
 	hv|rules/aircraft.yaml
 	hv|rules/buildings.yaml
 	hv|rules/terrain.yaml
+	hv|rules/ships.yaml
 
 Sequences:
 	hv|sequences/map.yaml
@@ -40,12 +41,14 @@ Sequences:
 	hv|sequences/buildings.yaml
 	hv|sequences/weapons.yaml
 	hv|sequences/terrain.yaml
+	hv|sequences/ships.yaml
 
 Weapons:
 	hv|weapons/explosions.yaml
 	hv|weapons/ballistics.yaml
 	hv|weapons/firearms.yaml
 	hv|weapons/missiles.yaml
+	hv|weapons/energetic.yaml
 
 TileSets:
 	hv|tileset.yaml

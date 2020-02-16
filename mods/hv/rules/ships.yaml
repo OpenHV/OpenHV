@@ -1,0 +1,74 @@
+boat:
+	Inherits: ^Ship
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Medium boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: harbor
+		BuildPaletteOrder: 40
+		Description: A boat with a turret
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 33000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 100
+		TurnSpeed: 15
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 15
+		Offset: 150,0,100
+	Armament:
+		Weapon: TyrianTankCannon
+		Recoil: 75
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 200,0,-50
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	#RenderSprites:
+	#	PlayerPalette: green
+
+heavyboat:
+	Inherits: ^Ship
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Heavy boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: harbor
+		BuildPaletteOrder: 40
+		Description: A heavy turret with a railgun.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 55000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 80
+		TurnSpeed: 10
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 10
+	Armament:
+		Weapon: railgun
+		Recoil: 100
+		RecoilRecovery: 25
+		LocalOffset: 500,0,0 # TODO: to be adjusted
+	AttackTurreted:
+	WithSpriteTurret:
+	#RenderSprites:
+	#	PlayerPalette: green
