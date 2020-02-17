@@ -1,6 +1,6 @@
 Metadata:
 	Title: OpenHV
-	Version: {DEV_VERSION}
+	Version: f45dd24781cb56f4cef4a9e1ffe74b4b12f741be
 
 ModCredits:
 	ModTabTitle: OpenHV
@@ -20,7 +20,7 @@ Packages:
 
 MapFolders:
 	hv|maps: System
-	~^maps/hv/{DEV_VERSION}: User
+	~^maps/hv/f45dd24781cb56f4cef4a9e1ffe74b4b12f741be: User
 
 Rules:
 	hv|rules/world.yaml
