@@ -34,8 +34,8 @@ BOAT:
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	#RenderSprites:
-	#	PlayerPalette: green
+	RenderSprites:
+		PlayerPalette: green
 
 HEAVYBOAT:
 	Inherits: ^Ship
