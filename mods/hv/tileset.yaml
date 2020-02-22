@@ -2,7 +2,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Sand, Plant, Stone, Swamp, Tech
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
 
 Terrain:
 	TerrainType@Clear:
@@ -4131,455 +4131,455 @@ Templates:
 		Id: 632
 		Images: sn2-2crb1.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@633:
 		Id: 633
 		Images: sn2-2crb2.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@634:
 		Id: 634
 		Images: sn2-2crb3.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@635:
 		Id: 635
 		Images: sn2-2crb4.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@636:
 		Id: 636
 		Images: sn2-2crb5.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@638:
 		Id: 638
 		Images: sn2-2crb7.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@639:
 		Id: 639
 		Images: sn2-2crb8.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@640:
 		Id: 640
 		Images: sn2-2crb9.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@641:
 		Id: 641
 		Images: sn2-2crb10.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@642:
 		Id: 642
 		Images: sn2-2crb11.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@643:
 		Id: 643
 		Images: sn2-2crb12.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@644:
 		Id: 644
 		Images: sn2-2crb13.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@645:
 		Id: 645
 		Images: sn2-2crb14.png
 		Size: 1,1
-		Categories: Snow, Crater
+		Categories: Red Snow, Crater
 		Tiles:
 			0: Crater
 	Template@646:
 		Id: 646
 		Images: sn2-2crc1.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@647:
 		Id: 647
 		Images: sn2-2crc2.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@648:
 		Id: 648
 		Images: sn2-2crc3.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@649:
 		Id: 649
 		Images: sn2-2crc4.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@650:
 		Id: 650
 		Images: sn2-2crc5.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@651:
 		Id: 651
 		Images: sn2-2crc6.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@652:
 		Id: 652
 		Images: sn2-2crc7.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@653:
 		Id: 653
 		Images: sn2-2crc8.png
 		Size: 1,1
-		Categories: Snow, Crater, Cliff
+		Categories: Red Snow, Crater, Cliff
 		Tiles:
 			0: Cliff
 	Template@654:
 		Id: 654
 		Images: sn2-2wtr1.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@655:
 		Id: 655
 		Images: sn2-2wtr2.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@656:
 		Id: 656
 		Images: sn2-2wtr3.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@658:
 		Id: 658
 		Images: sn2-2wtr5.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@660:
 		Id: 660
 		Images: sn2-2wtr7.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@661:
 		Id: 661
 		Images: sn2-2wtr8.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@662:
 		Id: 662
 		Images: sn2-2wtr9.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@663:
 		Id: 663
 		Images: sn2-2wtr10.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@664:
 		Id: 664
 		Images: sn2-2wtr11.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@665:
 		Id: 665
 		Images: sn2-2wtr12.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@666:
 		Id: 666
 		Images: sn2-2wtr13.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@667:
 		Id: 667
 		Images: sn2-2wtr14.png
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Water
 		Tiles:
 			0: Cliff
 	Template@668:
 		Id: 668
 		Images: sn2-clif1.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@669:
 		Id: 669
 		Images: sn2-clif2.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@670:
 		Id: 670
 		Images: sn2-clif3.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@671:
 		Id: 671
 		Images: sn2-clif4.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@673:
 		Id: 673
 		Images: sn2-clif6.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@674:
 		Id: 674
 		Images: sn2-clif7.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@675:
 		Id: 675
 		Images: sn2-clif8.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@676:
 		Id: 676
 		Images: sn2-clif9.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@677:
 		Id: 677
 		Images: sn2-clif10.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@678:
 		Id: 678
 		Images: sn2-clif11.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@679:
 		Id: 679
 		Images: sn2-clif12.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@680:
 		Id: 680
 		Images: sn2-clif13.png
 		Size: 1,1
-		Categories: Snow, Cliff
+		Categories: Red Snow, Cliff
 		Tiles:
 			0: Cliff
 	Template@681:
 		Id: 681
 		Images: sn2-rdst1.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@682:
 		Id: 682
 		Images: sn2-rdst2.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@683:
 		Id: 683
 		Images: sn2-rdst3.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@684:
 		Id: 684
 		Images: sn2-rdst4.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@685:
 		Id: 685
 		Images: sn2-rdst5.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@686:
 		Id: 686
 		Images: sn2-rdst6.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@687:
 		Id: 687
 		Images: sn2-rdst7.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@688:
 		Id: 688
 		Images: sn2-rdst8.png
 		Size: 1,1
-		Categories: Snow, Road
+		Categories: Red Snow, Road
 		Tiles:
 			0: Road
 	Template@689:
 		Id: 689
 		Images: sn22crtr1.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@690:
 		Id: 690
 		Images: sn22crtr2.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@691:
 		Id: 691
 		Images: sn22crtr3.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@693:
 		Id: 693
 		Images: sn22crtr5.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@695:
 		Id: 695
 		Images: sn22crtr7.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@696:
 		Id: 696
 		Images: sn22crtr8.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@697:
 		Id: 697
 		Images: sn22crtr9.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@698:
 		Id: 698
 		Images: sn22crtr10.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@699:
 		Id: 699
 		Images: sn22crtr11.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@700:
 		Id: 700
 		Images: sn22crtr12.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@701:
 		Id: 701
 		Images: sn22crtr13.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@702:
 		Id: 702
 		Images: sn22crtr14.png
 		Size: 1,1
-		Categories: Snow, Cliff, Crater
+		Categories: Red Snow, Cliff, Crater
 		Tiles:
 			0: Cliff
 	Template@703:
@@ -5069,210 +5069,210 @@ Templates:
 		Id: 778
 		Images: snow2-1.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@779:
 		Id: 779
 		Images: snow2-2.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@780:
 		Id: 780
 		Images: snow2-3.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@781:
 		Id: 781
 		Images: snow2-4.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@782:
 		Id: 782
 		Images: snow2-5.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@783:
 		Id: 783
 		Images: snow2-6.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@784:
 		Id: 784
 		Images: snow2-7.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@785:
 		Id: 785
 		Images: snow2-8.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@786:
 		Id: 786
 		Images: snow2-9.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@787:
 		Id: 787
 		Images: snow2-10.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@788:
 		Id: 788
 		Images: snow2-11.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@789:
 		Id: 789
 		Images: snow2-12.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@790:
 		Id: 790
 		Images: snow2-13.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@791:
 		Id: 791
 		Images: snw2-ct2.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@792:
 		Id: 792
 		Images: snw2-ctr.png
 		Size: 1,1
-		Categories: Snow
+		Categories: Red Snow
 		Tiles:
 			0: Snow
 	Template@793:
 		Id: 793
 		Images: snw2-rck.png
 		Size: 1,1
-		Categories: Snow, Rock
+		Categories: Red Snow, Rock
 		Tiles:
 			0: Rock
 	Template@794:
 		Id: 794
 		Images: snw2-rck2.png
 		Size: 1,1
-		Categories: Snow, Rock
+		Categories: Red Snow, Rock
 		Tiles:
 			0: Rock
 	Template@795:
 		Id: 795
 		Images: snw2-rck3.png
 		Size: 1,1
-		Categories: Snow, Rock
+		Categories: Red Snow, Rock
 		Tiles:
 			0: Rock
 	Template@796:
 		Id: 796
 		Images: snw2-lav1.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@797:
 		Id: 797
 		Images: snw2-lav2.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@798:
 		Id: 798
 		Images: snw2-lav3.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@800:
 		Id: 800
 		Images: snw2-lav5.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@802:
 		Id: 802
 		Images: snw2-lav7.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@803:
 		Id: 803
 		Images: snw2-lav8.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@804:
 		Id: 804
 		Images: snw2-lav9.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@805:
 		Id: 805
 		Images: snw2-lav10.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@806:
 		Id: 806
 		Images: snw2-lav11.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@807:
 		Id: 807
 		Images: snw2-lav12.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@808:
 		Id: 808
 		Images: snw2-lav13.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@809:
 		Id: 809
 		Images: snw2-lav14.png
 		Size: 1,1
-		Categories: Snow, Lava, Cliff
+		Categories: Red Snow, Lava, Cliff
 		Tiles:
 			0: Cliff
 	Template@810:
