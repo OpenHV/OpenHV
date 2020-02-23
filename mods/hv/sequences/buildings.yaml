@@ -5,6 +5,7 @@ base:
 		Tick: 300
 	idle: base.png
 		Length: 3
+		Reverses: true
 		Tick: 300
 	shadow-overlay: base-shadow.png
 		ZOffset: 1768
@@ -100,6 +101,7 @@ miner2:
 starport:
 	idle: starport.png
 		Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+		Length: *
 		Tick: 200
 	shadow-overlay: starport-shadow.png
 		ZOffset: 1768
@@ -237,7 +239,7 @@ harbor:
 	production: harbor.png
 		Start: 3
 		Length: 7
-		#Reverses: True #TODO It doesn't work correctly as it expects more frames
+		Reverses: true
 		Tick: 120
 		ZOffset: 1500
 	damaged-idle: harbor.png
