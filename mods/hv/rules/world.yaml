@@ -242,3 +242,5 @@ World:
 	ResourceLayer:
 	ResourceRenderer:
 		RenderTypes: gold, iron
+	CloudSpawner:
+		ActorTypes: cloud1, cloud2, cloud3

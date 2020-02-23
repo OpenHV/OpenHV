@@ -30,3 +30,12 @@ gull:
 		Length: 5
 		Tick: 100
 	icon: blank.png
+
+cloud1:
+	idle: cloud1.png
+
+cloud2:
+	idle: cloud2.png
+
+cloud3:
+	idle: cloud3.png

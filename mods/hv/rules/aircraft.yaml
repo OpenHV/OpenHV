@@ -133,3 +133,12 @@ GULL:
 	Inherits: CROW
 	Tooltip:
 		Name: Seagulls
+
+CLOUD1:
+	Inherits: ^Cloud
+
+CLOUD2:
+	Inherits: ^Cloud
+
+CLOUD3:
+	Inherits: ^Cloud

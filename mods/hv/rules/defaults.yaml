@@ -159,6 +159,31 @@
 		RequiresCondition: cruising
 	BodyOrientation:
 
+^Cloud:
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	OwnerLostAction:
+		Action: Kill
+	Aircraft:
+		AirborneCondition: airborne
+	HiddenUnderFog:
+		Type: GroundPosition
+	WithFacingSpriteBody:
+	MapEditorData:
+		Categories: Aircraft
+	RejectsOrders:
+	Interactable:
+	Aircraft:
+		CruiseAltitude: 2560
+		TurnSpeed: 5
+		Speed: 30
+		Repulsable: false
+		MaximumPitch: 56
+	SelectionDecorations:
+		RenderSelectionBars: false
+	RenderSprites:
+		Palette: shadow
+
 ^1x1Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
