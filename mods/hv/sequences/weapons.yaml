@@ -96,3 +96,15 @@ water_splash:
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
+
+water_splash_small:
+	water_splash_small_a: water_splash_small.png
+		Start: 0
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+	water_splash_small_b: water_splash_small.png
+		Start: 6
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
