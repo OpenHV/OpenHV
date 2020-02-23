@@ -115,7 +115,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void ITick.Tick(Actor self)
 		{
-			nextLocation = Facing == 64 ? self.Location + new CVec(-1,0) : self.Location + new CVec(1,0);
+			nextLocation = Facing == 64 ? self.Location + new CVec(-1, 0) : self.Location + new CVec(1, 0);
 
 			if (cachedLocation != self.Location)
 			{
