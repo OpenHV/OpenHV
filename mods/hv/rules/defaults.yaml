@@ -164,8 +164,6 @@
 	Inherits@4: ^SpriteActor
 	OwnerLostAction:
 		Action: Kill
-	Aircraft:
-		AirborneCondition: airborne
 	HiddenUnderFog:
 		Type: GroundPosition
 	WithFacingSpriteBody:
