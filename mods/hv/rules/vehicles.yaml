@@ -103,6 +103,43 @@ ARTIL:
 	RenderSprites:
 		PlayerPalette: green
 
+ARTIL3:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Dual Artillery
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Prerequisites: radar, factory3
+		Description: Double barraled artillery tank.
+	Health:
+		HP: 35000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 71
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 9c0
+	Armament:
+		Weapon: DoubleBarrelledArtillery
+		MuzzleSequence: muzzle
+		LocalOffset: 700,0,100
+	AttackFrontal:
+		Armaments: primary
+		TargetFrozenActors: true
+		ForceFireIgnoresActors: true
+	WithAttackAnimation:
+		Sequence: shoot
+	WithMuzzleOverlay:
+	Selectable:
+		DecorationBounds: 30,30
+
 SCOUT1:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

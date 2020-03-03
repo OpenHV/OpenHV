@@ -17,6 +17,18 @@ artil:
 		Tick: 100
 	icon: blank.png
 
+artil3:
+	idle: artil3.png
+		Facings: 8
+	shoot: artil3.png
+		Start: 8
+		Facings: 8
+	muzzle: artlflsh.png
+		Length: 3
+		Facings: 8
+		Tick: 100
+	icon: blank.png
+
 scout1:
 	idle: scout1.png
 		Facings: 8

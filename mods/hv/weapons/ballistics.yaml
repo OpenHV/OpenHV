@@ -77,6 +77,22 @@ SmallArtillery:
 		Versus:
 			None: 60
 
+DoubleBarrelledArtillery:
+	Inherits: ^Artillery
+	ReloadDelay: 150
+	Range: 18c0
+	MinRange: 5c0
+	Burst: 2
+	BurstDelays: 3
+	Report: howitzerfire02.wav
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 384
+		LaunchAngle: 165
+		Inaccuracy: 2c0
+	Warhead@Damage: SpreadDamage
+		Damage: 7500
+
 TurretCannon:
 	ValidTargets: Water, Ground, Tree
 	Report: tankfire01.wav
