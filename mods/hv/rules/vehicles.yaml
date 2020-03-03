@@ -176,6 +176,9 @@ SCOUT1:
 BUILDER1:
 	Inherits: ^Builder
 
+BUILDER2:
+	Inherits: ^Builder
+
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
 	Valued:
