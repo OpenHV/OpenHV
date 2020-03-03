@@ -22,8 +22,10 @@ seamnstr:
 	left: seamnstr.png
 		Length: 15
 		Tick: 300
+		Reverses: true
 	right: seamnstr.png
 		Start: 15
 		Length: 15
 		Tick: 300
+		Reverses: true
 	icon: blank.png
