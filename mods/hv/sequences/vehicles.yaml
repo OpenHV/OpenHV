@@ -79,3 +79,8 @@ builder2:
 	idle: builder2.png
 		Facings: 8
 	icon: blank.png
+
+builder3:
+	idle: builder3.png
+		Facings: 8
+	icon: blank.png

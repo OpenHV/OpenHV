@@ -179,6 +179,9 @@ BUILDER1:
 BUILDER2:
 	Inherits: ^Builder
 
+BUILDER3:
+	Inherits: ^Builder
+
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
 	Valued:
