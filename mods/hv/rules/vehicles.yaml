@@ -173,6 +173,9 @@ SCOUT1:
 	RenderSprites:
 		PlayerPalette: green
 
+BUILDER1:
+	Inherits: ^Builder
+
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
 	Valued:

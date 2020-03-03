@@ -86,6 +86,36 @@
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 
+^Builder:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Description: Grants additional build radius.
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
+	GivesBuildableArea:
+		AreaTypes: building
+		Adjacent: 3
+	BaseProvider:
+		Cooldown: 75
+		Range: 3c0
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Builder
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 8
+		Speed: 120
+	RevealsShroud:
+		Range: 6c0
+
 ^TrackedVehicle:
 	Inherits: ^Vehicle
 	Mobile:

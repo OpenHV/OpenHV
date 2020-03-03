@@ -69,3 +69,8 @@ beast:
 		Length: 12
 		Tick: 120
 	icon: blank.png
+
+builder1:
+	idle: builder1.png
+		Facings: 8
+	icon: blank.png
