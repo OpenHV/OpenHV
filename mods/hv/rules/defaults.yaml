@@ -96,7 +96,6 @@
 		Prerequisites: factory3
 	GivesBuildableArea:
 		AreaTypes: building
-		Adjacent: 3
 	BaseProvider:
 		Cooldown: 75
 		Range: 3c0
