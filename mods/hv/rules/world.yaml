@@ -5,6 +5,7 @@
 	Selection:
 	MusicPlaylist:
 	TerrainGeometryOverlay:
+	TerrainDebugOverlay:
 	DebugVisualizations:
 	TerrainRenderer:
 	Locomotor@IMMOBILE:
