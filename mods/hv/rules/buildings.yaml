@@ -400,7 +400,7 @@ FACTORY3:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
-		ProductionType: Infantry
+		ProductionType: Vehicles
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
