@@ -1,3 +1,33 @@
+TANK2:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Laser Bike
+		GenericName: Bike
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Infantry
+		Prerequisites: module
+		BuildPaletteOrder: 20
+		Description: Fires lasers.
+	AttackFrontal:
+	Armament:
+		Weapon: RedLaser
+		LocalOffset: 500,-250,0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 500
+	RevealsShroud:
+		Range: 7c0
+	RenderSprites:
+		PlayerPalette: bluebg-grey-remap
+
 TANK5:
 	Inherits: ^TrackedVehicle
 	Valued:

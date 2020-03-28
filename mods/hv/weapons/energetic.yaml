@@ -26,3 +26,20 @@ railgun:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+RedLaser:
+	ReloadDelay: 40
+	Range: 5c512
+	Report: ray_gun-Mike_Koenig.wav
+	Projectile: LaserZap
+		ZOffset: 2047
+		Color: FF000080
+		SecondaryBeam: true
+		SecondaryBeamZOffset: 2047
+		Width: 36
+		Duration: 8
+		SecondaryBeamWidth: 144
+		SecondaryBeamColor: FF000030
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 3000

@@ -170,7 +170,7 @@ MODULE:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: generator
-		Description: Does nothing.
+		Description: Produces very light vehicles.
 	Valued:
 		Cost: 500
 	Tooltip:
