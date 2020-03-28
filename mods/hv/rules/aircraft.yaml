@@ -34,10 +34,12 @@ COPTER2:
 	Cargo:
 		Types: Vehicle
 		MaxWeight: 4
-		PipCount: 4
 		AfterUnloadDelay: 40
 	RenderSprites:
 		PlayerPalette: green
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
 
 COPTER:
 	Inherits: ^Helicopter
@@ -125,7 +127,6 @@ CROW:
 	-Selectable:
 	Interactable:
 	SelectionDecorations:
-		RenderSelectionBars: False
 	-Voiced:
 	-Targetable@AIRBORNE:
 

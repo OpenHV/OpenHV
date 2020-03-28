@@ -207,7 +207,6 @@
 		Repulsable: false
 		MaximumPitch: 56
 	SelectionDecorations:
-		RenderSelectionBars: false
 	RenderSprites:
 		Palette: shadow
 

@@ -55,12 +55,14 @@ TRANSPRT:
 	Cargo:
 		Types: Vehicle
 		MaxWeight: 4
-		PipCount: 4
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 40,36
 	RenderSprites:
 		PlayerPalette: green
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
 
 ARTIL:
 	Inherits: ^TrackedVehicle

@@ -214,8 +214,7 @@ MODULE:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
@@ -242,8 +241,8 @@ MINER2:
 		Footprint: xx xx xx
 		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Ore
-		AllowInvalidPlacement: true # TODO CanPlaceBuilding explicitly prevents placing upon tiles with resources
+		TerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
+		AllowPlacementOnResources: true
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
 	RevealsShroud:
@@ -305,8 +304,7 @@ STARPORT:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
@@ -358,8 +356,7 @@ FACTORY2:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
@@ -411,8 +408,7 @@ FACTORY3:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
@@ -588,7 +584,6 @@ STORAGE:
 	RevealsShroud:
 		Range: 4c0
 	StoresResources:
-		PipCount: 4
 		Capacity: 4000
 	-WithSpriteBody:
 	WithResourceLevelSpriteBody:
@@ -599,6 +594,11 @@ STORAGE:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -300,150,0
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 4
+		FullSequence: pip-yellow
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
@@ -691,8 +691,7 @@ TELEVATR:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 
 TELEVTR2:
@@ -754,8 +753,7 @@ HARBOR:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
