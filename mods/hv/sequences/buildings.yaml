@@ -246,3 +246,6 @@ harbor:
 		Start: 1
 		ZOffset: 1000
 	icon: blank.png
+
+mother:
+	idle: mother.png

@@ -763,3 +763,25 @@ HARBOR:
 		Sequence: idle-entry
 	WithIdleOverlay@Production:
 		Sequence: production
+
+MOTHER:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^6x8Shape
+	Selectable:
+		Bounds: 113,145
+	Valued:
+		Cost: 15000
+	Tooltip:
+		Name: Main Base
+	Building:
+		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx
+		Dimensions: 6,8
+	Health:
+		HP: 5000000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 16c0
+	StrategicPoint:
+	ProximityCapturable:
+	RenderSprites:

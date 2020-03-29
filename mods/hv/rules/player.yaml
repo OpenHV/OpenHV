@@ -2,6 +2,9 @@ Player:
 	Inherits: ^BasePlayer
 	MissionObjectives:
 	ConquestVictoryConditions:
+	StrategicVictoryConditions:
+	ProximityCaptor:
+		Types: Player
 	PowerManager:
 	Shroud:
 	TechTree:

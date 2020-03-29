@@ -251,6 +251,13 @@
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 
+^6x8Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -3072, -4096
+			BottomRight: 3072, 4096
+
 ^Building:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
