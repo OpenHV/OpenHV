@@ -36,7 +36,7 @@ BASE:
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
-		Offset: -250,50,0
+		Offset: -1000,-150,0
 
 GENERATOR:
 	Inherits: ^BaseBuilding
