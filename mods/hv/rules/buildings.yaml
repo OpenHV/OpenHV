@@ -693,6 +693,8 @@ TELEVATR:
 		Sequence: primary
 		Position: Top
 		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
 
 TELEVTR2:
 	Inherits: TELEVATR
