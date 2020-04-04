@@ -99,3 +99,15 @@ builder5:
 	idle: builder5.png
 		Facings: 8
 	icon: blank.png
+
+missile_tank:
+	idle: missile_tank.png
+		Start: 0
+		Facings: 8
+	turret: missile_tank.png
+		Start: 8
+		Facings: 8
+	muzzle: muzzle.png
+		Length: 8
+		Facings: 8
+	icon: blank.png

@@ -328,3 +328,47 @@ BEAST:
 	-Passenger:
 	-MustBeDestroyed:
 	-Explodes:
+
+MISSILE_TANK:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Medium Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory3
+		BuildPaletteOrder: 40
+		Description: A tank which shoots missiles.
+		BuildAtProductionType: Tracked
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 33000
+	Armor:
+		Type: Medium
+	Mobile:
+		Speed: 120
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: -250,-50,100
+	Armament@PRIMARY:
+		Weapon: AntiAirRocket
+		Recoil: 50
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,0 # TODO: to be adjusted
+	Armament@SECONDARY:
+		Weapon: AntiGroundRocket
+		Recoil: 50
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,0 # TODO: to be adjusted
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	#RenderSprites:
+	#	PlayerPalette: green
