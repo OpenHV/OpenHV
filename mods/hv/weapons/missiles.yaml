@@ -81,3 +81,15 @@ AntiAirRocket:
 		Versus:
 			Steel: 75
 			Light: 75
+
+MissileTankRocket:
+	Inherits: AntiGroundRocket
+	ReloadDelay: 60
+	Burst: 3
+	BurstDelays: 5
+
+MissileTankRocket_AA:
+	Inherits: AntiAirRocket
+	ReloadDelay: 60
+	Burst: 3
+	BurstDelays: 5

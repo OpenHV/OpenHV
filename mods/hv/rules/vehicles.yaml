@@ -356,16 +356,10 @@ MISSILE_TANK:
 		TurnSpeed: 10
 		Offset: -250,-50,100
 	Armament@PRIMARY:
-		Weapon: AntiAirRocket
-		Recoil: 50
-		RecoilRecovery: 25
-		MuzzleSequence: muzzle
-		LocalOffset: 0,0,0 # TODO: to be adjusted
+		Weapon: MissileTankRocket
+		LocalOffset: 500,0,0 # TODO: to be adjusted
 	Armament@SECONDARY:
-		Weapon: AntiGroundRocket
-		Recoil: 50
-		RecoilRecovery: 25
-		MuzzleSequence: muzzle
+		Weapon: MissileTankRocket_AA
 		LocalOffset: 0,0,0 # TODO: to be adjusted
 	AttackTurreted:
 	WithSpriteTurret:
