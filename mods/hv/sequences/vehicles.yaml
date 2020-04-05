@@ -43,6 +43,15 @@ scout1:
 		Tick: 50
 	icon: blank.png
 
+scout2:
+	idle: scout2.png
+		Facings: 8
+	muzzle: muzzle2.png
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon: blank.png
+
 tyriantank:
 	idle: tyriantank.png
 		Start: 0

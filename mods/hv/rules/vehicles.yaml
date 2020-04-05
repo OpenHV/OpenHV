@@ -205,6 +205,40 @@ SCOUT1:
 	RenderSprites:
 		PlayerPalette: green
 
+SCOUT2:
+	Inherits: ^Vehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 130
+		Description: Fast reconnaissance vehicle.
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Scout Pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: LightAntiTankRocket
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,0 # TODO: to be adjusted
+	AttackFrontal:
+	WithMuzzleOverlay:
+	#RenderSprites:
+	#	PlayerPalette: green
+
+
 BUILDER1:
 	Inherits: ^Builder
 

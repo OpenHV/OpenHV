@@ -93,3 +93,18 @@ MissileTankRocket_AA:
 	ReloadDelay: 60
 	Burst: 3
 	BurstDelays: 5
+
+LightAntiTankRocket:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 70
+	-Minrange:
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 1500
+		Versus:
+			None: 10
+			Steel: 74
+			Light: 34
+			Heavy: 100
+			Concrete: 50
