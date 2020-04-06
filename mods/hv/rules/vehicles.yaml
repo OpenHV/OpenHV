@@ -238,7 +238,6 @@ SCOUT2:
 	#RenderSprites:
 	#	PlayerPalette: green
 
-
 BUILDER1:
 	Inherits: ^Builder
 
