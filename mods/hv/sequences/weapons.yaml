@@ -60,6 +60,13 @@ bullet6:
 		Facings: 8
 		ZOffset: 1023
 
+bullet7:
+	idle: bullets.png
+		Start: 48
+		Length: 2
+		Facings: 8
+		ZOffset: 1023
+
 nuclear:
 	up: bullets.png
 		Start: 40
@@ -70,6 +77,12 @@ nuclear:
 
 smoke:
 	idle: smoke.png
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+
+small_smoke:
+	idle: small_smoke.png
 		Length: 6
 		Tick: 60
 		ZOffset: 1000

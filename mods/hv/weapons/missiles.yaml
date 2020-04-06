@@ -93,3 +93,34 @@ MissileTankRocket_AA:
 	ReloadDelay: 60
 	Burst: 3
 	BurstDelays: 5
+
+LightAntiTankRocket:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 70
+	Report: rocketlaunch01.wav
+	Projectile: Missile
+		Speed: 213
+		Arm: 2
+		Blockable: false
+		Inaccuracy: 128
+		Image: bullet7
+		Shadow: true
+		HorizontalRateOfTurn: 5
+		RangeLimit: 6c0
+		TrailImage: small_smoke
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 1500
+		Versus:
+			None: 10
+			Steel: 74
+			Light: 34
+			Heavy: 100
+			Concrete: 50
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
