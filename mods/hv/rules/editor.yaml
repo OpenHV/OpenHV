@@ -22,6 +22,8 @@ EditorWorld:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	EditorCursorLayer:
+	LiquidTerrainLayerEditorLayer:
+		Types: water
 
 EditorPlayer:
 	AlwaysVisible:

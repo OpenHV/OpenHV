@@ -167,3 +167,55 @@ trees15:
 
 trees16:
 	idle: trees16.png
+
+waterflow1:
+	idle: watrflow.png
+		Start: 9
+
+waterflow2:
+	idle: watrflow.png
+		Start: 10
+
+waterflow3:
+	idle: watrflow.png
+		Start: 11
+
+waterflow4:
+	idle: watrflow.png
+		Start: 12
+
+waterflow5:
+	idle: watrflow.png
+		Start: 13
+
+waterflow6:
+	idle: watrflow.png
+		Start: 14
+
+waterflow7:
+	idle: watrflow.png
+		Start: 15
+
+waterflow8:
+	idle: watrflow.png
+		Start: 16
+
+waterflow9:
+	idle: watrflow.png
+		Start: 17
+
+waterflow10:
+	idle: watrflow.png
+		Start: 22
+
+waterflow11:
+	idle: watrflow.png
+		Start: 23
+
+waterflow12:
+	idle: watrflow.png
+		Start: 24
+
+waterflow13:
+	idle: watrflow.png
+		Start: 25

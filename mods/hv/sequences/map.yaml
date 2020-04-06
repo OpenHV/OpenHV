@@ -3,6 +3,8 @@ resources:
 		Length: 3
 	gold: gold.png
 	iron: iron.png
+	waterflow: watrflow.png
+		Length: *
 
 mpspawn:
 	idle: mpspawn.png

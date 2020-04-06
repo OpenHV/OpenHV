@@ -284,3 +284,42 @@ TREES17:
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+
+WATERFLOW1:
+	Inherits: ^WATERFLOW
+
+WATERFLOW2:
+	Inherits: ^WATERFLOW
+
+WATERFLOW3:
+	Inherits: ^WATERFLOW
+
+WATERFLOW4:
+	Inherits: ^WATERFLOW
+
+WATERFLOW5:
+	Inherits: ^WATERFLOW
+
+WATERFLOW6:
+	Inherits: ^WATERFLOW
+
+WATERFLOW7:
+	Inherits: ^WATERFLOW
+
+WATERFLOW8:
+	Inherits: ^WATERFLOW
+
+WATERFLOW9:
+	Inherits: ^WATERFLOW
+
+WATERFLOW10:
+	Inherits: ^WATERFLOW
+
+WATERFLOW11:
+	Inherits: ^WATERFLOW
+
+WATERFLOW12:
+	Inherits: ^WATERFLOW
+
+WATERFLOW13:
+	Inherits: ^WATERFLOW

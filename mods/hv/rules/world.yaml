@@ -92,6 +92,16 @@
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
 		AllowUnderActors: true
 		AllowUnderBuildings: true
+	ResourceType@Water:
+		Type: water
+		Name: Water
+		ResourceType: 3
+		TerrainType: Water
+		Palette: terrain
+		AllowedTerrainTypes: Crater
+		Sequences: waterflow
+		MaxDensity: 1
+		ValuePerUnit: 0
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal
@@ -250,5 +260,7 @@ World:
 	ResourceLayer:
 	ResourceRenderer:
 		RenderTypes: gold, iron
+	LiquidTerrainRenderer:
+		RenderTypes: water
 	CloudSpawner:
 		ActorTypes: cloud1, cloud2, cloud3

@@ -474,3 +474,28 @@
 		PlayerPalette: remap
 	WithFacingSpriteBody:
 	HitShape:
+
+^WATERFLOW:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	HiddenUnderShroud:
+	Tooltip:
+		Name: Waterflow
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Water
+	AppearsOnMapPreview:
+		Terrain: Water
+	SeedsResource:
+		ResourceType: water
+		Interval: 1
+	MapEditorData:
+		Categories: Water
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
