@@ -102,6 +102,8 @@
 		Sequences: waterflow
 		MaxDensity: 1
 		ValuePerUnit: 0
+		AllowUnderActors: true
+		AllowUnderBuildings: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: palette.pal
