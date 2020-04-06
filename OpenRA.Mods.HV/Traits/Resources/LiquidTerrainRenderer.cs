@@ -43,15 +43,25 @@ namespace OpenRA.Mods.HV.Traits
 
 		public static readonly Dictionary<ClearSides, int> SpriteMap = new Dictionary<ClearSides, int>()
 		{
+			{ ClearSides.Top, 0 },
 			{ ClearSides.Top | ClearSides.TopLeft | ClearSides.TopRight, 0 },
 			{ ClearSides.Left | ClearSides.Top | ClearSides.Bottom | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 1 },
+			{ ClearSides.Left | ClearSides.Top | ClearSides.TopLeft | ClearSides.BottomLeft, 1 },
 			{ ClearSides.Left | ClearSides.TopLeft | ClearSides.BottomLeft, 2 },
+			{ ClearSides.Left, 2 },
 			{ ClearSides.Left | ClearSides.Bottom | ClearSides.TopLeft | ClearSides.BottomLeft | ClearSides.BottomRight, 3 },
+			{ ClearSides.Bottom, 4 },
 			{ ClearSides.Bottom | ClearSides.BottomLeft | ClearSides.BottomRight, 4 },
 			{ ClearSides.Right | ClearSides.Bottom | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 5 },
+			{ ClearSides.Right, 6 },
 			{ ClearSides.Right | ClearSides.TopRight | ClearSides.BottomRight, 6 },
 			{ ClearSides.Top | ClearSides.Right | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomRight, 7 },
-			{ ClearSides.None, 8 }
+			{ ClearSides.Top | ClearSides.Right | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 7 },
+			{ ClearSides.None, 8 },
+			{ ClearSides.TopLeft, 17 },
+			{ ClearSides.BottomLeft, 19 },
+			{ ClearSides.BottomRight, 20 },
+			{ ClearSides.TopRight, 21 }
 		};
 
 		public LiquidTerrainRenderer(Actor self, LiquidTerrainRendererInfo info)
@@ -66,16 +76,16 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var ret = ClearSides.None;
 			if (!CellContains(p + new CVec(0, -1), t))
-				ret |= ClearSides.Top | ClearSides.TopLeft | ClearSides.TopRight;
+				ret |= ClearSides.Top;
 
 			if (!CellContains(p + new CVec(-1, 0), t))
-				ret |= ClearSides.Left | ClearSides.TopLeft | ClearSides.BottomLeft;
+				ret |= ClearSides.Left;
 
 			if (!CellContains(p + new CVec(1, 0), t))
-				ret |= ClearSides.Right | ClearSides.TopRight | ClearSides.BottomRight;
+				ret |= ClearSides.Right;
 
 			if (!CellContains(p + new CVec(0, 1), t))
-				ret |= ClearSides.Bottom | ClearSides.BottomLeft | ClearSides.BottomRight;
+				ret |= ClearSides.Bottom;
 
 			if (!CellContains(p + new CVec(-1, -1), t))
 				ret |= ClearSides.TopLeft;
