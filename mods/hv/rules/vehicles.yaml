@@ -232,7 +232,7 @@ SCOUT2:
 	Armament:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
-		LocalOffset: 0,0,0 # TODO: to be adjusted
+		LocalOffset: 50,0,0
 	AttackFrontal:
 	WithMuzzleOverlay:
 	#RenderSprites:
