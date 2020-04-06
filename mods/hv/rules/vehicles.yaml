@@ -235,8 +235,8 @@ SCOUT2:
 		LocalOffset: 50,0,0
 	AttackFrontal:
 	WithMuzzleOverlay:
-	#RenderSprites:
-	#	PlayerPalette: green
+	RenderSprites:
+		PlayerPalette: green
 
 BUILDER1:
 	Inherits: ^Builder
