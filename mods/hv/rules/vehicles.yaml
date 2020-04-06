@@ -364,5 +364,5 @@ MISSILE_TANK:
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	#RenderSprites:
-	#	PlayerPalette: green
+	RenderSprites:
+		PlayerPalette: green
