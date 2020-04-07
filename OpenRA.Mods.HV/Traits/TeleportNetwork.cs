@@ -15,7 +15,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	// TODO: Create a proper check for Types of TeleportNetwork and TeleportNetworkManager or lint rule.
-	[Desc("This actor can teleport actors like Nydus canels in SC1. Assuming static object.")]
+	[Desc("This actor can teleport actors to another actor with the same trait.")]
 	public class TeleportNetworkInfo : ITraitInfo
 	{
 		[FieldLoader.Require]
@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Stances requirement that targeted TeleportNetwork has to meet in order to teleport units.")]
 		public Stance ValidStances = Stance.Ally;
 
-		public object Create(ActorInitializer init) { return new TeleportNetwork(init, this); }
+		public object Create(ActorInitializer init) { return new TeleportNetwork(this); }
 	}
 
 	// The teleport network does nothing. The actor teleports itself, upon entering.
@@ -34,12 +34,12 @@ namespace OpenRA.Mods.HV.Traits
 		public TeleportNetworkInfo Info;
 		TeleportNetworkManager teleportNetworkManager;
 
-		public TeleportNetwork(ActorInitializer init, TeleportNetworkInfo info)
+		public TeleportNetwork(TeleportNetworkInfo info)
 		{
 			Info = info;
 		}
 
-		void IncreaseTeleportNetworkCount(Actor self, Player owner)
+		void IncreaseTeleportNetworkCount(Actor self)
 		{
 			if (teleportNetworkManager.Count == 0)
 			{
@@ -54,7 +54,7 @@ namespace OpenRA.Mods.HV.Traits
 			teleportNetworkManager.Count++;
 		}
 
-		void DecreaseTeleportNetworkCount(Actor self, Player owner)
+		void DecreaseTeleportNetworkCount(Actor self)
 		{
 			teleportNetworkManager.Count--;
 
@@ -67,8 +67,8 @@ namespace OpenRA.Mods.HV.Traits
 					teleportNetworkManager.PrimaryActor = null;
 				else
 				{
-					var pri = actors.First().Actor;
-					pri.Trait<TeleportNetworkPrimaryExit>().SetPrimary(pri);
+					var primary = actors.First().Actor;
+					primary.Trait<TeleportNetworkPrimaryExit>().SetPrimary(primary);
 				}
 			}
 		}
@@ -76,18 +76,18 @@ namespace OpenRA.Mods.HV.Traits
 		void INotifyAddedToWorld.AddedToWorld(Actor self)
 		{
 			teleportNetworkManager = self.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == Info.Type);
-			IncreaseTeleportNetworkCount(self, self.Owner);
+			IncreaseTeleportNetworkCount(self);
 		}
 
-		public void OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
+		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
 		{
-			DecreaseTeleportNetworkCount(self, oldOwner);
-			IncreaseTeleportNetworkCount(self, newOwner);
+			DecreaseTeleportNetworkCount(self);
+			IncreaseTeleportNetworkCount(self);
 		}
 
 		void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
 		{
-			DecreaseTeleportNetworkCount(self, self.Owner);
+			DecreaseTeleportNetworkCount(self);
 		}
 	}
 }
