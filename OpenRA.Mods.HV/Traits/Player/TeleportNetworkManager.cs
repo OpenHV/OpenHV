@@ -9,16 +9,26 @@
  */
 #endregion
 
+using System.Linq;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("This must be attached to player in order for TeleportNetwork to work.")]
-	public class TeleportNetworkManagerInfo : ITraitInfo
+	public class TeleportNetworkManagerInfo : ITraitInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]
 		[Desc("Type of TeleportNetwork that pairs up, in order for it to work.")]
 		public string Type;
+
+		public void RulesetLoaded(Ruleset rules, ActorInfo ai)
+		{
+			var teleporters = rules.Actors.Values.Where(a => a.HasTraitInfo<TeleportNetworkInfo>());
+			if (!teleporters.Any())
+				throw new YamlException("TeleportNetworkManager without TeleportNetwork actors.");
+			if (!teleporters.Any(a => a.TraitInfo<TeleportNetworkInfo>().Type == Type))
+				throw new YamlException("Can't find a TeleportNetwork with Type '{0}'".F(Type));
+		}
 
 		public object Create(ActorInitializer init) { return new TeleportNetworkManager(init, this); }
 	}

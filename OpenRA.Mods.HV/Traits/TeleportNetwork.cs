@@ -14,9 +14,8 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	// TODO: Create a proper check for Types of TeleportNetwork and TeleportNetworkManager or lint rule.
 	[Desc("This actor can teleport actors to another actor with the same trait.")]
-	public class TeleportNetworkInfo : ITraitInfo
+	public class TeleportNetworkInfo : ITraitInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]
 		[Desc("Type of TeleportNetwork that pairs up, in order for it to work.")]
@@ -24,6 +23,12 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Stances requirement that targeted TeleportNetwork has to meet in order to teleport units.")]
 		public Stance ValidStances = Stance.Ally;
+
+		public void RulesetLoaded(Ruleset rules, ActorInfo ai)
+		{
+			if (!rules.Actors["player"].TraitInfos<TeleportNetworkManagerInfo>().Any(q => Type == q.Type))
+				throw new YamlException("Can't find a TeleportNetworkManager with Type '{0}'".F(Type));
+		}
 
 		public object Create(ActorInitializer init) { return new TeleportNetwork(this); }
 	}
