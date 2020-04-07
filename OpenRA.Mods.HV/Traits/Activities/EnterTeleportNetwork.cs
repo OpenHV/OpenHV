@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Activities
 {
 	class EnterTeleportNetwork : Enter
 	{
-		string type;
+		readonly string type;
 
 		public EnterTeleportNetwork(Actor self, Target target, string type)
 			: base(self, target, Color.Yellow)
@@ -29,34 +29,34 @@ namespace OpenRA.Mods.HV.Activities
 			this.type = type;
 		}
 
-		protected override bool TryStartEnter(Actor self, Actor targetActor)
+		protected override bool TryStartEnter(Actor self, Actor target)
 		{
-			return targetActor.IsValidTeleportNetworkUser(self);
+			return target.IsValidTeleportNetworkUser(self);
 		}
 
-		protected override void OnEnterComplete(Actor self, Actor targetActor)
+		protected override void OnEnterComplete(Actor self, Actor target)
 		{
 			// entered the teleport network canal but the entrance is dead immediately.
-			if (targetActor.IsDead || self.IsDead)
+			if (target.IsDead || self.IsDead)
 				return;
 
 			// Find the primary teleport network exit.
-			var pri = targetActor.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == type).PrimaryActor;
+			var primary = target.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == type).PrimaryActor;
 
-			var exitinfo = pri.Info.TraitInfo<ExitInfo>();
-			var rp = pri.TraitOrDefault<RallyPoint>();
+			var exitInfo = primary.Info.TraitInfo<ExitInfo>();
+			var rallyPoint = primary.TraitOrDefault<RallyPoint>();
 
 			var exit = CPos.Zero; // spawn point
 			var exitLocations = new List<CPos>(); // dest to move (cell pos)
 
-			if (pri.OccupiesSpace != null)
+			if (primary.OccupiesSpace != null)
 			{
-				exit = pri.Location + exitinfo.ExitCell;
-				var spawn = pri.CenterPosition + exitinfo.SpawnOffset;
+				exit = primary.Location + exitInfo.ExitCell;
+				var spawn = primary.CenterPosition + exitInfo.SpawnOffset;
 				var to = self.World.Map.CenterOfCell(exit);
 
-				var initialFacing = exitinfo.Facing;
-				if (exitinfo.Facing < 0)
+				var initialFacing = exitInfo.Facing;
+				if (exitInfo.Facing < 0)
 				{
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
@@ -69,7 +69,7 @@ namespace OpenRA.Mods.HV.Activities
 						fi.Facing = initialFacing;
 				}
 
-				exitLocations = rp != null ? rp.Path : new List<CPos>() { exit };
+				exitLocations = rallyPoint != null ? rallyPoint.Path : new List<CPos>() { exit };
 			}
 
 			// Teleport myself to primary actor.

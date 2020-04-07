@@ -19,23 +19,22 @@ namespace OpenRA.Mods.HV.Traits
 {
 	static class TeleportNetworkPrimaryExitExts
 	{
-		public static bool IsValidTeleportNetworkUser(this Actor networkactor, Actor useractor)
+		public static bool IsValidTeleportNetworkUser(this Actor network, Actor user)
 		{
-			var trait = networkactor.TraitOrDefault<TeleportNetwork>();
+			var trait = network.TraitOrDefault<TeleportNetwork>();
 			if (trait == null)
 				return false;
 
-			var exit = networkactor.TraitOrDefault<TeleportNetworkPrimaryExit>();
+			var exit = network.TraitOrDefault<TeleportNetworkPrimaryExit>();
 			if (exit != null && exit.IsPrimary)
 				return false;
 
-			return networkactor.Owner.Stances[useractor.Owner].HasFlag(trait.Info.ValidStances);
+			return network.Owner.Stances[user.Owner].HasFlag(trait.Info.ValidStances);
 		}
 
-		public static bool IsPrimaryTeleportNetworkExit(this Actor networkactor)
+		public static bool IsPrimaryTeleportNetworkExit(this Actor network)
 		{
-			var exit = networkactor.TraitOrDefault<TeleportNetworkPrimaryExit>();
-
+			var exit = network.TraitOrDefault<TeleportNetworkPrimaryExit>();
 			if (exit == null)
 				return false;
 

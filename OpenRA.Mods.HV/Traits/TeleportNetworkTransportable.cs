@@ -50,14 +50,13 @@ namespace OpenRA.Mods.HV.Traits
 		}
 
 		// Checks if targeted actor's owner has enough canals (more than 1) of provided type
-		static bool HasEnoughCanals(Actor targetactor, string type)
+		static bool HasEnoughCanals(Actor target, string type)
 		{
-			var counter = targetactor.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().Where(x => x.Type == type).First();
-
-			if (counter == null)
+			var managers = target.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().Where(x => x.Type == type).First();
+			if (managers == null)
 				return false;
 
-			return counter.Count > 1;
+			return managers.Count > 1;
 		}
 
 		static bool IsValidOrder(Actor self, Order order)
@@ -67,7 +66,6 @@ namespace OpenRA.Mods.HV.Traits
 				return false;
 
 			var teleportNetwork = order.Target.Actor.TraitOrDefault<TeleportNetwork>();
-
 			if (teleportNetwork == null)
 				return false;
 
@@ -92,7 +90,6 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var teleportNetwork = order.Target.Actor.TraitOrDefault<TeleportNetwork>();
-
 			if (teleportNetwork == null)
 				return;
 
@@ -104,7 +101,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		class TeleportNetworkTransportOrderTargeter : UnitOrderTargeter
 		{
-			TeleportNetworkTransportableInfo info;
+			readonly TeleportNetworkTransportableInfo info;
 
 			public TeleportNetworkTransportOrderTargeter(TeleportNetworkTransportableInfo info)
 				: base("TeleportNetworkTransport", 6, info.EnterCursor, true, true)
