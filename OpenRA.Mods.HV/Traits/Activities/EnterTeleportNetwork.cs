@@ -72,6 +72,9 @@ namespace OpenRA.Mods.HV.Activities
 				exitLocations = rallyPoint != null ? rallyPoint.Path : new List<CPos>() { exit };
 			}
 
+			foreach (var notify in target.TraitsImplementing<INotifyEnterTeleporter>())
+				notify.Charging(self, target);
+
 			// Teleport myself to primary actor.
 			self.Trait<IPositionable>().SetPosition(self, exit);
 

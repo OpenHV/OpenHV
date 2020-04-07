@@ -685,7 +685,9 @@ TELEVATR:
 	TeleportNetworkPrimaryExit:
 	TeleportNetwork:
 		Type: subspace
+	WithTeleportChargeAnimation:
 	RallyPoint:
+		Path: 1,1
 	Exit:
 	WithDecoration@primary:
 		RequiresSelection: true

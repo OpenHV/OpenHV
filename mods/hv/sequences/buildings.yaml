@@ -203,29 +203,27 @@ artilleryturret:
 	icon: blank.png
 
 televatr:
+	Defaults:
+		ZOffset: -1c511
 	idle: televatr.png
 		Start: 15
 	damaged-idle: televatr.png
 		Start: 16
-	charging: televatr.png
-		Start: 0
-		Length: 8
-	teleport: televatr.png
-		Start: 8
-		Length: 8
+	active: televatr.png
+		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+		Length: *
 	icon: blank.png
 
 televtr2:
+	Defaults:
+		ZOffset: -1c511
 	idle: televtr2.png
 		Start: 7
 	damaged-idle: televtr2.png
 		Start: 14
-	charging: televtr2.png
-		Start: 0
-		Length: 7
-	teleport: televtr2.png
-		Start: 7
-		Length: 7
+	active: televtr2.png
+		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
 	icon: blank.png
 
 harbor:
