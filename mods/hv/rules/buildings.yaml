@@ -690,6 +690,8 @@ TELEVATR:
 	WithTeleportChargeAnimation:
 	RallyPoint:
 		Path: 1,1
+		IsPlayerPalette: true
+		Palette: green
 	Exit:
 	WithDecoration@primary:
 		RequiresSelection: true
