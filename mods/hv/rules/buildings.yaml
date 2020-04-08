@@ -699,10 +699,14 @@ TELEVATR:
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	PlaceBuildingVariants:
+		Actors: televtr2
 
 TELEVTR2:
 	Inherits: TELEVATR
 	Inherits@shape: ^1x2Shape
+	-Buildable:
+	-PlaceBuildingVariants:
 	Selectable:
 		Bounds: 20,40
 	Building:

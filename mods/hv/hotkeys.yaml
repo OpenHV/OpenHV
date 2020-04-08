@@ -22,6 +22,10 @@ ProductionTypeNaval: I
 	Description: Naval Tab
 	Types: Production, Player
 
+ToggleVariant: V
+	Description: Rotate Building
+	Types: Production, Player
+
 PowerDown: X
 	Description: Power-down mode
 	Types: OrderGenerator, Player

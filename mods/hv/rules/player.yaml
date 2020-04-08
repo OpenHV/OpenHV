@@ -9,6 +9,7 @@ Player:
 	Shroud:
 	TechTree:
 	PlaceBuilding:
+		ToggleVariantKey: ToggleVariant
 	SupportPowerManager:
 	PlayerResources:
 	DeveloperMode:
