@@ -209,6 +209,8 @@ televatr:
 		ZOffset: -1c511
 	idle: televatr.png
 		Start: 15
+	shadow-overlay: televatr-shadow.png
+		ZOffset: 1768
 	damaged-idle: televatr.png
 		Start: 16
 	active: televatr.png
@@ -221,6 +223,8 @@ televtr2:
 		ZOffset: -1c511
 	idle: televtr2.png
 		Start: 7
+	shadow-overlay: televtr2-shadow.png
+		ZOffset: 1768
 	damaged-idle: televtr2.png
 		Start: 14
 	active: televtr2.png
