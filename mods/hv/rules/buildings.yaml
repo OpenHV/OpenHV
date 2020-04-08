@@ -189,12 +189,13 @@ MODULE:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+	ExitsDebugOverlay:
 	Exit@1:
-		SpawnOffset: -170,810,0
+		SpawnOffset: -150,800,0
 		ExitCell: 1,2
 		ProductionTypes: Infantry
 	Exit@2:
-		SpawnOffset: -725,640,0
+		SpawnOffset: 150,800,0
 		ExitCell: 0,2
 		ProductionTypes: Infantry
 	Production:

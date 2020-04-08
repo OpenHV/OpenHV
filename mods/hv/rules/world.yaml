@@ -215,6 +215,7 @@ World:
 	ChatCommands:
 	DevCommands:
 	DebugVisualizationCommands:
+	ExitsDebugOverlayManager:
 	PlayerCommands:
 	HelpCommand:
 	ScreenShaker:
