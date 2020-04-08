@@ -201,6 +201,7 @@ MODULE:
 		Produces: Infantry
 	GrantExternalConditionToProduced:
 		Condition: produced
+	WithProductionDoorAnimation:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:

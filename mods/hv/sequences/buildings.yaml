@@ -62,8 +62,10 @@ tradplat:
 	icon: blank.png
 
 module:
-	door: module.png # TODO: unused
-		Length: 8
+	door: module.png
+		Frames: 7, 6, 5, 4, 3, 2, 1
+		Length: *
+		ZOffset: 1768
 	idle: module.png
 		Start: 8
 	shadow-overlay: module-shadow.png
