@@ -11,6 +11,8 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using OpenRA.Effects;
+using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Traits;
@@ -21,11 +23,21 @@ namespace OpenRA.Mods.HV.Activities
 {
 	class EnterTeleportNetwork : Enter
 	{
+		enum EnterState { Approaching, Entering, Exiting, Finished }
+
+		readonly IMove move;
 		readonly string type;
+
+		Target target;
+		Target lastVisibleTarget;
+		bool useLastVisibleTarget;
+		EnterState lastState = EnterState.Approaching;
 
 		public EnterTeleportNetwork(Actor self, Target target, string type)
 			: base(self, target, Color.Yellow)
 		{
+			move = self.Trait<IMove>();
+			this.target = target;
 			this.type = type;
 		}
 
@@ -75,22 +87,105 @@ namespace OpenRA.Mods.HV.Activities
 			foreach (var notify in target.TraitsImplementing<INotifyEnterTeleporter>())
 				notify.Charging(self, target);
 
-			// Teleport myself to primary actor.
-			self.Trait<IPositionable>().SetPosition(self, exit);
+			var teleporter = target.Trait<TeleportNetwork>();
 
-			// Cancel all activities (like PortableChrono does)
-			self.CancelActivity();
-
-			// Issue attack move to the rally point.
-			self.World.AddFrameEndTask(w =>
+			// TODO: avoid DelayedAction and use ITick instead.
+			self.World.AddFrameEndTask(w => w.Add(new DelayedAction(teleporter.Info.Delay, () =>
 			{
+				// Teleport myself to primary actor.
+				self.Trait<IPositionable>().SetPosition(self, exit);
+
+				// Cancel all activities (like PortableChrono does)
+				self.CancelActivity();
+
+				// Issue attack move to the rally point.
 				var move = self.TraitOrDefault<IMove>();
 				if (move != null)
 				{
 					foreach (var cell in exitLocations)
 						self.QueueActivity(new AttackMoveActivity(self, () => move.MoveTo(cell, 1, evaluateNearestMovableCell: true, targetLineColor: Color.OrangeRed)));
 				}
-			});
+			})));
+		}
+
+		public override bool Tick(Actor self)
+		{
+			// Update our view of the target
+			bool targetIsHiddenActor;
+			target = target.Recalculate(self.Owner, out targetIsHiddenActor);
+			if (!targetIsHiddenActor && target.Type == TargetType.Actor)
+				lastVisibleTarget = Target.FromTargetPositions(target);
+
+			useLastVisibleTarget = targetIsHiddenActor || !target.IsValidFor(self);
+
+			// Cancel immediately if the target died while we were entering it
+			if (!IsCanceling && useLastVisibleTarget && lastState == EnterState.Entering)
+				Cancel(self, true);
+
+			TickInner(self, target, useLastVisibleTarget);
+
+			// We need to wait for movement to finish before transitioning to
+			// the next state or next activity
+			if (!TickChild(self))
+				return false;
+
+			// Note that lastState refers to what we have just *finished* doing
+			switch (lastState)
+			{
+				case EnterState.Approaching:
+				{
+					// NOTE: We can safely cancel in this case because we know the
+					// actor has finished any in-progress move activities
+					if (IsCanceling)
+						return true;
+
+					// Lost track of the target
+					if (useLastVisibleTarget && lastVisibleTarget.Type == TargetType.Invalid)
+						return true;
+
+					// We are not next to the target - lets fix that
+					if (target.Type != TargetType.Invalid && !move.CanEnterTargetNow(self, target))
+					{
+						// Target lines are managed by this trait, so we do not pass targetLineColor
+						var initialTargetPosition = (useLastVisibleTarget ? lastVisibleTarget : target).CenterPosition;
+						QueueChild(move.MoveToTarget(self, target, initialTargetPosition));
+						return false;
+					}
+
+					// We are next to where we thought the target should be, but it isn't here
+					// There's not much more we can do here
+					if (useLastVisibleTarget || target.Type != TargetType.Actor)
+						return true;
+
+					// Are we ready to move into the target?
+					if (TryStartEnter(self, target.Actor))
+					{
+						lastState = EnterState.Entering;
+						QueueChild(move.MoveIntoTarget(self, target));
+						return false;
+					}
+
+					// Subclasses can cancel the activity during TryStartEnter
+					// Return immediately to avoid an extra tick's delay
+					if (IsCanceling)
+						return true;
+
+					return false;
+				}
+
+				case EnterState.Entering:
+				{
+					// Check that we reached the requested position
+					var targetPos = target.Positions.PositionClosestTo(self.CenterPosition);
+					if (!IsCanceling && self.CenterPosition == targetPos && target.Type == TargetType.Actor)
+						OnEnterComplete(self, target.Actor);
+
+					lastState = EnterState.Finished; // never exit a departing teleporter
+					return false;
+				}
+			}
+
+			return true;
 		}
 	}
 }

@@ -24,6 +24,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Stances requirement that targeted TeleportNetwork has to meet in order to teleport units.")]
 		public Stance ValidStances = Stance.Ally;
 
+		[Desc("Time in ticks to wait for the teleporter to charge up.")]
+		public int Delay = 20;
+
 		public void RulesetLoaded(Ruleset rules, ActorInfo ai)
 		{
 			if (!rules.Actors["player"].TraitInfos<TeleportNetworkManagerInfo>().Any(q => Type == q.Type))
