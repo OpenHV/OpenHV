@@ -6,9 +6,9 @@ TANK2:
 		Name: Laser Bike
 		GenericName: Bike
 	Buildable:
-		Queue: Infantry
-		BuildAtProductionType: Infantry
-		Prerequisites: module
+		Queue: Vehicle
+		BuildAtProductionType: Tracked
+		Prerequisites: factory2
 		BuildPaletteOrder: 20
 		Description: Fires lasers.
 	AttackFrontal:
@@ -176,11 +176,11 @@ SCOUT1:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Vehicle
+		Queue: Infantry
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
-		BuildAtProductionType: Wheeled
-		Prerequisites: factory3
+		BuildAtProductionType: Infantry
+		Prerequisites: module
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -209,11 +209,11 @@ SCOUT2:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Vehicle
+		Queue: Infantry
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
-		BuildAtProductionType: Wheeled
-		Prerequisites: factory3
+		BuildAtProductionType: Infantry
+		Prerequisites: module
 	Valued:
 		Cost: 500
 	Tooltip:
