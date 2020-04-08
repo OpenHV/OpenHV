@@ -670,7 +670,7 @@ TELEVATR:
 	Tooltip:
 		Name: Televator
 	Building:
-		Footprint: xx
+		Footprint: ++
 		Dimensions: 2,1
 	Health:
 		HP: 100000
@@ -706,7 +706,7 @@ TELEVTR2:
 	Selectable:
 		Bounds: 20,40
 	Building:
-		Footprint: x x
+		Footprint: + +
 		Dimensions: 1,2
 
 HARBOR:
