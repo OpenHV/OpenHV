@@ -21,10 +21,10 @@ script:
      make check ||  travis_terminate 1;
    fi;
    if [ "${TRAVIS_TEST_PACKAGING}" == "True" ] || [ -n "${TRAVIS_TAG}" ]; then
-     wget http://mirrors.kernel.org/ubuntu/pool/universe/n/nsis/nsis-common_3.03-2_all.deb || travis_terminate 1;
-     wget http://mirrors.kernel.org/ubuntu/pool/universe/n/nsis/nsis_3.03-2_amd64.deb || travis_terminate 1;
-     sudo dpkg -i nsis-common_3.03-2_all.deb || travis_terminate 1;
-     sudo dpkg -i nsis_3.03-2_amd64.deb || travis_terminate 1;
+     wget https://mirrors.edge.kernel.org/ubuntu/pool/universe/n/nsis/nsis-common_3.04-1_all.deb || travis_terminate 1;
+     wget https://mirrors.edge.kernel.org/ubuntu/pool/universe/n/nsis/nsis_3.04-1_amd64.deb || travis_terminate 1;
+     sudo dpkg -i nsis-common_3.04-1_all.deb || travis_terminate 1;
+     sudo dpkg -i nsis_3.04-1_amd64.deb || travis_terminate 1;
    fi
    if [ "${TRAVIS_TEST_PACKAGING}" == "True" ] && [ -z "${TRAVIS_TAG}" ]; then
      make check-packaging-scripts && ./packaging/package-all.sh test-0 || travis_terminate 1;
