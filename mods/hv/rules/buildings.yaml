@@ -703,6 +703,8 @@ TELEVATR:
 		PlayerPalette: green
 	PlaceBuildingVariants:
 		Actors: televtr2
+	WithShadowOverlay:
+		Offset: -250,150,0
 
 TELEVTR2:
 	Inherits: TELEVATR
@@ -714,6 +716,8 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
+	WithShadowOverlay:
+		Offset: -250,150,0
 
 HARBOR:
 	Inherits: ^BaseBuilding
