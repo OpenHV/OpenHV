@@ -385,12 +385,6 @@ Container@PLAYER_WIDGETS:
 							SoundUp: RadarUp
 							SoundDown: RadarDown
 							Children:
-						VqaPlayer@PLAYER:
-							X: 13
-							Y: 36
-							Width: 222
-							Height: 222
-							Skippable: false
 				Label@GAME_TIMER:
 					Logic: GameTimerLogic
 					X: 3
