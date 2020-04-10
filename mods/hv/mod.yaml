@@ -103,7 +103,7 @@ ChromeLayout:
 	common|chrome/assetbrowser.yaml
 	common|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
-	common|chrome/editor.yaml
+	hv|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	hv|chrome/ingame-observer.yaml
 	hv|chrome/ingame-player.yaml

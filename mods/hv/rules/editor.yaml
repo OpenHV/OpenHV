@@ -17,7 +17,7 @@ MpSpawn:
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
-	EditorResourceLayer:
+	UndergroundEditorResourceLayer:
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:

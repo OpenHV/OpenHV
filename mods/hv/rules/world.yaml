@@ -260,9 +260,10 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
-	ResourceLayer:
-	ResourceRenderer:
+	UndergroundResourceLayer:
+	UndergroundResourceRenderer:
 		RenderTypes: gold, iron
+	ResourceLayer:
 	LiquidTerrainRenderer:
 		RenderTypes: water
 	CloudSpawner:
