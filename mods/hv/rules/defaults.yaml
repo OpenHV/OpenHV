@@ -36,19 +36,48 @@
 	EmptySelectionDecorations:
 	WithSpriteSelectionDecorations@TopLeft:
 		RequiresSelection: true
+		RequiresCondition: !heavydamaged
 	WithSpriteSelectionDecorations@TopRight:
 		Position: TopRight
 		Sequence: top-right
 		RequiresSelection: true
+		RequiresCondition: !heavydamaged
 	WithSpriteSelectionDecorations@BottomLeft:
 		Position: BottomLeft
 		Sequence: bottom-left
 		RequiresSelection: true
+		RequiresCondition: !heavydamaged
 	WithSpriteSelectionDecorations@BottomRight:
 		Position: BottomRight
 		Sequence: bottom-right
 		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@TopLeftRed:
+		Image: outline-red
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteSelectionDecorations@TopRightRed:
+		Image: outline-red
+		Position: TopRight
+		Sequence: top-right
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteSelectionDecorations@BottomLeftRed:
+		Image: outline-red
+		Position: BottomLeft
+		Sequence: bottom-left
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteSelectionDecorations@BottomRightRed:
+		Image: outline-red
+		Position: BottomRight
+		Sequence: bottom-right
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
 	WithSpriteControlGroupDecoration:
+	GrantConditionOnDamageState@HEAVYDAMAGED:
+		Condition: heavydamaged
+		ValidDamageStates: Heavy, Critical
 
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
@@ -281,6 +310,13 @@
 		Position: Top
 		Sequence: top
 		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@TopRed:
+		Image: outline-red
+		Position: Top
+		Sequence: top
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
 	#WithSpriteSelectionDecorations@Left:
 	#	Position: Left
 	#	Sequence: left
