@@ -50,15 +50,15 @@ Container@OBSERVER_WIDGETS:
 				Container@RADAR:
 					Children:
 						ColorBlock:
-							X: 8
-							Y: 40
+							X: 14
+							Y: 33
 							Width: 222
 							Height: 222
 							Color: 000000
 						Radar@INGAME_RADAR:
 							WorldInteractionController: INTERACTION_CONTROLLER
-							X: 9
-							Y: 41
+							X: 15
+							Y: 34
 							Width: 220
 							Height: 220
 						VqaPlayer@PLAYER:

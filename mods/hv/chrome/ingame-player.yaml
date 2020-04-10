@@ -373,13 +373,13 @@ Container@PLAYER_WIDGETS:
 						LogicTicker@RADAR_TICKER:
 						ColorBlock@RADAR_FADETOBLACK:
 							X: 13
-							Y: 43
+							Y: 33
 							Width: 224
 							Height: 224
 						Radar@RADAR_MINIMAP:
 							WorldInteractionController: INTERACTION_CONTROLLER
 							X: 14
-							Y: 33
+							Y: 23
 							Width: 222
 							Height: 222
 							SoundUp: RadarUp
