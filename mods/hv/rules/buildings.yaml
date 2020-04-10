@@ -561,6 +561,12 @@ SILO:
 		Amount: -150
 	MustBeDestroyed:
 		RequiredForShortGame: false
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay@lights:
+		Sequence: animation_lights
+	WithIdleOverlay@orb:
+		Sequence: animation_orb
 
 STORAGE:
 	Inherits: ^BaseBuilding
