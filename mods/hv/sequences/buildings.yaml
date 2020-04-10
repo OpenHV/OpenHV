@@ -176,7 +176,21 @@ field:
 
 silo:
 	idle: silo.png
+		Start: 0
+	animation_lights: silo.png
+		Start: 2
+		Length: 4
+		Tick:	240
+		Reverses: true
+	animation_orb: silo.png
+		Start: 6
+		Length: 7
+		Tick:	60
+		Reverses: true
+	damaged-idle: silo.png
+		Start: 1
 	icon: blank.png
+
 
 storage:
 	idle: storage.png
