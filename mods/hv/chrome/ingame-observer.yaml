@@ -12,7 +12,7 @@ Container@OBSERVER_WIDGETS:
 				Background@GAME_TIMER_BLOCK:
 					Logic: GameTimerLogic
 					X: 26
-					Y: 10
+					Y: 5
 					Width: 120
 					Height: 22
 					Background: sidebar-button-observer
@@ -28,7 +28,7 @@ Container@OBSERVER_WIDGETS:
 				Container@TOP_BUTTONS:
 					Logic: MenuButtonsChromeLogic
 					X: 9
-					Y: 7
+					Y: 2
 					Children:
 						LogicKeyListener@OBSERVER_KEY_LISTENER:
 						MenuButton@OPTIONS_BUTTON:
@@ -67,11 +67,11 @@ Container@OBSERVER_WIDGETS:
 						WorldViewKey: ObserverWorldView
 					X: 6
 					Y: 262
-					Width: 226
+					Width: 233
 					Height: 25
 					Font: Bold
 					VisualHeight: 0
-					Background: sidebar-button-observershroud
+					Background: sidebar-button-observer
 					SeparatorImage: observer-separator
 					Children:
 						LogicKeyListener@SHROUD_KEYHANDLER:
