@@ -134,7 +134,6 @@ TRADPLAT:
 		Dimensions: 3,3
 	Selectable:
 		Bounds: 40,40
-	SelectionDecorations:
 	Health:
 		HP: 80000
 	Armor:

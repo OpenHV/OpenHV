@@ -28,7 +28,6 @@ COPTER2:
 		Sequence: fly
 		Name: fly
 		RequiresCondition: airborne
-	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 40,36
 	Cargo:
@@ -63,7 +62,6 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112
-	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 24,24
 	RenderSprites:
@@ -90,7 +88,6 @@ BALLOON:
 		Type: GroundPosition
 	Aircraft:
 		Speed: 60
-	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 24,24
 	-WithShadow:
@@ -126,7 +123,6 @@ CROW:
 	-AppearsOnRadar:
 	-Selectable:
 	Interactable:
-	SelectionDecorations:
 	-Voiced:
 	-Targetable@AIRBORNE:
 

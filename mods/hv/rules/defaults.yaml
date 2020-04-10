@@ -32,11 +32,30 @@
 		Priority: 6
 		PriorityModifiers: Ctrl, Alt
 
+^SelectionDecorations:
+	EmptySelectionDecorations:
+	WithSpriteSelectionDecorations@TopLeft:
+		RequiresSelection: true
+	WithSpriteSelectionDecorations@TopRight:
+		Position: TopRight
+		Sequence: top-right
+		RequiresSelection: true
+	WithSpriteSelectionDecorations@BottomLeft:
+		Position: BottomLeft
+		Sequence: bottom-left
+		RequiresSelection: true
+	WithSpriteSelectionDecorations@BottomRight:
+		Position: BottomRight
+		Sequence: bottom-right
+		RequiresSelection: true
+	WithSpriteControlGroupDecoration:
+
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
@@ -47,8 +66,6 @@
 		Locomotor: wheeled
 		TurnSpeed: 5
 	TeleportNetworkTransportable:
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 20, 20
 	Targetable:
@@ -125,6 +142,7 @@
 	Inherits@4: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
@@ -135,8 +153,6 @@
 	UpdatesPlayerStatistics:
 	AppearsOnRadar:
 		UseLocation: true
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 20,20
 	Aircraft:
@@ -206,7 +222,6 @@
 		Speed: 30
 		Repulsable: false
 		MaximumPitch: 56
-	SelectionDecorations:
 	RenderSprites:
 		Palette: shadow
 
@@ -261,11 +276,23 @@
 ^Building:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@decoration: ^SelectionDecorations
+	WithSpriteSelectionDecorations@Top:
+		Position: Top
+		Sequence: top
+		RequiresSelection: true
+	#WithSpriteSelectionDecorations@Left:
+	#	Position: Left
+	#	Sequence: left
+	#WithSpriteSelectionDecorations@Right:
+	#	Position: Right
+	#	Sequence: right
+	#WithSpriteSelectionDecorations@Bottom:
+	#	Position: Bottom
+	#	Sequence: bottom
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
 	Selectable:
 		Priority: 3
 	Targetable:
@@ -432,6 +459,7 @@
 	Inherits@2: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
@@ -440,8 +468,6 @@
 	UpdatesPlayerStatistics:
 	Mobile:
 		Locomotor: naval
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 20,20
 	Targetable:

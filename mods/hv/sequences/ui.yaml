@@ -65,3 +65,20 @@ beacon:
 icon:
 	shield: blank.png
 	nuke: blank.png
+
+outline:
+	top-left: outline.png
+	top: outline.png
+		Start: 1
+	top-right: outline.png
+		Start: 2
+	right: outline.png
+		Start: 3
+	bottom-right: outline.png
+		Start: 4
+	bottom: outline.png
+		Start: 5
+	bottom-left: outline.png
+		Start: 6
+	left: outline.png
+		Start: 7
