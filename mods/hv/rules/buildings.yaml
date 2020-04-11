@@ -72,6 +72,11 @@ GENERATOR:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -1500,550,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -116,6 +121,11 @@ RADAR:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -300,350,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -156,6 +166,11 @@ TRADPLAT:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -250,50,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -221,6 +236,11 @@ MODULE:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -950,350,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 MINER2:
 	Inherits: ^BaseBuilding
@@ -311,6 +331,11 @@ STARPORT:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -400,250,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 FACTORY2:
 	Inherits: ^BaseBuilding
@@ -363,6 +388,11 @@ FACTORY2:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -850,300,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 FACTORY3:
 	Inherits: ^BaseBuilding
@@ -415,6 +445,11 @@ FACTORY3:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -1350,350,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 TURRET:
 	Inherits: ^BaseBuilding
@@ -458,6 +493,7 @@ TURRET:
 	AttackTurreted:
 		PauseOnCondition: disabled
 	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
 		Sequence: shoot
 	Turreted:
@@ -466,6 +502,11 @@ TURRET:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -900,250,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -513,6 +554,11 @@ FIELD:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -250,100,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -564,8 +610,14 @@ SILO:
 		PlayerPalette: green
 	WithIdleOverlay@lights:
 		Sequence: animation_lights
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@orb:
 		Sequence: animation_orb
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 STORAGE:
 	Inherits: ^BaseBuilding
@@ -599,13 +651,18 @@ STORAGE:
 		Amount: -10
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
-		Offset: -300,150,0
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 4
 		FullSequence: pip-yellow
+	WithShadowOverlay:
+		Offset: -300,150,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
@@ -649,6 +706,7 @@ ARTILLERYTURRET:
 	AttackTurreted:
 		PauseOnCondition: disabled
 	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
 		Sequence: shoot
 	Turreted:
@@ -657,6 +715,11 @@ ARTILLERYTURRET:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -1900,100,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 TELEVATR:
 	Inherits: ^BaseBuilding
@@ -780,10 +843,17 @@ HARBOR:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -200,200,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Entry:
 		Sequence: idle-entry
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Production:
 		Sequence: production
+		RequiresCondition: !build-incomplete
 
 MOTHER:
 	Inherits: ^BaseBuilding
