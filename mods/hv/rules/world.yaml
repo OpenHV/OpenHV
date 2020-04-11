@@ -13,6 +13,7 @@
 		TerrainSpeeds:
 	Locomotor@WHEELED:
 		Name: wheeled
+		Crushes: Cube
 		TerrainSpeeds:
 			Clear: 90
 			Ore: 90
@@ -26,7 +27,7 @@
 			Stone: 100
 	Locomotor@TRACKED:
 		Name: tracked
-		Crushes: Tree
+		Crushes: Tree, Cube
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 80
@@ -41,6 +42,7 @@
 			Stone: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
+		Crushes: Cube
 		TerrainSpeeds:
 			Clear: 80
 			Ore: 80
@@ -54,6 +56,7 @@
 			Stone: 100
 	Locomotor@NAVAL:
 		Name: naval
+		Crushes: Cube
 		TerrainSpeeds:
 			Water: 100
 	Faction@0:
@@ -153,6 +156,10 @@
 		Name: colorpicker
 		Filename: palette.pal
 		AllowModifiers: false
+		TransparentIndex: 255
+	PaletteFromGimpOrJascFile@cube:
+		Name: cube
+		Filename: cube.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@shadow:
 		Name: shadow
@@ -268,3 +275,12 @@ World:
 		RenderTypes: water
 	CloudSpawner:
 		ActorTypes: cloud1, cloud2, cloud3
+	CrateSpawner:
+		CheckboxLabel: Cubes
+		CheckboxDescription: Collect cubes with units to receive random bonuses
+		CheckboxEnabled: false
+		CheckboxDisplayOrder: 1
+		ValidGround: Clear, Crater, Road, Grass, Mountain
+		WaterChance: 10
+		CrateActors: moneycube, revealmapcube
+		CrateActorShares: 90, 10

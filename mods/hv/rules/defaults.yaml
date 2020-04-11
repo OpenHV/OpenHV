@@ -561,3 +561,25 @@
 		Categories: Water
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+^Cube:
+	Interactable:
+	HiddenUnderFog:
+	Tooltip:
+		Name: Cube
+		GenericName: Cube
+		ShowOwnerRow: false
+	Crate:
+		Lifetime: 240
+		TerrainTypes: Clear, Crater, Road, Grass, Mountain
+		CrushClass: Cube
+	RenderSprites:
+		Palette: cube
+		Image: cube
+	WithSpriteBody:
+		Sequence: grey
+	BodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+	MapEditorData:
+		Categories: System

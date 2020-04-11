@@ -32,6 +32,7 @@ Rules:
 	hv|rules/buildings.yaml
 	hv|rules/terrain.yaml
 	hv|rules/ships.yaml
+	hv|rules/bonus.yaml
 
 Sequences:
 	hv|sequences/map.yaml
