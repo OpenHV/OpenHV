@@ -288,4 +288,15 @@ wall:
 	topright: wall.png
 		Start: 7
 		Offset: 0, 10
+	destroyed-left: walldest1.png
+		Offset: 0, 10
+	destroyed-right: walldest1.png
+		Start: 1
+		Offset: 0, 10
+	destroyed-bottomleft: walldest2.png
+	destroyed-bottomright: walldest2.png
+		Start: 1
+	destroyed-topleft: walldest3.png
+	destroyed-topright: walldest3.png
+		Start: 1
 	icon: blank.png

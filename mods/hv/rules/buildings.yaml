@@ -885,3 +885,57 @@ WALLTOPRIGHT:
 		Bounds: 24,24
 	WithSpriteBody:
 		Sequence: topright
+
+DESTROYEDWALLLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-left
+
+DESTROYEDWALLRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-right
+
+DESTROYEDWALLBOTTOMLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-bottomleft
+
+DESTROYEDWALLBOTTOMRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-bottomright
+
+DESTROYEDWALLTOPLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: destroyed-topleft
+
+DESTROYEDWALLTOPRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: destroyed-topright
