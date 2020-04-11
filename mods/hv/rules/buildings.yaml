@@ -618,6 +618,8 @@ SILO:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+	WithShadowOverlay:
+		RequiresCondition: !build-incomplete
 
 STORAGE:
 	Inherits: ^BaseBuilding

@@ -234,6 +234,8 @@ silo:
 		Reverses: true
 	damaged-idle: silo.png
 		Start: 1
+	shadow-overlay: silo-shadow.png
+		ZOffset: 1768
 	icon: blank.png
 	make: build.png
 		Length: 39
