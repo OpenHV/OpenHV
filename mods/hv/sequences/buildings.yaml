@@ -2,6 +2,7 @@ base:
 	build: base.png
 		Start: 3
 		Length: 3
+		Reverses: true
 		Tick: 300
 	idle: base.png
 		Length: 3
