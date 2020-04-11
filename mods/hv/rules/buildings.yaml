@@ -855,13 +855,6 @@ WALLBOTTOM:
 		Bounds: 24,48
 	WithSpriteBody:
 		Sequence: bottom
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 30
-		Prerequisites: base
-		Description: Stop units and blocks enemy fire.
-	PlaceBuildingVariants:
-		Actors: walltop, walltopleft, wallleft, wallbottomleft, wallbottomright, wallright, walltopright
 
 WALLBOTTOMRIGHT:
 	Inherits: ^Wall
