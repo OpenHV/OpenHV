@@ -806,3 +806,89 @@ MOTHER:
 	StrategicPoint:
 	ProximityCapturable:
 	RenderSprites:
+
+WALLTOP:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: top
+
+WALLTOPLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: topleft
+
+WALLLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: left
+
+WALLBOTTOMLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: bottomleft
+
+WALLBOTTOM:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: bottom
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 30
+		Prerequisites: base
+		Description: Stop units and blocks enemy fire.
+	PlaceBuildingVariants:
+		Actors: walltop, walltopleft, wallleft, wallbottomleft, wallbottomright, wallright, walltopright
+
+WALLBOTTOMRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: bottomright
+
+WALLRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: right
+
+WALLTOPRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: topright

@@ -266,3 +266,26 @@ harbor:
 
 mother:
 	idle: mother.png
+
+wall:
+	top: wall.png
+		Offset: 0, 10
+	topleft: wall.png
+		Start: 1
+		Offset: 0, 10
+	left: wall.png
+		Start: 2
+		Offset: 0, 10
+	bottomleft: wall.png
+		Start: 3
+	bottom: wall.png
+		Start: 4
+	bottomright: wall.png
+		Start: 5
+	right: wall.png
+		Start: 6
+		Offset: 0, 10
+	topright: wall.png
+		Start: 7
+		Offset: 0, 10
+	icon: blank.png

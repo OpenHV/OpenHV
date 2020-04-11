@@ -583,3 +583,45 @@
 	RenderSprites:
 	MapEditorData:
 		Categories: System
+
+^Wall:
+	Inherits@1: ^ExistsInWorld
+	Building:
+		Dimensions: 1,2
+		Footprint: x x
+		TerrainTypes: Clear, Road, Crater, Grass
+	Tooltip:
+		Name: Wall
+	Valued:
+		Cost: 200
+	CustomSellValue:
+		Value: 0
+	ActorPreviewPlaceBuildingPreview:
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	Targetable:
+		TargetTypes: Ground, Wall, NoAutoTarget
+	-GivesExperience:
+	RenderSprites:
+		Palette: effect
+		Image: wall
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	Sellable:
+	Guardable:
+	FrozenUnderFog:
+	Health:
+		HP: 40000
+	Armor:
+		Type: Concrete
+	BlocksProjectiles:
+	RadarColorFromTerrain:
+		Terrain: Road
+	AppearsOnMapPreview:
+		Terrain: Road
+	MapEditorData:
+		Categories: Wall
+	OwnerLostAction:
+		Action: ChangeOwner
