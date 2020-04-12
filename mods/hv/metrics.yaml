@@ -3,7 +3,7 @@ Metrics:
 	ColorPickerActorType: transprt.colorpicker
 	ClickDisabledSound: ClickDisabledSound
 	ClickSound: ClickSound
-	ChatLineSound:
+	ChatLineSound: ChatLineSound
 	TextfieldColorHighlight: 800000
 	ChatMessageColor: FFFFFF
 	SystemMessageColor: FFFF00
