@@ -6485,7 +6485,7 @@ Templates:
 	Template@1005:
 		Id: 1005
 		Images: stne2snw9.png
-		Size: 1,4
+		Size: 1,3
 		Categories: Stone, Cliff
 		Tiles:
 			0: Cliff
@@ -6655,21 +6655,21 @@ Templates:
 	Template@1035:
 		Id: 1035
 		Images: stnmisc1.png
-		Size: 2,2
+		Size: 1,1
 		Categories: Stone, Rock
 		Tiles:
 			0: Rock
 	Template@1036:
 		Id: 1036
 		Images: stnmisc2.png
-		Size: 2,2
+		Size: 1,1
 		Categories: Stone, Rock
 		Tiles:
 			0: Rock
 	Template@1037:
 		Id: 1037
 		Images: stnmisc3.png
-		Size: 2,2
+		Size: 1,1
 		Categories: Stone, Rock
 		Tiles:
 			0: Rock
@@ -6780,7 +6780,7 @@ Templates:
 	Template@1052:
 		Id: 1052
 		Images: stone6.png
-		Size: 1,4
+		Size: 1,3
 		Categories: Stone, Cliff
 		Tiles:
 			0: Cliff
@@ -6803,7 +6803,7 @@ Templates:
 	Template@1055:
 		Id: 1055
 		Images: stone9.png
-		Size: 1,4
+		Size: 1,3
 		Categories: Stone, Cliff
 		Tiles:
 			0: Cliff
