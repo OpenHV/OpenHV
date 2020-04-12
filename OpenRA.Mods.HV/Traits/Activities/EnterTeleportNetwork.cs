@@ -95,6 +95,9 @@ namespace OpenRA.Mods.HV.Activities
 				// Teleport myself to primary actor.
 				self.Trait<IPositionable>().SetPosition(self, exit);
 
+				foreach (var notify in self.TraitsImplementing<INotifyExitTeleporter>())
+					notify.Arrived(self);
+
 				// Cancel all activities (like PortableChrono does)
 				self.CancelActivity();
 

@@ -1,16 +1,22 @@
 tank5:
 	idle: tank5.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 tank2:
 	idle: tank2.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 transprt:
 	idle: transprt.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 artil:
@@ -20,6 +26,8 @@ artil:
 		Length: 3
 		Facings: 8
 		Tick: 100
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 artil3:
@@ -32,6 +40,8 @@ artil3:
 		Length: 3
 		Facings: 8
 		Tick: 100
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 scout1:
@@ -41,6 +51,8 @@ scout1:
 		Length: 3
 		Facings: 8
 		Tick: 50
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 scout2:
@@ -50,6 +62,8 @@ scout2:
 		Length: 3
 		Facings: 8
 		Tick: 50
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 tyriantank:
@@ -62,11 +76,15 @@ tyriantank:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 miner:
 	idle: miner.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 beast:
@@ -87,26 +105,36 @@ beast:
 builder1:
 	idle: builder1.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 builder2:
 	idle: builder2.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 builder3:
 	idle: builder3.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 builder4:
 	idle: builder4.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 builder5:
 	idle: builder5.png
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png
 
 missile_tank:
@@ -119,4 +147,6 @@ missile_tank:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
+	energyball: teleport.png
+		Length: 10
 	icon: blank.png

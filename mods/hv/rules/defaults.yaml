@@ -95,6 +95,7 @@
 		Locomotor: wheeled
 		TurnSpeed: 5
 	TeleportNetworkTransportable:
+	WithTeleportEnergyOverlay:
 	Selectable:
 		Bounds: 20, 20
 	Targetable:

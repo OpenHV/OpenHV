@@ -15,4 +15,5 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[RequireExplicitImplementation]
 	public interface INotifyEnterTeleporter { void Charging(Actor self, Actor teleporter); }
+	public interface INotifyExitTeleporter { void Arrived(Actor self); }
 }
