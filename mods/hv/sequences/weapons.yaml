@@ -140,3 +140,10 @@ mine4:
 	idle: mines.png
 		Start: 3
 		ZOffset: -512
+
+debris:
+	idle: junk.png
+		Start: 0
+		Length: 4
+		Tick: 60
+		ZOffset: 1000

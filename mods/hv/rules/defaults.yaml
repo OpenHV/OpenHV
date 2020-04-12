@@ -368,6 +368,10 @@
 	CommandBarBlacklist:
 	RenderSprites:
 		PlayerPalette: building
+	ThrowsShrapnel:
+		Weapons: debris
+		Pieces: 5, 10
+		Range: 1c512, 4c0
 
 ^BaseBuilding:
 	Inherits: ^Building
