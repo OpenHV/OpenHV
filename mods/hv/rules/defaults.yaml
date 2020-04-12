@@ -22,12 +22,22 @@
 	GivesBounty:
 		RequiresCondition: global-bounty
 
+^Selectable:
+	Selectable:
+	DrawLineToTarget:
+		LineWidth: 2
+		QueuedLineWidth: 2
+		MarkerWidth: 3
+		QueuedMarkerWidth: 3
+
 ^SelectableCombatUnit:
+	Inherits: ^Selectable
 	Selectable:
 		Priority: 10
 		PriorityModifiers: Ctrl
 
 ^SelectableEconomicUnit:
+	Inherits: ^Selectable
 	Selectable:
 		Priority: 6
 		PriorityModifiers: Ctrl, Alt
@@ -89,7 +99,6 @@
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
 		Locomotor: wheeled
@@ -177,7 +186,6 @@
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	DrawLineToTarget:
 	Armor:
 		Type: Light
 	UpdatesPlayerStatistics:
@@ -501,7 +509,6 @@
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
 		Locomotor: naval
