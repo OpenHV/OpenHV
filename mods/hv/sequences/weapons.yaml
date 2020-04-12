@@ -121,3 +121,10 @@ water_splash_small:
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
+
+debris:
+	idle: junk.png
+		Start: 0
+		Length: 4
+		Tick: 60
+		ZOffset: 1000
