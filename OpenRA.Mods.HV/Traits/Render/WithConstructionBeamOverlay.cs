@@ -58,7 +58,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 		protected override void TraitEnabled(Actor self)
 		{
 			// Remove the animation once it is complete
-			overlay.PlayThen(info.Sequence, () => self.World.AddFrameEndTask(w => renderSprites.Remove(anim)));
+			if (overlay != null && renderSprites != null && anim != null)
+				overlay.PlayThen(info.Sequence, () => self.World.AddFrameEndTask(w => renderSprites.Remove(anim)));
 		}
 	}
 }
