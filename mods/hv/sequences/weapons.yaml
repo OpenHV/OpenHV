@@ -121,3 +121,22 @@ water_splash_small:
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
+
+mine1:
+	idle: mines.png
+		ZOffset: -512
+
+mine2:
+	idle: mines.png
+		Start: 1
+		ZOffset: -512
+
+mine3:
+	idle: mines.png
+		Start: 2
+		ZOffset: -512
+
+mine4:
+	idle: mines.png
+		Start: 3
+		ZOffset: -512

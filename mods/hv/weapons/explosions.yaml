@@ -31,3 +31,17 @@ UnitExplodeSmall:
 		Damage: 4000
 	Warhead@Effect: CreateEffect
 		Explosions: small
+
+AntiTankMine:
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 40000
+		AffectsParent: true
+		InvalidTargets: Mine
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@Effect: CreateEffect
+		Explosions: large
+		ImpactSounds: explosion02.wav
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall, Trees

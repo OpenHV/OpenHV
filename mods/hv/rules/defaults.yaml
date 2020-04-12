@@ -42,6 +42,12 @@
 		Priority: 6
 		PriorityModifiers: Ctrl, Alt
 
+^SelectableSupportUnit:
+	Inherits: ^Selectable
+	Selectable:
+		Priority: 8
+		PriorityModifiers: Ctrl, Alt
+
 ^SelectionDecorations:
 	EmptySelectionDecorations:
 	WithSpriteSelectionDecorations@TopLeft:
@@ -633,3 +639,37 @@
 		Categories: Wall
 	OwnerLostAction:
 		Action: ChangeOwner
+
+^Mine:
+	Inherits: ^SpriteActor
+	Interactable:
+		Bounds: 20,20
+	WithSpriteBody:
+	HiddenUnderFog:
+	Mine:
+		CrushClasses: mine
+		DetonateClasses: mine
+		AvoidFriendly: true
+		BlockFriendly: true
+	Health:
+		HP: 10000
+		NotifyAppliedDamage: false
+	Armor:
+		Type: Light
+	Explodes:
+		Weapon: AntiTankMine
+		EmptyWeapon: UnitExplodeSmall
+	Cloak:
+		UncloakOn: Attack
+		Palette:
+		CloakTypes: Mine
+		InitialDelay: 0
+	Tooltip:
+		Name: Mine
+	Targetable:
+		TargetTypes: Ground, Mine
+	Immobile:
+		OccupiesSpace: true
+	HitShape:
+	MapEditorData:
+		Categories: System

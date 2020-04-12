@@ -5,6 +5,13 @@ tank5:
 		Length: 10
 	icon: blank.png
 
+tank6:
+	idle: tank6.png
+		Facings: 8
+	energyball: teleport.png
+		Length: 10
+	icon: blank.png
+
 tank2:
 	idle: tank2.png
 		Facings: 8
