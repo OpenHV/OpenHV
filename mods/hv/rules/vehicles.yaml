@@ -96,6 +96,8 @@ TANK6:
 		RearmActors: tradplat
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
+	RenderSprites:
+		PlayerPalette: green
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
