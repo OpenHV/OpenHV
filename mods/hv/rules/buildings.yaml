@@ -863,7 +863,7 @@ MOTHER:
 	Valued:
 		Cost: 15000
 	Tooltip:
-		Name: Main Base
+		Name: Mother Ship
 	Building:
 		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx
 		Dimensions: 6,8
