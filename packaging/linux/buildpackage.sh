@@ -143,7 +143,7 @@ if [ -f "${PACKAGING_DIR}/mod_scalable.svg" ]; then
   install -Dm644 "${PACKAGING_DIR}/mod_scalable.svg" "${BUILTDIR}/usr/share/icons/hicolor/scalable/apps/openra-${MOD_ID}.svg"
 fi
 
-for i in 16x16 32x32 48x48 64x64 do
+for i in 16x16 32x32 48x48 64x64; do
   if [ -f "${PACKAGING_DIR}/mod_${i}.png" ]; then
     install -Dm644 "${PACKAGING_DIR}/mod_${i}.png" "${BUILTDIR}/usr/share/icons/hicolor/${i}/apps/openra-${MOD_ID}.png"
     install -m644 "${PACKAGING_DIR}/mod_${i}.png" "${BUILTDIR}/openra-${MOD_ID}.png"
