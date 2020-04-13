@@ -1,4 +1,5 @@
 ^Cannon:
+	ValidTargets: Water, Ground, Tree
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 4c768
@@ -6,6 +7,8 @@
 		Speed: 682
 		Image: bullet1
 		Shadow: true
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 4000
@@ -13,10 +16,17 @@
 			None: 30
 			Steel: 75
 			Light: 75
+			Wood: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 TyrianTankCannon:
 	Inherits: ^Cannon
@@ -43,9 +53,16 @@ TyrianTankCannon:
 			Steel: 40
 			Light: 60
 			Heavy: 25
+			Wood: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion04.wav, explosion05.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 SmallArtillery:
 	Inherits: ^Artillery
@@ -59,3 +76,132 @@ SmallArtillery:
 		Falloff: 100, 55, 20, 5
 		Versus:
 			None: 60
+
+DoubleBarrelledArtillery:
+	Inherits: ^Artillery
+	ReloadDelay: 150
+	Range: 18c0
+	MinRange: 5c0
+	Burst: 2
+	BurstDelays: 3
+	Report: howitzerfire02.wav
+	TargetActorCenter: true
+	Projectile: Bullet
+		Speed: 384
+		LaunchAngle: 165
+		Inaccuracy: 2c0
+	Warhead@Damage: SpreadDamage
+		Damage: 7500
+
+TurretCannon:
+	ValidTargets: Water, Ground, Tree
+	Report: tankfire01.wav
+	ReloadDelay: 50
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 682
+		Image: bullet3
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 5000
+		Versus:
+			None: 30
+			Steel: 75
+			Light: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion02.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+Nuclear:
+	ValidTargets: Ground, Air, Tree
+	Warhead@Shake: ShakeScreen
+		Duration: 20
+		Intensity: 5
+		Multiplier: 1,1
+	Warhead@DamageImpact: SpreadDamage
+		Spread: 1c0
+		Damage: 15000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		Versus:
+			Steel: 25
+			Concrete: 25
+	Warhead@DamageArea1: SpreadDamage
+		Spread: 2c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 5
+		ValidTargets: Ground, Air
+		Versus:
+			Steel: 25
+			Concrete: 25
+	Warhead@EffectArea1: CreateEffect
+		ImpactSounds: explosion07.wav
+		Delay: 5
+		ImpactActors: false
+	Warhead@DamageArea2: SpreadDamage
+		Spread: 3c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 10
+		ValidTargets: Ground, Air
+		Versus:
+			Steel: 50
+			Concrete: 25
+	Warhead@DamageArea3: SpreadDamage
+		Spread: 4c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 15
+		ValidTargets: Ground, Air
+		Versus:
+			Concrete: 25
+	Warhead@DamageArea4: SpreadDamage
+		Spread: 5c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 20
+		ValidTargets: Ground, Air
+		Versus:
+			Concrete: 25
+
+TurretArtillery:
+	ValidTargets: Water, Ground, Tree
+	Report: heavycannonfire01.wav
+	ReloadDelay: 200
+	MinRange: 5c0
+	Range: 20c0
+	Projectile: Bullet
+		Speed: 204
+		Blockable: false
+		LaunchAngle: 100
+		Inaccuracy: 2c0
+		Image: bullet2
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 426
+		Damage: 30000
+		Versus:
+			None: 90
+			Steel: 40
+			Light: 60
+			Heavy: 25
+			Wood: 40
+	Warhead@Effect: CreateEffect
+		Explosions: large
+		ImpactSounds: explosion07.wav, explosion08.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

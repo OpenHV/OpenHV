@@ -1,3 +1,33 @@
+TANK2:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Laser Bike
+		GenericName: Bike
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Tracked
+		Prerequisites: factory2
+		BuildPaletteOrder: 20
+		Description: Fires lasers.
+	AttackFrontal:
+	Armament:
+		Weapon: RedLaser
+		LocalOffset: 500,-250,0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 500
+	RevealsShroud:
+		Range: 7c0
+	RenderSprites:
+		PlayerPalette: bluebg-grey-remap
+
 TANK5:
 	Inherits: ^TrackedVehicle
 	Valued:
@@ -7,9 +37,15 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		BuildAtProductionType: Tracked
+		Prerequisites: factory3
 		BuildPaletteOrder: 20
-		Description: Can't shoot anything. #TODO: obviously
+		Description: Shoots rockets.
+	Armament@PRIMARY:
+		Weapon: AntiAirRocket
+	Armament@SECONDARY:
+		Weapon: AntiGroundRocket
+	AttackFrontal:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -23,6 +59,46 @@ TANK5:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK6:
+	Inherits: ^TrackedVehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 310
+		Prerequisites: tradplat
+		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Minelayer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 5c0
+	Minelayer:
+		Mines: mine1, mine2, mine3, mine4
+	MineImmune:
+	AmmoPool:
+		Ammo: 5
+	DetectCloaked:
+		Range: 5c0
+		CloakTypes: Mine
+	RenderDetectionCircle:
+	Explodes:
+		Weapon: AntiTankMine
+	Rearmable:
+		RearmActors: tradplat
+	Targetable:
+		TargetTypes: Ground, Vehicle, Mine
+	RenderSprites:
+		PlayerPalette: green
+
 TRANSPRT:
 	Inherits: ^TrackedVehicle
 	Valued:
@@ -31,7 +107,8 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		BuildAtProductionType: Tracked
+		Prerequisites: factory3
 		BuildPaletteOrder: 30
 		Description: Can transport smaller vehicles. #TODO: find a better role
 	UpdatesPlayerStatistics:
@@ -48,12 +125,14 @@ TRANSPRT:
 	Cargo:
 		Types: Vehicle
 		MaxWeight: 4
-		PipCount: 4
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 40,36
 	RenderSprites:
 		PlayerPalette: green
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
 
 ARTIL:
 	Inherits: ^TrackedVehicle
@@ -64,9 +143,10 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory2
+		Prerequisites: radar, factory3
 		BuildPaletteOrder: 50
 		Description: Mobile long range weapon.
+		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -95,13 +175,52 @@ ARTIL:
 	RenderSprites:
 		PlayerPalette: green
 
+ARTIL3:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Dual Artillery
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Prerequisites: radar, factory3
+		Description: Double barraled artillery tank.
+	Health:
+		HP: 35000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 71
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 9c0
+	Armament:
+		Weapon: DoubleBarrelledArtillery
+		MuzzleSequence: muzzle
+		LocalOffset: 700,0,100
+	AttackFrontal:
+		Armaments: primary
+		TargetFrozenActors: true
+		ForceFireIgnoresActors: true
+	WithAttackAnimation:
+		Sequence: shoot
+	WithMuzzleOverlay:
+	Selectable:
+		DecorationBounds: 30,30
+
 SCOUT1:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Vehicle
+		Queue: Infantry
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
+		BuildAtProductionType: Infantry
+		Prerequisites: module
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -120,11 +239,59 @@ SCOUT1:
 	Armament:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
-		LocalOffset: 128,0,43 # TODO: to be adjusted
+		LocalOffset: 0,0,0 # TODO: to be adjusted
 	AttackFrontal:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+
+SCOUT2:
+	Inherits: ^Vehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 130
+		Description: Fast reconnaissance vehicle.
+		BuildAtProductionType: Infantry
+		Prerequisites: module
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Scout Pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 170
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: LightAntiTankRocket
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	AttackFrontal:
+	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
+
+BUILDER1:
+	Inherits: ^Builder
+
+BUILDER2:
+	Inherits: ^Builder
+
+BUILDER3:
+	Inherits: ^Builder
+
+BUILDER4:
+	Inherits: ^Builder
+
+BUILDER5:
+	Inherits: ^Builder
 
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
@@ -135,9 +302,10 @@ TYRIANTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: factory3
 		BuildPaletteOrder: 40
 		Description: Tank with rotating turret.
+		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -169,6 +337,8 @@ MINER:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
 		Description: Builds mining facilities.\n  Unarmed
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -186,6 +356,86 @@ MINER:
 		Range: 8c0
 	RenderSprites:
 		PlayerPalette: green
+	GrantConditionOnTerrain@validterrain:
+		Condition: validterrain
+		TerrainTypes: Ore
 	Transforms:
+		PauseOnCondition: !validterrain
 		IntoActor: miner2
 		Facing: 96
+		Offset: -1,-2
+
+BEAST:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Critter
+		GenericName: Beast
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 25
+		Speed: 80
+	RevealsShroud:
+		Range: 5c0
+	WithDeathAnimation:
+		FallbackSequence: die
+	DeathSounds:
+	WithMoveAnimation:
+	Wanders:
+		WanderMoveRadius: 1
+		MinMoveDelay: 100
+		MaxMoveDelay: 750
+	ScaredyCat:
+		PanicSpeedModifier: 150
+		AttackPanicChance: 80
+	WithShadow:
+		Offset: 50,50,0
+		ZOffset: -1000
+	Voiced:
+		VoiceSet: BeastVoice
+	-Repairable:
+	-Passenger:
+	-MustBeDestroyed:
+	-Explodes:
+
+MISSILE_TANK:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Medium Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory3
+		BuildPaletteOrder: 40
+		Description: A tank which shoots missiles.
+		BuildAtProductionType: Tracked
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 33000
+	Armor:
+		Type: Medium
+	Mobile:
+		Speed: 120
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: -250,-50,100
+	Armament@PRIMARY:
+		Weapon: MissileTankRocket
+		LocalOffset: 500,0,0 # TODO: to be adjusted
+	Armament@SECONDARY:
+		Weapon: MissileTankRocket_AA
+		LocalOffset: 0,0,0 # TODO: to be adjusted
+	AttackTurreted:
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green

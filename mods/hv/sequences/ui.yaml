@@ -3,6 +3,8 @@ overlay:
 	build-valid:
 	build-invalid:
         Start: 1
+	target-unknown:
+		Start: 3
 	target-select:
         Start: 2
 	target-invalid:
@@ -61,3 +63,41 @@ beacon:
 	circles: null.png
 		Length: *
 		ZOffset: 2047
+
+icon:
+	shield: blank.png
+	nuke: blank.png
+
+outline:
+	top-left: outline.png
+	top: outline.png
+		Start: 1
+	top-right: outline.png
+		Start: 2
+	right: outline.png
+		Start: 3
+	bottom-right: outline.png
+		Start: 4
+	bottom: outline.png
+		Start: 5
+	bottom-left: outline.png
+		Start: 6
+	left: outline.png
+		Start: 7
+
+outline-red:
+	top-left: outline2.png
+	top: outline.png
+		Start: 1
+	top-right: outline2.png
+		Start: 2
+	right: outline2.png
+		Start: 3
+	bottom-right: outline2.png
+		Start: 4
+	bottom: outline2.png
+		Start: 5
+	bottom-left: outline2.png
+		Start: 6
+	left: outline2.png
+		Start: 7

@@ -1,7 +1,7 @@
 LightMachineGun:
 	Report: machinegunburst01.wav, machinegunburst02.wav
-	Projectile: Bullet
-		Speed: 1c682
+	Projectile: InstantHit
+		Inaccuracy: 0c256
 	Warhead@Dam: SpreadDamage
 		Spread: 128
 		Damage: 2500
@@ -12,8 +12,15 @@ LightMachineGun:
 			Heavy: 10
 			Concrete: 10
 	Warhead@2Eff: CreateEffect
-		Explosions: sparks
+		Image: hit
+		Explosions: spark_a, spark_b, spark_c, spark_d
 		ValidTargets: Ground
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 	ReloadDelay: 30
 	Range: 4c0
 	Burst: 2

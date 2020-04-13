@@ -13,3 +13,4 @@ Sounds:
 		Beacon:
 		RadarDown:
 		RadarUp:
+		ChatLineSound: radiobeep

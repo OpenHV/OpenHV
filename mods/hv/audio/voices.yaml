@@ -9,3 +9,10 @@ GenericVoice2:
 	Voices:
 		Select: generic2select1, generic2select2
 		Action: generic2action1, generic2action2
+
+BeastVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: lion_growling-Mike_Koenig
+		Action: tiger_growling-Mike_Koenig
+		Die: tyrannosaurus_rex-Mike_Koenig

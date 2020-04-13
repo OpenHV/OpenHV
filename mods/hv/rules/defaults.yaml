@@ -22,31 +22,95 @@
 	GivesBounty:
 		RequiresCondition: global-bounty
 
+^Selectable:
+	Selectable:
+	DrawLineToTarget:
+		LineWidth: 2
+		QueuedLineWidth: 2
+		MarkerWidth: 3
+		QueuedMarkerWidth: 3
+
 ^SelectableCombatUnit:
+	Inherits: ^Selectable
 	Selectable:
 		Priority: 10
 		PriorityModifiers: Ctrl
 
 ^SelectableEconomicUnit:
+	Inherits: ^Selectable
 	Selectable:
 		Priority: 6
 		PriorityModifiers: Ctrl, Alt
+
+^SelectableSupportUnit:
+	Inherits: ^Selectable
+	Selectable:
+		Priority: 8
+		PriorityModifiers: Ctrl, Alt
+
+^SelectionDecorations:
+	EmptySelectionDecorations:
+	WithSpriteSelectionDecorations@TopLeft:
+		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@TopRight:
+		Position: TopRight
+		Sequence: top-right
+		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@BottomLeft:
+		Position: BottomLeft
+		Sequence: bottom-left
+		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@BottomRight:
+		Position: BottomRight
+		Sequence: bottom-right
+		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@TopLeftRed:
+		Image: outline-red
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteSelectionDecorations@TopRightRed:
+		Image: outline-red
+		Position: TopRight
+		Sequence: top-right
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteSelectionDecorations@BottomLeftRed:
+		Image: outline-red
+		Position: BottomLeft
+		Sequence: bottom-left
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteSelectionDecorations@BottomRightRed:
+		Image: outline-red
+		Position: BottomRight
+		Sequence: bottom-right
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	WithSpriteControlGroupDecoration:
+	GrantConditionOnDamageState@HEAVYDAMAGED:
+		Condition: heavydamaged
+		ValidDamageStates: Heavy, Critical
 
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@decoration: ^SelectionDecorations
+	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 5
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
+	TeleportNetworkTransportable:
+	WithTeleportEnergyOverlay:
 	Selectable:
 		Bounds: 20, 20
 	Targetable:
@@ -60,7 +124,6 @@
 	Repairable:
 		RepairActors: tradplat
 		HpPerStep: 2000
-		NearEnough: 0c768
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -85,6 +148,35 @@
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 
+^Builder:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Description: Grants additional build radius.
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
+	GivesBuildableArea:
+		AreaTypes: building
+	BaseProvider:
+		Cooldown: 75
+		Range: 3c0
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Builder
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 8
+		Speed: 120
+	RevealsShroud:
+		Range: 6c0
+
 ^TrackedVehicle:
 	Inherits: ^Vehicle
 	Mobile:
@@ -95,17 +187,16 @@
 	Inherits@4: ^SpriteActor
 	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
+	Inherits@decoration: ^SelectionDecorations
+	Inherits@shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	DrawLineToTarget:
 	Armor:
 		Type: Light
 	UpdatesPlayerStatistics:
 	AppearsOnRadar:
 		UseLocation: true
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 20,20
 	Aircraft:
@@ -157,12 +248,46 @@
 		RequiresCondition: cruising
 	BodyOrientation:
 
-^3x3Shape:
+^Cloud:
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	OwnerLostAction:
+		Action: Kill
+	HiddenUnderFog:
+		Type: GroundPosition
+	WithFacingSpriteBody:
+	MapEditorData:
+		Categories: Aircraft
+	RejectsOrders:
+	Interactable:
+	Aircraft:
+		CruiseAltitude: 2560
+		TurnSpeed: 5
+		Speed: 30
+		Repulsable: false
+		MaximumPitch: 56
+	RenderSprites:
+		Palette: shadow
+
+^1x1Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
-			TopLeft: -1536, -1536
-			BottomRight: 1536, 1536
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+^1x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -512, -1024
+			BottomRight: 512, 1024
+
+^2x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -512
+			BottomRight: 1024, 512
 
 ^2x2Shape:
 	HitShape:
@@ -178,14 +303,47 @@
 			TopLeft: -1024, -1536
 			BottomRight: 1024, 1536
 
+^3x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+
+^6x8Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -3072, -4096
+			BottomRight: 3072, 4096
+
 ^Building:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@decoration: ^SelectionDecorations
+	WithSpriteSelectionDecorations@Top:
+		Position: Top
+		Sequence: top
+		RequiresSelection: true
+		RequiresCondition: !heavydamaged
+	WithSpriteSelectionDecorations@TopRed:
+		Image: outline-red
+		Position: Top
+		Sequence: top
+		RequiresSelection: true
+		RequiresCondition: heavydamaged
+	#WithSpriteSelectionDecorations@Left:
+	#	Position: Left
+	#	Sequence: left
+	#WithSpriteSelectionDecorations@Right:
+	#	Position: Right
+	#	Sequence: right
+	#WithSpriteSelectionDecorations@Bottom:
+	#	Position: Bottom
+	#	Sequence: bottom
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
 	Selectable:
 		Priority: 3
 	Targetable:
@@ -210,12 +368,16 @@
 	CommandBarBlacklist:
 	RenderSprites:
 		PlayerPalette: building
+	ThrowsShrapnel:
+		Weapons: debris
+		Pieces: 5, 10
+		Range: 1c512, 4c0
 
 ^BaseBuilding:
 	Inherits: ^Building
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass
+		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow
 		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -280,11 +442,238 @@
 		Dimensions: 1,2
 	AppearsOnRadar:
 	RadarColorFromTerrain:
-		Terrain: Stone
+		Terrain: Rock
 	AppearsOnMapPreview:
-		Terrain: Stone
+		Terrain: Rock
 	HiddenUnderShroud:
 	MapEditorData:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+^ForceFieldCompatible:
+	WithColoredOverlay@FORCEFIELD:
+		RequiresCondition: shield
+		Palette: shield
+	DamageMultiplier@FORCEFIELD:
+		RequiresCondition: shield
+		Modifier: 0
+	TimedConditionBar:
+		Condition: shield
+	ExternalCondition@FORCEFIELD:
+		Condition: shield
+
+^Tree:
+	Inherits@1: ^SpriteActor
+	Inherits@shape: ^1x1Shape
+	Interactable:
+	Tooltip:
+		Name: Tree
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	Health:
+		HP: 50000
+	Armor:
+		Type: Wood
+	Targetable:
+		TargetTypes: Tree
+	WithDamageOverlay@Burn:
+		DamageTypes: Fire
+		Image: flame
+		Palette: effect
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+	SpawnActorOnDeath@Ash:
+		Actor: TreeAsh
+		DeathType: Fire
+	Crushable:
+		CrushClasses: Tree
+		WarnProbability: 0
+		CrushedByFriendlies: true
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
+		DeathType: Crush
+
+^Ship:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@bounty: ^GlobalBounty
+	Inherits@selection: ^SelectableCombatUnit
+	Inherits@decoration: ^SelectionDecorations
+	Inherits@shield: ^ForceFieldCompatible
+	Huntable:
+	OwnerLostAction:
+		Action: Kill
+	UpdatesPlayerStatistics:
+	Mobile:
+		Locomotor: naval
+	Selectable:
+		Bounds: 20,20
+	Targetable:
+		TargetTypes: Ground, Water, Ship
+	Targetable@REPAIR:
+		RequiresCondition: damaged
+		TargetTypes: Repair
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	HiddenUnderFog:
+	AttackMove:
+	ProximityCaptor:
+		Types: Ship
+	#RepairableNear:
+	#	RepairActors: harbor
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Ship
+	MustBeDestroyed:
+	MapEditorData:
+		Categories: Naval
+	Voiced:
+		VoiceSet: GenericVoice2
+	RenderSprites:
+		PlayerPalette: remap
+	WithFacingSpriteBody:
+	HitShape:
+
+^WATERFLOW:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	HiddenUnderShroud:
+	Tooltip:
+		Name: Waterflow
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Water
+	AppearsOnMapPreview:
+		Terrain: Water
+	SeedsResource:
+		ResourceType: water
+		Interval: 1
+	MapEditorData:
+		Categories: Water
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+^Cube:
+	Interactable:
+	HiddenUnderFog:
+	Tooltip:
+		Name: Cube
+		GenericName: Cube
+		ShowOwnerRow: false
+	Crate:
+		Lifetime: 240
+		TerrainTypes: Clear, Crater, Road, Grass, Mountain
+		CrushClass: Cube
+	RenderSprites:
+		Palette: cube
+		Image: cube
+	WithSpriteBody:
+		Sequence: grey
+	BodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+	MapEditorData:
+		Categories: System
+
+^Wall:
+	Inherits@1: ^ExistsInWorld
+	Building:
+		Dimensions: 1,2
+		Footprint: x x
+		TerrainTypes: Clear, Road, Crater, Grass
+	Tooltip:
+		Name: Wall
+	Valued:
+		Cost: 200
+	CustomSellValue:
+		Value: 0
+	ActorPreviewPlaceBuildingPreview:
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 7
+	Targetable:
+		TargetTypes: Ground, Wall, NoAutoTarget
+	-GivesExperience:
+	RenderSprites:
+		Palette: effect
+		Image: wall
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	Sellable:
+	Guardable:
+	FrozenUnderFog:
+	Health:
+		HP: 40000
+	Armor:
+		Type: Concrete
+	BlocksProjectiles:
+	RadarColorFromTerrain:
+		Terrain: Road
+	AppearsOnMapPreview:
+		Terrain: Road
+	MapEditorData:
+		Categories: Wall
+	OwnerLostAction:
+		Action: ChangeOwner
+
+^Mine:
+	Inherits: ^SpriteActor
+	Interactable:
+		Bounds: 20,20
+	WithSpriteBody:
+	HiddenUnderFog:
+	Mine:
+		CrushClasses: mine
+		DetonateClasses: mine
+		AvoidFriendly: true
+		BlockFriendly: true
+	Health:
+		HP: 10000
+		NotifyAppliedDamage: false
+	Armor:
+		Type: Light
+	Explodes:
+		Weapon: AntiTankMine
+		EmptyWeapon: UnitExplodeSmall
+	Cloak:
+		UncloakOn: Attack
+		Palette:
+		CloakTypes: Mine
+		InitialDelay: 0
+	Tooltip:
+		Name: Mine
+	Targetable:
+		TargetTypes: Ground, Mine
+	Immobile:
+		OccupiesSpace: true
+	HitShape:
+	MapEditorData:
+		Categories: System

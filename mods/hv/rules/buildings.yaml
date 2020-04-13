@@ -28,11 +28,15 @@ BASE:
 	Buildable:
 		Description: Builds structures
 	Production:
-		Produces: Building
+		Produces: Building, Defense
 	ProductionBar@Building:
 		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -1000,-150,0
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -66,6 +70,13 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -1500,550,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -108,11 +119,18 @@ RADAR:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -300,350,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^3x3Shape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -122,11 +140,10 @@ TRADPLAT:
 	Tooltip:
 		Name: Trade Platform
 	Building:
-		Footprint: ++ ++
-		Dimensions: 2,2
+		Footprint: x+x x+x x+x
+		Dimensions: 3,3
 	Selectable:
 		Bounds: 40,40
-	SelectionDecorations:
 	Health:
 		HP: 80000
 	Armor:
@@ -147,6 +164,13 @@ TRADPLAT:
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -250,50,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -160,7 +184,7 @@ MODULE:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: generator
-		Description: Does nothing.
+		Description: Produces very light vehicles.
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -174,23 +198,24 @@ MODULE:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 5c0
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+	ExitsDebugOverlay:
 	Exit@1:
-		SpawnOffset: -170,810,0
+		SpawnOffset: -150,800,0
 		ExitCell: 1,2
 		ProductionTypes: Infantry
 	Exit@2:
-		SpawnOffset: -725,640,0
+		SpawnOffset: 150,800,0
 		ExitCell: 0,2
 		ProductionTypes: Infantry
 	Production:
 		Produces: Infantry
 	GrantExternalConditionToProduced:
 		Condition: produced
+	WithProductionDoorAnimation:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
@@ -204,15 +229,21 @@ MODULE:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -950,350,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 MINER2:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^2x3Shape
 	Selectable:
 		Bounds: 40,60
 	Tooltip:
@@ -222,17 +253,29 @@ MINER2:
 	WithSpriteBody:
 		Sequence: active
 	WithMakeAnimation:
+		Condition: build-incomplete
 	QuantizeFacingsFromSequence:
 		Sequence: active
 	UpdatesDerrickCount:
 	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Ore
-		AllowInvalidPlacement: true # TODO allow placement only on ressources
+		TerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
+		AllowPlacementOnResources: true
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
+	WithShadowOverlay:
+		Offset: -2850,750,0
+		RequiresCondition: !build-incomplete
+	WithConstructionOverlay:
+		Sequence: make-shadow-overlay
+		Palette: shadow
+		Offset: -2850,750,0
+	RenderSprites:
+		PlayerPalette: green
 
 STARPORT:
 	Inherits: ^BaseBuilding
@@ -281,13 +324,76 @@ STARPORT:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -400,250,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
 
 FACTORY2:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Prerequisites: base
+		Queue: Building
+		BuildPaletteOrder: 90
+		Description: Builds Vehicles.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Light Factory
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 35000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c768
+	RallyPoint:
+		Path: 0,3
+		IsPlayerPalette: true
+		Palette: green
+	Exit@1:
+		SpawnOffset: 256,192,0
+		ExitCell: 0,2
+		ProductionTypes: Wheeled, Vehicle
+	Production:
+		Produces: Wheeled, Vehicle
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
+		ProductionType: Vehicle
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		Position: Top
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -850,300,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+
+FACTORY3:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Selectable:
@@ -312,12 +418,15 @@ FACTORY2:
 	RevealsShroud:
 		Range: 4c768
 	RallyPoint:
-		Offset: 0,3
+		Path: 0,3
+		IsPlayerPalette: true
+		Palette: green
 	Exit@1:
 		SpawnOffset: 256,192,0
 		ExitCell: 0,2
+		ProductionTypes: Tracked, Vehicle
 	Production:
-		Produces: Vehicle
+		Produces: Tracked, Vehicle
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
@@ -329,8 +438,574 @@ FACTORY2:
 		RequiresSelection: true
 		Image: tags
 		Sequence: primary
-		ReferencePoint: Top
-		ZOffset: 256
+		Position: Top
 		RequiresCondition: primary
 	RenderSprites:
 		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -1350,350,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+
+TURRET:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 32,32
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: generator
+		Description: Base defense.\nRequires power to operate.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Turret
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: -100,100,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 10000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	Power:
+		Amount: -60
+	ProvidesPrerequisite@buildingname:
+	Armament:
+		Weapon: TurretCannon
+		LocalOffset: 1200,50,0
+	AttackTurreted:
+		PauseOnCondition: disabled
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 30
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -900,250,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+
+FIELD:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 130
+		Prerequisites: generator
+		BuildLimit: 1
+		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\nRequires power to operate.\nMaximum 1 can be built.
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Force Field Generator
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 40,40
+	SelectionDecorations:
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+	GrantExternalConditionPower@FORCEFIELD:
+		PauseOnCondition: disabled
+		ChargeInterval: 3000
+		Description: Force Field
+		LongDesc: Makes a group of units invulnerable\nfor 30 seconds.
+		Duration: 750
+		Range: 3
+		DisplayRadarPing: True
+		Condition: shield
+		SupportPowerPaletteOrder: 10
+		Icon: shield
+	SupportPowerChargeBar:
+	Power:
+		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -250,100,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+
+SILO:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x3Shape
+	Selectable:
+		Bounds: 40,60
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Missile Silo
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: radar
+		BuildLimit: 1
+		Description: Launches a nuclear missile.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+	NukePower:
+		PauseOnCondition: disabled
+		Cursor: ability
+		Icon: nuke
+		ChargeInterval: 13500
+		Description: Atom Bomb
+		LongDesc: Drop an atomic bomb\nat a target location.
+		MissileWeapon: nuclear
+		MissileDelay: 5
+		SpawnOffset: 1c0,427,0
+		DisplayTimerStances: Ally, Neutral, Enemy
+		DisplayBeacon: false
+		DisplayRadarPing: true
+		FlashType: Nuke
+		CameraRange: 10c0
+		SupportPowerPaletteOrder: 70
+	SupportPowerChargeBar:
+	Power:
+		Amount: -150
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay@lights:
+		Sequence: animation_lights
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@orb:
+		Sequence: animation_orb
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+	WithShadowOverlay:
+		RequiresCondition: !build-incomplete
+
+STORAGE:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 35
+		Description: Stores excess refined\ngold and iron.
+	Valued:
+		Cost: 300
+	Targetable:
+		TargetTypes: Ground, Structure
+	Tooltip:
+		Name: Storage
+	-GivesBuildableArea:
+	-MustBeDestroyed:
+	Health:
+		HP: 30000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	StoresResources:
+		Capacity: 4000
+	-WithSpriteBody:
+	WithResourceLevelSpriteBody:
+		Sequence: stages
+	Power:
+		Amount: -10
+	RenderSprites:
+		PlayerPalette: green
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 4
+		FullSequence: pip-yellow
+	WithShadowOverlay:
+		Offset: -300,150,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+
+ARTILLERYTURRET:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 32,32
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0 #TODO Adjust that
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: generator
+		Description: Advanced base defense.\nRequires power to operate.
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Artillery Turret
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: -70,-750,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 15000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	Power:
+		Amount: -120
+	ProvidesPrerequisite@buildingname:
+	Armament:
+		Weapon: TurretArtillery
+		LocalOffset: 1700,0,100 #TODO Adjust that
+	AttackTurreted:
+		PauseOnCondition: disabled
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 15
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -1900,100,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+
+TELEVATR:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x1Shape
+	Selectable:
+		Bounds: 40,20
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 120
+		Prerequisites: radar
+		Description: Teleports a unit to\nanother televator.\nRequires power to operate.
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Televator
+	Building:
+		Footprint: ++
+		Dimensions: 2,1
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		RequiresCondition: !disabled
+	Power:
+		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	ProvidesPrerequisite@buildingname:
+	TeleportNetworkPrimaryExit:
+	TeleportNetwork:
+		Type: subspace
+	WithTeleportChargeAnimation:
+	RallyPoint:
+		Path: 1,1
+		IsPlayerPalette: true
+		Palette: green
+	Exit:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		Position: Top
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
+	PlaceBuildingVariants:
+		Actors: televtr2
+	WithShadowOverlay:
+		Offset: -250,150,0
+
+TELEVTR2:
+	Inherits: TELEVATR
+	Inherits@shape: ^1x2Shape
+	-Buildable:
+	-PlaceBuildingVariants:
+	Selectable:
+		Bounds: 20,40
+	Building:
+		Footprint: + +
+		Dimensions: 1,2
+	WithShadowOverlay:
+		Offset: -250,150,0
+
+HARBOR:
+	Inherits: ^BaseBuilding
+	Selectable:
+		Bounds: 40,40
+	Buildable:
+		Prerequisites: base
+		Queue: Building
+		BuildPaletteOrder: 90
+		Description: Builds ships.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Harbor
+	Building:
+		Footprint: xxx x=x x=x
+		Dimensions: 3,3
+		LocalCenterOffset: 150,-512,0
+		TerrainTypes: Water
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+	Health:
+		HP: 35000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c768
+	RallyPoint:
+		Path: 1,3
+		IsPlayerPalette: true
+		Palette: green
+	Exit:
+		SpawnOffset: -150,-500,0
+		ExitCell: 1,3
+		ProductionTypes: Ship
+		Facing: 90
+	Production:
+		Produces: Ship
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	ProductionBar:
+		ProductionType: Ship
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: tags
+		Sequence: primary
+		Position: Top
+		RequiresCondition: primary
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -200,200,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@Entry:
+		Sequence: idle-entry
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@Production:
+		Sequence: production
+		RequiresCondition: !build-incomplete
+
+MOTHER:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^6x8Shape
+	Selectable:
+		Bounds: 113,145
+	Valued:
+		Cost: 15000
+	Tooltip:
+		Name: Mother Ship
+	Building:
+		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx
+		Dimensions: 6,8
+	Health:
+		HP: 5000000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 16c0
+	StrategicPoint:
+	ProximityCapturable:
+	RenderSprites:
+
+WALLTOP:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: top
+
+WALLTOPLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: topleft
+
+WALLLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: left
+
+WALLBOTTOMLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: bottomleft
+
+WALLBOTTOM:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: bottom
+
+WALLBOTTOMRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: bottomright
+
+WALLRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: right
+
+WALLTOPRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: topright
+
+DESTROYEDWALLLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-left
+
+DESTROYEDWALLRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-right
+
+DESTROYEDWALLBOTTOMLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-bottomleft
+
+DESTROYEDWALLBOTTOMRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x2Shape
+	Interactable:
+		Bounds: 24,48
+	WithSpriteBody:
+		Sequence: destroyed-bottomright
+
+DESTROYEDWALLTOPLEFT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: destroyed-topleft
+
+DESTROYEDWALLTOPRIGHT:
+	Inherits: ^Wall
+	Inherits@shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 24,24
+	WithSpriteBody:
+		Sequence: destroyed-topright

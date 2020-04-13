@@ -17,12 +17,22 @@ MpSpawn:
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
-	EditorResourceLayer:
+	UndergroundEditorResourceLayer:
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	EditorCursorLayer:
+	LiquidTerrainLayerEditorLayer:
+		Types: water
 
 EditorPlayer:
 	AlwaysVisible:
 	Shroud:
+
+TRANSPRT.colorpicker:
+	Inherits: TRANSPRT
+	-Buildable:
+	-MapEditorData:
+	RenderSprites:
+		Image: transprt
+		Palette: colorpicker

@@ -2,10 +2,14 @@ base:
 	build: base.png
 		Start: 3
 		Length: 3
+		Reverses: true
 		Tick: 300
 	idle: base.png
 		Length: 3
+		Reverses: true
 		Tick: 300
+	shadow-overlay: base-shadow.png
+		ZOffset: 1768
 	damaged-idle: base.png
 		Start: 7
 		Length: 1
@@ -18,68 +22,358 @@ generator:
 	idle: generator.png
 		Length: 15
 		Tick: 300
+	shadow-overlay: generator-shadow.png
+		ZOffset: 1768
 	damaged-idle: generator.png
 		Start: 15
 		Length: 1
+	damaged-shadow-overlay: generator-shadow.png
+		Start: 1
+		ZOffset: 1768
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
 	icon: blank.png
 
 radar:
 	idle: radar.png
+	shadow-overlay: radar-shadow.png
+		ZOffset: 1768
 	damaged-idle: radar.png
 		Start: 1
+	damaged-shadow-overlay: radar-shadow.png
+		Start: 1
+		ZOffset: 1768
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
 	icon: blank.png
 
 tradplat:
 	idle: tradplat.png
 		Offset: 0,1
 		ZOffset: -1c511
+	shadow-overlay: tradplat-shadow.png
 	damaged-idle: tradplat.png
 		Start: 4
 		Offset: 0,1
 		ZOffset: -1c511
+	damaged-shadow-overlay: tradplat-shadow.png
+		Start: 1
 	active: tradplat.png
 		Frames: 1, 2, 3, 2, 1
+		Length: 5
 		Offset: 0,1
 		ZOffset: -1c511
+		Tick: 100
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
 	icon: blank.png
 
 module:
-	door: module.png # TODO: unused
-		Length: 8
+	door: module.png
+		Frames: 7, 6, 5, 4, 3, 2, 1
+		Length: *
+		ZOffset: 1768
 	idle: module.png
 		Start: 8
+	shadow-overlay: module-shadow.png
+		Start: 0
+		ZOffset: 1768
 	damaged-idle: module.png
 		Start: 9
+	damaged-shadow-overlay: module-shadow.png
+		Start: 1
+		ZOffset: 1768
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
 	icon: blank.png
 
 miner2:
 	make: miner2.png
 		Length: 17
 		Tick: 100
+	make-shadow-overlay: miner2-shadow.png
+		Length: 17
+		Tick: 100
 	active: miner2.png
+		Start: 17
+		Length: 3
+		Tick: 300
+	shadow-overlay: miner2-shadow.png
 		Start: 17
 		Length: 3
 		Tick: 300
 	damaged-active: miner2.png
 		Start: 20
+	damaged-shadow-overlay: miner2-shadow.png
+		Start: 20
+	silo: miner2.png
+		Start: 21
 
 starport:
 	idle: starport.png
 		Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+		Length: *
 		Tick: 200
+	shadow-overlay: starport-shadow.png
+		ZOffset: 1768
 	damaged-idle: starport.png
 		Start: 22
+	damaged-shadow-overlay: starport-shadow.png
+		Start: 1
+		ZOffset: 1768
 	active: starport2.png
 		Length: 5
 	damaged-active: starport2.png
 		Start: 5
 	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
 
 factory2:
 	idle: factory2.png
+		Length: 15
+		Tick: 300
+	shadow-overlay: factory2-shadow.png
+		ZOffset: 1768
+	damaged-idle: factory2.png
+		Start: 15
+		Length: 1
+	damaged-shadow-overlay: factory2-shadow.png
+		Start: 1
+		ZOffset: 1768
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+factory3:
+	idle: factory3.png
 		Length: 11
 		Tick: 300
-	damaged-idle: factory2.png
+	shadow-overlay: factory3-shadow.png
+		ZOffset: 1768
+	damaged-idle: factory3.png
 		Start: 11
 		Length: 1
+	damaged-shadow-overlay: factory3-shadow.png
+		Start: 1
+		ZOffset: 1768
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+turret:
+	idle: turret.png
+		Start: 0
+	shadow-overlay: turret-shadow.png
+		ZOffset: 1768
+	damaged-idle: turret.png
+		Start: 1
+	turret: turret.png
+		Start: 2
+		Facings: 8
+	shoot: turret.png
+		Start: 10
+		Facings: 8
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+field:
+	idle: field.png
+	shadow-overlay: field-shadow.png
+		ZOffset: 1768
+	active: field.png
+		Length: 5
+		Tick: 300
+	damaged-idle: field.png
+		Start: 5
+	damaged-active: field.png
+		Start: 5
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+silo:
+	idle: silo.png
+		Start: 0
+	animation_lights: silo.png
+		Start: 2
+		Length: 4
+		Tick: 240
+		Reverses: true
+	animation_orb: silo.png
+		Start: 6
+		Length: 7
+		Tick: 60
+		Reverses: true
+	damaged-idle: silo.png
+		Start: 1
+	shadow-overlay: silo-shadow.png
+		ZOffset: 1768
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+storage:
+	idle: storage.png
+	shadow-overlay: storage-shadow.png
+		ZOffset: 1768
+	stages: storage.png
+		Length: 14
+	damaged-stages: storage.png
+		Start: 14
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+artilleryturret:
+	idle: artilery2.png
+		Start: 0
+	shadow-overlay: artilery2-shadow.png
+		ZOffset: 1768
+	damaged-idle: artilery2.png
+		Start: 1
+	turret: artilery2.png
+		Start: 2
+		Facings: 8
+	shoot: artilery2.png
+		Start: 10
+		Facings: 8
+		Tick: 300
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+televatr:
+	Defaults:
+		ZOffset: -1c511
+	idle: televatr.png
+		Start: 15
+	shadow-overlay: televatr-shadow.png
+		ZOffset: 1768
+	damaged-idle: televatr.png
+		Start: 16
+	active: televatr.png
+		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+		Length: *
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+televtr2:
+	Defaults:
+		ZOffset: -1c511
+	idle: televtr2.png
+		Start: 7
+	shadow-overlay: televtr2-shadow.png
+		ZOffset: 1768
+	damaged-idle: televtr2.png
+		Start: 14
+	active: televtr2.png
+		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+harbor:
+	idle: harbor.png
+		ZOffset: 1000
+	idle-entry: harbor.png
+		Start: 2
+		ZOffset: -2000
+	shadow-overlay: harbor-shadow.png
+		ZOffset: -1768
+	production: harbor.png
+		Start: 3
+		Length: 7
+		Reverses: true
+		Tick: 120
+		ZOffset: 1500
+	damaged-idle: harbor.png
+		Start: 1
+		ZOffset: 1000
+	icon: blank.png
+	make: build.png
+		Length: 39
+	make-overlay: build-vanish.png
+		Length: 26
+	icon: blank.png
+
+mother:
+	idle: mother.png
+
+wall:
+	top: wall.png
+		Offset: 0, 10
+	topleft: wall.png
+		Start: 1
+		Offset: 0, 10
+	left: wall.png
+		Start: 2
+		Offset: 0, 10
+	bottomleft: wall.png
+		Start: 3
+	bottom: wall.png
+		Start: 4
+	bottomright: wall.png
+		Start: 5
+	right: wall.png
+		Start: 6
+		Offset: 0, 10
+	topright: wall.png
+		Start: 7
+		Offset: 0, 10
+	destroyed-left: walldest1.png
+		Offset: 0, 10
+	destroyed-right: walldest1.png
+		Start: 1
+		Offset: 0, 10
+	destroyed-bottomleft: walldest2.png
+	destroyed-bottomright: walldest2.png
+		Start: 1
+	destroyed-topleft: walldest3.png
+	destroyed-topright: walldest3.png
+		Start: 1
 	icon: blank.png

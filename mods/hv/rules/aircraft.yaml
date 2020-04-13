@@ -28,16 +28,17 @@ COPTER2:
 		Sequence: fly
 		Name: fly
 		RequiresCondition: airborne
-	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 40,36
 	Cargo:
 		Types: Vehicle
 		MaxWeight: 4
-		PipCount: 4
 		AfterUnloadDelay: 40
 	RenderSprites:
 		PlayerPalette: green
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
 
 COPTER:
 	Inherits: ^Helicopter
@@ -61,8 +62,80 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112
-	SelectionDecorations:
 	Selectable:
 		DecorationBounds: 24,24
 	RenderSprites:
 		PlayerPalette: green
+
+BALLOON:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Scout Balloon
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 20
+		Prerequisites: radar
+		Description: Slow reconnaissance air unit.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 18c0
+		Type: GroundPosition
+	Aircraft:
+		Speed: 60
+	Selectable:
+		DecorationBounds: 24,24
+	-WithShadow:
+	#	Offset: 200, 128, 0
+	#	ZOffset: -129
+	WithShadowOverlay:
+		Offset: -3750,1000,0
+	RenderSprites:
+		PlayerPalette: green
+
+CROW:
+	Inherits: ^Plane
+	Valued:
+		Cost: 10
+	Health:
+		HP: 100
+	Tooltip:
+		Name: Crows
+	Aircraft:
+		CruiseAltitude: 2560
+		Repulsable: false
+		Speed: 70
+		CruisingCondition: cruising
+		TurnSpeed: 1
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+	Wanders:
+		WanderMoveRadius: 10
+	WithShadow:
+		Offset: 200, 128, 0
+		ZOffset: -129
+	-Repairable:
+	-AppearsOnRadar:
+	-Selectable:
+	Interactable:
+	-Voiced:
+	-Targetable@AIRBORNE:
+
+GULL:
+	Inherits: CROW
+	Tooltip:
+		Name: Seagulls
+
+CLOUD1:
+	Inherits: ^Cloud
+
+CLOUD2:
+	Inherits: ^Cloud
+
+CLOUD3:
+	Inherits: ^Cloud

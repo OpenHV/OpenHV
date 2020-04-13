@@ -172,9 +172,9 @@ stance-icons:
 sidebar-observer:
 	Inherits: ^Chrome
 	Regions:
-		background: 512, 167, 238, 287
-		replay-bottom: 512, 454, 238, 40
-		observer-bottom: 512, 495, 238, 8
+		background: 438, 128, 244, 288
+		replay-bottom: 438, 459, 244, 7
+		observer-bottom: 438, 459, 244, 7
 
 sidebar-button-observershroud:
 sidebar-button-observershroud-pressed:
@@ -205,45 +205,45 @@ sidebar-button-observer-highlighted-disabled:
 
 observer-scrollpanel-button:
 	Inherits: ^Dialog
-	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 256, 2, 2, 124, 124, 2, 2
 
 observer-scrollpanel-button-hover:
 	Inherits: ^Dialog
-	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 256, 2, 2, 124, 124, 2, 2
 
 observer-scrollpanel-button-pressed:
 	Inherits: ^Dialog
-	PanelRegion: 896, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 896, 256, 2, 2, 124, 124, 2, 2
 
 observer-scrollpanel-button-disabled:
 	Inherits: ^Dialog
-	PanelRegion: 768, 384, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 384, 2, 2, 124, 124, 2, 2
 
 observer-scrollheader-selected:
 	Inherits: ^Dialog
-	PanelRegion: 768, 384, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 384, 2, 2, 124, 124, 2, 2
 
 observer-scrollitem-selected:
 	Inherits: ^Dialog
-	PanelRegion: 896, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 896, 256, 2, 2, 124, 124, 2, 2
 
 observer-scrollitem-hover:
 	Inherits: ^Dialog
-	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 256, 2, 2, 124, 124, 2, 2
 
 # Used for the main menu frame
 dialog:
 	Inherits: ^Dialog
 	Regions:
-		background: 0, 0, 480, 480
-		border-r: 489, 0, 9, 192
-		border-l: 480, 0, 9, 192
-		border-b: 0, 489, 191, 9
-		border-t: 0, 480, 191, 9
-		corner-tl: 191, 480, 9, 9
-		corner-tr: 200, 480, 9, 9
-		corner-bl: 191, 489, 9, 9
-		corner-br: 200, 489, 9, 9
+		background: 1, 1, 480, 480
+		border-r: 492, 1, 9, 190
+		border-l: 483, 1, 9, 190
+		border-b: 1, 492, 189, 9
+		border-t: 1, 483, 189, 9
+		corner-tl: 192, 483, 9, 9
+		corner-tr: 201, 483, 9, 9
+		corner-bl: 192, 492, 9, 9
+		corner-br: 201, 492, 9, 9
 
 # Used for Music and Map selection (normal button)
 dialog2:
@@ -379,32 +379,32 @@ progressbar-thumb:
 
 button:
 	Inherits: ^Dialog
-	PanelRegion: 512, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 512, 0, 2, 2, 124, 124, 2, 2
 
 # 5% lighter than a normal button (mouseover)
 button-hover:
 	Inherits: ^Dialog
-	PanelRegion: 512, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 512, 128, 2, 2, 124, 124, 2, 2
 
 button-pressed:
 	Inherits: ^Dialog
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 640, 0, 2, 2, 124, 124, 2, 2
 
 # 50% grey (disabled button)
 button-disabled:
 	Inherits: ^Dialog
-	PanelRegion: 512, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 512, 256, 2, 2, 124, 124, 2, 2
 
 button-highlighted:
 	Inherits: ^Dialog
-	PanelRegion: 768, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 128, 2, 2, 124, 124, 2, 2
 
 button-highlighted-hover:
 	Inherits: button-highlighted
 
 button-highlighted-pressed:
 	Inherits: ^Dialog
-	PanelRegion: 896, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 896, 128, 2, 2, 124, 124, 2, 2
 
 button-highlighted-disabled:
 	Inherits: button-highlighted
@@ -417,7 +417,7 @@ newsbutton-hover:
 
 newsbutton-highlighted:
 	Inherits: ^Dialog
-	PanelRegion: 768, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 0, 2, 2, 124, 124, 2, 2
 
 newsbutton-highlighted-hover:
 	Inherits: newsbutton-highlighted
@@ -488,15 +488,15 @@ checkbox-bits:
 
 checkbox-hover:
 	Inherits: ^Dialog
-	PanelRegion: 640, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 640, 128, 2, 2, 124, 124, 2, 2
 
 checkbox-disabled:
 	Inherits: ^Dialog
-	PanelRegion: 640, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 640, 256, 2, 2, 124, 124, 2, 2
 
 checkbox-highlighted:
 	Inherits: ^Dialog
-	PanelRegion: 896, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 896, 0, 2, 2, 124, 124, 2, 2
 
 scrollitem-selected:
 	Inherits: button-pressed

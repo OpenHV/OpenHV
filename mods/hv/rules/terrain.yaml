@@ -1,3 +1,9 @@
+CAVE:
+	Inherits: ^Rock
+	Building:
+		Footprint: ==== ==== xxxx xxxx xxxx
+		Dimensions: 4,5
+
 GRSSMISC6:
 	Inherits: ^Rock
 	Building:
@@ -40,3 +46,280 @@ LAVABUBL:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+
+MNTMISC8:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+MNTMISC9:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+SANDMISC6:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+SANDMISC7:
+	Inherits: ^Rock
+	Building:
+		Footprint: x_ xx
+		Dimensions: 2,2
+
+SANDMISC8:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK1:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+STNROCK2:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ _ x
+		Dimensions: 1,3
+
+SWMPANI:
+	Inherits@1: ^SpriteActor
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Swamp
+	AppearsOnMapPreview:
+		Terrain: Swamp
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+SWMPBUBL:
+	Inherits@1: ^SpriteActor
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Swamp
+	AppearsOnMapPreview:
+		Terrain: Swamp
+	HiddenUnderShroud:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+TREEGRS1:
+	Inherits: ^Tree
+
+TREEGRS2:
+	Inherits: ^Tree
+
+TREEGRS3:
+	Inherits: ^Tree
+
+TREEGRS4:
+	Inherits: ^Tree
+
+TREEGRS5:
+	Inherits: ^Tree
+
+TREEGRS6:
+	Inherits: ^Tree
+
+TREEGRS7:
+	Inherits: ^Tree
+
+TREEGRS8:
+	Inherits: ^Tree
+
+TREEGRS9:
+	Inherits: ^Tree
+
+TREEGRS10:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+TREEGRS11:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+TREEGRS12:
+	Inherits: ^Tree
+
+TREEGRS13:
+	Inherits: ^Tree
+
+TREEGRS14:
+	Inherits: ^Tree
+
+TREEGRS15:
+	Inherits: ^Tree
+
+TreeAsh:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	RenderSprites:
+		Palette: terrain
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Stone
+	AppearsOnMapPreview:
+		Terrain: Stone
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	WithSpriteBody:
+	Tooltip:
+		Name: Burnt Tree
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	ScriptTriggers:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+TreeMud:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	RenderSprites:
+		Palette: terrain
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Crater
+	AppearsOnMapPreview:
+		Terrain: Crater
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	WithSpriteBody:
+	Tooltip:
+		Name: Run Over Tree
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	ScriptTriggers:
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+TREES1:
+	Inherits: ^Tree
+
+TREES2:
+	Inherits: ^Tree
+
+TREES3:
+	Inherits: ^Tree
+
+TREES4:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+TREES5:
+	Inherits: ^Tree
+
+TREES6:
+	Inherits: ^Tree
+
+TREES7:
+	Inherits: ^Tree
+
+TREES8:
+	Inherits: ^Tree
+
+TREES9:
+	Inherits: ^Tree
+
+TREES10:
+	Inherits: ^Tree
+
+TREES11:
+	Inherits: ^Tree
+
+TREES12:
+	Inherits: ^Tree
+
+TREES13:
+	Inherits: ^Tree
+
+TREES14:
+	Inherits: ^Tree
+
+TREES15:
+	Inherits: ^Tree
+
+TREES16:
+	Inherits: ^Tree
+
+TREES17:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+WATERFLOW1:
+	Inherits: ^WATERFLOW
+
+WATERFLOW2:
+	Inherits: ^WATERFLOW
+
+WATERFLOW3:
+	Inherits: ^WATERFLOW
+
+WATERFLOW4:
+	Inherits: ^WATERFLOW
+
+WATERFLOW5:
+	Inherits: ^WATERFLOW
+
+WATERFLOW6:
+	Inherits: ^WATERFLOW
+
+WATERFLOW7:
+	Inherits: ^WATERFLOW
+
+WATERFLOW8:
+	Inherits: ^WATERFLOW
+
+WATERFLOW9:
+	Inherits: ^WATERFLOW
+
+WATERFLOW10:
+	Inherits: ^WATERFLOW
+
+WATERFLOW11:
+	Inherits: ^WATERFLOW
+
+WATERFLOW12:
+	Inherits: ^WATERFLOW
+
+WATERFLOW13:
+	Inherits: ^WATERFLOW

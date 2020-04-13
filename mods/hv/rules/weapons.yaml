@@ -1,0 +1,11 @@
+MINE1:
+	Inherits: ^Mine
+
+MINE2:
+	Inherits: ^Mine
+
+MINE3:
+	Inherits: ^Mine
+
+MINE4:
+	Inherits: ^Mine

@@ -1,0 +1,31 @@
+boat:
+	idle: boat1.png
+		Facings: 8
+	turret: boat1.png
+		Start: 8
+		Facings: 8
+	muzzle: muzzle2.png
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon: blank.png
+
+heavyboat:
+	idle: boat2.png
+		Facings: 8
+	turret: boat2.png
+		Start: 8
+		Facings: 8
+	icon: blank.png
+
+seamnstr:
+	left: seamnstr.png
+		Length: 15
+		Tick: 300
+		Reverses: true
+	right: seamnstr.png
+		Start: 15
+		Length: 15
+		Tick: 300
+		Reverses: true
+	icon: blank.png

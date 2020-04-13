@@ -5,6 +5,7 @@
 	Selection:
 	MusicPlaylist:
 	TerrainGeometryOverlay:
+	TerrainDebugOverlay:
 	DebugVisualizations:
 	TerrainRenderer:
 	Locomotor@IMMOBILE:
@@ -12,6 +13,7 @@
 		TerrainSpeeds:
 	Locomotor@WHEELED:
 		Name: wheeled
+		Crushes: Cube
 		TerrainSpeeds:
 			Clear: 90
 			Ore: 90
@@ -21,8 +23,13 @@
 			Mountain: 60
 			Ice: 10
 			Snow: 30
+			Red Snow: 30
+			Sand: 40
+			Stone: 100
 	Locomotor@TRACKED:
 		Name: tracked
+		Crushes: Tree, Cube
+		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 80
 			Ore: 80
@@ -32,8 +39,12 @@
 			Mountain: 70
 			Ice: 30
 			Snow: 50
+			Red Snow: 50
+			Sand: 40
+			Stone: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
+		Crushes: Cube
 		TerrainSpeeds:
 			Clear: 80
 			Ore: 80
@@ -43,6 +54,14 @@
 			Mountain: 70
 			Ice: 20
 			Snow: 40
+			Red Snow: 40
+			Sand: 30
+			Stone: 100
+	Locomotor@NAVAL:
+		Name: naval
+		Crushes: Cube
+		TerrainSpeeds:
+			Water: 100
 	Faction@0:
 		Name: MegaCorp
 		InternalName: megacorp
@@ -58,27 +77,37 @@
 	ResourceType@Gold:
 		Type: gold
 		Name: Gold
-		PipColor: yellow
 		ResourceType: 1
 		TerrainType: Ore
 		Palette: effect
 		Sequences: gold
 		MaxDensity: 3
 		ValuePerUnit: 40
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceType@Iron:
 		Type: iron
 		Name: Iron
-		PipColor: gray
 		ResourceType: 2
 		TerrainType: Ore
 		Palette: effect
 		Sequences: iron
 		MaxDensity: 3
 		ValuePerUnit: 25
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow
+		AllowUnderActors: true
+		AllowUnderBuildings: true
+	ResourceType@Water:
+		Type: water
+		Name: Water
+		ResourceType: 3
+		TerrainType: Water
+		Palette: terrain
+		AllowedTerrainTypes: Crater
+		Sequences: waterflow
+		MaxDensity: 1
+		ValuePerUnit: 0
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	PaletteFromGimpOrJascFile@terrain:
@@ -96,9 +125,17 @@
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 0
+	PaletteFromGimpOrJascFile@bluebg:
+		Name: bluebg
+		Filename: palette.pal
+		TransparentIndex: 37
 	PlayerColorPalette@grey-remap:
 		BasePalette: player
 		BaseName: remap
+		RemapIndex: 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65
+	PlayerColorPalette@bluebg-grey-remap:
+		BasePalette: bluebg
+		BaseName: bluebg-grey-remap
 		RemapIndex: 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65
 	PlayerColorPalette@blue-remap:
 		BasePalette: player
@@ -122,6 +159,10 @@
 		Name: colorpicker
 		Filename: palette.pal
 		AllowModifiers: false
+		TransparentIndex: 255
+	PaletteFromGimpOrJascFile@cube:
+		Name: cube
+		Filename: cube.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@shadow:
 		Name: shadow
@@ -164,6 +205,15 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
+	PaletteFromRGBA@shield:
+		Name: shield
+		R: 0
+		G: 0
+		B: 128
+		A: 128
+		TransparentIndex: 255
+	FlashPaletteEffect@nuke:
+		Type: Nuke
 	ShroudRenderer:
 		ShroudVariants: fow
 		FogVariants: fow
@@ -175,6 +225,7 @@ World:
 	ChatCommands:
 	DevCommands:
 	DebugVisualizationCommands:
+	ExitsDebugOverlayManager:
 	PlayerCommands:
 	HelpCommand:
 	ScreenShaker:
@@ -183,6 +234,12 @@ World:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	CustomTerrainDebugOverlay:
 	DomainIndex:
+	SmudgeLayer@CRATER:
+		Type: Crater
+		Sequence: craters
+		SmokeType:
+		SmokeSequence:
+		SmokePercentage: -1
 	WarheadDebugOverlay:
 	SpawnMapActors:
 	MapBuildRadius:
@@ -199,6 +256,7 @@ World:
 		ClassName: Base only
 		Factions: megacorp
 		BaseActor: base
+		SupportActors: builder1, builder2, builder3, builder4, builder5
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
@@ -212,4 +270,20 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
+	UndergroundResourceLayer:
+	UndergroundResourceRenderer:
+		RenderTypes: gold, iron
 	ResourceLayer:
+	LiquidTerrainRenderer:
+		RenderTypes: water
+	CloudSpawner:
+		ActorTypes: cloud1, cloud2, cloud3
+	CrateSpawner:
+		CheckboxLabel: Cubes
+		CheckboxDescription: Collect cubes with units to receive random bonuses
+		CheckboxEnabled: false
+		CheckboxDisplayOrder: 1
+		ValidGround: Clear, Crater, Road, Grass, Mountain
+		WaterChance: 10
+		CrateActors: moneycube, revealmapcube
+		CrateActorShares: 90, 10

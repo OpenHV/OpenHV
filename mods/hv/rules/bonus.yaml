@@ -1,0 +1,13 @@
+MONEYCUBE:
+	Inherits: ^Cube
+	WithSpriteBody:
+		Sequence: green
+	GiveCashCrateAction:
+		Amount: 1000
+		UseCashTick: true
+
+REVEALMAPCUBE:
+	Inherits: ^Cube
+	WithSpriteBody:
+		Sequence: blue
+	RevealMapCrateAction:

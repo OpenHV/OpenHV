@@ -4,8 +4,9 @@ BuildingExplode:
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 ^Explosion:
-	ValidTargets: Ground, Water, Air
+	ValidTargets: Ground, Water, Air, Tree
 	Warhead@1Dam: SpreadDamage
+		DamageTypes: Fire
 		Spread: 426
 		Damage: 5000
 		Versus:
@@ -30,3 +31,17 @@ UnitExplodeSmall:
 		Damage: 4000
 	Warhead@Effect: CreateEffect
 		Explosions: small
+
+AntiTankMine:
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 40000
+		AffectsParent: true
+		InvalidTargets: Mine
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@Effect: CreateEffect
+		Explosions: large
+		ImpactSounds: explosion02.wav
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall, Trees

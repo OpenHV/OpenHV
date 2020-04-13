@@ -5,7 +5,24 @@ explosion:
 	small: expsmall.png
 	medium: explosn.png
 	large: explobig.png
-	sparks: sparks.png
+
+hit:
+	spark_a: sparks.png
+		Start: 0
+		Length: 7
+		Tick: 60
+	spark_b: sparks.png
+		Start: 7
+		Length: 9
+		Tick: 60
+	spark_c: sparks.png
+		Start: 16
+		Length: 8
+		Tick: 60
+	spark_d: sparks.png
+		Start: 24
+		Length: 7
+		Tick: 60
 
 bullet1:
 	idle: bullets.png
@@ -22,7 +39,7 @@ bullet2:
 bullet3:
 	idle: bullets.png
 		Start: 16
-		Facings: 8		
+		Facings: 8
 		ZOffset: 1023
 
 bullet4:
@@ -42,3 +59,91 @@ bullet6:
 		Start: 40
 		Facings: 8
 		ZOffset: 1023
+
+bullet7:
+	idle: bullets.png
+		Start: 48
+		Length: 2
+		Facings: 8
+		ZOffset: 1023
+
+nuclear:
+	up: bullets.png
+		Start: 40
+		ZOffset: 1023
+	down: bullets.png
+		Start: 44
+		ZOffset: 1023
+
+smoke:
+	idle: smoke.png
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+
+small_smoke:
+	idle: small_smoke.png
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+
+flame:
+	idle: flame.png
+		Length: *
+		ZOffset: 512
+	loop: flame.png
+		Length: *
+		ZOffset: 512
+	end: flame.png
+		Length: *
+		ZOffset: 512
+
+water_splash:
+	water_splash_a: water_splash.png
+		Start: 0
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+	water_splash_b: water_splash.png
+		Start: 9
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+
+water_splash_small:
+	water_splash_small_a: water_splash_small.png
+		Start: 0
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+	water_splash_small_b: water_splash_small.png
+		Start: 6
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+
+mine1:
+	idle: mines.png
+		ZOffset: -512
+
+mine2:
+	idle: mines.png
+		Start: 1
+		ZOffset: -512
+
+mine3:
+	idle: mines.png
+		Start: 2
+		ZOffset: -512
+
+mine4:
+	idle: mines.png
+		Start: 3
+		ZOffset: -512
+
+debris:
+	idle: junk.png
+		Start: 0
+		Length: 4
+		Tick: 60
+		ZOffset: 1000

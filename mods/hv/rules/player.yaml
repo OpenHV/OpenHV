@@ -2,10 +2,14 @@ Player:
 	Inherits: ^BasePlayer
 	MissionObjectives:
 	ConquestVictoryConditions:
+	StrategicVictoryConditions:
+	ProximityCaptor:
+		Types: Player
 	PowerManager:
 	Shroud:
 	TechTree:
 	PlaceBuilding:
+		ToggleVariantKey: ToggleVariant
 	SupportPowerManager:
 	PlayerResources:
 	DeveloperMode:
@@ -23,7 +27,13 @@ Player:
 	ClassicProductionQueue@Building:
 		Type: Building
 		DisplayOrder: 0
-		BuildDurationModifier: 250
+		BuildDurationModifier: 25
+		LowPowerModifier: 300
+		SpeedUp: true
+	ClassicProductionQueue@Defense:
+		Type: Defense
+		DisplayOrder: 1
+		BuildDurationModifier: 25
 		LowPowerModifier: 300
 		SpeedUp: true
 	ClassicProductionQueue@Infantry:
@@ -34,12 +44,21 @@ Player:
 	ClassicProductionQueue@Vehicles:
 		Type: Vehicle
 		DisplayOrder: 3
-		BuildDurationModifier: 250
+		BuildDurationModifier: 25
 		LowPowerModifier: 300
 		SpeedUp: true
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4
+		BuildDurationModifier: 25
+		LowPowerModifier: 300
+		SpeedUp: true
+	ClassicProductionQueue@Naval:
+		Type: Ship
+		DisplayOrder: 5
+		BuildDurationModifier: 25
 		LowPowerModifier: 300
 		SpeedUp: true
 	PlayerRadarTerrain:
+	TeleportNetworkManager:
+		Type: subspace

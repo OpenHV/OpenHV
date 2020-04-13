@@ -1,3 +1,6 @@
+cave:
+	idle: cave.png
+
 grssmisc6:
 	idle: grssmisc6.png
 
@@ -14,3 +17,205 @@ lavabubl:
 	idle: lavabubl.png
 		Tick: 100
 		Length: *
+
+mntmisc8:
+	idle: mntmisc8.png
+		Offset: 0, -2
+
+mntmisc9:
+	idle: mntmisc9.png
+		Offset: 0, -4
+
+sandmisc6:
+	idle: sandmisc6.png
+		Offset: 0, 2
+
+sandmisc7:
+	idle: sandmisc7.png
+		Offset: 0, -2
+
+sandmisc8:
+	idle: sandmisc8.png
+		Offset: 0, -2
+
+craters:
+	Defaults:
+		Length: *
+	cr1: smudges1.png
+	cr2: smudges2.png
+	cr3: smudges3.png
+	cr4: smudges4.png
+	cr5: smudges5.png
+
+stnrock1:
+	idle: stnrock1.png
+
+stnrock2:
+	idle: stnrock2.png
+
+swmpani:
+	idle:
+		Combine: # TODO this doesn't work properly, see https://github.com/OpenRA/OpenRA/issues/16576
+			swmpani.png:
+				Length: 3
+			swmpani.png:
+				Frames: 3, 2, 1
+				Length: 3
+		Length: *
+		Tick: 1000
+
+swmpbubl:
+	idle: swmpbubl.png
+		Tick: 100
+		Length: *
+
+treeash:
+	idle: treeash.png
+
+treegrs1:
+	idle: treegrs1.png
+
+treegrs2:
+	idle: treegrs2.png
+
+treegrs3:
+	idle: treegrs3.png
+
+treegrs4:
+	idle: treegrs4.png
+
+treegrs5:
+	idle: treegrs5.png
+
+treegrs6:
+	idle: treegrs6.png
+
+treegrs7:
+	idle: treegrs7.png
+
+treegrs8:
+	idle: treegrs8.png
+
+treegrs9:
+	idle: treegrs9.png
+
+treegrs10:
+	idle: treegrs10.png
+
+treegrs11:
+	idle: treegrs11.png
+
+treegrs12:
+	idle: treegrs12.png
+
+treegrs13:
+	idle: treegrs13.png
+
+treegrs14:
+	idle: treegrs14.png
+
+treegrs15:
+	idle: treegrs15.png
+
+treemud:
+	idle: treegrs16.png
+
+trees1:
+	idle: trees1.png
+
+trees2:
+	idle: trees2.png
+
+trees3:
+	idle: trees3.png
+
+trees4:
+	idle: trees4.png
+
+trees5:
+	idle: trees5.png
+
+trees6:
+	idle: trees6.png
+
+trees7:
+	idle: trees7.png
+
+trees8:
+	idle: trees8.png
+
+trees9:
+	idle: trees9.png
+
+trees10:
+	idle: trees10.png
+
+trees11:
+	idle: trees11.png
+
+trees12:
+	idle: trees12.png
+
+trees13:
+	idle: trees13.png
+
+trees14:
+	idle: trees14.png
+
+trees15:
+	idle: trees15.png
+
+trees16:
+	idle: trees16.png
+
+waterflow1:
+	idle: watrflow.png
+		Start: 9
+
+waterflow2:
+	idle: watrflow.png
+		Start: 10
+
+waterflow3:
+	idle: watrflow.png
+		Start: 11
+
+waterflow4:
+	idle: watrflow.png
+		Start: 12
+
+waterflow5:
+	idle: watrflow.png
+		Start: 13
+
+waterflow6:
+	idle: watrflow.png
+		Start: 14
+
+waterflow7:
+	idle: watrflow.png
+		Start: 15
+
+waterflow8:
+	idle: watrflow.png
+		Start: 16
+
+waterflow9:
+	idle: watrflow.png
+		Start: 17
+
+waterflow10:
+	idle: watrflow.png
+		Start: 22
+
+waterflow11:
+	idle: watrflow.png
+		Start: 23
+
+waterflow12:
+	idle: watrflow.png
+		Start: 24
+
+waterflow13:
+	idle: watrflow.png
+		Start: 25

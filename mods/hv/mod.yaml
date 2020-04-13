@@ -9,7 +9,6 @@ ModCredits:
 Packages:
 	.
 	$hv: hv
-	$ra: ra
 	./mods/common: common
 	hv|bits
 	hv|bits/terrain
@@ -32,6 +31,9 @@ Rules:
 	hv|rules/aircraft.yaml
 	hv|rules/buildings.yaml
 	hv|rules/terrain.yaml
+	hv|rules/ships.yaml
+	hv|rules/bonus.yaml
+	hv|rules/weapons.yaml
 
 Sequences:
 	hv|sequences/map.yaml
@@ -41,11 +43,15 @@ Sequences:
 	hv|sequences/buildings.yaml
 	hv|sequences/weapons.yaml
 	hv|sequences/terrain.yaml
+	hv|sequences/ships.yaml
 
 Weapons:
 	hv|weapons/explosions.yaml
 	hv|weapons/ballistics.yaml
 	hv|weapons/firearms.yaml
+	hv|weapons/missiles.yaml
+	hv|weapons/energetic.yaml
+	hv|weapons/debris.yaml
 
 TileSets:
 	hv|tileset.yaml
@@ -58,6 +64,7 @@ Chrome:
 
 Assemblies:
 	common|OpenRA.Mods.Common.dll
+	hv|OpenRA.Mods.HV.dll
 
 ChromeLayout:
 	common|chrome/ingame.yaml
@@ -74,6 +81,7 @@ ChromeLayout:
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
 	common|chrome/mainmenu.yaml
+	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
@@ -95,10 +103,10 @@ ChromeLayout:
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
-	hv|chrome/assetbrowser.yaml
+	common|chrome/assetbrowser.yaml
 	common|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
-	common|chrome/editor.yaml
+	hv|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	hv|chrome/ingame-observer.yaml
 	hv|chrome/ingame-player.yaml
@@ -138,37 +146,37 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: common|FreeSans.ttf
-		Size: 10
-		Ascender: 8
-	TinyBold:
-		Font: common|FreeSansBold.ttf
-		Size: 10
-		Ascender: 8
-	Small:
-		Font: common|FreeSans.ttf
-		Size: 12
+		Font: hv|terminal-grotesque.ttf
+		Size: 11
 		Ascender: 9
+	TinyBold:
+		Font: hv|terminal-grotesque.ttf
+		Size: 11
+		Ascender: 9
+	Small:
+		Font: hv|terminal-grotesque.ttf
+		Size: 13
+		Ascender: 10
 	Regular:
-		Font: common|FreeSans.ttf
-		Size: 14
-		Ascender: 11
+		Font: hv|terminal-grotesque.ttf
+		Size: 15
+		Ascender: 12
 	Bold:
-		Font: common|FreeSansBold.ttf
-		Size: 14
-		Ascender: 11
+		Font: hv|terminal-grotesque.ttf
+		Size: 15
+		Ascender: 12
 	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size: 18
-		Ascender: 14
+		Font: hv|terminal-grotesque.ttf
+		Size: 20
+		Ascender: 15
 	BigBold:
-		Font: common|FreeSansBold.ttf
-		Size: 24
-		Ascender: 18
+		Font: hv|terminal-grotesque.ttf
+		Size: 26
+		Ascender: 20
 	Title:
-		Font: common|FreeSansBold.ttf
-		Size: 48
-		Ascender: 26
+		Font: hv|terminal-grotesque.ttf
+		Size: 52
+		Ascender: 28
 
 MapGrid:
 	TileSize: 20, 20
@@ -181,6 +189,9 @@ SoundFormats: Wav
 SpriteSequenceFormat: DefaultSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
+
+AssetBrowser:
+	SupportedExtensions: .png
 
 GameSpeeds:
 	default:
