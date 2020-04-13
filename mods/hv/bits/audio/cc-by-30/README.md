@@ -7,3 +7,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [ccbysmgfire01.wav](http://soundbible.com/2091-MP5-SMG-9mm.html) by GunGuru
 * [ccbygrenadelaunch01.wav](http://soundbible.com/2140-Grenade-Launcher-2.html) by Daniel Simon
 * [ccbyheavygunfire01.wav](http://soundbible.com/2004-Gun-Shot.html) by Marvin
+* [ccbysmgfire02.wav](http://soundbible.com/1575-High-Definition-Machine-Gun.html) by WEL
