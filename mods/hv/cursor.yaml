@@ -164,12 +164,10 @@ Cursors:
 			Y: 0
 		enter-blocked:
 			Start: 69
-			Length: 3
 			X: 0
 			Y: 0
 		enter-blocked-minimap:
 			Start: 69
-			Length: 3
 			X: 0
 			Y: 0
 		guard:
