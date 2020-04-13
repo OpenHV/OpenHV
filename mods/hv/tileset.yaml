@@ -52,6 +52,11 @@ Terrain:
 		TargetTypes: Ground
 		Color: B0C0D0
 		AcceptsSmudgeType: Crater
+	TerrainType@RedSnow:
+		Type: Red Snow
+		TargetTypes: Ground
+		Color: B59FAB
+		AcceptsSmudgeType: Crater
 	TerrainType@Sand:
 		Type: Sand
 		TargetTypes: Ground
@@ -4154,7 +4159,7 @@ Templates:
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@636:
 		Id: 636
 		Images: sn2-2crb5.png
@@ -5071,105 +5076,105 @@ Templates:
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@779:
 		Id: 779
 		Images: snow2-2.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@780:
 		Id: 780
 		Images: snow2-3.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@781:
 		Id: 781
 		Images: snow2-4.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@782:
 		Id: 782
 		Images: snow2-5.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@783:
 		Id: 783
 		Images: snow2-6.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@784:
 		Id: 784
 		Images: snow2-7.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@785:
 		Id: 785
 		Images: snow2-8.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@786:
 		Id: 786
 		Images: snow2-9.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@787:
 		Id: 787
 		Images: snow2-10.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@788:
 		Id: 788
 		Images: snow2-11.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@789:
 		Id: 789
 		Images: snow2-12.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@790:
 		Id: 790
 		Images: snow2-13.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@791:
 		Id: 791
 		Images: snw2-ct2.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@792:
 		Id: 792
 		Images: snw2-ctr.png
 		Size: 1,1
 		Categories: Red Snow
 		Tiles:
-			0: Snow
+			0: Red Snow
 	Template@793:
 		Id: 793
 		Images: snw2-rck.png

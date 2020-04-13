@@ -23,6 +23,7 @@
 			Mountain: 60
 			Ice: 10
 			Snow: 30
+			Red Snow: 30
 			Sand: 40
 			Stone: 100
 	Locomotor@TRACKED:
@@ -38,6 +39,7 @@
 			Mountain: 70
 			Ice: 30
 			Snow: 50
+			Red Snow: 50
 			Sand: 40
 			Stone: 100
 	Locomotor@LIGHTTRACKED:
@@ -52,6 +54,7 @@
 			Mountain: 70
 			Ice: 20
 			Snow: 40
+			Red Snow: 40
 			Sand: 30
 			Stone: 100
 	Locomotor@NAVAL:
