@@ -21,7 +21,10 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Required for the map editor to work. Attach this to the world actor.")]
 	public class UndergroundEditorResourceLayerInfo : ITraitInfo, Requires<ResourceTypeInfo>
 	{
-		public virtual object Create(ActorInitializer init) { return new UndergroundEditorResourceLayer(init.Self); }
+		[Desc("Only care for these ResourceType names.")]
+		public readonly string[] Types = null;
+
+		public virtual object Create(ActorInitializer init) { return new UndergroundEditorResourceLayer(init.Self, this); }
 	}
 
 	public class UndergroundEditorResourceLayer : IWorldLoaded, IRenderOverlay, INotifyActorDisposing
@@ -36,12 +39,16 @@ namespace OpenRA.Mods.HV.Traits
 
 		public int NetWorth { get; protected set; }
 
+		public readonly UndergroundEditorResourceLayerInfo Info;
+
 		bool disposed;
 
-		public UndergroundEditorResourceLayer(Actor self)
+		public UndergroundEditorResourceLayer(Actor self, UndergroundEditorResourceLayerInfo info)
 		{
 			if (self.World.Type != WorldType.Editor)
 				return;
+
+			Info = info;
 
 			Map = self.World.Map;
 			Tileset = self.World.Map.Rules.TileSet;
@@ -90,6 +97,10 @@ namespace OpenRA.Mods.HV.Traits
 			var tile = Map.Resources[uv];
 
 			var t = Tiles[cell];
+
+			if (Info.Types != null && t.Type != null && !Info.Types.Contains(t.Type.Info.Type))
+				return;
+
 			if (t.Density > 0)
 				NetWorth -= t.Density * t.Type.Info.ValuePerUnit;
 
@@ -129,6 +140,9 @@ namespace OpenRA.Mods.HV.Traits
 				t.Sprite = null;
 				return t;
 			}
+
+			if (Info.Types != null && !Info.Types.Contains(t.Type.Info.Type))
+				return t;
 
 			NetWorth -= t.Density * type.Info.ValuePerUnit;
 
