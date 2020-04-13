@@ -198,7 +198,6 @@ MODULE:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		MinRange: 4c0
 		Range: 5c0
 	RallyPoint:
 		IsPlayerPalette: true
