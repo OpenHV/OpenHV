@@ -1,5 +1,6 @@
 TANK2:
 	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -30,6 +31,7 @@ TANK2:
 
 TANK5:
 	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -295,6 +297,7 @@ BUILDER5:
 
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -404,6 +407,7 @@ BEAST:
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 700
 	Tooltip:
