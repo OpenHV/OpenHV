@@ -66,7 +66,8 @@ Cursors:
 			Y: 0
 	cursors.png: cursor
 		select:
-			Start: 0
+			Start: 58
+			Length: 8
 			X: 0
 			Y: 0
 	cursors.png: cursor
@@ -102,13 +103,11 @@ Cursors:
 			X: 0
 			Y: 0
 		move-blocked:
-			Start: 8 #TODO Needs different cursor
-			Length: 6
+			Start: 70
 			X: 0
 			Y: 0
 		move-blocked-minimap:
-			Start: 8 #TODO Needs different cursor
-			Length: 6
+			Start: 70
 			X: 0
 			Y: 0
 	cursors.png: cursor
@@ -133,17 +132,17 @@ Cursors:
 			X: 0
 			Y: 0
 		ability:
-			Start: 2
+			Start: 72
 			Length: 6
 			X: 0
 			Y: 0
 		ability-minimap:
-			Start: 2
+			Start: 72
 			Length: 6
 			X: 0
 			Y: 0
 	cursors.png: cursor
-		harvest: #TODO Needs different cursor
+		harvest:
 			Start: 2
 			Length: 6
 			X: 0
@@ -154,43 +153,41 @@ Cursors:
 			X: 0
 			Y: 0
 		enter:
-			Start: 2
-			Length: 6
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
 		enter-minimap:
-			Start: 2
-			Length: 6
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
 		enter-blocked:
-			Start: 2
-			Length: 6
+			Start: 69
+			Length: 3
 			X: 0
 			Y: 0
 		enter-blocked-minimap:
-			Start: 2
-			Length: 6
+			Start: 69
+			Length: 3
 			X: 0
 			Y: 0
 		guard:
-			Start: 2
-			Length: 6
+			Start: 80
 			X: 0
 			Y: 0
 		guard-minimap:
-			Start: 2
-			Length: 6
+			Start: 80
 			X: 0
 			Y: 0
-		capture: #TODO Needs different cursor
-			Start: 2
-			Length: 6
+		capture:
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
-		capture-minimap: #TODO Needs different cursor
-			Start: 2
-			Length: 6
+		capture-minimap:
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
 	cursors.png: cursor
@@ -199,35 +196,35 @@ Cursors:
 			X: 0
 			Y: 0
 		joystick-t-blocked:
-			Start: 48
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-tr-blocked:
-			Start: 55
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-r-blocked:
-			Start: 54
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-br-blocked:
-			Start: 53
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-b-blocked:
-			Start: 52
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-bl-blocked:
-			Start: 51
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-l-blocked:
-			Start: 50
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-tl-blocked:
-			Start: 49
+			Start: 79
 			X: 0
 			Y: 0
 	cursors.png: cursor
@@ -289,13 +286,11 @@ Cursors:
 			X: 0
 			Y: 0
 		attackmove-blocked:
-			Start: 14
-			Length: 6
+			Start: 71
 			X: 0
 			Y: 0
 		attackmove-blocked-minimap:
-			Start: 14
-			Length: 6
+			Start: 71
 			X: 0
 			Y: 0
 		assaultmove:
@@ -309,12 +304,10 @@ Cursors:
 			X: 0
 			Y: 0
 		assaultmove-blocked:
-			Start: 14
-			Length: 6
+			Start: 71
 			X: 0
 			Y: 0
 		assaultmove-blocked-minimap:
-			Start: 14
-			Length: 6
+			Start: 71
 			X: 0
 			Y: 0
