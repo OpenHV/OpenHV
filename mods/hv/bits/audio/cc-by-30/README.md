@@ -5,3 +5,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [tyrannosaurus_rex-Mike_Koenig.wav](http://soundbible.com/1319-Tyrannosaurus-Rex.html) by Mike Koenig
 * [ray_gun-Mike_Koenig.wav](http://soundbible.com/1770-Ray-Gun.html) by Mike Koenig
 * [ccbysmgfire01.wav](http://soundbible.com/2091-MP5-SMG-9mm.html) by GunGuru
+* [ccbygrenadelaunch01.wav](http://soundbible.com/2140-Grenade-Launcher-2.html) by Daniel Simon
