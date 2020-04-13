@@ -83,7 +83,7 @@
 		Sequences: gold
 		MaxDensity: 3
 		ValuePerUnit: 40
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceType@Iron:
@@ -95,7 +95,7 @@
 		Sequences: iron
 		MaxDensity: 3
 		ValuePerUnit: 25
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceType@Water:
