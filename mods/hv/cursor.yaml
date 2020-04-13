@@ -1,75 +1,76 @@
 Cursors:
-	scroll.png: cursor
+	cursors.png: cursor
 		scroll-t:
-			Start: 0
+			Start: 40
 			X: 0
 			Y: 0
 		scroll-tl:
-			Start: 1
+			Start: 41
 			X: 0
 			Y: 0
 		scroll-l:
-			Start: 2
+			Start: 42
 			X: 0
 			Y: 0
 		scroll-bl:
-			Start: 3
+			Start: 43
 			X: 0
 			Y: 0
 		scroll-b:
-			Start: 4
+			Start: 44
 			X: 0
 			Y: 0
 		scroll-br:
-			Start: 5
+			Start: 45
 			X: 0
 			Y: 0
 		scroll-r:
-			Start: 6
+			Start: 46
 			X: 0
 			Y: 0
 		scroll-tr:
-			Start: 7
+			Start: 47
 			X: 0
 			Y: 0
 		scroll-t-blocked:
-			Start: 0
+			Start: 48
 			X: 0
 			Y: 0
 		scroll-tl-blocked:
-			Start: 1
+			Start: 49
 			X: 0
 			Y: 0
 		scroll-l-blocked:
-			Start: 2
+			Start: 50
 			X: 0
 			Y: 0
 		scroll-bl-blocked:
-			Start: 3
+			Start: 51
 			X: 0
 			Y: 0
 		scroll-b-blocked:
-			Start: 4
+			Start: 52
 			X: 0
 			Y: 0
 		scroll-br-blocked:
-			Start: 5
+			Start: 53
 			X: 0
 			Y: 0
 		scroll-r-blocked:
-			Start: 6
+			Start: 54
 			X: 0
 			Y: 0
 		scroll-tr-blocked:
-			Start: 7
+			Start: 55
 			X: 0
 			Y: 0
-	select.png: cursor
+	cursors.png: cursor
 		select:
-			Start: 0
+			Start: 58
+			Length: 8
 			X: 0
 			Y: 0
-	cursor.png: cursor
+	cursors.png: cursor
 		default:
 			Start: 0
 			X: 0
@@ -87,202 +88,224 @@ Cursors:
 			X: 0
 			Y: 0
 		move:
-			Start: 0
+			Start: 8
+			Length: 6
 			X: 0
 			Y: 0
 		move-minimap:
-			Start: 0
+			Start: 8
+			Length: 6
 			X: 0
 			Y: 0
 		move-rough:
-			Start: 0
+			Start: 8
+			Length: 6
 			X: 0
 			Y: 0
 		move-blocked:
-			Start: 0
+			Start: 70
 			X: 0
 			Y: 0
 		move-blocked-minimap:
-			Start: 0
+			Start: 70
 			X: 0
 			Y: 0
-	selected.png: cursor
+	cursors.png: cursor
 		attack:
-			Start: 0
+			Start: 2
+			Length: 6
 			X: 0
 			Y: 0
 		attack-minimap:
-			Start: 0
+			Start: 2
+			Length: 6
 			X: 0
 			Y: 0
 		attackoutsiderange:
-			Start: 0
+			Start: 2
+			Length: 6
 			X: 0
 			Y: 0
 		attackoutsiderange-minimap:
-			Start: 0
+			Start: 2
+			Length: 6
 			X: 0
 			Y: 0
 		ability:
-			Start: 0
+			Start: 72
+			Length: 6
 			X: 0
 			Y: 0
 		ability-minimap:
-			Start: 0
+			Start: 72
+			Length: 6
 			X: 0
 			Y: 0
-	cursor.png: cursor
+	cursors.png: cursor
 		harvest:
-			Start: 0
+			Start: 2
+			Length: 6
 			X: 0
 			Y: 0
 		harvest-minimap:
-			Start: 0
+			Start: 2
+			Length: 6
 			X: 0
 			Y: 0
 		enter:
-			Start: 0
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
 		enter-minimap:
-			Start: 0
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
 		enter-blocked:
-			Start: 0
+			Start: 69
 			X: 0
 			Y: 0
 		enter-blocked-minimap:
-			Start: 0
+			Start: 69
 			X: 0
 			Y: 0
 		guard:
-			Start: 0
+			Start: 80
 			X: 0
 			Y: 0
 		guard-minimap:
-			Start: 0
+			Start: 80
 			X: 0
 			Y: 0
 		capture:
-			Start: 0
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
 		capture-minimap:
-			Start: 0
+			Start: 66
+			Length: 3
 			X: 0
 			Y: 0
-	drag.png: cursor
+	cursors.png: cursor
 		joystick-all:
-			Start: 0
+			Start: 1
 			X: 0
 			Y: 0
 		joystick-t-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-tr-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-r-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-br-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-b-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-bl-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-l-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
 		joystick-tl-blocked:
-			Start: 0
+			Start: 79
 			X: 0
 			Y: 0
-	cursor.png: cursor
+	cursors.png: cursor
 		deploy:
-			Start: 0
+			Start: 31
+			Length: 4
 			X: 0
 			Y: 0
 		deploy-blocked:
-			Start: 0
+			Start: 35
 			X: 0
 			Y: 0
 		goldwrench:
-			Start: 0
+			Start: 38
 			X: 0
 			Y: 0
 		goldwrench-blocked:
-			Start: 0
+			Start: 39
 			X: 0
 			Y: 0
 		sell:
-			Start: 0
+			Start: 20
+			Length: 10
 			X: 0
 			Y: 0
 		sell-blocked:
-			Start: 0
+			Start: 30
 			X: 0
 			Y: 0
 		repair:
-			Start: 0
+			Start: 38
 			X: 0
 			Y: 0
 		repair-blocked:
-			Start: 0
+			Start: 39
 			X: 0
 			Y: 0
 		sell2:
-			Start: 0
+			Start: 20
+			Length: 11
 			X: 0
 			Y: 0
 		powerdown-blocked:
-			Start: 0
+			Start: 37
 			X: 0
 			Y: 0
 		powerdown:
-			Start: 0
+			Start: 36
 			X: 0
 			Y: 0
 		attackmove:
-			Start: 0
+			Start: 14
+			Length: 6
 			X: 0
 			Y: 0
 		attackmove-minimap:
-			Start: 0
+			Start: 14
+			Length: 6
 			X: 0
 			Y: 0
 		attackmove-blocked:
-			Start: 0
+			Start: 71
 			X: 0
 			Y: 0
 		attackmove-blocked-minimap:
-			Start: 0
+			Start: 71
 			X: 0
 			Y: 0
 		assaultmove:
-			Start: 0
+			Start: 14
+			Length: 6
 			X: 0
 			Y: 0
 		assaultmove-minimap:
-			Start: 0
+			Start: 14
+			Length: 6
 			X: 0
 			Y: 0
 		assaultmove-blocked:
-			Start: 0
+			Start: 71
 			X: 0
 			Y: 0
 		assaultmove-blocked-minimap:
-			Start: 0
+			Start: 71
 			X: 0
 			Y: 0
