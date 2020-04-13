@@ -1,0 +1,20 @@
+debris:
+	ReloadDelay: 60
+	Range: 2c768
+	Projectile: Bullet
+		Speed: 64, 128
+		Blockable: false
+		LaunchAngle: 150, 200
+		Inaccuracy: 1c256
+		Image: debris
+		Shadow: true
+	Warhead@GroundEffect: CreateEffect
+		Image: small_smoke
+		Explosions: idle
+		ValidTargets: Ground
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

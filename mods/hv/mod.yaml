@@ -51,6 +51,7 @@ Weapons:
 	hv|weapons/firearms.yaml
 	hv|weapons/missiles.yaml
 	hv|weapons/energetic.yaml
+	hv|weapons/debris.yaml
 
 TileSets:
 	hv|tileset.yaml
