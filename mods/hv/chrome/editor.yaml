@@ -1,5 +1,5 @@
 Background@NEW_MAP_BG:
-	Logic: NewMapLogic
+	Logic: NewMapWithTileSelectionLogic
 	X: (WINDOW_RIGHT - WIDTH) / 2
 	Y: (WINDOW_BOTTOM - HEIGHT) / 2
 	Width: 300
@@ -13,14 +13,14 @@ Background@NEW_MAP_BG:
 			Text: New Map
 			Align: Center
 			Font: Bold
-		Label@TILESET_LABEL:
+		Label@TILE_LABEL:
 			X: 20
 			Y: 60
 			Width: 95
 			Height: 25
 			Align: Right
-			Text: Tileset:
-		DropDownButton@TILESET:
+			Text: Background:
+		DropDownButton@TILE:
 			X: 120
 			Y: 60
 			Width: 160
