@@ -325,7 +325,7 @@ TYRIANTANK:
 		Recoil: 50
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
-		LocalOffset: 0,0,0 # TODO: to be adjusted
+		LocalOffset: 550,-50,0
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
