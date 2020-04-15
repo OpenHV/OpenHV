@@ -168,6 +168,9 @@ trees15:
 trees16:
 	idle: trees16.png
 
+trees17:
+	idle: trees17.png
+
 waterflow1:
 	idle: watrflow.png
 		Start: 9

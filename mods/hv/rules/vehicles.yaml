@@ -394,6 +394,7 @@ BEAST:
 	ScaredyCat:
 		PanicSpeedModifier: 150
 		AttackPanicChance: 80
+		PanicSequencePrefix:
 	WithShadow:
 		Offset: 50,50,0
 		ZOffset: -1000
@@ -403,6 +404,8 @@ BEAST:
 	-Passenger:
 	-MustBeDestroyed:
 	-Explodes:
+	-TeleportNetworkTransportable:
+	-WithTeleportEnergyOverlay:
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
