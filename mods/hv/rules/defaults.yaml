@@ -667,7 +667,7 @@
 
 ^Mine:
 	Inherits: ^SpriteActor
-	Interactable:
+	Selectable:
 		Bounds: 20,20
 	WithSpriteBody:
 	HiddenUnderFog:
@@ -698,3 +698,8 @@
 	HitShape:
 	MapEditorData:
 		Categories: System
+	KillsSelf:
+		RequiresCondition: triggered
+	GrantConditionOnDeploy:
+		DeployedCondition: triggered
+	ConditionManager:
