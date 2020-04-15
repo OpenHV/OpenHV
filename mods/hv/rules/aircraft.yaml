@@ -62,6 +62,16 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		AttackType: Hover
+		OpportunityFire: true
+	Armament@PRIMARY:
+		Weapon: ChainGun
+		LocalOffset: 85,0,-85
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 	Selectable:
 		DecorationBounds: 24,24
 	RenderSprites:
