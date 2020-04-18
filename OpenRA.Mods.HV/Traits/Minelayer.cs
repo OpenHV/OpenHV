@@ -224,17 +224,18 @@ namespace OpenRA.Mods.HV.Traits
 					minelayers.Max(m => m.Info.TraitInfo<MinelayerInfo>().MinefieldDepth));
 
 				var movement = minelayer.Trait<IPositionable>();
-				var pal = wr.Palette(TileSet.TerrainPaletteInternalName);
+				var mobile = movement as Mobile;
+				var palette = wr.Palette(TileSet.TerrainPaletteInternalName);
 				foreach (var c in minefield)
 				{
 					var tile = tileOk;
 					if (world.FogObscures(c))
 						tile = tileUnknown;
-					else if (!movement.CanEnterCell(c, null, BlockedByActor.Immovable))
+					else if (!movement.CanEnterCell(c, null, BlockedByActor.Immovable) || (mobile != null && !mobile.CanStayInCell(c)))
 						tile = tileBlocked;
 
 					yield return new SpriteRenderable(tile, world.Map.CenterOfCell(c),
-						WVec.Zero, -511, pal, 1f, true);
+						WVec.Zero, -511, palette, 1f, true);
 				}
 			}
 

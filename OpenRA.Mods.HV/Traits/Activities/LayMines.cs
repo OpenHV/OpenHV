@@ -106,9 +106,11 @@ namespace OpenRA.Mods.HV.Activities
 			if (minefield != null)
 			{
 				var positionable = (IPositionable)movement;
+				var mobile = positionable as Mobile;
 				minefield.RemoveAll(c => self.World.ActorMap.GetActorsAt(c)
 					.Any(a => minelayer.Info.Mines.Contains(a.Info.Name) && a.CanBeViewedByPlayer(self.Owner)) ||
-						(!positionable.CanEnterCell(c, null, BlockedByActor.Immovable) && self.Owner.Shroud.IsVisible(c)));
+						((!positionable.CanEnterCell(c, null, BlockedByActor.Immovable) || (mobile != null && !mobile.CanStayInCell(c)))
+						&& self.Owner.Shroud.IsVisible(c)));
 			}
 		}
 
