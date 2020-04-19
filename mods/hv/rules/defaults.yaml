@@ -15,13 +15,6 @@
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 
-^GlobalBounty:
-	GrantConditionOnPrerequisite@GLOBALBOUNTY:
-		Condition: global-bounty
-		Prerequisites: global-bounty
-	GivesBounty:
-		RequiresCondition: global-bounty
-
 ^Selectable:
 	Selectable:
 	DrawLineToTarget:
@@ -98,7 +91,6 @@
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
@@ -147,6 +139,31 @@
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
+	SpawnScrapOnDeath:
+		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
+
+^Scrap:
+	Interactable:
+	HiddenUnderFog:
+	Tooltip:
+		Name: Scrap
+		GenericName: Scrap
+		ShowOwnerRow: false
+	Crate:
+		Lifetime: 240
+		TerrainTypes: Clear, Crater, Road, Grass, Mountain
+		CrushClass: Scrap
+	RenderSprites:
+		Palette: terrain
+		PlayerPalette:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+	MapEditorData:
+		Categories: System
+	CollectScrapCrateAction:
+	ScrapValue:
 
 ^Builder:
 	Inherits: ^Vehicle
@@ -185,7 +202,6 @@
 ^Plane:
 	Inherits@1: ^ExistsInWorld
 	Inherits@4: ^SpriteActor
-	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
@@ -533,7 +549,6 @@
 ^Ship:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits@bounty: ^GlobalBounty
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible

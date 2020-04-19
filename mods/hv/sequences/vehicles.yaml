@@ -157,3 +157,26 @@ missile_tank:
 	energyball: teleport.png
 		Length: 10
 	icon: blank.png
+
+scrap1:
+	idle: objects.png
+
+scrap2:
+	idle: objects.png
+		Start: 1
+
+scrap3:
+	idle: objects.png
+		Start: 2
+
+scrap4:
+	idle: objects.png
+		Start: 3
+
+scrap5:
+	idle: objects.png
+		Start: 4
+
+scrap6:
+	idle: objects.png
+		Start: 5

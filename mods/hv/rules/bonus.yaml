@@ -11,3 +11,21 @@ REVEALMAPCUBE:
 	WithSpriteBody:
 		Sequence: blue
 	RevealMapCrateAction:
+
+SCRAP1:
+	Inherits: ^Scrap
+
+SCRAP2:
+	Inherits: ^Scrap
+
+SCRAP3:
+	Inherits: ^Scrap
+
+SCRAP4:
+	Inherits: ^Scrap
+
+SCRAP5:
+	Inherits: ^Scrap
+
+SCRAP6:
+	Inherits: ^Scrap

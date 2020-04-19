@@ -14,7 +14,7 @@
 		TerrainSpeeds:
 	Locomotor@WHEELED:
 		Name: wheeled
-		Crushes: Cube
+		Crushes: Cube, Scrap
 		TerrainSpeeds:
 			Clear: 90
 			Ore: 90
@@ -29,7 +29,7 @@
 			Stone: 100
 	Locomotor@TRACKED:
 		Name: tracked
-		Crushes: Tree, Cube
+		Crushes: Tree, Cube, Scrap
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 80
@@ -45,7 +45,7 @@
 			Stone: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
-		Crushes: Cube
+		Crushes: Cube, Scrap
 		TerrainSpeeds:
 			Clear: 80
 			Ore: 80
@@ -251,6 +251,8 @@ World:
 		ShortGameCheckboxEnabled: false
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
+	ScrapOptions:
+		CheckboxDisplayOrder: 8
 	CreateMPPlayers:
 	MPStartUnits@base:
 		Class: none
