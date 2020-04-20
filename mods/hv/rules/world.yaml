@@ -213,6 +213,13 @@
 		B: 128
 		A: 128
 		TransparentIndex: 255
+	PaletteFromRGBA@ecm:
+		Name: ecm
+		R: 0
+		G: 128
+		B: 0
+		A: 128
+		TransparentIndex: 255
 	FlashPaletteEffect@nuke:
 		Type: Nuke
 	ShroudRenderer:

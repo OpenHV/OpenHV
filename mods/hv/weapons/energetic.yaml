@@ -43,3 +43,15 @@ RedLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 3000
+
+ElectronicCountermeasure:
+	ReloadDelay: 20
+	Range: 7c0
+	Report: ccbylaserfire01.wav
+	Projectile: Bullet
+		Speed: 150
+		Image: bullet4
+	Warhead@ECM: GrantExternalCondition
+		Range: 7c0
+		Duration: 600
+		Condition: ecmdisabled

@@ -13,6 +13,7 @@ TANK2:
 		BuildPaletteOrder: 20
 		Description: Fires lasers.
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
 	Armament:
 		Weapon: RedLaser
 		LocalOffset: 500,-250,0
@@ -48,6 +49,7 @@ TANK5:
 	Armament@SECONDARY:
 		Weapon: AntiGroundRocket
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -101,6 +103,37 @@ TANK6:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK15:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Countermeasure Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Tracked
+		Prerequisites: factory3
+		BuildPaletteOrder: 30
+		Description: Disables units.
+	Armament:
+		Weapon: ElectronicCountermeasure
+	AttackFrontal:
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 118
+	RevealsShroud:
+		Range: 6c0
+	JamsMissiles:
+		Range: 5c0
+		DeflectionStances: Neutral, Enemy
+
 TRANSPRT:
 	Inherits: ^TrackedVehicle
 	Valued:
@@ -121,7 +154,7 @@ TRANSPRT:
 		Type: Heavy
 	Mobile:
 		Speed: 142
-		PauseOnCondition: notmobile
+		PauseOnCondition: notmobile || ecmdisabled
 	RevealsShroud:
 		Range: 5c0
 	Cargo:
@@ -169,6 +202,7 @@ ARTIL:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
+		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
 	Explodes:
 		Weapon: ArtilleryExplode
@@ -208,6 +242,7 @@ ARTIL3:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
+		PauseOnCondition: ecmdisabled
 	WithAttackAnimation:
 		Sequence: shoot
 	WithMuzzleOverlay:
@@ -242,6 +277,7 @@ SCOUT1:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
@@ -275,6 +311,7 @@ SCOUT2:
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
@@ -327,6 +364,7 @@ TYRIANTANK:
 		MuzzleSequence: muzzle
 		LocalOffset: 550,-50,0
 	AttackTurreted:
+		PauseOnCondition: ecmdisabled
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 	RenderSprites:
@@ -441,6 +479,7 @@ MISSILE_TANK:
 		Weapon: MissileTankRocket_AA
 		LocalOffset: 0,0,0 # TODO: to be adjusted
 	AttackTurreted:
+		PauseOnCondition: ecmdisabled
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 	RenderSprites:

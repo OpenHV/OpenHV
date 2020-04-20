@@ -94,6 +94,7 @@
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
+	Inherits@ecm: ^DisabledByECM
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -718,3 +719,15 @@
 	GrantConditionOnDeploy:
 		DeployedCondition: triggered
 	ConditionManager:
+
+^DisabledByECM:
+	WithColoredOverlay@ECMDISABLED:
+		RequiresCondition: ecmdisabled
+		Palette: ecm
+	TimedConditionBar@ECMDISABLED:
+		Condition: ecmdisabled
+		Color: 00FF00
+	ExternalCondition@ECMDISABLED:
+		Condition: ecmdisabled
+	Mobile:
+		PauseOnCondition: ecmdisabled
