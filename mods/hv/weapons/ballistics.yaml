@@ -205,3 +205,8 @@ TurretArtillery:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+90mm:
+	Inherits: ^Cannon
+	Projectile: Bullet
+		Image: bullet5

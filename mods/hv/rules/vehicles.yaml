@@ -103,6 +103,35 @@ TANK6:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK11:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Medium Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Tracked
+		Prerequisites: factory3
+		BuildPaletteOrder: 20
+		Description: Main battle tank.
+	Armament:
+		Weapon: 90mm
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 6c0
+
 TANK15:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -451,7 +480,7 @@ MISSILE_TANK:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Medium Tank
+		Name: Missile Tank
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
