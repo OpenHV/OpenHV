@@ -132,6 +132,39 @@ TANK11:
 	RevealsShroud:
 		Range: 6c0
 
+TANK12:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 1150
+	Tooltip:
+		Name: Heavy Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Tracked
+		Prerequisites: factory3
+		BuildPaletteOrder: 40
+		Description: Double barreled tank.
+	Armament:
+		Weapon: 105mm
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 768,85,90, 768,-85,90
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+
 TANK15:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove

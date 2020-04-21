@@ -210,3 +210,13 @@ TurretArtillery:
 	Inherits: ^Cannon
 	Projectile: Bullet
 		Image: bullet5
+
+105mm:
+	Inherits: ^Cannon
+	ReloadDelay: 70
+	Burst: 2
+	Projectile: Bullet
+		Image: bullet5
+	Warhead@Damage: SpreadDamage
+		Versus:
+			Heavy: 115
