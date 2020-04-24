@@ -493,7 +493,7 @@ BEAST:
 		MaxMoveDelay: 750
 	ScaredyCat:
 		PanicSpeedModifier: 150
-		AttackPanicChance: 80
+		PanicChance: 80
 		PanicSequencePrefix:
 	WithShadow:
 		Offset: 50,50,0
