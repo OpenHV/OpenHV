@@ -610,9 +610,6 @@ SILO:
 	WithIdleOverlay@lights:
 		Sequence: animation_lights
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@orb:
-		Sequence: animation_orb
-		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:

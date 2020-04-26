@@ -20,6 +20,11 @@ Player:
 		Notification:
 	PlayerStatistics:
 	PlaceBeacon:
+		IsPlayerPalette: false
+		Palette: effect
+		BeaconSequence: idle
+		ArrowSequence:
+		CircleSequence:
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
 	PlayerExperience:

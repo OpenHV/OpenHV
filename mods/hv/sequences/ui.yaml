@@ -55,13 +55,9 @@ tags:
 	primary: primary.png
 
 beacon:
-	Defaults:
-		ZOffset: 2535
-	arrow: flag.png
-		Length: 5
-		Offset: 1,-12
-	circles: null.png
-		Length: *
+	idle: beacon.png
+		Length: 7
+		Reverses: true
 		ZOffset: 2047
 
 icon:
