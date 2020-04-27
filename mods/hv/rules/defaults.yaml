@@ -134,7 +134,7 @@
 	MapEditorData:
 		Categories: Vehicle
 	Voiced:
-		VoiceSet: GenericVoice1
+		VoiceSet: GenericVoice3
 	RenderSprites:
 		PlayerPalette: remap
 	Explodes:
