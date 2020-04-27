@@ -102,6 +102,7 @@
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 5
+		Voice: Move
 	TeleportNetworkTransportable:
 	WithTeleportEnergyOverlay:
 	Selectable:
