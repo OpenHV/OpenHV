@@ -481,6 +481,7 @@ BEAST:
 	Mobile:
 		TurnSpeed: 25
 		Speed: 80
+		Voice: Action
 	RevealsShroud:
 		Range: 5c0
 	WithDeathAnimation:
