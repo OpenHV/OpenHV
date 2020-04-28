@@ -102,6 +102,7 @@
 	Mobile:
 		Locomotor: wheeled
 		TurnSpeed: 5
+		Voice: Move
 	TeleportNetworkTransportable:
 	WithTeleportEnergyOverlay:
 	Selectable:
@@ -134,7 +135,7 @@
 	MapEditorData:
 		Categories: Vehicle
 	Voiced:
-		VoiceSet: GenericVoice1
+		VoiceSet: GenericVoice3
 	RenderSprites:
 		PlayerPalette: remap
 	Explodes:
