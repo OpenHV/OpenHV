@@ -103,6 +103,41 @@ TANK6:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK7:
+	Inherits: ^TrackedVehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 270
+		Prerequisites: radar
+		Description: Cloaked surveillance tank.\nCan detect cloaked vehicles.\n  Unarmed
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Stealth Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 20000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 160
+	RevealsShroud:
+		Range: 8c0
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		IsPlayerPalette: true
+		UncloakOn: Damage
+		PauseOnCondition: cloak-force-disabled || ecmdisabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+	DetectCloaked:
+		Range: 5c0
+	RenderDetectionCircle:
+
 TANK11:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove

@@ -220,6 +220,10 @@
 		B: 0
 		A: 128
 		TransparentIndex: 255
+	PaletteFromPlayerPaletteWithAlpha@cloak:
+		BaseName: cloak
+		BasePalette: player
+		Alpha: 0.55
 	FlashPaletteEffect@nuke:
 		Type: Nuke
 	ShroudRenderer:
