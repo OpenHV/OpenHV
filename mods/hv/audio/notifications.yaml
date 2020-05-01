@@ -2,8 +2,34 @@ Speech:
 	DefaultVariant: .wav
 	Notifications:
 		StartGame:
-		GameLoaded:
-		GameSaved:
+		GameLoaded: game_loaded
+		GameSaved: game_saved
+		BaseAttack: base_under_attack
+		Building: building
+		BuildingCannotPlaceAudio: building_cannot_be_placed
+		BuildingCaptured: building_captured
+		BuildingLost: building_lost
+		BuildingReady: building_ready
+		Cancelled: cancel
+		EnemyUnitsDetected: enemy_detected
+		Guarding: guarding
+		HarvesterAttack: miner_under_attack
+		InsufficientFunds: insufficient_funding
+		LowPower: no_power
+		MissileLaunchDetected: missile_launch_detected
+		MissileCharging: nuclear_bomb_charging
+		MissileReady: nuclear_bomb_ready
+		ForceFieldCharging: force_field_charging
+		ForceFieldReady: force_field_ready
+		NewOptions: new_construction_options
+		OnHold: on_hold
+		PrimaryBuildingSelected: primary_building_selected
+		Repairing: repairing
+		StructureSold: building_sold
+		Training: training
+		UnitLost: unit_lost
+		UnitReady: unit_ready
+		UnitRepaired: unit_repaired
 
 Sounds:
 	DefaultVariant: .wav

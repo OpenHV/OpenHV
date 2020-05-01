@@ -6,18 +6,22 @@ Player:
 	ProximityCaptor:
 		Types: Player
 	PowerManager:
+		SpeechNotification: LowPower
 	Shroud:
 	TechTree:
 	PlaceBuilding:
 		ToggleVariantKey: ToggleVariant
+		NewOptionsNotification: NewOptions
+		CannotPlaceNotification: BuildingCannotPlaceAudio
 	SupportPowerManager:
 	PlayerResources:
+		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
 		CheckboxDisplayOrder: 10
 		CheckboxEnabled: true
 	FrozenActorLayer:
 	BaseAttackNotifier:
-		Notification:
+		Notification: BaseAttack
 	PlayerStatistics:
 	PlaceBeacon:
 		IsPlayerPalette: false
@@ -34,35 +38,59 @@ Player:
 		DisplayOrder: 0
 		BuildDurationModifier: 25
 		LowPowerModifier: 300
+		ReadyAudio: BuildingReady
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: true
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		DisplayOrder: 1
 		BuildDurationModifier: 25
 		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: true
 	ClassicProductionQueue@Infantry:
 		Type: Infantry
 		DisplayOrder: 2
 		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: true
 	ClassicProductionQueue@Vehicles:
 		Type: Vehicle
 		DisplayOrder: 3
 		BuildDurationModifier: 25
 		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: true
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4
 		BuildDurationModifier: 25
 		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: true
 	ClassicProductionQueue@Naval:
 		Type: Ship
 		DisplayOrder: 5
 		BuildDurationModifier: 25
 		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		QueuedAudio: Training
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 		SpeedUp: true
 	PlayerRadarTerrain:
 	TeleportNetworkManager:

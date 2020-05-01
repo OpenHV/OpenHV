@@ -143,6 +143,7 @@
 		EmptyWeapon: UnitExplodeSmall
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
+	ActorLostNotification:
 
 ^Scrap:
 	Interactable:
@@ -248,6 +249,7 @@
 		PlayerPalette: remap
 	Repairable:
 		RepairActors: tradplat
+	ActorLostNotification:
 
 ^Helicopter:
 	Inherits: ^Plane
@@ -390,6 +392,9 @@
 		Weapons: debris
 		Pieces: 5, 10
 		Range: 1c512, 4c0
+	CaptureNotification:
+	ActorLostNotification:
+		Notification: BuildingLost
 
 ^BaseBuilding:
 	Inherits: ^Building
