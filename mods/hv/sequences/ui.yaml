@@ -18,12 +18,12 @@ editor-overlay:
 		Start: 1
 
 clock:
-	idle: icon.png # TODO
-		Length: *
+	idle: progress.png
+		Length: 64
 
 moveflsh:
 	idle: click.png
-		Length: *
+		Length: 5
 		Tick: 80
 		ZOffset: 2047
 

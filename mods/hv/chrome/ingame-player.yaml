@@ -443,13 +443,15 @@ Container@PLAYER_WIDGETS:
 							ImageName: background-bottom
 				LogicTicker@PRODUCTION_TICKER:
 				ProductionPalette@PRODUCTION_PALETTE:
-					X: 50
-					Y: 1
+					X: 49
+					Y: 4
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
 					HoldText: ON HOLD
 					IconSize: 62, 46
 					IconMargin: 1, 1
+					ClockPalette: shadow
+					NotBuildablePalette: shadow
 					IconSpriteOffset: -1, -1
 					HotkeyPrefix: Production
 					HotkeyCount: 24
