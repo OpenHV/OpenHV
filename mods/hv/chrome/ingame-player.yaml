@@ -379,7 +379,7 @@ Container@PLAYER_WIDGETS:
 						Radar@RADAR_MINIMAP:
 							WorldInteractionController: INTERACTION_CONTROLLER
 							X: 14
-							Y: 23
+							Y: 34
 							Width: 222
 							Height: 222
 							SoundUp: RadarUp
