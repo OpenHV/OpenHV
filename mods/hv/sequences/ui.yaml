@@ -18,7 +18,7 @@ editor-overlay:
 		Start: 1
 
 clock:
-	idle: blank.png # TODO
+	idle: icon.png # TODO
 		Length: *
 
 moveflsh:
@@ -61,8 +61,8 @@ beacon:
 		ZOffset: 2047
 
 icon:
-	shield: blank.png
-	nuke: blank.png
+	shield: icon.png
+	nuke: icon.png
 
 outline:
 	top-left: outline.png

@@ -47,7 +47,6 @@ radar:
 	damaged-shadow-overlay: radar-shadow.png
 		Start: 1
 		ZOffset: 1768
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -72,7 +71,6 @@ tradplat:
 		Offset: 0,1
 		ZOffset: -1c511
 		Tick: 100
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -95,7 +93,6 @@ module:
 	damaged-shadow-overlay: module-shadow.png
 		Start: 1
 		ZOffset: 1768
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -143,7 +140,6 @@ starport:
 		Length: 5
 	damaged-active: starport2.png
 		Start: 5
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -163,7 +159,6 @@ factory2:
 	damaged-shadow-overlay: factory2-shadow.png
 		Start: 1
 		ZOffset: 1768
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -183,7 +178,6 @@ factory3:
 	damaged-shadow-overlay: factory3-shadow.png
 		Start: 1
 		ZOffset: 1768
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -204,7 +198,6 @@ turret:
 	shoot: turret.png
 		Start: 10
 		Facings: 8
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -223,7 +216,6 @@ field:
 		Start: 5
 	damaged-active: field.png
 		Start: 5
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -243,7 +235,6 @@ silo:
 		Start: 1
 	shadow-overlay: silo-shadow.png
 		ZOffset: 1768
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -259,7 +250,6 @@ storage:
 		Length: 14
 	damaged-stages: storage.png
 		Start: 14
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -281,7 +271,6 @@ artilleryturret:
 		Start: 10
 		Facings: 8
 		Tick: 300
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -301,7 +290,6 @@ televatr:
 	active: televatr.png
 		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
 		Length: *
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -321,7 +309,6 @@ televtr2:
 	active: televtr2.png
 		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 		Length: *
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -346,7 +333,6 @@ harbor:
 	damaged-idle: harbor.png
 		Start: 1
 		ZOffset: 1000
-	icon: blank.png
 	make: build.png
 		Length: 39
 	make-overlay: build-vanish.png
@@ -389,4 +375,4 @@ wall:
 	destroyed-topleft: walldest3.png
 	destroyed-topright: walldest3.png
 		Start: 1
-	icon: blank.png
+	icon: icon.png

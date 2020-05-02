@@ -5,7 +5,7 @@ copter2:
 		Length: 4
 		Facings: 8
 		Tick: 100
-	icon: blank.png
+	icon: icon.png
 
 copter:
 	idle: copter.png
@@ -15,24 +15,24 @@ copter:
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
-	icon: blank.png
+	icon: icon.png
 
 balloon:
 	idle: balloon.png
 	shadow-overlay: balloon-shadow.png
-	icon: blank.png
+	icon: icon.png
 
 crow:
 	idle: crow.png
 		Length: 5
 		Tick: 100
-	icon: blank.png
+	icon: icon.png
 
 gull:
 	idle: gull.png
 		Length: 5
 		Tick: 100
-	icon: blank.png
+	icon: icon.png
 
 cloud1:
 	idle: cloud1.png
