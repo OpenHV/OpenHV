@@ -17,6 +17,7 @@ Packages:
 	hv|bits/audio/cc-by-30
 	hv|bits/audio/graion
 	hv|bits/audio/dzierzan
+	hv|bits/audio/dzierzan/announcer
 	hv|uibits
 
 MapFolders:

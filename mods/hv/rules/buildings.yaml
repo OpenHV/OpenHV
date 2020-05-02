@@ -158,6 +158,8 @@ TRADPLAT:
 		HpPerStep: 1000
 		Interval: 7
 		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
 	WithResupplyAnimation:
 	Power:
 		Amount: -30
@@ -218,6 +220,7 @@ MODULE:
 	WithProductionDoorAnimation:
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Infantry
 	Power:
@@ -315,6 +318,7 @@ STARPORT:
 		ProductionType: Aircraft
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	Power:
 		Amount: -10
 	ProvidesPrerequisite@buildingname:
@@ -372,6 +376,7 @@ FACTORY2:
 		Produces: Wheeled, Vehicle
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Vehicle
 	Power:
@@ -429,6 +434,7 @@ FACTORY3:
 		Produces: Tracked, Vehicle
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Vehicle
 	Power:
@@ -544,6 +550,8 @@ FIELD:
 		Condition: shield
 		SupportPowerPaletteOrder: 10
 		Icon: shield
+		BeginChargeSpeechNotification: ForceFieldCharging
+		EndChargeSpeechNotification: ForceFieldReady
 	SupportPowerChargeBar:
 	Power:
 		Amount: -200
@@ -600,6 +608,9 @@ SILO:
 		FlashType: Nuke
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 70
+		BeginChargeSpeechNotification: MissileCharging
+		EndChargeSpeechNotification: MissileReady
+		LaunchSpeechNotification: MissileLaunchDetected
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
@@ -825,6 +836,7 @@ HARBOR:
 		Produces: Ship
 	PrimaryBuilding:
 		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
 		ProductionType: Ship
 	Power:
