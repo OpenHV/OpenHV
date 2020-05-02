@@ -48,7 +48,7 @@ Player:
 		DisplayOrder: 1
 		BuildDurationModifier: 25
 		LowPowerModifier: 300
-		ReadyAudio: UnitReady
+		ReadyAudio: BuildingReady
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
