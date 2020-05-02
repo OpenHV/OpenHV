@@ -156,6 +156,7 @@
 		Name: chrome
 		Filename: palette.pal
 		AllowModifiers: false
+		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@colorpicker:
 		Name: colorpicker
 		Filename: palette.pal
