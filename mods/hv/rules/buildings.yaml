@@ -135,6 +135,7 @@ TRADPLAT:
 		Queue: Building
 		BuildPaletteOrder: 100
 		Description: Repairs and sells vehicles for credits.
+		Prerequisites: factory
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -346,7 +347,7 @@ FACTORY2:
 	Selectable:
 		Bounds: 40,40
 	Buildable:
-		Prerequisites: base
+		Prerequisites: module
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds Vehicles.
@@ -382,6 +383,8 @@ FACTORY2:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@factory:
+		Prerequisite: factory
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: tags
@@ -404,7 +407,7 @@ FACTORY3:
 	Selectable:
 		Bounds: 40,40
 	Buildable:
-		Prerequisites: base
+		Prerequisites: factory2
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds Tanks.
@@ -440,6 +443,8 @@ FACTORY3:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@factory:
+		Prerequisite: factory
 	WithDecoration@primary:
 		RequiresSelection: true
 		Image: tags
@@ -468,7 +473,7 @@ TURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: generator
+		Prerequisites: factory2
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -520,7 +525,7 @@ FIELD:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
-		Prerequisites: generator
+		Prerequisites: radar
 		BuildLimit: 1
 		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\nRequires power to operate.\nMaximum 1 can be built.
 	Valued:
@@ -685,7 +690,7 @@ ARTILLERYTURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: generator
+		Prerequisites: factory3
 		Description: Advanced base defense.\nRequires power to operate.
 	Valued:
 		Cost: 2000
@@ -800,7 +805,7 @@ HARBOR:
 	Selectable:
 		Bounds: 40,40
 	Buildable:
-		Prerequisites: base
+		Prerequisites: generator
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds ships.
