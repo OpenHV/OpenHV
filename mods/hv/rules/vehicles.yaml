@@ -542,6 +542,7 @@ BEAST:
 	-Explodes:
 	-TeleportNetworkTransportable:
 	-WithTeleportEnergyOverlay:
+	-SpawnScrapOnDeath:
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
