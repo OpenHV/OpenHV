@@ -16,7 +16,8 @@ base:
 	damaged-build: base.png
 		Start: 7
 		Length: 1
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 0
 
 generator:
 	idle: generator.png
@@ -34,7 +35,8 @@ generator:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 4
 
 radar:
 	idle: radar.png
@@ -50,7 +52,8 @@ radar:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 7
 
 tradplat:
 	idle: tradplat.png
@@ -74,7 +77,8 @@ tradplat:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 11
 
 module:
 	door: module.png
@@ -96,7 +100,8 @@ module:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 6
 
 miner2:
 	make: miner2.png
@@ -119,6 +124,8 @@ miner2:
 		Start: 20
 	silo: miner2.png
 		Start: 21
+	icon: buildings-icons.png
+		Start: 16
 
 starport:
 	idle: starport.png
@@ -141,7 +148,8 @@ starport:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 9
 
 factory2:
 	idle: factory2.png
@@ -160,7 +168,8 @@ factory2:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 1
 
 factory3:
 	idle: factory3.png
@@ -179,7 +188,8 @@ factory3:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 2
 
 turret:
 	idle: turret.png
@@ -199,7 +209,8 @@ turret:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 14
 
 field:
 	idle: field.png
@@ -217,7 +228,8 @@ field:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 3
 
 silo:
 	idle: silo.png
@@ -236,7 +248,8 @@ silo:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 8
 
 storage:
 	idle: storage.png
@@ -251,7 +264,8 @@ storage:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 10
 
 artilleryturret:
 	idle: artilery2.png
@@ -272,7 +286,8 @@ artilleryturret:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 15
 
 televatr:
 	Defaults:
@@ -291,7 +306,8 @@ televatr:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 12
 
 televtr2:
 	Defaults:
@@ -310,7 +326,8 @@ televtr2:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 13
 
 harbor:
 	idle: harbor.png
@@ -334,7 +351,8 @@ harbor:
 		Length: 39
 	make-overlay: build-vanish.png
 		Length: 26
-	icon: blank.png
+	icon: buildings-icons.png
+		Start: 5
 
 mother:
 	idle: mother.png
