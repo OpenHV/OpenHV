@@ -253,6 +253,7 @@ MINER2:
 	Tooltip:
 		Name: Miner
 	CashTrickler:
+		Amount: 100
 	CashTricklerBar:
 	WithSpriteBody:
 		Sequence: active

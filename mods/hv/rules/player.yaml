@@ -16,6 +16,7 @@ Player:
 	SupportPowerManager:
 	PlayerResources:
 		InsufficientFundsNotification: InsufficientFunds
+		SelectableCash: 10000, 20000, 30000
 	DeveloperMode:
 		CheckboxDisplayOrder: 10
 		CheckboxEnabled: true
