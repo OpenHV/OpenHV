@@ -8,7 +8,8 @@ boat:
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: icon.png
+	icon: units-icons.png
+		Start: 15
 
 heavyboat:
 	idle: boat2.png
@@ -16,7 +17,8 @@ heavyboat:
 	turret: boat2.png
 		Start: 8
 		Facings: 8
-	icon: icon.png
+	icon: units-icons.png
+		Start: 16
 
 seamnstr:
 	left: seamnstr.png

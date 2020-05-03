@@ -3,56 +3,64 @@ tank5:
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 6
 
 tank6:
 	idle: tank6.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 7
 
 tank7:
 	idle: tank7.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 10
 
 tank11:
 	idle: tank11.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 11
 
 tank12:
 	idle: tank12.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 12
 
 tank15:
 	idle: tank15.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 9
 
 tank2:
 	idle: tank2.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 8
 
 transprt:
 	idle: transprt.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 13
 
 artil:
 	idle: artil.png
@@ -63,7 +71,8 @@ artil:
 		Tick: 100
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 2
 
 artil3:
 	idle: artil3.png
@@ -77,7 +86,8 @@ artil3:
 		Tick: 100
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 3
 
 scout1:
 	idle: scout1.png
@@ -88,7 +98,8 @@ scout1:
 		Tick: 50
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 0
 
 scout2:
 	idle: scout2.png
@@ -99,7 +110,8 @@ scout2:
 		Tick: 50
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 1
 
 tyriantank:
 	idle: tyriantank.png
@@ -113,14 +125,16 @@ tyriantank:
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 32
 
 miner:
 	idle: miner.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 5
 
 beast:
 	idle: beast.png
@@ -135,42 +149,48 @@ beast:
 		Start: 40
 		Length: 12
 		Tick: 120
-	icon: icon.png
+	icon: units-icons.png
+		Start: 35
 
 builder1:
 	idle: builder1.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 17
 
 builder2:
 	idle: builder2.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 18
 
 builder3:
 	idle: builder3.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 19
 
 builder4:
 	idle: builder4.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 20
 
 builder5:
 	idle: builder5.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 21
 
 missile_tank:
 	idle: missile_tank.png
@@ -184,7 +204,8 @@ missile_tank:
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 4
 
 scrap1:
 	idle: objects.png
