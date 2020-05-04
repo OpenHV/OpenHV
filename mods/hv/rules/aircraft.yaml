@@ -62,11 +62,6 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112
-	#AttackAircraft:
-	#	FacingTolerance: 20
-	#	PersistentTargeting: false
-	#	AttackType: Hover
-	#	OpportunityFire: true
 	Turreted:
 		TurnSpeed: 20
 		Offset: 200,0,-100
