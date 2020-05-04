@@ -4,7 +4,7 @@ copter2:
 	fly: copter2b.png
 		Length: 4
 		Facings: 8
-		Tick: 100
+		Tick: 50
 	icon: units-icons.png
 		Start: 24
 
@@ -12,7 +12,7 @@ copter:
 	idle: copter.png
 		Length: 4
 		Facings: 8
-		Tick: 100
+		Tick: 50
 	muzzle: muzzle.png
 		Length: 8
 		Facings: 8
