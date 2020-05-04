@@ -10,12 +10,20 @@ copter2:
 
 copter:
 	idle: copter.png
+		Facings: 8
+	propeller: copter.png
+		Start: 8
 		Length: 4
-		Facings: 8
 		Tick: 50
-	muzzle: muzzle.png
-		Length: 8
+	turret: copter.png
+		Start: 12
 		Facings: 8
+		ZOffset: -100
+	shoot: copter.png
+		Start: 20
+		Length: 3
+		Facings: 8
+		ZOffset: -100
 	icon: units-icons.png
 		Start: 23
 

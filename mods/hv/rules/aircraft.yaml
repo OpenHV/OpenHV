@@ -62,20 +62,22 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 112
-	AttackAircraft:
-		FacingTolerance: 20
-		PersistentTargeting: false
-		AttackType: Hover
-		OpportunityFire: true
+	Turreted:
+		TurnSpeed: 20
+		Offset: 200,0,-100
+	AttackTurreted:
+	WithSpriteTurret:
 	Armament@PRIMARY:
 		Weapon: ChainGun
-		LocalOffset: 85,0,-85
-		MuzzleSequence: muzzle
-	WithMuzzleOverlay:
+		LocalOffset: 0,0,0
 	Selectable:
 		DecorationBounds: 24,24
 	RenderSprites:
 		PlayerPalette: green
+	WithIdleOverlay:
+		Sequence: propeller
+	WithTurretAttackAnimation:
+		Sequence: shoot
 
 BALLOON:
 	Inherits: ^Helicopter
