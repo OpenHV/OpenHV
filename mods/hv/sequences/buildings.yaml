@@ -16,6 +16,14 @@ base:
 	damaged-build: base.png
 		Start: 7
 		Length: 1
+	make: build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2000
+	make-overlay: build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 0
 
@@ -33,8 +41,12 @@ generator:
 		ZOffset: 1768
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 4
 
@@ -49,8 +61,12 @@ radar:
 		ZOffset: 1768
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 7
 
@@ -73,8 +89,12 @@ tradplat:
 		Tick: 100
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 11
 
@@ -95,8 +115,12 @@ module:
 		ZOffset: 1768
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 6
 
@@ -121,6 +145,14 @@ miner2:
 		Start: 20
 	silo: miner2.png
 		Start: 21
+	make: build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2000
+	make-overlay: build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 16
 
@@ -142,8 +174,12 @@ starport:
 		Start: 5
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 9
 
@@ -161,8 +197,12 @@ factory2:
 		ZOffset: 1768
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 1
 
@@ -180,8 +220,12 @@ factory3:
 		ZOffset: 1768
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 2
 
@@ -200,8 +244,12 @@ turret:
 		Facings: 8
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 14
 
@@ -218,8 +266,12 @@ field:
 		Start: 5
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 3
 
@@ -237,8 +289,12 @@ silo:
 		ZOffset: 1768
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 8
 
@@ -252,8 +308,12 @@ storage:
 		Start: 14
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 10
 
@@ -273,8 +333,12 @@ artilleryturret:
 		Tick: 300
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 15
 
@@ -292,8 +356,12 @@ televatr:
 		Length: *
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 12
 
@@ -311,8 +379,12 @@ televtr2:
 		Length: *
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 13
 
@@ -335,8 +407,12 @@ harbor:
 		ZOffset: 1000
 	make: build.png
 		Length: 39
+		Tick: 30
+		ZOffset: 2000
 	make-overlay: build-vanish.png
 		Length: 26
+		Tick: 30
+		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 5
 

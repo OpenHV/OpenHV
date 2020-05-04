@@ -28,64 +28,64 @@ bullet1:
 	idle: bullets.png
 		Start: 0
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 bullet2:
 	idle: bullets.png
 		Start: 8
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 bullet3:
 	idle: bullets.png
 		Start: 16
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 bullet4:
 	idle: bullets.png
 		Start: 24
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 bullet5:
 	idle: bullets.png
 		Start: 32
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 bullet6:
 	idle: bullets.png
 		Start: 40
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 bullet7:
 	idle: bullets.png
 		Start: 48
 		Length: 2
 		Facings: 8
-		ZOffset: 1023
+		ZOffset: 2030
 
 nuclear:
 	up: bullets.png
 		Start: 40
-		ZOffset: 1023
+		ZOffset: 2030
 	down: bullets.png
 		Start: 44
-		ZOffset: 1023
+		ZOffset: 2030
 
 smoke:
 	idle: smoke.png
 		Length: 6
 		Tick: 60
-		ZOffset: 1000
+		ZOffset: 2020
 
 small_smoke:
 	idle: small_smoke.png
 		Length: 6
 		Tick: 60
-		ZOffset: 1000
+		ZOffset: 2020
 
 flame:
 	idle: flame.png
@@ -146,4 +146,4 @@ debris:
 		Start: 0
 		Length: 4
 		Tick: 60
-		ZOffset: 1000
+		ZOffset: 2020
