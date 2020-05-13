@@ -392,7 +392,6 @@
 		Weapons: debris
 		Pieces: 5, 10
 		Range: 1c512, 4c0
-	CaptureNotification:
 	ActorLostNotification:
 		Notification: BuildingLost
 
@@ -413,11 +412,19 @@
 		PlayerExperience: 15
 	GivesBuildableArea:
 		AreaTypes: building
-	Sellable:
 	Explodes:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: building
+	CapturableProgressBar:
+	CapturableProgressBlink:
+	CaptureNotification:
+	Sellable:
+		RequiresCondition: !being-captured
 
 ^DisableOnLowPower:
 	WithColoredOverlay@IDISABLE:

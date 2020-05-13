@@ -22,6 +22,14 @@ tank7:
 	icon: units-icons.png
 		Start: 10
 
+tank8:
+	idle: tank8.png
+		Facings: 8
+	energyball: teleport.png
+		Length: 10
+	icon: units-icons.png
+		Start: 26
+
 tank11:
 	idle: tank11.png
 		Facings: 8

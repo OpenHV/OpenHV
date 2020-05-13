@@ -138,6 +138,35 @@ TANK7:
 		Range: 5c0
 	RenderDetectionCircle:
 
+TANK8:
+	Inherits: ^TrackedVehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 260
+		Prerequisites: factory
+		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hacker Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 375
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 150
+
 TANK11:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
