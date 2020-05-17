@@ -6,6 +6,11 @@ explosion:
 	medium: explosn.png
 	large: explobig.png
 
+nuclear_explosion: 
+	idle: nuclear_cloud.png
+		Length: 21
+		Tick: 60
+
 hit:
 	spark_a: sparks.png
 		Start: 0
@@ -68,11 +73,9 @@ bullet7:
 		ZOffset: 2030
 
 nuclear:
-	up: bullets.png
-		Start: 40
+	up: nuclear_bomb.png
 		ZOffset: 2030
-	down: bullets.png
-		Start: 44
+	down: nuclear_bomb.png
 		ZOffset: 2030
 
 smoke:
