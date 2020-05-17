@@ -2,11 +2,11 @@ overlay:
 	Defaults: overlay.png
 	build-valid:
 	build-invalid:
-        Start: 1
+		Start: 1
 	target-unknown:
 		Start: 3
 	target-select:
-        Start: 2
+		Start: 2
 	target-invalid:
 		Start: 1
 	target-valid:

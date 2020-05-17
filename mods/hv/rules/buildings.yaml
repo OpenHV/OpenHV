@@ -551,13 +551,14 @@ FIELD:
 		Description: Force Field
 		LongDesc: Makes a group of units invulnerable\nfor 30 seconds.
 		Duration: 750
-		Range: 3
 		DisplayRadarPing: True
 		Condition: shield
 		SupportPowerPaletteOrder: 10
 		Icon: shield
 		BeginChargeSpeechNotification: ForceFieldCharging
 		EndChargeSpeechNotification: ForceFieldReady
+		Dimensions: 3, 3
+		Footprint: xxx xxx xxx
 	SupportPowerChargeBar:
 	Power:
 		Amount: -200

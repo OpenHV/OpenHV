@@ -7,7 +7,6 @@
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	ScriptTriggers:
-	ConditionManager:
 	RenderDebugState:
 
 ^SpriteActor:
@@ -731,7 +730,6 @@
 		RequiresCondition: triggered
 	GrantConditionOnDeploy:
 		DeployedCondition: triggered
-	ConditionManager:
 
 ^DisabledByECM:
 	WithColoredOverlay@ECMDISABLED:

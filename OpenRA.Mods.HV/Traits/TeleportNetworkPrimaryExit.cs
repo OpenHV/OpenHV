@@ -56,12 +56,11 @@ namespace OpenRA.Mods.HV.Traits
 		public object Create(ActorInitializer init) { return new TeleportNetworkPrimaryExit(init.Self, this); }
 	}
 
-	public class TeleportNetworkPrimaryExit : IIssueOrder, IResolveOrder, INotifyCreated
+	public class TeleportNetworkPrimaryExit : IIssueOrder, IResolveOrder
 	{
 		readonly TeleportNetworkPrimaryExitInfo info;
 		readonly TeleportNetworkManager manager;
-		ConditionManager conditionManager;
-		int primaryToken = ConditionManager.InvalidConditionToken;
+		int primaryToken = Actor.InvalidConditionToken;
 
 		public bool IsPrimary { get; private set; }
 
@@ -70,11 +69,6 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 			var trait = self.Info.TraitInfoOrDefault<TeleportNetworkInfo>();
 			manager = self.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().Where(x => x.Type == trait.Type).First();
-		}
-
-		void INotifyCreated.Created(Actor self)
-		{
-			conditionManager = self.Trait<ConditionManager>();
 		}
 
 		public IEnumerable<IOrderTargeter> Orders
@@ -101,8 +95,8 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			IsPrimary = false;
 
-			if (primaryToken != ConditionManager.InvalidConditionToken)
-				primaryToken = conditionManager.RevokeCondition(self, primaryToken);
+			if (primaryToken != Actor.InvalidConditionToken)
+				primaryToken = self.RevokeCondition(primaryToken);
 		}
 
 		public void SetPrimary(Actor self)
@@ -115,7 +109,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			manager.PrimaryActor = self;
 
-			primaryToken = conditionManager.GrantCondition(self, info.PrimaryCondition);
+			primaryToken = self.GrantCondition(info.PrimaryCondition);
 			Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.SelectionNotification, self.Owner.Faction.InternalName);
 		}
 	}

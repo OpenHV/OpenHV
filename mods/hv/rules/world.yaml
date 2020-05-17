@@ -181,7 +181,7 @@
 		A: 128
 		TransparentIndex: 255
 	PlayerHighlightPalette:
-	#	TransparentIndex: 255 # https://github.com/OpenRA/OpenRA/pull/18097
+		TransparentIndex: 255
 	PaletteFromRGBA@moveflash:
 		Name: moveflash
 		R: 255
