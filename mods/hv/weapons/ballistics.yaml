@@ -172,6 +172,11 @@ Nuclear:
 		ValidTargets: Ground, Air
 		Versus:
 			Concrete: 25
+	Warhead@Effect: CreateEffect
+		Image: nuclear_explosion
+		Explosions: idle
+		ValidTargets: Ground, Air, Water
+		ImpactSounds: explosion07.wav, explosion08.wav
 
 TurretArtillery:
 	ValidTargets: Water, Ground, Tree
