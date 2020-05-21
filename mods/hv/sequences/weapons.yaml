@@ -8,8 +8,9 @@ explosion:
 
 nuclear_explosion: 
 	idle: nuclear_cloud.png
-		Length: 21
+		Length: 22
 		Tick: 60
+		ZOffset: 2050
 
 hit:
 	spark_a: sparks.png
