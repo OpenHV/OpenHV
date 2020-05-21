@@ -6,7 +6,7 @@ explosion:
 	medium: explosn.png
 	large: explobig.png
 
-nuclear_explosion: 
+nuclear_explosion:
 	idle: nuclear_cloud.png
 		Length: 22
 		Tick: 60
@@ -74,8 +74,7 @@ bullet7:
 		ZOffset: 2030
 
 nuclear:
-	up: nuclear_bomb.png
-		ZOffset: 2030
+	up: blank.png
 	down: nuclear_bomb.png
 		ZOffset: 2030
 

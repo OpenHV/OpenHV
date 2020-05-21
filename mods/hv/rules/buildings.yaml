@@ -583,13 +583,13 @@ SILO:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Missile Silo
+		Name: Launch Command
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
 		Prerequisites: radar
 		BuildLimit: 1
-		Description: Launches a nuclear missile.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
+		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
@@ -608,7 +608,7 @@ SILO:
 		LongDesc: Drop an atomic bomb\nat a target location.
 		MissileWeapon: nuclear
 		MissileDelay: 5
-		SpawnOffset: 1c0,427,0
+		SkipAscent: true
 		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: false
 		DisplayRadarPing: true
