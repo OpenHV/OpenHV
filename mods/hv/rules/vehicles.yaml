@@ -374,6 +374,8 @@ ARTIL3:
 	WithMuzzleOverlay:
 	Selectable:
 		DecorationBounds: 30,30
+	RenderSprites:
+		PlayerPalette: green
 
 SCOUT1:
 	Inherits: ^Vehicle
