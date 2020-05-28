@@ -260,6 +260,44 @@ TANK15:
 		Range: 5c0
 		DeflectionStances: Neutral, Enemy
 
+TANK16:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Mobile Repair Vehicle
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Tracked
+		Prerequisites: tradplat
+		BuildPaletteOrder: 70
+		Description: Repairs nearby vehicles.
+	Armament:
+		Weapon: Repair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	AttackFrontal:
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 20000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 85
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 5c0
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Vehicle
+
 TRANSPRT:
 	Inherits: ^TrackedVehicle
 	Valued:

@@ -55,3 +55,22 @@ ElectronicCountermeasure:
 		Range: 7c0
 		Duration: 600
 		Condition: ecmdisabled
+
+Repair:
+	ReloadDelay: 80
+	Range: 1c819
+	Projectile: LaserZap
+		ZOffset: 2047
+		Color: 0000FF80
+		SecondaryBeam: true
+		SecondaryBeamZOffset: 2047
+		Width: 36
+		Duration: 8
+		SecondaryBeamWidth: 144
+		SecondaryBeamColor: 0000FF30
+	ValidTargets: Repair
+	TargetActorCenter: true
+	Warhead@Repair: TargetDamage
+		DebugOverlayColor: 00FF00
+		Damage: -5000
+		ValidTargets: Repair
