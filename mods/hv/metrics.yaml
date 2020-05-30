@@ -4,6 +4,6 @@ Metrics:
 	ClickDisabledSound: ClickDisabledSound
 	ClickSound: ClickSound
 	ChatLineSound: ChatLineSound
-	TextfieldColorHighlight: 800000
+	TextfieldColorHighlight: 1a1a1a
 	ChatMessageColor: FFFFFF
 	SystemMessageColor: FFFF00
