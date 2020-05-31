@@ -259,6 +259,8 @@ TANK15:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionStances: Neutral, Enemy
+	RenderSprites:
+		PlayerPalette: green
 
 TANK16:
 	Inherits: ^TrackedVehicle
