@@ -12,7 +12,7 @@ MapSize: 5,5
 
 Bounds: 1,1,1,1
 
-Visibility: Lobby, Shellmap
+Visibility: Shellmap
 
 Categories: Maps
 
