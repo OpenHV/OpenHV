@@ -21,7 +21,7 @@ Terrain:
 	TerrainType@Water:
 		Type: Water
 		TargetTypes: Water
-		Color: 003897
+		Color: 0042A8
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
@@ -50,12 +50,12 @@ Terrain:
 	TerrainType@Snow:
 		Type: Snow
 		TargetTypes: Ground
-		Color: B0C0D0
+		Color: BDC0D5
 		AcceptsSmudgeType: Crater
 	TerrainType@RedSnow:
 		Type: Red Snow
 		TargetTypes: Ground
-		Color: B59FAB
+		Color: C196AB
 		AcceptsSmudgeType: Crater
 	TerrainType@Sand:
 		Type: Sand
@@ -65,11 +65,11 @@ Terrain:
 	TerrainType@Plant:
 		Type: Plant
 		TargetTypes: Ground
-		Color: 1F6E03
+		Color: 186104
 	TerrainType@Stone:
 		Type: Stone
 		TargetTypes: Ground
-		Color: 565656
+		Color: 454545
 	TerrainType@Swamp:
 		Type: Swamp
 		TargetTypes: Water
@@ -1779,7 +1779,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Water
+			0: Ice
 	Template@266:
 		Id: 266
 		Images: ice2watr12.png
@@ -4991,6 +4991,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: E0E0F0
+				RightColor: E0E0F0
 	Template@766:
 		Id: 766
 		Images: snow2.png
@@ -4998,6 +5000,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: E0E0F0
+				RightColor: E0E0F0
 	Template@767:
 		Id: 767
 		Images: snow3.png
@@ -5012,6 +5016,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: E0E0F0
+				RightColor: E0E0F0
 	Template@769:
 		Id: 769
 		Images: snow5.png
@@ -5027,6 +5033,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
+				RightColor: AEB4C8
 	Template@771:
 		Id: 771
 		Images: snow7.png
@@ -5041,6 +5049,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
+				RightColor: E0E0F0
 	Template@773:
 		Id: 773
 		Images: snow9.png
@@ -5048,6 +5058,7 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
 	Template@774:
 		Id: 774
 		Images: snow10.png
@@ -5055,6 +5066,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
+				RightColor: AEB4C8
 	Template@775:
 		Id: 775
 		Images: snow11.png
@@ -5062,6 +5075,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
+				RightColor: AEB4C8
 	Template@776:
 		Id: 776
 		Images: snow12.png
@@ -5069,6 +5084,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
+				RightColor: AEB4C8
 	Template@777:
 		Id: 777
 		Images: snow13.png
@@ -5076,6 +5093,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+				LeftColor: AEB4C8
+				RightColor: AEB4C8
 	Template@778:
 		Id: 778
 		Images: snow2-1.png
