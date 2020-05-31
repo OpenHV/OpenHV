@@ -17,6 +17,7 @@ Player:
 	PlayerResources:
 		InsufficientFundsNotification: InsufficientFunds
 		SelectableCash: 10000, 20000, 30000
+		DefaultCash: 10000
 	DeveloperMode:
 		CheckboxDisplayOrder: 10
 		CheckboxEnabled: true
