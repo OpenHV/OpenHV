@@ -145,14 +145,6 @@ miner2:
 		Start: 20
 	silo: miner2.png
 		Start: 21
-	make: build.png
-		Length: 39
-		Tick: 30
-		ZOffset: 2000
-	make-overlay: build-vanish.png
-		Length: 26
-		Tick: 30
-		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 16
 
