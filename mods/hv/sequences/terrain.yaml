@@ -69,35 +69,6 @@ swmpbubl:
 		Tick: 100
 		Length: *
 
-treeash:
-	idle: treeash.png
-
-treegrs1:
-	idle: treegrs1.png
-
-treegrs2:
-	idle: treegrs2.png
-
-treegrs3:
-	idle: treegrs3.png
-
-treegrs4:
-	idle: treegrs4.png
-
-treegrs5:
-	idle: treegrs5.png
-
-treegrs6:
-	idle: treegrs6.png
-
-treegrs7:
-	idle: treegrs7.png
-
-treegrs8:
-	idle: treegrs8.png
-
-treegrs9:
-	idle: treegrs9.png
 
 treegrs10:
 	idle: treegrs10.png
@@ -105,69 +76,8 @@ treegrs10:
 treegrs11:
 	idle: treegrs11.png
 
-treegrs12:
-	idle: treegrs12.png
-
-treegrs13:
-	idle: treegrs13.png
-
-treegrs14:
-	idle: treegrs14.png
-
-treegrs15:
-	idle: treegrs15.png
-
-treemud:
-	idle: treegrs16.png
-
-trees1:
-	idle: trees1.png
-
-trees2:
-	idle: trees2.png
-
-trees3:
-	idle: trees3.png
-
 trees4:
 	idle: trees4.png
-
-trees5:
-	idle: trees5.png
-
-trees6:
-	idle: trees6.png
-
-trees7:
-	idle: trees7.png
-
-trees8:
-	idle: trees8.png
-
-trees9:
-	idle: trees9.png
-
-trees10:
-	idle: trees10.png
-
-trees11:
-	idle: trees11.png
-
-trees12:
-	idle: trees12.png
-
-trees13:
-	idle: trees13.png
-
-trees14:
-	idle: trees14.png
-
-trees15:
-	idle: trees15.png
-
-trees16:
-	idle: trees16.png
-
 trees17:
 	idle: trees17.png
 

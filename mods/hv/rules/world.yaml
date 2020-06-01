@@ -43,6 +43,7 @@
 			Red Snow: 50
 			Sand: 40
 			Stone: 100
+			Plant: 30
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		Crushes: Cube, Scrap
@@ -84,7 +85,7 @@
 		Sequences: gold
 		MaxDensity: 3
 		ValuePerUnit: 40
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceType@Iron:
@@ -96,7 +97,7 @@
 		Sequences: iron
 		MaxDensity: 3
 		ValuePerUnit: 25
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceType@Water:
@@ -248,6 +249,9 @@ World:
 	ProductionQueueFromSelection:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	CustomTerrainDebugOverlay:
+	CustomTerrainLayer:
+	ForestLayer:
+		Trees: treegrs1, treegrs2, treegrs3, treegrs4, treegrs5, treegrs6, treegrs7, treegrs8, treegrs9, treegrs12, treegrs13, treegrs14, treegrs15, trees1, trees2, trees3, trees5, trees6, trees7, trees8, trees9, trees10, trees11, trees12, trees13, trees14, trees15, trees16
 	DomainIndex:
 	SmudgeLayer@CRATER:
 		Type: Crater

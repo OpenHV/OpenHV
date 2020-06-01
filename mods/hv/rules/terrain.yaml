@@ -129,60 +129,99 @@ SWMPBUBL:
 
 TREEGRS1:
 	Inherits: ^Tree
+	Tree:
+		Template: 1272
 
 TREEGRS2:
 	Inherits: ^Tree
+	Tree:
+		Template: 1273
 
 TREEGRS3:
 	Inherits: ^Tree
+	Tree:
+		Template: 1274
 
 TREEGRS4:
 	Inherits: ^Tree
+	Tree:
+		Template: 1275
 
 TREEGRS5:
 	Inherits: ^Tree
+	Tree:
+		Template: 1276
 
 TREEGRS6:
 	Inherits: ^Tree
+	Tree:
+		Template: 1277
 
 TREEGRS7:
 	Inherits: ^Tree
+	Tree:
+		Template: 1278
 
 TREEGRS8:
 	Inherits: ^Tree
+	Tree:
+		Template: 1279
 
 TREEGRS9:
 	Inherits: ^Tree
+	Tree:
+		Template: 1280
 
 TREEGRS10:
 	Inherits: ^Tree
+	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
 
 TREEGRS11:
 	Inherits: ^Tree
+	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
 
 TREEGRS12:
 	Inherits: ^Tree
+	Tree:
+		Template: 1281
 
 TREEGRS13:
 	Inherits: ^Tree
+	Tree:
+		Template: 1282
 
 TREEGRS14:
 	Inherits: ^Tree
+	Tree:
+		Template: 1283
 
 TREEGRS15:
 	Inherits: ^Tree
+	Tree:
+		Template: 1285
 
 TreeAsh:
-	Inherits@1: ^SpriteActor
 	Interactable:
-	RenderSprites:
-		Palette: terrain
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Stone
@@ -191,38 +230,37 @@ TreeAsh:
 	Building:
 		Footprint: =
 		Dimensions: 1,1
-	WithSpriteBody:
+	LaysTerrain:
+		Template: 1304
+		TerrainTypes: Plant
 	Tooltip:
 		Name: Burnt Tree
 		ShowOwnerRow: false
 	HiddenUnderShroud:
 		Type: CenterPosition
-	ScriptTriggers:
 	MapEditorData:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 
 TreeMud:
-	Inherits@1: ^SpriteActor
 	Interactable:
-	RenderSprites:
-		Palette: terrain
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Crater
 	AppearsOnMapPreview:
 		Terrain: Crater
+	LaysTerrain:
+		Template: 1286
+		TerrainTypes: Plant
 	Building:
 		Footprint: =
 		Dimensions: 1,1
-	WithSpriteBody:
 	Tooltip:
 		Name: Run Over Tree
 		ShowOwnerRow: false
 	HiddenUnderShroud:
 		Type: CenterPosition
-	ScriptTriggers:
 	MapEditorData:
 		Categories: Decoration
 	RequiresSpecificOwners:
@@ -230,60 +268,106 @@ TreeMud:
 
 TREES1:
 	Inherits: ^Tree
+	Tree:
+		Template: 1287
 
 TREES2:
 	Inherits: ^Tree
+	Tree:
+		Template: 1288
 
 TREES3:
 	Inherits: ^Tree
+	Tree:
+		Template: 1289
 
 TREES4:
 	Inherits: ^Tree
+	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
 
 TREES5:
 	Inherits: ^Tree
+	Tree:
+		Template: 1291
 
 TREES6:
 	Inherits: ^Tree
+	Tree:
+		Template: 1292
 
 TREES7:
 	Inherits: ^Tree
+	Tree:
+		Template: 1293
 
 TREES8:
 	Inherits: ^Tree
+	Tree:
+		Template: 1294
 
 TREES9:
 	Inherits: ^Tree
+	Tree:
+		Template: 1295
 
 TREES10:
 	Inherits: ^Tree
+	Tree:
+		Template: 1296
 
 TREES11:
 	Inherits: ^Tree
+	Tree:
+		Template: 1297
 
 TREES12:
 	Inherits: ^Tree
+	Tree:
+		Template: 1298
 
 TREES13:
 	Inherits: ^Tree
+	Tree:
+		Template: 1299
 
 TREES14:
 	Inherits: ^Tree
+	Tree:
+		Template: 1300
 
 TREES15:
 	Inherits: ^Tree
+	Tree:
+		Template: 1301
 
 TREES16:
 	Inherits: ^Tree
+	Tree:
+		Template: 1302
 
 TREES17:
 	Inherits: ^Tree
+	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
 
 WATERFLOW1:
 	Inherits: ^WATERFLOW

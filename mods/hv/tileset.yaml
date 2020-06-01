@@ -8262,3 +8262,213 @@ Templates:
 		Categories: Water, Road
 		Tiles:
 			0: Road
+	Template@1272:
+		Id: 1272
+		Images: treegrs1.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1273:
+		Id: 1273
+		Images: treegrs2.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1274:
+		Id: 1274
+		Images: treegrs3.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1275:
+		Id: 1275
+		Images: treegrs4.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1276:
+		Id: 1276
+		Images: treegrs5.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1277:
+		Id: 1277
+		Images: treegrs6.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1278:
+		Id: 1278
+		Images: treegrs7.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1279:
+		Id: 1279
+		Images: treegrs8.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1280:
+		Id: 1280
+		Images: treegrs9.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1281:
+		Id: 1281
+		Images: treegrs12.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1282:
+		Id: 1282
+		Images: treegrs13.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1283:
+		Id: 1283
+		Images: treegrs14.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1285:
+		Id: 1285
+		Images: treegrs15.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1286:
+		Id: 1286
+		Images: treegrs16.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1287:
+		Id: 1287
+		Images: trees1.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1288:
+		Id: 1288
+		Images: trees2.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1289:
+		Id: 1289
+		Images: trees3.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1291:
+		Id: 1291
+		Images: trees5.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1292:
+		Id: 1292
+		Images: trees6.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1293:
+		Id: 1293
+		Images: trees7.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1294:
+		Id: 1294
+		Images: trees8.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1295:
+		Id: 1295
+		Images: trees9.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1296:
+		Id: 1296
+		Images: trees10.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1297:
+		Id: 1297
+		Images: trees11.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1298:
+		Id: 1298
+		Images: trees12.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1299:
+		Id: 1299
+		Images: trees13.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1300:
+		Id: 1300
+		Images: trees14.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1301:
+		Id: 1301
+		Images: trees15.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1302:
+		Id: 1302
+		Images: trees16.png
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1304:
+		Id: 1304
+		Images: treeash.png
+		Size: 1,1
+		Categories: Trees
+		Tiles:
+			0: Stone

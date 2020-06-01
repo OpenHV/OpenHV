@@ -514,35 +514,22 @@
 		Condition: shield
 
 ^Tree:
-	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
 	Interactable:
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
-	AppearsOnRadar:
 	Health:
 		HP: 50000
 	Armor:
 		Type: Wood
 	Targetable:
 		TargetTypes: Tree
-	WithDamageOverlay@Burn:
-		DamageTypes: Fire
-		Image: flame
-		Palette: effect
-		MinimumDamageState: Medium
-		MaximumDamageState: Dead
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
+	BodyOrientation:
+		QuantizedFacings: 1
 	HiddenUnderShroud:
 	MapEditorData:
 		Categories: Decoration
