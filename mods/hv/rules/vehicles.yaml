@@ -9,7 +9,7 @@ TANK2:
 	Buildable:
 		Queue: Vehicle
 		BuildAtProductionType: Tracked
-		Prerequisites: factory2
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 20
 		Description: Fires lasers.
 	AttackFrontal:
