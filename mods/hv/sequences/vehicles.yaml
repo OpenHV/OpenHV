@@ -1,3 +1,11 @@
+tank1:
+	idle: tank1.png
+		Facings: 8
+	energyball: teleport.png
+		Length: 10
+	icon: units-icons.png
+		Start: 31
+
 tank2:
 	idle: tank2.png
 		Facings: 8

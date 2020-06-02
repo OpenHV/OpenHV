@@ -1,3 +1,29 @@
+TANK1:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Ramp Buggy
+		GenericName: Buggy
+	Buildable:
+		Queue: Vehicle
+		BuildAtProductionType: Wheeled
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 20
+		Description: Cut content. Incomplete palette.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 170
+	RevealsShroud:
+		Range: 7c0
+	RenderSprites:
+		PlayerPalette: simple
+
 TANK2:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

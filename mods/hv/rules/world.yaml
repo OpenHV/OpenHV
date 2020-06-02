@@ -131,6 +131,10 @@
 		Name: bluebg
 		Filename: palette.pal
 		TransparentIndex: 37
+	PaletteFromGimpOrJascFile@simple:
+		Name: simple
+		Filename: simple.pal
+		TransparentIndex: 22
 	PlayerColorPalette@grey-remap:
 		BasePalette: player
 		BaseName: remap
@@ -147,6 +151,10 @@
 		BasePalette: player
 		BaseName: green
 		RemapIndex: 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
+	PlayerColorPalette@simple-remap:
+		BasePalette: simple
+		BaseName: simple
+		RemapIndex: 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 	PaletteFromGimpOrJascFile@cursor:
 		Name: cursor
 		Filename: palette.pal
