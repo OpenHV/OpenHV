@@ -192,6 +192,8 @@ TANK8:
 		Type: Heavy
 	Mobile:
 		Speed: 150
+	RenderSprites:
+		PlayerPalette: green
 
 TANK11:
 	Inherits: ^TrackedVehicle
