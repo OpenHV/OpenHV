@@ -1,3 +1,13 @@
+ship2:
+	idle: ship2.png
+		Facings: 8
+	muzzle: muzzle2.png
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon: units-icons.png
+		Start: 33
+
 copter:
 	idle: copter.png
 		Facings: 8

@@ -52,3 +52,19 @@ ChainGun:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+ChainGun.Shuttle:
+	Inherits: ChainGun
+	ReloadDelay: 3
+	Range: 5c0
+	MinRange: 3c0
+	Projectile: InstantHit
+		Blockable: false
+	Warhead@Damage: SpreadDamage
+		Damage: 4000
+		Versus:
+			None: 100
+			Steel: 50
+			Light: 60
+			Heavy: 25
+			Concrete: 25

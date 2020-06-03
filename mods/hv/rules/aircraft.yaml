@@ -1,3 +1,54 @@
+SHIP2:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 30
+		Prerequisites: radar
+		Description: Attack Ship armed with\na large chain gun.
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Attack Ship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 6000
+	RevealsShroud:
+		MinRange: 9c0
+		Range: 11c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: ChainGun.Shuttle
+		LocalOffset: 256,0,0
+		MuzzleSequence: muzzle
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 192
+		TurnSpeed: 4
+		Speed: 178
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithMuzzleOverlay:
+	Contrail:
+		Offset: -400,0,0
+		UsePlayerColor: false
+		Color: A00000
+	Selectable:
+		DecorationBounds: 30,28,0,2
+	RenderSprites:
+		PlayerPalette: simple
+	WithShadow:
+		Palette: simple-shadow
+
 COPTER:
 	Inherits: ^Helicopter
 	Valued:

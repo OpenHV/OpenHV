@@ -182,6 +182,13 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
+	PaletteFromRGBA@simple-shadow:
+		Name: simple-shadow
+		R: 0
+		G: 0
+		B: 0
+		A: 140
+		TransparentIndex: 22
 	PaletteFromRGBA@highlight:
 		Name: highlight
 		R: 255
