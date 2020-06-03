@@ -285,7 +285,7 @@ World:
 		ClassName: Base only
 		Factions: megacorp
 		BaseActor: base
-		SupportActors: builder1, builder2, builder3, builder4, builder5
+		SupportActors: builder, builder, builder, builder, builder
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:

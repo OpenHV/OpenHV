@@ -512,20 +512,39 @@ SCOUT2:
 	RenderSprites:
 		PlayerPalette: green
 
-BUILDER1:
-	Inherits: ^Builder
-
-BUILDER2:
-	Inherits: ^Builder
-
-BUILDER3:
-	Inherits: ^Builder
-
-BUILDER4:
-	Inherits: ^Builder
-
-BUILDER5:
-	Inherits: ^Builder
+Builder:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Description: Grants additional build radius.
+		BuildAtProductionType: Wheeled
+		Prerequisites: factory3
+	GivesBuildableArea:
+		AreaTypes: building
+	BaseProvider:
+		Cooldown: 75
+		Range: 3c0
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Builder
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 8
+		Speed: 120
+	RevealsShroud:
+		Range: 6c0
+	RenderSprites:
+		Image: builder1
+	-WithFacingSpriteBody:
+	WithRandomFacingSpriteBody:
+		Images: builder1, builder2, builder3, builder4, builder5
 
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
