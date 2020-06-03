@@ -1,3 +1,42 @@
+COPTER:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Attack Helicopter
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Helicopter
+		BuildPaletteOrder: 20
+		Prerequisites: radar
+		Description: Small Helicopter Gunship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 112
+	Turreted:
+		TurnSpeed: 20
+		Offset: 200,0,-100
+	AttackTurreted:
+	WithSpriteTurret:
+	Armament@PRIMARY:
+		Weapon: ChainGun
+		LocalOffset: 0,0,0
+	Selectable:
+		DecorationBounds: 24,24
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay:
+		Sequence: propeller
+	WithTurretAttackAnimation:
+		Sequence: shoot
+
 COPTER2:
 	Inherits: ^Helicopter
 	Valued:
@@ -39,45 +78,6 @@ COPTER2:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
-
-COPTER:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Attack Helicopter
-	Buildable:
-		Queue: Aircraft
-		BuildAtProductionType: Helicopter
-		BuildPaletteOrder: 20
-		Prerequisites: radar
-		Description: Small Helicopter Gunship
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 10000
-	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
-	Aircraft:
-		TurnSpeed: 4
-		Speed: 112
-	Turreted:
-		TurnSpeed: 20
-		Offset: 200,0,-100
-	AttackTurreted:
-	WithSpriteTurret:
-	Armament@PRIMARY:
-		Weapon: ChainGun
-		LocalOffset: 0,0,0
-	Selectable:
-		DecorationBounds: 24,24
-	RenderSprites:
-		PlayerPalette: green
-	WithIdleOverlay:
-		Sequence: propeller
-	WithTurretAttackAnimation:
-		Sequence: shoot
 
 BALLOON:
 	Inherits: ^Helicopter
