@@ -1,3 +1,55 @@
+SHIP1:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildAtProductionType: Plane
+		BuildPaletteOrder: 50
+		Prerequisites: radar
+		Description: Fast Attack Ship
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Speeder
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		MinRange: 11c0
+		Range: 13c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: ShipMissile
+	Armament@SECONDARY:
+		Weapon: ShipMissile_AA
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 192
+		TurnSpeed: 4
+		Speed: 223
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	Selectable:
+		Bounds: 36,28,0,2
+		DecorationBounds: 40,29,0,1
+	Contrail:
+		Offset: -400,50,0
+		UsePlayerColor: false
+		Color: A00000
+		TrailWidth: 0c192
+	RenderSprites:
+		PlayerPalette: simple
+	WithShadow:
+		Palette: simple-shadow
+
 SHIP2:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -10,7 +62,7 @@ SHIP2:
 	Valued:
 		Cost: 1350
 	Tooltip:
-		Name: Attack Ship
+		Name: Gun Ship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

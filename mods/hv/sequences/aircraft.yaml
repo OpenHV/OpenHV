@@ -1,3 +1,9 @@
+ship1:
+	idle: ship1.png
+		Facings: 8
+	icon: units-icons.png
+		Start: 34
+
 ship2:
 	idle: ship2.png
 		Facings: 8
