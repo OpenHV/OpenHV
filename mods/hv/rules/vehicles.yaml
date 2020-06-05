@@ -55,13 +55,45 @@ TANK2:
 		Range: 7c0
 	RenderSprites:
 
+TANK3:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Light Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: factory2
+		Queue: Vehicle
+		Description: Fast, light tank.
+	Mobile:
+		TurnSpeed: 7
+		Speed: 110
+	Health:
+		HP: 34000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 7
+	Armament:
+		Weapon: 30mm
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+	AttackFrontal:
+
 TANK5:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Light Tank
+		Name: Rocket Tank
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle

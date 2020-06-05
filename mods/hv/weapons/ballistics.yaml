@@ -211,6 +211,34 @@ TurretArtillery:
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
+30mm:
+	ReloadDelay: 30
+	Range: 4c0
+	Report: 30mmsingle.wav
+	Projectile: Bullet
+		Image: bullet1
+		Speed: 853
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		Damage: 2500
+		Versus:
+			None: 24
+			Wood: 72
+			Light: 100
+			Heavy: 88
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+
 90mm:
 	Inherits: ^Cannon
 	Projectile: Bullet
