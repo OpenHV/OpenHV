@@ -640,6 +640,9 @@ STORAGE:
 	Inherits@shape: ^2x2Shape
 	Selectable:
 		Bounds: 40,40
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 35
