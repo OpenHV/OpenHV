@@ -1,5 +1,5 @@
 ![Logo](https://github.com/Mailaender/OpenHV/blob/master/mods/hv/logo.png?raw=true)
-# OpenHV [![Travis CI build status](https://travis-ci.org/Mailaender/OpenHV.svg?branch=master)](https://travis-ci.org/Mailaender/OpenHV)
+# OpenHV [![Travis CI build status](https://travis-ci.com/OpenHV/OpenHV.svg?branch=master)](https://travis-ci.com/github/OpenHV/OpenHV)
 
 A mod for [OpenRA](http://www.openra.net) based on the [Hard Vacuum](https://lostgarden.home.blog/2005/03/27/game-post-mortem-hard-vacuum/) sprites and [remastered Tyrian Graphics](https://lostgarden.home.blog/2007/04/05/free-game-graphics-tyrian-ships-and-tiles/) by Daniel Cook.
 
