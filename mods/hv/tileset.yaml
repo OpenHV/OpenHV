@@ -8364,105 +8364,105 @@ Templates:
 		Id: 1287
 		Images: trees1.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1288:
 		Id: 1288
 		Images: trees2.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1289:
 		Id: 1289
 		Images: trees3.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1291:
 		Id: 1291
 		Images: trees5.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1292:
 		Id: 1292
 		Images: trees6.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1293:
 		Id: 1293
 		Images: trees7.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1294:
 		Id: 1294
 		Images: trees8.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1295:
 		Id: 1295
 		Images: trees9.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1296:
 		Id: 1296
 		Images: trees10.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1297:
 		Id: 1297
 		Images: trees11.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1298:
 		Id: 1298
 		Images: trees12.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1299:
 		Id: 1299
 		Images: trees13.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1300:
 		Id: 1300
 		Images: trees14.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1301:
 		Id: 1301
 		Images: trees15.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1302:
 		Id: 1302
 		Images: trees16.png
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Snow, Plant
 		Tiles:
 			0: Plant
 	Template@1304:
