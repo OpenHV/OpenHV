@@ -131,46 +131,64 @@ TREEGRS1:
 	Inherits: ^Tree
 	Tree:
 		Template: 1272
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS2:
 	Inherits: ^Tree
 	Tree:
 		Template: 1273
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS3:
 	Inherits: ^Tree
 	Tree:
 		Template: 1274
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS4:
 	Inherits: ^Tree
 	Tree:
 		Template: 1275
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS5:
 	Inherits: ^Tree
 	Tree:
 		Template: 1276
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TREEGRS6:
 	Inherits: ^Tree
 	Tree:
 		Template: 1277
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS7:
 	Inherits: ^Tree
 	Tree:
 		Template: 1278
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS8:
 	Inherits: ^Tree
 	Tree:
 		Template: 1279
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS9:
 	Inherits: ^Tree
 	Tree:
 		Template: 1280
+	SpawnActorOnDeath@Crush:
+		Actor: Grass
 
 TREEGRS10:
 	Inherits: ^Tree
@@ -185,6 +203,8 @@ TREEGRS10:
 		Terrain: Plant
 	AppearsOnMapPreview:
 		Terrain: Plant
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TREEGRS11:
 	Inherits: ^Tree
@@ -199,26 +219,36 @@ TREEGRS11:
 		Terrain: Plant
 	AppearsOnMapPreview:
 		Terrain: Plant
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TREEGRS12:
 	Inherits: ^Tree
 	Tree:
 		Template: 1281
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TREEGRS13:
 	Inherits: ^Tree
 	Tree:
 		Template: 1282
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TREEGRS14:
 	Inherits: ^Tree
 	Tree:
 		Template: 1283
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TREEGRS15:
 	Inherits: ^Tree
 	Tree:
 		Template: 1285
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMud
 
 TreeAsh:
 	Interactable:
@@ -266,20 +296,41 @@ TreeMud:
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 
+Grass:
+	Inherits: TreeMud
+	LaysTerrain:
+		Template: 121
+
+TreeMudSnow:
+	Inherits: TreeMud
+	LaysTerrain:
+		Template: 1305
+
+Snow:
+	Inherits: TreeMud
+	LaysTerrain:
+		Template: 834
+
 TREES1:
 	Inherits: ^Tree
 	Tree:
 		Template: 1287
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES2:
 	Inherits: ^Tree
 	Tree:
 		Template: 1288
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES3:
 	Inherits: ^Tree
 	Tree:
 		Template: 1289
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES4:
 	Inherits: ^Tree
@@ -294,66 +345,92 @@ TREES4:
 		Terrain: Plant
 	AppearsOnMapPreview:
 		Terrain: Plant
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES5:
 	Inherits: ^Tree
 	Tree:
 		Template: 1291
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES6:
 	Inherits: ^Tree
 	Tree:
 		Template: 1292
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES7:
 	Inherits: ^Tree
 	Tree:
 		Template: 1293
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES8:
 	Inherits: ^Tree
 	Tree:
 		Template: 1294
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES9:
 	Inherits: ^Tree
 	Tree:
 		Template: 1295
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES10:
 	Inherits: ^Tree
 	Tree:
 		Template: 1296
+	SpawnActorOnDeath@Crush:
+		Actor: Snow
 
 TREES11:
 	Inherits: ^Tree
 	Tree:
 		Template: 1297
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES12:
 	Inherits: ^Tree
 	Tree:
 		Template: 1298
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES13:
 	Inherits: ^Tree
 	Tree:
 		Template: 1299
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES14:
 	Inherits: ^Tree
 	Tree:
 		Template: 1300
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES15:
 	Inherits: ^Tree
 	Tree:
 		Template: 1301
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES16:
 	Inherits: ^Tree
 	Tree:
 		Template: 1302
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 TREES17:
 	Inherits: ^Tree
@@ -368,6 +445,8 @@ TREES17:
 		Terrain: Plant
 	AppearsOnMapPreview:
 		Terrain: Plant
+	SpawnActorOnDeath@Crush:
+		Actor: TreeMudSnow
 
 WATERFLOW1:
 	Inherits: ^WATERFLOW

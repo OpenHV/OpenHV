@@ -514,7 +514,6 @@
 		WarnProbability: 0
 		CrushedByFriendlies: true
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
 		DeathType: Crush
 
 ^Ship:

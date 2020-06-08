@@ -8472,3 +8472,10 @@ Templates:
 		Categories: Trees
 		Tiles:
 			0: Stone
+	Template@1305:
+		Id: 1305
+		Images: trees18.png
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
