@@ -273,7 +273,6 @@ World:
 		BuildRadiusCheckboxDisplayOrder: 5
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
-		ShortGameCheckboxEnabled: false
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
 	ScrapOptions:
