@@ -36,6 +36,7 @@ Rules:
 	hv|rules/ships.yaml
 	hv|rules/bonus.yaml
 	hv|rules/weapons.yaml
+	hv|rules/bots.yaml
 
 Sequences:
 	hv|sequences/map.yaml
