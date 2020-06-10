@@ -7,7 +7,6 @@ TANK1:
 		GenericName: Buggy
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Wheeled
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 20
 		Description: Cut content. Incomplete palette.
@@ -34,7 +33,6 @@ TANK2:
 		GenericName: Bike
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 20
 		Description: Fires lasers.
@@ -97,7 +95,6 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 20
 		Description: Shoots rockets.
@@ -236,7 +233,6 @@ TANK11:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 20
 		Description: Main battle tank.
@@ -265,7 +261,6 @@ TANK12:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 40
 		Description: Double barreled tank.
@@ -298,7 +293,6 @@ TANK15:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 30
 		Description: Disables units.
@@ -331,7 +325,6 @@ TANK16:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: tradplat
 		BuildPaletteOrder: 70
 		Description: Repairs nearby vehicles.
@@ -367,7 +360,6 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		BuildAtProductionType: Tracked
 		Prerequisites: factory3
 		BuildPaletteOrder: 30
 		Description: Can transport smaller vehicles. #TODO: find a better role
@@ -406,7 +398,6 @@ ARTIL:
 		Prerequisites: radar, factory3
 		BuildPaletteOrder: 50
 		Description: Mobile long range weapon.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -483,7 +474,6 @@ SCOUT1:
 		Queue: Infantry
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
-		BuildAtProductionType: Infantry
 		Prerequisites: module
 	Valued:
 		Cost: 500
@@ -516,7 +506,6 @@ SCOUT2:
 		Queue: Infantry
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
-		BuildAtProductionType: Infantry
 		Prerequisites: module
 	Valued:
 		Cost: 500
@@ -549,7 +538,6 @@ Builder:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
 		Description: Grants additional build radius.
-		BuildAtProductionType: Wheeled
 		Prerequisites: factory3
 	GivesBuildableArea:
 		AreaTypes: building
@@ -590,7 +578,6 @@ TYRIANTANK:
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 40
 		Description: Tank with rotating turret.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -623,7 +610,6 @@ MINER:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
 		Description: Builds mining facilities.\n  Unarmed
-		BuildAtProductionType: Wheeled
 		Prerequisites: factory3
 	Valued:
 		Cost: 1100
@@ -706,7 +692,6 @@ MISSILE_TANK:
 		Prerequisites: factory3
 		BuildPaletteOrder: 40
 		Description: A tank which shoots missiles.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
