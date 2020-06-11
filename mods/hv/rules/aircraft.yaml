@@ -176,6 +176,10 @@ COPTER2:
 		Types: Scout
 		MaxWeight: 4
 		AfterUnloadDelay: 40
+	Carryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 10
+		LocalOffset: 0,0,-200
 	RenderSprites:
 		PlayerPalette: green
 	WithCargoPipsDecoration:

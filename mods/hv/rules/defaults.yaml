@@ -152,6 +152,7 @@
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
 	ActorLostNotification:
+	Carryable:
 
 ^Scrap:
 	Interactable:
