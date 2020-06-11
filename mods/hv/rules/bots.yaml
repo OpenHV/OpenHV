@@ -42,7 +42,7 @@ Player:
 		ConstructionYardTypes: base
 	UnitBuilderBotModule@Test:
 		RequiresCondition: enable-test-ai
-		UnitQueues: Infantry, Vehicle, Aircraft, Ship
+		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
 			tank3: 5
 			tank5: 5

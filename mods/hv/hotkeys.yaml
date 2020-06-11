@@ -6,8 +6,8 @@ ProductionTypeDefense: R
 	Description: Defense Tab
 	Types: Production, Player
 
-ProductionTypeInfantry: T
-	Description: Infantry Tab
+ProductionTypeScouts: T
+	Description: Scouts Tab
 	Types: Production, Player
 
 ProductionTypeVehicle: Y

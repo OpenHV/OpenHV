@@ -490,16 +490,16 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@INFANTRY:
+						ProductionTypeButton@SCOUTS:
 							Y: 62
 							Width: 28
 							Height: 28
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Infantry
+							TooltipText: Scouts
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Infantry
-							Key: ProductionTypeInfantry
+							ProductionGroup: Scouts
+							Key: ProductionTypeScouts
 							Children:
 								Image@ICON:
 									X: 6

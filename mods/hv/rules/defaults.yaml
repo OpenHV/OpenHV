@@ -444,11 +444,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Water, Air
+		ValidTargets: Vehicle, Water, Air
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Vehicle, Water, Air, Structure
+		ValidTargets: Vehicle, Water, Air, Structure
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAllAssaultMove:

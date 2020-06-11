@@ -471,7 +471,7 @@ SCOUT1:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Infantry
+		Queue: Scouts
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
 		Prerequisites: module
@@ -503,7 +503,7 @@ SCOUT2:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Infantry
+		Queue: Scouts
 		BuildPaletteOrder: 130
 		Description: Fast reconnaissance vehicle.
 		Prerequisites: module

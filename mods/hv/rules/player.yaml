@@ -55,8 +55,8 @@ Player:
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 		SpeedUp: true
-	ClassicProductionQueue@Infantry:
-		Type: Infantry
+	ClassicProductionQueue@Scouts:
+		Type: Scouts
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady

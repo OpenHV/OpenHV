@@ -92,9 +92,9 @@ production-icons:
 		defense: 400, 0, 16, 16
 		defense-disabled: 400, 16, 16, 16
 		defense-alert: 400, 32, 16, 16
-		infantry: 416, 0, 16, 16
-		infantry-disabled: 416, 16, 16, 16
-		infantry-alert: 416, 32, 16, 16
+		scouts: 416, 0, 16, 16
+		scouts-disabled: 416, 16, 16, 16
+		scouts-alert: 416, 32, 16, 16
 		vehicle: 432, 0, 16, 16
 		vehicle-disabled: 432, 16, 16, 16
 		vehicle-alert: 432, 32, 16, 16
