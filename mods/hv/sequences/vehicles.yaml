@@ -260,3 +260,6 @@ scrap5:
 scrap6:
 	idle: objects.png
 		Start: 5
+
+goldball:
+	idle: goldball.png

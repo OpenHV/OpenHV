@@ -36,3 +36,26 @@ SCRAP5:
 
 SCRAP6:
 	Inherits: ^Scrap
+
+GOLDBALL:
+	Interactable:
+	HiddenUnderFog:
+	Tooltip:
+		Name: Refined Resources
+		GenericName: Gold
+		ShowOwnerRow: false
+	Crate:
+		Lifetime: 240
+		TerrainTypes: Clear, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		CrushClass: Scrap
+	RenderSprites:
+		Palette: terrain
+		PlayerPalette:
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	RenderSprites:
+	MapEditorData:
+		Categories: System
+	GiveCashCrateAction:
+		Amount: 500
