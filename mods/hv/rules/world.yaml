@@ -309,7 +309,7 @@ World:
 		CheckboxDescription: Collect cubes with units to receive random bonuses
 		CheckboxEnabled: false
 		CheckboxDisplayOrder: 1
-		ValidGround: Clear, Crater, Road, Grass, Mountain
+		ValidGround: Clear, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		WaterChance: 10
 		CrateActors: moneycube, revealmapcube
 		CrateActorShares: 90, 10
