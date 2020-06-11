@@ -163,7 +163,6 @@ COPTER2:
 		TurnSpeed: 5
 		Speed: 128
 		AltitudeVelocity: 0c58
-		IdleBehavior: Land
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
 	WithFacingSpriteBody@FLY:
