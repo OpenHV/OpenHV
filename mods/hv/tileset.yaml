@@ -791,28 +791,28 @@ Templates:
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@118:
 		Id: 118
 		Images: grass2.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@119:
 		Id: 119
 		Images: grass3.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@120:
 		Id: 120
 		Images: grass4.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@121:
 		Id: 121
 		Images: grass5.png
@@ -827,56 +827,56 @@ Templates:
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@123:
 		Id: 123
 		Images: grass7.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@124:
 		Id: 124
 		Images: grass8.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@125:
 		Id: 125
 		Images: grass9.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@126:
 		Id: 126
 		Images: grass10.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@127:
 		Id: 127
 		Images: grass11.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@128:
 		Id: 128
 		Images: grass12.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@129:
 		Id: 129
 		Images: grass13.png
 		Size: 1,1
 		Categories: Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@130:
 		Id: 130
 		Images: grass14.png
