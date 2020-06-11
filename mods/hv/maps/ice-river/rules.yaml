@@ -18,3 +18,5 @@ World:
 		Green: 0.9
 		Blue: 1.0
 		Ambient: 1.2
+	CloudSpawner:
+		ActorTypes: cloud1, cloud2, cloud3

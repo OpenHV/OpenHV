@@ -304,8 +304,6 @@ World:
 	ResourceLayer:
 	LiquidTerrainRenderer:
 		RenderTypes: water
-	CloudSpawner:
-		ActorTypes: cloud1, cloud2, cloud3
 	CrateSpawner:
 		CheckboxLabel: Cubes
 		CheckboxDescription: Collect cubes with units to receive random bonuses
