@@ -65,3 +65,5 @@ Actors:
 	Actor255: mpspawn
 		Owner: Neutral
 		Location: 56,56
+
+Rules: rules.yaml
