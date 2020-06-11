@@ -375,7 +375,7 @@ TRANSPRT:
 	RevealsShroud:
 		Range: 5c0
 	Cargo:
-		Types: Vehicle
+		Types: Scout
 		MaxWeight: 4
 		LoadingCondition: notmobile
 	Selectable:
@@ -498,6 +498,8 @@ SCOUT1:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+	Passenger:
+		CargoType: Scout
 
 SCOUT2:
 	Inherits: ^Vehicle
@@ -531,6 +533,8 @@ SCOUT2:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+	Passenger:
+		CargoType: Scout
 
 Builder:
 	Inherits: ^Vehicle
@@ -672,7 +676,6 @@ BEAST:
 	Voiced:
 		VoiceSet: BeastVoice
 	-Repairable:
-	-Passenger:
 	-MustBeDestroyed:
 	-Explodes:
 	-TeleportNetworkTransportable:

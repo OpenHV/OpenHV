@@ -173,7 +173,7 @@ COPTER2:
 	Selectable:
 		DecorationBounds: 40,36
 	Cargo:
-		Types: Vehicle
+		Types: Scout
 		MaxWeight: 4
 		AfterUnloadDelay: 40
 	RenderSprites:
