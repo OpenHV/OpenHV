@@ -12,6 +12,13 @@ REVEALMAPCUBE:
 		Sequence: blue
 	RevealMapCrateAction:
 
+CLOAKCUBE:
+	Inherits: ^Cube
+	WithSpriteBody:
+		Sequence: grey
+	GrantExternalConditionCrateAction@cloak:
+		Condition: crate-cloak
+
 SCRAP1:
 	Inherits: ^Scrap
 

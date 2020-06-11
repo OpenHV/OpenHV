@@ -87,6 +87,16 @@
 		Condition: heavydamaged
 		ValidDamageStates: Heavy, Critical
 
+^Cloakable:
+	Cloak@ExternalCloak:
+		RequiresCondition: crate-cloak
+		InitialDelay: 0
+		CloakDelay: 90
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Demolish, Damage, Heal
+	ExternalCondition@CrateCloak:
+		Condition: crate-cloak
+
 ^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -94,6 +104,7 @@
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
 	Inherits@ecm: ^DisabledByECM
+	Inherits@cloak: ^Cloakable
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
