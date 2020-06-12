@@ -40,7 +40,7 @@ RedLaser:
 		Duration: 8
 		SecondaryBeamWidth: 144
 		SecondaryBeamColor: FF000030
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		Spread: 42
 		Damage: 3000
 
