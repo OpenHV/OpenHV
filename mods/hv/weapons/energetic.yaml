@@ -52,8 +52,8 @@ ElectronicCountermeasure:
 		Speed: 150
 		Image: bullet4
 	Warhead@ECM: GrantExternalCondition
-		Duration: 600
 		Range: 1c0
+		Duration: 40
 		Condition: ecmdisabled
 
 Repair:
