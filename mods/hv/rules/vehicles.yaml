@@ -634,7 +634,7 @@ MINER:
 		Range: 8c0
 	RenderSprites:
 		PlayerPalette: green
-	GrantConditionOnTerrain@validterrain:
+	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Ore
 	Transforms:
