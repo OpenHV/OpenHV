@@ -18,7 +18,7 @@
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
-			Ore: 90
+			Ore: 30
 			Crater: 70
 			Grass: 60
 			Road: 100
@@ -33,7 +33,7 @@
 		Crushes: Cube, Scrap
 		TerrainSpeeds:
 			Clear: 90
-			Ore: 90
+			Ore: 30
 			Crater: 70
 			Grass: 60
 			Road: 100
@@ -49,7 +49,7 @@
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 80
-			Ore: 80
+			Ore: 30
 			Crater: 60
 			Grass: 70
 			Road: 100
@@ -65,7 +65,7 @@
 		Crushes: Cube, Scrap
 		TerrainSpeeds:
 			Clear: 80
-			Ore: 80
+			Ore: 30
 			Crater: 70
 			Grass: 80
 			Road: 100
