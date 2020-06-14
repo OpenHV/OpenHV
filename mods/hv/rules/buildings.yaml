@@ -466,6 +466,7 @@ TURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
 	Selectable:
 		Bounds: 32,32
 	HitShape:
@@ -688,6 +689,7 @@ ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
 	Selectable:
 		Bounds: 32,32
 	HitShape:
