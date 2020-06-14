@@ -26,9 +26,9 @@ BASE:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
 	Buildable:
-		Description: Builds structures
+		Description: Builds structures and builders
 	Production:
-		Produces: Building, Defense
+		Produces: Building, Defense, Vehicle, BaseUnit
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:
@@ -37,6 +37,53 @@ BASE:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -1000,-150,0
+	RallyPoint:
+	Exit@0:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: -3,3
+		ProductionTypes: Vehicle, BaseUnit
+		Priority: 3
+	Exit@1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: 0,3
+		ProductionTypes: Vehicle, BaseUnit
+		Priority: 2
+	Exit@2:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: -3,0
+		ProductionTypes: Vehicle, BaseUnit
+		Priority: 2
+	Exit@fallback1:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: -3,-3
+		ProductionTypes: Vehicle, BaseUnit
+	Exit@fallback2:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: 0,-3
+		ProductionTypes: Vehicle, BaseUnit
+	Exit@fallback3:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: 3,-3
+		ProductionTypes: Vehicle, BaseUnit
+	Exit@fallback4:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: 3,0
+		ProductionTypes: Vehicle, BaseUnit
+	Exit@fallback5:
+		RequiresCondition: !being-captured
+		SpawnOffset: -280,400,0
+		ExitCell: 3,3
+		ProductionTypes: Vehicle, BaseUnit
+	Production:
+	ProductionBar@Vehicles:
+		ProductionType: Vehicle
 
 GENERATOR:
 	Inherits: ^BaseBuilding

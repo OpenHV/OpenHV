@@ -540,13 +540,14 @@ SCOUT2:
 		CargoType: Scout
 	-Carryable:
 
-Builder:
+BUILDER:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 10
 		Description: Grants additional build radius.
-		Prerequisites: factory3
+		Prerequisites: base
+		BuildAtProductionType: BaseUnit
 	GivesBuildableArea:
 		AreaTypes: building
 	BaseProvider:
@@ -616,9 +617,10 @@ MINER:
 	Inherits@selection: ^SelectableEconomicUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
-		Prerequisites: factory3
+		Prerequisites: base
+		BuildAtProductionType: BaseUnit
 	Valued:
 		Cost: 1100
 	Tooltip:
