@@ -97,3 +97,6 @@ outline-red:
 		Start: 6
 	left: outline2.png
 		Start: 7
+
+repair:
+	idle: building-repair.png

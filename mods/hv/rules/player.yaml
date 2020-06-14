@@ -9,6 +9,7 @@ Player:
 		SpeechNotification: LowPower
 	Shroud:
 	TechTree:
+	AllyRepair:
 	PlaceBuilding:
 		ToggleVariantKey: ToggleVariant
 		NewOptionsNotification: NewOptions

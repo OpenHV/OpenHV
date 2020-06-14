@@ -391,6 +391,11 @@
 		RepairPercent: 40
 		RepairStep: 1400
 		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: repair
+		Sequence: idle
+		Position: Center
+		BlinkPattern: Off, On
 	GivesBuildableArea:
 		AreaTypes: building
 	Explodes:
