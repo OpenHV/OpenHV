@@ -178,7 +178,7 @@ function Docs-Command
 
 function CheckForUtility
 {
-	if (Test-Path OpenRA.Utility.exe)
+	if (Test-Path $utilityPath)
 	{
 		return 0
 	}
@@ -189,7 +189,7 @@ function CheckForUtility
 
 function CheckForDotnet
 {
-	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null) 
+	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null)
 	{
 		Write-Host "The 'dotnet' tool is required to compile OpenRA. Please install the .NET Core SDK or Visual Studio and try again. https://dotnet.microsoft.com/download" -ForegroundColor Red
 		return 1
