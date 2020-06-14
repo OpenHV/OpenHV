@@ -2,7 +2,6 @@ Player:
 	AlwaysVisible:
 	MissionObjectives:
 	ConquestVictoryConditions:
-	StrategicVictoryConditions:
 	ProximityCaptor:
 		Types: Player
 	PowerManager:
