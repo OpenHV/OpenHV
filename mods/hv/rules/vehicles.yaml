@@ -488,6 +488,7 @@ SCOUT1:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 170
+		Locomotor: pod
 	RevealsShroud:
 		Range: 8c0
 	Armament:
@@ -523,6 +524,7 @@ SCOUT2:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 170
+		Locomotor: pod
 	RevealsShroud:
 		Range: 8c0
 	Armament:

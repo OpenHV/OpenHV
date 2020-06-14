@@ -185,6 +185,8 @@ Fonts:
 MapGrid:
 	TileSize: 20, 20
 	Type: Rectangular
+	SubCellOffsets: 0,0,0, -256,-256,0, 256,-256,0, 0,256,0
+	DefaultSubCell: 1
 
 SpriteFormats: PngSheet
 

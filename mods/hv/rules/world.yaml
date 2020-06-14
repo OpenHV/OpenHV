@@ -12,6 +12,22 @@
 	Locomotor@IMMOBILE:
 		Name: immobile
 		TerrainSpeeds:
+	Locomotor@POD:
+		Name: pod
+		Crushes: Cube
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Ore: 90
+			Crater: 70
+			Grass: 60
+			Road: 100
+			Mountain: 60
+			Ice: 10
+			Snow: 30
+			Red Snow: 30
+			Sand: 40
+			Stone: 100
 	Locomotor@WHEELED:
 		Name: wheeled
 		Crushes: Cube, Scrap
