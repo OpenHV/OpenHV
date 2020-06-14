@@ -63,7 +63,7 @@ TANK3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 120
 		Prerequisites: factory2
 		Queue: Vehicle
 		Description: Fast, light tank.
@@ -95,8 +95,8 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
-		BuildPaletteOrder: 20
+		Prerequisites: factory2
+		BuildPaletteOrder: 110
 		Description: Shoots rockets.
 	Armament@PRIMARY:
 		Weapon: AntiAirRocket
@@ -122,8 +122,8 @@ TANK6:
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 310
-		Prerequisites: tradplat
+		BuildPaletteOrder: 170
+		Prerequisites: factory2, tradplat
 		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
 	Valued:
 		Cost: 800
@@ -163,7 +163,7 @@ TANK7:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 270
-		Prerequisites: radar
+		Prerequisites: factory3, radar
 		Description: Cloaked surveillance tank.\nCan detect cloaked vehicles.\n  Unarmed
 	Valued:
 		Cost: 600
@@ -197,8 +197,8 @@ TANK8:
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 260
-		Prerequisites: factory
+		BuildPaletteOrder: 160
+		Prerequisites: factory2
 		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
 	Valued:
 		Cost: 400
@@ -234,7 +234,7 @@ TANK11:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: factory3
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 220
 		Description: Main battle tank.
 	Armament:
 		Weapon: 90mm
@@ -262,7 +262,7 @@ TANK12:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: factory3
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 240
 		Description: Double barreled tank.
 	Armament:
 		Weapon: 105mm
@@ -290,11 +290,11 @@ TANK15:
 		Cost: 800
 	Tooltip:
 		Name: Countermeasure Tank
-		GenericName: Tank
+		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
-		BuildPaletteOrder: 30
+		Prerequisites: factory2
+		BuildPaletteOrder: 130
 		Description: Disables units.
 	Armament:
 		Weapon: ElectronicCountermeasure
@@ -325,8 +325,8 @@ TANK16:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: tradplat
-		BuildPaletteOrder: 70
+		Prerequisites: factory2, tradplat
+		BuildPaletteOrder: 170
 		Description: Repairs nearby vehicles.
 	Armament:
 		Weapon: Repair
@@ -360,9 +360,9 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
-		BuildPaletteOrder: 30
-		Description: Can transport smaller vehicles. #TODO: find a better role
+		Prerequisites: factory2
+		BuildPaletteOrder: 140
+		Description: Can transport smaller vehicles.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -395,8 +395,8 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory3
-		BuildPaletteOrder: 50
+		Prerequisites: radar, factory2
+		BuildPaletteOrder: 150
 		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -438,7 +438,7 @@ ARTIL3:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 200
 		Prerequisites: radar, factory3
 		Description: Double barraled artillery tank.
 	Health:
@@ -699,7 +699,7 @@ MISSILE_TANK:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: factory3
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
