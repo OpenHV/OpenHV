@@ -99,6 +99,7 @@ SHIP2:
 
 COPTER:
 	Inherits: ^Helicopter
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
