@@ -33,7 +33,8 @@ UnitExplodeSmall:
 		Explosions: small
 
 AntiTankMine:
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
 		Spread: 256
 		Damage: 40000
 		AffectsParent: true

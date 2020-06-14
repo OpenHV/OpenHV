@@ -10,6 +10,7 @@
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
 		Spread: 128
 		Damage: 4000
 		Versus:
@@ -46,6 +47,7 @@ TyrianTankCannon:
 		LaunchAngle: 62
 		Inaccuracy: 1c938
 	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
 		Spread: 426
 		Damage: 23000
 		Versus:
@@ -103,6 +105,7 @@ TurretCannon:
 		Image: bullet3
 		Shadow: true
 	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
 		Spread: 128
 		Damage: 5000
 		Versus:
@@ -127,6 +130,7 @@ Nuclear:
 		Intensity: 5
 		Multiplier: 1,1
 	Warhead@DamageImpact: SpreadDamage
+		DamageTypes: Fire
 		Spread: 1c0
 		Damage: 15000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -135,6 +139,7 @@ Nuclear:
 			Steel: 25
 			Concrete: 25
 	Warhead@DamageArea1: SpreadDamage
+		DamageTypes: Fire
 		Spread: 2c0
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -148,6 +153,7 @@ Nuclear:
 		Delay: 5
 		ImpactActors: false
 	Warhead@DamageArea2: SpreadDamage
+		DamageTypes: Fire
 		Spread: 3c0
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -157,6 +163,7 @@ Nuclear:
 			Steel: 50
 			Concrete: 25
 	Warhead@DamageArea3: SpreadDamage
+		DamageTypes: Fire
 		Spread: 4c0
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -165,6 +172,7 @@ Nuclear:
 		Versus:
 			Concrete: 25
 	Warhead@DamageArea4: SpreadDamage
+		DamageTypes: Fire
 		Spread: 5c0
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -220,6 +228,7 @@ TurretArtillery:
 		Speed: 853
 		Shadow: true
 	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
 		Damage: 2500
 		Versus:
 			None: 24
