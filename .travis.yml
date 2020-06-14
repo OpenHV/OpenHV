@@ -10,6 +10,7 @@ addons:
     packages:
     - dpkg
     - liblua5.1-0
+    - imagemagick
 
 script:
  - make
