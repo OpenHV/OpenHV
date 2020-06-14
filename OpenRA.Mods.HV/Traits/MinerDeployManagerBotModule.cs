@@ -65,12 +65,14 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			public readonly Actor Actor;
 			public readonly Locomotor Locomotor;
+			public readonly Transforms Transforms;
 
 			public MinerTraitWrapper(Actor actor)
 			{
 				Actor = actor;
 				var mobile = actor.Trait<Mobile>();
 				Locomotor = mobile.Locomotor;
+				Transforms = actor.Trait<Transforms>();
 			}
 		}
 
@@ -141,10 +143,13 @@ namespace OpenRA.Mods.HV.Traits
 
 		Target FindNextResource(Actor actor, MinerTraitWrapper miner)
 		{
+			var towerInfo = AIUtils.GetInfoByCommonName(Info.DeployedActorTypes, player);
+			var buildingInfo = towerInfo.TraitInfo<BuildingInfo>();
 			Func<CPos, bool> isValidResource = cell =>
 				domainIndex.IsPassable(actor.Location, cell, miner.Locomotor.Info)
-					&& Info.DeployableTerrainTypes.Contains(actor.World.Map.GetTerrainInfo(cell).Type)
-					&& miner.Locomotor.CanStayInCell(cell); // TODO: check if it can deploy
+					&& Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
+					&& miner.Locomotor.CanStayInCell(cell)
+					&& world.CanPlaceBuilding(cell + miner.Transforms.Info.Offset, towerInfo, buildingInfo, actor);
 
 			var path = pathfinder.FindPath(
 				PathSearch.Search(world, miner.Locomotor, actor, BlockedByActor.Stationary, isValidResource)
