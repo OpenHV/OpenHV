@@ -30,6 +30,13 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Terrain types that can be targeted for deployment.")]
 		public readonly HashSet<string> DeployableTerrainTypes = new HashSet<string>();
 
+		[FieldLoader.Require]
+		[Desc("Actor types that have been deployed onto resources.")]
+		public readonly HashSet<string> DeployedActorTypes = new HashSet<string>();
+
+		[Desc("Prioritize this many resource towers before building other units.")]
+		public readonly int MinimumDeployedActors = 1;
+
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
 		public readonly int MinimumScanDelay = 375;
 
@@ -51,6 +58,8 @@ namespace OpenRA.Mods.HV.Traits
 		IPathFinder pathfinder;
 		DomainIndex domainIndex;
 		UndergroundResourceLayer resourceLayer;
+
+		IBotRequestUnitProduction[] requestUnitProduction;
 
 		class MinerTraitWrapper
 		{
@@ -84,6 +93,8 @@ namespace OpenRA.Mods.HV.Traits
 			pathfinder = world.WorldActor.Trait<IPathFinder>();
 			domainIndex = world.WorldActor.Trait<DomainIndex>();
 			resourceLayer = world.WorldActor.TraitOrDefault<UndergroundResourceLayer>();
+
+			requestUnitProduction = player.PlayerActor.TraitsImplementing<IBotRequestUnitProduction>().ToArray();
 		}
 
 		void IBotTick.BotTick(IBot bot)
@@ -115,6 +126,16 @@ namespace OpenRA.Mods.HV.Traits
 				AIUtils.BotDebug("AI: Miner {0} is idle. Ordering to {1} in search for new resources.".F(miner.Key, newSafeResourcePatch));
 				bot.QueueOrder(new Order("Move", miner.Key, newSafeResourcePatch, true));
 				bot.QueueOrder(new Order("DeployTransform", miner.Key, true));
+			}
+
+			// Keep the economy running before starving out.
+			var unitBuilder = requestUnitProduction.FirstOrDefault(Exts.IsTraitEnabled);
+			if (unitBuilder != null)
+			{
+				var minerInfo = AIUtils.GetInfoByCommonName(Info.DeployableActorTypes, player);
+				var miningTowers = AIUtils.CountBuildingByCommonName(Info.DeployedActorTypes, player);
+				if (miningTowers < Info.MinimumDeployedActors && unitBuilder.RequestedProductionCount(bot, minerInfo.Name) == 0)
+					unitBuilder.RequestUnitProduction(bot, minerInfo.Name);
 			}
 		}
 

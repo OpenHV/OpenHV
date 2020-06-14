@@ -44,6 +44,7 @@ Player:
 		RequiresCondition: enable-test-ai
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
+			miner: 10
 			tank3: 5
 			tank5: 5
 			tank7: 1
@@ -63,7 +64,7 @@ Player:
 			balloon: 1
 		UnitLimits:
 			builder: 3
-			miner: 1
+			miner: 3
 	CaptureManagerBotModule:
 		RequiresCondition: enable-test-ai
 		CapturingActorTypes: tank7
@@ -74,6 +75,7 @@ Player:
 		RequiresCondition: enable-test-ai
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
+		DeployedActorTypes: miner2
 	SupportPowerBotModule:
 		RequiresCondition: enable-test-ai
 		Decisions:
