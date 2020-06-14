@@ -3,7 +3,6 @@ SHIP1:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Aircraft
-		BuildAtProductionType: Plane
 		BuildPaletteOrder: 50
 		Prerequisites: radar
 		Description: Fast Attack Ship
@@ -55,7 +54,6 @@ SHIP2:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Aircraft
-		BuildAtProductionType: Plane
 		BuildPaletteOrder: 30
 		Prerequisites: radar
 		Description: Attack Ship armed with\na large chain gun.
@@ -109,7 +107,6 @@ COPTER:
 		Name: Attack Helicopter
 	Buildable:
 		Queue: Aircraft
-		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 20
 		Prerequisites: radar
 		Description: Small Helicopter Gunship
@@ -148,7 +145,6 @@ COPTER2:
 		Name: Transport Helicopter
 	Buildable:
 		Queue: Aircraft
-		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 50
 		Prerequisites: radar
 		Description: Fast Vehicle Transport Helicopter.\n  Unarmed
@@ -193,7 +189,6 @@ BALLOON:
 		Name: Scout Balloon
 	Buildable:
 		Queue: Aircraft
-		BuildAtProductionType: Helicopter
 		BuildPaletteOrder: 20
 		Prerequisites: radar
 		Description: Slow reconnaissance air unit.

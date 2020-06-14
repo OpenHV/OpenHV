@@ -293,7 +293,7 @@ STARPORT:
 		Queue: Building
 		BuildPaletteOrder: 120
 		Prerequisites: radar
-		Description: Produces and reloads\nhelicopters.
+		Description: Produces helicopters and shuttles.
 	Valued:
 		Cost: 700
 	Building:
@@ -314,7 +314,7 @@ STARPORT:
 		IsPlayerPalette: true
 		Palette: green
 	Production:
-		Produces: Aircraft, Helicopter
+		Produces: Aircraft
 	Reservable:
 	ProductionBar:
 		ProductionType: Aircraft
