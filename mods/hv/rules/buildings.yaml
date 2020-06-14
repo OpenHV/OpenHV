@@ -586,7 +586,6 @@ FIELD:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 40,40
-	SelectionDecorations:
 	Health:
 		HP: 100000
 	Armor:
