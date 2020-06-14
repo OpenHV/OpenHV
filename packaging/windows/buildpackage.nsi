@@ -1,18 +1,18 @@
-; Copyright 2007-2020 OpenRA developers (see CREDITS)
-; This file is part of OpenRA.
+; Copyright 2007-2020 OpenHV developers (see CREDITS)
+; This file is part of OpenHV
 ;
-;  OpenRA is free software: you can redistribute it and/or modify
+;  OpenHV is free software: you can redistribute it and/or modify
 ;  it under the terms of the GNU General Public License as published by
 ;  the Free Software Foundation, either version 3 of the License, or
 ;  (at your option) any later version.
 ;
-;  OpenRA is distributed in the hope that it will be useful,
+;  OpenHV is distributed in the hope that it will be useful,
 ;  but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;  GNU General Public License for more details.
 ;
 ;  You should have received a copy of the GNU General Public License
-;  along with OpenRA.  If not, see <http://www.gnu.org/licenses/>.
+;  along with OpenHV  If not, see <http://www.gnu.org/licenses/>.
 
 
 !include "MUI2.nsh"
@@ -20,7 +20,7 @@
 !include "WordFunc.nsh"
 
 Name "${PACKAGING_DISPLAY_NAME}"
-OutFile "OpenRA.Setup.exe"
+OutFile "OpenHV.Setup.exe"
 
 InstallDir "$PROGRAMFILES\${PACKAGING_WINDOWS_INSTALL_DIR_NAME}"
 InstallDirRegKey HKLM "Software\${PACKAGING_WINDOWS_REGISTRY_KEY}" "InstallDir"
@@ -35,7 +35,7 @@ RequestExecutionLevel admin
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKLM"
 !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\${PACKAGING_WINDOWS_REGISTRY_KEY}"
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "OpenRA"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "OpenHV"
 
 Var StartMenuFolder
 !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
@@ -122,7 +122,7 @@ SectionEnd
 
 Section "Desktop Shortcut" DESKTOPSHORTCUT
 	SetOutPath "$INSTDIR"
-	CreateShortCut "$DESKTOP\OpenRA - ${PACKAGING_DISPLAY_NAME}.lnk" "$INSTDIR\${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" "" \
+	CreateShortCut "$DESKTOP\${PACKAGING_DISPLAY_NAME}.lnk" "$INSTDIR\${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" "" \
 		"$INSTDIR\${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" "" "" "" ""
 SectionEnd
 
@@ -136,7 +136,7 @@ Section "-DotNet" DotNet
 	IfErrors error 0
 	IntCmp $0 461808 done error done
 	error:
-		MessageBox MB_OK ".NET Framework v4.7.2 or later is required to run OpenRA."
+		MessageBox MB_OK ".NET Framework v4.7.2 or later is required to run OpenHV."
 		Abort
 	done:
 SectionEnd
@@ -205,7 +205,7 @@ Function ${UN}Clean
 	Delete "$SMPROGRAMS\$StartMenuFolder\${PACKAGING_DISPLAY_NAME}.lnk"
 	RMDir "$SMPROGRAMS\$StartMenuFolder"
 
-	Delete "$DESKTOP\OpenRA - ${PACKAGING_DISPLAY_NAME}.lnk"
+	Delete "$DESKTOP\${PACKAGING_DISPLAY_NAME}.lnk"
 	DeleteRegKey HKLM "Software\${PACKAGING_WINDOWS_REGISTRY_KEY}"
 FunctionEnd
 !macroend
