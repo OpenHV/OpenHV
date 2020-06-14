@@ -63,7 +63,7 @@ Player:
 			copter: 5
 			balloon: 1
 		UnitLimits:
-			builder: 3
+			builder: 0
 			miner: 3
 	CaptureManagerBotModule:
 		RequiresCondition: enable-test-ai
