@@ -355,6 +355,7 @@
 	Building:
 		Dimensions: 1,1
 		Footprint: x
+		AllowPlacementOnResources: false
 	ActorPreviewPlaceBuildingPreview:
 	WithSpriteBody:
 	ShakeOnDeath:
