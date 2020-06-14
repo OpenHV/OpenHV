@@ -5,6 +5,11 @@
 ###############################################################
 function All-Command
 {
+	If (!(Test-Path "*.sln"))
+	{
+		return
+	}
+
 	if ((CheckForDotnet) -eq 1)
 	{
 		return
@@ -117,6 +122,12 @@ function Test-Command
 
 function Check-Command
 {
+	If (!(Test-Path "*.sln"))
+	{
+		Write-Host "No custom solution file found. Skipping static code checks." -ForegroundColor Cyan
+		return
+	}
+
 	Write-Host "Compiling in debug configuration..." -ForegroundColor Cyan
 	dotnet build /p:Configuration=Debug /nologo
 	if ($lastexitcode -ne 0)
