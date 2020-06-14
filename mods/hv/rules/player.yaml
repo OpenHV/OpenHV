@@ -58,6 +58,7 @@ Player:
 	ClassicProductionQueue@Scouts:
 		Type: Scouts
 		DisplayOrder: 2
+		BuildDurationModifier: 25
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
 		QueuedAudio: Training
