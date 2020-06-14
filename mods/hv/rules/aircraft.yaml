@@ -15,7 +15,6 @@ SHIP1:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		MinRange: 11c0
 		Range: 13c0
 		Type: GroundPosition
 	Armament@PRIMARY:
@@ -66,7 +65,6 @@ SHIP2:
 	Health:
 		HP: 6000
 	RevealsShroud:
-		MinRange: 9c0
 		Range: 11c0
 		Type: GroundPosition
 	Armament@PRIMARY:
