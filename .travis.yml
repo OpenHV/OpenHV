@@ -3,7 +3,7 @@
 
 dist: xenial
 language: csharp
-mono: 6.4.0
+mono: 6.8.0
 
 addons:
   apt:
