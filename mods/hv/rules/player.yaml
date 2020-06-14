@@ -1,5 +1,5 @@
 Player:
-	Inherits: ^BasePlayer
+	AlwaysVisible:
 	MissionObjectives:
 	ConquestVictoryConditions:
 	StrategicVictoryConditions:
