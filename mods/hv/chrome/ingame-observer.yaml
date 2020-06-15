@@ -846,6 +846,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 0
 									Height: PARENT_BOTTOM
 									TooltipContainer: TOOLTIP_CONTAINER
+									ClockPalette: shadow
 						ScrollItem@SUPPORT_POWERS_PLAYER_TEMPLATE:
 							X: 0
 							Y: 0
