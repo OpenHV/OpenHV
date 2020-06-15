@@ -62,7 +62,7 @@ beacon:
 
 icon:
 	shield: icon.png
-	nuke: icon.png
+	nuke: nuke-icon.png
 
 outline:
 	top-left: outline.png
