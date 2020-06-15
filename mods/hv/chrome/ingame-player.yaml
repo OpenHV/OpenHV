@@ -16,6 +16,7 @@ Container@PLAYER_WIDGETS:
 					HoldText: ON HOLD
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
+					ClockPalette: shadow
 				Container@PALETTE_FOREGROUND:
 					Children:
 						Image@ICON_TEMPLATE:
