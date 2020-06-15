@@ -35,7 +35,7 @@ ChainGun:
 	Burst: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 250
 		Versus:
 			None: 144
 			Steel: 60
@@ -61,7 +61,7 @@ ChainGun.Shuttle:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
-		Damage: 4000
+		Damage: 400
 		Versus:
 			None: 100
 			Steel: 50

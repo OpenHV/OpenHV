@@ -139,7 +139,7 @@ ShipMissile:
 		CruiseAltitude: 2c0
 		RangeLimit: 14c410
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 700
 		Versus:
 			None: 30
 			Wood: 90
@@ -161,7 +161,7 @@ ShipMissile_AA:
 		CruiseAltitude: 2c0
 		RangeLimit: 14c410
 	Warhead@1Dam: SpreadDamage
-		Damage: 7000
+		Damage: 700
 		Versus:
 			None: 30
 			Wood: 90
