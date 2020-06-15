@@ -30,7 +30,7 @@ namespace OpenRA.Mods.HV.Traits
 				throw new YamlException("Can't find a TeleportNetwork with Type '{0}'".F(Type));
 		}
 
-		public override object Create(ActorInitializer init) { return new TeleportNetworkManager(init, this); }
+		public override object Create(ActorInitializer init) { return new TeleportNetworkManager(this); }
 	}
 
 	public class TeleportNetworkManager
@@ -39,7 +39,7 @@ namespace OpenRA.Mods.HV.Traits
 		public int Count = 0;
 		public Actor PrimaryActor = null;
 
-		public TeleportNetworkManager(ActorInitializer init, TeleportNetworkManagerInfo info)
+		public TeleportNetworkManager(TeleportNetworkManagerInfo info)
 		{
 			Type = info.Type;
 		}
