@@ -32,6 +32,8 @@ Player:
 			starport: 1
 			turret: 7
 			artilleryturret: 5
+			field: 1
+			silo: 1
 	BuildingRepairBotModule:
 		RequiresCondition: enable-test-ai
 	SquadManagerBotModule@Test:
