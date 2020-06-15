@@ -15,7 +15,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Controls the 'Scrap' checkbox in the lobby options.")]
-	public class ScrapOptionsInfo : ITraitInfo, ILobbyOptions
+	public class ScrapOptionsInfo : TraitInfo, ILobbyOptions
 	{
 		[Translate]
 		[Desc("Descriptive label for the scrap checkbox in the lobby.")]
@@ -42,7 +42,7 @@ namespace OpenRA.Mods.HV.Traits
 			yield return new LobbyBooleanOption("scrap", CheckboxLabel, CheckboxDescription, CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
 		}
 
-		public object Create(ActorInitializer init) { return new ScrapOptions(this); }
+		public override object Create(ActorInitializer init) { return new ScrapOptions(this); }
 	}
 
 	public class ScrapOptions : INotifyCreated

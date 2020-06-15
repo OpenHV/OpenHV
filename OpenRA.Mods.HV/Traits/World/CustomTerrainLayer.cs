@@ -16,12 +16,12 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Attach this to the world actor. Required for LaysTerrain to work.")]
-	public class CustomTerrainLayerInfo : ITraitInfo
+	public class CustomTerrainLayerInfo : TraitInfo
 	{
 		[Desc("Palette to render the layer sprites in.")]
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
-		public object Create(ActorInitializer init) { return new CustomTerrainLayer(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new CustomTerrainLayer(init.Self, this); }
 	}
 
 	public class CustomTerrainLayer : IRenderOverlay, IWorldLoaded, ITickRender, INotifyActorDisposing

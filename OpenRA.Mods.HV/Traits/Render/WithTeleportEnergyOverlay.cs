@@ -17,7 +17,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("This actor display an overlay upon arrival.")]
-	public class WithTeleportEnergyOverlayInfo : ITraitInfo, Requires<RenderSpritesInfo>, Requires<BodyOrientationInfo>
+	public class WithTeleportEnergyOverlayInfo : TraitInfo, Requires<RenderSpritesInfo>, Requires<BodyOrientationInfo>
 	{
 		[SequenceReference]
 		[Desc("Sequence to use for charge animation.")]
@@ -33,7 +33,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Custom palette name")]
 		public readonly string Palette = null;
 
-		public object Create(ActorInitializer init) { return new WithTeleportEnergyOverlay(init, this); }
+		public override object Create(ActorInitializer init) { return new WithTeleportEnergyOverlay(init, this); }
 	}
 
 	public class WithTeleportEnergyOverlay : INotifyExitTeleporter

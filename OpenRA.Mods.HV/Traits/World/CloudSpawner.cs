@@ -17,7 +17,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	public class CloudSpawnerInfo : ITraitInfo
+	public class CloudSpawnerInfo : TraitInfo
 	{
 		[Desc("Average time (ticks) between cloud spawn.")]
 		public readonly int SpawnInterval = 10 * 25;
@@ -36,18 +36,16 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Spawn and remove the cloud this far outside the map.")]
 		public readonly WDist Cordon = new WDist(7680);
 
-		public object Create(ActorInitializer init) { return new CloudSpawner(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new CloudSpawner(this); }
 	}
 
 	public class CloudSpawner : ITick
 	{
-		readonly Actor self;
 		readonly CloudSpawnerInfo info;
 		int ticks;
 
-		public CloudSpawner(Actor self, CloudSpawnerInfo info)
+		public CloudSpawner(CloudSpawnerInfo info)
 		{
-			this.self = self;
 			this.info = info;
 
 			ticks = info.InitialSpawnDelay;

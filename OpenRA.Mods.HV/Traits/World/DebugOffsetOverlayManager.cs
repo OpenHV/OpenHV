@@ -15,12 +15,9 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	public class DebugOffsetOverlayManagerInfo : ITraitInfo
+	public class DebugOffsetOverlayManagerInfo : TraitInfo
 	{
-		[Desc("The font used to draw cell vectors. Should match the value as-is in the Fonts section of the mod manifest (do not convert to lowercase).")]
-		public readonly string Font = "TinyBold";
-
-		object ITraitInfo.Create(ActorInitializer init) { return new DebugOffsetOverlayManager(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new DebugOffsetOverlayManager(init.Self); }
 	}
 
 	public class DebugOffsetOverlayManager : IWorldLoaded, IChatCommand
@@ -30,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Actor self;
 
-		public DebugOffsetOverlayManager(Actor self, DebugOffsetOverlayManagerInfo info)
+		public DebugOffsetOverlayManager(Actor self)
 		{
 			this.self = self;
 		}

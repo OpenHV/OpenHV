@@ -19,13 +19,13 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Visualizes the state of the `ResourceLayer`.", " Attach this to the world actor.")]
-	public class UndergroundResourceRendererInfo : ITraitInfo, Requires<UndergroundResourceLayerInfo>
+	public class UndergroundResourceRendererInfo : TraitInfo, Requires<UndergroundResourceLayerInfo>
 	{
 		[FieldLoader.Require]
 		[Desc("Only render these ResourceType names.")]
 		public readonly string[] RenderTypes = null;
 
-		public virtual object Create(ActorInitializer init) { return new UndergroundResourceRenderer(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new UndergroundResourceRenderer(init.Self, this); }
 	}
 
 	public class UndergroundResourceRenderer : IWorldLoaded, IRenderOverlay, ITickRender, INotifyActorDisposing

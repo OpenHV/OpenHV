@@ -45,7 +45,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 		{
 			this.info = info;
 
-			if (init.Contains<SkipMakeAnimsInit>())
+			var skipMakeAnimsInit = init.GetOrDefault<SkipMakeAnimsInit>(info);
+			if (skipMakeAnimsInit != null)
 				return;
 
 			renderSprites = init.Self.Trait<RenderSprites>();

@@ -44,14 +44,12 @@ namespace OpenRA.Mods.HV.Traits.Render
 				p = init.WorldRenderer.Palette(Palette);
 
 			Func<WAngle> facing;
-			if (init.Contains<DynamicFacingInit>())
-			{
-				var getFacing = init.Get<DynamicFacingInit, Func<int>>();
-				facing = () => WAngle.FromFacing(getFacing());
-			}
+			var dynamicfacingInit = init.GetOrDefault<DynamicFacingInit>(this);
+			if (dynamicfacingInit != null)
+				facing = () => WAngle.FromFacing(dynamicfacingInit.Value());
 			else
 			{
-				var f = WAngle.FromFacing(init.Contains<FacingInit>() ? init.Get<FacingInit, int>() : 0);
+				var f = WAngle.FromFacing(init.GetValue<FacingInit, int>(this, 0));
 				facing = () => f;
 			}
 

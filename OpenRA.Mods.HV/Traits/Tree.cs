@@ -14,13 +14,13 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("For use with the ForestLayer.")]
-	class TreeInfo : ITraitInfo
+	class TreeInfo : TraitInfo
 	{
 		[FieldLoader.Require]
 		[Desc("Terrain tile to match.")]
 		public readonly ushort Template = 0;
 
-		public object Create(ActorInitializer init) { return new Tree(this); }
+		public override object Create(ActorInitializer init) { return new Tree(this); }
 	}
 
 	class Tree

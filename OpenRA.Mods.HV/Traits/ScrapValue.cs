@@ -8,18 +8,18 @@
  * information, see COPYING.
  */
 #endregion
-
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("How much the unit leftovers are worth.")]
-	public class ScrapValueInfo : ITraitInfo
+	public class ScrapValueInfo : TraitInfo
 	{
 		[Desc("Percentage of the killed actor's value.")]
 		public readonly int Percentage = 10;
 
-		public object Create(ActorInitializer init) { return new ScrapValue(init, this); }
+		public override object Create(ActorInitializer init) { return new ScrapValue(init, this); }
 	}
 
 	public class ScrapValue
@@ -28,7 +28,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public ScrapValue(ActorInitializer init, ScrapValueInfo info)
 		{
-			Bounty = init.Get<ValueInit>().Value(init.World) * info.Percentage / 100;
+			Bounty = init.Get<ValueInit>(info).Value * info.Percentage / 100;
 		}
 	}
 }

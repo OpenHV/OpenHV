@@ -20,7 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	public class MinelayerInfo : ITraitInfo, Requires<RearmableInfo>
+	public class MinelayerInfo : TraitInfo, Requires<RearmableInfo>
 	{
 		[FieldLoader.Require]
 		[ActorReference(typeof(MineInfo))]
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Cursor to display when able to (un)deploy the actor.")]
 		public readonly string Cursor = "ability";
 
-		public object Create(ActorInitializer init) { return new Minelayer(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new Minelayer(init.Self, this); }
 	}
 
 	public class Minelayer : IIssueOrder, IResolveOrder, ISync, IIssueDeployOrder, IOrderVoice, ITick

@@ -16,7 +16,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("This actor displays a charge-up animation when it receives a teleported unit.")]
-	public class WithTeleportChargeAnimationInfo : ITraitInfo, Requires<WithSpriteBodyInfo>, Requires<RenderSpritesInfo>
+	public class WithTeleportChargeAnimationInfo : TraitInfo, Requires<WithSpriteBodyInfo>, Requires<RenderSpritesInfo>
 	{
 		[SequenceReference]
 		[Desc("Sequence to use for charge animation.")]
@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Which sprite body to play the animation on.")]
 		public readonly string Body = "body";
 
-		public object Create(ActorInitializer init) { return new WithTeleportChargeAnimation(init, this); }
+		public override object Create(ActorInitializer init) { return new WithTeleportChargeAnimation(init, this); }
 	}
 
 	public class WithTeleportChargeAnimation : INotifyEnterTeleporter

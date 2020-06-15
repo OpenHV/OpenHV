@@ -38,7 +38,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 		public WithConstructionOverlay(ActorInitializer init, WithConstructionOverlayInfo info)
 			: base(info)
 		{
-			if (init.Contains<SkipMakeAnimsInit>())
+			var skipMakeAnimsInit = init.GetOrDefault<SkipMakeAnimsInit>(info);
+			if (skipMakeAnimsInit != null)
 				return;
 
 			var rs = init.Self.Trait<RenderSprites>();

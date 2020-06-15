@@ -11,13 +11,9 @@
 
 namespace OpenRA.Mods.HV
 {
-	public class ValueInit : IActorInit<int>
+	public class ValueInit : ValueActorInit<int>
 	{
-		[FieldFromYamlKey]
-		readonly int value = 0;
-
-		public ValueInit() { }
-		public ValueInit(int init) { value = init; }
-		public int Value(World world) { return value; }
+		public ValueInit(int value)
+			: base(value) { }
 	}
 }

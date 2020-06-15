@@ -17,13 +17,13 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	class ForestLayerInfo : ITraitInfo
+	class ForestLayerInfo : TraitInfo
 	{
 		[ActorReference]
 		[FieldLoader.Require]
 		public readonly string[] Trees = null;
 
-		public object Create(ActorInitializer init) { return new ForestLayer(this); }
+		public override object Create(ActorInitializer init) { return new ForestLayer(this); }
 	}
 
 	class ForestLayer : IWorldLoaded

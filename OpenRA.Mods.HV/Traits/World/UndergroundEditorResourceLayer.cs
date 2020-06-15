@@ -19,12 +19,12 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Required for the map editor to work. Attach this to the world actor.")]
-	public class UndergroundEditorResourceLayerInfo : ITraitInfo, Requires<ResourceTypeInfo>
+	public class UndergroundEditorResourceLayerInfo : TraitInfo, Requires<ResourceTypeInfo>
 	{
 		[Desc("Only care for these ResourceType names.")]
 		public readonly string[] Types = null;
 
-		public virtual object Create(ActorInitializer init) { return new UndergroundEditorResourceLayer(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new UndergroundEditorResourceLayer(init.Self, this); }
 	}
 
 	public class UndergroundEditorResourceLayer : IWorldLoaded, IRenderOverlay, INotifyActorDisposing

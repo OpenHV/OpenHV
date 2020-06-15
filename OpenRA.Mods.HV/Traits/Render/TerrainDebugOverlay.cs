@@ -18,11 +18,11 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Common.Traits
 {
 	[Desc("Displays terrain types. Excludes custom terrain.")]
-	class TerrainDebugOverlayInfo : ITraitInfo
+	class TerrainDebugOverlayInfo : TraitInfo
 	{
 		public readonly string Font = "TinyBold";
 
-		public object Create(ActorInitializer init) { return new TerrainDebugOverlay(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new TerrainDebugOverlay(this); }
 	}
 
 	class TerrainDebugOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
@@ -34,7 +34,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		readonly SpriteFont font;
 
-		public TerrainDebugOverlay(Actor self, TerrainDebugOverlayInfo info)
+		public TerrainDebugOverlay(TerrainDebugOverlayInfo info)
 		{
 			font = Game.Renderer.Fonts[info.Font];
 		}

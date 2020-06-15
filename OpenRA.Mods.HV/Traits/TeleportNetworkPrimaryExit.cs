@@ -12,7 +12,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Orders;
-using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -43,7 +42,7 @@ namespace OpenRA.Mods.HV.Traits
 	}
 
 	[Desc("Used with TeleportNetwork trait for primary exit designation.")]
-	public class TeleportNetworkPrimaryExitInfo : ITraitInfo, Requires<TeleportNetworkInfo>
+	public class TeleportNetworkPrimaryExitInfo : TraitInfo, Requires<TeleportNetworkInfo>
 	{
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while this is the primary building.")]
@@ -53,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("The speech notification to play when selecting a primary exit.")]
 		public readonly string SelectionNotification = null;
 
-		public object Create(ActorInitializer init) { return new TeleportNetworkPrimaryExit(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new TeleportNetworkPrimaryExit(init.Self, this); }
 	}
 
 	public class TeleportNetworkPrimaryExit : IIssueOrder, IResolveOrder

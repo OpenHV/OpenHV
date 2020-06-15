@@ -29,9 +29,9 @@ namespace OpenRA.Mods.HV.Traits
 		"`add X,Y,Z`: Adds the value to the current offset. Negative values function to subtract. No spaces are supported between the values.",
 		"`query`: Returns the current offset value in the chat.",
 		"`disable`: Disables rendering of the offset.")]
-	public class DebugOffsetOverlayInfo : ITraitInfo
+	public class DebugOffsetOverlayInfo : TraitInfo
 	{
-		public object Create(ActorInitializer init) { return new DebugOffsetOverlay(init.Self); }
+		public override object Create(ActorInitializer init) { return new DebugOffsetOverlay(init.Self); }
 	}
 
 	public class DebugOffsetOverlay : Requires<BodyOrientationInfo>, IRenderAnnotations, INotifyCreated

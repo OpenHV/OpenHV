@@ -67,14 +67,14 @@ namespace OpenRA.Mods.HV.Activities
 				var spawn = primary.CenterPosition + exitInfo.SpawnOffset;
 				var to = self.World.Map.CenterOfCell(exit);
 
-				var initialFacing = exitInfo.Facing;
+				var initialFacing = WAngle.FromFacing(exitInfo.Facing);
 				if (exitInfo.Facing < 0)
 				{
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
-						initialFacing = 0;
+						initialFacing = WAngle.Zero;
 					else
-						initialFacing = delta.Yaw.Facing;
+						initialFacing = delta.Yaw;
 
 					var fi = self.TraitOrDefault<IFacing>();
 					if (fi != null)

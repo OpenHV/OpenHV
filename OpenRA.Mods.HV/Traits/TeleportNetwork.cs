@@ -15,7 +15,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("This actor can teleport actors to another actor with the same trait.")]
-	public class TeleportNetworkInfo : ITraitInfo, IRulesetLoaded
+	public class TeleportNetworkInfo : TraitInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]
 		[Desc("Type of TeleportNetwork that pairs up, in order for it to work.")]
@@ -33,7 +33,7 @@ namespace OpenRA.Mods.HV.Traits
 				throw new YamlException("Can't find a TeleportNetworkManager with Type '{0}'".F(Type));
 		}
 
-		public object Create(ActorInitializer init) { return new TeleportNetwork(this); }
+		public override object Create(ActorInitializer init) { return new TeleportNetwork(this); }
 	}
 
 	// The teleport network does nothing. The actor teleports itself, upon entering.

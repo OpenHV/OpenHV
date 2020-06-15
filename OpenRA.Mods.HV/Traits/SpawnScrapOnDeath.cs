@@ -54,7 +54,7 @@ namespace OpenRA.Mods.HV.Traits
 			: base(info)
 		{
 			enabled = init.Self.World.WorldActor.Trait<ScrapOptions>().Enabled;
-			faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : init.Self.Owner.Faction.InternalName;
+			faction = init.GetValue<FactionInit, string>(info, init.Self.Owner.Faction.InternalName);
 		}
 
 		void INotifyKilled.Killed(Actor self, AttackInfo e)

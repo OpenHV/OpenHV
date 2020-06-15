@@ -19,7 +19,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	public class SeaMonsterInfo : ITraitInfo, IPositionableInfo, IFacingInfo, IMoveInfo, IActorPreviewInitInfo
+	public class SeaMonsterInfo : TraitInfo, IPositionableInfo, IFacingInfo, IMoveInfo, IActorPreviewInitInfo
 	{
 		public readonly int Speed = 28;
 
@@ -31,7 +31,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public readonly string RestrictToTerrainType = "Water";
 
-		public virtual object Create(ActorInitializer init) { return new SeaMonster(init, this); }
+		public override object Create(ActorInitializer init) { return new SeaMonster(init, this); }
 
 		public int GetInitialFacing() { return InitialFacing; }
 
@@ -61,11 +61,14 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly SeaMonsterInfo Info;
 		readonly Actor self;
 
+		static readonly WAngle Left = new WAngle(256);
+		static readonly WAngle Right = new WAngle(768);
+
 		IEnumerable<int> speedModifiers;
 		INotifyVisualPositionChanged[] notifyVisualPositionChanged;
 
 		[Sync]
-		public int Facing { get; set; }
+		public WAngle Facing { get; set; }
 
 		[Sync]
 		public WPos CenterPosition { get; private set; }
@@ -73,7 +76,7 @@ namespace OpenRA.Mods.HV.Traits
 		public CPos TopLeft { get { return self.World.Map.CellContaining(CenterPosition); } }
 
 		// Isn't used anyway
-		public int TurnSpeed { get { return 255; } }
+		public WAngle TurnSpeed { get { return WAngle.Zero; } }
 
 		CPos cachedLocation;
 		CPos nextLocation;
@@ -83,17 +86,19 @@ namespace OpenRA.Mods.HV.Traits
 			Info = info;
 			self = init.Self;
 
-			if (init.Contains<LocationInit>())
-				SetPosition(self, init.Get<LocationInit, CPos>());
+			var locationInit = init.GetOrDefault<LocationInit>(info);
+			if (locationInit != null)
+				SetPosition(self, locationInit.Value);
 
-			if (init.Contains<CenterPositionInit>())
-				SetPosition(self, init.Get<CenterPositionInit, WPos>());
+			var centerPositionInit = init.GetOrDefault<CenterPositionInit>(info);
+			if (centerPositionInit != null)
+				SetPosition(self, centerPositionInit.Value);
 
-			Facing = init.Contains<FacingInit>() ? init.Get<FacingInit, int>() : Info.GetInitialFacing();
+			Facing = WAngle.FromFacing(init.GetValue<FacingInit, int>(info, Info.GetInitialFacing()));
 
 			// Prevent mappers from setting bogus facings
-			if (Facing != 64 && Facing != 192)
-				Facing = Facing > 127 ? 192 : 64;
+			if (Facing != Left && Facing != Right)
+				Facing = Facing.Angle > 511 ? Right : Left;
 		}
 
 		void INotifyCreated.Created(Actor self)
@@ -115,7 +120,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void ITick.Tick(Actor self)
 		{
-			nextLocation = Facing == 64 ? self.Location + new CVec(-1, 0) : self.Location + new CVec(1, 0);
+			nextLocation = Facing == Left ? self.Location + new CVec(-1, 0) : self.Location + new CVec(1, 0);
 
 			if (cachedLocation != self.Location)
 			{
@@ -134,10 +139,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void Turn()
 		{
-			if (Facing == 64)
-				Facing = 192;
-			else
-				Facing = 64;
+			Facing = Facing == Left ? Right : Left;
 		}
 
 		int MovementSpeed
@@ -147,20 +149,20 @@ namespace OpenRA.Mods.HV.Traits
 
 		public Pair<CPos, SubCell>[] OccupiedCells() { return new[] { Pair.New(TopLeft, SubCell.FullCell) }; }
 
-		WVec MoveStep(int facing)
+		WVec MoveStep(WAngle facing)
 		{
 			return MoveStep(MovementSpeed, facing);
 		}
 
-		WVec MoveStep(int speed, int facing)
+		WVec MoveStep(int speed, WAngle facing)
 		{
-			var dir = new WVec(0, -1024, 0).Rotate(WRot.FromFacing(facing));
+			var dir = new WVec(0, -1024, 0).Rotate(WRot.FromYaw(facing));
 			return speed * dir / 1024;
 		}
 
 		void IDeathActorInitModifier.ModifyDeathActorInit(Actor self, TypeDictionary init)
 		{
-			init.Add(new FacingInit(Facing));
+			init.Add(new FacingInit(Facing.Facing));
 		}
 
 		public bool CanExistInCell(CPos cell) { return true; }
@@ -227,7 +229,7 @@ namespace OpenRA.Mods.HV.Traits
 		void IActorPreviewInitModifier.ModifyActorPreviewInit(Actor self, TypeDictionary inits)
 		{
 			if (!inits.Contains<DynamicFacingInit>() && !inits.Contains<FacingInit>())
-				inits.Add(new DynamicFacingInit(() => Facing));
+				inits.Add(new DynamicFacingInit(() => Facing.Facing));
 		}
 	}
 }

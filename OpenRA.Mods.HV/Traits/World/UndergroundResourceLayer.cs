@@ -18,9 +18,9 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Attach this to the world actor.", "Order of the layers defines the Z sorting.")]
-	public class UndergroundResourceLayerInfo : ITraitInfo, Requires<ResourceTypeInfo>, Requires<BuildingInfluenceInfo>
+	public class UndergroundResourceLayerInfo : TraitInfo, Requires<ResourceTypeInfo>, Requires<BuildingInfluenceInfo>
 	{
-		public virtual object Create(ActorInitializer init) { return new UndergroundResourceLayer(init.Self); }
+		public override object Create(ActorInitializer init) { return new UndergroundResourceLayer(init.Self); }
 	}
 
 	public class UndergroundResourceLayer : IWorldLoaded
@@ -44,20 +44,6 @@ namespace OpenRA.Mods.HV.Traits
 			buildingInfluence = self.Trait<BuildingInfluence>();
 
 			Content = new CellLayer<CellContents>(world.Map);
-		}
-
-		int GetAdjacentCellsWith(ResourceType t, CPos cell)
-		{
-			var sum = 0;
-			var directions = CVec.Directions;
-			for (var i = 0; i < directions.Length; i++)
-			{
-				var c = cell + directions[i];
-				if (Content.Contains(c) && Content[c].Type == t)
-					++sum;
-			}
-
-			return sum;
 		}
 
 		public void WorldLoaded(World w, WorldRenderer wr)

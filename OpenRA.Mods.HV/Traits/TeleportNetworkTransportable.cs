@@ -18,13 +18,13 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Can move actors instantly to primary designated teleport network canal actor.")]
-	class TeleportNetworkTransportableInfo : ITraitInfo
+	class TeleportNetworkTransportableInfo : TraitInfo
 	{
 		[VoiceReference]
 		public readonly string Voice = "Action";
 		public readonly string EnterCursor = "enter";
 		public readonly string EnterBlockedCursor = "enter-blocked";
-		public object Create(ActorInitializer init) { return new TeleportNetworkTransportable(init, this); }
+		public override object Create(ActorInitializer init) { return new TeleportNetworkTransportable(init, this); }
 	}
 
 	class TeleportNetworkTransportable : IIssueOrder, IResolveOrder, IOrderVoice

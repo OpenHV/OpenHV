@@ -15,7 +15,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("This must be attached to player in order for TeleportNetwork to work.")]
-	public class TeleportNetworkManagerInfo : ITraitInfo, IRulesetLoaded
+	public class TeleportNetworkManagerInfo : TraitInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]
 		[Desc("Type of TeleportNetwork that pairs up, in order for it to work.")]
@@ -30,7 +30,7 @@ namespace OpenRA.Mods.HV.Traits
 				throw new YamlException("Can't find a TeleportNetwork with Type '{0}'".F(Type));
 		}
 
-		public object Create(ActorInitializer init) { return new TeleportNetworkManager(init, this); }
+		public override object Create(ActorInitializer init) { return new TeleportNetworkManager(init, this); }
 	}
 
 	public class TeleportNetworkManager
