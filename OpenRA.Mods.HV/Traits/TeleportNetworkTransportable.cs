@@ -24,14 +24,14 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Voice = "Action";
 		public readonly string EnterCursor = "enter";
 		public readonly string EnterBlockedCursor = "enter-blocked";
-		public override object Create(ActorInitializer init) { return new TeleportNetworkTransportable(init, this); }
+		public override object Create(ActorInitializer init) { return new TeleportNetworkTransportable(this); }
 	}
 
 	class TeleportNetworkTransportable : IIssueOrder, IResolveOrder, IOrderVoice
 	{
 		readonly TeleportNetworkTransportableInfo info;
 
-		public TeleportNetworkTransportable(ActorInitializer init, TeleportNetworkTransportableInfo info)
+		public TeleportNetworkTransportable(TeleportNetworkTransportableInfo info)
 		{
 			this.info = info;
 		}
@@ -59,7 +59,7 @@ namespace OpenRA.Mods.HV.Traits
 			return managers.Count > 1;
 		}
 
-		static bool IsValidOrder(Actor self, Order order)
+		static bool IsValidOrder(Order order)
 		{
 			// Not targeting a frozen actor
 			if (order.Target.Actor == null)
@@ -77,13 +77,13 @@ namespace OpenRA.Mods.HV.Traits
 
 		public string VoicePhraseForOrder(Actor self, Order order)
 		{
-			return order.OrderString == "TeleportNetworkTransport" && IsValidOrder(self, order)
+			return order.OrderString == "TeleportNetworkTransport" && IsValidOrder(order)
 				? info.Voice : null;
 		}
 
 		public void ResolveOrder(Actor self, Order order)
 		{
-			if (order.OrderString != "TeleportNetworkTransport" || !IsValidOrder(self, order))
+			if (order.OrderString != "TeleportNetworkTransport" || !IsValidOrder(order))
 				return;
 
 			if (order.Target.Type != TargetType.Actor)
