@@ -54,7 +54,7 @@ AntiGroundRocket:
 		Speed: 256
 		HorizontalRateOfTurn: 10
 		RangeLimit: 8c512
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		Damage: 6000
 		Versus:
 			None: 30
@@ -75,7 +75,7 @@ AntiAirRocket:
 		HorizontalRateOfTurn: 10
 		RangeLimit: 7c0
 		TrailImage: smoke
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		Damage: 4000
 		ValidTargets: Air
 		Versus:
@@ -124,6 +124,23 @@ LightAntiTankRocket:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+LightAntiAirRocket:
+	Inherits: ^AntiAirMissile
+	Range: 7c512
+	ReloadDelay: 50
+	Report: rocketlaunch01.wav
+	Projectile: Missile
+		Arm: 3
+		Image: bullet7
+		Inaccuracy: 0
+		HorizontalRateOfTurn: 25
+		RangeLimit: 9c0
+		Speed: 341
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+		Versus:
+			Light: 60
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile

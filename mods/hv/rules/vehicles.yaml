@@ -525,8 +525,12 @@ SCOUT2:
 		Locomotor: pod
 	RevealsShroud:
 		Range: 8c0
-	Armament:
+	Armament@PRIMARY:
 		Weapon: LightAntiTankRocket
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	Armament@SECONDARY:
+		Weapon: LightAntiAirRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	AttackFrontal:
