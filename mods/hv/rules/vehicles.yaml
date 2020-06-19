@@ -9,7 +9,7 @@ TANK1:
 		Queue: Vehicle
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 20
-		Description: Cut content. Incomplete palette.
+		Description: Unknown purpose.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -20,8 +20,6 @@ TANK1:
 		Speed: 170
 	RevealsShroud:
 		Range: 7c0
-	RenderSprites:
-		PlayerPalette: simple
 
 TANK2:
 	Inherits: ^TrackedVehicle

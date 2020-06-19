@@ -43,10 +43,6 @@ SHIP1:
 		UsePlayerColor: false
 		Color: A00000
 		TrailWidth: 0c192
-	RenderSprites:
-		PlayerPalette: simple
-	WithShadow:
-		Palette: simple-shadow
 
 SHIP2:
 	Inherits: ^Plane
@@ -92,10 +88,6 @@ SHIP2:
 		Color: A00000
 	Selectable:
 		DecorationBounds: 30,28,0,2
-	RenderSprites:
-		PlayerPalette: simple
-	WithShadow:
-		Palette: simple-shadow
 
 COPTER:
 	Inherits: ^Helicopter
