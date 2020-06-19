@@ -123,8 +123,11 @@ namespace OpenRA.Mods.HV.Traits
 				if (!miner.Key.IsIdle)
 					continue;
 
-				// Tell the idle harvester to quit slacking:
+				// Tell the idle miner to quit slacking:
 				var newSafeResourcePatch = FindNextResource(miner.Key, miner.Value);
+				if (newSafeResourcePatch.Type == TargetType.Invalid)
+					continue;
+
 				AIUtils.BotDebug("AI: Miner {0} is idle. Ordering to {1} in search for new resources.".F(miner.Key, newSafeResourcePatch));
 				bot.QueueOrder(new Order("Move", miner.Key, newSafeResourcePatch, true));
 				bot.QueueOrder(new Order("DeployTransform", miner.Key, true));
