@@ -33,6 +33,20 @@ copter:
 	icon: units-icons.png
 		Start: 23
 
+banshee:
+	idle: banshee.png
+		Start: 7
+		Length: 4
+		Facings: 8
+		Tick: 50
+	muzzle: banshee.png
+		Start: 39
+		Length: 2
+		Facings: 8
+		Tick: 100
+	icon: units-icons.png
+		Start: 23
+
 copter2:
 	idle: copter2.png
 		Facings: 8
