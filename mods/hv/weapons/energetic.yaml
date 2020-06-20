@@ -76,3 +76,39 @@ Repair:
 		DebugOverlayColor: 00FF00
 		Damage: -5000
 		ValidTargets: Repair
+
+Plasma:
+	ReloadDelay: 50
+	Burst: 3
+	BurstDelays: 5
+	Range: 5c0
+	MinRange: 0c512
+	Projectile: Bullet
+		Speed: 350
+		Blockable: false
+		Inaccuracy: 512
+		Image: bullet8
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 5000
+		ValidTargets: Ground, Water, Air, Tree
+		Versus:
+			None: 10
+			Steel: 74
+			Light: 34
+			Heavy: 100
+			Concrete: 50
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

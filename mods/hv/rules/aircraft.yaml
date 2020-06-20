@@ -128,6 +128,44 @@ COPTER:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 
+BANSHEE:
+	Inherits: ^Helicopter
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Banshee
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
+		Prerequisites: radar
+		Description: Heavy Helicopter Gunship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 112
+	AttackFrontal:
+	Armament@PRIMARY:
+		Weapon: Plasma
+		MuzzleSequence: muzzle
+		LocalOffset: 700,200,0
+	Armament@SECONDARY:
+		Weapon: Plasma
+		MuzzleSequence: muzzle
+		LocalOffset: 700,-200,0
+	Selectable:
+		DecorationBounds: 24,24
+	RenderSprites:
+		PlayerPalette: green
+	WithMuzzleOverlay:
+		IgnoreOffset: True
+
 COPTER2:
 	Inherits: ^Helicopter
 	Valued:
