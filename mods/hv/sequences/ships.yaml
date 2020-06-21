@@ -20,6 +20,19 @@ heavyboat:
 	icon: units-icons.png
 		Start: 16
 
+aaboat:
+	idle: boat3.png
+		Facings: 8
+	turret: boat3.png
+		Start: 8
+		Facings: 8
+	shoot: boat3.png
+		Start: 16
+		Facings: 8
+		Tick: 1000
+	icon: units-icons.png
+		Start: 14
+
 seamnstr:
 	left: seamnstr.png
 		Length: 15
