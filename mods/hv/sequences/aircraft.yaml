@@ -45,7 +45,7 @@ banshee:
 		Facings: 8
 		Tick: 100
 	icon: units-icons.png
-		Start: 23
+		Start: 36
 
 copter2:
 	idle: copter2.png
