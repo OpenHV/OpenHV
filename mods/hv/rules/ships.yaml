@@ -37,6 +37,43 @@ BOAT:
 	RenderSprites:
 		PlayerPalette: green
 
+AABOAT:
+	Inherits: ^Ship
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Light boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: harbor
+		BuildPaletteOrder: 40
+		Description: Anti-Air light boat.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 33000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 150
+		TurnSpeed: 15
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 30
+		Offset: 100,0,100
+	Armament:
+		Weapon: BoatMissile_AA
+		LocalOffset: 0,0,0
+	AttackTurreted:
+	WithSpriteTurret:
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	#RenderSprites:
+	#	PlayerPalette: green	
+
 HEAVYBOAT:
 	Inherits: ^Ship
 	Valued:

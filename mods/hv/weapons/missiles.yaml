@@ -185,3 +185,32 @@ ShipMissile_AA:
 			Light: 90
 			Heavy: 115
 			Concrete: 100
+
+BoatMissile_AA:
+	ReloadDelay: 50
+	Range: 9c0
+	MinRange: 1c0
+	Report: missile7.aud
+	Projectile: Missile
+		Speed: 256
+		Blockable: false
+		Inaccuracy: 128
+		Image: bullet6
+		Shadow: true
+		HorizontalRateOfTurn: 5
+		RangeLimit: 15c0
+		TrailImage: smoke
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1000
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree
