@@ -63,7 +63,7 @@ AABOAT:
 		Range: 5c0
 	Turreted:
 		TurnSpeed: 30
-		Offset: 100,0,100
+		Offset: -50,0,100
 	Armament:
 		Weapon: BoatMissile_AA
 		LocalOffset: 0,0,0
@@ -71,8 +71,8 @@ AABOAT:
 	WithSpriteTurret:
 	WithTurretAttackAnimation:
 		Sequence: shoot
-	#RenderSprites:
-	#	PlayerPalette: green	
+	RenderSprites:
+		PlayerPalette: green	
 
 HEAVYBOAT:
 	Inherits: ^Ship

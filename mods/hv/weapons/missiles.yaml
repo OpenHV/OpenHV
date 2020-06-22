@@ -190,9 +190,10 @@ BoatMissile_AA:
 	ReloadDelay: 50
 	Range: 9c0
 	MinRange: 1c0
-	Report: missile7.aud
+	Report: rocketlaunch01.wav
+	ValidTargets: Air
 	Projectile: Missile
-		Speed: 256
+		Speed: 350
 		Blockable: false
 		Inaccuracy: 128
 		Image: bullet6
@@ -202,7 +203,7 @@ BoatMissile_AA:
 		TrailImage: smoke
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 2500
 		ValidTargets: Air
 		Versus:
 			None: 30
