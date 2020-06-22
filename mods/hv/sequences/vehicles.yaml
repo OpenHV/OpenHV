@@ -19,7 +19,8 @@ tank3:
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png # TODO
+	icon: units-icons.png
+		Start: 37
 
 tank5:
 	idle: tank5.png
