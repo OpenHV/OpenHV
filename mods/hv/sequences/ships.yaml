@@ -11,7 +11,7 @@ boat:
 	icon: units-icons.png
 		Start: 15
 
-heavyboat:
+boat2:
 	idle: boat2.png
 		Facings: 8
 	turret: boat2.png
@@ -20,7 +20,7 @@ heavyboat:
 	icon: units-icons.png
 		Start: 16
 
-aaboat:
+boat3:
 	idle: boat3.png
 		Facings: 8
 	turret: boat3.png
