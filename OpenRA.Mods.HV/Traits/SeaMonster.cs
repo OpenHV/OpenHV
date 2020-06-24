@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public int GetInitialFacing() { return InitialFacing; }
 
-		IEnumerable<object> IActorPreviewInitInfo.ActorPreviewInits(ActorInfo ai, ActorPreviewType type)
+		IEnumerable<ActorInit> IActorPreviewInitInfo.ActorPreviewInits(ActorInfo ai, ActorPreviewType type)
 		{
 			yield return new FacingInit(PreviewFacing);
 		}
@@ -67,8 +67,16 @@ namespace OpenRA.Mods.HV.Traits
 		IEnumerable<int> speedModifiers;
 		INotifyVisualPositionChanged[] notifyVisualPositionChanged;
 
+		WRot orientation;
+
 		[Sync]
-		public WAngle Facing { get; set; }
+		public WAngle Facing
+		{
+			get { return orientation.Yaw; }
+			set { orientation = orientation.WithYaw(value); }
+		}
+
+		public WRot Orientation { get { return orientation; } }
 
 		[Sync]
 		public WPos CenterPosition { get; private set; }
