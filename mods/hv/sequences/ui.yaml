@@ -83,7 +83,7 @@ outline:
 
 outline-red:
 	top-left: outline2.png
-	top: outline.png
+	top: outline2.png
 		Start: 1
 	top-right: outline2.png
 		Start: 2
