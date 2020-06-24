@@ -121,7 +121,8 @@ namespace OpenRA.Mods.HV.Traits
 				var movement = self.Trait<IPositionable>();
 
 				var minefield = GetMinefieldCells(minefieldStart, cell, Info.MinefieldDepth)
-					.Where(c => movement.CanEnterCell(c, null, BlockedByActor.Immovable) || !self.Owner.Shroud.IsVisible(c))
+					.Where(c => movement.CanEnterCell(c, null, BlockedByActor.Immovable)
+						|| (!self.Owner.Shroud.IsVisible(c) && self.World.Map.Contains(c)))
 					.OrderBy(c => (c - minefieldStart).LengthSquared).ToList();
 
 				self.QueueActivity(order.Queued, new LayMines(self, minefield));
@@ -229,7 +230,9 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var c in minefield)
 				{
 					var tile = tileOk;
-					if (world.FogObscures(c))
+					if (!world.Map.Contains(c))
+						tile = tileBlocked;
+					else if (world.FogObscures(c))
 						tile = tileUnknown;
 					else if (!movement.CanEnterCell(c, null, BlockedByActor.Immovable) || (mobile != null && !mobile.CanStayInCell(c)))
 						tile = tileBlocked;
