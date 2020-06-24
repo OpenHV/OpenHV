@@ -150,6 +150,7 @@
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
 	ActorLostNotification:
 	Carryable:
+	Demolishable:
 
 ^Scrap:
 	Interactable:
@@ -372,6 +373,7 @@
 		Range: 1c512, 4c0
 	ActorLostNotification:
 		Notification: BuildingLost
+	Demolishable:
 
 ^BaseBuilding:
 	Inherits: ^Building

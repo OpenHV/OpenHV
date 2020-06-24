@@ -1,15 +1,15 @@
 TANK1:
-	Inherits: ^TrackedVehicle
+	Inherits: ^Vehicle
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Ramp Buggy
 		GenericName: Buggy
 	Buildable:
-		Queue: Vehicle
-		Prerequisites: ~disabled
 		BuildPaletteOrder: 20
-		Description: Unknown purpose.
+		Prerequisites: factory2
+		Queue: Vehicle
+		Description: Remote controlled vehicle\narmed with explosives.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -20,6 +20,13 @@ TANK1:
 		Speed: 170
 	RevealsShroud:
 		Range: 7c0
+	Demolition:
+		DetonationDelay: 45
+		EnterBehaviour: Dispose
+		Cursor: ability
+	Passenger:
+		CustomPipType: red
+		Voice: Move
 
 TANK2:
 	Inherits: ^TrackedVehicle
