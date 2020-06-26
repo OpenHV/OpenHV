@@ -94,8 +94,8 @@ TANK3:
 		PauseOnCondition: ecmdisabled
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	#RenderSprites:
-	#	PlayerPalette: green
+	RenderSprites:
+		PlayerPalette: green
 
 TANK5:
 	Inherits: ^TrackedVehicle
