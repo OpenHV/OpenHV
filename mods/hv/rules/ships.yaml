@@ -30,7 +30,7 @@ BOAT:
 		Recoil: 75
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
-		LocalOffset: 0,0,0
+		LocalOffset: 200,0,-50
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
