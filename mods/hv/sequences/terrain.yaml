@@ -55,13 +55,8 @@ stnrock2:
 	idle: stnrock2.png
 
 swmpani:
-	idle:
-		Combine: # TODO this doesn't work properly, see https://github.com/OpenRA/OpenRA/issues/16576
-			swmpani.png:
-				Length: 3
-			swmpani.png:
-				Frames: 3, 2, 1
-				Length: 3
+	idle: swmpani.png
+		Frames: 1, 2, 3, 2, 1
 		Length: *
 		Tick: 1000
 
