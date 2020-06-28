@@ -24,9 +24,6 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		public readonly HashSet<string> DeliveryBuildings = new HashSet<string>();
 
-		[Desc("How long (in ticks) to wait until (re-)checking for a nearby available DeliveryBuilding if not yet linked to one.")]
-		public readonly int SearchForDeliveryBuildingDelay = 125;
-
 		[Desc("How much resources it can carry.")]
 		public readonly int Capacity = 1000;
 
