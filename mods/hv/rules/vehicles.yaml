@@ -85,7 +85,7 @@ TANK3:
 		TurnSpeed: 5
 		Offset: -125,0,50
 	Armament:
-		Weapon: TyrianTankCannon
+		Weapon: 30mm
 		Recoil: 75
 		RecoilRecovery: 25
 		MuzzleSequence: muzzle
