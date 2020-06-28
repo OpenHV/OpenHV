@@ -84,6 +84,7 @@ BASE:
 	Production:
 	ProductionBar@Vehicles:
 		ProductionType: Vehicle
+	AcceptsDeliveredResources:
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -299,9 +300,13 @@ MINER2:
 		Bounds: 40,60
 	Tooltip:
 		Name: Miner
-	CashTrickler:
-		Amount: 100
-	CashTricklerBar:
+	ResourceCollector:
+		DeliveryVehicleType: tank13
+	RallyPoint:
+		Path: 3,3
+		IsPlayerPalette: true
+		Palette: green
+	Exit:
 	WithSpriteBody:
 		Sequence: active
 	WithMakeAnimation:
@@ -730,6 +735,7 @@ STORAGE:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+	AcceptsDeliveredResources:
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding

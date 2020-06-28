@@ -39,7 +39,7 @@ Player:
 	SquadManagerBotModule@Test:
 		RequiresCondition: enable-test-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder
+		ExcludeFromSquadsTypes: miner, builder, tank13
 		NavalUnitsTypes: boat, heavyboat
 		ConstructionYardTypes: base
 	UnitBuilderBotModule@Test:
