@@ -447,3 +447,27 @@ wall:
 	destroyed-topright: walldest3.png
 		Start: 1
 	icon: icon.png
+
+techcenter:
+	idle: tech-center.png
+		Start: 0
+	shadow-overlay: tech-center-shadow.png
+		ZOffset: 1768
+	damaged-shadow-overlay: tech-center-shadow-damaged.png
+		ZOffset: 1768
+	damaged-idle: tech-center.png
+		Start: 1
+	animation: tech-center.png
+		Start: 2
+		Length: 10
+		Tick: 50
+	make: build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2000
+	make-overlay: build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2000
+	icon: buildings-icons.png
+		Start: 18
