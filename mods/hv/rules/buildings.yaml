@@ -509,6 +509,49 @@ FACTORY3:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 
+TECHCENTER:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Selectable:
+		Bounds: 40,60
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 10
+		Prerequisites: base
+		Description: Unlocks game ending units.
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Technology Center
+	ProvidesPrerequisite@buildingname:
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-312,0
+	Health:
+		HP: 30000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -200
+	Targetable:
+		TargetTypes: Ground, Structure
+	ScalePowerWithHealth:
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -500,300,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete	
+	WithIdleOverlay:
+		Sequence: animation
+		RequiresCondition: !build-incomplete
+
 TURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
