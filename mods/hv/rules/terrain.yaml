@@ -46,6 +46,8 @@ LAVABUBL:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+	WithIdleAnimation:
+		Interval: 500, 1000
 
 MNTMISC8:
 	Inherits: ^Rock
@@ -126,6 +128,8 @@ SWMPBUBL:
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+	WithIdleAnimation:
+		Interval: 500, 1000
 
 TREEGRS1:
 	Inherits: ^Tree

@@ -15,6 +15,7 @@ icicle2:
 
 lavabubl:
 	idle: lavabubl.png
+	active: lavabubl.png
 		Tick: 100
 		Length: *
 
@@ -66,6 +67,7 @@ swmpani:
 
 swmpbubl:
 	idle: swmpbubl.png
+	active: swmpbubl.png
 		Tick: 100
 		Length: *
 
