@@ -73,7 +73,7 @@ TANK3:
 		Queue: Vehicle
 		Description: Fast, light tank.
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 5
 		Speed: 110
 	Health:
 		HP: 34000
@@ -82,13 +82,20 @@ TANK3:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 7
+		TurnSpeed: 5
+		Offset: -125,0,50
 	Armament:
-		Weapon: 30mm
-		Recoil: 85
-		RecoilRecovery: 17
-		LocalOffset: 720,0,90
-	AttackFrontal:
+		Weapon: TyrianTankCannon
+		Recoil: 75
+		RecoilRecovery: 25
+		MuzzleSequence: muzzle
+		LocalOffset: 500,-50,-50
+	AttackTurreted:
+		PauseOnCondition: ecmdisabled
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
 
 TANK5:
 	Inherits: ^TrackedVehicle
