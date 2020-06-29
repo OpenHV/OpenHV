@@ -302,10 +302,6 @@ MINER2:
 		Name: Miner
 	ResourceCollector:
 		DeliveryVehicleType: tank13, tank14
-	RallyPoint:
-		Path: 3,3
-		IsPlayerPalette: true
-		Palette: green
 	Exit:
 	WithSpriteBody:
 		Sequence: active
