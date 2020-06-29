@@ -306,7 +306,7 @@ TANK13:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Resource Transporter
+		Name: Armored Resource Transporter
 	Health:
 		HP: 11000
 	Armor:
@@ -319,6 +319,9 @@ TANK13:
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
+
+TANK14:
+	Inherits: TANK13
 
 TANK15:
 	Inherits: ^TrackedVehicle

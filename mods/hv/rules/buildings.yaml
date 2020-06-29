@@ -301,7 +301,7 @@ MINER2:
 	Tooltip:
 		Name: Miner
 	ResourceCollector:
-		DeliveryVehicleType: tank13
+		DeliveryVehicleType: tank13, tank14
 	RallyPoint:
 		Path: 3,3
 		IsPlayerPalette: true

@@ -39,7 +39,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Capacity = 1000;
 
 		[ActorReference(typeof(ResourceTransporterInfo))]
-		public readonly string DeliveryVehicleType = null;
+		public readonly string[] DeliveryVehicleType = null;
 
 		public override object Create(ActorInitializer init) { return new ResourceCollector(init, this); }
 	}
@@ -80,21 +80,22 @@ namespace OpenRA.Mods.HV.Traits
 				if (Resources >= Info.Capacity)
 				{
 					var exit = self.Exits().RandomOrDefault(self.World.SharedRandom);
-					var transporter = self.World.Map.Rules.Actors[Info.DeliveryVehicleType.ToLowerInvariant()];
-					SpawnDeliveryVehicle(self, transporter, exit != null ? exit.Info : null);
+					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
+					var actorInfo = self.World.Map.Rules.Actors[vehicle];
+					SpawnDeliveryVehicle(self, actorInfo, exit != null ? exit.Info : null);
 					Resources = 0;
 				}
 			}
 		}
 
-		public void SpawnDeliveryVehicle(Actor self, ActorInfo transporter, ExitInfo exitinfo)
+		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitinfo)
 		{
 			var exit = CPos.Zero;
 			var exitLocations = new List<CPos>();
 
 			var td = new TypeDictionary();
 
-			if (exitinfo != null && self.OccupiesSpace != null && transporter.HasTraitInfo<IOccupySpaceInfo>())
+			if (exitinfo != null && self.OccupiesSpace != null && actorInfo.HasTraitInfo<IOccupySpaceInfo>())
 			{
 				exit = self.Location + exitinfo.ExitCell;
 				var spawn = self.CenterPosition + exitinfo.SpawnOffset;
@@ -106,7 +107,7 @@ namespace OpenRA.Mods.HV.Traits
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
 					{
-						var fi = transporter.TraitInfoOrDefault<IFacingInfo>();
+						var fi = actorInfo.TraitInfoOrDefault<IFacingInfo>();
 						initialFacing = fi != null ? fi.GetInitialFacing() : 0;
 					}
 					else
@@ -125,7 +126,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			self.World.AddFrameEndTask(w =>
 			{
-				var deliveryVehicle = self.World.CreateActor(transporter.Name, td);
+				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, td);
 
 				var move = deliveryVehicle.TraitOrDefault<IMove>();
 				if (exitinfo != null && move != null)
