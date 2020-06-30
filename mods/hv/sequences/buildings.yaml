@@ -145,6 +145,7 @@ miner2:
 		Start: 20
 	silo: miner2.png
 		Start: 21
+		Length: 6
 	icon: buildings-icons.png
 		Start: 16
 

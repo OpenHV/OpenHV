@@ -329,6 +329,13 @@ MINER2:
 		Offset: -2850,750,0
 	RenderSprites:
 		PlayerPalette: green
+	GrantConditionOnDamageState@CRITICAL:
+		Condition: critical
+		ValidDamageStates: Critical
+	WithResourceCollectorOverlay:
+		Palette: green
+		IsPlayerPalette: true
+		RequiresCondition: !build-incomplete && !critical
 
 STARPORT:
 	Inherits: ^BaseBuilding
