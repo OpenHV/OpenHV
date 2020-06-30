@@ -59,3 +59,4 @@ GOLDBALL:
 		Categories: System
 	GiveCashCrateAction:
 		Amount: 500
+		UseCashTick: true
