@@ -124,6 +124,11 @@ for f in $(ls usr/lib/mono/4.5/Facades/*.dll); do install -Dm 0644 "$f" "${BUILT
 for f in $(ls usr/lib/mono/4.5/*.dll usr/lib/mono/4.5/*.exe); do install -Dm 0644 "$f" "${BUILTDIR}/usr/lib/mono/4.5/"; done
 for f in $(ls usr/lib/*.so); do install -Dm 0755 "$f" "${BUILTDIR}/usr/lib/"; done
 
+install -Dm0755 usr/lib/libSDL2-2.0.so.0 "${BUILTDIR}/usr/lib/SDL2.so"
+install -Dm0755 usr/lib/libopenal.so.1 "${BUILTDIR}/usr/lib/soft_oal.so"
+install -Dm0755 usr/lib/liblua5.1.so.0 "${BUILTDIR}/usr/lib/lua51.so"
+install -Dm0755 usr/lib/libfreetype.so.6 "${BUILTDIR}/usr/lib/freetype6.so"
+
 rm -rf mono mono.tar.bz2
 
 # Add launcher and icons
