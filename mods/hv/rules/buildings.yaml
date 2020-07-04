@@ -85,6 +85,8 @@ BASE:
 	ProductionBar@Vehicles:
 		ProductionType: Vehicle
 	AcceptsDeliveredResources:
+	StoresResources:
+		Capacity: 2000
 
 GENERATOR:
 	Inherits: ^BaseBuilding
