@@ -17,7 +17,7 @@ Player:
 		VehiclesFactoryTypes: factory2, factory3
 		ProductionTypes: module, factory2, factory3, starport
 		NavalProductionTypes: harbor
-		RefineryTypes: base, storage # TODO https://github.com/OpenRA/OpenRA/pull/18272
+		RefineryTypes: base, storage
 		SiloTypes: storage
 		BuildingLimits:
 			field: 1
