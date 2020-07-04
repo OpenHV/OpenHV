@@ -82,6 +82,7 @@ make core TARGETPLATFORM=linux-x64
 make version VERSION="${ENGINE_VERSION}"
 make install-engine prefix="usr" DESTDIR="${BUILTDIR}/"
 make install-common-mod-files prefix="usr" DESTDIR="${BUILTDIR}/"
+make install-dependencies TARGETPLATFORM=linux-x64 prefix="usr" DESTDIR="${BUILTDIR}/"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
   mkdir -p "${BUILTDIR}/usr/lib/openra/$(dirname "${f}")"
@@ -123,11 +124,6 @@ install -Dm 0644 /etc/mono/4.5/machine.config "${BUILTDIR}/etc/mono/4.5"
 for f in $(ls usr/lib/mono/4.5/Facades/*.dll); do install -Dm 0644 "$f" "${BUILTDIR}/usr/lib/mono/4.5/Facades/"; done
 for f in $(ls usr/lib/mono/4.5/*.dll usr/lib/mono/4.5/*.exe); do install -Dm 0644 "$f" "${BUILTDIR}/usr/lib/mono/4.5/"; done
 for f in $(ls usr/lib/*.so); do install -Dm 0755 "$f" "${BUILTDIR}/usr/lib/"; done
-
-install -Dm0755 usr/lib/libSDL2-2.0.so.0 "${BUILTDIR}/usr/lib/SDL2.so"
-install -Dm0755 usr/lib/libopenal.so.1 "${BUILTDIR}/usr/lib/soft_oal.so"
-install -Dm0755 usr/lib/liblua5.1.so.0 "${BUILTDIR}/usr/lib/lua51.so"
-install -Dm0755 usr/lib/libfreetype.so.6 "${BUILTDIR}/usr/lib/freetype6.so"
 
 rm -rf mono mono.tar.bz2
 
