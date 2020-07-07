@@ -1,3 +1,5 @@
+# License: GPL-3.0+
+
 Background@NEW_MAP_BG:
 	Logic: NewMapWithTileSelectionLogic
 	X: (WINDOW_RIGHT - WIDTH) / 2

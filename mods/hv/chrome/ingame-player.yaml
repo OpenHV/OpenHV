@@ -1,3 +1,5 @@
+# License: GPL-3.0+
+
 Container@PLAYER_WIDGETS:
 	Children:
 		LogicKeyListener@CONTROLGROUP_KEYHANDLER:

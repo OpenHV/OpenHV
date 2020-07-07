@@ -37,6 +37,7 @@ MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
+BIT_FILES = $(shell find mods/*/bits/* -maxdepth 0 -iname '*.png' 2> /dev/null)
 
 MSBUILD = msbuild -verbosity:m -nologo
 
@@ -177,3 +178,12 @@ docs: utility
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --settings-docs > settings.md
 	@echo "Generating Lua documentation..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --lua-docs > lua.md
+
+bits: utility
+ifneq ("$(BIT_FILES)","")
+	@echo "Adding metadata to PNG sheets..."
+	@for SPRITE in $(BIT_FILES); do \
+		echo $${SPRITE}; \
+		MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --png-sheet-import $${SPRITE}; \
+	done
+endif

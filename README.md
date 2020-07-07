@@ -9,4 +9,4 @@ A mod for [OpenRA](http://www.openra.net) based on the [Hard Vacuum](https://los
 
 OpenHV just like the OpenRA engine and SDK scripts is made available under the [GPLv3](https://github.com/OpenHV/OpenHV/blob/master/COPYING) license.
 
-The mod data files (artwork, sound files, yaml, etc) are not part of the source code and are distributed under different terms. The [Lost Garden License](https://lostgarden.home.blog/2007/03/15/lost-garden-license/) applies: [Creative Commons Attribution 3.0 United States](https://creativecommons.org/licenses/by/3.0/us/)
+The mod data files (artwork, sound files, yaml, etc) are not part of the source code and are distributed under different terms. Various [Creative Commons](https://creativecommons.org/) licenses apply. Check the ReadMe files in the sub folders for details.

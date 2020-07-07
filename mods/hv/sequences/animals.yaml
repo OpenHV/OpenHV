@@ -7,8 +7,7 @@ beast:
 		Tick: 80
 		Length: 4
 		Facings: 8
-	die: beast.png
-		Start: 40
+	die: beast-die.png
 		Length: 12
 		Tick: 120
 	icon: units-icons.png

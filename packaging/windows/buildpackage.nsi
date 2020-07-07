@@ -1,4 +1,4 @@
-; Copyright 2007-2020 OpenHV developers (see CREDITS)
+; Copyright 2019-2020 OpenHV developers (see CREDITS)
 ; This file is part of OpenHV
 ;
 ;  OpenHV is free software: you can redistribute it and/or modify

@@ -1,3 +1,5 @@
+# License: GPL-3.0+
+
 Container@GAMESAVE_LOADING_SCREEN:
 	Logic: GameSaveLoadingLogic
 	Width: WINDOW_RIGHT

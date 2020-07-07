@@ -1,3 +1,5 @@
+# License: CC-BY-SA-4.0
+
 ^Cannon:
 	ValidTargets: Water, Ground, Tree
 	Report: tankfire01.wav

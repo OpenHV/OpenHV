@@ -1,0 +1,3 @@
+These scripts generate Windows installers, macOS .app bundles, and Linux [AppImages](https://appimage.org/) for distribution. `package-all.sh` chains them up. A Linux / macOS system is required. [Python](https://www.python.org/), [ImageMagick](https://imagemagick.org/) and [NSIS](https://nsis.sourceforge.io/) have to be installed.
+
+All SDK scripts are made available under the [GPLv3](https://github.com/OpenRA/OpenRA/blob/bleed/COPYING) license.

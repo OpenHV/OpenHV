@@ -1,3 +1,5 @@
+# License: GPL-3.0+
+
 Background@MAINMENU_PRERELEASE_NOTIFICATION:
 	Logic: PreReleaseWarningPrompt
 	X: (WINDOW_RIGHT - WIDTH) / 2

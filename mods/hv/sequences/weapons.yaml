@@ -1,3 +1,5 @@
+# License: CC-BY-SA-4.0
+
 explosion:
 	Defaults:
 		Length: *
@@ -13,69 +15,57 @@ nuclear_explosion:
 		ZOffset: 2050
 
 hit:
-	spark_a: sparks.png
-		Start: 0
+	spark_a: sparks1.png
 		Length: 7
 		Tick: 60
-	spark_b: sparks.png
-		Start: 7
-		Length: 9
+	spark_b: sparks2.png
+		Length: 10
 		Tick: 60
-	spark_c: sparks.png
-		Start: 16
-		Length: 8
+	spark_c: sparks3.png
+		Length: 10
 		Tick: 60
-	spark_d: sparks.png
-		Start: 24
+	spark_d: sparks4.png
 		Length: 7
 		Tick: 60
 
 bullet1:
-	idle: bullets.png
-		Start: 0
+	idle: bullet1.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet2:
-	idle: bullets.png
-		Start: 8
+	idle: bullet2.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet3:
-	idle: bullets.png
-		Start: 16
+	idle: bullet3.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet4:
-	idle: bullets.png
-		Start: 24
+	idle: bullet4.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet5:
-	idle: bullets.png
-		Start: 32
+	idle: bullet5.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet6:
-	idle: bullets.png
-		Start: 40
+	idle: bullet6.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet7:
-	idle: bullets.png
-		Start: 48
+	idle: bullet7.png
 		Length: 2
 		Facings: 8
 		ZOffset: 2030
 
 bullet8:
-	idle: bullets.png
-		Start: 64
+	idle: bullet8.png
 		Facings: 8
 		ZOffset: 2030
 

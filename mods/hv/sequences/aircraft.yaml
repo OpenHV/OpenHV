@@ -1,3 +1,5 @@
+# License: CC-BY-SA-4.0
+
 ship1:
 	idle: ship1.png
 		Facings: 8
