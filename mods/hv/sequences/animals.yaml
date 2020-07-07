@@ -1,0 +1,27 @@
+beast:
+	idle: beast.png
+		Start: 0
+		Facings: 8
+	move: beast.png
+		Start: 8
+		Tick: 80
+		Length: 4
+		Facings: 8
+	die: beast.png
+		Start: 40
+		Length: 12
+		Tick: 120
+	icon: units-icons.png
+		Start: 35
+
+crow:
+	idle: crow.png
+		Length: 5
+		Tick: 100
+	icon: icon.png
+
+gull:
+	idle: gull.png
+		Length: 5
+		Tick: 100
+	icon: icon.png

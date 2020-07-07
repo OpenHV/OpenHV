@@ -222,22 +222,6 @@ miner:
 	icon: units-icons.png
 		Start: 5
 
-beast:
-	idle: beast.png
-		Start: 0
-		Facings: 8
-	move: beast.png
-		Start: 8
-		Tick: 80
-		Length: 4
-		Facings: 8
-	die: beast.png
-		Start: 40
-		Length: 12
-		Tick: 120
-	icon: units-icons.png
-		Start: 35
-
 builder1:
 	idle: builder1.png
 		Facings: 8

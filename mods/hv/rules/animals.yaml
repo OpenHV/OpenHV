@@ -1,0 +1,73 @@
+BEAST:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Critter
+		GenericName: Beast
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 25
+		Speed: 80
+		Voice: Action
+	RevealsShroud:
+		Range: 5c0
+	WithDeathAnimation:
+		FallbackSequence: die
+	DeathSounds:
+	WithMoveAnimation:
+	Wanders:
+		WanderMoveRadius: 1
+		MinMoveDelay: 100
+		MaxMoveDelay: 750
+	ScaredyCat:
+		PanicSpeedModifier: 150
+		PanicChance: 80
+		PanicSequencePrefix:
+	WithShadow:
+		Offset: 50,50,0
+		ZOffset: -1000
+	Voiced:
+		VoiceSet: BeastVoice
+	-Repairable:
+	-MustBeDestroyed:
+	-Explodes:
+	-TeleportNetworkTransportable:
+	-WithTeleportEnergyOverlay:
+	-SpawnScrapOnDeath:
+
+CROW:
+	Inherits: ^Plane
+	Valued:
+		Cost: 10
+	Health:
+		HP: 100
+	Tooltip:
+		Name: Crows
+	Aircraft:
+		CruiseAltitude: 2560
+		Repulsable: false
+		Speed: 70
+		CruisingCondition: cruising
+		TurnSpeed: 1
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+	Wanders:
+		WanderMoveRadius: 10
+	WithShadow:
+		Offset: 200, 128, 0
+		ZOffset: -129
+	-Repairable:
+	-AppearsOnRadar:
+	-Selectable:
+	Interactable:
+	-Voiced:
+	-Targetable@AIRBORNE:
+
+GULL:
+	Inherits: CROW
+	Tooltip:
+		Name: Seagulls

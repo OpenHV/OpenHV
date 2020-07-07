@@ -44,3 +44,12 @@ cube:
 		Start: 18
 		Length: 3
 		Tick: 120
+
+cloud1:
+	idle: cloud1.png
+
+cloud2:
+	idle: cloud2.png
+
+cloud3:
+	idle: cloud3.png

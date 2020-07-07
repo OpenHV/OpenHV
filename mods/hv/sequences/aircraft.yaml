@@ -62,24 +62,3 @@ balloon:
 	shadow-overlay: balloon-shadow.png
 	icon: units-icons.png
 		Start: 22
-
-crow:
-	idle: crow.png
-		Length: 5
-		Tick: 100
-	icon: icon.png
-
-gull:
-	idle: gull.png
-		Length: 5
-		Tick: 100
-	icon: icon.png
-
-cloud1:
-	idle: cloud1.png
-
-cloud2:
-	idle: cloud2.png
-
-cloud3:
-	idle: cloud3.png

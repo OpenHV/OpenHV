@@ -26,6 +26,7 @@ MapFolders:
 
 Rules:
 	hv|rules/world.yaml
+	hv|rules/animals.yaml
 	hv|rules/defaults.yaml
 	hv|rules/vehicles.yaml
 	hv|rules/editor.yaml
@@ -39,6 +40,7 @@ Rules:
 	hv|rules/bots.yaml
 
 Sequences:
+	hv|sequences/animals.yaml
 	hv|sequences/map.yaml
 	hv|sequences/ui.yaml
 	hv|sequences/vehicles.yaml
