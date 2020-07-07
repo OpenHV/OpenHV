@@ -147,9 +147,9 @@ RADAR:
 	Tooltip:
 		Name: Radar Dome
 	Building:
-		Footprint: == xx xx
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-384,0
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
