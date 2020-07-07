@@ -5,6 +5,10 @@ A mod for [OpenRA](http://www.openra.net) based on the [Hard Vacuum](https://los
 
 ![Preview](https://github.com/Mailaender/OpenHV/blob/master/mods/hv/preview.png?raw=true)
 
+# Getting Started
+
+To launch the project from the development environment you must first compile the project by running `make.cmd` (Windows), or opening a terminal in the SDK directory and running `make` (Linux / macOS).  You can then run `launch-game.cmd` (Windows) or `launch-game.sh` (Linux / macOS) to run the game.
+
 # Licensing
 
 OpenHV just like the OpenRA engine and SDK scripts is made available under the [GPLv3](https://github.com/OpenHV/OpenHV/blob/master/COPYING) license.
