@@ -27,21 +27,21 @@ Background@MAINMENU_PRERELEASE_NOTIFICATION:
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Center
-			Text: for the community to follow development and as example for modders.
+			Text: for the community to follow development. Features may be missing
 		Label@PROMPT_TEXT_C:
 			X: 15
 			Y: 104
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Center
-			Text: Many features are missing or incomplete, artwork is being improved
+			Text: or incomplete, artwork is being improved and balancing is not final.
 		Label@PROMPT_TEXT_D:
 			X: 15
 			Y: 122
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Center
-			Text: and balance will not be addressed until a future beta.
+			Text: You may encounter game breaking issues. Thanks for helping test this.
 		Label@PROMPT_TEXT_E:
 			X: 15
 			Y: 140
