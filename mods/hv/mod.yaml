@@ -87,7 +87,7 @@ ChromeLayout:
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
-	common|chrome/mainmenu.yaml
+	hv|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/credits.yaml
@@ -202,6 +202,10 @@ ModelSequenceFormat: PlaceholderModelSequence
 
 AssetBrowser:
 	SupportedExtensions: .png
+
+WebServices:
+	GameNews: https://localhost/gamenews # TODO
+	VersionCheck: https://localhost/versioncheck # TODO
 
 GameSpeeds:
 	slowest:
