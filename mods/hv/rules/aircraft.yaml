@@ -241,3 +241,20 @@ BALLOON:
 		Offset: -3750,1000,0
 	RenderSprites:
 		PlayerPalette: green
+
+MOTHER2B:
+	Inherits: ^Helicopter
+	Health:
+		HP: 800000
+	Aircraft:
+		CanHover: false
+		Speed: 0
+		CruiseAltitude: 2048
+		Repulsable: false
+	-Hovers@CRUISING:
+	Selectable:
+		DecorationBounds: 128, 268
+
+MOTHER2C:
+	Inherits: MOTHER2B
+

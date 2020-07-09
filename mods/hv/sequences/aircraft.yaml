@@ -64,3 +64,11 @@ balloon:
 	shadow-overlay: balloon-shadow.png
 	icon: units-icons.png
 		Start: 22
+
+mother2b:
+	idle: mother2b.png
+	icon: icon.png
+
+mother2c:
+	idle: mother2c.png
+	icon: icon.png
