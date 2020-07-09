@@ -713,8 +713,6 @@ STORAGE:
 		TargetTypes: Ground, Structure
 	Tooltip:
 		Name: Storage
-	-GivesBuildableArea:
-	-MustBeDestroyed:
 	Health:
 		HP: 30000
 	Armor:
