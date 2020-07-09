@@ -40,7 +40,6 @@ Player:
 	ClassicProductionQueue@Building:
 		Type: Building
 		DisplayOrder: 0
-		BuildDurationModifier: 45
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
 		QueuedAudio: Building
@@ -50,7 +49,6 @@ Player:
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		DisplayOrder: 1
-		BuildDurationModifier: 45
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
 		QueuedAudio: Building
@@ -60,7 +58,6 @@ Player:
 	ClassicProductionQueue@Scouts:
 		Type: Scouts
 		DisplayOrder: 2
-		BuildDurationModifier: 45
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
 		QueuedAudio: Training
@@ -70,7 +67,6 @@ Player:
 	ClassicProductionQueue@Vehicles:
 		Type: Vehicle
 		DisplayOrder: 3
-		BuildDurationModifier: 45
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
 		QueuedAudio: Training
@@ -80,7 +76,6 @@ Player:
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4
-		BuildDurationModifier: 45
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
 		QueuedAudio: Training
@@ -90,7 +85,6 @@ Player:
 	ClassicProductionQueue@Naval:
 		Type: Ship
 		DisplayOrder: 5
-		BuildDurationModifier: 45
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
 		QueuedAudio: Training
