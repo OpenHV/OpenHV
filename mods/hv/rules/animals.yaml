@@ -73,3 +73,15 @@ GULL:
 	Inherits: CROW
 	Tooltip:
 		Name: Seagulls
+
+SEED:
+	Inherits: BEAST
+	-WithDeathAnimation:
+	-ScaredyCat:
+	Mobile:
+		TurnSpeed: 15
+		Speed: 50
+	Wanders:
+		WanderMoveRadius: 1
+		MinMoveDelay: 0
+		MaxMoveDelay: 0

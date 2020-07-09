@@ -1,6 +1,5 @@
 beast:
 	idle: beast.png
-		Start: 0
 		Facings: 8
 	move: beast.png
 		Start: 8
@@ -23,4 +22,13 @@ gull:
 	idle: gull.png
 		Length: 5
 		Tick: 100
+	icon: icon.png
+
+seed:
+	idle: seed.png
+		Facings: 8
+	move: seed-move.png
+		Tick: 180
+		Length: 3
+		Facings: 8
 	icon: icon.png
