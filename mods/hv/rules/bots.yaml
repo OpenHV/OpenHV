@@ -65,6 +65,7 @@ Player:
 			ship1: 5
 			ship2: 5
 			copter: 5
+			copter2: 5
 			balloon: 1
 		UnitLimits:
 			builder: 0
