@@ -237,3 +237,34 @@ StealthTankMissile:
 			Wood: 75
 			Light: 100
 			Heavy: 90
+
+Patriot:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 55
+	Range: 15c0
+	Report: rocketlaunch03.aud
+	ValidTargets: Air
+	Projectile: Missile
+		Arm: 1
+		VerticalRateOfTurn: 35
+		RangeLimit: 25c0
+		Speed: 288
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		HorizontalRateOfTurn: 25
+		Acceleration: 96
+		MinimumLaunchAngle: 128
+		MaximumLaunchAngle: 192
+		CruiseAltitude: 5c512
+		AllowSnapping: true
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 6000
+		ValidTargets: Air, Ground
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion08.wav
+		ImpactActors: false

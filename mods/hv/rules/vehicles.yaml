@@ -240,6 +240,36 @@ TANK8:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK9:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 130
+		Prerequisites: starport
+		Description: Mobile tank with AA missiles.
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Mobile AA
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 118
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 10
+	Armament:
+		Weapon: Patriot
+		LocalOffset: 543,0,815
+	AttackTurreted:
+
 TANK11:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
