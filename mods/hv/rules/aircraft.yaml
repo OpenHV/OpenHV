@@ -251,6 +251,7 @@ MOTHER2B:
 		Speed: 0
 		CruiseAltitude: 2048
 		Repulsable: false
+		-CruisingCondition:
 	-Hovers@CRUISING:
 	Selectable:
 		DecorationBounds: 128, 268
