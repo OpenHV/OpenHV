@@ -117,14 +117,16 @@ tank13:
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 28
 
 tank14:
 	idle: tank14.png
 		Facings: 8
 	energyball: teleport.png
 		Length: 10
-	icon: icon.png
+	icon: units-icons.png
+		Start: 29
 
 tank15:
 	idle: tank15.png
