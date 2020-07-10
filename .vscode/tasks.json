@@ -4,7 +4,11 @@
         {
             "label": "build",
             "command": "msbuild",
-            "args": ["-t:build", "-p:Configuration=Release", "-verbosity:m", "-nologo"]
+            "args": ["-t:build", "-p:Configuration=Release", "-verbosity:m", "-nologo"],
+            "windows": {
+                "command": "dotnet",
+                "args": ["build", "/p:Configuration=Release", "/nologo"]
+            }
         }
     ]
 }
