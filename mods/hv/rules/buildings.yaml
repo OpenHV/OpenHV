@@ -538,7 +538,6 @@ TECHCENTER:
 		Amount: -200
 	Targetable:
 		TargetTypes: Ground, Structure
-	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
