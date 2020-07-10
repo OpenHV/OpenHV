@@ -43,48 +43,76 @@
 	EmptySelectionDecorations:
 	WithSpriteSelectionDecorations@TopLeft:
 		RequiresSelection: true
-		RequiresCondition: !heavydamaged
+		RequiresCondition: not-damaged
 	WithSpriteSelectionDecorations@TopRight:
 		Position: TopRight
 		Sequence: top-right
 		RequiresSelection: true
-		RequiresCondition: !heavydamaged
+		RequiresCondition: not-damaged
 	WithSpriteSelectionDecorations@BottomLeft:
 		Position: BottomLeft
 		Sequence: bottom-left
 		RequiresSelection: true
-		RequiresCondition: !heavydamaged
+		RequiresCondition: not-damaged
 	WithSpriteSelectionDecorations@BottomRight:
 		Position: BottomRight
 		Sequence: bottom-right
 		RequiresSelection: true
-		RequiresCondition: !heavydamaged
+		RequiresCondition: not-damaged
+	WithSpriteSelectionDecorations@TopLeftYellow:
+		Image: outline-yellow
+		RequiresSelection: true
+		RequiresCondition: medium-damaged
+	WithSpriteSelectionDecorations@TopRightYellow:
+		Image: outline-yellow
+		Position: TopRight
+		Sequence: top-right
+		RequiresSelection: true
+		RequiresCondition: medium-damaged
+	WithSpriteSelectionDecorations@BottomLeftYellow:
+		Image: outline-yellow
+		Position: BottomLeft
+		Sequence: bottom-left
+		RequiresSelection: true
+		RequiresCondition: medium-damaged
+	WithSpriteSelectionDecorations@BottomRightYellow:
+		Image: outline-yellow
+		Position: BottomRight
+		Sequence: bottom-right
+		RequiresSelection: true
+		RequiresCondition: medium-damaged
 	WithSpriteSelectionDecorations@TopLeftRed:
 		Image: outline-red
 		RequiresSelection: true
-		RequiresCondition: heavydamaged
+		RequiresCondition: heavy-damaged
 	WithSpriteSelectionDecorations@TopRightRed:
 		Image: outline-red
 		Position: TopRight
 		Sequence: top-right
 		RequiresSelection: true
-		RequiresCondition: heavydamaged
+		RequiresCondition: heavy-damaged
 	WithSpriteSelectionDecorations@BottomLeftRed:
 		Image: outline-red
 		Position: BottomLeft
 		Sequence: bottom-left
 		RequiresSelection: true
-		RequiresCondition: heavydamaged
+		RequiresCondition: heavy-damaged
 	WithSpriteSelectionDecorations@BottomRightRed:
 		Image: outline-red
 		Position: BottomRight
 		Sequence: bottom-right
 		RequiresSelection: true
-		RequiresCondition: heavydamaged
+		RequiresCondition: heavy-damaged
 	WithSpriteControlGroupDecoration:
-	GrantConditionOnDamageState@HEAVYDAMAGED:
-		Condition: heavydamaged
+	GrantConditionOnDamageState@HEAVY:
+		Condition: heavy-damaged
 		ValidDamageStates: Heavy, Critical
+	GrantConditionOnDamageState@MEDIUM:
+		Condition: medium-damaged
+		ValidDamageStates: Medium
+	GrantConditionOnDamageState@NONE:
+		Condition: not-damaged
+		ValidDamageStates: Undamaged, Light
 
 ^Cloakable:
 	Cloak@ExternalCloak:
@@ -325,13 +353,19 @@
 		Position: Top
 		Sequence: top
 		RequiresSelection: true
-		RequiresCondition: !heavydamaged
+		RequiresCondition: not-damaged
+	WithSpriteSelectionDecorations@TopYellow:
+		Image: outline-yellow
+		Position: Top
+		Sequence: top
+		RequiresSelection: true
+		RequiresCondition: medium-damaged
 	WithSpriteSelectionDecorations@TopRed:
 		Image: outline-red
 		Position: Top
 		Sequence: top
 		RequiresSelection: true
-		RequiresCondition: heavydamaged
+		RequiresCondition: heavy-damaged
 	#WithSpriteSelectionDecorations@Left:
 	#	Position: Left
 	#	Sequence: left

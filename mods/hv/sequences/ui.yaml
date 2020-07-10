@@ -100,5 +100,22 @@ outline-red:
 	left: outline2.png
 		Start: 7
 
+outline-yellow:
+	top-left: outline3.png
+	top: outline3.png
+		Start: 1
+	top-right: outline3.png
+		Start: 2
+	right: outline3.png
+		Start: 3
+	bottom-right: outline3.png
+		Start: 4
+	bottom: outline3.png
+		Start: 5
+	bottom-left: outline3.png
+		Start: 6
+	left: outline3.png
+		Start: 7
+
 repair:
 	idle: building-repair.png
