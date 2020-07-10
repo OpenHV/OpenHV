@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly HashSet<string> DeliveryBuildings = new HashSet<string>();
 
 		[Desc("How much resources it can carry.")]
-		public readonly int Capacity = 1000;
+		public readonly int Capacity = 10;
 
 		[Desc("Automatically scan for delivery buildings when created.")]
 		public readonly bool SearchOnCreation = true;
@@ -48,7 +48,8 @@ namespace OpenRA.Mods.HV.Traits
 	public class ResourceTransporter : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated
 	{
 		public readonly ResourceTransporterInfo Info;
-		public readonly IReadOnlyDictionary<ResourceTypeInfo, int> Contents;
+
+		public ResourceType ResourceType;
 
 		readonly Mobile mobile;
 
@@ -65,7 +66,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (Info.SearchOnCreation)
 			{
 				var target = Target.FromActor(ClosestDestination(self));
-				self.World.AddFrameEndTask(w => self.QueueActivity(new TransportResources(self, target, Info.Capacity)));
+				self.World.AddFrameEndTask(w => self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType.Info)));
 			}
 		}
 
@@ -132,7 +133,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (accepts == null)
 					return;
 
-				self.QueueActivity(order.Queued, new TransportResources(self,  order.Target, Info.Capacity));
+				self.QueueActivity(order.Queued, new TransportResources(self,  order.Target, Info.Capacity, ResourceType.Info));
 				self.ShowTargetLines();
 			}
 		}

@@ -102,7 +102,7 @@
 		Palette: effect
 		Sequences: gold
 		MaxDensity: 3
-		ValuePerUnit: 40
+		ValuePerUnit: 180
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true
@@ -114,7 +114,7 @@
 		Palette: effect
 		Sequences: iron
 		MaxDensity: 3
-		ValuePerUnit: 25
+		ValuePerUnit: 100
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true

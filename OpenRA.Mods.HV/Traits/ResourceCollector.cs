@@ -11,20 +11,16 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Effects;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.HV.Activities;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Lets the actor generate resources in a set periodic time.")]
-	public class ResourceCollectorInfo : PausableConditionalTraitInfo
+	public class ResourceCollectorInfo : PausableConditionalTraitInfo, Requires<BuildingInfo>
 	{
 		[Desc("Number of ticks to wait between gathering resources.")]
 		public readonly int Interval = 50;
@@ -41,27 +37,37 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference(typeof(ResourceTransporterInfo))]
 		public readonly string[] DeliveryVehicleType = null;
 
-		public override object Create(ActorInitializer init) { return new ResourceCollector(init, this); }
+		public override object Create(ActorInitializer init) { return new ResourceCollector(init.Self, this); }
 	}
 
 	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, ITick, ISync
 	{
 		readonly ResourceCollectorInfo info;
-
-		readonly Lazy<RallyPoint> rp;
+		readonly Lazy<RallyPoint> rallyPoint;
+		readonly ResourceType resourceType;
 
 		public int Ticks { get; private set; }
 
 		[Sync]
 		public int Resources { get; private set; }
 
-		public ResourceCollector(ActorInitializer init, ResourceCollectorInfo info)
+		public ResourceCollector(Actor self, ResourceCollectorInfo info)
 			: base(info)
 		{
 			this.info = info;
 			Ticks = info.InitialDelay;
 
-			rp = Exts.Lazy(() => init.Self.IsDead ? null : init.Self.TraitOrDefault<RallyPoint>());
+			var resourceLayer = self.World.WorldActor.Trait<UndergroundResourceLayer>();
+
+			var building = self.Trait<Building>();
+			var cells = building.Info.Tiles(self.Location);
+			foreach (var cell in cells)
+			{
+				if (resourceLayer.GetResourceDensity(cell) > 0)
+					resourceType = resourceLayer.GetResourceType(cell);
+			}
+
+			rallyPoint = Exts.Lazy(() => self.IsDead ? null : self.TraitOrDefault<RallyPoint>());
 		}
 
 		void ITick.Tick(Actor self)
@@ -114,7 +120,7 @@ namespace OpenRA.Mods.HV.Traits
 						initialFacing = delta.Yaw.Facing;
 				}
 
-				exitLocations = rp.Value != null && rp.Value.Path.Count > 0 ? rp.Value.Path : new List<CPos> { exit };
+				exitLocations = rallyPoint.Value != null && rallyPoint.Value.Path.Count > 0 ? rallyPoint.Value.Path : new List<CPos> { exit };
 
 				td.Add(new LocationInit(exit));
 				td.Add(new CenterPositionInit(spawn));
@@ -127,6 +133,7 @@ namespace OpenRA.Mods.HV.Traits
 			self.World.AddFrameEndTask(w =>
 			{
 				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, td);
+				deliveryVehicle.Trait<ResourceTransporter>().ResourceType = resourceType;
 
 				var move = deliveryVehicle.TraitOrDefault<IMove>();
 				if (exitinfo != null && move != null)

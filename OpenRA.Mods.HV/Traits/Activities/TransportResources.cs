@@ -9,6 +9,7 @@
  */
 #endregion
 
+using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
@@ -20,11 +21,13 @@ namespace OpenRA.Mods.HV.Activities
 	class TransportResources : Enter
 	{
 		readonly int payload;
+		readonly ResourceTypeInfo typeInfo;
 
-		public TransportResources(Actor self, Target target, int payload)
+		public TransportResources(Actor self, Target target, int payload, ResourceTypeInfo typeInfo)
 			: base(self, target, Color.Yellow)
 		{
 			this.payload = payload;
+			this.typeInfo = typeInfo;
 		}
 
 		protected override void OnEnterComplete(Actor self, Actor targetActor)
@@ -33,7 +36,8 @@ namespace OpenRA.Mods.HV.Activities
 			var resources = targetOwner.PlayerActor.Trait<PlayerResources>();
 
 			var initialAmount = resources.Resources;
-			resources.GiveResources(payload);
+			var value = typeInfo.ValuePerUnit * payload;
+			resources.GiveResources(value);
 			var amount = resources.Resources - initialAmount;
 
 			if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
