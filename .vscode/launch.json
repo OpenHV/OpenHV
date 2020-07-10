@@ -3,7 +3,13 @@
     "configurations": [
         {
             "name": "OpenHV",
-            "type": "mono",
+            "type": "clr",
+            "linux": {
+                "type": "mono"
+            },
+            "osx": {
+                "type": "mono"
+            },
             "request": "launch",
             "program": "${workspaceRoot}/engine/OpenRA.Game.exe",
             "cwd": "${workspaceRoot}",
