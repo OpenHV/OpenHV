@@ -1,0 +1,9 @@
+{
+  "name": "OpenHV"
+, "files": [ { "git": 1 } ]
+, "build": {
+  "directory": "."
+  , "build": "make all"
+  , "clean": "make clean"
+  }
+}
