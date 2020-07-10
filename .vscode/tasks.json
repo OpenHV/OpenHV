@@ -3,11 +3,10 @@
     "tasks": [
         {
             "label": "build",
-            "command": "msbuild",
-            "args": ["-t:build", "-p:Configuration=Release", "-verbosity:m", "-nologo"],
+            "command": "make",
+            "args": ["all"],
             "windows": {
-                "command": "dotnet",
-                "args": ["build", "/p:Configuration=Release", "/nologo"]
+                "command": "make.cmd"
             }
         }
     ]
