@@ -34,6 +34,7 @@ script:
 before_deploy:
  - mkdir build
  - make check-packaging-scripts && cd build && ../packaging/package-all.sh ${TRAVIS_TAG} ${PWD} && cd ..
+ - cd packaging && cd itch && ./upload.sh ${TRAVIS_TAG} ${PWD}/build/
 
 deploy:
   provider: releases
@@ -41,8 +42,6 @@ deploy:
   file:
     - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x86.exe
     - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x64.exe
-    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x86-winportable.zip
-    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x64-winportable.zip
     - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-macOS.zip
     - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x86_64.AppImage
   skip_cleanup: true

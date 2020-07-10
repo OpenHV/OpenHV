@@ -139,9 +139,10 @@ function build_platform()
 	popd > /dev/null
 
 	echo "Packaging zip archive ($1)"
+	cp .itch.toml "${BUILTDIR}"
 	pushd "${BUILTDIR}" > /dev/null
 	find "${SRC_DIR}" -name '*.dll' -exec cp '{}' '.' ';'
-	zip "${PACKAGING_INSTALLER_NAME}-${TAG}-${1}-winportable.zip" -r -9 * --quiet
+	zip "${PACKAGING_INSTALLER_NAME}-${TAG}-${1}-winportable.zip" -r -9 * .[^.]* --quiet
 	mv "${PACKAGING_INSTALLER_NAME}-${TAG}-${1}-winportable.zip" "${OUTPUTDIR}"
 	popd > /dev/null
 
