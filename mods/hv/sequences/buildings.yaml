@@ -450,6 +450,8 @@ techcenter:
 		Start: 0
 	shadow-overlay: tech-center-shadow.png
 		ZOffset: 1768
+	damaged-shadow-overlay: tech-center-shadow-damaged.png
+		ZOffset: 1768
 	damaged-idle: tech-center.png
 		Start: 1
 	animation: tech-center.png
@@ -465,4 +467,4 @@ techcenter:
 		Tick: 30
 		ZOffset: 2000
 	icon: buildings-icons.png
-		Start: 0	
+		Start: 18
