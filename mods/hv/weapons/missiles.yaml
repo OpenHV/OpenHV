@@ -217,3 +217,23 @@ BoatMissile_AA:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
+
+StealthTankMissile:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 70
+	Range: 7c0
+	Report: rocketlaunch02.wav
+	Burst: 2
+	BurstDelays: 10
+	Projectile: Missile
+		Inaccuracy: 213
+		HorizontalRateOfTurn: 10
+		Speed: 213
+		RangeLimit: 8c409
+	Warhead@Damage: SpreadDamage
+		Damage: 6000
+		Versus:
+			None: 25
+			Wood: 75
+			Light: 100
+			Heavy: 90

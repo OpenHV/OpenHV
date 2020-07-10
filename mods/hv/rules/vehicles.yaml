@@ -173,7 +173,7 @@ TANK6:
 
 TANK7:
 	Inherits: ^TrackedVehicle
-	Inherits@selection: ^SelectableSupportUnit
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 270
@@ -189,6 +189,10 @@ TANK7:
 		HP: 20000
 	Armor:
 		Type: Heavy
+	AttackFrontal:
+	Armament:
+		Weapon: StealthTankMissile
+		LocalOffset: 213,43,128, 213,-43,128
 	Mobile:
 		Speed: 160
 	RevealsShroud:
@@ -197,7 +201,6 @@ TANK7:
 		InitialDelay: 90
 		CloakDelay: 90
 		IsPlayerPalette: true
-		UncloakOn: Damage
 		PauseOnCondition: cloak-force-disabled || ecmdisabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
