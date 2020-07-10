@@ -304,8 +304,6 @@ TANK13:
 	Inherits: ^Vehicle
 	Inherits@SELECTION: ^SelectableSupportUnit
 	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 410
 		Prerequisites: ~disabled
 		Description: Transports resources to the headquarter.\n  Unarmed
 	Valued:
