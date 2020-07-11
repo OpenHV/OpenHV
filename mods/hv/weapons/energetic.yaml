@@ -61,6 +61,11 @@ ElectronicCountermeasure:
 		Duration: 40
 		Condition: ecmdisabled
 		ValidTargets: Vehicle
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 1
+		Damage: 0
+		ValidTargets: Vehicle
 
 Repair:
 	ReloadDelay: 80
