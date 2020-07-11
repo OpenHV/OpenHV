@@ -25,9 +25,11 @@ namespace OpenRA.Mods.HV.UtilityCommands
 			var table = new DataTable();
 			table.Columns.Add("Name", typeof(string));
 			table.Columns.Add("Cost", typeof(int));
+			table.Columns.Add("Speed", typeof(int));
 			table.Columns.Add("HitPoints", typeof(int));
 			table.Columns.Add("Armor", typeof(string));
 			table.Columns.Add("Weapon", typeof(string));
+			table.Columns.Add("Range", typeof(string));
 			table.Columns.Add("Damage /s", typeof(int));
 
 			var armorList = new List<string>();
@@ -59,6 +61,10 @@ namespace OpenRA.Mods.HV.UtilityCommands
 				var value = actorInfo.TraitInfoOrDefault<ValuedInfo>();
 				row["Cost"] = value != null ? value.Cost : 0;
 
+				var aircraft = actorInfo.TraitInfoOrDefault<AircraftInfo>();
+				var mobile = actorInfo.TraitInfoOrDefault<MobileInfo>();
+				row["Speed"] = aircraft != null ? aircraft.Speed : mobile != null ? mobile.Speed : 0;
+
 				var health = actorInfo.TraitInfoOrDefault<HealthInfo>();
 				row["HitPoints"] = health != null ? health.HP : 0;
 
@@ -72,6 +78,8 @@ namespace OpenRA.Mods.HV.UtilityCommands
 					{
 						row["Weapon"] = armament.Weapon;
 						var weapon = rules.Weapons[armament.Weapon.ToLowerInvariant()];
+
+						row["Range"] = weapon.Range;
 
 						foreach (var warhead in weapon.Warheads.Where(w => w is DamageWarhead))
 						{
