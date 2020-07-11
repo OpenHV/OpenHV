@@ -192,7 +192,7 @@ Container@OBSERVER_WIDGETS:
 					Text: MAX
 					Font: TinyBold
 		Container@INGAME_OBSERVERSTATS_BG:
-			Logic: ObserverStatsLogic
+			Logic: HardVacuumObserverStatsLogic
 				StatisticsNoneKey: StatisticsNone
 				StatisticsBasicKey: StatisticsBasic
 				StatisticsEconomyKey: StatisticsEconomy
@@ -390,20 +390,12 @@ Container@OBSERVER_WIDGETS:
 									Text: Spent
 									Align: Right
 									Shadow: True
-								Label@HARVESTERS_HEADER:
+								Label@MINERS_HEADER:
 									X: 560
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Harvesters
-									Align: Right
-									Shadow: True
-								Label@DERRICKS_HEADER:
-									X: 650
-									Width: 80
-									Height: PARENT_BOTTOM
-									Font: Bold
-									Text: Oil Derricks
+									Text: Miners
 									Align: Right
 									Shadow: True
 						Container@PRODUCTION_STATS_HEADERS:
@@ -797,15 +789,8 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 									Align: Right
 									Shadow: True
-								Label@HARVESTERS:
+								Label@MINERS:
 									X: 560
-									Y: 0
-									Width: 80
-									Height: PARENT_BOTTOM
-									Align: Right
-									Shadow: True
-								Label@DERRICKS:
-									X: 650
 									Y: 0
 									Width: 80
 									Height: PARENT_BOTTOM
