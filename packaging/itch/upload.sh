@@ -24,5 +24,5 @@ chmod +x butler
 ./butler login
 
 ./butler push "${BUILD_OUTPUT_DIR}/OpenHV-${GIT_TAG}-x64-winportable.zip" "openhv/openhv:win" --userversion ${GIT_TAG}
-./butler push "${BUILD_OUTPUT_DIR}OpenHV-${GIT_TAG}-macOS.zip" "openhv/openhv:osx" --userversion ${GIT_TAG}
+./butler push "${BUILD_OUTPUT_DIR}/OpenHV-${GIT_TAG}-macOS.zip" "openhv/openhv:osx" --userversion ${GIT_TAG}
 ./butler push --fix-permissions "${BUILD_OUTPUT_DIR}/OpenHV-${GIT_TAG}-x86_64.AppImage" "openhv/openhv:linux" --userversion ${GIT_TAG}
