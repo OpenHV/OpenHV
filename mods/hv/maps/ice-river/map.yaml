@@ -58,14 +58,14 @@ Actors:
 	Actor157: icicle1
 		Owner: Neutral
 		Location: 24,33
-	Actor253: mpspawn
-		Owner: Neutral
-		Location: 7,7
 	Actor254: mpspawn
 		Owner: Neutral
 		Location: 18,40
-	Actor255: mpspawn
+	Actor6: mpspawn
 		Owner: Neutral
-		Location: 56,56
+		Location: 50,52
+	Actor7: mpspawn
+		Owner: Neutral
+		Location: 9,7
 
 Rules: rules.yaml
