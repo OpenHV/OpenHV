@@ -68,6 +68,7 @@ Container@MAINMENU:
 							Height: 30
 							Text: Manage Content
 							Font: Bold
+							Disabled: true
 						Button@QUIT_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 260
