@@ -547,7 +547,7 @@ TURRET:
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
-		HP: 10000
+		HP: 30000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -768,7 +768,7 @@ ARTILLERYTURRET:
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
-		HP: 15000
+		HP: 45000
 	Armor:
 		Type: Steel
 	RevealsShroud:
