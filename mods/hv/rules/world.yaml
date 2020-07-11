@@ -281,11 +281,17 @@ World:
 	ScrapOptions:
 		CheckboxDisplayOrder: 8
 	CreateMPPlayers:
-	MPStartUnits@base:
+	MPStartUnits@BASE:
 		Class: none
 		ClassName: Base only
 		Factions: megacorp
 		BaseActor: base
+	MPStartUnits@MINER:
+		Class: miner
+		ClassName: Base + Miner
+		Factions: megacorp
+		BaseActor: base
+		SupportActors: miner
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
