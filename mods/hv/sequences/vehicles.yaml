@@ -64,6 +64,18 @@ tank3:
 	icon: units-icons.png
 		Start: 37
 
+tank4:
+	idle: tank4.png
+		Facings: 8
+	extend: tank4-extend.png
+		Start: 3
+		Length: 3
+	extended: tank4-extend.png
+		Start: 5
+	energyball: teleport.png
+		Length: 10
+	icon: icon.png
+
 tank5:
 	idle: tank5.png
 		Facings: 8

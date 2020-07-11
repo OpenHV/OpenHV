@@ -99,6 +99,63 @@ TANK3:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK4:
+	Inherits: ^TrackedVehicle
+	Inherits@SELECTION: ^SelectableSupportUnit
+	-AppearsOnRadar:
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 90
+		Prerequisites: radar
+		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Reconnaissance Tank
+		RequiresCondition: !deployed
+	Tooltip@DEPLOYED:
+		Name: Reconnaissance Tank (deployed)
+		RequiresCondition: deployed
+	Health:
+		HP: 60000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		TurnSpeed: 5
+		ImmovableCondition: !undeployed
+		RequireForceMoveCondition: !undeployed
+	RevealsShroud:
+		RequiresCondition: undeployed
+		Range: 6c0
+	RevealsShroud@DEPLOYED:
+		RequiresCondition: !undeployed
+		Range: 12c0
+	WithMakeAnimation:
+		Sequence: extend
+	GrantCondition@PREVIEWWORKAROUND:
+		Condition: real-actor
+	GrantConditionOnDeploy:
+		PauseOnCondition: ecmdisabled
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Facing: 96
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
+		Voice: Move
+	Repairable:
+		RequireForceMoveCondition: !undeployed
+	WithSpriteBody@DEPLOYED:
+		RequiresCondition: !undeployed && real-actor
+		Sequence: extended
+		Name: deployed
+	DetectCloaked:
+		RequiresCondition: !ecmdisabled && deployed
+		Range: 12c0
+	RenderDetectionCircle:
+		TrailCount: 3
+
 TANK5:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -133,7 +190,7 @@ TANK5:
 
 TANK6:
 	Inherits: ^TrackedVehicle
-	Inherits@selection: ^SelectableSupportUnit
+	Inherits@SELECTION: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 170
@@ -205,13 +262,10 @@ TANK7:
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
-	DetectCloaked:
-		Range: 5c0
-	RenderDetectionCircle:
 
 TANK8:
 	Inherits: ^TrackedVehicle
-	Inherits@selection: ^SelectableSupportUnit
+	Inherits@SELECTION: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 160
@@ -691,7 +745,7 @@ TYRIANTANK:
 
 MINER:
 	Inherits: ^Vehicle
-	Inherits@selection: ^SelectableEconomicUnit
+	Inherits@SELECTION: ^SelectableEconomicUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
