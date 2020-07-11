@@ -85,7 +85,6 @@ Section "Game" GAME
 	File "${SRCDIR}\${MOD_ID}.ico"
 	File "${SRCDIR}\SDL2-CS.dll"
 	File "${SRCDIR}\OpenAL-CS.Core.dll"
-	File "${SRCDIR}\global mix database.dat"
 	File "${SRCDIR}\IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP"
 	File "${SRCDIR}\eluant.dll"
 	File "${SRCDIR}\BeaconLib.dll"
@@ -179,7 +178,6 @@ Function ${UN}Clean
 	Delete $INSTDIR\AUTHORS
 	Delete $INSTDIR\COPYING
 	Delete $INSTDIR\${MOD_ID}.ico
-	Delete "$INSTDIR\global mix database.dat"
 	Delete $INSTDIR\MaxMind.Db.dll
 	Delete $INSTDIR\KopiLua.dll
 	Delete $INSTDIR\soft_oal.dll
