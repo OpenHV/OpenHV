@@ -95,7 +95,7 @@ DoubleBarrelledArtillery:
 		LaunchAngle: 165
 		Inaccuracy: 2c0
 	Warhead@Damage: SpreadDamage
-		Damage: 7500
+		Damage: 45000
 
 TurretCannon:
 	ValidTargets: Water, Ground, Tree
