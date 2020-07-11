@@ -52,6 +52,7 @@ ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 7c0
 	Report: ccbylaserfire01.wav
+	ValidTargets: Vehicle
 	Projectile: Bullet
 		Speed: 150
 		Image: bullet4
@@ -59,6 +60,7 @@ ElectronicCountermeasure:
 		Range: 1c0
 		Duration: 40
 		Condition: ecmdisabled
+		ValidTargets: Vehicle
 
 Repair:
 	ReloadDelay: 80
