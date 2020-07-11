@@ -234,7 +234,7 @@ TANK7:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 270
-		Prerequisites: factory3, radar
+		Prerequisites: factory3, techcenter
 		Description: Cloaked surveillance tank.\nCan detect cloaked vehicles.\n  Unarmed
 	Valued:
 		Cost: 600
@@ -420,7 +420,7 @@ TANK15:
 		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: techcenter
 		BuildPaletteOrder: 130
 		Description: Disables units.
 	Armament:
@@ -487,7 +487,7 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: factory2, module
 		BuildPaletteOrder: 140
 		Description: Can transport smaller vehicles.
 	UpdatesPlayerStatistics:
@@ -567,7 +567,7 @@ ARTIL3:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
 		Prerequisites: radar, factory3
-		Description: Double barraled artillery tank.
+		Description: Double barreled artillery tank.
 	Health:
 		HP: 35000
 	Armor:
@@ -600,7 +600,7 @@ SCOUT1:
 	Buildable:
 		Queue: Scouts
 		BuildPaletteOrder: 130
-		Description: Fast reconnaissance vehicle.
+		Description: Fast reconnaissance vehicle.\nArmed with machine guns.
 		Prerequisites: module
 	Valued:
 		Cost: 500
@@ -636,7 +636,7 @@ SCOUT2:
 	Buildable:
 		Queue: Scouts
 		BuildPaletteOrder: 130
-		Description: Fast reconnaissance vehicle.
+		Description: Fast reconnaissance vehicle.\nShoots rockets.
 		Prerequisites: module
 	Valued:
 		Cost: 500

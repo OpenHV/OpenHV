@@ -528,13 +528,13 @@ TECHCENTER:
 		Bounds: 40,60
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 10
-		Prerequisites: base
-		Description: Unlocks game ending units.
+		BuildPaletteOrder: 110
+		Prerequisites: radar
+		Description: Grants access to advanced weaponry.
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Technology Center
+		Name: Technology Download Center
 	ProvidesPrerequisite@buildingname:
 	Building:
 		Footprint: xx xx
@@ -558,7 +558,7 @@ TECHCENTER:
 	WithMakeAnimation:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete	
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
@@ -628,7 +628,7 @@ FIELD:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
-		Prerequisites: radar
+		Prerequisites: techcenter
 		BuildLimit: 1
 		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\nRequires power to operate.\nMaximum 1 can be built.
 	Valued:
@@ -689,7 +689,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: radar
+		Prerequisites: techcenter
 		BuildLimit: 1
 		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
 	Building:
@@ -851,7 +851,7 @@ TELEVATR:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 120
-		Prerequisites: radar
+		Prerequisites: techcenter
 		Description: Teleports a unit to\nanother televator.\nRequires power to operate.
 	Valued:
 		Cost: 1500

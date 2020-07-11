@@ -140,7 +140,7 @@ BANSHEE:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: radar
+		Prerequisites: techcenter
 		Description: Heavy Helicopter Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -221,7 +221,7 @@ BALLOON:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: radar
+		Prerequisites: starport
 		Description: Slow reconnaissance air unit.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
