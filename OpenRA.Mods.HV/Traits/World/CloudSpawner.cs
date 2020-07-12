@@ -17,7 +17,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	public class CloudSpawnerInfo : TraitInfo
+	public class CloudSpawnerInfo : TraitInfo, ILobbyCustomRulesIgnore
 	{
 		[Desc("Average time (ticks) between cloud spawn.")]
 		public readonly int SpawnInterval = 10 * 25;
