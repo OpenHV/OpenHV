@@ -159,7 +159,7 @@ LightningBolt:
 		DistortionAnimation: 200
 		SegmentLength: 0c512
 		ZOffset: 2000
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2500
 		ValidTargets: Air
