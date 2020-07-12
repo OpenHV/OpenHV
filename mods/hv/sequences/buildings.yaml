@@ -248,6 +248,33 @@ turret:
 	icon: buildings-icons.png
 		Start: 14
 
+aaturret:
+	idle: aa-turret.png
+		Start: 0
+	shadow-overlay: aa-turret-shadow.png
+		ZOffset: 1768
+	damaged-idle: aa-turret.png
+		Start: 1
+	turret: aa-turret.png
+		Start: 2
+	shoot: aa-turret.png
+		Start: 7
+		Tick: 100
+	charge: aa-turret.png
+		Start: 3
+		Length: 4
+		Tick: 25
+	make: build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2000
+	make-overlay: build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2000
+	icon: buildings-icons.png
+		Start: 19
+
 field:
 	idle: field.png
 	shadow-overlay: field-shadow.png

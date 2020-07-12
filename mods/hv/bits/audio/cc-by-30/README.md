@@ -11,3 +11,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [ccbylaserfire01.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig
 * [ccbymissilelaunch01.wav](http://soundbible.com/2075-RPG-Plus-Shrapnel.html) (first part) by Mike Koenig
 * [laser_Cannon-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
+* [charging-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
