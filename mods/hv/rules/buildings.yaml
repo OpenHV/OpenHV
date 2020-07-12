@@ -621,6 +621,77 @@ TURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 
+AATURRET:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@shape: ^2x2Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Selectable:
+		Bounds: 32,32
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: factory2
+		Description: Anti-Air base defense.\nRequires power to operate.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: AA Turret
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: -50,250,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 30000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	Power:
+		Amount: -60
+	ProvidesPrerequisite@buildingname:
+	Armament:
+		Weapon: LightningBolt
+		LocalOffset: 0,0,500
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 255
+	WithChargeOverlay:
+		Sequence: charge
+		RequiresCondition: charging
+		PauseOnCondition: disabled
+	AttackCharges:
+		RequiresCondition: !build-incomplete
+		PauseOnCondition: disabled
+		ChargeLevel: 50
+		ChargeRate: 10
+		DischargeRate: 5
+		ChargingCondition: charging
+	RenderSprites:
+		PlayerPalette: green
+	WithShadowOverlay:
+		Offset: -800,300,0
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+	AmbientSound:
+		RequiresCondition: charging
+		SoundFiles: charging-Mike_Koenig.wav
+		Interval: 30, 40
+
 FIELD:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower

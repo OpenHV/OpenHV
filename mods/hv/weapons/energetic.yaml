@@ -142,3 +142,34 @@ VoltageArc:
 		Damage: 10000
 		ValidTargets: Ground, Water, Vehicle
 		DamageTypes: Electricity
+
+LightningBolt:
+	ReloadDelay: 50
+	Range: 9c0
+	MinRange: 1c0
+	Report: lightningbolt.wav
+	ValidTargets: Air
+	Projectile: EnergyBolt
+		Radius: 3
+		Duration: 5
+		InnerLightness: 200
+		OuterLightness: 90
+		Color: 2668bd
+		Distortion: 200
+		DistortionAnimation: 200
+		SegmentLength: 0c512
+		ZOffset: 2000
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 2500
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree
