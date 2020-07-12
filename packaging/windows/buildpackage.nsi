@@ -63,6 +63,11 @@ Section "-Reg" Reg
 	WriteRegStr HKLM "Software\Classes\openra-${MOD_ID}-${TAG}\DefaultIcon" "" "$INSTDIR\${MOD_ID}.ico,0"
 	WriteRegStr HKLM "Software\Classes\openra-${MOD_ID}-${TAG}\Shell\Open\Command" "" "$INSTDIR\${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe Launch.URI=%1"
 
+	WriteRegStr HKLM "Software\Classes\discord-${DISCORD_APP_ID}" "" "URL:Run game ${DISCORD_APP_ID} protocol"
+	WriteRegStr HKLM "Software\Classes\discord-${DISCORD_APP_ID}" "URL Protocol" ""
+	WriteRegStr HKLM "Software\Classes\discord-${DISCORD_APP_ID}\DefaultIcon" "" "$INSTDIR\${MOD_ID}.ico,0"
+	WriteRegStr HKLM "Software\Classes\discord-${DISCORD_APP_ID}\Shell\Open\Command" "" "$INSTDIR\${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe"
+
 SectionEnd
 
 Section "Game" GAME
@@ -88,6 +93,8 @@ Section "Game" GAME
 	File "${SRCDIR}\IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP"
 	File "${SRCDIR}\eluant.dll"
 	File "${SRCDIR}\BeaconLib.dll"
+	File "${SRCDIR}\DiscordRPC.dll"
+	File "${SRCDIR}\Newtonsoft.Json.dll"
 	File "${SRCDIR}\soft_oal.dll"
 	File "${SRCDIR}\SDL2.dll"
 	File "${SRCDIR}\freetype6.dll"
@@ -188,10 +195,13 @@ Function ${UN}Clean
 	Delete $INSTDIR\SDL2-CS.dll
 	Delete $INSTDIR\OpenAL-CS.Core.dll
 	Delete $INSTDIR\BeaconLib.dll
+	Delete $INSTDIR\DiscordRPC.dll
+	Delete $INSTDIR\Newtonsoft.Json.dll
 	RMDir /r $INSTDIR\Support
 
 	DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGING_WINDOWS_REGISTRY_KEY}"
 	DeleteRegKey HKLM "Software\Classes\openra-${MOD_ID}-${TAG}"
+	DeleteRegKey HKLM "Software\Classes\discord-${DISCORD_APP_ID}"
 
 	Delete $INSTDIR\uninstaller.exe
 	RMDir $INSTDIR

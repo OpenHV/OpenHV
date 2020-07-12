@@ -4993,8 +4993,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: E0E0F0
-				RightColor: E0E0F0
+				MinColor: E0E0F0
+				MaxColor: E0E0F0
 	Template@766:
 		Id: 766
 		Images: snow2.png
@@ -5002,8 +5002,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: E0E0F0
-				RightColor: E0E0F0
+				MinColor: E0E0F0
+				MaxColor: E0E0F0
 	Template@767:
 		Id: 767
 		Images: snow3.png
@@ -5018,8 +5018,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: E0E0F0
-				RightColor: E0E0F0
+				MinColor: E0E0F0
+				MaxColor: E0E0F0
 	Template@769:
 		Id: 769
 		Images: snow5.png
@@ -5035,8 +5035,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
-				RightColor: AEB4C8
+				MinColor: AEB4C8
+				MaxColor: AEB4C8
 	Template@771:
 		Id: 771
 		Images: snow7.png
@@ -5051,8 +5051,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
-				RightColor: E0E0F0
+				MinColor: AEB4C8
+				MaxColor: E0E0F0
 	Template@773:
 		Id: 773
 		Images: snow9.png
@@ -5060,7 +5060,7 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
+				MinColor: AEB4C8
 	Template@774:
 		Id: 774
 		Images: snow10.png
@@ -5068,8 +5068,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
-				RightColor: AEB4C8
+				MinColor: AEB4C8
+				MaxColor: AEB4C8
 	Template@775:
 		Id: 775
 		Images: snow11.png
@@ -5077,8 +5077,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
-				RightColor: AEB4C8
+				MinColor: AEB4C8
+				MaxColor: AEB4C8
 	Template@776:
 		Id: 776
 		Images: snow12.png
@@ -5086,8 +5086,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
-				RightColor: AEB4C8
+				MinColor: AEB4C8
+				MaxColor: AEB4C8
 	Template@777:
 		Id: 777
 		Images: snow13.png
@@ -5095,8 +5095,8 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
-				LeftColor: AEB4C8
-				RightColor: AEB4C8
+				MinColor: AEB4C8
+				MaxColor: AEB4C8
 	Template@778:
 		Id: 778
 		Images: snow2-1.png

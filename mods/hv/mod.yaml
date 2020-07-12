@@ -207,6 +207,9 @@ WebServices:
 	GameNews: https://localhost/gamenews # TODO
 	VersionCheck: https://localhost/versioncheck # TODO
 
+DiscordService:
+	ApplicationId: 730762985772941312
+
 GameSpeeds:
 	slowest:
 		Name: Slowest

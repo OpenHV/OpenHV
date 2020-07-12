@@ -81,7 +81,7 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					new CenterPositionInit(startEdge),
 					new OwnerInit(self.Owner),
-					new FacingInit(facing),
+					new FacingInit(WAngle.FromFacing(facing)),
 				});
 
 				cloud.QueueActivity(false, new Fly(cloud, Target.FromPos(finishEdge)));

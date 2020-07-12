@@ -714,7 +714,6 @@ SILO:
 		DisplayTimerStances: Ally, Neutral, Enemy
 		DisplayBeacon: false
 		DisplayRadarPing: true
-		FlashType: Nuke
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 70
 		BeginChargeSpeechNotification: MissileCharging

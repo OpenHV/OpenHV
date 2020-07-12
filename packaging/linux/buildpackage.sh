@@ -36,7 +36,7 @@ if [ -f "${TEMPLATE_ROOT}/user.config" ]; then
 	. "${TEMPLATE_ROOT}/user.config"
 fi
 
-require_variables "MOD_ID" "ENGINE_DIRECTORY" "PACKAGING_DISPLAY_NAME" "PACKAGING_INSTALLER_NAME" \
+require_variables "MOD_ID" "DISCORD_APP_ID" "ENGINE_DIRECTORY" "PACKAGING_DISPLAY_NAME" "PACKAGING_INSTALLER_NAME" \
 	"PACKAGING_APPIMAGE_DEPENDENCIES_TAG" "PACKAGING_APPIMAGE_DEPENDENCIES_SOURCE" "PACKAGING_APPIMAGE_DEPENDENCIES_TEMP_ARCHIVE_NAME" \
 	"PACKAGING_FAQ_URL" "PACKAGING_OVERWRITE_MOD_VERSION"
 
@@ -131,34 +131,34 @@ rm -rf mono mono.tar.bz2
 sed "s/{MODID}/${MOD_ID}/g" include/AppRun.in | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" > AppRun.temp
 install -m 0755 AppRun.temp "${BUILTDIR}/AppRun"
 
-sed "s/{MODID}/${MOD_ID}/g" include/mod.desktop.in | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" > temp.desktop
-install -Dm 0755 temp.desktop "${BUILTDIR}/usr/share/applications/openra-${MOD_ID}.desktop"
-install -m 0755 temp.desktop "${BUILTDIR}/openra-${MOD_ID}.desktop"
+sed "s/{MODID}/${MOD_ID}/g" include/mod.desktop.in | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" | sed "s/{DISCORDAPPID}/${DISCORD_APP_ID}/g" > temp.desktop
+install -Dm 0755 temp.desktop "${BUILTDIR}/usr/share/applications/openhv.desktop"
+install -m 0755 temp.desktop "${BUILTDIR}/openhv.desktop"
 
 sed "s/{MODID}/${MOD_ID}/g" include/mod-mimeinfo.xml.in | sed "s/{TAG}/${TAG}/g" > temp.xml
-install -Dm 0755 temp.xml "${BUILTDIR}/usr/share/mime/packages/openra-${MOD_ID}.xml"
+install -Dm 0755 temp.xml "${BUILTDIR}/usr/share/mime/packages/openhv.xml"
 
 if [ -f "${PACKAGING_DIR}/mod_scalable.svg" ]; then
-  install -Dm644 "${PACKAGING_DIR}/mod_scalable.svg" "${BUILTDIR}/usr/share/icons/hicolor/scalable/apps/openra-${MOD_ID}.svg"
+  install -Dm644 "${PACKAGING_DIR}/mod_scalable.svg" "${BUILTDIR}/usr/share/icons/hicolor/scalable/apps/openhv.svg"
 fi
 
 for i in 16x16 32x32 48x48 64x64; do
   if [ -f "${ARTWORK_DIR}/icon_${i}.png" ]; then
-    install -Dm644 "${ARTWORK_DIR}/icon_${i}.png" "${BUILTDIR}/usr/share/icons/hicolor/${i}/apps/openra-${MOD_ID}.png"
-    install -m644 "${ARTWORK_DIR}/icon_${i}.png" "${BUILTDIR}/openra-${MOD_ID}.png"
+    install -Dm644 "${ARTWORK_DIR}/icon_${i}.png" "${BUILTDIR}/usr/share/icons/hicolor/${i}/apps/openhv.png"
+    install -m644 "${ARTWORK_DIR}/icon_${i}.png" "${BUILTDIR}/openhv.png"
   fi
 done
 
 install -d "${BUILTDIR}/usr/bin"
 
 sed "s/{MODID}/${MOD_ID}/g" include/mod.in | sed "s/{TAG}/${TAG}/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{MODINSTALLERNAME}/${PACKAGING_INSTALLER_NAME}/g" | sed "s|{MODFAQURL}|${PACKAGING_FAQ_URL}|g" > openra-mod.temp
-install -m 0755 openra-mod.temp "${BUILTDIR}/usr/bin/openra-${MOD_ID}"
+install -m 0755 openra-mod.temp "${BUILTDIR}/usr/bin/openhv"
 
 sed "s/{MODID}/${MOD_ID}/g" include/mod-server.in  > openra-mod-server.temp
-install -m 0755 openra-mod-server.temp "${BUILTDIR}/usr/bin/openra-${MOD_ID}-server"
+install -m 0755 openra-mod-server.temp "${BUILTDIR}/usr/bin/openhv-server"
 
 sed "s/{MODID}/${MOD_ID}/g" include/mod-utility.in  > openra-mod-utility.temp
-install -m 0755 openra-mod-utility.temp "${BUILTDIR}/usr/bin/openra-${MOD_ID}-utility"
+install -m 0755 openra-mod-utility.temp "${BUILTDIR}/usr/bin/openhv-utility"
 
 install -m 0755 include/gtk-dialog.py "${BUILTDIR}/usr/bin/gtk-dialog.py"
 

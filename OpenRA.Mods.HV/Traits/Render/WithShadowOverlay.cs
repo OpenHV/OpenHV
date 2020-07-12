@@ -47,10 +47,10 @@ namespace OpenRA.Mods.HV.Traits.Render
 			Func<WAngle> facing;
 			var dynamicfacingInit = init.GetOrDefault<DynamicFacingInit>(this);
 			if (dynamicfacingInit != null)
-				facing = () => WAngle.FromFacing(dynamicfacingInit.Value());
+				facing = () => dynamicfacingInit.Value();
 			else
 			{
-				var f = WAngle.FromFacing(init.GetValue<FacingInit, int>(this, 0));
+				var f = init.GetValue<FacingInit, WAngle>(this, WAngle.Zero);
 				facing = () => f;
 			}
 

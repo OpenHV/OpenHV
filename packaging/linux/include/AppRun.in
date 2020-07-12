@@ -24,11 +24,11 @@ fi
 if [ -n "$1" ] && [ "$1" = "--server" ]; then
   # Drop the --server argument
   shift
-  exec "openra-{MODID}-server" "$@"
+  exec "openhv-server" "$@"
 elif [ -n "$1" ] && [ "$1" = "--utility" ]; then
   # Drop the --utility argument
   shift
-  exec "openra-{MODID}-utility" "$@"
+  exec "openhv-utility" "$@"
 else
-  exec "openra-{MODID}" "$@"
+  exec "openhv" "$@"
 fi

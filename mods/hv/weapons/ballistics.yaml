@@ -187,6 +187,9 @@ Nuclear:
 		Explosions: idle
 		ValidTargets: Ground, Air, Water
 		ImpactSounds: explosion07.wav, explosion08.wav
+	Warhead@FlashEffect: FlashPaletteEffect
+		Duration: 20
+		FlashType: Nuke
 
 TurretArtillery:
 	ValidTargets: Water, Ground, Tree

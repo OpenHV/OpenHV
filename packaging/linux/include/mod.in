@@ -14,10 +14,10 @@ if [ ! -z "${APPIMAGE}" ]; then
   # that the desktop file has been installed but the handler is not cached
   if command -v update-desktop-database > /dev/null; then
     APPIMAGEID=$(printf "file://%s" "${APPIMAGE}" | md5sum | cut -d' ' -f1)
-    LAUNCHER_NAME="appimagekit_${APPIMAGEID}-openra-{MODID}.desktop"
+    LAUNCHER_NAME="appimagekit_${APPIMAGEID}-openhv.desktop"
     LAUNCHER_PATH="${HOME}/.local/share/applications/${LAUNCHER_NAME}"
     MIMECACHE_PATH="${HOME}/.local/share/applications/mimeinfo.cache"
-    SCHEME="x-scheme-handler/openra-{MODID}-{TAG}"
+    SCHEME="x-scheme-handler/openhv-{TAG}"
     if [ -f "${LAUNCHER_PATH}" ] && ! grep -qs "${SCHEME}=" "${MIMECACHE_PATH}"; then
         update-desktop-database "${HOME}/.local/share/applications"
         if command -v gtk-update-icon-cache > /dev/null; then
@@ -28,14 +28,14 @@ if [ ! -z "${APPIMAGE}" ]; then
 fi
 
 # Search for server connection
-PROTOCOL_PREFIX="openra-{MODID}-{TAG}://"
+PROTOCOL_PREFIX="openhv-{TAG}://"
 JOIN_SERVER=""
 if [ "${1#${PROTOCOL_PREFIX}}" != "${1}" ]; then
   JOIN_SERVER="Launch.Connect=${1#${PROTOCOL_PREFIX}}"
 fi
 
 # Run the game
-export SDL_VIDEO_X11_WMCLASS="openra-{MODID}-{TAG}"
+export SDL_VIDEO_X11_WMCLASS="openhv-{TAG}"
 mono --debug OpenRA.Game.exe Game.Mod={MODID} Engine.LaunchPath="${LAUNCHER}" "${JOIN_SERVER}" "$@"
 
 # Show a crash dialog if something went wrong
