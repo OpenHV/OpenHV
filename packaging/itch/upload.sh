@@ -3,15 +3,6 @@
 export GIT_TAG="$1"
 export BUILD_OUTPUT_DIR="$2"
 
-case "${GIT_TAG}" in
-	master | release-* | playtest-*)
-		;;
-	*)
-		echo "Unknown branch: $1"
-		exit
-		;;
-esac
-
 if command -v curl >/dev/null 2>&1; then
 	curl -L -o butler-linux-amd64.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
 else
