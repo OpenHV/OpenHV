@@ -324,6 +324,34 @@ TANK9:
 		LocalOffset: 543,0,815
 	AttackTurreted:
 
+TANK10:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 330
+		Prerequisites: factory3, techcenter
+		Description: Fires electric discharges.
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Lightning Tank
+		GenericName: Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 40000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 99
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: VoltageArc
+		LocalOffset: 0,0,213
+	AttackFrontal:
+
 TANK11:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove

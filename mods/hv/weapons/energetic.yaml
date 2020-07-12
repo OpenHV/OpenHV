@@ -122,3 +122,23 @@ Plasma:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+VoltageArc:
+	ReloadDelay: 120
+	Range: 7c0
+	Report: railgunfire02.wav
+	Projectile: EnergyBolt
+		Radius: 2
+		Duration: 12
+		InnerLightness: 192
+		OuterLightness: 96
+		Color: 4444CC
+		Distortion: 200
+		DistortionAnimation: 120
+		SegmentLength: 0c512
+	ValidTargets: Ground, Water, Vehicle
+	Warhead@Damage: SpreadDamage
+		Spread: 42
+		Damage: 10000
+		ValidTargets: Ground, Water, Vehicle
+		DamageTypes: Electricity
