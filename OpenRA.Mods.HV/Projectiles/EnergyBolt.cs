@@ -34,6 +34,7 @@ namespace OpenRA.Mods.HV.Projectiles
 		[Desc("Outer lightness of the beam.")]
 		public readonly byte OuterLightness = 0x80;
 
+		[FieldLoader.Require]
 		[Desc("The radius of the beam.")]
 		public readonly int Radius = 3;
 
@@ -78,7 +79,7 @@ namespace OpenRA.Mods.HV.Projectiles
 			for (var i = 0; i < info.Radius; i++)
 			{
 				var color = info.Color == Color.Transparent ? args.SourceActor.Owner.Color : info.Color;
-				var bw = (float)((info.InnerLightness - info.OuterLightness) * i / (info.Radius - 1) + info.OuterLightness) / 0xff;
+				var bw = (float)((info.InnerLightness - info.OuterLightness) * i / info.Radius + info.OuterLightness) / 0xff;
 				var dstR = bw > .5 ? 1 - (1 - 2 * (bw - .5)) * (1 - (float)color.R / 0xff) : 2 * bw * ((float)color.R / 0xff);
 				var dstG = bw > .5 ? 1 - (1 - 2 * (bw - .5)) * (1 - (float)color.G / 0xff) : 2 * bw * ((float)color.G / 0xff);
 				var dstB = bw > .5 ? 1 - (1 - 2 * (bw - .5)) * (1 - (float)color.B / 0xff) : 2 * bw * ((float)color.B / 0xff);
