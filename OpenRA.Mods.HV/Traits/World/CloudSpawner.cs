@@ -25,8 +25,8 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Delay (in ticks) before the first cloud spawns.")]
 		public readonly int InitialSpawnDelay = 0;
 
-		[ActorReference]
 		[FieldLoader.Require]
+		[ActorReference(typeof(AircraftInfo))]
 		[Desc("The actors to spawn.")]
 		public readonly string[] ActorTypes = null;
 
