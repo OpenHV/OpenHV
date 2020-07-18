@@ -37,7 +37,7 @@ MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
-BIT_FILES = $(shell find mods/*/bits/* -maxdepth 0 -iname '*.png' 2> /dev/null)
+BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 
 MSBUILD = msbuild -verbosity:m -nologo
 
