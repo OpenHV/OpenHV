@@ -19,4 +19,7 @@ World:
 		Blue: 1.0
 		Ambient: 1.2
 	CloudSpawner:
-		ActorTypes: cloud1, cloud2, cloud3
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: shadow
+		Speed: 20, 30
