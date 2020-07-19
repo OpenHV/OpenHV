@@ -1,4 +1,4 @@
-﻿#region Copyright & License Information
+#region Copyright & License Information
 /*
  * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
