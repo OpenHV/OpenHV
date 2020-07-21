@@ -321,12 +321,3 @@ World:
 		WaterChance: 10
 		CrateActors: moneycube, revealmapcube, cloakcube
 		CrateActorShares: 90, 10, 40
-
-CLOUD1:
-	Inherits: ^Cloud
-
-CLOUD2:
-	Inherits: ^Cloud
-
-CLOUD3:
-	Inherits: ^Cloud

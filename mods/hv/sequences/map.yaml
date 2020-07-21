@@ -47,11 +47,16 @@ cube:
 		Length: 3
 		Tick: 120
 
-cloud1:
-	idle: cloud1.png
-
-cloud2:
-	idle: cloud2.png
-
-cloud3:
-	idle: cloud3.png
+cloud:
+	cloud1: cloud1.png
+	cloud1f: cloud1.png
+		FlipX: true
+		FlipY: true
+	cloud2: cloud2.png
+	cloud2f: cloud2.png
+		FlipX: true
+		FlipY: true
+	cloud3: cloud3.png
+	cloud3f: cloud3.png
+		FlipX: true
+		FlipY: true

@@ -9,10 +9,8 @@
  */
 #endregion
 
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
+using OpenRA.Graphics;
+using OpenRA.Mods.HV.Effects;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -26,9 +24,18 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int InitialSpawnDelay = 0;
 
 		[FieldLoader.Require]
-		[ActorReference(typeof(AircraftInfo))]
-		[Desc("The actors to spawn.")]
-		public readonly string[] ActorTypes = null;
+		[Desc("Which image to use.")]
+		public readonly string Image;
+
+		[FieldLoader.Require]
+		[Desc("Which sequence to use.")]
+		[SequenceReference("Image")]
+		public readonly string[] Sequences;
+
+		[FieldLoader.Require]
+		[Desc("Which palette to use.")]
+		[PaletteReference]
+		public readonly string Palette;
 
 		[Desc("Facing that the cloud may approach from.")]
 		public readonly int WindDirection = 8;
@@ -36,12 +43,23 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Spawn and remove the cloud this far outside the map.")]
 		public readonly WDist Cordon = new WDist(7680);
 
+		[FieldLoader.Require]
+		[Desc("Cloud forward movement. Two values mean the cloud speed randomizes between them.")]
+		public readonly WDist[] Speed;
+
+		[Desc("The altitude of the cloud.")]
+		public readonly WDist CruiseAltitude = new WDist(2560);
+
+		[Desc("Distance margin where the cloud can be removed.")]
+		public readonly WDist CloseEnough = new WDist(128);
+
 		public override object Create(ActorInitializer init) { return new CloudSpawner(this); }
 	}
 
 	public class CloudSpawner : ITick
 	{
 		readonly CloudSpawnerInfo info;
+
 		int ticks;
 
 		public CloudSpawner(CloudSpawnerInfo info)
@@ -65,28 +83,17 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var position = self.World.Map.ChooseRandomCell(self.World.SharedRandom);
 
-			self.World.AddFrameEndTask(w =>
-			{
-				var actorType = info.ActorTypes.Random(self.World.SharedRandom);
-				var actor = self.World.Map.Rules.Actors[actorType];
-				var facing = 256 * info.WindDirection / 32;
-				var delta = new WVec(0, -1024, 0).Rotate(WRot.FromFacing(facing));
+			var facing = 256 * info.WindDirection / 32;
+			var delta = new WVec(0, -1024, 0).Rotate(WRot.FromFacing(facing));
 
-				var altitude = actor.TraitInfo<AircraftInfo>().CruiseAltitude.Length;
-				var target = self.World.Map.CenterOfCell(position) + new WVec(0, 0, altitude);
-				var startEdge = target - (self.World.Map.DistanceToEdge(target, -delta) + info.Cordon).Length * delta / 1024;
-				var finishEdge = target + (self.World.Map.DistanceToEdge(target, delta) + info.Cordon).Length * delta / 1024;
+			var target = self.World.Map.CenterOfCell(position) + new WVec(0, 0, info.CruiseAltitude.Length);
+			var startEdge = target - (self.World.Map.DistanceToEdge(target, -delta) + info.Cordon).Length * delta / 1024;
+			var finishEdge = target + (self.World.Map.DistanceToEdge(target, delta) + info.Cordon).Length * delta / 1024;
 
-				var cloud = w.CreateActor(actorType, new TypeDictionary
-				{
-					new CenterPositionInit(startEdge),
-					new OwnerInit(self.Owner),
-					new FacingInit(WAngle.FromFacing(facing)),
-				});
+			var animation = new Animation(self.World, info.Image, () => WAngle.FromFacing(facing));
+			animation.PlayRepeating(info.Sequences.Random(self.World.SharedRandom));
 
-				cloud.QueueActivity(false, new Fly(cloud, Target.FromPos(finishEdge)));
-				cloud.QueueActivity(new RemoveSelf());
-			});
+			self.World.AddFrameEndTask(w => w.Add(new Cloud(self.World, animation, startEdge, finishEdge, facing, info)));
 		}
 	}
 }
