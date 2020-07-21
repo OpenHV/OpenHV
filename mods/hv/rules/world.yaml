@@ -184,6 +184,13 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
+	PaletteFromRGBA@cloud:
+		Name: cloud
+		R: 0
+		G: 0
+		B: 0
+		A: 72
+		TransparentIndex: 255
 	PaletteFromRGBA@highlight:
 		Name: highlight
 		R: 255
