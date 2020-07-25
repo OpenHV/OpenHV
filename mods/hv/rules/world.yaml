@@ -329,3 +329,19 @@ World:
 		WaterChance: 10
 		CrateActors: moneycube, revealmapcube, cloakcube
 		CrateActorShares: 90, 10, 40
+	TerrainTileAnimation@LAVABUBBLE:
+		Tiles: 323
+		Image: lavabubl
+		Sequence: active
+		Palette: effect
+	TerrainTileAnimation@SWAMPBUBBLE:
+		Tiles: 1070
+		Image: swmpbubl
+		Sequence: active
+		Palette: effect
+	TerrainTileAnimation@SWAMP:
+		Tiles: 1070
+		Interval: 25
+		Image: swmpani
+		Sequence: idle
+		Palette: effect

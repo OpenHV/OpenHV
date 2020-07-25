@@ -16,7 +16,6 @@ icicle2:
 	idle: icicle2.png
 
 lavabubl:
-	idle: lavabubl.png
 	active: lavabubl.png
 		Tick: 100
 		Length: *
@@ -63,11 +62,9 @@ swmpani:
 		Tick: 1000
 
 swmpbubl:
-	idle: swmpbubl.png
 	active: swmpbubl.png
 		Tick: 100
 		Length: *
-
 
 treegrs10:
 	idle: treegrs10.png
@@ -77,6 +74,7 @@ treegrs11:
 
 trees4:
 	idle: trees4.png
+
 trees17:
 	idle: trees17.png
 

@@ -30,27 +30,6 @@ ICICLE2:
 		Footprint: _ x
 		Dimensions: 1,2
 
-LAVABUBL:
-	Inherits@1: ^SpriteActor
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	AppearsOnRadar:
-	RadarColorFromTerrain:
-		Terrain: Lava
-	AppearsOnMapPreview:
-		Terrain: Lava
-	HiddenUnderShroud:
-	MapEditorData:
-		Categories: Decoration
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
-	WithIdleAnimation:
-		Interval: 500, 1000
-
 MNTMISC8:
 	Inherits: ^Rock
 	Building:
@@ -92,46 +71,6 @@ STNROCK2:
 	Building:
 		Footprint: _ _ x
 		Dimensions: 1,3
-
-SWMPANI:
-	Inherits@1: ^SpriteActor
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	AppearsOnRadar:
-	RadarColorFromTerrain:
-		Terrain: Swamp
-	AppearsOnMapPreview:
-		Terrain: Swamp
-	HiddenUnderShroud:
-	MapEditorData:
-		Categories: Decoration
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
-
-SWMPBUBL:
-	Inherits@1: ^SpriteActor
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	AppearsOnRadar:
-	RadarColorFromTerrain:
-		Terrain: Swamp
-	AppearsOnMapPreview:
-		Terrain: Swamp
-	HiddenUnderShroud:
-	MapEditorData:
-		Categories: Decoration
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
-	WithIdleAnimation:
-		Interval: 500, 1000
 
 TREEGRS1:
 	Inherits: ^Tree
