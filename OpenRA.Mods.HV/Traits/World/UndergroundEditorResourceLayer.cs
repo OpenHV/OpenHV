@@ -75,17 +75,18 @@ namespace OpenRA.Mods.HV.Traits
 				var res = r;
 				var layer = spriteLayers.GetOrAdd(r.Value.Palette, pal =>
 				{
-					var first = res.Value.Variants.First().Value.First();
+					var first = res.Value.Variants.First().Value.GetSprite(0);
 					return new TerrainSpriteLayer(w, wr, first.Sheet, first.BlendMode, pal, false);
 				});
 
 				// Validate that sprites are compatible with this layer
 				var sheet = layer.Sheet;
-				if (res.Value.Variants.Any(kv => kv.Value.Any(s => s.Sheet != sheet)))
+				var sprites = r.Value.Variants.Values.SelectMany(v => Exts.MakeArray(v.Length, x => v.GetSprite(x)));
+				if (sprites.Any(s => s.Sheet != sheet))
 					throw new InvalidDataException("Resource sprites span multiple sheets. Try loading their sequences earlier.");
 
 				var blendMode = layer.BlendMode;
-				if (res.Value.Variants.Any(kv => kv.Value.Any(s => s.BlendMode != blendMode)))
+				if (sprites.Any(s => s.BlendMode != blendMode))
 					throw new InvalidDataException("Resource sprites specify different blend modes. "
 						+ "Try using different palettes for resource types that use different blend modes.");
 			}
@@ -137,7 +138,7 @@ namespace OpenRA.Mods.HV.Traits
 			// Empty tile
 			if (type == null)
 			{
-				t.Sprite = null;
+				t.Sequence = null;
 				return t;
 			}
 
@@ -150,9 +151,8 @@ namespace OpenRA.Mods.HV.Traits
 
 			NetWorth += t.Density * type.Info.ValuePerUnit;
 
-			var sprites = type.Variants[t.Variant];
-			var frame = int2.Lerp(0, sprites.Length - 1, t.Density, type.Info.MaxDensity);
-			t.Sprite = sprites[frame];
+			t.Sequence = type.Variants[t.Variant];
+			t.Frame = int2.Lerp(0, t.Sequence.Length - 1, t.Density, type.Info.MaxDensity);
 
 			return t;
 		}
@@ -172,10 +172,10 @@ namespace OpenRA.Mods.HV.Traits
 					foreach (var kv in spriteLayers)
 					{
 						// resource.Type is meaningless (and may be null) if resource.Sprite is null
-						if (resource.Sprite != null && resource.Type.Palette == kv.Key)
-							kv.Value.Update(c, resource.Sprite);
+						if (resource.Sequence != null && resource.Type.Palette == kv.Key)
+							kv.Value.Update(c, resource.Sequence, resource.Frame);
 						else
-							kv.Value.Update(c, null);
+							kv.Value.Clear(c);
 					}
 				}
 			}

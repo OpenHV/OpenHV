@@ -67,8 +67,8 @@ namespace OpenRA.Mods.HV.Activities
 				var spawn = primary.CenterPosition + exitInfo.SpawnOffset;
 				var to = self.World.Map.CenterOfCell(exit);
 
-				var initialFacing = WAngle.FromFacing(exitInfo.Facing);
-				if (exitInfo.Facing < 0)
+				WAngle initialFacing;
+				if (!exitInfo.Facing.HasValue)
 				{
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
@@ -80,6 +80,8 @@ namespace OpenRA.Mods.HV.Activities
 					if (fi != null)
 						fi.Facing = initialFacing;
 				}
+				else
+					initialFacing = exitInfo.Facing.Value;
 
 				exitLocations = rallyPoint != null ? rallyPoint.Path : new List<CPos>() { exit };
 			}

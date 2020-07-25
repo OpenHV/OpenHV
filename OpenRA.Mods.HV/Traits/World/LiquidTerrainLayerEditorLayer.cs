@@ -43,7 +43,7 @@ namespace OpenRA.Mods.HV.Traits
 			// Empty tile
 			if (t.Type == null)
 			{
-				t.Sprite = null;
+				t.Sequence = null;
 				return t;
 			}
 
@@ -53,9 +53,12 @@ namespace OpenRA.Mods.HV.Traits
 			int index;
 			var clear = FindClearSides(t.Type, c);
 			if (LiquidTerrainRenderer.SpriteMap.TryGetValue(clear, out index))
-				t.Sprite = t.Type.Variants.First().Value[index];
+			{
+				t.Sequence = t.Type.Variants.First().Value;
+				t.Frame = index;
+			}
 			else
-				t.Sprite = null;
+				t.Sequence = null;
 
 			return t;
 		}

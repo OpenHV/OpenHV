@@ -132,12 +132,12 @@ namespace OpenRA.Mods.HV.Traits
 				var clear = FindClearSides(renderType, cell);
 				int index;
 				if (SpriteMap.TryGetValue(clear, out index))
-					UpdateSpriteLayers(cell, renderType.Variants.First().Value[index], renderType.Palette);
+					UpdateSpriteLayers(cell, renderType.Variants.First().Value, index, renderType.Palette);
 				else
 					Log.Write("debug", "{1}: SpriteMap does not contain an index for ClearSides type '{0}'".F(clear, cell));
 			}
 			else
-				UpdateSpriteLayers(cell, null, null);
+				UpdateSpriteLayers(cell, null, 0, null);
 		}
 	}
 }

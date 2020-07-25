@@ -62,7 +62,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				if (!self.World.FogObscures(kv.Key))
 				{
-					render.Update(kv.Key, kv.Value);
+					render.Update(kv.Key, kv.Value, false);
 					remove.Add(kv.Key);
 				}
 			}

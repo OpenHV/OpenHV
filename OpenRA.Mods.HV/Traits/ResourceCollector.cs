@@ -94,21 +94,21 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitinfo)
+		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo)
 		{
 			var exit = CPos.Zero;
 			var exitLocations = new List<CPos>();
 
 			var td = new TypeDictionary();
 
-			if (exitinfo != null && self.OccupiesSpace != null && actorInfo.HasTraitInfo<IOccupySpaceInfo>())
+			if (exitInfo != null && self.OccupiesSpace != null && actorInfo.HasTraitInfo<IOccupySpaceInfo>())
 			{
-				exit = self.Location + exitinfo.ExitCell;
-				var spawn = self.CenterPosition + exitinfo.SpawnOffset;
+				exit = self.Location + exitInfo.ExitCell;
+				var spawn = self.CenterPosition + exitInfo.SpawnOffset;
 				var to = self.World.Map.CenterOfCell(exit);
 
-				var initialFacing = WAngle.FromFacing(exitinfo.Facing);
-				if (exitinfo.Facing < 0)
+				WAngle initialFacing;
+				if (!exitInfo.Facing.HasValue)
 				{
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
@@ -119,6 +119,8 @@ namespace OpenRA.Mods.HV.Traits
 					else
 						initialFacing = delta.Yaw;
 				}
+				else
+					initialFacing = exitInfo.Facing.Value;
 
 				exitLocations = rallyPoint.Value != null && rallyPoint.Value.Path.Count > 0 ? rallyPoint.Value.Path : new List<CPos> { exit };
 
@@ -126,8 +128,8 @@ namespace OpenRA.Mods.HV.Traits
 				td.Add(new CenterPositionInit(spawn));
 				td.Add(new FacingInit(initialFacing));
 				td.Add(new OwnerInit(self.Owner));
-				if (exitinfo != null)
-					td.Add(new CreationActivityDelayInit(exitinfo.ExitDelay));
+				if (exitInfo != null)
+					td.Add(new CreationActivityDelayInit(exitInfo.ExitDelay));
 			}
 
 			self.World.AddFrameEndTask(w =>
@@ -136,7 +138,7 @@ namespace OpenRA.Mods.HV.Traits
 				deliveryVehicle.Trait<ResourceTransporter>().ResourceType = resourceType;
 
 				var move = deliveryVehicle.TraitOrDefault<IMove>();
-				if (exitinfo != null && move != null)
+				if (exitInfo != null && move != null)
 					foreach (var cell in exitLocations)
 						deliveryVehicle.QueueActivity(new Move(deliveryVehicle, cell));
 			});

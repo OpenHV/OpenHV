@@ -65,17 +65,18 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				var layer = spriteLayers.GetOrAdd(r.Value.Palette, pal =>
 				{
-					var first = r.Value.Variants.First().Value.First();
+					var first = r.Value.Variants.First().Value.GetSprite(0);
 					return new TerrainSpriteLayer(w, wr, first.Sheet, first.BlendMode, pal, wr.World.Type != WorldType.Editor);
 				});
 
 				// Validate that sprites are compatible with this layer
 				var sheet = layer.Sheet;
-				if (r.Value.Variants.Any(kv => kv.Value.Any(s => s.Sheet != sheet)))
+				var sprites = r.Value.Variants.Values.SelectMany(v => Exts.MakeArray(v.Length, x => v.GetSprite(x)));
+				if (sprites.Any(s => s.Sheet != sheet))
 					throw new InvalidDataException("Resource sprites span multiple sheets. Try loading their sequences earlier.");
 
 				var blendMode = layer.BlendMode;
-				if (r.Value.Variants.Any(kv => kv.Value.Any(s => s.BlendMode != blendMode)))
+				if (sprites.Any(s => s.BlendMode != blendMode))
 					throw new InvalidDataException("Resource sprites specify different blend modes. "
 						+ "Try using different palettes for resource types that use different blend modes.");
 			}
@@ -95,15 +96,15 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		protected void UpdateSpriteLayers(CPos cell, Sprite sprite, PaletteReference palette)
+		protected void UpdateSpriteLayers(CPos cell, ISpriteSequence sequence, int frame, PaletteReference palette)
 		{
 			foreach (var kv in spriteLayers)
 			{
-				// resource.Type is meaningless (and may be null) if resource.Sprite is null
-				if (sprite != null && palette == kv.Key)
-					kv.Value.Update(cell, sprite);
+				// resource.Type is meaningless (and may be null) if resource.Sequence is null
+				if (sequence != null && palette == kv.Key)
+					kv.Value.Update(cell, sequence, frame);
 				else
-					kv.Value.Update(cell, null);
+					kv.Value.Clear(cell);
 			}
 		}
 
@@ -163,10 +164,10 @@ namespace OpenRA.Mods.HV.Traits
 				var maxDensity = type.Info.MaxDensity;
 				var frame = int2.Lerp(0, sprites.Length - 1, density, maxDensity);
 
-				UpdateSpriteLayers(cell, sprites[frame], type.Palette);
+				UpdateSpriteLayers(cell, sprites, frame, type.Palette);
 			}
 			else
-				UpdateSpriteLayers(cell, null, null);
+				UpdateSpriteLayers(cell, null, 0, null);
 		}
 
 		bool disposed;
