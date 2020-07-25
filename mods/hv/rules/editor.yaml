@@ -62,3 +62,21 @@ LIGHT:
 		RedTint: 0.05
 		GreenTint: 0.05
 		BlueTint: 0.01
+
+CAMERA:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: Area Reveal Camera
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: camera
+	MapEditorData:
+		Categories: System

@@ -16,6 +16,10 @@ light:
 	idle: light.png
 		Length: 1
 
+camera:
+	idle: camera.png
+		Length: 1
+
 shroud:
 	fow: dark.png
 		Length: 12
