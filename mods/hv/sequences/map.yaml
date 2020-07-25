@@ -10,7 +10,11 @@ resources:
 
 mpspawn:
 	idle: mpspawn.png
-		Length: *
+		Length: 1
+
+light:
+	idle: light.png
+		Length: 1
 
 shroud:
 	fow: dark.png

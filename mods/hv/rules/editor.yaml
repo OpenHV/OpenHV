@@ -39,3 +39,26 @@ TRANSPRT.colorpicker:
 	RenderSprites:
 		Image: transprt
 		Palette: colorpicker
+
+LIGHT:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: Invisible Light Source
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	RenderSpritesEditorOnly:
+		Image: light
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: System
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+	TerrainLightSource:
+		Range: 20
+		Intensity: 0.2
+		RedTint: 0.05
+		GreenTint: 0.05
+		BlueTint: 0.01

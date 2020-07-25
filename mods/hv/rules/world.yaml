@@ -11,6 +11,7 @@
 	DebugVisualizations:
 	DebugOffsetOverlayManager:
 	TerrainRenderer:
+	TerrainLighting:
 	Locomotor@IMMOBILE:
 		Name: immobile
 		TerrainSpeeds:
