@@ -732,7 +732,7 @@ Templates:
 		Images: grasroad.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Grass
+		Categories: Grass, Road
 		Tiles:
 			0: Road
 	Template@92:
