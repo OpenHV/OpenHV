@@ -625,7 +625,7 @@ AATURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetAir
 	Selectable:
 		Bounds: 32,32
 	HitShape:
