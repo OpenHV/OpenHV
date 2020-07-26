@@ -288,6 +288,7 @@ World:
 		GameSpeedDropdownDisplayOrder: 3
 	ScrapOptions:
 		CheckboxDisplayOrder: 8
+	TimeLimitManager:
 	CreateMPPlayers:
 	MPStartUnits@BASE:
 		Class: none
