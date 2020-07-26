@@ -32,7 +32,7 @@ Container@MAINMENU:
 							Height: 30
 							Text: OpenHV
 							Align: Center
-							Font: Bold
+							Font: Title
 						Button@SINGLEPLAYER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 60
