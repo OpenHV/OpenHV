@@ -840,11 +840,11 @@ STORAGE:
 		Amount: -10
 	RenderSprites:
 		PlayerPalette: green
-	WithResourceStoragePipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 4
-		FullSequence: pip-yellow
+	#WithResourceStoragePipsDecoration:
+	#	Position: Bottom # TODO: https://github.com/OpenRA/OpenRA/pull/18391
+	#	RequiresSelection: true
+	#	PipCount: 4
+	#	FullSequence: pip-yellow
 	WithShadowOverlay:
 		Offset: -300,150,0
 		RequiresCondition: !build-incomplete
