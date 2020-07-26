@@ -140,7 +140,7 @@ Hotkeys:
 	common|hotkeys/viewport.yaml
 	hv|hotkeys.yaml
 
-LoadScreen: BlankLoadScreen
+LoadScreen: TextLoadScreen
 
 ServerTraits:
 	LobbyCommands
