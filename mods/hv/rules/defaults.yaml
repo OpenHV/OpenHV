@@ -370,6 +370,7 @@
 		Footprint: x
 		AllowPlacementOnResources: false
 	ActorPreviewPlaceBuildingPreview:
+		OverridePalette: place-building
 	WithSpriteBody:
 	ShakeOnDeath:
 	Guardable:

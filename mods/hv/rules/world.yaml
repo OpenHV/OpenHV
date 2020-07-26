@@ -246,6 +246,10 @@
 		BaseName: cloak
 		BasePalette: player
 		Alpha: 0.55
+	PaletteFromPlayerPaletteWithAlpha@PlaceBuilding:
+		BaseName: place-building
+		BasePalette: player
+		Alpha: 0.45
 	FlashPaletteEffect@nuke:
 		Type: Nuke
 	ShroudRenderer:
