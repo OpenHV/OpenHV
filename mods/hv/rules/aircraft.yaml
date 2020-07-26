@@ -209,7 +209,7 @@ COPTER2:
 	RenderSprites:
 		PlayerPalette: green
 	WithCargoPipsDecoration:
-		Position: BottomLeft
+		Position: Top
 		RequiresSelection: true
 
 BALLOON:
