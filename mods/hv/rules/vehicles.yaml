@@ -75,7 +75,7 @@ TANK3:
 		Queue: Vehicle
 		Description: Fast, light tank.
 	Mobile:
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Speed: 110
 	Health:
 		HP: 34000
@@ -84,7 +84,7 @@ TANK3:
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Offset: -125,0,50
 	Armament:
 		Weapon: 30mm
@@ -122,7 +122,7 @@ TANK4:
 		Type: Light
 	Mobile:
 		Speed: 85
-		TurnSpeed: 5
+		TurnSpeed: 20
 		ImmovableCondition: !undeployed
 		RequireForceMoveCondition: !undeployed
 	RevealsShroud:
@@ -141,7 +141,7 @@ TANK4:
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
 		UndeployOnPickup: true
-		Facing: 96
+		Facing: 384
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
 		Voice: Move
 	Repairable:
@@ -313,12 +313,12 @@ TANK9:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Speed: 118
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 10
+		TurnSpeed: 40
 	Armament:
 		Weapon: Patriot
 		LocalOffset: 543,0,815
@@ -498,7 +498,7 @@ TANK16:
 		Type: Heavy
 	Mobile:
 		Speed: 85
-		TurnSpeed: 5
+		TurnSpeed: 20
 	RevealsShroud:
 		Range: 5c0
 	AutoTarget:
@@ -560,7 +560,7 @@ ARTIL:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 2
+		TurnSpeed: 8
 		Speed: 85
 		Locomotor: lighttracked
 	RevealsShroud:
@@ -602,7 +602,7 @@ ARTIL3:
 		Type: Light
 	Mobile:
 		Speed: 71
-		TurnSpeed: 5
+		TurnSpeed: 20
 	RevealsShroud:
 		Range: 9c0
 	Armament:
@@ -641,7 +641,7 @@ SCOUT1:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Speed: 170
 		Locomotor: pod
 	RevealsShroud:
@@ -677,7 +677,7 @@ SCOUT2:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Speed: 170
 		Locomotor: pod
 	RevealsShroud:
@@ -723,7 +723,7 @@ BUILDER:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 8
+		TurnSpeed: 32
 		Speed: 120
 	RevealsShroud:
 		Range: 6c0
@@ -757,7 +757,7 @@ TYRIANTANK:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: TyrianTankCannon
 		Recoil: 50
@@ -791,7 +791,7 @@ MINER:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Speed: 170
 	RevealsShroud:
 		Range: 8c0
@@ -803,7 +803,7 @@ MINER:
 	Transforms:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2
-		Facing: 96
+		Facing: 384
 		Offset: -1,-2
 
 MISSILE_TANK:
@@ -830,7 +830,7 @@ MISSILE_TANK:
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 10
+		TurnSpeed: 40
 		Offset: -250,-50,100
 	Armament@PRIMARY:
 		Weapon: MissileTankRocket

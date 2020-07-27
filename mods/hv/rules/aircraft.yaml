@@ -29,8 +29,8 @@ SHIP1:
 		OpportunityFire: false
 	Aircraft:
 		CruiseAltitude: 2560
-		InitialFacing: 192
-		TurnSpeed: 4
+		InitialFacing: 768
+		TurnSpeed: 16
 		Speed: 223
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -75,8 +75,8 @@ SHIP2:
 		OpportunityFire: false
 	Aircraft:
 		CruiseAltitude: 2560
-		InitialFacing: 192
-		TurnSpeed: 4
+		InitialFacing: 768
+		TurnSpeed: 16
 		Speed: 178
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -111,10 +111,10 @@ COPTER:
 		Range: 10c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 4
+		TurnSpeed: 16
 		Speed: 112
 	Turreted:
-		TurnSpeed: 20
+		TurnSpeed: 80
 		Offset: 200,0,-100
 	AttackTurreted:
 	WithSpriteTurret:
@@ -150,7 +150,7 @@ BANSHEE:
 		Range: 10c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 4
+		TurnSpeed: 16
 		Speed: 112
 	AttackFrontal:
 	Armament@PRIMARY:
@@ -187,7 +187,7 @@ COPTER2:
 		Range: 8c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Speed: 128
 		AltitudeVelocity: 0c58
 	WithFacingSpriteBody:

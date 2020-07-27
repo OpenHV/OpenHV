@@ -368,7 +368,7 @@ STARPORT:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 		ExitCell: 0,0
-		Facing: 224
+		Facing: 896
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
@@ -610,7 +610,7 @@ TURRET:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 	Turreted:
-		TurnSpeed: 30
+		TurnSpeed: 120
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
@@ -666,7 +666,7 @@ AATURRET:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 	Turreted:
-		TurnSpeed: 255
+		TurnSpeed: 1023
 	WithChargeOverlay:
 		Sequence: charge
 		RequiresCondition: charging
@@ -901,7 +901,7 @@ ARTILLERYTURRET:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 	Turreted:
-		TurnSpeed: 15
+		TurnSpeed: 60
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
@@ -1013,7 +1013,7 @@ HARBOR:
 		SpawnOffset: -150,-500,0
 		ExitCell: 1,3
 		ProductionTypes: Ship
-		Facing: 90
+		Facing: 360
 	Production:
 		Produces: Ship
 	PrimaryBuilding:

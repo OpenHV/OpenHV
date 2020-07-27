@@ -11,7 +11,7 @@
 		Inaccuracy: 128
 		Image: bullet6
 		Shadow: true
-		HorizontalRateOfTurn: 5
+		HorizontalRateOfTurn: 20
 		RangeLimit: 6c0
 		TrailImage: smoke
 	Warhead@Smudge: LeaveSmudge
@@ -54,7 +54,7 @@ AntiGroundRocket:
 	BurstDelays: 14
 	Projectile: Missile
 		Speed: 256
-		HorizontalRateOfTurn: 10
+		HorizontalRateOfTurn: 40
 		RangeLimit: 8c512
 	Warhead@Damage: SpreadDamage
 		Damage: 6000
@@ -74,7 +74,7 @@ AntiAirRocket:
 	Projectile: Missile
 		Speed: 384
 		Inaccuracy: 128
-		HorizontalRateOfTurn: 10
+		HorizontalRateOfTurn: 40
 		RangeLimit: 7c0
 		TrailImage: smoke
 	Warhead@Damage: SpreadDamage
@@ -107,7 +107,7 @@ LightAntiTankRocket:
 		Inaccuracy: 128
 		Image: bullet7
 		Shadow: true
-		HorizontalRateOfTurn: 5
+		HorizontalRateOfTurn: 20
 		RangeLimit: 6c0
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
@@ -136,7 +136,7 @@ LightAntiAirRocket:
 		Arm: 3
 		Image: bullet7
 		Inaccuracy: 0
-		HorizontalRateOfTurn: 25
+		HorizontalRateOfTurn: 100
 		RangeLimit: 9c0
 		Speed: 341
 	Warhead@1Dam: SpreadDamage
@@ -200,7 +200,7 @@ BoatMissile_AA:
 		Inaccuracy: 128
 		Image: bullet6
 		Shadow: true
-		HorizontalRateOfTurn: 5
+		HorizontalRateOfTurn: 20
 		RangeLimit: 15c0
 		TrailImage: smoke
 	Warhead@1Dam: SpreadDamage
@@ -227,7 +227,7 @@ StealthTankMissile:
 	BurstDelays: 10
 	Projectile: Missile
 		Inaccuracy: 213
-		HorizontalRateOfTurn: 10
+		HorizontalRateOfTurn: 40
 		Speed: 213
 		RangeLimit: 8c409
 	Warhead@Damage: SpreadDamage
@@ -246,7 +246,7 @@ Patriot:
 	ValidTargets: Air
 	Projectile: Missile
 		Arm: 1
-		VerticalRateOfTurn: 35
+		VerticalRateOfTurn: 140
 		RangeLimit: 25c0
 		Speed: 288
 		MinimumLaunchSpeed: 75
@@ -254,7 +254,7 @@ Patriot:
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
-		HorizontalRateOfTurn: 25
+		HorizontalRateOfTurn: 100
 		Acceleration: 96
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192

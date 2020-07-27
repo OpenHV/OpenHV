@@ -21,11 +21,11 @@ BOAT:
 		Type: Heavy
 	Mobile:
 		Speed: 100
-		TurnSpeed: 15
+		TurnSpeed: 60
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 15
+		TurnSpeed: 60
 		Offset: 150,0,100
 	Armament:
 		Weapon: TyrianTankCannon
@@ -60,11 +60,11 @@ BOAT2:
 		Type: Heavy
 	Mobile:
 		Speed: 80
-		TurnSpeed: 10
+		TurnSpeed: 40
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 10
+		TurnSpeed: 40
 	Armament:
 		Weapon: railgun
 		Recoil: 100
@@ -96,11 +96,11 @@ BOAT3:
 		Type: Heavy
 	Mobile:
 		Speed: 150
-		TurnSpeed: 15
+		TurnSpeed: 60
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
-		TurnSpeed: 30
+		TurnSpeed: 120
 		Offset: -50,0,100
 	Armament:
 		Weapon: BoatMissile_AA

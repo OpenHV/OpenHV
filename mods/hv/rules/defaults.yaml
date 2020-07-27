@@ -138,7 +138,7 @@
 	UpdatesPlayerStatistics:
 	Mobile:
 		Locomotor: wheeled
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Voice: Move
 	TeleportNetworkTransportable:
 	WithTeleportEnergyOverlay:
@@ -228,7 +228,7 @@
 		Bounds: 20,20
 	Aircraft:
 		AirborneCondition: airborne
-		InitialFacing: 192
+		InitialFacing: 768
 	Targetable@GROUND:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -270,7 +270,7 @@
 		TakeOffOnResupply: true
 		VTOL: true
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
-		InitialFacing: 224
+		InitialFacing: 896
 		CanSlide: True
 	Hovers@CRUISING:
 		RequiresCondition: cruising

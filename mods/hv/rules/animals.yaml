@@ -12,7 +12,7 @@ BEAST:
 	Armor:
 		Type: Heavy
 	Mobile:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Speed: 80
 		Voice: Action
 	RevealsShroud:
@@ -54,7 +54,7 @@ CROW:
 		Repulsable: false
 		Speed: 70
 		CruisingCondition: cruising
-		TurnSpeed: 1
+		TurnSpeed: 4
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	Wanders:
@@ -79,7 +79,7 @@ SEED:
 	-WithDeathAnimation:
 	-ScaredyCat:
 	Mobile:
-		TurnSpeed: 15
+		TurnSpeed: 60
 		Speed: 50
 	Wanders:
 		WanderMoveRadius: 1
