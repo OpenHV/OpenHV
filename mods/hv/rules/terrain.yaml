@@ -137,7 +137,6 @@ TREEGRS9:
 
 TREEGRS10:
 	Inherits: ^Tree
-	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
@@ -153,7 +152,6 @@ TREEGRS10:
 
 TREEGRS11:
 	Inherits: ^Tree
-	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
@@ -279,7 +277,6 @@ TREES3:
 
 TREES4:
 	Inherits: ^Tree
-	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
@@ -379,7 +376,6 @@ TREES16:
 
 TREES17:
 	Inherits: ^Tree
-	Inherits@1: ^SpriteActor
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2

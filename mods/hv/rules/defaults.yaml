@@ -523,7 +523,8 @@
 
 ^Tree:
 	Inherits@shape: ^1x1Shape
-	Interactable:
+	Selectable:
+		Bounds: 20, 20
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
@@ -552,6 +553,16 @@
 		CrushedByFriendlies: true
 	SpawnActorOnDeath@Crush:
 		DeathType: Crush
+	GrantConditionOnDamageState:
+		Condition: burning
+		ValidDamageStates: Medium, Heavy, Critical
+	RenderSprites:
+	WithIdleOverlay@Burns:
+		Sequence: flame
+		RequiresCondition: burning
+	PeriodicDischarge:
+		Weapon: ForestFire
+		RequiresCondition: burning
 
 ^Ship:
 	Inherits@1: ^ExistsInWorld

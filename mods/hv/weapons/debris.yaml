@@ -20,3 +20,20 @@ debris:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+ForestFire:
+	ValidTargets: Ground, Tree
+	Warhead@Damage: SpreadDamage
+		Falloff: 100, 36, 13, 5, 2
+		Delay: 10
+		Spread: 1c426
+		Damage: 100
+		ValidTargets: Ground, Tree
+		Versus:
+			None: 90
+			Wood: 100
+			Light: 60
+			Heavy: 25
+			Concrete: 10
+		DamageTypes: Fire
+		AffectsParent: true
