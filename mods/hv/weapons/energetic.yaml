@@ -13,6 +13,7 @@ railgun:
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
+		ValidTargets: Ground, Water, Tree
 		Spread: 128
 		Damage: 7500
 		Versus:
@@ -62,7 +63,6 @@ ElectronicCountermeasure:
 		Condition: ecmdisabled
 		ValidTargets: Vehicle
 	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
 		Spread: 1
 		Damage: 0
 		ValidTargets: Vehicle

@@ -13,6 +13,7 @@
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
+		ValidTargets: Ground, Water, Tree
 		Spread: 128
 		Damage: 4000
 		Versus:
@@ -34,7 +35,7 @@
 TyrianTankCannon:
 	Inherits: ^Cannon
 	ReloadDelay: 70
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		Versus:
 			Heavy: 115
 
@@ -136,7 +137,7 @@ Nuclear:
 		Spread: 1c0
 		Damage: 15000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Water, Air, Tree
 		Versus:
 			Steel: 25
 			Concrete: 25
@@ -146,7 +147,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Water, Air, Tree
 		Versus:
 			Steel: 25
 			Concrete: 25
@@ -160,7 +161,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Water, Air, Tree
 		Versus:
 			Steel: 50
 			Concrete: 25
@@ -170,7 +171,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Water, Air, Tree
 		Versus:
 			Concrete: 25
 	Warhead@DamageArea4: SpreadDamage
@@ -179,13 +180,13 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Water, Air, Tree
 		Versus:
 			Concrete: 25
 	Warhead@Effect: CreateEffect
 		Image: nuclear_explosion
 		Explosions: idle
-		ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Water, Air, Tree
 		ImpactSounds: explosion07.wav, explosion08.wav
 	Warhead@FlashEffect: FlashPaletteEffect
 		Duration: 20
@@ -206,6 +207,7 @@ TurretArtillery:
 		Shadow: true
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
+		ValidTargets: Ground, Water, Tree
 		Spread: 426
 		Damage: 30000
 		Versus:
