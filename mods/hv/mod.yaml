@@ -154,32 +154,32 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: hv|terminal-grotesque.ttf
-		Size: 11
+		Font: hv|Inconsolata-Regular.ttf
+		Size: 10
 		Ascender: 9
 	TinyBold:
-		Font: hv|terminal-grotesque.ttf
-		Size: 11
+		Font: hv|Inconsolata-Bold.ttf
+		Size: 10
 		Ascender: 9
 	Small:
-		Font: hv|terminal-grotesque.ttf
-		Size: 13
+		Font: hv|Inconsolata-Regular.ttf
+		Size: 12
 		Ascender: 10
 	Regular:
-		Font: hv|terminal-grotesque.ttf
-		Size: 15
-		Ascender: 12
-	Bold:
-		Font: hv|PressStart2P.ttf
-		Size: 10
-		Ascender: 7
-	MediumBold:
-		Font: hv|PressStart2P.ttf
+		Font: hv|Inconsolata-Regular.ttf
 		Size: 13
 		Ascender: 10
-	BigBold:
-		Font: hv|PressStart2P.ttf
+	Bold:
+		Font: hv|Inconsolata-Bold.ttf
 		Size: 16
+		Ascender: 7
+	MediumBold:
+		Font: hv|Inconsolata-Bold.ttf
+		Size: 20
+		Ascender: 10
+	BigBold:
+		Font: hv|Inconsolata-Bold.ttf
+		Size: 22
 		Ascender: 12
 	Title:
 		Font: hv|PressStart2P.ttf
