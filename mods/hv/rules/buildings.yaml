@@ -178,6 +178,13 @@ RADAR:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+	GrantConditionOnDamageState:
+		Condition: burning
+		ValidDamageStates: Heavy, Critical
+	WithShadowOverlay@Burns:
+		Sequence: flame
+		Palette: effect
+		RequiresCondition: burning
 
 TRADPLAT:
 	Inherits: ^BaseBuilding

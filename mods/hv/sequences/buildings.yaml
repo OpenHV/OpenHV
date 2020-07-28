@@ -71,6 +71,11 @@ radar:
 		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 7
+	flame: flame.png
+		Length: *
+		ZOffset: 512
+		Offset: 0, -25
+		Tick: 80
 
 tradplat:
 	idle: tradplat.png
