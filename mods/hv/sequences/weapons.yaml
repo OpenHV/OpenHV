@@ -135,3 +135,10 @@ debris:
 		Length: 4
 		Tick: 60
 		ZOffset: 2020
+
+fire:
+	flame: flame.png
+		Length: 5
+		ZOffset: 512
+		Offset: 0, -10
+		Tick: 60

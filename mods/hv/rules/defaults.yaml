@@ -559,9 +559,10 @@
 		Condition: burning
 		ValidDamageStates: Medium, Heavy, Critical
 	RenderSprites:
-	WithIdleOverlay@Burns:
+	WithDamagedOverlay:
+		Image: fire
 		Sequence: flame
-		RequiresCondition: burning
+		MinimumDamageState: Medium
 	PeriodicDischarge:
 		Weapon: ForestFire
 		RequiresCondition: burning
