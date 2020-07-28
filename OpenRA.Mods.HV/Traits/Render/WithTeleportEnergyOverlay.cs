@@ -19,9 +19,12 @@ namespace OpenRA.Mods.HV.Traits.Render
 	[Desc("This actor display an overlay upon arrival.")]
 	public class WithTeleportEnergyOverlayInfo : TraitInfo, Requires<RenderSpritesInfo>, Requires<BodyOrientationInfo>
 	{
-		[SequenceReference]
+		[Desc("Defaults to the actor name.")]
+		public readonly string Image = null;
+
+		[SequenceReference("Image")]
 		[Desc("Sequence to use for charge animation.")]
-		public readonly string Sequence = "energyball";
+		public readonly string Sequence = null;
 
 		[Desc("Which sprite body to play the animation on.")]
 		public readonly string Body = "body";
@@ -47,7 +50,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		{
 			this.info = info;
 			renderSprites = init.Self.Trait<RenderSprites>();
-			overlay = new Animation(init.World, renderSprites.GetImage(init.Self));
+			overlay = new Animation(init.World, info.Image ?? renderSprites.GetImage(init.Self));
 			var body = init.Self.Trait<BodyOrientation>();
 			animation = new AnimationWithOffset(overlay,
 				() => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(init.Self, init.Self.Orientation))),

@@ -142,6 +142,8 @@
 		Voice: Move
 	TeleportNetworkTransportable:
 	WithTeleportEnergyOverlay:
+		Image: energyball
+		Sequence: teleport
 	Selectable:
 		Bounds: 20, 20
 	Targetable:
