@@ -75,7 +75,7 @@ radar:
 		Length: *
 		ZOffset: 512
 		Offset: 0, -25
-		Tick: 80
+		Tick: 60
 
 tradplat:
 	idle: tradplat.png

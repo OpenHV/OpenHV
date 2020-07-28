@@ -71,63 +71,63 @@ treegrs1:
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs2:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs3:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs4:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs5:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs6:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs7:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs8:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs9:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs10:
 	idle: treegrs10.png
@@ -135,7 +135,7 @@ treegrs10:
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs11:
 	idle: treegrs11.png
@@ -143,56 +143,56 @@ treegrs11:
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs12:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs13:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs14:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 treegrs15:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees1:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees2:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees3:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees4:
 	idle: trees4.png
@@ -200,91 +200,91 @@ trees4:
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees5:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees6:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees7:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees8:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees9:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees10:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees11:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees12:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees13:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees14:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees15:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees16:
 	flame: flame.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 trees17:
 	idle: trees17.png
@@ -292,7 +292,7 @@ trees17:
 		Length: *
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 80
+		Tick: 60
 
 waterflow1:
 	idle: watrflow.png
