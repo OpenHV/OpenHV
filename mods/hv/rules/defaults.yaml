@@ -103,7 +103,7 @@
 		Sequence: bottom-right
 		RequiresSelection: true
 		RequiresCondition: critically-damaged
-	WithSpriteControlGroupDecoration:
+	WithTextControlGroupDecoration:
 	GrantConditionOnDamageState@HEAVY:
 		Condition: critically-damaged
 		ValidDamageStates: Critical
