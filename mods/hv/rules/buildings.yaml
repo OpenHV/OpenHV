@@ -288,12 +288,12 @@ MODULE:
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, Structure
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: tags
-		Sequence: primary
-		Position: Top
+	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
@@ -392,12 +392,12 @@ STARPORT:
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, Structure
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: tags
-		Sequence: primary
-		Position: Top
+	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
@@ -452,12 +452,12 @@ FACTORY2:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@factory:
 		Prerequisite: factory
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: tags
-		Sequence: primary
-		Position: Top
+	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
@@ -512,12 +512,12 @@ FACTORY3:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@factory:
 		Prerequisite: factory
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: tags
-		Sequence: primary
-		Position: Top
+	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:
@@ -958,12 +958,12 @@ TELEVATR:
 		IsPlayerPalette: true
 		Palette: green
 	Exit:
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: tags
-		Sequence: primary
-		Position: Top
+	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: EXIT
 	RenderSprites:
 		PlayerPalette: green
 	PlaceBuildingVariants:
@@ -1031,12 +1031,12 @@ HARBOR:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: tags
-		Sequence: primary
-		Position: Top
+	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
 	RenderSprites:
 		PlayerPalette: green
 	WithShadowOverlay:

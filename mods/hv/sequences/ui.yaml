@@ -51,9 +51,6 @@ rallypoint:
 		Offset: -7,-7
 	circles: null.png
 
-tags:
-	primary: primary.png
-
 beacon:
 	idle: beacon.png
 		Length: 7
