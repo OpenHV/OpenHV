@@ -40,7 +40,7 @@
 		PriorityModifiers: Ctrl, Alt
 
 ^SelectionDecorations:
-	EmptySelectionDecorations:
+	OutlinedSelectionDecorations:
 	WithSpriteSelectionDecorations@TopLeft:
 		RequiresSelection: true
 		RequiresCondition: not-damaged
@@ -62,57 +62,57 @@
 	WithSpriteSelectionDecorations@TopLeftYellow:
 		Image: outline-yellow
 		RequiresSelection: true
-		RequiresCondition: medium-damaged
+		RequiresCondition: heavily-damaged
 	WithSpriteSelectionDecorations@TopRightYellow:
 		Image: outline-yellow
 		Position: TopRight
 		Sequence: top-right
 		RequiresSelection: true
-		RequiresCondition: medium-damaged
+		RequiresCondition: heavily-damaged
 	WithSpriteSelectionDecorations@BottomLeftYellow:
 		Image: outline-yellow
 		Position: BottomLeft
 		Sequence: bottom-left
 		RequiresSelection: true
-		RequiresCondition: medium-damaged
+		RequiresCondition: heavily-damaged
 	WithSpriteSelectionDecorations@BottomRightYellow:
 		Image: outline-yellow
 		Position: BottomRight
 		Sequence: bottom-right
 		RequiresSelection: true
-		RequiresCondition: medium-damaged
+		RequiresCondition: heavily-damaged
 	WithSpriteSelectionDecorations@TopLeftRed:
 		Image: outline-red
 		RequiresSelection: true
-		RequiresCondition: heavy-damaged
+		RequiresCondition: critically-damaged
 	WithSpriteSelectionDecorations@TopRightRed:
 		Image: outline-red
 		Position: TopRight
 		Sequence: top-right
 		RequiresSelection: true
-		RequiresCondition: heavy-damaged
+		RequiresCondition: critically-damaged
 	WithSpriteSelectionDecorations@BottomLeftRed:
 		Image: outline-red
 		Position: BottomLeft
 		Sequence: bottom-left
 		RequiresSelection: true
-		RequiresCondition: heavy-damaged
+		RequiresCondition: critically-damaged
 	WithSpriteSelectionDecorations@BottomRightRed:
 		Image: outline-red
 		Position: BottomRight
 		Sequence: bottom-right
 		RequiresSelection: true
-		RequiresCondition: heavy-damaged
+		RequiresCondition: critically-damaged
 	WithSpriteControlGroupDecoration:
 	GrantConditionOnDamageState@HEAVY:
-		Condition: heavy-damaged
-		ValidDamageStates: Heavy, Critical
+		Condition: critically-damaged
+		ValidDamageStates: Critical
 	GrantConditionOnDamageState@MEDIUM:
-		Condition: medium-damaged
-		ValidDamageStates: Medium
+		Condition: heavily-damaged
+		ValidDamageStates: Heavy
 	GrantConditionOnDamageState@NONE:
 		Condition: not-damaged
-		ValidDamageStates: Undamaged, Light
+		ValidDamageStates: Undamaged, Light, Medium
 
 ^Cloakable:
 	Cloak@ExternalCloak:
@@ -340,13 +340,13 @@
 		Position: Top
 		Sequence: top
 		RequiresSelection: true
-		RequiresCondition: medium-damaged
+		RequiresCondition: heavily-damaged
 	WithSpriteSelectionDecorations@TopRed:
 		Image: outline-red
 		Position: Top
 		Sequence: top
 		RequiresSelection: true
-		RequiresCondition: heavy-damaged
+		RequiresCondition: critically-damaged
 	#WithSpriteSelectionDecorations@Left:
 	#	Position: Left
 	#	Sequence: left

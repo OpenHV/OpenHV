@@ -134,4 +134,4 @@ SEAMNSTR:
 	-Selectable:
 	Interactable:
 	RejectsOrders:
-	-EmptySelectionDecorations:
+	-OutlinedSelectionDecorations:
