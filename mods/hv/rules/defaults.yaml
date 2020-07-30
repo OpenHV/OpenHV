@@ -347,15 +347,21 @@
 		Sequence: top
 		RequiresSelection: true
 		RequiresCondition: critically-damaged
-	#WithSpriteSelectionDecorations@Left:
-	#	Position: Left
-	#	Sequence: left
-	#WithSpriteSelectionDecorations@Right:
-	#	Position: Right
-	#	Sequence: right
-	#WithSpriteSelectionDecorations@Bottom:
-	#	Position: Bottom
-	#	Sequence: bottom
+	WithSpriteSelectionDecorations@Left:
+		Position: Left
+		Sequence: left
+		RequiresSelection: true
+		RequiresCondition: not-damaged
+	WithSpriteSelectionDecorations@Right:
+		Position: Right
+		Sequence: right
+		RequiresSelection: true
+		RequiresCondition: not-damaged
+	WithSpriteSelectionDecorations@Bottom:
+		Position: Bottom
+		Sequence: bottom
+		RequiresSelection: true
+		RequiresCondition: not-damaged
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
