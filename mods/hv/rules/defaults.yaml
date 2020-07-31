@@ -612,7 +612,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 
-^WATERFLOW:
+^Waterflow:
 	Inherits@1: ^SpriteActor
 	Interactable:
 	HiddenUnderShroud:
