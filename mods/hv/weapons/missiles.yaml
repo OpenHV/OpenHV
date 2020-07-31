@@ -4,6 +4,7 @@
 	ReloadDelay: 50
 	Range: 5c0
 	MinRange: 0c512
+	Report: rocketlaunch01.wav
 	Projectile: Missile
 		Speed: 213
 		Arm: 2
@@ -47,7 +48,6 @@
 
 AntiGroundRocket:
 	Inherits: ^AntiGroundMissile
-	Report: rocketlaunch01.wav
 	ReloadDelay: 60
 	MinRange: 1c256
 	Burst: 4
@@ -66,7 +66,6 @@ AntiGroundRocket:
 
 AntiAirRocket:
 	Inherits: ^AntiAirMissile
-	Report: rocketlaunch01.wav
 	ReloadDelay: 60
 	MinRange: 1c256
 	Burst: 2
@@ -99,7 +98,6 @@ MissileTankRocket_AA:
 LightAntiTankRocket:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
-	Report: rocketlaunch01.wav
 	Projectile: Missile
 		Speed: 213
 		Arm: 2
@@ -131,7 +129,6 @@ LightAntiAirRocket:
 	Inherits: ^AntiAirMissile
 	Range: 7c512
 	ReloadDelay: 50
-	Report: rocketlaunch01.wav
 	Projectile: Missile
 		Arm: 3
 		Image: bullet7
@@ -149,7 +146,6 @@ ShipMissile:
 	ReloadDelay: 50
 	Range: 9c0
 	MinRange: 2c0
-	Report: missile7.aud
 	Burst: 2
 	BurstDelays: 7
 	Projectile: Missile
@@ -171,7 +167,6 @@ ShipMissile_AA:
 	ReloadDelay: 50
 	Range: 9c0
 	MinRange: 2c0
-	Report: missile7.aud
 	Burst: 2
 	BurstDelays: 7
 	Projectile: Missile
@@ -192,7 +187,6 @@ BoatMissile_AA:
 	ReloadDelay: 50
 	Range: 9c0
 	MinRange: 1c0
-	Report: rocketlaunch01.wav
 	ValidTargets: Air
 	Projectile: Missile
 		Speed: 350
@@ -242,7 +236,7 @@ Patriot:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 55
 	Range: 15c0
-	Report: rocketlaunch03.aud
+	Report: rocketlaunch03.wav
 	ValidTargets: Air
 	Projectile: Missile
 		Arm: 1
