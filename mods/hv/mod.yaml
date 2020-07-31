@@ -153,6 +153,10 @@ ChromeMetrics:
 	hv|metrics.yaml
 
 Fonts:
+	TinyPixel:
+		Font: hv|terminal-grotesque.ttf
+		Size: 11
+		Ascender: 9
 	Tiny:
 		Font: hv|Inconsolata-Regular.ttf
 		Size: 10
