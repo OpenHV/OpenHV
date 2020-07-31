@@ -121,9 +121,6 @@ LightAntiTankRocket:
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 LightAntiAirRocket:
 	Inherits: ^AntiAirMissile
