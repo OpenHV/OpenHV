@@ -390,40 +390,40 @@ TREES17:
 		Actor: TreeMudSnow
 
 WATERFLOW1:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW2:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW3:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW4:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW5:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW6:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW7:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW8:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW9:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW10:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW11:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW12:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
 
 WATERFLOW13:
-	Inherits: ^WATERFLOW
+	Inherits: ^Waterflow
