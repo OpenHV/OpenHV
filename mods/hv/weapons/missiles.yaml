@@ -15,6 +15,7 @@
 		HorizontalRateOfTurn: 20
 		RangeLimit: 6c0
 		TrailImage: smoke
+		CruiseAltitude: 2c0
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure
@@ -194,6 +195,7 @@ BoatMissile_AA:
 		HorizontalRateOfTurn: 20
 		RangeLimit: 15c0
 		TrailImage: smoke
+		CruiseAltitude: 2c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2500
@@ -249,7 +251,7 @@ Patriot:
 		Acceleration: 96
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192
-		CruiseAltitude: 5c512
+		CruiseAltitude: 2c0
 		AllowSnapping: true
 	Warhead@Damage: SpreadDamage
 		Spread: 128
