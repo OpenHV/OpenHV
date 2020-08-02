@@ -2,7 +2,7 @@
 
 BuildingExplode:
 	Warhead@Effectf: CreateEffect
-		Explosions: small, medium, large
+		Explosions: medium, medium_2, large, large_2, large_3
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 ^Explosion:
@@ -15,7 +15,7 @@ BuildingExplode:
 			None: 90
 			Steel: 75
 	Warhead@Effect: CreateEffect
-		Explosions: small
+		Explosions: small_2
 		ValidTargets: Ground, Air
 		ImpactSounds: explosion02.wav, explosion03.wav
 
@@ -31,8 +31,6 @@ UnitExplodeSmall:
 	Inherits: ^Explosion
 	Warhead@Damage: SpreadDamage
 		Damage: 4000
-	Warhead@Effect: CreateEffect
-		Explosions: small
 
 AntiTankMine:
 	Warhead@Damage: SpreadDamage
@@ -43,7 +41,7 @@ AntiTankMine:
 		InvalidTargets: Mine
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@Effect: CreateEffect
-		Explosions: large
+		Explosions: large_2, large_3
 		ImpactSounds: explosion02.wav
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
