@@ -135,6 +135,9 @@ GENERATOR:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -192,6 +195,8 @@ RADAR:
 		Sequence: flame
 		Palette: effect
 		RequiresCondition: burning
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -240,6 +245,9 @@ TRADPLAT:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -311,6 +319,9 @@ MODULE:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 MINER2:
 	Inherits: ^BaseBuilding
@@ -355,6 +366,8 @@ MINER2:
 		Palette: green
 		IsPlayerPalette: true
 		RequiresCondition: !build-incomplete && !critical
+	Capturable:
+		RequiresCondition: !build-incomplete
 
 STARPORT:
 	Inherits: ^BaseBuilding
@@ -422,6 +435,9 @@ STARPORT:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 FACTORY2:
 	Inherits: ^BaseBuilding
@@ -483,6 +499,9 @@ FACTORY2:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 FACTORY3:
 	Inherits: ^BaseBuilding
@@ -544,6 +563,9 @@ FACTORY3:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
@@ -583,6 +605,9 @@ TECHCENTER:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
@@ -647,6 +672,8 @@ TURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 AATURRET:
 	Inherits: ^BaseBuilding
@@ -716,6 +743,8 @@ AATURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	AmbientSound:
 		RequiresCondition: charging
 		SoundFiles: charging-Mike_Koenig.wav
@@ -775,6 +804,9 @@ FIELD:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -833,8 +865,11 @@ SILO:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithShadowOverlay:
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 STORAGE:
 	Inherits: ^BaseBuilding
@@ -881,6 +916,9 @@ STORAGE:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	AcceptsDeliveredResources:
 
 ARTILLERYTURRET:
@@ -941,6 +979,8 @@ ARTILLERYTURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 TELEVATR:
 	Inherits: ^BaseBuilding
@@ -1066,17 +1106,20 @@ HARBOR:
 		PlayerPalette: green
 	WithShadowOverlay:
 		Offset: -200,200,0
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@Entry:
 		Sequence: idle-entry
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@Production:
 		Sequence: production
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 MOTHER:
 	Inherits: ^BaseBuilding
