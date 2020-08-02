@@ -19,6 +19,10 @@ namespace OpenRA.Mods.HV.Traits.Render
 	[Desc("Rendered after the \"make\" animation.")]
 	public class WithConstructionBeamOverlayInfo : ConditionalTraitInfo, Requires<RenderSpritesInfo>
 	{
+		[GrantedConditionReference]
+		[Desc("The condition to grant to self while the overlay is playing.")]
+		public readonly string Condition = null;
+
 		[SequenceReference]
 		[Desc("Sequence name to use")]
 		public readonly string Sequence = "make-overlay";
@@ -40,6 +44,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 		readonly WithConstructionBeamOverlayInfo info;
 		readonly AnimationWithOffset anim;
 
+		int token = Actor.InvalidConditionToken;
+
 		public WithConstructionBeamOverlay(ActorInitializer init, WithConstructionBeamOverlayInfo info)
 			: base(info)
 		{
@@ -58,9 +64,20 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 		protected override void TraitEnabled(Actor self)
 		{
+			if (token == Actor.InvalidConditionToken)
+				token = self.GrantCondition(info.Condition);
+
 			// Remove the animation once it is complete
 			if (overlay != null && renderSprites != null && anim != null)
-				overlay.PlayThen(info.Sequence, () => self.World.AddFrameEndTask(w => renderSprites.Remove(anim)));
+			{
+				overlay.PlayThen(info.Sequence, () => self.World.AddFrameEndTask(w =>
+				{
+					if (token != Actor.InvalidConditionToken)
+						token = self.RevokeCondition(token);
+
+					renderSprites.Remove(anim);
+				}));
+			}
 		}
 	}
 }
