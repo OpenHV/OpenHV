@@ -260,6 +260,9 @@
 	Repairable:
 		RepairActors: tradplat
 	ActorLostNotification:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 
 ^Helicopter:
 	Inherits: ^Plane
