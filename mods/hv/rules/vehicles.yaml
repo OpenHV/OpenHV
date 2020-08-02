@@ -707,7 +707,6 @@ BUILDER:
 		BuildPaletteOrder: 10
 		Description: Grants additional build radius.
 		Prerequisites: base
-		BuildAtProductionType: BaseUnit
 	GivesBuildableArea:
 		AreaTypes: building
 	BaseProvider:
@@ -780,7 +779,6 @@ MINER:
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
 		Prerequisites: base
-		BuildAtProductionType: BaseUnit
 	Valued:
 		Cost: 1100
 	Tooltip:

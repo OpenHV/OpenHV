@@ -503,3 +503,14 @@ techcenter:
 		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 18
+
+platform:
+	idle: platform.png
+		Start: 30
+		ZOffset: -1c511
+	make: platform.png
+		Length: 31
+	active: creation.png
+		Length: 23
+		Offset: 0, -5
+	icon: icon.png
