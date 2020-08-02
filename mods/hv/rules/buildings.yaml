@@ -3,6 +3,7 @@
 BASE:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^3x3Shape
+	Inherits@flame: ^BuildingFlame3
 	Selectable:
 		Bounds: 60,60
 	Valued:
@@ -99,6 +100,7 @@ BASE:
 GENERATOR:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,60
 	Buildable:
@@ -143,6 +145,7 @@ RADAR:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^3x3Shape
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 48,48
 	HitShape:
@@ -188,13 +191,6 @@ RADAR:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	GrantConditionOnDamageState:
-		Condition: burning
-		ValidDamageStates: Heavy, Critical
-	WithShadowOverlay@Burns:
-		Sequence: flame
-		Palette: effect
-		RequiresCondition: burning
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 
@@ -202,6 +198,7 @@ TRADPLAT:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^3x3Shape
+	Inherits@flame: ^BuildingFlame2
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -252,6 +249,7 @@ TRADPLAT:
 MODULE:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 48,48
 	HitShape:
@@ -326,6 +324,7 @@ MODULE:
 MINER2:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x3Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,60
 	Tooltip:
@@ -371,6 +370,7 @@ MINER2:
 STARPORT:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x3Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,60
 	Tooltip:
@@ -441,6 +441,7 @@ STARPORT:
 FACTORY2:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,40
 	Buildable:
@@ -483,6 +484,7 @@ FACTORY2:
 FACTORY3:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,40
 	Buildable:
@@ -525,6 +527,7 @@ FACTORY3:
 TECHCENTER:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,60
 	Buildable:
@@ -572,6 +575,7 @@ TURRET:
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 32,32
 	HitShape:
@@ -635,6 +639,7 @@ AATURRET:
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 32,32
 	HitShape:
@@ -709,6 +714,7 @@ FIELD:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
@@ -767,6 +773,7 @@ SILO:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x3Shape
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,60
 	Valued:
@@ -829,6 +836,7 @@ SILO:
 STORAGE:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 40,40
 	Building:
@@ -881,6 +889,7 @@ ARTILLERYTURRET:
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 32,32
 	HitShape:
@@ -941,6 +950,7 @@ TELEVATR:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
 	Inherits@shape: ^2x1Shape
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 40,20
 	Buildable:
@@ -1005,6 +1015,7 @@ TELEVTR2:
 
 HARBOR:
 	Inherits: ^BaseBuilding
+	Inherits@flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 40,40
 	Buildable:
@@ -1234,6 +1245,7 @@ DESTROYEDWALLTOPRIGHT:
 PLATFORM:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^1x1Shape
+	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 20,20
 	Tooltip:

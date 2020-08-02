@@ -1,6 +1,30 @@
 # License: CC-BY-SA-4.0
 
+^BuildingFlame:
+	flame: flame2.png
+		Length: *
+		ZOffset: 512
+		Offset: 0, -9
+		Tick: 60
+
+^BuildingFlame2:
+	Inherits: ^BuildingFlame
+	flame2: flame2.png
+		Length: *
+		ZOffset: 512
+		Offset: 0, -9
+		Tick: 60
+
+^BuildingFlame3:
+	Inherits: ^BuildingFlame2
+	flame3: flame2.png
+		Length: *
+		ZOffset: 512
+		Offset: 0, -9
+		Tick: 60
+
 base:
+	Inherits@flame: ^BuildingFlame3
 	build: base.png
 		Start: 3
 		Length: 3
@@ -26,10 +50,17 @@ base:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: -20, -5
+	flame2:
+		Offset: -1, 6
+	flame3
+		Offset: -4, -13
 	icon: buildings-icons.png
 		Start: 0
 
 generator:
+	Inherits@flame: ^BuildingFlame2
 	idle: generator.png
 		Length: 15
 		Tick: 300
@@ -49,10 +80,15 @@ generator:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 0, 10
+	flame2:
+		Offset: 3, -9
 	icon: buildings-icons.png
 		Start: 4
 
 radar:
+	Inherits@flame: ^BuildingFlame
 	idle: radar.png
 	shadow-overlay: radar-shadow.png
 		ZOffset: 1768
@@ -71,13 +107,9 @@ radar:
 		ZOffset: 2000
 	icon: buildings-icons.png
 		Start: 7
-	flame: flame.png
-		Length: *
-		ZOffset: 512
-		Offset: 0, -25
-		Tick: 60
 
 tradplat:
+	Inherits@flame: ^BuildingFlame2
 	idle: tradplat.png
 		Offset: 0,1
 		ZOffset: -1c511
@@ -102,10 +134,15 @@ tradplat:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: -2, -6
+	flame2:
+		Offset: 12, -17
 	icon: buildings-icons.png
 		Start: 11
 
 module:
+	Inherits@flame: ^BuildingFlame2
 	door: module.png
 		Frames: 7, 6, 5, 4, 3, 2, 1
 		Length: *
@@ -128,10 +165,17 @@ module:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 8, 2
+		ZOffset: 1769
+	flame2:
+		Offset: -7, -13
+		ZOffset: 1769
 	icon: buildings-icons.png
 		Start: 6
 
 miner2:
+	Inherits@flame: ^BuildingFlame2
 	make: miner2.png
 		Length: 17
 		Tick: 100
@@ -153,10 +197,15 @@ miner2:
 	silo: miner2.png
 		Start: 21
 		Length: 6
+	flame:
+		Offset: 3, 16
+	flame2:
+		Offset: -13, 14
 	icon: buildings-icons.png
 		Start: 16
 
 starport:
+	Inherits@flame: ^BuildingFlame2
 	idle: starport.png
 		Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
@@ -180,10 +229,15 @@ starport:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 0, -21
+	flame2:
+		Offset: -3, 19
 	icon: buildings-icons.png
 		Start: 9
 
 factory2:
+	Inherits@flame: ^BuildingFlame2
 	idle: factory2.png
 		Length: 15
 		Tick: 300
@@ -203,10 +257,15 @@ factory2:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 2, -9
+	flame2:
+		Offset: 10, 5
 	icon: buildings-icons.png
 		Start: 1
 
 factory3:
+	Inherits@flame: ^BuildingFlame2
 	idle: factory3.png
 		Length: 11
 		Tick: 300
@@ -226,10 +285,15 @@ factory3:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 0, -1
+	flame2:
+		Offset: 15, -2
 	icon: buildings-icons.png
 		Start: 2
 
 turret:
+	Inherits@flame: ^BuildingFlame
 	idle: turret.png
 		Start: 0
 	shadow-overlay: turret-shadow.png
@@ -250,10 +314,13 @@ turret:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 10, -4
 	icon: buildings-icons.png
 		Start: 14
 
 aaturret:
+	Inherits@flame: ^BuildingFlame
 	idle: aa-turret.png
 		Start: 0
 	shadow-overlay: aa-turret-shadow.png
@@ -277,10 +344,13 @@ aaturret:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 10, -7
 	icon: buildings-icons.png
 		Start: 19
 
 field:
+	Inherits@flame: ^BuildingFlame
 	idle: field.png
 	shadow-overlay: field-shadow.png
 		ZOffset: 1768
@@ -299,10 +369,13 @@ field:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 10, 0
 	icon: buildings-icons.png
 		Start: 3
 
 silo:
+	Inherits@flame: ^BuildingFlame2
 	idle: silo.png
 		Start: 0
 	animation_lights: silo.png
@@ -322,10 +395,15 @@ silo:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: -5, -2
+	flame2:
+		Offset: 8, -4
 	icon: buildings-icons.png
 		Start: 8
 
 storage:
+	Inherits@flame: ^BuildingFlame
 	idle: storage.png
 	shadow-overlay: storage-shadow.png
 		ZOffset: 1768
@@ -341,10 +419,13 @@ storage:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 3, -5
 	icon: buildings-icons.png
 		Start: 10
 
 artilleryturret:
+	Inherits@flame: ^BuildingFlame
 	idle: artilery2.png
 		Start: 0
 	shadow-overlay: artilery2-shadow.png
@@ -366,10 +447,13 @@ artilleryturret:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 12, 8
 	icon: buildings-icons.png
 		Start: 15
 
 televatr:
+	Inherits@flame: ^BuildingFlame
 	Defaults:
 		ZOffset: -1c511
 	idle: televatr.png
@@ -393,6 +477,7 @@ televatr:
 		Start: 12
 
 televtr2:
+	Inherits@flame: ^BuildingFlame
 	Defaults:
 		ZOffset: -1c511
 	idle: televtr2.png
@@ -416,6 +501,7 @@ televtr2:
 		Start: 13
 
 harbor:
+	Inherits@flame: ^BuildingFlame2
 	idle: harbor.png
 		ZOffset: 1000
 	idle-entry: harbor.png
@@ -440,10 +526,16 @@ harbor:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		ZOffset: 1001
+	flame2:
+		Offset: 13, 20
+		ZOffset: 1001
 	icon: buildings-icons.png
 		Start: 5
 
 mother:
+	Inherits@flame: ^BuildingFlame
 	idle: mother.png
 
 wall:
@@ -481,6 +573,7 @@ wall:
 	icon: icon.png
 
 techcenter:
+	Inherits@flame: ^BuildingFlame2
 	idle: tech-center.png
 		Start: 0
 	shadow-overlay: tech-center-shadow.png
@@ -501,10 +594,15 @@ techcenter:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
+	flame:
+		Offset: 4, -9
+	flame2:
+		Offset: 15, 17
 	icon: buildings-icons.png
 		Start: 18
 
 platform:
+	Inherits@flame: ^BuildingFlame
 	idle: platform.png
 		Start: 30
 		ZOffset: -1c511
