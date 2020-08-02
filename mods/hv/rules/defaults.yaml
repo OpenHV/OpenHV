@@ -754,3 +754,26 @@
 		Condition: ecmdisabled
 	Mobile:
 		PauseOnCondition: ecmdisabled
+
+^BuildingFlame:
+	GrantConditionOnDamageState:
+		Condition: burning
+		ValidDamageStates: Heavy, Critical
+	WithShadowOverlay@Burns:
+		Sequence: flame
+		Palette: effect
+		RequiresCondition: burning
+
+^BuildingFlame2:
+	Inherits: ^BuildingFlame
+	WithShadowOverlay@Burns2:
+		Sequence: flame2
+		Palette: effect
+		RequiresCondition: burning
+
+^BuildingFlame3:
+	Inherits: ^BuildingFlame2
+	WithShadowOverlay@Burns3:
+		Sequence: flame3
+		Palette: effect
+		RequiresCondition: burning
