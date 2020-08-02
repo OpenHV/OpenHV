@@ -26,6 +26,7 @@ Player:
 			silo: 1
 			factory2: 1
 			factory3: 1
+			radar: 1
 			techcenter: 1
 		BuildingFractions:
 			platform: 5
