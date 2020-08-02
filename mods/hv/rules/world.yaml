@@ -88,7 +88,7 @@
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
-		Description: Yigati Industries
+		Description: Yuruki Industries
 	Faction@1:
 		Name: SC
 		InternalName: sc
