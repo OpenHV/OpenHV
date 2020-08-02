@@ -26,6 +26,7 @@ Player:
 			silo: 1
 			factory2: 1
 			factory3: 1
+			techcenter: 1
 		BuildingFractions:
 			platform: 5
 			module: 1
@@ -35,6 +36,7 @@ Player:
 			harbor: 1
 			tradplat: 1
 			starport: 1
+			techcenter: 1
 			turret: 7
 			artilleryturret: 5
 			field: 1
