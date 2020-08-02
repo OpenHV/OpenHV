@@ -392,6 +392,7 @@
 	ActorLostNotification:
 		Notification: BuildingLost
 	Demolishable:
+	UpdatesPlayerStatistics:
 
 ^BaseBuilding:
 	Inherits: ^Building
