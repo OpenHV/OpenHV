@@ -5,8 +5,14 @@ explosion:
 		Length: *
 		ZOffset: 2047
 	small: expsmall.png
+	small_2: expsmall2.png
 	medium: explosn.png
+	medium_2: explosn2.png
 	large: explobig.png
+	large_2: explobig2.png
+		Tick: 80
+	large_3: explobig3.png
+		Tick: 80
 
 nuclear_explosion:
 	idle: nuclear_cloud.png
