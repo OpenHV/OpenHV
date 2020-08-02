@@ -339,7 +339,6 @@ MINER2:
 		Condition: build-incomplete
 	QuantizeFacingsFromSequence:
 		Sequence: active
-	UpdatesDerrickCount:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
