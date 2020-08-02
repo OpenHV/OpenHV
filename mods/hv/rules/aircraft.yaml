@@ -6,7 +6,7 @@ SHIP1:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar
+		Prerequisites: radar, ~aircraft.yi
 		Description: Fast Attack Ship
 	Valued:
 		Cost: 2000
@@ -52,7 +52,7 @@ SHIP2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: radar
+		Prerequisites: radar, ~aircraft.yi
 		Description: Attack Ship armed with\na large chain gun.
 	Valued:
 		Cost: 1350
@@ -101,7 +101,7 @@ COPTER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: radar
+		Prerequisites: radar, ~aircraft.sc
 		Description: Small Helicopter Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -140,7 +140,7 @@ BANSHEE:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: techcenter
+		Prerequisites: techcenter, ~aircraft.sc
 		Description: Heavy Helicopter Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -177,7 +177,7 @@ COPTER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar
+		Prerequisites: radar, ~aircraft.sc
 		Description: Fast Vehicle Transport Helicopter.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true

@@ -9,7 +9,7 @@ TANK1:
 		GenericName: Buggy
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: factory2
+		Prerequisites: ~vehicles.sc, factory2
 		Queue: Vehicle
 		Description: Remote controlled vehicle\narmed with explosives.
 	UpdatesPlayerStatistics:
@@ -66,12 +66,12 @@ TANK3:
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: Light Tank
+		Name: Assault Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: factory2
+		Prerequisites: factory2, ~vehicles.sc
 		Queue: Vehicle
 		Description: Fast, light tank.
 	Mobile:
@@ -166,7 +166,7 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2
+		Prerequisites: factory2, ~vehicles.sc
 		BuildPaletteOrder: 110
 		Description: Shoots rockets.
 	Armament@PRIMARY:
@@ -269,7 +269,7 @@ TANK8:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 160
-		Prerequisites: factory2
+		Prerequisites: factory2, ~vehicles.yi
 		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
 	Valued:
 		Cost: 400
@@ -362,7 +362,7 @@ TANK11:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
+		Prerequisites: factory3, ~vehicles.sc
 		BuildPaletteOrder: 220
 		Description: Main battle tank.
 	Armament:
@@ -390,7 +390,7 @@ TANK12:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
+		Prerequisites: factory3, ~vehicles.yi
 		BuildPaletteOrder: 240
 		Description: Double barreled tank.
 	Armament:
@@ -550,7 +550,7 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory2
+		Prerequisites: radar, factory2, ~vehicles.sc
 		BuildPaletteOrder: 150
 		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
@@ -594,7 +594,7 @@ ARTIL3:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: radar, factory3
+		Prerequisites: radar, factory3, ~vehicles.yi
 		Description: Double barreled artillery tank.
 	Health:
 		HP: 35000
@@ -739,11 +739,11 @@ TYRIANTANK:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Heavy Tank
+		Name: Assault Tank
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~disabled
+		Prerequisites: factory2, ~vehicles.sc
 		BuildPaletteOrder: 40
 		Description: Tank with rotating turret.
 	UpdatesPlayerStatistics:
@@ -816,7 +816,7 @@ MISSILE_TANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
+		Prerequisites: factory3, ~vehicles.yi
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
 	UpdatesPlayerStatistics:

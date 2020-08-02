@@ -349,7 +349,8 @@ flags:
 	Regions:
 		Random: 226, 241, 30, 15
 		spectator: 226, 241, 30, 15
-		megacorp: 226, 241, 30, 15
+		yi: 226, 241, 30, 15
+		sc: 226, 241, 30, 15
 
 music:
 	Inherits: ^Glyphs

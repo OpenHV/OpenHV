@@ -84,15 +84,21 @@
 		TerrainSpeeds:
 			Water: 100
 	Faction@0:
-		Name: MegaCorp
-		InternalName: megacorp
-		Side: MegaCorp
+		Name: YI
+		InternalName: yi
+		Side: Corporations
 		Selectable: true
-		Description: A large corporation with a sizeable mercenary battle team.
+		Description: Yigati Industries
+	Faction@1:
+		Name: SC
+		InternalName: sc
+		Side: Corporations
+		Selectable: true
+		Description: Synaty Corporation
 	Faction@RANDOM:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: megacorp
+		RandomFactionMembers: yi, sc
 		Side: Random
 		Description: Random Corporation\nA random corporation will be chosen when the game starts.
 	ResourceType@Gold:
@@ -297,12 +303,12 @@ World:
 	MPStartUnits@BASE:
 		Class: none
 		ClassName: Base only
-		Factions: megacorp
+		Factions: yi, sc
 		BaseActor: base
 	MPStartUnits@MINER:
 		Class: miner
 		ClassName: Base + Miner
-		Factions: megacorp
+		Factions: yi, sc
 		BaseActor: base
 		SupportActors: miner
 	MPStartLocations:

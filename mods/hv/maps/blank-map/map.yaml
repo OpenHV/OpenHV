@@ -23,7 +23,7 @@ Players:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
-		Faction: megacorp
+		Faction: Random
 
 Actors:
 

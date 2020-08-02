@@ -27,6 +27,12 @@ BASE:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@BuildingName:
+	ProvidesPrerequisite@YI:
+		Factions: yi
+		Prerequisite: vehicles.yi
+	ProvidesPrerequisite@SC:
+		Factions: sc
+		Prerequisite: vehicles.sc
 	Buildable:
 		Description: Builds structures and builders
 	Production:
@@ -383,6 +389,12 @@ STARPORT:
 	Production:
 		Produces: Aircraft
 	Reservable:
+	ProvidesPrerequisite@YI:
+		Factions: yi
+		Prerequisite: aircraft.yi
+	ProvidesPrerequisite@SC:
+		Factions: sc
+		Prerequisite: aircraft.sc
 	ProductionBar:
 		ProductionType: Aircraft
 	PrimaryBuilding:

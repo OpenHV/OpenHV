@@ -23,11 +23,11 @@ Players:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
-		Faction: megacorp
+		Faction: Random
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
-		Faction: megacorp
+		Faction: Random
 		Enemies: Multi0, Multi1, Multi2
 	PlayerReference@Multi0:
 		Name: Multi0
