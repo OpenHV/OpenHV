@@ -64,6 +64,7 @@ tank4:
 	extend: tank4-extend.png
 		Start: 3
 		Length: 3
+		Tick: 180
 	extended: tank4-extend.png
 		Start: 5
 	icon: icon.png

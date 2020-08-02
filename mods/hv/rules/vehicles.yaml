@@ -131,8 +131,6 @@ TANK4:
 	RevealsShroud@DEPLOYED:
 		RequiresCondition: !undeployed
 		Range: 12c0
-	WithMakeAnimation:
-		Sequence: extend
 	GrantCondition@PREVIEWWORKAROUND:
 		Condition: real-actor
 	GrantConditionOnDeploy:
@@ -148,6 +146,7 @@ TANK4:
 		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
 		RequiresCondition: !undeployed && real-actor
+		StartSequence: extend
 		Sequence: extended
 		Name: deployed
 	DetectCloaked:
