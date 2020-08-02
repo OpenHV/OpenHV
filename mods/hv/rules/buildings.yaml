@@ -166,12 +166,12 @@ RADAR:
 		Type: Steel
 	RevealsShroud:
 		Range: 10c0
-		RequiresCondition: !disabled && build-complete
+		RequiresCondition: !disabled && !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		Range: 5c0
 		RequiresCondition: disabled
 	ProvidesRadar:
-		RequiresCondition: !disabled && build-complete
+		RequiresCondition: !disabled && !build-incomplete && !beam-incomplete
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@BuildingName:
@@ -184,7 +184,7 @@ RADAR:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
-		Condition: build-complete
+		Condition: beam-incomplete
 	GrantConditionOnDamageState:
 		Condition: burning
 		ValidDamageStates: Heavy, Critical
@@ -618,7 +618,7 @@ TURRET:
 		Type: Steel
 	RevealsShroud:
 		Range: 15c0
-		RequiresCondition: build-complete
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
 		Range: 5c0
@@ -629,7 +629,8 @@ TURRET:
 		Weapon: TurretCannon
 		LocalOffset: 1200,50,0
 	AttackTurreted:
-		PauseOnCondition: disabled || !build-complete
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
@@ -645,7 +646,7 @@ TURRET:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
-		Condition: build-complete
+		Condition: beam-incomplete
 
 AATURRET:
 	Inherits: ^BaseBuilding
@@ -678,7 +679,7 @@ AATURRET:
 		Type: Steel
 	RevealsShroud:
 		Range: 15c0
-		RequiresCondition: build-complete
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
 		Range: 5c0
@@ -699,8 +700,8 @@ AATURRET:
 		RequiresCondition: charging
 		PauseOnCondition: disabled
 	AttackCharges:
-		RequiresCondition: !build-incomplete
-		PauseOnCondition: disabled || !build-complete
+		RequiresCondition: !build-incomplete && !beam-incomplete
+		PauseOnCondition: disabled
 		ChargeLevel: 50
 		ChargeRate: 10
 		DischargeRate: 5
@@ -714,7 +715,7 @@ AATURRET:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
-		Condition: build-complete
+		Condition: beam-incomplete
 	AmbientSound:
 		RequiresCondition: charging
 		SoundFiles: charging-Mike_Koenig.wav
@@ -923,7 +924,7 @@ ARTILLERYTURRET:
 		Weapon: TurretArtillery
 		LocalOffset: 1700,0,100 #TODO Adjust that
 	AttackTurreted:
-		PauseOnCondition: disabled || !build-complete
+		PauseOnCondition: disabled || beam-incomplete
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
@@ -939,7 +940,7 @@ ARTILLERYTURRET:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
-		Condition: build-complete
+		Condition: beam-incomplete
 
 TELEVATR:
 	Inherits: ^BaseBuilding
