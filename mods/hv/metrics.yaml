@@ -9,3 +9,5 @@ Metrics:
 	TextfieldColorHighlight: 1a1a1a
 	ChatMessageColor: FFFFFF
 	SystemMessageColor: FFFF00
+	TextContrastColorDark: 000000
+	TextContrastColorLight: 000000
