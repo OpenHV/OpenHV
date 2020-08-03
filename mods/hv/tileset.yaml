@@ -67,7 +67,7 @@ Terrain:
 	TerrainType@Plant:
 		Type: Plant
 		TargetTypes: Ground
-		Color: 186104
+		Color: 0d3103
 	TerrainType@Stone:
 		Type: Stone
 		TargetTypes: Ground
