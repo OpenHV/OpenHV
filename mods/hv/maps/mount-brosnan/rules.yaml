@@ -1,0 +1,14 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.72
+
+LAVALIGHT:
+	Inherits: LIGHT
+	Tooltip:
+		Name: Red Lighting
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 1.5
+		GreenTint: 0.01
+		BlueTint: 0.01

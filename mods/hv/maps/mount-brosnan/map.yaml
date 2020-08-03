@@ -1,0 +1,227 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Mount Brosnan
+
+Author: Matt
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 98,98
+
+Bounds: 1,1,96,96
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: Multi0, Multi1, Multi2, Multi3, Multi4, Multi5
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi4:
+		Name: Multi4
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi5:
+		Name: Multi5
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor7: mpspawn
+		Owner: Neutral
+		Location: 77,16
+	Actor8: mpspawn
+		Owner: Neutral
+		Location: 86,52
+	Actor9: mpspawn
+		Owner: Neutral
+		Location: 74,84
+	Actor10: mpspawn
+		Owner: Neutral
+		Location: 29,85
+	Actor11: mpspawn
+		Owner: Neutral
+		Location: 13,52
+	Actor12: mpspawn
+		Owner: Neutral
+		Location: 26,15
+	Actor14: lavalight
+		Owner: Neutral
+		Location: 50,50
+	Actor24: treegrs11
+		Owner: Neutral
+		Location: 33,70
+	Actor25: treegrs11
+		Owner: Neutral
+		Location: 57,78
+	Actor26: treegrs11
+		Owner: Neutral
+		Location: 75,74
+	Actor27: treegrs11
+		Owner: Neutral
+		Location: 76,58
+	Actor28: treegrs11
+		Owner: Neutral
+		Location: 77,44
+	Actor31: treegrs11
+		Owner: Neutral
+		Location: 70,15
+	Actor32: treegrs11
+		Owner: Neutral
+		Location: 59,26
+	Actor33: treegrs11
+		Owner: Neutral
+		Location: 36,32
+	Actor34: treegrs11
+		Owner: Neutral
+		Location: 36,15
+	Actor35: treegrs11
+		Owner: Neutral
+		Location: 18,9
+	Actor36: treegrs11
+		Owner: Neutral
+		Location: 14,35
+	Actor37: treegrs11
+		Owner: Neutral
+		Location: 27,51
+	Actor38: treegrs11
+		Owner: Neutral
+		Location: 7,64
+	Actor39: treegrs10
+		Owner: Neutral
+		Location: 27,63
+	Actor40: treegrs10
+		Owner: Neutral
+		Location: 28,75
+	Actor41: treegrs10
+		Owner: Neutral
+		Location: 41,76
+	Actor42: treegrs10
+		Owner: Neutral
+		Location: 10,85
+	Actor43: treegrs10
+		Owner: Neutral
+		Location: 58,89
+	Actor44: treegrs10
+		Owner: Neutral
+		Location: 78,90
+	Actor45: treegrs10
+		Owner: Neutral
+		Location: 92,77
+	Actor46: treegrs10
+		Owner: Neutral
+		Location: 93,67
+	Actor48: treegrs10
+		Owner: Neutral
+		Location: 73,46
+	Actor49: treegrs10
+		Owner: Neutral
+		Location: 66,30
+	Actor50: treegrs10
+		Owner: Neutral
+		Location: 78,27
+	Actor51: treegrs10
+		Owner: Neutral
+		Location: 86,7
+	Actor52: grssmisc6
+		Owner: Neutral
+		Location: 32,58
+	Actor53: grssmisc7
+		Owner: Neutral
+		Location: 63,67
+	Actor47: lavalight
+		Owner: Neutral
+		Location: 13,2
+	Actor54: lavalight
+		Owner: Neutral
+		Location: 29,1
+	Actor55: lavalight
+		Owner: Neutral
+		Location: 54,1
+	Actor56: lavalight
+		Owner: Neutral
+		Location: 53,17
+	Actor57: lavalight
+		Owner: Neutral
+		Location: 75,1
+	Actor59: lavalight
+		Owner: Neutral
+		Location: 93,28
+	Actor60: lavalight
+		Owner: Neutral
+		Location: 96,49
+	Actor61: lavalight
+		Owner: Neutral
+		Location: 95,72
+	Actor62: lavalight
+		Owner: Neutral
+		Location: 95,88
+	Actor63: lavalight
+		Owner: Neutral
+		Location: 75,95
+	Actor64: lavalight
+		Owner: Neutral
+		Location: 50,94
+	Actor65: lavalight
+		Owner: Neutral
+		Location: 23,95
+	Actor66: lavalight
+		Owner: Neutral
+		Location: 5,85
+	Actor67: lavalight
+		Owner: Neutral
+		Location: 13,74
+	Actor68: lavalight
+		Owner: Neutral
+		Location: 1,64
+	Actor69: lavalight
+		Owner: Neutral
+		Location: 1,42
+	Actor72: lavalight
+		Owner: Neutral
+		Location: 2,14
+	Actor73: lavalight
+		Owner: Neutral
+		Location: 93,4
+	Actor58: lavalight
+		Owner: Neutral
+		Location: 80,35
+	Actor71: lavalight
+		Owner: Neutral
+		Location: 12,29
+
+Rules: rules.yaml
