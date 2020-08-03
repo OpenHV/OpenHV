@@ -678,7 +678,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Cliff
 		Tiles:
-			0: Grass
+			0: Cliff
 	Template@85:
 		Id: 85
 		Images: grasclif.png
