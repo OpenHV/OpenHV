@@ -661,7 +661,7 @@ SCOUT1:
 
 SCOUT2:
 	Inherits: ^Vehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
 		BuildPaletteOrder: 130
@@ -670,7 +670,7 @@ SCOUT2:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Scout Pod
+		Name: Rocket Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
