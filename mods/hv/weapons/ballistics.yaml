@@ -34,6 +34,7 @@
 
 TyrianTankCannon:
 	Inherits: ^Cannon
+	Report: tankfire02.wav
 	ReloadDelay: 70
 	Warhead@Damage: SpreadDamage
 		Versus:
@@ -264,6 +265,7 @@ TurretArtillery:
 	Inherits: ^Cannon
 	ReloadDelay: 70
 	Burst: 2
+	Report: tankfire02.wav
 	Projectile: Bullet
 		Image: bullet5
 	Warhead@Damage: SpreadDamage
