@@ -41,78 +41,7 @@
 
 ^SelectionDecorations:
 	OutlinedSelectionDecorations:
-	WithSpriteSelectionDecorations@TopLeft:
-		RequiresSelection: true
-		RequiresCondition: not-damaged
-	WithSpriteSelectionDecorations@TopRight:
-		Position: TopRight
-		Sequence: top-right
-		RequiresSelection: true
-		RequiresCondition: not-damaged
-	WithSpriteSelectionDecorations@BottomLeft:
-		Position: BottomLeft
-		Sequence: bottom-left
-		RequiresSelection: true
-		RequiresCondition: not-damaged
-	WithSpriteSelectionDecorations@BottomRight:
-		Position: BottomRight
-		Sequence: bottom-right
-		RequiresSelection: true
-		RequiresCondition: not-damaged
-	WithSpriteSelectionDecorations@TopLeftYellow:
-		Image: outline-yellow
-		RequiresSelection: true
-		RequiresCondition: heavily-damaged
-	WithSpriteSelectionDecorations@TopRightYellow:
-		Image: outline-yellow
-		Position: TopRight
-		Sequence: top-right
-		RequiresSelection: true
-		RequiresCondition: heavily-damaged
-	WithSpriteSelectionDecorations@BottomLeftYellow:
-		Image: outline-yellow
-		Position: BottomLeft
-		Sequence: bottom-left
-		RequiresSelection: true
-		RequiresCondition: heavily-damaged
-	WithSpriteSelectionDecorations@BottomRightYellow:
-		Image: outline-yellow
-		Position: BottomRight
-		Sequence: bottom-right
-		RequiresSelection: true
-		RequiresCondition: heavily-damaged
-	WithSpriteSelectionDecorations@TopLeftRed:
-		Image: outline-red
-		RequiresSelection: true
-		RequiresCondition: critically-damaged
-	WithSpriteSelectionDecorations@TopRightRed:
-		Image: outline-red
-		Position: TopRight
-		Sequence: top-right
-		RequiresSelection: true
-		RequiresCondition: critically-damaged
-	WithSpriteSelectionDecorations@BottomLeftRed:
-		Image: outline-red
-		Position: BottomLeft
-		Sequence: bottom-left
-		RequiresSelection: true
-		RequiresCondition: critically-damaged
-	WithSpriteSelectionDecorations@BottomRightRed:
-		Image: outline-red
-		Position: BottomRight
-		Sequence: bottom-right
-		RequiresSelection: true
-		RequiresCondition: critically-damaged
 	WithTextControlGroupDecoration:
-	GrantConditionOnDamageState@HEAVY:
-		Condition: critically-damaged
-		ValidDamageStates: Critical
-	GrantConditionOnDamageState@MEDIUM:
-		Condition: heavily-damaged
-		ValidDamageStates: Heavy
-	GrantConditionOnDamageState@NONE:
-		Condition: not-damaged
-		ValidDamageStates: Undamaged, Light, Medium
 
 ^Cloakable:
 	Cloak@ExternalCloak:
@@ -333,32 +262,6 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@decoration: ^SelectionDecorations
-	WithSpriteSelectionDecorations@Top:
-		Position: Top
-		Sequence: top
-		RequiresSelection: true
-		RequiresCondition: not-damaged
-	WithSpriteSelectionDecorations@TopYellow:
-		Image: outline-yellow
-		Position: Top
-		Sequence: top
-		RequiresSelection: true
-		RequiresCondition: heavily-damaged
-	WithSpriteSelectionDecorations@TopRed:
-		Image: outline-red
-		Position: Top
-		Sequence: top
-		RequiresSelection: true
-		RequiresCondition: critically-damaged
-	#WithSpriteSelectionDecorations@Left:
-	#	Position: Left
-	#	Sequence: left
-	#WithSpriteSelectionDecorations@Right:
-	#	Position: Right
-	#	Sequence: right
-	#WithSpriteSelectionDecorations@Bottom:
-	#	Position: Bottom
-	#	Sequence: bottom
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
