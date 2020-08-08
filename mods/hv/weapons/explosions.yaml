@@ -2,7 +2,7 @@
 
 BuildingExplode:
 	Warhead@Effectf: CreateEffect
-		Explosions: medium, medium_2, large, large_2, large_3
+		Explosions: medium, medium_2, large, large_f, large_2, large_3
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 ^Explosion:

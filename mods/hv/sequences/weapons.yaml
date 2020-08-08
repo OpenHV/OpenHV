@@ -9,6 +9,9 @@ explosion:
 	medium: explosn.png
 	medium_2: explosn2.png
 	large: explobig.png
+	large_f: explobig.png
+		FlipX: true
+		FlipY: true
 	large_2: explobig2.png
 		Tick: 80
 	large_3: explobig3.png
