@@ -114,3 +114,6 @@ outline-yellow:
 
 repair:
 	idle: building-repair.png
+		Length: *
+		Tick: 200
+
