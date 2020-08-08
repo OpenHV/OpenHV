@@ -89,3 +89,11 @@ SpeederVoice:
 		Select: ship1_aeronautics_operational, ship1_avionics_online, ship1_awaiting_orders, ship1_ready_for_action
 		Move: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_not_a_problem, ship1_thrusters_engaged
 		Action: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_fire_the_missiles, ship1_intercepting_hostiles
+
+DroneVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: droneselect1, droneselect2, droneselect3, droneselect4
+		Move: droneaction1, droneaction2, droneaction3, droneaction5
+		Action: droneaction1, droneaction4, droneaction6, droneaction7
+
