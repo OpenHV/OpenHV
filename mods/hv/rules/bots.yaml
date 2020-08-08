@@ -77,6 +77,7 @@ Player:
 		UnitLimits:
 			builder: 0
 			miner: 3
+			balloon: 2
 	CaptureManagerBotModule:
 		RequiresCondition: enable-test-ai
 		CapturingActorTypes: tank7
