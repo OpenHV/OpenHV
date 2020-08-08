@@ -416,7 +416,6 @@
 		Image: repair
 		Sequence: idle
 		Position: Center
-		BlinkPattern: Off, On
 	GivesBuildableArea:
 		AreaTypes: building
 	Explodes:
