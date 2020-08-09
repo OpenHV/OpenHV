@@ -44,7 +44,7 @@ BASE:
 		ProductionType: Defense
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -133,7 +133,7 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -189,7 +189,7 @@ RADAR:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -244,7 +244,7 @@ TRADPLAT:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -322,7 +322,7 @@ MODULE:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -363,7 +363,7 @@ MINER2:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -445,7 +445,7 @@ STARPORT:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -491,7 +491,7 @@ FACTORY2:
 		Prerequisite: factory
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -537,7 +537,7 @@ FACTORY3:
 		Prerequisite: factory
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -583,7 +583,7 @@ TECHCENTER:
 		TargetTypes: Ground, Structure
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -596,7 +596,7 @@ TECHCENTER:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay:
+	WithIdleOverlay@animation:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
 
@@ -653,7 +653,7 @@ TURRET:
 		TurnSpeed: 120
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -728,7 +728,7 @@ AATURRET:
 		ChargingCondition: charging
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -794,7 +794,7 @@ FIELD:
 		RequiredForShortGame: false
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -869,7 +869,7 @@ SILO:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -914,7 +914,7 @@ STORAGE:
 	#	RequiresSelection: true
 	#	PipCount: 4
 	#	FullSequence: pip-yellow
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -980,7 +980,7 @@ ARTILLERYTURRET:
 		TurnSpeed: 60
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1045,7 +1045,7 @@ TELEVATR:
 		PlayerPalette: green
 	PlaceBuildingVariants:
 		Actors: televtr2
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1061,7 +1061,7 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1124,7 +1124,7 @@ HARBOR:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay:
+	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
