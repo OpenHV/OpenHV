@@ -210,7 +210,7 @@ LightningBolt:
 		Image: pixelsparks
 		Sequences: damage
 		Palette: effect
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 
 DamageSpark:
 	Inherits: ^PixelSpark
