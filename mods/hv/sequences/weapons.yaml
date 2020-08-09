@@ -56,6 +56,10 @@ bullet4:
 	idle: bullet4.png
 		Facings: 8
 		ZOffset: 2030
+	effect: bullet4.png
+		Start: 8
+		Facings: 8
+		ZOffset: 2030
 
 bullet5:
 	idle: bullet5.png
