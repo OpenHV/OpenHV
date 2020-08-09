@@ -1331,12 +1331,12 @@ PLATFORM:
 	Capturable:
 		RequiresCondition: !build-incomplete
 	RallyPoint:
-		Path: 0,3
+		Path: 0,1
 		IsPlayerPalette: true
 		Palette: green
 	Exit@1:
-		SpawnOffset: 256,192,0
-		ExitCell: 0,2
+		SpawnOffset: 0,192,0
+		ExitCell: 0,0
 		ProductionTypes: Vehicle
 	Production:
 		Produces: Vehicle
