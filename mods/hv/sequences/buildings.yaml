@@ -36,6 +36,7 @@ base:
 		Tick: 300
 	shadow-overlay: base-shadow.png
 		ZOffset: 1768
+		Offset: -3, 13
 	damaged-idle: base.png
 		Start: 7
 		Length: 1
@@ -66,12 +67,14 @@ generator:
 		Tick: 300
 	shadow-overlay: generator-shadow.png
 		ZOffset: 1768
+		Offset: 12, 19
 	damaged-idle: generator.png
 		Start: 15
 		Length: 1
 	damaged-shadow-overlay: generator-shadow.png
 		Start: 1
 		ZOffset: 1768
+		Offset: 12, 19
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -92,11 +95,13 @@ radar:
 	idle: radar.png
 	shadow-overlay: radar-shadow.png
 		ZOffset: 1768
+		Offset: 7, 4
 	damaged-idle: radar.png
 		Start: 1
 	damaged-shadow-overlay: radar-shadow.png
 		Start: 1
 		ZOffset: 1768
+		Offset: 7, 4
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -110,20 +115,21 @@ radar:
 
 tradplat:
 	Inherits@flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, 1
 	idle: tradplat.png
-		Offset: 0,1
 		ZOffset: -1c511
 	shadow-overlay: tradplat-shadow.png
+		Offset: 1, 3
 	damaged-idle: tradplat.png
 		Start: 4
-		Offset: 0,1
 		ZOffset: -1c511
 	damaged-shadow-overlay: tradplat-shadow.png
 		Start: 1
+		Offset: 1, 3
 	active: tradplat.png
 		Frames: 1, 2, 3, 2, 1
 		Length: 5
-		Offset: 0,1
 		ZOffset: -1c511
 		Tick: 100
 	make: build.png
@@ -140,6 +146,7 @@ tradplat:
 		Offset: 12, -17
 	icon: buildings-icons.png
 		Start: 11
+		Offset: 0, 0
 
 module:
 	Inherits@flame: ^BuildingFlame2
@@ -152,11 +159,13 @@ module:
 	shadow-overlay: module-shadow.png
 		Start: 0
 		ZOffset: 1768
+		Offset: 7, 12
 	damaged-idle: module.png
 		Start: 9
 	damaged-shadow-overlay: module-shadow.png
 		Start: 1
 		ZOffset: 1768
+		Offset: 7, 12
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -182,6 +191,7 @@ miner2:
 	make-shadow-overlay: miner2-shadow.png
 		Length: 17
 		Tick: 100
+		Offset: 15, 36
 	active: miner2.png
 		Start: 17
 		Length: 3
@@ -190,10 +200,12 @@ miner2:
 		Start: 17
 		Length: 3
 		Tick: 300
+		Offset: 15, 36
 	damaged-active: miner2.png
 		Start: 20
 	damaged-shadow-overlay: miner2-shadow.png
 		Start: 20
+		Offset: 15, 36
 	silo: miner2.png
 		Start: 21
 		Length: 6
@@ -212,11 +224,13 @@ starport:
 		Tick: 200
 	shadow-overlay: starport-shadow.png
 		ZOffset: 1768
+		Offset: 5, 5
 	damaged-idle: starport.png
 		Start: 22
 	damaged-shadow-overlay: starport-shadow.png
 		Start: 1
 		ZOffset: 1768
+		Offset: 5, 5
 	active: starport2.png
 		Length: 5
 	damaged-active: starport2.png
@@ -243,12 +257,14 @@ factory2:
 		Tick: 300
 	shadow-overlay: factory2-shadow.png
 		ZOffset: 1768
+		Offset: 6, 11
 	damaged-idle: factory2.png
 		Start: 15
 		Length: 1
 	damaged-shadow-overlay: factory2-shadow.png
 		Start: 1
 		ZOffset: 1768
+		Offset: 6, 11
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -271,12 +287,14 @@ factory3:
 		Tick: 300
 	shadow-overlay: factory3-shadow.png
 		ZOffset: 1768
+		Offset: 7, 17
 	damaged-idle: factory3.png
 		Start: 11
 		Length: 1
 	damaged-shadow-overlay: factory3-shadow.png
 		Start: 1
 		ZOffset: 1768
+		Offset: 7, 17
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -298,6 +316,7 @@ turret:
 		Start: 0
 	shadow-overlay: turret-shadow.png
 		ZOffset: 1768
+		Offset: 5, 11
 	damaged-idle: turret.png
 		Start: 1
 	turret: turret.png
@@ -325,6 +344,7 @@ aaturret:
 		Start: 0
 	shadow-overlay: aa-turret-shadow.png
 		ZOffset: 1768
+		Offset: 6, 10
 	damaged-idle: aa-turret.png
 		Start: 1
 	turret: aa-turret.png
@@ -354,6 +374,7 @@ field:
 	idle: field.png
 	shadow-overlay: field-shadow.png
 		ZOffset: 1768
+		Offset: 2, 3
 	active: field.png
 		Length: 5
 		Tick: 300
@@ -387,6 +408,7 @@ silo:
 		Start: 1
 	shadow-overlay: silo-shadow.png
 		ZOffset: 1768
+		Offset: 3, 5
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -407,6 +429,7 @@ storage:
 	idle: storage.png
 	shadow-overlay: storage-shadow.png
 		ZOffset: 1768
+		Offset: 3, 4
 	stages: storage.png
 		Length: 14
 	damaged-stages: storage.png
@@ -430,6 +453,7 @@ artilleryturret:
 		Start: 0
 	shadow-overlay: artilery2-shadow.png
 		ZOffset: 1768
+		Offset: 2, 24
 	damaged-idle: artilery2.png
 		Start: 1
 	turret: artilery2.png
@@ -460,6 +484,7 @@ televatr:
 		Start: 15
 	shadow-overlay: televatr-shadow.png
 		ZOffset: 1768
+		Offset: 3, 3
 	damaged-idle: televatr.png
 		Start: 16
 	active: televatr.png
@@ -484,6 +509,7 @@ televtr2:
 		Start: 7
 	shadow-overlay: televtr2-shadow.png
 		ZOffset: 1768
+		Offset: 3, 3
 	damaged-idle: televtr2.png
 		Start: 14
 	active: televtr2.png
@@ -509,6 +535,7 @@ harbor:
 		ZOffset: -2000
 	shadow-overlay: harbor-shadow.png
 		ZOffset: -1768
+		Offset: 4, 4
 	production: harbor.png
 		Start: 3
 		Length: 7
@@ -578,8 +605,10 @@ techcenter:
 		Start: 0
 	shadow-overlay: tech-center-shadow.png
 		ZOffset: 1768
+		Offset: 6, 6
 	damaged-shadow-overlay: tech-center-shadow-damaged.png
 		ZOffset: 1768
+		Offset: 6, 6
 	damaged-idle: tech-center.png
 		Start: 1
 	animation: tech-center.png
