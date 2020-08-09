@@ -48,7 +48,6 @@ BASE:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -1000,-150,0
 	RallyPoint:
 	Exit@0:
 		RequiresCondition: !being-captured
@@ -137,7 +136,6 @@ GENERATOR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -1500,550,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -193,7 +191,6 @@ RADAR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -300,350,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -248,7 +245,6 @@ TRADPLAT:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -250,50,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -326,7 +322,6 @@ MODULE:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -950,350,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -367,12 +362,10 @@ MINER2:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -2850,750,0
 		RequiresCondition: !build-incomplete
 	WithConstructionOverlay:
 		Sequence: make-shadow-overlay
 		Palette: shadow
-		Offset: -2850,750,0
 	RenderSprites:
 		PlayerPalette: green
 	GrantConditionOnDamageState@CRITICAL:
@@ -449,7 +442,6 @@ STARPORT:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -400,250,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -495,7 +487,6 @@ FACTORY2:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -850,300,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -541,7 +532,6 @@ FACTORY3:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -1350,350,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -587,7 +577,6 @@ TECHCENTER:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -500,300,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -657,7 +646,6 @@ TURRET:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -900,250,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -732,7 +720,6 @@ AATURRET:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -800,300,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -798,7 +785,6 @@ FIELD:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -250,100,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -918,7 +904,6 @@ STORAGE:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -300,150,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -984,7 +969,6 @@ ARTILLERYTURRET:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -1900,100,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
@@ -1049,7 +1033,6 @@ TELEVATR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -250,150,0
 
 TELEVTR2:
 	Inherits: TELEVATR
@@ -1065,7 +1048,6 @@ TELEVTR2:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -250,150,0
 
 HARBOR:
 	Inherits: ^BaseBuilding
@@ -1128,7 +1110,6 @@ HARBOR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		Offset: -200,200,0
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
