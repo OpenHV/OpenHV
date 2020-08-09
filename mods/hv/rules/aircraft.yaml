@@ -43,8 +43,9 @@ SHIP1:
 	Contrail:
 		Offset: -400,50,0
 		UsePlayerColor: false
-		Color: A00000
+		Color: A0000060
 		TrailWidth: 0c192
+		TrailLength: 5
 
 SHIP2:
 	Inherits: ^Plane
@@ -87,7 +88,9 @@ SHIP2:
 	Contrail:
 		Offset: -400,0,0
 		UsePlayerColor: false
-		Color: A00000
+		Color: A0000060
+		TrailWidth: 0c96
+		TrailLength: 5
 	Selectable:
 		DecorationBounds: 30,28,0,2
 
