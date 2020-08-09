@@ -173,3 +173,18 @@ LightningBolt:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
+
+^PixelSpark:
+	Range: 1c0
+	MinRange: 512
+	ReloadDelay: 1
+	Projectile: Bullet
+		Speed: 80
+		LaunchAngle: 125, 175
+		Image: pixelsparks
+		Sequences: damage
+		Palette: effect
+	Warhead@1Dam: SpreadDamage
+
+DamageSpark:
+	Inherits: ^PixelSpark
