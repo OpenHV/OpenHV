@@ -61,6 +61,7 @@
 	Inherits@shield: ^ForceFieldCompatible
 	Inherits@ecm: ^DisabledByECM
 	Inherits@cloak: ^Cloakable
+	Inherits@damagesparks: ^PixelDamageSparks
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -147,6 +148,7 @@
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
+	Inherits@damagesparks: ^PixelDamageSparks
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -479,6 +481,7 @@
 	Inherits@selection: ^SelectableCombatUnit
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
+	Inherits@damagesparks: ^PixelDamageSparks
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -682,3 +685,13 @@
 		Sequence: flame3
 		Palette: effect
 		RequiresCondition: burning
+
+^PixelDamageSparks:
+	GrantConditionOnDamageState:
+		Condition: throw-sparks
+		ValidDamageStates: Heavy, Critical
+	SpawnsShrapnel@damagesparks:
+		RequiresCondition: throw-sparks
+		Weapon: DamageSpark
+		Amount: 6
+		Delay: 192, 384

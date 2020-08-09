@@ -151,3 +151,12 @@ fire:
 		ZOffset: 512
 		Offset: 0, -10
 		Tick: 60
+
+pixelsparks:
+	damage: pixelsparks.png
+		Length: 9
+		Tick: 120
+	electric: pixelsparks.png
+		Length: 9
+		Start: 9
+		Tick: 120
