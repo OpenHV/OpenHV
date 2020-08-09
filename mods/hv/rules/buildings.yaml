@@ -859,7 +859,7 @@ SILO:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		RequiresCondition: !build-incomplete && !beam-incomplete
+		RequiresCondition: !build-incomplete
 
 STORAGE:
 	Inherits: ^BaseBuilding
@@ -1110,7 +1110,7 @@ HARBOR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		RequiresCondition: !build-incomplete && !beam-incomplete
+		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
@@ -1120,10 +1120,10 @@ HARBOR:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@Entry:
 		Sequence: idle-entry
-		RequiresCondition: !build-incomplete && !beam-incomplete
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Production:
 		Sequence: production
-		RequiresCondition: !build-incomplete && !beam-incomplete
+		RequiresCondition: !build-incomplete
 
 MOTHER:
 	Inherits: ^BaseBuilding
