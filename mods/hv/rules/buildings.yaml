@@ -2,18 +2,22 @@
 
 BASE:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^3x3Shape
 	Inherits@flame: ^BuildingFlame3
 	Selectable:
-		Bounds: 60,60
+		Bounds: 40,60,0,-10
 	Valued:
 		Cost: 3500
 	Tooltip:
 		Name: Main Base
 	Building:
-		Footprint: xxx xxx xxx
+		Footprint: === xx= xx=
 		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
+		LocalCenterOffset: -512,512,0
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 1024
 	Health:
 		HP: 210000
 	Armor:
@@ -104,7 +108,7 @@ GENERATOR:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 40,60,0,-10
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
@@ -118,7 +122,6 @@ GENERATOR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 40000
 	Armor:
@@ -148,13 +151,10 @@ GENERATOR:
 RADAR:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
-	Inherits@shape: ^3x3Shape
+	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 48,48
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 630,-384,0, 630,384,0, -700,-512,0, -700,512,0
+		Bounds: 40,48,0,-4
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
@@ -167,7 +167,6 @@ RADAR:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		LocalCenterOffset: 0,-384,0
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
@@ -259,10 +258,7 @@ MODULE:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 48,48
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 490,-470,0, 355,512,0, -355,-512,0, -630,512,0
+		Bounds: 40,40
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -333,10 +329,10 @@ MODULE:
 
 MINER2:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x3Shape
+	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 40,60,0,-20
 	Tooltip:
 		Name: Miner
 	ResourceCollector:
@@ -349,11 +345,12 @@ MINER2:
 	QuantizeFacingsFromSequence:
 		Sequence: active
 	Building:
-		Footprint: xx xx xx
+		Footprint: == == xx
 		Dimensions: 2,3
 		RequiresBaseProvider: false
 		TerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
 		AllowPlacementOnResources: true
+		LocalCenterOffset: 0,1024,0
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
 	RevealsShroud:
@@ -469,7 +466,6 @@ FACTORY2:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 35000
 	Armor:
@@ -514,7 +510,6 @@ FACTORY3:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 35000
 	Armor:
@@ -546,7 +541,7 @@ TECHCENTER:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 40,50,0,-5
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
@@ -558,9 +553,9 @@ TECHCENTER:
 		Name: Technology Download Center
 	ProvidesPrerequisite@BuildingName:
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,-312,0
+		Footprint: == xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,512,0
 	Health:
 		HP: 30000
 	Armor:
@@ -592,14 +587,11 @@ TECHCENTER:
 TURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^2x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 32,32
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0
+		Bounds: 40,30,0,-5
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -612,7 +604,7 @@ TURRET:
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
-		LocalCenterOffset: -100,100,0
+		LocalCenterOffset: 0,512,0
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
@@ -658,14 +650,11 @@ TURRET:
 AATURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^2x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 32,32
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0
+		Bounds: 40,30,0,-5
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -678,7 +667,7 @@ AATURRET:
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
-		LocalCenterOffset: -50,250,0
+		LocalCenterOffset: 0,512,0
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
@@ -797,10 +786,10 @@ FIELD:
 SILO:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPower
-	Inherits@shape: ^2x3Shape
+	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 40,60,0,-20
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -812,8 +801,9 @@ SILO:
 		BuildLimit: 1
 		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
 	Building:
-		Footprint: xx xx xx
+		Footprint: == == xx
 		Dimensions: 2,3
+		LocalCenterOffset: 0,1024,0
 	Health:
 		HP: 100000
 	Armor:
@@ -921,10 +911,7 @@ ARTILLERYTURRET:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 32,32
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 400,-400,0, 400,400,0, -400,-400,0, -400,400,0 #TODO Adjust that
+		Bounds: 40,40
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -935,9 +922,8 @@ ARTILLERYTURRET:
 	Tooltip:
 		Name: Artillery Turret
 	Building:
-		Footprint: == xx
+		Footprint: xx xx
 		Dimensions: 2,2
-		LocalCenterOffset: -70,-750,0
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
@@ -985,6 +971,9 @@ TELEVATR:
 	Inherits@flame: ^BuildingFlame
 	Selectable:
 		Bounds: 40,20
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 0,-512,0, 0,512,0
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 120
@@ -1037,6 +1026,10 @@ TELEVATR:
 TELEVTR2:
 	Inherits: TELEVATR
 	Inherits@shape: ^1x2Shape
+	HitShape:
+		UseTargetableCellsOffsets: false
+		# TODO: Figure out why these can't be 512. - Graion; 2020-08-09. 
+		TargetableOffsets: 0,0,0, -832,0,0, 832,0,0
 	-Buildable:
 	-PlaceBuildingVariants:
 	Selectable:
@@ -1051,9 +1044,10 @@ TELEVTR2:
 
 HARBOR:
 	Inherits: ^BaseBuilding
+	Inherits@shape: ^3x3Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,40
+		Bounds: 60,60
 	Buildable:
 		Prerequisites: generator
 		Queue: Building
@@ -1066,12 +1060,7 @@ HARBOR:
 	Building:
 		Footprint: xxx x=x x=x
 		Dimensions: 3,3
-		LocalCenterOffset: 150,-512,0
 		TerrainTypes: Water
-	HitShape:
-		Type: Rectangle
-			TopLeft: -1536, -1536
-			BottomRight: 1536, 1536
 	Health:
 		HP: 35000
 	Armor:
@@ -1083,8 +1072,7 @@ HARBOR:
 		IsPlayerPalette: true
 		Palette: green
 	Exit:
-		SpawnOffset: -150,-500,0
-		ExitCell: 1,3
+		ExitCell: 1,2
 		ProductionTypes: Ship
 		Facing: 360
 	Production:
