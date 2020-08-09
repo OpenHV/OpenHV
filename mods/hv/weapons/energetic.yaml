@@ -66,6 +66,22 @@ ElectronicCountermeasure:
 		Spread: 1
 		Damage: 0
 		ValidTargets: Vehicle
+	Warhead@Effect: FireRadius
+		Weapon: ElectronicCountermeasureEffect
+		Amount: 8
+		AffectsParent: true
+		ValidTargets: Ground
+
+ElectronicCountermeasureEffect:
+	ReloadDelay: 1
+	Range: 1c0
+	Projectile: Bullet
+		Speed: 150
+		Image: bullet4
+		Sequences: effect
+	Warhead@Damage: SpreadDamage
+		Spread: 1
+		Damage: 0
 
 Repair:
 	ReloadDelay: 80
