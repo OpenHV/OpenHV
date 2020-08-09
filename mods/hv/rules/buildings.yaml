@@ -44,7 +44,10 @@ BASE:
 		ProductionType: Defense
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -1000,-150,0
 	RallyPoint:
 	Exit@0:
@@ -130,7 +133,10 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -1500,550,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -183,7 +189,10 @@ RADAR:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -300,350,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -235,7 +244,10 @@ TRADPLAT:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -250,50,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -310,7 +322,10 @@ MODULE:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -950,350,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -348,7 +363,10 @@ MINER2:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -2850,750,0
 		RequiresCondition: !build-incomplete
 	WithConstructionOverlay:
@@ -427,7 +445,10 @@ STARPORT:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -400,250,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -470,7 +491,10 @@ FACTORY2:
 		Prerequisite: factory
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -850,300,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -513,7 +537,10 @@ FACTORY3:
 		Prerequisite: factory
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -1350,350,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -556,7 +583,10 @@ TECHCENTER:
 		TargetTypes: Ground, Structure
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -500,300,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -623,7 +653,10 @@ TURRET:
 		TurnSpeed: 120
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -900,250,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -695,7 +728,10 @@ AATURRET:
 		ChargingCondition: charging
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -800,300,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -758,7 +794,10 @@ FIELD:
 		RequiredForShortGame: false
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -250,100,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -830,7 +869,10 @@ SILO:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		RequiresCondition: !build-incomplete && !beam-incomplete
 
 STORAGE:
@@ -872,7 +914,10 @@ STORAGE:
 	#	RequiresSelection: true
 	#	PipCount: 4
 	#	FullSequence: pip-yellow
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -300,150,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -935,7 +980,10 @@ ARTILLERYTURRET:
 		TurnSpeed: 60
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -1900,100,0
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
@@ -997,7 +1045,10 @@ TELEVATR:
 		PlayerPalette: green
 	PlaceBuildingVariants:
 		Actors: televtr2
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -250,150,0
 
 TELEVTR2:
@@ -1010,7 +1061,10 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -250,150,0
 
 HARBOR:
@@ -1070,7 +1124,10 @@ HARBOR:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithShadowOverlay:
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 		Offset: -200,200,0
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithMakeAnimation:
