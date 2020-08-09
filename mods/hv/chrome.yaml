@@ -1,19 +1,19 @@
 # License: GPL-3.0+
 
 ^Chrome:
-	Image: chrome.png
+	Image: uibits/chrome.png
 
 ^Dialog:
-	Image: dialog.png
+	Image: uibits/dialog.png
 
 ^Glyphs:
-	Image: glyphs.png
+	Image: uibits/glyphs.png
 
 ^Logo:
-	Image: logo.png
+	Image: uibits/logo.png
 
 ^LoadScreen:
-	Image: loadscreen.png
+	Image: uibits/loadscreen.png
 
 sidebar:
 	Inherits: ^Chrome
