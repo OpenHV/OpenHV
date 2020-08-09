@@ -142,6 +142,11 @@ VoltageArc:
 		Damage: 10000
 		ValidTargets: Ground, Water, Vehicle
 		DamageTypes: Electricity
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 4
+		AffectsParent: true
+		ValidTargets: Ground, Water, Vehicle
 
 LightningBolt:
 	ReloadDelay: 50
@@ -173,6 +178,11 @@ LightningBolt:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 4
+		AffectsParent: true
+		ValidTargets: Ground, Air, Ship, Tree
 
 ^PixelSpark:
 	Range: 1c0
@@ -188,3 +198,8 @@ LightningBolt:
 
 DamageSpark:
 	Inherits: ^PixelSpark
+
+ElectricSpark:
+	Inherits: ^PixelSpark
+	Projectile: Bullet
+		Sequences: electric
