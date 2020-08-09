@@ -1,34 +1,34 @@
 beast:
-	idle: beast.png
+	idle: bits/beast.png
 		Facings: 8
-	move: beast.png
+	move: bits/beast.png
 		Start: 8
 		Tick: 80
 		Length: 4
 		Facings: 8
-	die: beast-die.png
+	die: bits/beast-die.png
 		Length: 12
 		Tick: 120
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 35
 
 crow:
-	idle: crow.png
+	idle: bits/crow.png
 		Length: 5
 		Tick: 100
-	icon: icon.png
+	icon: bits/icon.png
 
 gull:
-	idle: gull.png
+	idle: bits/gull.png
 		Length: 5
 		Tick: 100
-	icon: icon.png
+	icon: bits/icon.png
 
 seed:
-	idle: seed.png
+	idle: bits/seed.png
 		Facings: 8
-	move: seed-move.png
+	move: bits/seed-move.png
 		Tick: 180
 		Length: 3
 		Facings: 8
-	icon: icon.png
+	icon: bits/icon.png

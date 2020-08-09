@@ -139,15 +139,15 @@
 		AllowUnderBuildings: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
-		Filename: palette.pal
+		Filename: bits/palette.pal
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@player:
 		Name: player
-		Filename: palette.pal
+		Filename: bits/palette.pal
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@effect:
 		Name: effect
-		Filename: palette.pal
+		Filename: bits/palette.pal
 		TransparentIndex: 255
 	PlayerColorPalette:
 		BasePalette: player
@@ -166,23 +166,23 @@
 		RemapIndex: 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
 	PaletteFromGimpOrJascFile@cursor:
 		Name: cursor
-		Filename: palette.pal
+		Filename: bits/palette.pal
 		CursorPalette: true
 		AllowModifiers: false
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
-		Filename: palette.pal
+		Filename: bits/palette.pal
 		AllowModifiers: false
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@colorpicker:
 		Name: colorpicker
-		Filename: palette.pal
+		Filename: bits/palette.pal
 		AllowModifiers: false
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@cube:
 		Name: cube
-		Filename: cube.pal
+		Filename: bits/cube.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@shadow:
 		Name: shadow

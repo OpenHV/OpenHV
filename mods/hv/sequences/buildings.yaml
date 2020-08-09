@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 ^BuildingFlame:
-	flame: flame2.png
+	flame: bits/flame2.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -9
@@ -9,7 +9,7 @@
 
 ^BuildingFlame2:
 	Inherits: ^BuildingFlame
-	flame2: flame2.png
+	flame2: bits/flame2.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -9
@@ -17,7 +17,7 @@
 
 ^BuildingFlame3:
 	Inherits: ^BuildingFlame2
-	flame3: flame2.png
+	flame3: bits/flame2.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -9
@@ -25,29 +25,29 @@
 
 base:
 	Inherits@flame: ^BuildingFlame3
-	build: base.png
+	build: bits/base.png
 		Start: 3
 		Length: 3
 		Reverses: true
 		Tick: 300
-	idle: base.png
+	idle: bits/base.png
 		Length: 3
 		Reverses: true
 		Tick: 300
-	shadow-overlay: base-shadow.png
+	shadow-overlay: bits/base-shadow.png
 		ZOffset: 1768
 		Offset: -3, 13
-	damaged-idle: base.png
+	damaged-idle: bits/base.png
 		Start: 7
 		Length: 1
-	damaged-build: base.png
+	damaged-build: bits/base.png
 		Start: 7
 		Length: 1
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -57,21 +57,21 @@ base:
 		Offset: -1, 6
 	flame3
 		Offset: -4, -13
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 0
 
 generator:
 	Inherits@flame: ^BuildingFlame2
-	idle: generator.png
+	idle: bits/generator.png
 		Length: 15
 		Tick: 300
-	shadow-overlay: generator-shadow.png
+	shadow-overlay: bits/generator-shadow.png
 		ZOffset: 1768
 		Offset: 12, 19
-	damaged-idle: generator.png
+	damaged-idle: bits/generator.png
 		Start: 15
 		Length: 1
-	damaged-shadow-overlay: generator-shadow.png
+	damaged-shadow-overlay: bits/generator-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 12, 19
@@ -79,7 +79,7 @@ generator:
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -87,56 +87,56 @@ generator:
 		Offset: 0, 10
 	flame2:
 		Offset: 3, -9
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 4
 
 radar:
 	Inherits@flame: ^BuildingFlame
-	idle: radar.png
-	shadow-overlay: radar-shadow.png
+	idle: bits/radar.png
+	shadow-overlay: bits/radar-shadow.png
 		ZOffset: 1768
 		Offset: 7, 4
-	damaged-idle: radar.png
+	damaged-idle: bits/radar.png
 		Start: 1
-	damaged-shadow-overlay: radar-shadow.png
+	damaged-shadow-overlay: bits/radar-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 7, 4
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 7
 
 tradplat:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 1
-	idle: tradplat.png
+	idle: bits/tradplat.png
 		ZOffset: -1c511
-	shadow-overlay: tradplat-shadow.png
+	shadow-overlay: bits/tradplat-shadow.png
 		Offset: 1, 3
-	damaged-idle: tradplat.png
+	damaged-idle: bits/tradplat.png
 		Start: 4
 		ZOffset: -1c511
-	damaged-shadow-overlay: tradplat-shadow.png
+	damaged-shadow-overlay: bits/tradplat-shadow.png
 		Start: 1
 		Offset: 1, 3
-	active: tradplat.png
+	active: bits/tradplat.png
 		Frames: 1, 2, 3, 2, 1
 		Length: 5
 		ZOffset: -1c511
 		Tick: 100
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -144,33 +144,33 @@ tradplat:
 		Offset: -2, -6
 	flame2:
 		Offset: 12, -17
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 11
 		Offset: 0, 0
 
 module:
 	Inherits@flame: ^BuildingFlame2
-	door: module.png
+	door: bits/module.png
 		Frames: 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		ZOffset: 1768
-	idle: module.png
+	idle: bits/module.png
 		Start: 8
-	shadow-overlay: module-shadow.png
+	shadow-overlay: bits/module-shadow.png
 		Start: 0
 		ZOffset: 1768
 		Offset: 7, 12
-	damaged-idle: module.png
+	damaged-idle: bits/module.png
 		Start: 9
-	damaged-shadow-overlay: module-shadow.png
+	damaged-shadow-overlay: bits/module-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 7, 12
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -180,66 +180,66 @@ module:
 	flame2:
 		Offset: -7, -13
 		ZOffset: 1769
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 6
 
 miner2:
 	Inherits@flame: ^BuildingFlame2
-	make: miner2.png
+	make: bits/miner2.png
 		Length: 17
 		Tick: 100
-	make-shadow-overlay: miner2-shadow.png
+	make-shadow-overlay: bits/miner2-shadow.png
 		Length: 17
 		Tick: 100
 		Offset: 15, 36
-	active: miner2.png
+	active: bits/miner2.png
 		Start: 17
 		Length: 3
 		Tick: 300
-	shadow-overlay: miner2-shadow.png
+	shadow-overlay: bits/miner2-shadow.png
 		Start: 17
 		Length: 3
 		Tick: 300
 		Offset: 15, 36
-	damaged-active: miner2.png
+	damaged-active: bits/miner2.png
 		Start: 20
-	damaged-shadow-overlay: miner2-shadow.png
+	damaged-shadow-overlay: bits/miner2-shadow.png
 		Start: 20
 		Offset: 15, 36
-	silo: miner2.png
+	silo: bits/miner2.png
 		Start: 21
 		Length: 6
 	flame:
 		Offset: 3, 16
 	flame2:
 		Offset: -13, 14
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 16
 
 starport:
 	Inherits@flame: ^BuildingFlame2
-	idle: starport.png
+	idle: bits/starport.png
 		Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 200
-	shadow-overlay: starport-shadow.png
+	shadow-overlay: bits/starport-shadow.png
 		ZOffset: 1768
 		Offset: 5, 5
-	damaged-idle: starport.png
+	damaged-idle: bits/starport.png
 		Start: 22
-	damaged-shadow-overlay: starport-shadow.png
+	damaged-shadow-overlay: bits/starport-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 5, 5
-	active: starport2.png
+	active: bits/starport2.png
 		Length: 5
-	damaged-active: starport2.png
+	damaged-active: bits/starport2.png
 		Start: 5
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -247,29 +247,29 @@ starport:
 		Offset: 0, -21
 	flame2:
 		Offset: -3, 19
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 9
 
 factory2:
 	Inherits@flame: ^BuildingFlame2
-	idle: factory2.png
+	idle: bits/factory2.png
 		Length: 15
 		Tick: 300
-	shadow-overlay: factory2-shadow.png
+	shadow-overlay: bits/factory2-shadow.png
 		ZOffset: 1768
 		Offset: 6, 11
-	damaged-idle: factory2.png
+	damaged-idle: bits/factory2.png
 		Start: 15
 		Length: 1
-	damaged-shadow-overlay: factory2-shadow.png
+	damaged-shadow-overlay: bits/factory2-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 6, 11
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -277,29 +277,29 @@ factory2:
 		Offset: 2, -9
 	flame2:
 		Offset: 10, 5
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 1
 
 factory3:
 	Inherits@flame: ^BuildingFlame2
-	idle: factory3.png
+	idle: bits/factory3.png
 		Length: 11
 		Tick: 300
-	shadow-overlay: factory3-shadow.png
+	shadow-overlay: bits/factory3-shadow.png
 		ZOffset: 1768
 		Offset: 7, 17
-	damaged-idle: factory3.png
+	damaged-idle: bits/factory3.png
 		Start: 11
 		Length: 1
-	damaged-shadow-overlay: factory3-shadow.png
+	damaged-shadow-overlay: bits/factory3-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 7, 17
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -307,113 +307,113 @@ factory3:
 		Offset: 0, -1
 	flame2:
 		Offset: 15, -2
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 2
 
 turret:
 	Inherits@flame: ^BuildingFlame
-	idle: turret.png
+	idle: bits/turret.png
 		Start: 0
-	shadow-overlay: turret-shadow.png
+	shadow-overlay: bits/turret-shadow.png
 		ZOffset: 1768
 		Offset: 5, 11
-	damaged-idle: turret.png
+	damaged-idle: bits/turret.png
 		Start: 1
-	turret: turret.png
+	turret: bits/turret.png
 		Start: 2
 		Facings: 8
-	shoot: turret.png
+	shoot: bits/turret.png
 		Start: 10
 		Facings: 8
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
 	flame:
 		Offset: 10, -4
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 14
 
 aaturret:
 	Inherits@flame: ^BuildingFlame
-	idle: aa-turret.png
+	idle: bits/aa-turret.png
 		Start: 0
-	shadow-overlay: aa-turret-shadow.png
+	shadow-overlay: bits/aa-turret-shadow.png
 		ZOffset: 1768
 		Offset: 6, 10
-	damaged-idle: aa-turret.png
+	damaged-idle: bits/aa-turret.png
 		Start: 1
-	turret: aa-turret.png
+	turret: bits/aa-turret.png
 		Start: 2
-	shoot: aa-turret.png
+	shoot: bits/aa-turret.png
 		Start: 7
 		Tick: 100
-	charge: aa-turret.png
+	charge: bits/aa-turret.png
 		Start: 3
 		Length: 4
 		Tick: 25
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
 	flame:
 		Offset: 10, -7
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 19
 
 field:
 	Inherits@flame: ^BuildingFlame
-	idle: field.png
-	shadow-overlay: field-shadow.png
+	idle: bits/field.png
+	shadow-overlay: bits/field-shadow.png
 		ZOffset: 1768
 		Offset: 2, 3
-	active: field.png
+	active: bits/field.png
 		Length: 5
 		Tick: 300
-	damaged-idle: field.png
+	damaged-idle: bits/field.png
 		Start: 5
-	damaged-active: field.png
+	damaged-active: bits/field.png
 		Start: 5
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
 	flame:
 		Offset: 10, 0
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 3
 
 silo:
 	Inherits@flame: ^BuildingFlame2
-	idle: silo.png
+	idle: bits/silo.png
 		Start: 0
-	animation_lights: silo.png
+	animation_lights: bits/silo.png
 		Start: 2
 		Length: 4
 		Tick: 240
 		Reverses: true
-	damaged-idle: silo.png
+	damaged-idle: bits/silo.png
 		Start: 1
-	shadow-overlay: silo-shadow.png
+	shadow-overlay: bits/silo-shadow.png
 		ZOffset: 1768
 		Offset: 3, 5
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -421,76 +421,76 @@ silo:
 		Offset: -5, -2
 	flame2:
 		Offset: 8, -4
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 8
 
 storage:
 	Inherits@flame: ^BuildingFlame
-	idle: storage.png
-	shadow-overlay: storage-shadow.png
+	idle: bits/storage.png
+	shadow-overlay: bits/storage-shadow.png
 		ZOffset: 1768
 		Offset: 3, 4
-	stages: storage.png
+	stages: bits/storage.png
 		Length: 14
-	damaged-stages: storage.png
+	damaged-stages: bits/storage.png
 		Start: 14
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
 	flame:
 		Offset: 3, -5
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 10
 
 artilleryturret:
 	Inherits@flame: ^BuildingFlame
-	idle: artilery2.png
+	idle: bits/artilery2.png
 		Start: 0
-	shadow-overlay: artilery2-shadow.png
+	shadow-overlay: bits/artilery2-shadow.png
 		ZOffset: 1768
 		Offset: 2, 24
-	damaged-idle: artilery2.png
+	damaged-idle: bits/artilery2.png
 		Start: 1
-	turret: artilery2.png
+	turret: bits/artilery2.png
 		Start: 2
 		Facings: 8
-	shoot: artilery2.png
+	shoot: bits/artilery2.png
 		Start: 10
 		Facings: 8
 		Tick: 300
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
 	flame:
 		Offset: 12, 8
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 15
 
 televatr:
 	Inherits@flame: ^BuildingFlame
 	Defaults:
 		ZOffset: -1c511
-	idle: televatr.png
+	idle: bits/televatr.png
 		Start: 15
-	shadow-overlay: televatr-shadow.png
+	shadow-overlay: bits/televatr-shadow.png
 		ZOffset: 1768
 		Offset: 3, 3
-	damaged-idle: televatr.png
+	damaged-idle: bits/televatr.png
 		Start: 16
-	active: televatr.png
+	active: bits/televatr.png
 		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
 		Length: *
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
@@ -498,58 +498,58 @@ televatr:
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 12
 
 televtr2:
 	Inherits@flame: ^BuildingFlame
 	Defaults:
 		ZOffset: -1c511
-	idle: televtr2.png
+	idle: bits/televtr2.png
 		Start: 7
-	shadow-overlay: televtr2-shadow.png
+	shadow-overlay: bits/televtr2-shadow.png
 		ZOffset: 1768
 		Offset: 3, 3
-	damaged-idle: televtr2.png
+	damaged-idle: bits/televtr2.png
 		Start: 14
-	active: televtr2.png
+	active: bits/televtr2.png
 		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 		Length: *
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 13
 
 harbor:
 	Inherits@flame: ^BuildingFlame2
-	idle: harbor.png
+	idle: bits/harbor.png
 		ZOffset: 1000
-	idle-entry: harbor.png
+	idle-entry: bits/harbor.png
 		Start: 2
 		ZOffset: -2000
-	shadow-overlay: harbor-shadow.png
+	shadow-overlay: bits/harbor-shadow.png
 		ZOffset: -1768
 		Offset: 4, 4
-	production: harbor.png
+	production: bits/harbor.png
 		Start: 3
 		Length: 7
 		Reverses: true
 		Tick: 120
 		ZOffset: 1500
-	damaged-idle: harbor.png
+	damaged-idle: bits/harbor.png
 		Start: 1
 		ZOffset: 1000
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -558,68 +558,68 @@ harbor:
 	flame2:
 		Offset: 13, 20
 		ZOffset: 1001
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 5
 
 mother:
 	Inherits@flame: ^BuildingFlame
-	idle: mother.png
+	idle: bits/mother.png
 
 wall:
-	top: wall.png
+	top: bits/wall.png
 		Offset: 0, 10
-	topleft: wall.png
+	topleft: bits/wall.png
 		Start: 1
 		Offset: 0, 10
-	left: wall.png
+	left: bits/wall.png
 		Start: 2
 		Offset: 0, 10
-	bottomleft: wall.png
+	bottomleft: bits/wall.png
 		Start: 3
 	bottom: wall.png
 		Start: 4
-	bottomright: wall.png
+	bottomright: bits/wall.png
 		Start: 5
 	right: wall.png
 		Start: 6
 		Offset: 0, 10
-	topright: wall.png
+	topright: bits/wall.png
 		Start: 7
 		Offset: 0, 10
-	destroyed-left: walldest1.png
+	destroyed-left: bits/walldest1.png
 		Offset: 0, 10
-	destroyed-right: walldest1.png
+	destroyed-right: bits/walldest1.png
 		Start: 1
 		Offset: 0, 10
-	destroyed-bottomleft: walldest2.png
-	destroyed-bottomright: walldest2.png
+	destroyed-bottomleft: bits/walldest2.png
+	destroyed-bottomright: bits/walldest2.png
 		Start: 1
-	destroyed-topleft: walldest3.png
-	destroyed-topright: walldest3.png
+	destroyed-topleft: bits/walldest3.png
+	destroyed-topright: bits/walldest3.png
 		Start: 1
-	icon: icon.png
+	icon: bits/icon.png
 
 techcenter:
 	Inherits@flame: ^BuildingFlame2
-	idle: tech-center.png
+	idle: bits/tech-center.png
 		Start: 0
-	shadow-overlay: tech-center-shadow.png
+	shadow-overlay: bits/tech-center-shadow.png
 		ZOffset: 1768
 		Offset: 6, 6
-	damaged-shadow-overlay: tech-center-shadow-damaged.png
+	damaged-shadow-overlay: bits/tech-center-shadow-damaged.png
 		ZOffset: 1768
 		Offset: 6, 6
-	damaged-idle: tech-center.png
+	damaged-idle: bits/tech-center.png
 		Start: 1
-	animation: tech-center.png
+	animation: bits/tech-center.png
 		Start: 2
 		Length: 10
 		Tick: 50
-	make: build.png
+	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-	make-overlay: build-vanish.png
+	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
@@ -627,17 +627,17 @@ techcenter:
 		Offset: 4, -9
 	flame2:
 		Offset: 15, 17
-	icon: buildings-icons.png
+	icon: bits/buildings-icons.png
 		Start: 18
 
 platform:
 	Inherits@flame: ^BuildingFlame
-	idle: platform.png
+	idle: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
-	make: platform.png
+	make: bits/platform.png
 		Length: 31
-	active: creation.png
+	active: bits/creation.png
 		Length: 23
 		Offset: 0, -5
-	icon: icon.png
+	icon: bits/icon.png

@@ -1,21 +1,21 @@
 # License: CC-BY-SA-4.0
 
 tank1:
-	idle: tank1.png
+	idle: bits/tank1.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 31
 
 tank2:
-	idle: tank2.png
+	idle: bits/tank2.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 8
 
 tank3:
-	idle: tank3.png
+	idle: bits/tank3.png
 		Facings: 8
-	turret: tank3.png
+	turret: bits/tank3.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -55,229 +55,229 @@ tank3:
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 37
 
 tank4:
-	idle: tank4.png
+	idle: bits/tank4.png
 		Facings: 8
-	extend: tank4-extend.png
+	extend: bits/tank4-extend.png
 		Start: 3
 		Length: 3
 		Tick: 180
-	extended: tank4-extend.png
+	extended: bits/tank4-extend.png
 		Start: 5
-	icon: icon.png
+	icon: bits/icon.png
 
 tank5:
-	idle: tank5.png
+	idle: bits/tank5.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 6
 
 tank6:
-	idle: tank6.png
+	idle: bits/tank6.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 7
 
 tank7:
-	idle: tank7.png
+	idle: bits/tank7.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 10
 
 tank8:
-	idle: tank8.png
+	idle: bits/tank8.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 26
 
 tank9:
-	idle: tank9.png
+	idle: bits/tank9.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 27
 
 tank10:
-	idle: tank10.png
+	idle: bits/tank10.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 25
 
 tank11:
-	idle: tank11.png
+	idle: bits/tank11.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 11
 
 tank12:
-	idle: tank12.png
+	idle: bits/tank12.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 12
 
 tank13:
-	idle: tank13.png
+	idle: bits/tank13.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 28
 
 tank14:
-	idle: tank14.png
+	idle: bits/tank14.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 29
 
 tank15:
-	idle: tank15.png
+	idle: bits/tank15.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 9
 
 tank16:
-	idle: tank16.png
+	idle: bits/tank16.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 30
 
 transprt:
-	idle: transprt.png
+	idle: bits/transprt.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 13
 
 artil:
-	idle: artil.png
+	idle: bits/artil.png
 		Facings: 8
-	muzzle: artlflsh.png
+	muzzle: bits/artlflsh.png
 		Length: 3
 		Facings: 8
 		Tick: 100
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 2
 
 artil3:
-	idle: artil3.png
+	idle: bits/artil3.png
 		Facings: 8
-	shoot: artil3.png
+	shoot: bits/artil3.png
 		Start: 8
 		Facings: 8
-	muzzle: artlflsh.png
+	muzzle: bits/artlflsh.png
 		Length: 3
 		Facings: 8
 		Tick: 100
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 3
 
 scout1:
-	idle: scout1.png
+	idle: bits/scout1.png
 		Facings: 8
-	muzzle: muzzle2.png
+	muzzle: bits/muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 0
 
 scout2:
-	idle: scout2.png
+	idle: bits/scout2.png
 		Facings: 8
-	muzzle: muzzle2.png
+	muzzle: bits/muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 1
 
 tyriantank:
-	idle: tyriantank.png
+	idle: bits/tyriantank.png
 		Start: 0
 		Facings: 8
-	turret: tyriantank.png
+	turret: bits/tyriantank.png
 		Start: 8
 		Facings: 8
-	muzzle: muzzle.png
+	muzzle: bits/muzzle.png
 		Length: 8
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 32
 
 miner:
-	idle: miner.png
+	idle: bits/miner.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 5
 
 builder1:
-	idle: builder1.png
+	idle: bits/builder1.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 17
 
 builder2:
-	idle: builder2.png
+	idle: bits/builder2.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 18
 
 builder3:
-	idle: builder3.png
+	idle: bits/builder3.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 19
 
 builder4:
-	idle: builder4.png
+	idle: bits/builder4.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 20
 
 builder5:
-	idle: builder5.png
+	idle: bits/builder5.png
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 21
 
 missile_tank:
-	idle: missile_tank.png
+	idle: bits/missile_tank.png
 		Start: 0
 		Facings: 8
-	turret: missile_tank.png
+	turret: bits/missile_tank.png
 		Start: 8
 		Facings: 8
-	muzzle: muzzle.png
+	muzzle: bits/muzzle.png
 		Length: 8
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 4
 
 scrap1:
-	idle: objects.png
+	idle: bits/objects.png
 
 scrap2:
-	idle: objects.png
+	idle: bits/objects.png
 		Start: 1
 
 scrap3:
-	idle: objects.png
+	idle: bits/objects.png
 		Start: 2
 
 scrap4:
-	idle: objects.png
+	idle: bits/objects.png
 		Start: 3
 
 scrap5:
-	idle: objects.png
+	idle: bits/objects.png
 		Start: 4
 
 scrap6:
-	idle: objects.png
+	idle: bits/objects.png
 		Start: 5
 
 goldball:
-	idle: goldball.png
+	idle: bits/goldball.png
 
 energyball:
-	teleport: teleport.png
+	teleport: bits/teleport.png
 		Length: 10

@@ -3,68 +3,68 @@
 resources:
 	Defaults:
 		Length: 3
-	gold: gold.png
-	iron: iron.png
-	waterflow: watrflow.png
+	gold: bits/gold.png
+	iron: bits/iron.png
+	waterflow: bits/watrflow.png
 		Length: *
 
 mpspawn:
-	idle: mpspawn.png
+	idle: bits/mpspawn.png
 		Length: 1
 
 light:
-	idle: light.png
+	idle: bits/light.png
 		Length: 1
 
 camera:
-	idle: camera.png
+	idle: bits/camera.png
 		Length: 1
 
 shroud:
-	fow: dark.png
+	fow: bits/dark.png
 		Length: 12
-	full: dark.png
+	full: bits/dark.png
 		Start: 12
 
 cube:
-	blue: cube.png
+	blue: bits/cube.png
 		Length: 3
 		Tick: 120
-	turquoise: cube.png
+	turquoise: bits/cube.png
 		Start: 3
 		Length: 3
 		Tick: 120
-	grey: cube.png
+	grey: bits/cube.png
 		Start: 6
 		Length: 3
 		Tick: 120
-	brown: cube.png
+	brown: bits/cube.png
 		Start: 9
 		Length: 3
 		Tick: 120
-	yellow: cube.png
+	yellow: bits/cube.png
 		Start: 12
 		Length: 3
 		Tick: 120
-	orange: cube.png
+	orange: bits/cube.png
 		Start: 15
 		Length: 3
 		Tick: 120
-	green: cube.png
+	green: bits/cube.png
 		Start: 18
 		Length: 3
 		Tick: 120
 
 cloud:
-	cloud1: cloud1.png
-	cloud1f: cloud1.png
+	cloud1: bits/cloud1.png
+	cloud1f: bits/cloud1.png
 		FlipX: true
 		FlipY: true
-	cloud2: cloud2.png
-	cloud2f: cloud2.png
+	cloud2: bits/cloud2.png
+	cloud2f: bits/cloud2.png
 		FlipX: true
 		FlipY: true
-	cloud3: cloud3.png
-	cloud3f: cloud3.png
+	cloud3: bits/cloud3.png
+	cloud3f: bits/cloud3.png
 		FlipX: true
 		FlipY: true

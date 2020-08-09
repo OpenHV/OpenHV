@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 Cursors:
-	cursors1.png: cursor
+	bits/cursors1.png: cursor
 		scroll-t:
 			Start: 18
 			X: 0
@@ -66,13 +66,13 @@ Cursors:
 			Start: 33
 			X: 0
 			Y: 0
-	cursors2.png: cursor
+	bits/cursors2.png: cursor
 		select:
 			Start: 24
 			Length: 8
 			X: 0
 			Y: 0
-	cursors2.png: cursor
+	bits/cursors2.png: cursor
 		default:
 			Start: 0
 			X: 0
@@ -89,7 +89,7 @@ Cursors:
 			Start: 0
 			X: 0
 			Y: 0
-	cursors1.png: cursor
+	bits/cursors1.png: cursor
 		move:
 			Start: 6
 			Length: 6
@@ -113,7 +113,7 @@ Cursors:
 			Start: 34
 			X: 0
 			Y: 0
-	cursors1.png: cursor
+	bits/cursors1.png: cursor
 		attack:
 			Start: 0
 			Length: 6
@@ -144,7 +144,7 @@ Cursors:
 			Length: 6
 			X: 0
 			Y: 0
-	cursors1.png: cursor
+	bits/cursors1.png: cursor
 		harvest:
 			Start: 0
 			Length: 6
@@ -155,7 +155,7 @@ Cursors:
 			Length: 6
 			X: 0
 			Y: 0
-	cursors2.png: cursor
+	bits/cursors2.png: cursor
 		enter:
 			Start: 32
 			Length: 3
@@ -192,7 +192,7 @@ Cursors:
 			Length: 3
 			X: 0
 			Y: 0
-	cursors2.png: cursor
+	bits/cursors2.png: cursor
 		joystick-all:
 			Start: 1
 			X: 0
@@ -229,7 +229,7 @@ Cursors:
 			Start: 36
 			X: 0
 			Y: 0
-	cursors2.png: cursor
+	bits/cursors2.png: cursor
 		deploy:
 			Start: 13
 			Length: 4
@@ -277,7 +277,7 @@ Cursors:
 			Start: 18
 			X: 0
 			Y: 0
-	cursors1.png: cursor
+	bits/cursors1.png: cursor
 		attackmove:
 			Start: 12
 			Length: 6

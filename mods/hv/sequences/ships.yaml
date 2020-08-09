@@ -1,48 +1,48 @@
 # License: CC-BY-SA-4.0
 
 boat:
-	idle: boat1.png
+	idle: bits/boat1.png
 		Facings: 8
-	turret: boat1.png
+	turret: bits/boat1.png
 		Start: 8
 		Facings: 8
-	muzzle: muzzle2.png
+	muzzle: bits/muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 15
 
 boat2:
-	idle: boat2.png
+	idle: bits/boat2.png
 		Facings: 8
-	turret: boat2.png
+	turret: bits/boat2.png
 		Start: 8
 		Facings: 8
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 16
 
 boat3:
-	idle: boat3.png
+	idle: bits/boat3.png
 		Facings: 8
-	turret: boat3.png
+	turret: bits/boat3.png
 		Start: 8
 		Facings: 8
-	shoot: boat3.png
+	shoot: bits/boat3.png
 		Start: 16
 		Facings: 8
 		Tick: 1000
-	icon: units-icons.png
+	icon: bits/units-icons.png
 		Start: 14
 
 seamnstr:
-	left: seamnstr.png
+	left: bits/seamnstr.png
 		Length: 15
 		Tick: 300
 		Reverses: true
-	right: seamnstr.png
+	right: bits/seamnstr.png
 		Start: 15
 		Length: 15
 		Tick: 300
 		Reverses: true
-	icon: icon.png
+	icon: bits/icon.png

@@ -4,163 +4,164 @@ explosion:
 	Defaults:
 		Length: *
 		ZOffset: 2047
-	small: expsmall.png
-	small_2: expsmall2.png
-	medium: explosn.png
-	medium_2: explosn2.png
-	large: explobig.png
-	large_f: explobig.png
+	small: bits/expsmall.png
+	small_2: bits/expsmall2.png
+	medium: bits/explosn.png
+	medium_2: bits/explosn2.png
+	large: bits/explobig.png
+	large_f: bits/explobig.png
 		FlipX: true
 		FlipY: true
-	large_2: explobig2.png
+	large_2: bits/explobig2.png
 		Tick: 80
-	large_3: explobig3.png
+	large_3: bits/explobig3.png
 		Tick: 80
 
 nuclear_explosion:
-	idle: nuclear_cloud.png
+	idle: bits/nuclear_cloud.png
 		Length: 22
 		Tick: 60
 		ZOffset: 2050
 
 hit:
-	spark_a: sparks1.png
+	spark_a: bits/sparks1.png
 		Length: 7
 		Tick: 60
-	spark_b: sparks2.png
+	spark_b: bits/sparks2.png
 		Length: 10
 		Tick: 60
-	spark_c: sparks3.png
+	spark_c: bits/sparks3.png
 		Length: 10
 		Tick: 60
-	spark_d: sparks4.png
+	spark_d: bits/sparks4.png
 		Length: 7
 		Tick: 60
 
 bullet1:
-	idle: bullet1.png
+	idle: bits/bullet1.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet2:
-	idle: bullet2.png
+	idle: bits/bullet2.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet3:
-	idle: bullet3.png
+	idle: bits/bullet3.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet4:
-	idle: bullet4.png
+	idle: bits/bullet4.png
 		Facings: 8
 		ZOffset: 2030
-	effect: bullet4.png
+	effect: bits/bullet4.png
 		Start: 8
 		Facings: 8
 		ZOffset: 2030
 
 bullet5:
-	idle: bullet5.png
+	idle: bits/bullet5.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet6:
-	idle: bullet6.png
+	idle: bits/bullet6.png
 		Facings: 8
 		ZOffset: 2030
 
 bullet7:
-	idle: bullet7.png
+	idle: bits/bullet7.png
 		Length: 2
 		Facings: 8
 		ZOffset: 2030
 
 bullet8:
-	idle: bullet8.png
+	idle: bits/bullet8.png
 		Facings: 8
 		ZOffset: 2030
 
 nuclear:
-	up: blank.png
-	down: nuclear_bomb.png
+	up: bits/blank.png
+	down: bits/nuclear_bomb.png
 		ZOffset: 2030
 
 smoke:
-	idle: smoke.png
+	idle: bits/smoke.png
 		Length: 6
 		Tick: 60
 		ZOffset: 2020
 
 small_smoke:
-	idle: small_smoke.png
+	idle: bits/small_smoke.png
 		Length: 6
 		Tick: 60
 		ZOffset: 2020
 
 water_splash:
-	water_splash_a: water_splash.png
+	water_splash_a: bits/water_splash.png
 		Start: 0
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
-	water_splash_b: water_splash.png
+	water_splash_b: bits/water_splash.png
 		Start: 9
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
 
 water_splash_small:
-	water_splash_small_a: water_splash_small.png
+	water_splash_small_a: bits/water_splash_small.png
 		Start: 0
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
-	water_splash_small_b: water_splash_small.png
+	water_splash_small_b: bits/water_splash_small.png
 		Start: 6
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
 
 mine1:
-	idle: mines.png
+	idle: bits/mines.png
 		ZOffset: -512
 
 mine2:
-	idle: mines.png
+	idle: bits/mines.png
 		Start: 1
 		ZOffset: -512
 
 mine3:
-	idle: mines.png
+	idle: bits/mines.png
 		Start: 2
 		ZOffset: -512
 
 mine4:
-	idle: mines.png
+	idle: bits/mines.png
 		Start: 3
 		ZOffset: -512
 
 debris:
-	idle: junk.png
+	idle: bits/junk.png
 		Start: 0
 		Length: 4
 		Tick: 60
 		ZOffset: 2020
 
 fire:
-	flame: flame.png
+	flame: bits/flame.png
 		Length: 5
 		ZOffset: 512
 		Offset: 0, -10
 		Tick: 60
 
 pixelsparks:
-	damage: pixelsparks.png
+	Defaults: bits/pixelsparks.png
+	damage:
 		Length: 9
 		Tick: 120
-	electric: pixelsparks.png
+	electric:
 		Length: 9
 		Start: 9
 		Tick: 120

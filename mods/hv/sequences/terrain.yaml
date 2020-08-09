@@ -1,68 +1,68 @@
 # License: CC-BY-SA-4.0
 
 cave:
-	idle: cave.png
+	idle: bits/terrain/cave.png
 
 grssmisc6:
-	idle: grssmisc6.png
+	idle: bits/terrain/grssmisc6.png
 
 grssmisc7:
-	idle: grssmisc7.png
+	idle: bits/terrain/grssmisc7.png
 
 icicle1:
-	idle: icicle1.png
+	idle: bits/terrain/icicle1.png
 
 icicle2:
-	idle: icicle2.png
+	idle: bits/terrain/icicle2.png
 
 lavabubl:
-	active: lavabubl.png
+	active: bits/terrain/lavabubl.png
 		Tick: 100
 		Length: *
 
 mntmisc8:
-	idle: mntmisc8.png
+	idle: bits/terrain/mntmisc8.png
 		Offset: 0, -2
 
 mntmisc9:
-	idle: mntmisc9.png
+	idle: bits/terrain/mntmisc9.png
 		Offset: 0, -4
 
 sandmisc6:
-	idle: sandmisc6.png
+	idle: bits/terrain/sandmisc6.png
 		Offset: 0, 2
 
 sandmisc7:
-	idle: sandmisc7.png
+	idle: bits/terrain/sandmisc7.png
 		Offset: 0, -2
 
 sandmisc8:
-	idle: sandmisc8.png
+	idle: bits/terrain/sandmisc8.png
 		Offset: 0, -2
 
 craters:
 	Defaults:
 		Length: *
-	cr1: smudges1.png
-	cr2: smudges2.png
-	cr3: smudges3.png
-	cr4: smudges4.png
-	cr5: smudges5.png
+	cr1: bits/smudges1.png
+	cr2: bits/smudges2.png
+	cr3: bits/smudges3.png
+	cr4: bits/smudges4.png
+	cr5: bits/smudges5.png
 
 stnrock1:
-	idle: stnrock1.png
+	idle: bits/terrain/stnrock1.png
 
 stnrock2:
-	idle: stnrock2.png
+	idle: bits/terrain/stnrock2.png
 
 swmpani:
-	idle: swmpani.png
+	idle: bits/terrain/swmpani.png
 		Frames: 1, 2, 3, 2, 1
 		Length: *
 		Tick: 1000
 
 swmpbubl:
-	active: swmpbubl.png
+	active: bits/terrain/swmpbubl.png
 		Tick: 100
 		Length: *
 
@@ -85,10 +85,10 @@ treegrs8:
 treegrs9:
 
 treegrs10:
-	idle: treegrs10.png
+	idle: bits/terrain/treegrs10.png
 
 treegrs11:
-	idle: treegrs11.png
+	idle: bits/terrain/treegrs11.png
 
 treegrs12:
 
@@ -105,7 +105,7 @@ trees2:
 trees3:
 
 trees4:
-	idle: trees4.png
+	idle: bits/terrain/trees4.png
 
 trees5:
 
@@ -132,56 +132,56 @@ trees15:
 trees16:
 
 trees17:
-	idle: trees17.png
+	idle: bits/terrain/trees17.png
 
 waterflow1:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 9
 
 waterflow2:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 10
 
 waterflow3:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 11
 
 waterflow4:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 12
 
 waterflow5:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 13
 
 waterflow6:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 14
 
 waterflow7:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 15
 
 waterflow8:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 16
 
 waterflow9:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 17
 
 waterflow10:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 22
 
 waterflow11:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 23
 
 waterflow12:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 24
 
 waterflow13:
-	idle: watrflow.png
+	idle: bits/watrflow.png
 		Start: 25

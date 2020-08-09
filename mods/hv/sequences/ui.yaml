@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 overlay:
-	Defaults: overlay.png
+	Defaults: bits/overlay.png
 	build-valid:
 	build-invalid:
 		Start: 1
@@ -14,106 +14,109 @@ overlay:
 	target-valid:
 
 editor-overlay:
-	Defaults: overlay.png
+	Defaults: bits/overlay.png
 	copy:
 	paste:
 		Start: 1
 
 clock:
-	idle: progress.png
+	idle: bits/progress.png
 		Length: 64
 
 moveflsh:
-	idle: click.png
+	idle: bits/click.png
 		Length: 5
 		Tick: 80
 		ZOffset: 2047
 
 pips:
-	pip-empty: pips.png
+	Defaults: bits/pips.png
+	pip-empty:
 		Start: 0
-	pip-green: pips.png
+	pip-green:
 		Start: 1
-	pip-yellow: pips.png
+	pip-yellow:
 		Start: 2
-	pip-gray: pips.png
+	pip-gray:
 		Start: 3
-	pip-red: pips.png
+	pip-red:
 		Start: 4
-	pip-blue: pips.png
+	pip-blue:
 		Start: 5
 
 rallypoint:
-	flag: flag.png
+	flag: bits/flag.png
 		Length: 5
 		ZOffset: 3072
 		Tick: 200
 		Offset: -7,-7
-	circles: null.png
+	circles: bits/null.png
 
 beacon:
-	idle: beacon.png
+	idle: bits/beacon.png
 		Length: 7
 		Reverses: true
 		ZOffset: 2047
 
 icon:
-	shield: icon.png
-	nuke: nuke-icon.png
+	shield: bits/icon.png
+	nuke: bits/nuke-icon.png
 
 outline:
-	top-left: outline.png
-	top: outline.png
+	Defaults: bits/outline.png
+	top-left:
+	top:
 		Start: 1
-	top-right: outline.png
+	top-right:
 		Start: 2
-	right: outline.png
+	right:
 		Start: 3
-	bottom-right: outline.png
+	bottom-right:
 		Start: 4
-	bottom: outline.png
+	bottom:
 		Start: 5
-	bottom-left: outline.png
+	bottom-left:
 		Start: 6
-	left: outline.png
+	left:
 		Start: 7
 
 outline-red:
-	top-left: outline2.png
-	top: outline2.png
+	Defaults: bits/outline2.png
+	top-left:
+	top:
 		Start: 1
-	top-right: outline2.png
+	top-right:
 		Start: 2
-	right: outline2.png
+	right:
 		Start: 3
-	bottom-right: outline2.png
+	bottom-right:
 		Start: 4
-	bottom: outline2.png
+	bottom:
 		Start: 5
-	bottom-left: outline2.png
+	bottom-left:
 		Start: 6
-	left: outline2.png
+	left:
 		Start: 7
 
 outline-yellow:
-	top-left: outline3.png
-	top: outline3.png
+	Defaults: bits/outline3.png
+	top-left:
+	top:
 		Start: 1
-	top-right: outline3.png
+	top-right:
 		Start: 2
-	right: outline3.png
+	right:
 		Start: 3
-	bottom-right: outline3.png
+	bottom-right:
 		Start: 4
-	bottom: outline3.png
+	bottom:
 		Start: 5
-	bottom-left: outline3.png
+	bottom-left:
 		Start: 6
-	left: outline3.png
+	left:
 		Start: 7
 
 repair:
-	idle: building-repair.png
+	idle: bits/building-repair.png
 		Length: *
 		Tick: 200
-
