@@ -9,8 +9,10 @@ General:
 Terrain:
 	TerrainType@Clear:
 		Type: Clear
+		TargetTypes: Ground
 	TerrainType@Ore:
 		Type: Ore
+		TargetTypes: Ground
 	TerrainType@Crater:
 		Type: Crater
 		TargetTypes: Ground
