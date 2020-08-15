@@ -21,9 +21,8 @@ namespace OpenRA.Mods.HV.Traits
 			"the actor footprint will be filled with this tile.")]
 		public readonly ushort Template = 0;
 
-		[FieldLoader.Require]
 		[Desc("The terrain types that this template will be placed on.")]
-		public readonly HashSet<string> TerrainTypes = new HashSet<string>();
+		public readonly HashSet<string> TerrainTypes = null;
 
 		[Desc("Offset relative to the actor TopLeft. Not used if the template is PickAny.",
 			"Tiles being offset out of the actor's footprint will not be placed.")]
@@ -59,11 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var c in buildingInfo.Tiles(self.Location))
 				{
 					// Only place on allowed terrain types
-					if (!map.Contains(c) || !info.TerrainTypes.Contains(map.GetTerrainInfo(c).Type))
-						continue;
-
-					// Don't place under other buildings or custom terrain
-					if (bi.GetBuildingAt(c) != self || map.CustomTerrain[c] != byte.MaxValue)
+					if (!map.Contains(c) || (info.TerrainTypes != null && !info.TerrainTypes.Contains(map.GetTerrainInfo(c).Type)))
 						continue;
 
 					var index = Game.CosmeticRandom.Next(template.TilesCount);
@@ -79,11 +74,7 @@ namespace OpenRA.Mods.HV.Traits
 				var c = origin + new CVec(i % template.Size.X, i / template.Size.X);
 
 				// Only place on allowed terrain types
-				if (!info.TerrainTypes.Contains(map.GetTerrainInfo(c).Type))
-					continue;
-
-				// Don't place under other buildings or custom terrain
-				if (bi.GetBuildingAt(c) != self || map.CustomTerrain[c] != byte.MaxValue)
+				if (info.TerrainTypes != null && !info.TerrainTypes.Contains(map.GetTerrainInfo(c).Type))
 					continue;
 
 				layer.AddTile(c, new TerrainTile(template.Id, (byte)i));

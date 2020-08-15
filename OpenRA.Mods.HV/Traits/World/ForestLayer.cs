@@ -67,7 +67,7 @@ namespace OpenRA.Mods.HV.Traits
 			var ni = cell.X - index % template.Size.X;
 			var nj = cell.Y - index / template.Size.X;
 
-			// Create a new actor for this bridge and keep track of which subtiles this bridge includes
+			// Create a new actor for this tree and keep track of which subtiles this tree includes
 			var tree = w.CreateActor(treeTypes[tile], new TypeDictionary
 			{
 				new LocationInit(new CPos(ni, nj)),

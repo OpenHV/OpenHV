@@ -148,7 +148,9 @@ TREEGRS10:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud2
+	SpawnActorOnDeath@Ash:
+		Actor: TreeAsh2
 
 TREEGRS11:
 	Inherits: ^Tree
@@ -163,7 +165,9 @@ TREEGRS11:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud2
+	SpawnActorOnDeath@Ash:
+		Actor: TreeAsh2
 
 TREEGRS12:
 	Inherits: ^Tree
@@ -205,7 +209,6 @@ TreeAsh:
 		Dimensions: 1,1
 	LaysTerrain:
 		Template: 1304
-		TerrainTypes: Plant
 	Tooltip:
 		Name: Burnt Tree
 		ShowOwnerRow: false
@@ -216,6 +219,11 @@ TreeAsh:
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 
+TreeAsh2:
+	Inherits: TreeAsh
+	LaysTerrain:
+		Offset: 0,1
+
 TreeMud:
 	Interactable:
 	AppearsOnRadar:
@@ -225,7 +233,6 @@ TreeMud:
 		Terrain: Crater
 	LaysTerrain:
 		Template: 1286
-		TerrainTypes: Plant
 	Building:
 		Footprint: =
 		Dimensions: 1,1
@@ -239,6 +246,11 @@ TreeMud:
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 
+TreeMud2:
+	Inherits: TreeMud
+	LaysTerrain:
+		Offset: 0,1
+
 Grass:
 	Inherits: TreeMud
 	LaysTerrain:
@@ -248,6 +260,11 @@ TreeMudSnow:
 	Inherits: TreeMud
 	LaysTerrain:
 		Template: 1305
+
+TreeMudSnow2:
+	Inherits: TreeMudSnow
+	LaysTerrain:
+		Offset: 0,1
 
 Snow:
 	Inherits: TreeMud
@@ -288,7 +305,9 @@ TREES4:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMudSnow
+		Actor: TreeMudSnow2
+	SpawnActorOnDeath@Ash:
+		Actor: TreeAsh
 
 TREES5:
 	Inherits: ^Tree
@@ -387,7 +406,9 @@ TREES17:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMudSnow
+		Actor: TreeMudSnow2
+	SpawnActorOnDeath@Ash:
+		Actor: TreeAsh
 
 WATERFLOW1:
 	Inherits: ^Waterflow
