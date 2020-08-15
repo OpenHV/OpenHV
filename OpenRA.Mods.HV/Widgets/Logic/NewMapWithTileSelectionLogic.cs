@@ -32,7 +32,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var tileset = modData.DefaultTileSets.First().Value;
 
 			var clearTiles = tileset.Templates.Where(t => t.Value.PickAny)
-				.Select(t => new Pair<ushort, string>(t.Value.Id, t.Value.Categories.First()));
+				.Select(t => (Type: t.Value.Id, Description: t.Value.Categories.First()));
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
 			{
@@ -42,8 +42,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				item.Get<LabelWidget>("LABEL").GetText = () => option;
 				return item;
 			};
-			tileDropDown.Text = clearTiles.First().Second;
-			var options = clearTiles.Select(t => t.Second);
+			tileDropDown.Text = clearTiles.First().Description;
+			var options = clearTiles.Select(t => t.Description);
 			tileDropDown.OnClick = () =>
 				tileDropDown.ShowDropDown("LABEL_DROPDOWN_TEMPLATE", 210, options, setupItem);
 
@@ -68,7 +68,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var br = new PPos(width, height + maxTerrainHeight);
 				map.SetBounds(tl, br);
 
-				var type = clearTiles.First(c => c.Second == tileDropDown.Text).First;
+				var type = clearTiles.First(c => c.Description == tileDropDown.Text).Type;
 				for (var j = map.Bounds.Top; j < map.Bounds.Bottom; j++)
 				{
 					for (var i = map.Bounds.Left; i < map.Bounds.Right; i++)
