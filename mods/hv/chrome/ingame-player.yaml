@@ -16,6 +16,7 @@ Container@PLAYER_WIDGETS:
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
 					HoldText: ON HOLD
+					OverlayFont: TinyPixel
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
 					ClockPalette: shadow
@@ -451,6 +452,8 @@ Container@PLAYER_WIDGETS:
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
 					HoldText: ON HOLD
+					OverlayFont: TinyPixel
+					SymbolsFont: TinyPixel
 					IconSize: 62, 46
 					IconMargin: 1, 1
 					ClockPalette: shadow
