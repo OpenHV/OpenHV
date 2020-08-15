@@ -26,7 +26,7 @@ namespace OpenRA.Mods.Common.HV.Render
 		[SequenceReference("Image")]
 		public readonly string Sequence = null;
 
-		[PaletteReference("IsPlayerPalette")]
+		[PaletteReference(nameof(IsPlayerPalette))]
 		[Desc("Custom palette name.")]
 		public readonly string Palette = null;
 
