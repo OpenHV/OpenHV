@@ -120,3 +120,6 @@ repair:
 	idle: bits/building-repair.png
 		Length: *
 		Tick: 200
+
+poweroff:
+	offline: power.png

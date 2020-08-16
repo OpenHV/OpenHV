@@ -150,7 +150,7 @@ GENERATOR:
 
 RADAR:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
@@ -201,7 +201,7 @@ RADAR:
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^3x3Shape
 	Inherits@flame: ^BuildingFlame2
 	Buildable:
@@ -586,7 +586,7 @@ TECHCENTER:
 
 TURRET:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
@@ -649,7 +649,7 @@ TURRET:
 
 AATURRET:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@flame: ^BuildingFlame
@@ -724,7 +724,7 @@ AATURRET:
 
 FIELD:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Buildable:
@@ -785,7 +785,7 @@ FIELD:
 
 SILO:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
@@ -906,7 +906,7 @@ STORAGE:
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
@@ -966,7 +966,7 @@ ARTILLERYTURRET:
 
 TELEVATR:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPower
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:

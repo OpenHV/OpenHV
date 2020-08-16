@@ -348,6 +348,31 @@
 		RequiresCondition: lowpower
 		Condition: disabled
 
+^DisableOnLowPowerOrPowerDown:
+	Inherits: ^DisableOnLowPower
+	GrantCondition@IDISABLE:
+		RequiresCondition: lowpower || powerdown
+		Condition: disabled
+	ToggleConditionOnOrder:
+		Condition: powerdown
+		OrderName: PowerDown
+	WithDecoration@POWERDOWN:
+		Image: poweroff
+		Sequence: offline
+		Palette: chrome
+		RequiresCondition: powerdown
+		Position: Center
+		Offsets:
+			repairing: 10, 0
+	PowerMultiplier@POWERDOWN:
+		RequiresCondition: powerdown
+		Modifier: 0
+	RepairableBuilding:
+		RepairCondition: repairing
+	WithBuildingRepairDecoration:
+		Offsets:
+			powerdown: -10, 0
+
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
