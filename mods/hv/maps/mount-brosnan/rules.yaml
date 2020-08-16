@@ -12,3 +12,7 @@ LAVALIGHT:
 		RedTint: 1.5
 		GreenTint: 0.01
 		BlueTint: 0.01
+
+World:
+	TerrainTileAnimation@LAVABUBBLE:
+		Interval: 3
