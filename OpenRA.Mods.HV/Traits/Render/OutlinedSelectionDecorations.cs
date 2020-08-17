@@ -199,32 +199,33 @@ namespace OpenRA.Mods.Common.Traits.Render
 		protected override IEnumerable<IRenderable> RenderSelectionBox(Actor self, WorldRenderer wr, Color color)
 		{
 			var palette = wr.Palette(outlinedDecorationsInfo.Palette);
-			var offset = new int2(topRight.Image.Bounds.Width, 0);
+			var widthOffset = new int2(topRight.Image.Bounds.Width, 0);
+			var heightOffset = new int2(0, topRight.Image.Bounds.Height);
 
 			var topLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "TopLeft"));
 			yield return new UISpriteRenderable(topLeft.Image, self.CenterPosition, topLeftScreenPosition, 0, palette, 1f);
 
-			var topRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "TopRight")) - offset;
+			var topRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "TopRight")) - widthOffset;
 			yield return new UISpriteRenderable(topRight.Image, self.CenterPosition, topRightScreenPosition, 0, palette, 1f);
 
-			var bottomLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "BottomLeft"));
+			var bottomLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "BottomLeft")) - heightOffset;
 			yield return new UISpriteRenderable(bottomLeft.Image, self.CenterPosition, bottomLeftScreenPosition, 0, palette, 1f);
 
-			var bottomRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "BottomRight")) - offset;
+			var bottomRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "BottomRight")) - widthOffset - heightOffset;
 			yield return new UISpriteRenderable(bottomRight.Image, self.CenterPosition, bottomRightScreenPosition, 0, palette, 1f);
 
 			if (outlinedDecorationsInfo.Spacers)
 			{
-				var topScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Top")) - offset / 2;
+				var topScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Top")) - widthOffset / 2;
 				yield return new UISpriteRenderable(top.Image, self.CenterPosition, topScreenPosition, 0, palette, 1f);
 
-				var bottomScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Bottom")) - offset / 2;
+				var bottomScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Bottom")) - widthOffset / 2 - heightOffset;
 				yield return new UISpriteRenderable(bottom.Image, self.CenterPosition, bottomScreenPosition, 0, palette, 1f);
 
 				var leftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Left"));
 				yield return new UISpriteRenderable(left.Image, self.CenterPosition, leftScreenPosition, 0, palette, 1f);
 
-				var rightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Right")) - offset;
+				var rightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Right")) - widthOffset;
 				yield return new UISpriteRenderable(right.Image, self.CenterPosition, rightScreenPosition, 0, palette, 1f);
 			}
 		}
