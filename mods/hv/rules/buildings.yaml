@@ -450,6 +450,7 @@ STARPORT:
 
 FACTORY2:
 	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
@@ -477,6 +478,7 @@ FACTORY2:
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@factory:
 		Prerequisite: factory
+		RequiresCondition: !powerdown
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
@@ -494,6 +496,7 @@ FACTORY2:
 
 FACTORY3:
 	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
@@ -521,6 +524,7 @@ FACTORY3:
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@factory:
 		Prerequisite: factory
+		RequiresCondition: !powerdown
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
@@ -538,6 +542,7 @@ FACTORY3:
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
@@ -582,7 +587,7 @@ TECHCENTER:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@animation:
 		Sequence: animation
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !disabled
 
 TURRET:
 	Inherits: ^BaseBuilding
