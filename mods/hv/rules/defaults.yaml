@@ -372,6 +372,8 @@
 	WithBuildingRepairDecoration:
 		Offsets:
 			powerdown: -10, 0
+	ProvidesPrerequisite@BuildingName:
+		RequiresCondition: !powerdown
 
 ^AutoTargetGround:
 	AutoTarget:
