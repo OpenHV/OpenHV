@@ -38,7 +38,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int MinimumDeployedActors = 1;
 
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
-		public readonly int MinimumScanDelay = 375;
+		public readonly int MinimumScanDelay = 20;
 
 		[Desc("Avoid enemy actors nearby when searching for a new resource patch. Should be somewhere near the max weapon range.")]
 		public readonly WDist EnemyAvoidanceRadius = WDist.FromCells(8);
@@ -123,6 +123,12 @@ namespace OpenRA.Mods.HV.Traits
 				if (!miner.Key.IsIdle)
 					continue;
 
+				if (Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(miner.Key.Location).Type))
+				{
+					bot.QueueOrder(new Order("DeployTransform", miner.Key, true));
+					continue;
+				}
+
 				// Tell the idle miner to quit slacking:
 				var newSafeResourcePatch = FindNextResource(miner.Key, miner.Value);
 				if (newSafeResourcePatch.Type == TargetType.Invalid)
@@ -130,7 +136,6 @@ namespace OpenRA.Mods.HV.Traits
 
 				AIUtils.BotDebug("AI: Miner {0} is idle. Ordering to {1} in search for new resources.".F(miner.Key, newSafeResourcePatch));
 				bot.QueueOrder(new Order("Move", miner.Key, newSafeResourcePatch, true));
-				bot.QueueOrder(new Order("DeployTransform", miner.Key, true));
 			}
 
 			// Keep the economy running before starving out.
