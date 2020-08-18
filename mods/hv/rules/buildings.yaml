@@ -1033,8 +1033,7 @@ TELEVTR2:
 	Inherits@shape: ^1x2Shape
 	HitShape:
 		UseTargetableCellsOffsets: false
-		# TODO: Figure out why these can't be 512. - Graion; 2020-08-09. 
-		TargetableOffsets: 0,0,0, -832,0,0, 832,0,0
+		TargetableOffsets: 0,0,0, -512,0,0, 512,0,0
 	-Buildable:
 	-PlaceBuildingVariants:
 	Selectable:
