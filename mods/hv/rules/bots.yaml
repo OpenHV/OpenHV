@@ -76,6 +76,7 @@ Player:
 			builder: 0
 			miner: 1
 			balloon: 2
+			tank8: 1
 	CaptureManagerBotModule:
 		RequiresCondition: enable-test-ai
 		CapturingActorTypes: tank8
