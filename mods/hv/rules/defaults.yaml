@@ -10,6 +10,7 @@
 
 ^SpriteActor:
 	BodyOrientation:
+		UseClassicPerspectiveFudge: false
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 
