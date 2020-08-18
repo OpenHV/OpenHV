@@ -428,10 +428,10 @@ STARPORT:
 FACTORY2:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^2x3Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,40
+		Bounds: 40,60
 	Buildable:
 		Prerequisites: module
 		Queue: Building
@@ -442,8 +442,10 @@ FACTORY2:
 	Tooltip:
 		Name: Light Factory
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
+		Footprint: xx xx ++
+		Dimensions: 2,3
+	HitShape:
+		TargetableOffsets: 512,0,0, -1024,-512,0, -1024,512,0
 	Health:
 		HP: 35000
 	Armor:
@@ -470,13 +472,29 @@ FACTORY2:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithSpriteBody@platform1:
+		Name: platform1
+		Sequence: idle-platform1
+	WithSpriteBody@platform2:
+		Name: platform2
+		Sequence: idle-platform2
+	WithMakeAnimation@platform1:
+		BodyNames: platform1
+		Sequence: make-platform1
+	WithMakeAnimation@platform2:
+		BodyNames: platform2
+		Sequence: make-platform2
+	ExitsDebugOverlay:
 	RallyPoint:
-		Path: 0,3
 		IsPlayerPalette: true
 		Palette: green
-	Exit@1:
-		SpawnOffset: 256,192,0
+	Exit@0:
 		ExitCell: 0,2
+		SpawnOffset: -512,1024,0
+		ProductionTypes: Wheeled, Vehicle
+	Exit@1:
+		ExitCell: 1,2
+		SpawnOffset: 512,1024,0
 		ProductionTypes: Wheeled, Vehicle
 	Production:
 		Produces: Wheeled, Vehicle
