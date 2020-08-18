@@ -271,7 +271,9 @@ MODULE:
 		Produces: Scouts
 	GrantExternalConditionToProduced:
 		Condition: produced
-	WithProductionDoorAnimation:
+	WithProductionDoorAnimation@1:
+		ExitCells: 0,2, 1,2
+		ReplayBackwards: true
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
