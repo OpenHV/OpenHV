@@ -10,18 +10,27 @@
 #endregion
 
 using System.Linq;
+using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits.Render
+namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Play an animation when a unit exits after production finished.")]
 	class WithProductionDoorAnimationInfo : ConditionalTraitInfo, Requires<WithSpriteBodyInfo>
 	{
+		[FieldLoader.Require]
+		[Desc("Exit offset associated with the animation.")]
+		public readonly CVec[] ExitCells = { };
+
 		[SequenceReference]
 		public readonly string Sequence = "door";
 
 		[Desc("Which sprite body to play the animation on.")]
 		public readonly string Body = "body";
+
+		[Desc("Replay the animation backwards after it was played once?")]
+		public readonly bool ReplayBackwards = false;
 
 		public override object Create(ActorInitializer init) { return new WithProductionDoorAnimation(init.Self, this); }
 	}
@@ -38,9 +47,13 @@ namespace OpenRA.Mods.Common.Traits.Render
 
 		void INotifyProduction.UnitProduced(Actor self, Actor other, CPos exit)
 		{
-			if (!IsTraitDisabled)
+			if (!IsTraitDisabled && Info.ExitCells.Contains(exit - self.Location))
 				wsb.PlayCustomAnimation(self, Info.Sequence,
-					() => wsb.PlayCustomAnimationBackwards(self, Info.Sequence));
+					() =>
+					{
+						if (Info.ReplayBackwards)
+							wsb.PlayCustomAnimationBackwards(self, Info.Sequence);
+					});
 		}
 
 		protected override void TraitDisabled(Actor self)
