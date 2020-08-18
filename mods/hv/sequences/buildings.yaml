@@ -736,15 +736,3 @@ techcenter:
 	icon: bits/buildings-icons.png
 		Start: 18
 		Offset: 0, 0
-
-platform:
-	Inherits@flame: ^BuildingFlame
-	idle: bits/platform.png
-		Start: 30
-		ZOffset: -1c511
-	make: bits/platform.png
-		Length: 31
-	active: bits/creation.png
-		Length: 23
-		Offset: 0, -5
-	icon: bits/icon.png
