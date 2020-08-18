@@ -26,7 +26,7 @@
 base:
 	Inherits@flame: ^BuildingFlame3
 	Defaults:
-		Offset: 10, -10
+		Offset: 10, -30
 	build: bits/base.png
 		Start: 3
 		Length: 3
@@ -38,7 +38,7 @@ base:
 		Tick: 300
 	shadow-overlay: bits/base-shadow.png
 		ZOffset: 1768
-		Offset: 7, 3
+		Offset: 7, -17
 	damaged-idle: bits/base.png
 		Start: 7
 		Length: 1
@@ -54,11 +54,33 @@ base:
 		Tick: 30
 		ZOffset: 2000
 	flame:
-		Offset: -10, -15
+		Offset: -10, -35
 	flame2:
-		Offset: 9, 4
-	flame3
-		Offset: 6, -23
+		Offset: 9, -16
+	flame3:
+		Offset: 6, -43
+	idle-platform1: bits/platform.png
+		Start: 30
+		ZOffset: -1c511
+		Offset: -10, 10
+	make-platform1: bits/platform.png
+		Length: 31
+		Offset: -10, 10
+	active-platform1: bits/creation.png
+		Length: 23
+		# Offset: 0, -5
+		Offset: -10, 10
+	idle-platform2: bits/platform.png
+		Start: 30
+		ZOffset: -1c511
+		Offset: 10, 10
+	make-platform2: bits/platform.png
+		Length: 31
+		Offset: 10, 10
+	active-platform2: bits/creation.png
+		Length: 23
+		# Offset: 0, -5
+		Offset: 10, 10
 	icon: bits/buildings-icons.png
 		Start: 0
 		Offset: 0, 0

@@ -4,19 +4,20 @@ BASE:
 	Inherits: ^BaseBuilding
 	Inherits@flame: ^BuildingFlame3
 	Selectable:
-		Bounds: 40,60,0,-10
+		Bounds: 40,80,0,-20
 	Valued:
 		Cost: 3500
 	Tooltip:
 		Name: Main Base
 	Building:
-		Footprint: === xx= xx=
-		Dimensions: 3,3
-		LocalCenterOffset: -512,512,0
+		Footprint: === xx= xx= ++=
+		Dimensions: 3,4
+		LocalCenterOffset: -512,1024,0
 	HitShape:
 		UseTargetableCellsOffsets: true
+		TargetableOffsets: 1024,0,0, -512,-512,0, -512,512,0
 		Type: Rectangle
-			TopLeft: -1024, -1024
+			TopLeft: -1024, -2048
 			BottomRight: 1024, 1024
 	Health:
 		HP: 210000
@@ -52,49 +53,19 @@ BASE:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
+	ExitsDebugOverlay:
 	RallyPoint:
+		IsPlayerPalette: true
+		Palette: green
 	Exit@0:
 		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: -3,3
+		ExitCell: 0,3
+		SpawnOffset: -512,512,0
 		ProductionTypes: Vehicle, BaseUnit
-		Priority: 3
 	Exit@1:
 		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: 0,3
-		ProductionTypes: Vehicle, BaseUnit
-		Priority: 2
-	Exit@2:
-		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: -3,0
-		ProductionTypes: Vehicle, BaseUnit
-		Priority: 2
-	Exit@fallback1:
-		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: -3,-3
-		ProductionTypes: Vehicle, BaseUnit
-	Exit@fallback2:
-		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: 0,-3
-		ProductionTypes: Vehicle, BaseUnit
-	Exit@fallback3:
-		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: 3,-3
-		ProductionTypes: Vehicle, BaseUnit
-	Exit@fallback4:
-		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: 3,0
-		ProductionTypes: Vehicle, BaseUnit
-	Exit@fallback5:
-		RequiresCondition: !being-captured
-		SpawnOffset: -280,400,0
-		ExitCell: 3,3
+		ExitCell: 1,3
+		SpawnOffset: 512,512,0
 		ProductionTypes: Vehicle, BaseUnit
 	Production:
 	ProductionBar@Vehicles:
@@ -102,6 +73,12 @@ BASE:
 	AcceptsDeliveredResources:
 	StoresResources:
 		Capacity: 2000
+	WithSpriteBody@platform1:
+		Name: platform1
+		Sequence: idle-platform1
+	WithSpriteBody@platform2:
+		Name: platform2
+		Sequence: idle-platform2
 
 GENERATOR:
 	Inherits: ^BaseBuilding
