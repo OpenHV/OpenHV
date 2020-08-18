@@ -456,6 +456,7 @@
 		Modifier: 0
 	TimedConditionBar:
 		Condition: shield
+		Color: 0000FF
 	ExternalCondition@FORCEFIELD:
 		Condition: shield
 
