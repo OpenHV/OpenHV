@@ -4,8 +4,6 @@
 
 LAVALIGHT:
 	Inherits: LIGHT
-	Tooltip:
-		Name: Red Lighting
 	TerrainLightSource:
 		Range: 15c640
 		Intensity: 0.01
