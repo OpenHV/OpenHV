@@ -39,9 +39,9 @@ BASE:
 		Factions: sc
 		Prerequisite: vehicles.sc
 	Buildable:
-		Description: Builds structures
+		Description: Builds structures and builders.
 	Production:
-		Produces: Building, Defense
+		Produces: Building, Defense, Vehicle, BaseUnit
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:
@@ -459,7 +459,7 @@ FACTORY2:
 		Prerequisites: module
 		Queue: Building
 		BuildPaletteOrder: 90
-		Description: Required to build vehicles.
+		Description: Builds vehicles.
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -493,6 +493,28 @@ FACTORY2:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	RallyPoint:
+		Path: 0,3
+		IsPlayerPalette: true
+		Palette: green
+	Exit@1:
+		SpawnOffset: 256,192,0
+		ExitCell: 0,2
+		ProductionTypes: Wheeled, Vehicle
+	Production:
+		Produces: Wheeled, Vehicle
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	ProductionBar:
+		ProductionType: Vehicle
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
 
 FACTORY3:
 	Inherits: ^BaseBuilding
@@ -505,7 +527,7 @@ FACTORY3:
 		Prerequisites: factory2
 		Queue: Building
 		BuildPaletteOrder: 90
-		Description: Required to build tanks.
+		Description: Builds tanks.
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -539,6 +561,28 @@ FACTORY3:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	RallyPoint:
+		Path: 0,3
+		IsPlayerPalette: true
+		Palette: green
+	Exit@1:
+		SpawnOffset: 256,192,0
+		ExitCell: 0,2
+		ProductionTypes: Tracked, Vehicle
+	Production:
+		Produces: Tracked, Vehicle
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	ProductionBar:
+		ProductionType: Vehicle
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
@@ -1271,59 +1315,3 @@ DESTROYEDWALLTOPRIGHT:
 		Bounds: 24,24
 	WithSpriteBody:
 		Sequence: destroyed-topright
-
-PLATFORM:
-	Inherits: ^BaseBuilding
-	Inherits@shape: ^1x1Shape
-	Inherits@flame: ^BuildingFlame
-	Selectable:
-		Bounds: 20,20
-	Tooltip:
-		Name: Creation Platform
-	Valued:
-		Cost: 100
-	Health:
-		HP: 50000
-	WithMakeAnimation:
-		Condition: build-incomplete
-	QuantizeFacingsFromSequence:
-		Sequence: active
-	Building:
-		Footprint: +
-		Dimensions: 1,1
-		TerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 10
-		Prerequisites: base
-		Description: Produces tanks and vehicles.
-	RevealsShroud:
-		Range: 4c0
-	RenderSprites:
-		Palette: effect
-	Capturable:
-		RequiresCondition: !build-incomplete
-	RallyPoint:
-		Path: 0,1
-		IsPlayerPalette: true
-		Palette: green
-	Exit@1:
-		SpawnOffset: 0,192,0
-		ExitCell: 0,0
-		ProductionTypes: Vehicle
-	Production:
-		Produces: Vehicle
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
-	ProductionBar:
-		ProductionType: Vehicle
-	WithTextDecoration@PRIMARY:
-		RequiresCondition: primary
-		Position: Top
-		Margin: 0, 5
-		RequiresSelection: true
-		Text: PRIMARY
-		Font: TinyPixel
-	WithProductionDoorAnimation:
-		Sequence: active

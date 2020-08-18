@@ -16,20 +16,17 @@ Player:
 		ConstructionYardTypes: base
 		PowerTypes: generator
 		BarracksTypes: module
-		VehiclesFactoryTypes: platform
-		ProductionTypes: module, platform, starport, harbor
+		VehiclesFactoryTypes: factory2, factory3
+		ProductionTypes: module, factory2, factory3, starport, harbor
 		NavalProductionTypes: harbor
 		RefineryTypes: base, storage
 		SiloTypes: storage
 		BuildingLimits:
 			field: 1
 			silo: 1
-			factory2: 1
-			factory3: 1
 			radar: 1
 			techcenter: 1
 		BuildingFractions:
-			platform: 5
 			module: 1
 			radar: 1
 			factory2: 1
