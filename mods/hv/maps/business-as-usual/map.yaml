@@ -1,0 +1,97 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Business As Usual
+
+Author: Graion Dilach
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 34,58
+
+Bounds: 1,1,32,56
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 17,11
+	Actor1: mpspawn
+		Owner: Neutral
+		Location: 16,46
+	Actor2: lamppost
+		Owner: Neutral
+		Location: 23,24
+	Actor3: lamppost
+		Owner: Neutral
+		Location: 28,24
+	Actor4: lamppost
+		Owner: Neutral
+		Location: 28,33
+	Actor5: lamppost
+		Owner: Neutral
+		Location: 23,33
+	Actor6: lamppost
+		Owner: Neutral
+		Location: 10,33
+	Actor7: lamppost
+		Owner: Neutral
+		Location: 5,33
+	Actor8: lamppost
+		Owner: Neutral
+		Location: 5,24
+	Actor9: lamppost
+		Owner: Neutral
+		Location: 10,24
+	Actor10: lamppost
+		Owner: Neutral
+		Location: 6,27
+	Actor11: lamppost
+		Owner: Neutral
+		Location: 9,27
+	Actor12: lamppost
+		Owner: Neutral
+		Location: 6,30
+	Actor13: lamppost
+		Owner: Neutral
+		Location: 9,30
+	Actor14: lamppost
+		Owner: Neutral
+		Location: 24,30
+	Actor15: lamppost
+		Owner: Neutral
+		Location: 27,30
+	Actor16: lamppost
+		Owner: Neutral
+		Location: 27,27
+	Actor17: lamppost
+		Owner: Neutral
+		Location: 24,27
