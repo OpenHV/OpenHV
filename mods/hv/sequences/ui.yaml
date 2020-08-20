@@ -46,7 +46,8 @@ pips:
 
 rallypoint:
 	flag: bits/flag.png
-		Length: 5
+		Frames: 0, 1, 2, 3, 4, 3, 2, 1
+		Length: *
 		ZOffset: 3072
 		Tick: 200
 		Offset: -7,-7
