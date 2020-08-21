@@ -67,7 +67,8 @@ tank4:
 		Tick: 180
 	extended: bits/tank4-extend.png
 		Start: 5
-	icon: bits/icon.png
+	icon: bits/units-icons.png
+		Start: 38
 
 tank5:
 	idle: bits/tank5.png
