@@ -240,11 +240,10 @@ BALLOON:
 	-WithShadow:
 	#	Offset: 200, 128, 0
 	#	ZOffset: -129
-	WithIdleOverlay:
+	WithIdleOverlayOnGround:
 		IsDecoration: true
 		Sequence: shadow-overlay
 		Palette: shadow
-		Offset: -3750,1000,0
 	RenderSprites:
 		PlayerPalette: green
 
