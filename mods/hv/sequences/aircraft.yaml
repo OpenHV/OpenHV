@@ -62,6 +62,7 @@ copter2:
 balloon:
 	idle: bits/balloon.png
 	shadow-overlay: bits/balloon-shadow.png
+		Offset: 15, -1
 	icon: bits/units-icons.png
 		Start: 22
 
