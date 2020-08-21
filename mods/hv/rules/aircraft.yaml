@@ -38,8 +38,7 @@ SHIP1:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
 	Selectable:
-		Bounds: 36,28,0,2
-		DecorationBounds: 40,29,0,1
+		Bounds: 20,20
 	Contrail:
 		Offset: -400,50,0
 		UsePlayerColor: false
@@ -92,7 +91,7 @@ SHIP2:
 		TrailWidth: 0c96
 		TrailLength: 5
 	Selectable:
-		DecorationBounds: 30,28,0,2
+		Bounds: 20,20
 
 COPTER:
 	Inherits: ^Helicopter
@@ -125,7 +124,7 @@ COPTER:
 		Weapon: ChainGun
 		LocalOffset: 0,0,0
 	Selectable:
-		DecorationBounds: 24,24
+		Bounds: 24,24
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay:
