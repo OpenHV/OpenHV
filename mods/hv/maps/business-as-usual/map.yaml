@@ -10,9 +10,9 @@ License: CC-BY-SA-4.0
 
 Tileset: PLANET
 
-MapSize: 34,58
+MapSize: 42,66
 
-Bounds: 1,1,32,56
+Bounds: 1,1,40,64
 
 Visibility: Lobby
 
@@ -43,55 +43,55 @@ Players:
 Actors:
 	Actor0: mpspawn
 		Owner: Neutral
-		Location: 17,11
-	Actor1: mpspawn
+		Location: 21,15
+	Actor1: lamppost
 		Owner: Neutral
-		Location: 16,46
+		Location: 9,28
 	Actor2: lamppost
 		Owner: Neutral
-		Location: 23,24
+		Location: 14,28
 	Actor3: lamppost
 		Owner: Neutral
-		Location: 28,24
+		Location: 27,28
 	Actor4: lamppost
 		Owner: Neutral
-		Location: 28,33
+		Location: 32,28
 	Actor5: lamppost
 		Owner: Neutral
-		Location: 23,33
+		Location: 10,31
 	Actor6: lamppost
 		Owner: Neutral
-		Location: 10,33
+		Location: 13,31
 	Actor7: lamppost
 		Owner: Neutral
-		Location: 5,33
+		Location: 28,31
 	Actor8: lamppost
 		Owner: Neutral
-		Location: 5,24
+		Location: 31,31
 	Actor9: lamppost
 		Owner: Neutral
-		Location: 10,24
+		Location: 10,34
 	Actor10: lamppost
 		Owner: Neutral
-		Location: 6,27
+		Location: 13,34
 	Actor11: lamppost
 		Owner: Neutral
-		Location: 9,27
+		Location: 28,34
 	Actor12: lamppost
 		Owner: Neutral
-		Location: 6,30
+		Location: 31,34
 	Actor13: lamppost
 		Owner: Neutral
-		Location: 9,30
+		Location: 9,37
 	Actor14: lamppost
 		Owner: Neutral
-		Location: 24,30
+		Location: 14,37
 	Actor15: lamppost
 		Owner: Neutral
-		Location: 27,30
+		Location: 27,37
 	Actor16: lamppost
 		Owner: Neutral
-		Location: 27,27
-	Actor17: lamppost
+		Location: 32,37
+	Actor17: mpspawn
 		Owner: Neutral
-		Location: 24,27
+		Location: 20,50
