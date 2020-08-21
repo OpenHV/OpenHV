@@ -36,9 +36,6 @@ SCRAP4:
 SCRAP5:
 	Inherits: ^Scrap
 
-SCRAP6:
-	Inherits: ^Scrap
-
 GOLDBALL:
 	Interactable:
 	HiddenUnderFog:

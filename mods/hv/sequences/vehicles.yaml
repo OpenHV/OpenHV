@@ -271,10 +271,6 @@ scrap5:
 	idle: bits/objects.png
 		Start: 4
 
-scrap6:
-	idle: bits/objects.png
-		Start: 5
-
 goldball:
 	idle: bits/goldball.png
 
