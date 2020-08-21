@@ -532,6 +532,12 @@ FACTORY2:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
+	WithIdleOverlay@online:
+		Sequence: idle-online
+		RequiresCondition: !build-incomplete && !disabled
+	WithIdleOverlay@offline:
+		Sequence: idle-offline
+		RequiresCondition: !build-incomplete && disabled
 
 FACTORY3:
 	Inherits: ^BaseBuilding
