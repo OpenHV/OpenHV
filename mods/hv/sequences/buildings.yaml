@@ -350,15 +350,18 @@ factory3:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -16
-	idle: bits/factory3.png
+	idle: bits/null.png
+	idle-online: bits/factory3.png
 		Length: 11
 		Tick: 300
+	idle-offline: bits/factory3.png
 	shadow-overlay: bits/factory3-shadow.png
 		ZOffset: 1768
 		Offset: 7, 1
-	damaged-idle: bits/factory3.png
+	damaged-idle-online: bits/factory3.png
 		Start: 11
-		Length: 1
+	damaged-idle-offline: bits/factory3.png
+		Start: 11
 	damaged-shadow-overlay: bits/factory3-shadow.png
 		Start: 1
 		ZOffset: 1768
