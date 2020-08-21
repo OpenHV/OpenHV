@@ -45,7 +45,7 @@ namespace OpenRA.Mods.HV.Effects
 
 		IEnumerable<IRenderable> IEffect.Render(WorldRenderer r)
 		{
-			if (world.FogObscures(position))
+			if (world.ShroudObscures(position))
 				return SpriteRenderable.None;
 
 			return animation.Render(position, r.Palette(palette));
