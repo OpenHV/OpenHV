@@ -3,6 +3,8 @@
 Metadata:
 	Title: OpenHV
 	Version: {DEV_VERSION}
+	Website: https://openhv.itch.io/
+	WebIcon32: https://raw.githubusercontent.com/OpenHV/OpenHV/master/mods/hv/uibits/webicon.png
 
 ModCredits:
 	ModTabTitle: OpenHV
