@@ -185,3 +185,8 @@ waterflow12:
 waterflow13:
 	idle: bits/watrflow.png
 		Start: 25
+
+lamppost:
+	idle: bits/lamppost.png
+	shadow-overlay: bits/lamppost.png
+		Start: 1
