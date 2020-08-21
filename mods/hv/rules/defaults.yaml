@@ -307,7 +307,7 @@
 	Inherits: ^Building
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow
+		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow, Stone
 		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building
