@@ -223,5 +223,53 @@ Actors:
 	Actor71: lavalight
 		Owner: Neutral
 		Location: 12,29
+	Actor70: lamppost
+		Owner: Neutral
+		Location: 45,35
+	Actor74: lamppost
+		Owner: Neutral
+		Location: 48,35
+	Actor75: lamppost
+		Owner: Neutral
+		Location: 55,35
+	Actor76: lamppost
+		Owner: Neutral
+		Location: 58,35
+	Actor77: lamppost
+		Owner: Neutral
+		Location: 69,47
+	Actor78: lamppost
+		Owner: Neutral
+		Location: 69,50
+	Actor79: lamppost
+		Owner: Neutral
+		Location: 69,56
+	Actor80: lamppost
+		Owner: Neutral
+		Location: 69,59
+	Actor81: lamppost
+		Owner: Neutral
+		Location: 55,68
+	Actor82: lamppost
+		Owner: Neutral
+		Location: 58,68
+	Actor83: lamppost
+		Owner: Neutral
+		Location: 44,69
+	Actor84: lamppost
+		Owner: Neutral
+		Location: 47,69
+	Actor85: lamppost
+		Owner: Neutral
+		Location: 33,57
+	Actor86: lamppost
+		Owner: Neutral
+		Location: 33,54
+	Actor87: lamppost
+		Owner: Neutral
+		Location: 33,49
+	Actor88: lamppost
+		Owner: Neutral
+		Location: 33,46
 
 Rules: rules.yaml
