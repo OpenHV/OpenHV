@@ -546,7 +546,7 @@ FACTORY3:
 	Inherits@shape: ^2x4Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 40,80
 	Buildable:
 		Prerequisites: factory2
 		Queue: Building
@@ -560,7 +560,7 @@ FACTORY3:
 		Footprint: xx xx ++ ++
 		Dimensions: 2,4
 	HitShape:
-		TargetableOffsets: 512,0,0, -1024,-512,0, -1024,512,0
+		TargetableOffsets: 0,0,0, -512,-512,0, -512,512,0, -1536,-512,0, -1536,512,0
 	Health:
 		HP: 35000
 	Armor:

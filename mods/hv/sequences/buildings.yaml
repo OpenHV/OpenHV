@@ -369,7 +369,7 @@ factory2:
 factory3:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
-		Offset: 0, -16
+		Offset: 0, -24
 	idle: bits/null.png
 	idle-online: bits/factory3.png
 		Length: 11
@@ -377,7 +377,7 @@ factory3:
 	idle-offline: bits/factory3.png
 	shadow-overlay: bits/factory3-shadow.png
 		ZOffset: 1768
-		Offset: 7, 1
+		Offset: 7, -7
 	damaged-idle-online: bits/factory3.png
 		Start: 11
 	damaged-idle-offline: bits/factory3.png
@@ -385,71 +385,71 @@ factory3:
 	damaged-shadow-overlay: bits/factory3-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 7, 1
+		Offset: 7, -7
 	make: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2000
-		Offset: 0, -6
+		Offset: 0, -14
 	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2000
-		Offset: 0, -6
+		Offset: 0, -14
 	idle-platform1: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
-		Offset: -10, 18
+		Offset: -10, 10
 	damaged-idle-platform1: bits/platform.png
 		Start: 31
 		ZOffset: -1c511
-		Offset: -10, 18
+		Offset: -10, 10
 	make-platform1: bits/platform.png
 		Length: 31
-		Offset: -10, 18
+		Offset: -10, 10
 	idle-platform2: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
-		Offset: 10, 18
+		Offset: 10, 10
 	damaged-idle-platform2: bits/platform.png
 		Start: 31
 		ZOffset: -1c511
-		Offset: 10, 18
+		Offset: 10, 10
 	make-platform2: bits/platform.png
 		Length: 31
-		Offset: 10, 18
+		Offset: 10, 10
 	idle-platform3: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
-		Offset: -10, 38
+		Offset: -10, 30
 	damaged-idle-platform3: bits/platform.png
 		Start: 31
 		ZOffset: -1c511
-		Offset: -10, 38
+		Offset: -10, 30
 	make-platform3: bits/platform.png
 		Length: 31
-		Offset: -10, 38
+		Offset: -10, 30
 	idle-platform4: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
-		Offset: 10, 38
+		Offset: 10, 30
 	damaged-idle-platform4: bits/platform.png
 		Start: 31
 		ZOffset: -1c511
-		Offset: 10, 38
+		Offset: 10, 30
 	make-platform4: bits/platform.png
 		Length: 31
-		Offset: 10, 38
+		Offset: 10, 30
 	idle-creation: bits/creatn2.png
-		Offset: -1, 26
+		Offset: -1, 18
 	active-creation: bits/creatn2.png
 		Length: 28
-		Offset: -1, 26
+		Offset: -1, 18
 		ZOffset: 2048
 	flame:
-		Offset: 0, -17
+		Offset: 0, -25
 	flame2:
-		Offset: 15, -18
+		Offset: 15, -26
 	icon: bits/buildings-icons.png
 		Start: 2
 		Offset: 0, 0
