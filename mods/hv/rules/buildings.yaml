@@ -325,6 +325,7 @@ MINER2:
 	Tooltip:
 		Name: Miner
 	ResourceCollector:
+		Interval: 100
 		DeliveryVehicleType: tank13, tank14
 	Exit:
 	WithSpriteBody:
