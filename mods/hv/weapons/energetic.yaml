@@ -101,6 +101,7 @@ Repair:
 		DebugOverlayColor: 00FF00
 		Damage: -5000
 		ValidTargets: Repair
+		Spread: 1
 
 Plasma:
 	ReloadDelay: 50
