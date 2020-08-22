@@ -17,7 +17,7 @@ Player:
 		PowerTypes: generator
 		BarracksTypes: module
 		VehiclesFactoryTypes: factory2, factory3
-		ProductionTypes: module, factory2, factory3, starport, harbor
+		ProductionTypes: module, factory2, factory3, starport, starport2, harbor
 		NavalProductionTypes: harbor
 		RefineryTypes: base, storage
 		SiloTypes: storage
@@ -35,6 +35,7 @@ Player:
 			harbor: 1
 			tradplat: 1
 			starport: 1
+			starport2: 1
 			techcenter: 1
 			turret: 7
 			aaturret: 3
