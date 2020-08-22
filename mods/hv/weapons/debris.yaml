@@ -62,3 +62,6 @@ Spaceman:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Explosions: flame
+		ValidTargets: Lava
