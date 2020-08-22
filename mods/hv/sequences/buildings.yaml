@@ -403,9 +403,6 @@ factory3:
 	make-platform1: bits/platform.png
 		Length: 31
 		Offset: -10, 18
-	active-platform1: bits/creation.png
-		Length: 23
-		Offset: -11, 15
 	idle-platform2: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
@@ -417,9 +414,34 @@ factory3:
 	make-platform2: bits/platform.png
 		Length: 31
 		Offset: 10, 18
-	active-platform2: bits/creation.png
-		Length: 23
-		Offset: 9, 15
+	idle-platform3: bits/platform.png
+		Start: 30
+		ZOffset: -1c511
+		Offset: -10, 38
+	damaged-idle-platform3: bits/platform.png
+		Start: 31
+		ZOffset: -1c511
+		Offset: -10, 38
+	make-platform3: bits/platform.png
+		Length: 31
+		Offset: -10, 38
+	idle-platform4: bits/platform.png
+		Start: 30
+		ZOffset: -1c511
+		Offset: 10, 38
+	damaged-idle-platform4: bits/platform.png
+		Start: 31
+		ZOffset: -1c511
+		Offset: 10, 38
+	make-platform4: bits/platform.png
+		Length: 31
+		Offset: 10, 38
+	idle-creation: bits/creatn2.png
+		Offset: -1, 26
+	active-creation: bits/creatn2.png
+		Length: 28
+		Offset: -1, 26
+		ZOffset: 2048
 	flame:
 		Offset: 0, -17
 	flame2:
