@@ -16,6 +16,7 @@ explosion:
 		Tick: 80
 	large_3: bits/explobig3.png
 		Tick: 80
+	blood: bits/blood1.png
 
 nuclear_explosion:
 	idle: bits/nuclear_cloud.png
@@ -169,3 +170,8 @@ pixelsparks:
 		Length: 9
 		Start: 9
 		Tick: 120
+
+spaceman:
+	idle: bits/spaceman.png
+		Frames: 0, 1, 2, 1
+		Length: *

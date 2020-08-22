@@ -43,3 +43,21 @@ ForestFire:
 			Concrete: 10
 		DamageTypes: Fire
 		AffectsParent: true
+
+Spaceman:
+	ReloadDelay: 60
+	Range: 2c768
+	Projectile: GravityBomb
+		Image: spaceman
+		Shadow: true
+		Velocity: 0,0,-45
+		Acceleration: 0,0,-30
+	Warhead@GroundEffect: CreateEffect
+		Explosions: blood
+		ValidTargets: Ground
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

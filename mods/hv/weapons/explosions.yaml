@@ -46,3 +46,9 @@ AntiTankMine:
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Structure, Wall, Trees
+
+PilotSpawn:
+	ValidTargets: Air
+	Warhead@SpawnPilot: FireRadius
+		Weapon: Spaceman
+		ValidTargets: Air
