@@ -27,6 +27,7 @@
     <ProjectReference Include="../engine/OpenRA.Mods.Common/OpenRA.Mods.Common.csproj">
       <Private>False</Private>
     </ProjectReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
     <AdditionalFiles Include="../engine/stylecop.json" />
   </ItemGroup>
