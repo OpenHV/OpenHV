@@ -35,8 +35,14 @@ BASE:
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@YI:
 		Factions: yi
-		Prerequisite: vehicles.yi
+		Prerequisite: structures.yi
 	ProvidesPrerequisite@SC:
+		Factions: sc
+		Prerequisite: structures.sc
+	ProvidesPrerequisite@VEHICLES.YI:
+		Factions: yi
+		Prerequisite: vehicles.yi
+	ProvidesPrerequisite@VEHICLES.SC:
 		Factions: sc
 		Prerequisite: vehicles.sc
 	Buildable:
@@ -376,7 +382,7 @@ STARPORT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 120
-		Prerequisites: radar
+		Prerequisites: radar, ~structures.yi
 		Description: Produces helicopters and shuttles.
 	Valued:
 		Cost: 700
@@ -399,12 +405,8 @@ STARPORT:
 	Production:
 		Produces: Aircraft
 	Reservable:
-	ProvidesPrerequisite@YI:
-		Factions: yi
+	ProvidesPrerequisite@starport:
 		Prerequisite: aircraft.yi
-	ProvidesPrerequisite@SC:
-		Factions: sc
-		Prerequisite: aircraft.sc
 	ProductionBar:
 		ProductionType: Aircraft
 	PrimaryBuilding:
@@ -436,6 +438,13 @@ STARPORT:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+
+STARPORT2:
+	Inherits: STARPORT
+	Buildable:
+		Prerequisites: radar, ~structures.sc
+	ProvidesPrerequisite@starport:
+		Prerequisite: aircraft.sc
 
 FACTORY2:
 	Inherits: ^BaseBuilding
