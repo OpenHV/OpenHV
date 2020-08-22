@@ -6,7 +6,7 @@ BOAT:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Medium boat
+		Name: Medium Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
@@ -46,7 +46,7 @@ BOAT2:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Heavy boat
+		Name: Heavy Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
@@ -83,7 +83,7 @@ BOAT3:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Light boat
+		Name: Light Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
