@@ -302,6 +302,8 @@ TANK8:
 		Speed: 150
 	RenderSprites:
 		PlayerPalette: green
+	RevealsShroud:
+		Range: 6c0
 
 TANK9:
 	Inherits: ^TrackedVehicle
