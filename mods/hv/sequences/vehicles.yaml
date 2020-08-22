@@ -178,6 +178,9 @@ scout1:
 		Length: 3
 		Facings: 8
 		Tick: 50
+	die: bits/blood1.png
+		Length: 8
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 0
 
@@ -188,6 +191,9 @@ scout2:
 		Length: 3
 		Facings: 8
 		Tick: 50
+	die: bits/blood1.png
+		Length: 8
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 1
 
