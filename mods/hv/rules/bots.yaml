@@ -73,6 +73,9 @@ Player:
 			copter: 5
 			banshee: 5
 			balloon: 1
+			boat: 1
+			boat2: 1
+			boat3: 1
 		UnitLimits:
 			builder: 0
 			miner: 1
