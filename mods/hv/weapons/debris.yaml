@@ -1,6 +1,6 @@
 # License: CC-BY-SA-4.0
 
-debris:
+Debris:
 	ReloadDelay: 60
 	Range: 2c768
 	Projectile: Bullet
@@ -9,6 +9,7 @@ debris:
 		LaunchAngle: 150, 200
 		Inaccuracy: 1c256
 		Image: debris
+		Sequences: small, small2, small3
 		Shadow: true
 	Warhead@GroundEffect: CreateEffect
 		Image: small_smoke
@@ -20,6 +21,11 @@ debris:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+LargeDebris:
+	Inherits: Debris
+	Projectile: Bullet
+		Sequences: large
 
 ForestFire:
 	ValidTargets: Ground, Tree
