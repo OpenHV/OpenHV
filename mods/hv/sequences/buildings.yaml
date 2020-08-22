@@ -63,6 +63,10 @@ base:
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 10
+	damaged-idle-platform1: bits/platform.png
+		Start: 31
+		ZOffset: -1c511
+		Offset: -10, 10
 	make-platform1: bits/platform.png
 		Length: 31
 		Offset: -10, 10
@@ -73,6 +77,10 @@ base:
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 10
+	damaged-idle-platform2: bits/platform.png
+		Start: 31
+		ZOffset: -1c511
+		Offset: -10, 10
 	make-platform2: bits/platform.png
 		Length: 31
 		Offset: 10, 10
@@ -322,6 +330,10 @@ factory2:
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 18
+	damaged-idle-platform1: bits/platform.png
+		Start: 31
+		ZOffset: -1c511
+		Offset: -10, 18
 	make-platform1: bits/platform.png
 		Length: 31
 		Offset: -10, 18
@@ -330,6 +342,10 @@ factory2:
 		Offset: -11, 15
 	idle-platform2: bits/platform.png
 		Start: 30
+		ZOffset: -1c511
+		Offset: 10, 18
+	damaged-idle-platform1: bits/platform.png
+		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 18
 	make-platform2: bits/platform.png
@@ -380,6 +396,10 @@ factory3:
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 18
+	damaged-idle-platform1: bits/platform.png
+		Start: 31
+		ZOffset: -1c511
+		Offset: -10, 18
 	make-platform1: bits/platform.png
 		Length: 31
 		Offset: -10, 18
@@ -388,6 +408,10 @@ factory3:
 		Offset: -11, 15
 	idle-platform2: bits/platform.png
 		Start: 30
+		ZOffset: -1c511
+		Offset: 10, 18
+	damaged-idle-platform2: bits/platform.png
+		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 18
 	make-platform2: bits/platform.png
