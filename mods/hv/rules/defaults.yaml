@@ -534,6 +534,7 @@
 	UpdatesPlayerStatistics:
 	Mobile:
 		Locomotor: naval
+		Voice: Move
 	Selectable:
 		Bounds: 20,20
 	Targetable:
@@ -561,7 +562,7 @@
 	MapEditorData:
 		Categories: Naval
 	Voiced:
-		VoiceSet: GenericVoice2
+		VoiceSet: ShipVoice
 	RenderSprites:
 		PlayerPalette: remap
 	WithFacingSpriteBody:

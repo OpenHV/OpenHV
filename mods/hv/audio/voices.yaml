@@ -25,3 +25,10 @@ GenericVoice3:
 		Select: awaiting_orders, im_ready, receiving, yes_sir
 		Move: acknowledged, affirmative, as_you_wish, at_once, en route, lets_go, move_out, on_my_way, orders received, ten_four
 		Action: attack, destroy_them, hit_them_hard, light_em_up, target_locked, you_got_it
+
+ShipVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: shipselect1, shipselect2, shipselect3, shipselect4, shipselect5
+		Move: shipmove1, shipmove2, shipmove3, shipmove4
+		Action: shipattack1, shipattack2, shipattack3, shipattack4, shipattack5
