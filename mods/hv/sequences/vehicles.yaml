@@ -284,3 +284,5 @@ goldball:
 energyball:
 	teleport: bits/teleport.png
 		Length: 10
+	teleport-large: bits/teleprt2.png
+		Length: 9

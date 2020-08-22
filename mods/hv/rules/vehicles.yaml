@@ -556,6 +556,9 @@ TRANSPRT:
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
+	WithTeleportEnergyOverlay:
+		Image: energyball
+		Sequence: teleport-large
 
 ARTIL:
 	Inherits: ^TrackedVehicle
