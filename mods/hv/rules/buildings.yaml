@@ -388,7 +388,6 @@ STARPORT:
 		Type: Steel
 	RevealsShroud:
 		Range: 5c0
-	WithResupplyAnimation:
 	Exit@1:
 		SpawnOffset: 0,-256,0
 		ExitCell: 0,0
