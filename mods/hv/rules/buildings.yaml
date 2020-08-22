@@ -1176,10 +1176,15 @@ HARBOR:
 		Path: 1,3
 		IsPlayerPalette: true
 		Palette: green
-	Exit:
+	Exit@0:
 		ExitCell: 1,2
 		ProductionTypes: Ship
 		Facing: 360
+		Priority: 2
+	Exit@1:
+		ExitCell: 1,-1
+		ProductionTypes: Ship
+		Facing: 872
 	Production:
 		Produces: Ship
 	PrimaryBuilding:
