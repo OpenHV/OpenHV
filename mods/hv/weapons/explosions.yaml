@@ -16,7 +16,7 @@ BuildingExplode:
 			Steel: 75
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Air, Water
 		ImpactSounds: explosion02.wav, explosion03.wav
 
 ArtilleryExplode:
