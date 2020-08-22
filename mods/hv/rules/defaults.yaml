@@ -195,6 +195,12 @@
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
+	GrantRandomCondition@spawnpilot:
+		Conditions: spawn-pilot, dont-spawn-pilot
+	Explodes@spawn-pilot:
+		Weapon: PilotSpawn
+		EmptyWeapon: PilotSpawn
+		RequiresCondition: spawn-pilot && !dont-spawn-pilot
 
 ^Helicopter:
 	Inherits: ^Plane
