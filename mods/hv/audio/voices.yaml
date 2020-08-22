@@ -23,5 +23,5 @@ GenericVoice3:
 	DefaultVariant: .wav
 	Voices:
 		Select: awaiting_orders, im_ready, receiving, yes_sir
-		Move: acknowledged, affirmative, as_you_wish, at_once, en route, lets_go, move_out, on_my_way, orders received, ten_four
+		Move: acknowledged, affirmative, as_you_wish, at_once, en_route, lets_go, move_out, on_my_way, orders_received, ten_four
 		Action: attack, destroy_them, hit_them_hard, light_em_up, target_locked, you_got_it
