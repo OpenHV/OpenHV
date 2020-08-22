@@ -17,6 +17,8 @@ explosion:
 	large_3: bits/explobig3.png
 		Tick: 80
 	blood: bits/blood1.png
+	flame: bits/flame2.png
+		Offset: 0, -9
 
 nuclear_explosion:
 	idle: bits/nuclear_cloud.png
