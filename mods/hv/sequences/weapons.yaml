@@ -143,11 +143,15 @@ mine4:
 		ZOffset: -512
 
 debris:
-	idle: bits/junk.png
-		Start: 0
-		Length: 4
+	Defaults:
+		Length: 6
 		Tick: 60
 		ZOffset: 2020
+	small: bits/junk.png
+		Length: 4
+	small2: bits/debris2.png
+	small3: bits/debris3.png
+	large: bits/debris1.png
 
 fire:
 	flame: bits/flame.png
