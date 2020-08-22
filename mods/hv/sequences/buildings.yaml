@@ -73,6 +73,7 @@ base:
 	active-platform1: bits/creation.png
 		Length: 23
 		Offset: -11, 7
+		ZOffset: 2048
 	idle-platform2: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
@@ -87,6 +88,7 @@ base:
 	active-platform2: bits/creation.png
 		Length: 23
 		Offset: 9, 7
+		ZOffset: 2048
 	icon: bits/buildings-icons.png
 		Start: 0
 		Offset: 0, 0
@@ -340,6 +342,7 @@ factory2:
 	active-platform1: bits/creation.png
 		Length: 23
 		Offset: -11, 15
+		ZOffset: 2048
 	idle-platform2: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
@@ -354,6 +357,7 @@ factory2:
 	active-platform2: bits/creation.png
 		Length: 23
 		Offset: 9, 15
+		ZOffset: 2048
 	flame:
 		Offset: 1, -22
 	flame2:
