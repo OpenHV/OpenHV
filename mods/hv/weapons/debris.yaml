@@ -55,6 +55,7 @@ Spaceman:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: blood
 		ValidTargets: Ground
+		ImpactSounds: bodyfall.wav
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
