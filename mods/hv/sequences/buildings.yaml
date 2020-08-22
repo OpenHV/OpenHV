@@ -81,7 +81,7 @@ base:
 	damaged-idle-platform2: bits/platform.png
 		Start: 31
 		ZOffset: -1c511
-		Offset: -10, 10
+		Offset: 10, 10
 	make-platform2: bits/platform.png
 		Length: 31
 		Offset: 10, 10
