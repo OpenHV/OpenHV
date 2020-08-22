@@ -26,6 +26,7 @@ Player:
 			silo: 1
 			radar: 1
 			techcenter: 1
+			storage: 5
 		BuildingFractions:
 			module: 1
 			radar: 1
