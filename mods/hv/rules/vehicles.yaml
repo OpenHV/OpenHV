@@ -675,6 +675,7 @@ SCOUT1:
 	Passenger:
 		CargoType: Scout
 	-Carryable:
+	-SpawnScrapOnDeath:
 
 SCOUT2:
 	Inherits: ^Vehicle
@@ -716,6 +717,7 @@ SCOUT2:
 	Passenger:
 		CargoType: Scout
 	-Carryable:
+	-SpawnScrapOnDeath:
 
 BUILDER:
 	Inherits: ^Vehicle
