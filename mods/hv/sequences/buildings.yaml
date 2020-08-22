@@ -376,7 +376,7 @@ factory2:
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 18
-	damaged-idle-platform1: bits/platform.png
+	damaged-idle-platform2: bits/platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 18
