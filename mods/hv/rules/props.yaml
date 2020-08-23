@@ -1,0 +1,38 @@
+LAMPPOST:
+	Inherits@shape: ^1x1Shape
+	Interactable:
+		Bounds: 20, 20
+	AppearsOnRadar:
+	AppearsOnMapPreview:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Lamp Post
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.2
+		RedTint: 0.05
+		GreenTint: 0.05
+		BlueTint: 0.01
+	Targetable:
+		TargetTypes: Ground, Structure
+	Armor:
+		Type: Steel
+	Health:
+		HP: 120000
+	RenderSprites:
+	WithSpriteBody:
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+	BodyOrientation:
+		QuantizedFacings: 1

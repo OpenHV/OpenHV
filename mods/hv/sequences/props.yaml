@@ -1,0 +1,4 @@
+lamppost:
+	idle: bits/lamppost.png
+	shadow-overlay: bits/lamppost.png
+		Start: 1
