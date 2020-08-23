@@ -23,3 +23,20 @@ LAMPPOST:
 	ThrowsShrapnel:
 		Pieces: 1, 2
 	-ThrowsShrapnel@large:
+
+PYRAMID:
+	Inherits: ^Prop
+	Inherits@shape: ^2x2Shape
+	Interactable:
+		Bounds: 40, 40
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Pyramid
+	Health:
+		HP: 120000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
