@@ -44,7 +44,8 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly ResourceCollectorInfo info;
 		readonly Lazy<RallyPoint> rallyPoint;
-		readonly ResourceType resourceType;
+		readonly UndergroundResourceLayer resourceLayer;
+		readonly Building building;
 
 		public int Ticks { get; private set; }
 
@@ -57,15 +58,8 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 			Ticks = info.InitialDelay;
 
-			var resourceLayer = self.World.WorldActor.Trait<UndergroundResourceLayer>();
-
-			var building = self.Trait<Building>();
-			var cells = building.Info.Tiles(self.Location);
-			foreach (var cell in cells)
-			{
-				if (resourceLayer.GetResourceDensity(cell) > 0)
-					resourceType = resourceLayer.GetResourceType(cell);
-			}
+			resourceLayer = self.World.WorldActor.Trait<UndergroundResourceLayer>();
+			building = self.Trait<Building>();
 
 			rallyPoint = Exts.Lazy(() => self.IsDead ? null : self.TraitOrDefault<RallyPoint>());
 		}
@@ -88,14 +82,26 @@ namespace OpenRA.Mods.HV.Traits
 					var exit = self.Exits().RandomOrDefault(self.World.SharedRandom);
 					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
 					var actorInfo = self.World.Map.Rules.Actors[vehicle];
-					SpawnDeliveryVehicle(self, actorInfo, exit != null ? exit.Info : null);
+
+					ResourceType resourceType = null;
+					var cells = building.Info.Tiles(self.Location);
+					foreach (var cell in cells)
+					{
+						if (resourceLayer.GetResourceDensity(cell) > 0)
+							resourceType = resourceLayer.GetResourceType(cell);
+					}
+
+					SpawnDeliveryVehicle(self, actorInfo, exit != null ? exit.Info : null, resourceType);
 					Resources = 0;
 				}
 			}
 		}
 
-		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo)
+		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo, ResourceType resourceType)
 		{
+			if (resourceType == null)
+				return;
+
 			var exit = CPos.Zero;
 			var exitLocations = new List<CPos>();
 
