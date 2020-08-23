@@ -65,7 +65,11 @@ namespace OpenRA.Mods.HV.Traits
 			// Note: This is queued in a FrameEndTask because otherwise the activity is dropped/overridden while moving out of a factory.
 			if (Info.SearchOnCreation)
 			{
-				var target = Target.FromActor(ClosestDestination(self));
+				var destination = ClosestDestination(self);
+				if (destination == null)
+					return;
+
+				var target = Target.FromActor(destination);
 				self.World.AddFrameEndTask(w => self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType.Info)));
 			}
 		}
