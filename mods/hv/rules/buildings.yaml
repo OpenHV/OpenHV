@@ -613,15 +613,9 @@ FACTORY3:
 	WithMakeAnimation@platform3:
 		BodyNames: platform3
 		Sequence: make-platform3
-	WithMakeAnimation@platform3:
-		BodyNames: platform3
-		Sequence: make-platform3
 	WithSpriteBody@platform4:
 		Name: platform4
 		Sequence: idle-platform4
-	WithMakeAnimation@platform4:
-		BodyNames: platform4
-		Sequence: make-platform4
 	WithMakeAnimation@platform4:
 		BodyNames: platform4
 		Sequence: make-platform4
