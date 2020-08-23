@@ -315,10 +315,12 @@
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 4c0
-	ActorLostNotification:
-		Notification: BuildingLost
 	Demolishable:
 	UpdatesPlayerStatistics:
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
 
 ^BaseBuilding:
 	Inherits: ^Building
@@ -341,10 +343,6 @@
 		Position: Center
 	GivesBuildableArea:
 		AreaTypes: building
-	Explodes:
-		Type: Footprint
-		Weapon: BuildingExplode
-		EmptyWeapon: BuildingExplode
 	CaptureManager:
 		BeingCapturedCondition: being-captured
 	Capturable:
@@ -354,6 +352,19 @@
 	CaptureNotification:
 	Sellable:
 		RequiresCondition: !being-captured
+	ActorLostNotification:
+		Notification: BuildingLost
+
+^Prop:
+	Inherits: ^Building
+	-Selectable:
+	Interactable:
+	Tooltip:
+		ShowOwnerRow: false
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
 
 ^DisableOnLowPower:
 	WithColoredOverlay@IDISABLE:
