@@ -94,3 +94,4 @@ Player:
 	PlayerRadarTerrain:
 	TeleportNetworkManager:
 		Type: subspace
+	ScriptTriggers:

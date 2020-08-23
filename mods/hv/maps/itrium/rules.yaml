@@ -1,0 +1,73 @@
+Player:
+	PlayerResources:
+		DefaultCash: 3000
+
+World:
+	LuaScript:
+		Scripts: hv|scripts/campaign.lua, itrium.lua
+	MissionData:
+		Briefing: Greetings commander! We are approaching the orbit of Itrium. The company is interested in the vast Lithium reserves. You are tasked with scouting ahead and building up a bridgehead. Intelligence reports some settlers, which have established a small mining colony. Claim this planet for the company by all means necessary.
+
+RADAR:
+	Buildable:
+		Prerequisites: ~disabled
+
+TRADPLAT:
+	Buildable:
+		Prerequisites: ~disabled
+
+STARPORT:
+	Buildable:
+		Prerequisites: ~disabled
+
+STARPORT2:
+	Buildable:
+		Prerequisites: ~disabled
+
+FACTORY2:
+	Buildable:
+		Prerequisites: ~disabled
+
+FACTORY3:
+	Buildable:
+		Prerequisites: ~disabled
+
+TECHCENTER:
+	Buildable:
+		Prerequisites: ~disabled
+
+TURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+FIELD:
+	Buildable:
+		Prerequisites: ~disabled
+
+SILO:
+	Buildable:
+		Prerequisites: ~disabled
+
+ARTILLERYTURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVATR:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVTR2:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+BUILDER:
+	Buildable:
+		Prerequisites: ~disabled

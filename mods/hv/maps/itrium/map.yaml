@@ -1,0 +1,82 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Itrium
+
+Author: Matt
+
+Tileset: PLANET
+
+MapSize: 66,66
+
+Bounds: 1,1,64,64
+
+Visibility: MissionSelector
+
+Categories: Campaign
+
+LockPreview: True
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: The Company
+	PlayerReference@The Company:
+		Name: The Company
+		Playable: True
+		LockFaction: True
+		Faction: sc
+		LockColor: True
+		Color: D0A090
+		Enemies: Creeps
+
+Actors:
+	Scout1: scout1
+		Location: 22,32
+		Facing: 182
+		Owner: Creeps
+	Scout2: scout2
+		Location: 29,37
+		Facing: 28
+		Owner: Creeps
+	Base: base
+		Owner: The Company
+		Location: 11,6
+	Ballon: balloon
+		Facing: 384
+		Location: 26,34
+		Owner: Creeps
+	Storage: storage
+		Owner: Creeps
+		Location: 29,42
+	Actor41: trees17
+		Owner: Neutral
+		Location: 46,40
+	Actor42: trees17
+		Owner: Neutral
+		Location: 53,48
+	Actor43: icicle1
+		Owner: Neutral
+		Location: 28,55
+	Actor44: icicle2
+		Owner: Neutral
+		Location: 33,48
+	Actor45: cave
+		Owner: Neutral
+		Location: 1,31
+	Miner1: miner2
+		Owner: Creeps
+		Location: 22,37
+	Miner2: miner2
+		Location: 32,32
+		Owner: Creeps
+
+Rules: hv|rules/campaign.yaml, rules.yaml

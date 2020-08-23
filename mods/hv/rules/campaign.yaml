@@ -1,0 +1,41 @@
+World:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	-CrateSpawner:
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	MapCreeps:
+		CheckboxLocked: True
+		CheckboxEnabled: False
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxEnabled: False
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxEnabled: True
+	MapOptions:
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxEnabled: False
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			normal: Normal
+		Default: normal
+		Locked: true
+
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+		GameOverDelay: 3000
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: True
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: False
+	PlayerResources:
+		DefaultCashDropdownLocked: True
+		DefaultCash: 5000
+	ModularBot@CampaignAI:
+		Name: Campaign Player AI
+		Type: campaign
