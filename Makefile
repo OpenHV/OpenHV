@@ -163,7 +163,14 @@ endif
 	@echo "Checking for incorrect conditional trait interface overrides..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-conditional-trait-interface-overrides
 
-test: utility
+check-lua:
+	@echo
+	@echo "Checking for Lua syntax errors..."
+	@luac -p $(shell find mods/*/maps/* -iname '*.lua')
+	@luac -p $(shell find mods/*/scripts/* -iname '*.lua')
+
+test: utility check-lua
+	@echo
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-yaml
 	@echo "Checking $(MOD_ID) sprite sequences..."
