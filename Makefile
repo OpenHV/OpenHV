@@ -173,6 +173,7 @@ test: utility check-lua
 	@echo
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-yaml
+	@echo
 	@echo "Checking $(MOD_ID) sprite sequences..."
 	@MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" mono --debug engine/OpenRA.Utility.exe $(MOD_ID) --check-sequence-sprites
 
