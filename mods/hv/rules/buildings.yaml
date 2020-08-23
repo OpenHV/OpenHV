@@ -1399,3 +1399,45 @@ DESTROYEDWALLTOPRIGHT:
 		Bounds: 24,24
 	WithSpriteBody:
 		Sequence: destroyed-topright
+
+TECHBUILDING:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame
+	Selectable:
+		Bounds: 40,48,0,-4
+	Tooltip:
+		Name: Tech Building
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+		RequiresCondition: !disabled && !build-incomplete && !beam-incomplete
+	RevealsShroud@Offline:
+		Range: 5c0
+		RequiresCondition: disabled
+	Power:
+		Amount: -40
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@lights:
+		Sequence: animation-lights
+		RequiresCondition: !build-incomplete && !disable-lights
+	GrantConditionOnDamageState@disable-lights:
+		Condition: disable-lights
+		ValidDamageStates: Heavy, Critical
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
