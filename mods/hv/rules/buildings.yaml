@@ -1420,7 +1420,7 @@ TECHBUILDING:
 		Type: Steel
 	RevealsShroud:
 		Range: 10c0
-		RequiresCondition: !disabled && !build-incomplete && !beam-incomplete
+		RequiresCondition: !disabled
 	RevealsShroud@Offline:
 		Range: 5c0
 		RequiresCondition: disabled
@@ -1432,12 +1432,10 @@ TECHBUILDING:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		RequiresCondition: !build-incomplete
 	WithIdleOverlay@lights:
 		Sequence: animation-lights
-		RequiresCondition: !build-incomplete && !disable-lights
+		RequiresCondition: !disable-lights
 	GrantConditionOnDamageState@disable-lights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
 	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
