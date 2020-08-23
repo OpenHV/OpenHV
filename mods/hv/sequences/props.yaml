@@ -11,3 +11,8 @@ pyramid:
 		Start: 1
 	shadow-overlay: bits/pyramid-shadow.png
 		Offset: 1,6
+
+pyramid2:
+	idle: bits/pyramid2.png
+	damaged-idle: bits/pyramid2.png
+		Start: 1
