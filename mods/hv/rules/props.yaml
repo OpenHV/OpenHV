@@ -40,3 +40,16 @@ PYRAMID:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
+
+PYRAMID2:
+	Inherits: ^Prop
+	Inherits@shape: ^1x1Shape
+	Interactable:
+		Bounds: 20, 20
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Small Pyramid
+	Health:
+		HP: 60000
