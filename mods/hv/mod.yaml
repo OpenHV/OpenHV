@@ -36,6 +36,7 @@ Rules:
 	hv|rules/player.yaml
 	hv|rules/aircraft.yaml
 	hv|rules/buildings.yaml
+	hv|rules/props.yaml
 	hv|rules/terrain.yaml
 	hv|rules/ships.yaml
 	hv|rules/bonus.yaml
@@ -49,6 +50,7 @@ Sequences:
 	hv|sequences/vehicles.yaml
 	hv|sequences/aircraft.yaml
 	hv|sequences/buildings.yaml
+	hv|sequences/props.yaml
 	hv|sequences/weapons.yaml
 	hv|sequences/terrain.yaml
 	hv|sequences/ships.yaml
