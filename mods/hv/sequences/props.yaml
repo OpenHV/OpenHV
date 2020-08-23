@@ -2,3 +2,12 @@ lamppost:
 	idle: bits/lamppost.png
 	shadow-overlay: bits/lamppost.png
 		Start: 1
+
+pyramid:
+	Defaults:
+		Offset: -1,-2
+	idle: bits/pyramid.png
+	damaged-idle: bits/pyramid.png
+		Start: 1
+	shadow-overlay: bits/pyramid-shadow.png
+		Offset: 1,6
