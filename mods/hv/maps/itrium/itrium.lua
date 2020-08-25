@@ -27,7 +27,7 @@ Tick = function()
 			HasMiner = true
 		end
 	end
-	
+
 	if HasPower and HasMiner and DateTime.GameTime % DateTime.Seconds(30) == 0 then
 		local deployedMiners = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "miner2" and actor.Owner == player end)
 		if #deployedMiners == 0 then
@@ -50,11 +50,11 @@ Tick = function()
 			Media.DisplayMessage("Build a module to train a scouting party.", "Reminder")
 		end
 	end
-	
+
 	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not player.IsObjectiveCompleted(bridgehead) and CheckForBase(player, BaseBuildings) then
 		player.MarkCompletedObjective(bridgehead)
 	end
-	
+
 	if creeps.Resources >= creeps.ResourceCapacity * 0.75 then
 		creeps.Cash = creeps.Cash + creeps.Resources - creeps.ResourceCapacity * 0.25
 		creeps.Resources = creeps.ResourceCapacity * 0.25
@@ -64,7 +64,7 @@ end
 WorldLoaded = function()
 	player = Player.GetPlayer("The Company")
 	creeps = Player.GetPlayer("Creeps")
-	
+
 	InitObjectives(player)
 
 	killColonists = player.AddPrimaryObjective("Eliminate all colonists in the area.")
@@ -72,6 +72,6 @@ WorldLoaded = function()
 
 	bridgehead = player.AddPrimaryObjective("Establish a bridgehead.")
 	Trigger.OnKilled(Base, function() player.MarkFailedObjective(bridgehead) end)
-	
+
 	Camera.Position = Base.CenterPosition
 end
