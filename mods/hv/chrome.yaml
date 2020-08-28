@@ -71,13 +71,17 @@ command-button-highlighted-disabled:
 	Inherits: command-button-highlighted
 
 sidebar-bits:
+	Inherits: ^Glyphs
+	Regions:
+		production-tooltip-time: 136, 51, 16, 16
+		production-tooltip-power: 102, 51, 16, 16
+		production-tooltip-cost: 68, 51, 16, 16
+		indicator-muted: 68, 145, 26, 24
+
+commandbar:
 	Inherits: ^Chrome
 	Regions:
-		production-tooltip-time: 416, 80, 16, 16
-		production-tooltip-power: 432, 80, 16, 16
-		production-tooltip-cost: 448, 80, 16, 16
-		production-iconoverlay: 128, 75, 238, 48
-		commandbar-background: 0, 123, 434, 44
+		background: 0, 123, 434, 44
 
 power-icons:
 	Inherits: ^Chrome

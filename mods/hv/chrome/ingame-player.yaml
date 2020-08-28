@@ -39,8 +39,8 @@ Container@PLAYER_WIDGETS:
 			Y: WINDOW_BOTTOM - HEIGHT - 5
 			Width: 416
 			Height: 44
-			ImageCollection: sidebar-bits
-			ImageName: commandbar-background
+			ImageCollection: commandbar
+			ImageName: background
 		Container@COMMAND_BAR:
 			Logic: CommandBarLogic
 			X: 14
