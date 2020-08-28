@@ -238,7 +238,7 @@ dialog:
 	Inherits: ^Dialog
 	Regions:
 		background: 1, 1, 480, 480
-		border-r: 491, 1, 9, 190
+		border-r: 492, 1, 9, 190
 		border-l: 483, 1, 9, 190
 		border-b: 1, 492, 189, 9
 		border-t: 1, 483, 189, 9
