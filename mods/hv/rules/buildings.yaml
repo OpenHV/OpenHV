@@ -95,6 +95,12 @@ BASE:
 		ExitCells: 1,3
 		Body: platform2
 		Sequence: active-platform2
+	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0
+		GreenTint: 0
+		BlueTint: 0.4
 
 GENERATOR:
 	Inherits: ^BaseBuilding
