@@ -495,7 +495,7 @@
 		TargetTypes: Tree
 	BodyOrientation:
 		QuantizedFacings: 1
-	HiddenUnderShroud:
+	FrozenUnderFog:
 	MapEditorData:
 		Categories: Decoration
 	RequiresSpecificOwners:
