@@ -821,3 +821,32 @@ techcenter:
 	icon: bits/buildings-icons.png
 		Start: 18
 		Offset: 0, 0
+
+techbuilding:
+	Inherits@flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -6
+	idle: bits/tech-building.png
+		Start: 0
+	shadow-overlay: bits/tech-building-shadow.png
+		ZOffset: 1768
+		Offset: 2, 0
+	damaged-idle: bits/tech-building.png
+		Start: 1
+	animation-lights: bits/tech-building.png
+		Start: 2
+		Length: 3
+		Tick: 200
+	make: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2000
+	make-overlay: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2000
+	flame:
+		Offset: 4, -18
+	flame2:
+		Offset: 15, 8
+	icon: bits/icon.png
