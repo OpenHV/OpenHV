@@ -511,6 +511,8 @@ FACTORY2:
 	WithMakeAnimation@platform2:
 		BodyNames: platform2
 		Sequence: make-platform2
+	Sellable:
+		SkipMakeAnimation: true # TODO workaround until https://github.com/OpenRA/OpenRA/pull/18574 is accepted
 	WithProductionDoorAnimation@platform1:
 		ExitCells: 0,2
 		Body: platform1
@@ -625,6 +627,8 @@ FACTORY3:
 	WithMakeAnimation@platform4:
 		BodyNames: platform4
 		Sequence: make-platform4
+	Sellable:
+		SkipMakeAnimation: true # TODO workaround until https://github.com/OpenRA/OpenRA/pull/18574 is accepted
 	WithSpriteBody@creation:
 		Name: creation
 		Sequence: idle-creation
