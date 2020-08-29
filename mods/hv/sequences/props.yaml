@@ -16,3 +16,27 @@ pyramid2:
 	idle: bits/pyramid2.png
 	damaged-idle: bits/pyramid2.png
 		Start: 1
+
+prop1:
+	Defaults:
+		Offset: -1, -18
+	idle: bits/prop1.png
+	damaged-idle: bits/prop1.png
+		Start: 1
+	shadow-overlay: bits/prop1-shadow.png
+		Offset: 13,13
+
+prop2:
+	Defaults:
+		Offset: 0, -12
+	idle: bits/prop2.png
+	damaged-idle: bits/prop2.png
+		Start: 1
+	shadow-overlay: bits/prop2-shadow.png
+		ZOffset: -1768
+		Offset: 9, 9
+	animation: bits/prop2.png
+		Start: 2
+		Length: 4
+		Reverses: True
+		Tick: 100
