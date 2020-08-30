@@ -47,6 +47,7 @@ TANK2:
 		BuildAtProductionType: Wheeled
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	Armament:
 		Weapon: RedLaser
 		LocalOffset: 500,-250,0
@@ -97,6 +98,7 @@ TANK3:
 		LocalOffset: 500,-50,-50
 	AttackTurreted:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 	RenderSprites:
@@ -181,6 +183,7 @@ TANK5:
 		Weapon: AntiGroundRocket
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -255,6 +258,8 @@ TANK7:
 	Armor:
 		Type: Heavy
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	Armament:
 		Weapon: StealthTankMissile
 		LocalOffset: 213,43,128, 213,-43,128
@@ -335,6 +340,8 @@ TANK9:
 		Weapon: Patriot
 		LocalOffset: 543,0,815
 	AttackTurreted:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
 
 TANK10:
 	Inherits: ^TrackedVehicle
@@ -364,6 +371,8 @@ TANK10:
 		Weapon: VoltageArc
 		LocalOffset: 0,0,213
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
 
 TANK11:
 	Inherits: ^TrackedVehicle
@@ -383,6 +392,7 @@ TANK11:
 		Weapon: 90mm
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -416,6 +426,7 @@ TANK12:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -470,6 +481,8 @@ TANK15:
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -507,6 +520,7 @@ TANK16:
 		TargetStances: Ally
 		ForceTargetStances: None
 	AttackFrontal:
+		PauseOnCondition: ecmdisabled
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -596,6 +610,7 @@ ARTIL:
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithMuzzleOverlay:
 	Explodes:
 		Weapon: ArtilleryExplode
@@ -637,6 +652,7 @@ ARTIL3:
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithAttackAnimation:
 		Sequence: shoot
 	WithMuzzleOverlay:
@@ -674,6 +690,7 @@ SCOUT1:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
@@ -722,6 +739,7 @@ SCOUT2:
 		LocalOffset: 50,0,0
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
@@ -804,6 +822,7 @@ TYRIANTANK:
 		LocalOffset: 550,-50,0
 	AttackTurreted:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 	RenderSprites:
@@ -879,6 +898,7 @@ MISSILE_TANK:
 		LocalOffset: 0,0,0 # TODO: to be adjusted
 	AttackTurreted:
 		PauseOnCondition: ecmdisabled
+		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 	RenderSprites:
