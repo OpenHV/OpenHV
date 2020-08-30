@@ -597,40 +597,41 @@ FACTORY3:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithSpriteBody@platform1:
-		Name: platform1
+	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
-	WithSpriteBody@platform2:
-		Name: platform2
-		Sequence: idle-platform2
-	WithMakeAnimation@platform1:
-		BodyNames: platform1
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform1:
 		Sequence: make-platform1
-	WithMakeAnimation@platform2:
-		BodyNames: platform2
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithIdleOverlay@platform2:
+		Sequence: idle-platform2
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform2:
 		Sequence: make-platform2
-	WithSpriteBody@platform3:
-		Name: platform3
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithIdleOverlay@platform3:
 		Sequence: idle-platform3
-	WithMakeAnimation@platform3:
-		BodyNames: platform3
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform3:
 		Sequence: make-platform3
-	WithSpriteBody@platform4:
-		Name: platform4
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithIdleOverlay@platform4:
 		Sequence: idle-platform4
-	WithMakeAnimation@platform4:
-		BodyNames: platform4
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform4:
 		Sequence: make-platform4
-	Sellable:
-		SkipMakeAnimation: true # TODO workaround until https://github.com/OpenRA/OpenRA/pull/18574 is accepted
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithProductionExitOverlay@creation:
+		ExitCell: 0,2
+		Sequence: active-creation
 	WithSpriteBody@creation:
 		Name: creation
 		Sequence: idle-creation
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithProductionDoorAnimation@creation:
-		ExitCells: 0,2
-		Body: creation
-		Sequence: active-creation
 	ExitsDebugOverlay:
 	RallyPoint:
 		IsPlayerPalette: true
