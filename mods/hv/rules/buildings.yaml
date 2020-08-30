@@ -628,10 +628,6 @@ FACTORY3:
 	WithProductionExitOverlay@creation:
 		ExitCell: 0,2
 		Sequence: active-creation
-	WithSpriteBody@creation:
-		Name: creation
-		Sequence: idle-creation
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	ExitsDebugOverlay:
 	RallyPoint:
 		IsPlayerPalette: true
