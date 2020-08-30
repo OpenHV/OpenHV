@@ -81,19 +81,15 @@ BASE:
 	AcceptsDeliveredResources:
 	StoresResources:
 		Capacity: 2000
-	WithSpriteBody@platform1:
-		Name: platform1
+	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
-	WithSpriteBody@platform2:
-		Name: platform2
+	WithIdleOverlay@platform2:
 		Sequence: idle-platform2
-	WithProductionDoorAnimation@platform1:
-		ExitCells: 0,3
-		Body: platform1
+	WithProductionExitOverlay@platform1:
+		ExitCell: 0,3
 		Sequence: active-platform1
-	WithProductionDoorAnimation@platform2:
-		ExitCells: 1,3
-		Body: platform2
+	WithProductionExitOverlay@platform2:
+		ExitCell: 1,3
 		Sequence: active-platform2
 	TerrainLightSource:
 		Range: 2c512
