@@ -352,6 +352,7 @@
 	CaptureNotification:
 	Sellable:
 		RequiresCondition: !being-captured
+	BotRepairOrSellCaptures:
 	ActorLostNotification:
 		Notification: BuildingLost
 
