@@ -194,6 +194,9 @@ RADAR:
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 
+RADAR2:
+	Inherits: RADAR
+
 TRADPLAT:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
