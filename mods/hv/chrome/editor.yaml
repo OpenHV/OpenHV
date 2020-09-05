@@ -613,13 +613,6 @@ Container@EDITOR_WORLD_ROOT:
 			Align: Left
 			Font: Bold
 			Contrast: true
-		Label@CASH_LABEL:
-			X: 950
-			Width: 50
-			Height: 25
-			Align: Left
-			Font: Bold
-			Contrast: true
 
 ScrollPanel@CATEGORY_FILTER_PANEL:
 	Width: 240
