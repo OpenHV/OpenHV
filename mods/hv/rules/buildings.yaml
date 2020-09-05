@@ -153,7 +153,7 @@ RADAR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
-		Prerequisites: generator
+		Prerequisites: generator, ~structures.yi
 		Description: Provides an overview\nof the battlefield.\nRequires power to operate.
 	Valued:
 		Cost: 1800
@@ -196,6 +196,10 @@ RADAR:
 
 RADAR2:
 	Inherits: RADAR
+	Buildable:
+		Prerequisites: generator, ~structures.sc
+	ProvidesPrerequisite@Radar:
+		Prerequisite: radar
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
