@@ -125,6 +125,8 @@
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true
+	UndergroundResourceRenderer:
+		RenderTypes: gold, iron
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: bits/palette.pal
@@ -314,8 +316,6 @@ World:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 	ScriptTriggers:
 	UndergroundResourceLayer:
-	UndergroundResourceRenderer:
-		RenderTypes: gold, iron
 	CrateSpawner:
 		CheckboxLabel: Cubes
 		CheckboxDescription: Collect cubes with units to receive random bonuses

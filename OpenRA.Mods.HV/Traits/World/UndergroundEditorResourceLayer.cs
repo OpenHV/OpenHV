@@ -9,8 +9,8 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
@@ -18,42 +18,38 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Required for the map editor to work. Attach this to the world actor.")]
-	public class UndergroundEditorResourceLayerInfo : TraitInfo, Requires<ResourceTypeInfo>
+	[Desc("Required for the map editor to work. Attach this to the world actor.",
+		"Uses the resource density stored in the map.")]
+	public class UndergroundEditorResourceLayerInfo : TraitInfo, IResourceLayerInfo, Requires<ResourceTypeInfo>
 	{
-		[Desc("Only care for these ResourceType names.")]
-		public readonly string[] Types = null;
-
-		public override object Create(ActorInitializer init) { return new UndergroundEditorResourceLayer(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new UndergroundEditorResourceLayer(init.Self); }
 	}
 
-	public class UndergroundEditorResourceLayer : IWorldLoaded, IRenderOverlay, INotifyActorDisposing
+	public class UndergroundEditorResourceLayer : IResourceLayer, IWorldLoaded, INotifyActorDisposing
 	{
 		protected readonly Map Map;
 		protected readonly TileSet Tileset;
 		protected readonly Dictionary<int, ResourceType> Resources;
-		protected readonly CellLayer<EditorCellContents> Tiles;
-		protected readonly HashSet<CPos> Dirty = new HashSet<CPos>();
-
-		readonly Dictionary<PaletteReference, TerrainSpriteLayer> spriteLayers = new Dictionary<PaletteReference, TerrainSpriteLayer>();
+		protected readonly CellLayer<ResourceLayerContents> Tiles;
 
 		public int NetWorth { get; protected set; }
 
-		public readonly UndergroundEditorResourceLayerInfo Info;
-
 		bool disposed;
 
-		public UndergroundEditorResourceLayer(Actor self, UndergroundEditorResourceLayerInfo info)
+		public event Action<CPos, ResourceType> CellChanged;
+
+		ResourceLayerContents IResourceLayer.GetResource(CPos cell) { return Tiles[cell]; }
+		bool IResourceLayer.IsVisible(CPos cell) { return Map.Contains(cell); }
+
+		public UndergroundEditorResourceLayer(Actor self)
 		{
 			if (self.World.Type != WorldType.Editor)
 				return;
 
-			Info = info;
-
 			Map = self.World.Map;
 			Tileset = self.World.Map.Rules.TileSet;
 
-			Tiles = new CellLayer<EditorCellContents>(Map);
+			Tiles = new CellLayer<ResourceLayerContents>(Map);
 			Resources = self.TraitsImplementing<ResourceType>()
 				.ToDictionary(r => r.Info.ResourceType, r => r);
 
@@ -67,132 +63,53 @@ namespace OpenRA.Mods.HV.Traits
 
 			foreach (var cell in Map.AllCells)
 				UpdateCell(cell);
-
-			// Build the sprite layer dictionary for rendering resources
-			// All resources that have the same palette must also share a sheet and blend mode
-			foreach (var r in Resources)
-			{
-				var res = r;
-				var layer = spriteLayers.GetOrAdd(r.Value.Palette, pal =>
-				{
-					var first = res.Value.Variants.First().Value.GetSprite(0);
-					return new TerrainSpriteLayer(w, wr, first.Sheet, first.BlendMode, pal, false);
-				});
-
-				// Validate that sprites are compatible with this layer
-				var sheet = layer.Sheet;
-				var sprites = r.Value.Variants.Values.SelectMany(v => Exts.MakeArray(v.Length, x => v.GetSprite(x)));
-				if (sprites.Any(s => s.Sheet != sheet))
-					throw new InvalidDataException("Resource sprites span multiple sheets. Try loading their sequences earlier.");
-
-				var blendMode = layer.BlendMode;
-				if (sprites.Any(s => s.BlendMode != blendMode))
-					throw new InvalidDataException("Resource sprites specify different blend modes. "
-						+ "Try using different palettes for resource types that use different blend modes.");
-			}
 		}
 
 		public void UpdateCell(CPos cell)
 		{
 			var uv = cell.ToMPos(Map);
-			var tile = Map.Resources[uv];
-
-			var t = Tiles[cell];
-
-			if (Info.Types != null && t.Type != null && !Info.Types.Contains(t.Type.Info.Type))
+			if (!Map.Resources.Contains(uv))
 				return;
 
-			if (t.Density > 0)
-				NetWorth -= t.Density * t.Type.Info.ValuePerUnit;
+			var tile = Map.Resources[uv];
+			var t = Tiles[uv];
 
-			ResourceType type;
-			if (Resources.TryGetValue(tile.Type, out type))
+			var newTile = ResourceLayerContents.Empty;
+			var newTerrain = byte.MaxValue;
+			if (Resources.TryGetValue(tile.Type, out ResourceType type))
 			{
-				Tiles[uv] = new EditorCellContents
+				newTile = new ResourceLayerContents
 				{
 					Type = type,
-					Variant = ChooseRandomVariant(type),
+					Density = tile.Index
 				};
 
-				Map.CustomTerrain[uv] = Tileset.GetTerrainIndex(type.Info.TerrainType);
-			}
-			else
-			{
-				Tiles[uv] = EditorCellContents.Empty;
-				Map.CustomTerrain[uv] = byte.MaxValue;
+				newTerrain = Tileset.GetTerrainIndex(type.Info.TerrainType);
 			}
 
-			Dirty.Add(cell);
-		}
-
-		protected virtual string ChooseRandomVariant(ResourceType t)
-		{
-			return t.Variants.Keys.Random(Game.CosmeticRandom);
-		}
-
-		public virtual EditorCellContents UpdateDirtyTile(CPos c)
-		{
-			var t = Tiles[c];
-			var type = t.Type;
-
-			// Empty tile
-			if (type == null)
-			{
-				t.Sequence = null;
-				return t;
-			}
-
-			if (Info.Types != null && !Info.Types.Contains(t.Type.Info.Type))
-				return t;
-
-			NetWorth -= t.Density * type.Info.ValuePerUnit;
-
-			t.Density = Map.Resources[c].Index;
-
-			NetWorth += t.Density * type.Info.ValuePerUnit;
-
-			t.Sequence = type.Variants[t.Variant];
-			t.Frame = int2.Lerp(0, t.Sequence.Length - 1, t.Density, type.Info.MaxDensity);
-
-			return t;
-		}
-
-		void IRenderOverlay.Render(WorldRenderer wr)
-		{
-			if (wr.World.Type != WorldType.Editor)
+			// Nothing has changed
+			if (newTile.Type == t.Type && newTile.Density == t.Density)
 				return;
 
-			foreach (var c in Dirty)
-			{
-				if (Tiles.Contains(c))
-				{
-					var resource = UpdateDirtyTile(c);
-					Tiles[c] = resource;
+			UpdateNetWorth(t.Type, t.Density, newTile.Type, newTile.Density);
+			Tiles[uv] = newTile;
+			Map.CustomTerrain[uv] = newTerrain;
+			CellChanged?.Invoke(cell, type);
+		}
 
-					foreach (var kv in spriteLayers)
-					{
-						// resource.Type is meaningless (and may be null) if resource.Sprite is null
-						if (resource.Sequence != null && resource.Type.Palette == kv.Key)
-							kv.Value.Update(c, resource.Sequence, resource.Frame);
-						else
-							kv.Value.Clear(c);
-					}
-				}
-			}
+		void UpdateNetWorth(ResourceType oldType, int oldDensity, ResourceType newType, int newDensity)
+		{
+			if (oldType != null && oldDensity > 0)
+				NetWorth -= oldDensity * oldType.Info.ValuePerUnit;
 
-			Dirty.Clear();
-
-			foreach (var l in spriteLayers.Values)
-				l.Draw(wr.Viewport);
+			if (newType != null && newDensity > 0)
+				NetWorth += newDensity * newType.Info.ValuePerUnit;
 		}
 
 		void INotifyActorDisposing.Disposing(Actor self)
 		{
 			if (disposed)
 				return;
-
-			foreach (var kv in spriteLayers.Values)
-				kv.Dispose();
 
 			Map.Resources.CellEntryChanged -= UpdateCell;
 

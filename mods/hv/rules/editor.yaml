@@ -20,7 +20,6 @@ EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
 	UndergroundEditorResourceLayer:
-		Types: gold, iron
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:

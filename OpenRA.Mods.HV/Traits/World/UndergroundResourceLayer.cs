@@ -17,20 +17,19 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Attach this to the world actor.", "Order of the layers defines the Z sorting.")]
-	public class UndergroundResourceLayerInfo : TraitInfo, Requires<ResourceTypeInfo>, Requires<BuildingInfluenceInfo>
+	[Desc("Attach this to the world actor.", "Order of the layers defines the Z sorting.",
+		"Resource density is based on the exact data stored in the map.")]
+	public class UndergroundResourceLayerInfo : TraitInfo, IResourceLayerInfo, Requires<ResourceTypeInfo>, Requires<BuildingInfluenceInfo>
 	{
 		public override object Create(ActorInitializer init) { return new UndergroundResourceLayer(init.Self); }
 	}
 
-	public class UndergroundResourceLayer : IWorldLoaded
+	public class UndergroundResourceLayer : IResourceLayer, IWorldLoaded
 	{
-		static readonly CellContents EmptyCell = default(CellContents);
-
 		readonly World world;
 		readonly BuildingInfluence buildingInfluence;
 
-		protected readonly CellLayer<CellContents> Content;
+		protected readonly CellLayer<ResourceLayerContents> Content;
 
 		public bool IsResourceLayerEmpty { get { return resCells < 1; } }
 
@@ -43,7 +42,7 @@ namespace OpenRA.Mods.HV.Traits
 			world = self.World;
 			buildingInfluence = self.Trait<BuildingInfluence>();
 
-			Content = new CellLayer<CellContents>(world.Map);
+			Content = new CellLayer<ResourceLayerContents>(world.Map);
 		}
 
 		public void WorldLoaded(World w, WorldRenderer wr)
@@ -68,7 +67,7 @@ namespace OpenRA.Mods.HV.Traits
 				var type = GetResourceType(cell);
 				if (type != null)
 				{
-					var temp = GetResource(cell);
+					var temp = Content[cell];
 					temp.Density = w.Map.Resources[cell].Index;
 
 					Content[cell] = temp;
@@ -111,12 +110,12 @@ namespace OpenRA.Mods.HV.Traits
 				|| (currentResourceType == null && AllowResourceAt(newResourceType, cell));
 		}
 
-		CellContents CreateResourceCell(ResourceType t, CPos cell)
+		ResourceLayerContents CreateResourceCell(ResourceType t, CPos cell)
 		{
 			world.Map.CustomTerrain[cell] = world.Map.Rules.TileSet.GetTerrainIndex(t.Info.TerrainType);
 			++resCells;
 
-			return new CellContents
+			return new ResourceLayerContents
 			{
 				Type = t
 			};
@@ -152,7 +151,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (--c.Density < 0)
 			{
-				Content[cell] = EmptyCell;
+				Content[cell] = ResourceLayerContents.Empty;
 				world.Map.CustomTerrain[cell] = byte.MaxValue;
 				--resCells;
 			}
@@ -175,30 +174,18 @@ namespace OpenRA.Mods.HV.Traits
 			--resCells;
 
 			// Clear cell
-			Content[cell] = EmptyCell;
+			Content[cell] = ResourceLayerContents.Empty;
 			world.Map.CustomTerrain[cell] = byte.MaxValue;
 
 			if (CellChanged != null)
 				CellChanged(cell, c.Type);
 		}
 
-		public CellContents GetResource(CPos cell) { return Content[cell]; }
 		public ResourceType GetResourceType(CPos cell) { return Content[cell].Type; }
 
 		public int GetResourceDensity(CPos cell) { return Content[cell].Density; }
-		public int GetMaxResourceDensity(CPos cell)
-		{
-			if (Content[cell].Type == null)
-				return 0;
 
-			return Content[cell].Type.Info.MaxDensity;
-		}
-
-		public struct CellContents
-		{
-			public static readonly CellContents Empty = default(CellContents);
-			public ResourceType Type;
-			public int Density;
-		}
+		ResourceLayerContents IResourceLayer.GetResource(CPos cell) { return Content[cell]; }
+		bool IResourceLayer.IsVisible(CPos cell) { return !world.FogObscures(cell); }
 	}
 }
