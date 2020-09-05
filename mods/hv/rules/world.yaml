@@ -125,7 +125,7 @@
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true
-	UndergroundResourceRenderer:
+	ResourceRenderer:
 		RenderTypes: gold, iron
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
