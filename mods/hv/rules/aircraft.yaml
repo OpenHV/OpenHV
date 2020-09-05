@@ -235,10 +235,8 @@ BALLOON:
 	Aircraft:
 		Speed: 60
 	Selectable:
-		DecorationBounds: 24,24
+		DecorationBounds: 24,32
 	-WithShadow:
-	#	Offset: 200, 128, 0
-	#	ZOffset: -129
 	WithIdleOverlayOnGround:
 		IsDecoration: true
 		Sequence: shadow-overlay
