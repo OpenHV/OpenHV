@@ -125,18 +125,6 @@
 		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
 		AllowUnderActors: true
 		AllowUnderBuildings: true
-	ResourceType@Water:
-		Type: water
-		Name: Water
-		ResourceType: 3
-		TerrainType: Water
-		Palette: terrain
-		AllowedTerrainTypes: Crater
-		Sequences: waterflow
-		MaxDensity: 1
-		ValuePerUnit: 0
-		AllowUnderActors: true
-		AllowUnderBuildings: true
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: bits/palette.pal
@@ -328,9 +316,6 @@ World:
 	UndergroundResourceLayer:
 	UndergroundResourceRenderer:
 		RenderTypes: gold, iron
-	ResourceLayer:
-	LiquidTerrainRenderer:
-		RenderTypes: water
 	CrateSpawner:
 		CheckboxLabel: Cubes
 		CheckboxDescription: Collect cubes with units to receive random bonuses
