@@ -35,7 +35,7 @@ script:
 before_deploy:
  - mkdir build
  - make check-packaging-scripts && cd build && ../packaging/package-all.sh ${TRAVIS_TAG} ${PWD} && cd ..
- - cd packaging && cd itch && ./upload.sh ${TRAVIS_TAG} ${PWD}/../../build
+ - cd packaging && cd itch && ./upload.sh ${TRAVIS_TAG} ${PWD}/../../build && cd .. && cd ..
 
 deploy:
   provider: releases
