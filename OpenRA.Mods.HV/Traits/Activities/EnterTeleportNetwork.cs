@@ -116,8 +116,7 @@ namespace OpenRA.Mods.HV.Activities
 		public override bool Tick(Actor self)
 		{
 			// Update our view of the target
-			bool targetIsHiddenActor;
-			target = target.Recalculate(self.Owner, out targetIsHiddenActor);
+			target = target.Recalculate(self.Owner, out bool targetIsHiddenActor);
 			if (!targetIsHiddenActor && target.Type == TargetType.Actor)
 				lastVisibleTarget = Target.FromTargetPositions(target);
 

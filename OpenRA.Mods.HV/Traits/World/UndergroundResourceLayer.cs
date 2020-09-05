@@ -52,8 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			foreach (var cell in w.Map.AllCells)
 			{
-				ResourceType t;
-				if (!resources.TryGetValue(w.Map.Resources[cell].Type, out t))
+				if (!resources.TryGetValue(w.Map.Resources[cell].Type, out var t))
 					continue;
 
 				if (!AllowResourceAt(t, cell))
@@ -133,8 +132,7 @@ namespace OpenRA.Mods.HV.Traits
 			cell.Density = Math.Min(cell.Type.Info.MaxDensity, cell.Density + n);
 			Content[p] = cell;
 
-			if (CellChanged != null)
-				CellChanged(p, cell.Type);
+			CellChanged?.Invoke(p, cell.Type);
 		}
 
 		public bool IsFull(CPos cell)
@@ -158,8 +156,7 @@ namespace OpenRA.Mods.HV.Traits
 			else
 				Content[cell] = c;
 
-			if (CellChanged != null)
-				CellChanged(cell, c.Type);
+			CellChanged?.Invoke(cell, c.Type);
 
 			return c.Type;
 		}
@@ -177,8 +174,7 @@ namespace OpenRA.Mods.HV.Traits
 			Content[cell] = ResourceLayerContents.Empty;
 			world.Map.CustomTerrain[cell] = byte.MaxValue;
 
-			if (CellChanged != null)
-				CellChanged(cell, c.Type);
+			CellChanged?.Invoke(cell, c.Type);
 		}
 
 		public ResourceType GetResourceType(CPos cell) { return Content[cell].Type; }

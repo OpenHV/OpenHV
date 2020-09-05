@@ -45,10 +45,8 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			base.RulesetLoaded(rules, ai);
 
-			WeaponInfo weaponInfo;
-
 			var weaponToLower = Weapon.ToLowerInvariant();
-			if (!rules.Weapons.TryGetValue(weaponToLower, out weaponInfo))
+			if (!rules.Weapons.TryGetValue(weaponToLower, out WeaponInfo weaponInfo))
 				throw new YamlException("Weapons Ruleset does not contain an entry '{0}'".F(weaponToLower));
 
 			WeaponInfo = weaponInfo;
