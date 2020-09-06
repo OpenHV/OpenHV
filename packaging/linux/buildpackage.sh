@@ -79,9 +79,7 @@ pushd "${ENGINE_DIRECTORY}" > /dev/null
 make clean
 
 make core TARGETPLATFORM=linux-x64
-make version VERSION="${ENGINE_VERSION}"
 make install-engine prefix="usr" DESTDIR="${BUILTDIR}/"
-make install-common-mod-files prefix="usr" DESTDIR="${BUILTDIR}/"
 make install-dependencies TARGETPLATFORM=linux-x64 prefix="usr" DESTDIR="${BUILTDIR}/"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
