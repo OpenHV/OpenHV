@@ -25,11 +25,13 @@ Player:
 			field: 1
 			silo: 1
 			radar: 1
+			radar2: 1
 			techcenter: 1
 			storage: 5
 		BuildingFractions:
 			module: 1
 			radar: 1
+			radar2: 1
 			factory2: 1
 			factory3: 1
 			harbor: 1
