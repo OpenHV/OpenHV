@@ -12,6 +12,10 @@ RADAR:
 	Buildable:
 		Prerequisites: ~disabled
 
+RADAR2:
+	Buildable:
+		Prerequisites: ~disabled
+
 TRADPLAT:
 	Buildable:
 		Prerequisites: ~disabled
