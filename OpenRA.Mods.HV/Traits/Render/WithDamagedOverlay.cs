@@ -15,7 +15,7 @@ using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.HV.Render
+namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Renders an overlay when the actor is taking heavy damage.")]
 	public class WithDamagedOverlayInfo : TraitInfo, Requires<RenderSpritesInfo>
