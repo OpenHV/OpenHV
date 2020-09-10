@@ -219,5 +219,17 @@ Actors:
 	Actor83: pyramid2
 		Owner: Neutral
 		Location: 11,44
+	Actor76: techbuilding
+		Owner: Neutral
+		Location: 54,53
+	Actor77: techbuilding
+		Owner: Neutral
+		Location: 47,53
+	Actor80: techbuilding
+		Owner: Neutral
+		Location: 47,31
+	Actor81: techbuilding
+		Owner: Neutral
+		Location: 54,31
 
 Rules: rules.yaml
