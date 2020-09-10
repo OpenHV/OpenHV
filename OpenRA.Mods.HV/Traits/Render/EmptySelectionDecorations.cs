@@ -33,18 +33,42 @@ namespace OpenRA.Mods.Common.Traits.Render
 			interactable = self.Trait<Interactable>();
 		}
 
-		protected override int2 GetDecorationPosition(Actor self, WorldRenderer wr, DecorationPosition pos)
+		int2 GetDecorationPosition(Actor self, WorldRenderer wr, string pos)
 		{
 			var bounds = interactable.DecorationBounds(self, wr);
 			switch (pos)
 			{
-				case DecorationPosition.TopLeft: return bounds.TopLeft;
-				case DecorationPosition.TopRight: return bounds.TopRight;
-				case DecorationPosition.BottomLeft: return bounds.BottomLeft;
-				case DecorationPosition.BottomRight: return bounds.BottomRight;
-				case DecorationPosition.Top: return new int2(bounds.Left + bounds.Size.Width / 2, bounds.Top);
+				case "TopLeft": return bounds.TopLeft;
+				case "TopRight": return bounds.TopRight;
+				case "BottomLeft": return bounds.BottomLeft;
+				case "BottomRight": return bounds.BottomRight;
+				case "Top": return new int2(bounds.Left + bounds.Size.Width / 2, bounds.Top);
+				case "Bottom": return new int2(bounds.Left + bounds.Size.Width / 2, bounds.Bottom);
+				case "Left": return new int2(bounds.Left, bounds.Top + bounds.Size.Height / 2);
+				case "Right": return new int2(bounds.Right, bounds.Top + bounds.Size.Height / 2);
 				default: return bounds.TopLeft + new int2(bounds.Size.Width / 2, bounds.Size.Height / 2);
 			}
+		}
+
+		static int2 GetDecorationMargin(string pos, int2 margin)
+		{
+			switch (pos)
+			{
+				case "TopLeft": return margin;
+				case "TopRight": return new int2(-margin.X, margin.Y);
+				case "BottomLeft": return new int2(margin.X, -margin.Y);
+				case "BottomRight": return -margin;
+				case "Top": return new int2(0, margin.Y);
+				case "Bottom": return new int2(0, -margin.Y);
+				case "Left": return new int2(margin.X, 0);
+				case "Right": return new int2(-margin.X, 0);
+				default: return int2.Zero;
+			}
+		}
+
+		protected override int2 GetDecorationOrigin(Actor self, WorldRenderer wr, string pos, int2 margin)
+		{
+			return wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, pos)) + GetDecorationMargin(pos, margin);
 		}
 
 		protected override IEnumerable<IRenderable> RenderSelectionBox(Actor self, WorldRenderer wr, Color color)
