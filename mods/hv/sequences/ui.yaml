@@ -43,6 +43,7 @@ pips:
 		Start: 4
 	pip-blue:
 		Start: 5
+	pip-reconstructor: bits/pip-reconstructor.png
 
 rallypoint:
 	flag: bits/flag.png

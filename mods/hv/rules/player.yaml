@@ -95,3 +95,20 @@ Player:
 	TeleportNetworkManager:
 		Type: subspace
 	ScriptTriggers:
+	ExternalCondition@reconstructor:
+		Condition: reconstructor
+	ProvidesPrerequisite@reconstructor:
+		Prerequisite: reconstructor
+		RequiresCondition: reconstructor
+	ProvidesPrerequisite@reconstructor2:
+		Prerequisite: reconstructor2
+		RequiresCondition: reconstructor > 1
+	ProvidesPrerequisite@reconstructor3:
+		Prerequisite: reconstructor3
+		RequiresCondition: reconstructor > 2
+	ProvidesPrerequisite@reconstructor4:
+		Prerequisite: reconstructor4
+		RequiresCondition: reconstructor > 3
+	ProvidesPrerequisite@reconstructor5:
+		Prerequisite: reconstructor5
+		RequiresCondition: reconstructor > 4

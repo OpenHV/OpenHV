@@ -63,6 +63,7 @@
 	Inherits@ecm: ^DisabledByECM
 	Inherits@cloak: ^Cloakable
 	Inherits@damagesparks: ^PixelDamageSparks
+	Inherits@reconstructor: ^ReconstructorHeal
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -150,6 +151,7 @@
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
 	Inherits@damagesparks: ^PixelDamageSparks
+	Inherits@reconstructor: ^ReconstructorHeal
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -542,6 +544,7 @@
 	Inherits@decoration: ^SelectionDecorations
 	Inherits@shield: ^ForceFieldCompatible
 	Inherits@damagesparks: ^PixelDamageSparks
+	Inherits@reconstructor: ^ReconstructorHeal
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -756,3 +759,62 @@
 		Weapon: DamageSpark
 		Amount: 6
 		Delay: 192, 384
+
+^ReconstructorHeal:
+	ChangesHealth@reconstructor:
+		PercentageStep: 1
+		Step: 0
+		Delay: 150
+		StartIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: reconstructor
+	ChangesHealth@reconstructor2:
+		PercentageStep: 1
+		Step: 0
+		Delay: 150
+		StartIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: reconstructor > 1
+	ChangesHealth@reconstructor3:
+		PercentageStep: 1
+		Step: 0
+		Delay: 150
+		StartIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: reconstructor > 2
+	ChangesHealth@reconstructor4:
+		PercentageStep: 1
+		Step: 0
+		Delay: 150
+		StartIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: reconstructor > 3
+	ChangesHealth@reconstructor5:
+		PercentageStep: 1
+		Step: 0
+		Delay: 150
+		StartIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: reconstructor > 4
+	WithDecoration@reconstructor:
+		Image: pips
+		Sequence: pip-reconstructor
+		Palette: chrome
+		Position: TopRight
+		RequiresCondition: reconstructor
+		ValidStances: Ally
+	GrantConditionOnPrerequisite@reconstructor:
+		Condition: reconstructor
+		Prerequisites: reconstructor
+	GrantConditionOnPrerequisite@reconstructor2:
+		Condition: reconstructor
+		Prerequisites: reconstructor2
+	GrantConditionOnPrerequisite@reconstructor3:
+		Condition: reconstructor
+		Prerequisites: reconstructor3
+	GrantConditionOnPrerequisite@reconstructor4:
+		Condition: reconstructor
+		Prerequisites: reconstructor4
+	GrantConditionOnPrerequisite@reconstructor5:
+		Condition: reconstructor
+		Prerequisites: reconstructor5
