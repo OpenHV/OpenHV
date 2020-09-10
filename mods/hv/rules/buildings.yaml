@@ -1410,7 +1410,7 @@ TECHBUILDING:
 	Selectable:
 		Bounds: 40,48,0,-4
 	Tooltip:
-		Name: Tech Building
+		Name: Tech Reconstructor
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1422,10 +1422,10 @@ TECHBUILDING:
 		Type: Steel
 	RevealsShroud:
 		Range: 10c0
-		RequiresCondition: !disabled
+		RequiresCondition: !disabled && !ownerless
 	RevealsShroud@Offline:
 		Range: 5c0
-		RequiresCondition: disabled
+		RequiresCondition: disabled && !ownerless
 	Power:
 		Amount: -40
 	RenderSprites:
@@ -1436,8 +1436,73 @@ TECHBUILDING:
 		IsDecoration: true
 	WithIdleOverlay@lights:
 		Sequence: animation-lights
-		RequiresCondition: !disable-lights
+		RequiresCondition: !disable-lights && !ownerless && !disabled
 	GrantConditionOnDamageState@disable-lights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
 	Capturable:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	OwnerLostAction:
+		Action: ChangeOwner
+	TooltipDescription@ally:
+		Description: Provides self-healing to units when powered.
+		ValidStances: Ally
+	TooltipDescription@other:
+		Description: Capture and provide power to enable self-healing for units.
+		ValidStances: Neutral, Enemy
+	GrantConditionOnNeutralOwner:
+		Condition: ownerless
+	GrantExternalConditionToOwner@reconstructor:
+		Condition: reconstructor
+		RequiresCondition: !disabled && !ownerless
+	GrantConditionOnPrerequisite@reconstructor:
+		Condition: reconstructor
+		Prerequisites: reconstructor
+	GrantConditionOnPrerequisite@reconstructor2:
+		Condition: reconstructor
+		Prerequisites: reconstructor2
+	GrantConditionOnPrerequisite@reconstructor3:
+		Condition: reconstructor
+		Prerequisites: reconstructor3
+	GrantConditionOnPrerequisite@reconstructor4:
+		Condition: reconstructor
+		Prerequisites: reconstructor4
+	GrantConditionOnPrerequisite@reconstructor5:
+		Condition: reconstructor
+		Prerequisites: reconstructor5
+	WithTextDecoration@reconstructor:
+		RequiresSelection: true
+		Text: COUNT: 1
+		Font: TinyPixel
+		Position: Top
+		Margin: 0, 5
+		RequiresCondition: reconstructor == 1
+	WithTextDecoration@reconstructor2:
+		RequiresSelection: true
+		Text: COUNT: 2
+		Font: TinyPixel
+		Position: Top
+		Margin: 0, 5
+		RequiresCondition: reconstructor == 2
+	WithTextDecoration@reconstructor3:
+		RequiresSelection: true
+		Text: COUNT: 3
+		Font: TinyPixel
+		Position: Top
+		Margin: 0, 5
+		RequiresCondition: reconstructor == 3
+	WithTextDecoration@reconstructor4:
+		RequiresSelection: true
+		Text: COUNT: 4
+		Font: TinyPixel
+		Position: Top
+		Margin: 0, 5
+		RequiresCondition: reconstructor == 4
+	WithTextDecoration@reconstructor5:
+		RequiresSelection: true
+		Text: COUNT: 4+
+		Font: TinyPixel
+		Position: Top
+		Margin: 0, 5
+		RequiresCondition: reconstructor > 4
