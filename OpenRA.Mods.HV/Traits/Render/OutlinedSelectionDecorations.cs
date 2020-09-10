@@ -27,17 +27,32 @@ namespace OpenRA.Mods.Common.Traits.Render
 
 		public readonly string CriticallyDamagedImage = "outline-red";
 
-		[SequenceReference("Image", true)]
+		[SequenceReference("Image")]
 		public readonly string TopLeftSequence = "top-left";
 
-		[SequenceReference("Image", true)]
+		[SequenceReference("Image")]
 		public readonly string TopRightSequence = "top-right";
 
-		[SequenceReference("Image", true)]
+		[SequenceReference("Image")]
 		public readonly string BottomLeftSequence = "bottom-left";
 
-		[SequenceReference("Image", true)]
+		[SequenceReference("Image")]
 		public readonly string BottomRightSequence = "bottom-right";
+
+		[Desc("Render left, bottom, right and top as well.")]
+		public readonly bool Spacers = false;
+
+		[SequenceReference("Image")]
+		public readonly string LeftSequence = "left";
+
+		[SequenceReference("Image")]
+		public readonly string BottomSequence = "bottom";
+
+		[SequenceReference("Image")]
+		public readonly string RightSequence = "right";
+
+		[SequenceReference("Image")]
+		public readonly string TopSequence = "top";
 
 		[Desc("Palette to render the sprite in. Reference the world actor's PaletteFrom* traits.")]
 		public readonly string Palette = "cursor";
@@ -54,6 +69,11 @@ namespace OpenRA.Mods.Common.Traits.Render
 		protected Animation topRight;
 		protected Animation bottomLeft;
 		protected Animation bottomRight;
+
+		protected Animation left;
+		protected Animation right;
+		protected Animation bottom;
+		protected Animation top;
 
 		public OutlinedSelectionDecorations(Actor self, OutlinedSelectionDecorationsInfo info)
 			: base(info)
@@ -72,20 +92,59 @@ namespace OpenRA.Mods.Common.Traits.Render
 
 			bottomRight = new Animation(self.World, info.Image);
 			bottomRight.Play(info.BottomRightSequence);
+
+			if (info.Spacers)
+			{
+				left = new Animation(self.World, info.Image);
+				left.Play(info.LeftSequence);
+
+				bottom = new Animation(self.World, info.Image);
+				bottom.Play(info.BottomSequence);
+
+				right = new Animation(self.World, info.Image);
+				right.Play(info.RightSequence);
+
+				top = new Animation(self.World, info.Image);
+				top.Play(info.TopSequence);
+			}
 		}
 
-		protected override int2 GetDecorationPosition(Actor self, WorldRenderer wr, DecorationPosition pos)
+		int2 GetDecorationPosition(Actor self, WorldRenderer wr, string pos)
 		{
 			var bounds = interactable.DecorationBounds(self, wr);
 			switch (pos)
 			{
-				case DecorationPosition.TopLeft: return bounds.TopLeft;
-				case DecorationPosition.TopRight: return bounds.TopRight;
-				case DecorationPosition.BottomLeft: return bounds.BottomLeft;
-				case DecorationPosition.BottomRight: return bounds.BottomRight;
-				case DecorationPosition.Top: return new int2(bounds.Left + bounds.Size.Width / 2, bounds.Top);
+				case "TopLeft": return bounds.TopLeft;
+				case "TopRight": return bounds.TopRight;
+				case "BottomLeft": return bounds.BottomLeft;
+				case "BottomRight": return bounds.BottomRight;
+				case "Top": return new int2(bounds.Left + bounds.Size.Width / 2, bounds.Top);
+				case "Bottom": return new int2(bounds.Left + bounds.Size.Width / 2, bounds.Bottom);
+				case "Left": return new int2(bounds.Left, bounds.Top + bounds.Size.Height / 2);
+				case "Right": return new int2(bounds.Right, bounds.Top + bounds.Size.Height / 2);
 				default: return bounds.TopLeft + new int2(bounds.Size.Width / 2, bounds.Size.Height / 2);
 			}
+		}
+
+		static int2 GetDecorationMargin(string pos, int2 margin)
+		{
+			switch (pos)
+			{
+				case "TopLeft": return margin;
+				case "TopRight": return new int2(-margin.X, margin.Y);
+				case "BottomLeft": return new int2(margin.X, -margin.Y);
+				case "BottomRight": return -margin;
+				case "Top": return new int2(0, margin.Y);
+				case "Bottom": return new int2(0, -margin.Y);
+				case "Left": return new int2(margin.X, 0);
+				case "Right": return new int2(-margin.X, 0);
+				default: return int2.Zero;
+			}
+		}
+
+		protected override int2 GetDecorationOrigin(Actor self, WorldRenderer wr, string pos, int2 margin)
+		{
+			return wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, pos)) + GetDecorationMargin(pos, margin);
 		}
 
 		void INotifyDamageStateChanged.DamageStateChanged(Actor self, AttackInfo e)
@@ -96,6 +155,14 @@ namespace OpenRA.Mods.Common.Traits.Render
 				topRight.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
 				bottomLeft.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
 				bottomRight.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
+
+				if (outlinedDecorationsInfo.Spacers)
+				{
+					top.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
+					bottom.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
+					left.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
+					right.ChangeImage(outlinedDecorationsInfo.DamagedImage, outlinedDecorationsInfo.Image);
+				}
 			}
 			else if (e.DamageState == DamageState.Critical)
 			{
@@ -103,6 +170,14 @@ namespace OpenRA.Mods.Common.Traits.Render
 				topRight.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
 				bottomLeft.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
 				bottomRight.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
+
+				if (outlinedDecorationsInfo.Spacers)
+				{
+					top.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
+					bottom.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
+					left.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
+					right.ChangeImage(outlinedDecorationsInfo.CriticallyDamagedImage, outlinedDecorationsInfo.Image);
+				}
 			}
 			else
 			{
@@ -110,6 +185,14 @@ namespace OpenRA.Mods.Common.Traits.Render
 				topRight.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
 				bottomLeft.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
 				bottomRight.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
+
+				if (outlinedDecorationsInfo.Spacers)
+				{
+					top.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
+					bottom.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
+					left.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
+					right.ChangeImage(outlinedDecorationsInfo.Image, outlinedDecorationsInfo.Image);
+				}
 			}
 		}
 
@@ -118,17 +201,32 @@ namespace OpenRA.Mods.Common.Traits.Render
 			var palette = wr.Palette(outlinedDecorationsInfo.Palette);
 			var offset = new int2(topRight.Image.Bounds.Width, 0);
 
-			var topLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, DecorationPosition.TopLeft));
+			var topLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "TopLeft"));
 			yield return new UISpriteRenderable(topLeft.Image, self.CenterPosition, topLeftScreenPosition, 0, palette, 1f);
 
-			var topRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, DecorationPosition.TopRight)) - offset;
+			var topRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "TopRight")) - offset;
 			yield return new UISpriteRenderable(topRight.Image, self.CenterPosition, topRightScreenPosition, 0, palette, 1f);
 
-			var bottomLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, DecorationPosition.BottomLeft));
+			var bottomLeftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "BottomLeft"));
 			yield return new UISpriteRenderable(bottomLeft.Image, self.CenterPosition, bottomLeftScreenPosition, 0, palette, 1f);
 
-			var bottomRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, DecorationPosition.BottomRight)) - offset;
+			var bottomRightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "BottomRight")) - offset;
 			yield return new UISpriteRenderable(bottomRight.Image, self.CenterPosition, bottomRightScreenPosition, 0, palette, 1f);
+
+			if (outlinedDecorationsInfo.Spacers)
+			{
+				var topScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Top")) - offset / 2;
+				yield return new UISpriteRenderable(top.Image, self.CenterPosition, topScreenPosition, 0, palette, 1f);
+
+				var bottomScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Bottom")) - offset / 2;
+				yield return new UISpriteRenderable(bottom.Image, self.CenterPosition, bottomScreenPosition, 0, palette, 1f);
+
+				var leftScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Left"));
+				yield return new UISpriteRenderable(left.Image, self.CenterPosition, leftScreenPosition, 0, palette, 1f);
+
+				var rightScreenPosition = wr.Viewport.WorldToViewPx(GetDecorationPosition(self, wr, "Right")) - offset;
+				yield return new UISpriteRenderable(right.Image, self.CenterPosition, rightScreenPosition, 0, palette, 1f);
+			}
 		}
 
 		protected override IEnumerable<IRenderable> RenderSelectionBars(Actor self, WorldRenderer wr, bool displayHealth, bool displayExtra)

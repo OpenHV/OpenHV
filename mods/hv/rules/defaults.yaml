@@ -278,6 +278,8 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@decoration: ^SelectionDecorations
+	OutlinedSelectionDecorations:
+		Spacers: true
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
