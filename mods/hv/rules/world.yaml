@@ -127,6 +127,20 @@
 		AllowUnderBuildings: true
 	ResourceRenderer:
 		RenderTypes: gold, iron
+	ResourceType@Water:
+		Type: water
+		Name: Water
+		ResourceType: 3
+		TerrainType: Water
+		Palette: terrain
+		AllowedTerrainTypes: Crater
+		Sequences: waterflow
+		MaxDensity: 1
+		ValuePerUnit: 0
+		AllowUnderActors: true
+		AllowUnderBuildings: true
+	LiquidTerrainRenderer:
+		RenderTypes: water
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: bits/palette.pal
