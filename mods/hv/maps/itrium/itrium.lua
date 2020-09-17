@@ -14,7 +14,7 @@ Colonists = { Scout1, Scout2, Ballon, Miner1, Miner2, Storage }
 Tick = function()
 	if (player.PowerProvided <= 20 or player.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
 		HasPower = false
-		Media.DisplayMessage("Build a generator for power.", "Reminder")
+		Media.DisplayMessage("Build a power plant to generate electricity.", "Reminder")
 	else
 		HasPower = true
 	end
