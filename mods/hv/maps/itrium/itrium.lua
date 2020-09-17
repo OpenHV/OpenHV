@@ -71,7 +71,7 @@ WorldLoaded = function()
 	killColonists = player.AddPrimaryObjective("Eliminate all colonists in the area.")
 	Trigger.OnAllKilled(Colonists, function() player.MarkCompletedObjective(killColonists) end)
 
-	bridgehead = player.AddPrimaryObjective("Establish a bridgehead.")
+	bridgehead = player.AddPrimaryObjective("Build all available structures.")
 	Trigger.OnKilled(Base, function() player.MarkFailedObjective(bridgehead) end)
 
 	Camera.Position = Base.CenterPosition
