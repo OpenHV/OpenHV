@@ -7,7 +7,7 @@
    information, see COPYING.
 ]]
 
-BaseBuildings = { "base", "generator", "miner2", "storage", "module" }
+BaseBuildings = { "base", "generator", "miner2", "module" }
 
 Colonists = { Scout1, Scout2, Ballon, Miner1, Miner2, Storage }
 
