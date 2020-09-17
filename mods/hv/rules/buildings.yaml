@@ -338,7 +338,7 @@ MINER2:
 	Selectable:
 		Bounds: 40,60,0,-20
 	Tooltip:
-		Name: Miner
+		Name: Mining Tower
 	ResourceCollector:
 		Interval: 100
 		DeliveryVehicleType: tank13, tank14
