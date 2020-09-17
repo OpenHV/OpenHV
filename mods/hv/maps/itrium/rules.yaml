@@ -1,6 +1,6 @@
 Player:
 	PlayerResources:
-		DefaultCash: 3000
+		DefaultCash: 6000
 
 World:
 	LuaScript:
