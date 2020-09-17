@@ -26,9 +26,9 @@
 			Grass: 60
 			Road: 100
 			Mountain: 60
-			Ice: 10
-			Snow: 30
-			Red Snow: 30
+			Ice: 30
+			Snow: 50
+			Red Snow: 50
 			Sand: 40
 			Stone: 100
 	Locomotor@WHEELED:
