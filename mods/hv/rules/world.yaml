@@ -17,7 +17,7 @@
 		TerrainSpeeds:
 	Locomotor@POD:
 		Name: pod
-		Crushes: Cube
+		Crushes: Cube, Scrap
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
