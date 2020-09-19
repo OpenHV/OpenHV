@@ -177,3 +177,8 @@ spaceman:
 	idle: bits/spaceman.png
 		Frames: 0, 1, 2, 1
 		Length: *
+
+artillery-trail:
+	idle: bits/artillery-trail.png
+		Length: *
+		Tick: 80
