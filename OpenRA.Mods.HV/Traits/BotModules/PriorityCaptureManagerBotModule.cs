@@ -126,7 +126,7 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var newUnits = world.ActorsHavingTrait<Captures>()
-				.Where(a => a.Owner == player && !a.IsDead && a.IsInWorld);
+				.Where(a => a.Owner == player && !a.IsDead && a.IsInWorld && a.IsIdle);
 
 			if (!newUnits.Any())
 				return;
@@ -159,6 +159,7 @@ namespace OpenRA.Mods.HV.Traits
 					for (int i = 0; i < priorityCaptures; i++)
 					{
 						var capturer = capturers.First();
+
 						var priorityTarget = priorityTargets.First();
 
 						var captureManager = priorityTarget.TraitOrDefault<CaptureManager>();
