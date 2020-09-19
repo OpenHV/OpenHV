@@ -221,6 +221,7 @@ namespace OpenRA.Mods.HV.Traits
 
 					bot.QueueOrder(new Order("CaptureActor", capturer.Actor, safeTarget, true));
 					AIUtils.BotDebug("AI ({0}): Ordered {1} to capture {2}", player.ClientIndex, capturer.Actor, nearestTargetActor);
+					break;
 				}
 			}
 		}
