@@ -85,11 +85,10 @@ Player:
 			balloon: 2
 			tank8: 1
 			boat3: 3
-	CaptureManagerBotModule:
+	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-test-ai
 		CapturingActorTypes: tank8
-		CapturableActorTypes: base, generator, module, factory2, factory3, starport, starport2, tradplat, radar, silo, field
-		CapturableStances: Enemy
+		PriorityCapturableActorTypes: techbuilding
 		MaximumCaptureTargetOptions: 15
 	MinerDeployManagerBotModule:
 		RequiresCondition: enable-test-ai
