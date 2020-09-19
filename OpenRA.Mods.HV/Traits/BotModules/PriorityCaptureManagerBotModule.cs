@@ -167,18 +167,21 @@ namespace OpenRA.Mods.HV.Traits
 						{
 							var safeTarget = SafePath(capturer.Actor, priorityTarget);
 							if (safeTarget.Type == TargetType.Invalid)
+							{
+								priorityTargets = priorityTargets.Skip(1);
+								capturers = capturers.Skip(1);
 								continue;
+							}
 
 							bot.QueueOrder(new Order("CaptureActor", capturer.Actor, safeTarget, true));
 							AIUtils.BotDebug("AI ({0}): Ordered {1} {2} to capture {3} {4} in priority mode.",
 								player.ClientIndex, capturer.Actor, capturer.Actor.ActorID, priorityTarget, priorityTarget.ActorID);
 
 							activeCapturers.Add(capturer.Actor);
-
-							capturers = capturers.Skip(1);
 						}
 
 						priorityTargets = priorityTargets.Skip(1);
+						capturers = capturers.Skip(1);
 					}
 
 					if (!capturers.Any())
