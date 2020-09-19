@@ -106,8 +106,7 @@ check-variables:
 engine-dependencies: check-variables check-sdk-scripts
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
 
-engine: check-variables check-sdk-scripts
-	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
+engine: engine-dependencies check-variables check-sdk-scripts
 	@cd $(ENGINE_DIRECTORY) && make core WIN32=$(WIN32)
 
 utility: engine-dependencies engine
