@@ -62,8 +62,6 @@ namespace OpenRA.Mods.HV.Traits
 		readonly Player player;
 		readonly int maximumCaptureTargetOptions;
 
-		readonly List<Actor> activeCapturers = new List<Actor>();
-
 		int minCaptureDelayTicks;
 		IPathFinder pathfinder;
 		DomainIndex domainIndex;
@@ -176,8 +174,6 @@ namespace OpenRA.Mods.HV.Traits
 							bot.QueueOrder(new Order("CaptureActor", capturer.Actor, safeTarget, true));
 							AIUtils.BotDebug("AI ({0}): Ordered {1} {2} to capture {3} {4} in priority mode.",
 								player.ClientIndex, capturer.Actor, capturer.Actor.ActorID, priorityTarget, priorityTarget.ActorID);
-
-							activeCapturers.Add(capturer.Actor);
 						}
 
 						priorityTargets = priorityTargets.Skip(1);
@@ -225,7 +221,6 @@ namespace OpenRA.Mods.HV.Traits
 
 					bot.QueueOrder(new Order("CaptureActor", capturer.Actor, safeTarget, true));
 					AIUtils.BotDebug("AI ({0}): Ordered {1} to capture {2}", player.ClientIndex, capturer.Actor, nearestTargetActor);
-					activeCapturers.Add(capturer.Actor);
 				}
 			}
 		}
