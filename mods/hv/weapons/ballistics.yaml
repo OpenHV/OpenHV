@@ -46,10 +46,12 @@ TyrianTankCannon:
 	ReloadDelay: 85
 	Range: 12c0
 	Projectile: Bullet
-		Speed: 204
+		Speed: 170
 		Blockable: false
 		LaunchAngle: 62
 		Inaccuracy: 1c938
+		TrailImage: artillery-trail
+		TrailDelay: 0
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 426
@@ -75,9 +77,6 @@ SmallArtillery:
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		TrailImage: artillery-trail
-		TrailDelay: 0
-		Speed: 170
 		Inaccuracy: 1c138
 	Warhead@Damage: SpreadDamage
 		Falloff: 100, 55, 20, 5
@@ -94,11 +93,8 @@ DoubleBarrelledArtillery:
 	Report: howitzerfire02.wav
 	TargetActorCenter: true
 	Projectile: Bullet
-		Speed: 384
 		LaunchAngle: 165
 		Inaccuracy: 2c0
-	Warhead@Damage: SpreadDamage
-		Damage: 45000
 
 TurretCannon:
 	ValidTargets: Water, Ground, Tree
@@ -195,6 +191,7 @@ Nuclear:
 		FlashType: Nuke
 
 TurretArtillery:
+	Inherits: ^Artillery
 	ValidTargets: Water, Ground, Tree
 	Report: heavycannonfire01.wav
 	ReloadDelay: 200
@@ -202,31 +199,15 @@ TurretArtillery:
 	Range: 20c0
 	Projectile: Bullet
 		Speed: 204
-		Blockable: false
 		LaunchAngle: 100
 		Inaccuracy: 2c0
 		Image: bullet2
 		Shadow: true
 	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
-		ValidTargets: Ground, Water, Tree
-		Spread: 426
 		Damage: 30000
-		Versus:
-			None: 90
-			Steel: 40
-			Light: 60
-			Heavy: 25
-			Wood: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion07.wav, explosion08.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 30mm:
 	ReloadDelay: 30
