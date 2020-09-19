@@ -75,7 +75,8 @@ SmallArtillery:
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		ContrailLength: 30
+		TrailImage: artillery-trail
+		TrailDelay: 0
 		Speed: 170
 		Inaccuracy: 1c138
 	Warhead@Damage: SpreadDamage
