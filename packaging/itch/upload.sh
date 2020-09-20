@@ -3,6 +3,11 @@
 export GIT_TAG="$1"
 export BUILD_OUTPUT_DIR="$2"
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "itch upload requires a Linux host."
+	exit 0
+fi
+
 if command -v curl >/dev/null 2>&1; then
 	curl -L -o butler-linux-amd64.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
 else
