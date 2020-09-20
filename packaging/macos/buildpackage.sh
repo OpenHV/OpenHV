@@ -118,10 +118,11 @@ pushd "${ENGINE_DIRECTORY}" > /dev/null
 echo "Building core files"
 
 make clean
-make osx-dependencies
-make core
+make core TARGETPLATFORM=osx-x64
 make version VERSION="${ENGINE_VERSION}"
+
 make install-engine gameinstalldir="/Contents/Resources/" DESTDIR="${BUILTDIR}/OpenRA.app"
+make install-dependencies TARGETPLATFORM=osx-x64 gameinstalldir="/Contents/Resources/" DESTDIR="${BUILTDIR}/OpenRA.app"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 	mkdir -p "${BUILTDIR}/OpenRA.app/Contents/Resources/$(dirname "${f}")"
