@@ -124,7 +124,7 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var newUnits = world.ActorsHavingTrait<Captures>()
-				.Where(a => a.Owner == player && !a.IsDead && a.IsInWorld && a.IsIdle);
+				.Where(a => a.Owner == player && !a.IsDead && a.IsInWorld);
 
 			if (!newUnits.Any())
 				return;
