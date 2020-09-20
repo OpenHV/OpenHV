@@ -68,7 +68,7 @@ check-sdk-scripts:
 	fi
 
 check-packaging-scripts:
-	@if [ ! -x "packaging/package-all.sh" ] || [ ! -x "packaging/linux/buildpackage.sh" ] || [ ! -x "packaging/osx/buildpackage.sh" ] || [ ! -x "packaging/windows/buildpackage.sh" ]; then \
+	@if [ ! -x "packaging/package-all.sh" ] || [ ! -x "packaging/linux/buildpackage.sh" ] || [ ! -x "packaging/osx/buildpackage.sh" ] ||  [ ! -x "packaging/macos/buildpackage.sh" ] || [ ! -x "packaging/windows/buildpackage.sh" ]; then \
 		echo "Required SDK scripts are not executable:"; \
 		if [ ! -x "packaging/package-all.sh" ]; then \
 			echo "   packaging/package-all.sh"; \
@@ -78,6 +78,9 @@ check-packaging-scripts:
 		fi; \
 		if [ ! -x "packaging/osx/buildpackage.sh" ]; then \
 			echo "   packaging/osx/buildpackage.sh"; \
+		fi; \
+		if [ ! -x "packaging/macos/buildpackage.sh" ]; then \
+			echo "   packaging/macos/buildpackage.sh"; \
 		fi; \
 		if [ ! -x "packaging/windows/buildpackage.sh" ]; then \
 			echo "   packaging/windows/buildpackage.sh"; \

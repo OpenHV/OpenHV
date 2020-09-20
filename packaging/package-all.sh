@@ -20,26 +20,34 @@ command -v makensis >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requi
 
 PACKAGING_DIR=$(python -c "import os; print(os.path.dirname(os.path.realpath('$0')))")
 
-echo "Building Windows package"
-${PACKAGING_DIR}/windows/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
-if [ $? -ne 0 ]; then
-	echo "Windows package build failed."
-fi
-
-echo "Building macOS package"
-${PACKAGING_DIR}/osx/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
-if [ $? -ne 0 ]; then
-	echo "macOS package build failed."
-fi
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "Windows packaging requires a Linux host."
 	echo "Linux AppImage packaging requires a Linux host."
+	echo "Building macOS package"
+	${PACKAGING_DIR}/macos/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
+	if [ $? -ne 0 ]; then
+		echo "macOS package build failed."
+	fi
 else
+	echo "Building Windows package"
+	${PACKAGING_DIR}/windows/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
+	if [ $? -ne 0 ]; then
+		echo "Windows package build failed."
+	fi
+
+	echo "Building portable Mac OS X package"
+	${PACKAGING_DIR}/osx/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
+	if [ $? -ne 0 ]; then
+		echo "Mac OS X package build failed."
+	fi
+
 	echo "Building Linux AppImage package"
 	${PACKAGING_DIR}/linux/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
 	if [ $? -ne 0 ]; then
 		echo "Linux AppImage package build failed."
 	fi
+
+	echo "macOS packaging requires a macOS host."
 fi
 
 echo "Package build done."
