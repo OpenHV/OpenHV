@@ -76,7 +76,7 @@ else
 fi
 
 BUILTDIR="${PACKAGING_DIR}/build"
-PACKAGING_OSX_APP_NAME="OpenRA - ${PACKAGING_DISPLAY_NAME}.app"
+PACKAGING_OSX_APP_NAME="${PACKAGING_DISPLAY_NAME}.app"
 
 # Set the working dir to the location of this script
 cd "${PACKAGING_DIR}"
