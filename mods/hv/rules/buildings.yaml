@@ -957,7 +957,7 @@ SILO:
 		SupportPowerPaletteOrder: 70
 		BeginChargeSpeechNotification: MissileCharging
 		EndChargeSpeechNotification: MissileReady
-		LaunchSpeechNotification: MissileLaunchDetected
+		IncomingSpeechNotification: MissileLaunchDetected
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
