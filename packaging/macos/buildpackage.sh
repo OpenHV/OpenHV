@@ -158,6 +158,7 @@ rm -rf mod.iconset
 modify_plist "{MOD_ID}" "${MOD_ID}" "${PACKAGING_OSX_APP_NAME}/Contents/Info.plist"
 modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${PACKAGING_OSX_APP_NAME}/Contents/Info.plist"
 modify_plist "{JOIN_SERVER_URL_SCHEME}" "openhv-${TAG}" "${PACKAGING_OSX_APP_NAME}/Contents/Info.plist"
+modify_plist "{ADDITIONAL_URL_SCHEMES}" "" "${PACKAGING_OSX_APP_NAME}/Contents/Info.plist"
 
 # Sign binaries with developer certificate
 if [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
