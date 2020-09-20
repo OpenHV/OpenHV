@@ -114,7 +114,7 @@ function build_platform()
 	popd > /dev/null
 
 	# Create multi-resolution icon
-	convert "${ARTWORK_DIR}/icon_16x16.png" "${ARTWORK_DIR}/icon_24x24.png" "${ARTWORK_DIR}/icon_32x32.png" "${ARTWORK_DIR}/icon_48x48.png" "${ARTWORK_DIR}/icon_64x64.png"  "${BUILTDIR}/${MOD_ID}.ico"
+	convert "${ARTWORK_DIR}/icon_16x16.png" "${ARTWORK_DIR}/icon_24x24.png" "${ARTWORK_DIR}/icon_32x32.png" "${ARTWORK_DIR}/icon_48x48.png" "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/${MOD_ID}.ico"
 	cp "${SRC_DIR}/OpenRA.Game.exe.config" "${BUILTDIR}"
 
 	# We need to set the loadFromRemoteSources flag for the launcher, but only for the "portable" zip package.

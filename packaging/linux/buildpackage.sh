@@ -140,7 +140,7 @@ if [ -f "${PACKAGING_DIR}/mod_scalable.svg" ]; then
   install -Dm644 "${PACKAGING_DIR}/mod_scalable.svg" "${BUILTDIR}/usr/share/icons/hicolor/scalable/apps/openhv.svg"
 fi
 
-for i in 16x16 32x32 48x48 64x64; do
+for i in 16x16 32x32 48x48 64x64 128x128 256x256; do
   if [ -f "${ARTWORK_DIR}/icon_${i}.png" ]; then
     install -Dm644 "${ARTWORK_DIR}/icon_${i}.png" "${BUILTDIR}/usr/share/icons/hicolor/${i}/apps/openhv.png"
     install -m644 "${ARTWORK_DIR}/icon_${i}.png" "${BUILTDIR}/openhv.png"

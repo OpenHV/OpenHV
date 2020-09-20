@@ -147,6 +147,10 @@ cp "${ARTWORK_DIR}/icon_16x16.png" "mod.iconset/icon_16x16.png"
 cp "${ARTWORK_DIR}/icon_32x32.png" "mod.iconset/icon_16x16@2.png"
 cp "${ARTWORK_DIR}/icon_32x32.png" "mod.iconset/icon_32x32.png"
 cp "${ARTWORK_DIR}/icon_64x64.png" "mod.iconset/icon_32x32@2x.png"
+cp "${ARTWORK_DIR}/icon_128x128.png" "mod.iconset/icon_128x128.png"
+cp "${ARTWORK_DIR}/icon_256x256.png" "mod.iconset/icon_128x128@2x.png"
+cp "${ARTWORK_DIR}/icon_256x256.png" "mod.iconset/icon_256x256.png"
+cp "${ARTWORK_DIR}/icon_512x512.png" "mod.iconset/icon_256x256@2x.png"
 iconutil --convert icns "mod.iconset" -o "${PACKAGING_OSX_APP_NAME}/Contents/Resources/${MOD_ID}.icns"
 rm -rf mod.iconset
 
