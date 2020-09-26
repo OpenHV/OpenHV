@@ -133,7 +133,8 @@ Voices:
 	hv|audio/voices.yaml
 
 Translations:
-	hv|english.yaml
+	hv|languages/english.yaml
+	hv|languages/german.yaml
 
 Hotkeys:
 	common|hotkeys/game.yaml
