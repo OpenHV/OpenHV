@@ -107,7 +107,7 @@ GENERATOR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
-		Prerequisites: base
+		Prerequisites: base, ~structures.yi
 		Description: Generates power for other structures.
 	Valued:
 		Cost: 300
@@ -142,6 +142,15 @@ GENERATOR:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+
+GENERATOR2:
+	Inherits: GENERATOR
+	Buildable:
+		Prerequisites: base, ~structures.sc
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: generator
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 RADAR:
 	Inherits: ^BaseBuilding

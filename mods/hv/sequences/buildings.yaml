@@ -126,6 +126,9 @@ generator:
 		Start: 4
 		Offset: 0, 0
 
+generator2:
+	Inherits: generator
+
 radar:
 	Inherits@flame: ^BuildingFlame
 	Defaults:

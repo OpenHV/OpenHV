@@ -14,7 +14,7 @@ Player:
 		ExcessPowerIncrement: 40
 		ExcessPowerIncreaseThreshold: 4
 		ConstructionYardTypes: base
-		PowerTypes: generator
+		PowerTypes: generator, generator2
 		BarracksTypes: module
 		VehiclesFactoryTypes: factory2, factory3
 		ProductionTypes: module, factory2, factory3, starport, starport2, harbor
