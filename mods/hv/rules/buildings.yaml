@@ -209,6 +209,8 @@ RADAR2:
 		Prerequisites: generator, ~structures.sc
 	ProvidesPrerequisite@Radar:
 		Prerequisite: radar
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
