@@ -784,6 +784,7 @@ BUILDER:
 		Range: 6c0
 	RenderSprites:
 		Image: builder1
+		PlayerPalette: green
 	-WithFacingSpriteBody:
 	WithRandomFacingSpriteBody:
 		Images: builder1, builder2, builder3, builder4, builder5
