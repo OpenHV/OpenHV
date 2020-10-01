@@ -6,6 +6,12 @@ CAVE:
 		Footprint: ==== ==== xxxx xxxx xxxx
 		Dimensions: 4,5
 
+BIG_ROCK:
+	Inherits: ^Rock
+	Building:
+		Footprint: ==== xxxx xxxx
+		Dimensions: 4,3
+
 GRSSMISC6:
 	Inherits: ^Rock
 	Building:
