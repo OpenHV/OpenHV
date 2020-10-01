@@ -30,6 +30,8 @@ TANK1:
 	Passenger:
 		CustomPipType: red
 		Voice: Move
+	RenderSprites:
+		PlayerPalette: green
 
 TANK2:
 	Inherits: ^TrackedVehicle
