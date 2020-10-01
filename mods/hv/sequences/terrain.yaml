@@ -3,6 +3,9 @@
 cave:
 	idle: bits/terrain/cave.png
 
+big_rock:
+	idle: bits/terrain/big_rock.png
+
 grssmisc6:
 	idle: bits/terrain/grssmisc6.png
 
