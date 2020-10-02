@@ -27,6 +27,7 @@ Player:
 			radar: 1
 			radar2: 1
 			techcenter: 1
+			techcenter2: 1
 			storage: 5
 		BuildingFractions:
 			module: 1
@@ -41,6 +42,7 @@ Player:
 			starport: 1
 			starport2: 1
 			techcenter: 1
+			techcenter2: 1
 			turret: 7
 			aaturret: 3
 			artilleryturret: 5

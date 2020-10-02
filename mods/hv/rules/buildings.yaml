@@ -714,7 +714,7 @@ TECHCENTER:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: radar
+		Prerequisites: radar, ~structures.yi
 		Description: Grants access to advanced weaponry.
 	Valued:
 		Cost: 2000
@@ -752,6 +752,15 @@ TECHCENTER:
 	WithIdleOverlay@animation:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled
+
+TECHCENTER2:
+	Inherits: TECHCENTER
+	Buildable:
+		Prerequisites: radar, ~structures.sc
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: techcenter
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 TURRET:
 	Inherits: ^BaseBuilding

@@ -866,6 +866,9 @@ techcenter:
 		Start: 18
 		Offset: 0, 0
 
+techcenter2:
+	Inherits: techcenter
+
 techbuilding:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
