@@ -62,6 +62,7 @@ TANK2:
 	RevealsShroud:
 		Range: 7c0
 	RenderSprites:
+		PlayerPalette: green
 
 TANK3:
 	Inherits: ^TrackedVehicle
