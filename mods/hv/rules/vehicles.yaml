@@ -537,6 +537,8 @@ TANK16:
 		InitialStance: AttackAnything
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle
+	RenderSprites:
+		PlayerPalette: green
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
