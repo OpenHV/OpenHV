@@ -484,7 +484,7 @@ FACTORY2:
 	Selectable:
 		Bounds: 40,60
 	Buildable:
-		Prerequisites: module
+		Prerequisites: module, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds vehicles.
@@ -577,6 +577,15 @@ FACTORY2:
 	WithIdleOverlay@offline:
 		Sequence: idle-offline
 		RequiresCondition: !build-incomplete && disabled
+
+FACTORY22:
+	Inherits: FACTORY2
+	Buildable:
+		Prerequisites: module, ~structures.sc
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: factory2
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 FACTORY3:
 	Inherits: ^BaseBuilding

@@ -427,6 +427,9 @@ factory2:
 		Start: 1
 		Offset: 0, 0
 
+factory22:
+	Inherits: factory2
+
 factory3:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
