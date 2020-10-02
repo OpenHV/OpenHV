@@ -93,6 +93,9 @@ base:
 		Start: 0
 		Offset: 0, 0
 
+base2:
+	Inherits: base
+
 generator:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:

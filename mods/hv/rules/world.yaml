@@ -308,16 +308,27 @@ World:
 		CheckboxDisplayOrder: 8
 	TimeLimitManager:
 	CreateMPPlayers:
-	MPStartUnits@BASE:
+	MPStartUnits@BASE.YI:
 		Class: none
 		ClassName: Base only
-		Factions: yi, sc
+		Factions: yi
 		BaseActor: base
-	MPStartUnits@MINER:
+	MPStartUnits@BASE.SC:
+		Class: none
+		ClassName: Base only
+		Factions: sc
+		BaseActor: base2
+	MPStartUnits@MINER.YI:
 		Class: miner
 		ClassName: Base + Miner
-		Factions: yi, sc
+		Factions: yi
 		BaseActor: base
+		SupportActors: miner
+	MPStartUnits@MINER.SC:
+		Class: miner
+		ClassName: Base + Miner
+		Factions: sc
+		BaseActor: base2
 		SupportActors: miner
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6

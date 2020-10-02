@@ -98,6 +98,16 @@ BASE:
 		GreenTint: 0
 		BlueTint: 0.4
 
+BASE2:
+	Inherits: BASE
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: base
+	RenderSprites:
+		PlayerPalette: green-bgra
+	TerrainLightSource:
+		RedTint: 0.4
+		BlueTint: 0
+
 GENERATOR:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
