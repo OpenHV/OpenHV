@@ -94,6 +94,8 @@ SHIP2:
 		TrailLength: 5
 	Selectable:
 		Bounds: 20,20
+	RenderSprites:
+		PlayerPalette: green
 
 COPTER:
 	Inherits: ^Helicopter
