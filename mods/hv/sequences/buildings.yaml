@@ -346,7 +346,7 @@ starport2:
 	flame2:
 		Offset: -3, 17
 	icon: bits/buildings-icons.png
-		Start: 9
+		Start: 17
 		Offset: 0, 0
 
 factory2:
