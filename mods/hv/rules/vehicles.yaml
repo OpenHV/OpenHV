@@ -462,6 +462,8 @@ TANK13:
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
+	RenderSprites:
+		PlayerPalette: green
 
 TANK14:
 	Inherits: TANK13
