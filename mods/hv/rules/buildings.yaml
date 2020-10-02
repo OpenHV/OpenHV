@@ -595,7 +595,7 @@ FACTORY3:
 	Selectable:
 		Bounds: 40,80
 	Buildable:
-		Prerequisites: factory2
+		Prerequisites: factory2, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds tanks.
@@ -694,6 +694,15 @@ FACTORY3:
 	WithIdleOverlay@offline:
 		Sequence: idle-offline
 		RequiresCondition: !build-incomplete && disabled
+
+FACTORY32:
+	Inherits: FACTORY3
+	Buildable:
+		Prerequisites: factory2, ~structures.sc
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: factory3
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 TECHCENTER:
 	Inherits: ^BaseBuilding

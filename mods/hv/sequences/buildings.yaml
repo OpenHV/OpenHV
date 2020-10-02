@@ -524,6 +524,9 @@ factory3:
 		Start: 2
 		Offset: 0, 0
 
+factory32:
+	Inherits: factory3
+
 turret:
 	Inherits@flame: ^BuildingFlame
 	Defaults:

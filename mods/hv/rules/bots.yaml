@@ -16,8 +16,8 @@ Player:
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator, generator2
 		BarracksTypes: module
-		VehiclesFactoryTypes: factory2, factory22, factory3
-		ProductionTypes: module, factory2, factory22, factory3, starport, starport2, harbor
+		VehiclesFactoryTypes: factory2, factory22, factory3, factory32
+		ProductionTypes: module, factory2, factory22, factory3, factory32, starport, starport2, harbor
 		NavalProductionTypes: harbor
 		RefineryTypes: base, base2, storage
 		SiloTypes: storage
@@ -35,6 +35,7 @@ Player:
 			factory2: 1
 			factory22: 1
 			factory3: 1
+			factory32: 1
 			harbor: 1
 			tradplat: 1
 			starport: 1
