@@ -45,6 +45,8 @@ SHIP1:
 		Color: A0000060
 		TrailWidth: 0c192
 		TrailLength: 5
+	RenderSprites:
+		PlayerPalette: green
 
 SHIP2:
 	Inherits: ^Plane
