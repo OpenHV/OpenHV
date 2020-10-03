@@ -1,7 +1,6 @@
 #!/bin/sh
 
 set -e
-command -v python >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires python."; exit 1; }
 command -v mono >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires mono."; exit 1; }
 
 require_variables() {
@@ -16,7 +15,15 @@ require_variables() {
 	fi
 }
 
-TEMPLATE_LAUNCHER=$(python -c "import os; print(os.path.realpath('$0'))")
+if command -v python3 >/dev/null 2>&1; then
+	TEMPLATE_LAUNCHER=$(python3 -c "import os; print(os.path.realpath('$0'))")
+elif command -v python >/dev/null 2>&1; then
+	TEMPLATE_LAUNCHER=$(python -c "import os; print(os.path.realpath('$0'))")
+else
+	echo >&2 "The OpenRA mod template requires python."
+	exit 1
+fi
+
 TEMPLATE_ROOT=$(dirname "${TEMPLATE_LAUNCHER}")
 MOD_SEARCH_PATHS="${TEMPLATE_ROOT}/mods,./mods"
 
