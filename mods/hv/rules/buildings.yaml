@@ -231,7 +231,7 @@ TRADPLAT:
 		Queue: Building
 		BuildPaletteOrder: 100
 		Description: Repairs and sells vehicles for credits.
-		Prerequisites: factory
+		Prerequisites: factory, ~structures.yi
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -275,6 +275,15 @@ TRADPLAT:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+
+TRADPLAT2:
+	Inherits: TRADPLAT
+	Buildable:
+		Prerequisites: factory, ~structures.sc
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: tradplat
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 MODULE:
 	Inherits: ^BaseBuilding

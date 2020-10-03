@@ -215,6 +215,9 @@ tradplat:
 		Start: 11
 		Offset: 0, 0
 
+tradplat2:
+	Inherits: tradplat
+
 module:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:

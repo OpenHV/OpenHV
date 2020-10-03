@@ -39,6 +39,7 @@ Player:
 			factory32: 1
 			harbor: 1
 			tradplat: 1
+			tradplat2: 1
 			starport: 1
 			starport2: 1
 			techcenter: 1
