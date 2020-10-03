@@ -1,6 +1,7 @@
 # License: CC-BY-SA-4.0
 
 railgun:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 9c0
 	ReloadDelay: 100
 	Report: ray_gun-Mike_Koenig.wav
@@ -13,7 +14,7 @@ railgun:
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		ValidTargets: Ground, Water, Tree
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
 		Damage: 7500
 		Versus:
@@ -30,8 +31,21 @@ railgun:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 RedLaser:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 40
 	Range: 5c512
 	Report: ray_gun-Mike_Koenig.wav
@@ -104,6 +118,7 @@ Repair:
 		Spread: 1
 
 Plasma:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Burst: 3
 	BurstDelays: 5
@@ -122,7 +137,7 @@ Plasma:
 		DamageTypes: Fire
 		Spread: 128
 		Damage: 5000
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			None: 10
 			Steel: 74
@@ -139,6 +154,18 @@ Plasma:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 VoltageArc:
 	ReloadDelay: 120
@@ -153,17 +180,17 @@ VoltageArc:
 		Distortion: 200
 		DistortionAnimation: 120
 		SegmentLength: 0c512
-	ValidTargets: Ground, Water, Vehicle
+	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 42
 		Damage: 10000
-		ValidTargets: Ground, Water, Vehicle
+		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 		DamageTypes: Electricity
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 4
 		AffectsParent: true
-		ValidTargets: Ground, Water, Vehicle
+		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 
 LightningBolt:
 	ReloadDelay: 50
@@ -194,12 +221,12 @@ LightningBolt:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 4
 		AffectsParent: true
-		ValidTargets: Ground, Air, Ship, Tree
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
 ^PixelSpark:
 	Range: 1c0

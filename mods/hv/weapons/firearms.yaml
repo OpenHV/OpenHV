@@ -1,6 +1,7 @@
 # License: CC-BY-SA-4.0
 
 LightMachineGun:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: machinegunburst01.wav, machinegunburst02.wav
 	Projectile: InstantHit
 		Inaccuracy: 0c256
@@ -23,11 +24,24 @@ LightMachineGun:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash_small
+		Explosions: lava_splash_small_a, lava_splash_small_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash_small
+		Explosions: swamp_splash_small_a, swamp_splash_small_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 	ReloadDelay: 30
 	Range: 4c0
 	Burst: 2
 
 ChainGun:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 5c0
 	Report: ccbysmgfire01.wav
@@ -52,6 +66,18 @@ ChainGun:
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash_small
+		Explosions: lava_splash_small_a, lava_splash_small_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash_small
+		Explosions: swamp_splash_small_a, swamp_splash_small_b
+		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
