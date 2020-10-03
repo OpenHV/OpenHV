@@ -15,9 +15,9 @@ Player:
 		ExcessPowerIncreaseThreshold: 4
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator, generator2
-		BarracksTypes: module
+		BarracksTypes: module, module2
 		VehiclesFactoryTypes: factory2, factory22, factory3, factory32
-		ProductionTypes: module, factory2, factory22, factory3, factory32, starport, starport2, harbor
+		ProductionTypes: module, module2, factory2, factory22, factory3, factory32, starport, starport2, harbor
 		NavalProductionTypes: harbor
 		RefineryTypes: base, base2, storage
 		SiloTypes: storage
@@ -31,6 +31,7 @@ Player:
 			storage: 5
 		BuildingFractions:
 			module: 1
+			module2: 1
 			radar: 1
 			radar2: 1
 			factory2: 1

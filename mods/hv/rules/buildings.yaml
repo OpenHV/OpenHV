@@ -294,7 +294,7 @@ MODULE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
-		Prerequisites: generator
+		Prerequisites: generator, ~structures.yi
 		Description: Produces very light vehicles.
 	Valued:
 		Cost: 500
@@ -360,6 +360,15 @@ MODULE:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+
+MODULE2:
+	Inherits: MODULE
+	Buildable:
+		Prerequisites: generator, ~structures.sc
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: module
+	RenderSprites:
+		PlayerPalette: green-bgra
 
 MINER2:
 	Inherits: ^BaseBuilding

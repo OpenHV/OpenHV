@@ -256,6 +256,9 @@ module:
 		Start: 6
 		Offset: 0, 0
 
+module2:
+	Inherits: module
+
 miner2:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
