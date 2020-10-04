@@ -61,7 +61,7 @@ beacon:
 		ZOffset: 2047
 
 icon:
-	shield: bits/icon.png
+	shield: bits/shield-icon.png
 	nuke: bits/nuke-icon.png
 
 outline:
