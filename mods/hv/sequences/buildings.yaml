@@ -251,27 +251,41 @@ miner2:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -20
-	make: bits/miner2.png
+	make:
 		Length: 17
 		Tick: 100
-	make-shadow-overlay: bits/miner2-shadow.png
-		Length: 17
-		Tick: 100
-		Offset: 15, 16
-	active: bits/miner2.png
-		Start: 17
+		ShadowStart: 17
+		Combine:
+			bits/miner2.png:
+				Length: 17
+				Tick: 100
+			bits/miner2-shadow.png:
+				Offset: 15, 32
+				Length: 17
+				Tick: 100
+	active:
 		Length: 3
 		Tick: 300
-	shadow-overlay: bits/miner2-shadow.png
-		Start: 17
-		Length: 3
-		Tick: 300
-		Offset: 15, 16
-	damaged-active: bits/miner2.png
-		Start: 20
-	damaged-shadow-overlay: bits/miner2-shadow.png
-		Start: 20
-		Offset: 15, 16
+		ShadowStart: 3
+		Combine:
+			bits/miner2.png:
+				Start: 17
+				Length: 3
+				Tick: 300
+			bits/miner2-shadow.png:
+				Start: 17
+				Length: 3
+				Tick: 300
+				Offset: 15, 32
+	damaged-active:
+		ShadowStart: 1
+		Length: 1
+		Combine:
+			bits/miner2.png:
+				Start: 20
+			bits/miner2-shadow.png:
+				Start: 20
+				Offset: 15, 16
 	silo: bits/miner2.png
 		Start: 21
 		Length: 6

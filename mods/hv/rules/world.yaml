@@ -149,10 +149,12 @@
 		Name: player
 		Filename: bits/palette.pal
 		TransparentIndex: 255
+		Premultiply: false
 	PaletteFromGimpOrJascFile@effect:
 		Name: effect
 		Filename: bits/palette.pal
 		TransparentIndex: 255
+		Premultiply: false
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 0

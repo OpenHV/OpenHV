@@ -360,14 +360,6 @@ MINER2:
 	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 4c0
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithConstructionOverlay:
-		Sequence: make-shadow-overlay
-		Palette: shadow
 	RenderSprites:
 		PlayerPalette: green
 	GrantConditionOnDamageState@CRITICAL:
