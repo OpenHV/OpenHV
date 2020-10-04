@@ -126,6 +126,54 @@ water_splash_small:
 		Tick: 60
 		ZOffset: 1000
 
+lava_splash:
+	lava_splash_a: bits/lava_splash.png
+		Start: 0
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+	lava_splash_b: bits/lava_splash.png
+		Start: 9
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+
+lava_splash_small:
+	lava_splash_small_a: bits/lava_splash_small.png
+		Start: 0
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+	lava_splash_small_b: bits/lava_splash_small.png
+		Start: 6
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+
+swamp_splash:
+	swamp_splash_a: bits/swamp_splash.png
+		Start: 0
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+	swamp_splash_b: bits/swamp_splash.png
+		Start: 9
+		Length: 9
+		Tick: 60
+		ZOffset: 1000
+
+swamp_splash_small:
+	swamp_splash_small_a: bits/swamp_splash_small.png
+		Start: 0
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+	swamp_splash_small_b: bits/swamp_splash_small.png
+		Start: 6
+		Length: 6
+		Tick: 60
+		ZOffset: 1000
+
 mine1:
 	idle: bits/mines.png
 		ZOffset: -512

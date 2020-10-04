@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 ^Cannon:
-	ValidTargets: Water, Ground, Tree
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 4c768
@@ -13,7 +13,7 @@
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		ValidTargets: Ground, Water, Tree
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
 		Damage: 4000
 		Versus:
@@ -29,6 +29,18 @@
 		Image: water_splash
 		Explosions: water_splash_a, water_splash_b
 		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
@@ -65,12 +77,6 @@ TyrianTankCannon:
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion04.wav, explosion05.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 SmallArtillery:
 	Inherits: ^Artillery
@@ -97,7 +103,7 @@ DoubleBarrelledArtillery:
 		Inaccuracy: 2c0
 
 TurretCannon:
-	ValidTargets: Water, Ground, Tree
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: tankfire01.wav
 	ReloadDelay: 50
 	Range: 8c0
@@ -123,9 +129,21 @@ TurretCannon:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 Nuclear:
-	ValidTargets: Ground, Air, Tree
+	ValidTargets: Ground, Air, Tree, Lava, Swamp
 	Warhead@Shake: ShakeScreen
 		Duration: 20
 		Intensity: 5
@@ -135,7 +153,7 @@ Nuclear:
 		Spread: 1c0
 		Damage: 15000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Steel: 25
 			Concrete: 25
@@ -145,7 +163,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 5
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Steel: 25
 			Concrete: 25
@@ -159,7 +177,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 10
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Steel: 50
 			Concrete: 25
@@ -169,7 +187,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Concrete: 25
 	Warhead@DamageArea4: SpreadDamage
@@ -178,13 +196,13 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Concrete: 25
 	Warhead@Effect: CreateEffect
 		Image: nuclear_explosion
 		Explosions: idle
-		ValidTargets: Ground, Water, Air, Tree
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		ImpactSounds: nuke-explosion.wav
 	Warhead@FlashEffect: FlashPaletteEffect
 		Duration: 20
@@ -192,7 +210,7 @@ Nuclear:
 
 TurretArtillery:
 	Inherits: ^Artillery
-	ValidTargets: Water, Ground, Tree
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: heavycannonfire01.wav
 	ReloadDelay: 200
 	MinRange: 5c0
@@ -210,6 +228,7 @@ TurretArtillery:
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 30mm:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 30
 	Range: 4c0
 	Report: 30mmsingle.wav
@@ -235,6 +254,18 @@ TurretArtillery:
 		Image: water_splash
 		Explosions: water_splash_a, water_splash_b
 		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
