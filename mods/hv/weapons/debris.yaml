@@ -42,10 +42,10 @@ LargeDebris:
 ForestFire:
 	ValidTargets: Ground, Tree
 	Warhead@Damage: SpreadDamage
-		Falloff: 100, 36, 13, 5, 2
+		Falloff: 100, 36, 12
 		Delay: 10
-		Spread: 1c426
-		Damage: 100
+		Spread: 0c768
+		Damage: 500
 		ValidTargets: Ground, Tree
 		Versus:
 			None: 90
