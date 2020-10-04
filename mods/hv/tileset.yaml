@@ -76,7 +76,7 @@ Terrain:
 		Color: 454545
 	TerrainType@Swamp:
 		Type: Swamp
-		TargetTypes: Water
+		TargetTypes: Swamp
 		Color: 2B7D38
 
 Templates:
