@@ -470,6 +470,8 @@ TANK13:
 
 TANK14:
 	Inherits: TANK13
+	RenderSprites:
+		PlayerPalette: remap
 
 TANK15:
 	Inherits: ^TrackedVehicle
