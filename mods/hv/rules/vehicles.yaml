@@ -278,6 +278,8 @@ TANK7:
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
+	RenderSprites:
+		PlayerPalette: green
 
 TANK8:
 	Inherits: ^TrackedVehicle
