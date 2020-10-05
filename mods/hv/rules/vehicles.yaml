@@ -378,6 +378,8 @@ TANK10:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+	RenderSprites:
+		PlayerPalette: green
 
 TANK11:
 	Inherits: ^TrackedVehicle
