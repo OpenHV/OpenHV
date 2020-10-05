@@ -406,6 +406,8 @@ TANK11:
 		Speed: 85
 	RevealsShroud:
 		Range: 6c0
+	RenderSprites:
+		PlayerPalette: green
 
 TANK12:
 	Inherits: ^TrackedVehicle
