@@ -230,3 +230,24 @@ artillery-trail:
 	idle: bits/artillery-trail.png
 		Length: *
 		Tick: 80
+
+shells:
+	shell_flying: bits/shells.png
+		Length: 4
+		Tick: 75
+	shell_a: bits/shells.png
+		Start: 0
+		Tick: 3000
+		ZOffset: -100
+	shell_b: bits/shells.png
+		Start: 1
+		Tick: 3000
+		ZOffset: -100
+	shell_c: bits/shells.png
+		Start: 2
+		Tick: 3000
+		ZOffset: -100
+	shell_d: bits/shells.png
+		Start: 3
+		Tick: 3000
+		ZOffset: -100
