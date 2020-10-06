@@ -96,3 +96,37 @@ ChainGun.Shuttle:
 			Light: 60
 			Heavy: 25
 			Concrete: 25
+
+ShellCasing:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 10
+	Range: 1c0
+	Projectile: Bullet
+		Speed: 80,100
+		Blockable: false
+		LaunchAngle: 80, 120
+		Inaccuracy: 100
+		Image: shells
+		Sequences: shell_flying
+	Warhead@Effect: CreateEffect
+		Image: shells
+		Explosions: shell_a, shell_b, shell_c, shell_d
+		ValidTargets: Ground
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash_small
+		Explosions: lava_splash_small_a, lava_splash_small_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash_small
+		Explosions: swamp_splash_small_a, swamp_splash_small_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav	
