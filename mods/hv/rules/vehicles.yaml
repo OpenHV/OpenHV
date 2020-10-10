@@ -681,6 +681,7 @@ ARTIL3:
 SCOUT1:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@MAGAZINECASING: ^DropMagazineCasing
 	Buildable:
 		Queue: Scouts
 		BuildPaletteOrder: 130

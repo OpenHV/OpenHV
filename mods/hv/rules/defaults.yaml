@@ -818,3 +818,21 @@
 	GrantConditionOnPrerequisite@reconstructor5:
 		Condition: reconstructor
 		Prerequisites: reconstructor5
+
+^DropShellCasing:
+	SpawnsShrapnel@shell:
+		Weapon: ShellCasing
+		RequiresCondition: shell
+	GrantConditionOnAttack@shell:
+		Condition: shell
+		ArmamentNames: primary
+		RevokeDelay: 1
+
+^DropMagazineCasing:
+	SpawnsShrapnel@magazine:
+		Weapon: ShellCasing
+		RequiresCondition: magazine
+	GrantConditionOnBurstComplete@magazine:
+		Condition: magazine
+		ArmamentNames: primary
+		RevokeDelay: 1
