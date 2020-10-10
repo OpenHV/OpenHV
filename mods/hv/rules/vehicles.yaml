@@ -705,11 +705,6 @@ SCOUT1:
 	Armament:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
-	SpawnsShrapnel:
-		Weapon: shells
-		Delay: 15
-		Amount: 1
-		PauseOnCondition: !cast_shell
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
@@ -726,9 +721,6 @@ SCOUT1:
 		FallbackSequence: die
 		DeathPaletteIsPlayerPalette: false
 		Delay: 5
-	GrantConditionOnAttack:
-		Condition: cast_shell
-		ArmamentNames: primary
 
 SCOUT2:
 	Inherits: ^Vehicle

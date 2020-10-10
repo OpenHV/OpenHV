@@ -97,7 +97,7 @@ ChainGun.Shuttle:
 			Heavy: 25
 			Concrete: 25
 
-shells:
+ShellCasing:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 1c0

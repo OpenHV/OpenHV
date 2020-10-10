@@ -128,11 +128,6 @@ COPTER:
 	Armament@PRIMARY:
 		Weapon: ChainGun
 		LocalOffset: 0,0,0
-	SpawnsShrapnel:
-		Weapon: shells
-		Delay: 10
-		Amount: 1
-		PauseOnCondition: !cast_shell
 	Selectable:
 		Bounds: 24,24
 	RenderSprites:
