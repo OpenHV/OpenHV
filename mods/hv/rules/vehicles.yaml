@@ -1,4 +1,4 @@
-# License: CC-BY-SA-4.0
+d# License: CC-BY-SA-4.0
 
 TANK1:
 	Inherits: ^Vehicle
@@ -681,7 +681,6 @@ ARTIL3:
 SCOUT1:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@MAGAZINECASING: ^DropMagazineCasing
 	Buildable:
 		Queue: Scouts
 		BuildPaletteOrder: 130

@@ -100,7 +100,7 @@ SHIP2:
 COPTER:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Inherits@MAGAZINECASING: ^DropMagazineCasing
+	Inherits@MAGAZINECASING: ^DropShellCasing
 	Valued:
 		Cost: 1500
 	Tooltip:
