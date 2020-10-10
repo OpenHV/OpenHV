@@ -136,9 +136,6 @@ COPTER:
 		Sequence: propeller
 	WithTurretAttackAnimation:
 		Sequence: shoot
-	GrantConditionOnAttack:
-		Condition: cast_shell
-		ArmamentNames: primary
 
 BANSHEE:
 	Inherits: ^Helicopter
