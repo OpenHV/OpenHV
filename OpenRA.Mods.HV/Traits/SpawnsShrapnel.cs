@@ -25,7 +25,6 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Has to be defined in weapons.yaml as well.")]
 		public readonly string Weapon = null;
 
-		[FieldLoader.Require]
 		[Desc("Amount of shrapnels thrown. Two values indicate a range.")]
 		public readonly int[] Amount = { 1 };
 
