@@ -78,6 +78,10 @@ Terrain:
 		Type: Swamp
 		TargetTypes: Swamp
 		Color: 2B7D38
+	TerrainType@Bridge:
+		Type: Bridge
+		TargetTypes: Road
+		Color: 767676
 
 Templates:
 	Template@0:
@@ -9618,3 +9622,75 @@ Templates:
 		Categories: Snow, Plant
 		Tiles:
 			0: Plant
+	Template@1306:
+		Id: 1306
+		Images: bits/terrain/bridge.png
+		Frames: 0
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1307:
+		Id: 1307
+		Images: bits/terrain/bridge.png
+		Frames: 1
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1308:
+		Id: 1308
+		Images: bits/terrain/bridge.png
+		Frames: 2
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1309:
+		Id: 1309
+		Images: bits/terrain/bridge.png
+		Frames: 3
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1310:
+		Id: 1310
+		Images: bits/terrain/bridge.png
+		Frames: 4
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1311:
+		Id: 1311
+		Images: bits/terrain/bridge.png
+		Frames: 5
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1312:
+		Id: 1312
+		Images: bits/terrain/bridge.png
+		Frames: 6
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1313:
+		Id: 1313
+		Images: bits/terrain/bridge.png
+		Frames: 7
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
+	Template@1314:
+		Id: 1314
+		Images: bits/terrain/bridge.png
+		Frames: 8
+		Size: 1,1
+		Categories: Bridge
+		Tiles:
+			0: Road
