@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Defaults to the actor name.")]
 		public readonly string Image = null;
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string Sequence = null;
 
 		[PaletteReference(nameof(IsPlayerPalette))]

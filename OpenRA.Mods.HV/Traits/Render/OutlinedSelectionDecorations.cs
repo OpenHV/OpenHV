@@ -27,31 +27,31 @@ namespace OpenRA.Mods.Common.Traits.Render
 
 		public readonly string CriticallyDamagedImage = "outline-red";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string TopLeftSequence = "top-left";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string TopRightSequence = "top-right";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string BottomLeftSequence = "bottom-left";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string BottomRightSequence = "bottom-right";
 
 		[Desc("Render left, bottom, right and top as well.")]
 		public readonly bool Spacers = false;
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string LeftSequence = "left";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string BottomSequence = "bottom";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string RightSequence = "right";
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string TopSequence = "top";
 
 		[Desc("Palette to render the sprite in. Reference the world actor's PaletteFrom* traits.")]

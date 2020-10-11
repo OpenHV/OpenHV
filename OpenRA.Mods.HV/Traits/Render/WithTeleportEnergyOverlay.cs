@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Defaults to the actor name.")]
 		public readonly string Image = null;
 
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		[Desc("Sequence to use for charge animation.")]
 		public readonly string Sequence = null;
 

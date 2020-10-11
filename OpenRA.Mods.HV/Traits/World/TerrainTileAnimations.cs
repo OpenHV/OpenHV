@@ -33,7 +33,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Which sequence to use.")]
-		[SequenceReference("Image")]
+		[SequenceReference(nameof(Image))]
 		public readonly string Sequence;
 
 		[FieldLoader.Require]

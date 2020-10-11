@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (trees[cell] != null)
 				return;
 
-			// Correlate the tile "image" aka subtile with its position to find the template origin
+			// Correlate the tile nameof(Image) aka subtile with its position to find the template origin
 			var tile = w.Map.Tiles[cell].Type;
 			var index = w.Map.Tiles[cell].Index;
 			var template = w.Map.Rules.TileSet.Templates[tile];
