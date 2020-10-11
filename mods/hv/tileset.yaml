@@ -78,10 +78,6 @@ Terrain:
 		Type: Swamp
 		TargetTypes: Swamp
 		Color: 2B7D38
-	TerrainType@Bridge:
-		Type: Bridge
-		TargetTypes: Road
-		Color: 767676
 
 Templates:
 	Template@0:
