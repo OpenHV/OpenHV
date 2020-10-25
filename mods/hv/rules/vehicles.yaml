@@ -248,7 +248,7 @@ TANK7:
 		Queue: Vehicle
 		BuildPaletteOrder: 270
 		Prerequisites: factory3, techcenter
-		Description: Cloaked surveillance tank.\nCan detect cloaked vehicles.\n  Unarmed
+		Description: Cloaked missile tank.\nCan ambush enemies.
 		BuildAtProductionType: Tracked
 	Valued:
 		Cost: 600
