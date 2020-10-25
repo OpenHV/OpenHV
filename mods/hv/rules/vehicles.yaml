@@ -856,7 +856,7 @@ MINER:
 		Prerequisites: base
 		BuildAtProductionType: BaseUnit
 	Valued:
-		Cost: 1100
+		Cost: 400
 	Tooltip:
 		Name: Miner
 	UpdatesPlayerStatistics:
