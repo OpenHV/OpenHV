@@ -339,7 +339,7 @@
 		RequiredForShortGame: true
 	RepairableBuilding:
 		RepairPercent: 40
-		RepairStep: 1400
+		RepairStep: 1000
 		PlayerExperience: 15
 	WithBuildingRepairDecoration:
 		Image: repair
