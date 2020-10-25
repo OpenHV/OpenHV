@@ -160,7 +160,7 @@ namespace OpenRA.Mods.HV.Traits
 			var towerInfo = AIUtils.GetInfoByCommonName(Info.DeployedActorTypes, player);
 			var buildingInfo = towerInfo.TraitInfo<BuildingInfo>();
 			Func<CPos, bool> isValidResource = cell =>
-				domainIndex.IsPassable(actor.Location, cell, miner.Locomotor.Info)
+				domainIndex.IsPassable(actor.Location, cell, miner.Locomotor)
 					&& Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
 					&& miner.Locomotor.CanStayInCell(cell)
 					&& world.CanPlaceBuilding(cell + miner.Transforms.Info.Offset, towerInfo, buildingInfo, actor);

@@ -230,7 +230,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var locomotor = capturer.Trait<Mobile>().Locomotor;
 
-			if (!domainIndex.IsPassable(capturer.Location, target.Location, locomotor.Info))
+			if (!domainIndex.IsPassable(capturer.Location, target.Location, locomotor))
 				return Target.Invalid;
 
 			var path = pathfinder.FindPath(
