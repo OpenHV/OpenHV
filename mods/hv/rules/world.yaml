@@ -256,7 +256,7 @@
 		TransparentIndex: 255
 	PaletteFromPlayerPaletteWithAlpha@cloak:
 		BaseName: cloak
-		BasePalette: remap
+		BasePalette: green
 		Alpha: 0.55
 	PaletteFromPlayerPaletteWithAlpha@PlaceBuilding:
 		BaseName: place-building
