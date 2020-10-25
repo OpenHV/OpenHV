@@ -65,6 +65,7 @@ BASE:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	Exit@0:
 		RequiresCondition: !being-captured
 		ExitCell: 0,3
@@ -232,6 +233,7 @@ TRADPLAT:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	RepairsUnits:
 		HpPerStep: 1000
 		Interval: 7
@@ -285,6 +287,7 @@ MODULE:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	ExitsDebugOverlay:
 	Exit@1:
 		SpawnOffset: -150,800,0
@@ -405,6 +408,7 @@ STARPORT:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	Production:
 		Produces: Aircraft
 	Reservable:
@@ -520,6 +524,7 @@ FACTORY2:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	Exit@0:
 		ExitCell: 0,2
 		SpawnOffset: -512,1024,0
@@ -633,6 +638,7 @@ FACTORY3:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	Exit@0:
 		ExitCell: 0,2
 		SpawnOffset: 0,1536,0
@@ -1145,6 +1151,7 @@ TELEVATR:
 		Path: 1,1
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	Exit:
 	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
@@ -1209,6 +1216,7 @@ HARBOR:
 		Path: 1,3
 		IsPlayerPalette: true
 		Palette: green
+		LineWidth: 2
 	Exit@0:
 		ExitCell: 1,2
 		ProductionTypes: Ship
