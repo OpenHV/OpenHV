@@ -29,6 +29,8 @@ BASE:
 	BaseProvider:
 		Cooldown: 75
 		Range: 14c0
+		CircleWidth: 2
+		CircleBorderWidth: 4
 	WithBuildingPlacedAnimation:
 	Power:
 		Amount: 0
