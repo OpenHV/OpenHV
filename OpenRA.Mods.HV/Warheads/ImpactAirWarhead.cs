@@ -18,21 +18,13 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Warheads
 {
-	[Desc("VH warhead extension class." +
-		"Only required until https://github.com/OpenRA/OpenRA/pull/18072 and it's followup shifts these functions to Warhead.")]
-	public abstract class WarheadHV : Warhead
+	[Desc("Warhead extension class that adds functions from `CreateEffectWarhead`.")]
+	public abstract class ImpactAirWarhead : Warhead
 	{
 		[Desc("Whether to consider actors in determining whether the explosion should happen. If false, only terrain will be considered.")]
 		public readonly bool ImpactActors = true;
 
 		static readonly BitSet<TargetableType> TargetTypeAir = new BitSet<TargetableType>("Air");
-
-		protected enum ImpactActorType
-		{
-			None,
-			Invalid,
-			Valid,
-		}
 
 		/// <summary>Checks if there are any actors at impact position and if the warhead is valid against any of them.</summary>
 		protected ImpactActorType ActorTypeAtImpact(World world, WPos pos, Actor firedBy)

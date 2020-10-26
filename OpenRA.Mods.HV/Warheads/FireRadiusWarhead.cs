@@ -12,12 +12,13 @@
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Warheads;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Warheads
 {
 	[Desc("Fires a defined amount of weapons with their maximum range in a wave pattern.")]
-	public class FireRadiusWarhead : WarheadHV, IRulesetLoaded<WeaponInfo>
+	public class FireRadiusWarhead : ImpactAirWarhead, IRulesetLoaded<WeaponInfo>
 	{
 		[WeaponReference]
 		[FieldLoader.Require]

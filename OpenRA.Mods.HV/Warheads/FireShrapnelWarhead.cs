@@ -13,11 +13,12 @@ using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Warheads;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Warheads
 {
-	public class FireShrapnelWarhead : WarheadHV, IRulesetLoaded<WeaponInfo>
+	public class FireShrapnelWarhead : ImpactAirWarhead, IRulesetLoaded<WeaponInfo>
 	{
 		[WeaponReference]
 		[FieldLoader.Require]
