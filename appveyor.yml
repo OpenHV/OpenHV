@@ -1,0 +1,11 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+install:
+
+build_script:
+  - make all
+
+test_script:
+  - make test
+  - make check
