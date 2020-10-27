@@ -118,6 +118,7 @@ function Test-Command
 
 	Write-Host "Testing $modID mod MiniYAML..." -ForegroundColor Cyan
 	Invoke-Expression "$utilityPath $modID --check-yaml"
+	Invoke-Expression "$utilityPath $modID --check-missing-sprites"
 }
 
 function Check-Command
@@ -137,6 +138,9 @@ function Check-Command
 
 	if ((CheckForUtility) -eq 0)
 	{
+		Write-Host "Checking runtime assemblies..." -ForegroundColor Cyan
+		Invoke-Expression "$utilityPath $modID --check-runtime-assemblies"
+
 		Write-Host "Checking for explicit interface violations..." -ForegroundColor Cyan
 		Invoke-Expression "$utilityPath $modID --check-explicit-interfaces"
 
@@ -150,10 +154,17 @@ function Check-Scripts-Command
 	if ((Get-Command "luac.exe" -ErrorAction SilentlyContinue) -ne $null)
 	{
 		Write-Host "Testing Lua scripts..." -ForegroundColor Cyan
+
 		foreach ($script in ls "mods/*/maps/*/*.lua")
 		{
 			luac -p $script
 		}
+
+		foreach ($script in ls "mods/*/scripts/*.lua")
+		{
+			luac -p $script
+		}
+
 		Write-Host "Check completed!" -ForegroundColor Green
 	}
 	else
