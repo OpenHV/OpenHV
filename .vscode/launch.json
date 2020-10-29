@@ -13,7 +13,12 @@
             "request": "launch",
             "program": "${workspaceRoot}/engine/OpenRA.Game.exe",
             "cwd": "${workspaceRoot}",
-            "args": ["Engine.LaunchPath=${workspaceRoot}", "Engine.ModSearchPaths=${workspaceRoot}/mods", "Game.Mod=hv", "Debug.DisplayDeveloperSettings=true"]
+            "args": [
+                "Engine.LaunchPath=${workspaceRoot}",
+                "Engine.ModSearchPaths=${workspaceRoot}/mods",
+                "Game.Mod=hv",
+                "Debug.DisplayDeveloperSettings=true",
+            ]
         },
     ]
 }
