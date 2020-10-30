@@ -13,7 +13,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceRoot}/engine/OpenRA.Game.exe",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/engine/",
             "args": [
                 "Engine.LaunchPath=${workspaceRoot}",
                 "Engine.ModSearchPaths=${workspaceRoot}/mods",
