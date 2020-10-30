@@ -11,6 +11,7 @@
                 "type": "mono"
             },
             "request": "launch",
+            "preLaunchTask": "build",
             "program": "${workspaceRoot}/engine/OpenRA.Game.exe",
             "cwd": "${workspaceRoot}",
             "args": [
