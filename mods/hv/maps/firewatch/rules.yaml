@@ -1,0 +1,164 @@
+# License: CC-BY-SA-4.0
+
+WATERTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Fire Fighting Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: base
+		BuildPaletteOrder: 240
+		Description: Armored Fire Truck
+	Armament:
+		Weapon: WaterCannon
+		LocalOffset: 400,-50,0
+	AttackFrontal:
+		Voice: Attack
+		TargetLineColor: 0000FF
+	AttackMove:
+		TargetLineColor: 0000FF
+	WithAttackAnimation:
+		Sequence: shoot
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	RenderSprites:
+		PlayerPalette: green
+
+TREEFLAME:
+	Inherits@Shape: ^1x1Shape
+	Inherits@Selection: ^Selectable
+	Selectable:
+		Bounds: 1024, 1024
+	Targetable:
+		TargetTypes: Fire, Ground
+
+World:
+	LuaScript:
+		Scripts: hv|scripts/campaign.lua, firewatch.lua
+	MissionData:
+		Briefing: The 1st Colonial Fire Brigade on the forest moon Andor is an need of assistance. The vast natural woodlands face total destruction after heavy fighting of rival mining companies ignited the woods. Contain the fire before it's too late.
+	ForestLayer:
+		FlameOwner: Flames
+		Damage: 25
+		Interval: 5
+
+Player:
+	Shroud:
+		FogCheckboxVisible: False
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		ExploredMapCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+
+GENERATOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+MODULE:
+	Buildable:
+		Prerequisites: ~disabled
+
+STORAGE:
+	Buildable:
+		Prerequisites: ~disabled
+
+MINER:
+	Buildable:
+		Prerequisites: ~disabled
+
+RADAR:
+	Buildable:
+		Prerequisites: ~disabled
+
+RADAR2:
+	Buildable:
+		Prerequisites: ~disabled
+
+TRADPLAT:
+	Buildable:
+		Prerequisites: ~disabled
+
+STARPORT:
+	Buildable:
+		Prerequisites: ~disabled
+
+STARPORT2:
+	Buildable:
+		Prerequisites: ~disabled
+
+FACTORY3:
+	Buildable:
+		Prerequisites: ~disabled
+
+TECHCENTER:
+	Buildable:
+		Prerequisites: ~disabled
+
+TURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+FIELD:
+	Buildable:
+		Prerequisites: ~disabled
+
+SILO:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVATR:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVTR2:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+BUILDER:
+	Buildable:
+		Prerequisites: ~disabled
+
+TRANSPRT:
+	Buildable:
+		Prerequisites: ~disabled
+
+ARTIL:
+	Buildable:
+		Prerequisites: ~disabled
+
+RADARTANK:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK16:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK6:
+	Buildable:
+		Prerequisites: ~disabled

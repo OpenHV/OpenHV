@@ -387,3 +387,14 @@ CACTIASH:
 	Immobile:
 		OccupiesSpace: false
 	-MapEditorData:
+
+TREEFLAME:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Building:
+	FrozenUnderFog:
+	WithIdleOverlay:
+		IsDecoration: true
+		Image: fire
+		Sequence: flame
+		Palette: effect

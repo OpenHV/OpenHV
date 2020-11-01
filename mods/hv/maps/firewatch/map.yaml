@@ -1,0 +1,49 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Fire Watch
+
+Author: Matt
+
+Tileset: PLANET
+
+MapSize: 66,66
+
+Bounds: 1,1,64,64
+
+Visibility: MissionSelector
+
+Categories: Campaign
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Flames:
+		Name: Flames
+		NonCombatant: True
+		Faction: yi
+		Enemies: FireBrigade
+		Color: FF8000
+	PlayerReference@FireBrigade:
+		Name: FireBrigade
+		Playable: True
+		LockFaction: True
+		Faction: sc
+		LockColor: True
+		Color: FF0000
+		Enemies: Flames
+
+Actors:
+	Actor0: base2
+		Owner: FireBrigade
+		Location: 35,34
+
+Rules: hv|rules/campaign.yaml, rules.yaml
+
+Sequences: sequences.yaml
+
+Weapons: weapons.yaml

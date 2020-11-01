@@ -1,0 +1,15 @@
+# License: CC-BY-SA-4.0
+
+waterball:
+	idle: bits/waterball.png
+		Length: *
+		Facings: 1
+		ZOffset: 2030
+
+watertank:
+	idle: bits/tank13.png
+		Facings: 8
+	shoot: bits/tank14.png
+		Facings: 8
+	icon: bits/units-icons.png
+		Start: 29

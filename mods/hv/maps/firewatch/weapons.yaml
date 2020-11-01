@@ -1,0 +1,29 @@
+# License: CC-BY-SA-4.0
+
+WaterCannon:
+	ValidTargets: Fire, Ground, Water
+	ReloadDelay: 0
+	Burst: 15
+	BurstDelays: 1
+	Range: 5c0
+	Projectile: Bullet
+		Speed: 170
+		Image: waterball
+		LaunchAngle: 62
+		Inaccuracy: 853
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Fire, Ground
+		Spread: 341
+		Damage: -1000
+		Versus:
+			Wood: 100
+		DamageTypes: Incendiary
+	Warhead@Incendiary: TreeDamage
+		ValidTargets: Fire, Ground
+		Spread: 341
+		Damage: -1000
+	Warhead@Effect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water, Ground
+		ImpactSounds: Video_Game_Splash-Ploor.wav
