@@ -602,9 +602,9 @@
 		Terrain: Water
 	AppearsOnMapPreview:
 		Terrain: Water
-	SeedsResource:
-		ResourceType: water
-		Interval: 1
+	Floods:
+		Interval: 15
+		MaxRange: 1000
 	MapEditorData:
 		Categories: Water
 	RequiresSpecificOwners:
