@@ -48,6 +48,7 @@ namespace OpenRA.Mods.HV.Traits
 			{ ClearSides.Top | ClearSides.TopLeft | ClearSides.TopRight, 0 },
 			{ ClearSides.Left | ClearSides.Top | ClearSides.Bottom | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 1 },
 			{ ClearSides.Left | ClearSides.Top | ClearSides.TopLeft | ClearSides.BottomLeft, 1 },
+			{ ClearSides.BottomLeft | ClearSides.Left | ClearSides.TopLeft | ClearSides.Top | ClearSides.TopRight, 1 },
 			{ ClearSides.Left | ClearSides.TopLeft | ClearSides.BottomLeft, 2 },
 			{ ClearSides.Left, 2 },
 			{ ClearSides.Left | ClearSides.Bottom | ClearSides.TopLeft | ClearSides.BottomLeft | ClearSides.BottomRight, 3 },
@@ -75,32 +76,32 @@ namespace OpenRA.Mods.HV.Traits
 
 		ClearSides FindClearSides(ResourceType t, CPos p)
 		{
-			var ret = ClearSides.None;
+			var clearSides = ClearSides.None;
 			if (!CellContains(p + new CVec(0, -1), t))
-				ret |= ClearSides.Top;
+				clearSides |= ClearSides.Top;
 
 			if (!CellContains(p + new CVec(-1, 0), t))
-				ret |= ClearSides.Left;
+				clearSides |= ClearSides.Left;
 
 			if (!CellContains(p + new CVec(1, 0), t))
-				ret |= ClearSides.Right;
+				clearSides |= ClearSides.Right;
 
 			if (!CellContains(p + new CVec(0, 1), t))
-				ret |= ClearSides.Bottom;
+				clearSides |= ClearSides.Bottom;
 
 			if (!CellContains(p + new CVec(-1, -1), t))
-				ret |= ClearSides.TopLeft;
+				clearSides |= ClearSides.TopLeft;
 
 			if (!CellContains(p + new CVec(1, -1), t))
-				ret |= ClearSides.TopRight;
+				clearSides |= ClearSides.TopRight;
 
 			if (!CellContains(p + new CVec(-1, 1), t))
-				ret |= ClearSides.BottomLeft;
+				clearSides |= ClearSides.BottomLeft;
 
 			if (!CellContains(p + new CVec(1, 1), t))
-				ret |= ClearSides.BottomRight;
+				clearSides |= ClearSides.BottomRight;
 
-			return ret;
+			return clearSides;
 		}
 
 		protected override void UpdateRenderedSprite(CPos cell, RendererCellContents content)
