@@ -23,6 +23,12 @@
 		Offset: 0, -9
 		Tick: 60
 
+treeflame:
+	idle: bits/flame.png
+		Length: *
+		ZOffset: 512
+		Tick: 60
+
 base:
 	Inherits@Flame: ^BuildingFlame3
 	Defaults:

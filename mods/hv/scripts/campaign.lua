@@ -26,6 +26,14 @@ InitObjectives = function(player)
 	Trigger.OnObjectiveFailed(player, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
 	end)
+
+	Trigger.OnPlayerWon(player, function()
+		Media.PlaySpeechNotification(player, "MissionAccomplished")
+	end)
+
+	Trigger.OnPlayerLost(player, function()
+		Media.PlaySpeechNotification(player, "MissionFailed")
+	end)
 end
 
 CheckForBase = function(player, buildingTypes)

@@ -288,8 +288,7 @@ World:
 				Palette: effect
 				Name: No Construction Zone
 	ForestLayer:
-		Image: fire
-		Sequence: flame
+		FlameActor: treeflame
 		TransformedTerrain: Crater, Stone
 		CrushedTiles:
 			1272: 1394

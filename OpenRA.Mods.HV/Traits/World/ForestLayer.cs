@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Attach this to the world actor.")]
 	[TraitLocation(SystemActors.World)]
-	class ForestLayerInfo : TraitInfo, IOccupySpaceInfo, IRulesetLoaded
+	public class ForestLayerInfo : TraitInfo, IOccupySpaceInfo, IRulesetLoaded
 	{
 		[Desc("Palette to render the layer sprites in.")]
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
@@ -36,19 +36,19 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("At which health level to display flames.")]
 		public readonly int DamagedHitpoints = 75000;
 
-		[FieldLoader.Require]
-		[Desc("Animation image.")]
-		public readonly string Image = null;
-
-		[SequenceReference(nameof(Image))]
-		[Desc("Animation to play when damaged.")]
-		public readonly string Sequence = null;
-
-		[Desc("Time in ticks to spawn a new flame and to apply damage.")]
+		[Desc("Time in ticks to apply damage.")]
 		public readonly int Interval = 8;
 
 		[Desc("How much damage to apply to neighboring tiles when on fire.")]
 		public readonly int Damage = 10;
+
+		[Desc("Player that spawns the flame actors.")]
+		public readonly string FlameOwner = "Creeps";
+
+		[FieldLoader.Require]
+		[Desc("Fake actor required for targeting.")]
+		[ActorReference]
+		public readonly string FlameActor = "";
 
 		[FieldLoader.Require]
 		[Desc("Terrain types a tree can change into.")]
@@ -86,15 +86,19 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new ForestLayer(init.Self, this); }
 	}
 
-	class ForestLayer : IWorldLoaded, IOccupySpace, ICrushable, INotifyCrushed, ITick, ITickRender, IRenderOverlay, IRadarTerrainLayer
+	public class ForestLayer : IWorldLoaded, IOccupySpace, ICrushable, INotifyCrushed, ITick, ITickRender, IRenderOverlay, IRadarTerrainLayer
 	{
+		public int TotalTrees;
+		public int TreesLeft => occupied.Count;
+		public int TreesBurning;
+
 		readonly ForestLayerInfo info;
 		readonly World world;
 		readonly CellLayer<int> hitpoints;
 		readonly ITiledTerrainRenderer terrainRenderer;
 		readonly CellLayer<(Color, Color)> radarColor;
 		readonly Dictionary<CPos, TerrainTile?> dirty;
-		readonly List<(CPos cell, SubCell subCell)> occupied;
+		readonly List<(CPos Cell, SubCell SubCell)> occupied;
 
 		TerrainSpriteLayer render;
 		PaletteReference paletteReference;
@@ -124,6 +128,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				hitpoints[forestCell] = info.Hitpoints;
 				occupied.Add((forestCell, SubCell.FullCell));
+				TotalTrees++;
 			}
 
 			w.ActorMap.AddInfluence(w.WorldActor, this);
@@ -131,7 +136,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public CPos TopLeft => CPos.Zero;
 		public WPos CenterPosition => WPos.Zero;
-		public (CPos, SubCell)[] OccupiedCells() { return occupied.ToArray(); }
+		public (CPos Cell, SubCell SubCell)[] OccupiedCells() { return occupied.ToArray(); }
 
 		bool ICrushable.CrushableBy(Actor self, Actor crusher, BitSet<CrushClass> crushClasses)
 		{
@@ -166,7 +171,7 @@ namespace OpenRA.Mods.HV.Traits
 			hitpoints[uv] = 0;
 			radarColor[uv] = (tileInfo.GetColor(world.LocalRandom), tileInfo.GetColor(world.LocalRandom));
 
-			occupied.RemoveAll(o => o.cell == cell);
+			occupied.RemoveAll(o => o.Cell == cell);
 			world.ActorMap.UpdateOccupiedCells(this);
 		}
 
@@ -196,12 +201,25 @@ namespace OpenRA.Mods.HV.Traits
 				var hp = hitpoints[cell];
 				if (hp > 0 && hp < info.DamagedHitpoints)
 				{
-					var position = world.Map.CenterOfCell(cell);
-					world.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
+					if (!world.ActorMap.GetActorsAt(cell).Any(a => a.Info.Name == info.FlameActor))
+					{
+						var typeDictionary = new TypeDictionary { new OwnerInit(info.FlameOwner), new LocationInit(cell) };
+						world.CreateActor(info.FlameActor, typeDictionary);
+						TreesBurning++;
+					}
 
 					Hit(cell, info.Damage);
 					foreach (var direction in CVec.Directions)
 						Hit(cell + direction, info.Damage);
+				}
+				else
+				{
+					var flame = world.ActorMap.GetActorsAt(cell).FirstOrDefault(a => a.Info.Name == info.FlameActor);
+					if (flame != null)
+					{
+						world.Remove(flame);
+						TreesBurning--;
+					}
 				}
 			}
 
