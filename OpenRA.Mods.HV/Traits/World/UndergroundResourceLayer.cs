@@ -19,7 +19,7 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Attach this to the world actor.", "Order of the layers defines the Z sorting.",
 		"Resource density is based on the exact data stored in the map.")]
-	public class UndergroundResourceLayerInfo : TraitInfo, IResourceLayerInfo, Requires<ResourceTypeInfo>, Requires<BuildingInfluenceInfo>
+	public class UndergroundResourceLayerInfo : TraitInfo, IResourceLayerInfo, Requires<ResourceTypeInfo>
 	{
 		public override object Create(ActorInitializer init) { return new UndergroundResourceLayer(init.Self); }
 	}
@@ -27,7 +27,6 @@ namespace OpenRA.Mods.HV.Traits
 	public class UndergroundResourceLayer : IResourceLayer, IWorldLoaded
 	{
 		readonly World world;
-		readonly BuildingInfluence buildingInfluence;
 
 		protected readonly CellLayer<ResourceLayerContents> Content;
 
@@ -40,7 +39,6 @@ namespace OpenRA.Mods.HV.Traits
 		public UndergroundResourceLayer(Actor self)
 		{
 			world = self.World;
-			buildingInfluence = self.Trait<BuildingInfluence>();
 
 			Content = new CellLayer<ResourceLayerContents>(world.Map);
 		}
@@ -82,21 +80,16 @@ namespace OpenRA.Mods.HV.Traits
 			if (!rt.Info.AllowedTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type))
 				return false;
 
-			if (!rt.Info.AllowUnderActors && world.ActorMap.AnyActorsAt(cell))
-				return false;
-
-			if (!rt.Info.AllowUnderBuildings && buildingInfluence.GetBuildingAt(cell) != null)
-				return false;
-
-			if (!rt.Info.AllowOnRamps)
+			foreach (var a in world.ActorMap.GetActorsAt(cell))
 			{
-				var tile = world.Map.Tiles[cell];
-				var tileInfo = world.Map.Rules.TileSet.GetTileInfo(tile);
-				if (tileInfo != null && tileInfo.RampType > 0)
+				if (!rt.Info.AllowUnderActors)
+					return false;
+
+				if (!rt.Info.AllowUnderBuildings && a.TraitOrDefault<Building>() != null)
 					return false;
 			}
 
-			return true;
+			return rt.Info.AllowOnRamps || world.Map.Ramp[cell] == 0;
 		}
 
 		public bool CanSpawnResourceAt(ResourceType newResourceType, CPos cell)

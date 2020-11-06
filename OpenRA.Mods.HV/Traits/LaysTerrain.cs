@@ -35,7 +35,6 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly LaysTerrainInfo info;
 		readonly CustomTerrainLayer layer;
-		readonly BuildingInfluence bi;
 		readonly TerrainTemplateInfo template;
 		readonly BuildingInfo buildingInfo;
 
@@ -43,7 +42,6 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			this.info = info;
 			layer = self.World.WorldActor.Trait<CustomTerrainLayer>();
-			bi = self.World.WorldActor.Trait<BuildingInfluence>();
 			template = self.World.Map.Rules.TileSet.Templates[info.Template];
 			buildingInfo = self.Info.TraitInfo<BuildingInfo>();
 		}
