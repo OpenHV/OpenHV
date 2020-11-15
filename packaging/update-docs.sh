@@ -4,6 +4,8 @@ echo "Updating openhv.readthedocs.io"
 
 rm -rf "${HOME}/openhv-docs"
 git clone "https://${GITHUB_TOKEN_DOCS}@github.com/OpenHV/docs.git" "${HOME}/openhv-docs"
+git config --local user.email "deploy@travis-ci.org"
+git config --local user.name "Travis CI"
 
 ../utility.sh --docs "$1" > "${HOME}/openhv-docs/api/release/traits.md.in"
 sed "s/of OpenRA/of OpenHV/g" "${HOME}/openhv-docs/api/release/traits.md.in" > "${HOME}/openhv-docs/api/release/traits.md"
