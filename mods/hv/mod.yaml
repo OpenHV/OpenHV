@@ -11,9 +11,9 @@ ModCredits:
 	ModCreditsFile: hv|CREDITS
 
 Packages:
-	.
+	^EngineDir
 	$hv: hv
-	./mods/common: common
+	^EngineDir|mods/common: common
 	hv|bits
 	hv|bits/terrain
 	hv|bits/audio
@@ -25,7 +25,7 @@ Packages:
 
 MapFolders:
 	hv|maps: System
-	~^maps/hv/{DEV_VERSION}: User
+	~^SupportDir|maps/hv/{DEV_VERSION}: User
 
 Rules:
 	hv|rules/world.yaml
@@ -73,8 +73,8 @@ Chrome:
 	hv|chrome.yaml
 
 Assemblies:
-	common|OpenRA.Mods.Common.dll
-	hv|OpenRA.Mods.HV.dll
+	^BinDir|OpenRA.Mods.Common.dll
+	^BinDir|OpenRA.Mods.HV.dll
 
 ChromeLayout:
 	common|chrome/ingame.yaml

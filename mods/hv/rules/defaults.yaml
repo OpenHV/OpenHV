@@ -802,7 +802,7 @@
 		Palette: chrome
 		Position: TopRight
 		RequiresCondition: reconstructor
-		ValidStances: Ally
+		ValidRelationships: Ally
 	GrantConditionOnPrerequisite@reconstructor:
 		Condition: reconstructor
 		Prerequisites: reconstructor

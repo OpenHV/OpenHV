@@ -32,7 +32,7 @@ namespace OpenRA.Mods.HV.Warheads
 		public readonly int AimChance = 0;
 
 		[Desc("What diplomatic stances can be targeted by the shrapnel.")]
-		public readonly Stance AimTargetStances = Stance.Ally | Stance.Neutral | Stance.Enemy;
+		public readonly PlayerRelationship AimTargetStances = PlayerRelationship.Ally | PlayerRelationship.Neutral | PlayerRelationship.Enemy;
 
 		[Desc("Allow this shrapnel to be thrown randomly when no targets found.")]
 		public readonly bool ThrowWithoutTarget = true;
@@ -51,7 +51,7 @@ namespace OpenRA.Mods.HV.Warheads
 				throw new YamlException("Weapons Ruleset does not contain an entry '{0}'".F(Weapon.ToLowerInvariant()));
 		}
 
-		public override void DoImpact(Target target, WarheadArgs args)
+		public override void DoImpact(in Target target, WarheadArgs args)
 		{
 			var firedBy = args.SourceActor;
 			if (!target.IsValidFor(firedBy))
@@ -94,7 +94,7 @@ namespace OpenRA.Mods.HV.Warheads
 			var availableTargetActors = world.FindActorsOnCircle(epicenter, weapon.Range)
 				.Where(x => (AllowDirectHit || !directActors.Contains(x))
 					&& weapon.IsValidAgainst(Target.FromActor(x), firedBy.World, firedBy)
-					&& AimTargetStances.HasStance(firedBy.Owner.Stances[x.Owner]))
+					&& AimTargetStances.HasStance(firedBy.Owner.RelationshipWith(x.Owner)))
 				.Where(x =>
 				{
 					var activeShapes = x.TraitsImplementing<HitShape>().Where(Exts.IsTraitEnabled);
@@ -137,6 +137,7 @@ namespace OpenRA.Mods.HV.Warheads
 					continue;
 
 				var shrapnelFacing = (shrapnelTarget.CenterPosition - epicenter).Yaw;
+				var source = target.CenterPosition;
 
 				var projectileArgs = new ProjectileArgs
 				{
@@ -153,8 +154,8 @@ namespace OpenRA.Mods.HV.Warheads
 					RangeModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IRangeModifier>()
 						.Select(a => a.GetRangeModifier()).ToArray() : new int[0],
 
-					Source = target.CenterPosition,
-					CurrentSource = () => target.CenterPosition,
+					Source = source,
+					CurrentSource = () => source,
 					SourceActor = firedBy,
 					GuidedTarget = shrapnelTarget,
 					PassiveTarget = shrapnelTarget.CenterPosition

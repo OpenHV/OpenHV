@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-title OpenRA
+title OpenHV
 
 FOR /F "tokens=1,2 delims==" %%A IN (mod.config) DO (set %%A=%%B)
 if exist user.config (FOR /F "tokens=1,2 delims==" %%A IN (user.config) DO (set %%A=%%B))
@@ -12,11 +12,11 @@ if "!ENGINE_VERSION!" == "" goto badconfig
 if "!ENGINE_DIRECTORY!" == "" goto badconfig
 
 set TEMPLATE_DIR=%CD%
-if not exist %ENGINE_DIRECTORY%\OpenRA.Game.exe goto noengine
+if not exist %ENGINE_DIRECTORY%\bin\OpenRA.exe goto noengine
 >nul find %ENGINE_VERSION% %ENGINE_DIRECTORY%\VERSION || goto noengine
 cd %ENGINE_DIRECTORY%
 
-OpenRA.Game.exe Game.Mod=%MOD_ID% Engine.LaunchPath="%TEMPLATE_LAUNCHER%" "Engine.ModSearchPaths=%MOD_SEARCH_PATHS%" Debug.DisplayDeveloperSettings=true "%*"
+bin\OpenRA.exe Game.Mod=%MOD_ID% Engine.EngineDir=".." Engine.LaunchPath="%TEMPLATE_LAUNCHER%" "Engine.ModSearchPaths=%MOD_SEARCH_PATHS%"  "%*"
 set ERROR=%errorlevel%
 cd %TEMPLATE_DIR%
 
@@ -38,7 +38,7 @@ exit /b
 
 :crashdialog
 echo ----------------------------------------
-echo OpenRA has encountered a fatal error.
+echo OpenHV has encountered a fatal error.
 echo   * Log Files are available in Documents\OpenRA\Logs
 echo   * FAQ is available at https://github.com/OpenRA/OpenRA/wiki/FAQ
 echo ----------------------------------------

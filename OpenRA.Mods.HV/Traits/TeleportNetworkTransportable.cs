@@ -42,7 +42,7 @@ namespace OpenRA.Mods.HV.Traits
 			get { yield return new TeleportNetworkTransportOrderTargeter(info); }
 		}
 
-		public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+		public Order IssueOrder(Actor self, IOrderTargeter order, in Target target, bool queued)
 		{
 			if (order.OrderID != "TeleportNetworkTransport")
 				return null;
@@ -116,7 +116,7 @@ namespace OpenRA.Mods.HV.Traits
 					return false;
 
 				// Valid enemy TeleportNetwork entrances should still be offered to be destroyed first.
-				if (self.Owner.Stances[target.Owner] == Stance.Enemy && !modifiers.HasFlag(TargetModifiers.ForceMove))
+				if (self.Owner.RelationshipWith(target.Owner) == PlayerRelationship.Enemy && !modifiers.HasFlag(TargetModifiers.ForceMove))
 					return false;
 
 				var trait = target.TraitOrDefault<TeleportNetwork>();

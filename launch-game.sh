@@ -1,7 +1,13 @@
 #!/bin/sh
 
 set -e
-command -v mono >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires mono."; exit 1; }
+command -v mono >/dev/null 2>&1 || { echo >&2 "OpenHV requires mono."; exit 1; }
+if command -v python3 >/dev/null 2>&1; then
+	PYTHON="python3"
+else
+	command -v python >/dev/null 2>&1 || { echo >&2 "OpenHV requires python."; exit 1; }
+	PYTHON="python"
+fi
 
 require_variables() {
 	missing=""
@@ -15,15 +21,7 @@ require_variables() {
 	fi
 }
 
-if command -v python3 >/dev/null 2>&1; then
-	TEMPLATE_LAUNCHER=$(python3 -c "import os; print(os.path.realpath('$0'))")
-elif command -v python >/dev/null 2>&1; then
-	TEMPLATE_LAUNCHER=$(python -c "import os; print(os.path.realpath('$0'))")
-else
-	echo >&2 "The OpenRA mod template requires python."
-	exit 1
-fi
-
+TEMPLATE_LAUNCHER=$(${PYTHON} -c "import os; print(os.path.realpath('$0'))")
 TEMPLATE_ROOT=$(dirname "${TEMPLATE_LAUNCHER}")
 MOD_SEARCH_PATHS="${TEMPLATE_ROOT}/mods,./mods"
 
@@ -38,11 +36,11 @@ fi
 require_variables "MOD_ID" "ENGINE_VERSION" "ENGINE_DIRECTORY"
 
 cd "${TEMPLATE_ROOT}"
-if [ ! -f "${ENGINE_DIRECTORY}/OpenRA.Game.exe" ] || [ "$(cat "${ENGINE_DIRECTORY}/VERSION")" != "${ENGINE_VERSION}" ]; then
+if [ ! -f "${ENGINE_DIRECTORY}/bin/OpenRA.exe" ] || [ "$(cat "${ENGINE_DIRECTORY}/VERSION")" != "${ENGINE_VERSION}" ]; then
 	echo "Required engine files not found."
 	echo "Run \`make\` in the mod directory to fetch and build the required files, then try again.";
 	exit 1
 fi
 
 cd "${ENGINE_DIRECTORY}"
-mono --debug OpenRA.Game.exe Engine.LaunchPath="${TEMPLATE_LAUNCHER}" "Engine.ModSearchPaths=${MOD_SEARCH_PATHS}" Game.Mod="${MOD_ID}" Debug.DisplayDeveloperSettings=true "$@"
+mono bin/OpenRA.exe Engine.EngineDir=".." Engine.LaunchPath="${TEMPLATE_LAUNCHER}" "Engine.ModSearchPaths=${MOD_SEARCH_PATHS}" Game.Mod="${MOD_ID}" "$@"

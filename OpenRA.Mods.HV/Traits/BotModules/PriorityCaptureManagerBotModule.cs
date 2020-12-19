@@ -51,7 +51,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly bool CheckCaptureTargetsForVisibility = true;
 
 		[Desc("Player stances that capturers should attempt to target.")]
-		public readonly Stance CapturableStances = Stance.Enemy | Stance.Neutral;
+		public readonly PlayerRelationship CapturableStances = PlayerRelationship.Enemy | PlayerRelationship.Neutral;
 
 		public override object Create(ActorInitializer init) { return new PriorityCaptureManagerBotModule(init.Self, this); }
 	}
@@ -142,7 +142,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (world.LocalRandom.Next(100) < Info.PriorityCaptureChance)
 			{
 				var priorityTargets = world.Actors.Where(a =>
-					!a.IsDead && a.IsInWorld && Info.CapturableStances.HasStance(player.Stances[a.Owner])
+					!a.IsDead && a.IsInWorld && Info.CapturableStances.HasStance(player.RelationshipWith(a.Owner))
 					&& Info.PriorityCapturableActorTypes.Contains(a.Info.Name.ToLowerInvariant()));
 
 				if (Info.CheckCaptureTargetsForVisibility)
@@ -186,7 +186,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			var randomPlayer = world.Players.Where(p => !p.Spectating
-				&& Info.CapturableStances.HasStance(player.Stances[p])).Random(world.LocalRandom);
+				&& Info.CapturableStances.HasStance(player.RelationshipWith(p))).Random(world.LocalRandom);
 
 			var targetOptions = Info.CheckCaptureTargetsForVisibility
 				? GetVisibleActorsBelongingToPlayer(randomPlayer)
@@ -236,7 +236,7 @@ namespace OpenRA.Mods.HV.Traits
 			var path = pathfinder.FindPath(
 				PathSearch.FromPoint(world, locomotor, capturer, capturer.Location, target.Location, BlockedByActor.None)
 					.WithCustomCost(loc => world.FindActorsInCircle(world.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
-						.Where(u => !u.IsDead && capturer.Owner.Stances[u.Owner] == Stance.Enemy && capturer.IsTargetableBy(u))
+						.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
 						.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(loc) - u.CenterPosition).Length)))
 					.FromPoint(capturer.Location));
 

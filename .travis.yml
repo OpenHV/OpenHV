@@ -28,6 +28,7 @@ script:
    if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "${TRAVIS_TEST_MOD}" == "True" ]; then
      make test || travis_terminate 1;
      make check ||  travis_terminate 1;
+     make check-lua ||  travis_terminate 1;
    fi;
    if [ "$TRAVIS_OS_NAME" == "linux" ] && ( [ "${TRAVIS_TEST_PACKAGING}" == "True" ] || [ -n "${TRAVIS_TAG}" ] ); then
      wget https://mirrors.edge.kernel.org/ubuntu/pool/universe/n/nsis/nsis-common_3.04-1_all.deb || travis_terminate 1;

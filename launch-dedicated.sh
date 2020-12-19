@@ -5,8 +5,13 @@
 #  Read the file to see which settings you can override
 
 set -e
-command -v python >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires python."; exit 1; }
-command -v mono >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires mono."; exit 1; }
+command -v mono >/dev/null 2>&1 || { echo >&2 "OpenHV requires mono."; exit 1; }
+if command -v python3 >/dev/null 2>&1; then
+	PYTHON="python3"
+else
+	command -v python >/dev/null 2>&1 || { echo >&2 "OpenHV requires python."; exit 1; }
+	PYTHON="python"
+fi
 
 require_variables() {
 	missing=""
@@ -20,7 +25,7 @@ require_variables() {
 	fi
 }
 
-TEMPLATE_LAUNCHER=$(python -c "import os; print(os.path.realpath('$0'))")
+TEMPLATE_LAUNCHER=$(${PYTHON} -c "import os; print(os.path.realpath('$0'))")
 TEMPLATE_ROOT=$(dirname "${TEMPLATE_LAUNCHER}")
 MOD_SEARCH_PATHS="${TEMPLATE_ROOT}/mods,./mods"
 
@@ -40,14 +45,13 @@ LISTEN_PORT="${ListenPort:-"1234"}"
 ADVERTISE_ONLINE="${AdvertiseOnline:-"True"}"
 PASSWORD="${Password:-""}"
 
-GEOIP_DATABASE_PATH="${GeoIPDatabase:-""}"
-
 REQUIRE_AUTHENTICATION="${RequireAuthentication:-"False"}"
 PROFILE_ID_BLACKLIST="${ProfileIDBlacklist:-""}"
 PROFILE_ID_WHITELIST="${ProfileIDWhitelist:-""}"
 
 ENABLE_SINGLE_PLAYER="${EnableSingleplayer:-"False"}"
 ENABLE_SYNC_REPORTS="${EnableSyncReports:-"False"}"
+ENABLE_GEOIP="${EnableGeoIP:-"True"}"
 SHARE_ANONYMISED_IPS="${ShareAnonymizedIPs:-"True"}"
 
 SUPPORT_DIR="${SupportDir:-""}"
@@ -62,16 +66,16 @@ fi
 cd "${ENGINE_DIRECTORY}"
 
 while true; do
-     MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" mono --debug OpenRA.Server.exe Game.Mod="${LAUNCH_MOD}" \
+     MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" mono --debug bin/OpenRA.Server.exe Engine.EngineDir=".." Game.Mod="${LAUNCH_MOD}" \
      Server.Name="${NAME}" Server.ListenPort="${LISTEN_PORT}" \
      Server.AdvertiseOnline="${ADVERTISE_ONLINE}" \
      Server.Password="${PASSWORD}" \
-     Server.GeoIPDatabase="${GEOIP_DATABASE_PATH}" \
      Server.RequireAuthentication="${REQUIRE_AUTHENTICATION}" \
      Server.ProfileIDBlacklist="${PROFILE_ID_BLACKLIST}" \
      Server.ProfileIDWhitelist="${PROFILE_ID_WHITELIST}" \
      Server.EnableSingleplayer="${ENABLE_SINGLE_PLAYER}" \
      Server.EnableSyncReports="${ENABLE_SYNC_REPORTS}" \
+     Server.EnableGeoIP="${ENABLE_GEOIP}" \
      Server.ShareAnonymizedIPs="${SHARE_ANONYMISED_IPS}" \
      Engine.SupportDir="${SUPPORT_DIR}"
 done

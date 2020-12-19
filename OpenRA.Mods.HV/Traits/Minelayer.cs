@@ -16,6 +16,7 @@ using OpenRA.Graphics;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Activities;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -52,14 +53,27 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Cursor to display when able to (un)deploy the actor.")]
 		public readonly string Cursor = "ability";
 
+		[Desc("Color to use for the target line when laying mines.")]
+		public readonly Color TargetLineColor = Color.Crimson;
+
+		[Desc("Only allow laying mines on listed terrain types. Leave empty to allow all terrain types.")]
+		public readonly HashSet<string> TerrainTypes = new HashSet<string>();
+
+		[Desc("Cursor to display when able to lay a mine.")]
+		public readonly string DeployCursor = "deploy";
+
+		[Desc("Cursor to display when unable to lay a mine.")]
+		public readonly string DeployBlockedCursor = "deploy-blocked";
+
 		public override object Create(ActorInitializer init) { return new Minelayer(init.Self, this); }
 	}
 
 	public class Minelayer : IIssueOrder, IResolveOrder, ISync, IIssueDeployOrder, IOrderVoice, ITick
 	{
 		public readonly MinelayerInfo Info;
-
 		public readonly Sprite Tile;
+
+		readonly Actor self;
 
 		[Sync]
 		CPos minefieldStart;
@@ -67,6 +81,7 @@ namespace OpenRA.Mods.HV.Traits
 		public Minelayer(Actor self, MinelayerInfo info)
 		{
 			Info = info;
+			this.self = self;
 
 			Tile = self.World.Map.Rules.Sequences.GetSequence("overlay", Info.TileValidName).GetSprite(0);
 		}
@@ -76,18 +91,18 @@ namespace OpenRA.Mods.HV.Traits
 			get
 			{
 				yield return new BeginMinefieldOrderTargeter();
-				yield return new DeployOrderTargeter("PlaceMine", 5);
+				yield return new DeployOrderTargeter("PlaceMine", 5, () => IsCellAcceptable(self, self.Location) ? Info.DeployCursor : Info.DeployBlockedCursor);
 			}
 		}
 
-		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, in Target target, bool queued)
 		{
 			switch (order.OrderID)
 			{
 				case "BeginMinefield":
 					var start = self.World.Map.CellContaining(target.CenterPosition);
 					if (self.World.OrderGenerator is MinefieldOrderGenerator)
-						((MinefieldOrderGenerator)self.World.OrderGenerator).AddMinelayer(self);
+						((MinefieldOrderGenerator)self.World.OrderGenerator).AddMinelayer(self, start);
 					else
 						self.World.OrderGenerator = new MinefieldOrderGenerator(self, start, queued);
 
@@ -104,7 +119,10 @@ namespace OpenRA.Mods.HV.Traits
 			return new Order("PlaceMine", self, Target.FromCell(self.World, self.Location), queued);
 		}
 
-		bool IIssueDeployOrder.CanIssueDeployOrder(Actor self, bool queued) { return true; }
+		bool IIssueDeployOrder.CanIssueDeployOrder(Actor self, bool queued)
+		{
+			return IsCellAcceptable(self, self.Location);
+		}
 
 		void IResolveOrder.ResolveOrder(Actor self, Order order)
 		{
@@ -115,17 +133,21 @@ namespace OpenRA.Mods.HV.Traits
 			if (order.OrderString == "BeginMinefield")
 				minefieldStart = cell;
 			else if (order.OrderString == "PlaceMine")
-				self.QueueActivity(order.Queued, new LayMines(self));
+			{
+				if (IsCellAcceptable(self, cell))
+					self.QueueActivity(order.Queued, new LayMines(self));
+			}
 			else if (order.OrderString == "PlaceMinefield")
 			{
 				// A different minelayer might have started laying the field without this minelayer knowing the start
 				minefieldStart = order.ExtraLocation;
 
 				var movement = self.Trait<IPositionable>();
+				var mobile = movement as Mobile;
 
 				var minefield = GetMinefieldCells(minefieldStart, cell, Info.MinefieldDepth)
-					.Where(c => movement.CanEnterCell(c, null, BlockedByActor.Immovable)
-						|| (!self.Owner.Shroud.IsVisible(c) && self.World.Map.Contains(c)))
+					.Where(c => IsCellAcceptable(self, c) && self.Owner.Shroud.IsExplored(c)
+						&& movement.CanEnterCell(c, null, BlockedByActor.Immovable) && (mobile != null && mobile.CanStayInCell(c)))
 					.OrderBy(c => (c - minefieldStart).LengthSquared).ToList();
 
 				self.QueueActivity(order.Queued, new LayMines(self, minefield));
@@ -166,9 +188,22 @@ namespace OpenRA.Mods.HV.Traits
 						yield return new CPos(i, j);
 		}
 
+		public bool IsCellAcceptable(Actor self, CPos cell)
+		{
+			if (!self.World.Map.Contains(cell))
+				return false;
+
+			if (Info.TerrainTypes.Count == 0)
+				return true;
+
+			var terrainType = self.World.Map.GetTerrainInfo(cell).Type;
+			return Info.TerrainTypes.Contains(terrainType);
+		}
+
 		class MinefieldOrderGenerator : OrderGenerator
 		{
 			readonly List<Actor> minelayers;
+			readonly Minelayer minelayer;
 			readonly Sprite tileOk;
 			readonly Sprite tileUnknown;
 			readonly Sprite tileBlocked;
@@ -181,13 +216,13 @@ namespace OpenRA.Mods.HV.Traits
 				minefieldStart = xy;
 				this.queued = queued;
 
-				var minelayer = a.Trait<Minelayer>();
 				tileOk = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileValidName).GetSprite(0);
 				tileUnknown = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileUnknownName).GetSprite(0);
 				tileBlocked = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileInvalidName).GetSprite(0);
+				minelayer = a.Trait<Minelayer>();
 			}
 
-			public void AddMinelayer(Actor a)
+			public void AddMinelayer(Actor a, CPos xy)
 			{
 				minelayers.Add(a);
 			}
@@ -208,9 +243,10 @@ namespace OpenRA.Mods.HV.Traits
 				}
 			}
 
-			protected override void Tick(World world)
+			protected override void SelectionChanged(World world, IEnumerable<Actor> selected)
 			{
-				minelayers.RemoveAll(minelayer => !minelayer.IsInWorld || minelayer.IsDead);
+				minelayers.Clear();
+				minelayers.AddRange(selected.Where(s => !s.IsDead && s.Info.HasTraitInfo<MinelayerInfo>()));
 				if (!minelayers.Any())
 					world.CancelInputMode();
 			}
@@ -235,13 +271,15 @@ namespace OpenRA.Mods.HV.Traits
 					var tile = tileOk;
 					if (!world.Map.Contains(c))
 						tile = tileBlocked;
+					else if (world.ShroudObscures(c))
+						tile = tileBlocked;
 					else if (world.FogObscures(c))
 						tile = tileUnknown;
-					else if (!movement.CanEnterCell(c, null, BlockedByActor.Immovable) || (mobile != null && !mobile.CanStayInCell(c)))
+					else if (!this.minelayer.IsCellAcceptable(minelayer, c)
+						|| !movement.CanEnterCell(c, null, BlockedByActor.Immovable) || (mobile != null && !mobile.CanStayInCell(c)))
 						tile = tileBlocked;
 
-					yield return new SpriteRenderable(tile, world.Map.CenterOfCell(c),
-						WVec.Zero, -511, palette, 1f, true);
+					yield return new SpriteRenderable(tile, world.Map.CenterOfCell(c), WVec.Zero, -511, palette, 1f, true, true);
 				}
 			}
 
@@ -257,9 +295,9 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			public string OrderID { get { return "BeginMinefield"; } }
 			public int OrderPriority { get { return 5; } }
-			public bool TargetOverridesSelection(Actor self, Target target, List<Actor> actorsAt, CPos xy, TargetModifiers modifiers) { return true; }
+			public bool TargetOverridesSelection(Actor self, in Target target, List<Actor> actorsAt, CPos xy, TargetModifiers modifiers) { return true; }
 
-			public bool CanTarget(Actor self, Target target, List<Actor> othersAtTarget, ref TargetModifiers modifiers, ref string cursor)
+			public bool CanTarget(Actor self, in Target target, List<Actor> othersAtTarget, ref TargetModifiers modifiers, ref string cursor)
 			{
 				if (target.Type != TargetType.Terrain)
 					return false;

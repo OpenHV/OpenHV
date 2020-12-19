@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (exit != null && exit.IsPrimary)
 				return false;
 
-			return network.Owner.Stances[user.Owner].HasFlag(trait.Info.ValidStances);
+			return network.Owner.RelationshipWith(user.Owner).HasFlag(trait.Info.ValidStances);
 		}
 
 		public static bool IsPrimaryTeleportNetworkExit(this Actor network)
@@ -76,7 +76,7 @@ namespace OpenRA.Mods.HV.Traits
 			get { yield return new DeployOrderTargeter("TeleportNetworkPrimaryExit", 1); }
 		}
 
-		public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, in Target target, bool queued)
 		{
 			if (order.OrderID == "TeleportNetworkPrimaryExit")
 				return new Order(order.OrderID, self, false);
@@ -86,7 +86,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public void ResolveOrder(Actor self, Order order)
 		{
-			// You can NEVER unselect a primary teleport network building, unlike primary productions buildings in RA1.
+			// You can NEVER unselect a primary teleport network building.
 			if (order.OrderString == "TeleportNetworkPrimaryExit")
 				SetPrimary(self);
 		}

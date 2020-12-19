@@ -168,7 +168,7 @@ namespace OpenRA.Mods.HV.Traits
 			var path = pathfinder.FindPath(
 				PathSearch.Search(world, miner.Locomotor, actor, BlockedByActor.Stationary, isValidResource)
 					.WithCustomCost(loc => world.FindActorsInCircle(world.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
-						.Where(u => !u.IsDead && actor.Owner.Stances[u.Owner] == Stance.Enemy)
+						.Where(u => !u.IsDead && actor.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
 						.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(loc) - u.CenterPosition).Length)))
 					.FromPoint(actor.Location));
 

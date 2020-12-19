@@ -83,7 +83,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, refineries.Select(r => r.Actor.Location), self.Location, BlockedByActor.None)
 				.WithCustomCost(loc => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
-					.Where(u => !u.IsDead && self.Owner.Stances[u.Owner] == Stance.Enemy)
+					.Where(u => !u.IsDead && self.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(loc) - u.CenterPosition).Length))))
 				path = self.World.WorldActor.Trait<IPathFinder>().FindPath(search);
 
@@ -107,7 +107,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, in Target target, bool queued)
 		{
 			if (order.OrderID == "Deliver")
 				return new Order(order.OrderID, self, target, queued);

@@ -78,7 +78,7 @@ Background@SAVE_MAP_PANEL:
 	Logic: SaveMapLogic
 	X: (WINDOW_RIGHT - WIDTH) / 2
 	Y: (WINDOW_BOTTOM - HEIGHT) / 2
-	Width: 550
+	Width: 350
 	Height: 300
 	Children:
 		Label@LABEL_TITLE:
@@ -99,7 +99,7 @@ Background@SAVE_MAP_PANEL:
 		TextField@TITLE:
 			X: 110
 			Y: 60
-			Width: 400
+			Width: 220
 			MaxLength: 50
 			Height: 25
 		Label@AUTHOR_LABEL:
@@ -112,7 +112,7 @@ Background@SAVE_MAP_PANEL:
 		TextField@AUTHOR:
 			X: 110
 			Y: 95
-			Width: 400
+			Width: 220
 			MaxLength: 50
 			Height: 25
 		Label@VISIBILITY_LABEL:
@@ -125,7 +125,7 @@ Background@SAVE_MAP_PANEL:
 		DropDownButton@VISIBILITY_DROPDOWN:
 			X: 110
 			Y: 130
-			Width: 400
+			Width: 220
 			Height: 25
 			Text: Map Visibility
 		Label@DIRECTORY_LABEL:
@@ -138,7 +138,7 @@ Background@SAVE_MAP_PANEL:
 		DropDownButton@DIRECTORY_DROPDOWN:
 			X: 110
 			Y: 165
-			Width: 400
+			Width: 220
 			Height: 25
 		Label@FILENAME_LABEL:
 			X: 10
@@ -150,13 +150,13 @@ Background@SAVE_MAP_PANEL:
 		TextField@FILENAME:
 			X: 110
 			Y: 200
-			Width: 200
+			Width: 105
 			Height: 25
 			Type: Filename
 		DropDownButton@TYPE_DROPDOWN:
-			X: 315
+			X: 220
 			Y: 200
-			Width: 195
+			Width: 110
 			Height: 25
 		Button@SAVE_BUTTON:
 			X: 80

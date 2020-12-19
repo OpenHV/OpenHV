@@ -129,4 +129,4 @@ ShellCasing:
 		Explosions: swamp_splash_small_a, swamp_splash_small_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav	
+		ImpactSounds: Video_Game_Splash-Ploor.wav

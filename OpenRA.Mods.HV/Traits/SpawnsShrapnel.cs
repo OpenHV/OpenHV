@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int AimChance = 0;
 
 		[Desc("What diplomatic stances can be targeted by the shrapnel.")]
-		public readonly Stance AimTargetStances = Stance.Ally | Stance.Neutral | Stance.Enemy;
+		public readonly PlayerRelationship AimTargetStances = PlayerRelationship.Ally | PlayerRelationship.Neutral | PlayerRelationship.Enemy;
 
 		[Desc("Allow this shrapnel to be thrown randomly when no targets found.")]
 		public readonly bool ThrowWithoutTarget = true;
@@ -95,7 +95,7 @@ namespace OpenRA.Mods.HV.Traits
 			var availableTargetActors = world.FindActorsOnCircle(position, Info.WeaponInfo.Range)
 				.Where(x => (Info.AllowSelfHit || x != self)
 					&& Info.WeaponInfo.IsValidAgainst(Target.FromActor(x), world, self)
-					&& Info.AimTargetStances.HasStance(self.Owner.Stances[x.Owner]))
+					&& Info.AimTargetStances.HasStance(self.Owner.RelationshipWith(x.Owner)))
 				.Where(x =>
 				{
 					var activeShapes = x.TraitsImplementing<HitShape>().Where(Exts.IsTraitEnabled);

@@ -20,13 +20,21 @@
 #   make check-sdk-scripts
 #   make check-packaging-scripts
 
-.PHONY: utility stylecheck build clean engine version check check-scripts check-sdk-scripts check-packaging-scripts check-variables
+.PHONY: check-sdk-scripts check-packaging-scripts check-variables engine all clean version check-scripts check test
 .DEFAULT_GOAL := all
+
+PYTHON = $(shell command -v python3 2> /dev/null)
+ifeq ($(PYTHON),)
+PYTHON = $(shell command -v python 2> /dev/null)
+endif
+ifeq ($(PYTHON),)
+$(error "OpenHV requires python.")
+endif
 
 VERSION = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null || echo git-`git rev-parse --short HEAD`)
 MOD_ID = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/MOD_ID/ { print $$2; exit }')
 ENGINE_DIRECTORY = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/ENGINE_DIRECTORY/ { print $$2; exit }')
-MOD_SEARCH_PATHS = "$(shell python -c "import os; print(os.path.realpath('.'))")/mods,./mods"
+MOD_SEARCH_PATHS = "$(shell $(PYTHON) -c "import os; print(os.path.realpath('.'))")/mods,./mods"
 
 WHITELISTED_OPENRA_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | awk -F= '/WHITELISTED_OPENRA_ASSEMBLIES/ { print $$2; exit }')"
 WHITELISTED_THIRDPARTY_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | awk -F= '/WHITELISTED_THIRDPARTY_ASSEMBLIES/ { print $$2; exit }')"
@@ -41,8 +49,19 @@ BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 
 MSBUILD = msbuild -verbosity:m -nologo
 
-# Enable 32 bit builds while generating the windows installer
-WIN32 = false
+ifndef TARGETPLATFORM
+UNAME_S := $(shell uname -s)
+UNAME_M := $(shell uname -m)
+ifeq ($(UNAME_S),Darwin)
+TARGETPLATFORM = osx-x64
+else
+ifeq ($(UNAME_M),x86_64)
+TARGETPLATFORM = linux-x64
+else
+TARGETPLATFORM = unix-generic
+endif
+endif
+endif
 
 check-sdk-scripts:
 	@awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format: file must be saved using unix-style (CR, not CRLF) line endings.\n"; exit 1)
@@ -106,31 +125,18 @@ check-variables:
 		exit 1; \
 	fi
 
-engine-dependencies: check-variables check-sdk-scripts
+engine: check-variables check-sdk-scripts
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
+	@cd $(ENGINE_DIRECTORY) && make all
 
-engine: engine-dependencies check-variables check-sdk-scripts
-	@cd $(ENGINE_DIRECTORY) && make core WIN32=$(WIN32)
-
-utility: engine-dependencies engine
-	@test -f "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" || (printf "OpenRA.Utility.exe not found!\n"; exit 1)
-
-core:
-	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
+all: engine
+	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool."; exit 1)
 ifneq ("$(MOD_SOLUTION_FILES)","")
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:restore \;
-ifeq ($(WIN32), $(filter $(WIN32),true yes y on 1))
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration="Release-x86" \;
-else
-	@$(MSBUILD) -t:build -p:Configuration=Release
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:build -p:Configuration=Release \;
+	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
-endif
-
-all: engine-dependencies engine core
 
 clean: engine
-	@command -v $(MSBUILD) >/dev/null || (echo "OpenRA requires the '$(MSBUILD)' tool provided by Mono >= 5.4."; exit 1)
+	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool."; exit 1)
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:clean \;
 endif
@@ -138,9 +144,7 @@ endif
 	@printf "The engine has been cleaned.\n"
 
 version: check-variables
-	@awk '{sub("Version:.*$$","Version: $(VERSION)"); print $0}' $(MANIFEST_PATH) > $(MANIFEST_PATH).tmp && \
-	awk '{sub("/[^/]*: User$$", "/$(VERSION): User"); print $0}' $(MANIFEST_PATH).tmp > $(MANIFEST_PATH) && \
-	rm $(MANIFEST_PATH).tmp
+	@sh -c '. $(ENGINE_DIRECTORY)/packaging/functions.sh; set_mod_version $(VERSION) $(MANIFEST_PATH)'
 	@printf "Version changed to $(VERSION).\n"
 
 check-scripts: check-variables
@@ -153,17 +157,17 @@ ifneq ("$(LUA_FILES)","")
 	@luac -p $(LUA_FILES)
 endif
 
-check: utility
+check: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@echo "Compiling in debug mode..."
-	@$(MSBUILD) -t:build -p:Configuration=Debug
+	@$(MSBUILD) -t:build -restore -p:Configuration=Debug
 endif
 	@echo "Checking runtime assemblies..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-runtime-assemblies $(WHITELISTED_OPENRA_ASSEMBLIES) $(WHITELISTED_THIRDPARTY_ASSEMBLIES) $(WHITELISTED_CORE_ASSEMBLIES) $(WHITELISTED_MOD_ASSEMBLIES)
+	@./utility.sh --check-runtime-assemblies $(WHITELISTED_OPENRA_ASSEMBLIES) $(WHITELISTED_THIRDPARTY_ASSEMBLIES) $(WHITELISTED_CORE_ASSEMBLIES) $(WHITELISTED_MOD_ASSEMBLIES)
 	@echo "Checking for explicit interface violations..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-explicit-interfaces
+	@./utility.sh --check-explicit-interfaces
 	@echo "Checking for incorrect conditional trait interface overrides..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-conditional-trait-interface-overrides
+	@./utility.sh --check-conditional-trait-interface-overrides
 
 check-lua:
 	@echo
@@ -171,23 +175,24 @@ check-lua:
 	@luac -p $(shell find mods/*/maps/* -iname '*.lua')
 	@luac -p $(shell find mods/*/scripts/* -iname '*.lua')
 
-test: utility check-lua
+test: engine
 	@echo
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-yaml
+	@./utility.sh --check-yaml
 	@echo
 	@echo "Checking $(MOD_ID) sprite sequences..."
-	@MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" mono --debug engine/OpenRA.Utility.exe $(MOD_ID) --check-missing-sprites
+	@./utility.sh --check-missing-sprites
 
 docs: utility
+	@echo
 	@echo "Generating trait documentation..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --docs > traits.md
+	@./utility.sh --docs > traits.md
 	@echo "Generating weapon documentation..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --weapon-docs > weapons.md
+	@./utility.sh --weapon-docs > weapons.md
 	@echo "Generating settings documentation..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --settings-docs > settings.md
+	@./utility.sh --settings-docs > settings.md
 	@echo "Generating Lua documentation..."
-	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --lua-docs > lua.md
+	@./utility.sh --lua-docs > lua.md
 
 bits: utility
 ifneq ("$(BIT_FILES)","")

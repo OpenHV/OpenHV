@@ -46,7 +46,7 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 		}
 
-		void INotifyBurstComplete.FiredBurst(Actor self, Target target, Armament a)
+		void INotifyBurstComplete.FiredBurst(Actor self, in Target target, Armament a)
 		{
 			if (IsTraitDisabled || !Info.ArmamentNames.Contains(a.Info.Name))
 				return;

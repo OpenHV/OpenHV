@@ -39,7 +39,7 @@ namespace OpenRA.Mods.HV.Warheads
 				throw new YamlException("Weapons Ruleset does not contain an entry '{0}'".F(Weapon.ToLowerInvariant()));
 		}
 
-		public override void DoImpact(Target target, WarheadArgs args)
+		public override void DoImpact(in Target target, WarheadArgs args)
 		{
 			var firedBy = args.SourceActor;
 			if (!target.IsValidFor(firedBy))
@@ -83,11 +83,13 @@ namespace OpenRA.Mods.HV.Warheads
 				if (radiusTarget.Type == TargetType.Invalid)
 					continue;
 
+				var targetPosition = target.CenterPosition;
+
 				var projectileArgs = new ProjectileArgs
 				{
 					Weapon = weapon,
-					Facing = (radiusTarget.CenterPosition - target.CenterPosition).Yaw,
-					CurrentMuzzleFacing = () => (radiusTarget.CenterPosition - target.CenterPosition).Yaw,
+					Facing = (radiusTarget.CenterPosition - targetPosition).Yaw,
+					CurrentMuzzleFacing = () => (radiusTarget.CenterPosition - targetPosition).Yaw,
 
 					DamageModifiers = args.DamageModifiers,
 
@@ -97,8 +99,8 @@ namespace OpenRA.Mods.HV.Warheads
 					RangeModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IRangeModifier>()
 						.Select(a => a.GetRangeModifier()).ToArray() : new int[0],
 
-					Source = target.CenterPosition,
-					CurrentSource = () => target.CenterPosition,
+					Source = targetPosition,
+					CurrentSource = () => targetPosition,
 					SourceActor = firedBy,
 					GuidedTarget = radiusTarget,
 					PassiveTarget = radiusTarget.CenterPosition

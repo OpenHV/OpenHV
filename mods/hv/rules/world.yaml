@@ -279,6 +279,7 @@ World:
 	PlayerCommands:
 	HelpCommand:
 	ScreenShaker:
+	BuildingInfluence:
 	ProductionQueueFromSelection:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	CustomTerrainDebugOverlay:

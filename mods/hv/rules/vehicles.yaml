@@ -510,7 +510,7 @@ TANK15:
 		Range: 6c0
 	JamsMissiles:
 		Range: 5c0
-		DeflectionStances: Neutral, Enemy
+		DeflectionRelationships: Neutral, Enemy
 	RenderSprites:
 		PlayerPalette: green
 
@@ -532,8 +532,8 @@ TANK16:
 		Weapon: Repair
 		Cursor: repair
 		OutsideRangeCursor: repair
-		TargetStances: Ally
-		ForceTargetStances: None
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 	UpdatesPlayerStatistics:
