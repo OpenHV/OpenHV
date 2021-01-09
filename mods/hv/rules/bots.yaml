@@ -102,6 +102,9 @@ Player:
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
 		DeployedActorTypes: miner2
+	CubePickupBotModule:
+		RequiresCondition: enable-test-ai
+		ExcludedUnitTypes: miner, tank13, tank14
 	SupportPowerBotModule:
 		RequiresCondition: enable-test-ai
 		Decisions:
