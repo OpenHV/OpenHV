@@ -34,7 +34,7 @@ jobs:
         env:
           GIT_TAG: ${{ github.event.inputs.tag }}
         run: |
-          ./utility.sh all --settings-docs "${GIT_TAG}" > "wiki/Settings.md"
+          ./utility.sh --settings-docs "${GIT_TAG}" > "wiki/Settings.md"
 
       - name: Push Wiki
         env:
