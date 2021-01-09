@@ -774,7 +774,7 @@ SCOUT2:
 BUILDER:
 	Inherits: ^Vehicle
 	Buildable:
-		Queue: Vehicle
+		Queue: Building
 		BuildPaletteOrder: 10
 		Description: Grants additional build radius.
 		Prerequisites: base
@@ -850,7 +850,7 @@ MINER:
 	Inherits: ^Vehicle
 	Inherits@SELECTION: ^SelectableEconomicUnit
 	Buildable:
-		Queue: Vehicle
+		Queue: Building
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
 		Prerequisites: base

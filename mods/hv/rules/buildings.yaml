@@ -1004,8 +1004,8 @@ STORAGE:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Buildable:
-		Queue: Defense
 		BuildPaletteOrder: 35
+		Queue: Building
 		Description: Stores excess refined\ngold and iron.
 	Valued:
 		Cost: 300
