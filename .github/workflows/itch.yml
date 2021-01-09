@@ -40,7 +40,7 @@ jobs:
           ITCH_GAME: openhv
           ITCH_USER: openhv
           VERSION: ${{ github.event.inputs.tag }}
-          PACKAGE: OpenHV-${{ github.event.inputs.tag }}.dmg"
+          PACKAGE: OpenHV-${{ github.event.inputs.tag }}.dmg
 
       - name: Publish AppImage
         uses: josephbmanley/butler-publish-itchio-action@master
