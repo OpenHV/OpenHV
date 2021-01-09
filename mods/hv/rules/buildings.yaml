@@ -346,6 +346,7 @@ MINER2:
 		Name: Mining Tower
 	Valued:
 		Cost: 400
+	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		Interval: 100
 		DeliveryVehicleType: tank13, tank14
@@ -1006,6 +1007,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
+		Prerequisites: miner2
 		Description: Stores excess refined\ngold and iron.
 	Valued:
 		Cost: 300
