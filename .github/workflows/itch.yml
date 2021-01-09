@@ -1,0 +1,55 @@
+name: Deploy itch.io Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Git Tag'
+        required: true
+        default: 'xxxxxxxx'
+
+jobs:
+  itch:
+    name: Deploy to itch.io
+    runs-on: ubuntu-20.04
+    if: github.repository == 'openhv/openhv'
+    steps:
+      - name: Download Packages
+        env:
+          GIT_TAG: ${{ github.event.inputs.tag }}
+        run: |
+          wget -q "https://github.com/${{ github.repository }}/releases/download/${GIT_TAG}/OpenHV-${GIT_TAG}-x64-winportable.zip" -O "OpenHV-${GIT_TAG}-x64-win-itch.zip"
+          wget -q "https://github.com${{ github.repository }}/releases/download/${GIT_TAG}/OpenHV-${GIT_TAG}.dmg"
+          wget -q "https://github.com/${{ github.repository }}/releases/download/${GIT_TAG}/OpenHV-x86_64.AppImage"
+          wget -q "https://raw.githubusercontent.com/${{ github.repository }}/${GIT_TAG}/packaging/.itch.toml"
+          zip -u "OpenHV-${GIT_TAG}-x64-win-itch.zip" .itch.toml
+
+      - name: Publish Windows Itch Bundle
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: win
+          ITCH_GAME: openhv
+          ITCH_USER: openhv
+          VERSION: ${{ github.event.inputs.tag }}
+          PACKAGE: OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip
+
+      - name: Publish macOS Package
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: osx
+          ITCH_GAME: openhv
+          ITCH_USER: openhv
+          VERSION: ${{ github.event.inputs.tag }}
+          PACKAGE: OpenHV-${{ github.event.inputs.tag }}.dmg"
+
+      - name: Publish AppImage
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: linux
+          ITCH_GAME: openhv
+          ITCH_USER: openhv
+          VERSION: ${{ github.event.inputs.tag }}
+          PACKAGE: OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage

@@ -1,5 +1,5 @@
 ![Logo](https://github.com/OpenHV/OpenHV/blob/master/mods/hv/uibits/logo.png?raw=true)
-# OpenHV [![Travis CI build status](https://travis-ci.com/OpenHV/OpenHV.svg?branch=master)](https://travis-ci.com/github/OpenHV/OpenHV) [![Documentation Status](https://readthedocs.org/projects/openhv/badge/?version=latest)](https://openhv.readthedocs.io/en/latest/?badge=latest)
+# OpenHV ![Continuous Integration](https://github.com/OpenHV/OpenHV/workflows/Continuous%20Integration/badge.svg) [![Documentation Status](https://readthedocs.org/projects/openhv/badge/?version=latest)](https://openhv.readthedocs.io/en/latest/?badge=latest)
 
 A mod for [OpenRA](http://www.openra.net) based on the [Hard Vacuum](https://lostgarden.home.blog/2005/03/27/game-post-mortem-hard-vacuum/) project, the [remastered Tyrian Graphics](https://lostgarden.home.blog/2007/04/05/free-game-graphics-tyrian-ships-and-tiles/) and the [Iron Plague](https://lostgarden.home.blog/2005/03/30/download-a-complete-set-of-sweet-8-bit-sinistar-clone-graphics/) artwork by Daniel Cook.
 
