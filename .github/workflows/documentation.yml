@@ -34,7 +34,8 @@ jobs:
         env:
           GIT_TAG: ${{ github.event.inputs.tag }}
         run: |
-          ./utility.sh --settings-docs "${GIT_TAG}" > "wiki/Settings.md"
+          ./utility.sh --settings-docs "${GIT_TAG}" > "wiki/Settings.md.in"
+          sed "s/Game.Mod=ra/Game.Mod=hv/g" "wiki/Settings.md.in" | sed "s/OpenRA main directory/OpenHV main directory/g" | sed "s/of OpenRA/of OpenHV using the OpenRA engine/g" | sed "s/\`\`\`yaml/\`\`\`salt/g"  > "wiki/Settings.md"
 
       - name: Push Wiki
         env:
