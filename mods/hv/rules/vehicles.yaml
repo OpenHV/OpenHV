@@ -321,7 +321,7 @@ TANK9:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 130
-		Prerequisites: starport
+		Prerequisites: aircraft
 		Description: Mobile tank with AA missiles.
 		BuildAtProductionType: Tracked
 	Valued:

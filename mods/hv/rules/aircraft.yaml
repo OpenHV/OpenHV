@@ -229,7 +229,7 @@ BALLOON:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: starport
+		Prerequisites: ~aircraft
 		Description: Slow reconnaissance air unit.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true

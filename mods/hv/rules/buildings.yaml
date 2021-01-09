@@ -414,7 +414,9 @@ STARPORT:
 	Production:
 		Produces: Aircraft
 	Reservable:
-	ProvidesPrerequisite@starport:
+	ProvidesPrerequisite@generic:
+		Prerequisite: aircraft
+	ProvidesPrerequisite@faction:
 		Prerequisite: aircraft.yi
 	ProductionBar:
 		ProductionType: Aircraft
@@ -423,7 +425,6 @@ STARPORT:
 		SelectionNotification: PrimaryBuildingSelected
 	Power:
 		Amount: -10
-	ProvidesPrerequisite@BuildingName:
 	Targetable:
 		TargetTypes: Ground, Structure
 	WithTextDecoration@PRIMARY:
@@ -452,7 +453,7 @@ STARPORT2:
 	Inherits: STARPORT
 	Buildable:
 		Prerequisites: radar, ~structures.sc
-	ProvidesPrerequisite@starport:
+	ProvidesPrerequisite@faction:
 		Prerequisite: aircraft.sc
 
 FACTORY2:
