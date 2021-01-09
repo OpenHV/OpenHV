@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>openhv</id>
+    <title>OpenHV</title>
+    <version>{VERSION}</version>
+    <authors>OpenHV Developers</authors>
+    <owners>Mailaender</owners>
+    <summary>Open Source Pixelart Science-Fiction Real Time Strategy game</summary>
+    <description>OpenHV has Multiplayer (LAN and internet) support, competent skirmish AI as well as an integrated map editor.  All the assets are licensed under Open Source compliant terms. It is very easy to mod.</description>
+    <packageSourceUrl>https://github.com/OpenHV/OpenHV/packaging/windows/chocolatey</packageSourceUrl>
+    <projectUrl>https://openhv.itch.io/openhv</projectUrl>
+    <projectSourceUrl>https://github.com/OpenHV/OpenHV</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/OpenHV/OpenHV/issues</bugTrackerUrl>
+    <docsUrl>https://github.com/OpenHV/OpenHV/wiki</docsUrl>
+    <iconUrl>https://raw.githubusercontent.com/OpenHV/OpenHV/master/packaging/artwork/icon_256x256.png</iconUrl>
+    <tags>game rts sci-fi</tags>
+    <copyright>© 2021 OpenHV Developers</copyright>
+    <licenseUrl>https://github.com/OpenHV/OpenHV/blob/bleed/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://github.com/OpenHV/OpenHV/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
