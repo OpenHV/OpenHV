@@ -867,7 +867,7 @@ MINER:
 		Type: Light
 	Mobile:
 		TurnSpeed: 40
-		Speed: 170
+		Speed: 80
 	RevealsShroud:
 		Range: 8c0
 	RenderSprites:
