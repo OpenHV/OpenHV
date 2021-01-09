@@ -7,9 +7,6 @@ on:
         description: 'Git Tag'
         required: true
 
-env:
-  CHOCO_PATH: packaging/windows/chocolatey
-
 defaults:
   run:
     shell: bash
@@ -20,10 +17,17 @@ jobs:
     runs-on: windows-latest
     if: github.repository == 'openhv/openhv'
     steps:
-      - name: Download Installer
+      - name: Clone Repository
+        uses: actions/checkout@v2
+
+      - name: Set Checksum
         run: |
-          mkdir -p ${{ env.CHOCO_PATH }}/tools/
-          curl -sSL "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/$filename" -o "${{ env.CHOCO_PATH }}/tools/OpenHV-${{ github.event.inputs.tag }}-x64.exe"
+          filename="OpenHV-${{ github.event.inputs.tag }}-x64.exe"
+          url="https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/${filename}"
+          sed -i "s#{URL}#${url}#g" "packaging/windows/chocolatey/tools/chocolateyinstall.ps1"
+          curl -sSL "${url}" -o "packaging/windows/${filename}"
+          md5=$(cat "packaging/windows/${filename}" | md5sum -)
+          sed -i "s/{MD5CHECKSUM}/${md5:0:32}/g" "packaging/windows/chocolatey/tools/chocolateyinstall.ps1"
 
       - name: Set Version
         id: version
@@ -31,15 +35,14 @@ jobs:
           tag=${{ github.event.inputs.tag }}
           version="${tag:0:4}.${tag:4:2}.${tag:6:2}"
           echo "::set-output name=nuget::$version"
-          curl -sSL "https://raw.githubusercontent.com/OpenHV/OpenHV/master/packaging/windows/chocolatey/openhv.nuspec" -o "${{ env.CHOCO_PATH }}/openhv.nuspec"
-          sed -i "s/{VERSION}/${version}/g" "${{ env.CHOCO_PATH }}/openhv.nuspec"
+          sed -i "s/{VERSION}/${version}/g" "packaging/windows/chocolatey/openhv.nuspec"
 
       - name: Pack Release
         uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: pack ${{ env.CHOCO_PATH }}/openhv.nuspec --outputdirectory ${{ env.CHOCO_PATH }}
+          args: pack packaging/windows/chocolatey/openhv.nuspec --outputdirectory packaging/windows/chocolatey
 
       - name: Upload Release
         uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: push ${{ env.CHOCO_PATH }}/openhv.${{ steps.version.outputs.nuget }}.nupkg -s https://push.chocolatey.org/ -k ${{ secrets.CHOCO_KEY }}
+          args: push packaging/windows/chocolatey/openhv.${{ steps.version.outputs.nuget }}.nupkg -s https://push.chocolatey.org/ -k ${{ secrets.CHOCO_KEY }}
