@@ -1,15 +1,17 @@
-$packageName = 'openhv'
-$installerType = 'exe'
-$silentArgs = '/S'
-$url = '{URL}'
-$checksum = '{MD5CHECKSUM}'
-$checksumType = 'md5'
-$validExitCodes = @(0)
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-Install-ChocolateyPackage -PackageName "$packageName" `
-                          -FileType "$installerType" `
-                          -SilentArgs "$silentArgs" `
-                          -Url "$url" `
-                          -ValidExitCodes $validExitCodes `
-                          -Checksum "$checksum" `
-                          -ChecksumType "$checksumType"
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  url            = '{URL32}'
+  checksum       = '{MD5CHECKSUM32}'
+  checksumType   = 'md5'
+  url64Bit       = '{URL64}'
+  checksum64     = '{MD5CHECKSUM64}'
+  checksumType64 = 'md5'
+  softwareName   = 'OpenHV'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyPackage @packageArgs
