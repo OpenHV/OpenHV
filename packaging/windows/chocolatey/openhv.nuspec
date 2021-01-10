@@ -19,6 +19,9 @@
     <licenseUrl>https://github.com/OpenHV/OpenHV/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://github.com/OpenHV/OpenHV/releases</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
