@@ -286,3 +286,23 @@ Patriot:
 		Explosions: small
 		ImpactSounds: explosion08.wav
 		ImpactActors: false
+
+DropshipMissile:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 100
+	Range: 9c0
+	Report: rocketlaunch01.wav
+	Burst: 6
+	BurstDelays: 6
+	Projectile: Missile
+		Inaccuracy: 1000
+		HorizontalRateOfTurn: 40
+		Speed: 200
+		RangeLimit: 8c409
+	Warhead@Damage: SpreadDamage
+		Damage: 2500
+		Versus:
+			None: 25
+			Wood: 75
+			Light: 100
+			Heavy: 90

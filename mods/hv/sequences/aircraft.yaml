@@ -73,3 +73,31 @@ mother2b:
 mother2c:
 	idle: bits/mother2c.png
 	icon: bits/icon.png
+
+dropship:
+	idle: bits/dropship.png
+		Facings: 8
+	fly: bits/dropship.png
+		Start: 8
+		Facings: 8
+	shoot: bits/dropship.png
+		Start: 8
+		Facings: 8
+	landing: bits/dropship.png
+		Start: 16
+		Length: 5
+	touch-down: bits/dropship.png
+		Start: 21
+		Length: 6
+	muzzle1: bits/dropship.png
+		Start: 27
+		Length: 2
+		Facings: 8
+		Tick: 100
+	muzzle2: bits/dropship.png
+		Start: 43
+		Length: 2
+		Facings: 8
+		Tick: 100
+	icon: units-icons.png
+		Start: 39

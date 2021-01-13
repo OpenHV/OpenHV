@@ -272,3 +272,59 @@ MOTHER2B:
 
 MOTHER2C:
 	Inherits: MOTHER2B
+
+DROPSHIP:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Heavy Transport Dropship
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 50
+		# YI needs a counterpart transport plane.
+		Prerequisites: radar
+		Description: Slow Vehicle Transport.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 14000
+	RevealsShroud:
+		Range: 8c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 100
+		AltitudeVelocity: 0c58
+	AttackFrontal:
+	Armament@PRIMARY:
+		Weapon: DropshipMissile
+		MuzzleSequence: muzzle1
+		LocalOffset: 700,600,0
+	Armament@SECONDARY:
+		Weapon: DropshipMissile
+		MuzzleSequence: muzzle2
+		LocalOffset: 700,-600,0
+	WithFacingSpriteBody:
+		RequiresCondition: !airborne
+	WithFacingSpriteBody@FLY:
+		Sequence: fly
+		Name: fly
+		RequiresCondition: airborne
+	Selectable:
+		DecorationBounds: 40,36
+	Cargo:
+		Types: Scout
+		MaxWeight: 4
+		AfterUnloadDelay: 40
+	Carryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 10
+		LocalOffset: 0,0,-200
+	RenderSprites:
+		PlayerPalette: green
+	WithCargoPipsDecoration:
+		Position: Top
+		RequiresSelection: true
+	WithMuzzleOverlay:
+		IgnoreOffset: True
