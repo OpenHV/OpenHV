@@ -296,15 +296,6 @@ DROPSHIP:
 		TurnSpeed: 20
 		Speed: 100
 		AltitudeVelocity: 0c58
-	AttackFrontal:
-	Armament@PRIMARY:
-		Weapon: DropshipMissile
-		MuzzleSequence: muzzle1
-		LocalOffset: 700,600,0
-	Armament@SECONDARY:
-		Weapon: DropshipMissile
-		MuzzleSequence: muzzle2
-		LocalOffset: 700,-600,0
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
 	WithFacingSpriteBody@FLY:
@@ -326,5 +317,3 @@ DROPSHIP:
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
-	WithMuzzleOverlay:
-		IgnoreOffset: True
