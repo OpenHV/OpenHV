@@ -36,10 +36,15 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v2
 
-      - name: Check Code
+      - name: Compile
         shell: powershell
         run: |
           dotnet nuget locals all --clear
+          .\make.ps1 all
+
+      - name: Check Code
+        shell: powershell
+        run: |
           .\make.ps1 check
 
       - name: Check Mods
