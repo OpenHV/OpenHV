@@ -294,6 +294,9 @@ DROPSHIP:
 		TurnSpeed: 20
 		Speed: 100
 		AltitudeVelocity: 0c58
+		InitialFacing: 512
+	WithLandingAnimation:
+		RequiredFacing: 512
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
 	WithFacingSpriteBody@FLY:

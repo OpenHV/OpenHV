@@ -86,9 +86,12 @@ dropship:
 	landing: bits/dropship.png
 		Start: 16
 		Length: 5
-	touch-down: bits/dropship.png
+	touchdown: bits/dropship.png
 		Start: 21
-		Length: 6
+		Length: 1
+	liftoff: bits/dropship.png
+		Start: 21
+		Length: 5
 	muzzle1: bits/dropship.png
 		Start: 27
 		Length: 2
