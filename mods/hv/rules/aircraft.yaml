@@ -184,8 +184,7 @@ COPTER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		# YI needs a counterpart transport plane.
-		Prerequisites: radar
+		Prerequisites: radar, ~aircraft.sc
 		Description: Fast Vehicle Transport Helicopter.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -282,8 +281,7 @@ DROPSHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		# YI needs a counterpart transport plane.
-		Prerequisites: radar
+		Prerequisites: radar, ~aircraft.yi
 		Description: Slow Vehicle Transport.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
