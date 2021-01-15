@@ -786,6 +786,83 @@ TURRET:
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 
+TURRET2:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@shape: ^2x1Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@flame: ^BuildingFlame
+	Selectable:
+		Bounds: 40,30,0,-5
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: factory2
+		Description: Base defense.\nRequires power to operate.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Turret
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,512,0
+	Targetable:
+		TargetTypes: Ground, Structure
+	Health:
+		HP: 30000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 15c0
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+	Power:
+		Amount: -60
+	ProvidesPrerequisite@BuildingName:
+	Armament:
+		Name: primary
+		Weapon: Turret2Cannon
+		LocalOffset: 600,-300,300
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: Turret2Cannon
+		LocalOffset: 600,200,300
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 8c0
+	AttackTurreted:
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	WithTurretAttackAnimation:
+		Armament: primary
+		Sequence: shoot
+	WithTurretAttackAnimation:
+		Armament: secondary
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 120
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
+
 AATURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown

@@ -85,6 +85,11 @@ bullet8:
 		Facings: 8
 		ZOffset: 2030
 
+bullet9:
+	idle: bits/bullet9.png
+		Facings: 8
+		ZOffset: 2030
+
 nuclear:
 	up: bits/blank.png
 	down: bits/nuclear_bomb.png
