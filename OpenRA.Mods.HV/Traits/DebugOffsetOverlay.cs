@@ -23,12 +23,12 @@ namespace OpenRA.Mods.HV.Traits
 		"Select the unit first.",
 		"Rendering is enabled automatically with the first valid command.",
 		"Available commands:",
-		"`body`: Sets the reference point to the actor's center position.",
-		"`turret X`: where X is the turret index whose center the reference point should be set. Falls back to actor center position on wrong index.",
-		"`set X,Y,Z`: Sets the offset. No spaces are supported between the values.",
-		"`add X,Y,Z`: Adds the value to the current offset. Negative values function to subtract. No spaces are supported between the values.",
-		"`query`: Returns the current offset value in the chat.",
-		"`disable`: Disables rendering of the offset.")]
+		"`/offset body`: Sets the reference point to the actor's center position.",
+		"`/offset turret X`: where X is the turret index whose center the reference point should be set. Falls back to actor center position on wrong index.",
+		"`/offset set X,Y,Z`: Sets the offset. No spaces are supported between the values.",
+		"`/offset add X,Y,Z`: Adds the value to the current offset. Negative values function to subtract. No spaces are supported between the values.",
+		"`/offset query`: Returns the current offset value in the chat.",
+		"`/offset disable`: Disables rendering of the offset.")]
 	public class DebugOffsetOverlayInfo : TraitInfo
 	{
 		public override object Create(ActorInitializer init) { return new DebugOffsetOverlay(init.Self); }
