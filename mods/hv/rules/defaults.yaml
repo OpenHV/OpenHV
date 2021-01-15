@@ -7,6 +7,7 @@
 		PlayerExperienceModifier: 1
 	ScriptTriggers:
 	RenderDebugState:
+	DebugOffsetOverlay:
 
 ^SpriteActor:
 	BodyOrientation:
