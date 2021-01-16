@@ -786,6 +786,7 @@ TURRET:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	-CommandBarBlacklist:
 
 TURRET2:
 	Inherits: ^BaseBuilding
@@ -864,6 +865,7 @@ TURRET2:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	-CommandBarBlacklist:
 
 AATURRET:
 	Inherits: ^BaseBuilding
@@ -944,6 +946,7 @@ AATURRET:
 		RequiresCondition: charging
 		SoundFiles: charging-Mike_Koenig.wav
 		Interval: 30, 40
+	-CommandBarBlacklist:
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -1193,6 +1196,7 @@ ARTILLERYTURRET:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	-CommandBarBlacklist:
 
 TELEVATR:
 	Inherits: ^BaseBuilding
