@@ -109,6 +109,8 @@ Player:
 	DeployDetectorBotModule:
 		RequiresCondition: enable-test-ai
 		DeployableActorTypes: tank4
+	PowerDownBotModule:
+		RequiresCondition: enable-test-ai
 	SupportPowerBotModule:
 		RequiresCondition: enable-test-ai
 		Decisions:
