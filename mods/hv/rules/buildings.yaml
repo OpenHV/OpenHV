@@ -771,6 +771,7 @@ TURRET:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 120
+		RequiresCondition: !build-incomplete
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
@@ -848,6 +849,7 @@ TURRET2:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 120
+		RequiresCondition: !build-incomplete
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
@@ -1176,6 +1178,7 @@ ARTILLERYTURRET:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 60
+		RequiresCondition: !build-incomplete
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
