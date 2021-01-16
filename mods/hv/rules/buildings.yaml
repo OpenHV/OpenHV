@@ -487,6 +487,7 @@ FACTORY2:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@BuildingName:
+		RequiresCondition: !powerdown
 	ProvidesPrerequisite@factory:
 		Prerequisite: factory
 		RequiresCondition: !powerdown
@@ -590,6 +591,7 @@ FACTORY3:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@BuildingName:
+		RequiresCondition: !powerdown
 	ProvidesPrerequisite@factory:
 		Prerequisite: factory
 		RequiresCondition: !powerdown
