@@ -731,7 +731,7 @@ TURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory2
+		Prerequisites: factory2, ~structures.yi
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -801,7 +801,7 @@ TURRET2:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory2
+		Prerequisites: factory2, ~structures.sc
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
