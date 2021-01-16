@@ -65,6 +65,7 @@ Player:
 		RequiresCondition: enable-test-ai
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
+			tank4: 1
 			tank3: 5
 			tank5: 5
 			tank7: 1
@@ -105,6 +106,9 @@ Player:
 	CubePickupBotModule:
 		RequiresCondition: enable-test-ai
 		ExcludedUnitTypes: miner, tank13, tank14
+	DeployDetectorBotModule:
+		RequiresCondition: enable-test-ai
+		DeployableActorTypes: tank4
 	SupportPowerBotModule:
 		RequiresCondition: enable-test-ai
 		Decisions:
