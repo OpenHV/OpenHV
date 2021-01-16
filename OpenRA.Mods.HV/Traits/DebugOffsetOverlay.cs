@@ -31,7 +31,7 @@ namespace OpenRA.Mods.HV.Traits
 		"`/offset disable`: Disables rendering of the offset.")]
 	public class DebugOffsetOverlayInfo : TraitInfo
 	{
-		public override object Create(ActorInitializer init) { return new DebugOffsetOverlay(init.Self); }
+		public override object Create(ActorInitializer init) { return new DebugOffsetOverlay(); }
 	}
 
 	public class DebugOffsetOverlay : Requires<BodyOrientationInfo>, IRenderAnnotations, INotifyCreated
@@ -39,21 +39,19 @@ namespace OpenRA.Mods.HV.Traits
 		static readonly WVec TargetPosHLine = new WVec(0, 128, 0);
 		static readonly WVec TargetPosVLine = new WVec(128, 0, 0);
 
-		readonly BodyOrientation coords;
-
 		Turreted[] turrets;
+		BodyOrientation coords;
+
 		WVec devOffset;
 		int turret = -1;
 		bool enabled;
 
-		public DebugOffsetOverlay(Actor self)
-		{
-			coords = self.Trait<BodyOrientation>();
-		}
+		public DebugOffsetOverlay() { }
 
 		void INotifyCreated.Created(Actor self)
 		{
 			turrets = self.TraitsImplementing<Turreted>().ToArray();
+			coords = self.Trait<BodyOrientation>();
 		}
 
 		IEnumerable<IRenderable> IRenderAnnotations.RenderAnnotations(Actor self, WorldRenderer wr)
