@@ -335,9 +335,8 @@ starport2:
 	Defaults:
 		Offset: 0, -2
 	idle: bits/starport2.png
-		Frames: 0, 1, 2, 3, 4, 3, 2, 1
-		Length: *
-		Tick: 100
+		Length: 5
+		Tick: 120
 	shadow-overlay: bits/starport-shadow.png
 		ZOffset: 1768
 		Offset: 5, 3
