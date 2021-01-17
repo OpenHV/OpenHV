@@ -100,6 +100,9 @@ BASE:
 		RedTint: 0
 		GreenTint: 0
 		BlueTint: 0.4
+	WithProductionOverlay@base:
+		RequiresCondition: !build-incomplete
+		Sequence: production-inprogress
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -449,6 +452,12 @@ STARPORT:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithProductionOverlay:
+		RequiresCondition: !build-incomplete
+		Sequence: production-inprogress
+	WithProductionExitOverlay:
+		ExitCell: 0,0
+		Sequence: production-done
 
 STARPORT2:
 	Inherits: STARPORT
@@ -456,6 +465,7 @@ STARPORT2:
 		Prerequisites: radar, ~structures.sc
 	ProvidesPrerequisite@faction:
 		Prerequisite: aircraft.sc
+	-WithProductionExitOverlay:
 
 FACTORY2:
 	Inherits: ^BaseBuilding
@@ -560,6 +570,12 @@ FACTORY2:
 	WithIdleOverlay@offline:
 		Sequence: idle-offline
 		RequiresCondition: !build-incomplete && disabled
+	WithProductionOverlay@base:
+		RequiresCondition: !build-incomplete
+		Sequence: production-inprogress
+	WithProductionExitOverlay@base:
+		ExitCell: 0,0
+		Sequence: production-done
 
 FACTORY3:
 	Inherits: ^BaseBuilding
@@ -670,6 +686,12 @@ FACTORY3:
 	WithIdleOverlay@offline:
 		Sequence: idle-offline
 		RequiresCondition: !build-incomplete && disabled
+	WithProductionOverlay@base:
+		RequiresCondition: !build-incomplete
+		Sequence: production-inprogress
+	WithProductionExitOverlay@base:
+		ExitCell: 0,0
+		Sequence: production-done
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
@@ -1351,9 +1373,9 @@ HARBOR:
 	WithIdleOverlay@Entry:
 		Sequence: idle-entry
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@Production:
-		Sequence: production
+	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete
+		Sequence: production-inprogress
 
 MOTHER:
 	Inherits: ^BaseBuilding
