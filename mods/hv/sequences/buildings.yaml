@@ -28,14 +28,10 @@ base:
 	Defaults:
 		Offset: 10, -30
 	build: bits/base.png
-		Start: 3
-		Length: 3
-		Reverses: true
-		Tick: 300
+		Frames: 4, 5, 6, 4, 5, 6, 4, 5 ,6
+		Length: *
+		Tick: 50
 	idle: bits/base.png
-		Length: 3
-		Reverses: true
-		Tick: 150
 	shadow-overlay: bits/base-shadow.png
 		ZOffset: 1768
 		Offset: 7, -17
@@ -45,6 +41,10 @@ base:
 	damaged-build: bits/base.png
 		Start: 7
 		Length: 1
+	production-inprogress: bits/base.png
+		Length: 3
+		Reverses: true
+		Tick: 150
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -302,9 +302,16 @@ starport:
 	Defaults:
 		Offset: 0, -2
 	idle: bits/starport.png
-		Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
-		Length: *
+		Start: 15
+	production-inprogress: bits/starport.png
+		Start: 16
+		Length: 6
+		Reverses: True
 		Tick: 100
+	production-done: bits/starport.png
+		Frames: 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+		Length: *
+		Tick: 35
 	shadow-overlay: bits/starport-shadow.png
 		ZOffset: 1768
 		Offset: 5, 3
@@ -335,9 +342,9 @@ starport2:
 	Defaults:
 		Offset: 0, -2
 	idle: bits/starport2.png
-		Frames: 0, 1, 2, 3, 4, 3, 2, 1
-		Length: *
-		Tick: 100
+	production-inprogress: bits/starport2.png
+		Length: 5
+		Tick: 120
 	shadow-overlay: bits/starport-shadow.png
 		ZOffset: 1768
 		Offset: 5, 3
@@ -369,8 +376,6 @@ factory2:
 		Offset: -1, -13
 	idle: bits/null.png
 	idle-online: bits/factory2.png
-		Length: 15
-		Tick: 100
 	idle-offline: bits/factory2.png
 	shadow-overlay: bits/factory2-shadow.png
 		ZOffset: 1768
@@ -383,6 +388,17 @@ factory2:
 		Start: 1
 		ZOffset: 1768
 		Offset: 5, -2
+	production-inprogress: bits/factory2.png
+		Start: 1
+		Length: 10
+		Reverses: True
+		Tick: 80
+		ZOffset: 1500
+	production-done: bits/factory2.png
+		Frames: 11, 12, 13, 14, 15, 14, 13, 12
+		Length: *
+		Tick: 100
+		ZOffset: 1500
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -441,8 +457,6 @@ factory3:
 		Offset: 0, -24
 	idle: bits/null.png
 	idle-online: bits/factory3.png
-		Length: 11
-		Tick: 100
 	idle-offline: bits/factory3.png
 	shadow-overlay: bits/factory3-shadow.png
 		ZOffset: 1768
@@ -455,6 +469,17 @@ factory3:
 		Start: 1
 		ZOffset: 1768
 		Offset: 7, -7
+	production-inprogress: bits/factory3.png
+		Start: 5
+		Length: 6
+		Reverses: True
+		Tick: 100
+		ZOffset: 1500
+	production-done: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 1500
+		Offset: 0, -14
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -802,11 +827,11 @@ harbor:
 	shadow-overlay: bits/harbor-shadow.png
 		ZOffset: -1768
 		Offset: 6, -1
-	production: bits/harbor.png
+	production-inprogress: bits/harbor.png
 		Start: 3
 		Length: 7
 		Reverses: true
-		Tick: 120
+		Tick: 80
 		ZOffset: 1500
 	damaged-idle: bits/harbor.png
 		Start: 1
