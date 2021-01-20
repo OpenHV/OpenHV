@@ -248,12 +248,6 @@ BALLOON:
 		Palette: shadow
 	RenderSprites:
 		PlayerPalette: green
-	GrantConditionOnBotOwner:
-		Bots: test
-		Condition: enable-test-ai
-	Wanders:
-		WanderMoveRadius: 20
-		RequiresCondition: enable-test-ai
 
 MOTHER2B:
 	Inherits: ^Helicopter

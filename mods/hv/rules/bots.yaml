@@ -111,6 +111,10 @@ Player:
 		DeployableActorTypes: tank4
 	PowerDownBotModule:
 		RequiresCondition: enable-test-ai
+	ScoutBotModule:
+		ScoutActorTypes: balloon
+		MoveRadius: 20
+		RequiresCondition: enable-test-ai
 	SupportPowerBotModule:
 		RequiresCondition: enable-test-ai
 		Decisions:
