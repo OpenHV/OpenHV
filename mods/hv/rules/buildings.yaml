@@ -1057,6 +1057,16 @@ SILO:
 		EndChargeSpeechNotification: MissileReady
 		IncomingSpeechNotification: MissileLaunchDetected
 	SupportPowerChargeBar:
+	RailgunPower:
+		PauseOnCondition: lowpower
+		Prerequisites: ~disabled
+		Icon: railgun
+		ChargeInterval: 9000
+		Description: Railgun
+		LongDesc: Initiate a Railgun strike.\nApplies instant damage to a small area.
+		DisplayRadarPing: True
+		CameraRange: 5c0
+		SupportPowerPaletteOrder: 20
 	Power:
 		Amount: -150
 	MustBeDestroyed:

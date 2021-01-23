@@ -247,3 +247,19 @@ ElectricSpark:
 	Inherits: ^PixelSpark
 	Projectile: Bullet
 		Sequences: electric
+
+RailgunStrike:
+	ValidTargets: Water, Ground, Tree, Air
+	Warhead@DamageImpact: SpreadDamage
+		Spread: 1c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Water, Ground, Tree, Air
+		DamageTypes: Fire
+	Warhead@DamageArea: SpreadDamage
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Water, Ground, Tree, Air
+		DamageTypes: Fire

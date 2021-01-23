@@ -63,6 +63,7 @@ beacon:
 icon:
 	shield: bits/shield-icon.png
 	nuke: bits/nuke-icon.png
+	railgun: bits/icon.png
 
 outline:
 	Defaults: bits/outline.png
