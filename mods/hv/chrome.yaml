@@ -21,7 +21,7 @@ sidebar:
 		background-top: 438, 128, 244, 288
 		background-iconrow: 438, 409, 244, 50
 		background-bottom: 438, 459, 244, 7
-		background-supportoverlay: 0, 75, 64, 48
+		background-supportoverlay: 484, 410, 64, 48
 
 sidebar-button:
 	Inherits: ^Chrome
