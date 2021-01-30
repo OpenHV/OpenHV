@@ -7,7 +7,10 @@
     <authors>OpenHV Developers</authors>
     <owners>Mailaender</owners>
     <summary>Open Source Pixelart Science-Fiction Real Time Strategy game</summary>
-    <description>OpenHV has Multiplayer (LAN and internet) support, competent skirmish AI as well as an integrated map editor.  All the assets are licensed under Open Source compliant terms. It is very easy to mod.</description>
+    <description>OpenHV has Multiplayer (LAN and internet) support, competent skirmish AI as well as an integrated map editor.  All the assets are licensed under Open Source compliant terms. It is very easy to mod.
+
+![OpenHV](https://img.itch.zone/aW1hZ2UvNjg5NjY5LzM4MzY5MjUucG5n/original/VzlKJN.png)
+    </description>
     <packageSourceUrl>https://github.com/OpenHV/OpenHV/tree/master/packaging/windows/chocolatey</packageSourceUrl>
     <projectUrl>https://openhv.itch.io/openhv</projectUrl>
     <projectSourceUrl>https://github.com/OpenHV/OpenHV</projectSourceUrl>
