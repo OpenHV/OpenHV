@@ -74,9 +74,12 @@ jobs:
         env:
           GIT_TAG: ${{ github.event.inputs.tag }}
         run: |
-          ./utility.sh --docs "${GIT_TAG}" > "docs/api/release/traits.md"
-          ./utility.sh --weapon-docs "${GIT_TAG}" > "docs/api/release/weapons.md"
-          ./utility.sh --lua-docs "${GIT_TAG}" > "docs/api/release/lua.md"
+          ./utility.sh --docs "${GIT_TAG}" > "traits.md"
+          sed "s/of OpenRA/of OpenHV/g" "traits.md"  > "docs/api/release/traits.md"
+          ./utility.sh --weapon-docs "${GIT_TAG}" > "weapons.md"
+          sed "s/of OpenRA/of OpenHV/g" "weapons.md" > "docs/api/release/weapons.md"
+          ./utility.sh --lua-docs "${GIT_TAG}" > "lua.md"
+          sed "s/of OpenRA/of OpenHV/g" "lua.md" | sed "s/OpenRA allows/OpenHV allows/g"  > "docs/api/release/lua.md"
 
       - name: Push openhv/docs
         env:
