@@ -101,7 +101,6 @@ BASE:
 		GreenTint: 0
 		BlueTint: 0.4
 	WithProductionOverlay@base:
-		RequiresCondition: !build-incomplete
 		Sequence: production-inprogress
 
 GENERATOR:
