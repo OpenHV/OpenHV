@@ -286,3 +286,34 @@ Patriot:
 		Explosions: small
 		ImpactSounds: explosion08.wav
 		ImpactActors: false
+
+TowerMissile:
+	Inherits: ^AntiAirMissile
+	ReloadDelay: 55
+	Range: 9c0
+	Report: rocketlaunch03.wav
+	ValidTargets: Air
+	Projectile: Missile
+		Arm: 1
+		VerticalRateOfTurn: 140
+		RangeLimit: 25c0
+		Speed: 288
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		HorizontalRateOfTurn: 100
+		Acceleration: 96
+		MinimumLaunchAngle: 128
+		MaximumLaunchAngle: 192
+		CruiseAltitude: 2c0
+		AllowSnapping: true
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 6000
+		ValidTargets: Air, Ground, Lava, Swamp
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion08.wav
+		ImpactActors: false
