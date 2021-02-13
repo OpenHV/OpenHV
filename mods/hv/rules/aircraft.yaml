@@ -137,6 +137,46 @@ COPTER:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 
+SAUCER:
+	Inherits: ^Helicopter
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Attack Saucer
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
+		Prerequisites: radar, ~aircraft.sc
+		Description: Saucer
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 16
+		Speed: 112
+	Turreted:
+		TurnSpeed: 80
+		Offset: 0,0,100
+	AttackTurreted:
+	WithSpriteTurret:
+	-WithShadow:
+	Armament@PRIMARY:
+		Weapon: Laser
+		LocalOffset: 0,0,-100
+	Selectable:
+		Bounds: 24,24
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+	RenderSprites:
+		PlayerPalette: green
+
 BANSHEE:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

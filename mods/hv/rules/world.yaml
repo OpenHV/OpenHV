@@ -169,7 +169,7 @@
 	PlayerColorPalette@green-remap:
 		BasePalette: player
 		BaseName: green
-		RemapIndex: 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
+		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
 	PaletteFromGimpOrJascFile@cursor:
 		Name: cursor
 		Filename: bits/palette.pal

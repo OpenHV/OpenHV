@@ -90,6 +90,13 @@ bullet9:
 		Facings: 8
 		ZOffset: 2030
 
+bullet10:
+	idle: bits/bullet10.png
+		Facings: 8
+		Length: 2
+		Tick: 50
+		ZOffset: 2030
+
 nuclear:
 	up: bits/blank.png
 	down: bits/nuclear_bomb.png

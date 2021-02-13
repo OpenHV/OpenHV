@@ -13,3 +13,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [laser_Cannon-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
 * [charging-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
 * [blaster-newlocknew.wav](https://freesound.org/people/newlocknew/sounds/520056/) by newlocknew, edited by Dzierzan.
+* [blaster1/2/3-tutarap.wav](https://freesound.org/people/tutarap/sounds/341956/) by tutarap

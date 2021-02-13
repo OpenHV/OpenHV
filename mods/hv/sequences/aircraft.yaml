@@ -104,3 +104,12 @@ dropship:
 		Tick: 100
 	icon: units-icons.png
 		Start: 39
+
+saucer:
+	idle: bits/saucer.png
+		ZOffset: 2050 
+	shadow-overlay: bits/saucer-shadow.png
+		Offset: 15, -1
+	turret: bits/null.png
+	icon: bits/units-icons.png
+		Start: 40
