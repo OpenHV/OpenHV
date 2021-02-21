@@ -645,7 +645,7 @@ ARTIL2:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory2
+		Prerequisites: radar, factory2, ~disabled
 		BuildPaletteOrder: 150
 		Description: Mobile long range weapon.
 		BuildAtProductionType: Tracked

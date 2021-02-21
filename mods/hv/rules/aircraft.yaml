@@ -147,7 +147,7 @@ SAUCER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: radar, ~aircraft.sc
+		Prerequisites: radar, ~aircraft.sc, ~disabled
 		Description: Saucer
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
