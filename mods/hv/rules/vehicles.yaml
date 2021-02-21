@@ -636,6 +636,50 @@ ARTIL:
 	RenderSprites:
 		PlayerPalette: green
 
+ARTIL2:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Artillery
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: radar, factory2
+		BuildPaletteOrder: 150
+		Description: Mobile long range weapon.
+		BuildAtProductionType: Tracked
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 8
+		Speed: 85
+		Locomotor: lighttracked
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: SmallArtillery
+		LocalOffset: 550,0,800
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		Armaments: primary
+		TargetFrozenActors: true
+		ForceFireIgnoresActors: true
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	WithMuzzleOverlay:
+		IgnoreOffset: True
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 75
+	RenderSprites:
+		PlayerPalette: green
+
 ARTIL3:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
