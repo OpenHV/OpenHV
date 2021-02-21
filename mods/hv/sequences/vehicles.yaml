@@ -195,6 +195,17 @@ artil:
 	icon: bits/units-icons.png
 		Start: 2
 
+artil2:
+	idle: bits/artil2.png
+		Facings: 8
+	muzzle: bits/artil2.png
+		Start: 8
+		Length: 3
+		Facings: 8
+		Tick: 100
+	icon: bits/units-icons.png
+		Start: 41
+
 artil3:
 	idle: bits/artil3.png
 		Facings: 8
