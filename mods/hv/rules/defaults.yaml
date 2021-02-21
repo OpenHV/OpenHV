@@ -45,6 +45,11 @@
 	OutlinedSelectionDecorations:
 	WithTextControlGroupDecoration:
 
+^PlayerHandicaps:
+	HandicapFirepowerMultiplier:
+	HandicapDamageMultiplier:
+	HandicapProductionTimeMultiplier:
+
 ^Cloakable:
 	Cloak@ExternalCloak:
 		RequiresCondition: crate-cloak
@@ -65,6 +70,7 @@
 	Inherits@cloak: ^Cloakable
 	Inherits@damagesparks: ^PixelDamageSparks
 	Inherits@reconstructor: ^ReconstructorHeal
+	Inherits@handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -153,6 +159,7 @@
 	Inherits@shield: ^ForceFieldCompatible
 	Inherits@damagesparks: ^PixelDamageSparks
 	Inherits@reconstructor: ^ReconstructorHeal
+	Inherits@handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -329,6 +336,7 @@
 
 ^BaseBuilding:
 	Inherits: ^Building
+	Inherits@handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow, Sand, Stone
@@ -546,6 +554,7 @@
 	Inherits@shield: ^ForceFieldCompatible
 	Inherits@damagesparks: ^PixelDamageSparks
 	Inherits@reconstructor: ^ReconstructorHeal
+	Inherits@handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
