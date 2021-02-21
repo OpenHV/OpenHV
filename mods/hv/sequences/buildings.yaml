@@ -621,13 +621,17 @@ turret2:
 aaturret:
 	Inherits@flame: ^BuildingFlame
 	Defaults:
-		Offset: 0, -5
+		Offset: 0, -7
 	idle: bits/aa-turret.png
 		Start: 0
-	shadow-overlay: bits/aa-turret-shadow.png
+	shadow-overlay: bits/aa-turret2-shadow.png
 		ZOffset: 1768
-		Offset: 6, 5
-	damaged-idle: bits/aa-turret.png
+		Offset: 1, -2
+	damaged-shadow-overlay: bits/aa-turret2-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 1, -2
+	damaged-idle: bits/aa-turret2.png
 		Start: 1
 	turret: bits/aa-turret.png
 		Start: 2

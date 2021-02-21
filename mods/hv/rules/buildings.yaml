@@ -928,7 +928,7 @@ AATURRET:
 	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Weapon: LightningBolt
-		LocalOffset: 0,0,500
+		LocalOffset: 0,0,1000
 	WithRangeCircle:
 		Type: Turret
 		Width: 2
