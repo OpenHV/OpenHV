@@ -48,7 +48,6 @@
 ^PlayerHandicaps:
 	HandicapFirepowerMultiplier:
 	HandicapDamageMultiplier:
-	HandicapProductionTimeMultiplier:
 
 ^Cloakable:
 	Cloak@ExternalCloak:
