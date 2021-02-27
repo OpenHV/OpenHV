@@ -1270,7 +1270,7 @@ ARTILLERYTURRET:
 	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Weapon: TurretArtillery
-		LocalOffset: 1700,0,100 #TODO Adjust that
+		LocalOffset: 1500,50,1400
 	WithRangeCircle:
 		Type: Turret
 		Width: 2
