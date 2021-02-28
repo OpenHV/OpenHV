@@ -107,7 +107,7 @@ dropship:
 
 saucer:
 	idle: bits/saucer.png
-		ZOffset: 2050 
+		ZOffset: 2050
 	shadow-overlay: bits/saucer-shadow.png
 		Offset: 15, -1
 	turret: bits/null.png
