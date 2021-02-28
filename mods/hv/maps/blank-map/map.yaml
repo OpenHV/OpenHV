@@ -28,5 +28,7 @@ Players:
 Actors:
 
 Rules:
+	World:
+		Randomizer:
 
 Sequences:
