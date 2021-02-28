@@ -30,5 +30,3 @@ Actors:
 Rules:
 
 Sequences:
-	test: # to trigger lint testing across the mod https://github.com/OpenRA/OpenRA/issues/12753
-		null: blank.png
