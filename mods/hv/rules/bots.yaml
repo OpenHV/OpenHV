@@ -7,6 +7,8 @@ Player:
 	GrantConditionOnBotOwner@Test:
 		Condition: enable-test-ai
 		Bots: test
+	BaseBotModule@Test:
+		RequiresCondition: enable-test-ai
 	BaseBuilderBotModule@Test:
 		RequiresCondition: enable-test-ai
 		MinimumExcessPower: 60
