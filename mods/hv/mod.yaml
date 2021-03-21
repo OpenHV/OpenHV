@@ -121,7 +121,6 @@ ChromeLayout:
 	hv|chrome/ingame-observer.yaml
 	hv|chrome/ingame-player.yaml
 	hv|chrome/gamesave-loading.yaml
-	hv|chrome/mainmenu-prerelease-notification.yaml
 
 Music:
 	hv|audio/music.yaml
