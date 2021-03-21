@@ -285,7 +285,7 @@ miner2:
 				Start: 20
 			bits/miner2-shadow.png:
 				Start: 20
-				Offset: 15, 16
+				Offset: 15, 32
 	silo: bits/miner2.png
 		Start: 21
 		Length: 6
