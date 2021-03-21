@@ -140,7 +140,8 @@ namespace OpenRA.Mods.HV.Traits
 					return;
 				}
 
-				AIUtils.BotDebug("AI: Miner {0} is idle. Ordering to {1} in search for new resources.".F(miner.Key, newSafeResourcePatch));
+				var cell = world.Map.CellContaining(newSafeResourcePatch.CenterPosition);
+				AIUtils.BotDebug("AI: {0} is idle. Ordering to {1} in search for new resources.".F(miner.Key, cell));
 				bot.QueueOrder(new Order("Move", miner.Key, newSafeResourcePatch, true));
 			}
 

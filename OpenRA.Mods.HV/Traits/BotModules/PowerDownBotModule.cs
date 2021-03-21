@@ -151,9 +151,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			if (togglingBuildings.Count > 0)
-			{
 				bot.QueueOrder(new Order("PowerDown", null, false, groupedActors: togglingBuildings.ToArray()));
-			}
 
 			toggleTick = Info.Interval;
 		}

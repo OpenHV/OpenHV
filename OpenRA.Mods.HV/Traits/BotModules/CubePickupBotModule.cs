@@ -122,7 +122,8 @@ namespace OpenRA.Mods.HV.Traits
 				if (target.Type == TargetType.Invalid)
 					continue;
 
-				AIUtils.BotDebug("AI: Ordering unit {0} to {1} for cube pick up.".F(cubeCollector, target));
+				var cell = world.Map.CellContaining(target.CenterPosition);
+				AIUtils.BotDebug("AI: Ordering {0} to {1} for cube pick up.".F(cubeCollector, cell));
 				bot.QueueOrder(new Order("Move", cubeCollector, target, true));
 				alreadyPursuitcubes.Add(cube);
 			}
