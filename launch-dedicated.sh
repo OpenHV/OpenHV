@@ -57,7 +57,7 @@ SHARE_ANONYMISED_IPS="${ShareAnonymizedIPs:-"True"}"
 SUPPORT_DIR="${SupportDir:-""}"
 
 cd "${TEMPLATE_ROOT}"
-if [ ! -f "${ENGINE_DIRECTORY}/OpenRA.Game.exe" ] || [ "$(cat "${ENGINE_DIRECTORY}/VERSION")" != "${ENGINE_VERSION}" ]; then
+if [ ! -f "${ENGINE_DIRECTORY}/bin/OpenRA.Server.exe" ] || [ "$(cat "${ENGINE_DIRECTORY}/VERSION")" != "${ENGINE_VERSION}" ]; then
 	echo "Required engine files not found."
 	echo "Run \`make\` in the mod directory to fetch and build the required files, then try again.";
 	exit 1
