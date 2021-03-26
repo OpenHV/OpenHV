@@ -17,11 +17,9 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Controls the 'Scrap' checkbox in the lobby options.")]
 	public class ScrapOptionsInfo : TraitInfo, ILobbyOptions
 	{
-		[Translate]
 		[Desc("Descriptive label for the scrap checkbox in the lobby.")]
 		public readonly string CheckboxLabel = "Scrap";
 
-		[Translate]
 		[Desc("Tooltip description for the scrap checkbox in the lobby.")]
 		public readonly string CheckboxDescription = "Collectible junk after unit destruction";
 

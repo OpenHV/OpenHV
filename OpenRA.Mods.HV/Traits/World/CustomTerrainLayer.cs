@@ -11,12 +11,13 @@
 
 using System.Collections.Generic;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Attach this to the world actor. Required for LaysTerrain to work.")]
-	public class CustomTerrainLayerInfo : TraitInfo
+	public class CustomTerrainLayerInfo : TraitInfo, Requires<ITiledTerrainRendererInfo>
 	{
 		[Desc("Palette to render the layer sprites in.")]
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
@@ -27,32 +28,31 @@ namespace OpenRA.Mods.HV.Traits
 	public class CustomTerrainLayer : IRenderOverlay, IWorldLoaded, ITickRender, INotifyActorDisposing
 	{
 		readonly CustomTerrainLayerInfo info;
-		readonly Dictionary<CPos, Sprite> dirty = new Dictionary<CPos, Sprite>();
+		readonly Dictionary<CPos, TerrainTile?> dirty = new Dictionary<CPos, TerrainTile?>();
+		readonly ITiledTerrainRenderer terrainRenderer;
 		readonly Map map;
 
 		TerrainSpriteLayer render;
-		Theater theater;
+		PaletteReference paletteReference;
 		bool disposed;
 
 		public CustomTerrainLayer(Actor self, CustomTerrainLayerInfo info)
 		{
 			this.info = info;
 			map = self.World.Map;
+			terrainRenderer = self.Trait<ITiledTerrainRenderer>();
 		}
 
-		public void WorldLoaded(World w, WorldRenderer wr)
+		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
-			theater = wr.Theater;
-			render = new TerrainSpriteLayer(w, wr, theater.Sheet, BlendMode.Alpha, wr.Palette(info.Palette), wr.World.Type != WorldType.Editor);
+			render = new TerrainSpriteLayer(w, wr, terrainRenderer.MissingTile, BlendMode.Alpha, wr.World.Type != WorldType.Editor);
+			paletteReference = wr.Palette(info.Palette);
 		}
 
 		public void AddTile(CPos cell, TerrainTile tile)
 		{
-			map.CustomTerrain[cell] = map.Rules.TileSet.GetTerrainIndex(tile);
-
-			// Terrain tiles define their origin at the topleft
-			var s = theater.TileSprite(tile);
-			dirty[cell] = new Sprite(s.Sheet, s.Bounds, s.ZRamp, float2.Zero, s.Channel, s.BlendMode);
+			map.CustomTerrain[cell] = map.Rules.TerrainInfo.GetTerrainIndex(tile);
+			dirty[cell] = tile;
 		}
 
 		void ITickRender.TickRender(WorldRenderer wr, Actor self)
@@ -62,13 +62,20 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				if (!self.World.FogObscures(kv.Key))
 				{
-					render.Update(kv.Key, kv.Value, false);
+					var tile = kv.Value;
+					if (tile.HasValue)
+					{
+						// Terrain tiles define their origin at the topleft
+						var s = terrainRenderer.TileSprite(tile.Value);
+						var ss = new Sprite(s.Sheet, s.Bounds, s.ZRamp, float2.Zero, s.Channel, s.BlendMode);
+						render.Update(kv.Key, ss, paletteReference);
+					}
+					else
+						render.Clear(kv.Key);
+
 					remove.Add(kv.Key);
 				}
 			}
-
-			foreach (var r in remove)
-				dirty.Remove(r);
 		}
 
 		void IRenderOverlay.Render(WorldRenderer wr)

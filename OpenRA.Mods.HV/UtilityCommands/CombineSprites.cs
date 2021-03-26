@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using OpenRA.FileFormats;
+using OpenRA.Graphics;
 using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Common.UtilityCommands
@@ -31,7 +32,7 @@ namespace OpenRA.Mods.Common.UtilityCommands
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
-			var modData = Game.ModData = utility.ModData;
+			Game.ModData = utility.ModData;
 
 			var width = 0;
 			var height = 0;
@@ -65,7 +66,7 @@ namespace OpenRA.Mods.Common.UtilityCommands
 				}
 			}
 
-			var output = new Png(data, width, height, palette, embeddedData);
+			var output = new Png(data, SpriteFrameType.Indexed8, width, height, palette, embeddedData);
 			var path = Path.Combine(args[1], args[3]);
 			output.Save(path);
 		}

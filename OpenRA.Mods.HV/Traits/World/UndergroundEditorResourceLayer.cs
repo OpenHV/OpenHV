@@ -28,7 +28,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class UndergroundEditorResourceLayer : IResourceLayer, IWorldLoaded, INotifyActorDisposing
 	{
 		protected readonly Map Map;
-		protected readonly TileSet Tileset;
+		protected readonly ITerrainInfo TerrainInfo;
 		protected readonly Dictionary<int, ResourceType> Resources;
 		protected readonly CellLayer<ResourceLayerContents> Tiles;
 
@@ -47,7 +47,7 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			Map = self.World.Map;
-			Tileset = self.World.Map.Rules.TileSet;
+			TerrainInfo = self.World.Map.Rules.TerrainInfo;
 
 			Tiles = new CellLayer<ResourceLayerContents>(Map);
 			Resources = self.TraitsImplementing<ResourceType>()
@@ -84,7 +84,7 @@ namespace OpenRA.Mods.HV.Traits
 					Density = tile.Index
 				};
 
-				newTerrain = Tileset.GetTerrainIndex(type.Info.TerrainType);
+				newTerrain = TerrainInfo.GetTerrainIndex(type.Info.TerrainType);
 			}
 
 			// Nothing has changed

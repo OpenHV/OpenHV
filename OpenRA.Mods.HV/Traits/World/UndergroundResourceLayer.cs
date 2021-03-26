@@ -104,7 +104,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		ResourceLayerContents CreateResourceCell(ResourceType t, CPos cell)
 		{
-			world.Map.CustomTerrain[cell] = world.Map.Rules.TileSet.GetTerrainIndex(t.Info.TerrainType);
+			world.Map.CustomTerrain[cell] = world.Map.Rules.TerrainInfo.GetTerrainIndex(t.Info.TerrainType);
 			++resCells;
 
 			return new ResourceLayerContents

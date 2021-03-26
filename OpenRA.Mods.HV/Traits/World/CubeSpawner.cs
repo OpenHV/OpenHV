@@ -20,11 +20,9 @@ namespace OpenRA.Mods.HV.Traits
 {
 	public class CubeSpawnerInfo : TraitInfo, ILobbyOptions
 	{
-		[Translate]
 		[Desc("Descriptive label for the cubes checkbox in the lobby.")]
 		public readonly string CheckboxLabel = "Cubes";
 
-		[Translate]
 		[Desc("Tooltip description for the cubes checkbox in the lobby.")]
 		public readonly string CheckboxDescription = "Collect cubes with units to receive random bonuses";
 

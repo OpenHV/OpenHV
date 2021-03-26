@@ -1,6 +1,6 @@
 World:
-	-SpawnMPUnits:
-	-MPStartLocations:
+	-SpawnStartingUnits:
+	-MapStartingLocations:
 	-CubeSpawner:
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES

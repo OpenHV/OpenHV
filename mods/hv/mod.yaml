@@ -92,7 +92,12 @@ ChromeLayout:
 	common|chrome/ingame-infochat.yaml
 	hv|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
-	hv|chrome/settings.yaml
+	common|chrome/settings.yaml
+	common|chrome/settings-display.yaml
+	common|chrome/settings-audio.yaml
+	common|chrome/settings-input.yaml
+	common|chrome/settings-hotkeys.yaml
+	common|chrome/settings-advanced.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
 	common|chrome/lobby-mappreview.yaml
@@ -130,10 +135,6 @@ Notifications:
 
 Voices:
 	hv|audio/voices.yaml
-
-Translations:
-	hv|languages/english.yaml
-	hv|languages/german.yaml
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -198,6 +199,10 @@ MapGrid:
 	Type: Rectangular
 	SubCellOffsets: 0,0,0, -256,-256,0, 256,-256,0, 0,256,0
 	DefaultSubCell: 1
+
+TerrainFormat: CustomTerrain
+
+VideoFormats:
 
 SpriteFormats: PngSheet
 

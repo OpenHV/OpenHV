@@ -15,7 +15,7 @@ function All-Command
 		return
 	}
 
-	dotnet build /p:Configuration=Release /nologo
+	dotnet build -c Release --nologo -p:TargetPlatform=win-x64
 	if ($lastexitcode -ne 0)
 	{
 		Write-Host "Build failed. If just the development tools failed to build, try installing Visual Studio. You may also still be able to run the game." -ForegroundColor Red
@@ -39,9 +39,9 @@ function Clean-Command
 	}
 
 	dotnet clean /nologo
-	rm ./*/obj -r
-	rm env:ENGINE_DIRECTORY/bin -r
-	rm env:ENGINE_DIRECTORY/*/obj -r
+	Remove-Item ./*/obj -Recurse -ErrorAction Ignore
+	Remove-Item env:ENGINE_DIRECTORY/bin -Recurse -ErrorAction Ignore
+	Remove-Item env:ENGINE_DIRECTORY/*/obj -Recurse -ErrorAction Ignore
 
 	Write-Host "Clean complete." -ForegroundColor Green
 }
@@ -112,7 +112,7 @@ function Check-Command
 	}
 
 	Write-Host "Compiling in debug configuration..." -ForegroundColor Cyan
-	dotnet build /p:Configuration=Debug /nologo
+	dotnet build -c Debug --nologo -p:TargetPlatform=win-x64
 	if ($lastexitcode -ne 0)
 	{
 		Write-Host "Build failed." -ForegroundColor Red
@@ -120,9 +120,6 @@ function Check-Command
 
 	if ((CheckForUtility) -eq 0)
 	{
-		Write-Host "Checking runtime assemblies..." -ForegroundColor Cyan
-		InvokeCommand "$utilityPath $modID --check-runtime-assemblies $env:WHITELISTED_OPENRA_ASSEMBLIES $env:WHITELISTED_THIRDPARTY_ASSEMBLIES $env:WHITELISTED_CORE_ASSEMBLIES $env:WHITELISTED_MOD_ASSEMBLIES"
-
 		Write-Host "Checking for explicit interface violations..." -ForegroundColor Cyan
 		InvokeCommand "$utilityPath $modID --check-explicit-interfaces"
 
@@ -154,20 +151,6 @@ function Check-Scripts-Command
 	}
 }
 
-function Docs-Command
-{
-	if ((CheckForUtility) -eq 1)
-	{
-		return
-	}
-
-	./make.ps1 version
-	InvokeCommand "$utilityPath $modID --docs | Out-File -Encoding 'UTF8' DOCUMENTATION.md"
-	InvokeCommand "$utilityPath $modID --weapon-docs | Out-File -Encoding "UTF8" WEAPONS.md"
-	InvokeCommand "$utilityPath $modID --lua-docs | Out-File -Encoding 'UTF8' Lua-API.md"
-	echo "Docs generated." -ForegroundColor Green
-}
-
 function CheckForUtility
 {
 	if (Test-Path $utilityPath)
@@ -183,7 +166,7 @@ function CheckForDotnet
 {
 	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null)
 	{
-		Write-Host "The 'dotnet' tool is required to compile OpenRA. Please install the .NET Core SDK or Visual Studio and try again. https://dotnet.microsoft.com/download" -ForegroundColor Red
+		Write-Host "The 'dotnet' tool is required to compile OpenHV. Please install the .NET 5.0 SDK and try again. https://dotnet.microsoft.com/download/dotnet/5.0" -ForegroundColor Red
 		return 1
 	}
 
@@ -215,9 +198,7 @@ function ReadConfigLine($line, $name)
 function ParseConfigFile($fileName)
 {
 	$names = @("MOD_ID", "ENGINE_VERSION", "AUTOMATIC_ENGINE_MANAGEMENT", "AUTOMATIC_ENGINE_SOURCE",
-		"AUTOMATIC_ENGINE_EXTRACT_DIRECTORY", "AUTOMATIC_ENGINE_TEMP_ARCHIVE_NAME", "ENGINE_DIRECTORY",
-		"WHITELISTED_OPENRA_ASSEMBLIES", "WHITELISTED_THIRDPARTY_ASSEMBLIES", "WHITELISTED_CORE_ASSEMBLIES",
-		"WHITELISTED_MOD_ASSEMBLIES")
+		"AUTOMATIC_ENGINE_EXTRACT_DIRECTORY", "AUTOMATIC_ENGINE_TEMP_ARCHIVE_NAME", "ENGINE_DIRECTORY")
 
 	$reader = [System.IO.File]::OpenText($fileName)
 	while($null -ne ($line = $reader.ReadLine()))
@@ -287,7 +268,6 @@ if ($args.Length -eq 0)
 	echo "  test            Tests the mod's MiniYAML for errors."
 	echo "  check           Checks .cs files for StyleCop violations."
 	echo "  check-scripts   Checks .lua files for syntax errors."
-	echo "  docs            Generates the trait and Lua API documentation."
 	echo ""
 	$command = (Read-Host "Enter command").Split(' ', 2)
 }
@@ -295,6 +275,10 @@ else
 {
 	$command = $args
 }
+
+# Set the working directory for our IO methods
+$templateDir = $pwd.Path
+[System.IO.Directory]::SetCurrentDirectory($templateDir)
 
 # Load the environment variables from the config file
 # and get the mod ID from the local environment variable
@@ -313,7 +297,6 @@ $env:ENGINE_DIR = ".."
 # Fetch the engine if required
 if ($command -eq "all" -or $command -eq "clean" -or $command -eq "check")
 {
-	$templateDir = $pwd.Path
 	$versionFile = $env:ENGINE_DIRECTORY + "/VERSION"
 	$currentEngine = ""
 	if (Test-Path $versionFile)
@@ -381,16 +364,7 @@ if ($command -eq "all" -or $command -eq "clean" -or $command -eq "check")
 		Rename-Item $extractedDir.Name (Split-Path -leaf $env:ENGINE_DIRECTORY)
 
 		rm $env:AUTOMATIC_ENGINE_EXTRACT_DIRECTORY -r
-	}
-}
 
-
-
-# Run the same command on the engine's make file
-if ($command -eq "all" -or $command -eq "clean" -or $command -eq "check")
-{
-	if (Test-Path $env:ENGINE_DIRECTORY)
-	{
 		cd $env:ENGINE_DIRECTORY
 		Invoke-Expression ".\make.cmd version $env:ENGINE_VERSION"
 		Invoke-Expression ".\make.cmd $command"
@@ -415,7 +389,6 @@ switch ($execute)
 	"test" { Test-Command }
 	"check" { Check-Command }
 	"check-scripts" { Check-Scripts-Command }
-	"docs" { Docs-Command }
 	Default { echo ("Invalid command '{0}'" -f $command) }
 }
 
