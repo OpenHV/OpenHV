@@ -11,7 +11,7 @@
 
 using System;
 using System.Linq;
-using OpenRA.Primitives;
+using OpenRA.Mods.Common.Terrain;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Common.Widgets.Logic
@@ -29,9 +29,11 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var tileDropDown = panel.Get<DropDownButtonWidget>("TILE");
 
-			var tileset = modData.DefaultTileSets.First().Value;
+			var tileset = modData.DefaultTerrainInfo.First().Value;
 
-			var clearTiles = tileset.Templates.Where(t => t.Value.PickAny)
+			var terrainInfo = world.Map.Rules.TerrainInfo as ITemplatedTerrainInfo;
+
+			var clearTiles = terrainInfo.Templates.Where(t => t.Value.PickAny)
 				.Select(t => (Type: t.Value.Id, Description: t.Value.Categories.First()));
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
@@ -72,13 +74,14 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				{
 					for (var i = map.Bounds.Left; i < map.Bounds.Right; i++)
 					{
-						var template = tileset.Templates[type];
+						var template = terrainInfo.Templates[type];
 						map.Tiles[new MPos(i, j)] = new TerrainTile(type, 0);
 					}
 				}
 
 				map.PlayerDefinitions = new MapPlayers(map.Rules, 0).ToMiniYaml();
-				map.FixOpenAreas();
+				if (map.Rules.TerrainInfo is ITerrainInfoNotifyMapCreated notifyMapCreated)
+					notifyMapCreated.MapCreated(map);
 
 				Action<string> afterSave = uid =>
 				{

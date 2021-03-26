@@ -12,6 +12,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Terrain;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -63,7 +64,8 @@ namespace OpenRA.Mods.HV.Traits
 			// Correlate the tile nameof(Image) aka subtile with its position to find the template origin
 			var tile = w.Map.Tiles[cell].Type;
 			var index = w.Map.Tiles[cell].Index;
-			var template = w.Map.Rules.TileSet.Templates[tile];
+			var terrainInfo = w.Map.Rules.TerrainInfo as ITemplatedTerrainInfo;
+			var template = terrainInfo.Templates[tile];
 			var ni = cell.X - index % template.Size.X;
 			var nj = cell.Y - index / template.Size.X;
 

@@ -204,9 +204,8 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			readonly List<Actor> minelayers;
 			readonly Minelayer minelayer;
-			readonly Sprite tileOk;
-			readonly Sprite tileUnknown;
-			readonly Sprite tileBlocked;
+			readonly Sprite validTile, unknownTile, blockedTile;
+			readonly float validAlpha, unknownAlpha, blockedAlpha;
 			readonly CPos minefieldStart;
 			readonly bool queued;
 
@@ -216,9 +215,18 @@ namespace OpenRA.Mods.HV.Traits
 				minefieldStart = xy;
 				this.queued = queued;
 
-				tileOk = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileValidName).GetSprite(0);
-				tileUnknown = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileUnknownName).GetSprite(0);
-				tileBlocked = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileInvalidName).GetSprite(0);
+				var validSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileValidName);
+				validTile = validSequence.GetSprite(0);
+				validAlpha = validSequence.GetAlpha(0);
+
+				var unknownSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileUnknownName);
+				unknownTile = unknownSequence.GetSprite(0);
+				unknownAlpha = unknownSequence.GetAlpha(0);
+
+				var blockedSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileInvalidName);
+				blockedTile = blockedSequence.GetSprite(0);
+				blockedAlpha = blockedSequence.GetAlpha(0);
+
 				minelayer = a.Trait<Minelayer>();
 			}
 
@@ -265,21 +273,34 @@ namespace OpenRA.Mods.HV.Traits
 
 				var movement = minelayer.Trait<IPositionable>();
 				var mobile = movement as Mobile;
-				var palette = wr.Palette(TileSet.TerrainPaletteInternalName);
+				var pal = wr.Palette(TileSet.TerrainPaletteInternalName);
 				foreach (var c in minefield)
 				{
-					var tile = tileOk;
+					var tile = validTile;
+					var alpha = validAlpha;
 					if (!world.Map.Contains(c))
-						tile = tileBlocked;
+					{
+						tile = blockedTile;
+						alpha = blockedAlpha;
+					}
 					else if (world.ShroudObscures(c))
-						tile = tileBlocked;
+					{
+						tile = blockedTile;
+						alpha = blockedAlpha;
+					}
 					else if (world.FogObscures(c))
-						tile = tileUnknown;
+					{
+						tile = unknownTile;
+						alpha = unknownAlpha;
+					}
 					else if (!this.minelayer.IsCellAcceptable(minelayer, c)
 						|| !movement.CanEnterCell(c, null, BlockedByActor.Immovable) || (mobile != null && !mobile.CanStayInCell(c)))
-						tile = tileBlocked;
+					{
+						tile = blockedTile;
+						alpha = blockedAlpha;
+					}
 
-					yield return new SpriteRenderable(tile, world.Map.CenterOfCell(c), WVec.Zero, -511, palette, 1f, true, true);
+					yield return new SpriteRenderable(tile, world.Map.CenterOfCell(c), WVec.Zero, -511, pal, 1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
 				}
 			}
 

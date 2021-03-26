@@ -37,7 +37,13 @@ namespace OpenRA.Mods.HV.Graphics
 
 		public IRenderable WithPalette(PaletteReference newPalette) { return this; }
 		public IRenderable WithZOffset(int newOffset) { return new EnergyBoltRenderable(offsets, newOffset, width, color); }
-		public IRenderable OffsetBy(WVec vec) { return new EnergyBoltRenderable(offsets.Select(offset => offset + vec).ToArray(), zOffset, width, color); }
+		public IRenderable OffsetBy(in WVec vec)
+		{
+			// Lambdas can't use 'in' variables, so capture a copy for later
+			var vector = vec;
+			return new EnergyBoltRenderable(offsets.Select(offset => offset + vector).ToArray(), zOffset, width, color);
+		}
+
 		public IRenderable AsDecoration() { return this; }
 
 		public IFinalizedRenderable PrepareRender(WorldRenderer wr) { return this; }

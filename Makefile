@@ -3,6 +3,12 @@
 # to compile, run:
 #   make
 #
+# to compile using Mono (version 6.4 or greater) instead of .NET 5, run:
+#   make RUNTIME=mono
+#
+# to compile using system libraries for native dependencies, run:
+#   make [RUNTIME=dotnet] TARGETPLATFORM=unix-generic
+#
 # to remove the files created by compiling, run:
 #   make clean
 #
@@ -13,7 +19,10 @@
 #   make check-scripts
 #
 # to check the engine and your mod dlls for StyleCop violations, run:
-#   make check
+#   make [RUNTIME=dotnet] check
+#
+# to check your mod yaml for errors, run:
+#   make [RUNTIME=dotnet] test
 #
 # the following are internal sdk helpers that are not intended to be run directly:
 #   make check-variables
@@ -36,11 +45,6 @@ MOD_ID = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/MOD_ID/ { p
 ENGINE_DIRECTORY = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/ENGINE_DIRECTORY/ { print $$2; exit }')
 MOD_SEARCH_PATHS = "$(shell $(PYTHON) -c "import os; print(os.path.realpath('.'))")/mods,./mods"
 
-WHITELISTED_OPENRA_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | awk -F= '/WHITELISTED_OPENRA_ASSEMBLIES/ { print $$2; exit }')"
-WHITELISTED_THIRDPARTY_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | awk -F= '/WHITELISTED_THIRDPARTY_ASSEMBLIES/ { print $$2; exit }')"
-WHITELISTED_CORE_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | awk -F= '/WHITELISTED_CORE_ASSEMBLIES/ { print $$2; exit }')"
-WHITELISTED_MOD_ASSEMBLIES = "$(shell cat user.config mod.config 2> /dev/null | awk -F= '/WHITELISTED_MOD_ASSEMBLIES/ { print $$2; exit }')"
-
 MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
@@ -48,6 +52,9 @@ MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
 BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 
 MSBUILD = msbuild -verbosity:m -nologo
+DOTNET = dotnet
+
+RUNTIME ?= dotnet
 
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
@@ -124,21 +131,27 @@ check-variables:
 
 engine: check-variables check-sdk-scripts
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
-	@cd $(ENGINE_DIRECTORY) && make all
+	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
 
 all: engine
-	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool."; exit 1)
+ifeq ($(RUNTIME), mono)
+	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool provided by Mono >= 6.4."; exit 1)
 ifneq ("$(MOD_SOLUTION_FILES)","")
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) \;
+	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true \;
+endif
+else
+	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
 
 clean: engine
-	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool."; exit 1)
 ifneq ("$(MOD_SOLUTION_FILES)","")
+ifeq ($(RUNTIME), mono)
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:clean \;
+else
+	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) clean \;
+endif
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
-	@printf "The engine has been cleaned.\n"
 
 version: check-variables
 	@sh -c '. $(ENGINE_DIRECTORY)/packaging/functions.sh; set_mod_version $(VERSION) $(MANIFEST_PATH)'
@@ -157,10 +170,12 @@ endif
 check: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@echo "Compiling in debug mode..."
-	@$(MSBUILD) -t:build -restore -p:Configuration=Debug
+ifeq ($(RUNTIME), mono)
+	@$(MSBUILD) -t:build -restore -p:Configuration=Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true
+else
+	@$(DOTNET) build -c Debug -p:TargetPlatform=$(TARGETPLATFORM)
 endif
-	@echo "Checking runtime assemblies..."
-	@./utility.sh --check-runtime-assemblies $(WHITELISTED_OPENRA_ASSEMBLIES) $(WHITELISTED_THIRDPARTY_ASSEMBLIES) $(WHITELISTED_CORE_ASSEMBLIES) $(WHITELISTED_MOD_ASSEMBLIES)
+endif
 	@echo "Checking for explicit interface violations..."
 	@./utility.sh --check-explicit-interfaces
 	@echo "Checking for incorrect conditional trait interface overrides..."

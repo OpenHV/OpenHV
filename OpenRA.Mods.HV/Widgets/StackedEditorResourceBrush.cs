@@ -92,12 +92,11 @@ namespace OpenRA.Mods.HV.Widgets
 				return false;
 
 			var tile = world.Map.Tiles[cell];
-			var tileInfo = world.Map.Rules.TileSet.GetTileInfo(tile);
+			var tileInfo = world.Map.Rules.TerrainInfo.GetTerrainInfo(tile);
 			if (tileInfo == null)
 				return false;
 
-			var terrainType = world.Map.Rules.TileSet.TerrainInfo[tileInfo.TerrainType];
-
+			var terrainType = world.Map.Rules.TerrainInfo.TerrainTypes[tileInfo.TerrainType];
 			if (!ResourceType.AllowedTerrainTypes.Contains(terrainType.Type))
 				return false;
 

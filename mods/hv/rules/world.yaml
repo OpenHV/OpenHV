@@ -211,21 +211,12 @@
 		B: 255
 		A: 128
 		TransparentIndex: 255
-	PlayerHighlightPalette:
-		TransparentIndex: 255
 	PaletteFromRGBA@moveflash:
 		Name: moveflash
 		R: 255
 		G: 255
 		B: 255
 		A: 64
-		TransparentIndex: 255
-	PaletteFromRGBA@disabled:
-		Name: disabled
-		R: 0
-		G: 0
-		B: 0
-		A: 180
 		TransparentIndex: 255
 	PaletteFromRGBA@shroud:
 		Name: shroud
@@ -240,28 +231,10 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
-	PaletteFromRGBA@shield:
-		Name: shield
-		R: 0
-		G: 0
-		B: 128
-		A: 64
-		TransparentIndex: 255
-	PaletteFromRGBA@ecm:
-		Name: ecm
-		R: 0
-		G: 128
-		B: 0
-		A: 64
-		TransparentIndex: 255
 	PaletteFromPlayerPaletteWithAlpha@cloak:
 		BaseName: cloak
 		BasePalette: green
 		Alpha: 0.55
-	PaletteFromPlayerPaletteWithAlpha@PlaceBuilding:
-		BaseName: place-building
-		BasePalette: green
-		Alpha: 0.45
 	FlashPaletteEffect@nuke:
 		Type: Nuke
 	ShroudRenderer:
@@ -302,21 +275,21 @@ World:
 	ScrapOptions:
 		CheckboxDisplayOrder: 8
 	TimeLimitManager:
-	CreateMPPlayers:
-	MPStartUnits@BASE:
+	CreateMapPlayers:
+	StartingUnits@BASE:
 		Class: none
 		ClassName: Base only
 		Factions: yi, sc
 		BaseActor: base
-	MPStartUnits@MINER:
+	StartingUnits@MINER:
 		Class: miner
 		ClassName: Base + Miner
 		Factions: yi, sc
 		BaseActor: base
 		SupportActors: miner
-	MPStartLocations:
+	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
-	SpawnMPUnits:
+	SpawnStartingUnits:
 		DropdownDisplayOrder: 1
 	PathFinder:
 	ValidateOrder:

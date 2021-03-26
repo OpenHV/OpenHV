@@ -305,7 +305,7 @@
 		Footprint: x
 		AllowPlacementOnResources: false
 	ActorPreviewPlaceBuildingPreview:
-		OverridePalette: place-building
+		PreviewAlpha: 0.65
 	WithSpriteBody:
 	ShakeOnDeath:
 	Guardable:
@@ -382,7 +382,7 @@
 ^DisableOnLowPower:
 	WithColoredOverlay@IDISABLE:
 		RequiresCondition: disabled
-		Palette: disabled
+		Color: 000000B4
 	GrantConditionOnPowerState@LOWPOWER:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
@@ -491,7 +491,7 @@
 ^ForceFieldCompatible:
 	WithColoredOverlay@FORCEFIELD:
 		RequiresCondition: shield
-		Palette: shield
+		Color: 0000FFB4
 	DamageMultiplier@FORCEFIELD:
 		RequiresCondition: shield
 		Modifier: 0
@@ -654,6 +654,7 @@
 	CustomSellValue:
 		Value: 0
 	ActorPreviewPlaceBuildingPreview:
+		PreviewAlpha: 0.65
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 7
@@ -724,7 +725,7 @@
 ^DisabledByECM:
 	WithColoredOverlay@ECMDISABLED:
 		RequiresCondition: ecmdisabled
-		Palette: ecm
+		Color: 000000B4
 	TimedConditionBar@ECMDISABLED:
 		Condition: ecmdisabled
 		Color: 00FF00

@@ -48,7 +48,7 @@ namespace OpenRA.Mods.HV.Graphics
 
 		public IRenderable WithPalette(PaletteReference newPalette) { return this; }
 		public IRenderable WithZOffset(int newOffset) { return this; }
-		public IRenderable OffsetBy(WVec vec) { return new OutlinedSelectionBoxAnnotationRenderable(pos + vec, actor, decorationBounds); }
+		public IRenderable OffsetBy(in WVec vec) { return new OutlinedSelectionBoxAnnotationRenderable(pos + vec, actor, decorationBounds); }
 		public IRenderable AsDecoration() { return this; }
 
 		void DrawExtraBars(float2 start, float2 end)
@@ -90,7 +90,7 @@ namespace OpenRA.Mods.HV.Graphics
 		Color GetHealthColor(IHealth health)
 		{
 			if (Game.Settings.Game.UsePlayerStanceColors)
-				return actor.Owner.PlayerStanceColor(actor);
+				return actor.Owner.PlayerRelationshipColor(actor);
 
 			return health.DamageState == DamageState.Critical ? Color.Crimson :
 				health.DamageState == DamageState.Heavy ? Color.Gold : Color.Green;

@@ -10,6 +10,8 @@
 #endregion
 
 using System.Collections.Generic;
+using System.IO;
+using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -42,7 +44,13 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			this.info = info;
 			layer = self.World.WorldActor.Trait<CustomTerrainLayer>();
-			template = self.World.Map.Rules.TileSet.Templates[info.Template];
+
+			var terrainInfo = self.World.Map.Rules.TerrainInfo as ITemplatedTerrainInfo;
+			if (terrainInfo == null)
+				throw new InvalidDataException("LaysTerrain requires a template-based tileset.");
+
+			template = terrainInfo.Templates[info.Template];
+
 			buildingInfo = self.Info.TraitInfo<BuildingInfo>();
 		}
 

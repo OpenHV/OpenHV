@@ -27,10 +27,10 @@ Container@MAINMENU:
 					Children:
 						Label@MAINMENU_LABEL_TITLE:
 							X: 0
-							Y: 21
+							Y: 22
 							Width: 200
 							Height: 30
-							Text: @MAIN-MENU-MAINMENU-LABEL-TITLE-TEXT@
+							Text: OpenHV
 							Align: Center
 							Font: Title
 						Button@SINGLEPLAYER_BUTTON:
@@ -38,35 +38,35 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: @MAIN-MENU-SINGLEPLAYER-BUTTON-TEXT@
+							Text: Singleplayer
 							Font: Bold
 						Button@MULTIPLAYER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: @MAIN-MENU-MULTIPLAYER-BUTTON-TEXT@
+							Text: Multiplayer
 							Font: Bold
 						Button@SETTINGS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: @MAIN-MENU-SETTINGS-BUTTON-TEXT@
+							Text: Settings
 							Font: Bold
 						Button@EXTRAS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
-							Text: @MAIN-MENU-EXTRAS-BUTTON-TEXT@
+							Text: Extras
 							Font: Bold
 						Button@CONTENT_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 220
 							Width: 140
 							Height: 30
-							Text: @MAIN-MENU-CONTENT-BUTTON-TEXT@
+							Text: Manage Content
 							Font: Bold
 							Disabled: true
 						Button@QUIT_BUTTON:
@@ -74,7 +74,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: @MAIN-MENU-QUIT-BUTTON-TEXT@
+							Text: Quit
 							Font: Bold
 				Background@SINGLEPLAYER_MENU:
 					Width: PARENT_RIGHT
@@ -82,10 +82,10 @@ Container@MAINMENU:
 					Children:
 						Label@SINGLEPLAYER_MENU_TITLE:
 							X: 0
-							Y: 21
+							Y: 20
 							Width: 200
 							Height: 30
-							Text: @SINGLEPLAYER-MENU-SINGLEPLAYER-MENU-TITLE-TEXT@
+							Text: Singleplayer
 							Align: Center
 							Font: Bold
 						Button@SKIRMISH_BUTTON:
@@ -93,21 +93,21 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: @SINGLEPLAYER-MENU-SKIRMISH-BUTTON-TEXT@
+							Text: Skirmish
 							Font: Bold
 						Button@MISSIONS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: @SINGLEPLAYER-MENU-MISSIONS-BUTTON-TEXT@
+							Text: Missions
 							Font: Bold
 						Button@LOAD_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: @SINGLEPLAYER-MENU-LOAD-BUTTON-TEXT@
+							Text: Load
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -115,7 +115,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: @SINGLEPLAYER-MENU-BACK-BUTTON-TEXT@
+							Text: Back
 							Font: Bold
 				Background@EXTRAS_MENU:
 					Width: PARENT_RIGHT
@@ -123,10 +123,10 @@ Container@MAINMENU:
 					Children:
 						Label@EXTRAS_MENU_TITLE:
 							X: 0
-							Y: 21
+							Y: 20
 							Width: 200
 							Height: 30
-							Text: @EXTRAS-MENU-EXTRAS-MENU-TITLE-TEXT@
+							Text: Extras
 							Align: Center
 							Font: Bold
 						Button@REPLAYS_BUTTON:
@@ -134,14 +134,14 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: @EXTRAS-MENU-REPLAYS-BUTTON-TEXT@
+							Text: Replays
 							Font: Bold
 						Button@MUSIC_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: @EXTRAS-MENU-MUSIC-BUTTON-TEXT@
+							Text: Music
 							Font: Bold
 							Disabled: true
 						Button@MAP_EDITOR_BUTTON:
@@ -149,21 +149,21 @@ Container@MAINMENU:
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: @EXTRAS-MENU-MAP-EDITOR-BUTTON-TEXT@
+							Text: Map Editor
 							Font: Bold
 						Button@ASSETBROWSER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
-							Text: @EXTRAS-MENU-ASSETBROWSER-BUTTON-TEXT@
+							Text: Asset Browser
 							Font: Bold
 						Button@CREDITS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 220
 							Width: 140
 							Height: 30
-							Text: @EXTRAS-MENU-CREDITS-BUTTON-TEXT@
+							Text: Credits
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -171,7 +171,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: @EXTRAS-MENU-BACK-BUTTON-TEXT@
+							Text: Back
 							Font: Bold
 				Background@MAP_EDITOR_MENU:
 					Width: PARENT_RIGHT
@@ -179,10 +179,10 @@ Container@MAINMENU:
 					Children:
 						Label@MAP_EDITOR_MENU_TITLE:
 							X: 0
-							Y: 21
+							Y: 20
 							Width: 200
 							Height: 30
-							Text: @MAP-EDITOR-MENU-MAP-EDITOR-MENU-TITLE-TEXT@
+							Text: Map Editor
 							Align: Center
 							Font: Bold
 						Button@NEW_MAP_BUTTON:
@@ -190,14 +190,14 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: @MAP-EDITOR-MENU-NEW-MAP-BUTTON-TEXT@
+							Text: New Map
 							Font: Bold
 						Button@LOAD_MAP_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: @MAP-EDITOR-MENU-LOAD-MAP-BUTTON-TEXT@
+							Text: Load Map
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -205,45 +205,14 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: @MAP-EDITOR-MENU-BACK-BUTTON-TEXT@
+							Text: Back
 							Font: Bold
-		Background@NEWS_BG:
-			X: (WINDOW_RIGHT - WIDTH) / 2
-			Y: 35
-			Width: 430
-			Height: 55
-			Children:
-				DropDownButton@NEWS_BUTTON:
-					X: 15
-					Y: 15
-					Width: 400
-					Height: 25
-					Text: @NEWS-BG-NEWS-BUTTON-TEXT@
-					Font: Bold
-		Container@UPDATE_NOTICE:
-			X: (WINDOW_RIGHT - WIDTH) / 2
-			Y: 96
-			Width: 128
-			Children:
-				Label@A:
-					Width: PARENT_RIGHT
-					Height: 25
-					Align: Center
-					Shadow: true
-					Text: @UPDATE-NOTICE-A-TEXT@
-				Label@B:
-					Y: 20
-					Width: PARENT_RIGHT
-					Height: 25
-					Align: Center
-					Shadow: true
-					Text: @UPDATE-NOTICE-B-TEXT@
 		Container@PERFORMANCE_INFO:
 			Logic: PerfDebugLogic
 			Children:
 				Label@PERF_TEXT:
 					X: 30
-					Y: WINDOW_BOTTOM - 69
+					Y: WINDOW_BOTTOM - 70
 					Width: 170
 					Height: 40
 					Contrast: true
@@ -260,6 +229,38 @@ Container@MAINMENU:
 							Y: 5
 							Width: 200
 							Height: 200
+		Background@NEWS_BG:
+			X: (WINDOW_RIGHT - WIDTH) / 2
+			Y: 35
+			Width: 430
+			Height: 55
+			Children:
+				DropDownButton@NEWS_BUTTON:
+					Background: newsbutton
+					X: 15
+					Y: 15
+					Width: 400
+					Height: 25
+					Text: Subspace Transmissions
+					Font: Bold
+		Container@UPDATE_NOTICE:
+			X: (WINDOW_RIGHT - WIDTH) / 2
+			Y: 95
+			Width: 128
+			Children:
+				Label@A:
+					Width: PARENT_RIGHT
+					Height: 25
+					Align: Center
+					Shadow: true
+					Text: You are running an outdated version of OpenHV.
+				Label@B:
+					Y: 20
+					Width: PARENT_RIGHT
+					Height: 25
+					Align: Center
+					Shadow: true
+					Text: Download the latest version from www.github.com
 		Container@PLAYER_PROFILE_CONTAINER:
-			X: 5
-			Y: 5
+			X: 25
+			Y: 25

@@ -94,7 +94,7 @@ namespace OpenRA.Mods.HV.Warheads
 			var availableTargetActors = world.FindActorsOnCircle(epicenter, weapon.Range)
 				.Where(x => (AllowDirectHit || !directActors.Contains(x))
 					&& weapon.IsValidAgainst(Target.FromActor(x), firedBy.World, firedBy)
-					&& AimTargetStances.HasStance(firedBy.Owner.RelationshipWith(x.Owner)))
+					&& AimTargetStances.HasRelationship(firedBy.Owner.RelationshipWith(x.Owner)))
 				.Where(x =>
 				{
 					var activeShapes = x.TraitsImplementing<HitShape>().Where(Exts.IsTraitEnabled);
