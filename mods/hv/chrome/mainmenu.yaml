@@ -1,5 +1,5 @@
 Container@MAINMENU:
-	Logic: MainMenuLogic
+	Logic: CustomMainMenuLogic
 	Children:
 		LogicKeyListener@GLOBAL_KEYHANDLER:
 			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
@@ -218,7 +218,6 @@ Container@MAINMENU:
 					Y: 15
 					Width: 400
 					Height: 25
-					Disabled: true
 					Text: @NEWS-BG-NEWS-BUTTON-TEXT@
 					Font: Bold
 		Container@UPDATE_NOTICE:

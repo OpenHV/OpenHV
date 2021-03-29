@@ -211,9 +211,9 @@ AssetBrowser:
 	SupportedExtensions: .png
 
 WebServices:
-	GameNews: https://localhost/gamenews # TODO
-	VersionCheck: https://localhost/versioncheck # TODO
-	GameNewsFileName: hv-news.yaml
+
+GitHubWebServices:
+	GameNewsFileName: hv-news.json
 
 DiscordService:
 	ApplicationId: 730762985772941312
