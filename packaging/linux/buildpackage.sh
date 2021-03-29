@@ -130,13 +130,13 @@ fi
 
 mkdir -p "${APPDIR}/usr/share/applications"
 chmod 0644 temp.desktop.in
-sed "s/openra-{MODID}/openhv/g" temp.desktop.in | sed "s/OpenRA - {MODNAME}/OpenHV/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/applications/openhv.desktop"
+sed "s/openra-{MODID}-{TAG}/openra-${MOD_ID}-${TAG}/g" temp.desktop.in | sed "s/openra-{MODID}/openhv/g" | sed "s/OpenRA - {MODNAME}/OpenHV/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/applications/openhv.desktop"
 cp "${APPDIR}/usr/share/applications/openhv.desktop" "${APPDIR}/openhv.desktop"
 rm temp.desktop.in
 
 mkdir -p "${APPDIR}/usr/share/mime/packages"
 chmod 0644 temp.xml.in
-sed "s/openra-{MODID}/openhv/g" temp.xml.in | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/mime/packages/openhv.xml"
+sed "s/openra-{MODID}-{TAG}/openra-${MOD_ID}-${TAG}/g" | sed temp.xml.in "s/openra-{MODID}/openhv/g" | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/mime/packages/openhv.xml"
 rm temp.xml.in
 
 if [ -f "${ARTWORK_DIR}/icon_scalable.svg" ]; then
