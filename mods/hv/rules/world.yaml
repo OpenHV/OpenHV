@@ -10,8 +10,8 @@
 	TerrainDebugOverlay:
 	DebugVisualizations:
 	DebugOffsetOverlayManager:
-	TerrainRenderer:
 	TerrainLighting:
+	CustomTerrainRenderer:
 	Locomotor@IMMOBILE:
 		Name: immobile
 		TerrainSpeeds:
@@ -31,6 +31,7 @@
 			Red Snow: 50
 			Sand: 40
 			Stone: 100
+			Tech: 100
 	Locomotor@WHEELED:
 		Name: wheeled
 		Crushes: Cube, Scrap
@@ -46,6 +47,7 @@
 			Red Snow: 30
 			Sand: 40
 			Stone: 100
+			Tech: 100
 	Locomotor@TRACKED:
 		Name: tracked
 		Crushes: Tree, Cube, Scrap
@@ -63,6 +65,7 @@
 			Sand: 40
 			Stone: 100
 			Plant: 30
+			Tech: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		Crushes: Cube, Scrap
@@ -78,6 +81,7 @@
 			Red Snow: 40
 			Sand: 30
 			Stone: 100
+			Tech: 100
 	Locomotor@NAVAL:
 		Name: naval
 		Crushes: Cube
@@ -110,7 +114,7 @@
 		Sequences: gold
 		MaxDensity: 3
 		ValuePerUnit: 180
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant, Tech
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceType@Iron:
@@ -122,7 +126,7 @@
 		Sequences: iron
 		MaxDensity: 3
 		ValuePerUnit: 100
-		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant
+		AllowedTerrainTypes: Clear, Crater, Grass, Road, Mountain, Snow, Red Snow, Plant, Tech
 		AllowUnderActors: true
 		AllowUnderBuildings: true
 	ResourceRenderer:
@@ -303,7 +307,7 @@ World:
 	UndergroundResourceLayer:
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
-		ValidGround: Clear, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone
+		ValidGround: Clear, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		CubeActors: moneycube, revealmapcube, cloakcube
 		CubeActorShares: 90, 10, 40
 	TerrainTileAnimation@LAVABUBBLE:

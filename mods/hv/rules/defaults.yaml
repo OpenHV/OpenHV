@@ -338,7 +338,7 @@
 	Inherits@handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow, Sand, Stone
+		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow, Sand, Stone, Tech
 		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building

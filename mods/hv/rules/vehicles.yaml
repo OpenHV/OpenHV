@@ -152,7 +152,7 @@ TANK4:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Facing: 384
-		AllowedTerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
 		Voice: Move
 	Repairable:
 		RequireForceMoveCondition: !undeployed

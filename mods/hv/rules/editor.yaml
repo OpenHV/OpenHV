@@ -24,6 +24,7 @@ EditorWorld:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	EditorCursorLayer:
+	EditorAutoTiler:
 
 EditorPlayer:
 	AlwaysVisible:
