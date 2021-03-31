@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,11 +13,12 @@ using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Commands;
 using OpenRA.Mods.Common.Graphics;
+using OpenRA.Mods.Common.Terrain;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Displays terrain types. Excludes custom terrain.")]
+	[Desc("Displays terrain tile IDs colored by terrain type.")]
 	class TerrainDebugOverlayInfo : TraitInfo
 	{
 		public readonly string Font = "TinyBold";
@@ -66,13 +67,16 @@ namespace OpenRA.Mods.Common.Traits
 			{
 				var cell = uv.ToCPos(wr.World.Map);
 				var center = wr.World.Map.CenterOfCell(cell);
-				var terrainType = self.World.Map.CustomTerrain[cell];
+				var terrainType = wr.World.Map.CustomTerrain[cell];
 				if (terrainType != byte.MaxValue)
 					continue;
 
 				var info = wr.World.Map.GetTerrainInfo(cell);
+				var terrainInfo = (ITemplatedTerrainInfo)wr.World.Map.Rules.TerrainInfo;
+				var tile = wr.World.Map.Tiles[cell].Type;
+				var template = terrainInfo.Templates[tile];
 
-				yield return new TextAnnotationRenderable(font, center, 0, info.Color, info.Type);
+				yield return new TextAnnotationRenderable(font, center, 0, info.Color, template.Id.ToString());
 			}
 		}
 

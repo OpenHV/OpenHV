@@ -30,6 +30,10 @@ Terrain:
 		Type: Road
 		TargetTypes: Ground
 		Color: 767676
+	TerrainType@Tech:
+		Type: Tech
+		TargetTypes: Ground
+		Color: 666666
 	TerrainType@Grass:
 		Type: Grass
 		TargetTypes: Ground
@@ -124,8 +128,53 @@ Templates:
 		Images: bits/terrain/crater.png
 		Frames: 4
 		Size: 1,1
-		Categories: Crater
-		PickAny: true
+		Categories: Crater, Terrain
+		ClearTile: true
+		AutoConnect@Grass:
+			Type: Grass
+			BorderTypes: Crater
+			BorderTransitions: 156, 152, 154, 160, 159, 161, 153, 151
+			Corners: 158, 157, 162, 163
+ 		AutoConnect@Mountain:
+			Type: Mountain
+			BorderTypes: Crater
+			BorderTransitions: 370, 366, 368, 374, 373, 375, 367, 365
+			Corners: 372, 371, 376, 377
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 32, 38, 34, 29, 36, 35, 40, 41
+			Corners: 37, 39, 30, 28
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 18, 24, 20, 15, 22, 21, 26, 27
+			Corners: 23, 25, 16, 14
+		AutoConnect@RedSnow:
+			Type: Red Snow
+			BorderTypes: Crater
+			BorderTransitions: 638, 633, 636, 642, 641, 643, 634, 632
+			Corners: 640, 639, 644, 645
+		AutoConnect@Sand:
+			Type: Sand
+			BorderTypes: Crater
+			BorderTransitions: 708, 704, 706, 712, 711, 713, 705, 703
+			Corners: 710, 709, 714, 715
+		AutoConnect@Snow:
+			Type: Snow
+			BorderTypes: Crater
+			BorderTransitions: 813, 810, 812, 819, 817, 820, 811, 818
+			Corners: 816, 815, 821, 822
+		AutoConnect@Stone:
+			Type: Stone
+			BorderTypes: Crater
+			BorderTransitions: 907, 902, 905, 911, 910, 912, 903, 901
+			Corners: 909, 908, 913, 914
+		AutoConnect@Tech:
+			Type: Tech
+			BorderTypes: Crater
+			BorderTransitions: 1110, 1105, 1108, 1114, 1113, 1115, 1106, 1104
+			Corners: 1112, 1111, 1116, 1117
 		Tiles:
 			0: Crater
 	Template@6:
@@ -295,7 +344,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@29:
 		Id: 29
 		Images: bits/terrain/crtr2wtr.png
@@ -303,7 +352,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@30:
 		Id: 30
 		Images: bits/terrain/crtr2wtr.png
@@ -311,7 +360,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@32:
 		Id: 32
 		Images: bits/terrain/crtr2wtr.png
@@ -319,14 +368,14 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@33:
 		Id: 33
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Water
-		PickAny: true
+		Categories: Water, Terrain
+		ClearTile: true
 		Tiles:
 			0: Water
 	Template@34:
@@ -336,7 +385,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@35:
 		Id: 35
 		Images: bits/terrain/crtr2wtr.png
@@ -344,7 +393,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@36:
 		Id: 36
 		Images: bits/terrain/crtr2wtr.png
@@ -352,7 +401,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@37:
 		Id: 37
 		Images: bits/terrain/crtr2wtr.png
@@ -360,7 +409,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@38:
 		Id: 38
 		Images: bits/terrain/crtr2wtr.png
@@ -368,7 +417,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@39:
 		Id: 39
 		Images: bits/terrain/crtr2wtr.png
@@ -376,7 +425,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@40:
 		Id: 40
 		Images: bits/terrain/crtr2wtr.png
@@ -384,7 +433,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@41:
 		Id: 41
 		Images: bits/terrain/crtr2wtr.png
@@ -392,7 +441,7 @@ Templates:
 		Size: 1,1
 		Categories: Crater, Water
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@42:
 		Id: 42
 		Images: bits/terrain/crtrmisc.png
@@ -926,8 +975,33 @@ Templates:
 		Images: bits/terrain/grass.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass
-		PickAny: true
+		Categories: Grass, Terrain
+		ClearTile: true
+		AutoConnect@Mountain:
+			Type: Mountain
+			BorderTypes: Grass
+			BorderTransitions: 196, 192, 194, 200, 199, 201, 193, 191
+			Corners: 198, 197, 202, 203
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Grass, Cliff
+			BorderTransitions: 208, 214, 210, 205, 212, 211, 216, 217
+			Corners: 213, 215, 206, 204
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Grass, Cliff
+			BorderTransitions: 222, 228, 224, 219, 226, 225, 230, 231
+			Corners: 227, 229, 220, 218
+		AutoConnect@Swamp:
+			Type: Swamp
+			BorderTypes: Grass, Cliff
+			BorderTransitions: 1069, 1075, 1071, 1066, 1077, 1078, 1073, 1072
+			Corners: 1074, 1076, 1067, 1065
+ 		AutoConnect@Trees:
+			Type: Plant
+			BorderTypes: Grass
+			BorderTransitions: 1273, 1277, 1279, 1275, 1283, 1281, 1282, 1285
+			Corners: 1274, 1280, 1278, 1272
 		Tiles:
 			0: Grass
 	Template@122:
@@ -1465,7 +1539,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@192:
 		Id: 192
 		Images: bits/terrain/grs2mnt.png
@@ -1473,7 +1547,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@193:
 		Id: 193
 		Images: bits/terrain/grs2mnt.png
@@ -1481,7 +1555,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@194:
 		Id: 194
 		Images: bits/terrain/grs2mnt.png
@@ -1489,13 +1563,29 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@195:
 		Id: 195
 		Images: bits/terrain/grs2mnt.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Mountain
+		Categories: Mountain, Terrain
+ 		ClearTile: true
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Mountain
+			BorderTransitions: 322, 328, 324, 320, 326, 325, 330, 331
+			Corners: 327, 329, 321, 319
+		AutoConnect@Sand:
+			Type: Sand
+			BorderTypes: Mountain
+			BorderTransitions: 417, 422, 418, 415, 420, 419, 424, 425
+			Corners: 421, 423, 416, 414
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Mountain, Cliff
+			BorderTransitions: 430, 436, 432, 427, 434, 433, 438, 439
+			Corners: 435, 437, 428, 426
 		Tiles:
 			0: Mountain
 	Template@196:
@@ -1505,7 +1595,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@197:
 		Id: 197
 		Images: bits/terrain/grs2mnt.png
@@ -1513,7 +1603,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@198:
 		Id: 198
 		Images: bits/terrain/grs2mnt.png
@@ -1521,7 +1611,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@199:
 		Id: 199
 		Images: bits/terrain/grs2mnt.png
@@ -1529,7 +1619,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@200:
 		Id: 200
 		Images: bits/terrain/grs2mnt.png
@@ -1537,7 +1627,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@201:
 		Id: 201
 		Images: bits/terrain/grs2mnt.png
@@ -1545,7 +1635,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@202:
 		Id: 202
 		Images: bits/terrain/grs2mnt.png
@@ -1553,7 +1643,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@203:
 		Id: 203
 		Images: bits/terrain/grs2mnt.png
@@ -1561,7 +1651,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Mountain
 		Tiles:
-			0: Mountain
+			0: Grass
 	Template@204:
 		Id: 204
 		Images: bits/terrain/grs2watr.png
@@ -1833,7 +1923,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@242:
 		Id: 242
 		Images: bits/terrain/ice2snow.png
@@ -1865,13 +1955,19 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@246:
 		Id: 246
 		Images: bits/terrain/ice2snow.png
 		Frames: 6
 		Size: 1,1
-		Categories: Ice
+		Categories: Ice, Terrain
+		ClearTile: true
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Ice
+			BorderTransitions: 260, 266, 262, 256, 259, 258, 263, 264
+			Corners: 265, 267, 257, 255
 		Tiles:
 			0: Ice
 	Template@247:
@@ -1881,7 +1977,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@248:
 		Id: 248
 		Images: bits/terrain/ice2snow.png
@@ -1889,7 +1985,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@249:
 		Id: 249
 		Images: bits/terrain/ice2snow.png
@@ -1897,7 +1993,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@250:
 		Id: 250
 		Images: bits/terrain/ice2snow.png
@@ -1913,7 +2009,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@252:
 		Id: 252
 		Images: bits/terrain/ice2snow.png
@@ -1929,7 +2025,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@254:
 		Id: 254
 		Images: bits/terrain/ice2snow.png
@@ -1937,7 +2033,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Snow
 		Tiles:
-			0: Ice
+			0: Snow
 	Template@255:
 		Id: 255
 		Images: bits/terrain/ice2watr.png
@@ -1953,7 +2049,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Water
+			0: Ice
 	Template@257:
 		Id: 257
 		Images: bits/terrain/ice2watr.png
@@ -1969,7 +2065,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Water
+			0: Ice
 	Template@259:
 		Id: 259
 		Images: bits/terrain/ice2watr.png
@@ -1977,7 +2073,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Water
+			0: Ice
 	Template@260:
 		Id: 260
 		Images: bits/terrain/ice2watr.png
@@ -2001,7 +2097,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Water
+			0: Ice
 	Template@263:
 		Id: 263
 		Images: bits/terrain/ice2watr.png
@@ -2009,7 +2105,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Water
+			0: Ice
 	Template@264:
 		Id: 264
 		Images: bits/terrain/ice2watr.png
@@ -2017,7 +2113,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Water
+			0: Ice
 	Template@265:
 		Id: 265
 		Images: bits/terrain/ice2watr.png
@@ -2033,7 +2129,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Water
+			0: Ice
 	Template@267:
 		Id: 267
 		Images: bits/terrain/ice2watr.png
@@ -2439,7 +2535,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@321:
 		Id: 321
 		Images: bits/terrain/lava.png
@@ -2455,13 +2551,14 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@323:
 		Id: 323
 		Images: bits/terrain/lava.png
 		Frames: 4
 		Size: 1,1
-		Categories: Lava
+		ClearTile: true
+		Categories: Lava, Terrain
 		Tiles:
 			0: Lava
 	Template@324:
@@ -2471,7 +2568,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@325:
 		Id: 325
 		Images: bits/terrain/lava.png
@@ -2479,7 +2576,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@326:
 		Id: 326
 		Images: bits/terrain/lava.png
@@ -2487,7 +2584,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@327:
 		Id: 327
 		Images: bits/terrain/lava.png
@@ -2495,7 +2592,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@328:
 		Id: 328
 		Images: bits/terrain/lava.png
@@ -2503,7 +2600,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@329:
 		Id: 329
 		Images: bits/terrain/lava.png
@@ -2519,7 +2616,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@331:
 		Id: 331
 		Images: bits/terrain/lava.png
@@ -2527,7 +2624,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Lava
+			0: Mountain
 	Template@332:
 		Id: 332
 		Images: bits/terrain/lavaflow.png
@@ -2791,7 +2888,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Crater
 		Tiles:
-			0: Mountain
+			0: Crater
 	Template@366:
 		Id: 366
 		Images: bits/terrain/mnt2crtb.png
@@ -2807,7 +2904,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Crater
 		Tiles:
-			0: Mountain
+			0: Crater
 	Template@368:
 		Id: 368
 		Images: bits/terrain/mnt2crtb.png
@@ -2847,7 +2944,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Crater
 		Tiles:
-			0: Mountain
+			0: Crater
 	Template@374:
 		Id: 374
 		Images: bits/terrain/mnt2crtb.png
@@ -2855,7 +2952,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Crater
 		Tiles:
-			0: Mountain
+			0: Crater
 	Template@375:
 		Id: 375
 		Images: bits/terrain/mnt2crtb.png
@@ -2863,7 +2960,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Crater
 		Tiles:
-			0: Mountain
+			0: Crater
 	Template@376:
 		Id: 376
 		Images: bits/terrain/mnt2crtb.png
@@ -3167,7 +3264,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@418:
 		Id: 418
 		Images: bits/terrain/mnt2sand.png
@@ -3175,7 +3272,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@419:
 		Id: 419
 		Images: bits/terrain/mnt2sand.png
@@ -3183,7 +3280,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@420:
 		Id: 420
 		Images: bits/terrain/mnt2sand.png
@@ -3191,7 +3288,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@421:
 		Id: 421
 		Images: bits/terrain/mnt2sand.png
@@ -3207,7 +3304,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@423:
 		Id: 423
 		Images: bits/terrain/mnt2sand.png
@@ -3223,7 +3320,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@425:
 		Id: 425
 		Images: bits/terrain/mnt2sand.png
@@ -3231,7 +3328,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Sand
 		Tiles:
-			0: Sand
+			0: Mountain
 	Template@426:
 		Id: 426
 		Images: bits/terrain/mnt2watr.png
@@ -3239,7 +3336,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@427:
 		Id: 427
 		Images: bits/terrain/mnt2watr.png
@@ -3255,7 +3352,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@430:
 		Id: 430
 		Images: bits/terrain/mnt2watr.png
@@ -3263,7 +3360,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@432:
 		Id: 432
 		Images: bits/terrain/mnt2watr.png
@@ -3279,7 +3376,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@434:
 		Id: 434
 		Images: bits/terrain/mnt2watr.png
@@ -3287,7 +3384,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@435:
 		Id: 435
 		Images: bits/terrain/mnt2watr.png
@@ -3319,7 +3416,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@439:
 		Id: 439
 		Images: bits/terrain/mnt2watr.png
@@ -3327,7 +3424,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Water, Cliff
 		Tiles:
-			0: Water
+			0: Cliff
 	Template@440:
 		Id: 440
 		Images: bits/terrain/mntcliff.png
@@ -4239,8 +4336,18 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 4
 		Size: 1,1
-		Categories: Sand
-		PickAny: true
+		Categories: Sand, Terrain
+		ClearTile: true
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Sand, Cliff
+			BorderTransitions: 580, 586, 582, 577, 584, 583, 588, 589
+			Corners: 585, 587, 578, 576
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Sand, Cliff
+			BorderTransitions: 742, 748, 744, 739, 746, 745, 750, 751
+			Corners: 747, 749, 740, 738
 		Tiles:
 			0: Sand
 	Template@568:
@@ -4720,8 +4827,18 @@ Templates:
 		Images: bits/terrain/sn2-2crb.png
 		Frames: 3
 		Size: 1,1
-		Categories: Red Snow
-		PickAny: true
+		Categories: Red Snow, Terrain
+		ClearTile: true
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Red Snow, Cliff
+			BorderTransitions: 658, 664, 660, 655, 662, 661, 666, 667
+			Corners: 663, 665, 656, 654
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Red Snow, Cliff
+			BorderTransitions: 800, 806, 802, 797, 804, 803, 808, 809
+			Corners: 805, 807, 798, 796
 		Tiles:
 			0: Red Snow
 	Template@636:
@@ -5219,7 +5336,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@704:
 		Id: 704
 		Images: bits/terrain/snd2crtb.png
@@ -5227,7 +5344,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@705:
 		Id: 705
 		Images: bits/terrain/snd2crtb.png
@@ -5235,7 +5352,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@706:
 		Id: 706
 		Images: bits/terrain/snd2crtb.png
@@ -5243,7 +5360,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@708:
 		Id: 708
 		Images: bits/terrain/snd2crtb.png
@@ -5251,7 +5368,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@709:
 		Id: 709
 		Images: bits/terrain/snd2crtb.png
@@ -5275,7 +5392,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@712:
 		Id: 712
 		Images: bits/terrain/snd2crtb.png
@@ -5283,7 +5400,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@713:
 		Id: 713
 		Images: bits/terrain/snd2crtb.png
@@ -5291,7 +5408,7 @@ Templates:
 		Size: 1,1
 		Categories: Sand, Crater
 		Tiles:
-			0: Sand
+			0: Crater
 	Template@714:
 		Id: 714
 		Images: bits/terrain/snd2crtb.png
@@ -5703,8 +5820,38 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 4
 		Size: 1,1
-		Categories: Snow
-		PickAny: true
+		Categories: Snow, Terrain
+		ClearTile: true
+		AutoConnect@Ice:
+			Type: Ice
+			BorderTypes: Snow
+			BorderTransitions: 245, 251, 247, 241, 249, 248, 253, 254
+			Corners: 250, 252, 242, 240
+		AutoConnect@RedSnow:
+			Type: Red Snow
+			BorderTypes: Snow
+			BorderTransitions: 781, 787, 783, 779, 785, 784, 789, 790
+			Corners: 786, 788, 780, 778
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Snow, Cliff
+			BorderTransitions: 849, 855, 851, 846, 853, 852, 857, 858
+			Corners: 854, 856, 847, 845
+		AutoConnect@Mountain:
+			Type: Mountain
+			BorderTypes: Snow
+			BorderTransitions: 863, 860, 862, 867, 866, 868, 861, 859
+			Corners: 865, 864, 869, 870
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Snow, Cliff
+			BorderTransitions: 875, 881, 877, 872, 879, 878, 883, 884
+			Corners: 880, 882, 873, 871
+ 		AutoConnect@Trees:
+			Type: Plant
+			BorderTypes: Snow
+			BorderTransitions: 1288, 1293, 1295, 1291, 1301, 1298, 1299, 1302
+			Corners: 1289, 1296, 1294, 1287
 		Tiles:
 			0: Snow
 	Template@770:
@@ -5789,33 +5936,33 @@ Templates:
 		Images: bits/terrain/snow2.png
 		Frames: 0
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@779:
 		Id: 779
 		Images: bits/terrain/snow2.png
 		Frames: 1
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@780:
 		Id: 780
 		Images: bits/terrain/snow2.png
 		Frames: 2
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@781:
 		Id: 781
 		Images: bits/terrain/snow2.png
 		Frames: 3
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@782:
 		Id: 782
 		Images: bits/terrain/snow2.png
@@ -5829,65 +5976,65 @@ Templates:
 		Images: bits/terrain/snow2.png
 		Frames: 5
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@784:
 		Id: 784
 		Images: bits/terrain/snow2.png
 		Frames: 6
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@785:
 		Id: 785
 		Images: bits/terrain/snow2.png
 		Frames: 7
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@786:
 		Id: 786
 		Images: bits/terrain/snow2.png
 		Frames: 8
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@787:
 		Id: 787
 		Images: bits/terrain/snow2.png
 		Frames: 9
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@788:
 		Id: 788
 		Images: bits/terrain/snow2.png
 		Frames: 10
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@789:
 		Id: 789
 		Images: bits/terrain/snow2.png
 		Frames: 11
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@790:
 		Id: 790
 		Images: bits/terrain/snow2.png
 		Frames: 12
 		Size: 1,1
-		Categories: Red Snow
+		Categories: Red Snow, Snow
 		Tiles:
-			0: Red Snow
+			0: Snow
 	Template@791:
 		Id: 791
 		Images: bits/terrain/snw2-ct2.png
@@ -6389,7 +6536,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Mountain
 		Tiles:
-			0: Mountain
+			0: Snow
 	Template@860:
 		Id: 860
 		Images: bits/terrain/snw2mnt.png
@@ -6405,7 +6552,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Mountain
 		Tiles:
-			0: Mountain
+			0: Snow
 	Template@862:
 		Id: 862
 		Images: bits/terrain/snw2mnt.png
@@ -6445,7 +6592,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Mountain
 		Tiles:
-			0: Mountain
+			0: Snow
 	Template@867:
 		Id: 867
 		Images: bits/terrain/snw2mnt.png
@@ -6453,7 +6600,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Mountain
 		Tiles:
-			0: Mountain
+			0: Snow
 	Template@868:
 		Id: 868
 		Images: bits/terrain/snw2mnt.png
@@ -6461,7 +6608,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Mountain
 		Tiles:
-			0: Mountain
+			0: Snow
 	Template@869:
 		Id: 869
 		Images: bits/terrain/snw2mnt.png
@@ -6701,7 +6848,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@902:
 		Id: 902
 		Images: bits/terrain/stn2crtb.png
@@ -6709,7 +6856,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@903:
 		Id: 903
 		Images: bits/terrain/stn2crtb.png
@@ -6717,7 +6864,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@905:
 		Id: 905
 		Images: bits/terrain/stn2crtb.png
@@ -6757,7 +6904,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@911:
 		Id: 911
 		Images: bits/terrain/stn2crtb.png
@@ -6765,7 +6912,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@912:
 		Id: 912
 		Images: bits/terrain/stn2crtb.png
@@ -6773,7 +6920,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@913:
 		Id: 913
 		Images: bits/terrain/stn2crtb.png
@@ -7061,7 +7208,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@953:
 		Id: 953
 		Images: bits/terrain/stn2snwb.png
@@ -7077,7 +7224,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@957:
 		Id: 957
 		Images: bits/terrain/stn2snwb.png
@@ -7085,7 +7232,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@958:
 		Id: 958
 		Images: bits/terrain/stn2snwb.png
@@ -7093,7 +7240,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@959:
 		Id: 959
 		Images: bits/terrain/stn2snwb.png
@@ -7101,7 +7248,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@960:
 		Id: 960
 		Images: bits/terrain/stn2snwb.png
@@ -7133,7 +7280,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@964:
 		Id: 964
 		Images: bits/terrain/stn2snwb.png
@@ -7141,7 +7288,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Snow
 		Tiles:
-			0: Snow
+			0: Stone
 	Template@965:
 		Id: 965
 		Images: bits/terrain/stn2watr.png
@@ -7267,8 +7414,23 @@ Templates:
 		Images: bits/terrain/stncliff.png
 		Frames: 3
 		Size: 1,1
-		Categories: Stone
-		PickAny: true
+		Categories: Stone, Terrain
+		ClearTile: true
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Stone, Cliff
+			BorderTransitions: 941, 947, 943, 938, 945, 944, 949, 950
+			Corners: 946, 948, 939, 937
+		AutoConnect@Snow:
+			Type: Snow
+			BorderTypes: Stone
+			BorderTransitions: 956, 961, 957, 952, 959, 958, 963, 964
+			Corners: 960, 962, 953, 951
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Stone, Cliff
+			BorderTransitions: 969, 975, 971, 966, 973, 972, 977, 978
+			Corners: 974, 976, 967, 965
 		Tiles:
 			0: Stone
 	Template@983:
@@ -7883,7 +8045,8 @@ Templates:
 		Images: bits/terrain/swamp.png
 		Frames: 5
 		Size: 1,1
-		Categories: Swamp
+		Categories: Swamp, Terrain
+		ClearTile: true
 		Tiles:
 			0: Swamp
 	Template@1071:
@@ -8131,7 +8294,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1105:
 		Id: 1105
 		Images: bits/terrain/tch2crtb.png
@@ -8139,7 +8302,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1106:
 		Id: 1106
 		Images: bits/terrain/tch2crtb.png
@@ -8147,7 +8310,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1108:
 		Id: 1108
 		Images: bits/terrain/tch2crtb.png
@@ -8155,7 +8318,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1110:
 		Id: 1110
 		Images: bits/terrain/tch2crtb.png
@@ -8163,7 +8326,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1111:
 		Id: 1111
 		Images: bits/terrain/tch2crtb.png
@@ -8187,7 +8350,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1114:
 		Id: 1114
 		Images: bits/terrain/tch2crtb.png
@@ -8195,7 +8358,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1115:
 		Id: 1115
 		Images: bits/terrain/tch2crtb.png
@@ -8203,7 +8366,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Crater
 	Template@1116:
 		Id: 1116
 		Images: bits/terrain/tch2crtb.png
@@ -8385,7 +8548,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 0
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1141:
@@ -8393,7 +8556,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 1
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1142:
@@ -8401,15 +8564,15 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 2
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1144:
 		Id: 1144
 		Images: bits/terrain/tch2lava.png
 		Frames: 3
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1146:
@@ -8417,7 +8580,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 4
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1147:
@@ -8425,7 +8588,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 5
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1148:
@@ -8433,7 +8596,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 6
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1149:
@@ -8441,7 +8604,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 7
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1150:
@@ -8449,7 +8612,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 8
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1151:
@@ -8457,15 +8620,15 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 9
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1152:
 		Id: 1152
 		Images: bits/terrain/tch2lava.png
 		Frames: 10
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1153:
@@ -8473,7 +8636,7 @@ Templates:
 		Images: bits/terrain/tch2lava.png
 		Frames: 11
 		Size: 1,1
-		Categories: Tech, Crater, Lava
+		Categories: Tech, Lava
 		Tiles:
 			0: Cliff
 	Template@1154:
@@ -8481,7 +8644,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1155:
@@ -8489,7 +8652,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1156:
@@ -8497,15 +8660,15 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1158:
 		Id: 1158
 		Images: bits/terrain/tch2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1160:
@@ -8513,7 +8676,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1161:
@@ -8521,7 +8684,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1162:
@@ -8529,7 +8692,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1163:
@@ -8537,7 +8700,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1164:
@@ -8545,7 +8708,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1165:
@@ -8553,15 +8716,15 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1166:
 		Id: 1166
 		Images: bits/terrain/tch2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1167:
@@ -8569,7 +8732,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Tech, Crater, Water
+		Categories: Tech, Water
 		Tiles:
 			0: Cliff
 	Template@1168:
@@ -8577,7 +8740,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 0
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1169:
@@ -8585,7 +8748,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 1
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1170:
@@ -8593,7 +8756,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 2
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1171:
@@ -8601,7 +8764,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 3
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1173:
@@ -8609,7 +8772,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 4
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1174:
@@ -8617,7 +8780,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 5
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1175:
@@ -8625,7 +8788,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 6
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1176:
@@ -8633,7 +8796,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 7
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1177:
@@ -8641,7 +8804,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 8
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1178:
@@ -8649,7 +8812,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 9
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1179:
@@ -8657,7 +8820,7 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 10
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1180:
@@ -8665,17 +8828,27 @@ Templates:
 		Images: bits/terrain/tchcliff.png
 		Frames: 11
 		Size: 1,1
-		Categories: Tech, Crater, Cliff
+		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
 	Template@1181:
 		Id: 1181
 		Images: bits/terrain/tech.png
 		Size: 1,1
-		Categories: Tech
-		PickAny: true
+		Categories: Tech, Terrain
+		ClearTile: true
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Tech, Cliff
+			BorderTransitions: 1144, 1150, 1146, 1141, 1148, 1147, 1152, 1153
+			Corners: 1149, 1151, 1142, 1140
+		AutoConnect@Water:
+			Type: Water
+			BorderTypes: Tech, Cliff
+			BorderTransitions: 1158, 1164, 1160, 1155, 1162, 1161, 1166, 1167
+			Corners: 1163, 1165, 1156, 1154
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1182:
 		Id: 1182
 		Images: bits/terrain/techmsc.png
@@ -8683,7 +8856,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1183:
 		Id: 1183
 		Images: bits/terrain/techmsc.png
@@ -8691,7 +8864,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1184:
 		Id: 1184
 		Images: bits/terrain/techmsc.png
@@ -8699,7 +8872,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1185:
 		Id: 1185
 		Images: bits/terrain/techmsc.png
@@ -8707,7 +8880,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1186:
 		Id: 1186
 		Images: bits/terrain/techmsc.png
@@ -8715,7 +8888,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1187:
 		Id: 1187
 		Images: bits/terrain/techmsc.png
@@ -8723,7 +8896,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1188:
 		Id: 1188
 		Images: bits/terrain/techmsc.png
@@ -8731,7 +8904,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1189:
 		Id: 1189
 		Images: bits/terrain/techmsc.png
@@ -8739,7 +8912,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1190:
 		Id: 1190
 		Images: bits/terrain/techmsc.png
@@ -8747,7 +8920,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1191:
 		Id: 1191
 		Images: bits/terrain/techmsc.png
@@ -8755,7 +8928,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1192:
 		Id: 1192
 		Images: bits/terrain/techmsc.png
@@ -8763,7 +8936,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1193:
 		Id: 1193
 		Images: bits/terrain/techmsc.png
@@ -8771,7 +8944,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1194:
 		Id: 1194
 		Images: bits/terrain/techmsc.png
@@ -8779,7 +8952,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1195:
 		Id: 1195
 		Images: bits/terrain/techmsc.png
@@ -8787,7 +8960,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1196:
 		Id: 1196
 		Images: bits/terrain/techmsc.png
@@ -8795,7 +8968,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1198:
 		Id: 1198
 		Images: bits/terrain/techmsc.png
@@ -8803,7 +8976,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1199:
 		Id: 1199
 		Images: bits/terrain/techmsc.png
@@ -8811,7 +8984,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1200:
 		Id: 1200
 		Images: bits/terrain/techmsc.png
@@ -8819,7 +8992,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1201:
 		Id: 1201
 		Images: bits/terrain/techmsc.png
@@ -8827,7 +9000,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech
 		Tiles:
-			0: Stone
+			0: Tech
 	Template@1202:
 		Id: 1202
 		Images: bits/terrain/techrdst.png
@@ -9370,7 +9543,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1273:
 		Id: 1273
 		Images: bits/terrain/treegrs.png
@@ -9378,7 +9551,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1274:
 		Id: 1274
 		Images: bits/terrain/treegrs.png
@@ -9386,7 +9559,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1275:
 		Id: 1275
 		Images: bits/terrain/treegrs.png
@@ -9394,13 +9567,13 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1276:
 		Id: 1276
 		Images: bits/terrain/treegrs.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Plant
+		Categories: Grass, Plant, Terrain
 		Tiles:
 			0: Plant
 	Template@1277:
@@ -9410,7 +9583,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1278:
 		Id: 1278
 		Images: bits/terrain/treegrs.png
@@ -9418,7 +9591,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1279:
 		Id: 1279
 		Images: bits/terrain/treegrs.png
@@ -9426,7 +9599,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1280:
 		Id: 1280
 		Images: bits/terrain/treegrs.png
@@ -9434,7 +9607,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1281:
 		Id: 1281
 		Images: bits/terrain/treegrs.png
@@ -9442,7 +9615,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1282:
 		Id: 1282
 		Images: bits/terrain/treegrs.png
@@ -9450,7 +9623,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1283:
 		Id: 1283
 		Images: bits/terrain/treegrs.png
@@ -9458,7 +9631,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1285:
 		Id: 1285
 		Images: bits/terrain/treegrs.png
@@ -9466,13 +9639,14 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Grass
 	Template@1286:
 		Id: 1286
 		Images: bits/terrain/treegrs.png
 		Frames: 13
 		Size: 1,1
 		Categories: Grass, Plant
+		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1287:
@@ -9482,7 +9656,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1288:
 		Id: 1288
 		Images: bits/terrain/trees.png
@@ -9490,7 +9664,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1289:
 		Id: 1289
 		Images: bits/terrain/trees.png
@@ -9498,7 +9672,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1291:
 		Id: 1291
 		Images: bits/terrain/trees.png
@@ -9506,13 +9680,13 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1292:
 		Id: 1292
 		Images: bits/terrain/trees.png
 		Frames: 4
 		Size: 1,1
-		Categories: Snow, Plant
+		Categories: Snow, Plant, Terrain
 		Tiles:
 			0: Plant
 	Template@1293:
@@ -9522,7 +9696,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1294:
 		Id: 1294
 		Images: bits/terrain/trees.png
@@ -9530,7 +9704,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1295:
 		Id: 1295
 		Images: bits/terrain/trees.png
@@ -9538,7 +9712,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1296:
 		Id: 1296
 		Images: bits/terrain/trees.png
@@ -9546,7 +9720,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1297:
 		Id: 1297
 		Images: bits/terrain/trees.png
@@ -9562,7 +9736,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1299:
 		Id: 1299
 		Images: bits/terrain/trees.png
@@ -9570,7 +9744,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1300:
 		Id: 1300
 		Images: bits/terrain/trees.png
@@ -9586,7 +9760,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1302:
 		Id: 1302
 		Images: bits/terrain/trees.png
@@ -9594,7 +9768,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Snow
 	Template@1304:
 		Id: 1304
 		Images: bits/terrain/treeash.png

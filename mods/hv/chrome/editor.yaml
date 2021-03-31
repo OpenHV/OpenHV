@@ -205,10 +205,18 @@ Container@EDITOR_ROOT:
 		TooltipContainer@TOOLTIP_CONTAINER:
 
 Container@EDITOR_WORLD_ROOT:
-	Logic: LoadIngamePerfLogic, MapEditorLogic, ActorEditLogic
+	Logic: LoadIngamePerfLogic, CustomMapEditorLogic, ActorEditLogic
 		EditPanelPadding: 14
 	Children:
 		Container@PERF_ROOT:
+		Label@COORDINATE_LABEL:
+			X: 25
+			Y: WINDOW_BOTTOM - 25
+			Width: 50
+			Height: 25
+			Align: Left
+			Font: Bold
+			Contrast: true
 		EditorViewportController@MAP_EDITOR:
 			Width: WINDOW_RIGHT
 			Height: WINDOW_BOTTOM
@@ -613,13 +621,24 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipTemplate: BUTTON_TOOLTIP
 			TooltipText: Redo last step
 			TooltipContainer: TOOLTIP_CONTAINER
-		Label@COORDINATE_LABEL:
-			X: 835
-			Width: 50
+		Button@AUTOTILE_BUTTON:
+			X: 700
+			Width: 120
 			Height: 25
-			Align: Left
+			Text: Auto Tile
+			TooltipTemplate: BUTTON_TOOLTIP
+			TooltipText: Even out tile transitions
+			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
-			Contrast: true
+		Button@DEBUG_BUTTON:
+			X: 830
+			Width: 70
+			Height: 25
+			Text: Debug
+			TooltipTemplate: BUTTON_TOOLTIP
+			TooltipText: Show the terrain types
+			TooltipContainer: TOOLTIP_CONTAINER
+			Font: Bold
 
 ScrollPanel@CATEGORY_FILTER_PANEL:
 	Width: 240

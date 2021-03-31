@@ -12,6 +12,7 @@
 using System;
 using System.Linq;
 using OpenRA.Mods.Common.Terrain;
+using OpenRA.Mods.HV.Terrain;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Common.Widgets.Logic
@@ -33,7 +34,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			var terrainInfo = world.Map.Rules.TerrainInfo as ITemplatedTerrainInfo;
 
-			var clearTiles = terrainInfo.Templates.Where(t => t.Value.PickAny)
+			var clearTiles = terrainInfo.Templates.Where(t => ((CustomTerrainTemplateInfo)t.Value).ClearTile)
 				.Select(t => (Type: t.Value.Id, Description: t.Value.Categories.First()));
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
