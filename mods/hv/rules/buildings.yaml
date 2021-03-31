@@ -572,8 +572,11 @@ FACTORY2:
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete
 		Sequence: production-inprogress
-	WithProductionExitOverlay@base:
-		ExitCell: 0,0
+	WithProductionExitOverlay@factory1:
+		ExitCell: 0,2
+		Sequence: production-done
+	WithProductionExitOverlay@factory2:
+		ExitCell: 1,2
 		Sequence: production-done
 
 FACTORY3:
@@ -688,8 +691,11 @@ FACTORY3:
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete
 		Sequence: production-inprogress
-	WithProductionExitOverlay@base:
-		ExitCell: 0,0
+	WithProductionExitOverlay@factory1:
+		ExitCell: 0,2
+		Sequence: production-done
+	WithProductionExitOverlay@factory2:
+		ExitCell: 1,2
 		Sequence: production-done
 
 TECHCENTER:
