@@ -2042,14 +2042,6 @@ Templates:
 		Categories: Water, Ice
 		Tiles:
 			0: Ice
-	Template@268:
-		Id: 268
-		Images: bits/terrain/ice2watr.png
-		Frames: 13
-		Size: 1,1
-		Categories: Ice
-		Tiles:
-			0: Ice
 	Template@269:
 		Id: 269
 		Images: bits/terrain/icebrk.png
