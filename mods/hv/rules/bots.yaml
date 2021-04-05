@@ -148,12 +148,14 @@ Player:
 			copter: 5
 			banshee: 5
 			balloon: 1
+			saucer: 1
 			boat: 1
 			boat2: 1
 			boat3: 1
 		UnitLimits:
 			builder: 0
 			balloon: 2
+			saucer: 2
 			tank8: 1
 			boat3: 3
 	UnitBuilderBotModule@Easy:
@@ -183,12 +185,14 @@ Player:
 			copter: 5
 			banshee: 5
 			balloon: 1
+			saucer: 1
 			boat: 1
 			boat2: 1
 			boat3: 1
 		UnitLimits:
 			builder: 0
 			balloon: 2
+			saucer: 2
 			boat3: 3
 	ProductionThrottleBotModule:
 		RequiresCondition: enable-easy-ai
@@ -211,7 +215,7 @@ Player:
 	PowerDownBotModule:
 		RequiresCondition: enable-hard-ai
 	ScoutBotModule:
-		ScoutActorTypes: balloon
+		ScoutActorTypes: balloon, saucer
 		MoveRadius: 20
 		RequiresCondition: enable-hard-ai || enable-easy-ai
 	SupportPowerBotModule:

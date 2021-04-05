@@ -110,6 +110,5 @@ saucer:
 		ZOffset: 2050
 	shadow-overlay: bits/saucer-shadow.png
 		Offset: 15, -1
-	turret: bits/null.png
 	icon: bits/units-icons.png
 		Start: 40

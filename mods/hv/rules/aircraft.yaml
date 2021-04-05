@@ -107,7 +107,7 @@ COPTER:
 		Name: Attack Helicopter
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 30
 		Prerequisites: radar, ~aircraft.sc
 		Description: Small Helicopter Gunship
 	UpdatesPlayerStatistics:
@@ -139,16 +139,15 @@ COPTER:
 
 SAUCER:
 	Inherits: ^Helicopter
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Attack Saucer
+		Name: Scout Saucer
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: radar, ~aircraft.sc, ~disabled
-		Description: Saucer
+		Prerequisites: ~aircraft.yi
+		Description: Reconnaissance air unit.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -159,15 +158,7 @@ SAUCER:
 	Aircraft:
 		TurnSpeed: 16
 		Speed: 112
-	Turreted:
-		TurnSpeed: 80
-		Offset: 0,0,100
-	AttackTurreted:
-	WithSpriteTurret:
 	-WithShadow:
-	Armament@PRIMARY:
-		Weapon: Laser
-		LocalOffset: 0,0,-100
 	Selectable:
 		Bounds: 24,24
 	WithIdleOverlayOnGround:
@@ -186,7 +177,7 @@ BANSHEE:
 		Name: Banshee
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 40
 		Prerequisites: techcenter, ~aircraft.sc
 		Description: Heavy Helicopter Gunship
 	UpdatesPlayerStatistics:
@@ -268,8 +259,8 @@ BALLOON:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~aircraft
-		Description: Slow reconnaissance air unit.
+		Prerequisites: ~aircraft.sc
+		Description: Reconnaissance air unit.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
