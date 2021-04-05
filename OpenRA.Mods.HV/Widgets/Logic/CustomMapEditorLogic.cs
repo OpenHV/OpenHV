@@ -91,14 +91,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				};
 			}
 
-			var cashLabel = widget.GetOrNull<LabelWidget>("CASH_LABEL");
-			if (cashLabel != null)
-			{
-				var reslayer = worldRenderer.World.WorldActor.TraitsImplementing<EditorResourceLayer>().FirstOrDefault();
-				if (reslayer != null)
-					cashLabel.GetText = () => "$ {0}".F(reslayer.NetWorth);
-			}
-
 			var undoButton = widget.GetOrNull<ButtonWidget>("UNDO_BUTTON");
 			var redoButton = widget.GetOrNull<ButtonWidget>("REDO_BUTTON");
 			if (undoButton != null && redoButton != null)
