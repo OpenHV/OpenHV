@@ -216,7 +216,7 @@ COPTER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: radar, ~aircraft.sc
-		Description: Fast Vehicle Transport Helicopter.\n  Unarmed
+		Description: Vehicle Transport Helicopter.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -236,6 +236,13 @@ COPTER2:
 		RequiresCondition: airborne
 	Selectable:
 		DecorationBounds: 40,36
+	Turreted:
+		TurnSpeed: 80
+		Offset: 0,0,100
+	AttackTurreted:
+	Armament@PRIMARY:
+		Weapon: Vulcan
+		LocalOffset: 0,0,-100
 	Cargo:
 		Types: Scout
 		MaxWeight: 4
@@ -307,7 +314,7 @@ DROPSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: radar, ~aircraft.yi
-		Description: Slow Vehicle Transport.
+		Description: Vehicle Transport Shuttle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -328,6 +335,15 @@ DROPSHIP:
 		Sequence: fly
 		Name: fly
 		RequiresCondition: airborne
+	AttackFrontal:
+	Armament@PRIMARY:
+		Weapon: DropshipMissile
+		MuzzleSequence: muzzle1
+		LocalOffset: 700,600,0
+	Armament@SECONDARY:
+		Weapon: DropshipMissile
+		MuzzleSequence: muzzle2
+		LocalOffset: 700,-600,0
 	Selectable:
 		DecorationBounds: 40,36
 	Cargo:
@@ -343,3 +359,5 @@ DROPSHIP:
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
+	WithMuzzleOverlay:
+		IgnoreOffset: True

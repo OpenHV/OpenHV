@@ -130,3 +130,20 @@ ShellCasing:
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+Vulcan:
+	Inherits: ChainGun
+	ReloadDelay: 80
+	Burst: 20
+	StartBurstReport: ccbysmgfire02.wav
+	Report:
+	Projectile: InstantHit
+		Blockable: false
+	Warhead@Damage: SpreadDamage
+		Damage: 200
+		Versus:
+			None: 120
+			Steel: 50
+			Light: 60
+			Heavy: 25
+			Concrete: 25
