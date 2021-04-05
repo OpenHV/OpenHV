@@ -1,0 +1,134 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Waterbridgeworld
+
+Author: meldrian
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 82,82
+
+Bounds: 1,1,80,80
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1, Multi2, Multi3
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: pyramid
+		Owner: Neutral
+		Location: 4,6
+		Health: 100
+	Actor1: pyramid2
+		Owner: Neutral
+		Location: 78,64
+	Actor2: pyramid2
+		Owner: Neutral
+		Location: 55,71
+	Actor3: treegrs11
+		Owner: Neutral
+		Location: 68,13
+	Actor4: treegrs11
+		Owner: Neutral
+		Location: 71,20
+	Actor5: treegrs11
+		Owner: Neutral
+		Location: 23,54
+	Actor6: treegrs11
+		Owner: Neutral
+		Location: 17,69
+	Actor7: grssmisc6
+		Owner: Neutral
+		Location: 12,64
+	Actor8: grssmisc6
+		Owner: Neutral
+		Location: 55,24
+	Actor9: big_rock
+		Owner: Neutral
+		Location: 66,21
+	Actor10: mpspawn
+		Owner: Neutral
+		Location: 11,11
+	Actor11: mpspawn
+		Owner: Neutral
+		Location: 70,70
+	Actor16: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 6,75
+	Actor17: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 77,4
+	Actor18: treegrs10
+		Owner: Neutral
+		Location: 22,14
+	Actor19: treegrs10
+		Owner: Neutral
+		Location: 59,20
+	Actor20: lamppost
+		Owner: Neutral
+		Location: 66,12
+	Actor21: lamppost
+		Owner: Neutral
+		Location: 11,61
+	Actor22: lamppost
+		Owner: Neutral
+		Location: 24,11
+	Actor23: lamppost
+		Owner: Neutral
+		Location: 64,62
+	Actor24: prop2
+		Owner: Neutral
+		Location: 32,41
+	Actor25: prop1
+		Owner: Neutral
+		Location: 45,42
+	Actor27: lamppost
+		Owner: Neutral
+		Location: 32,40
+	Actor28: lamppost
+		Owner: Neutral
+		Location: 45,41
+	Actor26: mpspawn
+		Owner: Neutral
+		Location: 16,60
+	Actor29: mpspawn
+		Owner: Neutral
+		Location: 61,17
