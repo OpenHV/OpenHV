@@ -263,3 +263,9 @@ shells:
 		Start: 3
 		Tick: 3000
 		ZOffset: -100
+
+beam:
+	idle: bits/beam.png
+		Length: 18
+		Tick: 50
+		ZOffset: 2030
