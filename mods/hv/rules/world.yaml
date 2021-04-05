@@ -21,15 +21,15 @@
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
-			Ore: 30
-			Crater: 70
-			Grass: 60
+			Ore: 90
+			Crater: 90
+			Grass: 90
 			Road: 100
-			Mountain: 60
-			Ice: 30
-			Snow: 50
-			Red Snow: 50
-			Sand: 40
+			Mountain: 90
+			Ice: 80
+			Snow: 90
+			Red Snow: 90
+			Sand: 90
 			Stone: 100
 			Tech: 100
 	Locomotor@WHEELED:
@@ -37,15 +37,15 @@
 		Crushes: Cube, Scrap
 		TerrainSpeeds:
 			Clear: 90
-			Ore: 30
-			Crater: 70
-			Grass: 60
+			Ore: 90
+			Crater: 90
+			Grass: 90
 			Road: 100
-			Mountain: 60
-			Ice: 10
-			Snow: 30
-			Red Snow: 30
-			Sand: 40
+			Mountain: 90
+			Ice: 80
+			Snow: 90
+			Red Snow: 90
+			Sand: 90
 			Stone: 100
 			Tech: 100
 	Locomotor@TRACKED:
@@ -53,33 +53,33 @@
 		Crushes: Tree, Cube, Scrap
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
-			Clear: 80
-			Ore: 30
-			Crater: 60
-			Grass: 70
+			Clear: 100
+			Ore: 100
+			Crater: 100
+			Grass: 100
 			Road: 100
-			Mountain: 70
-			Ice: 30
-			Snow: 50
-			Red Snow: 50
-			Sand: 40
+			Mountain: 100
+			Ice: 100
+			Snow: 100
+			Red Snow: 100
+			Sand: 100
 			Stone: 100
-			Plant: 30
+			Plant: 50
 			Tech: 100
 	Locomotor@LIGHTTRACKED:
 		Name: lighttracked
 		Crushes: Cube, Scrap
 		TerrainSpeeds:
-			Clear: 80
-			Ore: 30
-			Crater: 70
-			Grass: 80
+			Clear: 100
+			Ore: 100
+			Crater: 100
+			Grass: 100
 			Road: 100
-			Mountain: 70
-			Ice: 20
-			Snow: 40
-			Red Snow: 40
-			Sand: 30
+			Mountain: 100
+			Ice: 100
+			Snow: 100
+			Red Snow: 100
+			Sand: 100
 			Stone: 100
 			Tech: 100
 	Locomotor@NAVAL:
