@@ -245,6 +245,15 @@ scout2:
 	icon: bits/units-icons.png
 		Start: 1
 
+technician:
+	idle: bits/technician.png
+		Facings: 8
+	die: bits/blood1.png
+		Length: 8
+		Tick: 100
+	icon: bits/units-icons.png
+		Start: 42
+
 tyriantank:
 	idle: bits/tyriantank.png
 		Start: 0
