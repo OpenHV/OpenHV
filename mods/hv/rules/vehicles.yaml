@@ -815,6 +815,51 @@ SCOUT2:
 		DeathPaletteIsPlayerPalette: false
 		Delay: 5
 
+TECHNICIAN:
+	Inherits: ^Vehicle
+	Inherits@SELECTION: ^SelectableSupportUnit
+	Buildable:
+		Queue: Scouts
+		BuildPaletteOrder: 130
+		Description: Armoured technician.\nInfiltrates and captures enemy structures.\n  Unarmed
+		Prerequisites: module
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Hacker technician
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 375
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 40
+		Speed: 150
+		Locomotor: pod
+	RenderSprites:
+		PlayerPalette: green
+	RevealsShroud:
+		Range: 6c0
+	Passenger:
+		CargoType: Scout
+	-Carryable:
+	-SpawnScrapOnDeath:
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: effect
+		FallbackSequence: die
+		DeathPaletteIsPlayerPalette: false
+		Delay: 5
+
 BUILDER:
 	Inherits: ^Vehicle
 	Buildable:
