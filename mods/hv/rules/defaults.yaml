@@ -503,7 +503,7 @@
 
 ^Tree:
 	Inherits@shape: ^1x1Shape
-	Selectable:
+	Interactable:
 		Bounds: 20, 20
 	Tooltip:
 		Name: Tree
