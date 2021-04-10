@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Terrain;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Terrain;
 using OpenRA.Traits;
 
@@ -41,7 +42,41 @@ namespace OpenRA.Mods.HV.Traits
 	public class EditorAutoTiler : IWorldLoaded
 	{
 		Map map;
-		ITemplatedTerrainInfo terrainInfo;
+		EditorActionManager editorActionManager;
+
+		public void WorldLoaded(World w, WorldRenderer wr)
+		{
+			map = w.Map;
+			editorActionManager = w.WorldActor.Trait<EditorActionManager>();
+		}
+
+		public void CleanEdges()
+		{
+			var action = new AutoConnectEditorAction(map);
+			editorActionManager.Add(action);
+		}
+	}
+
+	class AutoConnectEditorAction : IEditorAction
+	{
+		public string Text { get; private set; }
+
+		readonly Map map;
+		readonly ITemplatedTerrainInfo terrainInfo;
+		readonly Queue<UndoTile> undoTiles = new Queue<UndoTile>();
+
+		public AutoConnectEditorAction(Map map)
+		{
+			this.map = map;
+			terrainInfo = (ITemplatedTerrainInfo)map.Rules.TerrainInfo;
+
+			Text = "Auto connect tile transitions.";
+		}
+
+		public void Execute()
+		{
+			Do();
+		}
 
 		static readonly BitMask[] BorderTileMap = new BitMask[]
 		{
@@ -79,12 +114,12 @@ namespace OpenRA.Mods.HV.Traits
 			BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft,
 		};
 
-		bool CellContains(Map map, CPos cell, string[] terrainTypes)
+		static bool CellContains(Map map, CPos cell, string[] terrainTypes)
 		{
 			return map.Contains(cell) && terrainTypes.Contains(map.GetTerrainInfo(cell).Type);
 		}
 
-		BitMask FindAdjacentTerrain(Map map, CPos cell, string[] terrainTypes)
+		static BitMask FindAdjacentTerrain(Map map, CPos cell, string[] terrainTypes)
 		{
 			var adjacentTiles = BitMask.None;
 
@@ -103,7 +138,7 @@ namespace OpenRA.Mods.HV.Traits
 			return adjacentTiles;
 		}
 
-		BitMask FindCorners(Map map, CPos cell, string[] terrainTypes)
+		static BitMask FindCorners(Map map, CPos cell, string[] terrainTypes)
 		{
 			var cornerTile = BitMask.None;
 
@@ -122,13 +157,7 @@ namespace OpenRA.Mods.HV.Traits
 			return cornerTile;
 		}
 
-		public void WorldLoaded(World w, WorldRenderer wr)
-		{
-			map = w.Map;
-			terrainInfo = (ITemplatedTerrainInfo)map.Rules.TerrainInfo;
-		}
-
-		public void CleanEdges()
+		public void Do()
 		{
 			foreach (var cell in map.AllCells)
 			{
@@ -143,6 +172,7 @@ namespace OpenRA.Mods.HV.Traits
 						{
 							if (validNeighbors.All(n => map.GetTerrainInfo(cell + n).Type == autoConnect.Type))
 							{
+								undoTiles.Enqueue(new UndoTile(cell, map.Tiles[cell]));
 								var borderTransitions = autoConnect.BorderTransitions;
 								map.Tiles[cell] = new TerrainTile(borderTransitions[index], 0x00);
 							}
@@ -164,6 +194,7 @@ namespace OpenRA.Mods.HV.Traits
 						{
 							if (validNeighbors.All(n => map.GetTerrainInfo(cell + n).Type == autoConnect.Type))
 							{
+								undoTiles.Enqueue(new UndoTile(cell, map.Tiles[cell]));
 								var corners = autoConnect.Corners;
 								map.Tiles[cell] = new TerrainTile(corners[index], 0x00);
 							}
@@ -171,6 +202,27 @@ namespace OpenRA.Mods.HV.Traits
 					}
 				}
 			}
+		}
+
+		public void Undo()
+		{
+			while (undoTiles.Count > 0)
+			{
+				var undoTile = undoTiles.Dequeue();
+				map.Tiles[undoTile.Cell] = undoTile.MapTile;
+			}
+		}
+	}
+
+	class UndoTile
+	{
+		public CPos Cell { get; private set; }
+		public TerrainTile MapTile { get; private set; }
+
+		public UndoTile(CPos cell, TerrainTile mapTile)
+		{
+			Cell = cell;
+			MapTile = mapTile;
 		}
 	}
 }
