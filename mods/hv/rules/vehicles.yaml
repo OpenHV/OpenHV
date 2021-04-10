@@ -821,20 +821,18 @@ TECHNICIAN:
 	Buildable:
 		Queue: Scouts
 		BuildPaletteOrder: 130
-		Description: Armoured technician.\nInfiltrates and captures enemy structures.\n  Unarmed
-		Prerequisites: module
+		Description: Armored technician.\nInfiltrates and captures enemy structures.\n  Unarmed
+		Prerequisites: module, ~vehicles.sc
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Hacker technician
+		Name: Combat technician
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	CaptureManager:
 	Captures:
 		CaptureTypes: building
 		PlayerExperience: 25
-		CaptureDelay: 375
-		ConsumedByCapture: false
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
 	Health:
