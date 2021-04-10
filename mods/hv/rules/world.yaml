@@ -107,7 +107,7 @@
 		Description: Random Corporation\nA random corporation will be chosen when the game starts.
 	ResourceType@Gold:
 		Type: gold
-		Name: Very Profitable Underground Resource Deposit
+		Name: Mineable Resource Deposit
 		ResourceType: 1
 		TerrainType: Ore
 		Palette: effect
@@ -119,7 +119,7 @@
 		AllowUnderBuildings: true
 	ResourceType@Iron:
 		Type: iron
-		Name: Underground Resource Deposit
+		Name: Mineable Resource Deposit
 		ResourceType: 2
 		TerrainType: Ore
 		Palette: effect
