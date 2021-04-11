@@ -114,13 +114,13 @@ Player:
 	SquadManagerBotModule@Hard:
 		RequiresCondition: enable-hard-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tank13, tank14, tank8
+		ExcludeFromSquadsTypes: miner, builder, tanker, tank8
 		NavalUnitsTypes: boat, heavyboat
 		ConstructionYardTypes: base
 	SquadManagerBotModule@Easy:
 		RequiresCondition: enable-easy-ai
 		SquadSize: 7
-		ExcludeFromSquadsTypes: miner, builder, tank13, tank14, tank8
+		ExcludeFromSquadsTypes: miner, builder, tanker, tank8
 		NavalUnitsTypes: boat, heavyboat
 		ConstructionYardTypes: base
 	UnitBuilderBotModule@Hard:
@@ -208,7 +208,7 @@ Player:
 		DeployedActorTypes: miner2
 	CubePickupBotModule:
 		RequiresCondition: enable-hard-ai
-		ExcludedUnitTypes: miner, tank13, tank14
+		ExcludedUnitTypes: miner, tanker
 	DeployDetectorBotModule:
 		RequiresCondition: enable-hard-ai
 		DeployableActorTypes: tank4
