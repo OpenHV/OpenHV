@@ -1008,3 +1008,28 @@ MISSILE_TANK:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+
+TANKER:
+	Inherits: ^Vehicle
+	Inherits@SELECTION: ^SelectableSupportUnit
+	Buildable:
+		Prerequisites: ~disabled
+		Description: Transports resources to the headquarter.\n  Unarmed
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Armored Resource Transporter
+	Health:
+		HP: 11000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	ResourceTransporter:
+	SpawnActorOnDeath:
+		Actor: goldball
+	-SpawnScrapOnDeath:
+	RenderSprites:
+		PlayerPalette: green

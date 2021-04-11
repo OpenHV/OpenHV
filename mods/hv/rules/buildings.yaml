@@ -351,7 +351,7 @@ MINER2:
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		Interval: 100
-		DeliveryVehicleType: tank13, tank14
+		DeliveryVehicleType: tanker
 	Exit:
 	WithSpriteBody:
 		Sequence: active
