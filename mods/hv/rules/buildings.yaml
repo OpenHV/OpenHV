@@ -1240,6 +1240,61 @@ STORAGE:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	AcceptsDeliveredResources:
 
+REFINERY:
+	Inherits: ^BaseBuilding
+	Inherits@shape: ^2x2Shape
+	Inherits@flame: ^BuildingFlame
+	Selectable:
+		Bounds: 40,40
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Buildable:
+		BuildPaletteOrder: 35
+		Queue: Building
+		Prerequisites: miner2
+		Description: Stores excess refined\ngold and iron.
+	Valued:
+		Cost: 300
+	Targetable:
+		TargetTypes: Ground, Structure
+	Tooltip:
+		Name: Storage
+	Health:
+		HP: 30000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	StoresResources:
+		Capacity: 4000
+	Power:
+		Amount: -10
+	RenderSprites:
+		PlayerPalette: green
+	#WithResourceStoragePipsDecoration:
+	#	Position: Bottom # TODO: https://github.com/OpenRA/OpenRA/pull/18391
+	#	RequiresSelection: true
+	#	PipCount: 4
+	#	FullSequence: pip-yellow
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	AcceptsDeliveredResources:
+	WithIdleOverlay@animation:
+		Sequence: animation
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
