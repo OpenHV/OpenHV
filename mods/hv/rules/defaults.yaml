@@ -131,7 +131,7 @@
 		ShowOwnerRow: false
 	Crate:
 		Lifetime: 240
-		TerrainTypes: Clear, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		CrushClass: Scrap
 	RenderSprites:
 		Palette: terrain
@@ -221,7 +221,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		InitialFacing: 896
 		CanSlide: True
 	Hovers@CRUISING:
@@ -338,7 +338,7 @@
 	Inherits@handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech
 		AllowInvalidPlacement: false
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -628,7 +628,7 @@
 		ShowOwnerRow: false
 	Crate:
 		Lifetime: 240
-		TerrainTypes: Clear, Crater, Road, Grass, Mountain
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain
 		CrushClass: Cube
 	RenderSprites:
 		Palette: cube
@@ -646,7 +646,7 @@
 	Building:
 		Dimensions: 1,2
 		Footprint: x x
-		TerrainTypes: Clear, Road, Crater, Grass
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit
 	Tooltip:
 		Name: Wall
 	Valued:

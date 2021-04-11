@@ -39,6 +39,11 @@ Terrain:
 		TargetTypes: Ground
 		Color: 186104
 		AcceptsSmudgeType: Crater
+	TerrainType@GrassPit:
+		Type: Grass Pit
+		TargetTypes: Ground
+		Color: 125405
+		AcceptsSmudgeType: Crater
 	TerrainType@Cliff:
 		Type: Cliff
 		TargetTypes: Ground
@@ -977,6 +982,11 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Terrain
 		ClearTile: true
+		AutoConnect@GrassPit:
+			Type: Grass Pit
+			BorderTypes: Grass
+			BorderTransitions: 141, 137, 135, 139, 132, 130, 131, 133
+			Corners: 140, 134, 136, 142
 		AutoConnect@Mountain:
 			Type: Mountain
 			BorderTypes: Grass
@@ -1137,9 +1147,10 @@ Templates:
 		Images: bits/terrain/grass.png
 		Frames: 21
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Terrain
+		ClearTile: true
 		Tiles:
-			0: Grass
+			0: Grass Pit
 	Template@139:
 		Id: 139
 		Images: bits/terrain/grass.png

@@ -45,7 +45,7 @@ GOLDBALL:
 		ShowOwnerRow: false
 	Crate:
 		Lifetime: 240
-		TerrainTypes: Clear, Crater, Road, Grass, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		CrushClass: Scrap
 	RenderSprites:
 		Palette: terrain

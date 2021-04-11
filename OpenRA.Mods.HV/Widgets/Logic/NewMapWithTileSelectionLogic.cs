@@ -35,7 +35,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			var terrainInfo = world.Map.Rules.TerrainInfo as ITemplatedTerrainInfo;
 
 			var clearTiles = terrainInfo.Templates.Where(t => ((CustomTerrainTemplateInfo)t.Value).ClearTile)
-				.Select(t => (Type: t.Value.Id, Description: t.Value.Categories.First()));
+				.Select(t => (Type: t.Value.Id,
+					Description: terrainInfo.TerrainTypes[terrainInfo.GetTerrainInfo(new TerrainTile(t.Key, 0)).TerrainType].Type));
 
 			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
 			{
