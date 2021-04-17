@@ -126,12 +126,6 @@ namespace OpenRA.Mods.HV.Traits
 				if (!miner.Key.IsIdle)
 					continue;
 
-				if (Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(miner.Key.Location).Type))
-				{
-					bot.QueueOrder(new Order("DeployTransform", miner.Key, true));
-					continue;
-				}
-
 				// Tell the idle miner to quit slacking:
 				var newSafeResourcePatch = FindNextResource(miner.Key, miner.Value);
 				if (newSafeResourcePatch.Type == TargetType.Invalid)
@@ -141,8 +135,8 @@ namespace OpenRA.Mods.HV.Traits
 				}
 
 				var cell = world.Map.CellContaining(newSafeResourcePatch.CenterPosition);
-				AIUtils.BotDebug("AI: {0} is idle. Ordering to {1} in search for new resources.".F(miner.Key, cell));
-				bot.QueueOrder(new Order("Move", miner.Key, newSafeResourcePatch, true));
+				AIUtils.BotDebug("AI: {0} is idle. Ordering to {1} for deployment.".F(miner.Key, cell));
+				bot.QueueOrder(new Order("DeployMiner", miner.Key, newSafeResourcePatch, false));
 			}
 
 			// Keep the economy running before starving out.

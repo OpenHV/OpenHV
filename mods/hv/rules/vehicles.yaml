@@ -962,6 +962,8 @@ MINER:
 	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Ore
+	Miner:
+		TerrainTypes: Ore
 	Transforms:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2
