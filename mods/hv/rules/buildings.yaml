@@ -4,7 +4,7 @@ BASE:
 	Inherits: ^BaseBuilding
 	Inherits@flame: ^BuildingFlame3
 	Selectable:
-		Bounds: 40,80,0,-20
+		Bounds: 2048, 4096, 0, -1024
 	Valued:
 		Cost: 3500
 	Tooltip:
@@ -108,7 +108,7 @@ GENERATOR:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60,0,-10
+		Bounds: 2048, 3072, 0, -512
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
@@ -154,7 +154,7 @@ RADAR:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,48,0,-4
+		Bounds: 2048, 2457, 0, -204
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
@@ -224,7 +224,7 @@ TRADPLAT:
 		Footprint: x+x x+x x+x
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 40,40
+		Bounds: 2048, 2048
 	Health:
 		HP: 80000
 	Armor:
@@ -266,7 +266,7 @@ MODULE:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,40
+		Bounds: 2048, 2048
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -343,7 +343,7 @@ MINER2:
 	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60,0,-20
+		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
 		Name: Mining Tower
 	Valued:
@@ -387,7 +387,7 @@ STARPORT:
 	Inherits@shape: ^2x3Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 2048, 3072
 	Tooltip:
 		Name: Starport
 	Buildable:
@@ -472,7 +472,7 @@ FACTORY2:
 	Inherits@shape: ^2x3Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60
+		Bounds: 2048, 3072
 	Buildable:
 		Prerequisites: module
 		Queue: Building
@@ -585,7 +585,7 @@ FACTORY3:
 	Inherits@shape: ^2x4Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,80
+		Bounds: 2048, 4096
 	Buildable:
 		Prerequisites: factory2
 		Queue: Building
@@ -704,7 +704,7 @@ TECHCENTER:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,50,0,-5
+		Bounds: 2048, 2560, 0, -256
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
@@ -754,7 +754,7 @@ TURRET:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,30,0,-5
+		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -824,7 +824,7 @@ TURRET2:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,30,0,-5
+		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -903,7 +903,7 @@ AATURRET:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,30,0,-5
+		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -984,7 +984,7 @@ AATURRET2:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,30,0,-5
+		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -1066,7 +1066,7 @@ FIELD:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 40,40
+		Bounds: 2048, 2048
 	Health:
 		HP: 100000
 	Armor:
@@ -1114,7 +1114,7 @@ SILO:
 	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 40,60,0,-20
+		Bounds: 2048, 3072, 0, -1024
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1191,7 +1191,7 @@ STORAGE:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,40
+		Bounds: 2048, 2048
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1245,7 +1245,7 @@ REFINERY:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,40
+		Bounds: 2048, 2048
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1302,7 +1302,7 @@ ARTILLERYTURRET:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,40
+		Bounds: 2048, 2048
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -1368,7 +1368,7 @@ TELEVATR:
 	Inherits@shape: ^2x1Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,20
+		Bounds: 2048, 1024
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 0,-512,0, 0,512,0
@@ -1431,7 +1431,7 @@ TELEVTR2:
 	-Buildable:
 	-PlaceBuildingVariants:
 	Selectable:
-		Bounds: 20,40
+		Bounds: 1024, 2048
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
@@ -1445,7 +1445,7 @@ HARBOR:
 	Inherits@shape: ^3x3Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 60,60
+		Bounds: 3072, 3072
 	Buildable:
 		Prerequisites: generator
 		Queue: Building
@@ -1521,7 +1521,7 @@ MOTHER:
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^6x8Shape
 	Selectable:
-		Bounds: 113,145
+		Bounds: 5785, 7424
 	Valued:
 		Cost: 15000
 	Tooltip:
@@ -1546,7 +1546,7 @@ WALLTOP:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: top
 
@@ -1557,7 +1557,7 @@ WALLTOPLEFT:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: topleft
 
@@ -1568,7 +1568,7 @@ WALLLEFT:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: left
 
@@ -1576,7 +1576,7 @@ WALLBOTTOMLEFT:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: bottomleft
 
@@ -1584,7 +1584,7 @@ WALLBOTTOM:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: bottom
 
@@ -1592,7 +1592,7 @@ WALLBOTTOMRIGHT:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: bottomright
 
@@ -1603,7 +1603,7 @@ WALLRIGHT:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: right
 
@@ -1614,7 +1614,7 @@ WALLTOPRIGHT:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: topright
 
@@ -1622,7 +1622,7 @@ DESTROYEDWALLLEFT:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-left
 
@@ -1630,7 +1630,7 @@ DESTROYEDWALLRIGHT:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-right
 
@@ -1638,7 +1638,7 @@ DESTROYEDWALLBOTTOMLEFT:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-bottomleft
 
@@ -1646,7 +1646,7 @@ DESTROYEDWALLBOTTOMRIGHT:
 	Inherits: ^Wall
 	Inherits@shape: ^1x2Shape
 	Interactable:
-		Bounds: 24,48
+		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-bottomright
 
@@ -1657,7 +1657,7 @@ DESTROYEDWALLTOPLEFT:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: destroyed-topleft
 
@@ -1668,7 +1668,7 @@ DESTROYEDWALLTOPRIGHT:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: destroyed-topright
 
@@ -1678,7 +1678,7 @@ TECHBUILDING:
 	Inherits@shape: ^2x2Shape
 	Inherits@flame: ^BuildingFlame
 	Selectable:
-		Bounds: 40,48,0,-4
+		Bounds: 2048, 2457, 0, -204
 	Tooltip:
 		Name: Tech Reconstructor
 	Building:

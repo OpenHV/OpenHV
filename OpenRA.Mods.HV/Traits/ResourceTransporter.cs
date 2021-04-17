@@ -33,9 +33,11 @@ namespace OpenRA.Mods.HV.Traits
 		[VoiceReference]
 		public readonly string DeliverVoice = "Action";
 
+		[CursorReference]
 		[Desc("Cursor to display when able to unload at target actor.")]
 		public readonly string EnterCursor = "enter";
 
+		[CursorReference]
 		[Desc("Cursor to display when unable to unload at target actor.")]
 		public readonly string EnterBlockedCursor = "enter-blocked";
 
@@ -49,7 +51,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		public readonly ResourceTransporterInfo Info;
 
-		public ResourceType ResourceType;
+		public string ResourceType;
 
 		readonly Mobile mobile;
 
@@ -70,7 +72,7 @@ namespace OpenRA.Mods.HV.Traits
 					return;
 
 				var target = Target.FromActor(destination);
-				self.World.AddFrameEndTask(w => self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType.Info)));
+				self.World.AddFrameEndTask(w => self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType)));
 			}
 		}
 
@@ -137,7 +139,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (accepts == null)
 					return;
 
-				self.QueueActivity(order.Queued, new TransportResources(self,  order.Target, Info.Capacity, ResourceType.Info));
+				self.QueueActivity(order.Queued, new TransportResources(self,  order.Target, Info.Capacity, ResourceType));
 				self.ShowTargetLines();
 			}
 		}

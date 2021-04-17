@@ -140,7 +140,7 @@ Templates:
 			BorderTypes: Crater
 			BorderTransitions: 156, 152, 154, 160, 159, 161, 153, 151
 			Corners: 158, 157, 162, 163
- 		AutoConnect@Mountain:
+		AutoConnect@Mountain:
 			Type: Mountain
 			BorderTypes: Crater
 			BorderTransitions: 370, 366, 368, 374, 373, 375, 367, 365
@@ -1007,7 +1007,7 @@ Templates:
 			BorderTypes: Grass, Cliff
 			BorderTransitions: 1069, 1075, 1071, 1066, 1077, 1078, 1073, 1072
 			Corners: 1074, 1076, 1067, 1065
- 		AutoConnect@Trees:
+		AutoConnect@Trees:
 			Type: Plant
 			BorderTypes: Grass
 			BorderTransitions: 1273, 1277, 1279, 1275, 1283, 1281, 1282, 1285
@@ -1581,7 +1581,7 @@ Templates:
 		Frames: 4
 		Size: 1,1
 		Categories: Mountain, Terrain
- 		ClearTile: true
+		ClearTile: true
 		AutoConnect@Lava:
 			Type: Lava
 			BorderTypes: Mountain
@@ -5858,7 +5858,7 @@ Templates:
 			BorderTypes: Snow, Cliff
 			BorderTransitions: 875, 881, 877, 872, 879, 878, 883, 884
 			Corners: 880, 882, 873, 871
- 		AutoConnect@Trees:
+		AutoConnect@Trees:
 			Type: Plant
 			BorderTypes: Snow
 			BorderTransitions: 1288, 1293, 1295, 1291, 1301, 1298, 1299, 1302

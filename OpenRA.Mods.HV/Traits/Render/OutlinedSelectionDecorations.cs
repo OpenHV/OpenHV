@@ -54,6 +54,7 @@ namespace OpenRA.Mods.Common.Traits.Render
 		[SequenceReference(nameof(Image))]
 		public readonly string TopSequence = "top";
 
+		[PaletteReference]
 		[Desc("Palette to render the sprite in. Reference the world actor's PaletteFrom* traits.")]
 		public readonly string Palette = "cursor";
 

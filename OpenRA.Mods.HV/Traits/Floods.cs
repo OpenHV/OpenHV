@@ -32,8 +32,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly FloodsInfo info;
 
-		readonly ResourceType resourceType;
-		readonly UndergroundResourceLayer resourceLayer;
+		readonly IResourceLayer resourceLayer;
 
 		readonly List<CPos> cells = new List<CPos>();
 
@@ -42,13 +41,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			this.info = info;
 
-			resourceType = self.World.WorldActor.TraitsImplementing<ResourceType>()
-				.FirstOrDefault(t => t.Info.Type == info.ResourceType);
-
-			if (resourceType == null)
-				throw new InvalidOperationException("No such resource type `{0}`".F(info.ResourceType));
-
-			resourceLayer = self.World.WorldActor.Trait<UndergroundResourceLayer>(); // TODO: think of something else
+			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 
 			cells.Add(self.Location);
 		}
@@ -72,15 +65,15 @@ namespace OpenRA.Mods.HV.Traits
 			var waveFront = Util.ExpandFootprint(cells, true)
 				.Take(info.MaxRange)
 				.SkipWhile(p => !self.World.Map.Contains(p) ||
-					(resourceLayer.GetResourceType(p) == resourceType && resourceLayer.IsFull(p)))
+					(resourceLayer.GetResource(p).Type == info.ResourceType))
 				.ToArray();
 
 			foreach (var cell in waveFront)
 			{
-				if (resourceLayer.CanSpawnResourceAt(resourceType, cell))
+				if (resourceLayer.CanAddResource(info.ResourceType, cell))
 				{
 					cells.Add(cell);
-					resourceLayer.AddResource(resourceType, cell, 1);
+					resourceLayer.AddResource(info.ResourceType, cell, 1);
 				}
 			}
 		}

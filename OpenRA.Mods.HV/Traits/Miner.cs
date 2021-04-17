@@ -19,6 +19,7 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Allows the miner to deploy at a target location with a single order.")]
 	public class MinerInfo : TraitInfo
 	{
+		[CursorReference]
 		[Desc("Cursor to display when able to lay a mine.")]
 		public readonly string DeployCursor = "deploy";
 

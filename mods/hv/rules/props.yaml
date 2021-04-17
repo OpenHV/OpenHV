@@ -2,7 +2,7 @@ LAMPPOST:
 	Inherits: ^Prop
 	Inherits@shape: ^1x1Shape
 	Interactable:
-		Bounds: 20, 20
+		Bounds: 1024, 1024
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -28,7 +28,7 @@ PYRAMID:
 	Inherits: ^Prop
 	Inherits@shape: ^2x2Shape
 	Interactable:
-		Bounds: 40, 40
+		Bounds: 2048, 2048
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -45,7 +45,7 @@ PYRAMID2:
 	Inherits: ^Prop
 	Inherits@shape: ^1x1Shape
 	Interactable:
-		Bounds: 20, 20
+		Bounds: 1024, 1024
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -58,7 +58,7 @@ PROP1:
 	Inherits: ^Prop
 	Inherits@shape: ^1x1Shape
 	Interactable:
-		Bounds: 20, 20
+		Bounds: 1024, 1024
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -77,7 +77,7 @@ PROP2:
 	Inherits: ^Prop
 	Inherits@shape: ^1x1Shape
 	Interactable:
-		Bounds: 20, 20
+		Bounds: 1024, 1024
 	Building:
 		Footprint: x
 		Dimensions: 1,1

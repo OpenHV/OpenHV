@@ -11,7 +11,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Mods.Common.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -69,36 +68,36 @@ namespace OpenRA.Mods.HV.Traits
 		public LiquidTerrainRenderer(Actor self, LiquidTerrainRendererInfo info)
 			: base(self, info) { }
 
-		bool CellContains(CPos c, ResourceType t)
+		bool CellContains(CPos cell, string resourceType)
 		{
-			return RenderContent.Contains(c) && RenderContent[c].Type == t;
+			return RenderContents.Contains(cell) && RenderContents[cell].Type == resourceType;
 		}
 
-		ClearSides FindClearSides(ResourceType t, CPos p)
+		ClearSides FindClearSides(CPos cell, string resourceType)
 		{
 			var clearSides = ClearSides.None;
-			if (!CellContains(p + new CVec(0, -1), t))
-				clearSides |= ClearSides.Top;
+			if (!CellContains(cell + new CVec(0, -1), resourceType))
+				clearSides |= ClearSides.Top | ClearSides.TopLeft | ClearSides.TopRight;
 
-			if (!CellContains(p + new CVec(-1, 0), t))
-				clearSides |= ClearSides.Left;
+			if (!CellContains(cell + new CVec(-1, 0), resourceType))
+				clearSides |= ClearSides.Left | ClearSides.TopLeft | ClearSides.BottomLeft;
 
-			if (!CellContains(p + new CVec(1, 0), t))
-				clearSides |= ClearSides.Right;
+			if (!CellContains(cell + new CVec(1, 0), resourceType))
+				clearSides |= ClearSides.Right | ClearSides.TopRight | ClearSides.BottomRight;
 
-			if (!CellContains(p + new CVec(0, 1), t))
-				clearSides |= ClearSides.Bottom;
+			if (!CellContains(cell + new CVec(0, 1), resourceType))
+				clearSides |= ClearSides.Bottom | ClearSides.BottomLeft | ClearSides.BottomRight;
 
-			if (!CellContains(p + new CVec(-1, -1), t))
+			if (!CellContains(cell + new CVec(-1, -1), resourceType))
 				clearSides |= ClearSides.TopLeft;
 
-			if (!CellContains(p + new CVec(1, -1), t))
+			if (!CellContains(cell + new CVec(1, -1), resourceType))
 				clearSides |= ClearSides.TopRight;
 
-			if (!CellContains(p + new CVec(-1, 1), t))
+			if (!CellContains(cell + new CVec(-1, 1), resourceType))
 				clearSides |= ClearSides.BottomLeft;
 
-			if (!CellContains(p + new CVec(1, 1), t))
+			if (!CellContains(cell + new CVec(1, 1), resourceType))
 				clearSides |= ClearSides.BottomRight;
 
 			return clearSides;
@@ -115,7 +114,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void UpdateRenderedSpriteInner(CPos cell)
 		{
-			UpdateRenderedSpriteInner(cell, RenderContent[cell]);
+			UpdateRenderedSpriteInner(cell, RenderContents[cell]);
 		}
 
 		void UpdateRenderedSpriteInner(CPos cell, RendererCellContents content)
@@ -125,15 +124,9 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (density > 0 && renderType != null)
 			{
-				// The call chain for this method (that starts with AddDirtyCell()) guarantees
-				// that the new content type would still be suitable for this renderer,
-				// but that is a bit too fragile to rely on in case the code starts changing.
-				if (!Info.RenderTypes.Contains(renderType.Info.Type))
-					return;
-
-				var clear = FindClearSides(renderType, cell);
+				var clear = FindClearSides(cell, content.Type);
 				if (SpriteMap.TryGetValue(clear, out var index))
-					UpdateSpriteLayers(cell, renderType.Variants.First().Value, index, renderType.Palette);
+					UpdateSpriteLayers(cell, content.Sequence, index, content.Palette);
 				else
 					Log.Write("debug", "{1}: SpriteMap does not contain an index for ClearSides type '{0}'".F(clear, cell));
 			}

@@ -38,7 +38,7 @@ SHIP1:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
 	Selectable:
-		Bounds: 20,20
+		Bounds: 1024, 1024
 	Contrail:
 		Offset: -400,50,0
 		UsePlayerColor: false
@@ -93,7 +93,7 @@ SHIP2:
 		TrailWidth: 0c96
 		TrailLength: 5
 	Selectable:
-		Bounds: 20,20
+		Bounds: 1024, 1024
 	RenderSprites:
 		PlayerPalette: green
 
@@ -129,7 +129,7 @@ COPTER:
 		Weapon: ChainGun
 		LocalOffset: 0,0,0
 	Selectable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay:
@@ -160,7 +160,7 @@ SAUCER:
 		Speed: 112
 	-WithShadow:
 	Selectable:
-		Bounds: 24,24
+		Bounds: 1228, 1228
 	WithIdleOverlayOnGround:
 		IsDecoration: true
 		Sequence: shadow-overlay
@@ -200,7 +200,7 @@ BANSHEE:
 		MuzzleSequence: muzzle
 		LocalOffset: 700,-200,0
 	Selectable:
-		DecorationBounds: 24,24
+		DecorationBounds: 1228, 1228
 	RenderSprites:
 		PlayerPalette: green
 	WithMuzzleOverlay:
@@ -235,7 +235,7 @@ COPTER2:
 		Name: fly
 		RequiresCondition: airborne
 	Selectable:
-		DecorationBounds: 40,36
+		DecorationBounds: 2048, 1843
 	Turreted:
 		TurnSpeed: 80
 		Offset: 0,0,100
@@ -278,7 +278,7 @@ BALLOON:
 	Aircraft:
 		Speed: 60
 	Selectable:
-		DecorationBounds: 24,32
+		DecorationBounds: 1228, 1638
 	-WithShadow:
 	WithIdleOverlayOnGround:
 		IsDecoration: true
@@ -299,7 +299,7 @@ MOTHER2B:
 		-CruisingCondition:
 	-Hovers@CRUISING:
 	Selectable:
-		DecorationBounds: 128, 268
+		DecorationBounds: 6553, 13721
 
 MOTHER2C:
 	Inherits: MOTHER2B
@@ -345,7 +345,7 @@ DROPSHIP:
 		MuzzleSequence: muzzle2
 		LocalOffset: 700,-600,0
 	Selectable:
-		DecorationBounds: 40,36
+		DecorationBounds: 2048, 1843
 	Cargo:
 		Types: Scout
 		MaxWeight: 4

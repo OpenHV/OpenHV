@@ -83,7 +83,7 @@
 		Image: energyball
 		Sequence: teleport
 	Selectable:
-		Bounds: 20, 20
+		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Targetable@REPAIR:
@@ -168,7 +168,7 @@
 	AppearsOnRadar:
 		UseLocation: true
 	Selectable:
-		Bounds: 20,20
+		Bounds: 1024, 1024
 	Aircraft:
 		AirborneCondition: airborne
 		InitialFacing: 768
@@ -504,7 +504,7 @@
 ^Tree:
 	Inherits@shape: ^1x1Shape
 	Interactable:
-		Bounds: 20, 20
+		Bounds: 1024, 1024
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
@@ -562,7 +562,7 @@
 		Locomotor: naval
 		Voice: Move
 	Selectable:
-		Bounds: 20,20
+		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Water, Ship
 	Targetable@REPAIR:
@@ -616,6 +616,7 @@
 		MaxRange: 1000
 	MapEditorData:
 		Categories: Water
+		ExcludeTilesets: PLANET # TODO: not finished
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 
@@ -687,7 +688,7 @@
 ^Mine:
 	Inherits: ^SpriteActor
 	Selectable:
-		Bounds: 20,20
+		Bounds: 1024, 1024
 	WithSpriteBody:
 	HiddenUnderFog:
 	Mine:

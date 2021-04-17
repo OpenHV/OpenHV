@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -44,7 +44,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly ResourceCollectorInfo info;
 		readonly Lazy<RallyPoint> rallyPoint;
-		readonly UndergroundResourceLayer resourceLayer;
+		readonly IResourceLayer resourceLayer;
 		readonly Building building;
 
 		public int Ticks { get; private set; }
@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 			Ticks = info.InitialDelay;
 
-			resourceLayer = self.World.WorldActor.Trait<UndergroundResourceLayer>();
+			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 			building = self.Trait<Building>();
 
 			rallyPoint = Exts.Lazy(() => self.IsDead ? null : self.TraitOrDefault<RallyPoint>());
@@ -83,21 +83,24 @@ namespace OpenRA.Mods.HV.Traits
 					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
 					var actorInfo = self.World.Map.Rules.Actors[vehicle];
 
-					ResourceType resourceType = null;
+					string resourceType = null;
 					var cells = building.Info.Tiles(self.Location);
 					foreach (var cell in cells)
 					{
-						if (resourceLayer.GetResourceDensity(cell) > 0)
-							resourceType = resourceLayer.GetResourceType(cell);
+						var resource = resourceLayer.GetResource(cell);
+						if (resource.Density > 0)
+							resourceType = resource.Type;
 					}
 
-					SpawnDeliveryVehicle(self, actorInfo, exit != null ? exit.Info : null, resourceType);
+					if (resourceType != null)
+						SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType);
+
 					Resources = 0;
 				}
 			}
 		}
 
-		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo, ResourceType resourceType)
+		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo, string resourceType)
 		{
 			if (resourceType == null)
 				return;

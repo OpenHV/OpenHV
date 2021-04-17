@@ -19,7 +19,24 @@ MpSpawn:
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
-	UndergroundEditorResourceLayer:
+	EditorResourceLayer:
+		RecalculateResourceDensity: false
+		ResourceTypes:
+			gold:
+				ResourceIndex: 1
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
+				MaxDensity: 3
+			iron:
+				ResourceIndex: 2
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
+				MaxDensity: 3
+			water:
+				ResourceIndex: 3
+				TerrainType: Water
+				AllowedTerrainTypes: Crater
+				MaxDensity: 1
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
@@ -27,8 +44,7 @@ EditorWorld:
 	EditorAutoTiler:
 
 EditorPlayer:
-	AlwaysVisible:
-	Shroud:
+	Inherits: ^BasePlayer
 
 TRANSPRT.colorpicker:
 	Inherits: TRANSPRT

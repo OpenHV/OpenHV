@@ -50,6 +50,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Sprite overlay to use for minefield cells hidden behind fog or shroud.")]
 		public readonly string TileUnknownName = "target-unknown";
 
+		[CursorReference]
 		[Desc("Cursor to display when able to (un)deploy the actor.")]
 		public readonly string Cursor = "ability";
 
@@ -59,9 +60,11 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Only allow laying mines on listed terrain types. Leave empty to allow all terrain types.")]
 		public readonly HashSet<string> TerrainTypes = new HashSet<string>();
 
+		[CursorReference]
 		[Desc("Cursor to display when able to lay a mine.")]
 		public readonly string DeployCursor = "deploy";
 
+		[CursorReference]
 		[Desc("Cursor to display when unable to lay a mine.")]
 		public readonly string DeployBlockedCursor = "deploy-blocked";
 

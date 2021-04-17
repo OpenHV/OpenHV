@@ -1,14 +1,22 @@
 # License: CC-BY-SA-4.0
 
-Player:
+^BasePlayer:
 	AlwaysVisible:
+	Shroud:
+	PlayerResources:
+		ResourceValues:
+			gold: 180
+			iron: 100
+			water: 0
+
+Player:
+	Inherits: ^BasePlayer
 	MissionObjectives:
 	ConquestVictoryConditions:
 	ProximityCaptor:
 		Types: Player
 	PowerManager:
 		SpeechNotification: LowPower
-	Shroud:
 	TechTree:
 	AllyRepair:
 	PlaceBuilding:

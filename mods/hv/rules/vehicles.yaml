@@ -583,7 +583,7 @@ TRANSPRT:
 		MaxWeight: 4
 		LoadingCondition: notmobile
 	Selectable:
-		DecorationBounds: 40,36
+		DecorationBounds: 2048, 1843
 	RenderSprites:
 		PlayerPalette: green
 	WithCargoPipsDecoration:
@@ -718,7 +718,7 @@ ARTIL3:
 		Sequence: shoot
 	WithMuzzleOverlay:
 	Selectable:
-		DecorationBounds: 30,30
+		DecorationBounds: 1536, 1536
 	RenderSprites:
 		PlayerPalette: green
 

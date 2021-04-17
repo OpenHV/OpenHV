@@ -21,13 +21,16 @@ namespace OpenRA.Mods.HV.Activities
 	class TransportResources : Enter
 	{
 		readonly int payload;
-		readonly ResourceTypeInfo typeInfo;
+		readonly string resourceType;
+		readonly PlayerResources playerResources;
 
-		public TransportResources(Actor self, Target target, int payload, ResourceTypeInfo typeInfo)
+		public TransportResources(Actor self, Target target, int payload, string resourceType)
 			: base(self, target, Color.Yellow)
 		{
 			this.payload = payload;
-			this.typeInfo = typeInfo;
+			this.resourceType = resourceType;
+
+			playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
 		}
 
 		protected override void OnEnterComplete(Actor self, Actor targetActor)
@@ -36,7 +39,10 @@ namespace OpenRA.Mods.HV.Activities
 			var resources = targetOwner.PlayerActor.Trait<PlayerResources>();
 
 			var initialAmount = resources.Resources;
-			var value = typeInfo.ValuePerUnit * payload;
+			if (!playerResources.Info.ResourceValues.TryGetValue(resourceType, out var resourceValue))
+				return;
+
+			var value = resourceValue * payload;
 			resources.GiveResources(value);
 			var amount = resources.Resources - initialAmount;
 

@@ -137,7 +137,7 @@ namespace OpenRA.Mods.HV.Traits
 					continue;
 
 				// Don't drop on any actors
-				if (self.World.WorldActor.Trait<BuildingInfluence>().GetBuildingAt(p) != null
+				if (self.World.WorldActor.Trait<BuildingInfluence>().AnyBuildingAt(p)
 					|| self.World.ActorMap.GetActorsAt(p).Any())
 					continue;
 

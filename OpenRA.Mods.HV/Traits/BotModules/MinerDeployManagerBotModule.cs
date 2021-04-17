@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		IPathFinder pathfinder;
 		DomainIndex domainIndex;
-		UndergroundResourceLayer resourceLayer;
+		IResourceLayer resourceLayer;
 
 		IBotRequestUnitProduction[] requestUnitProduction;
 
@@ -97,14 +97,14 @@ namespace OpenRA.Mods.HV.Traits
 
 			pathfinder = world.WorldActor.Trait<IPathFinder>();
 			domainIndex = world.WorldActor.Trait<DomainIndex>();
-			resourceLayer = world.WorldActor.TraitOrDefault<UndergroundResourceLayer>();
+			resourceLayer = world.WorldActor.TraitOrDefault<IResourceLayer>();
 
 			requestUnitProduction = player.PlayerActor.TraitsImplementing<IBotRequestUnitProduction>().ToArray();
 		}
 
 		void IBotTick.BotTick(IBot bot)
 		{
-			if (resourceLayer == null || resourceLayer.IsResourceLayerEmpty)
+			if (resourceLayer == null || resourceLayer.IsEmpty)
 				return;
 
 			if (--scanForIdleMinersTicks > 0)

@@ -32,6 +32,9 @@ namespace OpenRA.Mods.HV.UtilityCommands
 			table.Columns.Add("Range", typeof(string));
 			table.Columns.Add("Damage /s", typeof(int));
 
+			var gameSpeeds = Game.ModData.Manifest.Get<GameSpeeds>();
+			var defaultGameSpeed = gameSpeeds.Speeds[gameSpeeds.DefaultSpeed];
+
 			var armorList = new List<string>();
 			foreach (var actorInfo in rules.Actors.Values)
 			{
@@ -91,9 +94,9 @@ namespace OpenRA.Mods.HV.UtilityCommands
 							var damagePerSecond = 0f;
 
 							foreach (var delay in weapon.BurstDelays)
-								damagePerSecond += 1000f / Game.Timestep * (damage * burst) / (delay + burst * rateOfFire);
+								damagePerSecond += 1000f / defaultGameSpeed.Timestep * (damage * burst) / (delay + burst * rateOfFire);
 
-							damagePerSecond /= weapon.BurstDelays.Count();
+							damagePerSecond /= weapon.BurstDelays.Length;
 							row["Damage /s"] = Math.Round(damagePerSecond, 1, MidpointRounding.AwayFromZero);
 
 							foreach (var armorType in armorList)

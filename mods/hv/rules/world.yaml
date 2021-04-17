@@ -109,46 +109,20 @@
 		RandomFactionMembers: yi, sc
 		Side: Random
 		Description: Random Corporation\nA random corporation will be chosen when the game starts.
-	ResourceType@Gold:
-		Type: gold
-		Name: Mineable Resource Deposit
-		ResourceType: 1
-		TerrainType: Ore
-		Palette: effect
-		Sequences: gold
-		MaxDensity: 3
-		ValuePerUnit: 180
-		AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
-		AllowUnderActors: true
-		AllowUnderBuildings: true
-	ResourceType@Iron:
-		Type: iron
-		Name: Mineable Resource Deposit
-		ResourceType: 2
-		TerrainType: Ore
-		Palette: effect
-		Sequences: iron
-		MaxDensity: 3
-		ValuePerUnit: 100
-		AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
-		AllowUnderActors: true
-		AllowUnderBuildings: true
 	ResourceRenderer:
-		RenderTypes: gold, iron
-	ResourceType@Water:
-		Type: water
-		Name: Water
-		ResourceType: 3
-		TerrainType: Water
-		Palette: terrain
-		AllowedTerrainTypes: Crater
-		Sequences: waterflow
-		MaxDensity: 1
-		ValuePerUnit: 0
-		AllowUnderActors: true
-		AllowUnderBuildings: true
-	LiquidTerrainRenderer:
-		RenderTypes: water
+		ResourceTypes:
+			gold:
+				Sequences: gold
+				Palette: effect
+				Name: Mineable Resource Deposit
+			iron:
+				Sequences: iron
+				Palette: effect
+				Name: Mineable Resource Deposit
+			water:
+				Sequences: waterflow
+				Palette: terrain
+				Name: Water
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
 		Filename: bits/palette.pal
@@ -309,6 +283,22 @@ World:
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
 	UndergroundResourceLayer:
+		ResourceTypes:
+			gold:
+				ResourceIndex: 1
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
+				MaxDensity: 3
+			iron:
+				ResourceIndex: 2
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
+				MaxDensity: 3
+			#water:
+			#	ResourceIndex: 3
+			#	TerrainType: Water
+			#	AllowedTerrainTypes: Crater
+			#	MaxDensity: 1
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech

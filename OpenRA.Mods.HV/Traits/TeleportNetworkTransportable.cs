@@ -23,8 +23,13 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[VoiceReference]
 		public readonly string Voice = "Action";
+
+		[CursorReference]
 		public readonly string EnterCursor = "enter";
+
+		[CursorReference]
 		public readonly string EnterBlockedCursor = "enter-blocked";
+
 		public override object Create(ActorInitializer init) { return new TeleportNetworkTransportable(this); }
 	}
 

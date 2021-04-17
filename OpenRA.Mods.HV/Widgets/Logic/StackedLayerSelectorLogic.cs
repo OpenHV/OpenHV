@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
@@ -37,42 +36,37 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			layerTemplateList.Layout = new GridLayout(layerTemplateList);
 			layerPreviewTemplate = layerTemplateList.Get<ScrollItemWidget>("LAYERPREVIEW_TEMPLATE");
 
-			IntializeLayerPreview(widget);
+			IntializeLayerPreview();
 		}
 
-		void IntializeLayerPreview(Widget widget)
+		void IntializeLayerPreview()
 		{
 			layerTemplateList.RemoveChildren();
 			var rules = worldRenderer.World.Map.Rules;
-			var resources = rules.Actors["world"].TraitInfos<ResourceTypeInfo>();
 			var tileSize = worldRenderer.World.Map.Grid.TileSize;
-			foreach (var resource in resources)
+			foreach (var resourceRenderer in worldRenderer.World.WorldActor.TraitsImplementing<IResourceRenderer>())
 			{
-				var newResourcePreviewTemplate = ScrollItemWidget.Setup(layerPreviewTemplate,
-					() => editorCursor.Type == EditorCursorType.Resource && editorCursor.Resource == resource,
-					() => editor.SetBrush(new StackedEditorResourceBrush(editor, resource, worldRenderer)));
+				foreach (var resourceType in resourceRenderer.ResourceTypes)
+				{
+					var newResourcePreviewTemplate = ScrollItemWidget.Setup(layerPreviewTemplate,
+						() => editorCursor.Type == EditorCursorType.Resource && editorCursor.ResourceType == resourceType,
+						() => editor.SetBrush(new StackedEditorResourceBrush(editor, resourceType, worldRenderer)));
 
-				newResourcePreviewTemplate.Bounds.X = 0;
-				newResourcePreviewTemplate.Bounds.Y = 0;
+					newResourcePreviewTemplate.Bounds.X = 0;
+					newResourcePreviewTemplate.Bounds.Y = 0;
 
-				var layerPreview = newResourcePreviewTemplate.Get<SpriteWidget>("LAYER_PREVIEW");
-				layerPreview.IsVisible = () => true;
-				layerPreview.GetPalette = () => resource.Palette;
+					var layerPreview = newResourcePreviewTemplate.Get<ResourcePreviewWidget>("LAYER_PREVIEW");
+					layerPreview.IsVisible = () => true;
+					layerPreview.ResourceType = resourceType;
+					layerPreview.Bounds.Width = tileSize.Width;
+					layerPreview.Bounds.Height = tileSize.Height;
+					newResourcePreviewTemplate.Bounds.Width = tileSize.Width + (layerPreview.Bounds.X * 2);
+					newResourcePreviewTemplate.Bounds.Height = tileSize.Height + (layerPreview.Bounds.Y * 2);
+					newResourcePreviewTemplate.IsVisible = () => true;
+					newResourcePreviewTemplate.GetTooltipText = () => resourceType;
 
-				var variant = resource.Sequences.FirstOrDefault();
-				var sequence = rules.Sequences.GetSequence("resources", variant); // TODO: choose something more appropriate
-				var frame = sequence.Frames != null ? sequence.Frames.Last() : resource.MaxDensity - 1;
-				layerPreview.GetSprite = () => sequence.GetSprite(frame);
-
-				layerPreview.Bounds.Width = tileSize.Width;
-				layerPreview.Bounds.Height = tileSize.Height;
-				newResourcePreviewTemplate.Bounds.Width = tileSize.Width + (layerPreview.Bounds.X * 2);
-				newResourcePreviewTemplate.Bounds.Height = tileSize.Height + (layerPreview.Bounds.Y * 2);
-
-				newResourcePreviewTemplate.IsVisible = () => true;
-				newResourcePreviewTemplate.GetTooltipText = () => resource.Type;
-
-				layerTemplateList.AddChild(newResourcePreviewTemplate);
+					layerTemplateList.AddChild(newResourcePreviewTemplate);
+				}
 			}
 		}
 	}
