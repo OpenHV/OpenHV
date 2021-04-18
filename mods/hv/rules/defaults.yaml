@@ -422,11 +422,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Vehicle
-		InvalidTargets: NoAutoTarget, WaterStructure
+		ValidTargets: Vehicle, Structure
+		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Vehicle
+		ValidTargets: Vehicle, Structure
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetGroundAssaultMove:
