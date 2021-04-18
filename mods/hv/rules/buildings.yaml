@@ -1196,7 +1196,7 @@ STORAGE:
 		BuildPaletteOrder: 35
 		Queue: Building
 		Prerequisites: miner2
-		Description: Stores excess refined\ngold and iron.
+		Description: Stores excess refined\nresources.
 	Valued:
 		Cost: 300
 	Targetable:
@@ -1249,13 +1249,13 @@ REFINERY:
 		BuildPaletteOrder: 35
 		Queue: Building
 		Prerequisites: miner2
-		Description: Stores excess refined\ngold and iron.
+		Description: Processes resources.
 	Valued:
 		Cost: 300
 	Targetable:
 		TargetTypes: Ground, Structure
 	Tooltip:
-		Name: Storage
+		Name: Refinery
 	Health:
 		HP: 30000
 	Armor:
