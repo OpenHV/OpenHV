@@ -1030,24 +1030,24 @@ refinery:
 		Start: 23
 		Offset: 0, 0
 
-civilianminer:
+techminer:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -18
-	idle: bits/civilian-miner.png
+	idle: bits/techminer.png
 		Start: 2
 		Length: 8
 		Tick: 200
-	damaged-idle: bits/civilian-miner.png
+	damaged-idle: bits/techminer.png
 		Start: 1
-	shadow-overlay: bits/civilian-miner-shadow.png
+	shadow-overlay: bits/techminer-shadow.png
 		Start: 0
 		Length: 5
 		Tick: 200
 		Reverses: True
 		ZOffset: 1768
 		Offset: 8,13
-	damaged-shadow-overlay: bits/civilian-miner-shadow.png
+	damaged-shadow-overlay: bits/techminer-shadow.png
 		Start: 5
 		ZOffset: 1768
 		Offset: 8,13

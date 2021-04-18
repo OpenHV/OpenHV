@@ -1773,7 +1773,7 @@ TECHBUILDING:
 		Margin: 0, 5
 		RequiresCondition: reconstructor > 4
 
-CIVILIANMINER:
+TECHMINER:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
 	Inherits@shape: ^2x1Shape
@@ -1781,7 +1781,7 @@ CIVILIANMINER:
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
-		Name: Civilian Mining Tower
+		Name: Tech Mining Tower
 	TooltipDescription@ally:
 		Description: Provides additional resources.
 		ValidRelationships: Ally

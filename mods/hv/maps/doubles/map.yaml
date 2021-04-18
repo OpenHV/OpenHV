@@ -6,6 +6,8 @@ Title: Doubles
 
 Author: Dzierzan
 
+License: CC-BY-SA-4.0
+
 Tileset: PLANET
 
 MapSize: 110,52
@@ -315,24 +317,24 @@ Actors:
 	Actor95: mpspawn
 		Owner: Neutral
 		Location: 90,5
-	Actor96: civilianminer
+	Actor96: techminer
 		Owner: Neutral
 		Location: 3,43
-	Actor98: civilianminer
+	Actor98: techminer
 		Owner: Neutral
 		Location: 2,1
-	Actor99: civilianminer
+	Actor99: techminer
 		Owner: Neutral
 		Location: 106,1
-	Actor100: civilianminer
+	Actor100: techminer
 		Owner: Neutral
 		Location: 105,43
 	Actor101: prop2
 		Owner: Neutral
 		Location: 63,49
-	Actor92: civilianminer
+	Actor92: techminer
 		Owner: Neutral
 		Location: 62,3
-	Actor102: civilianminer
+	Actor102: techminer
 		Owner: Neutral
 		Location: 46,3
