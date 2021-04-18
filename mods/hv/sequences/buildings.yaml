@@ -1029,3 +1029,30 @@ refinery:
 	icon: bits/buildings-icons.png
 		Start: 23
 		Offset: 0, 0
+
+techminer:
+	Inherits@flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -18
+	idle: bits/techminer.png
+		Start: 2
+		Length: 8
+		Tick: 200
+	damaged-idle: bits/techminer.png
+		Start: 1
+	shadow-overlay: bits/techminer-shadow.png
+		Start: 0
+		Length: 5
+		Tick: 200
+		Reverses: True
+		ZOffset: 1768
+		Offset: 8,13
+	damaged-shadow-overlay: bits/techminer-shadow.png
+		Start: 5
+		ZOffset: 1768
+		Offset: 8,13
+	flame:
+		Offset: 3, -4
+	flame2:
+		Offset: -13, -6
+	icon: bits/icon.png

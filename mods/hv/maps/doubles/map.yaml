@@ -51,12 +51,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: techbuilding
-		Owner: Neutral
-		Location: 46,4
-	Actor1: techbuilding
-		Owner: Neutral
-		Location: 62,4
 	Actor2: lamppost
 		Owner: Neutral
 		Location: 51,4
@@ -75,24 +69,12 @@ Actors:
 	Actor7: prop2
 		Owner: Neutral
 		Location: 56,4
-	Actor10: techbuilding
-		Owner: Neutral
-		Location: 2,2
 	Actor11: lamppost
 		Owner: Neutral
 		Location: 5,5
-	Actor12: techbuilding
-		Owner: Neutral
-		Location: 106,2
 	Actor13: lamppost
 		Owner: Neutral
 		Location: 104,5
-	Actor14: techbuilding
-		Owner: Neutral
-		Location: 105,45
-	Actor15: techbuilding
-		Owner: Neutral
-		Location: 3,45
 	Actor16: lamppost
 		Owner: Neutral
 		Location: 6,43
@@ -323,9 +305,6 @@ Actors:
 	Actor91: prop2
 		Owner: Neutral
 		Location: 46,49
-	Actor92: prop2
-		Owner: Neutral
-		Location: 62,49
 	Actor97: mpspawn
 		Owner: Neutral
 		Location: 17,5
@@ -338,3 +317,24 @@ Actors:
 	Actor95: mpspawn
 		Owner: Neutral
 		Location: 90,5
+	Actor96: techminer
+		Owner: Neutral
+		Location: 3,43
+	Actor98: techminer
+		Owner: Neutral
+		Location: 2,1
+	Actor99: techminer
+		Owner: Neutral
+		Location: 106,1
+	Actor100: techminer
+		Owner: Neutral
+		Location: 105,43
+	Actor101: prop2
+		Owner: Neutral
+		Location: 63,49
+	Actor92: techminer
+		Owner: Neutral
+		Location: 62,3
+	Actor102: techminer
+		Owner: Neutral
+		Location: 46,3
