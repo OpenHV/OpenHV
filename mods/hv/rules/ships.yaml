@@ -125,15 +125,16 @@ SEAMNSTR:
 		HP: 70000
 	Armor:
 		Type: Heavy
-	-Mobile:
-	SeaMonster:
+	Mobile:
 		Speed: 28
 	-QuantizeFacingsFromSequence:
 	BodyOrientation:
-		QuantizedFacings: 2
+		QuantizedFacings: 8
 	-WithFacingSpriteBody:
 	WithSeaMonsterBody:
-		Sequence: left # Just a work-around to avoid crash
+		EmergeDuration: 100
+	Wanders:
+		WanderMoveRadius: 10
 	-Selectable:
 	Interactable:
 	RejectsOrders:

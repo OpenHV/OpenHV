@@ -39,10 +39,9 @@ seamnstr:
 	left: bits/seamnstr.png
 		Length: 15
 		Tick: 300
-		Reverses: true
 	right: bits/seamnstr.png
 		Start: 15
 		Length: 15
 		Tick: 300
-		Reverses: true
+	idle: bits/null.png
 	icon: bits/icon.png
