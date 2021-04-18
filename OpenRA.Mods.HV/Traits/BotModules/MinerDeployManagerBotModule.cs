@@ -20,7 +20,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Manages AI miner deployment logic.")]
-	public class MinerDeployManagerBotModuleInfo : ConditionalTraitInfo
+	public class MinerBotModuleInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that can deploy onto resources.")]
@@ -49,7 +49,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new MinerDeployManagerBotModule(init.Self, this); }
 	}
 
-	public class MinerDeployManagerBotModule : ConditionalTrait<MinerDeployManagerBotModuleInfo>, IBotTick
+	public class MinerDeployManagerBotModule : ConditionalTrait<MinerBotModuleInfo>, IBotTick
 	{
 		readonly World world;
 		readonly Player player;
@@ -81,7 +81,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Dictionary<Actor, MinerTraitWrapper> miners = new Dictionary<Actor, MinerTraitWrapper>();
 
-		public MinerDeployManagerBotModule(Actor self, MinerDeployManagerBotModuleInfo info)
+		public MinerDeployManagerBotModule(Actor self, MinerBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;

@@ -81,9 +81,6 @@ BASE:
 	Production:
 	ProductionBar@Vehicles:
 		ProductionType: Vehicle
-	AcceptsDeliveredResources:
-	StoresResources:
-		Capacity: 2000
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 	WithIdleOverlay@platform2:
@@ -1238,7 +1235,6 @@ STORAGE:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	AcceptsDeliveredResources:
 
 REFINERY:
 	Inherits: ^BaseBuilding
@@ -1267,7 +1263,7 @@ REFINERY:
 	RevealsShroud:
 		Range: 4c0
 	StoresResources:
-		Capacity: 4000
+		Capacity: 8000
 	Power:
 		Amount: -10
 	RenderSprites:

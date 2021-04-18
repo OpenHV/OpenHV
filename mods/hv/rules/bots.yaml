@@ -15,7 +15,7 @@ Player:
 		Bots: easy
 	BaseBotModule@Hard:
 		RequiresCondition: enable-hard-ai || enable-easy-ai
-	BaseBuilderBotModule@Hard:
+	CustomBaseBuilderBotModule@Hard:
 		RequiresCondition: enable-hard-ai
 		MinimumExcessPower: 60
 		MaximumExcessPower: 160
@@ -27,10 +27,12 @@ Player:
 		VehiclesFactoryTypes: factory2, factory3
 		ProductionTypes: module, factory2, factory3, starport, starport2, harbor
 		NavalProductionTypes: harbor
-		RefineryTypes: miner, miner2
+		MinerTypes: miner, miner2
+		RefineryTypes: refinery
 		SiloTypes: storage
 		BuildingLimits:
 			miner: 1
+			refinery: 1
 			module: 4
 			factory2: 4
 			factory3: 4
@@ -46,6 +48,7 @@ Player:
 			silo: 1
 		BuildingFractions:
 			miner: 3
+			refinery: 1
 			module: 1
 			radar: 1
 			radar2: 1
@@ -61,7 +64,7 @@ Player:
 			artilleryturret: 5
 			field: 1
 			silo: 1
-	BaseBuilderBotModule@Easy:
+	CustomBaseBuilderBotModule@Easy:
 		RequiresCondition: enable-easy-ai
 		MinimumExcessPower: 60
 		MaximumExcessPower: 160
@@ -73,12 +76,14 @@ Player:
 		VehiclesFactoryTypes: factory2, factory3
 		ProductionTypes: module, factory2, factory3, starport, starport2, harbor
 		NavalProductionTypes: harbor
-		RefineryTypes: miner, miner2
+		MinerTypes: miner, miner2
+		RefineryTypes: refinery
 		SiloTypes: storage
 		BuildingDelays:
 			silo: 70000
 		BuildingLimits:
 			miner: 1
+			refinery: 3
 			module: 4
 			factory2: 4
 			factory3: 4
@@ -94,6 +99,7 @@ Player:
 			silo: 1
 		BuildingFractions:
 			miner: 3
+			refinery: 1
 			module: 1
 			radar: 1
 			radar2: 1
@@ -201,7 +207,7 @@ Player:
 		CapturingActorTypes: tank8
 		PriorityCapturableActorTypes: techbuilding
 		MaximumCaptureTargetOptions: 15
-	MinerDeployManagerBotModule:
+	MinerBotModule:
 		RequiresCondition: enable-hard-ai || enable-easy-ai
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
