@@ -47,21 +47,21 @@ sidebar-button-highlighted-disabled:
 
 command-button:
 	Inherits: ^Chrome
-	PanelRegion: 59, 31, 0, 0, 22, 22, 0, 0
+	PanelRegion: 112, 28, 0, 0, 28, 28, 0, 0
 	PanelSides: Center
 command-button-hover:
 	Inherits: ^Chrome
-	PanelRegion: 59, 3, 0, 0, 22, 22, 0, 0
+	PanelRegion: 112, 0, 0, 0, 28, 28, 0, 0
 	PanelSides: Center
 command-button-pressed:
 	Inherits: command-button
 command-button-highlighted:
 	Inherits: ^Chrome
-	PanelRegion: 87, 31, 0, 0, 22, 22, 0, 0
+	PanelRegion: 140, 28, 0, 0, 28, 28, 0, 0
 	PanelSides: Center
 command-button-highlighted-hover:
 	Inherits: ^Chrome
-	PanelRegion: 87, 3, 0, 0, 22, 22, 0, 0
+	PanelRegion: 140, 0, 0, 0, 28, 28, 0, 0
 	PanelSides: Center
 command-button-highlighted-pressed:
 	Inherits: command-button-highlighted
