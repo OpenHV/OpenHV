@@ -16,11 +16,15 @@ MODULE:
 	Buildable:
 		BuildLimit: 1
 
-STORAGE:
+MINER:
 	Buildable:
 		BuildLimit: 1
 
-MINER:
+REFINERY:
+	Buildable:
+		BuildLimit: 1
+
+STORAGE:
 	Buildable:
 		BuildLimit: 1
 

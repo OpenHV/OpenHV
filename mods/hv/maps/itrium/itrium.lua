@@ -20,7 +20,7 @@ Tick = function()
 	end
 
 	if not HasMiner and not Mining and HasPower and DateTime.GameTime % DateTime.Seconds(20) == 0 then
-		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "miner" and actor.Owner == player end)
+		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "miner" or actor.Type == "miner2") and actor.Owner == player end)
 		if #miners == 0 then
 			Media.DisplayMessage("Build a miner to collect resources.", "Reminder")
 			HasMiner = false
@@ -36,6 +36,14 @@ Tick = function()
 			Mining = false
 		else
 			Mining = true
+		end
+	end
+
+	if Mining and not HasRefinery and DateTime.GameTime % DateTime.Seconds(20) == 0 then
+		local refineries = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "refinery" and actor.Owner == player end)
+		if #refineries == 0 then
+			Media.DisplayMessage("Build a refinery to process the resources.", "Reminder")
+			HasRefinery = true
 		end
 	end
 
