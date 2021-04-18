@@ -1810,9 +1810,6 @@ CIVILIANMINER:
 		PlayerPalette: green
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	GrantConditionOnDamageState@CRITICAL:
-		Condition: critical
-		ValidDamageStates: Heavy, Critical
 	CashTrickler:
 		Amount: 200
 		Interval: 500
@@ -1822,3 +1819,5 @@ CIVILIANMINER:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
+	GrantConditionOnNeutralOwner:
+		Condition: ownerless
