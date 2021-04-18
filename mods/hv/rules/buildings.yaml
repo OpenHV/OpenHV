@@ -1772,3 +1772,53 @@ TECHBUILDING:
 		Position: Top
 		Margin: 0, 5
 		RequiresCondition: reconstructor > 4
+
+CIVILIANMINER:
+	Inherits: ^BaseBuilding
+	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
+	Inherits@shape: ^2x1Shape
+	Inherits@flame: ^BuildingFlame2
+	Selectable:
+		Bounds: 2048, 3072, 0, -1024
+	Tooltip:
+		Name: Civilian Mining Tower
+	TooltipDescription@ally:
+		Description: Provides additional resources.
+		ValidRelationships: Ally
+	TooltipDescription@other:
+		Description: Capture and provide additional resources.
+		ValidRelationships: Neutral, Enemy
+	ProvidesPrerequisite@BuildingName:
+	Building:
+		Footprint: == == xx
+		Dimensions: 2,3
+		RequiresBaseProvider: false
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+		AllowPlacementOnResources: true
+		LocalCenterOffset: 0,1024,0
+	-RequiresBuildableArea:
+	-GivesBuildableArea:
+	Power:
+		Amount: -40
+	RevealsShroud:
+		Range: 10c0
+		RequiresCondition: !disabled && !ownerless
+	RevealsShroud@Offline:
+		Range: 5c0
+		RequiresCondition: disabled && !ownerless
+	RenderSprites:
+		PlayerPalette: green
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	GrantConditionOnDamageState@CRITICAL:
+		Condition: critical
+		ValidDamageStates: Heavy, Critical
+	CashTrickler:
+		Amount: 200
+		Interval: 500
+		DisplayDuration: 50
+	CashTricklerBar:
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
