@@ -61,11 +61,11 @@ BASE:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-	ExitsDebugOverlay:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
+	ExitsDebugOverlay:
 	Exit@0:
 		RequiresCondition: !being-captured
 		ExitCell: 0,3
@@ -528,11 +528,11 @@ FACTORY2:
 	WithProductionExitOverlay@platform2:
 		ExitCell: 1,2
 		Sequence: active-platform2
-	ExitsDebugOverlay:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
+	ExitsDebugOverlay:
 	Exit@0:
 		ExitCell: 0,2
 		SpawnOffset: -512,1024,0
@@ -652,11 +652,11 @@ FACTORY3:
 	WithProductionExitOverlay@creation:
 		ExitCell: 0,2
 		Sequence: active-creation
-	ExitsDebugOverlay:
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
+	ExitsDebugOverlay:
 	Exit@0:
 		ExitCell: 0,2
 		SpawnOffset: 0,1536,0
@@ -1463,15 +1463,24 @@ HARBOR:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
-	Exit@0:
+	ExitsDebugOverlay:
+	Exit@Front:
 		ExitCell: 1,2
 		ProductionTypes: Ship
 		Facing: 360
 		Priority: 2
-	Exit@1:
+	Exit@Back:
 		ExitCell: 1,-1
 		ProductionTypes: Ship
 		Facing: 872
+	Exit@Right:
+		ExitCell: 3,1
+		ProductionTypes: Ship
+		Facing: 768
+	Exit@Left:
+		ExitCell: -1,1
+		ProductionTypes: Ship
+		Facing: 512
 	Production:
 		Produces: Ship
 	PrimaryBuilding:
