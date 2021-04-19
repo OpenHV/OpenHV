@@ -50,7 +50,7 @@ BASE:
 	Buildable:
 		Description: Builds structures and builders.
 	Production:
-		Produces: Building, Defense, BaseUnit
+		Produces: Building, Defense
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:
@@ -71,16 +71,13 @@ BASE:
 		ExitCell: 0,3
 		SpawnOffset: -512,512,0
 		Facing: 512
-		ProductionTypes: BaseUnit
+		ProductionTypes: Building
 	Exit@1:
 		RequiresCondition: !being-captured
 		ExitCell: 1,3
 		SpawnOffset: 512,512,0
 		Facing: 512
-		ProductionTypes: BaseUnit
-	Production:
-	ProductionBar@Vehicles:
-		ProductionType: Vehicle
+		ProductionTypes: Building
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 	WithIdleOverlay@platform2:
