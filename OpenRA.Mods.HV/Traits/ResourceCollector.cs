@@ -26,7 +26,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Interval = 50;
 
 		[Desc("Number of ticks to wait before gathering first resources.")]
-		public readonly int InitialDelay = 50;
+		public readonly int InitialDelay = 200;
 
 		[Desc("Amount of resource to collect each time.")]
 		public readonly int Amount = 100;
