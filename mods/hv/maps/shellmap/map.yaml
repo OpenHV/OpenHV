@@ -1,0 +1,201 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Shellmap
+
+Author: Matt
+
+Tileset: PLANET
+
+MapSize: 130,130
+
+Bounds: 1,1,128,128
+
+Visibility: Shellmap
+
+Categories: Maps
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+
+Actors:
+	Actor0: mother2b
+		Owner: Neutral
+		Facing: 384
+		Location: 59,27
+	Actor1: mother
+		Owner: Neutral
+		Location: 60,90
+	Actor2: miner2
+		Owner: Neutral
+		Location: 42,103
+	Actor3: miner2
+		Owner: Neutral
+		Location: 79,118
+	Actor4: miner2
+		Owner: Neutral
+		Location: 82,9
+	Actor5: miner2
+		Owner: Neutral
+		Location: 55,9
+	Actor6: refinery
+		Owner: Neutral
+		Location: 59,118
+	Actor7: refinery
+		Owner: Neutral
+		Location: 69,14
+	Actor8: base
+		Owner: Neutral
+		Location: 67,26
+	Actor9: base
+		Owner: Neutral
+		Location: 69,109
+	Actor10: generator
+		Owner: Neutral
+		Location: 76,108
+	Actor11: generator
+		Owner: Neutral
+		Location: 60,109
+	Actor12: radar
+		Owner: Neutral
+		Location: 76,101
+	Actor13: module
+		Owner: Neutral
+		Location: 80,95
+	Actor14: tradplat
+		Owner: Neutral
+		Location: 81,103
+	Actor15: starport
+		Owner: Neutral
+		Location: 83,110
+	Actor16: starport2
+		Owner: Neutral
+		Location: 50,28
+	Actor17: factory2
+		Owner: Neutral
+		Location: 75,32
+	Actor18: factory3
+		Owner: Neutral
+		Location: 71,31
+	Actor19: module
+		Owner: Neutral
+		Location: 67,31
+	Actor20: radar2
+		Owner: Neutral
+		Location: 67,23
+	Actor21: tradplat
+		Owner: Neutral
+		Location: 70,27
+	Actor22: turret
+		Owner: Neutral
+		Location: 75,37
+		TurretFacing: 512
+	Actor23: turret
+		Owner: Neutral
+		Location: 67,37
+		TurretFacing: 512
+	Actor24: turret
+		Owner: Neutral
+		Location: 59,35
+		TurretFacing: 512
+	Actor25: aaturret
+		Owner: Neutral
+		Location: 52,33
+	Actor26: aaturret
+		Owner: Neutral
+		Location: 81,34
+	Actor27: artilleryturret
+		Owner: Neutral
+		Location: 77,28
+	Actor28: televtr2
+		Owner: Neutral
+		Location: 64,31
+	Actor29: televatr
+		Owner: Neutral
+		Location: 89,102
+	Actor30: turret2
+		Owner: Neutral
+		Location: 78,87
+	Actor31: turret2
+		Owner: Neutral
+		Location: 85,92
+	Actor32: turret2
+		Owner: Neutral
+		Location: 47,87
+	Actor33: turret2
+		Owner: Neutral
+		Location: 41,97
+	Actor34: aaturret2
+		Owner: Neutral
+		Location: 75,94
+	Actor35: aaturret2
+		Owner: Neutral
+		Location: 49,100
+	Actor36: artilleryturret
+		Owner: Neutral
+		Location: 83,99
+	Actor37: generator
+		Owner: Neutral
+		Location: 52,113
+	Actor38: generator
+		Owner: Neutral
+		Location: 70,105
+	Actor39: generator
+		Owner: Neutral
+		Location: 68,116
+	Actor40: generator
+		Owner: Neutral
+		Location: 70,24
+	Actor41: generator
+		Owner: Neutral
+		Location: 73,23
+	Actor42: generator
+		Owner: Neutral
+		Location: 76,22
+	Actor43: generator
+		Owner: Neutral
+		Location: 64,23
+	Actor44: generator
+		Owner: Neutral
+		Location: 64,27
+	Actor45: generator
+		Owner: Neutral
+		Location: 65,106
+	Actor46: generator
+		Owner: Neutral
+		Location: 74,113
+	Actor47: generator
+		Owner: Neutral
+		Location: 62,107
+	Actor48: generator
+		Owner: Neutral
+		Location: 77,112
+	Actor54: generator
+		Owner: Neutral
+		Location: 74,17
+	Actor55: generator
+		Owner: Neutral
+		Location: 77,17
+	Actor53: generator
+		Owner: Neutral
+		Location: 61,17
+	Actor56: generator
+		Owner: Neutral
+		Location: 64,17
+	Actor57: generator
+		Owner: Neutral
+		Location: 68,18
+	Actor58: generator
+		Owner: Neutral
+		Location: 71,18
+
+Rules: rules.yaml
