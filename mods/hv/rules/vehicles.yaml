@@ -902,7 +902,7 @@ TYRIANTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, ~vehicles.sc
+		Prerequisites: factory2, ~vehicles.yi
 		BuildPaletteOrder: 40
 		Description: Tank with rotating turret.
 		BuildAtProductionType: Wheeled
