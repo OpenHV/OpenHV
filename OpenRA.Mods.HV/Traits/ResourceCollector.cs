@@ -102,7 +102,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo, string resourceType)
 		{
-			if (resourceType == null)
+			if (string.IsNullOrEmpty(resourceType))
 				return;
 
 			var exit = CPos.Zero;
@@ -145,6 +145,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, td);
 				deliveryVehicle.Trait<ResourceTransporter>().ResourceType = resourceType;
+				deliveryVehicle.Trait<ResourceTransporter>().LinkedCollector = self;
 
 				var move = deliveryVehicle.TraitOrDefault<IMove>();
 				if (exitInfo != null && move != null)

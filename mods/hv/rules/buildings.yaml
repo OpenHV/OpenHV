@@ -345,7 +345,7 @@ MINER2:
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		Interval: 100
-		DeliveryVehicleType: tanker
+		DeliveryVehicleType: tanker1
 	Exit:
 	WithSpriteBody:
 		Sequence: active
@@ -1282,7 +1282,17 @@ REFINERY:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	ExitsDebugOverlay:
+	Exit@Bottom:
+		ExitCell: 0,2
+	Exit@Right:
+		ExitCell: 2, 1
+	Exit@Left:
+		ExitCell: -1, 0
+	Exit@Top:
+		ExitCell: 1, -1
 	AcceptsDeliveredResources:
+		DeliveryVehicleType: tanker2
 	WithIdleOverlay@animation:
 		Sequence: animation
 		IsDecoration: true

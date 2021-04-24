@@ -316,12 +316,16 @@ missile_tank:
 	icon: bits/units-icons.png
 		Start: 4
 
-tanker:
+tanker1:
+	idle: bits/tanker.png
+		Start: 8
+		Facings: 8
+	icon: bits/units-icons.png
+		Start: 43
+
+tanker2:
 	idle: bits/tanker.png
 		Start: 0
-		Facings: 8
-	loaded: bits/tanker.png
-		Start: 8
 		Facings: 8
 	icon: bits/units-icons.png
 		Start: 43

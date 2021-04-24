@@ -1009,7 +1009,7 @@ MISSILE_TANK:
 	RenderSprites:
 		PlayerPalette: green
 
-TANKER:
+TANKER1:
 	Inherits: ^Vehicle
 	Inherits@SELECTION: ^SelectableSupportUnit
 	Buildable:
@@ -1018,7 +1018,7 @@ TANKER:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Armored Resource Transporter
+		Name: Loaded Resource Transporter
 	Health:
 		HP: 11000
 	Armor:
@@ -1033,3 +1033,11 @@ TANKER:
 	-SpawnScrapOnDeath:
 	RenderSprites:
 		PlayerPalette: green
+
+TANKER2:
+	Inherits: TANKER1
+	Buildable:
+		Description: Collects resources at mining towers.\n  Unarmed
+	Tooltip:
+		Name: Empty Resource Transporter
+	-SpawnActorOnDeath:

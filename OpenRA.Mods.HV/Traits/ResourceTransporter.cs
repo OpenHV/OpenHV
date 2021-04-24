@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -27,9 +27,6 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("How much resources it can carry.")]
 		public readonly int Capacity = 10;
 
-		[Desc("Automatically scan for delivery buildings when created.")]
-		public readonly bool SearchOnCreation = true;
-
 		[VoiceReference]
 		public readonly string DeliverVoice = "Action";
 
@@ -52,6 +49,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly ResourceTransporterInfo Info;
 
 		public string ResourceType;
+		public Actor LinkedCollector;
 
 		readonly Mobile mobile;
 
@@ -64,33 +62,36 @@ namespace OpenRA.Mods.HV.Traits
 
 		void INotifyCreated.Created(Actor self)
 		{
-			// Note: This is queued in a FrameEndTask because otherwise the activity is dropped/overridden while moving out of a factory.
-			if (Info.SearchOnCreation)
+			// Wait for resource type to be set.
+			self.World.AddFrameEndTask(w =>
 			{
-				var destination = ClosestDestination(self);
+				var safeReturn = string.IsNullOrEmpty(ResourceType) && LinkedCollector != null && !LinkedCollector.IsDead;
+				var destination = safeReturn ? LinkedCollector : ClosestDestination(self);
 				if (destination == null)
 					return;
 
 				var target = Target.FromActor(destination);
-				self.World.AddFrameEndTask(w => self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType)));
-			}
+
+				self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType, LinkedCollector));
+			});
 		}
 
 		public Actor ClosestDestination(Actor self)
 		{
-			var refineries = self.World.ActorsWithTrait<AcceptsDeliveredResources>()
-				.Where(r => r.Actor.Owner == self.Owner);
+			var actors = string.IsNullOrEmpty(ResourceType)
+			 ? self.World.ActorsHavingTrait<ResourceCollector>().Where(r => r.Owner == self.Owner)
+			 : self.World.ActorsHavingTrait<AcceptsDeliveredResources>().Where(r => r.Owner == self.Owner);
 
 			List<CPos> path;
 
-			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, refineries.Select(r => r.Actor.Location), self.Location, BlockedByActor.None)
+			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, actors.Select(a => a.Location), self.Location, BlockedByActor.None)
 				.WithCustomCost(loc => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && self.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(loc) - u.CenterPosition).Length))))
 				path = self.World.WorldActor.Trait<IPathFinder>().FindPath(search);
 
 			if (path.Count != 0)
-				return refineries.First(r => r.Actor.Location == path.Last()).Actor;
+				return actors.First(r => r.Location == path.Last());
 
 			return null;
 		}
@@ -139,7 +140,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (accepts == null)
 					return;
 
-				self.QueueActivity(order.Queued, new TransportResources(self,  order.Target, Info.Capacity, ResourceType));
+				self.QueueActivity(order.Queued, new TransportResources(self, order.Target, Info.Capacity, ResourceType, LinkedCollector));
 				self.ShowTargetLines();
 			}
 		}
