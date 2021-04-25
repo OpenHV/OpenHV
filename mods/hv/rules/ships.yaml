@@ -24,7 +24,7 @@ BOAT3:
 		Speed: 150
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 120
 		Offset: -50,0,100
@@ -62,7 +62,7 @@ BOAT:
 		Speed: 100
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 60
 		Offset: 150,0,100
@@ -102,7 +102,7 @@ BOAT2:
 		Speed: 75
 		TurnSpeed: 40
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 40
 	Armament:

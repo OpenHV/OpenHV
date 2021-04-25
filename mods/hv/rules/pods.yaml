@@ -22,7 +22,7 @@ SCOUT1:
 		Speed: 120
 		Locomotor: pod
 	RevealsShroud:
-		Range: 8c0
+		Range: 7c0
 	Armament:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
@@ -52,7 +52,7 @@ SCOUT2:
 		Description: Fast reconnaissance vehicle.\nShoots rockets.
 		Prerequisites: module
 	Valued:
-		Cost: 250
+		Cost: 300
 	Tooltip:
 		Name: Rocket Pod
 	UpdatesPlayerStatistics:
@@ -66,7 +66,7 @@ SCOUT2:
 		Speed: 120
 		Locomotor: pod
 	RevealsShroud:
-		Range: 8c0
+		Range: 7c0
 	Armament@PRIMARY:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
@@ -103,7 +103,7 @@ TECHNICIAN:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Combat technician
+		Name: Technician Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	CaptureManager:

@@ -17,7 +17,7 @@ SHIP2:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		Range: 11c0
+		Range: 10c0
 		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: ChainGun.Shuttle
@@ -66,7 +66,7 @@ SHIP1:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		Range: 13c0
+		Range: 10c0
 		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: ShipMissile
@@ -115,7 +115,7 @@ COPTER:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		Range: 8c0
+		Range: 10c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
@@ -153,7 +153,7 @@ SAUCER:
 	Health:
 		HP: 8000
 	RevealsShroud:
-		Range: 15c0
+		Range: 16c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16
@@ -226,7 +226,7 @@ COPTER2:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 128
+		Speed: 110
 		AltitudeVelocity: 0c58
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
@@ -273,7 +273,7 @@ BALLOON:
 	Health:
 		HP: 8000
 	RevealsShroud:
-		Range: 18c0
+		Range: 16c0
 		Type: GroundPosition
 	Aircraft:
 		Speed: 70
@@ -324,7 +324,7 @@ DROPSHIP:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 100
+		Speed: 110
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
 	WithLandingAnimation:
