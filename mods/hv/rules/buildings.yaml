@@ -1248,7 +1248,7 @@ REFINERY:
 		Prerequisites: miner2
 		Description: Processes resources.
 	Valued:
-		Cost: 300
+		Cost: 800
 	Targetable:
 		TargetTypes: Ground, Structure
 	Tooltip:
