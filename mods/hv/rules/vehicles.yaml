@@ -1,102 +1,36 @@
 # License: CC-BY-SA-4.0
 
-TANK1:
-	Inherits: ^Vehicle
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Ramp Buggy
-		GenericName: Buggy
-	Buildable:
-		BuildPaletteOrder: 20
-		Prerequisites: ~vehicles.sc, factory2
-		Queue: Vehicle
-		Description: Remote controlled vehicle\narmed with explosives.
-		BuildAtProductionType: Wheeled
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 9000
-	Armor:
-		Type: Light
-	Mobile:
-		Speed: 170
-	RevealsShroud:
-		Range: 7c0
-	Demolition:
-		DetonationDelay: 45
-		EnterBehaviour: Dispose
-		Cursor: ability
-	Passenger:
-		CustomPipType: red
-		Voice: Move
-	RenderSprites:
-		PlayerPalette: green
-
-TANK2:
-	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Laser Bike
-		GenericName: Bike
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 20
-		Description: Fires lasers.
-		BuildAtProductionType: Wheeled
-	AttackFrontal:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-	Armament:
-		Weapon: RedLaser
-		LocalOffset: 500,-250,0
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 12000
-	Armor:
-		Type: Light
-	Mobile:
-		Speed: 500
-	RevealsShroud:
-		Range: 7c0
-	RenderSprites:
-		PlayerPalette: green
-
 TANK3:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 650
+		Cost: 800
 	Tooltip:
 		Name: Assault Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 120
+		BuildPaletteOrder: 10
 		Prerequisites: factory2, ~vehicles.sc
 		Queue: Vehicle
-		Description: Fast, light tank.
+		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 		BuildAtProductionType: Wheeled
 	Mobile:
-		TurnSpeed: 20
-		Speed: 110
+		TurnSpeed: 25
+		Speed: 100
 	Health:
-		HP: 34000
+		HP: 46000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
 	Turreted:
-		TurnSpeed: 20
+		TurnSpeed: 25
 		Offset: -125,0,50
 	Armament:
-		Weapon: 30mm
-		Recoil: 75
-		RecoilRecovery: 25
+		Weapon: ^Cannon
+		Recoil: 125
+		RecoilRecovery: 38
 		MuzzleSequence: muzzle
 		LocalOffset: 500,-50,-50
 	AttackTurreted:
@@ -107,18 +41,173 @@ TANK3:
 	RenderSprites:
 		PlayerPalette: green
 
+TYRIANTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Assault Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory2, ~vehicles.yi
+		BuildPaletteOrder: 10
+		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		BuildAtProductionType: Wheeled
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 46000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 25
+		Speed: 100
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 25
+	Armament:
+		Weapon: ^Cannon
+		Recoil: 125
+		RecoilRecovery: 38
+		MuzzleSequence: muzzle
+		LocalOffset: 550,-50,0
+	AttackTurreted:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	WithSpriteTurret:
+	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
+
+TANK9:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 20
+		Prerequisites: factory2
+		Description: Mobile tank with AA missiles.
+		BuildAtProductionType: Tracked
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mobile AA
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 40
+		Speed: 115
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 40
+	Armament:
+		Weapon: Patriot
+		LocalOffset: 543,0,815
+	AttackTurreted:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+
+TRANSPRT:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Transport Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: module
+		BuildPaletteOrder: 30
+		Description: Can transport smaller vehicles.
+		BuildAtProductionType: Tracked
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 125
+		PauseOnCondition: notmobile || ecmdisabled
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Scout
+		MaxWeight: 5
+		LoadingCondition: notmobile
+	Selectable:
+		DecorationBounds: 2048, 1843
+	RenderSprites:
+		PlayerPalette: green
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+	WithTeleportEnergyOverlay:
+		Image: energyball
+		Sequence: teleport-large
+
+ARTIL:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Artillery
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: radar, factory2
+		BuildPaletteOrder: 40
+		Description: Mobile long range weapon.
+		BuildAtProductionType: Tracked
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 15
+		Speed: 85
+		Locomotor: lighttracked
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: SmallArtillery
+		MuzzleSequence: muzzle
+		LocalOffset: 500,0,100
+	AttackFrontal:
+		Armaments: primary
+		TargetFrozenActors: true
+		ForceFireIgnoresActors: true
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	WithMuzzleOverlay:
+	Explodes:
+		Weapon: ArtilleryExplode
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 75
+	RenderSprites:
+		PlayerPalette: green
+
 TANK4:
 	Inherits: ^TrackedVehicle
 	Inherits@SELECTION: ^SelectableSupportUnit
 	-AppearsOnRadar:
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 50
 		Prerequisites: radar
 		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
 		BuildAtProductionType: Wheeled
 	Valued:
-		Cost: 950
+		Cost: 400
 	Tooltip:
 		Name: Reconnaissance Tank
 		RequiresCondition: !deployed
@@ -126,7 +215,7 @@ TANK4:
 		Name: Reconnaissance Tank (deployed)
 		RequiresCondition: deployed
 	Health:
-		HP: 60000
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -166,37 +255,44 @@ TANK4:
 	RenderDetectionCircle:
 		TrailCount: 3
 
-TANK5:
+TANK16:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 700
+		Cost: 800
 	Tooltip:
-		Name: Rocket Tank
+		Name: Mobile Repair Vehicle
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, ~vehicles.sc
-		BuildPaletteOrder: 110
-		Description: Shoots rockets.
+		Prerequisites: factory2, tradplat
+		BuildPaletteOrder: 60
+		Description: Repairs nearby vehicles.
 		BuildAtProductionType: Wheeled
-	Armament@PRIMARY:
-		Weapon: AntiAirRocket
-	Armament@SECONDARY:
-		Weapon: AntiGroundRocket
+	Armament:
+		Weapon: Repair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
-		Voice: Attack
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 22000
+		HP: 20000
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 118
+		Speed: 85
+		TurnSpeed: 20
 	RevealsShroud:
 		Range: 5c0
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Vehicle
 	RenderSprites:
 		PlayerPalette: green
 
@@ -205,12 +301,12 @@ TANK6:
 	Inherits@SELECTION: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 170
+		BuildPaletteOrder: 70
 		Prerequisites: factory2, tradplat
 		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
 		BuildAtProductionType: Wheeled
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Minelayer
 	UpdatesPlayerStatistics:
@@ -241,23 +337,89 @@ TANK6:
 	RenderSprites:
 		PlayerPalette: green
 
+TANK5:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Railgun Tank
+		GenericName: Tank
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: factory2, techcenter, ~vehicles.sc
+		BuildPaletteOrder: 150
+		Description: A powerful tank which shoots laser.
+		BuildAtProductionType: Wheeled
+	Armament:
+		Weapon: railgun
+		LocalOffset: 325,350,0
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 50000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 75
+	RevealsShroud:
+		Range: 6c0
+	RenderSprites:
+		PlayerPalette: green
+
+TANK10:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 150
+		Prerequisites: factory3, techcenter, ~vehicles.yi
+		Description: Fires electric discharges.
+		BuildAtProductionType: Tracked
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Lightning Tank
+		GenericName: Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 50000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 75
+	RevealsShroud:
+		Range: 6c0
+	Armament:
+		Weapon: VoltageArc
+		LocalOffset: 0,0,213
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	RenderSprites:
+		PlayerPalette: green
+
 TANK7:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 270
+		BuildPaletteOrder: 120
 		Prerequisites: factory3, techcenter
 		Description: Cloaked missile tank.\nCan ambush enemies.
 		BuildAtProductionType: Tracked
 	Valued:
-		Cost: 600
+		Cost: 900
 	Tooltip:
 		Name: Stealth Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 30000
 	Armor:
 		Type: Heavy
 	AttackFrontal:
@@ -267,9 +429,9 @@ TANK7:
 		Weapon: StealthTankMissile
 		LocalOffset: 213,43,128, 213,-43,128
 	Mobile:
-		Speed: 160
+		Speed: 120
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	Cloak:
 		InitialDelay: 90
 		CloakDelay: 90
@@ -278,106 +440,6 @@ TANK7:
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
-	RenderSprites:
-		PlayerPalette: green
-
-TANK8:
-	Inherits: ^TrackedVehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 160
-		Prerequisites: factory2, ~vehicles.yi
-		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
-		BuildAtProductionType: Wheeled
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Hacker Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	CaptureManager:
-	Captures:
-		CaptureTypes: building
-		PlayerExperience: 25
-		CaptureDelay: 375
-		ConsumedByCapture: false
-		EnterCursor: ability
-		EnterBlockedCursor: move-blocked
-	Health:
-		HP: 10000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 150
-	RenderSprites:
-		PlayerPalette: green
-	RevealsShroud:
-		Range: 6c0
-
-TANK9:
-	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAir
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 130
-		Prerequisites: aircraft
-		Description: Mobile tank with AA missiles.
-		BuildAtProductionType: Tracked
-	Valued:
-		Cost: 600
-	Tooltip:
-		Name: Mobile AA
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 15000
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 40
-		Speed: 118
-	RevealsShroud:
-		Range: 6c0
-	Turreted:
-		TurnSpeed: 40
-	Armament:
-		Weapon: Patriot
-		LocalOffset: 543,0,815
-	AttackTurreted:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-
-TANK10:
-	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 330
-		Prerequisites: factory3, techcenter
-		Description: Fires electric discharges.
-		BuildAtProductionType: Tracked
-	Valued:
-		Cost: 1350
-	Tooltip:
-		Name: Lightning Tank
-		GenericName: Tank
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 40000
-	Armor:
-		Type: Light
-	Mobile:
-		Speed: 99
-	RevealsShroud:
-		Range: 7c0
-	Armament:
-		Weapon: VoltageArc
-		LocalOffset: 0,0,213
-	AttackFrontal:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
 	RenderSprites:
 		PlayerPalette: green
 
@@ -391,12 +453,12 @@ TANK11:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3, ~vehicles.sc
-		BuildPaletteOrder: 220
+		Prerequisites: ~disabled #factory3, ~vehicles.sc
+		BuildPaletteOrder: 180
 		Description: Main battle tank.
 		BuildAtProductionType: Tracked
 	Armament:
-		Weapon: 90mm
+		Weapon: ^Cannon
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
@@ -423,8 +485,8 @@ TANK12:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3, ~vehicles.yi
-		BuildPaletteOrder: 240
+		Prerequisites: ~disabled #factory3, ~vehicles.yi
+		BuildPaletteOrder: 190
 		Description: Double barreled tank.
 		BuildAtProductionType: Tracked
 	Armament:
@@ -483,14 +545,14 @@ TANK15:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: Countermeasure Tank
 		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: techcenter
-		BuildPaletteOrder: 130
+		Prerequisites: techcenter, tradplat
+		BuildPaletteOrder: 110
 		Description: Disables units.
 		BuildAtProductionType: Tracked
 	Armament:
@@ -503,136 +565,14 @@ TANK15:
 	Health:
 		HP: 30000
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
-		Speed: 118
+		Speed: 110
 	RevealsShroud:
 		Range: 6c0
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
-	RenderSprites:
-		PlayerPalette: green
-
-TANK16:
-	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Mobile Repair Vehicle
-		GenericName: Tank
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: factory2, tradplat
-		BuildPaletteOrder: 170
-		Description: Repairs nearby vehicles.
-		BuildAtProductionType: Wheeled
-	Armament:
-		Weapon: Repair
-		Cursor: repair
-		OutsideRangeCursor: repair
-		TargetRelationships: Ally
-		ForceTargetRelationships: None
-	AttackFrontal:
-		PauseOnCondition: ecmdisabled
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 20000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 85
-		TurnSpeed: 20
-	RevealsShroud:
-		Range: 5c0
-	AutoTarget:
-		ScanRadius: 8
-		InitialStance: AttackAnything
-	AutoTargetPriority@DEFAULT:
-		ValidTargets: Vehicle
-	RenderSprites:
-		PlayerPalette: green
-
-TRANSPRT:
-	Inherits: ^TrackedVehicle
-	Valued:
-		Cost: 850
-	Tooltip:
-		Name: Transport Tank
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: factory3, module
-		BuildPaletteOrder: 140
-		Description: Can transport smaller vehicles.
-		BuildAtProductionType: Tracked
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 35000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 142
-		PauseOnCondition: notmobile || ecmdisabled
-	RevealsShroud:
-		Range: 5c0
-	Cargo:
-		Types: Scout
-		MaxWeight: 4
-		LoadingCondition: notmobile
-	Selectable:
-		DecorationBounds: 2048, 1843
-	RenderSprites:
-		PlayerPalette: green
-	WithCargoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-	WithTeleportEnergyOverlay:
-		Image: energyball
-		Sequence: teleport-large
-
-ARTIL:
-	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Valued:
-		Cost: 850
-	Tooltip:
-		Name: Artillery
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: radar, factory2, ~vehicles.sc
-		BuildPaletteOrder: 150
-		Description: Mobile long range weapon.
-		BuildAtProductionType: Tracked
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 10000
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 8
-		Speed: 85
-		Locomotor: lighttracked
-	RevealsShroud:
-		Range: 5c0
-	Armament:
-		Weapon: SmallArtillery
-		MuzzleSequence: muzzle
-		LocalOffset: 500,0,100
-	AttackFrontal:
-		Armaments: primary
-		TargetFrozenActors: true
-		ForceFireIgnoresActors: true
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-	WithMuzzleOverlay:
-	Explodes:
-		Weapon: ArtilleryExplode
-		EmptyWeapon: UnitExplodeSmall
-		LoadedChance: 75
 	RenderSprites:
 		PlayerPalette: green
 
@@ -657,7 +597,7 @@ ARTIL2:
 		Type: Light
 	Mobile:
 		TurnSpeed: 8
-		Speed: 85
+		Speed: 60
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 5c0
@@ -684,15 +624,15 @@ ARTIL3:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 950
+		Cost: 1750
 	Tooltip:
 		Name: Dual Artillery
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 200
-		Prerequisites: radar, factory3, ~vehicles.yi
+		BuildPaletteOrder: 140
+		Prerequisites: radar, factory3, techcenter, ~vehicles.yi
 		Description: Double barreled artillery tank.
 		BuildAtProductionType: Tracked
 	Health:
@@ -700,10 +640,10 @@ ARTIL3:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 71
-		TurnSpeed: 20
+		TurnSpeed: 8
+		Speed: 60
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 	Armament:
 		Weapon: DoubleBarrelledArtillery
 		MuzzleSequence: muzzle
@@ -721,142 +661,6 @@ ARTIL3:
 		DecorationBounds: 1536, 1536
 	RenderSprites:
 		PlayerPalette: green
-
-SCOUT1:
-	Inherits: ^Vehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Scouts
-		BuildPaletteOrder: 130
-		Description: Fast reconnaissance vehicle.\nArmed with machine guns.
-		Prerequisites: module
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Scout Pod
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 15000
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 40
-		Speed: 170
-		Locomotor: pod
-	RevealsShroud:
-		Range: 8c0
-	Armament:
-		Weapon: LightMachineGun
-		MuzzleSequence: muzzle
-	AttackFrontal:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
-	Passenger:
-		CargoType: Scout
-	-Carryable:
-	-SpawnScrapOnDeath:
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
-		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5
-
-SCOUT2:
-	Inherits: ^Vehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Buildable:
-		Queue: Scouts
-		BuildPaletteOrder: 130
-		Description: Fast reconnaissance vehicle.\nShoots rockets.
-		Prerequisites: module
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Rocket Pod
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 15000
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 40
-		Speed: 170
-		Locomotor: pod
-	RevealsShroud:
-		Range: 8c0
-	Armament@PRIMARY:
-		Weapon: LightAntiTankRocket
-		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
-	Armament@SECONDARY:
-		Weapon: LightAntiAirRocket
-		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
-	AttackFrontal:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
-	Passenger:
-		CargoType: Scout
-	-Carryable:
-	-SpawnScrapOnDeath:
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
-		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5
-
-TECHNICIAN:
-	Inherits: ^Vehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
-	Buildable:
-		Queue: Scouts
-		BuildPaletteOrder: 130
-		Description: Armored technician.\nInfiltrates and captures enemy structures.\n  Unarmed
-		Prerequisites: module, ~vehicles.sc
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Combat technician
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	CaptureManager:
-	Captures:
-		CaptureTypes: building
-		PlayerExperience: 25
-		EnterCursor: ability
-		EnterBlockedCursor: move-blocked
-	Health:
-		HP: 10000
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 40
-		Speed: 150
-		Locomotor: pod
-	RenderSprites:
-		PlayerPalette: green
-	RevealsShroud:
-		Range: 6c0
-	Passenger:
-		CargoType: Scout
-	-Carryable:
-	-SpawnScrapOnDeath:
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
-		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5
 
 BUILDER:
 	Inherits: ^Vehicle
@@ -882,7 +686,7 @@ BUILDER:
 		Type: Light
 	Mobile:
 		TurnSpeed: 32
-		Speed: 120
+		Speed: 100
 	RevealsShroud:
 		Range: 6c0
 	RenderSprites:
@@ -891,46 +695,6 @@ BUILDER:
 	-WithFacingSpriteBody:
 	WithRandomFacingSpriteBody:
 		Images: builder1, builder2, builder3, builder4, builder5
-
-TYRIANTANK:
-	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Assault Tank
-		GenericName: Tank
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: factory2, ~vehicles.yi
-		BuildPaletteOrder: 40
-		Description: Tank with rotating turret.
-		BuildAtProductionType: Wheeled
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 33000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 100
-	RevealsShroud:
-		Range: 5c0
-	Turreted:
-		TurnSpeed: 20
-	Armament:
-		Weapon: TyrianTankCannon
-		Recoil: 50
-		RecoilRecovery: 25
-		MuzzleSequence: muzzle
-		LocalOffset: 550,-50,0
-	AttackTurreted:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-	WithSpriteTurret:
-	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 
 MINER:
 	Inherits: ^Vehicle
@@ -951,7 +715,7 @@ MINER:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 40
+		TurnSpeed: 30
 		Speed: 80
 	RevealsShroud:
 		Range: 8c0
@@ -972,40 +736,137 @@ MISSILE_TANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 700
+		Cost: 1200
 	Tooltip:
 		Name: Missile Tank
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3, ~vehicles.yi
+		Prerequisites: radar, factory3, techcenter, ~vehicles.sc
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
 		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 33000
+		HP: 45000
 	Armor:
-		Type: Medium
+		Type: Heavy
 	Mobile:
-		Speed: 120
+		Speed: 80
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: -250,-50,100
-	Armament@PRIMARY:
+	Armament:
 		Weapon: MissileTankRocket
-		LocalOffset: 500,0,0 # TODO: to be adjusted
-	Armament@SECONDARY:
-		Weapon: MissileTankRocket_AA
-		LocalOffset: 0,0,0 # TODO: to be adjusted
+		LocalOffset: 500,0,0
 	AttackTurreted:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
+
+TANK8:
+	Inherits: ^TrackedVehicle
+	Inherits@SELECTION: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 200
+		Prerequisites: ~disabled #factory2, ~vehicles.yi
+		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
+		BuildAtProductionType: Wheeled
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hacker Tank
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 375
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 150
+	RenderSprites:
+		PlayerPalette: green
+	RevealsShroud:
+		Range: 6c0
+
+TANK1:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Ramp Buggy
+		GenericName: Buggy
+	Buildable:
+		BuildPaletteOrder: 200
+		Prerequisites: ~disabled #~vehicles.sc, factory2
+		Queue: Vehicle
+		Description: Remote controlled vehicle\narmed with explosives.
+		BuildAtProductionType: Wheeled
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 9000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+	RevealsShroud:
+		Range: 7c0
+	Demolition:
+		DetonationDelay: 45
+		EnterBehaviour: Dispose
+		Cursor: ability
+	Passenger:
+		CustomPipType: red
+		Voice: Move
+	RenderSprites:
+		PlayerPalette: green
+
+TANK2:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Laser Bike
+		GenericName: Bike
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 210
+		Description: Fires lasers.
+		BuildAtProductionType: Wheeled
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	Armament:
+		Weapon: RedLaser
+		LocalOffset: 500,-250,0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 12000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 500
+	RevealsShroud:
+		Range: 7c0
 	RenderSprites:
 		PlayerPalette: green
 

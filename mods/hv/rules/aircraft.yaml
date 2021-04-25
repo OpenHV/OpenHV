@@ -1,5 +1,54 @@
 # License: CC-BY-SA-4.0
 
+SHIP2:
+	Inherits: ^Plane
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: radar, ~aircraft.yi
+		Description: Attack Ship armed with\na large chain gun.
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Gun Ship
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 11c0
+		Type: GroundPosition
+	Armament@PRIMARY:
+		Weapon: ChainGun.Shuttle
+		LocalOffset: 256,0,0
+		MuzzleSequence: muzzle
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 768
+		TurnSpeed: 16
+		Speed: 180
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+	WithMuzzleOverlay:
+	Contrail:
+		Offset: -400,0,0
+		UsePlayerColor: false
+		Color: A0000060
+		TrailWidth: 0c96
+		TrailLength: 5
+	Selectable:
+		Bounds: 1024, 1024
+	RenderSprites:
+		PlayerPalette: green
+
 SHIP1:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -9,7 +58,7 @@ SHIP1:
 		Prerequisites: radar, ~aircraft.yi
 		Description: Fast Attack Ship
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Speeder
 	UpdatesPlayerStatistics:
@@ -31,7 +80,7 @@ SHIP1:
 		CruiseAltitude: 2560
 		InitialFacing: 768
 		TurnSpeed: 16
-		Speed: 223
+		Speed: 180
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	AutoTarget:
@@ -48,61 +97,12 @@ SHIP1:
 	RenderSprites:
 		PlayerPalette: green
 
-SHIP2:
-	Inherits: ^Plane
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Aircraft
-		BuildPaletteOrder: 30
-		Prerequisites: radar, ~aircraft.yi
-		Description: Attack Ship armed with\na large chain gun.
-	Valued:
-		Cost: 1350
-	Tooltip:
-		Name: Gun Ship
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 6000
-	RevealsShroud:
-		Range: 11c0
-		Type: GroundPosition
-	Armament@PRIMARY:
-		Weapon: ChainGun.Shuttle
-		LocalOffset: 256,0,0
-		MuzzleSequence: muzzle
-	AttackAircraft:
-		FacingTolerance: 20
-		PersistentTargeting: false
-		OpportunityFire: false
-	Aircraft:
-		CruiseAltitude: 2560
-		InitialFacing: 768
-		TurnSpeed: 16
-		Speed: 178
-		RepulsionSpeed: 40
-		MaximumPitch: 56
-	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: HoldFire
-	WithMuzzleOverlay:
-	Contrail:
-		Offset: -400,0,0
-		UsePlayerColor: false
-		Color: A0000060
-		TrailWidth: 0c96
-		TrailLength: 5
-	Selectable:
-		Bounds: 1024, 1024
-	RenderSprites:
-		PlayerPalette: green
-
 COPTER:
 	Inherits: ^Helicopter
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@MAGAZINECASING: ^DropShellCasing
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: Attack Helicopter
 	Buildable:
@@ -115,11 +115,11 @@ COPTER:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		Range: 10c0
+		Range: 8c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 16
-		Speed: 112
+		TurnSpeed: 20
+		Speed: 115
 	Turreted:
 		TurnSpeed: 80
 		Offset: 200,0,-100
@@ -140,7 +140,7 @@ COPTER:
 SAUCER:
 	Inherits: ^Helicopter
 	Valued:
-		Cost: 1500
+		Cost: 400
 	Tooltip:
 		Name: Scout Saucer
 	Buildable:
@@ -151,13 +151,13 @@ SAUCER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 8000
 	RevealsShroud:
-		Range: 10c0
+		Range: 15c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16
-		Speed: 112
+		Speed: 70
 	-WithShadow:
 	Selectable:
 		Bounds: 1228, 1228
@@ -220,7 +220,7 @@ COPTER2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 14000
+		HP: 15000
 	RevealsShroud:
 		Range: 8c0
 		Type: GroundPosition
@@ -245,7 +245,7 @@ COPTER2:
 		LocalOffset: 0,0,-100
 	Cargo:
 		Types: Scout
-		MaxWeight: 4
+		MaxWeight: 5
 		AfterUnloadDelay: 40
 	Carryall:
 		BeforeLoadDelay: 10
@@ -260,7 +260,7 @@ COPTER2:
 BALLOON:
 	Inherits: ^Helicopter
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Scout Balloon
 	Buildable:
@@ -276,7 +276,7 @@ BALLOON:
 		Range: 18c0
 		Type: GroundPosition
 	Aircraft:
-		Speed: 60
+		Speed: 70
 	Selectable:
 		DecorationBounds: 1228, 1638
 	-WithShadow:
@@ -318,7 +318,7 @@ DROPSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 14000
+		HP: 15000
 	RevealsShroud:
 		Range: 8c0
 		Type: GroundPosition

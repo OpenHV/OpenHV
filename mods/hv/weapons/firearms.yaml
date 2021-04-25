@@ -6,11 +6,11 @@ LightMachineGun:
 	Projectile: InstantHit
 		Inaccuracy: 0c256
 	Warhead@Damage: SpreadDamage
-		Spread: 128
-		Damage: 2500
+		Spread: 24
+		Damage: 1000
 		Versus:
 			None: 150
-			Steel: 10
+			Steel: 25
 			Light: 30
 			Heavy: 10
 			Concrete: 10
@@ -36,27 +36,27 @@ LightMachineGun:
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
-	ReloadDelay: 30
-	Range: 4c0
+	ReloadDelay: 20
+	Range: 5c0
 	Burst: 2
 
 ChainGun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 10
-	Range: 5c0
+	Range: 6c0
 	Report: ccbysmgfire01.wav
 	Projectile: InstantHit
 		Blockable: false
 	MinRange: 0c768
 	Burst: 4
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 250
+		Spread: 64
+		Damage: 1000
 		Versus:
-			None: 144
+			None: 175
 			Steel: 60
-			Light: 72
-			Heavy: 28
+			Light: 75
+			Heavy: 25
 			Concrete: 28
 	Warhead@Effect: CreateEffect
 		Image: hit
@@ -89,13 +89,14 @@ ChainGun.Shuttle:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
-		Damage: 400
+		Spread: 64
+		Damage: 1000
 		Versus:
-			None: 100
-			Steel: 50
-			Light: 60
-			Heavy: 25
-			Concrete: 25
+			None: 200
+			Steel: 75
+			Light: 85
+			Heavy: 35
+			Concrete: 28
 
 ShellCasing:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -140,10 +141,11 @@ Vulcan:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
-		Damage: 200
+		Spread: 64
+		Damage: 1000
 		Versus:
-			None: 120
-			Steel: 50
-			Light: 60
-			Heavy: 25
-			Concrete: 25
+			None: 145
+			Steel: 40
+			Light: 85
+			Heavy: 15
+			Concrete: 28

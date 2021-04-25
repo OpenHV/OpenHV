@@ -3,8 +3,8 @@
 ^Cannon:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: tankfire01.wav
-	ReloadDelay: 50
-	Range: 4c768
+	ReloadDelay: 70
+	Range: 6c0
 	Projectile: Bullet
 		Speed: 682
 		Image: bullet1
@@ -17,9 +17,10 @@
 		Spread: 128
 		Damage: 4000
 		Versus:
-			None: 30
+			None: 75
 			Steel: 75
 			Light: 75
+			Heavy: 125
 			Wood: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
@@ -44,21 +45,13 @@
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
-TyrianTankCannon:
-	Inherits: ^Cannon
-	Report: tankfire02.wav
-	ReloadDelay: 70
-	Warhead@Damage: SpreadDamage
-		Versus:
-			Heavy: 115
-
 ^Artillery:
 	Inherits: ^Cannon
 	Report: howitzerfire01.wav
 	ReloadDelay: 85
 	Range: 12c0
 	Projectile: Bullet
-		Speed: 170
+		Speed: 200
 		Blockable: false
 		LaunchAngle: 62
 		Inaccuracy: 1c938
@@ -70,7 +63,7 @@ TyrianTankCannon:
 		Damage: 23000
 		Versus:
 			None: 90
-			Steel: 40
+			Steel: 45
 			Light: 60
 			Heavy: 25
 			Wood: 40
@@ -91,7 +84,7 @@ SmallArtillery:
 
 DoubleBarrelledArtillery:
 	Inherits: ^Artillery
-	ReloadDelay: 150
+	ReloadDelay: 200
 	Range: 18c0
 	MinRange: 5c0
 	Burst: 2
@@ -102,12 +95,19 @@ DoubleBarrelledArtillery:
 		LaunchAngle: 165
 		Inaccuracy: 2c0
 	Warhead@Damage: SpreadDamage
-		Damage: 11000
+		Spread: 500
+		Damage: 23000
+		Versus:
+			None: 150
+			Steel: 60
+			Light: 60
+			Heavy: 50
+			Wood: 40
 
 TurretCannon:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: tankfire01.wav
-	ReloadDelay: 50
+	ReloadDelay: 25
 	Range: 8c0
 	Projectile: Bullet
 		Speed: 682
@@ -118,9 +118,10 @@ TurretCannon:
 		Spread: 128
 		Damage: 5000
 		Versus:
-			None: 30
+			None: 90
 			Steel: 75
 			Light: 75
+			Heavy: 85
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -147,7 +148,7 @@ TurretCannon:
 Turret2Cannon:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: blaster-newlocknew.wav
-	ReloadDelay: 50
+	ReloadDelay: 25
 	Range: 8c0
 	Projectile: Bullet
 		Speed: 682
@@ -158,9 +159,10 @@ Turret2Cannon:
 		Spread: 128
 		Damage: 2500
 		Versus:
-			None: 30
+			None: 90
 			Steel: 75
 			Light: 75
+			Heavy: 85
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -254,17 +256,24 @@ TurretArtillery:
 	Inherits: ^Artillery
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: heavycannonfire01.wav
-	ReloadDelay: 200
+	ReloadDelay: 150
 	MinRange: 5c0
 	Range: 20c0
 	Projectile: Bullet
-		Speed: 204
+		Speed: 300
 		LaunchAngle: 100
 		Inaccuracy: 2c0
 		Image: bullet2
 		Shadow: true
 	Warhead@Damage: SpreadDamage
 		Damage: 30000
+		Spread: 750
+		Versus:
+			None: 60
+			Steel: 50
+			Light: 60
+			Heavy: 60
+			Wood: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion07.wav, explosion08.wav
@@ -310,11 +319,6 @@ TurretArtillery:
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
-
-90mm:
-	Inherits: ^Cannon
-	Projectile: Bullet
-		Image: bullet5
 
 105mm:
 	Inherits: ^Cannon
