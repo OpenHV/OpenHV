@@ -1215,11 +1215,11 @@ STORAGE:
 		Amount: -10
 	RenderSprites:
 		PlayerPalette: green
-	#WithResourceStoragePipsDecoration:
-	#	Position: Bottom # TODO: https://github.com/OpenRA/OpenRA/pull/18391
-	#	RequiresSelection: true
-	#	PipCount: 4
-	#	FullSequence: pip-yellow
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 4
+		FullSequence: pip-yellow
 	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -1265,11 +1265,11 @@ REFINERY:
 		Amount: -10
 	RenderSprites:
 		PlayerPalette: green
-	#WithResourceStoragePipsDecoration:
-	#	Position: Bottom # TODO: https://github.com/OpenRA/OpenRA/pull/18391
-	#	RequiresSelection: true
-	#	PipCount: 4
-	#	FullSequence: pip-yellow
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 8
+		FullSequence: pip-yellow
 	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
