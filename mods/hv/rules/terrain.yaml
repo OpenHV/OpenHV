@@ -3,7 +3,7 @@
 CAVE:
 	Inherits: ^Rock
 	Building:
-		Footprint: ==== ==== xxxx xxxx xxxx
+		Footprint: ____ ==== xxxx xxxx =xx=
 		Dimensions: 4,5
 
 BIG_ROCK:
@@ -15,19 +15,19 @@ BIG_ROCK:
 GRSSMISC6:
 	Inherits: ^Rock
 	Building:
-		Footprint: x x
+		Footprint: = x
 		Dimensions: 1,2
 
 GRSSMISC7:
 	Inherits: ^Rock
 	Building:
-		Footprint: xx _x
-		Dimensions: 2,2
+		Footprint: __ == xx =x
+		Dimensions: 2,4
 
 ICICLE1:
 	Inherits: ^Rock
 	Building:
-		Footprint: __ __ xx
+		Footprint: __ == xx
 		Dimensions: 2,3
 
 ICICLE2:
@@ -57,7 +57,7 @@ SANDMISC6:
 SANDMISC7:
 	Inherits: ^Rock
 	Building:
-		Footprint: x_ xx
+		Footprint: x= xx
 		Dimensions: 2,2
 
 SANDMISC8:
@@ -75,7 +75,7 @@ STNROCK1:
 STNROCK2:
 	Inherits: ^Rock
 	Building:
-		Footprint: _ _ x
+		Footprint: _ = x
 		Dimensions: 1,3
 
 TREEGRS1:

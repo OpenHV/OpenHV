@@ -62,7 +62,7 @@ swmpani:
 	idle: bits/terrain/swmpani.png
 		Frames: 1, 2, 3, 2, 1
 		Length: *
-		Tick: 1000
+		Tick: 250
 
 swmpbubl:
 	active: bits/terrain/swmpbubl.png
