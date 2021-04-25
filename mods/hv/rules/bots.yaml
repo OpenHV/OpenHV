@@ -148,6 +148,7 @@ Player:
 			artil3: 5
 			scout1: 1
 			scout2: 1
+			technician: 1
 			missile_tank: 5
 			ship1: 5
 			ship2: 5
@@ -185,6 +186,7 @@ Player:
 			artil3: 5
 			scout1: 1
 			scout2: 1
+			technician: 1
 			missile_tank: 5
 			ship1: 5
 			ship2: 5
@@ -203,8 +205,8 @@ Player:
 	ProductionThrottleBotModule:
 		RequiresCondition: enable-easy-ai
 	PriorityCaptureManagerBotModule:
-		RequiresCondition: enable-hard-ai
-		CapturingActorTypes: tank8
+		RequiresCondition: enable-hard-ai || enable-easy-ai
+		CapturingActorTypes: tank8, technician
 		PriorityCapturableActorTypes: techbuilding
 		MaximumCaptureTargetOptions: 15
 	MinerBotModule:
