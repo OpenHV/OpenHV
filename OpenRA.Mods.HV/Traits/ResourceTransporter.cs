@@ -41,10 +41,13 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Avoid enemy actors nearby when searching for a new delivery route. Should be somewhere near the max weapon range.")]
 		public readonly WDist EnemyAvoidanceRadius = WDist.FromCells(8);
 
+		[Desc("Minimum delay (in ticks) between searching for destinations.")]
+		public readonly int IdleScanDelay = 20;
+
 		public override object Create(ActorInitializer init) { return new ResourceTransporter(init.Self, this); }
 	}
 
-	public class ResourceTransporter : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated
+	public class ResourceTransporter : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated, INotifyIdle
 	{
 		public readonly ResourceTransporterInfo Info;
 
@@ -53,6 +56,8 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Mobile mobile;
 
+		int scanForDestinationTicks;
+
 		public ResourceTransporter(Actor self, ResourceTransporterInfo info)
 		{
 			Info = info;
@@ -60,20 +65,21 @@ namespace OpenRA.Mods.HV.Traits
 			mobile = self.Trait<Mobile>();
 		}
 
+		void ReturnHome(Actor self)
+		{
+			var safeReturn = string.IsNullOrEmpty(ResourceType) && LinkedCollector != null && !LinkedCollector.IsDead;
+			var destination = safeReturn ? LinkedCollector : ClosestDestination(self);
+			if (destination == null)
+				return;
+
+			var target = Target.FromActor(destination);
+			self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType, LinkedCollector));
+		}
+
 		void INotifyCreated.Created(Actor self)
 		{
 			// Wait for resource type to be set.
-			self.World.AddFrameEndTask(w =>
-			{
-				var safeReturn = string.IsNullOrEmpty(ResourceType) && LinkedCollector != null && !LinkedCollector.IsDead;
-				var destination = safeReturn ? LinkedCollector : ClosestDestination(self);
-				if (destination == null)
-					return;
-
-				var target = Target.FromActor(destination);
-
-				self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType, LinkedCollector));
-			});
+			self.World.AddFrameEndTask(w => ReturnHome(self));
 		}
 
 		public Actor ClosestDestination(Actor self)
@@ -143,6 +149,16 @@ namespace OpenRA.Mods.HV.Traits
 				self.QueueActivity(order.Queued, new TransportResources(self, order.Target, Info.Capacity, ResourceType, LinkedCollector));
 				self.ShowTargetLines();
 			}
+		}
+
+		void INotifyIdle.TickIdle(Actor self)
+		{
+			if (--scanForDestinationTicks > 0)
+				return;
+
+			scanForDestinationTicks = Info.IdleScanDelay;
+
+			ReturnHome(self);
 		}
 	}
 }
