@@ -120,13 +120,13 @@ Player:
 	SquadManagerBotModule@Hard:
 		RequiresCondition: enable-hard-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8, technician
 		NavalUnitsTypes: boat, heavyboat
 		ConstructionYardTypes: base
 	SquadManagerBotModule@Easy:
 		RequiresCondition: enable-easy-ai
 		SquadSize: 7
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8, technician
 		NavalUnitsTypes: boat, heavyboat
 		ConstructionYardTypes: base
 	UnitBuilderBotModule@Hard:
@@ -148,6 +148,7 @@ Player:
 			artil3: 5
 			scout1: 1
 			scout2: 1
+			technician: 1
 			missile_tank: 5
 			ship1: 5
 			ship2: 5
@@ -164,6 +165,7 @@ Player:
 			saucer: 2
 			tank8: 1
 			boat3: 3
+			technician: 1
 	UnitBuilderBotModule@Easy:
 		RequiresCondition: enable-easy-ai
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
@@ -204,7 +206,7 @@ Player:
 		RequiresCondition: enable-easy-ai
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-hard-ai
-		CapturingActorTypes: tank8
+		CapturingActorTypes: tank8, technician
 		PriorityCapturableActorTypes: techbuilding
 		MaximumCaptureTargetOptions: 15
 	MinerBotModule:
