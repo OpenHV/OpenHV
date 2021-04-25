@@ -42,6 +42,7 @@ Rules:
 	hv|rules/bonus.yaml
 	hv|rules/weapons.yaml
 	hv|rules/bots.yaml
+	hv|rules/pods.yaml
 
 Sequences:
 	hv|sequences/animals.yaml

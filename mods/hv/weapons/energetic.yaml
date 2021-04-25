@@ -2,14 +2,14 @@
 
 railgun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Range: 9c0
+	Range: 8c0
 	ReloadDelay: 100
 	Report: ray_gun-Mike_Koenig.wav
 	Projectile: LaserZap
 		Width: 0c100
 		Shape: Cylindrical
 		ZOffset: 2000
-		Color: FE0303 #DE8200
+		Color: FE0303
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 	Warhead@Damage: SpreadDamage
@@ -18,9 +18,11 @@ railgun:
 		Spread: 128
 		Damage: 7500
 		Versus:
-			None: 30
+			None: 150
 			Steel: 75
-			Light: 75
+			Light: 100
+			Heavy: 155
+			Wood: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -98,22 +100,22 @@ ElectronicCountermeasureEffect:
 		Damage: 0
 
 Repair:
-	ReloadDelay: 80
-	Range: 1c819
+	ReloadDelay: 5
+	Range: 2c0
 	Projectile: LaserZap
 		ZOffset: 2047
-		Color: 0000FF80
+		Color: fffff2
 		SecondaryBeam: true
 		SecondaryBeamZOffset: 2047
 		Width: 36
-		Duration: 8
+		Duration: 2
 		SecondaryBeamWidth: 144
-		SecondaryBeamColor: 0000FF30
+		SecondaryBeamColor: f09000
 	ValidTargets: Repair
 	TargetActorCenter: true
 	Warhead@Repair: TargetDamage
 		DebugOverlayColor: 00FF00
-		Damage: -5000
+		Damage: -250
 		ValidTargets: Repair
 		Spread: 1
 
@@ -122,7 +124,7 @@ Plasma:
 	ReloadDelay: 50
 	Burst: 3
 	BurstDelays: 5
-	Range: 5c0
+	Range: 6c0
 	MinRange: 0c512
 	Report: laser_Cannon-Mike_Koenig.wav
 	Projectile: Bullet
@@ -141,8 +143,8 @@ Plasma:
 		Versus:
 			None: 10
 			Steel: 74
-			Light: 34
-			Heavy: 100
+			Light: 75
+			Heavy: 125
 			Concrete: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small
@@ -168,22 +170,28 @@ Plasma:
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 VoltageArc:
-	ReloadDelay: 120
-	Range: 7c0
+	ReloadDelay: 100
+	Range: 8c0
 	Report: railgunfire02.wav
 	Projectile: EnergyBolt
 		Radius: 2
-		Duration: 12
+		Duration: 5
 		InnerLightness: 192
 		OuterLightness: 96
-		Color: 4444CC
+		Color: 2668bd
 		Distortion: 200
-		DistortionAnimation: 120
+		DistortionAnimation: 150
 		SegmentLength: 0c512
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
-		Spread: 42
-		Damage: 10000
+		Spread: 128
+		Damage: 7500
+		Versus:
+			None: 150
+			Steel: 75
+			Light: 100
+			Heavy: 155
+			Wood: 10
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 		DamageTypes: Electricity
 	Warhead@Sparks: FireShrapnel

@@ -102,12 +102,14 @@ MissileTankRocket:
 	ReloadDelay: 60
 	Burst: 3
 	BurstDelays: 5
-
-MissileTankRocket_AA:
-	Inherits: AntiAirRocket
-	ReloadDelay: 60
-	Burst: 3
-	BurstDelays: 5
+	Warhead@Damage: SpreadDamage
+		Damage: 6000
+		Versus:
+			None: 5
+			Steel: 90
+			Light: 75
+			Heavy: 75
+			Concrete: 100
 
 LightAntiTankRocket:
 	Inherits: ^AntiGroundMissile
@@ -125,12 +127,12 @@ LightAntiTankRocket:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
-		Damage: 1500
+		Damage: 2500
 		Versus:
 			None: 10
-			Steel: 74
-			Light: 34
-			Heavy: 100
+			Steel: 75
+			Light: 80
+			Heavy: 145
 			Concrete: 50
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash_small
@@ -160,9 +162,10 @@ LightAntiAirRocket:
 		RangeLimit: 9c0
 		Speed: 341
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 2500
 		Versus:
-			Light: 60
+			Light: 50
+			Heavy: 100
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile
@@ -179,10 +182,10 @@ ShipMissile:
 	Warhead@1Dam: SpreadDamage
 		Damage: 700
 		Versus:
-			None: 30
+			None: 10
 			Wood: 90
 			Light: 90
-			Heavy: 115
+			Heavy: 125
 			Concrete: 100
 
 ShipMissile_AA:
@@ -200,10 +203,10 @@ ShipMissile_AA:
 	Warhead@1Dam: SpreadDamage
 		Damage: 700
 		Versus:
-			None: 30
+			None: 10
 			Wood: 90
 			Light: 90
-			Heavy: 115
+			Heavy: 125
 			Concrete: 100
 
 BoatMissile_AA:
@@ -251,15 +254,16 @@ StealthTankMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 6000
 		Versus:
-			None: 25
+			None: 10
 			Wood: 75
+			Steel: 125
 			Light: 100
 			Heavy: 90
 
 Patriot:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 55
-	Range: 15c0
+	Range: 8c0
 	Report: rocketlaunch03.wav
 	ValidTargets: Air
 	Projectile: Missile
@@ -321,7 +325,7 @@ TowerMissile:
 DropshipMissile:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 100
-	Range: 9c0
+	Range: 8c0
 	Report: rocketlaunch01.wav
 	Burst: 6
 	BurstDelays: 6

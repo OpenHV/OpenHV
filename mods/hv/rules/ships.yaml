@@ -1,10 +1,48 @@
 # License: CC-BY-SA-4.0
 
+BOAT3:
+	Inherits: ^Ship
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Light Boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: harbor
+		BuildPaletteOrder: 40
+		Description: Anti-Air light boat.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 150
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 120
+		Offset: -50,0,100
+	Armament:
+		Weapon: BoatMissile_AA
+		LocalOffset: 0,0,0
+	AttackTurreted:
+	WithSpriteTurret:
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	RenderSprites:
+		PlayerPalette: green
+
 BOAT:
 	Inherits: ^Ship
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 700
+		Cost: 800
 	Tooltip:
 		Name: Medium Boat
 		GenericName: Boat
@@ -17,7 +55,7 @@ BOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 33000
+		HP: 46000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -29,9 +67,9 @@ BOAT:
 		TurnSpeed: 60
 		Offset: 150,0,100
 	Armament:
-		Weapon: TyrianTankCannon
-		Recoil: 75
-		RecoilRecovery: 25
+		Weapon: ^Cannon
+		Recoil: 125
+		RecoilRecovery: 38
 		MuzzleSequence: muzzle
 		LocalOffset: 200,0,-50
 	AttackTurreted:
@@ -51,17 +89,17 @@ BOAT2:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor
+		Prerequisites: harbor, techcenter
 		BuildPaletteOrder: 40
 		Description: A heavy boat with a railgun.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 55000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 80
+		Speed: 75
 		TurnSpeed: 40
 	RevealsShroud:
 		Range: 5c0
@@ -74,44 +112,6 @@ BOAT2:
 		LocalOffset: 500,0,0 # TODO: to be adjusted
 	AttackTurreted:
 	WithSpriteTurret:
-	RenderSprites:
-		PlayerPalette: green
-
-BOAT3:
-	Inherits: ^Ship
-	Inherits@AUTOTARGET: ^AutoTargetAir
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Light Boat
-		GenericName: Boat
-	Buildable:
-		Queue: Ship
-		BuildAtProductionType: Ship
-		Prerequisites: harbor
-		BuildPaletteOrder: 40
-		Description: Anti-Air light boat.
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 33000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 150
-		TurnSpeed: 60
-	RevealsShroud:
-		Range: 5c0
-	Turreted:
-		TurnSpeed: 120
-		Offset: -50,0,100
-	Armament:
-		Weapon: BoatMissile_AA
-		LocalOffset: 0,0,0
-	AttackTurreted:
-	WithSpriteTurret:
-	WithTurretAttackAnimation:
-		Sequence: shoot
 	RenderSprites:
 		PlayerPalette: green
 
