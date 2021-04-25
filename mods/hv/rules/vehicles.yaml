@@ -23,7 +23,7 @@ TANK3:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 25
 		Offset: -125,0,50
@@ -65,7 +65,7 @@ TYRIANTANK:
 		TurnSpeed: 25
 		Speed: 100
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 25
 	Armament:
@@ -105,7 +105,7 @@ TANK9:
 		TurnSpeed: 40
 		Speed: 115
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 40
 	Armament:
@@ -137,7 +137,7 @@ TRANSPRT:
 		Speed: 125
 		PauseOnCondition: notmobile || ecmdisabled
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Cargo:
 		Types: Scout
 		MaxWeight: 5
@@ -177,7 +177,7 @@ ARTIL:
 		Speed: 85
 		Locomotor: lighttracked
 	RevealsShroud:
-		Range: 5c0
+		Range: 6c0
 	Armament:
 		Weapon: SmallArtillery
 		MuzzleSequence: muzzle
@@ -287,7 +287,7 @@ TANK16:
 		Speed: 85
 		TurnSpeed: 20
 	RevealsShroud:
-		Range: 5c0
+		Range: 6c0
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
@@ -318,7 +318,7 @@ TANK6:
 	Mobile:
 		Speed: 128
 	RevealsShroud:
-		Range: 5c0
+		Range: 6c0
 	Minelayer:
 		Mines: mine1, mine2, mine3, mine4
 	MineImmune:
@@ -366,7 +366,7 @@ TANK5:
 	Mobile:
 		Speed: 75
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -393,7 +393,7 @@ TANK10:
 	Mobile:
 		Speed: 75
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	Armament:
 		Weapon: VoltageArc
 		LocalOffset: 0,0,213
@@ -431,7 +431,7 @@ TANK7:
 	Mobile:
 		Speed: 120
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	Cloak:
 		InitialDelay: 90
 		CloakDelay: 90
@@ -471,7 +471,7 @@ TANK11:
 	Mobile:
 		Speed: 85
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -507,7 +507,7 @@ TANK12:
 	Mobile:
 		Speed: 71
 	RevealsShroud:
-		Range: 6c0
+		Range: 8c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -528,7 +528,7 @@ TANK13:
 	Mobile:
 		Speed: 128
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c0
 	ResourceTransporter:
 	SpawnActorOnDeath:
 		Actor: goldball
@@ -569,7 +569,7 @@ TANK15:
 	Mobile:
 		Speed: 110
 	RevealsShroud:
-		Range: 6c0
+		Range: 7c0
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
@@ -643,7 +643,7 @@ ARTIL3:
 		TurnSpeed: 8
 		Speed: 60
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	Armament:
 		Weapon: DoubleBarrelledArtillery
 		MuzzleSequence: muzzle
@@ -718,7 +718,7 @@ MINER:
 		TurnSpeed: 30
 		Speed: 80
 	RevealsShroud:
-		Range: 8c0
+		Range: 6c0
 	RenderSprites:
 		PlayerPalette: green
 	GrantConditionOnTerrain:
@@ -755,7 +755,7 @@ MISSILE_TANK:
 	Mobile:
 		Speed: 80
 	RevealsShroud:
-		Range: 5c0
+		Range: 8c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: -250,-50,100

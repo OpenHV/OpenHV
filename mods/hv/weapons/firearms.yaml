@@ -53,10 +53,10 @@ ChainGun:
 		Spread: 64
 		Damage: 1000
 		Versus:
-			None: 175
+			None: 180
 			Steel: 60
-			Light: 75
-			Heavy: 25
+			Light: 70
+			Heavy: 35
 			Concrete: 28
 	Warhead@Effect: CreateEffect
 		Image: hit
@@ -92,10 +92,10 @@ ChainGun.Shuttle:
 		Spread: 64
 		Damage: 1000
 		Versus:
-			None: 200
+			None: 210
 			Steel: 75
 			Light: 85
-			Heavy: 35
+			Heavy: 45
 			Concrete: 28
 
 ShellCasing:
@@ -144,8 +144,8 @@ Vulcan:
 		Spread: 64
 		Damage: 1000
 		Versus:
-			None: 145
+			None: 40
 			Steel: 40
-			Light: 85
-			Heavy: 15
+			Light: 20
+			Heavy: 10
 			Concrete: 28

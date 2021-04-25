@@ -335,9 +335,11 @@ DropshipMissile:
 		Speed: 200
 		RangeLimit: 10c0
 	Warhead@Damage: SpreadDamage
-		Damage: 250
+		Spread: 128
+		Damage: 2500
 		Versus:
-			None: 25
-			Wood: 75
-			Light: 100
-			Heavy: 90
+			None: 10
+			Steel: 50
+			Light: 25
+			Heavy: 50
+			Concrete: 50

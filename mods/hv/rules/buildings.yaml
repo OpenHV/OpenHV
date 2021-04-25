@@ -482,7 +482,7 @@ FACTORY2:
 	HitShape:
 		TargetableOffsets: 512,0,0, -1024,-512,0, -1024,512,0
 	Health:
-		HP: 35000
+		HP: 60000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -595,7 +595,7 @@ FACTORY3:
 	HitShape:
 		TargetableOffsets: 0,0,0, -512,-512,0, -512,512,0, -1536,-512,0, -1536,512,0
 	Health:
-		HP: 35000
+		HP: 60000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -714,7 +714,7 @@ TECHCENTER:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,512,0
 	Health:
-		HP: 30000
+		HP: 40000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -769,7 +769,7 @@ TURRET:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 15c0
+		Range: 10c0
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
@@ -839,7 +839,7 @@ TURRET2:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 15c0
+		Range: 10c0
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
@@ -918,7 +918,7 @@ AATURRET:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 15c0
+		Range: 10c0
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
@@ -999,7 +999,7 @@ AATURRET2:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 15c0
+		Range: 10c0
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
@@ -1325,7 +1325,7 @@ ARTILLERYTURRET:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 15c0
+		Range: 12c0
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
 		Range: 5c0
