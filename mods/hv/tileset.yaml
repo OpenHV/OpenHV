@@ -1886,7 +1886,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Rock
 		Tiles:
-			0: Rock
+			0: Grass
 	Template@236:
 		Id: 236
 		Images: bits/terrain/grssmisc.png
@@ -1894,7 +1894,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Rock
 		Tiles:
-			0: Rock
+			0: Grass
 	Template@237:
 		Id: 237
 		Images: bits/terrain/grssmisc.png
@@ -1902,7 +1902,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Rock
 		Tiles:
-			0: Rock
+			0: Grass
 	Template@238:
 		Id: 238
 		Images: bits/terrain/grssmisc.png
@@ -1910,7 +1910,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Rock
 		Tiles:
-			0: Rock
+			0: Grass
 	Template@239:
 		Id: 239
 		Images: bits/terrain/grssmisc.png
@@ -1918,7 +1918,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Rock
 		Tiles:
-			0: Rock
+			0: Grass
 	Template@240:
 		Id: 240
 		Images: bits/terrain/ice2snow.png
