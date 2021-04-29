@@ -1710,6 +1710,7 @@ TECHBUILDING:
 		RequiresCondition: disabled && !ownerless
 	Power:
 		Amount: -40
+		RequiresCondition: !ownerless
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
@@ -1816,6 +1817,7 @@ TECHMINER:
 	-GivesBuildableArea:
 	Power:
 		Amount: -40
+		RequiresCondition: !ownerless
 	RevealsShroud:
 		Range: 10c0
 		RequiresCondition: !disabled && !ownerless
