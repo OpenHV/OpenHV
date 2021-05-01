@@ -632,7 +632,7 @@ ARTIL3:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
-		Prerequisites: radar, factory3, techcenter, ~vehicles.yi
+		Prerequisites: radar, factory, techcenter, ~vehicles.yi
 		Description: Double barreled artillery tank.
 		BuildAtProductionType: Tracked
 	Health:
@@ -703,9 +703,9 @@ MINER:
 		Queue: Building
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
-		Prerequisites: base
+		Prerequisites: refinery
 	Valued:
-		Cost: 1400
+		Cost: 1100
 	Tooltip:
 		Name: Miner
 	UpdatesPlayerStatistics:
@@ -742,7 +742,7 @@ MISSILE_TANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory3, techcenter, ~vehicles.sc
+		Prerequisites: radar, factory, techcenter, ~vehicles.sc
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
 		BuildAtProductionType: Tracked

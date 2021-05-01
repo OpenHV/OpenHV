@@ -123,7 +123,7 @@ GENERATOR:
 	RevealsShroud:
 		Range: 4c0
 	Power:
-		Amount: 100
+		Amount: 130
 	Targetable:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
@@ -152,7 +152,7 @@ RADAR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
-		Prerequisites: generator, ~structures.yi
+		Prerequisites: generator, refinery, ~structures.yi
 		Description: Provides an overview\nof the battlefield.\nRequires power to operate.
 	Valued:
 		Cost: 1800
@@ -196,7 +196,7 @@ RADAR:
 RADAR2:
 	Inherits: RADAR
 	Buildable:
-		Prerequisites: generator, ~structures.sc
+		Prerequisites: generator, refinery, ~structures.sc
 	ProvidesPrerequisite@Radar:
 		Prerequisite: radar
 
@@ -341,7 +341,7 @@ MINER2:
 	Tooltip:
 		Name: Mining Tower
 	Valued:
-		Cost: 1400
+		Cost: 1000
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		Interval: 100
@@ -1084,7 +1084,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: miner2
+		Prerequisites: refinery
 		Description: Stores excess refined\nresources.
 	Valued:
 		Cost: 300
@@ -1099,12 +1099,12 @@ STORAGE:
 	RevealsShroud:
 		Range: 4c0
 	StoresResources:
-		Capacity: 4000
+		Capacity: 8000
 	-WithSpriteBody:
 	WithResourceLevelSpriteBody:
 		Sequence: stages
 	Power:
-		Amount: -10
+		Amount: -20
 	RenderSprites:
 		PlayerPalette: green
 	WithResourceStoragePipsDecoration:
@@ -1137,10 +1137,10 @@ REFINERY:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: miner2
+		Prerequisites: generator
 		Description: Processes resources.
 	Valued:
-		Cost: 800
+		Cost: 1400
 	Targetable:
 		TargetTypes: Ground, Structure
 	Tooltip:
@@ -1152,9 +1152,9 @@ REFINERY:
 	RevealsShroud:
 		Range: 4c0
 	StoresResources:
-		Capacity: 8000
+		Capacity: 5000
 	Power:
-		Amount: -10
+		Amount: -30
 	RenderSprites:
 		PlayerPalette: green
 	WithResourceStoragePipsDecoration:
@@ -1189,6 +1189,12 @@ REFINERY:
 		Sequence: animation
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
+	FreeActor:
+		Actor: miner
+		SpawnOffset: 0,2
+		Facing: 512
+	ProvidesPrerequisite:
+		Prerequisite: refinery
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
@@ -1342,7 +1348,7 @@ HARBOR:
 	Selectable:
 		Bounds: 3072, 3072
 	Buildable:
-		Prerequisites: generator
+		Prerequisites: factory
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds ships.
