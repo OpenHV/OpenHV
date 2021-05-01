@@ -92,13 +92,13 @@
 		TerrainSpeeds:
 			Water: 100
 	Faction@0:
-		Name: YI
+		Name: Yuruki
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
 		Description: Yuruki Industries
 	Faction@1:
-		Name: SC
+		Name: Synaty
 		InternalName: sc
 		Side: Corporations
 		Selectable: true
