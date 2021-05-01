@@ -52,7 +52,7 @@
 			Tech: 100
 	Locomotor@TRACKED:
 		Name: tracked
-		Crushes: Tree, Cube, Scrap
+		Crushes: Tree, Cube, Scrap, Pods
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 100

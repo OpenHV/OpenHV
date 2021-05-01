@@ -146,6 +146,9 @@
 		FallbackSequence: die
 		DeathPaletteIsPlayerPalette: false
 		Delay: 5
+	Crushable:
+		CrushClasses: Pods
+		WarnProbability: 15
 
 ^Scrap:
 	Interactable:

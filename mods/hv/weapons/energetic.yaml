@@ -16,9 +16,9 @@ railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 7500
+		Damage: 8000
 		Versus:
-			None: 150
+			None: 200
 			Steel: 75
 			Light: 100
 			Heavy: 155
@@ -172,7 +172,7 @@ Plasma:
 VoltageArc:
 	ReloadDelay: 100
 	Range: 8c0
-	Report: railgunfire02.wav
+	Report: lightningbolt.wav
 	Projectile: EnergyBolt
 		Radius: 2
 		Duration: 5
@@ -185,9 +185,9 @@ VoltageArc:
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 7500
+		Damage: 8000
 		Versus:
-			None: 150
+			None: 200
 			Steel: 75
 			Light: 100
 			Heavy: 155

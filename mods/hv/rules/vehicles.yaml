@@ -104,6 +104,7 @@ TANK9:
 	Mobile:
 		TurnSpeed: 40
 		Speed: 115
+		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 8c0
 	Turreted:
@@ -642,6 +643,7 @@ ARTIL3:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 60
+		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
 	Armament:
@@ -687,6 +689,7 @@ BUILDER:
 	Mobile:
 		TurnSpeed: 32
 		Speed: 100
+		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
 	RenderSprites:
