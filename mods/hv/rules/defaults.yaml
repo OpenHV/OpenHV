@@ -128,6 +128,9 @@
 		TurnSpeed: 100
 		Speed: 120
 		Locomotor: pod
+		Voice: Action
+	Voiced:
+		VoiceSet: GenericVoice2
 	Health:
 		HP: 15000
 	Armor:
