@@ -34,6 +34,8 @@ SHIP2:
 		Speed: 180
 		RepulsionSpeed: 40
 		MaximumPitch: 56
+	Voiced:
+		VoiceSet: GunshipVoice
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -83,6 +85,8 @@ SHIP1:
 		Speed: 180
 		RepulsionSpeed: 40
 		MaximumPitch: 56
+	Voiced:
+		VoiceSet: SpeederVoice
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
@@ -120,6 +124,8 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 115
+	Voiced:
+		VoiceSet: AttackHelicopterVoice
 	Turreted:
 		TurnSpeed: 80
 		Offset: 200,0,-100
@@ -158,6 +164,8 @@ SAUCER:
 	Aircraft:
 		TurnSpeed: 16
 		Speed: 70
+	Voiced:
+		VoiceSet: SaucerVoice
 	-WithShadow:
 	Selectable:
 		Bounds: 1228, 1228
@@ -190,6 +198,8 @@ BANSHEE:
 	Aircraft:
 		TurnSpeed: 16
 		Speed: 112
+	Voiced:
+		VoiceSet: BansheeVoice
 	AttackFrontal:
 	Armament@PRIMARY:
 		Weapon: Plasma
@@ -228,6 +238,8 @@ COPTER2:
 		TurnSpeed: 20
 		Speed: 110
 		AltitudeVelocity: 0c58
+	Voiced:
+		VoiceSet: TransportHelicopterVoice
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
 	WithFacingSpriteBody@FLY:
@@ -277,6 +289,12 @@ BALLOON:
 		Type: GroundPosition
 	Aircraft:
 		Speed: 70
+	Voiced:
+		VoiceSet: BalloonVoice
+	Guard:
+		Voice: Move
+	Repairable:
+		Voice: Move
 	Selectable:
 		DecorationBounds: 1228, 1638
 	-WithShadow:
@@ -327,6 +345,8 @@ DROPSHIP:
 		Speed: 110
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
+	Voiced:
+		VoiceSet: DropshipVoice
 	WithLandingAnimation:
 		RequiredFacing: 512
 	WithFacingSpriteBody:
@@ -350,10 +370,12 @@ DROPSHIP:
 		Types: Scout
 		MaxWeight: 4
 		AfterUnloadDelay: 40
+		UnloadVoice: Unload
 	Carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
+		Voice: Unload
 	RenderSprites:
 		PlayerPalette: green
 	WithCargoPipsDecoration:

@@ -33,3 +33,59 @@ ShipVoice:
 		Select: shipselect1, shipselect2, shipselect3, shipselect4, shipselect5
 		Move: shipmove1, shipmove2, shipmove3, shipmove4
 		Action: shipattack1, shipattack2, shipattack3, shipattack4, shipattack5
+
+TransportHelicopterVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: copter2_aeronautics_operational, copter2_avionics_online, copter2_awaiting_orders
+		Move: copter2_acknowledged, copter2_affirmative, copter2_heading_to_new_lz, copter2_not_a_problem, copter2_roger_that, copter2_verify_new_coordinate
+		Action: copter2_acknowledged, copter2_affirmative, copter2_not_a_problem, copter2_ready_for_action, copter2_roger_that, copter2_special_delivery
+
+AttackHelicopterVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: copter_aeronautics_operational, copter_avionics_online, copter_awaiting_orders
+		Move: copter_acknowledged, copter_affirmative, copter_not_a_problem, copter_right_away_sir, copter_roger_that, copter_solid_copy
+		Action: copter_acknowledged, copter_affirmative, copter_not_a_problem, copter_ready_for_action, copter_roger_that, copter_solid_copy, copter_target_acquired
+
+SaucerVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: saucer_aeronautics_operational, saucer_avionics_online, saucer_awaiting_orders
+		Move: saucer_acknowledged, saucer_affirmative, saucer_not_a_problem, saucer_roger_that
+		Action: saucer_quantum_deconstruction, saucer_vaporising_molecular_levels, sauer_atomising_photon_cannon
+
+BansheeVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: banshee_aeronautics_operational, banshee_avionics_online, banshee_awaiting_orders, banshee_ready_for_action, banshee_reporting_in
+		Move: banshee_acknowledged, banshee_affirmative, banshee_air_support_inbound, banshee_not_a_problem, banshee_roger_that
+		Action: banshee_acknowledged, banshee_affirmative, banshee_air_support_inbound, banshee_cleared_to_engage, banshee_not_a_problem, banshee_roger_that
+
+GunshipVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: ship2_acknowledged, ship2_aeronautics_operational, ship2_awaiting_orders, ship2_ready_for_action
+		Move: ship2_affirmative, ship2_closing_in, ship2_not_a_problem, ship2_roger_that
+		Action: ship2_affirmative, ship2_discharging_munitions, ship2_not_a_problem, ship2_roger_that, ship2_sweep_the_area
+
+DropshipVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: dropship_aeronautics_operational, dropship_avionics_online, dropship_awaiting_orders, dropship_ready_for_action
+		Move: dropship_acknowledged, dropship_affirmative, dropship_destination_set, dropship_not_a_problem, dropship_roger_that
+		Action: dropship_acknowledged, dropship_affirmative, dropship_keep_those_skies_clear, dropship_not_a_problem, dropship_roger_that
+		Unload: dropship_touching_down
+
+BalloonVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: balloon_aeronautics_operational, balloon_avionics_online, balloon_awaiting_orders, balloon_ready_for_action, balloon_sensors_aligned, balloon_surveillance_active
+		Move: balloon_acknowledged, balloon_affirmative, balloon_not_a_problem, balloon_optimising_updraft, balloon_roger_that
+
+SpeederVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: ship1_aeronautics_operational, ship1_avionics_online, ship1_awaiting_orders, ship1_ready_for_action
+		Move: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_not_a_problem, ship1_thrusters_engaged
+		Action: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_fire_the_missiles, ship1_intercepting_hostiles

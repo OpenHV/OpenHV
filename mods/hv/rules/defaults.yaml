@@ -197,6 +197,7 @@
 	Aircraft:
 		AirborneCondition: airborne
 		InitialFacing: 768
+		Voice: Move
 	Targetable@GROUND:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -219,8 +220,6 @@
 	HitShape:
 	MapEditorData:
 		Categories: Aircraft
-	Voiced:
-		VoiceSet: GenericVoice2
 	RenderSprites:
 		PlayerPalette: remap
 	Repairable:

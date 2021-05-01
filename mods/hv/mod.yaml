@@ -22,6 +22,7 @@ Packages:
 	hv|bits/audio/graion
 	hv|bits/audio/dzierzan
 	hv|bits/audio/dzierzan/announcer
+	hv|bits/audio/flamewh33l/
 
 MapFolders:
 	hv|maps: System
