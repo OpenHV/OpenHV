@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 SCOUT1:
-	Inherits: ^Vehicle
+	Inherits: ^Pod
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
@@ -13,14 +13,6 @@ SCOUT1:
 		Name: Machine Gun Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Health:
-		HP: 15000
-	Armor:
-		Type: None
-	Mobile:
-		TurnSpeed: 100
-		Speed: 120
-		Locomotor: pod
 	RevealsShroud:
 		Range: 7c0
 	Armament:
@@ -32,20 +24,9 @@ SCOUT1:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
-	Passenger:
-		CargoType: Scout
-	-Carryable:
-	-SpawnScrapOnDeath:
-	-Explodes:
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
-		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5
 
 SCOUT2:
-	Inherits: ^Vehicle
+	Inherits: ^Pod
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
@@ -57,14 +38,6 @@ SCOUT2:
 		Name: Rocket Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Health:
-		HP: 15000
-	Armor:
-		Type: None
-	Mobile:
-		TurnSpeed: 100
-		Speed: 120
-		Locomotor: pod
 	RevealsShroud:
 		Range: 7c0
 	Armament@PRIMARY:
@@ -77,24 +50,12 @@ SCOUT2:
 		LocalOffset: 50,0,0
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
-		Voice: Attack
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
-	Passenger:
-		CargoType: Scout
-	-Carryable:
-	-SpawnScrapOnDeath:
-	-Explodes:
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
-		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5
 
 TECHNICIAN:
-	Inherits: ^Vehicle
+	Inherits: ^Pod
 	Inherits@SELECTION: ^SelectableSupportUnit
 	Buildable:
 		Queue: Scouts
@@ -116,8 +77,6 @@ TECHNICIAN:
 		EnterBlockedCursor: move-blocked
 	Health:
 		HP: 12500
-	Armor:
-		Type: None
 	Mobile:
 		TurnSpeed: 100
 		Speed: 80
@@ -126,14 +85,3 @@ TECHNICIAN:
 		PlayerPalette: green
 	RevealsShroud:
 		Range: 6c0
-	Passenger:
-		CargoType: Scout
-	-Carryable:
-	-SpawnScrapOnDeath:
-	-Explodes:
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
-		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5

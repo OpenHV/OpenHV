@@ -122,6 +122,28 @@
 	Carryable:
 	Demolishable:
 
+^Pod:
+	Inherits: ^Vehicle
+	Mobile:
+		TurnSpeed: 100
+		Speed: 120
+		Locomotor: pod
+	Health:
+		HP: 15000
+	Armor:
+		Type: None
+	Passenger:
+		CargoType: Scout
+	-Carryable:
+	-SpawnScrapOnDeath:
+	-Explodes:
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: effect
+		FallbackSequence: die
+		DeathPaletteIsPlayerPalette: false
+		Delay: 5
+
 ^Scrap:
 	Interactable:
 	HiddenUnderFog:
