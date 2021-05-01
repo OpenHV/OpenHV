@@ -155,7 +155,7 @@
 		GenericName: Scrap
 		ShowOwnerRow: false
 	Crate:
-		Lifetime: 240
+		Duration: 6000
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		CrushClass: Scrap
 	RenderSprites:
@@ -652,7 +652,7 @@
 		GenericName: Cube
 		ShowOwnerRow: false
 	Crate:
-		Lifetime: 240
+		Duration: 6000
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain
 		CrushClass: Cube
 	RenderSprites:

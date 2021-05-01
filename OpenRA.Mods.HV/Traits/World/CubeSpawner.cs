@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Chance of each cube actor spawning.")]
 		public readonly int[] CubeActorShares = { 10 };
 
-		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(Ruleset rules)
+		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(MapPreview map)
 		{
 			yield return new LobbyBooleanOption("cubes", CheckboxLabel, CheckboxDescription, CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
 		}

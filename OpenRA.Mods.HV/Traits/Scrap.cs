@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Display order for the scrap checkbox in the lobby.")]
 		public readonly int CheckboxDisplayOrder = 0;
 
-		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(Ruleset rules)
+		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(MapPreview map)
 		{
 			yield return new LobbyBooleanOption("scrap", CheckboxLabel, CheckboxDescription, CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
 		}
