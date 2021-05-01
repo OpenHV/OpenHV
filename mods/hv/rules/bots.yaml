@@ -1,22 +1,16 @@
 # License: CC-BY-SA-4.0
 
 Player:
-	ModularBot@HardAI:
-		Name: Hard AI
-		Type: hard
-	GrantConditionOnBotOwner@Hard:
-		Condition: enable-hard-ai
-		Bots: hard
-	ModularBot@EasyAI:
-		Name: Easy AI
-		Type: easy
-	GrantConditionOnBotOwner@Easy:
-		Condition: enable-easy-ai
-		Bots: easy
-	BaseBotModule@Hard:
-		RequiresCondition: enable-hard-ai || enable-easy-ai
-	CustomBaseBuilderBotModule@Hard:
-		RequiresCondition: enable-hard-ai
+	ModularBot@RogueAI:
+		Name: Rogue AI
+		Type: rogue
+	GrantConditionOnBotOwner@RogueAI:
+		Condition: enable-rogue-ai
+		Bots: rogue
+	BaseBotModule@RogueAI:
+		RequiresCondition: enable-rogue-ai
+	CustomBaseBuilderBotModule@RogueAI:
+		RequiresCondition: enable-rogue-ai
 		MinimumExcessPower: 60
 		MaximumExcessPower: 160
 		ExcessPowerIncrement: 40
@@ -33,57 +27,6 @@ Player:
 		BuildingLimits:
 			miner: 1
 			refinery: 1
-			module: 4
-			factory2: 4
-			factory3: 4
-			radar: 1
-			radar2: 1
-			starport: 4
-			starport2: 4
-			tradplat: 1
-			techcenter: 1
-			harbor: 1
-			storage: 5
-			field: 1
-			silo: 1
-		BuildingFractions:
-			miner: 3
-			refinery: 1
-			module: 1
-			radar: 1
-			radar2: 1
-			factory2: 1
-			factory3: 1
-			harbor: 1
-			tradplat: 1
-			starport: 1
-			starport2: 1
-			techcenter: 1
-			turret: 7
-			aaturret: 3
-			artilleryturret: 5
-			field: 1
-			silo: 1
-	CustomBaseBuilderBotModule@Easy:
-		RequiresCondition: enable-easy-ai
-		MinimumExcessPower: 60
-		MaximumExcessPower: 160
-		ExcessPowerIncrement: 40
-		ExcessPowerIncreaseThreshold: 4
-		ConstructionYardTypes: base
-		PowerTypes: generator
-		BarracksTypes: module
-		VehiclesFactoryTypes: factory2, factory3
-		ProductionTypes: module, factory2, factory3, starport, starport2, harbor
-		NavalProductionTypes: harbor
-		MinerTypes: miner, miner2
-		RefineryTypes: refinery
-		SiloTypes: storage
-		BuildingDelays:
-			silo: 70000
-		BuildingLimits:
-			miner: 1
-			refinery: 3
 			module: 4
 			factory2: 4
 			factory3: 4
@@ -116,22 +59,16 @@ Player:
 			field: 1
 			silo: 1
 	BuildingRepairBotModule:
-		RequiresCondition: enable-hard-ai
-	SquadManagerBotModule@Hard:
-		RequiresCondition: enable-hard-ai
+		RequiresCondition: enable-rogue-ai
+	SquadManagerBotModule@RogueAI:
+		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
 		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8, technician
 		NavalUnitsTypes: boat, heavyboat
 		ConstructionYardTypes: base
-	SquadManagerBotModule@Easy:
-		RequiresCondition: enable-easy-ai
-		SquadSize: 7
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8, technician
-		NavalUnitsTypes: boat, heavyboat
-		ConstructionYardTypes: base
-	UnitBuilderBotModule@Hard:
+	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
-		RequiresCondition: enable-hard-ai
+		RequiresCondition: enable-rogue-ai
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
 			tank4: 1
@@ -166,68 +103,30 @@ Player:
 			tank8: 1
 			boat3: 3
 			technician: 1
-	UnitBuilderBotModule@Easy:
-		RequiresCondition: enable-easy-ai
-		UnitQueues: Scouts, Vehicle, Aircraft, Ship
-		UnitDelays:
-			copter: 10000
-			banshee: 10000
-			ship1: 10000
-			ship2: 10000
-		UnitsToBuild:
-			tank3: 5
-			tank5: 5
-			tank7: 1
-			tank9: 3
-			tank11: 10
-			tank12: 10
-			tank15: 1
-			tank16: 1
-			artil: 5
-			artil3: 5
-			scout1: 1
-			scout2: 1
-			missile_tank: 5
-			ship1: 5
-			ship2: 5
-			copter: 5
-			banshee: 5
-			balloon: 1
-			saucer: 1
-			boat: 1
-			boat2: 1
-			boat3: 1
-		UnitLimits:
-			builder: 0
-			balloon: 2
-			saucer: 2
-			boat3: 3
-	ProductionThrottleBotModule:
-		RequiresCondition: enable-easy-ai
 	PriorityCaptureManagerBotModule:
-		RequiresCondition: enable-hard-ai
+		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: tank8, technician
 		PriorityCapturableActorTypes: techbuilding
 		MaximumCaptureTargetOptions: 15
 	MinerBotModule:
-		RequiresCondition: enable-hard-ai || enable-easy-ai
+		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
 		DeployedActorTypes: miner2
 	CubePickupBotModule:
-		RequiresCondition: enable-hard-ai
+		RequiresCondition: enable-rogue-ai
 		ExcludedUnitTypes: miner, tanker1, tanker2
 	DeployDetectorBotModule:
-		RequiresCondition: enable-hard-ai
+		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: tank4
 	PowerDownBotModule:
-		RequiresCondition: enable-hard-ai
+		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
 		ScoutActorTypes: balloon, saucer
 		MoveRadius: 20
-		RequiresCondition: enable-hard-ai || enable-easy-ai
+		RequiresCondition: enable-rogue-ai
 	SupportPowerBotModule:
-		RequiresCondition: enable-hard-ai || enable-easy-ai
+		RequiresCondition: enable-rogue-ai
 		Decisions:
 			nukepower:
 				OrderName: NukePowerInfoOrder
