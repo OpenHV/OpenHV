@@ -463,132 +463,19 @@ STARPORT2:
 FACTORY2:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x3Shape
+	Inherits@shape: ^2x4Shape
 	Inherits@flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 2048, 3072
+		Bounds: 2048, 4096
 	Buildable:
-		Prerequisites: module
+		Prerequisites: module, ~structures.sc
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds vehicles.
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Light Factory
-	Building:
-		Footprint: xx xx ++
-		Dimensions: 2,3
-	HitShape:
-		TargetableOffsets: 512,0,0, -1024,-512,0, -1024,512,0
-	Health:
-		HP: 60000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 4c768
-	Power:
-		Amount: -150
-	ProvidesPrerequisite@BuildingName:
-		RequiresCondition: !powerdown
-	ProvidesPrerequisite@factory:
-		Prerequisite: factory
-		RequiresCondition: !powerdown
-	RenderSprites:
-		PlayerPalette: green
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay@platform1:
-		Sequence: idle-platform1
-		RequiresCondition: !build-incomplete
-	WithIdleOverlay@platform2:
-		Sequence: idle-platform2
-		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform1:
-		Sequence: make-platform1
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@make-platform2:
-		Sequence: make-platform2
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithProductionExitOverlay@platform1:
-		ExitCell: 0,2
-		Sequence: active-platform1
-	WithProductionExitOverlay@platform2:
-		ExitCell: 1,2
-		Sequence: active-platform2
-	RallyPoint:
-		IsPlayerPalette: true
-		Palette: green
-		LineWidth: 2
-	ExitsDebugOverlay:
-	Exit@0:
-		ExitCell: 0,2
-		SpawnOffset: -512,1024,0
-		Facing: 512
-		ProductionTypes: Wheeled, Vehicle
-	Exit@1:
-		ExitCell: 1,2
-		SpawnOffset: 512,1024,0
-		Facing: 512
-		ProductionTypes: Wheeled, Vehicle
-	Production:
-		Produces: Wheeled, Vehicle
-	PrimaryBuilding:
-		PrimaryCondition: primary
-		SelectionNotification: PrimaryBuildingSelected
-	ProductionBar:
-		ProductionType: Vehicle
-	WithTextDecoration@PRIMARY:
-		RequiresCondition: primary
-		Position: Top
-		Margin: 0, 5
-		RequiresSelection: true
-		Text: PRIMARY
-		Font: TinyPixel
-	WithIdleOverlay@online:
-		Sequence: idle-online
-		RequiresCondition: !build-incomplete && !disabled
-	WithIdleOverlay@offline:
-		Sequence: idle-offline
-		RequiresCondition: !build-incomplete && disabled
-	WithProductionOverlay@base:
-		RequiresCondition: !build-incomplete
-		Sequence: production-inprogress
-	WithProductionExitOverlay@factory1:
-		ExitCell: 0,2
-		Sequence: production-done
-	WithProductionExitOverlay@factory2:
-		ExitCell: 1,2
-		Sequence: production-done
-
-FACTORY3:
-	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x4Shape
-	Inherits@flame: ^BuildingFlame2
-	Selectable:
-		Bounds: 2048, 4096
-	Buildable:
-		Prerequisites: factory2
-		Queue: Building
-		BuildPaletteOrder: 90
-		Description: Builds tanks.
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Heavy Factory
+		Name: Vehicle Factory
 	Building:
 		Footprint: xx xx ++ ++
 		Dimensions: 2,4
@@ -692,6 +579,11 @@ FACTORY3:
 		ExitCell: 1,2
 		Sequence: production-done
 
+FACTORY3:
+	Inherits: FACTORY2
+	Buildable:
+		Prerequisites: module, ~structures.yi
+
 TECHCENTER:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
@@ -752,7 +644,7 @@ TURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory2, ~structures.yi
+		Prerequisites: factory, ~structures.yi
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -822,7 +714,7 @@ TURRET2:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory2, ~structures.sc
+		Prerequisites: factory, ~structures.sc
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -901,7 +793,7 @@ AATURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory2, ~structures.yi
+		Prerequisites: factory, ~structures.yi
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
@@ -982,7 +874,7 @@ AATURRET2:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory2, ~structures.sc
+		Prerequisites: factory, ~structures.sc
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
