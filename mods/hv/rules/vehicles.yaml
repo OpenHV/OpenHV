@@ -90,7 +90,7 @@ TANK9:
 		BuildPaletteOrder: 20
 		Prerequisites: factory2
 		Description: Mobile tank with AA missiles.
-		BuildAtProductionType: Tracked
+		BuildAtProductionType: Wheeled
 	Valued:
 		Cost: 500
 	Tooltip:
