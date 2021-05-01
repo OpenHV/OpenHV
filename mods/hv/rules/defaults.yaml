@@ -187,7 +187,7 @@
 	Tooltip:
 		GenericName: Plane
 	WithShadow:
-		Offset: 43, 128, 0
+		Offset: 356, 256, 0
 		ZOffset: -129
 	WithFacingSpriteBody:
 	MustBeDestroyed:
