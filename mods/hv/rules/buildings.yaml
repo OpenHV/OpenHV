@@ -1426,6 +1426,12 @@ HARBOR:
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete
 		Sequence: production-inprogress
+	RepairsUnits:
+		HpPerStep: 1000
+		Interval: 7
+		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
 
 MOTHER:
 	Inherits: ^BaseBuilding

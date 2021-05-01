@@ -620,6 +620,9 @@
 		PlayerPalette: remap
 	WithFacingSpriteBody:
 	HitShape:
+	RepairableNear:
+		RepairActors: harbor
+		CloseEnough: 2c0
 
 ^Waterflow:
 	Inherits@1: ^SpriteActor
