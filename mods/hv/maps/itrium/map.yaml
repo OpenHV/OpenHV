@@ -56,7 +56,7 @@ Actors:
 		Facing: 384
 		Location: 26,34
 		Owner: Creeps
-	Storage: storage
+	Refinery: refinery
 		Owner: Creeps
 		Location: 29,42
 	Actor41: trees17

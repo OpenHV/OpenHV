@@ -9,7 +9,7 @@
 
 BaseBuildings = { "base", "generator", "miner2", "module" }
 
-Colonists = { Scout1, Scout2, Ballon, Miner1, Miner2, Storage }
+Colonists = { Scout1, Scout2, Ballon, Miner1, Miner2, Refinery }
 
 Tick = function()
 	if (player.PowerProvided <= 20 or player.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
