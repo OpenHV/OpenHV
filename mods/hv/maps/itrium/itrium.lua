@@ -9,7 +9,9 @@
 
 BaseBuildings = { "base", "generator", "miner2", "module" }
 
-Colonists = { Scout1, Scout2, Ballon, Miner1, Miner2, Refinery }
+Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Storage, Refinery}
+
+Civilians = { TechMiner1, TechMiner2 }
 
 Tick = function()
 	if (player.PowerProvided <= 20 or player.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
@@ -20,9 +22,9 @@ Tick = function()
 	end
 
 	if not HasMiner and not Mining and HasPower and DateTime.GameTime % DateTime.Seconds(20) == 0 then
-		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "miner" or actor.Type == "miner2") and actor.Owner == player end)
+		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "refinery") and actor.Owner == player end)
 		if #miners == 0 then
-			Media.DisplayMessage("Build a miner to collect resources.", "Reminder")
+			Media.DisplayMessage("Build a refinery to collect resources.", "Reminder")
 			HasMiner = false
 		else
 			HasMiner = true
@@ -39,14 +41,6 @@ Tick = function()
 		end
 	end
 
-	if Mining and not HasRefinery and DateTime.GameTime % DateTime.Seconds(20) == 0 then
-		local refineries = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "refinery" and actor.Owner == player end)
-		if #refineries == 0 then
-			Media.DisplayMessage("Build a refinery to process the resources.", "Reminder")
-			HasRefinery = true
-		end
-	end
-
 	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(40) == 0 then
 		if player.Resources > player.ResourceCapacity * 0.8 then
 			Media.DisplayMessage("Build a silo to store additional resources.", "Reminder")
@@ -56,7 +50,7 @@ Tick = function()
 	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(20) == 0 then
 		local modules = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "module" and actor.Owner == player end)
 		if #modules == 0 then
-			Media.DisplayMessage("Build a module to train a scouting party.", "Reminder")
+			Media.DisplayMessage("Build a module to train pods.", "Reminder")
 		end
 	end
 

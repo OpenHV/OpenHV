@@ -8,26 +8,6 @@ World:
 	MissionData:
 		Briefing: Greetings commander! We are approaching the orbit of Itrium. The company is interested in the vast Lithium reserves. You are tasked with scouting ahead and building up a bridgehead. Intelligence reports some settlers, which have established a small mining colony. Claim this planet for the company by all means necessary.
 
-GENERATOR:
-	Buildable:
-		BuildLimit: 1
-
-MODULE:
-	Buildable:
-		BuildLimit: 1
-
-MINER:
-	Buildable:
-		BuildLimit: 1
-
-REFINERY:
-	Buildable:
-		BuildLimit: 1
-
-STORAGE:
-	Buildable:
-		BuildLimit: 1
-
 RADAR:
 	Buildable:
 		Prerequisites: ~disabled
