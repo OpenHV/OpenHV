@@ -1584,7 +1584,7 @@ Templates:
 		ClearTile: true
 		AutoConnect@Lava:
 			Type: Lava
-			BorderTypes: Mountain
+			BorderTypes: Mountain, Cliff
 			BorderTransitions: 322, 328, 324, 320, 326, 325, 330, 331
 			Corners: 327, 329, 321, 319
 		AutoConnect@Sand:
@@ -2538,7 +2538,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@320:
 		Id: 320
 		Images: bits/terrain/lava.png
@@ -2546,7 +2546,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@321:
 		Id: 321
 		Images: bits/terrain/lava.png
@@ -2554,7 +2554,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@322:
 		Id: 322
 		Images: bits/terrain/lava.png
@@ -2562,7 +2562,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@323:
 		Id: 323
 		Images: bits/terrain/lava.png
@@ -2579,7 +2579,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@325:
 		Id: 325
 		Images: bits/terrain/lava.png
@@ -2587,7 +2587,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@326:
 		Id: 326
 		Images: bits/terrain/lava.png
@@ -2595,7 +2595,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@327:
 		Id: 327
 		Images: bits/terrain/lava.png
@@ -2603,7 +2603,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@328:
 		Id: 328
 		Images: bits/terrain/lava.png
@@ -2611,7 +2611,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@329:
 		Id: 329
 		Images: bits/terrain/lava.png
@@ -2619,7 +2619,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@330:
 		Id: 330
 		Images: bits/terrain/lava.png
@@ -2627,7 +2627,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@331:
 		Id: 331
 		Images: bits/terrain/lava.png
@@ -2635,7 +2635,7 @@ Templates:
 		Size: 1,1
 		Categories: Lava, Mountain
 		Tiles:
-			0: Mountain
+			0: Cliff
 	Template@332:
 		Id: 332
 		Images: bits/terrain/lavaflow.png
