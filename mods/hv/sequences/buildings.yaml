@@ -74,6 +74,10 @@ base:
 		Length: 23
 		Offset: -11, 7
 		ZOffset: 2048
+	active-platform1-damaged: bits/creation-damaged.png
+		Length: 23
+		Offset: -11, 7
+		ZOffset: 2048
 	idle-platform2: bits/platform.png
 		Start: 30
 		ZOffset: -1c511
@@ -86,6 +90,10 @@ base:
 		Length: 31
 		Offset: 10, 10
 	active-platform2: bits/creation.png
+		Length: 23
+		Offset: 9, 7
+		ZOffset: 2048
+	active-platform2-damaged: bits/creation-damaged.png
 		Length: 23
 		Offset: 9, 7
 		ZOffset: 2048
@@ -466,9 +474,9 @@ factory2:
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
-	active-platform2: bits/creation.png
-		Length: 23
-		Offset: 9, 15
+	active-creation-damaged: bits/creatn2-damaged.png
+		Length: 28
+		Offset: -1, 17
 		ZOffset: 2048
 	flame:
 		Offset: 1, -22
@@ -570,6 +578,10 @@ factory3:
 		Tick: 38
 		Offset: 10, 30
 	active-creation: bits/creatn2.png
+		Length: 28
+		Offset: -1, 17
+		ZOffset: 2048
+	active-creation-damaged: bits/creatn2-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
