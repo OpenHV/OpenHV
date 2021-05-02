@@ -41,12 +41,6 @@ BASE:
 	ProvidesPrerequisite@SC:
 		Factions: sc
 		Prerequisite: structures.sc
-	ProvidesPrerequisite@VEHICLES.YI:
-		Factions: yi
-		Prerequisite: vehicles.yi
-	ProvidesPrerequisite@VEHICLES.SC:
-		Factions: sc
-		Prerequisite: vehicles.sc
 	Buildable:
 		Description: Builds structures and builders.
 	Production:
@@ -460,6 +454,14 @@ STARPORT2:
 		Prerequisite: aircraft.sc
 	-WithProductionExitOverlay:
 
+FACTORY:
+	AlwaysVisible:
+	Interactable:
+	Buildable:
+		Description: Vehicle Factory
+	Tooltip:
+		Name: Vehicle Factory
+
 FACTORY2:
 	Inherits: ^BaseBuilding
 	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
@@ -475,7 +477,7 @@ FACTORY2:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Vehicle Factory
+		Name: Synaty Corporation Vehicle Factory
 	Building:
 		Footprint: xx xx ++ ++
 		Dimensions: 2,4
@@ -548,9 +550,9 @@ FACTORY2:
 		ExitCell: 0,2
 		SpawnOffset: 0,1536,0
 		Facing: 512
-		ProductionTypes: Tracked, Vehicle
+		ProductionTypes: Vehicle
 	Production:
-		Produces: Tracked, Vehicle
+		Produces: Vehicle
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
@@ -583,6 +585,8 @@ FACTORY3:
 	Inherits: FACTORY2
 	Buildable:
 		Prerequisites: module, ~structures.yi
+	Tooltip:
+		Name: Yuruki Industries Vehicle Factory
 
 TECHCENTER:
 	Inherits: ^BaseBuilding

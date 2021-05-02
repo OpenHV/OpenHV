@@ -11,10 +11,9 @@ TANK3:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: factory, ~vehicles.sc
+		Prerequisites: ~factory2
 		Queue: Vehicle
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-		BuildAtProductionType: Wheeled
 	Mobile:
 		TurnSpeed: 25
 		Speed: 100
@@ -51,10 +50,9 @@ TYRIANTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory, ~vehicles.yi
+		Prerequisites: ~factory3
 		BuildPaletteOrder: 10
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-		BuildAtProductionType: Wheeled
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -88,9 +86,8 @@ TANK9:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: factory
+		Prerequisites: ~factory
 		Description: Mobile tank with AA missiles.
-		BuildAtProductionType: Wheeled
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -124,10 +121,9 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: module
+		Prerequisites: ~factory, module
 		BuildPaletteOrder: 30
 		Description: Can transport smaller vehicles.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -166,7 +162,6 @@ ARTIL:
 		Prerequisites: radar, factory
 		BuildPaletteOrder: 40
 		Description: Mobile long range weapon.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -204,9 +199,8 @@ TANK4:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
-		Prerequisites: radar
+		Prerequisites: ~factory, radar
 		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
-		BuildAtProductionType: Wheeled
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -266,10 +260,9 @@ TANK16:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory, tradplat
+		Prerequisites: ~factory, tradplat
 		BuildPaletteOrder: 60
 		Description: Repairs nearby vehicles.
-		BuildAtProductionType: Wheeled
 	Armament:
 		Weapon: Repair
 		Cursor: repair
@@ -303,9 +296,8 @@ TANK6:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
-		Prerequisites: factory, tradplat
+		Prerequisites: ~factory, tradplat
 		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
-		BuildAtProductionType: Wheeled
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -348,10 +340,9 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory, techcenter, ~vehicles.sc
+		Prerequisites: ~factory2, techcenter
 		BuildPaletteOrder: 150
 		Description: A powerful tank which shoots laser.
-		BuildAtProductionType: Wheeled
 	Armament:
 		Weapon: railgun
 		LocalOffset: 325,350,0
@@ -377,9 +368,8 @@ TANK10:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 150
-		Prerequisites: factory3, techcenter, ~vehicles.yi
+		Prerequisites: ~factory3, techcenter
 		Description: Fires electric discharges.
-		BuildAtProductionType: Tracked
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -410,9 +400,8 @@ TANK7:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 120
-		Prerequisites: factory3, techcenter
+		Prerequisites: ~factory3, techcenter
 		Description: Cloaked missile tank.\nCan ambush enemies.
-		BuildAtProductionType: Tracked
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -454,10 +443,9 @@ TANK11:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~disabled #factory3, ~vehicles.sc
+		Prerequisites: ~disabled #factory2
 		BuildPaletteOrder: 180
 		Description: Main battle tank.
-		BuildAtProductionType: Tracked
 	Armament:
 		Weapon: ^Cannon
 	AttackFrontal:
@@ -486,10 +474,9 @@ TANK12:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~disabled #factory3, ~vehicles.yi
+		Prerequisites: ~disabled #factory3
 		BuildPaletteOrder: 190
 		Description: Double barreled tank.
-		BuildAtProductionType: Tracked
 	Armament:
 		Weapon: 105mm
 		Recoil: 128
@@ -552,10 +539,9 @@ TANK15:
 		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: techcenter, tradplat
+		Prerequisites: ~factory, techcenter, tradplat
 		BuildPaletteOrder: 110
 		Description: Disables units.
-		BuildAtProductionType: Tracked
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -589,7 +575,6 @@ ARTIL2:
 		Prerequisites: radar, factory, ~disabled
 		BuildPaletteOrder: 150
 		Description: Mobile long range weapon.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -633,9 +618,8 @@ ARTIL3:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
-		Prerequisites: radar, factory, techcenter, ~vehicles.yi
+		Prerequisites: ~factory3, radar, techcenter
 		Description: Double barreled artillery tank.
-		BuildAtProductionType: Tracked
 	Health:
 		HP: 35000
 	Armor:
@@ -745,10 +729,9 @@ MISSILE_TANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory, techcenter, ~vehicles.sc
+		Prerequisites: ~factory2, radar, techcenter
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
-		BuildAtProductionType: Tracked
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -779,9 +762,8 @@ TANK8:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: ~disabled #factory, ~vehicles.yi
+		Prerequisites: ~disabled #, factory3
 		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
-		BuildAtProductionType: Wheeled
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -816,10 +798,9 @@ TANK1:
 		GenericName: Buggy
 	Buildable:
 		BuildPaletteOrder: 200
-		Prerequisites: ~disabled #~vehicles.sc, factory
+		Prerequisites: ~disabled #, factory2
 		Queue: Vehicle
 		Description: Remote controlled vehicle\narmed with explosives.
-		BuildAtProductionType: Wheeled
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -853,7 +834,6 @@ TANK2:
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 210
 		Description: Fires lasers.
-		BuildAtProductionType: Wheeled
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
