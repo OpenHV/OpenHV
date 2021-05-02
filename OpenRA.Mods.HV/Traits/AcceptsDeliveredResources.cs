@@ -92,10 +92,18 @@ namespace OpenRA.Mods.HV.Traits
 				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, td);
 				deliveryVehicle.Trait<ResourceTransporter>().LinkedCollector = returning;
 
-				var move = deliveryVehicle.TraitOrDefault<IMove>();
-				if (exitInfo != null && move != null)
+				var mobile = deliveryVehicle.TraitOrDefault<Mobile>();
+				if (exitInfo != null && mobile != null)
+				{
 					foreach (var cell in exitLocations)
+					{
+						if (!mobile.CanEnterCell(cell))
+							continue;
+
 						deliveryVehicle.QueueActivity(new Move(deliveryVehicle, cell));
+						return;
+					}
+				}
 			});
 		}
 	}
