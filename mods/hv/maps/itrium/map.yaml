@@ -60,7 +60,7 @@ Actors:
 		Owner: Creeps
 	Refinery: refinery
 		Owner: Creeps
-		Location: 29,42
+		Location: 28,40
 		FreeActor: False
 	Actor41: trees17
 		Owner: Neutral
