@@ -15,6 +15,7 @@ BEAST:
 		TurnSpeed: 100
 		Speed: 80
 		Voice: Action
+		Locomotor: foot
 	RevealsShroud:
 		Range: 5c0
 	WithDeathAnimation:
