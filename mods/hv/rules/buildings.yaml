@@ -1141,8 +1141,8 @@ REFINERY:
 	Selectable:
 		Bounds: 2048, 2048
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
+		Footprint: ==+= +xx= =xx+ =+==
+		Dimensions: 4,4
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
@@ -1200,9 +1200,37 @@ REFINERY:
 		RequiresCondition: !build-incomplete
 	FreeActor:
 		Actor: miner
-		SpawnOffset: 0,2
+		SpawnOffset: 1,3
 		Facing: 512
 	ProvidesPrerequisite@BuildingName:
+	WithIdleOverlay@platform1:
+		Sequence: idle-platform1
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform1:
+		Sequence: make-platform1
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithIdleOverlay@platform2:
+		Sequence: idle-platform2
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform2:
+		Sequence: make-platform2
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithIdleOverlay@platform3:
+		Sequence: idle-platform3
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform3:
+		Sequence: make-platform3
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
+	WithIdleOverlay@platform4:
+		Sequence: idle-platform4
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform4:
+		Sequence: make-platform4
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
 
 ARTILLERYTURRET:
 	Inherits: ^BaseBuilding
