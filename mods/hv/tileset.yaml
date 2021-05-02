@@ -1976,7 +1976,7 @@ Templates:
 		ClearTile: true
 		AutoConnect@Water:
 			Type: Water
-			BorderTypes: Ice
+			BorderTypes: Ice, Cliff
 			BorderTransitions: 260, 266, 262, 256, 259, 258, 263, 264
 			Corners: 265, 267, 257, 255
 		Tiles:
@@ -2052,7 +2052,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@256:
 		Id: 256
 		Images: bits/terrain/ice2watr.png
@@ -2060,7 +2060,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@257:
 		Id: 257
 		Images: bits/terrain/ice2watr.png
@@ -2068,7 +2068,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@258:
 		Id: 258
 		Images: bits/terrain/ice2watr.png
@@ -2076,7 +2076,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@259:
 		Id: 259
 		Images: bits/terrain/ice2watr.png
@@ -2084,7 +2084,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@260:
 		Id: 260
 		Images: bits/terrain/ice2watr.png
@@ -2092,7 +2092,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@261:
 		Id: 261
 		Images: bits/terrain/ice2watr.png
@@ -2108,7 +2108,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@263:
 		Id: 263
 		Images: bits/terrain/ice2watr.png
@@ -2116,7 +2116,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@264:
 		Id: 264
 		Images: bits/terrain/ice2watr.png
@@ -2124,7 +2124,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@265:
 		Id: 265
 		Images: bits/terrain/ice2watr.png
@@ -2132,7 +2132,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@266:
 		Id: 266
 		Images: bits/terrain/ice2watr.png
@@ -2140,7 +2140,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@267:
 		Id: 267
 		Images: bits/terrain/ice2watr.png
@@ -2148,7 +2148,7 @@ Templates:
 		Size: 1,1
 		Categories: Water, Ice
 		Tiles:
-			0: Ice
+			0: Cliff
 	Template@269:
 		Id: 269
 		Images: bits/terrain/icebrk.png
