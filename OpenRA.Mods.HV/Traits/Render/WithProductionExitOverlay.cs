@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -17,7 +17,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Rendered when an actor finishes production on the used exit cell.")]
-	public class WithProductionExitOverlayInfo : TraitInfo, Requires<RenderSpritesInfo>
+	public class WithProductionExitOverlayInfo : ConditionalTraitInfo, Requires<RenderSpritesInfo>
 	{
 		[FieldLoader.Require]
 		[Desc("Exit offset associated with the animation.")]
@@ -38,7 +38,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		public override object Create(ActorInitializer init) { return new WithProductionExitOverlay(init, this); }
 	}
 
-	public class WithProductionExitOverlay : INotifyProduction
+	public class WithProductionExitOverlay : ConditionalTrait<WithProductionExitOverlayInfo>, INotifyProduction
 	{
 		readonly WithProductionExitOverlayInfo info;
 		readonly Animation overlay;
@@ -46,6 +46,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		bool active;
 
 		public WithProductionExitOverlay(ActorInitializer init, WithProductionExitOverlayInfo info)
+			: base(info)
 		{
 			this.info = info;
 			var renderSprites = init.Self.Trait<RenderSprites>();
@@ -56,6 +57,9 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 		void INotifyProduction.UnitProduced(Actor self, Actor other, CPos exit)
 		{
+			if (IsTraitDisabled)
+				return;
+
 			if (info.ExitCell == (exit - self.Location))
 			{
 				active = true;

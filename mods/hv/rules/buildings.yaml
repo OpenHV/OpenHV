@@ -90,6 +90,7 @@ BASE:
 		BlueTint: 0.4
 	WithProductionOverlay@base:
 		Sequence: production-inprogress
+		RequiresCondition: !burning
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -440,11 +441,12 @@ STARPORT:
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithProductionOverlay:
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
 	WithProductionExitOverlay:
 		ExitCell: 0,0
 		Sequence: production-done
+		RequiresCondition: !burning
 
 STARPORT2:
 	Inherits: STARPORT
@@ -572,14 +574,16 @@ FACTORY2:
 		Sequence: idle-offline
 		RequiresCondition: !build-incomplete && disabled
 	WithProductionOverlay@base:
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
 	WithProductionExitOverlay@factory1:
 		ExitCell: 0,2
 		Sequence: production-done
+		RequiresCondition: !burning
 	WithProductionExitOverlay@factory2:
 		ExitCell: 1,2
 		Sequence: production-done
+		RequiresCondition: !burning
 
 FACTORY3:
 	Inherits: FACTORY2
@@ -1428,7 +1432,7 @@ HARBOR:
 		Sequence: idle-entry
 		RequiresCondition: !build-incomplete
 	WithProductionOverlay@base:
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
 	RepairsUnits:
 		HpPerStep: 1000
