@@ -137,7 +137,7 @@ Actors:
 		SubCell: 1
 		Location: 31,36
 		Facing: 618
-	Scout6: scout2
+	Scout9: scout2
 		Owner: Creeps
 		SubCell: 1
 		Location: 26,40

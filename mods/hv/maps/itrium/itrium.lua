@@ -9,7 +9,7 @@
 
 BaseBuildings = { "base", "generator", "miner2", "module" }
 
-Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Storage, Refinery}
+Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Storage, Refinery}
 
 Civilians = { TechMiner1, TechMiner2 }
 
