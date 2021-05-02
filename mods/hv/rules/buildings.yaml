@@ -473,7 +473,7 @@ FACTORY2:
 	Selectable:
 		Bounds: 2048, 4096
 	Buildable:
-		Prerequisites: module, ~structures.sc
+		Prerequisites: module, refinery, ~structures.sc
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds vehicles.
@@ -589,7 +589,7 @@ FACTORY2:
 FACTORY3:
 	Inherits: FACTORY2
 	Buildable:
-		Prerequisites: module, ~structures.yi
+		Prerequisites: module, refinery, ~structures.yi
 	Tooltip:
 		Name: Yuruki Industries Vehicle Factory
 
@@ -653,7 +653,7 @@ TURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory, ~structures.yi
+		Prerequisites: module, refinery, ~structures.yi
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -723,7 +723,7 @@ TURRET2:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory, ~structures.sc
+		Prerequisites: module, refinery, ~structures.sc
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -802,7 +802,7 @@ AATURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory, ~structures.yi
+		Prerequisites: module, radar, ~structures.yi
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
@@ -883,7 +883,7 @@ AATURRET2:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory, ~structures.sc
+		Prerequisites: module, radar, ~structures.sc
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
@@ -1243,7 +1243,7 @@ ARTILLERYTURRET:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: factory3, techcenter
+		Prerequisites: factory, techcenter
 		Description: Advanced base defense.\nRequires power to operate.
 	Valued:
 		Cost: 2000
