@@ -45,12 +45,12 @@ Players:
 Actors:
 	Scout1: scout1
 		Location: 22,32
-		Facing: 182
 		Owner: Creeps
+		Facing: 182
 	Scout2: scout2
 		Location: 29,37
-		Facing: 28
 		Owner: Creeps
+		Facing: 28
 	Base: base
 		Owner: The Company
 		Location: 11,6
@@ -132,42 +132,42 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 7,35
-	Actor26: scout1
+	Scout8: scout1
 		Owner: Creeps
 		SubCell: 1
 		Location: 31,36
 		Facing: 618
-	Actor27: scout2
+	Scout6: scout2
 		Owner: Creeps
 		SubCell: 1
 		Location: 26,40
 		Facing: 384
-	Actor28: scout1
+	Scout4: scout1
 		Owner: Creeps
 		SubCell: 1
-		Facing: 384
 		Location: 20,36
-	Actor29: scout1
+		Facing: 384
+	Scout3: scout1
 		Owner: Creeps
 		SubCell: 1
 		Location: 22,35
 		Facing: 111
-	Actor30: scout1
+	Scout6: scout1
 		Owner: Creeps
 		SubCell: 1
 		Location: 30,39
 		Facing: 824
-	Actor31: scout1
+	Scout7: scout1
 		Owner: Creeps
 		SubCell: 1
 		Location: 32,40
 		Facing: 642
-	Actor33: scout1
+	Scout5: scout1
 		Owner: Creeps
 		SubCell: 1
 		Location: 22,42
 		Facing: 475
-	Actor34: storage
+	Storage: storage
 		Owner: Creeps
 		Location: 26,42
 	Actor38: walltop
@@ -179,9 +179,6 @@ Actors:
 	Actor40: walltop
 		Location: 22,27
 		Owner: Neutral
-	Actor46: walltop
-		Location: 21,27
-		Owner: Neutral
 	Actor48: wallbottom
 		Location: 23,28
 		Owner: Neutral
@@ -191,23 +188,8 @@ Actors:
 	Actor52: wallbottom
 		Location: 22,28
 		Owner: Neutral
-	Actor53: walltopleft
-		Location: 19,27
-		Owner: Neutral
-	Actor54: walltop
-		Location: 20,27
-		Owner: Neutral
-	Actor55: wallbottom
-		Location: 21,28
-		Owner: Neutral
-	Actor56: wallbottom
-		Location: 20,28
-		Owner: Neutral
 	Actor51: destroyedwallleft
 		Location: 25,27
-		Owner: Neutral
-	Actor50: destroyedwallbottomleft
-		Location: 19,28
 		Owner: Neutral
 	Actor57: destroyedwallright
 		Location: 31,27
@@ -233,12 +215,6 @@ Actors:
 	Actor64: destroyedwallleft
 		Location: 35,27
 		Owner: Neutral
-	Actor65: wallleft
-		Location: 16,34
-		Owner: Neutral
-	Actor66: wallleft
-		Location: 16,35
-		Owner: Neutral
 	Actor67: wallleft
 		Location: 16,36
 		Owner: Neutral
@@ -257,18 +233,6 @@ Actors:
 	Actor74: destroyedwallbottomright
 		Owner: Creeps
 		Location: 17,39
-	Actor75: destroyedwalltopleft
-		Location: 16,33
-		Owner: Neutral
-	Actor76: destroyedwalltopright
-		Location: 17,33
-		Owner: Neutral
-	Actor77: wallright
-		Location: 17,34
-		Owner: Neutral
-	Actor78: wallright
-		Location: 17,35
-		Owner: Neutral
 	Actor79: wallright
 		Location: 17,36
 		Owner: Neutral
@@ -278,21 +242,15 @@ Actors:
 	Actor81: wallright
 		Location: 17,38
 		Owner: Neutral
-	Actor83: generator
+	Generator3: generator
 		Owner: Creeps
 		Location: 29,45
-	Actor84: generator
+	Generator1: generator
 		Owner: Creeps
 		Location: 32,42
-	Actor85: generator
+	Generator2: generator
 		Owner: Creeps
 		Location: 32,45
-	Actor86: wallbottom
-		Owner: Neutral
-		Location: 28,50
-	Actor87: wallbottom
-		Owner: Neutral
-		Location: 29,50
 	Actor88: wallbottom
 		Owner: Neutral
 		Location: 30,50
@@ -305,12 +263,6 @@ Actors:
 	Actor91: wallbottom
 		Owner: Neutral
 		Location: 33,50
-	Actor92: wallbottom
-		Owner: Neutral
-		Location: 27,50
-	Actor93: wallbottomleft
-		Owner: Neutral
-		Location: 26,50
 	Actor94: destroyedwallleft
 		Owner: Neutral
 		Location: 34,49
@@ -326,19 +278,7 @@ Actors:
 	Actor98: walltop
 		Owner: Neutral
 		Location: 30,49
-	Actor99: walltop
-		Owner: Neutral
-		Location: 29,49
-	Actor100: walltop
-		Owner: Neutral
-		Location: 28,49
-	Actor102: walltop
-		Owner: Neutral
-		Location: 27,49
-	Actor101: walltopleft
-		Owner: Neutral
-		Location: 26,49
-	Actor104: techminer
+	TechMiner2: techminer
 		Owner: Neutral
 		Location: 51,26
 	Actor105: lamppost
@@ -488,8 +428,26 @@ Actors:
 	Actor153: trees17
 		Owner: Neutral
 		Location: 63,22
-	Actor103: techminer
+	TechMiner1: techminer
 		Owner: Neutral
 		Location: 52,21
+	Actor154: destroyedwallright
+		Owner: Neutral
+		Location: 21,27
+	Actor155: destroyedwalltopleft
+		Owner: Neutral
+		Location: 16,35
+	Actor156: destroyedwalltopright
+		Owner: Neutral
+		Location: 17,35
+	Actor157: destroyedwallright
+		Owner: Neutral
+		Location: 29,49
+	Actor158: destroyedwallleft
+		Owner: Neutral
+		Location: 27,49
+	Actor159: destroyedwallright
+		Owner: Neutral
+		Location: 26,49
 
 Rules: hv|rules/campaign.yaml, rules.yaml
