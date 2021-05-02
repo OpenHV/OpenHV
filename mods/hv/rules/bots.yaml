@@ -42,7 +42,7 @@ Player:
 			silo: 1
 		BuildingFractions:
 			miner: 3
-			refinery: 1
+			refinery: 2
 			module: 1
 			radar: 1
 			radar2: 1

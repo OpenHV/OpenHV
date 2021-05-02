@@ -11,7 +11,7 @@ TANK3:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: factory2, ~vehicles.sc
+		Prerequisites: factory, ~vehicles.sc
 		Queue: Vehicle
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 		BuildAtProductionType: Wheeled
@@ -51,7 +51,7 @@ TYRIANTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, ~vehicles.yi
+		Prerequisites: factory, ~vehicles.yi
 		BuildPaletteOrder: 10
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 		BuildAtProductionType: Wheeled
@@ -88,7 +88,7 @@ TANK9:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: factory2
+		Prerequisites: factory
 		Description: Mobile tank with AA missiles.
 		BuildAtProductionType: Wheeled
 	Valued:
@@ -104,6 +104,7 @@ TANK9:
 	Mobile:
 		TurnSpeed: 40
 		Speed: 115
+		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 8c0
 	Turreted:
@@ -162,7 +163,7 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory2
+		Prerequisites: radar, factory
 		BuildPaletteOrder: 40
 		Description: Mobile long range weapon.
 		BuildAtProductionType: Tracked
@@ -265,7 +266,7 @@ TANK16:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, tradplat
+		Prerequisites: factory, tradplat
 		BuildPaletteOrder: 60
 		Description: Repairs nearby vehicles.
 		BuildAtProductionType: Wheeled
@@ -302,7 +303,7 @@ TANK6:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
-		Prerequisites: factory2, tradplat
+		Prerequisites: factory, tradplat
 		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
 		BuildAtProductionType: Wheeled
 	Valued:
@@ -347,7 +348,7 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, techcenter, ~vehicles.sc
+		Prerequisites: factory, techcenter, ~vehicles.sc
 		BuildPaletteOrder: 150
 		Description: A powerful tank which shoots laser.
 		BuildAtProductionType: Wheeled
@@ -585,7 +586,7 @@ ARTIL2:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory2, ~disabled
+		Prerequisites: radar, factory, ~disabled
 		BuildPaletteOrder: 150
 		Description: Mobile long range weapon.
 		BuildAtProductionType: Tracked
@@ -632,7 +633,7 @@ ARTIL3:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
-		Prerequisites: radar, factory3, techcenter, ~vehicles.yi
+		Prerequisites: radar, factory, techcenter, ~vehicles.yi
 		Description: Double barreled artillery tank.
 		BuildAtProductionType: Tracked
 	Health:
@@ -642,6 +643,7 @@ ARTIL3:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 60
+		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
 	Armament:
@@ -687,6 +689,7 @@ BUILDER:
 	Mobile:
 		TurnSpeed: 32
 		Speed: 100
+		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
 	RenderSprites:
@@ -703,9 +706,9 @@ MINER:
 		Queue: Building
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
-		Prerequisites: base
+		Prerequisites: refinery
 	Valued:
-		Cost: 1400
+		Cost: 1100
 	Tooltip:
 		Name: Miner
 	UpdatesPlayerStatistics:
@@ -742,7 +745,7 @@ MISSILE_TANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory3, techcenter, ~vehicles.sc
+		Prerequisites: radar, factory, techcenter, ~vehicles.sc
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
 		BuildAtProductionType: Tracked
@@ -776,7 +779,7 @@ TANK8:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: ~disabled #factory2, ~vehicles.yi
+		Prerequisites: ~disabled #factory, ~vehicles.yi
 		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
 		BuildAtProductionType: Wheeled
 	Valued:
@@ -813,7 +816,7 @@ TANK1:
 		GenericName: Buggy
 	Buildable:
 		BuildPaletteOrder: 200
-		Prerequisites: ~disabled #~vehicles.sc, factory2
+		Prerequisites: ~disabled #~vehicles.sc, factory
 		Queue: Vehicle
 		Description: Remote controlled vehicle\narmed with explosives.
 		BuildAtProductionType: Wheeled

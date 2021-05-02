@@ -3,6 +3,7 @@
 SHIP2:
 	Inherits: ^Plane
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@MAGAZINECASING: ^DropShellCasing
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
@@ -72,8 +73,6 @@ SHIP1:
 		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: ShipMissile
-	Armament@SECONDARY:
-		Weapon: ShipMissile_AA
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false

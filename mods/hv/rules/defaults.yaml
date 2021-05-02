@@ -126,7 +126,7 @@
 	Inherits: ^Vehicle
 	Mobile:
 		TurnSpeed: 100
-		Speed: 120
+		Speed: 100
 		Locomotor: pod
 		Voice: Action
 	Voiced:
@@ -146,6 +146,9 @@
 		FallbackSequence: die
 		DeathPaletteIsPlayerPalette: false
 		Delay: 5
+	Crushable:
+		CrushClasses: Pods
+		WarnProbability: 15
 
 ^Scrap:
 	Interactable:
@@ -617,6 +620,9 @@
 		PlayerPalette: remap
 	WithFacingSpriteBody:
 	HitShape:
+	RepairableNear:
+		RepairActors: harbor
+		CloseEnough: 2c0
 
 ^Waterflow:
 	Inherits@1: ^SpriteActor

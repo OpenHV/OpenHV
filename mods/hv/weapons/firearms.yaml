@@ -41,7 +41,7 @@ LightMachineGun:
 	Burst: 2
 
 ChainGun:
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
 	ReloadDelay: 10
 	Range: 6c0
 	Report: ccbysmgfire01.wav
