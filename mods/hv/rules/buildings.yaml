@@ -232,6 +232,7 @@ TRADPLAT:
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 	WithResupplyAnimation:
+		RequiresCondition: !damaged
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@BuildingName:
@@ -249,6 +250,8 @@ TRADPLAT:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	GrantConditionOnDamageState:
+		Condition: damaged
 
 MODULE:
 	Inherits: ^BaseBuilding
