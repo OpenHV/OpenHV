@@ -270,6 +270,9 @@ tyriantank:
 miner:
 	idle: bits/miner.png
 		Facings: 8
+	creation: bits/miner-creation.png
+		Length: 19
+		Tick: 40
 	icon: bits/units-icons.png
 		Start: 5
 

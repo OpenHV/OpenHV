@@ -719,6 +719,14 @@ MINER:
 		Facing: 384
 		Offset: -2,-2
 
+MINER_REFINERY:
+	Inherits: MINER
+	-Buildable:
+	WithFacingSpriteBody:
+		StartSequence: creation
+	RenderSprites:
+		Image: MINER
+
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
