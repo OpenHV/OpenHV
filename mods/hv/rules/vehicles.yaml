@@ -112,6 +112,8 @@ TANK9:
 	AttackTurreted:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+	RenderSprites:
+		PlayerPalette: green
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
