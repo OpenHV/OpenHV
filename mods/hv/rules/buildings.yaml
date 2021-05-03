@@ -250,7 +250,7 @@ TRADPLAT:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	GrantConditionOnDamageState:
+	GrantConditionOnDamageState@Damaged:
 		Condition: damaged
 
 MODULE:
