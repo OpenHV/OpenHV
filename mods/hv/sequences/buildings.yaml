@@ -896,7 +896,7 @@ harbor:
 		ZOffset: -2000
 	shadow-overlay: bits/harbor-shadow.png
 		ZOffset: -1768
-		Offset: 6, -1
+		Offset: 6, 4
 	production-inprogress: bits/harbor.png
 		Start: 3
 		Length: 7

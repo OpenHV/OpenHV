@@ -1394,7 +1394,7 @@ HARBOR:
 	Tooltip:
 		Name: Harbor
 	Building:
-		Footprint: xxx x=x x=x
+		Footprint: xxx x=x ___
 		Dimensions: 3,3
 		TerrainTypes: Water
 	Health:
@@ -1412,7 +1412,7 @@ HARBOR:
 	Exit@Front:
 		ExitCell: 1,2
 		ProductionTypes: Ship
-		Facing: 360
+		Facing: 512
 		Priority: 2
 	Exit@Back:
 		ExitCell: 1,-1
