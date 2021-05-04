@@ -709,8 +709,10 @@ TURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:	
 	-CommandBarBlacklist:
 
 TURRET2:
@@ -788,8 +790,10 @@ TURRET2:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:	
 	-CommandBarBlacklist:
 
 AATURRET:
@@ -865,8 +869,10 @@ AATURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:	
 	AmbientSound:
 		RequiresCondition: charging
 		SoundFiles: charging-Mike_Koenig.wav
@@ -939,8 +945,10 @@ AATURRET2:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:	
 	-CommandBarBlacklist:
 
 FIELD:
@@ -1296,8 +1304,10 @@ ARTILLERYTURRET:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:	
 	-CommandBarBlacklist:
 
 TELEVATR:
