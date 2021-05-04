@@ -232,6 +232,7 @@ TRADPLAT:
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 	WithResupplyAnimation:
+		RequiresCondition: !burning
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@BuildingName:
