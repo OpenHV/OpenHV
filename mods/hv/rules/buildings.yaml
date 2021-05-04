@@ -79,9 +79,11 @@ BASE:
 	WithProductionExitOverlay@platform1:
 		ExitCell: 0,3
 		Sequence: active-platform1
+		CreationSound: Quedicemipez__teleportation.wav
 	WithProductionExitOverlay@platform2:
 		ExitCell: 1,3
 		Sequence: active-platform2
+		CreationSound: Quedicemipez__teleportation.wav
 	TerrainLightSource:
 		Range: 2c512
 		Intensity: 0.1
@@ -129,13 +131,6 @@ GENERATOR:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -180,13 +175,6 @@ RADAR:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 RADAR2:
 	Inherits: RADAR
@@ -243,13 +231,6 @@ TRADPLAT:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -321,13 +302,6 @@ MODULE:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 MINER2:
 	Inherits: ^BaseBuilding
@@ -372,6 +346,7 @@ MINER2:
 		RequiresCondition: !build-incomplete && !critical
 	Capturable:
 		RequiresCondition: !build-incomplete
+	-WithConstructionBeamOverlay:
 
 STARPORT:
 	Inherits: ^BaseBuilding
@@ -435,13 +410,6 @@ STARPORT:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithProductionOverlay:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
@@ -507,13 +475,6 @@ FACTORY2:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 		RequiresCondition: !build-incomplete
@@ -545,6 +506,7 @@ FACTORY2:
 	WithProductionExitOverlay@creation:
 		ExitCell: 0,2
 		Sequence: active-creation
+		CreationSound: Quedicemipez__teleportation.wav
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
@@ -632,13 +594,6 @@ TECHCENTER:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@animation:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled
@@ -704,13 +659,10 @@ TURRET:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 	-CommandBarBlacklist:
 
 TURRET2:
@@ -783,13 +735,10 @@ TURRET2:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 	-CommandBarBlacklist:
 
 AATURRET:
@@ -860,13 +809,10 @@ AATURRET:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 	AmbientSound:
 		RequiresCondition: charging
 		SoundFiles: charging-Mike_Koenig.wav
@@ -934,13 +880,10 @@ AATURRET2:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 	-CommandBarBlacklist:
 
 FIELD:
@@ -996,13 +939,10 @@ FIELD:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -1069,13 +1009,10 @@ SILO:
 	WithIdleOverlay@lights:
 		Sequence: animation_lights
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 	WithIdleOverlay@shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -1127,13 +1064,6 @@ STORAGE:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 REFINERY:
 	Inherits: ^BaseBuilding
@@ -1177,13 +1107,6 @@ REFINERY:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	ExitsDebugOverlay:
 	Exit@Bottom:
 		ExitCell: 0,2
@@ -1291,13 +1214,10 @@ ARTILLERYTURRET:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 	-CommandBarBlacklist:
 
 TELEVATR:
@@ -1359,6 +1279,7 @@ TELEVATR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
+		RequiresCondition: !build-incomplete
 
 TELEVTR2:
 	Inherits: TELEVATR
@@ -1373,10 +1294,6 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 
 HARBOR:
 	Inherits: ^BaseBuilding
@@ -1450,13 +1367,6 @@ HARBOR:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@Entry:
 		Sequence: idle-entry
 		RequiresCondition: !build-incomplete

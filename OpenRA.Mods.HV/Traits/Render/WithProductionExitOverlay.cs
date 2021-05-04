@@ -35,6 +35,9 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Custom palette is a player palette BaseName.")]
 		public readonly bool IsPlayerPalette = false;
 
+		[Desc("Plays a sound when an actor is spawned.")]
+		public readonly string CreationSound = null;
+
 		public override object Create(ActorInitializer init) { return new WithProductionExitOverlay(init, this); }
 	}
 
@@ -64,6 +67,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 			{
 				active = true;
 				overlay.PlayThen(info.Sequence, () => active = false);
+				Game.Sound.Play(SoundType.World, info.CreationSound, self.CenterPosition);
 			}
 		}
 	}
