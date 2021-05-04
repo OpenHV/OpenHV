@@ -386,6 +386,7 @@
 		BeingCapturedCondition: being-captured
 	Capturable:
 		Types: building
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	CaptureNotification:
@@ -394,6 +395,11 @@
 	BotRepairOrSellCaptures:
 	ActorLostNotification:
 		Notification: BuildingLost
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
 
 ^Prop:
 	Inherits: ^Building
