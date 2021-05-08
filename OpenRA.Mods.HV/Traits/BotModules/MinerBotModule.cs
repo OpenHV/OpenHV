@@ -26,6 +26,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Actor types that can deploy onto resources.")]
 		public readonly HashSet<string> DeployableActorTypes = new HashSet<string>();
 
+		[Desc("Where to request production of additional deployable actors.")]
+		public readonly string VehiclesQueue = "Vehicle";
+
 		[FieldLoader.Require]
 		[Desc("Terrain types that can be targeted for deployment.")]
 		public readonly HashSet<string> DeployableTerrainTypes = new HashSet<string>();
@@ -144,6 +147,10 @@ namespace OpenRA.Mods.HV.Traits
 			if (unitBuilder != null)
 			{
 				var minerInfo = AIUtils.GetInfoByCommonName(Info.DeployableActorTypes, player);
+				var queue = AIUtils.FindQueues(player, Info.VehiclesQueue).FirstOrDefault();
+				if (!queue.CanBuild(minerInfo))
+					return;
+
 				var miningTowers = AIUtils.CountBuildingByCommonName(Info.DeployedActorTypes, player);
 				if (miningTowers < Info.MinimumDeployedActors && unitBuilder.RequestedProductionCount(bot, minerInfo.Name) == 0)
 					unitBuilder.RequestUnitProduction(bot, minerInfo.Name);

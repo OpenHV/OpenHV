@@ -48,11 +48,13 @@ BASE:
 	Buildable:
 		Description: Builds structures and builders.
 	Production:
-		Produces: Building, Defense
+		Produces: Building, Defense, Vehicle
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:
 		ProductionType: Defense
+	ProductionBar@Vehicle:
+		ProductionType: Vehicle
 	ProductionSound:
 		Files: Quedicemipez__teleportation.wav
 	RenderSprites:

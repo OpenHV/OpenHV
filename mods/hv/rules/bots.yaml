@@ -25,7 +25,6 @@ Player:
 		RefineryTypes: refinery
 		SiloTypes: storage
 		BuildingLimits:
-			miner: 1
 			refinery: 1
 			module: 4
 			factory2: 4
@@ -41,7 +40,6 @@ Player:
 			field: 1
 			silo: 1
 		BuildingFractions:
-			miner: 3
 			refinery: 2
 			module: 1
 			radar: 1
@@ -71,6 +69,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
+			miner: 3
 			tank4: 1
 			tank3: 5
 			tank5: 5
@@ -97,6 +96,7 @@ Player:
 			boat2: 1
 			boat3: 1
 		UnitLimits:
+			miner: 1
 			builder: 0
 			balloon: 2
 			saucer: 2

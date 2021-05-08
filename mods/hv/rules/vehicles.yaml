@@ -177,7 +177,7 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory
+		Prerequisites: radar, ~factory
 		BuildPaletteOrder: 40
 		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
@@ -598,7 +598,7 @@ TANK15:
 		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, techcenter, tradplat
+		Prerequisites: ~factory2, techcenter, tradplat
 		BuildPaletteOrder: 110
 		Description: Disables units.
 	Armament:
@@ -635,7 +635,7 @@ ARTIL2:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory, ~disabled
+		Prerequisites: radar, ~factory, ~disabled
 		BuildPaletteOrder: 150
 		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
@@ -722,10 +722,11 @@ ARTIL3:
 BUILDER:
 	Inherits: ^Vehicle
 	Buildable:
-		Queue: Building
+		Queue: Vehicle
 		BuildPaletteOrder: 10
 		Description: Grants additional build radius.
 		Prerequisites: base
+		BuildAtProductionType: Building
 	GivesBuildableArea:
 		AreaTypes: building
 	BaseProvider:
@@ -762,10 +763,11 @@ MINER:
 	Inherits: ^Vehicle
 	Inherits@SELECTION: ^SelectableEconomicUnit
 	Buildable:
-		Queue: Building
+		Queue: Vehicle
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
 		Prerequisites: refinery
+		BuildAtProductionType: Building
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -845,7 +847,7 @@ TANK8:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: factory3, radar, tradplat
+		Prerequisites: ~factory3, radar, tradplat
 		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Unarmed
 	Valued:
 		Cost: 400
