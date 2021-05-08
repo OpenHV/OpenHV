@@ -798,7 +798,7 @@ MINER:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2
 		Facing: 384
-		Offset: -2,-2
+		Offset: -1,-2
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle

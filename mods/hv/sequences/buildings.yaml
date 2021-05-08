@@ -258,7 +258,7 @@ module:
 miner2:
 	Inherits@flame: ^BuildingFlame2
 	Defaults:
-		Offset: 2, -31
+		Offset: 0, -20
 	make:
 		Length: 17
 		Tick: 100
@@ -268,7 +268,7 @@ miner2:
 				Length: 17
 				Tick: 100
 			bits/miner2-shadow.png:
-				Offset: 15, 36
+				Offset: 15, 32
 				Length: 17
 				Tick: 100
 	active:
@@ -284,7 +284,7 @@ miner2:
 				Start: 17
 				Length: 3
 				Tick: 300
-				Offset: 15, 36
+				Offset: 15, 32
 	damaged-active:
 		ShadowStart: 1
 		Length: 1
@@ -293,7 +293,7 @@ miner2:
 				Start: 20
 			bits/miner2-shadow.png:
 				Start: 20
-				Offset: 15, 36
+				Offset: 15, 32
 	silo: bits/miner2.png
 		Start: 21
 		Length: 6
