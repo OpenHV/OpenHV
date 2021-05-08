@@ -594,11 +594,13 @@ FACTORY2:
 		ExitDelay: 20
 	Production:
 		Produces: Vehicle
+	ProductionBar:
+		ProductionType: Vehicle
+	ProductionSound:
+		Files: Quedicemipez__teleportation.wav
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
-	ProductionBar:
-		ProductionType: Vehicle
 	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
 		Position: Top
