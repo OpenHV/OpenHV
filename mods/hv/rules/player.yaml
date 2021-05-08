@@ -54,6 +54,7 @@ Player:
 		CancelledAudio: Cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+		BuildDurationModifier: 70
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		DisplayOrder: 1
