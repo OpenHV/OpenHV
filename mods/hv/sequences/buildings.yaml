@@ -74,7 +74,7 @@ base:
 		Length: 23
 		Offset: -11, 7
 		ZOffset: 2048
-	active-platform1-damaged: bits/creation-damaged.png
+	damaged-active-platform1: bits/creation-damaged.png
 		Length: 23
 		Offset: -11, 7
 		ZOffset: 2048
@@ -93,7 +93,7 @@ base:
 		Length: 23
 		Offset: 9, 7
 		ZOffset: 2048
-	active-platform2-damaged: bits/creation-damaged.png
+	damaged-active-platform2: bits/creation-damaged.png
 		Length: 23
 		Offset: 9, 7
 		ZOffset: 2048
@@ -474,7 +474,7 @@ factory2:
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
-	active-creation-damaged: bits/creatn2-damaged.png
+	damaged-active-creation: bits/creatn2-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
@@ -581,7 +581,7 @@ factory3:
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
-	active-creation-damaged: bits/creatn2-damaged.png
+	damaged-active-creation: bits/creatn2-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048

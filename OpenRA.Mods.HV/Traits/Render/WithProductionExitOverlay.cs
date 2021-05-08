@@ -63,7 +63,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 			if (info.ExitCell == (exit - self.Location))
 			{
 				active = true;
-				overlay.PlayThen(info.Sequence, () => active = false);
+				var sequence = RenderSprites.NormalizeSequence(overlay, self.GetDamageState(), info.Sequence);
+				overlay.PlayThen(sequence, () => active = false);
 			}
 		}
 	}
