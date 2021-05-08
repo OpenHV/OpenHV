@@ -1280,10 +1280,13 @@ REFINERY:
 		Sequence: animation
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
-	FreeActor:
+	FreeActorWithEffect:
 		Actor: miner
-		SpawnOffset: 1,3
+		SpawnOffset: 2,3
 		Facing: 512
+		Palette: effect
+		Image: energyball
+		Sequence: appear
 	ProvidesPrerequisite@BuildingName:
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1

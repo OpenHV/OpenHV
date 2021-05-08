@@ -357,3 +357,7 @@ energyball:
 		Length: 10
 	teleport-large: bits/teleprt2.png
 		Length: 9
+	appear: bits/teleport.png
+		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
+		Length: *
+		Tick: 50
