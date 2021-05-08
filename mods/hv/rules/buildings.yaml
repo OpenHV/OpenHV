@@ -53,6 +53,8 @@ BASE:
 		ProductionType: Building
 	ProductionBar@Defense:
 		ProductionType: Defense
+	ProductionSound:
+		Files: Quedicemipez__teleportation.wav
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@shadow:
