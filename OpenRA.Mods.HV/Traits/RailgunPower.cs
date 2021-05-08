@@ -34,6 +34,16 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Amount of time after detonation to remove the camera.")]
 		public readonly int CameraRemoveDelay = 25;
 
+		[Desc("Effect sequence sprite image")]
+		public readonly string Effect = "railgun";
+
+		[SequenceReference(nameof(Effect))]
+		[Desc("Effect sequence to display")]
+		public readonly string EffectSequence = "idle";
+
+		[PaletteReference]
+		public readonly string EffectPalette = "effect";
+
 		[WeaponReference]
 		[Desc("Which weapon to fire")]
 		public readonly string Weapon = "RailgunStrike";
@@ -79,7 +89,8 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				PlayLaunchSounds();
 
-				w.Add(new Railgun(self.Owner, info.WeaponInfo, w, self.CenterPosition, target, info.WeaponDelay));
+				w.Add(new Railgun(self.Owner, info.WeaponInfo, w, self.CenterPosition, target,
+					info.Effect, info.EffectSequence, info.EffectPalette, info.WeaponDelay));
 
 				if (info.CameraRange != WDist.Zero)
 				{

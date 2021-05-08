@@ -102,6 +102,12 @@ nuclear:
 	down: bits/nuclear_bomb.png
 		ZOffset: 2030
 
+railgun:
+	idle: bits/railgunsfx.png
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023
+
 smoke:
 	idle: bits/smoke.png
 		Length: 6

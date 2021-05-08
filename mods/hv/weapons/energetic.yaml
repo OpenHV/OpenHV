@@ -258,6 +258,7 @@ ElectricSpark:
 
 RailgunStrike:
 	ValidTargets: Water, Ground, Tree, Air
+	Report: ray_gun-Mike_Koenig.wav
 	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 10000
