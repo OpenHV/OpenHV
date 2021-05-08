@@ -25,6 +25,10 @@ BOAT3:
 		TurnSpeed: 60
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 120
 		Offset: -50,0,100
@@ -63,6 +67,10 @@ BOAT:
 		TurnSpeed: 60
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 60
 		Offset: 150,0,100
@@ -103,6 +111,10 @@ BOAT2:
 		TurnSpeed: 40
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
 	Armament:

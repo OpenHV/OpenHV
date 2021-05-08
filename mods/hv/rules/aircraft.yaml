@@ -20,6 +20,11 @@ SHIP2:
 	RevealsShroud:
 		Range: 10c0
 		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: ChainGun.Shuttle
 		LocalOffset: 256,0,0
@@ -71,6 +76,11 @@ SHIP1:
 	RevealsShroud:
 		Range: 10c0
 		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Armament@PRIMARY:
 		Weapon: ShipMissile
 	AttackAircraft:
@@ -120,6 +130,11 @@ COPTER:
 	RevealsShroud:
 		Range: 10c0
 		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 115
@@ -160,6 +175,11 @@ SAUCER:
 	RevealsShroud:
 		Range: 16c0
 		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16
 		Speed: 70
@@ -193,6 +213,11 @@ BANSHEE:
 		HP: 10000
 	RevealsShroud:
 		Range: 10c0
+		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16
@@ -232,6 +257,11 @@ COPTER2:
 		HP: 15000
 	RevealsShroud:
 		Range: 8c0
+		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
@@ -286,6 +316,11 @@ BALLOON:
 	RevealsShroud:
 		Range: 16c0
 		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Aircraft:
 		Speed: 70
 	Voiced:
@@ -338,6 +373,11 @@ DROPSHIP:
 		HP: 15000
 	RevealsShroud:
 		Range: 8c0
+		Type: GroundPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20

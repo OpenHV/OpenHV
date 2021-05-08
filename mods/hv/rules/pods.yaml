@@ -15,6 +15,10 @@ SCOUT1:
 		AddToArmyValue: true
 	RevealsShroud:
 		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Armament:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
@@ -39,6 +43,10 @@ SCOUT2:
 		AddToArmyValue: true
 	RevealsShroud:
 		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Armament@PRIMARY:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
@@ -86,3 +94,7 @@ TECHNICIAN:
 		PlayerPalette: green
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0

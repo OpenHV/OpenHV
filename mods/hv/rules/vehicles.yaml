@@ -23,6 +23,10 @@ TANK3:
 		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 25
 		Offset: -125,0,50
@@ -64,6 +68,10 @@ TYRIANTANK:
 		Speed: 100
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 25
 	Armament:
@@ -104,6 +112,10 @@ TANK9:
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
 	Armament:
@@ -137,6 +149,10 @@ TRANSPRT:
 		PauseOnCondition: notmobile || ecmdisabled
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Cargo:
 		Types: Scout
 		MaxWeight: 5
@@ -176,6 +192,10 @@ ARTIL:
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Armament:
 		Weapon: SmallArtillery
 		MuzzleSequence: muzzle
@@ -223,6 +243,11 @@ TANK4:
 	RevealsShroud:
 		RequiresCondition: undeployed
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		RequiresCondition: undeployed
 	RevealsShroud@DEPLOYED:
 		RequiresCondition: !undeployed
 		Range: 12c0
@@ -284,6 +309,10 @@ TANK16:
 		TurnSpeed: 20
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
@@ -314,6 +343,10 @@ TANK6:
 		Speed: 128
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Minelayer:
 		Mines: mine1, mine2, mine3, mine4
 	MineImmune:
@@ -361,6 +394,10 @@ TANK5:
 		Speed: 75
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -387,6 +424,10 @@ TANK10:
 		Speed: 75
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Armament:
 		Weapon: VoltageArc
 		LocalOffset: 0,0,213
@@ -424,6 +465,10 @@ TANK7:
 		Speed: 120
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Cloak:
 		InitialDelay: 90
 		CloakDelay: 90
@@ -463,6 +508,10 @@ TANK11:
 		Speed: 85
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -498,6 +547,10 @@ TANK12:
 		Speed: 71
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -519,6 +572,10 @@ TANK13:
 		Speed: 128
 	RevealsShroud:
 		Range: 5c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	ResourceTransporter:
 	SpawnActorOnDeath:
 		Actor: goldball
@@ -541,7 +598,7 @@ TANK15:
 		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~factory, techcenter, tradplat
+		Prerequisites: factory2, techcenter, tradplat
 		BuildPaletteOrder: 110
 		Description: Disables units.
 	Armament:
@@ -559,6 +616,10 @@ TANK15:
 		Speed: 110
 	RevealsShroud:
 		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
@@ -589,6 +650,10 @@ ARTIL2:
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 5c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Armament:
 		Weapon: SmallArtillery
 		LocalOffset: 550,0,800
@@ -632,6 +697,10 @@ ARTIL3:
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Armament:
 		Weapon: DoubleBarrelledArtillery
 		MuzzleSequence: muzzle
@@ -678,6 +747,10 @@ BUILDER:
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	RenderSprites:
 		Image: builder1
 		PlayerPalette: green
@@ -708,6 +781,10 @@ MINER:
 		Speed: 80
 	RevealsShroud:
 		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	RenderSprites:
 		PlayerPalette: green
 	GrantConditionOnTerrain:
@@ -744,6 +821,10 @@ MISSILE_TANK:
 		Speed: 80
 	RevealsShroud:
 		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: -250,-50,100
@@ -764,22 +845,14 @@ TANK8:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: ~disabled #, factory3
-		Description: Rogue SysOp in a tank.\nInfiltrates and captures enemy structures.\n  Unarmed
+		Prerequisites: factory3, radar, tradplat
+		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Unarmed
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Hacker Tank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	CaptureManager:
-	Captures:
-		CaptureTypes: building
-		PlayerExperience: 25
-		CaptureDelay: 375
-		ConsumedByCapture: false
-		EnterCursor: ability
-		EnterBlockedCursor: move-blocked
 	Health:
 		HP: 10000
 	Armor:
@@ -790,6 +863,9 @@ TANK8:
 		PlayerPalette: green
 	RevealsShroud:
 		Range: 6c0
+	CreatesShroud:
+		Range: 8c0
+	RenderShroudCircle:
 
 TANK1:
 	Inherits: ^Vehicle
@@ -813,6 +889,10 @@ TANK1:
 		Speed: 140
 	RevealsShroud:
 		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	Demolition:
 		DetonationDelay: 45
 		EnterBehaviour: Dispose
@@ -852,6 +932,10 @@ TANK2:
 		Speed: 500
 	RevealsShroud:
 		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
 	RenderSprites:
 		PlayerPalette: green
 
@@ -872,6 +956,10 @@ TANKER1:
 	Mobile:
 		Speed: 128
 	RevealsShroud:
+		Range: 4c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
 		Range: 4c0
 	ResourceTransporter:
 	SpawnActorOnDeath:
