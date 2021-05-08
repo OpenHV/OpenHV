@@ -151,3 +151,6 @@ SEAMNSTR:
 	Interactable:
 	RejectsOrders:
 	-OutlinedSelectionDecorations:
+	-Explodes:
+	WithDeathAnimation:
+		FallbackSequence: die

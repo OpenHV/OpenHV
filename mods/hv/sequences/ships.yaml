@@ -43,5 +43,6 @@ seamnstr:
 		Start: 15
 		Length: 15
 		Tick: 300
+	die: bits/blood1.png
 	idle: bits/null.png
 	icon: bits/icon.png
