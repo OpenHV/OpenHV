@@ -3,16 +3,13 @@
     "configurations": [
         {
             "name": "OpenHV",
-            "type": "clr",
-            "linux": {
-                "type": "mono"
-            },
-            "osx": {
-                "type": "mono"
-            },
+            "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/engine/bin/OpenRA.exe",
+            "program": "${workspaceRoot}/engine/bin/OpenRA.dll",
+            "windows": {
+                "program": "${workspaceRoot}/engine/bin/OpenRA.exe",
+            },
             "args": [
                 "Engine.EngineDir=${workspaceRoot}/engine",
                 "Engine.ModSearchPaths=${workspaceRoot}/mods",
