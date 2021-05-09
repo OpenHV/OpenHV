@@ -49,10 +49,10 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Avoid enemy actors nearby when searching for a new resource patch. Should be somewhere near the max weapon range.")]
 		public readonly WDist EnemyAvoidanceRadius = WDist.FromCells(8);
 
-		public override object Create(ActorInitializer init) { return new MinerDeployManagerBotModule(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new MinerBotModule(init.Self, this); }
 	}
 
-	public class MinerDeployManagerBotModule : ConditionalTrait<MinerBotModuleInfo>, IBotTick
+	public class MinerBotModule : ConditionalTrait<MinerBotModuleInfo>, IBotTick
 	{
 		readonly World world;
 		readonly Player player;
@@ -84,13 +84,18 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Dictionary<Actor, MinerTraitWrapper> miners = new Dictionary<Actor, MinerTraitWrapper>();
 
-		public MinerDeployManagerBotModule(Actor self, MinerBotModuleInfo info)
+		public MinerBotModule(Actor self, MinerBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;
 			player = self.Owner;
 
 			unitCannotBeOrdered = a => a.Owner != self.Owner || a.IsDead || !a.IsInWorld;
+		}
+
+		protected override void Created(Actor self)
+		{
+			requestUnitProduction = self.Owner.PlayerActor.TraitsImplementing<IBotRequestUnitProduction>().ToArray();
 		}
 
 		protected override void TraitEnabled(Actor self)
@@ -101,8 +106,6 @@ namespace OpenRA.Mods.HV.Traits
 			pathfinder = world.WorldActor.Trait<IPathFinder>();
 			domainIndex = world.WorldActor.Trait<DomainIndex>();
 			resourceLayer = world.WorldActor.TraitOrDefault<IResourceLayer>();
-
-			requestUnitProduction = player.PlayerActor.TraitsImplementing<IBotRequestUnitProduction>().ToArray();
 		}
 
 		void IBotTick.BotTick(IBot bot)
@@ -143,18 +146,18 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			// Keep the economy running before starving out.
-			var unitBuilder = requestUnitProduction.FirstOrDefault(Exts.IsTraitEnabled);
-			if (unitBuilder != null)
-			{
-				var minerInfo = AIUtils.GetInfoByCommonName(Info.DeployableActorTypes, player);
-				var queue = AIUtils.FindQueues(player, Info.VehiclesQueue).FirstOrDefault();
-				if (!queue.CanBuild(minerInfo))
-					return;
+			var queue = AIUtils.FindQueues(player, Info.VehiclesQueue).FirstOrDefault();
+			var minerInfo = AIUtils.GetInfoByCommonName(Info.DeployableActorTypes, player);
+			if (queue == null || !queue.CanBuild(minerInfo))
+				return;
 
-				var miningTowers = AIUtils.CountBuildingByCommonName(Info.DeployedActorTypes, player);
-				if (miningTowers < Info.MinimumDeployedActors && unitBuilder.RequestedProductionCount(bot, minerInfo.Name) == 0)
-					unitBuilder.RequestUnitProduction(bot, minerInfo.Name);
-			}
+			var unitBuilder = requestUnitProduction.FirstOrDefault(Exts.IsTraitEnabled);
+			if (unitBuilder == null)
+				return;
+
+			var miningTowers = AIUtils.CountBuildingByCommonName(Info.DeployedActorTypes, player);
+			if (miningTowers < Info.MinimumDeployedActors && unitBuilder.RequestedProductionCount(bot, minerInfo.Name) == 0)
+				unitBuilder.RequestUnitProduction(bot, minerInfo.Name);
 		}
 
 		Target FindNextResource(Actor actor, MinerTraitWrapper miner)
