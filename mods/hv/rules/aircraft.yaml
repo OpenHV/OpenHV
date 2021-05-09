@@ -183,6 +183,7 @@ SAUCER:
 	Aircraft:
 		TurnSpeed: 16
 		Speed: 70
+		CanForceLand: false
 	Voiced:
 		VoiceSet: SaucerVoice
 	-WithShadow:
@@ -323,6 +324,7 @@ BALLOON:
 		Type: GroundPosition
 	Aircraft:
 		Speed: 70
+		CanForceLand: false
 	Voiced:
 		VoiceSet: BalloonVoice
 	Guard:
