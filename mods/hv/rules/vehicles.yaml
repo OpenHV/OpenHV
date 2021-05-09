@@ -799,6 +799,7 @@ MINER:
 		IntoActor: miner2
 		Facing: 384
 		Offset: -1,-2
+		TransformSounds: hybrid-v_sci-fi-weapons-deploy.wav
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
