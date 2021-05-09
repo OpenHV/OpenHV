@@ -392,6 +392,7 @@
 	CaptureNotification:
 	Sellable:
 		RequiresCondition: !being-captured
+		SellSounds: Freqman_fx376-reverse.wav
 	BotRepairOrSellCaptures:
 	ActorLostNotification:
 		Notification: BuildingLost
