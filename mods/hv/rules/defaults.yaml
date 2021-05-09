@@ -217,7 +217,7 @@
 		GenericName: Plane
 	WithShadow:
 		Offset: 356, 256, 0
-		ZOffset: -129
+		ZOffset: -256
 	WithFacingSpriteBody:
 	MustBeDestroyed:
 	HitShape:
