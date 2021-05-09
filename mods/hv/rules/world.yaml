@@ -285,6 +285,18 @@ World:
 		Factions: yi, sc
 		BaseActor: base
 		SupportActors: miner
+	StartingUnits@SCOUTSC:
+		Class: scout
+		ClassName: Base + Scout
+		Factions: sc
+		BaseActor: base
+		SupportActors: balloon
+	StartingUnits@SCOUTYI:
+		Class: scout
+		ClassName: Base + Scout
+		Factions: yi
+		BaseActor: base
+		SupportActors: saucer
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnStartingUnits:
