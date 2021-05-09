@@ -1117,7 +1117,7 @@ SILO:
 		ChargeInterval: 13500
 		Description: Atom Bomb
 		LongDesc: Drop an atomic bomb\nat a target location.
-		Prerequisites: ~structures.sc
+		Prerequisites: ~structures.yi
 		MissileWeapon: nuclear
 		MissileDelay: 5
 		SkipAscent: true
@@ -1136,7 +1136,7 @@ SILO:
 		ChargeInterval: 9000
 		Description: Orbital Railgun
 		LongDesc: Initiate a surgical strike.\nApplies instant damage to a small area.
-		Prerequisites: ~structures.yi
+		Prerequisites: ~structures.sc
 		DisplayRadarPing: True
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 20
