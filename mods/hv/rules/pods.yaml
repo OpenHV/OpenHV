@@ -61,6 +61,40 @@ SCOUT2:
 	RenderSprites:
 		PlayerPalette: green
 
+SNIPERPOD:
+	Inherits: ^Pod
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Scouts
+		Description: Long range sniper pod.
+		Prerequisites: module, radar
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Sniper Pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Mobile:
+		TurnSpeed: 100
+		Speed: 80
+		Locomotor: pod
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament:
+		Weapon: SniperRifle
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+	WithMuzzleOverlay:
+	RenderSprites:
+		PlayerPalette: green
+
 TECHNICIAN:
 	Inherits: ^Pod
 	Inherits@SELECTION: ^SelectableSupportUnit

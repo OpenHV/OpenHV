@@ -149,3 +149,18 @@ Vulcan:
 			Light: 20
 			Heavy: 10
 			Concrete: 28
+
+SniperRifle:
+	Inherits: LightMachineGun
+	Report: twisterman_silenced-gun-1.wav
+	Warhead@Damage: SpreadDamage
+		Spread: 24
+		Versus:
+			None: 1000
+			Steel: 40
+			Light: 55
+			Heavy: 25
+			Concrete: 15	
+	ReloadDelay: 50
+	Range: 10c0
+	Burst: 1

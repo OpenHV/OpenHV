@@ -245,6 +245,19 @@ scout2:
 	icon: bits/units-icons.png
 		Start: 1
 
+sniperpod:
+	idle: bits/sniperpod.png
+		Facings: 8
+	muzzle: bits/muzzle3.png
+		Length: 3
+		Facings: 8
+		Tick: 50
+	die: bits/blood1.png
+		Length: 8
+		Tick: 100
+	icon: bits/units-icons.png
+		Start: 44
+
 technician:
 	idle: bits/technician.png
 		Facings: 8
