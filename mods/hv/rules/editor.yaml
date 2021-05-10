@@ -9,6 +9,7 @@ MpSpawn:
 		OccupiesSpace: false
 	WithSpriteBody:
 	RenderSpritesEditorOnly:
+		PlayerPalette: misc
 	BodyOrientation:
 		QuantizedFacings: 1
 	MapEditorData:
@@ -63,6 +64,7 @@ LIGHT:
 		OccupiesSpace: false
 	RenderSpritesEditorOnly:
 		Image: light
+		PlayerPalette: misc
 	WithSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 1
@@ -92,5 +94,6 @@ CAMERA:
 	WithSpriteBody:
 	RenderSpritesEditorOnly:
 		Image: camera
+		PlayerPalette: misc
 	MapEditorData:
 		Categories: System
