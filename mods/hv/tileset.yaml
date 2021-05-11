@@ -9799,3 +9799,387 @@ Templates:
 		Categories: Snow, Plant
 		Tiles:
 			0: Plant
+	Template@1306:
+		Id: 1306
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1307:
+		Id: 1307
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1308:
+		Id: 1308
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1309:
+		Id: 1309
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1310:
+		Id: 1310
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1311:
+		Id: 1311
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1312:
+		Id: 1312
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1313:
+		Id: 1313
+		Images: bits/terrain/grascliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Grass, Cliff
+		Tiles:
+			0: Cliff
+	Template@1314:
+		Id: 1314
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1315:
+		Id: 1315
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1316:
+		Id: 1316
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1317:
+		Id: 1317
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1318:
+		Id: 1318
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1319:
+		Id: 1319
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1320:
+		Id: 1320
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1321:
+		Id: 1321
+		Images: bits/terrain/crtcliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Crater, Cliff
+		Tiles:
+			0: Cliff
+	Template@1322:
+		Id: 1322
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1323:
+		Id: 1323
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1324:
+		Id: 1324
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1325:
+		Id: 1325
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1326:
+		Id: 1326
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1327:
+		Id: 1327
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1328:
+		Id: 1328
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1329:
+		Id: 1329
+		Images: bits/terrain/sn2-cliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Red Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1330:
+		Id: 1330
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1331:
+		Id: 1331
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1332:
+		Id: 1332
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1333:
+		Id: 1333
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1334:
+		Id: 1334
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1335:
+		Id: 1335
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1336:
+		Id: 1336
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1337:
+		Id: 1337
+		Images: bits/terrain/sndcliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1338:
+		Id: 1338
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1339:
+		Id: 1339
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1340:
+		Id: 1340
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1341:
+		Id: 1341
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1342:
+		Id: 1342
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1343:
+		Id: 1343
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1344:
+		Id: 1344
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1345:
+		Id: 1345
+		Images: bits/terrain/snwcliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Snow, Cliff
+		Tiles:
+			0: Cliff
+	Template@1346:
+		Id: 1346
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1347:
+		Id: 1347
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1348:
+		Id: 1348
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1349:
+		Id: 1349
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1350:
+		Id: 1350
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1351:
+		Id: 1351
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1352:
+		Id: 1352
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1353:
+		Id: 1353
+		Images: bits/terrain/stncliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
