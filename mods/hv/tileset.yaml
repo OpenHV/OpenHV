@@ -2264,7 +2264,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@283:
 		Id: 283
 		Images: bits/terrain/icebrk.png
@@ -2272,7 +2272,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@284:
 		Id: 284
 		Images: bits/terrain/icebrk.png
@@ -2280,7 +2280,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@285:
 		Id: 285
 		Images: bits/terrain/icebrk.png
@@ -2304,7 +2304,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@288:
 		Id: 288
 		Images: bits/terrain/icebrk.png
@@ -2320,7 +2320,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@290:
 		Id: 290
 		Images: bits/terrain/icebrk.png
@@ -2344,7 +2344,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@293:
 		Id: 293
 		Images: bits/terrain/icebrk.png
@@ -2352,7 +2352,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@294:
 		Id: 294
 		Images: bits/terrain/icebrk.png
@@ -2360,7 +2360,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Water
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@295:
 		Id: 295
 		Images: bits/terrain/icedent.png
@@ -3543,7 +3543,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Rock
 		Tiles:
-			0: Rock
+			0: Mountain
 	Template@454:
 		Id: 454
 		Images: bits/terrain/mntmisc.png
@@ -3559,7 +3559,7 @@ Templates:
 		Size: 1,1
 		Categories: Mountain, Rock
 		Tiles:
-			0: Rock
+			0: Mountain
 	Template@456:
 		Id: 456
 		Images: bits/terrain/mntmisc.png
@@ -4313,7 +4313,7 @@ Templates:
 		Size: 1,1
 		Categories: Rock, Snow
 		Tiles:
-			0: Rock
+			0: Snow
 	Template@563:
 		Id: 563
 		Images: bits/terrain/sand.png
@@ -6079,7 +6079,7 @@ Templates:
 		Size: 1,1
 		Categories: Red Snow, Rock
 		Tiles:
-			0: Rock
+			0: Red Snow
 	Template@795:
 		Id: 795
 		Images: bits/terrain/snw2-rck.png
@@ -6087,7 +6087,7 @@ Templates:
 		Size: 1,1
 		Categories: Red Snow, Rock
 		Tiles:
-			0: Rock
+			0: Red Snow
 	Template@796:
 		Id: 796
 		Images: bits/terrain/snw2-lav.png
@@ -7772,7 +7772,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Rock
 		Tiles:
-			0: Rock
+			0: Stone
 	Template@1036:
 		Id: 1036
 		Images: bits/terrain/stnmisc.png
@@ -7780,7 +7780,7 @@ Templates:
 		Size: 1,1
 		Categories: Stone, Rock
 		Tiles:
-			0: Rock
+			0: Stone
 	Template@1037:
 		Id: 1037
 		Images: bits/terrain/stnmisc.png
