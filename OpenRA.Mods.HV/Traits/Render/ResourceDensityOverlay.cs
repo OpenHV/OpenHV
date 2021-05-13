@@ -13,30 +13,32 @@ using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Commands;
 using OpenRA.Mods.Common.Graphics;
-using OpenRA.Mods.Common.Terrain;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
-	[Desc("Displays terrain tile IDs colored by terrain type.")]
-	class TerrainDebugOverlayInfo : TraitInfo
+	[Desc("Displays resource density colored by type.")]
+	class ResourceDensityOverlayInfo : TraitInfo
 	{
 		public readonly string Font = "TinyBold";
 
-		public override object Create(ActorInitializer init) { return new TerrainDebugOverlay(this); }
+		public override object Create(ActorInitializer init) { return new ResourceDensityOverlay(this); }
 	}
 
-	class TerrainDebugOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
+	class ResourceDensityOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
 	{
-		const string CommandName = "terraindebug";
-		const string CommandDesc = "Toggles the terrain debug overlay.";
+		const string CommandName = "resourcedebug";
+		const string CommandDesc = "Toggles the resource debug overlay.";
 
 		public bool Enabled;
 
 		readonly SpriteFont font;
 
-		public TerrainDebugOverlay(TerrainDebugOverlayInfo info)
+		IResourceLayer resourceLayer;
+
+		public ResourceDensityOverlay(ResourceDensityOverlayInfo info)
 		{
 			font = Game.Renderer.Fonts[info.Font];
 		}
@@ -45,6 +47,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var console = w.WorldActor.TraitOrDefault<ChatCommands>();
 			var help = w.WorldActor.TraitOrDefault<HelpCommand>();
+			resourceLayer = w.WorldActor.TraitOrDefault<IResourceLayer>();
 
 			if (console == null || help == null)
 				return;
@@ -68,16 +71,13 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				var cell = uv.ToCPos(wr.World.Map);
 				var center = wr.World.Map.CenterOfCell(cell);
-				var terrainType = wr.World.Map.CustomTerrain[cell];
-				if (terrainType != byte.MaxValue)
+				var density = resourceLayer.GetResource(cell).Density;
+				if (density <= 0)
 					continue;
 
 				var info = wr.World.Map.GetTerrainInfo(cell);
-				var terrainInfo = (ITemplatedTerrainInfo)wr.World.Map.Rules.TerrainInfo;
-				var tile = wr.World.Map.Tiles[cell].Type;
-				var template = terrainInfo.Templates[tile];
 
-				yield return new TextAnnotationRenderable(font, center, 0, info.Color, template.Id.ToString());
+				yield return new TextAnnotationRenderable(font, center, 0, info.Color, density.ToString());
 			}
 		}
 
