@@ -85,7 +85,7 @@ SNIPERPOD:
 		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 3c0
+		Range: 4c0
 	Armament:
 		Weapon: SniperRifle
 		MuzzleSequence: muzzle
