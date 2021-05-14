@@ -4321,7 +4321,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@564:
 		Id: 564
 		Images: bits/terrain/sand.png
@@ -4329,7 +4331,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@565:
 		Id: 565
 		Images: bits/terrain/sand.png
@@ -4337,7 +4341,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@566:
 		Id: 566
 		Images: bits/terrain/sand.png
@@ -4345,7 +4351,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@567:
 		Id: 567
 		Images: bits/terrain/sand.png
@@ -4372,7 +4380,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@569:
 		Id: 569
 		Images: bits/terrain/sand.png
@@ -4380,7 +4390,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@570:
 		Id: 570
 		Images: bits/terrain/sand.png
@@ -4388,7 +4400,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@571:
 		Id: 571
 		Images: bits/terrain/sand.png
@@ -4396,7 +4410,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@572:
 		Id: 572
 		Images: bits/terrain/sand.png
@@ -4404,7 +4420,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@573:
 		Id: 573
 		Images: bits/terrain/sand.png
@@ -4412,7 +4430,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@574:
 		Id: 574
 		Images: bits/terrain/sand.png
@@ -4420,7 +4440,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@575:
 		Id: 575
 		Images: bits/terrain/sand.png
@@ -4428,7 +4450,9 @@ Templates:
 		Size: 1,1
 		Categories: Sand
 		Tiles:
-			0: Cliff
+			0: Sand
+				MinColor: 9D796C 
+				MaxColor: 9D796C
 	Template@576:
 		Id: 576
 		Images: bits/terrain/sand2lav.png
