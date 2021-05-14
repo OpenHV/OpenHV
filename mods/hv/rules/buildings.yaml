@@ -1273,14 +1273,15 @@ REFINERY:
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	ExitsDebugOverlay:
-	Exit@Bottom:
-		ExitCell: 0,2
-	Exit@Right:
-		ExitCell: 2, 1
-	Exit@Left:
-		ExitCell: -1, 0
 	Exit@Top:
-		ExitCell: 1, -1
+		ExitCell: 2, 0
+	Exit@Right:
+		ExitCell: 3, 2
+	Exit@Left:
+		ExitCell: 0, 1
+	Exit@Bottom:
+		ExitCell: 1, 3
+
 	AcceptsDeliveredResources:
 		DeliveryVehicleType: tanker2
 	WithIdleOverlay@animation:
