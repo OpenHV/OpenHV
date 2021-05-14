@@ -374,6 +374,30 @@ namespace OpenRA.Mods.HV.Traits
 			return null;
 		}
 
+		bool AdjacentBuildingAt(CPos cell)
+		{
+			foreach (var adjacent in CVec.Directions)
+			{
+				var adjacentCell = cell + adjacent;
+				if (buildingInfluence.AnyBuildingAt(adjacentCell))
+					return true;
+			}
+
+			return false;
+		}
+
+		bool ResourcesNearby(CPos cell, int radius)
+		{
+			var surroundingCells = world.Map.FindTilesInCircle(cell, radius);
+			foreach (var surroundingCell in surroundingCells)
+			{
+				if (resourceLayer.GetResource(surroundingCell).Density > 0)
+					return true;
+			}
+
+			return false;
+		}
+
 		CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
 		{
 			var actorInfo = world.Map.Rules.Actors[actorType];
@@ -397,18 +421,13 @@ namespace OpenRA.Mods.HV.Traits
 					if (!world.CanPlaceBuilding(cell, actorInfo, buildingInfo, null))
 						continue;
 
-					foreach (var adjacent in CVec.Directions)
-					{
-						var adjacentCell = cell + adjacent;
+					// Don't clutter the base
+					if (AdjacentBuildingAt(cell))
+						continue;
 
-						// Don't clutter the base
-						if (buildingInfluence.AnyBuildingAt(adjacentCell))
-							continue;
-
-						// Don't block of resources
-						if (resourceLayer.GetResource(adjacentCell).Density > 0)
-							continue;
-					}
+					// Don't block of resources
+					if (ResourcesNearby(cell, baseBuilder.Info.ResourceDistance))
+						continue;
 
 					if (distanceToBaseIsImportant && !buildingInfo.IsCloseEnoughToBase(world, player, actorInfo, cell))
 						continue;

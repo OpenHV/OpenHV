@@ -74,6 +74,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Number of refineries to build before building a barracks.")]
 		public readonly int MinimumRefineryCount = 1;
 
+		[Desc("Minimum distance in cells for resource patches when checking for building placement.")]
+		public readonly int ResourceDistance = 5;
+
 		[Desc("Additional delay (in ticks) between structure production checks when there is no active production.",
 			"StructureProductionRandomBonusDelay is added to this.")]
 		public readonly int StructureProductionInactiveDelay = 125;
