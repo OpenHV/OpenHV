@@ -799,6 +799,7 @@ MINER:
 		IntoActor: miner2
 		Facing: 384
 		Offset: -1,-2
+		NoTransformNotification: BuildingCannotPlaceAudio
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle

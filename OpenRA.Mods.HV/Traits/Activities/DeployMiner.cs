@@ -45,8 +45,8 @@ namespace OpenRA.Mods.HV.Activities
 			if (CanDeploy(self, location.Value))
 			{
 				QueueChild(movement.MoveTo(location.Value));
-				self.Trait<Transforms>().DeployTransform(false);
-				return false;
+				self.Trait<Transforms>().DeployTransform(true);
+				return true;
 			}
 
 			return true;
