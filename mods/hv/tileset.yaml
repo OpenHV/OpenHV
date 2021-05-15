@@ -955,6 +955,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 3DB137
 	Template@118:
 		Id: 118
 		Images: bits/terrain/grass.png
@@ -963,6 +964,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 3DB137
 	Template@119:
 		Id: 119
 		Images: bits/terrain/grass.png
@@ -971,6 +973,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@120:
 		Id: 120
 		Images: bits/terrain/grass.png
@@ -979,6 +982,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 3DB137
 	Template@121:
 		Id: 121
 		Images: bits/terrain/grass.png
@@ -1026,6 +1030,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@123:
 		Id: 123
 		Images: bits/terrain/grass.png
@@ -1034,6 +1039,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@124:
 		Id: 124
 		Images: bits/terrain/grass.png
@@ -1042,6 +1048,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@125:
 		Id: 125
 		Images: bits/terrain/grass.png
@@ -1050,6 +1057,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 3DB137
 	Template@126:
 		Id: 126
 		Images: bits/terrain/grass.png
@@ -1058,6 +1066,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@127:
 		Id: 127
 		Images: bits/terrain/grass.png
@@ -1066,6 +1075,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@128:
 		Id: 128
 		Images: bits/terrain/grass.png
@@ -1074,6 +1084,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 0B3A00
 	Template@129:
 		Id: 129
 		Images: bits/terrain/grass.png
@@ -1082,6 +1093,7 @@ Templates:
 		Categories: Grass
 		Tiles:
 			0: Grass
+				MinColor: 3DB137
 	Template@130:
 		Id: 130
 		Images: bits/terrain/grass.png
@@ -4322,7 +4334,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@564:
 		Id: 564
@@ -4332,7 +4344,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@565:
 		Id: 565
@@ -4342,7 +4354,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@566:
 		Id: 566
@@ -4352,7 +4364,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@567:
 		Id: 567
@@ -4381,7 +4393,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@569:
 		Id: 569
@@ -4391,7 +4403,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@570:
 		Id: 570
@@ -4401,7 +4413,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@571:
 		Id: 571
@@ -4411,7 +4423,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@572:
 		Id: 572
@@ -4421,7 +4433,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@573:
 		Id: 573
@@ -4431,7 +4443,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@574:
 		Id: 574
@@ -4441,7 +4453,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@575:
 		Id: 575
@@ -4451,7 +4463,7 @@ Templates:
 		Categories: Sand
 		Tiles:
 			0: Sand
-				MinColor: 9D796C 
+				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@576:
 		Id: 576
