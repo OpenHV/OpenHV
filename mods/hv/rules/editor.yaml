@@ -47,12 +47,12 @@ EditorWorld:
 EditorPlayer:
 	Inherits: ^BasePlayer
 
-TRANSPRT.colorpicker:
-	Inherits: TRANSPRT
+DROPSHIP.colorpicker:
+	Inherits: DROPSHIP
 	-Buildable:
 	-MapEditorData:
 	RenderSprites:
-		Image: transprt
+		Image: dropship
 		Palette: colorpicker
 
 LIGHT:
