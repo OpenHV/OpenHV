@@ -200,10 +200,6 @@ VoltageArc:
 		Amount: 4
 		AffectsParent: true
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
-	Warhead@Smudge: LeaveSmudge
-		SmudgeType: Crater
-		Chance: 25
-		InvalidTargets: Vehicle, Structure
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
@@ -263,10 +259,6 @@ LightningBolt:
 		Amount: 4
 		AffectsParent: true
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
-	Warhead@Smudge: LeaveSmudge
-		SmudgeType: Crater
-		Chance: 25
-		InvalidTargets: Vehicle, Structure
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
