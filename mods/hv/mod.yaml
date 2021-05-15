@@ -253,9 +253,6 @@ GameSpeeds:
 			Timestep: 20
 			OrderLatency: 6
 
-ColorValidator:
-	TeamColorPresets: d0a090, 5391d3, 7e4865, 2f9b1c
-
 WorldViewportSizes:
 	CloseWindowHeights: 320, 640
 	MediumWindowHeights: 640, 800

@@ -184,11 +184,15 @@
 		Filename: bits/palette.pal
 		AllowModifiers: false
 		TransparentIndex: 255
-	PaletteFromGimpOrJascFile@colorpicker:
+	ColorPickerPalette:
 		Name: colorpicker
-		Filename: bits/palette.pal
+		BasePalette: player
+		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
 		AllowModifiers: false
-		TransparentIndex: 255
+	ColorPickerManager:
+		PreviewActor: transprt.colorpicker
+		PresetHues: 0, 0.13, 0.18, 0.3, 0.475, 0.625, 0.82, 0.89, 0.97, 0.05, 0.23, 0.375, 0.525, 0.6, 0.75, 0.85
+		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.5, 0.35, 0.4, 0.4, 0.5, 0.5, 0.4, 0.35
 	PaletteFromGimpOrJascFile@cube:
 		Name: cube
 		Filename: bits/cube.pal

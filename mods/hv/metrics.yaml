@@ -1,8 +1,6 @@
 # License: CC-BY-SA-4.0
 
 Metrics:
-	ColorPickerRemapIndices: 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
-	ColorPickerActorType: transprt.colorpicker
 	ClickDisabledSound: ClickDisabledSound
 	ClickSound: ClickSound
 	ChatLineSound: ChatLineSound
