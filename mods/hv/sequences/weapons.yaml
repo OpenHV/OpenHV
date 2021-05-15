@@ -104,7 +104,7 @@ nuclear:
 
 railgun:
 	idle: bits/railgunsfx.png
-		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 11, 11, 11
+		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
 		Length: *
 		Tick: 20
 		Offset: 0, -42
