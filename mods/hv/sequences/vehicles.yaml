@@ -275,6 +275,39 @@ tyriantank:
 		Start: 8
 		Facings: 8
 	muzzle: bits/muzzle.png
+		Combine:
+			muzzle.png: #N
+				Start: 0
+				Length: 8
+				Offset: 3,-11
+			muzzle.png: #NW
+				Start: 8
+				Length: 8
+				Offset: -1,-10
+			muzzle.png: #W
+				Start: 16
+				Length: 8
+				Offset: -2,-6
+			muzzle.png: #SW
+				Start: 24
+				Length: 8
+				Offset: -3,1
+			muzzle.png: #S
+				Start: 32
+				Length: 8
+				Offset: 1,0
+			muzzle.png: #SE
+				Start: 40
+				Length: 8
+				Offset: 4,2
+			muzzle.png: #E
+				Start: 48
+				Length: 8
+				Offset: 6,-4
+			muzzle.png: #NE
+				Start: 56
+				Length: 8
+				Offset: 6,-9
 		Length: 8
 		Facings: 8
 	icon: bits/units-icons.png
