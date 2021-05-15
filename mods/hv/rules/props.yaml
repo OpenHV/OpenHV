@@ -97,3 +97,41 @@ PROP2:
 		ValidDamageStates: Heavy, Critical
 	RenderSprites:
 		Palette: terrain
+
+PROP3:
+	Inherits: ^Prop
+	Inherits@shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Civilian structure
+	Health:
+		HP: 60000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+	RenderSprites:
+		Palette: terrain
+
+PROP4:
+	Inherits: ^Prop
+	Inherits@shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Civilian tower
+	Health:
+		HP: 60000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+	RenderSprites:
+		PlayerPalette: green

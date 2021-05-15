@@ -40,3 +40,28 @@ prop2:
 		Length: 4
 		Reverses: True
 		Tick: 100
+
+prop3:
+	Defaults:
+		Offset: 0,-3
+	idle: bits/prop3.png
+		Frames: 0, 1, 2, 1
+		Length: 4
+		Tick: 200
+	damaged-idle: bits/prop3.png
+		Start: 3
+	shadow-overlay: bits/prop3-shadow.png
+		Offset: 1,0
+
+prop4:
+	Defaults:
+		Offset: -1,-15
+	idle: bits/prop4.png
+	damaged-idle: bits/prop4.png
+		Start: 1
+	shadow-overlay: bits/prop4-shadow.png
+		Offset: 9,10
+	damaged-shadow-overlay: bits/prop4-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 9,10
