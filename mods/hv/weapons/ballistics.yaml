@@ -11,6 +11,7 @@
 		Shadow: true
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
+		Chance: 25
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
@@ -297,6 +298,7 @@ TurretArtillery:
 			Heavy: 88
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
+		Chance: 25
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground

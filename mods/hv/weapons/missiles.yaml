@@ -19,6 +19,7 @@
 		CruiseAltitude: 2c0
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
+		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire

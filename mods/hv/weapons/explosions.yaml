@@ -45,6 +45,7 @@ AntiTankMine:
 		ImpactSounds: explosion02.wav
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
+		Chance: 50
 		InvalidTargets: Structure, Wall, Trees
 
 PilotSpawn:
