@@ -995,7 +995,7 @@ UPLINK:
 		BuildPaletteOrder: 140
 		Prerequisites: techcenter, ~structures.sc
 		BuildLimit: 1
-		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
+		Description: Orders an orbital railgun strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Orbital Railgun
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
