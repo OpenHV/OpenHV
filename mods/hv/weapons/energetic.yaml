@@ -200,29 +200,6 @@ VoltageArc:
 		Amount: 4
 		AffectsParent: true
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
-	Warhead@Effect: CreateEffect
-		Explosions: small
-		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
-
 
 LightningBolt:
 	ReloadDelay: 50
@@ -259,28 +236,6 @@ LightningBolt:
 		Amount: 4
 		AffectsParent: true
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
-	Warhead@Effect: CreateEffect
-		Explosions: small
-		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 ^PixelSpark:
 	Range: 1c0
