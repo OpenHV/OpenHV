@@ -232,6 +232,9 @@ TRADPLAT:
 	Building:
 		Footprint: x+x x+x x+x
 		Dimensions: 3,3
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
 	Selectable:
 		Bounds: 2048, 2048
 	Health:
@@ -1224,6 +1227,9 @@ ARTILLERYTURRET:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -256,-256,0,   256,-256,0,   -256,256,0,   256,256,0
 	Health:
 		HP: 60000
 	RevealsShroud:
