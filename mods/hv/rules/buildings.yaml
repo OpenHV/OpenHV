@@ -218,7 +218,7 @@ RADAR2:
 TRADPLAT:
 	Inherits: ^BaseBuilding
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
-	Inherits@Shape: ^3x3Shape
+	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Buildable:
 		Queue: Building
