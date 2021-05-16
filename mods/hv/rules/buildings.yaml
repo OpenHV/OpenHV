@@ -691,15 +691,9 @@ TECHCENTER:
 		RequiresCondition: !build-incomplete && !disabled
 
 TURRET:
-	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@flame: ^BuildingFlame
-	Selectable:
-		Bounds: 2048, 1536, 0, -256
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
-		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: module, refinery, ~structures.yi
 		Description: Base defense.\nRequires power to operate.
@@ -707,31 +701,8 @@ TURRET:
 		Cost: 1000
 	Tooltip:
 		Name: Turret
-	Building:
-		Footprint: == xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,512,0
-	Targetable:
-		TargetTypes: Ground, Structure
 	Health:
 		HP: 50000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	Power:
-		Amount: -60
-	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Weapon: TurretCannon
 		LocalOffset: 1200,50,0
@@ -750,32 +721,11 @@ TURRET:
 	Turreted:
 		TurnSpeed: 120
 		RequiresCondition: !build-incomplete
-	RenderSprites:
-		PlayerPalette: green
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	-CommandBarBlacklist:
 
 TURRET2:
-	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@flame: ^BuildingFlame
-	Selectable:
-		Bounds: 2048, 1536, 0, -256
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
-		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: module, refinery, ~structures.sc
 		Description: Base defense.\nRequires power to operate.
@@ -783,31 +733,8 @@ TURRET2:
 		Cost: 1000
 	Tooltip:
 		Name: Turret
-	Building:
-		Footprint: == xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,512,0
-	Targetable:
-		TargetTypes: Ground, Structure
 	Health:
 		HP: 50000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	Power:
-		Amount: -60
-	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Name: primary
 		Weapon: Turret2Cannon
@@ -835,32 +762,13 @@ TURRET2:
 	Turreted:
 		TurnSpeed: 120
 		RequiresCondition: !build-incomplete
-	RenderSprites:
-		PlayerPalette: green
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	-CommandBarBlacklist:
 
 AATURRET:
-	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@AUTOTARGET: ^AutoTargetAir
-	Inherits@flame: ^BuildingFlame
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
 	Selectable:
 		Bounds: 2048, 1536, 0, -256
 	Buildable:
-		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: module, radar, ~structures.yi
 		Description: Anti-Air base defense.\nRequires power to operate.
@@ -868,31 +776,8 @@ AATURRET:
 		Cost: 1250
 	Tooltip:
 		Name: AA Turret
-	Building:
-		Footprint: == xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,512,0
-	Targetable:
-		TargetTypes: Ground, Structure
-	Health:
-		HP: 45000
 	Armor:
 		Type: Steel
-	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	Power:
-		Amount: -60
-	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Weapon: LightningBolt
 		LocalOffset: 0,0,1000
@@ -918,36 +803,15 @@ AATURRET:
 		ChargeRate: 10
 		DischargeRate: 5
 		ChargingCondition: charging
-	RenderSprites:
-		PlayerPalette: green
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	AmbientSound:
 		RequiresCondition: charging
 		SoundFiles: charging-Mike_Koenig.wav
 		Interval: 30, 40
-	-CommandBarBlacklist:
 
 AATURRET2:
-	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@AUTOTARGET: ^AutoTargetAir
-	Inherits@flame: ^BuildingFlame
-	Selectable:
-		Bounds: 2048, 1536, 0, -256
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
-		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: module, radar, ~structures.sc
 		Description: Anti-Air base defense.\nRequires power to operate.
@@ -955,31 +819,8 @@ AATURRET2:
 		Cost: 1250
 	Tooltip:
 		Name: AA Turret
-	Building:
-		Footprint: == xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,512,0
-	Targetable:
-		TargetTypes: Ground, Structure
 	Health:
 		HP: 45000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	Power:
-		Amount: -60
-	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Weapon: TowerMissile
 		LocalOffset: 256,375,760, 256,-375,760
@@ -1000,19 +841,6 @@ AATURRET2:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	-CommandBarBlacklist:
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -1326,15 +1154,11 @@ REFINERY:
 		PauseOnCondition: !build-incomplete
 
 ARTILLERYTURRET:
-	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x2Shape
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@flame: ^BuildingFlame
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
 	Selectable:
 		Bounds: 2048, 2048
 	Buildable:
-		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: factory, techcenter
 		Description: Advanced base defense.\nRequires power to operate.
@@ -1345,12 +1169,8 @@ ARTILLERYTURRET:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	Targetable:
-		TargetTypes: Ground, Structure
 	Health:
 		HP: 60000
-	Armor:
-		Type: Steel
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 4c0
@@ -1364,7 +1184,6 @@ ARTILLERYTURRET:
 		Range: 4c0
 	Power:
 		Amount: -120
-	ProvidesPrerequisite@BuildingName:
 	Armament:
 		Weapon: TurretArtillery
 		LocalOffset: 1500,50,1400
@@ -1384,19 +1203,6 @@ ARTILLERYTURRET:
 		RequiresCondition: !build-incomplete
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	-CommandBarBlacklist:
 
 TELEVATR:
 	Inherits: ^BaseBuilding

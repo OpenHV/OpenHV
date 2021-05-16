@@ -397,6 +397,53 @@
 	ActorLostNotification:
 		Notification: BuildingLost
 
+^DefenseBuilding:
+	Inherits: ^BaseBuilding
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame
+	Selectable:
+		Bounds: 2048, 1536, 0, -256
+	Buildable:
+		Queue: Defense
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,512,0
+	Targetable:
+		TargetTypes: Ground, Structure, Defense
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Power:
+		Amount: -60
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	-CommandBarBlacklist:
+
 ^Prop:
 	Inherits: ^Building
 	-Selectable:
