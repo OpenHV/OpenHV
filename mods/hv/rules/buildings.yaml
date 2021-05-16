@@ -1322,6 +1322,12 @@ TELEVATR:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
 
 TELEVTR2:
 	Inherits: TELEVATR
