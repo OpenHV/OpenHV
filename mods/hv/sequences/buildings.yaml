@@ -24,7 +24,7 @@
 		Tick: 60
 
 base:
-	Inherits@flame: ^BuildingFlame3
+	Inherits@Flame: ^BuildingFlame3
 	Defaults:
 		Offset: 10, -30
 	build: bits/base.png
@@ -102,7 +102,7 @@ base:
 		Offset: 0, 0
 
 generator:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -8
 	idle: bits/generator.png
@@ -135,7 +135,7 @@ generator:
 		Offset: 0, 0
 
 radar:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -4
 	idle: bits/radar.png
@@ -161,7 +161,7 @@ radar:
 		Offset: 0, 0
 
 radar2:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -4
 	idle: bits/radar2.png
@@ -183,7 +183,7 @@ radar2:
 		Offset: 0, 0
 
 tradplat:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 1
 	idle: bits/tradplat.png
@@ -218,7 +218,7 @@ tradplat:
 		Offset: 0, 0
 
 module:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 2
 	door: bits/module.png
@@ -256,7 +256,7 @@ module:
 		Offset: 0, 0
 
 miner2:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -20
 	make:
@@ -306,7 +306,7 @@ miner2:
 		Offset: 0, 0
 
 starport:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -2
 	idle: bits/starport.png
@@ -346,7 +346,7 @@ starport:
 		Offset: 0, 0
 
 starport2:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -2
 	idle: bits/starport2.png
@@ -379,7 +379,7 @@ starport2:
 		Offset: 0, 0
 
 factory2:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: -1, -22
 	idle: bits/null.png
@@ -487,7 +487,7 @@ factory2:
 		Offset: 0, 0
 
 factory3:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -24
 	idle: bits/null.png
@@ -594,7 +594,7 @@ factory3:
 		Offset: 0, 0
 
 turret:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -8
 	idle: bits/turret.png
@@ -625,7 +625,7 @@ turret:
 		Offset: 0, 0
 
 turret2:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -8
 	idle: bits/turret.png
@@ -658,7 +658,7 @@ turret2:
 		Offset: 0, 0
 
 aaturret:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -7
 	idle: bits/aa-turret.png
@@ -696,7 +696,7 @@ aaturret:
 		Offset: 0, 0
 
 aaturret2:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -9
 	idle: bits/aa-turret2.png
@@ -735,7 +735,7 @@ aaturret2:
 		Offset: 0, 0
 
 field:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	idle: bits/field.png
 	shadow-overlay: bits/field-shadow.png
 		ZOffset: 1768
@@ -761,7 +761,7 @@ field:
 		Start: 3
 
 silo:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -20
 	idle: bits/silo.png
@@ -793,7 +793,7 @@ silo:
 		Offset: 0, 0
 
 storage:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	idle: bits/storage.png
 	shadow-overlay: bits/storage-shadow.png
 		ZOffset: 1768
@@ -816,7 +816,7 @@ storage:
 		Start: 10
 
 artilleryturret:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -20
 	idle: bits/artilery2.png
@@ -848,7 +848,7 @@ artilleryturret:
 		Offset: 0, 0
 
 televatr:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		ZOffset: -1c511
 	idle: bits/televatr.png
@@ -873,7 +873,7 @@ televatr:
 		Start: 12
 
 televtr2:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		ZOffset: -1c511
 	idle: bits/televtr2.png
@@ -898,7 +898,7 @@ televtr2:
 		Start: 13
 
 harbor:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 2, -5
 	idle: bits/harbor.png
@@ -937,7 +937,7 @@ harbor:
 		Offset: 0, 0
 
 mother:
-	Inherits@flame: ^BuildingFlame
+	Inherits@Flame: ^BuildingFlame
 	idle: bits/mother.png
 
 wall:
@@ -975,7 +975,7 @@ wall:
 	icon: bits/icon.png
 
 techcenter:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -9
 	idle: bits/tech-center.png
@@ -1009,7 +1009,7 @@ techcenter:
 		Offset: 0, 0
 
 techbuilding:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -6
 	idle: bits/tech-building.png
@@ -1038,7 +1038,7 @@ techbuilding:
 	icon: bits/icon.png
 
 refinery:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -10
 	idle: bits/refinery.png
@@ -1125,7 +1125,7 @@ refinery:
 		Offset: 0, 0
 
 techminer:
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -18
 	idle: bits/techminer.png

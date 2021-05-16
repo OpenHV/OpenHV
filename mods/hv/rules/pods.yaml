@@ -2,7 +2,7 @@
 
 SCOUT1:
 	Inherits: ^Pod
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
 		Description: Fast reconnaissance vehicle.\nArmed with machine guns.
@@ -30,7 +30,7 @@ SCOUT1:
 
 SCOUT2:
 	Inherits: ^Pod
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
 		Description: Fast reconnaissance vehicle.\nShoots rockets.
@@ -63,7 +63,7 @@ SCOUT2:
 
 SNIPERPOD:
 	Inherits: ^Pod
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
 		Description: Long range sniper pod.

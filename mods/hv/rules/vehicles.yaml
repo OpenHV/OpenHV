@@ -2,7 +2,7 @@
 
 TANK3:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -46,7 +46,7 @@ TANK3:
 
 TYRIANTANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -90,7 +90,7 @@ TYRIANTANK:
 
 TANK9:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
@@ -170,7 +170,7 @@ TRANSPRT:
 
 ARTIL:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -279,7 +279,7 @@ TANK4:
 
 TANK16:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -316,7 +316,7 @@ TANK16:
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
-	AutoTargetPriority@DEFAULT:
+	AutoTargetPriority@Default:
 		ValidTargets: Vehicle
 	RenderSprites:
 		PlayerPalette: green
@@ -367,7 +367,7 @@ TANK6:
 
 TANK5:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -403,7 +403,7 @@ TANK5:
 
 TANK10:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 150
@@ -439,7 +439,7 @@ TANK10:
 
 TANK7:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 120
@@ -482,7 +482,7 @@ TANK7:
 
 TANK11:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -517,7 +517,7 @@ TANK11:
 
 TANK12:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1150
 	Tooltip:
@@ -590,7 +590,7 @@ TANK14:
 
 TANK15:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -628,7 +628,7 @@ TANK15:
 
 ARTIL2:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -675,7 +675,7 @@ ARTIL2:
 
 ARTIL3:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -803,7 +803,7 @@ MINER:
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -908,7 +908,7 @@ TANK1:
 
 TANK2:
 	Inherits: ^TrackedVehicle
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 400
 	Tooltip:

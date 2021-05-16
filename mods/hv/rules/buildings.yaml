@@ -2,7 +2,7 @@
 
 BASE:
 	Inherits: ^BaseBuilding
-	Inherits@flame: ^BuildingFlame3
+	Inherits@Flame: ^BuildingFlame3
 	Selectable:
 		Bounds: 2048, 4096, 0, -1024
 	Valued:
@@ -104,8 +104,8 @@ BASE:
 
 GENERATOR:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 3072, 0, -512
 	Buildable:
@@ -153,9 +153,9 @@ GENERATOR:
 
 RADAR:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
 	Buildable:
@@ -217,9 +217,9 @@ RADAR2:
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^3x3Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -277,8 +277,8 @@ TRADPLAT:
 
 MODULE:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 2048
 	Buildable:
@@ -359,8 +359,8 @@ MODULE:
 
 MINER2:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x1Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
@@ -407,8 +407,8 @@ MINER2:
 
 STARPORT:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x3Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Shape: ^2x3Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 3072
 	Tooltip:
@@ -504,9 +504,9 @@ FACTORY:
 
 FACTORY2:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x4Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x4Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 4096
 	Buildable:
@@ -639,9 +639,9 @@ FACTORY3:
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 2560, 0, -256
 	Buildable:
@@ -844,9 +844,9 @@ AATURRET2:
 
 FIELD:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
@@ -909,9 +909,9 @@ FIELD:
 
 SILO:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Valued:
@@ -992,8 +992,8 @@ SILO:
 
 STORAGE:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 2048
 	Building:
@@ -1049,8 +1049,8 @@ STORAGE:
 
 REFINERY:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 2048
 	Building:
@@ -1206,9 +1206,9 @@ ARTILLERYTURRET:
 
 TELEVATR:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 1024
 	HitShape:
@@ -1270,7 +1270,7 @@ TELEVATR:
 
 TELEVTR2:
 	Inherits: TELEVATR
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, -512,0,0, 512,0,0
@@ -1288,8 +1288,8 @@ TELEVTR2:
 
 HARBOR:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^3x3Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 3072, 3072
 	Buildable:
@@ -1384,7 +1384,7 @@ HARBOR:
 
 MOTHER:
 	Inherits: ^BaseBuilding
-	Inherits@shape: ^6x8Shape
+	Inherits@Shape: ^6x8Shape
 	Selectable:
 		Bounds: 5785, 7424
 	Valued:
@@ -1410,7 +1410,7 @@ MOTHER:
 
 WALLTOP:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1421,7 +1421,7 @@ WALLTOP:
 
 WALLTOPLEFT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1432,7 +1432,7 @@ WALLTOPLEFT:
 
 WALLLEFT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1443,7 +1443,7 @@ WALLLEFT:
 
 WALLBOTTOMLEFT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1451,7 +1451,7 @@ WALLBOTTOMLEFT:
 
 WALLBOTTOM:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1459,7 +1459,7 @@ WALLBOTTOM:
 
 WALLBOTTOMRIGHT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1467,7 +1467,7 @@ WALLBOTTOMRIGHT:
 
 WALLRIGHT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1478,7 +1478,7 @@ WALLRIGHT:
 
 WALLTOPRIGHT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1489,7 +1489,7 @@ WALLTOPRIGHT:
 
 DESTROYEDWALLLEFT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1497,7 +1497,7 @@ DESTROYEDWALLLEFT:
 
 DESTROYEDWALLRIGHT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1505,7 +1505,7 @@ DESTROYEDWALLRIGHT:
 
 DESTROYEDWALLBOTTOMLEFT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1513,7 +1513,7 @@ DESTROYEDWALLBOTTOMLEFT:
 
 DESTROYEDWALLBOTTOMRIGHT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x2Shape
+	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1228, 2457
 	WithSpriteBody:
@@ -1521,7 +1521,7 @@ DESTROYEDWALLBOTTOMRIGHT:
 
 DESTROYEDWALLTOPLEFT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1532,7 +1532,7 @@ DESTROYEDWALLTOPLEFT:
 
 DESTROYEDWALLTOPRIGHT:
 	Inherits: ^Wall
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1543,9 +1543,9 @@ DESTROYEDWALLTOPRIGHT:
 
 TECHBUILDING:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x2Shape
-	Inherits@flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
 	Tooltip:
@@ -1655,9 +1655,9 @@ TECHBUILDING:
 
 TECHMINER:
 	Inherits: ^BaseBuilding
-	Inherits@IDISABLE: ^DisableOnLowPowerOrPowerDown
-	Inherits@shape: ^2x1Shape
-	Inherits@flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:

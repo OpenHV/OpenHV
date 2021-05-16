@@ -456,19 +456,19 @@
 		ValidOwnerNames: Neutral
 
 ^DisableOnLowPower:
-	WithColoredOverlay@IDISABLE:
+	WithColoredOverlay@Disable:
 		RequiresCondition: disabled
 		Color: 000000B4
-	GrantConditionOnPowerState@LOWPOWER:
+	GrantConditionOnPowerState@LowPower:
 		Condition: lowpower
 		ValidPowerStates: Low, Critical
-	GrantCondition@IDISABLE:
+	GrantCondition@Disable:
 		RequiresCondition: lowpower
 		Condition: disabled
 
 ^DisableOnLowPowerOrPowerDown:
 	Inherits: ^DisableOnLowPower
-	GrantCondition@IDISABLE:
+	GrantCondition@Disable:
 		RequiresCondition: lowpower || powerdown
 		Condition: disabled
 	ToggleConditionOnOrder:
@@ -496,47 +496,47 @@
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
-	AutoTargetPriority@DEFAULT:
+	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Vehicle, Structure
 		InvalidTargets: NoAutoTarget
-	AutoTargetPriority@ATTACKANYTHING:
+	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle, Structure
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetGroundAssaultMove:
 	Inherits: ^AutoTargetGround
-	AutoTargetPriority@DEFAULT:
+	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything && !assault-move
-	AutoTargetPriority@ATTACKANYTHING:
+	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
 		AssaultMoveCondition: assault-move
 
 ^AutoTargetAir:
 	AutoTarget:
-	AutoTargetPriority@DEFAULT:
+	AutoTargetPriority@Default:
 		ValidTargets: Air
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAll:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
-	AutoTargetPriority@DEFAULT:
+	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Vehicle, Water, Air
 		InvalidTargets: NoAutoTarget
-	AutoTargetPriority@ATTACKANYTHING:
+	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle, Water, Air, Structure
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAllAssaultMove:
 	Inherits: ^AutoTargetAll
-	AutoTargetPriority@DEFAULT:
+	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything && !assault-move
-	AutoTargetPriority@ATTACKANYTHING:
+	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
 		AssaultMoveCondition: assault-move
@@ -578,7 +578,7 @@
 		Condition: shield
 
 ^Tree:
-	Inherits@shape: ^1x1Shape
+	Inherits@Shape: ^1x1Shape
 	Interactable:
 		Bounds: 1024, 1024
 	Tooltip:

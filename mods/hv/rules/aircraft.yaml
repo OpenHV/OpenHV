@@ -2,7 +2,7 @@
 
 SHIP2:
 	Inherits: ^Plane
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MAGAZINECASING: ^DropShellCasing
 	Buildable:
 		Queue: Aircraft
@@ -59,7 +59,7 @@ SHIP2:
 
 SHIP1:
 	Inherits: ^Plane
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
@@ -112,7 +112,7 @@ SHIP1:
 
 COPTER:
 	Inherits: ^Helicopter
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MAGAZINECASING: ^DropShellCasing
 	Valued:
 		Cost: 1000
@@ -198,7 +198,7 @@ SAUCER:
 
 BANSHEE:
 	Inherits: ^Helicopter
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:

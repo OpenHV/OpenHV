@@ -2,7 +2,7 @@
 
 BOAT3:
 	Inherits: ^Ship
-	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AutoTarget: ^AutoTargetAir
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -44,7 +44,7 @@ BOAT3:
 
 BOAT:
 	Inherits: ^Ship
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -88,7 +88,7 @@ BOAT:
 
 BOAT2:
 	Inherits: ^Ship
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
