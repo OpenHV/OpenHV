@@ -921,7 +921,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter
+		Prerequisites: techcenter, ~structures.yi
 		BuildLimit: 1
 		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
 	Building:
@@ -945,7 +945,6 @@ SILO:
 		ChargeInterval: 13500
 		Description: Atom Bomb
 		LongDesc: Drop an atomic bomb\nat a target location.
-		Prerequisites: ~structures.yi
 		MissileWeapon: nuclear
 		MissileDelay: 5
 		SkipAscent: true
@@ -958,13 +957,69 @@ SILO:
 		EndChargeSpeechNotification: MissileReady
 		IncomingSpeechNotification: MissileLaunchDetected
 	SupportPowerChargeBar:
+	Power:
+		Amount: -150
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	RenderSprites:
+		PlayerPalette: green
+	WithIdleOverlay@lights:
+		Sequence: animation_lights
+		RequiresCondition: !build-incomplete
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+
+UPLINK:
+	Inherits: ^BaseBuilding
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
+	Selectable:
+		Bounds: 2048, 3072, 0, 0
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Orbital Strike Uplink Command
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter, ~structures.sc
+		BuildLimit: 1
+		Description: Orders an orbital railgun strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Orbital Railgun
+	Building:
+		Footprint: == == xx
+		Dimensions: 2,3
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1048, -512
+			BottomRight: 1048, 1524
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	SupportPowerChargeBar:
 	RailgunPower:
 		PauseOnCondition: lowpower
 		Icon: railgun
 		ChargeInterval: 9000
 		Description: Orbital Railgun
 		LongDesc: Initiate a surgical strike.\nApplies instant damage to a small area.
-		Prerequisites: ~structures.sc
 		DisplayRadarPing: True
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 20
@@ -975,7 +1030,7 @@ SILO:
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@lights:
-		Sequence: animation_lights
+		Sequence: animation
 		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
