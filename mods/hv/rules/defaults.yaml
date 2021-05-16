@@ -498,11 +498,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Vehicle, Structure
+		ValidTargets: Vehicle, Defense, Ship, Mine
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Vehicle, Structure
+		ValidTargets: Vehicle, Defense, Ship, Mine, Structure
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetGroundAssaultMove:
@@ -525,11 +525,11 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Vehicle, Water, Air
+		ValidTargets: Vehicle, Air, Ship, Mine, Defense
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Vehicle, Water, Air, Structure
+		ValidTargets: Vehicle, Air, Ship, Mine, Defense, Structure
 		InvalidTargets: NoAutoTarget
 
 ^AutoTargetAllAssaultMove:
