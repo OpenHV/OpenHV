@@ -6,8 +6,6 @@ Title: Tomb Raiders
 
 Author: Graion Dilach
 
-License: CC-BY-SA-4.0
-
 Tileset: PLANET
 
 MapSize: 103,86
@@ -17,6 +15,8 @@ Bounds: 1,1,101,84
 Visibility: Lobby
 
 Categories: Conquest
+
+Translations:
 
 Players:
 	PlayerReference@Neutral:
@@ -219,17 +219,17 @@ Actors:
 	Actor83: pyramid2
 		Owner: Neutral
 		Location: 11,44
-	Actor76: techbuilding
+	Actor76: techminer
 		Owner: Neutral
-		Location: 54,53
-	Actor77: techbuilding
+		Location: 54,52
+	Actor77: techminer
 		Owner: Neutral
-		Location: 47,53
-	Actor80: techbuilding
+		Location: 47,52
+	Actor80: techminer
 		Owner: Neutral
-		Location: 47,31
-	Actor81: techbuilding
+		Location: 47,30
+	Actor81: techminer
 		Owner: Neutral
-		Location: 54,31
+		Location: 54,30
 
 Rules: rules.yaml
