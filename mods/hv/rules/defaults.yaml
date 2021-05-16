@@ -86,10 +86,10 @@
 		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Vehicle
-	Targetable@REPAIR:
+	Targetable@Repair:
 		RequiresCondition: damaged
 		TargetTypes: Repair
-	GrantConditionOnDamageState@DAMAGED:
+	GrantConditionOnDamageState@Damaged:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
@@ -201,10 +201,10 @@
 		AirborneCondition: airborne
 		InitialFacing: 768
 		Voice: Move
-	Targetable@GROUND:
+	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
-	Targetable@AIRBORNE:
+	Targetable@Airborne:
 		RequiresCondition: airborne
 		TargetTypes: Air
 	HiddenUnderFog:
@@ -641,10 +641,10 @@
 		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Water, Ship
-	Targetable@REPAIR:
+	Targetable@Repair:
 		RequiresCondition: damaged
 		TargetTypes: Repair
-	GrantConditionOnDamageState@DAMAGED:
+	GrantConditionOnDamageState@Damaged:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	HiddenUnderFog:

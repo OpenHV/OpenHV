@@ -67,7 +67,7 @@ CROW:
 	-AppearsOnRadar:
 	-Selectable:
 	Interactable:
-	-Targetable@AIRBORNE:
+	-Targetable@Airborne:
 
 GULL:
 	Inherits: CROW
