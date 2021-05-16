@@ -1334,6 +1334,8 @@ TELEVATR:
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 
 TELEVTR2:
 	Inherits: TELEVATR
