@@ -651,8 +651,6 @@
 	AttackMove:
 	ProximityCaptor:
 		Types: Ship
-	#RepairableNear:
-	#	RepairActors: harbor
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
