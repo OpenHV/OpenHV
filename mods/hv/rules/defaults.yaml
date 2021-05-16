@@ -588,7 +588,7 @@
 		Footprint: x
 		Dimensions: 1,1
 	Health:
-		HP: 50000
+		HP: 100000
 	Armor:
 		Type: Wood
 	Targetable:

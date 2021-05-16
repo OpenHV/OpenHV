@@ -45,7 +45,7 @@ ForestFire:
 		Falloff: 100, 36, 12
 		Delay: 10
 		Spread: 0c768
-		Damage: 500
+		Damage: 50
 		ValidTargets: Ground, Tree
 		Versus:
 			None: 90
