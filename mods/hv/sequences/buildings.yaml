@@ -804,6 +804,7 @@ uplink:
 		Length: 6
 		Tick: 100
 		Reverses: true
+		ZOffset: 550
 	damaged-idle: bits/uplink.png
 		Start: 1
 		ZOffset: 500
