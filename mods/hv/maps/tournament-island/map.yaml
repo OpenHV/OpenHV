@@ -1,0 +1,322 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Tournament Island
+
+Author: Dzierzan
+
+Tileset: PLANET
+
+License: CC-BY-SA-4.0
+
+MapSize: 128,128
+
+Bounds: 1,1,126,126
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Translations:
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1, Multi2, Multi3
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor4: techbuilding
+		Owner: Neutral
+		Location: 63,62
+	Actor5: lamppost
+		Owner: Neutral
+		Location: 58,58
+	Actor6: lamppost
+		Owner: Neutral
+		Location: 68,58
+	Actor7: lamppost
+		Owner: Neutral
+		Location: 58,68
+	Actor8: lamppost
+		Owner: Neutral
+		Location: 68,68
+	Actor9: lamppost
+		Owner: Neutral
+		Location: 61,63
+	Actor10: lamppost
+		Owner: Neutral
+		Location: 63,61
+	Actor11: lamppost
+		Owner: Neutral
+		Location: 63,65
+	Actor12: lamppost
+		Owner: Neutral
+		Location: 65,63
+	Actor13: prop4
+		Owner: Neutral
+		Location: 67,63
+	Actor14: prop1
+		Owner: Neutral
+		Location: 63,59
+	Actor15: prop3
+		Owner: Neutral
+		Location: 63,67
+	Actor16: prop2
+		Owner: Neutral
+		Location: 59,63
+	Actor17: techminer
+		Owner: Neutral
+		Location: 23,100
+	Actor18: techminer
+		Owner: Neutral
+		Location: 22,21
+	Actor19: techminer
+		Owner: Neutral
+		Location: 103,21
+	Actor20: techminer
+		Owner: Neutral
+		Location: 102,100
+	Actor25: mpspawn
+		Owner: Neutral
+		Location: 37,90
+	Actor26: mpspawn
+		Owner: Neutral
+		Location: 92,90
+	Actor21: mpspawn
+		Owner: Neutral
+		Location: 92,35
+	Actor22: mpspawn
+		Owner: Neutral
+		Location: 36,35
+	Actor23: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 9,69
+	Actor24: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 30,11
+	Actor27: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 114,11
+	Actor28: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 119,91
+	Actor29: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 59,119
+	Actor31: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 117,114
+	Actor30: techminer
+		Owner: Neutral
+		Location: 7,117
+	Actor32: techminer
+		Owner: Neutral
+		Location: 7,6
+	Actor33: techminer
+		Owner: Neutral
+		Location: 119,6
+	Actor34: techminer
+		Owner: Neutral
+		Location: 119,117
+	Actor35: prop4
+		Owner: Neutral
+		Location: 123,123
+	Actor36: prop4
+		Owner: Neutral
+		Location: 4,123
+	Actor37: prop4
+		Owner: Neutral
+		Location: 4,4
+	Actor38: prop4
+		Owner: Neutral
+		Location: 123,4
+	Actor39: prop3
+		Owner: Neutral
+		Location: 120,4
+	Actor40: prop3
+		Owner: Neutral
+		Location: 7,4
+	Actor41: prop3
+		Owner: Neutral
+		Location: 7,123
+	Actor42: prop3
+		Owner: Neutral
+		Location: 120,123
+	Actor43: prop1
+		Owner: Neutral
+		Location: 123,120
+	Actor44: prop1
+		Owner: Neutral
+		Location: 4,120
+	Actor45: prop1
+		Owner: Neutral
+		Location: 4,7
+	Actor46: prop1
+		Owner: Neutral
+		Location: 123,7
+	Actor47: lamppost
+		Owner: Neutral
+		Location: 124,10
+	Actor48: lamppost
+		Owner: Neutral
+		Location: 118,9
+	Actor49: lamppost
+		Owner: Neutral
+		Location: 117,3
+	Actor50: lamppost
+		Owner: Neutral
+		Location: 9,9
+	Actor51: lamppost
+		Owner: Neutral
+		Location: 3,10
+	Actor52: lamppost
+		Owner: Neutral
+		Location: 10,3
+	Actor53: lamppost
+		Owner: Neutral
+		Location: 118,118
+	Actor54: lamppost
+		Owner: Neutral
+		Location: 124,117
+	Actor55: lamppost
+		Owner: Neutral
+		Location: 117,124
+	Actor56: lamppost
+		Owner: Neutral
+		Location: 10,124
+	Actor57: lamppost
+		Owner: Neutral
+		Location: 9,118
+	Actor58: lamppost
+		Owner: Neutral
+		Location: 3,117
+	Actor59: grssmisc7
+		Owner: Neutral
+		Location: 56,101
+	Actor60: grssmisc6
+		Owner: Neutral
+		Location: 69,102
+	Actor61: grssmisc6
+		Owner: Neutral
+		Location: 70,103
+	Actor62: grssmisc7
+		Owner: Neutral
+		Location: 69,19
+	Actor63: grssmisc6
+		Owner: Neutral
+		Location: 56,20
+	Actor64: grssmisc6
+		Owner: Neutral
+		Location: 57,21
+	Actor65: grssmisc7
+		Owner: Neutral
+		Location: 21,54
+	Actor66: grssmisc6
+		Owner: Neutral
+		Location: 21,69
+	Actor67: grssmisc6
+		Owner: Neutral
+		Location: 22,68
+	Actor68: grssmisc7
+		Owner: Neutral
+		Location: 104,67
+	Actor69: grssmisc6
+		Owner: Neutral
+		Location: 105,55
+	Actor70: grssmisc6
+		Owner: Neutral
+		Location: 104,56
+	Actor71: treegrs10
+		Owner: Neutral
+		Location: 105,56
+	Actor72: treegrs10
+		Owner: Neutral
+		Location: 21,68
+	Actor73: treegrs10
+		Owner: Neutral
+		Location: 57,20
+	Actor74: treegrs10
+		Owner: Neutral
+		Location: 69,103
+	Actor75: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 14,14
+	Actor76: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 18,114
+	Actor77: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 115,17
+	Actor78: treegrs11
+		Owner: Neutral
+		Location: 47,76
+	Actor79: treegrs11
+		Owner: Neutral
+		Location: 78,75
+	Actor80: treegrs10
+		Owner: Neutral
+		Location: 81,46
+	Actor81: treegrs10
+		Owner: Neutral
+		Location: 51,44
+	Actor82: treegrs10
+		Owner: Neutral
+		Location: 23,47
+	Actor83: treegrs10
+		Owner: Neutral
+		Location: 48,21
+	Actor84: treegrs10
+		Owner: Neutral
+		Location: 79,20
+	Actor85: treegrs10
+		Owner: Neutral
+		Location: 105,39
+	Actor86: treegrs10
+		Owner: Neutral
+		Location: 105,78
+	Actor87: treegrs10
+		Owner: Neutral
+		Location: 83,102
+	Actor88: treegrs11
+		Owner: Neutral
+		Location: 48,103
+	Actor89: treegrs11
+		Owner: Neutral
+		Location: 20,85
