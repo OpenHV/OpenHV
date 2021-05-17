@@ -1359,6 +1359,7 @@ HARBOR:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^3x3Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 3072, 3072
 	Buildable:
