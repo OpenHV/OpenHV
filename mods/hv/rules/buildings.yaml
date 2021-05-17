@@ -1656,7 +1656,7 @@ TECHBUILDING:
 	GrantConditionOnDamageState@disable-lights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
-	Capturable:
+	-Sellable:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	OwnerLostAction:
@@ -1767,6 +1767,7 @@ TECHMINER:
 		PlayerPalette: green
 	MustBeDestroyed:
 		RequiredForShortGame: false
+	-Sellable:
 	CashTrickler:
 		Amount: 200
 		Interval: 500
