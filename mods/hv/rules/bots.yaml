@@ -102,6 +102,7 @@ Player:
 			builder: 0
 			balloon: 2
 			saucer: 2
+			tank4: 1
 			tank8: 1
 			boat3: 3
 			technician: 1
