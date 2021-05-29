@@ -78,7 +78,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (waterState == WaterCheck.NotChecked)
 			{
-				if (AIUtils.IsAreaAvailable<BaseProvider>(world, player, world.Map, baseBuilder.Info.MaxBaseRadius, baseBuilder.Info.WaterTerrainTypes))
+				if (AIUtils.IsAreaAvailable<BaseProvider>(world, player, world.Map, baseBuilder.Info.MaximumBaseRadius, baseBuilder.Info.WaterTerrainTypes))
 					waterState = WaterCheck.EnoughWater;
 				else
 				{
@@ -453,8 +453,8 @@ namespace OpenRA.Mods.HV.Traits
 
 				case BuildingType.Refinery:
 				case BuildingType.Building:
-					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius,
-						distanceToBaseIsImportant ? baseBuilder.Info.MaxBaseRadius : world.Map.Grid.MaximumTileSearchRange);
+					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius,
+						distanceToBaseIsImportant ? baseBuilder.Info.MaximumBaseRadius : world.Map.Grid.MaximumTileSearchRange);
 			}
 
 			// Can't find a build location
