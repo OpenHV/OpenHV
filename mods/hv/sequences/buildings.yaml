@@ -593,6 +593,31 @@ factory3:
 		Start: 2
 		Offset: 0, 0
 
+bunker:
+	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		Offset: 0, -3
+	idle: bits/bunker.png
+		Start: 0
+	shadow-overlay: bits/bunker-shadow.png
+		ZOffset: 1768
+		Offset: 2, 6
+	damaged-idle: bits/bunker.png
+		Start: 1
+	make: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2000
+	make-overlay: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2000
+	flame:
+		Offset: 2, -12
+	icon: bits/buildings-icons.png
+		Start: 25
+		Offset: 0, 0
+
 turret:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:

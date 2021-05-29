@@ -19,8 +19,12 @@ SCOUT1:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Armament:
+	Armament@PRIMARY:
 		Weapon: LightMachineGun
+		MuzzleSequence: muzzle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: BunkerChaingun
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
@@ -55,6 +59,10 @@ SCOUT2:
 		Weapon: LightAntiAirRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: RapidAntiTankRocket
+		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
@@ -86,8 +94,12 @@ SNIPERPOD:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Armament:
+	Armament@PRIMARY:
 		Weapon: SniperRifle
+		MuzzleSequence: muzzle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: BunkerSniperRifle
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
