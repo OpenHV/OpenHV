@@ -15,6 +15,7 @@ Player:
 		MaximumExcessPower: 160
 		ExcessPowerIncrement: 40
 		ExcessPowerIncreaseThreshold: 4
+		ResourceDistance: 6
 		ConstructionYardTypes: base
 		PowerTypes: generator
 		BarracksTypes: module
