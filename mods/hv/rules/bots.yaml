@@ -51,7 +51,8 @@ Player:
 			starport: 1
 			starport2: 1
 			techcenter: 1
-			turret: 7
+			bunker: 7
+			turret: 5
 			aaturret: 3
 			artilleryturret: 5
 			field: 1

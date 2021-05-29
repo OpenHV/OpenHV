@@ -693,13 +693,55 @@ TECHCENTER:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled
 
+BUNKER:
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: module, refinery
+		Description: Basic base defense.\nGood against pods.\nRequires power to operate.
+	Selectable:
+		Bounds: 1256, 1450, 0, -300
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Bunker
+	Health:
+		HP: 40000
+	Turreted:
+		TurnSpeed: 512
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	HitShape:
+		Type: Circle
+			Radius: 512
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 6c0
+	Cargo:
+		Types: Scout
+		MaxWeight: 1
+		InitialUnits: scout1
+	AttackGarrisoned:
+		RequiresCondition: !build-incomplete && !beam-incomplete
+		Armaments: garrisoned
+		PortOffsets: 175,0,375, 125,-341,375, -125,-341,375, -225,0,375, -125,341,375, 125,341,375
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
+	Power:
+		Amount: -20
+
 TURRET:
 	Inherits: ^DefenseBuilding
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: module, refinery, ~structures.yi
-		Description: Base defense.\nRequires power to operate.
+		Description: Base defense.\nGood against vehicles.\nRequires power to operate.
 	Valued:
 		Cost: 1000
 	Tooltip:

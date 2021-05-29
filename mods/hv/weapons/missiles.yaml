@@ -168,6 +168,11 @@ LightAntiAirRocket:
 			Light: 50
 			Heavy: 100
 
+RapidAntiTankRocket:
+	Inherits: LightAntiTankRocket
+	ReloadDelay: 20
+	Range: 8c0
+
 ShipMissile:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 50

@@ -40,6 +40,16 @@ LightMachineGun:
 	Range: 5c0
 	Burst: 2
 
+BunkerChaingun:
+	Inherits: LightMachineGun
+	Report: heavymgburst01.wav, heavymgburst02.wav
+	Warhead@Damage: SpreadDamage
+		Spread: 24
+		Damage: 3000
+	ReloadDelay: 15
+	Range: 8c0
+	Burst: 1
+
 ChainGun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
 	ReloadDelay: 10
@@ -163,4 +173,10 @@ SniperRifle:
 			Concrete: 15	
 	ReloadDelay: 50
 	Range: 10c0
+	Burst: 1
+
+BunkerSniperRifle:
+	Inherits: SniperRifle
+	ReloadDelay: 20
+	Range: 11c0
 	Burst: 1
