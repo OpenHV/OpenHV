@@ -613,7 +613,7 @@ bunker:
 		Tick: 30
 		ZOffset: 2000
 	flame:
-		Offset: 10, -12
+		Offset: 2, -12
 	icon: bits/buildings-icons.png
 		Start: 25
 		Offset: 0, 0
