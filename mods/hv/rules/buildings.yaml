@@ -1699,6 +1699,8 @@ TECHBUILDING:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
 	-Sellable:
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	OwnerLostAction:
@@ -1810,6 +1812,8 @@ TECHMINER:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-Sellable:
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 	CashTrickler:
 		Amount: 200
 		Interval: 500
