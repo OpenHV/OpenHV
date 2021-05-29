@@ -172,6 +172,8 @@ RapidAntiTankRocket:
 	Inherits: LightAntiTankRocket
 	ReloadDelay: 20
 	Range: 8c0
+	Projectile: Missile
+		RangeLimit: 10c0
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile
