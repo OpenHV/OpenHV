@@ -74,6 +74,9 @@ Cursors:
 Chrome:
 	hv|chrome.yaml
 
+Missions:
+	hv|missions.yaml
+
 Assemblies:
 	^BinDir|OpenRA.Mods.Common.dll
 	^BinDir|OpenRA.Mods.HV.dll

@@ -14,9 +14,11 @@ MapSize: 62,62
 
 Bounds: 1,1,60,60
 
-Visibility: Lobby
+Visibility: MissionSelector
 
-Categories: Conquest
+Categories: Campaign
+
+Translations:
 
 Players:
 	PlayerReference@Neutral:
@@ -28,21 +30,14 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
-		Enemies: Multi0, Multi1, Multi2
-	PlayerReference@Multi0:
-		Name: Multi0
+		Enemies: The Company
+	PlayerReference@The Company:
+		Name: The Company
 		Playable: True
-		Faction: Random
-		Enemies: Creeps
-	PlayerReference@Multi1:
-		Name: Multi1
-		Playable: True
-		Faction: Random
-		Enemies: Creeps
-	PlayerReference@Multi2:
-		Name: Multi2
-		Playable: True
-		Faction: Random
+		LockFaction: True
+		Faction: sc
+		LockColor: True
+		Color: D0A090
 		Enemies: Creeps
 
 Actors:
@@ -58,14 +53,136 @@ Actors:
 	Actor157: icicle1
 		Owner: Neutral
 		Location: 24,33
-	Actor254: mpspawn
-		Owner: Neutral
-		Location: 18,40
-	Actor6: mpspawn
-		Owner: Neutral
-		Location: 50,52
-	Actor7: mpspawn
-		Owner: Neutral
-		Location: 9,7
+	Actor4: miner2
+		Owner: Creeps
+		Location: 15,2
+	Actor5: miner2
+		Owner: Creeps
+		Location: 32,8
+	Actor6: miner2
+		Owner: Creeps
+		Location: 42,26
+	Actor7: miner2
+		Owner: Creeps
+		Location: 35,20
+	Actor14: turret
+		Owner: Creeps
+		Location: 30,5
+	Base: base
+		Owner: The Company
+		Location: 46,49
+	Actor10: refinery
+		Owner: Creeps
+		Location: 5,5
+		FreeActor: False
+	Actor11: factory2
+		Owner: Creeps
+		Location: 16,37
+	Actor12: module
+		Owner: Creeps
+		Location: 24,38
+	Actor13: radar
+		Owner: Creeps
+		Location: 20,37
+	Actor16: storage
+		Owner: Creeps
+		Location: 6,14
+	Actor17: storage
+		Owner: Creeps
+		Location: 25,44
+	Actor18: base
+		Owner: Creeps
+		Location: 16,51
+	Actor19: generator
+		Owner: Creeps
+		Location: 16,58
+	Actor20: generator
+		Owner: Creeps
+		Location: 19,57
+	Actor21: generator
+		Owner: Creeps
+		Location: 22,55
+	Actor22: generator
+		Owner: Creeps
+		Location: 22,44
+	Actor23: generator
+		Owner: Creeps
+		Location: 12,37
+	Actor24: generator
+		Owner: Creeps
+		Location: 9,39
+	Actor25: turret
+		Owner: Creeps
+		Location: 25,30
+	Actor26: tradplat
+		Owner: Creeps
+		Location: 17,43
+	Actor27: generator
+		Owner: Creeps
+		Location: 3,3
+	Actor28: generator
+		Owner: Creeps
+		Location: 11,2
+	Actor29: tank3
+		Owner: Creeps
+		Location: 24,8
+		Facing: 777
+		TurretFacing: 23
+	Actor30: artil
+		Owner: Creeps
+		Location: 22,9
+		Facing: 761
+	Actor31: tank11
+		Owner: Creeps
+		Location: 32,19
+		Facing: 991
+	Actor34: tank11
+		Owner: Creeps
+		Location: 25,20
+		Facing: 864
+	Actor32: balloon
+		Owner: Creeps
+		Facing: 384
+		Location: 27,14
+	Actor33: scout1
+		Owner: Creeps
+		SubCell: 1
+		Location: 36,10
+		Facing: 800
+	Actor35: scout2
+		Owner: Creeps
+		SubCell: 1
+		Location: 33,12
+		Facing: 753
+	Actor36: scout2
+		Owner: Creeps
+		SubCell: 1
+		Location: 30,9
+		Facing: 800
+	Actor37: scout1
+		Owner: Creeps
+		SubCell: 1
+		Location: 35,25
+		Facing: 103
+	Actor38: scout1
+		Owner: Creeps
+		SubCell: 1
+		Location: 41,24
+		Facing: 206
+	Actor39: scout1
+		Owner: Creeps
+		SubCell: 1
+		Location: 39,29
+		Facing: 142
+	Actor40: scout1
+		Owner: Creeps
+		SubCell: 1
+		Location: 32,27
+		Facing: 39
+	Actor41: scout1
+		Owner: Creeps
+		SubCell: 1
+		Location: 31,23
+		Facing: 15
 
-Rules: rules.yaml
+Rules: hv|rules/campaign.yaml, rules.yaml

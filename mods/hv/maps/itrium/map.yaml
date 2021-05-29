@@ -33,7 +33,7 @@ Players:
 		NonCombatant: True
 		Faction: Random
 		Enemies: The Company
-	PlayerReference@The Company:
+	PlayerReference@TheCompany:
 		Name: The Company
 		Playable: True
 		LockFaction: True

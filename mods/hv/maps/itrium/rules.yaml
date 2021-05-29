@@ -56,6 +56,10 @@ SILO:
 	Buildable:
 		Prerequisites: ~disabled
 
+UPLINK:
+	Buildable:
+		Prerequisites: ~disabled
+
 ARTILLERYTURRET:
 	Buildable:
 		Prerequisites: ~disabled

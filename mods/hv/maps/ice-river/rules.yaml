@@ -1,3 +1,7 @@
+Player:
+	PlayerResources:
+		DefaultCash: 10000
+
 World:
 	WeatherOverlay:
 		ChangingWindLevel: true
@@ -23,3 +27,47 @@ World:
 		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
 		Palette: cloud
 		Speed: 20, 30
+	LuaScript:
+		Scripts: hv|scripts/campaign.lua, ice-river.lua
+	MissionData:
+		Briefing: A bridgehead on planet Itrium has been successfully established. The mission is now to expand the companies footprint. Reception for interplanetary televation is still being worked on. Your arsenal will be limited for the time being.
+
+STARPORT:
+	Buildable:
+		Prerequisites: ~disabled
+
+STARPORT2:
+	Buildable:
+		Prerequisites: ~disabled
+
+TECHCENTER:
+	Buildable:
+		Prerequisites: ~disabled
+
+FIELD:
+	Buildable:
+		Prerequisites: ~disabled
+
+SILO:
+	Buildable:
+		Prerequisites: ~disabled
+
+UPLINK:
+	Buildable:
+		Prerequisites: ~disabled
+
+ARTILLERYTURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVATR:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVTR2:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
