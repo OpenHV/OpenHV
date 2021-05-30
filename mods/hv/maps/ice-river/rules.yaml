@@ -1,6 +1,6 @@
 Player:
 	PlayerResources:
-		DefaultCash: 10000
+		DefaultCash: 8000
 
 World:
 	WeatherOverlay:
@@ -69,5 +69,57 @@ TELEVTR2:
 		Prerequisites: ~disabled
 
 HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET2:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK9:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK4:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK6:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK5:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK10:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK7:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK15:
+	Buildable:
+		Prerequisites: ~disabled
+
+ARTIL3:
+	Buildable:
+		Prerequisites: ~disabled
+
+MISSILE_TANK:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK8:
+	Buildable:
+		Prerequisites: ~disabled
+
+SNIPERPOD:
 	Buildable:
 		Prerequisites: ~disabled
