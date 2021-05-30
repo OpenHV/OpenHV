@@ -68,6 +68,7 @@ Actors:
 	Actor14: turret
 		Owner: Creeps
 		Location: 30,5
+		Stance: AttackAnything
 	Base: base
 		Owner: The Company
 		Location: 46,49
@@ -114,6 +115,7 @@ Actors:
 	Actor25: turret
 		Owner: Creeps
 		Location: 25,30
+		Stance: AttackAnything
 	Actor26: tradplat
 		Owner: Creeps
 		Location: 17,43
