@@ -1,6 +1,3 @@
-[[prereqs]]
-name = "net-runtime-5-x64-windows"
-
 [[actions]]
 os = "windows"
 name = "OpenHV"
