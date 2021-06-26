@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2021 The OpenHV Developers (see AUTHORS)
+ * Copyright 2019-2021 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -18,6 +18,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[TraitLocation(SystemActors.World)]
 	public class CubeSpawnerInfo : TraitInfo, ILobbyOptions
 	{
 		[Desc("Descriptive label for the cubes checkbox in the lobby.")]

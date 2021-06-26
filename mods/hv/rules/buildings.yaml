@@ -374,13 +374,18 @@ MINER2:
 	ResourceCollector:
 		Interval: 100
 		DeliveryVehicleType: tanker1
+		Deposits:
+			iron: 10000
+			gold: 15000
+		Colors:
+			iron: 878787
+			gold: F07000
+		RequiresCondition: !build-incomplete
 	Exit:
 	WithSpriteBody:
-		Sequence: active
+	WithDrillingAnimation:
 	WithMakeAnimation:
 		Condition: build-incomplete
-	QuantizeFacingsFromSequence:
-		Sequence: active
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3

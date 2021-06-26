@@ -271,6 +271,9 @@ miner2:
 				Offset: 15, 32
 				Length: 17
 				Tick: 100
+	idle: bits/miner2.png
+		Start: 17
+		Length: 1
 	active:
 		Length: 3
 		Tick: 300

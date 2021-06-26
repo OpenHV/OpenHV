@@ -336,6 +336,7 @@ World:
 			#	TerrainType: Water
 			#	AllowedTerrainTypes: Crater
 			#	MaxDensity: 1
+	LimitedResources:
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech

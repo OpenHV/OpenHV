@@ -19,4 +19,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	[RequireExplicitImplementation]
 	public interface INotifyResourceTransport { void Delivered(Actor sender, Actor receiver); }
+
+	[RequireExplicitImplementation]
+	public interface INotifyResourceCollection { void Mining(Actor self); void Depletion(Actor self); }
 }

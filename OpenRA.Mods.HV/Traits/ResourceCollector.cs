@@ -37,17 +37,33 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference(typeof(ResourceTransporterInfo))]
 		public readonly string[] DeliveryVehicleType = null;
 
+		[Desc("How much can be mined in total before depletion.")]
+		public readonly Dictionary<string, int> Deposits = new Dictionary<string, int>();
+
+		[Desc("Defines to which players the bar is to be shown.")]
+		public readonly PlayerRelationship DisplayRelationships = PlayerRelationship.Ally;
+
+		[Desc("Defines to which players the bar is to be shown.")]
+		public readonly Dictionary<string, Color> Colors = new Dictionary<string, Color>();
+
 		public override object Create(ActorInitializer init) { return new ResourceCollector(init.Self, this); }
 	}
 
-	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, ITick, ISync
+	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, ITick, ISync, ISelectionBar
 	{
 		readonly ResourceCollectorInfo info;
+		readonly Actor self;
 		readonly Lazy<RallyPoint> rallyPoint;
 		readonly IResourceLayer resourceLayer;
 		readonly Building building;
 
-		public int Ticks { get; private set; }
+		LimitedResources limitedResources;
+		string resourceType = null;
+		int total;
+		int deposit;
+		int left;
+		int ticks;
+		bool depleted;
 
 		[Sync]
 		public int Resources { get; private set; }
@@ -56,7 +72,9 @@ namespace OpenRA.Mods.HV.Traits
 			: base(info)
 		{
 			this.info = info;
-			Ticks = info.InitialDelay;
+			this.self = self;
+
+			ticks = info.InitialDelay;
 
 			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 			building = self.Trait<Building>();
@@ -64,33 +82,75 @@ namespace OpenRA.Mods.HV.Traits
 			rallyPoint = Exts.Lazy(() => self.IsDead ? null : self.TraitOrDefault<RallyPoint>());
 		}
 
+		protected override void TraitEnabled(Actor self)
+		{
+			var cells = building.Info.Tiles(self.Location);
+			foreach (var cell in cells)
+			{
+				var resource = resourceLayer.GetResource(cell);
+				if (resource.Density > 0)
+				{
+					resourceType = resource.Type;
+					deposit = info.Deposits[resource.Type];
+					total = deposit * resource.Density;
+					left = total;
+				}
+			}
+
+			if (deposit > 0)
+				foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
+					notify.Mining(self);
+
+			limitedResources = self.Owner.World.WorldActor.TraitOrDefault<LimitedResources>();
+		}
+
 		void ITick.Tick(Actor self)
 		{
 			if (IsTraitDisabled)
-				Ticks = info.Interval;
+				ticks = info.Interval;
 
 			if (IsTraitPaused || IsTraitDisabled)
 				return;
 
-			if (--Ticks < 0)
+			if (depleted)
+				return;
+
+			if (--ticks < 0)
 			{
-				Ticks = info.Interval;
+				ticks = info.Interval;
 				Resources += info.Amount;
-
-				if (Resources >= Info.Capacity)
+				left -= info.Amount;
+				if (left < info.Capacity)
 				{
-					var exit = self.Exits().RandomOrDefault(self.World.SharedRandom);
-					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
-					var actorInfo = self.World.Map.Rules.Actors[vehicle];
+					depleted = true;
 
-					string resourceType = null;
+					foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
+						notify.Depletion(self);
+				}
+
+				if (limitedResources != null && limitedResources.IsTraitEnabled() && limitedResources.Enabled)
+				{
+					var density = (int)Math.Round(left / (float)deposit);
 					var cells = building.Info.Tiles(self.Location);
 					foreach (var cell in cells)
 					{
 						var resource = resourceLayer.GetResource(cell);
-						if (resource.Density > 0)
-							resourceType = resource.Type;
+						if (resource.Density > density)
+							resourceLayer.RemoveResource(resource.Type, cell);
 					}
+				}
+
+				if (Resources >= info.Capacity || depleted)
+				{
+					if (depleted)
+					{
+						Resources += left;
+						left = 0;
+					}
+
+					var exit = self.Exits().RandomOrDefault(self.World.SharedRandom);
+					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
+					var actorInfo = self.World.Map.Rules.Actors[vehicle];
 
 					if (resourceType != null)
 						SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType);
@@ -108,7 +168,7 @@ namespace OpenRA.Mods.HV.Traits
 			var exit = CPos.Zero;
 			var exitLocations = new List<CPos>();
 
-			var td = new TypeDictionary();
+			var typeDictionary = new TypeDictionary();
 
 			if (exitInfo != null && self.OccupiesSpace != null && actorInfo.HasTraitInfo<IOccupySpaceInfo>())
 			{
@@ -122,8 +182,8 @@ namespace OpenRA.Mods.HV.Traits
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
 					{
-						var fi = actorInfo.TraitInfoOrDefault<IFacingInfo>();
-						initialFacing = fi != null ? fi.GetInitialFacing() : WAngle.Zero;
+						var facingInfo = actorInfo.TraitInfoOrDefault<IFacingInfo>();
+						initialFacing = facingInfo != null ? facingInfo.GetInitialFacing() : WAngle.Zero;
 					}
 					else
 						initialFacing = delta.Yaw;
@@ -133,17 +193,17 @@ namespace OpenRA.Mods.HV.Traits
 
 				exitLocations = rallyPoint.Value != null && rallyPoint.Value.Path.Count > 0 ? rallyPoint.Value.Path : new List<CPos> { exit };
 
-				td.Add(new LocationInit(exit));
-				td.Add(new CenterPositionInit(spawn));
-				td.Add(new FacingInit(initialFacing));
-				td.Add(new OwnerInit(self.Owner));
+				typeDictionary.Add(new LocationInit(exit));
+				typeDictionary.Add(new CenterPositionInit(spawn));
+				typeDictionary.Add(new FacingInit(initialFacing));
+				typeDictionary.Add(new OwnerInit(self.Owner));
 				if (exitInfo != null)
-					td.Add(new CreationActivityDelayInit(exitInfo.ExitDelay));
+					typeDictionary.Add(new CreationActivityDelayInit(exitInfo.ExitDelay));
 			}
 
 			self.World.AddFrameEndTask(w =>
 			{
-				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, td);
+				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, typeDictionary);
 				deliveryVehicle.Trait<ResourceTransporter>().ResourceType = resourceType;
 				deliveryVehicle.Trait<ResourceTransporter>().LinkedCollector = self;
 
@@ -153,5 +213,32 @@ namespace OpenRA.Mods.HV.Traits
 						deliveryVehicle.QueueActivity(new Move(deliveryVehicle, cell));
 			});
 		}
+
+		bool CantViewSelectionBar()
+		{
+			var viewer = self.World.RenderPlayer ?? self.World.LocalPlayer;
+			return viewer != null && !info.DisplayRelationships.HasRelationship(self.Owner.RelationshipWith(viewer));
+		}
+
+		float ISelectionBar.GetValue()
+		{
+			if (CantViewSelectionBar())
+				return 0;
+
+			if (resourceType == null)
+				return 0;
+
+			return left / (float)total;
+		}
+
+		Color ISelectionBar.GetColor()
+		{
+			if (resourceType != null)
+				return info.Colors[resourceType];
+
+			return Color.White;
+		}
+
+		bool ISelectionBar.DisplayWhenEmpty => !CantViewSelectionBar();
 	}
 }
