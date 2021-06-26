@@ -68,30 +68,92 @@ BASE:
 		Palette: green
 		LineWidth: 2
 	ExitsDebugOverlay:
-	Exit@0:
+	Exit@South1:
 		RequiresCondition: !being-captured
 		ExitCell: 0,4
 		SpawnOffset: -512,512,0
 		Facing: 512
-		ProductionTypes: Building
+		ProductionTypes: Vehicle
 		ExitDelay: 20
-	Exit@1:
+		Priority: 10
+	WithProductionExitOverlay@South1:
+		ExitCell: 0,4
+		Sequence: active-platform1
+	Exit@South2:
 		RequiresCondition: !being-captured
-		ExitCell: 1,3
+		ExitCell: 1,4
 		SpawnOffset: 512,512,0
 		Facing: 512
-		ProductionTypes: Building
+		ProductionTypes: Vehicle
 		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South2:
+		ExitCell: 1,4
+		Sequence: active-platform2
+	Exit@West1:
+		RequiresCondition: !being-captured
+		ExitCell: -1,2
+		SpawnOffset: -512,512,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West1:
+		ExitCell: -1,2
+		Sequence: active-platform1
+	Exit@West2:
+		RequiresCondition: !being-captured
+		ExitCell: -1,3
+		SpawnOffset: -512,512,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West2:
+		ExitCell: -1,3
+		Sequence: active-platform1
+	Exit@West3:
+		RequiresCondition: !being-captured
+		ExitCell: -1,4
+		SpawnOffset: -512,512,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West3:
+		ExitCell: -1,4
+		Sequence: active-platform1
+	Exit@East1:
+		RequiresCondition: !being-captured
+		ExitCell: 2,2
+		SpawnOffset: 512,512,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East1:
+		ExitCell: 2,2
+		Sequence: active-platform2
+	Exit@East2:
+		RequiresCondition: !being-captured
+		ExitCell: 2,3
+		SpawnOffset: 512,512,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East2:
+		ExitCell: 2,3
+		Sequence: active-platform2
+	Exit@East3:
+		RequiresCondition: !being-captured
+		ExitCell: 2,4
+		SpawnOffset: 512,512,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East3:
+		ExitCell: 2,4
+		Sequence: active-platform2
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 	WithIdleOverlay@platform2:
 		Sequence: idle-platform2
-	WithProductionExitOverlay@platform1:
-		ExitCell: 0,4
-		Sequence: active-platform1
-	WithProductionExitOverlay@platform2:
-		ExitCell: 1,3
-		Sequence: active-platform2
 	TerrainLightSource:
 		Range: 2c512
 		Intensity: 0.1
@@ -312,13 +374,23 @@ MODULE:
 		Palette: green
 		LineWidth: 2
 	ExitsDebugOverlay:
-	Exit@1:
+	Exit@South1:
 		SpawnOffset: -150,800,0
 		ExitCell: 1,2
 		ProductionTypes: Scouts
-	Exit@2:
+		Priority: 10
+	Exit@South2:
 		SpawnOffset: 150,800,0
 		ExitCell: 0,2
+		ProductionTypes: Scouts
+		Priority: 10
+	Exit@North1:
+		SpawnOffset: -150,-800,0
+		ExitCell: 1,-1
+		ProductionTypes: Scouts
+	Exit@South2:
+		SpawnOffset: 150,-800,0
+		ExitCell: 0,-1
 		ProductionTypes: Scouts
 	Production:
 		Produces: Scouts
@@ -588,20 +660,103 @@ FACTORY2:
 		Sequence: make-platform4
 		RequiresCondition: build-incomplete
 		PauseOnCondition: !build-incomplete
-	WithProductionExitOverlay@creation:
-		ExitCell: 0,4
-		Sequence: active-creation
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
 	ExitsDebugOverlay:
-	Exit@0:
+	Exit@South1:
 		ExitCell: 0,4
 		SpawnOffset: -50,800,0
 		Facing: 512
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South1:
+		ExitCell: 0,4
+		Sequence: active-creation
+	Exit@South2:
+		ExitCell: 1,4
+		SpawnOffset: -50,800,0
+		Facing: 512
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+		Priority: 10
+	WithProductionExitOverlay@South2:
+		ExitCell: 1,4
+		Sequence: active-creation
+	Exit@West1:
+		ExitCell: -1,1
+		SpawnOffset: -50,800,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West1:
+		ExitCell: -1,1
+		Sequence: active-creation
+	Exit@West2:
+		ExitCell: -1,2
+		SpawnOffset: -50,800,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West2:
+		ExitCell: -1,2
+		Sequence: active-creation
+	Exit@West3:
+		ExitCell: -1,3
+		SpawnOffset: -50,800,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West3:
+		ExitCell: -1,3
+		Sequence: active-creation
+	Exit@West4:
+		ExitCell: -1,4
+		SpawnOffset: -50,800,0
+		Facing: 768
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@West4:
+		ExitCell: -1,4
+		Sequence: active-creation
+	Exit@East1:
+		ExitCell: 2,1
+		SpawnOffset: -50,800,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East1:
+		ExitCell: 2,1
+		Sequence: active-creation
+	Exit@East2:
+		ExitCell: 2,2
+		SpawnOffset: -50,800,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East2:
+		ExitCell: 2,2
+		Sequence: active-creation
+	Exit@East3:
+		ExitCell: 2,3
+		SpawnOffset: -50,800,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East3:
+		ExitCell: 2,3
+		Sequence: active-creation
+	Exit@East4:
+		ExitCell: 2,4
+		SpawnOffset: -50,800,0
+		Facing: 256
+		ProductionTypes: Vehicle
+		ExitDelay: 20
+	WithProductionExitOverlay@East4:
+		ExitCell: 2,4
+		Sequence: active-creation
 	Production:
 		Produces: Vehicle
 	ProductionBar:
@@ -627,11 +782,11 @@ FACTORY2:
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
-	WithProductionExitOverlay@factory1:
+	WithProductionExitOverlay@Done1:
 		ExitCell: 0,2
 		Sequence: production-done
 		RequiresCondition: !burning
-	WithProductionExitOverlay@factory2:
+	WithProductionExitOverlay@Done2:
 		ExitCell: 1,2
 		Sequence: production-done
 		RequiresCondition: !burning
