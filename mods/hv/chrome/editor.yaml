@@ -639,6 +639,16 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipText: Show the terrain types
 			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
+		Button@BUILDABLE_BUTTON:
+			X: 910
+			Width: 90
+			Height: 25
+			Text: Buildable
+			Font: Bold
+			Key: f2
+			TooltipTemplate: BUTTON_TOOLTIP
+			TooltipText: Toggle unbuildable cells
+			TooltipContainer: TOOLTIP_CONTAINER
 
 ScrollPanel@CATEGORY_FILTER_PANEL:
 	Width: 240

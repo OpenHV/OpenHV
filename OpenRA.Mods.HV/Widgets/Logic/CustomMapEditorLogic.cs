@@ -37,6 +37,19 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				gridButton.IsHighlighted = () => terrainGeometryTrait.Enabled;
 			}
 
+			var lockButton = widget.GetOrNull<ButtonWidget>("BUILDABLE_BUTTON");
+			if (lockButton != null)
+			{
+				var buildableTerrainTrait = world.WorldActor.TraitOrDefault<BuildableTerrainOverlay>();
+				if (buildableTerrainTrait != null)
+				{
+					lockButton.OnClick = () => buildableTerrainTrait.Enabled ^= true;
+					lockButton.IsHighlighted = () => buildableTerrainTrait.Enabled;
+				}
+				else
+					lockButton.Disabled = true;
+			}
+
 			var autoTileButton = widget.GetOrNull<ButtonWidget>("AUTOTILE_BUTTON");
 			if (autoTileButton != null)
 			{

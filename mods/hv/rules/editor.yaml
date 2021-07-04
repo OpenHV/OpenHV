@@ -26,12 +26,12 @@ EditorWorld:
 			gold:
 				ResourceIndex: 1
 				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
 				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
 				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Plant, Tech
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
 				MaxDensity: 3
 			water:
 				ResourceIndex: 3
@@ -43,6 +43,8 @@ EditorWorld:
 	EditorActionManager:
 	EditorCursorLayer:
 	EditorAutoTiler:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Tech
 
 EditorPlayer:
 	Inherits: ^BasePlayer
