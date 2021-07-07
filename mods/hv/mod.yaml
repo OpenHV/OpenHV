@@ -23,6 +23,7 @@ Packages:
 	hv|bits/audio/dzierzan
 	hv|bits/audio/dzierzan/announcer
 	hv|bits/audio/flamewh33l/
+	hv|bits/audio/timbeek/
 
 MapFolders:
 	hv|maps: System
@@ -211,7 +212,7 @@ VideoFormats:
 
 SpriteFormats: PngSheet
 
-SoundFormats: Wav
+SoundFormats: Wav, Ogg
 
 SpriteSequenceFormat: DefaultSpriteSequence
 

@@ -59,17 +59,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			mainMenu.Get<ButtonWidget>("MULTIPLAYER_BUTTON").OnClick = OpenMultiplayerPanel;
 
-			mainMenu.Get<ButtonWidget>("CONTENT_BUTTON").OnClick = () =>
-			{
-				// Switching mods changes the world state (by disposing it),
-				// so we can't do this inside the input handler.
-				Game.RunAfterTick(() =>
-				{
-					var content = modData.Manifest.Get<ModContent>();
-					Game.InitializeMod(content.ContentInstallerMod, new Arguments(new[] { "Content.Mod=" + modData.Manifest.Id }));
-				});
-			};
-
 			mainMenu.Get<ButtonWidget>("SETTINGS_BUTTON").OnClick = () =>
 			{
 				SwitchMenu(MenuType.None);

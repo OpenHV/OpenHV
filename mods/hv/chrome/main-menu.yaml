@@ -61,14 +61,6 @@ Container@MAINMENU:
 							Height: 30
 							Text: Extras
 							Font: Bold
-						Button@CONTENT_BUTTON:
-							X: PARENT_RIGHT / 2 - WIDTH / 2
-							Y: 220
-							Width: 140
-							Height: 30
-							Text: Manage Content
-							Font: Bold
-							Disabled: true
 						Button@QUIT_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 260
@@ -143,7 +135,6 @@ Container@MAINMENU:
 							Height: 30
 							Text: Music
 							Font: Bold
-							Disabled: true
 						Button@MAP_EDITOR_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
