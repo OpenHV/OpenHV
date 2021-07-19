@@ -7,7 +7,7 @@
 #   make RUNTIME=mono
 #
 # to compile using system libraries for native dependencies, run:
-#   make [RUNTIME=dotnet] TARGETPLATFORM=unix-generic
+#   make [RUNTIME=net5] TARGETPLATFORM=unix-generic
 #
 # to remove the files created by compiling, run:
 #   make clean
@@ -19,10 +19,10 @@
 #   make check-scripts
 #
 # to check the engine and your mod dlls for StyleCop violations, run:
-#   make [RUNTIME=dotnet] check
+#   make [RUNTIME=net5] check
 #
 # to check your mod yaml for errors, run:
-#   make [RUNTIME=dotnet] test
+#   make [RUNTIME=net5] test
 #
 # the following are internal sdk helpers that are not intended to be run directly:
 #   make check-variables
@@ -54,7 +54,7 @@ BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
 
-RUNTIME ?= dotnet
+RUNTIME ?= net5
 
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
@@ -187,7 +187,7 @@ check-lua:
 	@luac -p $(shell find mods/*/maps/* -iname '*.lua')
 	@luac -p $(shell find mods/*/scripts/* -iname '*.lua')
 
-test: engine
+test: all
 	@echo
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
 	@./utility.sh --check-yaml

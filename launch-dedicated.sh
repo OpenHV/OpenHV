@@ -6,13 +6,13 @@
 
 set -e
 if ! command -v mono >/dev/null 2>&1; then
-	command -v dotnet >/dev/null 2>&1 || { echo >&2 "The OpenHV mod SDK requires dotnet or mono."; exit 1; }
+	command -v dotnet >/dev/null 2>&1 || { echo >&2 "OpenHV requires dotnet or mono."; exit 1; }
 fi
 
 if command -v python3 >/dev/null 2>&1; then
 	PYTHON="python3"
 else
-	command -v python >/dev/null 2>&1 || { echo >&2 "The OpenHV mod SDK requires python."; exit 1; }
+	command -v python >/dev/null 2>&1 || { echo >&2 "OpenHV requires python."; exit 1; }
 	PYTHON="python"
 fi
 

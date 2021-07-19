@@ -135,11 +135,12 @@ build_platform() {
 	fi
 
 	echo "Building core files"
+	RUNTIME="net5"
 	if [ "${PLATFORM}" = "compat" ]; then
-		install_assemblies_mono "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
-	else
-		install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+		RUNTIME="mono"
 	fi
+
+	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
 
 	for f in ${PACKAGING_COPY_ENGINE_FILES}; do
@@ -148,11 +149,7 @@ build_platform() {
 	done
 
 	echo "Building mod files"
-	if [ "${PLATFORM}" = "compat" ]; then
-		install_mod_assemblies_mono "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
-	else
-		install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64"
-	fi
+	install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 	cp -LR "${TEMPLATE_ROOT}mods/"* "${LAUNCHER_RESOURCES_DIR}/mods"
 
