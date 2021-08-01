@@ -1,0 +1,291 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Crescendo
+
+Author: SiegeSpud
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 98,98
+
+Bounds: 1,1,96,96
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Translations:
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor3: lamppost
+		Owner: Neutral
+		Location: 47,43
+	Actor4: lamppost
+		Owner: Neutral
+		Location: 50,43
+	Actor5: techminer
+		Owner: Neutral
+		Location: 46,58
+	Actor6: techminer
+		Owner: Neutral
+		Location: 50,58
+	Actor7: techminer
+		Owner: Neutral
+		Location: 48,61
+	Actor8: lamppost
+		Owner: Neutral
+		Location: 50,57
+	Actor9: lamppost
+		Owner: Neutral
+		Location: 47,57
+	Actor10: grssmisc7
+		Owner: Neutral
+		Location: 30,76
+	Actor11: grssmisc7
+		Owner: Neutral
+		Location: 66,76
+	Actor12: grssmisc6
+		Owner: Neutral
+		Location: 66,78
+	Actor13: grssmisc6
+		Owner: Neutral
+		Location: 30,78
+	Actor18: prop3
+		Owner: Neutral
+		Location: 48,33
+	Actor19: prop3
+		Owner: Neutral
+		Location: 49,33
+	Actor20: prop3
+		Owner: Neutral
+		Location: 49,34
+	Actor21: prop3
+		Owner: Neutral
+		Location: 48,34
+	Actor22: lamppost
+		Owner: Neutral
+		Location: 47,32
+	Actor23: lamppost
+		Owner: Neutral
+		Location: 50,32
+	Actor24: lamppost
+		Owner: Neutral
+		Location: 50,35
+	Actor25: lamppost
+		Owner: Neutral
+		Location: 47,35
+	Actor32: prop1
+		Owner: Neutral
+		Location: 60,83
+	Actor33: prop1
+		Owner: Neutral
+		Location: 37,83
+	Actor38: treegrs10
+		Owner: Neutral
+		Location: 51,34
+	Actor39: treegrs10
+		Owner: Neutral
+		Location: 46,34
+	Actor40: treegrs11
+		Owner: Neutral
+		Location: 47,35
+	Actor41: treegrs11
+		Owner: Neutral
+		Location: 50,35
+	Actor42: treegrs10
+		Owner: Neutral
+		Location: 48,36
+	Actor43: treegrs10
+		Owner: Neutral
+		Location: 49,36
+	Actor37: treegrs11
+		Owner: Neutral
+		Location: 51,32
+	Actor44: treegrs11
+		Owner: Neutral
+		Location: 46,32
+	Actor45: treegrs11
+		Owner: Neutral
+		Location: 48,30
+	Actor46: treegrs11
+		Owner: Neutral
+		Location: 49,30
+	Actor31: lamppost
+		Owner: Neutral
+		Location: 47,22
+	Actor34: lamppost
+		Owner: Neutral
+		Location: 50,22
+	Actor35: prop3
+		Owner: Neutral
+		Location: 48,23
+	Actor36: prop3
+		Owner: Neutral
+		Location: 49,23
+	Actor47: prop3
+		Owner: Neutral
+		Location: 48,24
+	Actor48: prop3
+		Owner: Neutral
+		Location: 49,24
+	Actor49: lamppost
+		Owner: Neutral
+		Location: 47,25
+	Actor50: lamppost
+		Owner: Neutral
+		Location: 50,25
+	Actor51: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 44,30
+	Actor52: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 53,30
+	Actor53: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 45,38
+	Actor54: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 52,38
+	Actor55: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 35,51
+	Actor56: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 62,51
+	Actor63: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 27,28
+	Actor64: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 70,28
+	Actor65: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 33,10
+	Actor66: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 64,10
+	Actor69: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 28,9
+	Actor70: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 69,9
+	Actor71: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 41,81
+	Actor72: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 56,81
+	Actor57: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 88,49
+	Actor58: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 9,49
+	Actor59: mpspawn
+		Owner: Neutral
+		Location: 22,55
+	Actor60: mpspawn
+		Owner: Neutral
+		Location: 74,55
+	Actor61: resourcelight
+		Owner: Neutral
+		Location: 20,43
+	Actor62: resourcelight
+		Owner: Neutral
+		Location: 28,18
+	Actor67: resourcelight
+		Owner: Neutral
+		Location: 42,16
+	Actor68: resourcelight
+		Owner: Neutral
+		Location: 55,16
+	Actor73: resourcelight
+		Owner: Neutral
+		Location: 69,18
+	Actor74: resourcelight
+		Owner: Neutral
+		Location: 77,43
+	Actor75: resourcelight
+		Owner: Neutral
+		Location: 70,67
+	Actor76: resourcelight
+		Owner: Neutral
+		Location: 77,68
+	Actor77: resourcelight
+		Owner: Neutral
+		Location: 20,68
+	Actor78: resourcelight
+		Owner: Neutral
+		Location: 27,67
+	Actor79: resourcelight
+		Owner: Neutral
+		Location: 47,60
+	Actor80: resourcelight
+		Owner: Neutral
+		Location: 51,60
+	Actor81: resourcelight
+		Owner: Neutral
+		Location: 49,63
+	Actor82: resourcelight
+		Owner: Neutral
+		Location: 60,83
+	Actor83: resourcelight
+		Owner: Neutral
+		Location: 37,83
+	Actor84: resourcelight
+		Owner: Neutral
+		Location: 35,37
+	Actor85: resourcelight
+		Owner: Neutral
+		Location: 62,37
+	Actor86: resourcelight
+		Owner: Neutral
+		Location: 70,28
+	Actor87: resourcelight
+		Owner: Neutral
+		Location: 27,28
+
+Rules: rules.yaml

@@ -1,0 +1,214 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Antifreeze
+
+Author: SiegeSpud
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 130,66
+
+Bounds: 1,1,128,64
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Translations:
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: lamppost
+		Owner: Neutral
+		Location: 49,27
+	Actor1: lamppost
+		Owner: Neutral
+		Location: 49,38
+	Actor2: lamppost
+		Owner: Neutral
+		Location: 36,38
+	Actor3: lamppost
+		Owner: Neutral
+		Location: 36,27
+	Actor4: lamppost
+		Owner: Neutral
+		Location: 80,27
+	Actor5: lamppost
+		Owner: Neutral
+		Location: 80,38
+	Actor6: lamppost
+		Owner: Neutral
+		Location: 93,27
+	Actor7: lamppost
+		Owner: Neutral
+		Location: 93,38
+	Actor8: icicle1
+		Owner: Neutral
+		Location: 52,31
+	Actor9: icicle1
+		Owner: Neutral
+		Location: 76,31
+	Actor10: techminer
+		Owner: Neutral
+		Location: 70,15
+	Actor11: techminer
+		Owner: Neutral
+		Location: 58,15
+	Actor12: techminer
+		Owner: Neutral
+		Location: 77,17
+	Actor13: techminer
+		Owner: Neutral
+		Location: 51,17
+	Actor15: techminer
+		Owner: Neutral
+		Location: 70,46
+	Actor16: techminer
+		Owner: Neutral
+		Location: 58,46
+	Actor17: techminer
+		Owner: Neutral
+		Location: 77,44
+	Actor18: techminer
+		Owner: Neutral
+		Location: 51,44
+	Actor19: icicle2
+		Owner: Neutral
+		Location: 71,34
+	Actor20: icicle2
+		Owner: Neutral
+		Location: 58,29
+	Actor21: trees4
+		Owner: Neutral
+		Location: 73,40
+	Actor22: trees4
+		Owner: Neutral
+		Location: 56,23
+	Actor23: trees17
+		Owner: Neutral
+		Location: 55,24
+	Actor24: trees17
+		Owner: Neutral
+		Location: 74,39
+	Actor25: icelight
+		Owner: Neutral
+		Location: 65,33
+	Actor27: baselight
+		Owner: Neutral
+		Location: 24,32
+	Actor26: baselight
+		Owner: Neutral
+		Location: 106,33
+	Actor28: mpspawn
+		Owner: Neutral
+		Location: 23,28
+	Actor29: mpspawn
+		Owner: Neutral
+		Location: 105,33
+	Actor30: redsmalllight
+		Owner: Neutral
+		Location: 27,16
+	Actor31: redsmalllight
+		Owner: Neutral
+		Location: 31,17
+	Actor32: redsmalllight
+		Owner: Neutral
+		Location: 17,45
+	Actor33: redsmalllight
+		Owner: Neutral
+		Location: 112,20
+	Actor34: redsmalllight
+		Owner: Neutral
+		Location: 102,49
+	Actor35: redsmalllight
+		Owner: Neutral
+		Location: 98,48
+	Actor36: redsmalllight
+		Owner: Neutral
+		Location: 77,46
+	Actor37: redsmalllight
+		Owner: Neutral
+		Location: 70,48
+	Actor38: redsmalllight
+		Owner: Neutral
+		Location: 58,48
+	Actor39: redsmalllight
+		Owner: Neutral
+		Location: 51,46
+	Actor40: redsmalllight
+		Owner: Neutral
+		Location: 51,19
+	Actor41: redsmalllight
+		Owner: Neutral
+		Location: 58,17
+	Actor42: redsmalllight
+		Owner: Neutral
+		Location: 70,17
+	Actor43: redsmalllight
+		Owner: Neutral
+		Location: 77,19
+	Actor44: redsmalllight
+		Owner: Neutral
+		Location: 54,39
+	Actor45: redsmalllight
+		Owner: Neutral
+		Location: 75,26
+	Actor46: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 44,18
+	Actor47: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 85,18
+	Actor48: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 85,44
+	Actor49: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 44,44
+	Actor50: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 35,57
+	Actor51: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 91,58
+	Actor52: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 94,8
+	Actor53: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 38,7
+
+Rules: rules.yaml

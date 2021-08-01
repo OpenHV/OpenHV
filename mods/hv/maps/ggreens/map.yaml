@@ -1,0 +1,156 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Green Greens
+
+Author: SiegeSpud
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 98,66
+
+Bounds: 1,1,96,64
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Translations:
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 16,30
+	Actor1: mpspawn
+		Owner: Neutral
+		Location: 80,30
+	Actor2: prop2
+		Owner: Neutral
+		Location: 85,19
+	Actor3: prop2
+		Owner: Neutral
+		Location: 75,19
+	Actor4: prop2
+		Owner: Neutral
+		Location: 12,46
+	Actor5: prop2
+		Owner: Neutral
+		Location: 22,46
+	Actor6: prop2
+		Owner: Neutral
+		Location: 56,34
+	Actor7: prop2
+		Owner: Neutral
+		Location: 41,31
+	Actor8: grssmisc6
+		Owner: Neutral
+		Location: 3,17
+	Actor9: grssmisc6
+		Owner: Neutral
+		Location: 1,19
+	Actor10: grssmisc6
+		Owner: Neutral
+		Location: 94,46
+	Actor11: grssmisc6
+		Owner: Neutral
+		Location: 96,44
+	Actor16: treegrs11
+		Owner: Neutral
+		Location: 42,46
+	Actor17: treegrs11
+		Owner: Neutral
+		Location: 55,17
+	Actor18: treegrs10
+		Owner: Neutral
+		Location: 54,16
+	Actor19: treegrs10
+		Owner: Neutral
+		Location: 43,47
+	Actor20: treegrs11
+		Owner: Neutral
+		Location: 43,48
+	Actor21: treegrs11
+		Owner: Neutral
+		Location: 54,15
+	Actor22: treegrs10
+		Owner: Neutral
+		Location: 54,14
+	Actor23: treegrs10
+		Owner: Neutral
+		Location: 43,49
+	Actor24: treegrs11
+		Owner: Neutral
+		Location: 48,53
+	Actor25: treegrs11
+		Owner: Neutral
+		Location: 49,10
+	Actor26: swamplight
+		Owner: Neutral
+		Location: 48,32
+	Actor27: swamplight
+		Owner: Neutral
+		Location: 32,50
+	Actor28: swamplight
+		Owner: Neutral
+		Location: 65,15
+	Actor29: swamplight
+		Owner: Neutral
+		Location: 31,13
+	Actor30: swamplight
+		Owner: Neutral
+		Location: 66,52
+	Actor31: swamplight
+		Owner: Neutral
+		Location: 3,61
+	Actor32: swamplight
+		Owner: Neutral
+		Location: 94,4
+	Actor33: swamplight
+		Owner: Neutral
+		Location: 10,10
+	Actor34: swamplight
+		Owner: Neutral
+		Location: 87,55
+	Actor35: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 41,24
+	Actor36: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 56,41
+	Actor37: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 32,57
+	Actor38: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 65,8
+
+Rules: rules.yaml
