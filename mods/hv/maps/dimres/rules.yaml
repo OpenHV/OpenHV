@@ -1,0 +1,29 @@
+World:
+	GlobalLightingPaletteEffect:
+		Red: 1.2
+		Green: 1.1
+		Blue: 0.9
+		Ambient: 1.2
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 15, 25
+
+BLUELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 012000
+		Intensity: 0.10
+		RedTint: 0.01
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+GREENLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 010000
+		Intensity: 0.10
+		RedTint: 0.02
+		GreenTint: 0.80
+		BlueTint: 0.30
