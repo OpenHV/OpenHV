@@ -1,3 +1,7 @@
 World:
 	LuaScript:
 		Scripts: shellmap.lua
+	MusicPlaylist:
+		StartingMusic: cinematic intro extended loop
+		AllowMuteBackgroundMusic: true
+		DisableWorldSounds: true
