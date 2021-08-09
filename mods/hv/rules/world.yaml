@@ -142,16 +142,16 @@
 				Name: Water
 	PaletteFromGimpOrJascFile@terrain:
 		Name: terrain
-		Filename: bits/palette.pal
+		Filename: bits/colors.pal
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@player:
 		Name: player
-		Filename: bits/palette.pal
+		Filename: bits/colors.pal
 		TransparentIndex: 255
 		Premultiply: false
 	PaletteFromGimpOrJascFile@effect:
 		Name: effect
-		Filename: bits/palette.pal
+		Filename: bits/colors.pal
 		TransparentIndex: 255
 		Premultiply: false
 	PlayerColorPalette:
@@ -175,13 +175,13 @@
 		RemapIndex: 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32
 	PaletteFromGimpOrJascFile@cursor:
 		Name: cursor
-		Filename: bits/palette.pal
+		Filename: bits/colors.pal
 		CursorPalette: true
 		AllowModifiers: false
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
-		Filename: bits/palette.pal
+		Filename: bits/colors.pal
 		AllowModifiers: false
 		TransparentIndex: 255
 	ColorPickerPalette:
@@ -203,6 +203,10 @@
 		G: 0
 		B: 0
 		A: 140
+		TransparentIndex: 255
+	PaletteFromGimpOrJascFile@shadows:
+		Name: shadows
+		Filename: bits/shadows.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@cloud:
 		Name: cloud
