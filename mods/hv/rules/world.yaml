@@ -204,9 +204,9 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
-	PaletteFromGimpOrJascFile@shadows:
-		Name: shadows
-		Filename: bits/shadows.pal
+	PaletteFromGimpOrJascFile@alpha-gradients:
+		Name: alpha-gradients
+		Filename: bits/alpha-gradients.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@cloud:
 		Name: cloud
