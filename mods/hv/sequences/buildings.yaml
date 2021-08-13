@@ -34,7 +34,7 @@ base:
 	idle: bits/base.png
 	shadow-overlay: bits/base-shadow.png
 		ZOffset: 1768
-		Offset: 7, -17
+		Offset: 7, -18
 	damaged-idle: bits/base.png
 		Start: 7
 		Length: 1
@@ -110,14 +110,14 @@ generator:
 		Tick: 80
 	shadow-overlay: bits/generator-shadow.png
 		ZOffset: 1768
-		Offset: 12, 11
+		Offset: 11, 11
 	damaged-idle: bits/generator.png
 		Start: 15
 		Length: 1
 	damaged-shadow-overlay: bits/generator-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 12, 11
+		Offset: 11, 11
 	make: build.png
 		Length: 39
 		Tick: 30
@@ -141,13 +141,13 @@ radar:
 	idle: bits/radar.png
 	shadow-overlay: bits/radar-shadow.png
 		ZOffset: 1768
-		Offset: 7, 0
+		Offset: 5, 0
 	damaged-idle: bits/radar.png
 		Start: 1
 	damaged-shadow-overlay: bits/radar-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 7, 0
+		Offset: 5, 0
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -167,7 +167,7 @@ radar2:
 	idle: bits/radar2.png
 	shadow-overlay: bits/radar2-shadow.png
 		ZOffset: 1768
-		Offset: 7, 0
+		Offset: 5, 0
 	damaged-idle: bits/radar2.png
 		Start: 1
 	make: bits/build.png
@@ -230,13 +230,13 @@ module:
 	shadow-overlay: bits/module-shadow.png
 		Start: 0
 		ZOffset: 1768
-		Offset: 7, 14
+		Offset: 6, 14
 	damaged-idle: bits/module.png
 		Start: 9
 	damaged-shadow-overlay: bits/module-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 7, 14
+		Offset: 6, 14
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -390,7 +390,7 @@ factory2:
 	idle-offline: bits/factory2.png
 	shadow-overlay: bits/factory2-shadow.png
 		ZOffset: 1768
-		Offset: 5, -12
+		Offset: 4, -13
 	damaged-idle-online: bits/factory2.png
 		Start: 15
 	damaged-idle-offline: bits/factory2.png
@@ -398,7 +398,7 @@ factory2:
 	damaged-shadow-overlay: bits/factory2-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 5, -12
+		Offset: 4, -13
 	production-inprogress: bits/factory2.png
 		Start: 1
 		Length: 10
@@ -498,7 +498,7 @@ factory3:
 	idle-offline: bits/factory3.png
 	shadow-overlay: bits/factory3-shadow.png
 		ZOffset: 1768
-		Offset: 7, -7
+		Offset: 6, -7
 	damaged-idle-online: bits/factory3.png
 		Start: 11
 	damaged-idle-offline: bits/factory3.png
@@ -506,7 +506,7 @@ factory3:
 	damaged-shadow-overlay: bits/factory3-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 7, -7
+		Offset: 6, -7
 	production-inprogress: bits/factory3.png
 		Start: 5
 		Length: 6
@@ -803,7 +803,7 @@ silo:
 		Start: 1
 	shadow-overlay: bits/silo-shadow.png
 		ZOffset: 1768
-		Offset: 3, -15
+		Offset: 3, -16
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -860,7 +860,7 @@ storage:
 	idle: bits/storage.png
 	shadow-overlay: bits/storage-shadow.png
 		ZOffset: 1768
-		Offset: 3, 4
+		Offset: 3, 3
 	stages: bits/storage.png
 		Length: 14
 	damaged-stages: bits/storage.png
