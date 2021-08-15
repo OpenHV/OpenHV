@@ -1,0 +1,159 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Clovergrief
+
+Author: SiegeSpud
+
+License: CC-BY-SA-4.0
+
+Tileset: PLANET
+
+MapSize: 114,114
+
+Bounds: 1,1,112,112
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Translations:
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1, Multi2, Multi3
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 30,29
+	Actor1: mpspawn
+		Owner: Neutral
+		Location: 82,29
+	Actor2: mpspawn
+		Owner: Neutral
+		Location: 82,80
+	Actor3: mpspawn
+		Owner: Neutral
+		Location: 30,80
+	Actor4: pyramid
+		Owner: Neutral
+		Location: 56,56
+	Actor5: base_light
+		Owner: Neutral
+		Location: 30,30
+	Actor6: base_light
+		Owner: Neutral
+		Location: 82,30
+	Actor7: base_light
+		Owner: Neutral
+		Location: 82,81
+	Actor8: base_light
+		Owner: Neutral
+		Location: 30,81
+	Actor9: central_light
+		Owner: Neutral
+		Location: 57,57
+	Actor30: prop1
+		Owner: Neutral
+		Location: 12,12
+	Actor31: prop1
+		Owner: Neutral
+		Location: 101,12
+	Actor32: prop1
+		Owner: Neutral
+		Location: 101,101
+	Actor33: prop1
+		Owner: Neutral
+		Location: 12,101
+	Actor14: resource_light
+		Owner: Neutral
+		Location: 38,50
+	Actor15: resource_light
+		Owner: Neutral
+		Location: 39,39
+	Actor16: resource_light
+		Owner: Neutral
+		Location: 50,38
+	Actor17: resource_light
+		Owner: Neutral
+		Location: 34,18
+	Actor18: resource_light
+		Owner: Neutral
+		Location: 19,33
+	Actor19: resource_light
+		Owner: Neutral
+		Location: 38,63
+	Actor20: resource_light
+		Owner: Neutral
+		Location: 39,74
+	Actor21: resource_light
+		Owner: Neutral
+		Location: 50,75
+	Actor22: resource_light
+		Owner: Neutral
+		Location: 34,95
+	Actor23: resource_light
+		Owner: Neutral
+		Location: 19,80
+	Actor24: resource_light
+		Owner: Neutral
+		Location: 80,95
+	Actor25: resource_light
+		Owner: Neutral
+		Location: 95,80
+	Actor26: resource_light
+		Owner: Neutral
+		Location: 75,74
+	Actor27: resource_light
+		Owner: Neutral
+		Location: 76,63
+	Actor28: resource_light
+		Owner: Neutral
+		Location: 64,75
+	Actor29: resource_light
+		Owner: Neutral
+		Location: 76,50
+	Actor34: resource_light
+		Owner: Neutral
+		Location: 75,39
+	Actor35: resource_light
+		Owner: Neutral
+		Location: 64,38
+	Actor36: resource_light
+		Owner: Neutral
+		Location: 95,33
+	Actor37: resource_light
+		Owner: Neutral
+		Location: 80,18
+
+Rules: rules.yaml
