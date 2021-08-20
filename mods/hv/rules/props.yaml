@@ -41,6 +41,9 @@ PYRAMID:
 		Palette: shadow
 		IsDecoration: true
 
+MAYANPYRAMID:
+	Inherits: PYRAMID
+
 PYRAMID2:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
@@ -53,6 +56,9 @@ PYRAMID2:
 		Name: Small Pyramid
 	Health:
 		HP: 60000
+
+MAYANPYRAMID2:
+	Inherits: PYRAMID2
 
 PROP1:
 	Inherits: ^Prop

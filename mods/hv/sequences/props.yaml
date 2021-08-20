@@ -12,9 +12,23 @@ pyramid:
 	shadow-overlay: bits/pyramid-shadow.png
 		Offset: 1,6
 
+mayanpyramid:
+	Defaults:
+		Offset: -1,-2
+	idle: bits/mayanpyramid.png
+	damaged-idle: bits/mayanpyramid.png
+		Start: 1
+	shadow-overlay: bits/pyramid-shadow.png
+		Offset: 1,6
+
 pyramid2:
 	idle: bits/pyramid2.png
 	damaged-idle: bits/pyramid2.png
+		Start: 1
+
+mayanpyramid2:
+	idle: bits/mayanpyramid2.png
+	damaged-idle: bits/mayanpyramid2.png
 		Start: 1
 
 prop1:

@@ -18,8 +18,6 @@ Visibility: Lobby
 
 Categories: Conquest
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -65,7 +63,7 @@ Actors:
 	Actor3: mpspawn
 		Owner: Neutral
 		Location: 30,80
-	Actor4: pyramid
+	Actor4: mayanpyramid
 		Owner: Neutral
 		Location: 56,56
 	Actor5: base_light
