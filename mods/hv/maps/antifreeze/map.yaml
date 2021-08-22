@@ -43,28 +43,28 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: lamppost
+	Actor0: sparklamp
 		Owner: Neutral
 		Location: 49,27
-	Actor1: lamppost
+	Actor1: sparklamp
 		Owner: Neutral
 		Location: 49,38
-	Actor2: lamppost
+	Actor2: sparklamp
 		Owner: Neutral
 		Location: 36,38
-	Actor3: lamppost
+	Actor3: sparklamp
 		Owner: Neutral
 		Location: 36,27
-	Actor4: lamppost
+	Actor4: sparklamp
 		Owner: Neutral
 		Location: 80,27
-	Actor5: lamppost
+	Actor5: sparklamp
 		Owner: Neutral
 		Location: 80,38
-	Actor6: lamppost
+	Actor6: sparklamp
 		Owner: Neutral
 		Location: 93,27
-	Actor7: lamppost
+	Actor7: sparklamp
 		Owner: Neutral
 		Location: 93,38
 	Actor8: icicle1
