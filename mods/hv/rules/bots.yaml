@@ -97,6 +97,7 @@ Player:
 			boat: 1
 			boat2: 1
 			boat3: 1
+			boat4: 2
 		UnitLimits:
 			miner: 1
 			builder: 0
@@ -105,6 +106,7 @@ Player:
 			tank4: 1
 			tank8: 1
 			boat3: 3
+			boat4: 4
 			technician: 1
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai

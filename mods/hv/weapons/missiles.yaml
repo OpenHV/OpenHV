@@ -351,3 +351,26 @@ DropshipMissile:
 			Light: 25
 			Heavy: 50
 			Concrete: 50
+
+BallisticMissile:
+	Inherits: ^AntiGroundMissile
+	ReloadDelay: 150
+	Range: 22c0
+	MinRange: 6c0
+	Report: rocketlaunch03.wav
+	Projectile: Missile
+		HorizontalRateOfTurn: 40
+		Speed: 150
+		Image: bullet11
+		Shadow: false
+		Acceleration: 0c02
+		RangeLimit: 25c0
+	Warhead@Damage: SpreadDamage
+		Spread: 512
+		Damage: 8000
+		Versus:
+			None: 50
+			Steel: 50
+			Light: 50
+			Heavy: 50
+			Concrete: 50

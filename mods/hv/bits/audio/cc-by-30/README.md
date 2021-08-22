@@ -15,3 +15,5 @@ Content of this folder indicates assets made by various authors, under the defau
 * [blaster-newlocknew.wav](https://freesound.org/people/newlocknew/sounds/520056/) by newlocknew, edited by Dzierzan.
 * [blaster1/2/3-tutarap.wav](https://freesound.org/people/tutarap/sounds/341956/) by tutarap
 * [twisterman_silenced-gun-1.wav](https://freesound.org/people/twisterman/sounds/163583/) by twisterman
+* [submarine_in_szegvari.wav](https://freesound.org/people/szegvari/sounds/572537/) by szegvari
+* [submarine_out_szegvari.wav](https://freesound.org/people/szegvari/sounds/572537/) by szegvari
