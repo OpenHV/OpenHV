@@ -57,6 +57,23 @@ PYRAMID2:
 	Health:
 		HP: 60000
 
+OBELISK:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Obelisk
+	Health:
+		HP: 50000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+
 MAYANPYRAMID2:
 	Inherits: PYRAMID2
 
