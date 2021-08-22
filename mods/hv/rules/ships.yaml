@@ -179,6 +179,9 @@ BOAT4:
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical, Heavy
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
 	RenderSprites:
 		PlayerPalette: green
 
