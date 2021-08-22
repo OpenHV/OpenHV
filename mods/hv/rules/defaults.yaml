@@ -112,7 +112,7 @@
 	Voiced:
 		VoiceSet: GenericVoice3
 	RenderSprites:
-		PlayerPalette: remap
+		PlayerPalette: grey
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -224,7 +224,7 @@
 	MapEditorData:
 		Categories: Aircraft
 	RenderSprites:
-		PlayerPalette: remap
+		PlayerPalette: grey
 	Repairable:
 		RepairActors: tradplat
 	ActorLostNotification:
@@ -663,7 +663,7 @@
 	Voiced:
 		VoiceSet: ShipVoice
 	RenderSprites:
-		PlayerPalette: remap
+		PlayerPalette: grey
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
