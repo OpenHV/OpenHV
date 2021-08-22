@@ -26,6 +26,20 @@ pyramid2:
 	damaged-idle: bits/pyramid2.png
 		Start: 1
 
+obelisk:
+	Defaults:
+		Offset: 0,-3
+	idle: bits/obelisk.png
+	damaged-idle: bits/obelisk.png
+		Start: 1
+	shadow-overlay: bits/obelisk-shadow.png
+		Offset: 4,8
+		ZOffset: 1768
+	damaged-shadow-overlay: bits/obelisk-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 4,8
+
 mayanpyramid2:
 	idle: bits/mayanpyramid2.png
 	damaged-idle: bits/mayanpyramid2.png
