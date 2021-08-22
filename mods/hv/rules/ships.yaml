@@ -39,6 +39,10 @@ BOAT3:
 	WithSpriteTurret:
 	WithTurretAttackAnimation:
 		Sequence: shoot
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 6c0
+	RenderDetectionCircle:
 	RenderSprites:
 		PlayerPalette: green
 
@@ -124,6 +128,57 @@ BOAT2:
 		LocalOffset: 500,0,0 # TODO: to be adjusted
 	AttackTurreted:
 	WithSpriteTurret:
+	RenderSprites:
+		PlayerPalette: green
+
+BOAT4:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Missile Submarine
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: harbor, techcenter
+		BuildPaletteOrder: 50
+		Description: A submarine with powerful long range missiles.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 50000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 55
+		TurnSpeed: 40
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	AttackFrontal:
+		FacingTolerance: 25
+	WithAttackAnimation:
+		Sequence: shoot
+	Armament:
+		Weapon: BallisticMissile
+		LocalOffset: -250,0,0
+	Cloak:
+		CloakTypes: Underwater
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakSound: submarine_out_szegvari.wav
+		UncloakSound: submarine_in_szegvari.wav
+		CloakedCondition: underwater
+		Palette: shadow
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical, Heavy
 	RenderSprites:
 		PlayerPalette: green
 

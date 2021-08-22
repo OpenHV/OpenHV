@@ -35,6 +35,17 @@ boat3:
 	icon: bits/units-icons.png
 		Start: 14
 
+boat4:
+	idle: bits/submarine.png
+		Facings: 8
+	shoot: bits/submarine.png
+		Start: 8
+		Length: 2
+		Facings: 8
+		Tick: 50
+	icon: bits/units-icons.png
+		Start: 45
+
 seamnstr:
 	left: bits/seamnstr.png
 		Length: 15
