@@ -173,7 +173,6 @@ BOAT4:
 		CloakDelay: 100
 		CloakSound: submarine_out_szegvari.wav
 		UncloakSound: submarine_in_szegvari.wav
-		CloakedCondition: underwater
 		Palette: shadow
 		PauseOnCondition: cloak-force-disabled
 	GrantConditionOnDamageState@UNCLOAK:
