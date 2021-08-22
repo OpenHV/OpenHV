@@ -12,5 +12,5 @@ LAVALIGHT:
 		BlueTint: 0.01
 
 World:
-	TerrainTileAnimation@LAVABUBBLE:
+	TerrainTileAnimation@LavaBubble:
 		Interval: 3

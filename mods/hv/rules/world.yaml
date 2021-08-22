@@ -13,10 +13,10 @@
 	DebugOffsetOverlayManager:
 	TerrainLighting:
 	CustomTerrainRenderer:
-	Locomotor@IMMOBILE:
+	Locomotor@Immobile:
 		Name: immobile
 		TerrainSpeeds:
-	Locomotor@FOOT:
+	Locomotor@Foot:
 		Name: foot
 		TerrainSpeeds:
 			Clear: 100
@@ -32,7 +32,7 @@
 			Sand: 100
 			Stone: 100
 			Tech: 100
-	Locomotor@POD:
+	Locomotor@Pod:
 		Name: pod
 		Crushes: Cube, Scrap
 		SharesCell: true
@@ -50,7 +50,7 @@
 			Sand: 90
 			Stone: 100
 			Tech: 100
-	Locomotor@WHEELED:
+	Locomotor@Wheeled:
 		Name: wheeled
 		Crushes: Cube, Scrap
 		TerrainSpeeds:
@@ -67,7 +67,7 @@
 			Sand: 90
 			Stone: 100
 			Tech: 100
-	Locomotor@TRACKED:
+	Locomotor@Tracked:
 		Name: tracked
 		Crushes: Tree, Cube, Scrap, Pods
 		CrushDamageTypes: Crush
@@ -86,7 +86,7 @@
 			Stone: 100
 			Plant: 50
 			Tech: 100
-	Locomotor@LIGHTTRACKED:
+	Locomotor@LightTracked:
 		Name: lighttracked
 		Crushes: Cube, Scrap
 		TerrainSpeeds:
@@ -103,7 +103,7 @@
 			Sand: 100
 			Stone: 100
 			Tech: 100
-	Locomotor@NAVAL:
+	Locomotor@Naval:
 		Name: naval
 		Crushes: Cube
 		TerrainSpeeds:
@@ -120,7 +120,7 @@
 		Side: Corporations
 		Selectable: true
 		Description: Synaty Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Railgun Tank\n    - Countermeasure Tank\n    - Missile Tank\n\nSuperweapon:\n    - Orbital Railgun Strike
-	Faction@RANDOM:
+	Faction@Random:
 		Name: Any
 		InternalName: Random
 		RandomFactionMembers: yi, sc
@@ -140,16 +140,16 @@
 				Sequences: waterflow
 				Palette: terrain
 				Name: Water
-	PaletteFromGimpOrJascFile@terrain:
+	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
 		Filename: bits/colors.pal
 		TransparentIndex: 255
-	PaletteFromGimpOrJascFile@player:
+	PaletteFromGimpOrJascFile@Player:
 		Name: player
 		Filename: bits/colors.pal
 		TransparentIndex: 255
 		Premultiply: false
-	PaletteFromGimpOrJascFile@effect:
+	PaletteFromGimpOrJascFile@Effect:
 		Name: effect
 		Filename: bits/colors.pal
 		TransparentIndex: 255
@@ -157,25 +157,25 @@
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 0
-	PlayerColorPalette@grey-remap:
+	PlayerColorPalette@GreyRemap:
 		BasePalette: player
 		BaseName: grey
 		RemapIndex: 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65
-	PlayerColorPalette@green-remap:
+	PlayerColorPalette@GreenRemap:
 		BasePalette: player
 		BaseName: green
 		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
-	PlayerColorPalette@misc-remap:
+	PlayerColorPalette@GreyBlueRemap:
 		BasePalette: player
 		BaseName: grey-blue
 		RemapIndex: 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32
-	PaletteFromGimpOrJascFile@cursor:
+	PaletteFromGimpOrJascFile@Cursor:
 		Name: cursor
 		Filename: bits/colors.pal
 		CursorPalette: true
 		AllowModifiers: false
 		TransparentIndex: 255
-	PaletteFromGimpOrJascFile@chrome:
+	PaletteFromGimpOrJascFile@Chrome:
 		Name: chrome
 		Filename: bits/colors.pal
 		AllowModifiers: false
@@ -189,60 +189,60 @@
 		PreviewActor: dropship.colorpicker
 		PresetHues: 0, 0.13, 0.18, 0.3, 0.475, 0.625, 0.82, 0.89, 0.97, 0.05, 0.23, 0.375, 0.525, 0.6, 0.75, 0.85
 		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.5, 0.35, 0.4, 0.4, 0.5, 0.5, 0.4, 0.35
-	PaletteFromGimpOrJascFile@cube:
+	PaletteFromGimpOrJascFile@Cube:
 		Name: cube
 		Filename: bits/cube.pal
 		TransparentIndex: 255
-	PaletteFromRGBA@shadow:
+	PaletteFromRGBA@Shadow:
 		Name: shadow
 		R: 0
 		G: 0
 		B: 0
 		A: 140
 		TransparentIndex: 255
-	PaletteFromGimpOrJascFile@shadows:
+	PaletteFromGimpOrJascFile@Shadows:
 		Name: shadows
 		Filename: bits/shadows.pal
 		TransparentIndex: 255
-	PaletteFromRGBA@cloud:
+	PaletteFromRGBA@Cloud:
 		Name: cloud
 		R: 0
 		G: 0
 		B: 0
 		A: 72
 		TransparentIndex: 255
-	PaletteFromRGBA@highlight:
+	PaletteFromRGBA@Highlight:
 		Name: highlight
 		R: 255
 		G: 255
 		B: 255
 		A: 128
 		TransparentIndex: 255
-	PaletteFromRGBA@moveflash:
+	PaletteFromRGBA@MoveFlash:
 		Name: moveflash
 		R: 255
 		G: 255
 		B: 255
 		A: 64
 		TransparentIndex: 255
-	PaletteFromRGBA@shroud:
+	PaletteFromRGBA@Shroud:
 		Name: shroud
 		R: 0
 		G: 0
 		B: 0
 		TransparentIndex: 255
-	PaletteFromRGBA@fog:
+	PaletteFromRGBA@Fog:
 		Name: fog
 		R: 0
 		G: 0
 		B: 0
 		A: 140
 		TransparentIndex: 255
-	PaletteFromPlayerPaletteWithAlpha@cloak:
+	PaletteFromPlayerPaletteWithAlpha@Cloak:
 		BaseName: cloak
 		BasePalette: green
 		Alpha: 0.55
-	FlashPaletteEffect@nuke:
+	FlashPaletteEffect@Nuke:
 		Type: Nuke
 	ShroudRenderer:
 		ShroudVariants: fow
@@ -267,7 +267,7 @@ World:
 	ForestLayer:
 		Trees: treegrs1, treegrs2, treegrs3, treegrs4, treegrs5, treegrs6, treegrs7, treegrs8, treegrs9, treegrs12, treegrs13, treegrs14, treegrs15, trees1, trees2, trees3, trees5, trees6, trees7, trees8, trees9, trees10, trees11, trees12, trees13, trees14, trees15, trees16
 	DomainIndex:
-	SmudgeLayer@CRATER:
+	SmudgeLayer@Craters:
 		Type: Crater
 		Sequence: craters
 	WarheadDebugOverlay:
@@ -283,24 +283,24 @@ World:
 		CheckboxDisplayOrder: 8
 	TimeLimitManager:
 	CreateMapPlayers:
-	StartingUnits@BASE:
+	StartingUnits@Base:
 		Class: none
 		ClassName: Base only
 		Factions: yi, sc
 		BaseActor: base
-	StartingUnits@MINER:
+	StartingUnits@Miner:
 		Class: miner
 		ClassName: Base + Miner
 		Factions: yi, sc
 		BaseActor: base
 		SupportActors: miner
-	StartingUnits@SCOUTSC:
+	StartingUnits@ScoutSC:
 		Class: scout
 		ClassName: Base + Scout
 		Factions: sc
 		BaseActor: base
 		SupportActors: balloon
-	StartingUnits@SCOUTYI:
+	StartingUnits@ScoutYI:
 		Class: scout
 		ClassName: Base + Scout
 		Factions: yi
@@ -342,17 +342,17 @@ World:
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		CubeActors: moneycube, revealmapcube, cloakcube
 		CubeActorShares: 90, 10, 40
-	TerrainTileAnimation@LAVABUBBLE:
+	TerrainTileAnimation@LavaBubble:
 		Tiles: 323
 		Image: lavabubl
 		Sequence: active
 		Palette: effect
-	TerrainTileAnimation@SWAMPBUBBLE:
+	TerrainTileAnimation@SwampBubble:
 		Tiles: 1070
 		Image: swmpbubl
 		Sequence: active
 		Palette: effect
-	TerrainTileAnimation@SWAMP:
+	TerrainTileAnimation@Swamp:
 		Tiles: 1070
 		Interval: 25
 		Image: swmpani
