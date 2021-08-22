@@ -3,6 +3,11 @@ lamppost:
 	shadow-overlay: bits/lamppost.png
 		Start: 1
 
+sparklamp:
+	idle: bits/sparklamp.png
+	shadow-overlay: bits/sparklamp.png
+		Start: 1
+
 pyramid:
 	Defaults:
 		Offset: -1,-2

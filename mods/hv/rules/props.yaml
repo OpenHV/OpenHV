@@ -24,6 +24,11 @@ LAMPPOST:
 		Pieces: 1, 2
 	-ThrowsShrapnel@large:
 
+SPARKLAMP:
+	Inherits: LAMPPOST
+	Tooltip:
+		Name: Spark Lamp
+
 PYRAMID:
 	Inherits: ^Prop
 	Inherits@Shape: ^2x2Shape
