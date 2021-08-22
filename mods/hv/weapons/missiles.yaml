@@ -358,19 +358,17 @@ BallisticMissile:
 	Range: 22c0
 	MinRange: 6c0
 	Report: rocketlaunch03.wav
-	Projectile: Missile
-		HorizontalRateOfTurn: 40
+	Projectile: Bullet
 		Speed: 150
 		Image: bullet11
 		Shadow: false
-		Acceleration: 0c02
-		RangeLimit: 25c0
+		LaunchAngle: 100
 	Warhead@Damage: SpreadDamage
 		Spread: 512
-		Damage: 8000
+		Damage: 10000
 		Versus:
-			None: 50
-			Steel: 50
-			Light: 50
-			Heavy: 50
-			Concrete: 50
+			None: 75
+			Steel: 100
+			Light: 75
+			Heavy: 75
+			Concrete: 100
