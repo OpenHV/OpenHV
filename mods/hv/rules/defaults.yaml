@@ -344,7 +344,6 @@
 		Categories: Building
 	CommandBarBlacklist:
 	RenderSprites:
-		PlayerPalette: building
 	ThrowsShrapnel:
 		Weapons: Debris
 		Pieces: 5, 10
