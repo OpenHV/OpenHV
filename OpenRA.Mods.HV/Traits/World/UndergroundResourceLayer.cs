@@ -84,6 +84,30 @@ namespace OpenRA.Mods.HV.Traits
 			PopulateMapPreviewSignatureCells(map, ResourceTypes, destinationBuffer);
 		}
 
+		bool IResourceLayerInfo.TryGetTerrainType(string resourceType, out string terrainType)
+		{
+			if (resourceType == null || !ResourceTypes.TryGetValue(resourceType, out var resourceInfo))
+			{
+				terrainType = null;
+				return false;
+			}
+
+			terrainType = resourceInfo.TerrainType;
+			return true;
+		}
+
+		bool IResourceLayerInfo.TryGetResourceIndex(string resourceType, out byte index)
+		{
+			if (resourceType == null || !ResourceTypes.TryGetValue(resourceType, out var resourceInfo))
+			{
+				index = 0;
+				return false;
+			}
+
+			index = resourceInfo.ResourceIndex;
+			return true;
+		}
+
 		public override object Create(ActorInitializer init) { return new UndergroundResourceLayer(init.Self, this); }
 	}
 
@@ -96,6 +120,7 @@ namespace OpenRA.Mods.HV.Traits
 		protected readonly Dictionary<byte, string> ResourceTypesByIndex;
 
 		int resCells;
+		IResourceLayerInfo IResourceLayer.Info => info;
 
 		public event Action<CPos, string> CellChanged;
 
