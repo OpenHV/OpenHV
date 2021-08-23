@@ -684,9 +684,9 @@
 		Dimensions: 1,1
 	AppearsOnRadar:
 	RadarColorFromTerrain:
-		Terrain: Water
+		Terrain: Littoral
 	AppearsOnMapPreview:
-		Terrain: Water
+		Terrain: Littoral
 	Floods:
 		Interval: 15
 		MaxRange: 1000

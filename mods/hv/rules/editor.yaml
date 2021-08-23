@@ -35,7 +35,7 @@ EditorWorld:
 				MaxDensity: 3
 			water:
 				ResourceIndex: 3
-				TerrainType: Water
+				TerrainType: Littoral
 				AllowedTerrainTypes: Crater
 				MaxDensity: 1
 	EditorSelectionLayer:

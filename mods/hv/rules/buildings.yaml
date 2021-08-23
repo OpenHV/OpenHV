@@ -1574,7 +1574,7 @@ HARBOR:
 	Building:
 		Footprint: xxx x=x ___
 		Dimensions: 3,3
-		TerrainTypes: Water
+		TerrainTypes: Littoral
 	Health:
 		HP: 35000
 	Armor:

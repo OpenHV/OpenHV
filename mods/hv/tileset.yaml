@@ -4,7 +4,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Water, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
 
 Terrain:
 	TerrainType@Clear:
@@ -22,10 +22,18 @@ Terrain:
 		Type: Lava
 		TargetTypes: Lava
 		Color: 600000
-	TerrainType@Water:
-		Type: Water
+	TerrainType@Littoral:
+		Type: Littoral
 		TargetTypes: Water
 		Color: 0042A8
+	TerrainType@Pelagic:
+		Type: Pelagic
+		TargetTypes: Water
+		Color: 002875
+	TerrainType@Oceanic:
+		Type: Oceanic
+		TargetTypes: Water
+		Color: 001A53
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
@@ -153,8 +161,8 @@ Templates:
 			BorderTypes: Crater
 			BorderTransitions: 370, 366, 368, 374, 373, 375, 367, 365
 			Corners: 372, 371, 376, 377
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Crater, Cliff
 			BorderTransitions: 32, 38, 34, 29, 36, 35, 40, 41
 			Corners: 37, 39, 30, 28
@@ -355,7 +363,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@29:
@@ -363,7 +371,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@30:
@@ -371,7 +379,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@32:
@@ -379,7 +387,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@33:
@@ -387,16 +395,21 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Water, Terrain
+		Categories: Littoral, Terrain
 		ClearTile: true
+		AutoConnect@Pelagic:
+			Type: Pelagic
+			BorderTypes: Littoral
+			BorderTransitions: 1239, 1245, 1241, 1237, 1243, 1242, 1247, 1248
+			Corners: 1244, 1246, 1238, 1236
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@34:
 		Id: 34
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@35:
@@ -404,7 +417,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@36:
@@ -412,7 +425,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@37:
@@ -420,7 +433,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@38:
@@ -428,7 +441,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@39:
@@ -436,7 +449,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@40:
@@ -444,7 +457,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@41:
@@ -452,7 +465,7 @@ Templates:
 		Images: bits/terrain/crtr2wtr.png
 		Frames: 12
 		Size: 1,1
-		Categories: Crater, Water
+		Categories: Crater, Littoral
 		Tiles:
 			0: Cliff
 	Template@42:
@@ -1004,8 +1017,8 @@ Templates:
 			BorderTypes: Grass
 			BorderTransitions: 196, 192, 194, 200, 199, 201, 193, 191
 			Corners: 198, 197, 202, 203
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Grass, Cliff
 			BorderTransitions: 208, 214, 210, 205, 212, 211, 216, 217
 			Corners: 213, 215, 206, 204
@@ -1612,8 +1625,8 @@ Templates:
 			BorderTypes: Mountain
 			BorderTransitions: 417, 422, 418, 415, 420, 419, 424, 425
 			Corners: 421, 423, 416, 414
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Mountain, Cliff
 			BorderTransitions: 430, 436, 432, 427, 434, 433, 438, 439
 			Corners: 435, 437, 428, 426
@@ -1688,7 +1701,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@205:
@@ -1696,7 +1709,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@206:
@@ -1704,7 +1717,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@208:
@@ -1712,7 +1725,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@210:
@@ -1720,7 +1733,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@211:
@@ -1728,7 +1741,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@212:
@@ -1736,7 +1749,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@213:
@@ -1744,7 +1757,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@214:
@@ -1752,7 +1765,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@215:
@@ -1760,7 +1773,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@216:
@@ -1768,7 +1781,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@217:
@@ -1776,7 +1789,7 @@ Templates:
 		Images: bits/terrain/grs2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Grass, Water, Cliff
+		Categories: Grass, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@218:
@@ -1994,8 +2007,8 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Terrain
 		ClearTile: true
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Ice, IceCliff
 			BorderTransitions: 260, 266, 262, 256, 259, 258, 263, 264
 			Corners: 265, 267, 257, 255
@@ -2070,7 +2083,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@256:
@@ -2078,7 +2091,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@257:
@@ -2086,7 +2099,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@258:
@@ -2094,7 +2107,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@259:
@@ -2102,7 +2115,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@260:
@@ -2110,7 +2123,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@261:
@@ -2118,15 +2131,15 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@262:
 		Id: 262
 		Images: bits/terrain/ice2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@263:
@@ -2134,7 +2147,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@264:
@@ -2142,7 +2155,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@265:
@@ -2150,7 +2163,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@266:
@@ -2158,7 +2171,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@267:
@@ -2166,7 +2179,7 @@ Templates:
 		Images: bits/terrain/ice2watr.png
 		Frames: 12
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@269:
@@ -2174,7 +2187,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 0
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@270:
@@ -2182,7 +2195,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 1
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@271:
@@ -2190,7 +2203,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 2
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@272:
@@ -2198,7 +2211,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 3
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@273:
@@ -2206,7 +2219,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 4
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@274:
@@ -2214,7 +2227,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 5
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@275:
@@ -2222,7 +2235,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 6
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@276:
@@ -2230,7 +2243,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 7
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@277:
@@ -2238,7 +2251,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 8
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@278:
@@ -2246,7 +2259,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 9
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@279:
@@ -2254,7 +2267,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 10
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@280:
@@ -2262,7 +2275,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 11
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@281:
@@ -2270,7 +2283,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 12
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@282:
@@ -2278,7 +2291,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 13
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@283:
@@ -2286,7 +2299,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 14
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@284:
@@ -2294,7 +2307,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 15
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@285:
@@ -2302,15 +2315,15 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 16
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@286:
 		Id: 286
 		Images: bits/terrain/icebrk.png
 		Frames: 17
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: Ice
 	Template@287:
@@ -2318,7 +2331,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 18
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@288:
@@ -2326,15 +2339,15 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 19
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@289:
 		Id: 289
 		Images: bits/terrain/icebrk.png
 		Frames: 20
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@290:
@@ -2342,23 +2355,23 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 21
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@291:
 		Id: 291
 		Images: bits/terrain/icebrk.png
 		Frames: 22
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@292:
 		Id: 292
 		Images: bits/terrain/icebrk.png
 		Frames: 23
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@293:
@@ -2366,7 +2379,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 24
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@294:
@@ -2374,7 +2387,7 @@ Templates:
 		Images: bits/terrain/icebrk.png
 		Frames: 25
 		Size: 1,1
-		Categories: Ice, Water
+		Categories: Ice, Littoral
 		Tiles:
 			0: IceCliff
 	Template@295:
@@ -3365,7 +3378,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@427:
@@ -3373,7 +3386,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@428:
@@ -3381,7 +3394,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@430:
@@ -3389,7 +3402,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@432:
@@ -3397,7 +3410,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@433:
@@ -3405,7 +3418,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@434:
@@ -3413,7 +3426,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@435:
@@ -3421,7 +3434,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@436:
@@ -3429,7 +3442,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@437:
@@ -3437,7 +3450,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@438:
@@ -3445,7 +3458,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@439:
@@ -3453,7 +3466,7 @@ Templates:
 		Images: bits/terrain/mnt2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Mountain, Water, Cliff
+		Categories: Mountain, Littoral, Cliff
 		Tiles:
 			0: Cliff
 	Template@440:
@@ -4382,8 +4395,8 @@ Templates:
 			BorderTypes: Sand, Cliff
 			BorderTransitions: 580, 586, 582, 577, 584, 583, 588, 589
 			Corners: 585, 587, 578, 576
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Sand, Cliff
 			BorderTransitions: 742, 748, 744, 739, 746, 745, 750, 751
 			Corners: 747, 749, 740, 738
@@ -4884,8 +4897,8 @@ Templates:
 		Size: 1,1
 		Categories: Red Snow, Terrain
 		ClearTile: true
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Red Snow, Cliff
 			BorderTransitions: 658, 664, 660, 655, 662, 661, 666, 667
 			Corners: 663, 665, 656, 654
@@ -5037,7 +5050,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@655:
@@ -5045,7 +5058,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@656:
@@ -5053,7 +5066,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@658:
@@ -5061,7 +5074,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@660:
@@ -5069,7 +5082,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@661:
@@ -5077,7 +5090,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@662:
@@ -5085,7 +5098,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@663:
@@ -5093,7 +5106,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@664:
@@ -5101,7 +5114,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@665:
@@ -5109,7 +5122,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@666:
@@ -5117,7 +5130,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@667:
@@ -5125,7 +5138,7 @@ Templates:
 		Images: bits/terrain/sn2-2wtr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Red Snow, Cliff, Water
+		Categories: Red Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@668:
@@ -5645,7 +5658,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@739:
@@ -5653,7 +5666,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@740:
@@ -5661,7 +5674,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@742:
@@ -5669,7 +5682,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@744:
@@ -5677,7 +5690,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@745:
@@ -5685,7 +5698,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@746:
@@ -5693,7 +5706,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@747:
@@ -5701,7 +5714,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@748:
@@ -5709,7 +5722,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@749:
@@ -5717,7 +5730,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@750:
@@ -5725,7 +5738,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@751:
@@ -5733,7 +5746,7 @@ Templates:
 		Images: bits/terrain/snd2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Sand, Cliff, Water
+		Categories: Sand, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@752:
@@ -5897,8 +5910,8 @@ Templates:
 			BorderTypes: Snow
 			BorderTransitions: 863, 860, 862, 867, 866, 868, 861, 859
 			Corners: 865, 864, 869, 870
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Snow, Cliff
 			BorderTransitions: 875, 881, 877, 872, 879, 878, 883, 884
 			Corners: 880, 882, 873, 871
@@ -6685,7 +6698,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@872:
@@ -6693,7 +6706,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@873:
@@ -6701,7 +6714,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@875:
@@ -6709,7 +6722,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@877:
@@ -6717,7 +6730,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@878:
@@ -6725,7 +6738,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@879:
@@ -6733,7 +6746,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@880:
@@ -6741,7 +6754,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@881:
@@ -6749,7 +6762,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@882:
@@ -6757,7 +6770,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@883:
@@ -6765,7 +6778,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@884:
@@ -6773,7 +6786,7 @@ Templates:
 		Images: bits/terrain/snw2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Snow, Cliff, Water
+		Categories: Snow, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@885:
@@ -7349,7 +7362,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@966:
@@ -7357,7 +7370,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@967:
@@ -7365,7 +7378,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@969:
@@ -7373,7 +7386,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@971:
@@ -7381,7 +7394,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@972:
@@ -7389,7 +7402,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@973:
@@ -7397,7 +7410,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@974:
@@ -7405,7 +7418,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@975:
@@ -7413,7 +7426,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@976:
@@ -7421,7 +7434,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@977:
@@ -7429,7 +7442,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@978:
@@ -7437,7 +7450,7 @@ Templates:
 		Images: bits/terrain/stn2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Stone, Cliff, Water
+		Categories: Stone, Cliff, Littoral
 		Tiles:
 			0: Cliff
 	Template@979:
@@ -7481,8 +7494,8 @@ Templates:
 			BorderTypes: Stone
 			BorderTransitions: 956, 961, 957, 952, 959, 958, 963, 964
 			Corners: 960, 962, 953, 951
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Stone, Cliff
 			BorderTransitions: 969, 975, 971, 966, 973, 972, 977, 978
 			Corners: 974, 976, 967, 965
@@ -8699,7 +8712,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1155:
@@ -8707,7 +8720,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1156:
@@ -8715,7 +8728,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1158:
@@ -8723,7 +8736,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1160:
@@ -8731,7 +8744,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 4
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1161:
@@ -8739,7 +8752,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 5
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1162:
@@ -8747,7 +8760,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 6
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1163:
@@ -8755,7 +8768,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 7
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1164:
@@ -8763,7 +8776,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 8
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1165:
@@ -8771,7 +8784,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 9
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1166:
@@ -8779,7 +8792,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 10
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1167:
@@ -8787,7 +8800,7 @@ Templates:
 		Images: bits/terrain/tch2watr.png
 		Frames: 11
 		Size: 1,1
-		Categories: Tech, Water
+		Categories: Tech, Littoral
 		Tiles:
 			0: Cliff
 	Template@1168:
@@ -8897,8 +8910,8 @@ Templates:
 			BorderTypes: Tech, Cliff
 			BorderTransitions: 1144, 1150, 1146, 1141, 1148, 1147, 1152, 1153
 			Corners: 1149, 1151, 1142, 1140
-		AutoConnect@Water:
-			Type: Water
+		AutoConnect@Littoral:
+			Type: Littoral
 			BorderTypes: Tech, Cliff
 			BorderTransitions: 1158, 1164, 1160, 1155, 1162, 1161, 1166, 1167
 			Corners: 1163, 1165, 1156, 1154
@@ -9220,223 +9233,229 @@ Templates:
 		Id: 1222
 		Images: bits/terrain/water.png
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1223:
 		Id: 1223
 		Images: bits/terrain/water2.png
 		Frames: 0
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1224:
 		Id: 1224
 		Images: bits/terrain/water2.png
 		Frames: 1
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1225:
 		Id: 1225
 		Images: bits/terrain/water2.png
 		Frames: 2
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1226:
 		Id: 1226
 		Images: bits/terrain/water2.png
 		Frames: 3
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1227:
 		Id: 1227
 		Images: bits/terrain/water2.png
 		Frames: 4
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Terrain, Oceanic
 		Tiles:
-			0: Water
+			0: Oceanic
 	Template@1228:
 		Id: 1228
 		Images: bits/terrain/water2.png
 		Frames: 5
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1229:
 		Id: 1229
 		Images: bits/terrain/water2.png
 		Frames: 6
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1230:
 		Id: 1230
 		Images: bits/terrain/water2.png
 		Frames: 7
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1231:
 		Id: 1231
 		Images: bits/terrain/water2.png
 		Frames: 8
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1232:
 		Id: 1232
 		Images: bits/terrain/water2.png
 		Frames: 9
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1233:
 		Id: 1233
 		Images: bits/terrain/water2.png
 		Frames: 10
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1234:
 		Id: 1234
 		Images: bits/terrain/water2.png
 		Frames: 11
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1235:
 		Id: 1235
 		Images: bits/terrain/water2.png
 		Frames: 12
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1236:
 		Id: 1236
 		Images: bits/terrain/water2.png
 		Frames: 13
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1237:
 		Id: 1237
 		Images: bits/terrain/water2.png
 		Frames: 14
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1238:
 		Id: 1238
 		Images: bits/terrain/water2.png
 		Frames: 15
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1239:
 		Id: 1239
 		Images: bits/terrain/water2.png
 		Frames: 16
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1240:
 		Id: 1240
 		Images: bits/terrain/water2.png
 		Frames: 17
 		Size: 1,1
-		Categories: Water
+		Categories: Pelagic, Terrain
+		ClearTile: true
+		AutoConnect@Oceanic:
+			Type: Oceanic
+			BorderTypes: Pelagic
+			BorderTransitions: 1226, 1232, 1228, 1224, 1230, 1229, 1234, 1235
+			Corners: 1231, 1233, 1225, 1223
 		Tiles:
-			0: Water
+			0: Pelagic
 	Template@1241:
 		Id: 1241
 		Images: bits/terrain/water2.png
 		Frames: 18
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1242:
 		Id: 1242
 		Images: bits/terrain/water2.png
 		Frames: 19
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1243:
 		Id: 1243
 		Images: bits/terrain/water2.png
 		Frames: 20
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1244:
 		Id: 1244
 		Images: bits/terrain/water2.png
 		Frames: 21
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1245:
 		Id: 1245
 		Images: bits/terrain/water2.png
 		Frames: 22
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1246:
 		Id: 1246
 		Images: bits/terrain/water2.png
 		Frames: 23
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1247:
 		Id: 1247
 		Images: bits/terrain/water2.png
 		Frames: 24
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1248:
 		Id: 1248
 		Images: bits/terrain/water2.png
 		Frames: 25
 		Size: 1,1
-		Categories: Water
+		Categories: Littoral, Pelagic
 		Tiles:
-			0: Water
+			0: Littoral
 	Template@1249:
 		Id: 1249
 		Images: bits/terrain/watrrdst.png
 		Frames: 0
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1250:
@@ -9444,7 +9463,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 1
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1251:
@@ -9452,7 +9471,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 2
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1252:
@@ -9460,7 +9479,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 3
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1253:
@@ -9468,7 +9487,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 4
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1254:
@@ -9476,7 +9495,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 5
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1255:
@@ -9484,7 +9503,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 6
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1256:
@@ -9492,7 +9511,7 @@ Templates:
 		Images: bits/terrain/watrrdst.png
 		Frames: 7
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1259:
@@ -9500,7 +9519,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 0
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1260:
@@ -9508,7 +9527,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 1
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1261:
@@ -9516,7 +9535,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 2
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1262:
@@ -9524,7 +9543,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 3
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1263:
@@ -9532,7 +9551,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 4
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1264:
@@ -9540,7 +9559,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 5
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1265:
@@ -9548,7 +9567,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 6
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1266:
@@ -9556,7 +9575,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 7
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1267:
@@ -9564,7 +9583,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 8
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1268:
@@ -9572,7 +9591,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 9
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1269:
@@ -9580,7 +9599,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 10
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1270:
@@ -9588,7 +9607,7 @@ Templates:
 		Images: bits/terrain/watrroad.png
 		Frames: 11
 		Size: 1,1
-		Categories: Water, Road
+		Categories: Littoral, Road
 		Tiles:
 			0: Road
 	Template@1272:
@@ -10228,7 +10247,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1355:
@@ -10236,7 +10255,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1356:
@@ -10244,7 +10263,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1357:
@@ -10252,7 +10271,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1358:
@@ -10260,7 +10279,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1359:
@@ -10268,7 +10287,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 5
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1360:
@@ -10276,7 +10295,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 6
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1361:
@@ -10284,7 +10303,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 7
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1362:
@@ -10292,7 +10311,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 8
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1363:
@@ -10300,7 +10319,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 9
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1364:
@@ -10308,7 +10327,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 10
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1365:
@@ -10316,7 +10335,7 @@ Templates:
 		Images: bits/terrain/grs2watrshore.png
 		Frames: 11
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1366:
@@ -10324,7 +10343,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff1.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1367:
@@ -10332,7 +10351,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff1.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1368:
@@ -10340,7 +10359,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff1.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1369:
@@ -10348,7 +10367,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff1.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1370:
@@ -10356,7 +10375,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff2.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1371:
@@ -10364,7 +10383,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff2.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1372:
@@ -10372,7 +10391,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff2.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1373:
@@ -10380,7 +10399,7 @@ Templates:
 		Images: bits/terrain/grs2wtr_shore2cliff2.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1374:
@@ -10388,7 +10407,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1375:
@@ -10396,7 +10415,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1376:
@@ -10404,7 +10423,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1377:
@@ -10412,7 +10431,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1378:
@@ -10420,7 +10439,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1379:
@@ -10428,7 +10447,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 5
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1380:
@@ -10436,7 +10455,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 6
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1381:
@@ -10444,7 +10463,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 7
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1382:
@@ -10452,7 +10471,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 8
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1383:
@@ -10460,7 +10479,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 9
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1384:
@@ -10468,7 +10487,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 10
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1385:
@@ -10476,7 +10495,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 11
 		Size: 1,1
-		Categories: Grass, Water, Shore
+		Categories: Grass, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1386:
@@ -10484,7 +10503,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1387:
@@ -10492,7 +10511,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1388:
@@ -10500,7 +10519,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1389:
@@ -10508,7 +10527,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1390:
@@ -10516,7 +10535,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1391:
@@ -10524,7 +10543,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1392:
@@ -10532,7 +10551,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1393:
@@ -10540,6 +10559,6 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Water, Shore, Cliff
+		Categories: Grass, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff

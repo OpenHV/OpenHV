@@ -107,7 +107,9 @@
 		Name: naval
 		Crushes: Cube
 		TerrainSpeeds:
-			Water: 100
+			Littoral: 100
+			Pelagic: 100
+			Oceanic: 100
 	Faction@0:
 		Name: Yuruki
 		InternalName: yi
@@ -333,7 +335,7 @@ World:
 				MaxDensity: 3
 			#water:
 			#	ResourceIndex: 3
-			#	TerrainType: Water
+			#	TerrainType: Littoral
 			#	AllowedTerrainTypes: Crater
 			#	MaxDensity: 1
 	LimitedResources:
