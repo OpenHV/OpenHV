@@ -91,6 +91,10 @@ Terrain:
 		Type: Swamp
 		TargetTypes: Swamp
 		Color: 2B7D38
+	TerrainType@Shore:
+		Type: Shore
+		TargetTypes: Shore
+		Color: E0B0A0
 
 Templates:
 	Template@0:
@@ -10217,5 +10221,325 @@ Templates:
 		Size: 1,1
 		Frames: 7
 		Categories: Stone, Cliff
+		Tiles:
+			0: Cliff
+	Template@1354:
+		Id: 1354
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1355:
+		Id: 1355
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1356:
+		Id: 1356
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1357:
+		Id: 1357
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1358:
+		Id: 1358
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 4
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1359:
+		Id: 1359
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 5
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1360:
+		Id: 1360
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 6
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1361:
+		Id: 1361
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 7
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1362:
+		Id: 1362
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 8
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1363:
+		Id: 1363
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 9
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1364:
+		Id: 1364
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 10
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1365:
+		Id: 1365
+		Images: bits/terrain/grs2watrshore.png
+		Frames: 11
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1366:
+		Id: 1366
+		Images: bits/terrain/grs2wtr_shore2cliff1.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1367:
+		Id: 1367
+		Images: bits/terrain/grs2wtr_shore2cliff1.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1368:
+		Id: 1368
+		Images: bits/terrain/grs2wtr_shore2cliff1.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1369:
+		Id: 1369
+		Images: bits/terrain/grs2wtr_shore2cliff1.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1370:
+		Id: 1370
+		Images: bits/terrain/grs2wtr_shore2cliff2.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1371:
+		Id: 1371
+		Images: bits/terrain/grs2wtr_shore2cliff2.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1372:
+		Id: 1372
+		Images: bits/terrain/grs2wtr_shore2cliff2.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1373:
+		Id: 1373
+		Images: bits/terrain/grs2wtr_shore2cliff2.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1374:
+		Id: 1374
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1375:
+		Id: 1375
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1376:
+		Id: 1376
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1377:
+		Id: 1377
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1378:
+		Id: 1378
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 4
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1379:
+		Id: 1379
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 5
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1380:
+		Id: 1380
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 6
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1381:
+		Id: 1381
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 7
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1382:
+		Id: 1382
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 8
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1383:
+		Id: 1383
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 9
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1384:
+		Id: 1384
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 10
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1385:
+		Id: 1385
+		Images: bits/terrain/snd2watrshore.png
+		Frames: 11
+		Size: 1,1
+		Categories: Grass, Water, Shore
+		Tiles:
+			0: Shore
+	Template@1386:
+		Id: 1386
+		Images: bits/terrain/snd2wtr_shore2cliff1.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1387:
+		Id: 1387
+		Images: bits/terrain/snd2wtr_shore2cliff1.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1388:
+		Id: 1388
+		Images: bits/terrain/snd2wtr_shore2cliff1.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1389:
+		Id: 1389
+		Images: bits/terrain/snd2wtr_shore2cliff1.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1390:
+		Id: 1390
+		Images: bits/terrain/snd2wtr_shore2cliff2.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1391:
+		Id: 1391
+		Images: bits/terrain/snd2wtr_shore2cliff2.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1392:
+		Id: 1392
+		Images: bits/terrain/snd2wtr_shore2cliff2.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1393:
+		Id: 1393
+		Images: bits/terrain/snd2wtr_shore2cliff2.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Water, Shore, Cliff
 		Tiles:
 			0: Cliff
