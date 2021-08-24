@@ -164,13 +164,21 @@ PROP4:
 	RenderSprites:
 		PlayerPalette: green
 
-TANKTRAP1:
-	Inherits: ^Rock
+TANKTRAP:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+	Health:
+		HP: 40000
 	Tooltip:
 		Name: Tank Trap
-
-TANKTRAP2:
-	Inherits: TANKTRAP1
+	-ThrowsShrapnel:
+	-ShakeOnDeath:
+	Explodes:
+		Type: Footprint
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
