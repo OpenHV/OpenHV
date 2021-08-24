@@ -247,13 +247,19 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		void LoadAndDisplayNews(GitHubWebServices webServices, Widget newsBG)
 		{
-			if (newsBG != null && Game.Settings.Game.FetchNews)
+			if (!Game.Settings.Game.FetchNews)
+				return;
+
+			if (newsBG != null)
 			{
 				var newsButton = newsBG.GetOrNull<DropDownButtonWidget>("NEWS_BUTTON");
 				if (newsButton != null)
 				{
 					DisplayNews(webServices);
 					newsButton.OnClick = () => OpenNewsPanel(newsButton);
+
+					if (menuType == MenuType.None || menuType == MenuType.StartupPrompts)
+						return;
 
 					if (webServices.NewsAlert)
 						OpenNewsPanel(newsButton);
