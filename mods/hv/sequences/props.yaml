@@ -99,9 +99,7 @@ prop4:
 		ZOffset: 1768
 		Offset: 9,10
 
-tanktrap1:
+tanktrap:
 	idle: bits/tanktraps.png
-
-tanktrap2:
-	idle: bits/tanktraps.png
+	damaged-idle: bits/tanktraps.png
 		Start: 1
