@@ -219,15 +219,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					SwitchMenu(MenuType.Main);
 				};
 
-				if (SystemInfoPromptLogic.ShouldShowPrompt())
-				{
-					Ui.OpenWindow("MAINMENU_SYSTEM_INFO_PROMPT", new WidgetArgs
-					{
-						{ "onComplete", onSysInfoComplete }
-					});
-				}
-				else
-					onSysInfoComplete();
+				onSysInfoComplete();
 			};
 
 			if (IntroductionPromptLogic.ShouldShowPrompt())
