@@ -216,7 +216,7 @@ ARTIL:
 
 TANK4:
 	Inherits: ^TrackedVehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	-AppearsOnRadar:
 	Buildable:
 		Queue: Vehicle
@@ -323,7 +323,7 @@ TANK16:
 
 TANK6:
 	Inherits: ^TrackedVehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
@@ -556,7 +556,7 @@ TANK12:
 
 TANK13:
 	Inherits: ^Vehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Prerequisites: ~disabled
 		Description: Transports resources to the headquarter.\n  Unarmed
@@ -761,7 +761,7 @@ BUILDER:
 
 MINER:
 	Inherits: ^Vehicle
-	Inherits@SELECTION: ^SelectableEconomicUnit
+	Inherits@Selection: ^SelectableEconomicUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
@@ -844,7 +844,7 @@ MISSILE_TANK:
 
 TANK8:
 	Inherits: ^TrackedVehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
@@ -944,7 +944,7 @@ TANK2:
 
 TANKER1:
 	Inherits: ^Vehicle
-	Inherits@SELECTION: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Prerequisites: ~disabled
 		Description: Transports resources to the headquarter.\n  Unarmed

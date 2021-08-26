@@ -19,7 +19,7 @@ SCOUT1:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
 	Armament@GARRISONED:
@@ -51,7 +51,7 @@ SCOUT2:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
@@ -94,7 +94,7 @@ SNIPERPOD:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: SniperRifle
 		MuzzleSequence: muzzle
 	Armament@GARRISONED:
@@ -109,7 +109,7 @@ SNIPERPOD:
 
 TECHNICIAN:
 	Inherits: ^Pod
-	Inherits@SELECTION: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Scouts
 		Description: Armored technician.\nInfiltrates and captures enemy structures.\n  Unarmed

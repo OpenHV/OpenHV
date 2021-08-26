@@ -60,16 +60,16 @@
 		Condition: crate-cloak
 
 ^Vehicle:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Inherits@selection: ^SelectableCombatUnit
-	Inherits@decoration: ^SelectionDecorations
-	Inherits@shield: ^ForceFieldCompatible
-	Inherits@ecm: ^DisabledByECM
-	Inherits@cloak: ^Cloakable
-	Inherits@damagesparks: ^PixelDamageSparks
-	Inherits@reconstructor: ^ReconstructorHeal
-	Inherits@handicaps: ^PlayerHandicaps
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Inherits@Selection: ^SelectableCombatUnit
+	Inherits@Decoration: ^SelectionDecorations
+	Inherits@Shield: ^ForceFieldCompatible
+	Inherits@ECM: ^DisabledByECM
+	Inherits@Cloak: ^Cloakable
+	Inherits@DamageSparks: ^PixelDamageSparks
+	Inherits@Reconstructor: ^ReconstructorHeal
+	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -179,14 +179,14 @@
 		Locomotor: tracked
 
 ^Plane:
-	Inherits@1: ^ExistsInWorld
+	Inherits@Exists: ^ExistsInWorld
 	Inherits@4: ^SpriteActor
-	Inherits@selection: ^SelectableCombatUnit
-	Inherits@decoration: ^SelectionDecorations
-	Inherits@shield: ^ForceFieldCompatible
-	Inherits@damagesparks: ^PixelDamageSparks
-	Inherits@reconstructor: ^ReconstructorHeal
-	Inherits@handicaps: ^PlayerHandicaps
+	Inherits@Selection: ^SelectableCombatUnit
+	Inherits@Decoration: ^SelectionDecorations
+	Inherits@Shield: ^ForceFieldCompatible
+	Inherits@DamageSparks: ^PixelDamageSparks
+	Inherits@Reconstructor: ^ReconstructorHeal
+	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -231,9 +231,9 @@
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
-	GrantRandomCondition@spawnpilot:
+	GrantRandomCondition@SpawnPilot:
 		Conditions: spawn-pilot, dont-spawn-pilot
-	Explodes@spawn-pilot:
+	Explodes@SpawnPilot:
 		Weapon: PilotSpawn
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
@@ -311,9 +311,9 @@
 			BottomRight: 3072, 4096
 
 ^Building:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Inherits@decoration: ^SelectionDecorations
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Inherits@Decoration: ^SelectionDecorations
 	OutlinedSelectionDecorations:
 		Spacers: true
 	Huntable:
@@ -361,7 +361,7 @@
 
 ^BaseBuilding:
 	Inherits: ^Building
-	Inherits@handicaps: ^PlayerHandicaps
+	Inherits@Handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech
@@ -621,14 +621,14 @@
 		RequiresCondition: burning
 
 ^Ship:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Inherits@selection: ^SelectableCombatUnit
-	Inherits@decoration: ^SelectionDecorations
-	Inherits@shield: ^ForceFieldCompatible
-	Inherits@damagesparks: ^PixelDamageSparks
-	Inherits@reconstructor: ^ReconstructorHeal
-	Inherits@handicaps: ^PlayerHandicaps
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Inherits@Selection: ^SelectableCombatUnit
+	Inherits@Decoration: ^SelectionDecorations
+	Inherits@Shield: ^ForceFieldCompatible
+	Inherits@DamageSparks: ^PixelDamageSparks
+	Inherits@Reconstructor: ^ReconstructorHeal
+	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
@@ -719,7 +719,7 @@
 		Categories: System
 
 ^Wall:
-	Inherits@1: ^ExistsInWorld
+	Inherits@Exists: ^ExistsInWorld
 	Building:
 		Dimensions: 1,2
 		Footprint: x x

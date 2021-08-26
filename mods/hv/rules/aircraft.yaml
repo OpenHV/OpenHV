@@ -3,7 +3,7 @@
 SHIP2:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@MAGAZINECASING: ^DropShellCasing
+	Inherits@MagazineCasing: ^DropShellCasing
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
@@ -25,7 +25,7 @@ SHIP2:
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: ChainGun.Shuttle
 		LocalOffset: 256,0,0
 		MuzzleSequence: muzzle
@@ -81,7 +81,7 @@ SHIP1:
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: ShipMissile
 	AttackAircraft:
 		FacingTolerance: 20
@@ -113,7 +113,7 @@ SHIP1:
 COPTER:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@MAGAZINECASING: ^DropShellCasing
+	Inherits@MagazineCasing: ^DropShellCasing
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -145,7 +145,7 @@ COPTER:
 		Offset: 200,0,-100
 	AttackTurreted:
 	WithSpriteTurret:
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: ChainGun
 		LocalOffset: 0,0,0
 	Selectable:
@@ -226,7 +226,7 @@ BANSHEE:
 	Voiced:
 		VoiceSet: BansheeVoice
 	AttackFrontal:
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: Plasma
 		MuzzleSequence: muzzle
 		LocalOffset: 700,200,0
@@ -282,7 +282,7 @@ COPTER2:
 		TurnSpeed: 80
 		Offset: 0,0,100
 	AttackTurreted:
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: Vulcan
 		LocalOffset: 0,0,-100
 	Cargo:
@@ -397,7 +397,7 @@ DROPSHIP:
 		Name: fly
 		RequiresCondition: airborne
 	AttackFrontal:
-	Armament@PRIMARY:
+	Armament@Primary:
 		Weapon: DropshipMissile
 		MuzzleSequence: muzzle1
 		LocalOffset: 700,600,0
