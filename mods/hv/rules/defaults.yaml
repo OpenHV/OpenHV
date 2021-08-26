@@ -238,6 +238,18 @@
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
 
+^SpawnedPlane:
+	Inherits: ^Plane
+	-Selectable:
+	Interactable:
+	-ActorLostNotification:
+	RejectsOrders:
+	-GrantRandomCondition@SpawnPilot:
+	-Explodes@SpawnPilot:
+	Aircraft:
+		IdleBehavior: None
+		Repulsable: False
+
 ^Helicopter:
 	Inherits: ^Plane
 	Tooltip:

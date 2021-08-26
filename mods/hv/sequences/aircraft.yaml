@@ -112,3 +112,10 @@ saucer:
 		Offset: 15, -1
 	icon: bits/units-icons.png
 		Start: 40
+
+drone:
+	idle: bits/drone.png
+		Facings: 8
+	shoot: bits/drone.png
+		Facings: 8
+		Start: 8

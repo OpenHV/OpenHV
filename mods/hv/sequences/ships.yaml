@@ -46,6 +46,15 @@ boat4:
 	icon: bits/units-icons.png
 		Start: 45
 
+carrier:
+	idle: bits/carrier.png
+		Facings: 1
+	open: bits/carrier.png
+		Start: 1
+		Length: 3
+	icon: bits/units-icons.png
+		Start: 46
+
 seamnstr:
 	left: bits/seamnstr.png
 		Length: 15

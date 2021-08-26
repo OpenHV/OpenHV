@@ -142,7 +142,7 @@ BOAT4:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor, techcenter
+		Prerequisites: harbor, techcenter, ~structures.yi
 		BuildPaletteOrder: 50
 		Description: A submarine with powerful long range missiles.
 	UpdatesPlayerStatistics:
@@ -183,6 +183,52 @@ BOAT4:
 		InitialStanceAI: ReturnFire
 	RenderSprites:
 		PlayerPalette: green
+
+CARRIER:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Ship
+		BuildPaletteOrder: 60
+		Prerequisites: harbor, techcenter, ~structures.sc
+		Description: Launches aerial autonomous attack vessels.
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Drone Ship
+	Health:
+		HP: 80000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Mobile:
+		InitialFacing: 0
+		TurnSpeed: 16
+		Speed: 70
+	RevealsShroud:
+		Range: 7c0
+	AttackFrontal:
+		FacingTolerance: 128
+	RenderSprites:
+		PlayerPalette: green
+	CarrierParent:
+		Actors: drone, drone, drone
+		RespawnTicks: 300
+		SpawnAllAtOnce: true
+	WithCarrierParentPipsDecoration:
+	WithCarrierHatchAnimation:
+	Exit@0:
+		SpawnOffset: 0,0,0
+		Facing: 0
+	Armament:
+		Weapon: DroneLauncher
 
 SEAMNSTR:
 	Inherits: ^Ship

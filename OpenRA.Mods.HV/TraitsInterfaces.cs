@@ -22,4 +22,18 @@ namespace OpenRA.Mods.HV.Traits
 
 	[RequireExplicitImplementation]
 	public interface INotifyResourceCollection { void Mining(Actor self); void Depletion(Actor self); }
+
+	[RequireExplicitImplementation]
+	public interface INotifyEnterCarrier
+	{
+		void Approaching(Actor self, Actor child);
+		void Landed(Actor self, Actor child);
+	}
+
+	[RequireExplicitImplementation]
+	public interface INotifyExitCarrier
+	{
+		void Opening(Actor self, Actor child);
+		void Closing(Actor self, Actor child);
+	}
 }

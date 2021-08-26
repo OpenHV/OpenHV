@@ -424,3 +424,50 @@ DROPSHIP:
 		RequiresSelection: true
 	WithMuzzleOverlay:
 		IgnoreOffset: True
+
+DRONE:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: Drone
+	Health:
+		HP: 5000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		Type: GroundPosition
+		MinRange: 1c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 1c0
+		Type: GroundPosition
+	Armament@Primary:
+		Weapon: ChainGun.Drone
+		LocalOffset: 4,-4,0
+		PauseOnCondition: !ammo
+	Armament@Secondary:
+		Name: secondary
+		Weapon: ChainGun.Drone
+		LocalOffset: 4,4,0
+		PauseOnCondition: !ammo
+	WithAttackAnimation:
+		Sequence: shoot
+	Aircraft:
+		Speed: 273
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+	RenderSprites:
+		PlayerPalette: green
+	AttackAircraft:
+		FacingTolerance: 20
+		Voice: Attack
+	AmmoPool:
+		Ammo: 5
+		AmmoCondition: ammo
+	CarrierChild:
+		LandingDistance: 8c0
+	Rearmable:
+		RearmActors: carrier
