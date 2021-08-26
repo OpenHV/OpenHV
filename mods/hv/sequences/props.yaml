@@ -99,6 +99,33 @@ prop4:
 		ZOffset: 1768
 		Offset: 9,10
 
+prop5:
+	Defaults:
+		Offset: 0,0
+	idle: bits/prop5.png
+	damaged-idle: bits/prop5.png
+		Start: 1
+	shadow-overlay: bits/prop5-shadow.png
+		Offset: 1,6
+
+prop6:
+	Defaults:
+		Offset: 0,0
+	idle: bits/prop6.png
+	damaged-idle: bits/prop6.png
+		Start: 1
+	shadow-overlay: bits/prop6-shadow.png
+		Offset: 1,4
+
+prop7:
+	Defaults:
+		Offset: 0,0
+	idle: bits/prop7.png
+	damaged-idle: bits/prop7.png
+		Start: 1
+	shadow-overlay: bits/prop7-shadow.png
+		Offset: 1,4
+
 tanktrap:
 	idle: bits/tanktraps.png
 	damaged-idle: bits/tanktraps.png

@@ -164,6 +164,62 @@ PROP4:
 	RenderSprites:
 		PlayerPalette: green
 
+PROP5:
+	Inherits: ^Prop
+	Inherits@Shape: ^2x2Shape
+	Interactable:
+		Bounds: 2048, 2048
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,350,0
+	Tooltip:
+		Name: Civilian structure
+	Health:
+		HP: 100000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+
+PROP6:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Civilian structure
+	Health:
+		HP: 60000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+	RenderSprites:
+		Palette: terrain
+
+PROP7:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Civilian structure
+	Health:
+		HP: 60000
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+	RenderSprites:
+		Palette: terrain
+
 TANKTRAP:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
