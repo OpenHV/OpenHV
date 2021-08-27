@@ -144,7 +144,9 @@ chmod 0755 "${APPDIR}/usr/bin/openhv-utility"
 install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${APPDIR}/usr/bin/gtk-dialog.py"
 
 chmod a+x appimagetool-x86_64.AppImage
-ARCH=x86_64 ./appimagetool-x86_64.AppImage "${APPDIR}" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}-x86_64.AppImage"
+APPIMAGE="${PACKAGING_INSTALLER_NAME}-${TAG}-x86_64.AppImage"
+ARCH=x86_64 ./appimagetool-x86_64.AppImage -u "gh-releases-zsync|OpenHV|OpenHV|latest|OpenHV-*.AppImage.zsync" "${APPDIR}" "${OUTPUTDIR}/${APPIMAGE}"
+zsyncmake -u "https://github.com/OpenHV/OpenHV/releases/download/${TAG}/${APPIMAGE}" -o "${OUTPUTDIR}/${APPIMAGE}.zsync" "${OUTPUTDIR}/${APPIMAGE}"
 
 # Clean up
 rm -rf appimagetool-x86_64.AppImage "${PACKAGING_APPIMAGE_DEPENDENCIES_TEMP_ARCHIVE_NAME}" "${APPDIR}"
