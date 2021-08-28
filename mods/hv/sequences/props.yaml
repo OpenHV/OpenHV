@@ -126,6 +126,15 @@ prop7:
 	shadow-overlay: bits/prop7-shadow.png
 		Offset: 1,4
 
+prop8:
+	Defaults:
+		Offset: 0,0
+	idle: bits/prop8.png
+	damaged-idle: bits/prop8.png
+		Start: 1
+	shadow-overlay: bits/prop8-shadow.png
+		Offset: 1,4
+
 tanktrap:
 	idle: bits/tanktraps.png
 	damaged-idle: bits/tanktraps.png

@@ -32,6 +32,13 @@ UnitExplodeSmall:
 	Warhead@Damage: SpreadDamage
 		Damage: 4000
 
+PropExplode:
+	Inherits: ^Explosion
+	Warhead@Damage: SpreadDamage
+		Damage: 4000
+	Warhead@Effect: CreateEffect
+		Explosions: medium
+
 AntiTankMine:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire

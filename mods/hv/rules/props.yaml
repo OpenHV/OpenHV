@@ -200,25 +200,18 @@ PROP6:
 		IsDecoration: true
 	RenderSprites:
 		Palette: terrain
+	-ThrowsShrapnel:
+	-ShakeOnDeath:
+	Explodes:
+		Type: Footprint
+		Weapon: PropExplode
+		EmptyWeapon: PropExplode
 
 PROP7:
-	Inherits: ^Prop
-	Inherits@Shape: ^1x1Shape
-	Interactable:
-		Bounds: 1024, 1024
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	Tooltip:
-		Name: Civilian structure
-	Health:
-		HP: 60000
-	WithIdleOverlay@shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-	RenderSprites:
-		Palette: terrain
+	Inherits: PROP6
+
+PROP8:
+	Inherits: PROP6
 
 TANKTRAP:
 	Inherits: ^Prop
