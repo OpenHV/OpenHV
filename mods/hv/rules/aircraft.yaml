@@ -443,19 +443,13 @@ DRONE:
 	RevealsShroud@Hacked:
 		Range: 1c0
 		Type: GroundPosition
-	Armament@Primary:
-		Weapon: ChainGun.Drone
-		LocalOffset: 4,-4,0
-		PauseOnCondition: !ammo
-	Armament@Secondary:
-		Name: secondary
-		Weapon: ChainGun.Drone
-		LocalOffset: 4,4,0
+	Armament:
+		Weapon: LaserBeam
 		PauseOnCondition: !ammo
 	WithAttackAnimation:
 		Sequence: shoot
 	Aircraft:
-		Speed: 273
+		Speed: 250
 		AltitudeVelocity: 240
 		VTOL: true
 		Repulsable: false

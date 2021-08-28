@@ -135,7 +135,7 @@ BOAT4:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 2000
+		Cost: 1750
 	Tooltip:
 		Name: Missile Submarine
 		GenericName: Boat
