@@ -52,6 +52,7 @@ carrier:
 	open: bits/carrier.png
 		Start: 1
 		Length: 3
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 46
 

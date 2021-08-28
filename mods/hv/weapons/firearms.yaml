@@ -108,22 +108,6 @@ ChainGun.Shuttle:
 			Heavy: 45
 			Concrete: 28
 
-ChainGun.Drone:
-	Inherits: ChainGun
-	ReloadDelay: 3
-	Range: 5c0
-	MinRange: 3c0
-	Projectile: InstantHit
-		Blockable: false
-	Warhead@Damage: SpreadDamage
-		Damage: 4000
-		Versus:
-			None: 100
-			Wood: 50
-			Light: 60
-			Heavy: 25
-			Concrete: 25
-
 ShellCasing:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 10

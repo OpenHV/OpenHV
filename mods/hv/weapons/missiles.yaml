@@ -359,15 +359,15 @@ BallisticMissile:
 	MinRange: 6c0
 	Report: rocketlaunch03.wav
 	Projectile: Bullet
-		Speed: 150
+		Speed: 170
 		Image: bullet11
 		Shadow: false
 		LaunchAngle: 100
 	Warhead@Damage: SpreadDamage
 		Spread: 512
-		Damage: 10000
+		Damage: 11000
 		Versus:
-			None: 75
+			None: 100
 			Steel: 100
 			Light: 75
 			Heavy: 75
