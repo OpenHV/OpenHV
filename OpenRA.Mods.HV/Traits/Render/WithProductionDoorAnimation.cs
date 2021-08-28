@@ -37,28 +37,28 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 	class WithProductionDoorAnimation : ConditionalTrait<WithProductionDoorAnimationInfo>, INotifyProduction
 	{
-		readonly WithSpriteBody wsb;
+		readonly WithSpriteBody body;
 
 		public WithProductionDoorAnimation(Actor self, WithProductionDoorAnimationInfo info)
 			: base(info)
 		{
-			wsb = self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == info.Body);
+			body = self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == info.Body);
 		}
 
 		void INotifyProduction.UnitProduced(Actor self, Actor other, CPos exit)
 		{
 			if (!IsTraitDisabled && Info.ExitCells.Contains(exit - self.Location))
-				wsb.PlayCustomAnimation(self, Info.Sequence,
+				body.PlayCustomAnimation(self, Info.Sequence,
 					() =>
 					{
 						if (Info.ReplayBackwards)
-							wsb.PlayCustomAnimationBackwards(self, Info.Sequence);
+							body.PlayCustomAnimationBackwards(self, Info.Sequence);
 					});
 		}
 
 		protected override void TraitDisabled(Actor self)
 		{
-			wsb.CancelCustomAnimation(self);
+			body.CancelCustomAnimation(self);
 		}
 	}
 }
