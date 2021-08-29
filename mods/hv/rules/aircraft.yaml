@@ -444,7 +444,7 @@ DRONE:
 		Range: 1c0
 		Type: GroundPosition
 	Armament:
-		Weapon: LaserBeam
+		Weapon: DroneBlaster
 		PauseOnCondition: !ammo
 	WithAttackAnimation:
 		Sequence: shoot

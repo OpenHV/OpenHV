@@ -274,7 +274,7 @@ RailgunStrike:
 		ValidTargets: Water, Ground, Tree, Air
 		DamageTypes: Fire
 
-LaserBeam:
+DroneBlaster:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Range: 5c0
