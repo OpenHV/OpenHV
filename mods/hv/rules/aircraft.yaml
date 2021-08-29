@@ -471,3 +471,34 @@ DRONE:
 		LandingDistance: 8c0
 	Rearmable:
 		RearmActors: carrier
+
+DROPPOD:
+	Inherits: ^Plane
+	Valued:
+		Cost: 10
+	Tooltip:
+		Name: Drop Pod
+	Health:
+		HP: 6000
+	Armor:
+		Type: Light
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 300
+		CruiseAltitude: 16c0
+		MaximumPitch: 110
+		LandableTerrainTypes: Ground 
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
+	WithFacingSpriteBody:
+	QuantizeFacingsFromSequence:
+	HitShape:
+	Interactable:
+	WithShadow:
+	FallsToEarth:
+		Explosion: PropExplode
+		Moves: true
+		Velocity: 768
+		MaximumSpinSpeed: 0

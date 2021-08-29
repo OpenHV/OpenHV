@@ -1983,3 +1983,60 @@ TECHMINER:
 		IsDecoration: true
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
+
+TECHCOMLINK:
+	Inherits: ^BaseBuilding
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
+	Selectable:
+		Bounds: 2048, 3072, 0, -1024
+	Tooltip:
+		Name: Tech Comlink
+	TooltipDescription@ally:
+		Description: Provides orbital airstrike.
+		ValidRelationships: Ally
+	TooltipDescription@other:
+		Description: Capture and provide orbital airstrike.
+		ValidRelationships: Neutral, Enemy
+	ProvidesPrerequisite@BuildingName:
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		RequiresBaseProvider: false
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+		AllowPlacementOnResources: true
+		LocalCenterOffset: 0,850,0
+	-RequiresBuildableArea:
+	-GivesBuildableArea:
+	Power:
+		Amount: -40
+		RequiresCondition: !ownerless
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+		RequiresCondition: !disabled && !ownerless
+	RevealsShroud@Offline:
+		Range: 5c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+		RequiresCondition: disabled && !ownerless
+	RevealsShroud@Hacked:
+		Range: 4c0
+	RenderSprites:
+		PlayerPalette: green
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-Sellable:
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
+	WithIdleOverlay@shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+	GrantConditionOnNeutralOwner:
+		Condition: ownerless
+	WithIdleOverlay@lights:
+		Sequence: animation
+		RequiresCondition: !build-incomplete

@@ -1213,3 +1213,23 @@ techminer:
 	flame2:
 		Offset: -13, -6
 	icon: bits/icon.png
+
+techcomlink:
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -18
+	idle: bits/comlink.png
+	damaged-idle: bits/comlink.png
+		Start: 1
+	animation: bits/comlink.png
+		Start: 2
+		Length: 4
+		Tick: 200
+	shadow-overlay: bits/comlink-shadow.png
+		ZOffset: 1768
+		Offset: 4,-3
+	flame:
+		Offset: 3, -4
+	flame2:
+		Offset: -13, -6
+	icon: bits/icon.png
