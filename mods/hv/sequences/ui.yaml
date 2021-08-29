@@ -64,6 +64,7 @@ icon:
 	shield: bits/shield-icon.png
 	nuke: bits/nuke-icon.png
 	railgun: bits/railgun-icon.png
+	null: bits/null.png
 
 outline:
 	Defaults: bits/outline.png

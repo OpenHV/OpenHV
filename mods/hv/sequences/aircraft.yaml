@@ -119,3 +119,12 @@ drone:
 	shoot: bits/drone.png
 		Facings: 8
 		Start: 8
+
+droppod:
+	idle: bits/droppod.png
+		Length: 5
+		Tick: 250
+
+landedpod:
+	idle: bits/droppod.png
+		Start: 5

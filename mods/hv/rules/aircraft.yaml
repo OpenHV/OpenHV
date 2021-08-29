@@ -465,3 +465,31 @@ DRONE:
 		LandingDistance: 8c0
 	Rearmable:
 		RearmActors: carrier
+
+DROPPOD1:
+	Inherits: ^DropPod
+	SpawnActorOnDeath:
+		Actor: scout1
+
+DROPPOD2:
+	Inherits: ^DropPod
+	SpawnActorOnDeath:
+		Actor: scout2
+
+LANDEDPOD:
+	Inherits: ^Prop
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	ChangesHealth:
+		Step: -250
+		StartIfBelow: 101
+		Delay: 6
+	Health:
+		HP: 10000
+	Tooltip:
+		Name: Landed Pod
+	HitShape:
+	Armor:
+		Type: Heavy
+	-ShakeOnDeath:

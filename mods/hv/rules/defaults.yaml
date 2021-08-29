@@ -250,6 +250,42 @@
 		IdleBehavior: None
 		Repulsable: False
 
+^DropPod:
+	Inherits: ^Plane
+	Valued:
+		Cost: 10
+	Tooltip:
+		Name: Drop Pod
+	Health:
+		HP: 6000
+	Armor:
+		Type: Light
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 300
+		CruiseAltitude: 16c0
+		MaximumPitch: 110
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+	-WithFacingSpriteBody:
+	WithSpriteBody:
+	HitShape:
+	-Selectable:
+	Interactable:
+	-ActorLostNotification:
+	RenderSprites:
+		Image: droppod
+	WithShadow:
+	FallsToEarth:
+		Explosion:
+		Moves: true
+		Velocity: 768
+		MaximumSpinSpeed: 0
+	SpawnActorOnDeath@Pod:
+		Actor: landedpod
+
 ^Helicopter:
 	Inherits: ^Plane
 	Tooltip:
