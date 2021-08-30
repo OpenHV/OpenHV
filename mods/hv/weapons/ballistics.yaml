@@ -218,7 +218,7 @@ Nuclear:
 		Image: nuclear_explosion
 		Explosions: idle
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		ImpactSounds: nuke-explosion.wav
+		ImpactSounds: nuke_explosion_cgeffex.wav
 	Warhead@FlashEffect: FlashPaletteEffect
 		Duration: 20
 		FlashType: Nuke

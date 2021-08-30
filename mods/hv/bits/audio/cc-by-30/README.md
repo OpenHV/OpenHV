@@ -17,3 +17,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [twisterman_silenced-gun-1.wav](https://freesound.org/people/twisterman/sounds/163583/) by twisterman
 * [submarine_in_szegvari.wav](https://freesound.org/people/szegvari/sounds/572537/) by szegvari
 * [submarine_out_szegvari.wav](https://freesound.org/people/szegvari/sounds/572537/) by szegvari
+* [nuke_explosion_cgeffex.wav](https://freesound.org/people/CGEffex/sounds/100773/) by cgeffex
