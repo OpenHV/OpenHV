@@ -285,6 +285,13 @@
 		MaximumSpinSpeed: 0
 	SpawnActorOnDeath@Pod:
 		Actor: landedpod
+	Explodes:
+		Weapon: DropPodImpact
+		EmptyWeapon: DropPodImpact
+	RenderSprites:
+		PlayerPalette: green
+	AmbientSound:
+		SoundFiles: droppodlanding_dudeawesome.wav
 
 ^Helicopter:
 	Inherits: ^Plane

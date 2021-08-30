@@ -2012,13 +2012,15 @@ TECHCOMLINK:
 	DropPodsPower:
 		Cursor: ability
 		PauseOnCondition: disabled
-		Icon: null
+		Icon: droppods
 		Description: Drop Pods
-		LongDesc: Atmospheric assault reinforcements.\nSmall team of elite soldiers drops\nonto target location from orbit.
+		LongDesc: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
 		DisplayRadarPing: true
 		ChargeInterval: 10000
 		UnitTypes: droppod1, droppod2
 		CameraActor: camera
+		PodScatter: 5
+		Drops: 8,8
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless

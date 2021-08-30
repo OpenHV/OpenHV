@@ -479,8 +479,8 @@ DROPPOD2:
 LANDEDPOD:
 	Inherits: ^Prop
 	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: DropPodExplode
+		EmptyWeapon: DropPodExplode
 	ChangesHealth:
 		Step: -250
 		StartIfBelow: 101
@@ -493,3 +493,6 @@ LANDEDPOD:
 	Armor:
 		Type: Heavy
 	-ShakeOnDeath:
+	-ThrowsShrapnel:
+	RenderSprites:
+		PlayerPalette: green
