@@ -123,8 +123,9 @@ drone:
 droppod:
 	idle: bits/droppod.png
 		Length: 5
-		Tick: 250
+		Tick: 200
 
 landedpod:
 	idle: bits/droppod.png
 		Start: 5
+		Offset: 0,2

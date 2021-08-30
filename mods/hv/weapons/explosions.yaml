@@ -60,3 +60,20 @@ PilotSpawn:
 	Warhead@SpawnPilot: FireRadius
 		Weapon: Spaceman
 		ValidTargets: Air
+
+DropPodImpact:
+	ValidTargets: Ground, Tree
+	Warhead@Debris: FireShrapnel
+		Weapon: Debris
+		Amount: 4
+	Warhead@Effect: CreateEffect
+		Explosions: idle
+		Image: smoke
+		ImpactSounds: impact_sangnamsa.wav	
+
+DropPodExplode:
+	ValidTargets: Ground, Air, Water, Lava, Swamp
+	Warhead@Effect: CreateEffect
+		Explosions: medium
+		ValidTargets: Ground, Air, Water, Lava, Swamp
+		ImpactSounds: explosion02.wav, explosion03.wav
