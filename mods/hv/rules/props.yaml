@@ -79,6 +79,9 @@ OBELISK:
 		Palette: shadow
 		IsDecoration: true
 
+MAYANOBELISK:
+	Inherits: OBELISK
+
 MAYANPYRAMID2:
 	Inherits: PYRAMID2
 
