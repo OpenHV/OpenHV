@@ -30,21 +30,22 @@ MapFolders:
 	~^SupportDir|maps/hv/{DEV_VERSION}: User
 
 Rules:
-	hv|rules/world.yaml
-	hv|rules/animals.yaml
-	hv|rules/defaults.yaml
-	hv|rules/vehicles.yaml
 	hv|rules/editor.yaml
 	hv|rules/player.yaml
+	hv|rules/pods.yaml
+	hv|rules/vehicles.yaml
 	hv|rules/aircraft.yaml
-	hv|rules/buildings.yaml
-	hv|rules/props.yaml
-	hv|rules/terrain.yaml
 	hv|rules/ships.yaml
+	hv|rules/animals.yaml
 	hv|rules/bonus.yaml
 	hv|rules/weapons.yaml
 	hv|rules/bots.yaml
-	hv|rules/pods.yaml
+	hv|rules/buildings.yaml
+	hv|rules/world.yaml
+	hv|rules/props.yaml
+	hv|rules/defaults.yaml
+	hv|rules/terrain.yaml
+	hv|rules/mothership.yaml
 
 Sequences:
 	hv|sequences/animals.yaml
