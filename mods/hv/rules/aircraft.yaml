@@ -341,23 +341,6 @@ BALLOON:
 	RenderSprites:
 		PlayerPalette: green
 
-MOTHER2B:
-	Inherits: ^Helicopter
-	Health:
-		HP: 800000
-	Aircraft:
-		CanHover: false
-		Speed: 0
-		CruiseAltitude: 2048
-		Repulsable: false
-		-CruisingCondition:
-	-Hovers@CRUISING:
-	Selectable:
-		DecorationBounds: 6553, 13721
-
-MOTHER2C:
-	Inherits: MOTHER2B
-
 DROPSHIP:
 	Inherits: ^Helicopter
 	Valued:
@@ -465,16 +448,19 @@ DRONE:
 		LandingDistance: 8c0
 	Rearmable:
 		RearmActors: carrier
+	-MapEditorData:
 
 DROPPOD1:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
 		Actor: scout1
+	-MapEditorData:
 
 DROPPOD2:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
 		Actor: scout2
+	-MapEditorData:
 
 LANDEDPOD:
 	Inherits: ^Prop
@@ -496,3 +482,4 @@ LANDEDPOD:
 	-ThrowsShrapnel:
 	RenderSprites:
 		PlayerPalette: green
+	-MapEditorData:

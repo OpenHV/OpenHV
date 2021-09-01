@@ -1048,6 +1048,60 @@ AATURRET2:
 	RenderSprites:
 		PlayerPalette: green
 
+ARTILLERYTURRET:
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
+	Selectable:
+		Bounds: 2048, 2048
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: factory, techcenter
+		Description: Advanced base defense.\nRequires power to operate.
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Artillery Turret
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -256,-256,0,   256,-256,0,   -256,256,0,   256,256,0
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Offline:
+		RequiresCondition: !disabled
+		Range: 5c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Power:
+		Amount: -120
+	Armament:
+		Weapon: TurretArtillery
+		LocalOffset: 1500,50,1400
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 20c0
+	AttackTurreted:
+		PauseOnCondition: disabled || beam-incomplete
+	WithSpriteTurret:
+		RequiresCondition: !build-incomplete
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	Turreted:
+		TurnSpeed: 60
+		RequiresCondition: !build-incomplete
+	RenderSprites:
+		PlayerPalette: green
+
 FIELD:
 	Inherits: ^BaseBuilding
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
@@ -1414,61 +1468,6 @@ REFINERY:
 		RequiresCondition: build-incomplete
 		PauseOnCondition: !build-incomplete
 
-ARTILLERYTURRET:
-	Inherits: ^DefenseBuilding
-	Inherits@AutoTarget: ^AutoTargetGround
-	Selectable:
-		Bounds: 2048, 2048
-	Buildable:
-		BuildPaletteOrder: 90
-		Prerequisites: factory, techcenter
-		Description: Advanced base defense.\nRequires power to operate.
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Artillery Turret
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	HitShape:
-		UseTargetableCellsOffsets: False
-		TargetableOffsets: -256,-256,0,   256,-256,0,   -256,256,0,   256,256,0
-	Health:
-		HP: 60000
-	RevealsShroud:
-		Range: 12c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	Power:
-		Amount: -120
-	Armament:
-		Weapon: TurretArtillery
-		LocalOffset: 1500,50,1400
-	WithRangeCircle:
-		Type: Turret
-		Width: 2
-		BorderWidth: 3
-		Range: 20c0
-	AttackTurreted:
-		PauseOnCondition: disabled || beam-incomplete
-	WithSpriteTurret:
-		RequiresCondition: !build-incomplete
-	WithTurretAttackAnimation:
-		Sequence: shoot
-	Turreted:
-		TurnSpeed: 60
-		RealignDelay: -1
-		RequiresCondition: !build-incomplete
-	RenderSprites:
-		PlayerPalette: green
-
 TELEVATR:
 	Inherits: ^BaseBuilding
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
@@ -1655,32 +1654,6 @@ HARBOR:
 		PlayerExperience: 15
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
-
-MOTHER:
-	Inherits: ^BaseBuilding
-	Inherits@Shape: ^6x8Shape
-	Selectable:
-		Bounds: 5785, 7424
-	Valued:
-		Cost: 15000
-	Tooltip:
-		Name: Mother Ship
-	Building:
-		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx
-		Dimensions: 6,8
-	Health:
-		HP: 5000000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 16c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	StrategicPoint:
-	ProximityCapturable:
-	RenderSprites:
 
 WALLTOP:
 	Inherits: ^Wall
