@@ -923,6 +923,7 @@ TURRET:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 120
+		RealignDelay: -1
 		RequiresCondition: !build-incomplete
 
 TURRET2:
@@ -964,6 +965,7 @@ TURRET2:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 120
+		RealignDelay: -1
 		RequiresCondition: !build-incomplete
 
 AATURRET:
@@ -1038,6 +1040,7 @@ AATURRET2:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 120
+		RealignDelay: -1
 		RequiresCondition: !build-incomplete
 	AttackTurreted:
 		PauseOnCondition: disabled
@@ -1461,6 +1464,7 @@ ARTILLERYTURRET:
 		Sequence: shoot
 	Turreted:
 		TurnSpeed: 60
+		RealignDelay: -1
 		RequiresCondition: !build-incomplete
 	RenderSprites:
 		PlayerPalette: green
