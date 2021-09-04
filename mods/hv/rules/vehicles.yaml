@@ -704,7 +704,7 @@ ARTIL3:
 	Armament:
 		Weapon: DoubleBarrelledArtillery
 		MuzzleSequence: muzzle
-		LocalOffset: 700,0,100
+		LocalOffset: 800,0,600
 	AttackFrontal:
 		Armaments: primary
 		TargetFrozenActors: true

@@ -89,12 +89,13 @@ DoubleBarrelledArtillery:
 	Range: 18c0
 	MinRange: 5c0
 	Burst: 2
-	BurstDelays: 3
-	Report: howitzerfire02.wav
+	BurstDelays: 8
+	Report: ccbygrenadelaunch01.wav
 	TargetActorCenter: true
 	Projectile: Bullet
 		LaunchAngle: 165
 		Inaccuracy: 2c0
+		Image: bullet12
 	Warhead@Damage: SpreadDamage
 		Spread: 500
 		Damage: 23000
