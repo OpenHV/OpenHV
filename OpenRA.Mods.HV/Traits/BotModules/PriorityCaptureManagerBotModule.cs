@@ -172,8 +172,7 @@ namespace OpenRA.Mods.HV.Traits
 							}
 
 							bot.QueueOrder(new Order("CaptureActor", capturer.Actor, safeTarget, true));
-							AIUtils.BotDebug("AI ({0}): Ordered {1} {2} to capture {3} {4} in priority mode.",
-								player.ClientIndex, capturer.Actor, capturer.Actor.ActorID, priorityTarget, priorityTarget.ActorID);
+							AIUtils.BotDebug($"{player}: Ordered {capturer.Actor} {capturer.Actor.ActorID} to capture {priorityTarget} {priorityTarget.ActorID} in priority mode.");
 						}
 
 						priorityTargets = priorityTargets.Skip(1);
@@ -220,7 +219,7 @@ namespace OpenRA.Mods.HV.Traits
 						continue;
 
 					bot.QueueOrder(new Order("CaptureActor", capturer.Actor, safeTarget, true));
-					AIUtils.BotDebug("AI: Ordered {0} to capture {1}", capturer.Actor, nearestTargetActor);
+					AIUtils.BotDebug($"{capturer.Actor.Owner}: Ordered {capturer.Actor} to capture {nearestTargetActor}");
 					break;
 				}
 			}

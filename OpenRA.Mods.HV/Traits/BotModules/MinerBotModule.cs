@@ -141,7 +141,7 @@ namespace OpenRA.Mods.HV.Traits
 				}
 
 				var cell = world.Map.CellContaining(newSafeResourcePatch.CenterPosition);
-				AIUtils.BotDebug("AI: {0} is idle. Ordering to {1} for deployment.".F(miner.Key, cell));
+				AIUtils.BotDebug($"{miner.Key.Owner}: {miner.Key} is idle. Ordering to {cell} for deployment.");
 				bot.QueueOrder(new Order("DeployMiner", miner.Key, newSafeResourcePatch, false));
 			}
 

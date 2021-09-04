@@ -123,7 +123,7 @@ namespace OpenRA.Mods.HV.Traits
 					continue;
 
 				var cell = world.Map.CellContaining(target.CenterPosition);
-				AIUtils.BotDebug("AI: Ordering {0} to {1} for cube pick up.".F(cubeCollector, cell));
+				AIUtils.BotDebug($"{bot.Player}: Ordering {cubeCollector} to {cell} for cube pick up.");
 				bot.QueueOrder(new Order("Move", cubeCollector, target, true));
 				alreadyPursuitcubes.Add(cube);
 			}
