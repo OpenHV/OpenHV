@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2021 The OpenHV Developers (see AUTHORS)
+ * Copyright 2021 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -169,7 +169,7 @@ namespace OpenRA.Mods.HV.Traits
 
 				if (location == null)
 				{
-					AIUtils.BotDebug("{0} has nowhere to place {1}".F(player, currentBuilding.Item));
+					AIUtils.BotDebug($"{player} has nowhere to place {currentBuilding.Item}");
 					bot.QueueOrder(Order.CancelProduction(queue.Actor, currentBuilding.Item, 1));
 					failCount += failCount;
 
@@ -240,7 +240,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				if (power != null && power.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault).Sum(p => p.Amount) > 0)
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (low power)", queue.Actor.Owner, power.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (low power)");
 					return power;
 				}
 			}
@@ -251,13 +251,13 @@ namespace OpenRA.Mods.HV.Traits
 				var refinery = GetProducibleBuilding(baseBuilder.Info.RefineryTypes, buildableThings);
 				if (refinery != null && HasSufficientPowerForActor(refinery))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, refinery.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {refinery.Name}: Priority override (refinery)");
 					return refinery;
 				}
 
 				if (power != null && refinery != null && !HasSufficientPowerForActor(refinery))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, power.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (would be low power)");
 					return power;
 				}
 			}
@@ -268,13 +268,13 @@ namespace OpenRA.Mods.HV.Traits
 				var production = GetProducibleBuilding(baseBuilder.Info.ProductionTypes, buildableThings);
 				if (production != null && HasSufficientPowerForActor(production))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (production)", queue.Actor.Owner, production.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {production.Name}: Priority override (production)");
 					return production;
 				}
 
 				if (power != null && production != null && !HasSufficientPowerForActor(production))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, power.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (would be low power)");
 					return power;
 				}
 			}
@@ -287,13 +287,13 @@ namespace OpenRA.Mods.HV.Traits
 				var navalproduction = GetProducibleBuilding(baseBuilder.Info.NavalProductionTypes, buildableThings);
 				if (navalproduction != null && HasSufficientPowerForActor(navalproduction))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (navalproduction)", queue.Actor.Owner, navalproduction.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {navalproduction.Name}: Priority override (navalproduction)");
 					return navalproduction;
 				}
 
 				if (power != null && navalproduction != null && !HasSufficientPowerForActor(navalproduction))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, power.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (would be low power)");
 					return power;
 				}
 			}
@@ -304,13 +304,13 @@ namespace OpenRA.Mods.HV.Traits
 				var silo = GetProducibleBuilding(baseBuilder.Info.SiloTypes, buildableThings);
 				if (silo != null && HasSufficientPowerForActor(silo))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (silo)", queue.Actor.Owner, silo.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {silo.Name}: Priority override (silo)");
 					return silo;
 				}
 
 				if (power != null && silo != null && !HasSufficientPowerForActor(silo))
 				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, power.Name);
+					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (would be low power)");
 					return power;
 				}
 			}
@@ -354,17 +354,16 @@ namespace OpenRA.Mods.HV.Traits
 					if (power != null && power.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault).Sum(pi => pi.Amount) > 0)
 					{
 						if (powerManager.PowerOutageRemainingTicks > 0)
-							AIUtils.BotDebug("{0} decided to build {1}: Priority override (is low power)", queue.Actor.Owner, power.Name);
+							AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (is low power)");
 						else
-							AIUtils.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, power.Name);
+							AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (would be low power)");
 
 						return power;
 					}
 				}
 
 				// Lets build this
-				AIUtils.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
-					queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
+				AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {name}: Desired is {frac.Value} ({frac.Value * playerBuildings.Length} / {playerBuildings.Length}); current is {count} / {playerBuildings.Length}");
 				return actor;
 			}
 
