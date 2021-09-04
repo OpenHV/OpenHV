@@ -472,6 +472,8 @@ TANK7:
 	Cloak:
 		InitialDelay: 90
 		CloakDelay: 90
+		CloakSound: stealth_on_humanoide9000.wav
+		UncloakSound: stealth_off_humanoide9000.wav
 		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled || ecmdisabled
 	GrantConditionOnDamageState@UNCLOAK:
