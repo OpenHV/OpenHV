@@ -369,7 +369,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			// Too spammy to keep enabled all the time, but very useful when debugging specific issues.
-			// AIUtils.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
+			// AIUtils.BotDebug($"{queue.Actor.Owner} couldn't decide what to build for queue {queue.Info.Type}.");
 			return null;
 		}
 
