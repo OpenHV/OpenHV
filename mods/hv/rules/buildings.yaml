@@ -1424,7 +1424,6 @@ REFINERY:
 		ExitCell: 0, 1
 	Exit@Bottom:
 		ExitCell: 1, 3
-
 	AcceptsDeliveredResources:
 		DeliveryVehicleType: tanker2
 	WithIdleOverlay@animation:
