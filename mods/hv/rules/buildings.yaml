@@ -1099,6 +1099,7 @@ ARTILLERYTURRET:
 	Turreted:
 		TurnSpeed: 60
 		RequiresCondition: !build-incomplete
+		RealignDelay: -1
 	RenderSprites:
 		PlayerPalette: green
 
