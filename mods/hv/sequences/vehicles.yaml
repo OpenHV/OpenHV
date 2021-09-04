@@ -58,6 +58,20 @@ tank3:
 	icon: bits/units-icons.png
 		Start: 37
 
+radartank:
+	idle: bits/radartank.png
+		Facings: 8
+	extend: bits/radartank.png
+		Start: 8
+		Length: 4
+		Tick: 100
+	extended: bits/radartank.png
+		Start: 11
+		Length: 8
+		Tick: 120
+	icon: bits/units-icons.png
+		Start: 47
+
 tank4:
 	idle: bits/tank4.png
 		Facings: 8

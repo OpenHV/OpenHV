@@ -214,7 +214,7 @@ ARTIL:
 	RenderSprites:
 		PlayerPalette: green
 
-TANK4:
+RADARTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	-AppearsOnRadar:
@@ -262,7 +262,7 @@ TANK4:
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
 		UndeployOnPickup: true
-		Facing: 384
+		Facing: 512
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
 		Voice: Move
 	Repairable:
@@ -276,6 +276,10 @@ TANK4:
 		Range: 12c0
 	RenderDetectionCircle:
 		TrailCount: 3
+	WithFacingSpriteBody:
+		RequiresCondition: undeployed
+	RenderSprites:
+		PlayerPalette: green
 
 TANK16:
 	Inherits: ^TrackedVehicle

@@ -84,7 +84,7 @@ TANK9:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK4:
+RADARTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
