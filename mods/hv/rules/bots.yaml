@@ -72,7 +72,7 @@ Player:
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
 			miner: 3
-			tank4: 1
+			radartank: 1
 			tank3: 5
 			tank5: 5
 			tank7: 1
@@ -103,7 +103,7 @@ Player:
 			builder: 0
 			balloon: 2
 			saucer: 2
-			tank4: 1
+			radartank: 1
 			tank8: 1
 			boat3: 3
 			boat4: 4
