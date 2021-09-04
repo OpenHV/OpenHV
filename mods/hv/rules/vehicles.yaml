@@ -276,6 +276,8 @@ RADARTANK:
 		Range: 12c0
 	RenderDetectionCircle:
 		TrailCount: 3
+	WithFacingSpriteBody:
+		RequiresCondition: undeployed
 	RenderSprites:
 		PlayerPalette: green
 
