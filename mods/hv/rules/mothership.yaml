@@ -12,7 +12,7 @@ MOTHER2B:
 		-CruisingCondition:
 	-Hovers@CRUISING:
 	Selectable:
-		DecorationBounds: 6553, 13721
+		DecorationBounds: 6664, 13728
 	MapEditorData:
 		Categories: Mothership
 
@@ -23,7 +23,7 @@ MOTHER:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^6x8Shape
 	Selectable:
-		Bounds: 5785, 7424
+		Bounds: 5786, 7424
 	Valued:
 		Cost: 15000
 	Tooltip:

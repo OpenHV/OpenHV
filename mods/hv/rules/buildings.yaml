@@ -859,7 +859,7 @@ BUNKER:
 		Prerequisites: module, refinery
 		Description: Basic base defense.\nGood against pods.\nRequires power to operate.
 	Selectable:
-		Bounds: 1256, 1450, 0, -300
+		Bounds: 1256, 1480, 0, -256
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1967,7 +1967,7 @@ TECHCOMLINK:
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 2048, 1700, 0, 200
+		Bounds: 2048, 1664, 0, 256
 	Tooltip:
 		Name: Tech Communication Link
 	TooltipDescription@ally:

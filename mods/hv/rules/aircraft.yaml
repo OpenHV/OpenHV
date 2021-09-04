@@ -389,7 +389,7 @@ DROPSHIP:
 		MuzzleSequence: muzzle2
 		LocalOffset: 700,-600,0
 	Selectable:
-		DecorationBounds: 2048, 1843
+		DecorationBounds: 2048, 1848
 	Cargo:
 		Types: Scout
 		MaxWeight: 4
