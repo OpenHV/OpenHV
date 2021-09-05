@@ -637,6 +637,7 @@ turret:
 		Facings: 8
 	shoot: bits/turret.png
 		Start: 10
+		Tick: 100
 		Facings: 8
 	make: bits/build.png
 		Length: 39
