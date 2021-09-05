@@ -178,7 +178,7 @@ Function ${UN}Clean
 	DeleteRegKey HKLM "Software\Classes\openra-${MOD_ID}-${TAG}"
 
 	!ifdef USE_DISCORDID
-		DeleteRegKey HKLM "Software\Classes\discord-${DISCORD_APP_ID}"
+		DeleteRegKey HKLM "Software\Classes\discord-${USE_DISCORDID}"
 	!endif
 
 	Delete $INSTDIR\uninstaller.exe
