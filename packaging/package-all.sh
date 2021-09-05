@@ -38,12 +38,6 @@ else
 		echo "Windows package build failed."
 	fi
 
-	echo "Building portable Mac OS X package"
-	${PACKAGING_DIR}/osx/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
-	if [ $? -ne 0 ]; then
-		echo "Mac OS X package build failed."
-	fi
-
 	echo "Building Linux AppImage package"
 	${PACKAGING_DIR}/linux/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
 	if [ $? -ne 0 ]; then
