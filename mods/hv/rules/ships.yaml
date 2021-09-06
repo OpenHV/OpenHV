@@ -157,16 +157,21 @@ BOAT4:
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 4c0
-		RevealGeneratedShroud: False
+		RevealGeneratedShroud: false
 	RevealsShroud@Hacked:
 		Range: 4c0
 	AttackFrontal:
 		FacingTolerance: 25
+	WithMissileSpawnerParentPipsDecoration:
 	WithAttackAnimation:
 		Sequence: shoot
 	Armament:
-		Weapon: BallisticMissile
-		LocalOffset: -250,0,0
+		Weapon: MissileLauncher
+	MissileSpawnerParent:
+		Actors: slcm
+		RespawnTicks: 120
+	Exit:
+		SpawnOffset: 250,0,0
 	Cloak:
 		CloakTypes: Underwater
 		InitialDelay: 0
@@ -175,7 +180,7 @@ BOAT4:
 		UncloakSound: submarine_in_szegvari.wav
 		Palette: shadow
 		PauseOnCondition: cloak-force-disabled
-	GrantConditionOnDamageState@UNCLOAK:
+	GrantConditionOnDamageState@Uncloak:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical, Heavy
 	AutoTarget:
@@ -183,6 +188,35 @@ BOAT4:
 		InitialStanceAI: ReturnFire
 	RenderSprites:
 		PlayerPalette: green
+
+SLCM:
+	Inherits: ^ShootableMissile
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: Submarine-launched cruise missile
+	Health:
+		HP: 50
+	Armor:
+		Type: Light
+	BallisticMissile:
+		CreateAngle: 255
+		LaunchAngle: 255
+		PrepareTick: 0
+		TurnSpeed: 24
+		Speed: 256
+		LaunchAcceleration: 16
+		HitAcceleration: 16
+		LaunchSounds: rocketlaunch03.wav
+	LeavesTrails:
+		Image: smoke
+		MovingInterval: 2
+		Type: CenterPosition
+		SpawnAtLastPosition: false
+	MissileSpawnerChild:
+	SpawnedExplodes:
+		Weapon: CruiseMissileImpact
+		EmptyWeapon: CruiseMissileImpact
 
 CARRIER:
 	Inherits: ^Ship
