@@ -352,23 +352,39 @@ DropshipMissile:
 			Heavy: 50
 			Concrete: 50
 
-BallisticMissile:
-	Inherits: ^AntiGroundMissile
-	ReloadDelay: 150
-	Range: 22c0
-	MinRange: 6c0
-	Report: rocketlaunch03.wav
-	Projectile: Bullet
-		Speed: 170
-		Image: bullet11
-		Shadow: false
-		LaunchAngle: 100
+CruiseMissileImpact:
 	Warhead@Damage: SpreadDamage
 		Spread: 512
 		Damage: 11000
+		ValidTargets: Ground, Water
 		Versus:
 			None: 100
 			Steel: 100
 			Light: 75
 			Heavy: 75
 			Concrete: 100
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+	Warhead@GroundEffect: CreateEffect
+		Explosions: medium
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

@@ -42,7 +42,7 @@ boat4:
 		Start: 8
 		Length: 2
 		Facings: 8
-		Tick: 50
+		Tick: 200
 	icon: bits/units-icons.png
 		Start: 45
 

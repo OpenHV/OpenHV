@@ -167,7 +167,6 @@
 	WithSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 1
-	RenderSprites:
 	MapEditorData:
 		Categories: System
 	CollectScrapCrateAction:
@@ -398,7 +397,6 @@
 	MapEditorData:
 		Categories: Building
 	CommandBarBlacklist:
-	RenderSprites:
 	ThrowsShrapnel:
 		Weapons: Debris
 		Pieces: 5, 10
@@ -769,7 +767,6 @@
 		Sequence: grey
 	BodyOrientation:
 		QuantizedFacings: 1
-	RenderSprites:
 	MapEditorData:
 		Categories: System
 
@@ -979,3 +976,27 @@
 		Condition: magazine
 		ArmamentNames: primary
 		RevokeDelay: 1
+
+^ShootableMissile:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	WithMissileSpriteBody:
+	-GivesExperience:
+	Armor:
+		Type: Missile
+	BallisticMissile:
+		AirborneCondition: airborne
+	Targetable@Ground:
+		RequiresCondition: !airborne
+		TargetTypes: Ground, Vehicle
+	Targetable@Airborne:
+		RequiresCondition: airborne
+		TargetTypes: Air
+	HiddenUnderFog:
+		Type: GroundPosition
+	Tooltip:
+		Name: Missile
+		GenericName: Missile
+	HitShape:
+	RejectsOrders:
+	Interactable:
