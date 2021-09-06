@@ -31,20 +31,21 @@ SHIP2:
 		MuzzleSequence: muzzle
 	AttackAircraft:
 		FacingTolerance: 20
-		PersistentTargeting: false
-		OpportunityFire: false
+		PersistentTargeting: False
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 768
-		TurnSpeed: 16
-		Speed: 180
+		TurnSpeed: 20
+		Speed: 220
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	Voiced:
 		VoiceSet: GunshipVoice
 	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: HoldFire
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
 	WithMuzzleOverlay:
 	Contrail:
 		Offset: -400,0,0
@@ -86,19 +87,20 @@ SHIP1:
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
-		OpportunityFire: false
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 768
-		TurnSpeed: 16
-		Speed: 180
+		TurnSpeed: 20
+		Speed: 220
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	Voiced:
 		VoiceSet: SpeederVoice
 	AutoTarget:
-		InitialStance: HoldFire
-		InitialStanceAI: HoldFire
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
 	Selectable:
 		Bounds: 1024, 1024
 	Contrail:
@@ -173,7 +175,7 @@ SAUCER:
 	Health:
 		HP: 8000
 	RevealsShroud:
-		Range: 16c0
+		Range: 18c0
 		Type: GroundPosition
 		MinRange: 4c0
 		RevealGeneratedShroud: False
@@ -221,7 +223,7 @@ BANSHEE:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 16
+		TurnSpeed: 20
 		Speed: 112
 	Voiced:
 		VoiceSet: BansheeVoice
@@ -315,7 +317,7 @@ BALLOON:
 	Health:
 		HP: 8000
 	RevealsShroud:
-		Range: 16c0
+		Range: 18c0
 		Type: GroundPosition
 		MinRange: 4c0
 		RevealGeneratedShroud: False

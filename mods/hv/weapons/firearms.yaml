@@ -10,10 +10,10 @@ LightMachineGun:
 		Damage: 1000
 		Versus:
 			None: 150
-			Steel: 25
+			Steel: 10
 			Light: 30
 			Heavy: 10
-			Concrete: 10
+			Concrete: 5
 	Warhead@Effect: CreateEffect
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
@@ -64,10 +64,10 @@ ChainGun:
 		Damage: 1000
 		Versus:
 			None: 180
-			Steel: 60
-			Light: 70
+			Steel: 30
+			Light: 65
 			Heavy: 35
-			Concrete: 28
+			Concrete: 15
 	Warhead@Effect: CreateEffect
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
@@ -166,7 +166,7 @@ SniperRifle:
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Versus:
-			None: 1000
+			None: 1500
 			Steel: 40
 			Light: 55
 			Heavy: 25

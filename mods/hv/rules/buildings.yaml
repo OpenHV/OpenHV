@@ -442,6 +442,8 @@ MINER2:
 		Name: Mining Tower
 	Valued:
 		Cost: 1000
+	Health:
+		HP: 45000
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		Interval: 100
@@ -905,7 +907,7 @@ TURRET:
 	Tooltip:
 		Name: Turret
 	Health:
-		HP: 50000
+		HP: 55000
 	Armament:
 		Weapon: TurretCannon
 		LocalOffset: 1200,50,0
@@ -938,7 +940,7 @@ TURRET2:
 	Tooltip:
 		Name: Turret
 	Health:
-		HP: 50000
+		HP: 55000
 	Armament:
 		Name: primary
 		Weapon: Turret2Cannon
@@ -981,6 +983,8 @@ AATURRET:
 		Cost: 1250
 	Tooltip:
 		Name: AA Turret
+	Health:
+		HP: 55000
 	Armor:
 		Type: Steel
 	Armament:
@@ -1025,7 +1029,7 @@ AATURRET2:
 	Tooltip:
 		Name: AA Turret
 	Health:
-		HP: 45000
+		HP: 55000
 	Armament:
 		Weapon: TowerMissile
 		LocalOffset: 256,375,760, 256,-375,760
@@ -1068,7 +1072,7 @@ ARTILLERYTURRET:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -256,-256,0,   256,-256,0,   -256,256,0,   256,256,0
 	Health:
-		HP: 60000
+		HP: 65000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 4c0
@@ -1384,7 +1388,7 @@ REFINERY:
 	Tooltip:
 		Name: Refinery
 	Health:
-		HP: 30000
+		HP: 55000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1579,7 +1583,7 @@ HARBOR:
 		Dimensions: 3,3
 		TerrainTypes: Littoral
 	Health:
-		HP: 35000
+		HP: 40000
 	Armor:
 		Type: Steel
 	RevealsShroud:
