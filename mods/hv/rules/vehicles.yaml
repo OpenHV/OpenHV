@@ -129,6 +129,7 @@ TANK9:
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -137,7 +138,7 @@ TRANSPRT:
 		Queue: Vehicle
 		Prerequisites: factory, module
 		BuildPaletteOrder: 30
-		Description: Can transport smaller vehicles.
+		Description: Can load infantry pods.\nHas fireports for garrisoned units.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -157,6 +158,10 @@ TRANSPRT:
 		Types: Scout
 		MaxWeight: 5
 		LoadingCondition: notmobile
+	AttackGarrisoned:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 88, 88, 88, 88, 88, 88
 	Selectable:
 		DecorationBounds: 2048, 1843
 	RenderSprites:
