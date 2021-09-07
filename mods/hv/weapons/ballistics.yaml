@@ -122,8 +122,8 @@ TurretCannon:
 		Versus:
 			None: 40
 			Steel: 100
-			Light: 125
-			Heavy: 150
+			Light: 150
+			Heavy: 175
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -157,6 +157,11 @@ Turret2Cannon:
 		DamageTypes: Fire
 		Spread: 128
 		Damage: 2500
+		Versus:
+			None: 40
+			Steel: 100
+			Light: 150
+			Heavy: 175
 
 Nuclear:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp
@@ -241,10 +246,10 @@ TurretArtillery:
 		Damage: 30000
 		Spread: 750
 		Versus:
-			None: 60
-			Steel: 50
-			Light: 60
-			Heavy: 60
+			None: 150
+			Steel: 65
+			Light: 65
+			Heavy: 65
 			Wood: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large

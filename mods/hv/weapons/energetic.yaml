@@ -142,10 +142,10 @@ Plasma:
 		Damage: 1200
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
-			None: 10
-			Steel: 74
+			None: 15
+			Steel: 85
 			Light: 75
-			Heavy: 125
+			Heavy: 175
 			Concrete: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small
