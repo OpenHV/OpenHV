@@ -31,12 +31,12 @@ SHIP2:
 		MuzzleSequence: muzzle
 	AttackAircraft:
 		FacingTolerance: 20
-		PersistentTargeting: False
+		PersistentTargeting: false
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 768
 		TurnSpeed: 20
-		Speed: 220
+		Speed: 200
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	Voiced:
@@ -91,7 +91,7 @@ SHIP1:
 		CruiseAltitude: 2560
 		InitialFacing: 768
 		TurnSpeed: 20
-		Speed: 220
+		Speed: 200
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	Voiced:
