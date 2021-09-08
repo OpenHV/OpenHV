@@ -311,10 +311,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		void LoadMapIntoEditor(string uid)
 		{
-			ConnectionLogic.Connect(Game.CreateLocalServer(uid),
-				"",
-				() => { Game.LoadEditor(uid); },
-				() => { Game.CloseServer(); SwitchMenu(MenuType.MapEditor); });
+			Game.LoadEditor(uid);
 
 			DiscordService.UpdateStatus(DiscordState.InMapEditor);
 
