@@ -115,15 +115,11 @@ MissileTankRocket:
 LightAntiTankRocket:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
-	Projectile: Missile
+	Projectile: Bullet
 		Speed: 213
-		Arm: 2
-		Blockable: false
 		Inaccuracy: 128
 		Image: bullet7
 		Shadow: true
-		HorizontalRateOfTurn: 20
-		RangeLimit: 6c0
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -172,7 +168,7 @@ RapidAntiTankRocket:
 	Inherits: LightAntiTankRocket
 	ReloadDelay: 20
 	Range: 8c0
-	Projectile: Missile
+	Projectile: Bullet
 		RangeLimit: 10c0
 
 ShipMissile:
