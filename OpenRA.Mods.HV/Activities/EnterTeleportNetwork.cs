@@ -54,6 +54,8 @@ namespace OpenRA.Mods.HV.Activities
 
 			// Find the primary teleport network exit.
 			var primary = target.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == type).PrimaryActor;
+			if (primary.IsDead)
+				return;
 
 			var exitInfo = primary.Info.TraitInfo<ExitInfo>();
 			var rallyPoint = primary.TraitOrDefault<RallyPoint>();
