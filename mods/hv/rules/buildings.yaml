@@ -887,6 +887,7 @@ BUNKER:
 		MaxWeight: 1
 		InitialUnits: scout1
 	AttackGarrisoned:
+		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		Armaments: garrisoned
 		PortOffsets: 175,0,375, 125,-341,375, -125,-341,375, -225,0,375, -125,341,375, 125,341,375
