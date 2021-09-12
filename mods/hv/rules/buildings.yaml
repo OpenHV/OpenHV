@@ -291,6 +291,19 @@ RADAR2:
 		Prerequisites: generator, refinery, ~structures.sc
 	ProvidesPrerequisite@Radar:
 		Prerequisite: radar
+	-AirstrikePower:
+	DropPodsPower:
+		Cursor: ability
+		PauseOnCondition: disabled
+		Icon: droppods
+		Description: Drop Pods
+		LongDesc: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
+		DisplayRadarPing: true
+		ChargeInterval: 10000
+		UnitTypes: droppod1, droppod2
+		CameraActor: camera
+		PodScatter: 5
+		Drops: 8,8
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -1991,10 +2004,8 @@ TECHCOMLINK:
 	Tooltip:
 		Name: Tech Communication Link
 	TooltipDescription@ally:
-		Description: Provides orbital airstrike.
 		ValidRelationships: Ally
 	TooltipDescription@other:
-		Description: Capture and provide orbital airstrike.
 		ValidRelationships: Neutral, Enemy
 	ProvidesPrerequisite@BuildingName:
 	Building:
@@ -2005,18 +2016,6 @@ TECHCOMLINK:
 		AllowPlacementOnResources: true
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
-	DropPodsPower:
-		Cursor: ability
-		PauseOnCondition: disabled
-		Icon: droppods
-		Description: Drop Pods
-		LongDesc: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
-		DisplayRadarPing: true
-		ChargeInterval: 10000
-		UnitTypes: droppod1, droppod2
-		CameraActor: camera
-		PodScatter: 5
-		Drops: 8,8
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
