@@ -485,3 +485,36 @@ LANDEDPOD:
 	RenderSprites:
 		PlayerPalette: green
 	-MapEditorData:
+
+BOMBER1:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Inherits@Handicaps: ^PlayerHandicaps
+	Interactable:
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	RenderSprites:
+		PlayerPalette: grey
+	WithFacingSpriteBody:
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	Tooltip:
+		Name: Athmospheric Bomber
+	Valued:
+		Cost: 2000
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	Aircraft:
+		InitialFacing: 512
+		TurnSpeed: 0
+		Speed: 512
+		Repulsable: False
+		Voice: Move
+	AttackBomber:
+		FacingTolerance: 512
+	Armament:
+		Weapon: Bomb

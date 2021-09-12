@@ -269,6 +269,21 @@ RADAR:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	AirstrikePower:
+		PauseOnCondition: lowpower
+		Icon: airstrike
+		ChargeInterval: 7500
+		SquadSize: 3
+		QuantizedFacings: 1
+		Description: Air Strike
+		LongDesc: Deploy an aerial bombing run.
+		UnitType: bomber1
+		DisplayBeacon: false
+		DisplayRadarPing: true
+		CameraActor: camera
+		UseDirectionalTarget: false
+		SupportPowerPaletteOrder: 10
+	SupportPowerChargeBar:
 
 RADAR2:
 	Inherits: RADAR

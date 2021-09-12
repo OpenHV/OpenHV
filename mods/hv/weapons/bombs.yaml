@@ -1,0 +1,45 @@
+Bomb:
+	ReloadDelay: 60
+	Burst: 5
+	BurstDelays: 6
+	Range: 2c512
+	TargetActorCenter: true
+	Projectile: GravityBomb
+		Velocity: 72, 0, -90
+		Acceleration: 0, 0, -8
+		Image: bullet1
+		Shadow: true
+		Palette: effect
+	Warhead@Damage: SpreadDamage
+		Spread: 512
+		Falloff: 100, 50, 25, 12, 6, 3, 0
+		Damage: 16000
+		Versus:
+		Versus:
+			None: 90
+			Steel: 75
+			Light: 75
+			Heavy: 125
+			Wood: 75
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

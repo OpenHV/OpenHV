@@ -129,3 +129,7 @@ landedpod:
 	idle: bits/droppod.png
 		Start: 5
 		Offset: 0,2
+
+bomber1:
+	idle: bits/bomber1.png
+		Facing: 1

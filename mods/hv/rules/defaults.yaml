@@ -179,7 +179,7 @@
 
 ^Plane:
 	Inherits@Exists: ^ExistsInWorld
-	Inherits@4: ^SpriteActor
+	Inherits@Sprite: ^SpriteActor
 	Inherits@Selection: ^SelectableCombatUnit
 	Inherits@Decoration: ^SelectionDecorations
 	Inherits@Shield: ^ForceFieldCompatible

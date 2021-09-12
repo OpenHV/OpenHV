@@ -65,6 +65,7 @@ Weapons:
 	hv|weapons/firearms.yaml
 	hv|weapons/missiles.yaml
 	hv|weapons/energetic.yaml
+	hv|weapons/bombs.yaml
 	hv|weapons/debris.yaml
 	hv|weapons/fake.yaml
 
