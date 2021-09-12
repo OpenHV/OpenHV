@@ -1962,6 +1962,8 @@ TECHMINER:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
+	WithSpriteBody:
+		PauseOnCondition: disabled
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 4c0
@@ -1985,6 +1987,7 @@ TECHMINER:
 		Amount: 200
 		Interval: 500
 		DisplayDuration: 50
+		PauseOnCondition: disabled
 	CashTricklerBar:
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
