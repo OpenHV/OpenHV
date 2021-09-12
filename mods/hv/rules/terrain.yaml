@@ -27,7 +27,7 @@ GRSSMISC7:
 ICICLE1:
 	Inherits: ^Rock
 	Building:
-		Footprint: __ == xx
+		Footprint: __ xx xx
 		Dimensions: 2,3
 
 ICICLE2:
