@@ -16,7 +16,7 @@ LAMPPOST:
 		BlueTint: 0.01
 	Health:
 		HP: 120000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -41,7 +41,7 @@ PYRAMID:
 		Name: Pyramid
 	Health:
 		HP: 120000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -74,7 +74,7 @@ OBELISK:
 		Name: Obelisk
 	Health:
 		HP: 50000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -97,7 +97,7 @@ PROP1:
 		Name: Civilian tower
 	Health:
 		HP: 60000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -116,7 +116,7 @@ PROP2:
 		Name: Civilian tower
 	Health:
 		HP: 60000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -141,7 +141,7 @@ PROP3:
 		Name: Civilian structure
 	Health:
 		HP: 60000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -160,7 +160,7 @@ PROP4:
 		Name: Civilian tower
 	Health:
 		HP: 60000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -180,7 +180,7 @@ PROP5:
 		Name: Civilian structure
 	Health:
 		HP: 100000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -197,7 +197,7 @@ PROP6:
 		Name: Civilian structure
 	Health:
 		HP: 60000
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true

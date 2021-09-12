@@ -59,7 +59,7 @@ BASE:
 		Files: Quedicemipez__teleportation.wav
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -200,7 +200,7 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -257,7 +257,7 @@ RADAR:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -327,7 +327,7 @@ TRADPLAT:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -419,7 +419,7 @@ MODULE:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -548,7 +548,7 @@ STARPORT:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -622,7 +622,7 @@ FACTORY2:
 		RequiresCondition: !powerdown
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -837,7 +837,7 @@ TECHCENTER:
 		TargetTypes: Ground, Structure
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1160,7 +1160,7 @@ FIELD:
 		RequiredForShortGame: false
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1239,7 +1239,7 @@ SILO:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1305,7 +1305,7 @@ UPLINK:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1355,7 +1355,7 @@ STORAGE:
 		RequiresSelection: true
 		PipCount: 4
 		FullSequence: pip-yellow
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1409,7 +1409,7 @@ REFINERY:
 		RequiresSelection: true
 		PipCount: 8
 		FullSequence: pip-yellow
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1532,7 +1532,7 @@ TELEVATR:
 		PlayerPalette: green
 	PlaceBuildingVariants:
 		Actors: televtr2
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1558,7 +1558,7 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1635,7 +1635,7 @@ HARBOR:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1828,7 +1828,7 @@ TECHBUILDING:
 		RequiresCondition: !ownerless
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -1959,7 +1959,7 @@ TECHMINER:
 		Interval: 500
 		DisplayDuration: 50
 	CashTricklerBar:
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
@@ -2024,7 +2024,7 @@ TECHCOMLINK:
 	-Sellable:
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
-	WithIdleOverlay@shadow:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
