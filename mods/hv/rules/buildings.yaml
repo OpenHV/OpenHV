@@ -2004,9 +2004,25 @@ TECHCOMLINK:
 	Tooltip:
 		Name: Tech Communication Link
 	TooltipDescription@ally:
+		Description: Provides battlefield intelligence.
 		ValidRelationships: Ally
 	TooltipDescription@other:
+		Description: Capture to gain intelligence support.
 		ValidRelationships: Neutral, Enemy
+	SpawnActorPower:
+		Icon: radar
+		Description: Active Radar
+		LongDesc: Reveals the battlefield in the vicinity for a \nshort time.
+		ChargeInterval: 750
+		PauseOnCondition: lowpower
+		Actor: camera
+		Terrain: Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
+		AllowUnderShroud: true
+		LifeTime: 250
+		EffectImage: moveflsh
+		EffectSequence: idle
+		EffectPalette: moveflash
+		SupportPowerPaletteOrder: 80
 	ProvidesPrerequisite@BuildingName:
 	Building:
 		Footprint: == xx

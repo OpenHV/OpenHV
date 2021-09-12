@@ -66,6 +66,7 @@ icon:
 	railgun: bits/railgun-icon.png
 	droppods: bits/droppods-icon.png
 	airstrike: bits/airstrike-icon.png
+	radar: bits/radar-icon.png
 	null: bits/null.png
 
 outline:
