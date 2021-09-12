@@ -743,6 +743,9 @@ BUILDER:
 	BaseProvider:
 		Cooldown: 75
 		Range: 3c0
+		PauseOnCondition: enemy-radius
+	GrantConditionInsideEnemyBuildRadius:
+		Condition: enemy-radius
 	Valued:
 		Cost: 1000
 	Tooltip:
