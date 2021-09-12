@@ -31,7 +31,6 @@ BASE:
 		Range: 4c0
 	BaseBuilding:
 	BaseProvider:
-		Cooldown: 75
 		Range: 14c0
 		CircleWidth: 2
 		CircleBorderWidth: 4
