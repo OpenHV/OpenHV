@@ -109,6 +109,12 @@ bullet12:
 		Reverses: True
 		ZOffset: 2030
 
+bullet13:
+	idle: bits/bullet13.png
+		Length: 10
+		Tick: 40
+		ZOffset: 2030
+
 nuclear:
 	up: bits/blank.png
 	down: bits/nuclear_bomb.png

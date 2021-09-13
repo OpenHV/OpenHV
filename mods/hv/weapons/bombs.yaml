@@ -1,19 +1,23 @@
 Bomb:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 60
 	Burst: 5
-	BurstDelays: 6
+	BurstDelays: 3
 	Range: 2c512
 	TargetActorCenter: true
 	Projectile: GravityBomb
 		Velocity: 72, 0, -90
 		Acceleration: 0, 0, -8
-		Image: bullet1
+		Image: bullet13
 		Shadow: true
 		Palette: effect
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
 	Warhead@Damage: SpreadDamage
 		Spread: 512
 		Falloff: 100, 50, 25, 12, 6, 3, 0
-		Damage: 16000
+		Damage: 10000
 		Versus:
 		Versus:
 			None: 90
@@ -22,7 +26,7 @@ Bomb:
 			Heavy: 125
 			Wood: 75
 	Warhead@GroundEffect: CreateEffect
-		Explosions: small
+		Explosions: medium
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 	Warhead@WaterEffect: CreateEffect

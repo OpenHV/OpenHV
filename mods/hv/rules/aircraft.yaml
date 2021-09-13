@@ -497,7 +497,7 @@ BOMBER1:
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
 	RenderSprites:
-		PlayerPalette: grey
+		PlayerPalette: green
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 356, 256, 0
@@ -509,8 +509,7 @@ BOMBER1:
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: false
 	Aircraft:
-		InitialFacing: 512
-		TurnSpeed: 0
+		TurnSpeed: 28
 		Speed: 512
 		Repulsable: False
 		Voice: Move

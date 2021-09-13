@@ -132,4 +132,4 @@ landedpod:
 
 bomber1:
 	idle: bits/bomber1.png
-		Facing: 1
+		Facings: 8
