@@ -26,6 +26,12 @@ plane1:
 	icon: units-icons.png
 		Start: 48
 
+plane2:
+	idle: bits/plane2.png
+		Facings: 8
+	icon: units-icons.png
+		Start: 49
+
 copter:
 	idle: bits/copter.png
 		Facings: 8
