@@ -59,3 +59,15 @@ GOLDBALL:
 	GiveCashCrateAction:
 		Amount: 500
 		UseCashTick: true
+
+RADARSWEEP:
+	Interactable:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	DetectCloaked:
+		CloakTypes: Cloak, Underwater, Mine
+		Range: 10c0
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
