@@ -306,6 +306,7 @@ RADAR2:
 		PodScatter: 5
 		Drops: 8,8
 		OrderName: EjectPods
+		SelectTargetSound: select_target.wav
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
