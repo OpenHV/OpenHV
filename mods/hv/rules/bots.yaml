@@ -89,7 +89,7 @@ Player:
 			technician: 1
 			missile_tank: 5
 			ship1: 5
-			ship2: 5
+			plane1: 5
 			copter: 5
 			banshee: 5
 			balloon: 1
