@@ -1,6 +1,6 @@
 # License: CC-BY-SA-4.0
 
-SHIP2:
+PLANE1:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing

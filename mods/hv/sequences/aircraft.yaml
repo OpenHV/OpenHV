@@ -16,6 +16,16 @@ ship2:
 	icon: units-icons.png
 		Start: 33
 
+plane1:
+	idle: bits/plane1.png
+		Facings: 8
+	muzzle: muzzle2.png
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon: units-icons.png
+		Start: 48
+
 copter:
 	idle: bits/copter.png
 		Facings: 8
