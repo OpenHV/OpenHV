@@ -136,7 +136,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		Decisions:
 			nukepower:
-				OrderName: NukePowerInfoOrder
+				OrderName: Nukem
 				MinimumAttractiveness: 3000
 				Consideration@1:
 					Against: Enemy
@@ -151,7 +151,7 @@ Player:
 					TargetMetric: Value
 					CheckRadius: 7c0
 			shield:
-				OrderName: ShieldOrder
+				OrderName: ShieldsUp
 				MinimumAttractiveness: 1000
 				Consideration@1:
 					Against: Ally
@@ -164,4 +164,28 @@ Player:
 					Types: Structure, Vehicle
 					Attractiveness: -10
 					TargetMetric: Value
+					CheckRadius: 5c0
+			droppods:
+				OrderName: EjectPods
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			airstrike:
+				OrderName: FlushBombers
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
 					CheckRadius: 5c0

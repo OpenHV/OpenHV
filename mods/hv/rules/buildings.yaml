@@ -283,6 +283,7 @@ RADAR:
 		UseDirectionalTarget: false
 		SupportPowerPaletteOrder: 10
 		SelectTargetSound: select_target.wav
+		OrderName: FlushBombers
 	SupportPowerChargeBar:
 
 RADAR2:
@@ -304,6 +305,7 @@ RADAR2:
 		CameraActor: camera
 		PodScatter: 5
 		Drops: 8,8
+		OrderName: EjectPods
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -1166,7 +1168,7 @@ FIELD:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	GrantExternalConditionPower@FORCEFIELD:
+	GrantExternalConditionPower@ForceField:
 		PauseOnCondition: disabled
 		ChargeInterval: 3000
 		Description: Force Field
@@ -1180,7 +1182,7 @@ FIELD:
 		EndChargeSpeechNotification: ForceFieldReady
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
-		OrderName: ShieldOrder
+		OrderName: ShieldsUp
 	SupportPowerChargeBar:
 	Power:
 		Amount: -200
@@ -1250,6 +1252,7 @@ SILO:
 		BeginChargeSpeechNotification: MissileCharging
 		EndChargeSpeechNotification: MissileReady
 		IncomingSpeechNotification: MissileLaunchDetected
+		OrderName: Nukem
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
