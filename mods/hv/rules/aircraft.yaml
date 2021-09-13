@@ -47,12 +47,12 @@ PLANE1:
 	AutoTargetPriority:
 		InvalidTargets: Structure
 	WithMuzzleOverlay:
-	Contrail:
-		Offset: -400,0,0
-		UsePlayerColor: false
-		Color: A0000060
-		TrailWidth: 0c96
-		TrailLength: 5
+	Contrail@Right:
+		Offset: -298,-264,0
+		TrailLength: 12
+	Contrail@Left:
+		Offset: -298,264,0
+		TrailLength: 12
 	Selectable:
 		Bounds: 1024, 1024
 	RenderSprites:
