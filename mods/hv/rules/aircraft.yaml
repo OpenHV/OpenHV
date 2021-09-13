@@ -58,7 +58,7 @@ PLANE1:
 	RenderSprites:
 		PlayerPalette: green
 
-SHIP1:
+PLANE2:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
@@ -103,12 +103,14 @@ SHIP1:
 		InvalidTargets: Structure
 	Selectable:
 		Bounds: 1024, 1024
-	Contrail:
-		Offset: -400,50,0
-		UsePlayerColor: false
-		Color: A0000060
-		TrailWidth: 0c192
-		TrailLength: 5
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
 	RenderSprites:
 		PlayerPalette: green
 
