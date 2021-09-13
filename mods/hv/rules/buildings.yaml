@@ -2015,7 +2015,7 @@ TECHCOMLINK:
 		Icon: radar
 		Description: Active Radar
 		LongDesc: Reveals the battlefield in the vicinity for a \nshort time.
-		ChargeInterval: 750
+		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: camera
 		Terrain: Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
@@ -2025,6 +2025,8 @@ TECHCOMLINK:
 		EffectSequence: idle
 		EffectPalette: moveflash
 		SupportPowerPaletteOrder: 80
+		SelectTargetSound: select_target.wav
+		LaunchSound: radar_reveal_avreference.wav
 	ProvidesPrerequisite@BuildingName:
 	Building:
 		Footprint: == xx

@@ -7,3 +7,4 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [impact_sangnamsa.wav](https://freesound.org/people/sangnamsa/sounds/473941/) by sangnamsa
 * [stealth_on_humanoide9000.wav](https://freesound.org/people/humanoide9000/sounds/422245/) by humanoide9000
 * [stealth_off_humanoide9000.wav](https://freesound.org/people/humanoide9000/sounds/422245/) by humanoide9000
+* [radar_reveal_avreference.wav](https://freesound.org/people/avreference/sounds/575419/) by avreference
