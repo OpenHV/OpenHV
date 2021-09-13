@@ -11,6 +11,9 @@ Bomb:
 		Image: bullet13
 		Shadow: true
 		Palette: effect
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
 	Warhead@Damage: SpreadDamage
 		Spread: 512
 		Falloff: 100, 50, 25, 12, 6, 3, 0

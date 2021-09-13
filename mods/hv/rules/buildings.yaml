@@ -282,6 +282,7 @@ RADAR:
 		CameraActor: camera
 		UseDirectionalTarget: false
 		SupportPowerPaletteOrder: 10
+		SelectTargetSound: select_target.wav
 	SupportPowerChargeBar:
 
 RADAR2:
