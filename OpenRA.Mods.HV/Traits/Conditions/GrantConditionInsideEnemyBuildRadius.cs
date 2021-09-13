@@ -21,6 +21,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("The condition to grant.")]
 		public readonly string Condition = null;
 
+		[Desc("Time in ticks.")]
+		public readonly int ScanDelay = 25;
+
 		public override object Create(ActorInitializer init) { return new GrantConditionInsideEnemyBuildRadius(this); }
 	}
 
@@ -29,22 +32,29 @@ namespace OpenRA.Mods.HV.Traits
 		readonly GrantConditionInsideEnemyBuildRadiusInfo info;
 
 		int token = Actor.InvalidConditionToken;
+		int ticks;
 
 		public GrantConditionInsideEnemyBuildRadius(GrantConditionInsideEnemyBuildRadiusInfo info)
 		{
 			this.info = info;
+			ticks = info.ScanDelay;
 		}
 
 		void ITick.Tick(Actor self)
 		{
+			if (ticks-- > 0)
+				return;
+
 			if (IntersectsEnemyBuildRadius(self))
 				GrantCondition(self, info.Condition);
 			else
 				RevokeCondition(self);
+
+			ticks = info.ScanDelay;
 		}
 
 		static bool IntersectsEnemyBuildRadius(Actor self)
-		 {
+		{
 			foreach (var baseProvider in self.World.ActorsWithTrait<BaseProvider>())
 			{
 				if (baseProvider.Actor.Owner.IsAlliedWith(self.Owner))
@@ -56,7 +66,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			return false;
-		 }
+		}
 
 		void GrantCondition(Actor self, string condition)
 		{
