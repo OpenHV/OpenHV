@@ -1254,6 +1254,7 @@ SILO:
 		EndChargeSpeechNotification: MissileReady
 		IncomingSpeechNotification: MissileLaunchDetected
 		OrderName: Nukem
+		SelectTargetSound: select_target.wav
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
