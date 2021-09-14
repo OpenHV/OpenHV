@@ -1184,6 +1184,8 @@ FIELD:
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		OrderName: ShieldsUp
+		SelectTargetSound: select_target.wav
+		LaunchSound: force_field_autistic-lucario.wav
 	SupportPowerChargeBar:
 	Power:
 		Amount: -200
