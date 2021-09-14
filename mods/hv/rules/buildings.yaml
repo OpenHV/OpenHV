@@ -1321,6 +1321,7 @@ UPLINK:
 		DisplayRadarPing: true
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 20
+		SelectTargetSound: select_target.wav
 	Power:
 		Amount: -150
 	MustBeDestroyed:
