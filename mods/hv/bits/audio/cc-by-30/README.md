@@ -19,3 +19,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [submarine_out_szegvari.wav](https://freesound.org/people/szegvari/sounds/572537/) by szegvari
 * [nuke_explosion_cgeffex.wav](https://freesound.org/people/CGEffex/sounds/100773/) by cgeffex
 * [droppodlanding_dudeawesome.wav](https://freesound.org/people/DudeAwesome/sounds/386067/) by dudeawesome
+* [force_field_autistic-lucario.wav](https://freesound.org/people/Autistic%20Lucario/sounds/142607/) by autistic-lucario
