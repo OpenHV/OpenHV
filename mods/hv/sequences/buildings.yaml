@@ -771,11 +771,13 @@ field:
 		Offset: 2, 3
 	active: bits/field.png
 		Length: 5
-		Tick: 300
+		Tick: 200
 	damaged-idle: bits/field.png
-		Start: 5
+		Start: 7
 	damaged-active: bits/field.png
-		Start: 5
+		Start: 7
+		Length: 5
+		Tick: 200
 	make: bits/build.png
 		Length: 39
 		Tick: 30
