@@ -271,7 +271,7 @@ RADAR:
 	AirstrikePower:
 		PauseOnCondition: lowpower
 		Icon: airstrike
-		ChargeInterval: 7500
+		ChargeInterval: 3750
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Air Strike
@@ -300,11 +300,11 @@ RADAR2:
 		Description: Drop Pods
 		LongDesc: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
 		DisplayRadarPing: true
-		ChargeInterval: 10000
+		ChargeInterval: 3750
 		UnitTypes: droppod1, droppod2
 		CameraActor: camera
 		PodScatter: 5
-		Drops: 8,8
+		Drops: 12,12
 		OrderName: EjectPods
 		SelectTargetSound: select_target.wav
 
