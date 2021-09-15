@@ -769,7 +769,13 @@ field:
 	shadow-overlay: bits/field-shadow.png
 		ZOffset: 1768
 		Offset: 2, 3
-	active: bits/field.png
+	charged: bits/field.png
+		Length: 5
+		Tick: 200
+	loop: bits/field.png
+		Start: 6
+	end: bits/field.png
+		Frames: 6, 5, 4, 3, 2, 1
 		Length: 5
 		Tick: 200
 	damaged-idle: bits/field.png

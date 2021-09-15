@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		[Desc("Which sprite body to play the animation on.")]
 		public readonly string Body = "body";
 
-		public override object Create(ActorInitializer init) { return new WithTeleportChargeAnimation(init, this); }
+		public override object Create(ActorInitializer init) { return new WithTeleportChargeAnimation(init.Self, this); }
 	}
 
 	public class WithTeleportChargeAnimation : INotifyEnterTeleporter
@@ -33,10 +33,10 @@ namespace OpenRA.Mods.HV.Traits.Render
 		readonly WithTeleportChargeAnimationInfo info;
 		readonly WithSpriteBody body;
 
-		public WithTeleportChargeAnimation(ActorInitializer init, WithTeleportChargeAnimationInfo info)
+		public WithTeleportChargeAnimation(Actor self, WithTeleportChargeAnimationInfo info)
 		{
 			this.info = info;
-			body = init.Self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == info.Body);
+			body = self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == info.Body);
 		}
 
 		void INotifyEnterTeleporter.Charging(Actor self, Actor teleporter)

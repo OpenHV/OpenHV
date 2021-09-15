@@ -1178,6 +1178,7 @@ FIELD:
 		Duration: 750
 		DisplayRadarPing: true
 		Condition: shield
+		Sequence: end
 		SupportPowerPaletteOrder: 10
 		Icon: shield
 		BeginChargeSpeechNotification: ForceFieldCharging
@@ -1188,6 +1189,7 @@ FIELD:
 		SelectTargetSound: select_target.wav
 		LaunchSound: force_field_autistic-lucario.wav
 	SupportPowerChargeBar:
+	WithSupportPowerChargedAnimation:
 	Power:
 		Amount: -200
 	MustBeDestroyed:
