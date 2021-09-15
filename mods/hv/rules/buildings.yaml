@@ -280,7 +280,8 @@ RADAR:
 		DisplayBeacon: false
 		DisplayRadarPing: true
 		CameraActor: camera
-		UseDirectionalTarget: false
+		UseDirectionalTarget: true
+		DirectionArrowAnimation: direction
 		SupportPowerPaletteOrder: 10
 		SelectTargetSound: select_target.wav
 		OrderName: FlushBombers
