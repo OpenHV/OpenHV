@@ -10,7 +10,7 @@ MOTHER2B:
 		CruiseAltitude: 2048
 		Repulsable: false
 		-CruisingCondition:
-	-Hovers@CRUISING:
+	-Hovers@Cruising:
 	Selectable:
 		DecorationBounds: 6664, 13728
 	MapEditorData:

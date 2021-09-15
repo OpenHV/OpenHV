@@ -1890,53 +1890,53 @@ TECHBUILDING:
 		ValidRelationships: Neutral, Enemy
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
-	GrantExternalConditionToOwner@reconstructor:
+	GrantExternalConditionToOwner@Reconstructor:
 		Condition: reconstructor
 		RequiresCondition: !disabled && !ownerless
-	GrantConditionOnPrerequisite@reconstructor:
+	GrantConditionOnPrerequisite@Reconstructor:
 		Condition: reconstructor
 		Prerequisites: reconstructor
-	GrantConditionOnPrerequisite@reconstructor2:
+	GrantConditionOnPrerequisite@Reconstructor2:
 		Condition: reconstructor
 		Prerequisites: reconstructor2
-	GrantConditionOnPrerequisite@reconstructor3:
+	GrantConditionOnPrerequisite@Reconstructor3:
 		Condition: reconstructor
 		Prerequisites: reconstructor3
-	GrantConditionOnPrerequisite@reconstructor4:
+	GrantConditionOnPrerequisite@Reconstructor4:
 		Condition: reconstructor
 		Prerequisites: reconstructor4
-	GrantConditionOnPrerequisite@reconstructor5:
+	GrantConditionOnPrerequisite@Reconstructor5:
 		Condition: reconstructor
 		Prerequisites: reconstructor5
-	WithTextDecoration@reconstructor:
+	WithTextDecoration@Reconstructor:
 		RequiresSelection: true
 		Text: COUNT: 1
 		Font: TinyPixel
 		Position: Top
 		Margin: 0, 5
 		RequiresCondition: reconstructor == 1
-	WithTextDecoration@reconstructor2:
+	WithTextDecoration@Reconstructor2:
 		RequiresSelection: true
 		Text: COUNT: 2
 		Font: TinyPixel
 		Position: Top
 		Margin: 0, 5
 		RequiresCondition: reconstructor == 2
-	WithTextDecoration@reconstructor3:
+	WithTextDecoration@Reconstructor3:
 		RequiresSelection: true
 		Text: COUNT: 3
 		Font: TinyPixel
 		Position: Top
 		Margin: 0, 5
 		RequiresCondition: reconstructor == 3
-	WithTextDecoration@reconstructor4:
+	WithTextDecoration@Reconstructor4:
 		RequiresSelection: true
 		Text: COUNT: 4
 		Font: TinyPixel
 		Position: Top
 		Margin: 0, 5
 		RequiresCondition: reconstructor == 4
-	WithTextDecoration@reconstructor5:
+	WithTextDecoration@Reconstructor5:
 		RequiresSelection: true
 		Text: COUNT: 4+
 		Font: TinyPixel

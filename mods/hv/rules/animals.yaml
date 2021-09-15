@@ -56,7 +56,7 @@ CROW:
 		Speed: 70
 		CruisingCondition: cruising
 		TurnSpeed: 4
-	Hovers@CRUISING:
+	Hovers@Cruising:
 		RequiresCondition: cruising
 	Wanders:
 		WanderMoveRadius: 10

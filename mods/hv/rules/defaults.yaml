@@ -305,7 +305,7 @@
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		InitialFacing: 896
 		CanSlide: True
-	Hovers@CRUISING:
+	Hovers@Cruising:
 		RequiresCondition: cruising
 	BodyOrientation:
 
@@ -526,7 +526,7 @@
 	ToggleConditionOnOrder:
 		Condition: powerdown
 		OrderName: PowerDown
-	WithDecoration@POWERDOWN:
+	WithDecoration@PowerDown:
 		Image: poweroff
 		Sequence: offline
 		Palette: chrome
@@ -534,7 +534,7 @@
 		Position: Center
 		Offsets:
 			repairing: 10, 0
-	PowerMultiplier@POWERDOWN:
+	PowerMultiplier@PowerDown:
 		RequiresCondition: powerdown
 		Modifier: 0
 	RepairableBuilding:
@@ -594,7 +594,7 @@
 		AssaultMoveCondition: assault-move
 
 ^Rock:
-	Inherits@1: ^SpriteActor
+	Inherits@Sprite: ^SpriteActor
 	Interactable:
 	Tooltip:
 		Name: Rock
@@ -617,16 +617,16 @@
 		ValidOwnerNames: Neutral
 
 ^ForceFieldCompatible:
-	WithColoredOverlay@FORCEFIELD:
+	WithColoredOverlay@ForceField:
 		RequiresCondition: shield
 		Color: 0000FFB4
-	DamageMultiplier@FORCEFIELD:
+	DamageMultiplier@ForceField:
 		RequiresCondition: shield
 		Modifier: 0
 	TimedConditionBar:
 		Condition: shield
 		Color: 0000FF
-	ExternalCondition@FORCEFIELD:
+	ExternalCondition@ForceField:
 		Condition: shield
 
 ^Tree:
@@ -853,13 +853,13 @@
 		DeployedCondition: triggered
 
 ^DisabledByECM:
-	WithColoredOverlay@ECMDISABLED:
+	WithColoredOverlay@ECMdisabled:
 		RequiresCondition: ecmdisabled
 		Color: 000000B4
-	TimedConditionBar@ECMDISABLED:
+	TimedConditionBar@ECMdisabled:
 		Condition: ecmdisabled
 		Color: 00FF00
-	ExternalCondition@ECMDISABLED:
+	ExternalCondition@ECMdisabled:
 		Condition: ecmdisabled
 	Mobile:
 		PauseOnCondition: ecmdisabled
@@ -894,68 +894,68 @@
 	GrantConditionOnDamageState:
 		Condition: throw-sparks
 		ValidDamageStates: Heavy, Critical
-	SpawnsShrapnel@damagesparks:
+	SpawnsShrapnel@DamageSparks:
 		RequiresCondition: throw-sparks
 		Weapon: DamageSpark
 		Amount: 6
 		Delay: 192, 384
 
 ^ReconstructorHeal:
-	ChangesHealth@reconstructor:
+	ChangesHealth@Reconstructor:
 		PercentageStep: 1
 		Step: 0
 		Delay: 150
 		StartIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: reconstructor
-	ChangesHealth@reconstructor2:
+	ChangesHealth@Reconstructor2:
 		PercentageStep: 1
 		Step: 0
 		Delay: 150
 		StartIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: reconstructor > 1
-	ChangesHealth@reconstructor3:
+	ChangesHealth@Reconstructor3:
 		PercentageStep: 1
 		Step: 0
 		Delay: 150
 		StartIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: reconstructor > 2
-	ChangesHealth@reconstructor4:
+	ChangesHealth@Reconstructor4:
 		PercentageStep: 1
 		Step: 0
 		Delay: 150
 		StartIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: reconstructor > 3
-	ChangesHealth@reconstructor5:
+	ChangesHealth@Reconstructor5:
 		PercentageStep: 1
 		Step: 0
 		Delay: 150
 		StartIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: reconstructor > 4
-	WithDecoration@reconstructor:
+	WithDecoration@Reconstructor:
 		Image: pips
 		Sequence: pip-reconstructor
 		Palette: chrome
 		Position: TopRight
 		RequiresCondition: reconstructor
 		ValidRelationships: Ally
-	GrantConditionOnPrerequisite@reconstructor:
+	GrantConditionOnPrerequisite@Reconstructor:
 		Condition: reconstructor
 		Prerequisites: reconstructor
-	GrantConditionOnPrerequisite@reconstructor2:
+	GrantConditionOnPrerequisite@Reconstructor2:
 		Condition: reconstructor
 		Prerequisites: reconstructor2
-	GrantConditionOnPrerequisite@reconstructor3:
+	GrantConditionOnPrerequisite@Reconstructor3:
 		Condition: reconstructor
 		Prerequisites: reconstructor3
-	GrantConditionOnPrerequisite@reconstructor4:
+	GrantConditionOnPrerequisite@Reconstructor4:
 		Condition: reconstructor
 		Prerequisites: reconstructor4
-	GrantConditionOnPrerequisite@reconstructor5:
+	GrantConditionOnPrerequisite@Reconstructor5:
 		Condition: reconstructor
 		Prerequisites: reconstructor5
 
