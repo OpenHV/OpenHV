@@ -76,7 +76,11 @@ GULL:
 
 SEED:
 	Inherits: BEAST
-	-WithDeathAnimation:
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: effect
+		FallbackSequence: die
+		DeathPaletteIsPlayerPalette: false
 	-ScaredyCat:
 	Mobile:
 		TurnSpeed: 60
