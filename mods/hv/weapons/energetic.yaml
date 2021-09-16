@@ -204,7 +204,6 @@ VoltageArc:
 LightningBolt:
 	ReloadDelay: 50
 	Range: 9c0
-	MinRange: 1c0
 	Report: lightningbolt.wav
 	ValidTargets: Air
 	Projectile: EnergyBolt
@@ -219,7 +218,7 @@ LightningBolt:
 		ZOffset: 2000
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 3250
 		ValidTargets: Air
 		Versus:
 			None: 30
