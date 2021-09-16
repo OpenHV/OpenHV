@@ -31,4 +31,7 @@ seed:
 		Tick: 180
 		Length: 3
 		Facings: 8
+	die: bits/blood1.png
+		Length: 8
+		Tick: 100
 	icon: bits/icon.png
