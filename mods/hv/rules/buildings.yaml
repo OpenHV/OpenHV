@@ -223,7 +223,7 @@ RADAR:
 		Queue: Building
 		BuildPaletteOrder: 90
 		Prerequisites: generator, refinery, ~structures.yi
-		Description: Provides an overview\nof the battlefield.\nRequires power to operate.
+		Description: Provides an overview\nof the battlefield.\nCalls in reinforcements.\nRequires power to operate.
 	Valued:
 		Cost: 1800
 	Tooltip:
