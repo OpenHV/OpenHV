@@ -780,8 +780,14 @@ field:
 		Tick: 200
 	damaged-idle: bits/field.png
 		Start: 7
-	damaged-active: bits/field.png
+	damaged-charged: bits/field.png
 		Start: 7
+		Length: 5
+		Tick: 200
+	damaged-loop: bits/field.png
+		Start: 13
+	damaged-end: bits/field.png
+		Frames: 13, 12, 11, 10, 9, 8
 		Length: 5
 		Tick: 200
 	make: bits/build.png
