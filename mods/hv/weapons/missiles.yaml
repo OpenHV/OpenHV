@@ -309,7 +309,7 @@ TowerMissile:
 		Arm: 1
 		VerticalRateOfTurn: 140
 		RangeLimit: 25c0
-		Speed: 288
+		Speed: 350
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
 		Blockable: false
@@ -323,8 +323,14 @@ TowerMissile:
 		AllowSnapping: true
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 6000
-		ValidTargets: Air, Ground, Lava, Swamp
+		Damage: 3250
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion08.wav
