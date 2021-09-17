@@ -890,7 +890,7 @@ BUNKER:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: module, refinery
+		Prerequisites: module, refinery, ~structures.yi
 		Description: Basic base defense.\nGood against pods.\nRequires power to operate.
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
@@ -927,6 +927,13 @@ BUNKER:
 		PortCones: 88, 88, 88, 88, 88, 88
 	Power:
 		Amount: -20
+
+BUNKER2:
+	Inherits: BUNKER
+	Buildable:
+		Prerequisites: module, refinery, ~structures.sc
+	AttackGarrisoned:
+		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 
 TURRET:
 	Inherits: ^DefenseBuilding
