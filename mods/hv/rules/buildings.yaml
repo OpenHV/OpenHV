@@ -282,7 +282,7 @@ RADAR:
 		CameraActor: camera
 		UseDirectionalTarget: true
 		DirectionArrowAnimation: direction
-		SupportPowerPaletteOrder: 10
+		SupportPowerPaletteOrder: 30
 		SelectTargetSound: select_target.wav
 		OrderName: FlushBombers
 	SupportPowerChargeBar:
@@ -307,6 +307,7 @@ RADAR2:
 		PodScatter: 5
 		Drops: 12,12
 		OrderName: EjectPods
+		SupportPowerPaletteOrder: 30
 		SelectTargetSound: select_target.wav
 
 TRADPLAT:
@@ -1186,7 +1187,7 @@ FIELD:
 		DisplayRadarPing: true
 		Condition: shield
 		Sequence: end
-		SupportPowerPaletteOrder: 10
+		SupportPowerPaletteOrder: 20
 		Icon: shield
 		BeginChargeSpeechNotification: ForceFieldCharging
 		EndChargeSpeechNotification: ForceFieldReady
@@ -1261,7 +1262,7 @@ SILO:
 		DisplayBeacon: false
 		DisplayRadarPing: true
 		CameraRange: 10c0
-		SupportPowerPaletteOrder: 70
+		SupportPowerPaletteOrder: 10
 		BeginChargeSpeechNotification: MissileCharging
 		EndChargeSpeechNotification: MissileReady
 		IncomingSpeechNotification: MissileLaunchDetected
@@ -1333,7 +1334,7 @@ UPLINK:
 		LongDesc: Initiate a surgical strike.\nApplies instant damage to a small area.
 		DisplayRadarPing: true
 		CameraRange: 5c0
-		SupportPowerPaletteOrder: 20
+		SupportPowerPaletteOrder: 10
 		SelectTargetSound: select_target.wav
 	Power:
 		Amount: -150
@@ -2043,7 +2044,7 @@ TECHCOMLINK:
 		EffectImage: moveflsh
 		EffectSequence: idle
 		EffectPalette: moveflash
-		SupportPowerPaletteOrder: 80
+		SupportPowerPaletteOrder: 40
 		SelectTargetSound: select_target.wav
 		LaunchSound: radar_reveal_avreference.wav
 	ProvidesPrerequisite@BuildingName:
