@@ -260,19 +260,19 @@ miner2:
 	Defaults:
 		Offset: 0, -20
 	make:
-		Length: 17
+		Length: 18
 		Tick: 100
-		ShadowStart: 17
+		ShadowStart: 18
 		Combine:
 			bits/miner2.png:
-				Length: 17
+				Length: 18
 				Tick: 100
 			bits/miner2-shadow.png:
-				Offset: 15, 32
-				Length: 17
+				Offset: 15, 36
+				Length: 18
 				Tick: 100
 	idle: bits/miner2.png
-		Start: 17
+		Start: 18
 		Length: 1
 	active:
 		Length: 3
@@ -280,25 +280,25 @@ miner2:
 		ShadowStart: 3
 		Combine:
 			bits/miner2.png:
-				Start: 17
+				Start: 18
 				Length: 3
 				Tick: 300
 			bits/miner2-shadow.png:
-				Start: 17
+				Start: 18
 				Length: 3
 				Tick: 300
-				Offset: 15, 32
+				Offset: 15, 36
 	damaged-active:
 		ShadowStart: 1
 		Length: 1
 		Combine:
 			bits/miner2.png:
-				Start: 20
+				Start: 21
 			bits/miner2-shadow.png:
-				Start: 20
-				Offset: 15, 32
+				Start: 21
+				Offset: 15, 36
 	silo: bits/miner2.png
-		Start: 21
+		Start: 22
 		Length: 6
 	flame:
 		Offset: 3, -4

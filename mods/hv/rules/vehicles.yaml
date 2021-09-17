@@ -811,7 +811,7 @@ MINER:
 	Transforms:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2
-		Facing: 384
+		Facing: 750
 		Offset: -1,-2
 		NoTransformNotification: BuildingCannotPlaceAudio
 
