@@ -71,6 +71,7 @@
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion04.wav, explosion05.wav
+		ValidTargets: Ground, Tree
 
 SmallArtillery:
 	Inherits: ^Artillery

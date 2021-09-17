@@ -149,3 +149,4 @@ landedpod:
 bomber1:
 	idle: bits/bomber1.png
 		Facings: 8
+		ZOffset: 2050

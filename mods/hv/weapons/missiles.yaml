@@ -293,7 +293,7 @@ Patriot:
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 6000
-		ValidTargets: Air, Ground, Lava, Swamp
+		ValidTargets: Air
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion08.wav

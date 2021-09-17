@@ -229,7 +229,7 @@ LightningBolt:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
+		ValidTargets: Air
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 4
