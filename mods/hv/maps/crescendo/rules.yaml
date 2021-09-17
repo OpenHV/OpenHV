@@ -3,7 +3,7 @@ World:
 		Red: 0.9
 		Green: 1.0
 		Blue: 0.9
-		Ambient: 1.2
+		Ambient: 1.1
 	CloudSpawner:
 		Image: cloud
 		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f

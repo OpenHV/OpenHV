@@ -18,8 +18,6 @@ Visibility: Lobby
 
 Categories: Conquest
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -49,15 +47,6 @@ Actors:
 	Actor4: lamppost
 		Owner: Neutral
 		Location: 50,43
-	Actor5: techminer
-		Owner: Neutral
-		Location: 46,58
-	Actor6: techminer
-		Owner: Neutral
-		Location: 50,58
-	Actor7: techminer
-		Owner: Neutral
-		Location: 48,61
 	Actor8: lamppost
 		Owner: Neutral
 		Location: 50,57
@@ -230,45 +219,18 @@ Actors:
 	Actor60: mpspawn
 		Owner: Neutral
 		Location: 74,55
-	Actor61: resourcelight
-		Owner: Neutral
-		Location: 20,43
-	Actor62: resourcelight
-		Owner: Neutral
-		Location: 28,18
 	Actor67: resourcelight
 		Owner: Neutral
 		Location: 42,16
 	Actor68: resourcelight
 		Owner: Neutral
 		Location: 55,16
-	Actor73: resourcelight
-		Owner: Neutral
-		Location: 69,18
-	Actor74: resourcelight
-		Owner: Neutral
-		Location: 77,43
 	Actor75: resourcelight
 		Owner: Neutral
 		Location: 70,67
-	Actor76: resourcelight
-		Owner: Neutral
-		Location: 77,68
-	Actor77: resourcelight
-		Owner: Neutral
-		Location: 20,68
 	Actor78: resourcelight
 		Owner: Neutral
 		Location: 27,67
-	Actor79: resourcelight
-		Owner: Neutral
-		Location: 47,60
-	Actor80: resourcelight
-		Owner: Neutral
-		Location: 51,60
-	Actor81: resourcelight
-		Owner: Neutral
-		Location: 49,63
 	Actor82: resourcelight
 		Owner: Neutral
 		Location: 60,83
@@ -287,5 +249,35 @@ Actors:
 	Actor87: resourcelight
 		Owner: Neutral
 		Location: 27,28
+	Actor79: techminer
+		Owner: Neutral
+		Location: 50,59
+	Actor80: techminer
+		Owner: Neutral
+		Location: 46,59
+	Actor81: resourcelight
+		Owner: Neutral
+		Location: 51,61
+	Actor88: resourcelight
+		Owner: Neutral
+		Location: 47,61
+	Actor73: resourcelight
+		Owner: Neutral
+		Location: 77,68
+	Actor74: resourcelight
+		Owner: Neutral
+		Location: 77,43
+	Actor76: resourcelight
+		Owner: Neutral
+		Location: 69,18
+	Actor89: resourcelight
+		Owner: Neutral
+		Location: 28,18
+	Actor90: resourcelight
+		Owner: Neutral
+		Location: 20,43
+	Actor77: resourcelight
+		Owner: Neutral
+		Location: 20,68
 
 Rules: rules.yaml
