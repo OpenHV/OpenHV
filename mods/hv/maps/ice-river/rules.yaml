@@ -80,7 +80,7 @@ AATURRET2:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK9:
+AATANK:
 	Buildable:
 		Prerequisites: ~disabled
 

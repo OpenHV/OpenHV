@@ -88,7 +88,7 @@ TYRIANTANK:
 	RenderSprites:
 		PlayerPalette: green
 
-TANK9:
+AATANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
@@ -107,7 +107,7 @@ TANK9:
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 40
+		TurnSpeed: 35
 		Speed: 115
 		Locomotor: lighttracked
 	RevealsShroud:
@@ -120,10 +120,13 @@ TANK9:
 		TurnSpeed: 40
 	Armament:
 		Weapon: Patriot
-		LocalOffset: 543,0,815
+		Recoil: 125
+		RecoilRecovery: 38
+		LocalOffset: 250,250,150, 250,-250,150
 	AttackTurreted:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+	WithSpriteTurret:
 	RenderSprites:
 		PlayerPalette: green
 
