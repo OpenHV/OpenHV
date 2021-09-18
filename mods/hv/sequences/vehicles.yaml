@@ -445,7 +445,7 @@ aatank2:
 		Facings: 8
 		Tick: 100
 	icon: bits/units-icons.png
-		Start: 27
+		Start: 38
 
 scrap1:
 	idle: bits/objects.png
