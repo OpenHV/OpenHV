@@ -27,7 +27,7 @@ Bomb:
 			Wood: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: medium
-		ValidTargets: Ground
+		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash
