@@ -83,63 +83,63 @@ TREEGRS1:
 	Tree:
 		Template: 1272
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud1
 
 TREEGRS2:
 	Inherits: ^Tree
 	Tree:
 		Template: 1273
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud2
 
 TREEGRS3:
 	Inherits: ^Tree
 	Tree:
 		Template: 1274
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud3
 
 TREEGRS4:
 	Inherits: ^Tree
 	Tree:
 		Template: 1275
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud4
 
 TREEGRS5:
 	Inherits: ^Tree
 	Tree:
 		Template: 1276
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud5
 
 TREEGRS6:
 	Inherits: ^Tree
 	Tree:
 		Template: 1277
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud6
 
 TREEGRS7:
 	Inherits: ^Tree
 	Tree:
 		Template: 1278
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud7
 
 TREEGRS8:
 	Inherits: ^Tree
 	Tree:
 		Template: 1279
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud8
 
 TREEGRS9:
 	Inherits: ^Tree
 	Tree:
 		Template: 1280
 	SpawnActorOnDeath@Crush:
-		Actor: Grass
+		Actor: TreeMud9
 
 TREEGRS10:
 	Inherits: ^Tree
@@ -154,7 +154,7 @@ TREEGRS10:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud2
+		Actor: TreeMud15
 	SpawnActorOnDeath@Ash:
 		Actor: TreeAsh2
 
@@ -171,7 +171,7 @@ TREEGRS11:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud2
+		Actor: TreeMud15
 	SpawnActorOnDeath@Ash:
 		Actor: TreeAsh2
 
@@ -180,28 +180,28 @@ TREEGRS12:
 	Tree:
 		Template: 1281
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud10
 
 TREEGRS13:
 	Inherits: ^Tree
 	Tree:
 		Template: 1282
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud11
 
 TREEGRS14:
 	Inherits: ^Tree
 	Tree:
 		Template: 1283
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud12
 
 TREEGRS15:
 	Inherits: ^Tree
 	Tree:
 		Template: 1285
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud
+		Actor: TreeMud13
 
 TreeAsh:
 	Interactable:
@@ -230,15 +230,13 @@ TreeAsh2:
 	LaysTerrain:
 		Offset: 0,1
 
-TreeMud:
+^TreeMud:
 	Interactable:
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Crater
 	AppearsOnMapPreview:
 		Terrain: Crater
-	LaysTerrain:
-		Template: 1286
 	Building:
 		Footprint: =
 		Dimensions: 1,1
@@ -252,18 +250,89 @@ TreeMud:
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 
-TreeMud2:
-	Inherits: TreeMud
+TreeMud1:
+	Inherits: ^TreeMud
 	LaysTerrain:
+		Template: 1394
+
+TreeMud2:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1395
+
+TreeMud3:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1396
+
+TreeMud4:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1397
+
+TreeMud5:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1398
+
+TreeMud6:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1399
+
+TreeMud7:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1400
+
+TreeMud8:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1401
+
+TreeMud9:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1402
+
+TreeMud10:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1403
+
+TreeMud11:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1404
+
+TreeMud12:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1405
+
+TreeMud13:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1406
+
+TreeMud14:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1407
+
+TreeMud15:
+	Inherits: ^TreeMud
+	LaysTerrain:
+		Template: 1407
 		Offset: 0,1
 
 Grass:
-	Inherits: TreeMud
+	Inherits: ^TreeMud
 	LaysTerrain:
 		Template: 121
 
 TreeMudSnow:
-	Inherits: TreeMud
+	Inherits: ^TreeMud
 	LaysTerrain:
 		Template: 1305
 
@@ -273,7 +342,7 @@ TreeMudSnow2:
 		Offset: 0,1
 
 Snow:
-	Inherits: TreeMud
+	Inherits: ^TreeMud
 	LaysTerrain:
 		Template: 834
 
