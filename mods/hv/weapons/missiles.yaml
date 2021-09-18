@@ -278,7 +278,7 @@ Patriot:
 		Arm: 1
 		VerticalRateOfTurn: 140
 		RangeLimit: 25c0
-		Speed: 288
+		Speed: 300
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
 		Blockable: false
@@ -292,8 +292,14 @@ Patriot:
 		AllowSnapping: true
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 6000
+		Damage: 2000
 		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion08.wav

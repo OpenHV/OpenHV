@@ -94,7 +94,7 @@ AATANK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: factory
+		Prerequisites: factory, ~structures.sc
 		Description: Mobile tank with AA missiles.
 	Valued:
 		Cost: 500
@@ -129,6 +129,19 @@ AATANK:
 	WithSpriteTurret:
 	RenderSprites:
 		PlayerPalette: green
+
+AATANK2:
+	Inherits: AATANK
+	Buildable:
+		Prerequisites: factory, ~structures.yi
+		Description: Mobile tank with lightning gun.
+	Armament:
+		Weapon: LightningBoltLight
+		Recoil: 125
+		RecoilRecovery: 38
+		LocalOffset: 200,0,200
+	WithTurretAttackAnimation:
+		Sequence: shoot
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
