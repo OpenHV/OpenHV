@@ -434,6 +434,19 @@ aatank:
 	icon: bits/units-icons.png
 		Start: 35
 
+aatank2:
+	idle: bits/aatank2.png
+		Facings: 8
+	turret: bits/aatank2.png
+		Start: 8
+		Facings: 8
+	shoot: bits/aatank2.png
+		Start: 16
+		Facings: 8
+		Tick: 100
+	icon: bits/units-icons.png
+		Start: 27
+
 scrap1:
 	idle: bits/objects.png
 

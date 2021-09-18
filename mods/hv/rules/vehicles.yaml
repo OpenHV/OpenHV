@@ -130,6 +130,50 @@ AATANK:
 	RenderSprites:
 		PlayerPalette: green
 
+AATANK2:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetAir
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 20
+		Prerequisites: factory, ~structures.yi
+		Description: Mobile tank with AA missiles.
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mobile AA
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 35
+		Speed: 115
+		Locomotor: lighttracked
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 40
+	Armament:
+		Weapon: LightningBoltLight
+		Recoil: 125
+		RecoilRecovery: 38
+		LocalOffset: 200,0,200
+	AttackTurreted:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	WithSpriteTurret:
+	WithTurretAttackAnimation:
+		Sequence: shoot
+	RenderSprites:
+		PlayerPalette: green
+
 TRANSPRT:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove

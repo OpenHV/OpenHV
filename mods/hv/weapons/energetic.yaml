@@ -236,6 +236,25 @@ LightningBolt:
 		AffectsParent: true
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
+LightningBoltLight:
+	Inherits: LightningBolt
+	Range: 8c0
+	Report: lightningbolt.wav
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 2000
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
+
 ^PixelSpark:
 	Range: 1c0
 	MinRange: 512
