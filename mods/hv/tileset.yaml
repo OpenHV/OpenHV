@@ -9841,14 +9841,6 @@ Templates:
 		Categories: Plant
 		Tiles:
 			0: Stone
-	Template@1305:
-		Id: 1305
-		Images: bits/terrain/trees.png
-		Frames: 15
-		Size: 1,1
-		Categories: Snow, Plant
-		Tiles:
-			0: Plant
 	Template@1306:
 		Id: 1306
 		Images: bits/terrain/grascliffend.png
@@ -10775,3 +10767,124 @@ Templates:
 		Categories: Road
 		Tiles:
 			0: Road
+	Template@1420:
+		Id: 1420
+		Images: bits/terrain/treesmnch.png
+		Frames: 0
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1421:
+		Id: 1421
+		Images: bits/terrain/treesmnch.png
+		Frames: 1
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1422:
+		Id: 1422
+		Images: bits/terrain/treesmnch.png
+		Frames: 2
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1423:
+		Id: 1423
+		Images: bits/terrain/treesmnch.png
+		Frames: 3
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1424:
+		Id: 1424
+		Images: bits/terrain/treesmnch.png
+		Frames: 4
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1425:
+		Id: 1425
+		Images: bits/terrain/treesmnch.png
+		Frames: 5
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1426:
+		Id: 1426
+		Images: bits/terrain/treesmnch.png
+		Frames: 6
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1427:
+		Id: 1427
+		Images: bits/terrain/treesmnch.png
+		Frames: 7
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1428:
+		Id: 1428
+		Images: bits/terrain/treesmnch.png
+		Frames: 8
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1429:
+		Id: 1429
+		Images: bits/terrain/treesmnch.png
+		Frames: 9
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1430:
+		Id: 1430
+		Images: bits/terrain/treesmnch.png
+		Frames: 10
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1431:
+		Id: 1431
+		Images: bits/terrain/treesmnch.png
+		Frames: 11
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1432:
+		Id: 1432
+		Images: bits/terrain/treesmnch.png
+		Frames: 12
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1433:
+		Id: 1433
+		Images: bits/terrain/treesmnch.png
+		Frames: 13
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+	Template@1434:
+		Id: 1434
+		Images: bits/terrain/treesmnch.png
+		Frames: 14
+		Size: 1,1
+		Categories: Snow, Plant
+		Tiles:
+			0: Plant
+
