@@ -99,25 +99,6 @@ dropship:
 	shoot: bits/dropship.png
 		Start: 8
 		Facings: 8
-	landing: bits/dropship.png
-		Start: 16
-		Length: 5
-	touchdown: bits/dropship.png
-		Start: 21
-		Length: 1
-	liftoff: bits/dropship.png
-		Start: 21
-		Length: 5
-	muzzle1: bits/dropship.png
-		Start: 27
-		Length: 2
-		Facings: 8
-		Tick: 100
-	muzzle2: bits/dropship.png
-		Start: 43
-		Length: 2
-		Facings: 8
-		Tick: 100
 	icon: units-icons.png
 		Start: 39
 
