@@ -142,6 +142,7 @@ build_platform() {
 
 	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
+	rm -rf "${LAUNCHER_RESOURCES_DIR}/global mix database.dat"
 
 	for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 		mkdir -p "${LAUNCHER_RESOURCES_DIR}/$(dirname "${f}")"

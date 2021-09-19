@@ -87,6 +87,7 @@ function build_platform()
 	echo "Building core files (${PLATFORM})"
 	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}" "win-${PLATFORM}" "net5" "False" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}"
+	rm -rf "${BUILTDIR}/global mix database.dat"
 
 	for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 		mkdir -p "${BUILTDIR}/$(dirname "${f}")"
