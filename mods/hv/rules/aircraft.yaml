@@ -375,8 +375,6 @@ DROPSHIP:
 		InitialFacing: 512
 	Voiced:
 		VoiceSet: DropshipVoice
-	WithLandingAnimation:
-		RequiredFacing: 512
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
 	WithFacingSpriteBody@Fly:
