@@ -32,6 +32,7 @@ PLANE1:
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
+		OpportunityFire: False
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 768
@@ -87,6 +88,7 @@ PLANE2:
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
+		OpportunityFire: False
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 768
