@@ -10679,3 +10679,99 @@ Templates:
 		ClearTile: true
 		Tiles:
 			0: Plant
+	Template@1408:
+		Id: 1408
+		Images: bits/terrain/roadplain.png
+		Frames: 0
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1409:
+		Id: 1409
+		Images: bits/terrain/roadplain.png
+		Frames: 1
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1410:
+		Id: 1410
+		Images: bits/terrain/roadplain.png
+		Frames: 2
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1411:
+		Id: 1411
+		Images: bits/terrain/roadplain.png
+		Frames: 3
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1412:
+		Id: 1412
+		Images: bits/terrain/roadvnts.png
+		Frames: 0
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1413:
+		Id: 1413
+		Images: bits/terrain/roadvnts.png
+		Frames: 1
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1414:
+		Id: 1414
+		Images: bits/terrain/roadvnts.png
+		Frames: 2
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1415:
+		Id: 1415
+		Images: bits/terrain/roadvnts.png
+		Frames: 3
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1416:
+		Id: 1416
+		Images: bits/terrain/roadcppr.png
+		Frames: 0
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1417:
+		Id: 1417
+		Images: bits/terrain/roadcppr.png
+		Frames: 1
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1418:
+		Id: 1418
+		Images: bits/terrain/roadcppr.png
+		Frames: 2
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1419:
+		Id: 1419
+		Images: bits/terrain/roadcppr.png
+		Frames: 3
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
