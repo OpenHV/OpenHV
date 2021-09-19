@@ -59,6 +59,21 @@
 	ExternalCondition@CrateCloak:
 		Condition: crate-cloak
 
+^Husk:
+	Interactable:
+	Health:
+		HP: 28000
+	Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: CenterPosition
+		AlwaysVisibleRelationships: None
+	ScriptTriggers:
+	WithFacingSpriteBody:
+	HitShape:
+	MapEditorData:
+		Categories: Husk
+
 ^Vehicle:
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
@@ -236,6 +251,27 @@
 		Weapon: PilotSpawn
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
+
+^PlaneHusk:
+	Inherits@Husk: ^Husk
+	Inherits@Sprite: ^SpriteActor
+	Targetable:
+		TargetTypes: Air, Husk, NoAutoTarget
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Tooltip:
+		GenericName: Destroyed Plane
+	Aircraft:
+	FallsToEarth:
+		Moves: true
+		Velocity: 86
+		Explosion: UnitExplodeSmall
+		MaximumSpinSpeed: 0
+	-MapEditorData:
+	RevealOnDeath:
+		Duration: 60
+		Radius: 4c0
 
 ^SpawnedPlane:
 	Inherits: ^Plane

@@ -276,7 +276,7 @@ COPTER2:
 		VoiceSet: TransportHelicopterVoice
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
-	WithFacingSpriteBody@FLY:
+	WithFacingSpriteBody@Fly:
 		Sequence: fly
 		Name: fly
 		RequiresCondition: airborne
@@ -379,7 +379,7 @@ DROPSHIP:
 		RequiredFacing: 512
 	WithFacingSpriteBody:
 		RequiresCondition: !airborne
-	WithFacingSpriteBody@FLY:
+	WithFacingSpriteBody@Fly:
 		Sequence: fly
 		Name: fly
 		RequiresCondition: airborne
@@ -388,7 +388,7 @@ DROPSHIP:
 		Weapon: DropshipMissile
 		MuzzleSequence: muzzle1
 		LocalOffset: 700,600,0
-	Armament@SECONDARY:
+	Armament@Secondary:
 		Weapon: DropshipMissile
 		MuzzleSequence: muzzle2
 		LocalOffset: 700,-600,0
@@ -411,6 +411,36 @@ DROPSHIP:
 		RequiresSelection: true
 	WithMuzzleOverlay:
 		IgnoreOffset: True
+	SpawnActorOnDeath:
+		Actor: DROPSHIP.Husk
+
+DROPSHIP.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Crashing Transport Dropship
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 43
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		MinRange: 8c0
+		Range: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: dropship
+		PlayerPalette: green
 
 DRONE:
 	Inherits: ^SpawnedPlane

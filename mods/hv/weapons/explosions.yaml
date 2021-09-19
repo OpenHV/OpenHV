@@ -1,13 +1,13 @@
 # License: CC-BY-SA-4.0
 
 BuildingExplode:
-	Warhead@Effectf: CreateEffect
+	Warhead@Effect: CreateEffect
 		Explosions: medium, medium_2, large, large_f, large_2, large_3
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 ^Explosion:
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 426
 		Damage: 5000
@@ -31,6 +31,13 @@ UnitExplodeSmall:
 	Inherits: ^Explosion
 	Warhead@Damage: SpreadDamage
 		Damage: 4000
+
+UnitExplodeLarge:
+	Inherits: ^Explosion
+	Warhead@Effect: CreateEffect
+		Explosions: large
+	Warhead@Damage: SpreadDamage
+		Damage: 8000
 
 PropExplode:
 	Inherits: ^Explosion
