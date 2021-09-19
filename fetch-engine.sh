@@ -2,8 +2,8 @@
 # Helper script used to check and update engine dependencies
 # This should not be called manually
 
-command -v curl >/dev/null 2>&1 || command -v wget > /dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires curl or wget."; exit 1; }
-command -v python >/dev/null 2>&1 || { echo >&2 "The OpenRA mod template requires python."; exit 1; }
+command -v curl >/dev/null 2>&1 || command -v wget > /dev/null 2>&1 || { echo >&2 "OpenHV requires curl or wget."; exit 1; }
+command -v python >/dev/null 2>&1 || { echo >&2 "OpenHV requires python."; exit 1; }
 
 require_variables() {
 	missing=""
