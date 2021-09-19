@@ -10684,7 +10684,7 @@ Templates:
 		Images: bits/terrain/roadplain.png
 		Frames: 0
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1409:
@@ -10692,7 +10692,7 @@ Templates:
 		Images: bits/terrain/roadplain.png
 		Frames: 1
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1410:
@@ -10700,7 +10700,7 @@ Templates:
 		Images: bits/terrain/roadplain.png
 		Frames: 2
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1411:
@@ -10708,7 +10708,7 @@ Templates:
 		Images: bits/terrain/roadplain.png
 		Frames: 3
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1412:
@@ -10716,7 +10716,7 @@ Templates:
 		Images: bits/terrain/roadvnts.png
 		Frames: 0
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1413:
@@ -10724,7 +10724,7 @@ Templates:
 		Images: bits/terrain/roadvnts.png
 		Frames: 1
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1414:
@@ -10732,7 +10732,7 @@ Templates:
 		Images: bits/terrain/roadvnts.png
 		Frames: 2
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1415:
@@ -10740,7 +10740,7 @@ Templates:
 		Images: bits/terrain/roadvnts.png
 		Frames: 3
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1416:
@@ -10748,7 +10748,7 @@ Templates:
 		Images: bits/terrain/roadcppr.png
 		Frames: 0
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1417:
@@ -10756,7 +10756,7 @@ Templates:
 		Images: bits/terrain/roadcppr.png
 		Frames: 1
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1418:
@@ -10764,7 +10764,7 @@ Templates:
 		Images: bits/terrain/roadcppr.png
 		Frames: 2
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@1419:
@@ -10772,6 +10772,6 @@ Templates:
 		Images: bits/terrain/roadcppr.png
 		Frames: 3
 		Size: 1,1
-		Categories: Littoral, Road
+		Categories: Road
 		Tiles:
 			0: Road
