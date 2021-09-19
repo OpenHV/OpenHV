@@ -96,6 +96,15 @@ dropship:
 	fly: bits/dropship.png
 		Start: 8
 		Facings: 8
+	landing: bits/dropship.png
+		Start: 8
+		Facings: 8
+	touchdown: bits/dropship.png
+		Start: 8
+		Facings: 8
+	liftoff: bits/dropship.png
+		Start: 8
+		Facings: 8
 	shoot: bits/dropship.png
 		Start: 8
 		Facings: 8
