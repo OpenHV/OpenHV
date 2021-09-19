@@ -69,6 +69,9 @@ install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/ope
 install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/openra"
 rm -rf "${APPDIR}/usr/lib/openra/global mix database.dat"
 
+mkdir -p "${APPDIR}/usr/share/metainfo"
+install -m644 "${PACKAGING_DIR}/openhv.metainfo.xml" "${APPDIR}/usr/share/metainfo"
+
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 	mkdir -p "${APPDIR}/usr/lib/openra/$(dirname "${f}")"
 	cp -r "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/${f}" "${APPDIR}/usr/lib/openra/${f}"

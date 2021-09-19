@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>openhv.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <name>OpenHV</name>
+  <summary>Open Source 90s Pixelart Sci-Fi Real Time Strategy game</summary>
+  <description>
+    <p>
+      In 1993 a game called Hard Vacuum was in development. Heavily inspired by Dune 2, the father of the modern RTS, it had ambitious goals, but it was never released to the public. Decades later the pixel art was released under a free license. The starting point for this project.
+    </p>
+    <p>
+      OpenHV is an Open Source Pixelart Science-Fiction Real Time Strategy game from the golden era of RTS. It comes with Multiplayer (LAN and internet) support, competent skirmish AI as well as an integrated map editor. All the assets are licensed under Open Source compliant terms. It is easy to mod.
+    </p>
+  </description>
+  <launchable type="desktop-id">openhv.desktop</launchable>
+  <screenshots>
+    <screenshot>
+      <image>https://img.itch.zone/aW1hZ2UvNjg5NjY5LzM4MzY5MjUucG5n/original/VzlKJN.png</image>
+      <caption>Snow</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://media.moddb.com/images/mods/1/48/47842/EhK29FRXYAAkWhL.1.png</image>
+      <caption>Base</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://media.discordapp.net/attachments/415154443261050901/878982936924418048/Screenshot_from_2021-07-31_13-18-44.png</image>
+      <caption>Editor</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://media.moddb.com/images/mods/1/48/47842/army.png</image>
+      <caption>Multiplayer</caption>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://openhv.itch.io/openhv</url>
+  <url type="bugtracker">https://github.com/OpenHV/OpenHV/issues</url>
+  <url type="help">https://github.com/OpenHV/OpenHV/wiki</url>
+  <url type="faq">https://github.com/OpenHV/OpenHV/wiki/FAQ</url>
+  <url type="contact">https://matrix.to/#/+openhv:matrix.org</url>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-realistic">moderate</content_attribute>
+    <content_attribute id="violence-bloodshed">moderate</content_attribute>
+    <content_attribute id="violence-worship">moderate</content_attribute>
+    <content_attribute id="drugs-tobacco">moderate</content_attribute>
+    <content_attribute id="language-profanity">mild</content_attribute>
+    <content_attribute id="language-humor">mild</content_attribute>
+    <content_attribute id="social-chat">intense</content_attribute>
+  </content_rating>
+</component>
