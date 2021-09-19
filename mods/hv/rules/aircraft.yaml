@@ -404,6 +404,8 @@ DROPSHIP:
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
+	SpawnActorOnDeath:
+		Actor: DROPSHIP.Husk
 
 DROPSHIP.Husk:
 	Inherits: ^PlaneHusk
