@@ -1,0 +1,1 @@
+Contents of this folder were created using [MagicaVoxel](https://ephtracy.github.io/index.html?page=mv_main) and serve as a basis for sprites. They are licensed under the [Creative Commons Attribution ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) terms.

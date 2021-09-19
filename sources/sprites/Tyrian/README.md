@@ -1,0 +1,1 @@
+Contents of this folder are the original [remastered Tyrian Graphics](https://lostgarden.home.blog/2007/04/05/free-game-graphics-tyrian-ships-and-tiles/) sprites by Daniel Cook. The [Lost Garden License](https://lostgarden.home.blog/2007/03/15/lost-garden-license/) applies: [Creative Commons Attribution 3.0 United States](https://creativecommons.org/licenses/by/3.0/us/)

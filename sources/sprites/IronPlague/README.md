@@ -1,0 +1,1 @@
+Contents of this folder are the original [Iron Plague](https://lostgarden.home.blog/2005/03/30/download-a-complete-set-of-sweet-8-bit-sinistar-clone-graphics/) sprites by Daniel Cook. The [Lost Garden License](https://lostgarden.home.blog/2007/03/15/lost-garden-license/) applies: [Creative Commons Attribution 3.0 United States](https://creativecommons.org/licenses/by/3.0/us/)
