@@ -384,14 +384,9 @@ DROPSHIP:
 		Name: fly
 		RequiresCondition: airborne
 	AttackFrontal:
-	Armament@Primary:
+	Armament:
 		Weapon: DropshipMissile
-		MuzzleSequence: muzzle1
-		LocalOffset: 700,600,0
-	Armament@Secondary:
-		Weapon: DropshipMissile
-		MuzzleSequence: muzzle2
-		LocalOffset: 700,-600,0
+		LocalOffset: 700,500,0, 700,-500,0
 	Selectable:
 		DecorationBounds: 2048, 1848
 	Cargo:
@@ -409,10 +404,6 @@ DROPSHIP:
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
-	WithMuzzleOverlay:
-		IgnoreOffset: True
-	SpawnActorOnDeath:
-		Actor: DROPSHIP.Husk
 
 DROPSHIP.Husk:
 	Inherits: ^PlaneHusk
