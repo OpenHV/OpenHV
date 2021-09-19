@@ -6,8 +6,6 @@ Title: Antifreeze
 
 Author: SiegeSpud
 
-License: CC-BY-SA-4.0
-
 Tileset: PLANET
 
 MapSize: 130,66
@@ -17,8 +15,6 @@ Bounds: 1,1,128,64
 Visibility: Lobby
 
 Categories: Conquest
-
-Translations:
 
 Players:
 	PlayerReference@Neutral:

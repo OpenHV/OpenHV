@@ -8,8 +8,6 @@ Author: Dzierzan
 
 Tileset: PLANET
 
-License: CC-BY-SA-4.0
-
 MapSize: 128,128
 
 Bounds: 1,1,126,126
@@ -17,8 +15,6 @@ Bounds: 1,1,126,126
 Visibility: Lobby
 
 Categories: Conquest
-
-Translations:
 
 Players:
 	PlayerReference@Neutral:
