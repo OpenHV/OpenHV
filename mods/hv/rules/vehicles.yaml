@@ -94,7 +94,7 @@ AATANK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: factory, ~structures.sc
+		Prerequisites: factory2
 		Description: Mobile tank with AA missiles.
 	Valued:
 		Cost: 500
@@ -133,7 +133,7 @@ AATANK:
 AATANK2:
 	Inherits: AATANK
 	Buildable:
-		Prerequisites: factory, ~structures.yi
+		Prerequisites: factory3
 		Description: Mobile tank with lightning gun.
 	Armament:
 		Weapon: LightningBoltLight
