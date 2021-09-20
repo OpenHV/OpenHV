@@ -1,0 +1,245 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Cold Rage
+
+Author: SiegeSpud
+
+Tileset: PLANET
+
+MapSize: 98,98
+
+Bounds: 1,1,96,96
+
+Visibility: Lobby
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1, Multi2, Multi3
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: prop5
+		Owner: Neutral
+		Location: 48,47
+	Actor1: prop7
+		Owner: Neutral
+		Location: 47,46
+	Actor2: prop8
+		Owner: Neutral
+		Location: 51,47
+	Actor3: prop8
+		Owner: Neutral
+		Location: 46,50
+	Actor4: prop6
+		Owner: Neutral
+		Location: 50,51
+	Actor5: prop8
+		Owner: Neutral
+		Location: 48,49
+	Actor6: prop8
+		Owner: Neutral
+		Location: 49,49
+	Actor7: prop7
+		Owner: Neutral
+		Location: 49,49
+	Actor8: prop6
+		Owner: Neutral
+		Location: 52,49
+	Actor9: prop6
+		Owner: Neutral
+		Location: 45,48
+	Actor11: lamppost
+		Owner: Neutral
+		Location: 42,47
+	Actor12: lamppost
+		Owner: Neutral
+		Location: 55,50
+	Actor13: prop1
+		Owner: Neutral
+		Location: 54,56
+	Actor14: prop1
+		Owner: Neutral
+		Location: 43,41
+	Actor28: firelight
+		Owner: Neutral
+		Location: 59,62
+	Actor29: firelight
+		Owner: Neutral
+		Location: 37,62
+	Actor30: firelight
+		Owner: Neutral
+		Location: 38,34
+	Actor31: firelight
+		Owner: Neutral
+		Location: 59,35
+	Actor19: mpspawn
+		Owner: Neutral
+		Location: 48,13
+	Actor20: mpspawn
+		Owner: Neutral
+		Location: 13,47
+	Actor21: mpspawn
+		Owner: Neutral
+		Location: 82,47
+	Actor22: mpspawn
+		Owner: Neutral
+		Location: 48,80
+	Actor24: baselight
+		Owner: Neutral
+		Location: 48,81
+	Actor25: baselight
+		Owner: Neutral
+		Location: 82,48
+	Actor26: baselight
+		Owner: Neutral
+		Location: 48,14
+	Actor27: baselight
+		Owner: Neutral
+		Location: 13,48
+	Actor36: resourcelight
+		Owner: Neutral
+		Location: 10,9
+	Actor37: resourcelight
+		Owner: Neutral
+		Location: 87,9
+	Actor39: resourcelight
+		Owner: Neutral
+		Location: 10,87
+	Actor40: resourcelight
+		Owner: Neutral
+		Location: 44,75
+	Actor42: resourcelight
+		Owner: Neutral
+		Location: 75,59
+	Actor43: resourcelight
+		Owner: Neutral
+		Location: 93,49
+	Actor44: resourcelight
+		Owner: Neutral
+		Location: 54,22
+	Actor46: resourcelight
+		Owner: Neutral
+		Location: 23,38
+	Actor47: resourcelight
+		Owner: Neutral
+		Location: 5,49
+	Actor48: resourcelight
+		Owner: Neutral
+		Location: 17,70
+	Actor49: resourcelight
+		Owner: Neutral
+		Location: 27,81
+	Actor50: resourcelight
+		Owner: Neutral
+		Location: 71,16
+	Actor51: resourcelight
+		Owner: Neutral
+		Location: 81,27
+	Actor52: smallfirelight
+		Owner: Neutral
+		Location: 18,79
+	Actor53: smallfirelight
+		Owner: Neutral
+		Location: 79,18
+	Actor54: prop5
+		Owner: Neutral
+		Location: 18,82
+	Actor55: prop5
+		Owner: Neutral
+		Location: 78,13
+	Actor56: techminer
+		Owner: Neutral
+		Location: 9,8
+	Actor58: techcomlink
+		Owner: Neutral
+		Location: 9,87
+	Actor59: techcomlink
+		Owner: Neutral
+		Location: 87,9
+	Actor57: resourcelight
+		Owner: Neutral
+		Location: 87,87
+	Actor60: techminer
+		Owner: Neutral
+		Location: 87,86
+	Actor61: resourcelight
+		Owner: Neutral
+		Location: 59,93
+	Actor62: resourcelight
+		Owner: Neutral
+		Location: 39,4
+	Actor65: mediumfirelight
+		Owner: Neutral
+		Location: 19,16
+	Actor66: mediumfirelight
+		Owner: Neutral
+		Location: 78,81
+	Actor63: prop1
+		Owner: Neutral
+		Location: 65,72
+	Actor64: prop1
+		Owner: Neutral
+		Location: 72,78
+	Actor67: prop1
+		Owner: Neutral
+		Location: 25,19
+	Actor68: prop1
+		Owner: Neutral
+		Location: 32,25
+	Actor69: prop6
+		Owner: Neutral
+		Location: 74,88
+	Actor70: prop7
+		Owner: Neutral
+		Location: 77,87
+	Actor71: prop7
+		Owner: Neutral
+		Location: 23,9
+	Actor72: prop8
+		Owner: Neutral
+		Location: 20,10
+	Actor73: prop5
+		Owner: Neutral
+		Location: 26,10
+	Actor74: prop5
+		Owner: Neutral
+		Location: 70,85
+	Actor75: icicle1
+		Owner: Neutral
+		Location: 26,86
+	Actor76: icicle1
+		Owner: Neutral
+		Location: 70,8
+
+Rules: rules.yaml
