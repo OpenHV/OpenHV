@@ -319,7 +319,7 @@ TRADPLAT:
 		Queue: Building
 		BuildPaletteOrder: 100
 		Description: Repairs and sells vehicles for credits.
-		Prerequisites: factory
+		Prerequisites: ~factory
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1100,7 +1100,7 @@ ARTILLERYTURRET:
 		Bounds: 2048, 2048
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, techcenter
+		Prerequisites: ~factory, techcenter
 		Description: Advanced base defense.\nRequires power to operate.
 	Valued:
 		Cost: 2000
@@ -1618,7 +1618,7 @@ HARBOR:
 	Selectable:
 		Bounds: 3072, 3072
 	Buildable:
-		Prerequisites: factory
+		Prerequisites: ~factory
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds ships.

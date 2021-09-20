@@ -11,7 +11,7 @@ TANK3:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: factory2
+		Prerequisites: ~factory2
 		Queue: Vehicle
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Mobile:
@@ -54,7 +54,7 @@ TYRIANTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory3
+		Prerequisites: ~factory3
 		BuildPaletteOrder: 10
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	UpdatesPlayerStatistics:
@@ -94,7 +94,7 @@ AATANK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
-		Prerequisites: factory2
+		Prerequisites: ~factory2
 		Description: Mobile tank with AA missiles.
 	Valued:
 		Cost: 500
@@ -133,7 +133,7 @@ AATANK:
 AATANK2:
 	Inherits: AATANK
 	Buildable:
-		Prerequisites: factory3
+		Prerequisites: ~factory3
 		Description: Mobile tank with lightning gun.
 	Armament:
 		Weapon: LightningBoltLight
@@ -152,7 +152,7 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory, module
+		Prerequisites: ~factory, module
 		BuildPaletteOrder: 30
 		Description: Can load infantry pods.\nHas fireports for garrisoned units.
 	UpdatesPlayerStatistics:
@@ -198,7 +198,7 @@ ARTIL:
 		Name: Artillery
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: radar, factory
+		Prerequisites: ~factory, radar
 		BuildPaletteOrder: 40
 		Description: Mobile long range weapon.
 	UpdatesPlayerStatistics:
@@ -242,7 +242,7 @@ RADARTANK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
-		Prerequisites: factory, radar
+		Prerequisites: ~factory, radar
 		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
 	Valued:
 		Cost: 400
@@ -312,7 +312,7 @@ TANK16:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory, tradplat
+		Prerequisites: ~factory, tradplat
 		BuildPaletteOrder: 60
 		Description: Repairs nearby vehicles.
 	Armament:
@@ -352,7 +352,7 @@ TANK6:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
-		Prerequisites: factory, tradplat
+		Prerequisites: ~factory, tradplat
 		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
 	Valued:
 		Cost: 700
@@ -400,7 +400,7 @@ TANK5:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, techcenter
+		Prerequisites: ~factory2, techcenter
 		BuildPaletteOrder: 150
 		Description: A powerful tank which shoots laser.
 	Armament:
@@ -432,7 +432,7 @@ TANK10:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 150
-		Prerequisites: factory3, techcenter
+		Prerequisites: ~factory3, techcenter
 		Description: Fires electric discharges.
 	Valued:
 		Cost: 1500
@@ -468,7 +468,7 @@ TANK7:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 120
-		Prerequisites: factory3, techcenter
+		Prerequisites: ~factory3, techcenter
 		Description: Cloaked missile tank.\nCan ambush enemies.
 	Valued:
 		Cost: 900
@@ -625,7 +625,7 @@ TANK15:
 		GenericName: ECM Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, techcenter, tradplat
+		Prerequisites: ~factory2, techcenter, tradplat
 		BuildPaletteOrder: 110
 		Description: Disables units.
 	Armament:
@@ -712,7 +712,7 @@ ARTIL3:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
-		Prerequisites: factory3, radar, techcenter
+		Prerequisites: ~factory3, radar, techcenter
 		Description: Double barreled artillery tank.
 	Health:
 		HP: 35000
@@ -841,7 +841,7 @@ MISSILE_TANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: factory2, radar, techcenter
+		Prerequisites: ~factory2, radar, techcenter
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles.
 	UpdatesPlayerStatistics:
@@ -878,7 +878,7 @@ TANK8:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
-		Prerequisites: factory3, radar, tradplat
+		Prerequisites: ~factory3, radar, tradplat
 		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Unarmed
 	Valued:
 		Cost: 400
