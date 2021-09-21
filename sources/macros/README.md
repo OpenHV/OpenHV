@@ -1,0 +1,1 @@
+Contents of this folder were created using [Audiacity] (https://www.audacityteam.org/)They are licensed under the [Creative Commons Attribution ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) terms.

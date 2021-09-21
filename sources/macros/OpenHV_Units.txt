@@ -1,0 +1,7 @@
+HighPassFilter:frequency="400" rolloff="48 dB"
+LowPassFilter:frequency="3000" rolloff="48 dB"
+Normalize:ApplyGain="1" PeakLevel="-1" RemoveDcOffset="1" StereoIndependent="0"
+Limiter:gain-L="0" gain-R="0" hold="10" makeup="No" thresh="-3" type="Hard Limit"
+Compressor:AttackTime="0.21" NoiseFloor="-40" Normalize="1" Ratio="2" ReleaseTime="1" Threshold="-12" UsePeak="0"
+Normalize:ApplyGain="1" PeakLevel="-1" RemoveDcOffset="1" StereoIndependent="0"
+ExportWav:
