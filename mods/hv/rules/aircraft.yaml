@@ -538,6 +538,7 @@ BOMBER1:
 		Speed: 512
 		Repulsable: False
 		Voice: Move
+	RejectsOrders:
 	AttackBomber:
 		FacingTolerance: 512
 	Armament:
