@@ -514,7 +514,7 @@ scrollitem-nohover:
 logos:
 	Inherits: ^Logo
 	Regions:
-		logo: 0, 0, 64, 64
+		logo: 0, 0, 256, 256
 
 loadscreen-stripe:
 	Inherits: ^LoadScreen
