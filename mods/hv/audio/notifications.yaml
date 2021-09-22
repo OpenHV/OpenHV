@@ -21,6 +21,7 @@ Speech:
 		MissileLaunchDetected: missile_launch_detected
 		MissileCharging: nuclear_bomb_charging
 		MissileReady: nuclear_bomb_ready
+		MinerReady: miner_mining_tower_ready
 		ForceFieldCharging: force_field_charging
 		ForceFieldReady: force_field_ready
 		NewOptions: new_construction_options

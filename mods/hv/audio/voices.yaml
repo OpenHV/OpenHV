@@ -97,3 +97,11 @@ DroneVoice:
 		Move: droneaction1, droneaction2, droneaction3, droneaction5
 		Action: droneaction1, droneaction4, droneaction6, droneaction7
 
+
+MinerVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: miner_any_orders, miner_copy, miner_im_ready, miner_ready_and_waiting, miner_reporting_in, miner_sir
+		Move: miner_acknowledged, miner_affirmative, miner_at_once, miner_good_copy, miner_enroute, miner_move_orders_confirmed, miner_on_my_way, miner_roger_that, miner_ten_four, miner_yes_sir
+		Action: miner_yes_sir, miner_acknowledged, miner_affirmative, miner_at_once, miner_roger_that, miner_yes_sir
+		Deploying: miner_deploying
