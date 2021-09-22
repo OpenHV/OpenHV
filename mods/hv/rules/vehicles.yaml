@@ -830,6 +830,10 @@ MINER:
 		Facing: 750
 		Offset: -1,-2
 		NoTransformNotification: BuildingCannotPlaceAudio
+		TransformNotification: MinerReady
+		Voice: Deploying
+	Voiced:
+		VoiceSet: MinerVoice
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
