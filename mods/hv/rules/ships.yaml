@@ -263,6 +263,8 @@ CARRIER:
 		Facing: 0
 	Armament:
 		Weapon: DroneLauncher
+	Voiced:
+		VoiceSet: DroneVoice
 
 SEAMNSTR:
 	Inherits: ^Ship
