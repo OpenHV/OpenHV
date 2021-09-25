@@ -6,14 +6,16 @@ Speech:
 		StartGame:
 		GameLoaded: game_loaded
 		GameSaved: game_saved
-		BaseAttack: base_under_attack
+		AirStrikeReady: airstrike_ready
+		BaseAttack: we_are_under_attack
 		Building: building
 		BuildingCannotPlaceAudio: building_cannot_be_placed
 		BuildingCaptured: building_captured
 		BuildingLost: building_lost
 		BuildingReady: building_ready
 		Cancelled: cancel
-		EnemyUnitsDetected: enemy_detected
+		DroppodReady: droppod_ready
+		EnemyUnitsDetected: enemy_in_range
 		Guarding: guarding
 		HarvesterAttack: miner_under_attack
 		InsufficientFunds: insufficient_funding
@@ -26,9 +28,13 @@ Speech:
 		ForceFieldReady: force_field_ready
 		NewOptions: new_construction_options
 		OnHold: on_hold
+		OrbitalRailgunDetected: orbital_railgun_detected
+		OrbitalRailgunCharging: orbital_railgun_charging
+		OrbitalRailgunReady: orbital_railgun_ready
 		PrimaryBuildingSelected: primary_building_selected
 		Repairing: repairing
 		StructureSold: building_sold
+		SurveillanceReady: surveillance_ready
 		Training: training
 		UnitLost: unit_lost
 		UnitReady: unit_ready

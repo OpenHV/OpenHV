@@ -285,6 +285,7 @@ RADAR:
 		SupportPowerPaletteOrder: 30
 		SelectTargetSound: select_target.wav
 		OrderName: FlushBombers
+		EndChargeSpeechNotification: AirStrikeReady
 	SupportPowerChargeBar:
 
 RADAR2:
@@ -309,6 +310,7 @@ RADAR2:
 		OrderName: EjectPods
 		SupportPowerPaletteOrder: 30
 		SelectTargetSound: select_target.wav
+		EndChargeSpeechNotification: DroppodReady
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -1336,6 +1338,9 @@ UPLINK:
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 10
 		SelectTargetSound: select_target.wav
+		BeginChargeSpeechNotification: OrbitalRailgunCharging
+		EndChargeSpeechNotification: OrbitalRailgunReady
+		IncomingSpeechNotification: OrbitalRailgunDetected
 	Power:
 		Amount: -150
 	MustBeDestroyed:
@@ -2047,6 +2052,7 @@ TECHCOMLINK:
 		SupportPowerPaletteOrder: 40
 		SelectTargetSound: select_target.wav
 		LaunchSound: radar_reveal_avreference.wav
+		EndChargeSpeechNotification: SurveillanceReady
 	ProvidesPrerequisite@BuildingName:
 	Building:
 		Footprint: == xx
