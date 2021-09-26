@@ -83,8 +83,9 @@ PLANE2:
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
-	Armament@Primary:
+	Armament:
 		Weapon: ShipMissile
+		LocalOffset: 256,375,0, 256,-375,0
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
