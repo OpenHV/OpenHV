@@ -71,7 +71,7 @@ WorldLoaded = function()
 	InitObjectives(player)
 
 	killColonists = player.AddPrimaryObjective("Eliminate all colonists in the area.")
-	Trigger.OnAllKilled(Colonists, function() player.MarkCompletedObjective(killColonists) end)
+	Trigger.OnAllKilledOrCaptured(Colonists, function() player.MarkCompletedObjective(killColonists) end)
 
 	bridgehead = player.AddPrimaryObjective("Build all available structures.")
 	Trigger.OnKilled(Base, function() player.MarkFailedObjective(bridgehead) end)
