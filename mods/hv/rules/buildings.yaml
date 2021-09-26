@@ -1002,10 +1002,10 @@ TURRET2:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
-	WithTurretAttackAnimation:
+	WithTurretAttackAnimation@Primary:
 		Armament: primary
 		Sequence: shoot
-	WithTurretAttackAnimation:
+	WithTurretAttackAnimation@Secondary:
 		Armament: secondary
 		Sequence: shoot
 	Turreted:
