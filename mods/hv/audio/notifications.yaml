@@ -13,6 +13,7 @@ Speech:
 		BuildingCaptured: building_captured
 		BuildingLost: building_lost
 		BuildingReady: building_ready
+		BuildingSold: building_sold
 		Cancelled: cancel
 		DroppodReady: droppod_ready
 		EnemyUnitsDetected: enemy_in_range
@@ -21,16 +22,18 @@ Speech:
 		InsufficientFunds: insufficient_funding
 		LowPower: no_power
 		MissileLaunchDetected: missile_launch_detected
-		MissileCharging: nuclear_bomb_charging
-		MissileReady: nuclear_bomb_ready
+		MissileCharging: nuke_prepping
+		MissileReady: nuke_ready
 		MinerReady: miner_mining_tower_ready
+		MissionAccomplished: mission_accomplished
+		MissionFailed: mission_failed
 		ForceFieldCharging: force_field_charging
 		ForceFieldReady: force_field_ready
 		NewOptions: new_construction_options
 		OnHold: on_hold
-		OrbitalRailgunDetected: orbital_railgun_detected
-		OrbitalRailgunCharging: orbital_railgun_charging
-		OrbitalRailgunReady: orbital_railgun_ready
+		OrbitalRailgunDetected: railgun_detected
+		OrbitalRailgunCharging: railgun_charging
+		OrbitalRailgunReady: railgun_ready
 		PrimaryBuildingSelected: primary_building_selected
 		Repairing: repairing
 		StructureSold: building_sold

@@ -12,6 +12,8 @@
 Player:
 	Inherits: ^BasePlayer
 	MissionObjectives:
+		WinNotification: MissionAccomplished
+		LoseNotification: MissionFailed
 	ConquestVictoryConditions:
 	ProximityCaptor:
 		Types: Player
