@@ -44,7 +44,23 @@ TURRET:
 	Buildable:
 		Prerequisites: ~disabled
 
+TURRET2:
+	Buildable:
+		Prerequisites: ~disabled
+
+BUNKER:
+	Buildable:
+		Prerequisites: ~disabled
+
+BUNKER2:
+	Buildable:
+		Prerequisites: ~disabled
+
 AATURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET2:
 	Buildable:
 		Prerequisites: ~disabled
 
