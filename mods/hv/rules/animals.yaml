@@ -89,3 +89,40 @@ SEED:
 		WanderMoveRadius: 1
 		MinMoveDelay: 0
 		MaxMoveDelay: 0
+
+SEAMNSTR:
+	Inherits: ^Ship
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Sea Monster
+	Health:
+		HP: 70000
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 60
+		Speed: 28
+	Wanders:
+		WanderMoveRadius: 10
+		MinMoveDelay: 0
+		MaxMoveDelay: 0
+	-Selectable:
+	Interactable:
+	RejectsOrders:
+	-OutlinedSelectionDecorations:
+	-Explodes:
+	WithDeathAnimation:
+		FallbackSequence: die
+	WithMoveAnimation:
+		MoveSequence: move-fake
+	WithIdleAnimation:
+		Interval: 200, 400
+		Sequences: emerge
+	LeavesTrails:
+		Image: seamnstr
+		Sequences: move
+		Palette: shadow
+		Type: CenterPosition
+		TerrainTypes: Water
+		MovingInterval: 3
