@@ -48,3 +48,17 @@ seamnstr:
 		Facings: 8
 		Tick: 75
 		ZOffset: 100
+
+worm:
+	idle: bits/worm.png
+		Frames: 0, 2, 4, 6, 8, 10, 12, 14
+		Facings: 8
+	move: bits/worm.png
+		Length: 2
+		Facings: 8
+		Tick: 180
+	die: bits/worm.png
+		Start: 16
+		Length: 10
+		Tick: 80
+	icon: bits/icon.png
