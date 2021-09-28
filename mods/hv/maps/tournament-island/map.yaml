@@ -51,9 +51,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor4: techbuilding
-		Owner: Neutral
-		Location: 63,62
 	Actor5: lamppost
 		Owner: Neutral
 		Location: 58,58
@@ -66,30 +63,6 @@ Actors:
 	Actor8: lamppost
 		Owner: Neutral
 		Location: 68,68
-	Actor9: lamppost
-		Owner: Neutral
-		Location: 61,63
-	Actor10: lamppost
-		Owner: Neutral
-		Location: 63,61
-	Actor11: lamppost
-		Owner: Neutral
-		Location: 63,65
-	Actor12: lamppost
-		Owner: Neutral
-		Location: 65,63
-	Actor13: prop4
-		Owner: Neutral
-		Location: 67,63
-	Actor14: prop1
-		Owner: Neutral
-		Location: 63,59
-	Actor15: prop3
-		Owner: Neutral
-		Location: 63,67
-	Actor16: prop2
-		Owner: Neutral
-		Location: 59,63
 	Actor17: techminer
 		Owner: Neutral
 		Location: 23,100
@@ -318,3 +291,51 @@ Actors:
 	Actor89: treegrs11
 		Owner: Neutral
 		Location: 20,85
+	Actor90: sparklamp
+		Owner: Neutral
+		Location: 63,61
+	Actor91: sparklamp
+		Owner: Neutral
+		Location: 65,63
+	Actor92: sparklamp
+		Owner: Neutral
+		Location: 61,63
+	Actor93: sparklamp
+		Owner: Neutral
+		Location: 63,65
+	Actor94: techbuilding
+		Owner: Neutral
+		Location: 63,62
+	Actor95: prop6
+		Owner: Neutral
+		Location: 63,58
+	Actor96: prop6
+		Owner: Neutral
+		Location: 68,62
+	Actor97: prop7
+		Owner: Neutral
+		Location: 64,67
+	Actor98: prop8
+		Owner: Neutral
+		Location: 59,63
+	Actor99: prop8
+		Owner: Neutral
+		Location: 67,64
+	Actor100: prop7
+		Owner: Neutral
+		Location: 62,60
+	Actor101: prop6
+		Owner: Neutral
+		Location: 58,60
+	Actor102: prop8
+		Owner: Neutral
+		Location: 61,67
+	Actor103: prop7
+		Owner: Neutral
+		Location: 65,59
+	Actor104: prop7
+		Owner: Neutral
+		Location: 66,68
+	Actor105: prop6
+		Owner: Neutral
+		Location: 58,65
