@@ -480,5 +480,41 @@ Actors:
 	Actor157: mpspawn
 		Owner: Neutral
 		Location: 94,12
+	Actor158: worm
+		Owner: Neutral
+		Location: 62,62
+		Facing: 190
+	Actor159: worm
+		Owner: Neutral
+		Location: 67,58
+		Facing: 0
+	Actor160: worm
+		Owner: Neutral
+		Location: 70,65
+		Facing: 674
+	Actor161: worm
+		Owner: Neutral
+		Location: 62,70
+		Facing: 618
+	Actor162: worm
+		Owner: Neutral
+		Location: 16,16
+		Facing: 1015
+	Actor163: worm
+		Owner: Neutral
+		Location: 114,117
+		Facing: 245
+	Actor164: worm
+		Owner: Neutral
+		Location: 95,97
+		Facing: 1023
+	Actor165: worm
+		Owner: Neutral
+		Location: 33,34
+		Facing: 816
+	Actor166: worm
+		Owner: Neutral
+		Location: 60,66
+		Facing: 277
 
 Rules: rules.yaml
