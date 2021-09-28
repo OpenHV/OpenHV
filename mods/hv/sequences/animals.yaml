@@ -37,16 +37,14 @@ seed:
 	icon: bits/icon.png
 
 seamnstr:
-	idle: bits/seamnstr.png
-		Frames: 14, 29, 44, 59, 74, 89, 104, 119
-		Facings: 8
-	move: bits/seamnstr-move.png
-		Length: 10
+	idle: bits/seamnstr-move.png
+		Length: 6
 		Tick: 100
-	move-fake: bits/null.png
+		ZOffset: -500
 	die: bits/blood1.png
 	icon: bits/icon.png
 	emerge: bits/seamnstr.png
-		Length: 30
+		Length: 29
 		Facings: 8
-		Tick: 50
+		Tick: 75
+		ZOffset: 100

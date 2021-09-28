@@ -100,29 +100,20 @@ SEAMNSTR:
 		HP: 70000
 	Armor:
 		Type: Heavy
+	-Selectable:
+	Interactable:
+	-OutlinedSelectionDecorations:
 	Mobile:
 		TurnSpeed: 60
 		Speed: 28
 	Wanders:
-		WanderMoveRadius: 10
+		WanderMoveRadius: 15
 		MinMoveDelay: 0
 		MaxMoveDelay: 0
-	-Selectable:
-	Interactable:
 	RejectsOrders:
-	-OutlinedSelectionDecorations:
 	-Explodes:
 	WithDeathAnimation:
 		FallbackSequence: die
-	WithMoveAnimation:
-		MoveSequence: move-fake
 	WithIdleAnimation:
 		Interval: 200, 400
 		Sequences: emerge
-	LeavesTrails:
-		Image: seamnstr
-		Sequences: move
-		Palette: shadow
-		Type: CenterPosition
-		TerrainTypes: Water
-		MovingInterval: 3
