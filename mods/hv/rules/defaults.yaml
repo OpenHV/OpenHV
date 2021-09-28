@@ -689,7 +689,6 @@
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAsh
 		DeathType: Fire
 	Crushable:
 		CrushClasses: Tree
@@ -708,6 +707,46 @@
 	PeriodicDischarge:
 		Weapon: ForestFire
 		RequiresCondition: burning
+
+^TreeMud:
+	Interactable:
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Crater
+	AppearsOnMapPreview:
+		Terrain: Crater
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	Tooltip:
+		Name: Run Over Tree
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+
+^TreeAsh:
+	Interactable:
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Stone
+	AppearsOnMapPreview:
+		Terrain: Stone
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	Tooltip:
+		Name: Burnt Tree
+		ShowOwnerRow: false
+	HiddenUnderShroud:
+		Type: CenterPosition
+	MapEditorData:
+		Categories: Decoration
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
 
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld

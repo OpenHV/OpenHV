@@ -10887,4 +10887,227 @@ Templates:
 		Categories: Snow, Plant
 		Tiles:
 			0: Plant
-
+	Template@1435:
+		Id: 1435
+		Images: bits/terrain/treeashgrs.png
+		Frames: 0
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1436:
+		Id: 1436
+		Images: bits/terrain/treeashgrs.png
+		Frames: 1
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1437:
+		Id: 1437
+		Images: bits/terrain/treeashgrs.png
+		Frames: 2
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1438:
+		Id: 1438
+		Images: bits/terrain/treeashgrs.png
+		Frames: 3
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1439:
+		Id: 1439
+		Images: bits/terrain/treeashgrs.png
+		Frames: 4
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1440:
+		Id: 1440
+		Images: bits/terrain/treeashgrs.png
+		Frames: 5
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1441:
+		Id: 1441
+		Images: bits/terrain/treeashgrs.png
+		Frames: 6
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1442:
+		Id: 1442
+		Images: bits/terrain/treeashgrs.png
+		Frames: 7
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1443:
+		Id: 1443
+		Images: bits/terrain/treeashgrs.png
+		Frames: 8
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1444:
+		Id: 1444
+		Images: bits/terrain/treeashgrs.png
+		Frames: 9
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1445:
+		Id: 1445
+		Images: bits/terrain/treeashgrs.png
+		Frames: 10
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1446:
+		Id: 1446
+		Images: bits/terrain/treeashgrs.png
+		Frames: 11
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1447:
+		Id: 1447
+		Images: bits/terrain/treeashgrs.png
+		Frames: 12
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1448:
+		Id: 1448
+		Images: bits/terrain/treeashsnow.png
+		Frames: 0
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1449:
+		Id: 1449
+		Images: bits/terrain/treeashsnow.png
+		Frames: 1
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1450:
+		Id: 1450
+		Images: bits/terrain/treeashsnow.png
+		Frames: 2
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1451:
+		Id: 1451
+		Images: bits/terrain/treeashsnow.png
+		Frames: 3
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1452:
+		Id: 1452
+		Images: bits/terrain/treeashsnow.png
+		Frames: 4
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1453:
+		Id: 1453
+		Images: bits/terrain/treeashsnow.png
+		Frames: 5
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1454:
+		Id: 1454
+		Images: bits/terrain/treeashsnow.png
+		Frames: 6
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1455:
+		Id: 1455
+		Images: bits/terrain/treeashsnow.png
+		Frames: 7
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1456:
+		Id: 1456
+		Images: bits/terrain/treeashsnow.png
+		Frames: 8
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1457:
+		Id: 1457
+		Images: bits/terrain/treeashsnow.png
+		Frames: 9
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1458:
+		Id: 1458
+		Images: bits/terrain/treeashsnow.png
+		Frames: 10
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1459:
+		Id: 1459
+		Images: bits/terrain/treeashsnow.png
+		Frames: 11
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1460:
+		Id: 1460
+		Images: bits/terrain/treeashsnow.png
+		Frames: 12
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1461:
+		Id: 1461
+		Images: bits/terrain/treeashsnow.png
+		Frames: 13
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
+	Template@1462:
+		Id: 1462
+		Images: bits/terrain/treeashsnow.png
+		Frames: 14
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
