@@ -55,15 +55,3 @@ carrier:
 		Tick: 100
 	icon: bits/units-icons.png
 		Start: 46
-
-seamnstr:
-	left: bits/seamnstr.png
-		Length: 15
-		Tick: 300
-	right: bits/seamnstr.png
-		Start: 15
-		Length: 15
-		Tick: 300
-	die: bits/blood1.png
-	idle: bits/null.png
-	icon: bits/icon.png

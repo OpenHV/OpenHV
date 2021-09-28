@@ -35,3 +35,16 @@ seed:
 		Length: 8
 		Tick: 100
 	icon: bits/icon.png
+
+seamnstr:
+	idle: bits/seamnstr-move.png
+		Length: 6
+		Tick: 100
+		ZOffset: -500
+	die: bits/blood1.png
+	icon: bits/icon.png
+	emerge: bits/seamnstr.png
+		Length: 29
+		Facings: 8
+		Tick: 75
+		ZOffset: 100
