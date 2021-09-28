@@ -117,3 +117,17 @@ SEAMNSTR:
 	WithIdleAnimation:
 		Interval: 200, 400
 		Sequences: emerge
+
+WORM:
+	Inherits: BEAST
+	Tooltip:
+		GenericName: Worm
+	Mobile:
+		Speed: 100
+	Wanders:
+		WanderMoveRadius: 2
+		MinMoveDelay: 100
+		MaxMoveDelay: 250
+	Voiced:
+		VoiceSet: WormVoice
+	DeathSounds:

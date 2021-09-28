@@ -19,6 +19,13 @@ BeastVoice:
 		Action: tiger_growling-Mike_Koenig
 		Die: tyrannosaurus_rex-Mike_Koenig
 
+WormVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select:
+		Action:
+		Die: worm_death_inspectorj
+
 GenericVoice3:
 	DefaultVariant: .wav
 	Voices:
@@ -96,7 +103,6 @@ DroneVoice:
 		Select: droneselect1, droneselect2, droneselect3, droneselect4
 		Move: droneaction1, droneaction2, droneaction3, droneaction5
 		Action: droneaction1, droneaction4, droneaction6, droneaction7
-
 
 MinerVoice:
 	DefaultVariant: .wav

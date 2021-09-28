@@ -20,3 +20,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [nuke_explosion_cgeffex.wav](https://freesound.org/people/CGEffex/sounds/100773/) by cgeffex
 * [droppodlanding_dudeawesome.wav](https://freesound.org/people/DudeAwesome/sounds/386067/) by dudeawesome
 * [force_field_autistic-lucario.wav](https://freesound.org/people/Autistic%20Lucario/sounds/142607/) by autistic-lucario
+* [worm_death_inspectorj.wav](https://freesound.org/people/InspectorJ/sounds/401943/) by InspectorJ
