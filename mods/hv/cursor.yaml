@@ -68,7 +68,7 @@ Cursors:
 			Y: 0
 	bits/cursors2.png: cursor
 		select:
-			Start: 24
+			Start: 15
 			Length: 8
 			X: 0
 			Y: 0
@@ -76,19 +76,19 @@ Cursors:
 		default:
 			Start: 0
 			X: 0
-			Y: 0
+			Y: -4
 		default-minimap:
 			Start: 0
 			X: 0
-			Y: 0
+			Y: -4
 		generic-blocked:
 			Start: 0
 			X: 0
-			Y: 0
+			Y: -4
 		generic-blocked-minimap:
 			Start: 0
 			X: 0
-			Y: 0
+			Y: -4
 	bits/cursors1.png: cursor
 		move:
 			Start: 6
@@ -157,38 +157,38 @@ Cursors:
 			Y: 0
 	bits/cursors2.png: cursor
 		enter:
-			Start: 32
+			Start: 23
 			Length: 3
 			X: 0
 			Y: 0
 		enter-minimap:
-			Start: 32
+			Start: 23
 			Length: 3
 			X: 0
 			Y: 0
 		enter-blocked:
-			Start: 35
+			Start: 26
 			X: 0
 			Y: 0
 		enter-blocked-minimap:
-			Start: 35
+			Start: 26
 			X: 0
 			Y: 0
 		guard:
-			Start: 37
+			Start: 28
 			X: 0
 			Y: 0
 		guard-minimap:
-			Start: 37
+			Start: 28
 			X: 0
 			Y: 0
 		capture:
-			Start: 32
+			Start: 23
 			Length: 3
 			X: 0
 			Y: 0
 		capture-minimap:
-			Start: 32
+			Start: 23
 			Length: 3
 			X: 0
 			Y: 0
@@ -198,45 +198,45 @@ Cursors:
 			X: 0
 			Y: 0
 		joystick-t-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 		joystick-tr-blocked:
-			Start: 36
+			Start: 327
 			X: 0
 			Y: 0
 		joystick-r-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 		joystick-br-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 		joystick-b-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 		joystick-bl-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 		joystick-l-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 		joystick-tl-blocked:
-			Start: 36
+			Start: 27
 			X: 0
 			Y: 0
 	bits/cursors2.png: cursor
 		deploy:
-			Start: 13
+			Start: 4
 			Length: 4
 			X: 0
 			Y: 0
 		deploy-blocked:
-			Start: 17
+			Start: 8
 			X: 0
 			Y: 0
 		goldwrench:
@@ -249,19 +249,18 @@ Cursors:
 			Y: 0
 		sell:
 			Start: 2
-			Length: 10
 			X: 0
 			Y: 0
 		sell-blocked:
-			Start: 12
+			Start: 3
 			X: 0
 			Y: 0
 		repair:
-			Start: 20
+			Start: 11
 			X: 0
 			Y: 0
 		repair-blocked:
-			Start: 21
+			Start: 12
 			X: 0
 			Y: 0
 		sell2:
@@ -270,11 +269,11 @@ Cursors:
 			X: 0
 			Y: 0
 		powerdown-blocked:
-			Start: 19
+			Start: 10
 			X: 0
 			Y: 0
 		powerdown:
-			Start: 18
+			Start: 9
 			X: 0
 			Y: 0
 	bits/cursors1.png: cursor
@@ -312,5 +311,33 @@ Cursors:
 			Y: 0
 		assaultmove-blocked-minimap:
 			Start: 35
+			X: 0
+			Y: 0
+
+	bits/cursors1.png: cursor
+		railgun:
+			Start: 46
+			X: 0
+			Y: 0
+		airstrike:
+			Start: 43
+			X: 0
+			Y: 0
+		force-field:
+			Start: 45
+			X: 0
+			Y: 0
+		droppod:
+			Start: 44
+			X: 0
+			Y: 0
+
+	bits/cursors2.png: cursor
+		nuke:
+			Start: 29
+			X: 0
+			Y: 0
+		force-field-blocked:
+			Start: 13
 			X: 0
 			Y: 0

@@ -271,6 +271,7 @@ RADAR:
 	AirstrikePower:
 		PauseOnCondition: lowpower
 		Icon: airstrike
+		Cursor: airstrike
 		ChargeInterval: 3750
 		SquadSize: 3
 		QuantizedFacings: 8
@@ -296,7 +297,7 @@ RADAR2:
 		Prerequisite: radar
 	-AirstrikePower:
 	DropPodsPower:
-		Cursor: ability
+		Cursor: droppod
 		PauseOnCondition: disabled
 		Icon: droppods
 		Description: Drop Pods
@@ -1191,6 +1192,8 @@ FIELD:
 		Sequence: end
 		SupportPowerPaletteOrder: 20
 		Icon: shield
+		Cursor: force-field
+		BlockedCursor: force-field-blocked
 		BeginChargeSpeechNotification: ForceFieldCharging
 		EndChargeSpeechNotification: ForceFieldReady
 		Dimensions: 3, 3
@@ -1252,7 +1255,7 @@ SILO:
 		Range: 4c0
 	NukePower:
 		PauseOnCondition: disabled
-		Cursor: ability
+		Cursor: nuke
 		Icon: nuke
 		ChargeInterval: 13500
 		Description: Atom Bomb
@@ -1331,6 +1334,7 @@ UPLINK:
 	RailgunPower:
 		PauseOnCondition: lowpower
 		Icon: railgun
+		Cursor: railgun
 		ChargeInterval: 9000
 		Description: Orbital Railgun
 		LongDesc: Initiate a surgical strike.\nApplies instant damage to a small area.
