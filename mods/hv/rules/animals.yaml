@@ -89,6 +89,8 @@ SEED:
 		WanderMoveRadius: 1
 		MinMoveDelay: 0
 		MaxMoveDelay: 0
+	-Voiced:
+	-DeathSounds:
 
 SEAMNSTR:
 	Inherits: ^Ship
