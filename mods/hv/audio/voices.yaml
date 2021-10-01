@@ -31,6 +31,7 @@ FlyingMonsterVoice:
 	Voices:
 		Select:
 		Action:
+		Move:
 		Die: flyingmonster_death_robinhood76
 
 GenericVoice3:

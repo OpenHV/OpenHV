@@ -166,3 +166,4 @@ FLYINGMONSTER:
 	-SpawnsShrapnel@DamageSparks:
 	-Explodes:
 	-Explodes@SpawnPilot:
+	-GrantRandomCondition@SpawnPilot:
