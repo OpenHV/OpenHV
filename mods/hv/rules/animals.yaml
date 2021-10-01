@@ -133,3 +133,36 @@ WORM:
 	Voiced:
 		VoiceSet: WormVoice
 	DeathSounds:
+
+FLYINGMONSTER:
+	Inherits: ^Plane
+	Valued:
+		Cost: 10
+	Health:
+		HP: 50000
+	Tooltip:
+		Name: Flying monster
+	Aircraft:
+		CruiseAltitude: 2560
+		Repulsable: false
+		Speed: 80
+		CruisingCondition: cruising
+		TurnSpeed: 4
+	Hovers@Cruising:
+		RequiresCondition: cruising
+	Wanders:
+		WanderMoveRadius: 25
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+		DeathSequencePalette: effect
+		FallbackSequence: die
+		DeathPaletteIsPlayerPalette: false	
+	Voiced:
+		VoiceSet: FlyingMonsterVoice
+	DeathSounds:
+	-Repairable:
+	-MustBeDestroyed:
+	-GrantConditionOnDamageState:
+	-SpawnsShrapnel@DamageSparks:
+	-Explodes:
+	-Explodes@SpawnPilot:
