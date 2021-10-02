@@ -219,6 +219,7 @@ ShipMissile_AA:
 
 BoatMissile_AA:
 	ReloadDelay: 50
+	Report: rocketlaunch03.wav
 	Range: 9c0
 	MinRange: 1c0
 	ValidTargets: Air
