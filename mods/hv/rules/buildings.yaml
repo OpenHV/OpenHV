@@ -985,14 +985,17 @@ TURRET2:
 		Name: Turret
 	Health:
 		HP: 55000
-	Armament:
+	Armament@PRIMARY:
 		Name: primary
-		Weapon: Turret2Cannon
+		Weapon: Turret2CannonFirst
 		LocalOffset: 600,-300,300
 	Armament@SECONDARY:
 		Name: secondary
-		Weapon: Turret2Cannon
+		Weapon: Turret2CannonSecond
 		LocalOffset: 600,200,300
+	Armament@TERRIARY:
+		Name: tertiary
+		Weapon: Turret2CannonFake
 	WithRangeCircle:
 		Type: Turret
 		Width: 2
@@ -1000,6 +1003,7 @@ TURRET2:
 		Range: 8c0
 	AttackTurreted:
 		PauseOnCondition: disabled
+		Armaments: primary, secondary, tertiary
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete

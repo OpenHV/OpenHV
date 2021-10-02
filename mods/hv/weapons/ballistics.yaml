@@ -148,11 +148,13 @@ TurretCannon:
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
-Turret2Cannon:
-	Inherits: TurretCannon
-	Report: blaster-newlocknew.wav
+Turret2CannonFirst:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
 	Projectile: Bullet
-		Image: bullet9
+		Speed: 682
+		Image: bullet3
 		Shadow: false
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -163,6 +165,55 @@ Turret2Cannon:
 			Steel: 100
 			Light: 150
 			Heavy: 175
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion02.wav
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+
+Turret2CannonSecond:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 682
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 2500
+		Versus:
+			None: 40
+			Steel: 100
+			Light: 150
+			Heavy: 175
+
+Turret2CannonFake:
+	Inherits: Turret2CannonSecond
+	Report: blaster-newlocknew.wav
+	Projectile: Bullet
+		Image: null
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		Damage: 0
 
 Nuclear:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp

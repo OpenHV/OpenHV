@@ -289,3 +289,6 @@ shells:
 		Start: 3
 		Tick: 3000
 		ZOffset: -100
+
+null:
+	idle: null.png
