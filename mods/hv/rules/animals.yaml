@@ -167,3 +167,5 @@ FLYINGMONSTER:
 	-Explodes:
 	-Explodes@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
+	-Selectable:
+	Interactable:
