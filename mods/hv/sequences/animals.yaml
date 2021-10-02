@@ -62,3 +62,14 @@ worm:
 		Length: 10
 		Tick: 80
 	icon: bits/icon.png
+
+flyingmonster:
+	idle: bits/flyingmonster.png
+		Length: 4
+		Facings: 8
+		Tick: 200
+		Offset: -2,-1
+	die: bits/blood1.png
+		Length: 8
+		Tick: 100
+	icon: bits/icon.png

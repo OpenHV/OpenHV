@@ -26,6 +26,14 @@ WormVoice:
 		Action:
 		Die: worm_death_inspectorj
 
+FlyingMonsterVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select:
+		Action:
+		Move:
+		Die: flyingmonster_death_robinhood76
+
 GenericVoice3:
 	DefaultVariant: .wav
 	Voices:
