@@ -67,7 +67,7 @@ flyingmonster:
 	idle: bits/flyingmonster.png
 		Length: 4
 		Facings: 8
-		Tick: 120
+		Tick: 200
 		Offset: -2,-1
 	die: bits/blood1.png
 		Length: 8
