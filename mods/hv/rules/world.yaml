@@ -166,7 +166,7 @@
 	PlayerColorPalette@GreenRemap:
 		BasePalette: player
 		BaseName: green
-		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
+		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48
 	PlayerColorPalette@GreyBlueRemap:
 		BasePalette: player
 		BaseName: grey-blue
