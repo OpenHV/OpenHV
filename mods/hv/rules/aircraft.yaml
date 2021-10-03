@@ -233,20 +233,15 @@ BANSHEE:
 	Voiced:
 		VoiceSet: BansheeVoice
 	AttackFrontal:
-	Armament@Primary:
+	Armament:
 		Weapon: Plasma
 		MuzzleSequence: muzzle
-		LocalOffset: 700,200,0
-	Armament@SECONDARY:
-		Weapon: Plasma
-		MuzzleSequence: muzzle
-		LocalOffset: 700,-200,0
+		LocalOffset: 700,200,0, 700,-200,0
 	Selectable:
 		DecorationBounds: 1228, 1228
 	RenderSprites:
 		PlayerPalette: green
 	WithMuzzleOverlay:
-		IgnoreOffset: True
 
 COPTER2:
 	Inherits: ^Helicopter
