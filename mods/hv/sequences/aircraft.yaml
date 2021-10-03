@@ -53,12 +53,43 @@ copter:
 
 banshee:
 	idle: bits/banshee.png
-		Start: 7
 		Length: 4
 		Facings: 8
 		Tick: 50
-	muzzle: bits/banshee.png
-		Start: 39
+	muzzle:
+		Combine:
+			muzzle4.png: #N
+				Start: 0
+				Length: 2
+				Offset: 0,6
+			muzzle4.png: #NW
+				Start: 2
+				Length: 2
+				Offset: 3,4
+			muzzle4.png: #W
+				Start: 4
+				Length: 2
+				Offset: 4,2
+			muzzle4.png: #SW
+				Start: 6
+				Length: 2
+				Offset: 2,-2
+			muzzle4.png: #S
+				Start: 8
+				Length: 2
+				Offset: 0,-3
+			muzzle4.png: #SE
+				Start: 10
+				Length: 2
+				Offset: -2,-2
+			muzzle4.png: #E
+				Start: 12
+				Length: 2
+				Offset: -4,2
+			muzzle4.png: #NE
+				Start: 14
+				Length: 2
+				Offset: -3,4
 		Length: 2
 		Facings: 8
 		Tick: 100
