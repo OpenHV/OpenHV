@@ -460,7 +460,7 @@ TreeMudSnow16:
 	Inherits: ^TreeMud
 	LaysTerrain:
 		Offset: 0,1
-		Template: 1424
+		Template: 1432
 
 TreeAshSnow1:
 	Inherits: ^TreeAsh
@@ -543,6 +543,18 @@ TreeAshSnow16:
 		Offset: 0,1
 		Template: 1304
 
+TreeAshSnow17:
+	Inherits: ^TreeAsh
+	LaysTerrain:
+		Offset: 0,1
+		Template: 1457
+
+TreeAshSnow18:
+	Inherits: ^TreeAsh
+	LaysTerrain:
+		Offset: 0,1
+		Template: 1460
+
 TREES1:
 	Inherits: ^Tree
 	Tree:
@@ -585,7 +597,7 @@ TREES4:
 	SpawnActorOnDeath@Crush:
 		Actor: TreeMudSnow16
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAshSnow16
+		Actor: TreeAshSnow18
 
 TREES5:
 	Inherits: ^Tree
@@ -710,7 +722,7 @@ TREES17:
 	SpawnActorOnDeath@Crush:
 		Actor: TreeMudSnow16
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAshSnow16
+		Actor: TreeAshSnow17
 
 WATERFLOW1:
 	Inherits: ^Waterflow
