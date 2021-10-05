@@ -119,3 +119,10 @@ MinerVoice:
 		Move: miner_acknowledged, miner_affirmative, miner_at_once, miner_good_copy, miner_enroute, miner_move_orders_confirmed, miner_on_my_way, miner_roger_that, miner_ten_four, miner_yes_sir
 		Action: miner_yes_sir, miner_acknowledged, miner_affirmative, miner_at_once, miner_roger_that, miner_yes_sir
 		Deploying: miner_deploying
+
+TechnicianVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: technician_copy, technician_ready, technician_roger, technician_sir, technician_technician
+		Move: technician_acknowledged, technician_affirmitive, technician_going, technician_good_copy, technician_got_it, technician_lets_go, technician_ok, technician_yeap, technician_yes_sir
+		Action: technician_capturing, technician_gotcha, technician_obtaining, technician_ok, technician_yes_sir

@@ -129,13 +129,14 @@ TECHNICIAN:
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
 	Voiced:
-		VoiceSet: GenericVoice3
+		VoiceSet: TechnicianVoice
 	Health:
 		HP: 12500
 	Mobile:
 		TurnSpeed: 100
 		Speed: 80
 		Locomotor: pod
+		Voice: Move
 	RenderSprites:
 		PlayerPalette: green
 	RevealsShroud:
