@@ -33,7 +33,7 @@ Player:
 	DeveloperMode:
 		CheckboxDisplayOrder: 10
 	FrozenActorLayer:
-	BaseAttackNotifier:
+	BuildingAttackNotifier:
 		Notification: BaseAttack
 	MinerAttackNotifier:
 	PlayerStatistics:
