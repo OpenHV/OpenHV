@@ -5,12 +5,14 @@ GenericVoice1:
 	Voices:
 		Select: generic1select1, generic1select2
 		Action: generic1action1, generic1action2
+		Guard: guarding
 
 GenericVoice2:
 	DefaultVariant: .wav
 	Voices:
 		Select: generic2select1, generic2select2
 		Action: generic2action1, generic2action2
+		Guard: guarding
 
 BeastVoice:
 	DefaultVariant: .wav
@@ -41,6 +43,7 @@ GenericVoice3:
 		Move: acknowledged, affirmative, as_you_wish, at_once, en_route, lets_go, move_out, on_my_way, orders_received, ten_four
 		Action: acknowledged, affirmative, as_you_wish, orders_received
 		Attack: attack, destroy_them, hit_them_hard, light_em_up, target_locked, you_got_it
+		Guard: guarding
 
 ShipVoice:
 	DefaultVariant: .wav
@@ -48,6 +51,7 @@ ShipVoice:
 		Select: shipselect1, shipselect2, shipselect3, shipselect4, shipselect5
 		Move: shipmove1, shipmove2, shipmove3, shipmove4
 		Action: shipattack1, shipattack2, shipattack3, shipattack4, shipattack5
+		Guard: guarding
 
 TransportHelicopterVoice:
 	DefaultVariant: .wav
@@ -55,6 +59,7 @@ TransportHelicopterVoice:
 		Select: copter2_aeronautics_operational, copter2_avionics_online, copter2_awaiting_orders
 		Move: copter2_acknowledged, copter2_affirmative, copter2_heading_to_new_lz, copter2_not_a_problem, copter2_roger_that, copter2_verify_new_coordinate
 		Action: copter2_acknowledged, copter2_affirmative, copter2_not_a_problem, copter2_ready_for_action, copter2_roger_that, copter2_special_delivery
+		Guard: guarding
 
 AttackHelicopterVoice:
 	DefaultVariant: .wav
@@ -62,6 +67,7 @@ AttackHelicopterVoice:
 		Select: copter_aeronautics_operational, copter_avionics_online, copter_awaiting_orders
 		Move: copter_acknowledged, copter_affirmative, copter_not_a_problem, copter_right_away_sir, copter_roger_that, copter_solid_copy
 		Action: copter_acknowledged, copter_affirmative, copter_not_a_problem, copter_ready_for_action, copter_roger_that, copter_solid_copy, copter_target_acquired
+		Guard: guarding
 
 SaucerVoice:
 	DefaultVariant: .wav
@@ -69,6 +75,7 @@ SaucerVoice:
 		Select: saucer_aeronautics_operational, saucer_avionics_online, saucer_awaiting_orders
 		Move: saucer_acknowledged, saucer_affirmative, saucer_not_a_problem, saucer_roger_that
 		Action: saucer_quantum_deconstruction, saucer_vaporising_molecular_levels, sauer_atomising_photon_cannon
+		Guard: guarding
 
 BansheeVoice:
 	DefaultVariant: .wav
@@ -76,6 +83,7 @@ BansheeVoice:
 		Select: banshee_aeronautics_operational, banshee_avionics_online, banshee_awaiting_orders, banshee_ready_for_action, banshee_reporting_in
 		Move: banshee_acknowledged, banshee_affirmative, banshee_air_support_inbound, banshee_not_a_problem, banshee_roger_that
 		Action: banshee_acknowledged, banshee_affirmative, banshee_air_support_inbound, banshee_cleared_to_engage, banshee_not_a_problem, banshee_roger_that
+		Guard: guarding
 
 GunshipVoice:
 	DefaultVariant: .wav
@@ -83,6 +91,7 @@ GunshipVoice:
 		Select: ship2_acknowledged, ship2_aeronautics_operational, ship2_awaiting_orders, ship2_ready_for_action
 		Move: ship2_affirmative, ship2_closing_in, ship2_not_a_problem, ship2_roger_that
 		Action: ship2_affirmative, ship2_discharging_munitions, ship2_not_a_problem, ship2_roger_that, ship2_sweep_the_area
+		Guard: guarding
 
 DropshipVoice:
 	DefaultVariant: .wav
@@ -91,12 +100,14 @@ DropshipVoice:
 		Move: dropship_acknowledged, dropship_affirmative, dropship_destination_set, dropship_not_a_problem, dropship_roger_that
 		Action: dropship_acknowledged, dropship_affirmative, dropship_keep_those_skies_clear, dropship_not_a_problem, dropship_roger_that
 		Unload: dropship_touching_down
+		Guard: guarding
 
 BalloonVoice:
 	DefaultVariant: .wav
 	Voices:
 		Select: balloon_aeronautics_operational, balloon_avionics_online, balloon_awaiting_orders, balloon_ready_for_action, balloon_sensors_aligned, balloon_surveillance_active
 		Move: balloon_acknowledged, balloon_affirmative, balloon_not_a_problem, balloon_optimising_updraft, balloon_roger_that
+		Guard: guarding
 
 SpeederVoice:
 	DefaultVariant: .wav
@@ -104,6 +115,7 @@ SpeederVoice:
 		Select: ship1_aeronautics_operational, ship1_avionics_online, ship1_awaiting_orders, ship1_ready_for_action
 		Move: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_not_a_problem, ship1_thrusters_engaged
 		Action: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_fire_the_missiles, ship1_intercepting_hostiles
+		Guard: guarding
 
 DroneVoice:
 	DefaultVariant: .wav
@@ -111,6 +123,7 @@ DroneVoice:
 		Select: droneselect1, droneselect2, droneselect3, droneselect4
 		Move: droneaction1, droneaction2, droneaction3, droneaction5
 		Action: droneaction1, droneaction4, droneaction6, droneaction7
+		Guard: guarding
 
 MinerVoice:
 	DefaultVariant: .wav

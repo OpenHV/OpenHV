@@ -35,6 +35,7 @@ BEAST:
 		ZOffset: -1000
 	Voiced:
 		VoiceSet: BeastVoice
+	-Guard:
 	-Repairable:
 	-MustBeDestroyed:
 	-Explodes:
@@ -156,10 +157,11 @@ FLYINGMONSTER:
 		UseDeathTypeSuffix: false
 		DeathSequencePalette: effect
 		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false	
+		DeathPaletteIsPlayerPalette: false
 	Voiced:
 		VoiceSet: FlyingMonsterVoice
 	DeathSounds:
+	-Guard:
 	-Repairable:
 	-MustBeDestroyed:
 	-GrantConditionOnDamageState:

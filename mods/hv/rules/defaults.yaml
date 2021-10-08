@@ -115,6 +115,7 @@
 	ProximityCaptor:
 		Types: Vehicle
 	Guard:
+		Voice: Guard
 	Guardable:
 	Tooltip:
 		GenericName: Vehicle
@@ -226,6 +227,7 @@
 	HiddenUnderFog:
 		Type: GroundPosition
 	Guard:
+		Voice: Guard
 	Guardable:
 	ProximityCaptor:
 		Types: Plane
@@ -785,6 +787,7 @@
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	Guard:
+		Voice: Guard
 	Guardable:
 	Tooltip:
 		GenericName: Ship

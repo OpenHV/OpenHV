@@ -330,7 +330,7 @@ BALLOON:
 	Voiced:
 		VoiceSet: BalloonVoice
 	Guard:
-		Voice: Move
+		Voice: Guard
 	Repairable:
 		Voice: Move
 	Selectable:

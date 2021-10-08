@@ -130,6 +130,7 @@ TECHNICIAN:
 		EnterBlockedCursor: move-blocked
 	Voiced:
 		VoiceSet: TechnicianVoice
+	-Guard:
 	Health:
 		HP: 12500
 	Mobile:

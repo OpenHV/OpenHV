@@ -834,6 +834,7 @@ MINER:
 		Voice: Deploying
 	Voiced:
 		VoiceSet: MinerVoice
+	-Guard:
 
 MISSILE_TANK:
 	Inherits: ^TrackedVehicle
