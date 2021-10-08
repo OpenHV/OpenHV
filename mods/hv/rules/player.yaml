@@ -35,6 +35,7 @@ Player:
 	FrozenActorLayer:
 	BaseAttackNotifier:
 		Notification: BaseAttack
+	MinerAttackNotifier:
 	PlayerStatistics:
 	PlaceBeacon:
 		IsPlayerPalette: false

@@ -136,6 +136,8 @@
 	ActorLostNotification:
 	Carryable:
 	Demolishable:
+	AnnounceOnSeen:
+		Notification: EnemyUnitsDetected
 
 ^Pod:
 	Inherits: ^Vehicle
@@ -465,6 +467,7 @@
 		RepairPercent: 40
 		RepairStep: 1000
 		PlayerExperience: 15
+		RepairingNotification: Repairing
 	WithBuildingRepairDecoration:
 		Image: repair
 		Sequence: idle

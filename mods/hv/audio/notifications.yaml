@@ -18,7 +18,8 @@ Speech:
 		DroppodReady: droppod_ready
 		EnemyUnitsDetected: enemy_in_range
 		Guarding: guarding
-		HarvesterAttack: miner_under_attack
+		MinerUnderAttack: miner_under_attack
+		MiningTowerUnderAttack: mining_tower_under_attack
 		InsufficientFunds: insufficient_funding
 		LowPower: no_power
 		MissileLaunchDetected: missile_launch_detected
@@ -42,6 +43,8 @@ Speech:
 		UnitLost: unit_lost
 		UnitReady: unit_ready
 		UnitRepaired: unit_repaired
+		ReinforcementsHaveArrived: reinforcements_have_arrived
+		SelectTarget: select_target.wav
 
 Sounds:
 	DefaultVariant: .wav
