@@ -425,7 +425,7 @@ MODULE:
 		SpawnOffset: -150,-800,0
 		ExitCell: 1,-1
 		ProductionTypes: Scouts
-	Exit@South2:
+	Exit@North2:
 		SpawnOffset: 150,-800,0
 		ExitCell: 0,-1
 		ProductionTypes: Scouts
