@@ -87,6 +87,7 @@ Player:
 			artil3: 5
 			scout1: 1
 			scout2: 1
+			mortarpod: 1
 			technician: 1
 			missile_tank: 5
 			plane2: 5

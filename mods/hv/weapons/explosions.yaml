@@ -84,3 +84,20 @@ DropPodExplode:
 		Explosions: medium
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: explosion02.wav, explosion03.wav
+
+MortarPodExplode:
+	ValidTargets: Ground, Air, Water, Lava, Swamp
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 512
+		Damage: 7500
+		Versus:
+			None: 100
+			Steel: 50
+			Light: 25
+			Heavy: 25
+			Wood: 50
+	Warhead@Effect: CreateEffect
+		Explosions: small_2
+		ValidTargets: Ground, Air, Water, Lava, Swamp
+		ImpactSounds: explosion02.wav, explosion03.wav
