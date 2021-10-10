@@ -4,7 +4,7 @@ TANK3:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 850
 	Tooltip:
 		Name: Assault Tank
 	UpdatesPlayerStatistics:
@@ -16,7 +16,7 @@ TANK3:
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Mobile:
 		TurnSpeed: 25
-		Speed: 100
+		Speed: 95
 	Health:
 		HP: 46000
 	Armor:
@@ -48,7 +48,7 @@ TYRIANTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 850
 	Tooltip:
 		Name: Assault Tank
 		GenericName: Tank
@@ -193,7 +193,7 @@ ARTIL:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 850
+		Cost: 800
 	Tooltip:
 		Name: Artillery
 	Buildable:
@@ -209,7 +209,7 @@ ARTIL:
 		Type: Light
 	Mobile:
 		TurnSpeed: 15
-		Speed: 85
+		Speed: 95
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
@@ -257,7 +257,7 @@ RADARTANK:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 85
+		Speed: 90
 		TurnSpeed: 20
 		ImmovableCondition: !undeployed
 		RequireForceMoveCondition: !undeployed
@@ -330,8 +330,8 @@ TANK16:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 85
-		TurnSpeed: 20
+		Speed: 95
+		TurnSpeed: 25
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 4c0
@@ -416,7 +416,8 @@ TANK5:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 75
+		Speed: 80
+		TurnSpeed: 25
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -446,7 +447,8 @@ TANK10:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 75
+		Speed: 80
+		TurnSpeed: 25
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -673,7 +675,7 @@ ARTIL2:
 		Type: Light
 	Mobile:
 		TurnSpeed: 8
-		Speed: 60
+		Speed: 80
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 5c0
@@ -720,7 +722,7 @@ ARTIL3:
 		Type: Light
 	Mobile:
 		TurnSpeed: 8
-		Speed: 60
+		Speed: 85
 		Locomotor: lighttracked
 	RevealsShroud:
 		Range: 6c0
@@ -988,7 +990,7 @@ TANKER1:
 	Tooltip:
 		Name: Loaded Resource Transporter
 	Health:
-		HP: 11000
+		HP: 15000
 	Armor:
 		Type: Light
 	Mobile:

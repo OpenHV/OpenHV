@@ -52,7 +52,7 @@
 	ReloadDelay: 85
 	Range: 12c0
 	Projectile: Bullet
-		Speed: 200
+		Speed: 260
 		Blockable: false
 		LaunchAngle: 62
 		Inaccuracy: 1c938
