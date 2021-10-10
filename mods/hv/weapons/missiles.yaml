@@ -190,7 +190,7 @@ ShipMissile:
 	Warhead@1Dam: SpreadDamage
 		Damage: 700
 		Versus:
-			None: 10
+			None: 25
 			Wood: 90
 			Light: 90
 			Heavy: 125

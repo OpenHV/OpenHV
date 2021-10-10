@@ -3,7 +3,7 @@
 railgun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 8c0
-	ReloadDelay: 100
+	ReloadDelay: 50
 	Report: ray_gun-Mike_Koenig.wav
 	Projectile: LaserZap
 		Width: 0c100
@@ -20,7 +20,7 @@ railgun:
 		Versus:
 			None: 200
 			Steel: 75
-			Light: 100
+			Light: 125
 			Heavy: 155
 			Wood: 10
 	Warhead@GroundEffect: CreateEffect
@@ -171,7 +171,7 @@ Plasma:
 		ImpactSounds: Video_Game_Splash-Ploor.wav
 
 VoltageArc:
-	ReloadDelay: 100
+	ReloadDelay: 50
 	Range: 8c0
 	Report: lightningbolt.wav
 	Projectile: EnergyBolt
@@ -190,7 +190,7 @@ VoltageArc:
 		Versus:
 			None: 200
 			Steel: 75
-			Light: 100
+			Light: 125
 			Heavy: 155
 			Wood: 10
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
