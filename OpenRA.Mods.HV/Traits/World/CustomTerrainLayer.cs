@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -16,6 +16,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[TraitLocation(SystemActors.World)]
 	[Desc("Attach this to the world actor. Required for LaysTerrain to work.")]
 	public class CustomTerrainLayerInfo : TraitInfo, Requires<ITiledTerrainRendererInfo>
 	{
@@ -45,7 +46,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
-			render = new TerrainSpriteLayer(w, wr, terrainRenderer.MissingTile, BlendMode.Alpha, wr.World.Type != WorldType.Editor);
+			render = new TerrainSpriteLayer(w, wr, terrainRenderer.MissingTile, BlendMode.Alpha, w.Type != WorldType.Editor);
 			paletteReference = wr.Palette(info.Palette);
 		}
 
@@ -76,6 +77,9 @@ namespace OpenRA.Mods.HV.Traits
 					remove.Add(kv.Key);
 				}
 			}
+
+			foreach (var r in remove)
+				dirty.Remove(r);
 		}
 
 		void IRenderOverlay.Render(WorldRenderer wr)
