@@ -6,10 +6,7 @@ Content of this folder indicates assets made by various authors, under the defau
 * [ray_gun-Mike_Koenig.wav](http://soundbible.com/1770-Ray-Gun.html) by Mike Koenig
 * [ccbysmgfire01.wav](http://soundbible.com/2091-MP5-SMG-9mm.html) by GunGuru
 * [ccbygrenadelaunch01.wav](http://soundbible.com/2140-Grenade-Launcher-2.html) by Daniel Simon
-* [ccbyheavygunfire01.wav](http://soundbible.com/2004-Gun-Shot.html) by Marvin
 * [ccbysmgfire02.wav](http://soundbible.com/1575-High-Definition-Machine-Gun.html) by WEL
-* [ccbylaserfire01.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig
-* [ccbymissilelaunch01.wav](http://soundbible.com/2075-RPG-Plus-Shrapnel.html) (first part) by Mike Koenig
 * [laser_Cannon-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
 * [charging-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
 * [blaster-newlocknew.wav](https://freesound.org/people/newlocknew/sounds/520056/) by newlocknew, edited by Dzierzan.
