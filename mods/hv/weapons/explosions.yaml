@@ -100,4 +100,4 @@ MortarPodExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion02.wav, explosion03.wav
+		ImpactSounds: explosion01.wav

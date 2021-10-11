@@ -75,6 +75,7 @@
 
 SmallArtillery:
 	Inherits: ^Artillery
+	Report: howitzerfire02.wav
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
@@ -109,7 +110,7 @@ DoubleBarrelledArtillery:
 
 TurretCannon:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: tankfire01.wav
+	Report: tankfire03.wav
 	ReloadDelay: 25
 	Range: 8c0
 	Projectile: Bullet
