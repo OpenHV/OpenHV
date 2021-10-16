@@ -1,0 +1,46 @@
+World:
+	GlobalLightingPaletteEffect:
+		Red: 1.20
+		Green: 1.40
+		Blue: 1.10
+		Ambient: 0.80
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.35
+		BlueTint: 0.45
+
+REDLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 1.00
+		GreenTint: 0.10
+		BlueTint: 0.10
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 18c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.30
+		BlueTint: 0.50
+
+TOPLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 32c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.35
+		BlueTint: 0.20
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
