@@ -171,9 +171,9 @@ check: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@echo "Compiling in debug mode..."
 ifeq ($(RUNTIME), mono)
-	@$(MSBUILD) -t:build -restore -p:Configuration=Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true
+	@$(MSBUILD) -t:build -restore -p:Configuration=Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 else
-	@$(DOTNET) build -c Debug -p:TargetPlatform=$(TARGETPLATFORM)
+	@$(DOTNET) build -c Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 endif
 endif
 	@echo "Checking for explicit interface violations..."

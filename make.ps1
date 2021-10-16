@@ -15,7 +15,7 @@ function All-Command
 		return
 	}
 
-	dotnet build -c Release --nologo -p:TargetPlatform=win-x64
+	dotnet build -c Release --nologo -p:TargetPlatform=win-x64 -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 	if ($lastexitcode -ne 0)
 	{
 		Write-Host "Build failed. If just the development tools failed to build, try installing Visual Studio. You may also still be able to run the game." -ForegroundColor Red

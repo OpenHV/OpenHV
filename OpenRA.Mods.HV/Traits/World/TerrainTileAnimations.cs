@@ -68,9 +68,8 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (--ticks <= 0)
 			{
-				ticks = Common.Util.RandomDelay(self.World, info.Interval);
-
 				var world = self.World;
+				ticks = Common.Util.RandomInRange(world.LocalRandom, info.Interval);
 				var position = world.Map.CenterOfCell(cells.Random(world.LocalRandom));
 				world.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
 			}

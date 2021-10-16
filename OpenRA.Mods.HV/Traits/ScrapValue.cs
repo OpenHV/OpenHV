@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -8,7 +8,7 @@
  * information, see COPYING.
  */
 #endregion
-using OpenRA.Mods.Common.Traits;
+
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
