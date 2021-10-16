@@ -144,7 +144,7 @@
 	Inherits: ^Vehicle
 	Mobile:
 		TurnSpeed: 100
-		Speed: 50
+		Speed: 80
 		Locomotor: pod
 		Voice: Action
 	Voiced:

@@ -121,7 +121,7 @@ SNIPERPOD:
 	Health:
 		HP: 15000
 	Mobile:
-		Speed: 40
+		Speed: 70
 		Locomotor: pod
 	RevealsShroud:
 		Range: 8c0
@@ -169,7 +169,7 @@ TECHNICIAN:
 	Health:
 		HP: 12500
 	Mobile:
-		Speed: 40
+		Speed: 70
 		Voice: Move
 	RenderSprites:
 		PlayerPalette: green
