@@ -22,7 +22,7 @@ SCOUT1:
 	Armament@Primary:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
-	Armament@GARRISONED:
+	Armament@Garrisoned:
 		Name: garrisoned
 		Weapon: BunkerChaingun
 		MuzzleSequence: muzzle
@@ -55,11 +55,11 @@ SCOUT2:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
-	Armament@SECONDARY:
+	Armament@Secondary:
 		Weapon: LightAntiAirRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
-	Armament@GARRISONED:
+	Armament@Garrisoned:
 		Name: garrisoned
 		Weapon: RapidAntiTankRocket
 		MuzzleSequence: muzzle
@@ -121,8 +121,7 @@ SNIPERPOD:
 	Health:
 		HP: 15000
 	Mobile:
-		TurnSpeed: 100
-		Speed: 80
+		Speed: 40
 		Locomotor: pod
 	RevealsShroud:
 		Range: 8c0
@@ -133,7 +132,7 @@ SNIPERPOD:
 	Armament@Primary:
 		Weapon: SniperRifle
 		MuzzleSequence: muzzle
-	Armament@GARRISONED:
+	Armament@Garrisoned:
 		Name: garrisoned
 		Weapon: BunkerSniperRifle
 		MuzzleSequence: muzzle
@@ -170,9 +169,7 @@ TECHNICIAN:
 	Health:
 		HP: 12500
 	Mobile:
-		TurnSpeed: 100
-		Speed: 80
-		Locomotor: pod
+		Speed: 40
 		Voice: Move
 	RenderSprites:
 		PlayerPalette: green

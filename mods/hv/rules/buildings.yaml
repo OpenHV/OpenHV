@@ -990,7 +990,7 @@ TURRET2:
 		Name: primary
 		Weapon: Turret2Cannon
 		LocalOffset: 600,-300,300
-	Armament@SECONDARY:
+	Armament@Secondary:
 		Name: secondary
 		Weapon: Turret2Cannon
 		LocalOffset: 600,200,300
