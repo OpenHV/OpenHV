@@ -19,3 +19,4 @@ lua.md
 StyleCopViolations.xml
 .DS_Store
 .directory
+/.vscode/settings.json
