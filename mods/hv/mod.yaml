@@ -91,6 +91,7 @@ Assemblies:
 ChromeLayout:
 	common|chrome/ingame.yaml
 	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-transients.yaml
 	common|chrome/ingame-fmvplayer.yaml
 	common|chrome/ingame-info.yaml
 	common|chrome/ingame-infoscripterror.yaml
@@ -136,6 +137,7 @@ ChromeLayout:
 	common|chrome/confirmation-dialogs.yaml
 	hv|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
+	common|chrome/text-notifications.yaml
 	hv|chrome/ingame-observer.yaml
 	hv|chrome/ingame-player.yaml
 	hv|chrome/gamesave-loading.yaml
