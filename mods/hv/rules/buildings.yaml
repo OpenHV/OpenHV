@@ -483,7 +483,10 @@ MINER2:
 		HP: 45000
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
-		Interval: 100
+		InitialDelay: 100
+		Interval: 75
+		Amount: 70
+		Capacity: 700
 		DeliveryVehicleType: tanker1
 		Deposits:
 			iron: 10000

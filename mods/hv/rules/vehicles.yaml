@@ -606,6 +606,7 @@ TANK13:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	ResourceTransporter:
+		Capacity: 7
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
@@ -1002,6 +1003,7 @@ TANKER1:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	ResourceTransporter:
+		Capacity: 7
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
