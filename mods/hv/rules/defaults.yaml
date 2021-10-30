@@ -313,6 +313,8 @@
 	HitShape:
 	-Selectable:
 	Interactable:
+	Targetable:
+		TargetTypes: NoAutoTarget
 	-ActorLostNotification:
 	RenderSprites:
 		Image: droppod
