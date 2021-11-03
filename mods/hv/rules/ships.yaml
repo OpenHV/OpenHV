@@ -246,6 +246,7 @@ CARRIER:
 		InitialFacing: 0
 		TurnSpeed: 16
 		Speed: 70
+		Voice: Move
 	RevealsShroud:
 		Range: 7c0
 	AttackFrontal:

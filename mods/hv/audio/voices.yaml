@@ -121,8 +121,8 @@ DroneVoice:
 	DefaultVariant: .wav
 	Voices:
 		Select: droneselect1, droneselect2, droneselect3, droneselect4
-		Move: droneaction1, droneaction2, droneaction3, droneaction5
-		Action: droneaction1, droneaction4, droneaction6, droneaction7
+		Move: droneaction1, droneaction2, droneaction3, droneaction4
+		Action: droneattack1, droneattack2, droneattack3, droneattack4
 		Guard: guarding
 
 MinerVoice:
