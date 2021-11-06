@@ -211,6 +211,6 @@ ifneq ("$(BIT_FILES)","")
 	@echo "Adding metadata to PNG sheets..."
 	@for SPRITE in $(BIT_FILES); do \
 		echo $${SPRITE}; \
-		MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --png-sheet-import $${SPRITE}; \
+		./utility.sh --png-sheet-import ../$${SPRITE}; \
 	done
 endif
