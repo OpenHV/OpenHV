@@ -5920,6 +5920,11 @@ Templates:
 			BorderTypes: Snow
 			BorderTransitions: 1288, 1293, 1295, 1291, 1301, 1298, 1299, 1302
 			Corners: 1289, 1296, 1294, 1287
+		AutoConnect@Grass:
+			Type: Grass
+			BorderTypes: Snow
+			BorderTransitions: 1465, 1471, 1466, 1463, 1468, 1467, 1473, 1474
+			Corners: 1469, 1472, 1464, 1470
 		Tiles:
 			0: Snow
 	Template@770:
@@ -11111,3 +11116,99 @@ Templates:
 		Categories: Plant
 		Tiles:
 			0: Stone
+	Template@1463:
+		Id: 1463
+		Images: bits/terrain/snw2grass.png
+		Frames: 0
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1464:
+		Id: 1464
+		Images: bits/terrain/snw2grass.png
+		Frames: 1
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1465:
+		Id: 1465
+		Images: bits/terrain/snw2grass.png
+		Frames: 2
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1466:
+		Id: 1466
+		Images: bits/terrain/snw2grass.png
+		Frames: 3
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1467:
+		Id: 1467
+		Images: bits/terrain/snw2grass.png
+		Frames: 4
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1468:
+		Id: 1468
+		Images: bits/terrain/snw2grass.png
+		Frames: 5
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1469:
+		Id: 1469
+		Images: bits/terrain/snw2grass.png
+		Frames: 6
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1470:
+		Id: 1470
+		Images: bits/terrain/snw2grass.png
+		Frames: 7
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1471:
+		Id: 1471
+		Images: bits/terrain/snw2grass.png
+		Frames: 8
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1472:
+		Id: 1472
+		Images: bits/terrain/snw2grass.png
+		Frames: 9
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1473:
+		Id: 1473
+		Images: bits/terrain/snw2grass.png
+		Frames: 10
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
+	Template@1474:
+		Id: 1474
+		Images: bits/terrain/snw2grass.png
+		Frames: 11
+		Size: 1,1
+		Categories: Snow, Grass
+		Tiles:
+			0: Snow
