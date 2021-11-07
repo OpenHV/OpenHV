@@ -214,3 +214,12 @@ ifneq ("$(BIT_FILES)","")
 		./utility.sh --png-sheet-import ../$${SPRITE}; \
 	done
 endif
+
+check-bits: utility
+ifneq ("$(BIT_FILES)","")
+	@echo "Checking PNG sheet metadata..."
+	@for SPRITE in $(BIT_FILES); do \
+		echo $${SPRITE}; \
+		./utility.sh --check-sprite-metadata ../$${SPRITE}; \
+	done
+endif

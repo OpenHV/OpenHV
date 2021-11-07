@@ -28,6 +28,10 @@ jobs:
           make check
           make check-packaging-scripts
 
+      - name: Check Sprites
+        run: |
+          make check-bits
+
       - name: Check Mod
         run: |
           sudo apt-get install lua5.1
