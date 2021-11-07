@@ -221,5 +221,5 @@ ifneq ("$(BIT_FILES)","")
 	@for SPRITE in $(BIT_FILES); do \
 		echo $${SPRITE}; \
 		./utility.sh --check-sprite-metadata ../$${SPRITE}; \
-	done
+	done || exit 1
 endif
