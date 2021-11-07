@@ -10556,7 +10556,6 @@ Templates:
 		Frames: 0
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1395:
@@ -10565,7 +10564,6 @@ Templates:
 		Frames: 1
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1396:
@@ -10574,7 +10572,6 @@ Templates:
 		Frames: 2
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1397:
@@ -10583,7 +10580,6 @@ Templates:
 		Frames: 3
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1398:
@@ -10592,7 +10588,6 @@ Templates:
 		Frames: 4
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1399:
@@ -10601,7 +10596,6 @@ Templates:
 		Frames: 5
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1400:
@@ -10610,7 +10604,6 @@ Templates:
 		Frames: 6
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1401:
@@ -10619,7 +10612,6 @@ Templates:
 		Frames: 7
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1402:
@@ -10628,7 +10620,6 @@ Templates:
 		Frames: 8
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1403:
@@ -10637,7 +10628,6 @@ Templates:
 		Frames: 9
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1404:
@@ -10646,7 +10636,6 @@ Templates:
 		Frames: 10
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1405:
@@ -10655,7 +10644,6 @@ Templates:
 		Frames: 11
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1406:
@@ -10664,7 +10652,6 @@ Templates:
 		Frames: 12
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
 			0: Plant
 	Template@1407:
