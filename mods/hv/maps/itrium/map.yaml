@@ -16,8 +16,6 @@ Visibility: MissionSelector
 
 Categories: Campaign
 
-Translations:
-
 LockPreview: True
 
 Players:
@@ -165,135 +163,12 @@ Actors:
 		SubCell: 1
 		Location: 22,42
 		Facing: 475
-	Storage: storage
-		Owner: Creeps
-		Location: 26,42
-	Actor38: walltop
-		Owner: Creeps
-		Location: 24,27
-	Actor39: walltop
-		Location: 23,27
-		Owner: Neutral
-	Actor40: walltop
-		Location: 22,27
-		Owner: Neutral
-	Actor48: wallbottom
-		Location: 23,28
-		Owner: Neutral
-	Actor49: wallbottom
-		Location: 24,28
-		Owner: Neutral
-	Actor52: wallbottom
-		Location: 22,28
-		Owner: Neutral
-	Actor51: destroyedwallleft
-		Location: 25,27
-		Owner: Neutral
-	Actor57: destroyedwallright
-		Location: 31,27
-		Owner: Neutral
-	Actor58: walltop
-		Location: 32,27
-		Owner: Neutral
-	Actor59: walltop
-		Location: 33,27
-		Owner: Neutral
-	Actor60: walltop
-		Location: 34,27
-		Owner: Neutral
-	Actor61: wallbottom
-		Location: 32,28
-		Owner: Neutral
-	Actor62: wallbottom
-		Owner: Creeps
-		Location: 33,28
-	Actor63: wallbottom
-		Location: 34,28
-		Owner: Neutral
-	Actor64: destroyedwallleft
-		Location: 35,27
-		Owner: Neutral
-	Actor67: wallleft
-		Location: 16,36
-		Owner: Neutral
-	Actor68: wallleft
-		Location: 16,37
-		Owner: Neutral
-	Actor69: wallleft
-		Location: 16,38
-		Owner: Neutral
-	Actor72: destroyedwallbottomleft
-		Location: 16,39
-		Owner: Neutral
-	Actor73: wallbottom
-		Location: 17,39
-		Owner: Neutral
-	Actor74: destroyedwallbottomright
-		Owner: Creeps
-		Location: 17,39
-	Actor79: wallright
-		Location: 17,36
-		Owner: Neutral
-	Actor80: wallright
-		Location: 17,37
-		Owner: Neutral
-	Actor81: wallright
-		Location: 17,38
-		Owner: Neutral
-	Generator3: generator
-		Owner: Creeps
-		Location: 29,45
-	Generator1: generator
-		Owner: Creeps
-		Location: 32,42
-	Generator2: generator
-		Owner: Creeps
-		Location: 32,45
-	Actor88: wallbottom
-		Owner: Neutral
-		Location: 30,50
-	Actor89: wallbottom
-		Owner: Neutral
-		Location: 31,50
-	Actor90: wallbottom
-		Owner: Neutral
-		Location: 32,50
-	Actor91: wallbottom
-		Owner: Neutral
-		Location: 33,50
-	Actor94: destroyedwallleft
-		Owner: Neutral
-		Location: 34,49
-	Actor95: walltop
-		Owner: Neutral
-		Location: 33,49
-	Actor96: walltop
-		Owner: Neutral
-		Location: 32,49
-	Actor97: walltop
-		Owner: Neutral
-		Location: 31,49
-	Actor98: walltop
-		Owner: Neutral
-		Location: 30,49
-	TechMiner2: techminer
-		Owner: Neutral
-		Location: 51,26
 	Actor105: lamppost
 		Owner: Neutral
 		Location: 50,21
 	Actor106: lamppost
 		Owner: Neutral
 		Location: 57,25
-	Actor107: lamppost
-		Owner: Neutral
-		Location: 49,29
-	Actor108: prop2
-		Owner: Neutral
-		Location: 55,25
-	Actor109: prop2
-		Owner: Neutral
-		Location: 52,26
 	Actor110: icicle1
 		Owner: Neutral
 		Location: 45,18
@@ -426,26 +301,20 @@ Actors:
 	Actor153: trees17
 		Owner: Neutral
 		Location: 63,22
-	TechMiner1: techminer
+	Actor80: lamppost
 		Owner: Neutral
-		Location: 52,21
-	Actor154: destroyedwallright
-		Owner: Neutral
-		Location: 21,27
-	Actor155: destroyedwalltopleft
-		Owner: Neutral
-		Location: 16,35
-	Actor156: destroyedwalltopright
-		Owner: Neutral
-		Location: 17,35
-	Actor157: destroyedwallright
-		Owner: Neutral
-		Location: 29,49
-	Actor158: destroyedwallleft
-		Owner: Neutral
-		Location: 27,49
-	Actor159: destroyedwallright
-		Owner: Neutral
-		Location: 26,49
+		Location: 50,28
+	Generator1: generator
+		Owner: Creeps
+		Location: 38,38
+	Generator2: generator
+		Owner: Creeps
+		Location: 41,41
+	Generator3: generator
+		Owner: Creeps
+		Location: 35,43
+	Storage: storage
+		Owner: Creeps
+		Location: 24,42
 
 Rules: hv|rules/campaign.yaml, rules.yaml

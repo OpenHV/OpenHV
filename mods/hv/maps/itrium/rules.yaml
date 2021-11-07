@@ -13,6 +13,14 @@ World:
 BASE:
 	-Sellable:
 
+SNIPERPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+TECHNICIAN:
+	Buildable:
+		Prerequisites: ~disabled
+
 RADAR:
 	Buildable:
 		Prerequisites: ~disabled
