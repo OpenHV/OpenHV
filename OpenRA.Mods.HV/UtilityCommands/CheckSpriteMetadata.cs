@@ -36,15 +36,16 @@ namespace OpenRA.Mods.HV.UtilityCommands
 				var png = new Png(spriteStream);
 				var embeddedYaml = png.EmbeddedData.Select(m => new MiniYamlNode(m.Key, m.Value))
 					.ToList()
-					.WriteToString()
-					.Replace('ä', '?') // TODO: fix this in the engine
-					.Replace('ö', '?')
-					.Replace('ü', '?');
+					.WriteToString();
 
 				var yamlPath = Path.ChangeExtension(pngPath, "yaml");
 				using (var metadataStream = File.OpenRead(yamlPath))
 				{
-					var externalYaml = metadataStream.ReadAllText();
+					var externalYaml = metadataStream.ReadAllText()
+						.Replace('ä', '?') // TODO: fix this in the engine
+						.Replace('ö', '?')
+						.Replace('ü', '?');
+
 					if (!externalYaml.Equals(embeddedYaml))
 					{
 						Console.WriteLine($"{pngPath} embedded metadata does not match {yamlPath} file.");
