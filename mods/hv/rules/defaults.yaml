@@ -160,10 +160,8 @@
 	-Explodes:
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-		DeathSequencePalette: effect
+		DeathSequencePalette: green
 		FallbackSequence: die
-		DeathPaletteIsPlayerPalette: false
-		Delay: 5
 	Crushable:
 		CrushClasses: Pods
 		WarnProbability: 15
