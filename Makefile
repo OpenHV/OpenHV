@@ -220,6 +220,6 @@ ifneq ("$(BIT_FILES)","")
 	@echo "Checking PNG sheet metadata..."
 	@for SPRITE in $(BIT_FILES); do \
 		echo $${SPRITE}; \
-		./utility.sh --check-sprite-metadata ../$${SPRITE}; \
-	done || exit 1
+		./utility.sh --check-sprite-metadata ../$${SPRITE} || exit 1 ;\
+	done
 endif
