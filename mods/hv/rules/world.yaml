@@ -198,10 +198,6 @@
 		B: 0
 		A: 140
 		TransparentIndex: 255
-	PaletteFromGimpOrJascFile@Shadows:
-		Name: shadows
-		Filename: bits/shadows.pal
-		TransparentIndex: 255
 	PaletteFromRGBA@Cloud:
 		Name: cloud
 		R: 0
