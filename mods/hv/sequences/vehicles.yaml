@@ -274,9 +274,10 @@ scout1:
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/blood1.png
-		Length: 8
-		Tick: 100
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
 	icon: bits/units-icons.png
 		Start: 0
 
@@ -287,9 +288,10 @@ scout2:
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/blood1.png
-		Length: 8
-		Tick: 100
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
 	icon: bits/units-icons.png
 		Start: 1
 
@@ -333,9 +335,10 @@ mortarpod:
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/blood1.png
-		Length: 8
-		Tick: 100
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
 	icon: bits/units-icons.png
 		Start: 50
 
@@ -346,18 +349,20 @@ sniperpod:
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/blood1.png
-		Length: 8
-		Tick: 100
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
 	icon: bits/units-icons.png
 		Start: 44
 
 technician:
 	idle: bits/technician.png
 		Facings: 8
-	die: bits/blood1.png
-		Length: 8
-		Tick: 100
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
 	icon: bits/units-icons.png
 		Start: 42
 
