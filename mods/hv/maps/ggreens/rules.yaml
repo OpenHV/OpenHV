@@ -11,6 +11,10 @@ SWAMPLIGHT:
 		GreenTint: 1.50
 		BlueTint: 0.01
 
-HARBOR:
+HARBOR-YI:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR-SC:
 	Buildable:
 		Prerequisites: ~disabled

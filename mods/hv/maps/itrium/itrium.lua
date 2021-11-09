@@ -58,15 +58,15 @@ Tick = function()
 		player.MarkCompletedObjective(bridgehead)
 	end
 
-	if creeps.Resources >= creeps.ResourceCapacity * 0.75 then
-		creeps.Cash = creeps.Cash + creeps.Resources - creeps.ResourceCapacity * 0.25
-		creeps.Resources = creeps.ResourceCapacity * 0.25
+	if enemy.Resources >= enemy.ResourceCapacity * 0.75 then
+		enemy.Cash = enemy.Cash + enemy.Resources - enemy.ResourceCapacity * 0.25
+		enemy.Resources = enemy.ResourceCapacity * 0.25
 	end
 end
 
 WorldLoaded = function()
-	player = Player.GetPlayer("The Company")
-	creeps = Player.GetPlayer("Creeps")
+	player = Player.GetPlayer("Yuruki Industries")
+	enemy = Player.GetPlayer("Synaty Corporation")
 
 	InitObjectives(player)
 

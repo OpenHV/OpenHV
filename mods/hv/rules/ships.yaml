@@ -142,7 +142,7 @@ BOAT4:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor, techcenter, ~structures.yi
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
 		Description: A submarine with powerful long range missiles.
 	UpdatesPlayerStatistics:
@@ -224,7 +224,7 @@ CARRIER:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 60
-		Prerequisites: harbor, techcenter, ~structures.sc
+		Prerequisites: ~harbor.sc, techcenter
 		Description: Launches aerial autonomous attack vessels.
 	Valued:
 		Cost: 2000

@@ -27,37 +27,46 @@ Players:
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
-		Faction: Random
-		Enemies: The Company
-	PlayerReference@TheCompany:
-		Name: The Company
+		Faction: yi
+		Enemies: Yuruki Industries, Synaty Corporation
+	PlayerReference@Synaty Corporation:
+		Name: Synaty Corporation
+		NonCombatant: True
+		Faction: sc
+		Color: 805040
+		Enemies: Yuruki Industries, Creeps
+	PlayerReference@Yuruki Industries:
+		Name: Yuruki Industries
 		Playable: True
 		LockFaction: True
-		Faction: sc
+		Faction: yi
 		LockColor: True
-		Color: D0A090
-		Enemies: Creeps
+		Color: 003897
+		Enemies: Synaty Corporation, Creeps
 
 Actors:
 	Scout1: scout1
 		Location: 22,32
-		Owner: Creeps
+		Faction: yi
 		Facing: 182
+		Owner: Synaty Corporation
 	Scout2: scout2
 		Location: 29,37
-		Owner: Creeps
+		Faction: yi
+		Owner: Synaty Corporation
 		Facing: 28
 	Base: base
-		Owner: The Company
+		Owner: Yuruki Industries
 		Location: 11,6
 	Ballon: balloon
 		Facing: 384
 		Location: 26,34
-		Owner: Creeps
+		Owner: Synaty Corporation
 	Refinery: refinery
-		Owner: Creeps
 		Location: 28,40
 		FreeActor: False
+		Faction: yi
+		Owner: Synaty Corporation
 	Actor41: trees17
 		Owner: Neutral
 		Location: 46,40
@@ -71,11 +80,13 @@ Actors:
 		Owner: Neutral
 		Location: 1,31
 	Miner1: miner2
-		Owner: Creeps
 		Location: 22,37
+		Faction: yi
+		Owner: Synaty Corporation
 	Miner2: miner2
 		Location: 32,32
-		Owner: Creeps
+		Faction: yi
+		Owner: Synaty Corporation
 	Actor12: crow
 		Owner: Neutral
 		Facing: 384
@@ -129,40 +140,47 @@ Actors:
 		Facing: 384
 		Location: 7,35
 	Scout8: scout1
-		Owner: Creeps
 		SubCell: 1
 		Location: 31,36
+		Faction: yi
 		Facing: 618
+		Owner: Synaty Corporation
 	Scout9: scout2
-		Owner: Creeps
 		SubCell: 1
 		Location: 26,40
+		Faction: yi
 		Facing: 384
+		Owner: Synaty Corporation
 	Scout4: scout1
-		Owner: Creeps
 		SubCell: 1
 		Location: 20,36
+		Faction: yi
 		Facing: 384
+		Owner: Synaty Corporation
 	Scout3: scout1
-		Owner: Creeps
 		SubCell: 1
 		Location: 22,35
+		Faction: yi
 		Facing: 111
+		Owner: Synaty Corporation
 	Scout6: scout1
-		Owner: Creeps
 		SubCell: 1
 		Location: 30,39
+		Faction: yi
 		Facing: 824
+		Owner: Synaty Corporation
 	Scout7: scout1
-		Owner: Creeps
 		SubCell: 1
 		Location: 32,40
+		Faction: yi
 		Facing: 642
+		Owner: Synaty Corporation
 	Scout5: scout1
-		Owner: Creeps
 		SubCell: 1
 		Location: 22,42
+		Faction: yi
 		Facing: 475
+		Owner: Synaty Corporation
 	Actor105: lamppost
 		Owner: Neutral
 		Location: 50,21
@@ -305,16 +323,16 @@ Actors:
 		Owner: Neutral
 		Location: 50,28
 	Generator1: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 38,38
 	Generator2: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 41,41
 	Generator3: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 35,43
 	Storage: storage
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 24,42
 
 Rules: hv|rules/campaign.yaml, rules.yaml
