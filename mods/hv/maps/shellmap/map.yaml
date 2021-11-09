@@ -16,189 +16,148 @@ Visibility: Shellmap
 
 Categories: Maps
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
-		Faction: yi
+		Faction: Random
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
+		Faction: Random
+	PlayerReference@Yuruki Industries:
+		Name: Yuruki Industries
 		Faction: yi
+		Color: 003897
+		Enemies: Creeps
+	PlayerReference@Synaty Corporation:
+		Name: Synaty Corporation
+		Faction: sc
+		Color: 805040
+		Enemies: Creeps
 
 Actors:
 	Actor0: mother2b
-		Owner: Neutral
-		Facing: 384
 		Location: 59,27
+		Facing: 384
+		Owner: Neutral
 	Actor1: mother
 		Owner: Neutral
 		Location: 60,90
 	Actor2: miner2
-		Owner: Neutral
 		Location: 42,103
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor3: miner2
-		Owner: Neutral
 		Location: 79,118
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor4: miner2
-		Owner: Neutral
 		Location: 82,9
+		Faction: Random
+		Owner: Synaty Corporation
 	Actor5: miner2
-		Owner: Neutral
 		Location: 55,9
+		Faction: Random
+		Owner: Synaty Corporation
 	Actor6: refinery
-		Owner: Neutral
 		Location: 59,118
-	Actor7: refinery
-		Owner: Neutral
-		Location: 69,14
-	Actor8: base
-		Owner: Neutral
-		Location: 67,26
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor9: base
-		Owner: Neutral
 		Location: 69,109
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor10: generator
-		Owner: Neutral
 		Location: 76,108
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor11: generator
-		Owner: Neutral
 		Location: 60,109
-	Actor12: radar
-		Owner: Neutral
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor12: radar-yi
 		Location: 76,101
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor13: module
-		Owner: Neutral
 		Location: 80,95
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor14: tradplat
-		Owner: Neutral
 		Location: 81,103
-	Actor15: starport
-		Owner: Neutral
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor15: starport-yi
 		Location: 83,110
-	Actor16: starport2
-		Owner: Neutral
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor16: starport-sc
 		Location: 50,28
-	Actor17: factory2
-		Owner: Neutral
-		Location: 75,32
-	Actor18: factory3
-		Owner: Neutral
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor18: factory-sc
 		Location: 71,31
+		Faction: Random
+		Owner: Synaty Corporation
 	Actor19: module
-		Owner: Neutral
 		Location: 67,31
-	Actor20: radar2
-		Owner: Neutral
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor20: radar-sc
 		Location: 67,23
-	Actor21: tradplat
-		Owner: Neutral
-		Location: 70,27
-	Actor22: turret
-		Owner: Neutral
-		Location: 75,37
-		TurretFacing: 512
-	Actor23: turret
-		Owner: Neutral
-		Location: 67,37
-		TurretFacing: 512
-	Actor24: turret
-		Owner: Neutral
-		Location: 59,35
-		TurretFacing: 512
-	Actor25: aaturret
-		Owner: Neutral
-		Location: 52,33
-	Actor26: aaturret
-		Owner: Neutral
-		Location: 81,34
+		Faction: Random
+		Owner: Synaty Corporation
 	Actor27: artilleryturret
-		Owner: Neutral
 		Location: 77,28
+		Faction: Random
+		TurretFacing: 570
+		Owner: Synaty Corporation
 	Actor28: televtr2
-		Owner: Neutral
 		Location: 64,31
+		Faction: Random
+		Owner: Synaty Corporation
 	Actor29: televatr
-		Owner: Neutral
 		Location: 89,102
-	Actor30: turret2
-		Owner: Neutral
-		Location: 78,87
-	Actor31: turret2
-		Owner: Neutral
-		Location: 85,92
-	Actor32: turret2
-		Owner: Neutral
-		Location: 47,87
-	Actor33: turret2
-		Owner: Neutral
-		Location: 41,97
-	Actor34: aaturret2
-		Owner: Neutral
-		Location: 75,94
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor35: aaturret2
-		Owner: Neutral
 		Location: 49,100
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor36: artilleryturret
-		Owner: Neutral
 		Location: 83,99
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor37: generator
-		Owner: Neutral
 		Location: 52,113
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor38: generator
-		Owner: Neutral
 		Location: 70,105
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor39: generator
-		Owner: Neutral
 		Location: 68,116
-	Actor40: generator
-		Owner: Neutral
-		Location: 70,24
-	Actor41: generator
-		Owner: Neutral
-		Location: 73,23
-	Actor42: generator
-		Owner: Neutral
-		Location: 76,22
-	Actor43: generator
-		Owner: Neutral
-		Location: 64,23
-	Actor44: generator
-		Owner: Neutral
-		Location: 64,27
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor45: generator
-		Owner: Neutral
 		Location: 65,106
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor46: generator
-		Owner: Neutral
 		Location: 74,113
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor47: generator
-		Owner: Neutral
 		Location: 62,107
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor48: generator
-		Owner: Neutral
 		Location: 77,112
-	Actor54: generator
-		Owner: Neutral
-		Location: 74,17
-	Actor55: generator
-		Owner: Neutral
-		Location: 77,17
-	Actor53: generator
-		Owner: Neutral
-		Location: 61,17
-	Actor56: generator
-		Owner: Neutral
-		Location: 64,17
-	Actor57: generator
-		Owner: Neutral
-		Location: 68,18
-	Actor58: generator
-		Owner: Neutral
-		Location: 71,18
+		Faction: Random
+		Owner: Yuruki Industries
 	Actor59: sandmisc7
 		Owner: Neutral
 		Location: 35,31
@@ -679,5 +638,336 @@ Actors:
 	Actor217: treegrs10
 		Owner: Neutral
 		Location: 10,117
+	Actor218: base-sc
+		Location: 67,26
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor232: starport-sc
+		Location: 52,24
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor233: turret2
+		Location: 75,37
+		Faction: Random
+		TurretFacing: 658
+		Owner: Synaty Corporation
+	Actor234: turret2
+		Location: 67,37
+		Faction: Random
+		TurretFacing: 459
+		Owner: Synaty Corporation
+	Actor235: turret2
+		Location: 59,35
+		Faction: Random
+		TurretFacing: 380
+		Owner: Synaty Corporation
+	Actor236: bunker2
+		Location: 80,37
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor237: bunker2
+		Location: 71,38
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor238: bunker2
+		Location: 63,37
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor239: bunker2
+		Location: 55,35
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor240: bunker2
+		Location: 92,27
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor241: bunker2
+		Location: 95,26
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor242: uplink
+		Location: 81,21
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor244: storage
+		Location: 85,22
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor245: storage
+		Location: 88,22
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor246: refinery
+		Location: 69,13
+		Faction: Random
+		Owner: Synaty Corporation
+	Actor247: starport-yi
+		Location: 86,112
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor248: factory-yi
+		Location: 64,111
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor249: field
+		Location: 67,121
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor251: harbor-yi
+		Location: 98,124
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor252: turret
+		Location: 78,87
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor253: turret
+		Location: 85,92
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor254: turret
+		Location: 48,87
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor255: turret
+		Location: 39,90
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor256: aaturret
+		Location: 43,96
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor257: aaturret
+		Location: 75,94
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor258: aaturret
+		Location: 57,106
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor259: artilleryturret
+		Location: 39,98
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor260: aaturret2
+		Location: 52,32
+		Faction: Random
+		TurretFacing: 412
+		Owner: Synaty Corporation
+	Actor261: aaturret2
+		Location: 81,32
+		Faction: Random
+		TurretFacing: 483
+		Owner: Synaty Corporation
+	Actor262: aaturret2
+		Location: 92,21
+		Faction: Random
+		Owner: Synaty Corporation
+		TurretFacing: 689
+	Actor263: big_rock
+		Owner: Neutral
+		Location: 62,65
+	Actor264: big_rock
+		Owner: Neutral
+		Location: 25,48
+	Actor265: big_rock
+		Owner: Neutral
+		Location: 2,28
+	Actor266: big_rock
+		Owner: Neutral
+		Location: 119,48
+	Actor267: big_rock
+		Owner: Neutral
+		Location: 120,20
+	Actor268: big_rock
+		Owner: Neutral
+		Location: 103,95
+	Actor269: big_rock
+		Owner: Neutral
+		Location: 115,106
+	Actor270: big_rock
+		Owner: Neutral
+		Location: 14,86
+	Actor271: grssmisc7
+		Owner: Neutral
+		Location: 47,104
+	Actor272: grssmisc6
+		Owner: Neutral
+		Location: 39,103
+	Actor273: grssmisc6
+		Owner: Neutral
+		Location: 53,94
+	Actor274: grssmisc6
+		Owner: Neutral
+		Location: 93,96
+	Actor275: grssmisc6
+		Owner: Neutral
+		Location: 99,104
+	Actor276: grssmisc6
+		Owner: Neutral
+		Location: 127,103
+	Actor277: grssmisc6
+		Owner: Neutral
+		Location: 126,82
+	Actor278: grssmisc6
+		Owner: Neutral
+		Location: 105,57
+	Actor279: grssmisc6
+		Owner: Neutral
+		Location: 121,39
+	Actor280: grssmisc6
+		Owner: Neutral
+		Location: 126,28
+	Actor281: grssmisc6
+		Owner: Neutral
+		Location: 57,57
+	Actor282: grssmisc6
+		Owner: Neutral
+		Location: 31,50
+	Actor283: grssmisc6
+		Owner: Neutral
+		Location: 8,42
+	Actor284: grssmisc6
+		Owner: Neutral
+		Location: 14,34
+	Actor285: grssmisc6
+		Owner: Neutral
+		Location: 17,21
+	Actor286: grssmisc6
+		Owner: Neutral
+		Location: 10,20
+	Actor287: grssmisc6
+		Owner: Neutral
+		Location: 24,7
+	Actor288: grssmisc7
+		Owner: Neutral
+		Location: 21,9
+	Actor289: grssmisc7
+		Owner: Neutral
+		Location: 20,41
+	Actor290: grssmisc7
+		Owner: Neutral
+		Location: 40,52
+	Actor291: grssmisc7
+		Owner: Neutral
+		Location: 73,60
+	Actor292: grssmisc7
+		Owner: Neutral
+		Location: 94,57
+	Actor293: grssmisc7
+		Owner: Neutral
+		Location: 111,43
+	Actor294: grssmisc7
+		Owner: Neutral
+		Location: 121,32
+	Actor295: grssmisc7
+		Owner: Neutral
+		Location: 125,87
+	Actor296: grssmisc7
+		Owner: Neutral
+		Location: 91,102
+	Actor297: generator
+		Location: 61,124
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor298: generator
+		Location: 64,123
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor299: generator
+		Location: 66,125
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor300: generator
+		Location: 69,123
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor301: generator
+		Location: 71,125
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor306: silo
+		Location: 71,118
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor307: harbor-yi
+		Location: 23,125
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor308: tradplat
+		Owner: Synaty Corporation
+		Location: 70,27
+	Actor309: techcenter
+		Owner: Synaty Corporation
+		Location: 75,32
+	Actor310: field
+		Owner: Synaty Corporation
+		Location: 79,25
+	Actor305: generator
+		Owner: Synaty Corporation
+		Location: 52,21
+	Actor304: generator
+		Owner: Synaty Corporation
+		Location: 55,20
+	Actor303: generator
+		Owner: Synaty Corporation
+		Location: 58,18
+	Actor311: generator
+		Owner: Synaty Corporation
+		Location: 61,17
+	Actor312: generator
+		Owner: Synaty Corporation
+		Location: 64,17
+	Actor313: generator
+		Owner: Synaty Corporation
+		Location: 68,18
+	Actor314: generator
+		Owner: Synaty Corporation
+		Location: 71,18
+	Actor315: generator
+		Owner: Synaty Corporation
+		Location: 74,17
+	Actor316: generator
+		Owner: Synaty Corporation
+		Location: 77,17
+	Actor302: generator
+		Owner: Synaty Corporation
+		Location: 80,18
+	Actor317: generator
+		Owner: Synaty Corporation
+		Location: 76,22
+	Actor319: generator
+		Owner: Synaty Corporation
+		Location: 73,23
+	Actor318: generator
+		Owner: Synaty Corporation
+		Location: 70,24
+	Actor320: generator
+		Owner: Synaty Corporation
+		Location: 64,27
+	Actor321: generator
+		Owner: Synaty Corporation
+		Location: 64,23
+	Actor322: generator
+		Owner: Yuruki Industries
+		Location: 73,123
+	Actor323: generator
+		Owner: Yuruki Industries
+		Location: 75,125
+	Actor324: generator
+		Owner: Yuruki Industries
+		Location: 78,123
+	Actor325: generator
+		Owner: Yuruki Industries
+		Location: 80,125
+	Actor326: storage
+		Owner: Yuruki Industries
+		Location: 52,119
+	Actor327: storage
+		Owner: Yuruki Industries
+		Location: 55,121
+	Actor328: storage
+		Owner: Yuruki Industries
+		Location: 52,123
 
 Rules: rules.yaml

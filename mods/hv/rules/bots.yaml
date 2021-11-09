@@ -19,38 +19,40 @@ Player:
 		ConstructionYardTypes: base
 		PowerTypes: generator
 		BarracksTypes: module
-		VehiclesFactoryTypes: factory2, factory3
-		ProductionTypes: module, factory2, factory3, starport, starport2, harbor
-		NavalProductionTypes: harbor
+		VehiclesFactoryTypes: factory-yi, factory-sc
+		ProductionTypes: module, factory-yi, factory-sc, starport-yi, starport-sc, harbor-yi, harbor-sc
+		NavalProductionTypes: harbor-yi, harbor-sc
 		MinerTypes: miner, miner2
 		RefineryTypes: refinery
 		SiloTypes: storage
 		BuildingLimits:
 			refinery: 1
 			module: 4
-			factory2: 4
-			factory3: 4
-			radar: 1
-			radar2: 1
-			starport: 4
-			starport2: 4
+			factory-yi: 4
+			factory-sc: 4
+			radar-yi: 1
+			radar-sc: 1
+			starport-yi: 4
+			starport-sc: 4
 			tradplat: 1
 			techcenter: 1
-			harbor: 1
+			harbor-yi: 1
+			harbor-sc: 1
 			storage: 5
 			field: 1
 			silo: 1
 		BuildingFractions:
 			refinery: 2
 			module: 1
-			radar: 1
-			radar2: 1
-			factory2: 1
-			factory3: 1
-			harbor: 1
+			radar-yi: 1
+			radar-sc: 1
+			factory-yi: 1
+			factory-sc: 1
+			harbor-yi: 1
+			harbor-sc: 1
 			tradplat: 1
-			starport: 1
-			starport2: 1
+			starport-yi: 1
+			starport-sc: 1
 			techcenter: 1
 			bunker: 7
 			bunker2: 7

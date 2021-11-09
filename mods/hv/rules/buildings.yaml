@@ -38,10 +38,10 @@ BASE:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@BuildingName:
-	ProvidesPrerequisite@YI:
+	ProvidesPrerequisite@yi:
 		Factions: yi
 		Prerequisite: structures.yi
-	ProvidesPrerequisite@SC:
+	ProvidesPrerequisite@sc:
 		Factions: sc
 		Prerequisite: structures.sc
 	Buildable:
@@ -58,6 +58,9 @@ BASE:
 		Files: Quedicemipez__teleportation.wav
 	RenderSprites:
 		PlayerPalette: green
+		Image: base
+		FactionImages:
+			sc: base-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -163,6 +166,19 @@ BASE:
 		Sequence: production-inprogress
 		RequiresCondition: !burning
 
+BASE-SC:
+	Inherits: BASE
+	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0.4
+		GreenTint: 0
+		BlueTint: 0
+	RenderSprites:
+		Image: base-sc
+		-FactionImages:
+	-MapEditorData:
+
 GENERATOR:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
@@ -199,6 +215,9 @@ GENERATOR:
 	ScalePowerWithHealth:
 	RenderSprites:
 		PlayerPalette: green
+		Image: generator-yi
+		FactionImages:
+			sc: generator-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -212,7 +231,7 @@ GENERATOR:
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 
-RADAR:
+RADAR-YI:
 	Inherits: ^BaseBuilding
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
@@ -254,6 +273,7 @@ RADAR:
 	Power:
 		Amount: -40
 	ProvidesPrerequisite@BuildingName:
+		Prerequisite: radar
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@Shadow:
@@ -289,12 +309,10 @@ RADAR:
 		EndChargeSpeechNotification: AirStrikeReady
 	SupportPowerChargeBar:
 
-RADAR2:
-	Inherits: RADAR
+RADAR-SC:
+	Inherits: RADAR-YI
 	Buildable:
 		Prerequisites: generator, refinery, ~structures.sc
-	ProvidesPrerequisite@Radar:
-		Prerequisite: radar
 	-AirstrikePower:
 	DropPodsPower:
 		Cursor: droppod
@@ -364,6 +382,9 @@ TRADPLAT:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
+		Image: tradplat-yi
+		FactionImages:
+			sc: tradplat-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -527,7 +548,7 @@ MINER2:
 	Capturable:
 		RequiresCondition: !build-incomplete
 
-STARPORT:
+STARPORT-YI:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x3Shape
 	Inherits@Flame: ^BuildingFlame2
@@ -566,9 +587,9 @@ STARPORT:
 	Production:
 		Produces: Aircraft
 	Reservable:
-	ProvidesPrerequisite@generic:
+	ProvidesPrerequisite@Generic:
 		Prerequisite: aircraft
-	ProvidesPrerequisite@faction:
+	ProvidesPrerequisite@Faction:
 		Prerequisite: aircraft.yi
 	ProductionBar:
 		ProductionType: Aircraft
@@ -608,11 +629,11 @@ STARPORT:
 		Sequence: production-done
 		RequiresCondition: !burning
 
-STARPORT2:
-	Inherits: STARPORT
+STARPORT-SC:
+	Inherits: STARPORT-YI
 	Buildable:
 		Prerequisites: radar, ~structures.sc
-	ProvidesPrerequisite@faction:
+	ProvidesPrerequisite@Faction:
 		Prerequisite: aircraft.sc
 	-WithProductionExitOverlay:
 
@@ -622,7 +643,7 @@ FACTORY:
 	Tooltip:
 		Name: Vehicle Factory
 
-FACTORY2:
+FACTORY-YI:
 	Inherits: ^BaseBuilding
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x4Shape
@@ -630,14 +651,14 @@ FACTORY2:
 	Selectable:
 		Bounds: 2048, 4096
 	Buildable:
-		Prerequisites: module, refinery, ~structures.sc
+		Prerequisites: module, refinery, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds vehicles.
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Synaty Corporation Vehicle Factory
+		Name: Yuruki Industries Vehicle Factory
 	Building:
 		Footprint: xx xx ++ ++
 		Dimensions: 2,4
@@ -657,9 +678,11 @@ FACTORY2:
 		Amount: -150
 	ProvidesPrerequisite@BuildingName:
 		RequiresCondition: !powerdown
-	ProvidesPrerequisite@AnyFactory:
+	ProvidesPrerequisite@Generic:
 		Prerequisite: factory
 		RequiresCondition: !powerdown
+	ProvidesPrerequisite@Faction:
+		Prerequisite: factory.yi
 	RenderSprites:
 		PlayerPalette: green
 	WithIdleOverlay@Shadow:
@@ -833,12 +856,16 @@ FACTORY2:
 		Sequence: production-done
 		RequiresCondition: !burning
 
-FACTORY3:
-	Inherits: FACTORY2
+FACTORY-SC:
+	Inherits: FACTORY-YI
 	Buildable:
-		Prerequisites: module, refinery, ~structures.yi
+		Prerequisites: module, refinery, ~structures.sc
+	ProvidesPrerequisite@Faction:
+		Prerequisite: factory.sc
+	RenderSprites:
+		Image: factory-sc
 	Tooltip:
-		Name: Yuruki Industries Vehicle Factory
+		Name: Synaty Corporation Vehicle Factory
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
@@ -857,6 +884,7 @@ TECHCENTER:
 	Tooltip:
 		Name: Technology Download Center
 	ProvidesPrerequisite@BuildingName:
+		Prerequisite: techcenter
 	Building:
 		Footprint: == xx xx
 		Dimensions: 2,3
@@ -877,6 +905,9 @@ TECHCENTER:
 		TargetTypes: Ground, Structure
 	RenderSprites:
 		PlayerPalette: green
+		Image: techcenter-yi
+		FactionImages:
+			sc: techcenter-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -1213,6 +1244,9 @@ FIELD:
 		RequiredForShortGame: false
 	RenderSprites:
 		PlayerPalette: green
+		Image: field-yi
+		FactionImages:
+			sc: field-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -1623,7 +1657,7 @@ TELEVTR2:
 		Palette: shadow
 		IsDecoration: true
 
-HARBOR:
+HARBOR-YI:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^3x3Shape
 	Inherits@Flame: ^BuildingFlame2
@@ -1631,7 +1665,7 @@ HARBOR:
 	Selectable:
 		Bounds: 3072, 3072
 	Buildable:
-		Prerequisites: factory
+		Prerequisites: factory, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds ships.
@@ -1685,7 +1719,11 @@ HARBOR:
 		ProductionType: Ship
 	Power:
 		Amount: -150
-	ProvidesPrerequisite@BuildingName:
+	ProvidesPrerequisite@Generic:
+		Prerequisite: harbor
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@Faction:
+		Prerequisite: harbor.yi
 	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
 		Position: Top
@@ -1719,6 +1757,15 @@ HARBOR:
 		PlayerExperience: 15
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
+
+HARBOR-SC:
+	Inherits: HARBOR-YI
+	RenderSprites:
+		Image: harbor-sc
+	ProvidesPrerequisite@Faction:
+		Prerequisite: harbor.sc
+	Buildable:
+		Prerequisites: factory, ~structures.sc
 
 WALLTOP:
 	Inherits: ^Wall

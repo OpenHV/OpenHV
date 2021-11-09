@@ -8,7 +8,7 @@ World:
 	LuaScript:
 		Scripts: hv|scripts/campaign.lua, itrium.lua
 	MissionData:
-		Briefing: Greetings commander! We are approaching the orbit of Itrium. The company is interested in the vast Lithium reserves. You are tasked with scouting ahead and building up a bridgehead. Intelligence reports some settlers, which have established a small mining colony. Claim this planet for the company by all means necessary.
+		Briefing: Greetings commander! We are approaching the orbit of Itrium. Yuruki Industries is interested in the vast Lithium reserves. You are tasked with scouting ahead and building up a bridgehead. Intelligence reports some settlers, which have established a small mining colony. Claim this planet for Yuruki Industries by all means necessary.
 
 BASE:
 	-Sellable:
@@ -21,11 +21,11 @@ TECHNICIAN:
 	Buildable:
 		Prerequisites: ~disabled
 
-RADAR:
+RADAR-YI:
 	Buildable:
 		Prerequisites: ~disabled
 
-RADAR2:
+RADAR-SC:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -33,19 +33,19 @@ TRADPLAT:
 	Buildable:
 		Prerequisites: ~disabled
 
-STARPORT:
+STARPORT-YI:
 	Buildable:
 		Prerequisites: ~disabled
 
-STARPORT2:
+STARPORT-SC:
 	Buildable:
 		Prerequisites: ~disabled
 
-FACTORY2:
+FACTORY-YI:
 	Buildable:
 		Prerequisites: ~disabled
 
-FACTORY3:
+FACTORY-SC:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -101,10 +101,38 @@ TELEVTR2:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR:
+HARBOR-YI:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR-SC:
 	Buildable:
 		Prerequisites: ~disabled
 
 BUILDER:
+	Buildable:
+		Prerequisites: ~disabled
+
+TRANSPRT:
+	Buildable:
+		Prerequisites: ~disabled
+
+ARTIL:
+	Buildable:
+		Prerequisites: ~disabled
+
+RADARTANK:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK16:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK6:
+	Buildable:
+		Prerequisites: ~disabled
+
+MORTARPOD:
 	Buildable:
 		Prerequisites: ~disabled

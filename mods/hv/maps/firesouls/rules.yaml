@@ -47,6 +47,10 @@ BASELIGHT:
 		GreenTint: 0.40
 		BlueTint: 0.40
 
-HARBOR:
+HARBOR-YI:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR-SC:
 	Buildable:
 		Prerequisites: ~disabled

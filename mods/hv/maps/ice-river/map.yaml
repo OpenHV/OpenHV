@@ -16,8 +16,6 @@ Visibility: MissionSelector
 
 Categories: Campaign
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -27,16 +25,22 @@ Players:
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
-		Faction: Random
-		Enemies: The Company
-	PlayerReference@The Company:
-		Name: The Company
+		Faction: yi
+		Enemies: Yuruki Industries, Synaty Corporation
+	PlayerReference@Synaty Corporation:
+		Name: Synaty Corporation
+		NonCombatant: True
+		Faction: sc
+		Color: 805040
+		Enemies: Yuruki Industries, Creeps
+	PlayerReference@Yuruki Industries:
+		Name: Yuruki Industries
 		Playable: True
 		LockFaction: True
-		Faction: sc
+		Faction: yi
 		LockColor: True
-		Color: D0A090
-		Enemies: Creeps
+		Color: 003897
+		Enemies: Synaty Corporation, Creeps
 
 Actors:
 	Actor154: icicle2
@@ -52,137 +56,154 @@ Actors:
 		Owner: Neutral
 		Location: 24,33
 	Actor4: miner2
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 15,2
 	Actor5: miner2
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 32,8
 	Actor6: miner2
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 42,26
 	Actor7: miner2
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 35,20
-	Actor14: turret
-		Owner: Creeps
-		Location: 30,5
-		Stance: AttackAnything
 	Base: base
-		Owner: The Company
+		Owner: Yuruki Industries
 		Location: 46,49
 	Actor10: refinery
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 5,5
 		FreeActor: False
-	Actor11: factory2
-		Owner: Creeps
+	Actor11: factory-sc
+		Owner: Synaty Corporation
 		Location: 16,37
 	Actor12: module
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 24,38
-	Actor13: radar
-		Owner: Creeps
-		Location: 20,37
 	Actor16: storage
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 6,14
 	Actor17: storage
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 25,44
-	Actor18: base
-		Owner: Creeps
+	Actor18: base-sc
+		Owner: Synaty Corporation
 		Location: 16,51
 	Actor19: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 16,58
 	Actor20: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 19,57
 	Actor21: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 22,55
 	Actor22: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 22,44
 	Actor23: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 12,37
 	Actor24: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 9,39
-	Actor25: turret
-		Owner: Creeps
-		Location: 25,30
-		Stance: AttackAnything
-	Actor26: tradplat
-		Owner: Creeps
-		Location: 17,43
 	Actor27: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 3,3
 	Actor28: generator
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 11,2
-	Actor29: tank3
-		Owner: Creeps
-		Location: 24,8
-		Facing: 777
-		TurretFacing: 23
 	Actor30: artil
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 22,9
 		Facing: 761
 	Actor31: tank11
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 32,19
 		Facing: 991
 	Actor34: tank11
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Location: 25,20
 		Facing: 864
 	Actor32: balloon
-		Owner: Creeps
+		Owner: Synaty Corporation
 		Facing: 384
 		Location: 27,14
 	Actor33: scout1
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 36,10
 		Facing: 800
 	Actor35: scout2
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 33,12
 		Facing: 753
 	Actor36: scout2
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 30,9
 		Facing: 800
 	Actor37: scout1
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 35,25
 		Facing: 103
 	Actor38: scout1
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 41,24
 		Facing: 206
 	Actor39: scout1
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 39,29
 		Facing: 142
 	Actor40: scout1
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 32,27
 		Facing: 39
 	Actor41: scout1
-		Owner: Creeps
+		Owner: Synaty Corporation
 		SubCell: 1
 		Location: 31,23
 		Facing: 15
+	Actor42: radar-sc
+		Owner: Synaty Corporation
+		Location: 20,37
+	Actor43: tradplat
+		Owner: Synaty Corporation
+		Location: 17,43
+	Actor44: tyriantank
+		Owner: Synaty Corporation
+		Location: 24,8
+		Facing: 793
+	Actor45: tyriantank
+		Owner: Synaty Corporation
+		Location: 22,23
+		Facing: 919
+	Actor46: tyriantank
+		Owner: Synaty Corporation
+		Location: 28,28
+		Facing: 951
+	Actor47: turret2
+		Owner: Synaty Corporation
+		Location: 25,30
+		Stance: AttackAnything
+		TurretFacing: 896
+	Actor48: turret2
+		Owner: Synaty Corporation
+		Location: 30,3
+		TurretFacing: 737
+		Stance: AttackAnything
+	Actor49: bunker2
+		Owner: Synaty Corporation
+		Location: 19,30
+		Stance: AttackAnything
+	Actor50: bunker2
+		Owner: Synaty Corporation
+		Location: 32,33
+		Stance: AttackAnything
 
 Rules: hv|rules/campaign.yaml, rules.yaml

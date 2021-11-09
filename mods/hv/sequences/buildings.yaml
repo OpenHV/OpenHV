@@ -101,7 +101,31 @@ base:
 		Start: 0
 		Offset: 0, 0
 
-generator:
+base-sc:
+	Inherits: base
+	Inherits@Flame: ^BuildingFlame3
+	Defaults:
+		Offset: 10, -30
+	build: bits/base-yi.png
+		Frames: 4, 5, 6, 4, 5, 6, 4, 5 ,6
+		Length: *
+		Tick: 50
+	idle: bits/base-yi.png
+	damaged-idle: bits/base-yi.png
+		Start: 7
+		Length: 1
+	damaged-build: bits/base-yi.png
+		Start: 7
+		Length: 1
+	production-inprogress: bits/base-yi.png
+		Length: 3
+		Reverses: true
+		Tick: 150
+	icon: bits/buildings-icons.png
+		Start: 27
+		Offset: 0, 0
+
+generator-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -8
@@ -134,7 +158,19 @@ generator:
 		Start: 4
 		Offset: 0, 0
 
-radar:
+generator-sc:
+	Inherits: generator-yi
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -8
+	idle: bits/generator-sc.png
+		Length: 15
+		Tick: 80
+	damaged-idle: bits/generator-sc.png
+		Start: 15
+		Length: 1
+
+radar-yi:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -4
@@ -158,9 +194,9 @@ radar:
 		ZOffset: 2000
 	icon: bits/buildings-icons.png
 		Start: 7
-		Offset: 0, 0
+		Offset: 0, 1
 
-radar2:
+radar-sc:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -4
@@ -180,9 +216,9 @@ radar2:
 		ZOffset: 2000
 	icon: bits/buildings-icons.png
 		Start: 20
-		Offset: 0, 0
+		Offset: 0, 1
 
-tradplat:
+tradplat-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 1
@@ -215,7 +251,26 @@ tradplat:
 		Offset: 12, -17
 	icon: bits/buildings-icons.png
 		Start: 11
-		Offset: 0, 0
+		Offset: 0, 2
+
+tradplat-sc:
+	Inherits: tradplat-yi
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, 1
+	idle: bits/tradplat-sc.png
+		ZOffset: -1c511
+	damaged-idle: bits/tradplat-sc.png
+		Start: 4
+		ZOffset: -1c511
+	active: bits/tradplat-sc.png
+		Frames: 1, 2, 3, 2, 1
+		Length: 5
+		ZOffset: -1c511
+		Tick: 100
+	icon: bits/buildings-icons.png
+		Start: 28
+		Offset: 0, 2
 
 module:
 	Inherits@Flame: ^BuildingFlame2
@@ -306,9 +361,9 @@ miner2:
 		Offset: -13, -6
 	icon: bits/buildings-icons.png
 		Start: 16
-		Offset: 0, 0
+		Offset: 0, 2
 
-starport:
+starport-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -2
@@ -346,9 +401,9 @@ starport:
 		Offset: -3, 17
 	icon: bits/buildings-icons.png
 		Start: 9
-		Offset: 0, 0
+		Offset: 0, 3
 
-starport2:
+starport-sc:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -2
@@ -379,7 +434,7 @@ starport2:
 		Offset: -3, 17
 	icon: bits/buildings-icons.png
 		Start: 17
-		Offset: 0, 0
+		Offset: 0, 3
 
 factory2:
 	Inherits@Flame: ^BuildingFlame2
@@ -487,9 +542,44 @@ factory2:
 		Offset: 9, -8
 	icon: bits/buildings-icons.png
 		Start: 1
-		Offset: 0, 0
+		Offset: 0, 1
 
-factory3:
+factory-sc:
+	Inherits: factory2
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: -1, -22
+	idle: bits/null.png
+	idle-online: bits/factory-sc.png
+	idle-offline: bits/factory-sc.png
+	shadow-overlay: bits/factory2-shadow.png
+		ZOffset: 1768
+		Offset: 5, -12
+	damaged-idle-online: bits/factory-sc.png
+		Start: 15
+	damaged-idle-offline: bits/factory-sc.png
+		Start: 15
+	damaged-shadow-overlay: bits/factory2-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 5, -12
+	production-inprogress: bits/factory-sc.png
+		Start: 1
+		Length: 10
+		Reverses: True
+		Tick: 80
+		ZOffset: 1500
+	production-done: bits/factory-sc.png
+		Start: 11
+		Length: 4
+		Reverses: True
+		Tick: 100
+		ZOffset: 1500
+	icon: bits/buildings-icons.png
+		Start: 1
+		Offset: 0, 1
+
+factory-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -24
@@ -594,7 +684,7 @@ factory3:
 		Offset: 15, -26
 	icon: bits/buildings-icons.png
 		Start: 2
-		Offset: 0, 0
+		Offset: 0, 1
 
 bunker:
 	Inherits@Flame: ^BuildingFlame
@@ -619,7 +709,7 @@ bunker:
 		Offset: 2, -12
 	icon: bits/buildings-icons.png
 		Start: 25
-		Offset: 0, 0
+		Offset: 0, 1
 
 bunker2:
 	Inherits@Flame: ^BuildingFlame
@@ -644,7 +734,7 @@ bunker2:
 		Offset: 2, -12
 	icon: bits/buildings-icons.png
 		Start: 26
-		Offset: 0, 0
+		Offset: 0, 1
 
 turret:
 	Inherits@Flame: ^BuildingFlame
@@ -676,7 +766,7 @@ turret:
 		Offset: 10, -12
 	icon: bits/buildings-icons.png
 		Start: 14
-		Offset: 0, 0
+		Offset: 0, 1
 
 turret2:
 	Inherits@Flame: ^BuildingFlame
@@ -709,7 +799,7 @@ turret2:
 		Offset: 10, -12
 	icon: bits/buildings-icons.png
 		Start: 21
-		Offset: 0, 0
+		Offset: 0, 1
 
 aaturret:
 	Inherits@Flame: ^BuildingFlame
@@ -747,7 +837,7 @@ aaturret:
 		Offset: 10, -12
 	icon: bits/buildings-icons.png
 		Start: 19
-		Offset: 0, 0
+		Offset: 0, 1
 
 aaturret2:
 	Inherits@Flame: ^BuildingFlame
@@ -786,9 +876,9 @@ aaturret2:
 		Offset: 10, -12
 	icon: bits/buildings-icons.png
 		Start: 22
-		Offset: 0, 0
+		Offset: 0, 1
 
-field:
+field-yi:
 	Inherits@Flame: ^BuildingFlame
 	idle: bits/field.png
 	shadow-overlay: bits/field-shadow.png
@@ -833,6 +923,45 @@ field:
 		Offset: 10, 0
 	icon: bits/buildings-icons.png
 		Start: 3
+		Offset: 0, 1
+
+field-sc:
+	Inherits: field-yi
+	Inherits@Flame: ^BuildingFlame
+	idle: bits/field-sc.png
+	shadow-overlay: bits/field-shadow.png
+		ZOffset: 1768
+		Offset: 2, 3
+	charged: bits/field-sc.png
+		Length: 4
+		Tick: 100
+	loop: bits/field-sc.png
+		Start: 4
+		Length: 3
+		Reverses: True
+		Tick: 100
+	end: bits/field-sc.png
+		Frames: 4, 3, 2, 1
+		Length: 4
+		Tick: 100
+	damaged-idle: bits/field-sc.png
+		Start: 7
+	damaged-charged: bits/field-sc.png
+		Start: 7
+		Length: 3
+		Tick: 100
+	damaged-loop: bits/field-sc.png
+		Start: 11
+		Length: 3
+		Reverses: True
+		Tick: 100
+	damaged-end: bits/field-sc.png
+		Frames: 11, 10, 9, 8
+		Length: 4
+		Tick: 100
+	icon: bits/buildings-icons.png
+		Start: 3
+		Offset: 0, 1
 
 silo:
 	Inherits@Flame: ^BuildingFlame2
@@ -864,22 +993,22 @@ silo:
 		Offset: 8, -24
 	icon: bits/buildings-icons.png
 		Start: 8
-		Offset: 0, 0
+		Offset: 0, 1
 
 uplink:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 0
-	idle: bits/uplink.png
+	idle: bits/uplink-sc.png
 		Start: 0
 		ZOffset: 500
-	animation: bits/uplink.png
+	animation: bits/uplink-sc.png
 		Start: 2
 		Length: 6
 		Tick: 100
 		Reverses: true
 		ZOffset: 550
-	damaged-idle: bits/uplink.png
+	damaged-idle: bits/uplink-sc.png
 		Start: 1
 		ZOffset: 500
 	shadow-overlay: bits/uplink-shadow.png
@@ -899,7 +1028,7 @@ uplink:
 		Offset: 8, -24
 	icon: bits/buildings-icons.png
 		Start: 24
-		Offset: 0, 0
+		Offset: 0, 1
 
 storage:
 	Inherits@Flame: ^BuildingFlame
@@ -923,6 +1052,7 @@ storage:
 		Offset: 3, -5
 	icon: bits/buildings-icons.png
 		Start: 10
+		Offset: 0, 0
 
 artilleryturret:
 	Inherits@Flame: ^BuildingFlame
@@ -1006,7 +1136,7 @@ televtr2:
 	icon: bits/buildings-icons.png
 		Start: 13
 
-harbor:
+harbor-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 2, -5
@@ -1043,7 +1173,33 @@ harbor:
 		ZOffset: 1001
 	icon: bits/buildings-icons.png
 		Start: 5
-		Offset: 0, 0
+		Offset: 0, 4
+
+harbor-sc:
+	Inherits: harbor-yi
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 2, -5
+	idle: bits/harbor-sc.png
+		ZOffset: 1000
+	idle-entry: bits/harbor-sc.png
+		Start: 2
+		ZOffset: -2000
+	shadow-overlay: bits/harbor-sc-shadow.png
+		ZOffset: -1768
+		Offset: 6, 4
+	production-inprogress: bits/harbor-sc.png
+		Start: 3
+		Length: 7
+		Reverses: true
+		Tick: 80
+		ZOffset: 1500
+	damaged-idle: bits/harbor-sc.png
+		Start: 1
+		ZOffset: 1000
+	icon: bits/buildings-icons.png
+		Start: 29
+		Offset: 0, 1
 
 mother:
 	Inherits@Flame: ^BuildingFlame
@@ -1083,7 +1239,7 @@ wall:
 		Start: 1
 	icon: bits/icon.png
 
-techcenter:
+techcenter-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -9
@@ -1115,7 +1271,30 @@ techcenter:
 		Offset: 15, 8
 	icon: bits/buildings-icons.png
 		Start: 18
-		Offset: 0, 0
+		Offset: 0, 2
+
+techcenter-sc:
+	Inherits: techcenter-yi
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -9
+	idle: bits/tech-center-sc.png
+		Start: 0
+	shadow-overlay: bits/tech-center-shadow.png
+		ZOffset: 1768
+		Offset: 6, -3
+	damaged-shadow-overlay: bits/tech-center-shadow-damaged.png
+		ZOffset: 1768
+		Offset: 6, -3
+	damaged-idle: bits/tech-center-sc.png
+		Start: 1
+	animation: bits/tech-center-sc.png
+		Start: 2
+		Length: 10
+		Tick: 50
+	icon: bits/buildings-icons.png
+		Start: 18
+		Offset: 0, 2
 
 techbuilding:
 	Inherits@Flame: ^BuildingFlame2
@@ -1231,7 +1410,7 @@ refinery:
 		Offset: 15, 8
 	icon: bits/buildings-icons.png
 		Start: 23
-		Offset: 0, 0
+		Offset: 0, 1
 
 techminer:
 	Inherits@Flame: ^BuildingFlame2
