@@ -195,7 +195,7 @@ test: all
 	@echo "Checking $(MOD_ID) sprite sequences..."
 	@./utility.sh --check-missing-sprites
 
-docs: utility
+docs: engine
 	@echo
 	@echo "Generating trait documentation..."
 	@./utility.sh --docs > traits.md
@@ -206,7 +206,7 @@ docs: utility
 	@echo "Generating Lua documentation..."
 	@./utility.sh --lua-docs > lua.md
 
-bits: utility
+bits: engine
 ifneq ("$(BIT_FILES)","")
 	@echo "Adding metadata to PNG sheets..."
 	@for SPRITE in $(BIT_FILES); do \
@@ -215,7 +215,7 @@ ifneq ("$(BIT_FILES)","")
 	done
 endif
 
-check-bits: utility
+check-bits: engine
 ifneq ("$(BIT_FILES)","")
 	@echo "Checking PNG sheet metadata..."
 	@for SPRITE in $(BIT_FILES); do \
