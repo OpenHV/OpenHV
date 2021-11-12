@@ -1498,6 +1498,9 @@ REFINERY:
 		Amount: -30
 	RenderSprites:
 		PlayerPalette: green
+		Image: refinery-yi
+		FactionImages:
+			sc: refinery-sc
 	WithResourceStoragePipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true

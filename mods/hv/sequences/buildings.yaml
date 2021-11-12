@@ -121,6 +121,16 @@ base-sc:
 		Length: 3
 		Reverses: true
 		Tick: 150
+	idle-platform1: bits/platform-sc.png
+	damaged-idle-platform1: bits/platform-sc.png
+	make-platform1: bits/platform-sc.png
+	active-platform1: bits/creation-sc.png
+	damaged-active-platform1: bits/creation-damaged-sc.png
+	idle-platform2: bits/platform-sc.png
+	damaged-idle-platform2: bits/platform-sc.png
+	make-platform2: bits/platform-sc.png
+	active-platform2: bits/creation-sc.png
+	damaged-active-platform2: bits/creation-damaged-sc.png
 	icon: bits/buildings-icons.png
 		Start: 27
 		Offset: 0, 0
@@ -575,6 +585,20 @@ factory-sc:
 		Reverses: True
 		Tick: 100
 		ZOffset: 1500
+	idle-platform1: bits/platform-sc.png
+	damaged-idle-platform1: bits/platform-sc.png
+	make-platform1: bits/platform-sc.png
+	idle-platform2: bits/platform-sc.png
+	damaged-idle-platform2: bits/platform-sc.png
+	make-platform2: bits/platform-sc.png
+	idle-platform3: bits/platform-sc.png
+	damaged-idle-platform3: bits/platform-sc.png
+	make-platform3: bits/platform-sc.png
+	idle-platform4: bits/platform-sc.png
+	damaged-idle-platform4: bits/platform-sc.png
+	make-platform4: bits/platform-sc.png
+	active-creation: bits/creatn2-sc.png
+	damaged-active-creation: bits/creatn2-damaged-sc.png
 	icon: bits/buildings-icons.png
 		Start: 1
 		Offset: 0, 1
@@ -1325,7 +1349,7 @@ techbuilding:
 		Offset: 15, 8
 	icon: bits/icon.png
 
-refinery:
+refinery-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -10
@@ -1411,6 +1435,21 @@ refinery:
 	icon: bits/buildings-icons.png
 		Start: 23
 		Offset: 0, 1
+
+refinery-sc:
+	Inherits: refinery-yi
+	idle-platform1: bits/platform-sc.png
+	damaged-idle-platform1: bits/platform-sc.png
+	make-platform1: bits/platform-sc.png
+	idle-platform2: bits/platform-sc.png
+	damaged-idle-platform2: bits/platform-sc.png
+	make-platform2: bits/platform-sc.png
+	idle-platform3: bits/platform-sc.png
+	damaged-idle-platform3: bits/platform-sc.png
+	make-platform3: bits/platform-sc.png
+	idle-platform4: bits/platform-sc.png
+	damaged-idle-platform4: bits/platform-sc.png
+	make-platform4: bits/platform-sc.png
 
 techminer:
 	Inherits@Flame: ^BuildingFlame2
