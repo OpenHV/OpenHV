@@ -2,6 +2,6 @@ World:
 	LuaScript:
 		Scripts: shellmap.lua
 	MusicPlaylist:
-		StartingMusic: cinematic intro extended loop
+		BackgroundMusic: the struggle loop
 		AllowMuteBackgroundMusic: true
 		DisableWorldSounds: true
