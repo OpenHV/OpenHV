@@ -34,7 +34,7 @@ base:
 	idle: bits/base.png
 	shadow-overlay: bits/base-shadow.png
 		ZOffset: 1768
-		Offset: 7, -17
+		Offset: 7, -18
 	damaged-idle: bits/base.png
 		Start: 7
 		Length: 1
