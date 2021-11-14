@@ -830,11 +830,47 @@ turret2:
 	turret: bits/turret2.png
 		Facings: 8
 		Offset: 1, -8
-	shoot: bits/turret2.png
-		Start: 8
+	#muzzle: bits/muzzle5.png
+	#	Length: 2
+	#	Facings: 8
+	#	Tick: 50	
+	muzzle: bits/muzzle5.png
+		Combine:
+			muzzle5.png: #N
+				Start: 0
+				Length: 2
+				Offset: 3,10
+			muzzle5.png: #NW
+				Start: 2
+				Length: 2
+				Offset: 0,0
+			muzzle5.png: #W
+				Start: 4
+				Length: 2
+				Offset: 0,0
+			muzzle5.png: #SW
+				Start: 6
+				Length: 2
+				Offset: 0,0
+			muzzle5.png: #S
+				Start: 8
+				Length: 2
+				Offset: 0,0
+			muzzle5.png: #SE
+				Start: 10
+				Length: 2
+				Offset: 0,0
+			muzzle5.png: #E
+				Start: 12
+				Length: 2
+				Offset: 0,0
+			muzzle5.png: #NE
+				Start: 14
+				Length: 2
+				Offset: 0,0
 		Facings: 8
-		Tick: 100
-		Offset: 1, -8
+		Length: 2
+		Tick: 60
 	make: bits/build.png
 		Length: 39
 		Tick: 30

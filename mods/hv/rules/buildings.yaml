@@ -1027,13 +1027,11 @@ TURRET2:
 	Health:
 		HP: 55000
 	Armament:
-		Name: primary
 		Weapon: Turret2Cannon
-		LocalOffset: 600,-300,300
-	Armament@Secondary:
-		Name: secondary
-		Weapon: Turret2Cannon
-		LocalOffset: 600,200,300
+		LocalOffset: 600,-300,200, 600,200,200
+		MuzzleSequence: muzzle
+		Recoil: 85
+		RecoilRecovery: 25
 	WithRangeCircle:
 		Type: Turret
 		Width: 2
@@ -1044,16 +1042,11 @@ TURRET2:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
-	WithTurretAttackAnimation@Primary:
-		Armament: primary
-		Sequence: shoot
-	WithTurretAttackAnimation@Secondary:
-		Armament: secondary
-		Sequence: shoot
 	Turreted:
 		TurnSpeed: 120
 		RealignDelay: -1
 		RequiresCondition: !build-incomplete
+	WithMuzzleOverlay:
 
 AATURRET:
 	Inherits: ^DefenseBuilding
