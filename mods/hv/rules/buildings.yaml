@@ -1133,13 +1133,12 @@ AATURRET2:
 
 ARTILLERYTURRET:
 	Inherits: ^DefenseBuilding
-	Inherits@AutoTarget: ^AutoTargetGround
 	Selectable:
 		Bounds: 2048, 2048
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, techcenter
-		Description: Advanced base defense.\nRequires power to operate.
+		Prerequisites: radar, ~structures.sc
+		Description: Advanced base cannon.\nRequires power to operate.
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1168,13 +1167,18 @@ ARTILLERYTURRET:
 	Armament:
 		Weapon: TurretArtillery
 		LocalOffset: 1500,50,1400
-	WithRangeCircle:
-		Type: Turret
-		Width: 2
-		BorderWidth: 3
-		Range: 20c0
+	AttackOrderPower:
+		PauseOnCondition: disabled
+		Cursor: attack
+		Icon: null
+		ChargeInterval: 3000
+		Description: Artillery Strike
+		LongDesc: Fires a long range barrage across the map.
+		EndChargeSpeechNotification:
+		SelectTargetSpeechNotification: SelectTarget
+		CircleBorderWidth: 3
 	AttackTurreted:
-		PauseOnCondition: disabled || beam-incomplete
+		RequiresCondition: !build-incomplete && !disabled
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
@@ -1194,7 +1198,7 @@ FIELD:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
-		Prerequisites: techcenter
+		Prerequisites: radar, ~structures.yi
 		BuildLimit: 1
 		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\nRequires power to operate.\nMaximum 1 can be built.
 	Valued:
