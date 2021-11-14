@@ -588,9 +588,9 @@ STARPORT-YI:
 		Produces: Aircraft
 	Reservable:
 	ProvidesPrerequisite@Generic:
-		Prerequisite: aircraft
+		Prerequisite: starport
 	ProvidesPrerequisite@Faction:
-		Prerequisite: aircraft.yi
+		Prerequisite: starport.yi
 	ProductionBar:
 		ProductionType: Aircraft
 	PrimaryBuilding:
@@ -634,7 +634,7 @@ STARPORT-SC:
 	Buildable:
 		Prerequisites: radar, ~structures.sc
 	ProvidesPrerequisite@Faction:
-		Prerequisite: aircraft.sc
+		Prerequisite: starport.sc
 	-WithProductionExitOverlay:
 
 FACTORY:
@@ -979,7 +979,7 @@ TURRET:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: module, refinery, ~structures.yi
+		Prerequisites: factory, refinery, ~structures.yi
 		Description: Base defense.\nGood against vehicles.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -1012,7 +1012,7 @@ TURRET2:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: module, refinery, ~structures.sc
+		Prerequisites: factory, refinery, ~structures.sc
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -1056,7 +1056,7 @@ AATURRET:
 		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: module, radar, ~structures.yi
+		Prerequisites: module, starport, ~structures.yi
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
@@ -1101,7 +1101,7 @@ AATURRET2:
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: module, radar, ~structures.sc
+		Prerequisites: module, starport, ~structures.sc
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250

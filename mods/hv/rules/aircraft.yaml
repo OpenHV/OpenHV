@@ -7,7 +7,7 @@ PLANE1:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: radar, ~aircraft.yi
+		Prerequisites: radar, ~starport.yi
 		Description: Attack Ship armed with\na large chain gun.
 	Valued:
 		Cost: 1000
@@ -65,7 +65,7 @@ PLANE2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar, ~aircraft.yi
+		Prerequisites: radar, ~starport.yi
 		Description: Fast Attack Ship
 	Valued:
 		Cost: 1500
@@ -128,7 +128,7 @@ COPTER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: radar, ~aircraft.sc
+		Prerequisites: radar, ~starport.sc
 		Description: Small Helicopter Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -173,7 +173,7 @@ SAUCER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~aircraft.yi
+		Prerequisites: ~starport.yi
 		Description: Reconnaissance air unit.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -213,7 +213,7 @@ BANSHEE:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: techcenter, ~aircraft.sc
+		Prerequisites: techcenter, ~starport.sc
 		Description: Heavy Helicopter Gunship
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -252,7 +252,7 @@ COPTER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar, ~aircraft.sc
+		Prerequisites: radar, ~starport.sc
 		Description: Vehicle Transport Helicopter.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -310,7 +310,7 @@ BALLOON:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~aircraft.sc
+		Prerequisites: ~starport.sc
 		Description: Reconnaissance air unit.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -352,7 +352,7 @@ DROPSHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar, ~aircraft.yi
+		Prerequisites: radar, ~starport.yi
 		Description: Vehicle Transport Shuttle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
