@@ -51,14 +51,21 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 		void INotifySupportPower.Charged(Actor self)
 		{
-			body.PlayCustomAnimation(self, info.ChargeSequence,
-				() => body.PlayCustomAnimationRepeating(self, info.LoopSequence));
+			if (!IsTraitDisabled)
+				body.PlayCustomAnimation(self, info.ChargeSequence,
+					() => body.PlayCustomAnimationRepeating(self, info.LoopSequence));
 		}
 
 		void INotifySupportPower.Activated(Actor self)
 		{
-			if (!string.IsNullOrEmpty(info.EndSequence))
-				body.PlayCustomAnimation(self, info.EndSequence);
+			if (!IsTraitDisabled)
+				if (!string.IsNullOrEmpty(info.EndSequence))
+					body.PlayCustomAnimation(self, info.EndSequence);
+		}
+
+		protected override void TraitDisabled(Actor self)
+		{
+			body.CancelCustomAnimation(self);
 		}
 	}
 }

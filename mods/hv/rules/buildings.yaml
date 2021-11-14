@@ -1218,6 +1218,7 @@ FIELD:
 		Range: 4c0
 	GrantExternalConditionPower@ForceField:
 		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		ChargeInterval: 3000
 		Description: Force Field
 		LongDesc: Makes a group of units invulnerable\nfor 30 seconds.
@@ -1238,6 +1239,7 @@ FIELD:
 		LaunchSound: force_field_autistic-lucario.wav
 	SupportPowerChargeBar:
 	WithSupportPowerChargedAnimation:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	Power:
 		Amount: -200
 	MustBeDestroyed:
