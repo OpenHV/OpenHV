@@ -40,7 +40,7 @@ SCOUT2:
 		Description: Fast anti-vehicle pod.\nShoots rockets.
 		Prerequisites: module
 	Valued:
-		Cost: 300
+		Cost: 225
 	Tooltip:
 		Name: Rocket Pod
 	UpdatesPlayerStatistics:
@@ -113,7 +113,7 @@ SNIPERPOD:
 		Description: Long range sniper pod.
 		Prerequisites: module, radar
 	Valued:
-		Cost: 600
+		Cost: 500
 	Tooltip:
 		Name: Sniper Pod
 	UpdatesPlayerStatistics:
