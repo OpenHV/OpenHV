@@ -715,7 +715,7 @@ ARTIL3:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
-		Prerequisites: ~factory.yi, radar, techcenter
+		Prerequisites: ~disabled
 		Description: Double barreled artillery tank.
 	Health:
 		HP: 35000

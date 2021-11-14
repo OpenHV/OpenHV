@@ -114,10 +114,6 @@ TANK15:
 	Buildable:
 		Prerequisites: ~disabled
 
-ARTIL3:
-	Buildable:
-		Prerequisites: ~disabled
-
 MISSILE_TANK:
 	Buildable:
 		Prerequisites: ~disabled
