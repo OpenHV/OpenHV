@@ -403,7 +403,7 @@ MODULE:
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Selectable:
-		Bounds: 2048, 2048
+		Bounds: 2048, 2448
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -1679,7 +1679,7 @@ HARBOR-YI:
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
-		Bounds: 3072, 3072
+		Bounds: 3072, 2348, 0, -560
 	Buildable:
 		Prerequisites: factory, ~structures.yi
 		Queue: Building
