@@ -67,6 +67,8 @@ icon:
 	droppods: bits/droppods-icon.png
 	airstrike: bits/airstrike-icon.png
 	radar: bits/radar-icon.png
+	howitzer: bits/buildings-icons.png
+		Start: 15
 	null: bits/null.png
 
 outline:

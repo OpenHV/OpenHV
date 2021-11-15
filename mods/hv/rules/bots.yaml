@@ -40,6 +40,8 @@ Player:
 			harbor-sc: 1
 			storage: 5
 			field: 1
+			artilleryturret: 1
+			uplink: 1
 			silo: 1
 		BuildingFractions:
 			refinery: 2
@@ -58,7 +60,8 @@ Player:
 			bunker2: 7
 			turret: 5
 			aaturret: 3
-			artilleryturret: 5
+			artilleryturret: 1
+			uplink: 1
 			field: 1
 			silo: 1
 	BuildingRepairBotModule:

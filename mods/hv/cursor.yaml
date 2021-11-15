@@ -341,3 +341,7 @@ Cursors:
 			Start: 13
 			X: 0
 			Y: 0
+		howitzer-blocked:
+			Start: 14
+			X: 0
+			Y: 0
