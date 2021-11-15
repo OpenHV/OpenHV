@@ -1170,6 +1170,7 @@ ARTILLERYTURRET:
 		LocalOffset: 1500,50,1400
 	AttackOrderPower:
 		PauseOnCondition: disabled
+		AttackingCondition: attacking
 		Cursor: attack
 		BlockedCursor: howitzer-blocked
 		Icon: howitzer
@@ -1184,6 +1185,7 @@ ARTILLERYTURRET:
 		CircleBorderWidth: 3
 	AttackTurreted:
 		RequiresCondition: !build-incomplete && !disabled
+		PauseOnCondition: !attacking
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:

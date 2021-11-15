@@ -38,13 +38,19 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Cursor to display when out of range.")]
 		public readonly string BlockedCursor = "attack-blocked";
 
+		[GrantedConditionReference]
+		[Desc("The condition to grant to self while attacking.")]
+		public readonly string AttackingCondition = null;
+
 		public override object Create(ActorInitializer init) { return new AttackOrderPower(init.Self, this); }
 	}
 
 	class AttackOrderPower : SupportPower, INotifyCreated, INotifyBurstComplete
 	{
 		readonly AttackOrderPowerInfo info;
+
 		AttackBase attack;
+		int attackToken = Actor.InvalidConditionToken;
 
 		public AttackOrderPower(Actor self, AttackOrderPowerInfo info)
 			: base(self, info)
@@ -62,6 +68,9 @@ namespace OpenRA.Mods.HV.Traits
 			base.Activate(self, order, manager);
 			PlayLaunchSounds();
 
+			if (!string.IsNullOrEmpty(info.AttackingCondition) && attackToken == Actor.InvalidConditionToken)
+				attackToken = self.GrantCondition(info.AttackingCondition);
+
 			attack.AttackTarget(order.Target, AttackSource.Default, false, false, true);
 		}
 
@@ -75,6 +84,9 @@ namespace OpenRA.Mods.HV.Traits
 		void INotifyBurstComplete.FiredBurst(Actor self, in Target target, Armament a)
 		{
 			self.World.IssueOrder(new Order("Stop", self, false));
+
+			if (attackToken != Actor.InvalidConditionToken)
+				attackToken = self.RevokeCondition(attackToken);
 		}
 	}
 
