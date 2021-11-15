@@ -106,9 +106,12 @@ namespace OpenRA.Mods.HV.Traits
 		bool IsValidTarget(World world, CPos cell)
 		{
 			var pos = world.Map.CenterOfCell(cell);
-			var range = attack.GetMaximumRange().LengthSquared;
+			var minRange = attack.GetMinimumRange().LengthSquared;
+			var maxRange = attack.GetMaximumRange().LengthSquared;
 
-			return world.Map.Contains(cell) && instance.Instances.Any(a => !a.IsTraitPaused && (a.Self.CenterPosition - pos).HorizontalLengthSquared < range);
+			return world.Map.Contains(cell) && instance.Instances.Any(a => !a.IsTraitPaused
+				&& (a.Self.CenterPosition - pos).HorizontalLengthSquared > minRange
+				&& (a.Self.CenterPosition - pos).HorizontalLengthSquared < maxRange);
 		}
 
 		protected override IEnumerable<Order> OrderInner(World world, CPos cell, int2 worldPixel, MouseInput mi)
