@@ -1171,7 +1171,7 @@ ARTILLERYTURRET:
 	AttackOrderPower:
 		PauseOnCondition: disabled
 		Cursor: attack
-		#BlockedCursor: howitzer-blocked
+		BlockedCursor: howitzer-blocked
 		Icon: howitzer
 		ChargeInterval: 3000
 		DisplayRadarPing: true

@@ -34,6 +34,10 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Range circle border width.")]
 		public readonly float CircleBorderWidth = 3;
 
+		[CursorReference]
+		[Desc("Cursor to display when out of range.")]
+		public readonly string BlockedCursor = "attack-blocked";
+
 		public override object Create(ActorInitializer init) { return new AttackOrderPower(init.Self, this); }
 	}
 
@@ -50,7 +54,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public override void SelectTarget(Actor self, string order, SupportPowerManager manager)
 		{
-			self.World.OrderGenerator = new SelectAttackPowerTarget(self, order, manager, info.Cursor, MouseButton.Left, attack);
+			self.World.OrderGenerator = new SelectAttackPowerTarget(self, order, manager, info.Cursor, info.BlockedCursor, MouseButton.Left, attack);
 		}
 
 		public override void Activate(Actor self, Order order, SupportPowerManager manager)
@@ -84,7 +88,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly MouseButton expectedButton;
 		readonly AttackBase attack;
 
-		public SelectAttackPowerTarget(Actor self, string order, SupportPowerManager manager, string cursor, MouseButton button, AttackBase attack)
+		public SelectAttackPowerTarget(Actor self, string order, SupportPowerManager manager, string cursor, string cursorBlocked, MouseButton button, AttackBase attack)
 		{
 			// Clear selection if using Left-Click Orders
 			if (Game.Settings.Game.UseClassicMouseStyle)
@@ -94,9 +98,9 @@ namespace OpenRA.Mods.HV.Traits
 			this.manager = manager;
 			this.order = order;
 			this.cursor = cursor;
+			this.cursorBlocked = cursorBlocked;
 			expectedButton = button;
 			this.attack = attack;
-			cursorBlocked = cursor + "-blocked";
 		}
 
 		bool IsValidTarget(World world, CPos cell)
