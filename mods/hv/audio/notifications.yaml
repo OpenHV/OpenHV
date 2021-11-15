@@ -17,6 +17,9 @@ Speech:
 		Cancelled: cancel
 		DroppodReady: droppod_ready
 		EnemyUnitsDetected: enemy_in_range
+		HowitzerDetected: howitzer_detected
+		HowitzerCharging: howitzer_prepping
+		HowitzerReady: howitzer_ready
 		MinerUnderAttack: miner_under_attack
 		MiningTowerUnderAttack: mining_tower_under_attack
 		InsufficientFunds: insufficient_funding

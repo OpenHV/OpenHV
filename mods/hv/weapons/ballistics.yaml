@@ -237,17 +237,18 @@ TurretArtillery:
 	Report: heavycannonfire01.wav
 	ReloadDelay: 150
 	Range: 64c0
-	Burst: 6
-	BurstDelays: 3
+	MinRange: 12c0
+	Burst: 5
+	BurstDelays: 20
 	Projectile: Bullet
 		Speed: 300
 		LaunchAngle: 100
-		Inaccuracy: 2c0
+		Inaccuracy: 6c0
 		Image: bullet2
 		Shadow: true
 	Warhead@Damage: SpreadDamage
 		Damage: 30000
-		Spread: 750
+		Spread: 850
 		Versus:
 			None: 150
 			Steel: 65

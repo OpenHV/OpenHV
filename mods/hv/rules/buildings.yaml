@@ -1138,11 +1138,12 @@ ARTILLERYTURRET:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.sc
-		Description: Advanced base cannon.\nRequires power to operate.
+		Description: Advanced base cannon.\nRequires power to operate.\nMaximum 1 can be built
+		BuildLimit: 1
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Artillery Turret
+		Name: Grand Howitzer
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1150,7 +1151,7 @@ ARTILLERYTURRET:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -256,-256,0,   256,-256,0,   -256,256,0,   256,256,0
 	Health:
-		HP: 65000
+		HP: 100000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 4c0
@@ -1170,12 +1171,16 @@ ARTILLERYTURRET:
 	AttackOrderPower:
 		PauseOnCondition: disabled
 		Cursor: attack
-		Icon: null
+		#BlockedCursor: howitzer-blocked
+		Icon: howitzer
 		ChargeInterval: 3000
+		DisplayRadarPing: true
 		Description: Artillery Strike
 		LongDesc: Fires a long range barrage across the map.
-		EndChargeSpeechNotification:
+		BeginChargeSpeechNotification: HowitzerCharging
+		EndChargeSpeechNotification: HowitzerReady
 		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: HowitzerDetected
 		CircleBorderWidth: 3
 	AttackTurreted:
 		RequiresCondition: !build-incomplete && !disabled

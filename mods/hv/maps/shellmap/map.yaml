@@ -112,22 +112,14 @@ Actors:
 	Actor27: artilleryturret
 		Location: 77,28
 		Faction: Random
-		TurretFacing: 570
 		Owner: Synaty Corporation
+		TurretFacing: 372
 	Actor28: televtr2
 		Location: 64,31
 		Faction: Random
 		Owner: Synaty Corporation
 	Actor29: televatr
 		Location: 89,102
-		Faction: Random
-		Owner: Yuruki Industries
-	Actor35: aaturret2
-		Location: 49,100
-		Faction: Random
-		Owner: Yuruki Industries
-	Actor36: artilleryturret
-		Location: 83,99
 		Faction: Random
 		Owner: Yuruki Industries
 	Actor37: generator
@@ -725,6 +717,7 @@ Actors:
 		Location: 85,92
 		Faction: Random
 		Owner: Yuruki Industries
+		TurretFacing: 896
 	Actor254: turret
 		Location: 48,87
 		Faction: Random
@@ -733,6 +726,7 @@ Actors:
 		Location: 39,90
 		Faction: Random
 		Owner: Yuruki Industries
+		TurretFacing: 150
 	Actor256: aaturret
 		Location: 43,96
 		Faction: Random
@@ -743,10 +737,6 @@ Actors:
 		Owner: Yuruki Industries
 	Actor258: aaturret
 		Location: 57,106
-		Faction: Random
-		Owner: Yuruki Industries
-	Actor259: artilleryturret
-		Location: 39,98
 		Faction: Random
 		Owner: Yuruki Industries
 	Actor260: aaturret2
@@ -900,9 +890,6 @@ Actors:
 	Actor309: techcenter
 		Owner: Synaty Corporation
 		Location: 75,32
-	Actor310: field
-		Owner: Synaty Corporation
-		Location: 79,25
 	Actor305: generator
 		Owner: Synaty Corporation
 		Location: 52,21
@@ -969,5 +956,48 @@ Actors:
 	Actor328: storage
 		Owner: Yuruki Industries
 		Location: 52,123
+	Actor310: bunker
+		Owner: Yuruki Industries
+		Location: 88,87
+	Actor329: bunker
+		Owner: Yuruki Industries
+		Location: 77,84
+	Actor330: bunker
+		Owner: Yuruki Industries
+		Location: 45,86
+	Actor331: bunker
+		Owner: Yuruki Industries
+		Location: 37,87
+	Actor332: bunker
+		Owner: Yuruki Industries
+		Location: 33,92
+	Actor333: bunker
+		Owner: Yuruki Industries
+		Location: 96,93
+	Actor334: turret
+		Owner: Yuruki Industries
+		Location: 35,96
+		TurretFacing: 134
+	Actor335: turret
+		Owner: Yuruki Industries
+		Location: 84,97
+		TurretFacing: 935
+	Actor336: aaturret
+		Owner: Yuruki Industries
+		Location: 50,101
+	Actor337: aaturret
+		Owner: Yuruki Industries
+		Location: 80,91
+	Actor338: aaturret2
+		Owner: Synaty Corporation
+		Location: 79,26
+		TurretFacing: 626
+	Actor339: turret2
+		Owner: Synaty Corporation
+		Location: 46,30
+		TurretFacing: 380
+	Actor340: techcenter
+		Owner: Yuruki Industries
+		Location: 58,113
 
 Rules: rules.yaml
