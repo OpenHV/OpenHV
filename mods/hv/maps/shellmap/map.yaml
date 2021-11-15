@@ -65,6 +65,7 @@ Actors:
 		Location: 59,118
 		Faction: Random
 		Owner: Yuruki Industries
+		FreeActor: False
 	Actor9: base
 		Location: 69,109
 		Faction: Random
@@ -99,10 +100,6 @@ Actors:
 		Owner: Synaty Corporation
 	Actor18: factory-sc
 		Location: 71,31
-		Faction: Random
-		Owner: Synaty Corporation
-	Actor19: module
-		Location: 67,31
 		Faction: Random
 		Owner: Synaty Corporation
 	Actor20: radar-sc
@@ -693,6 +690,7 @@ Actors:
 		Location: 69,13
 		Faction: Random
 		Owner: Synaty Corporation
+		FreeActor: False
 	Actor247: starport-yi
 		Location: 86,112
 		Faction: Random
@@ -999,5 +997,8 @@ Actors:
 	Actor340: techcenter
 		Owner: Yuruki Industries
 		Location: 58,113
+	Actor341: module
+		Owner: Synaty Corporation
+		Location: 67,32
 
 Rules: rules.yaml

@@ -477,6 +477,9 @@ MODULE:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
+		Image: module-yi
+		FactionImages:
+			sc: module-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -489,6 +492,9 @@ MODULE:
 		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithProductionOverlay@base:
+		RequiresCondition: !build-incomplete && !burning
+		Sequence: production-inprogress
 
 MINER2:
 	Inherits: ^BaseBuilding

@@ -62,11 +62,6 @@ Actors:
 		Facing: 384
 		Location: 26,34
 		Owner: Synaty Corporation
-	Refinery: refinery
-		Location: 28,40
-		FreeActor: False
-		Faction: yi
-		Owner: Synaty Corporation
 	Actor41: trees17
 		Owner: Neutral
 		Location: 46,40
@@ -334,5 +329,9 @@ Actors:
 	Storage: storage
 		Owner: Synaty Corporation
 		Location: 24,42
+	Refinery: refinery
+		Owner: Synaty Corporation
+		Location: 29,40
+		FreeActor: False
 
 Rules: hv|rules/campaign.yaml, rules.yaml
