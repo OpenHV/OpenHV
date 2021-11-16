@@ -33,7 +33,7 @@ base:
 		Tick: 50
 	idle: bits/base.png
 	shadow-overlay: bits/base-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, -18
 	damaged-idle: bits/base.png
 		Start: 7
@@ -143,14 +143,14 @@ generator-yi:
 		Length: 15
 		Tick: 80
 	shadow-overlay: bits/generator-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 12, 11
 	damaged-idle: bits/generator.png
 		Start: 15
 		Length: 1
 	damaged-shadow-overlay: bits/generator-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 12, 11
 	make: build.png
 		Length: 39
@@ -186,13 +186,13 @@ radar-yi:
 		Offset: 0, -4
 	idle: bits/radar.png
 	shadow-overlay: bits/radar-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, 0
 	damaged-idle: bits/radar.png
 		Start: 1
 	damaged-shadow-overlay: bits/radar-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, 0
 	make: bits/build.png
 		Length: 39
@@ -212,7 +212,7 @@ radar-sc:
 		Offset: 0, -4
 	idle: bits/radar2.png
 	shadow-overlay: bits/radar2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, 0
 	damaged-idle: bits/radar2.png
 		Start: 1
@@ -294,13 +294,13 @@ module-yi:
 		Start: 8
 	shadow-overlay: bits/module-shadow.png
 		Start: 0
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, 14
 	damaged-idle: bits/module.png
 		Start: 9
 	damaged-shadow-overlay: bits/module-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, 14
 	production-inprogress: bits/module.png
 		Start: 8
@@ -328,11 +328,11 @@ module-sc:
 	idle: bits/module-sc.png
 	shadow-overlay: bits/module-shadow-sc.png
 		Start: 0
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 7
 	damaged-shadow-overlay: bits/module-shadow-sc.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 7
 	production-inprogress: bits/module-sc.png
 		Start: 10
@@ -413,13 +413,13 @@ starport-yi:
 		Length: *
 		Tick: 35
 	shadow-overlay: bits/starport-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 3
 	damaged-idle: bits/starport.png
 		Start: 22
 	damaged-shadow-overlay: bits/starport-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 3
 	make: bits/build.png
 		Length: 39
@@ -446,13 +446,13 @@ starport-sc:
 		Length: 5
 		Tick: 120
 	shadow-overlay: bits/starport-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 3
 	damaged-idle: bits/starport2.png
 		Start: 5
 	damaged-shadow-overlay: bits/starport-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 3
 	make: bits/build.png
 		Length: 39
@@ -478,7 +478,7 @@ factory2:
 	idle-online: bits/factory2.png
 	idle-offline: bits/factory2.png
 	shadow-overlay: bits/factory2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, -12
 	damaged-idle-online: bits/factory2.png
 		Start: 15
@@ -486,7 +486,7 @@ factory2:
 		Start: 15
 	damaged-shadow-overlay: bits/factory2-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, -12
 	production-inprogress: bits/factory2.png
 		Start: 1
@@ -587,7 +587,7 @@ factory-sc:
 	idle-online: bits/factory-sc.png
 	idle-offline: bits/factory-sc.png
 	shadow-overlay: bits/factory2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, -12
 	damaged-idle-online: bits/factory-sc.png
 		Start: 15
@@ -595,7 +595,7 @@ factory-sc:
 		Start: 15
 	damaged-shadow-overlay: bits/factory2-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, -12
 	production-inprogress: bits/factory-sc.png
 		Start: 1
@@ -635,7 +635,7 @@ factory-yi:
 	idle-online: bits/factory3.png
 	idle-offline: bits/factory3.png
 	shadow-overlay: bits/factory3-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, -7
 	damaged-idle-online: bits/factory3.png
 		Start: 11
@@ -643,7 +643,7 @@ factory-yi:
 		Start: 11
 	damaged-shadow-overlay: bits/factory3-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 7, -7
 	production-inprogress: bits/factory3.png
 		Start: 5
@@ -741,7 +741,7 @@ bunker:
 	idle: bits/bunker.png
 		Start: 0
 	shadow-overlay: bits/bunker-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 6
 	damaged-idle: bits/bunker.png
 		Start: 1
@@ -766,7 +766,7 @@ bunker2:
 	idle: bits/bunker2.png
 		Start: 0
 	shadow-overlay: bits/bunker2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 2
 	damaged-idle: bits/bunker2.png
 		Start: 1
@@ -791,7 +791,7 @@ turret:
 	idle: bits/turret.png
 		Start: 0
 	shadow-overlay: bits/turret-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 3
 	damaged-idle: bits/turret.png
 		Start: 1
@@ -823,7 +823,7 @@ turret2:
 	idle: bits/turret.png
 		Start: 0
 	shadow-overlay: bits/turret-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 5, 3
 	damaged-idle: bits/turret.png
 		Start: 1
@@ -856,11 +856,11 @@ aaturret:
 	idle: bits/aa-turret.png
 		Start: 0
 	shadow-overlay: bits/aa-turret2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 1, -2
 	damaged-shadow-overlay: bits/aa-turret2-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 1, -2
 	damaged-idle: bits/aa-turret2.png
 		Start: 1
@@ -894,11 +894,11 @@ aaturret2:
 	idle: bits/aa-turret2.png
 		Start: 0
 	shadow-overlay: bits/aa-turret2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 1, -2
 	damaged-shadow-overlay: bits/aa-turret2-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 1, -2
 	damaged-idle: bits/aa-turret2.png
 		Start: 1
@@ -930,7 +930,7 @@ field-yi:
 	Inherits@Flame: ^BuildingFlame
 	idle: bits/field.png
 	shadow-overlay: bits/field-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 3
 	charged: bits/field.png
 		Length: 4
@@ -978,7 +978,7 @@ field-sc:
 	Inherits@Flame: ^BuildingFlame
 	idle: bits/field-sc.png
 	shadow-overlay: bits/field-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 3
 	charged: bits/field-sc.png
 		Length: 4
@@ -1031,11 +1031,11 @@ silo:
 	damaged-idle: bits/silo.png
 		Start: 1
 	shadow-overlay: bits/silo-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 12,12
 	damaged-shadow-overlay: bits/silo-shadow.png
 		Start: 1
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 12,12
 	make: bits/build.png
 		Length: 39
@@ -1070,7 +1070,7 @@ uplink:
 		Start: 1
 		ZOffset: 500
 	shadow-overlay: bits/uplink-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 16, 34
 	make: bits/build.png
 		Length: 39
@@ -1092,7 +1092,7 @@ storage:
 	Inherits@Flame: ^BuildingFlame
 	idle: bits/storage.png
 	shadow-overlay: bits/storage-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 3, 4
 	stages: bits/storage.png
 		Length: 14
@@ -1119,7 +1119,7 @@ artilleryturret:
 	idle: bits/artilery2.png
 		Start: 0
 	shadow-overlay: bits/artilery2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 4
 	damaged-idle: bits/artilery2.png
 		Start: 1
@@ -1151,7 +1151,7 @@ televatr:
 	idle: bits/televatr.png
 		Start: 15
 	shadow-overlay: bits/televatr-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 3, 3
 	damaged-idle: bits/televatr.png
 		Start: 16
@@ -1176,7 +1176,7 @@ televtr2:
 	idle: bits/televtr2.png
 		Start: 7
 	shadow-overlay: bits/televtr2-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 3, 3
 	damaged-idle: bits/televtr2.png
 		Start: 14
@@ -1304,10 +1304,10 @@ techcenter-yi:
 	idle: bits/tech-center.png
 		Start: 0
 	shadow-overlay: bits/tech-center-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 6, -3
 	damaged-shadow-overlay: bits/tech-center-shadow-damaged.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 6, -3
 	damaged-idle: bits/tech-center.png
 		Start: 1
@@ -1339,10 +1339,10 @@ techcenter-sc:
 	idle: bits/tech-center-sc.png
 		Start: 0
 	shadow-overlay: bits/tech-center-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 6, -3
 	damaged-shadow-overlay: bits/tech-center-shadow-damaged.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 6, -3
 	damaged-idle: bits/tech-center-sc.png
 		Start: 1
@@ -1361,7 +1361,7 @@ techbuilding:
 	idle: bits/tech-building.png
 		Start: 0
 	shadow-overlay: bits/tech-building-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 0
 	damaged-idle: bits/tech-building.png
 		Start: 1
@@ -1390,7 +1390,7 @@ refinery-yi:
 	idle: bits/refinery.png
 		Start: 0
 	shadow-overlay: bits/refinery-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 2, 1
 	damaged-idle: bits/refinery.png
 		Start: 1
@@ -1500,11 +1500,11 @@ techminer:
 		Length: 5
 		Tick: 200
 		Reverses: True
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 8,13
 	damaged-shadow-overlay: bits/techminer-shadow.png
 		Start: 5
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 8,13
 	flame:
 		Offset: 3, -4
@@ -1524,7 +1524,7 @@ techcomlink:
 		Length: 4
 		Tick: 200
 	shadow-overlay: bits/comlink-shadow.png
-		ZOffset: 1768
+		ZOffset: -1768
 		Offset: 4, 14
 	flame:
 		Offset: 3, -4
