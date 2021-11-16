@@ -1293,7 +1293,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~structures.yi
+		Prerequisites: techcenter, ~structures.sc
 		BuildLimit: 1
 		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
 	Building:
@@ -1352,6 +1352,9 @@ SILO:
 		Palette: shadow
 		IsDecoration: true
 		RequiresCondition: !build-incomplete
+	WithIdleOverlay@red_light:
+		Sequence: animation_red_light
+		RequiresCondition: !build-incomplete
 
 UPLINK:
 	Inherits: ^BaseBuilding
@@ -1367,7 +1370,7 @@ UPLINK:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~structures.sc
+		Prerequisites: techcenter, ~structures.yi
 		BuildLimit: 1
 		Description: Orders an orbital railgun strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Orbital Railgun
 	Building:
