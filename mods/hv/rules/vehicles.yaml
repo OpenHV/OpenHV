@@ -786,11 +786,10 @@ BUILDER:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	RenderSprites:
-		Image: builder1
 		PlayerPalette: green
-	-WithFacingSpriteBody:
-	WithRandomFacingSpriteBody:
-		Images: builder1, builder2, builder3, builder4, builder5
+		Image: builder1
+		FactionImages:
+			sc: builder4
 
 MINER:
 	Inherits: ^Vehicle
