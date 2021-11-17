@@ -241,7 +241,7 @@ RADAR-YI:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
-		Prerequisites: generator, refinery, ~structures.yi
+		Prerequisites: generator, storage, ~structures.yi
 		Description: Provides an overview\nof the battlefield.\nCalls in reinforcements.\nRequires power to operate.
 	Valued:
 		Cost: 1800
@@ -312,7 +312,7 @@ RADAR-YI:
 RADAR-SC:
 	Inherits: RADAR-YI
 	Buildable:
-		Prerequisites: generator, refinery, ~structures.sc
+		Prerequisites: generator, storage, ~structures.sc
 	-AirstrikePower:
 	DropPodsPower:
 		Cursor: droppod
@@ -657,7 +657,7 @@ FACTORY-YI:
 	Selectable:
 		Bounds: 2048, 4096
 	Buildable:
-		Prerequisites: module, refinery, ~structures.yi
+		Prerequisites: module, storage, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds vehicles.
@@ -865,7 +865,7 @@ FACTORY-YI:
 FACTORY-SC:
 	Inherits: FACTORY-YI
 	Buildable:
-		Prerequisites: module, refinery, ~structures.sc
+		Prerequisites: module, storage, ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.sc
 	RenderSprites:
@@ -935,7 +935,7 @@ BUNKER:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: module, refinery, ~structures.yi
+		Prerequisites: module, storage, ~structures.yi
 		Description: Basic base defense.\nGood against pods.\nRequires power to operate.
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
@@ -976,7 +976,7 @@ BUNKER:
 BUNKER2:
 	Inherits: BUNKER
 	Buildable:
-		Prerequisites: module, refinery, ~structures.sc
+		Prerequisites: module, storage, ~structures.sc
 	AttackGarrisoned:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 
@@ -985,7 +985,7 @@ TURRET:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, refinery, ~structures.yi
+		Prerequisites: factory, storage, ~structures.yi
 		Description: Base defense.\nGood against vehicles.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -1018,7 +1018,7 @@ TURRET2:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, refinery, ~structures.sc
+		Prerequisites: factory, storage, ~structures.sc
 		Description: Base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1000
@@ -1434,76 +1434,19 @@ STORAGE:
 	Selectable:
 		Bounds: 2048, 2048
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Buildable:
-		BuildPaletteOrder: 35
-		Queue: Building
-		Prerequisites: refinery
-		Description: Stores excess refined\nresources.
-	Valued:
-		Cost: 300
-	Targetable:
-		TargetTypes: Ground, Structure
-	Tooltip:
-		Name: Storage
-	Health:
-		HP: 30000
-	Armor:
-		Type: Steel
-	RevealsShroud:
-		Range: 4c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-	StoresResources:
-		Capacity: 8000
-	-WithSpriteBody:
-	WithResourceLevelSpriteBody:
-		Sequence: stages
-	Power:
-		Amount: -20
-	RenderSprites:
-		PlayerPalette: green
-	WithResourceStoragePipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 4
-		FullSequence: pip-yellow
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-
-REFINERY:
-	Inherits: ^BaseBuilding
-	Inherits@Shape: ^2x2Shape
-	Inherits@Flame: ^BuildingFlame
-	Selectable:
-		Bounds: 2048, 2048
-	Building:
 		Footprint: ==+= +xx= =xx+ =+==
 		Dimensions: 4,4
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
 		Prerequisites: generator
-		Description: Processes resources.
+		Description: Stores excess refined\nresources.
 	Valued:
 		Cost: 1400
 	Targetable:
 		TargetTypes: Ground, Structure
 	Tooltip:
-		Name: Refinery
+		Name: Storage
 	Health:
 		HP: 55000
 	Armor:
@@ -1514,20 +1457,13 @@ REFINERY:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	StoresResources:
-		Capacity: 5000
 	Power:
 		Amount: -30
 	RenderSprites:
 		PlayerPalette: green
-		Image: refinery-yi
+		Image: storage-yi
 		FactionImages:
-			sc: refinery-sc
-	WithResourceStoragePipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 8
-		FullSequence: pip-yellow
+			sc: storage-sc
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -1551,10 +1487,6 @@ REFINERY:
 		ExitCell: 1, 3
 	AcceptsDeliveredResources:
 		DeliveryVehicleType: tanker2
-	WithIdleOverlay@animation:
-		Sequence: animation
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
 	FreeActorWithEffect:
 		Actor: miner
 		SpawnOffset: 2,3

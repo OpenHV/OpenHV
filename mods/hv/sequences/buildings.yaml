@@ -1088,30 +1088,6 @@ uplink:
 		Start: 24
 		Offset: 0, 1
 
-storage:
-	Inherits@Flame: ^BuildingFlame
-	idle: bits/storage.png
-	shadow-overlay: bits/storage-shadow.png
-		ZOffset: 1768
-		Offset: 3, 4
-	stages: bits/storage.png
-		Length: 14
-	damaged-stages: bits/storage.png
-		Start: 14
-	make: bits/build.png
-		Length: 39
-		Tick: 30
-		ZOffset: 2000
-	make-overlay: bits/build-vanish.png
-		Length: 26
-		Tick: 30
-		ZOffset: 2000
-	flame:
-		Offset: 3, -5
-	icon: bits/buildings-icons.png
-		Start: 10
-		Offset: 0, 0
-
 artilleryturret:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
@@ -1383,21 +1359,22 @@ techbuilding:
 		Offset: 15, 8
 	icon: bits/icon.png
 
-refinery-yi:
+storage-yi:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
-		Offset: 0, -10
-	idle: bits/refinery.png
+		Offset: 0, -1
+	idle: bits/storage-yi.png
 		Start: 0
-	shadow-overlay: bits/refinery-shadow.png
+	shadow-overlay: bits/storage-yi-shadow.png
 		ZOffset: 1768
 		Offset: 2, 1
-	damaged-idle: bits/refinery.png
+	damaged-idle: bits/storage-yi.png
 		Start: 1
-	animation: bits/refinery.png
-		Start: 2
-		Length: 3
-		Tick: 200
+	animation: bits/storage-yi.png
+		Frames: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2
+		Length: *
+		Reverses: True
+		Tick: 80
 	make: bits/build.png
 		Length: 39
 		Tick: 30
@@ -1470,8 +1447,18 @@ refinery-yi:
 		Start: 23
 		Offset: 0, 1
 
-refinery-sc:
-	Inherits: refinery-yi
+storage-sc:
+	Inherits: storage-yi
+	Defaults:
+		Offset: 0, -1
+	idle: bits/storage-sc.png
+		Start: 13
+	damaged-idle: bits/storage-sc.png
+		Start: 14
+	animation: bits/storage-sc.png
+		Frames: 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+		Length: *
+		Tick: 60
 	idle-platform1: bits/platform-sc.png
 	damaged-idle-platform1: bits/platform-sc.png
 	make-platform1: bits/platform-sc.png
@@ -1484,6 +1471,9 @@ refinery-sc:
 	idle-platform4: bits/platform-sc.png
 	damaged-idle-platform4: bits/platform-sc.png
 	make-platform4: bits/platform-sc.png
+	icon: bits/buildings-icons.png
+		Start: 10
+		Offset: 0, 0
 
 techminer:
 	Inherits@Flame: ^BuildingFlame2

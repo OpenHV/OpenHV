@@ -9,7 +9,7 @@
 
 BaseBuildings = { "base", "generator", "miner2", "module" }
 
-Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Storage, Refinery}
+Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Generator4, Storage}
 
 Civilians = { TechMiner1, TechMiner2 }
 
@@ -22,9 +22,9 @@ Tick = function()
 	end
 
 	if not HasMiner and not Mining and HasPower and DateTime.GameTime % DateTime.Seconds(20) == 0 then
-		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "refinery") and actor.Owner == player end)
+		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "storage") and actor.Owner == player end)
 		if #miners == 0 then
-			Media.DisplayMessage("Build a refinery to collect resources.", "Reminder")
+			Media.DisplayMessage("Build a storage to collect resources.", "Reminder")
 			HasMiner = false
 		else
 			HasMiner = true

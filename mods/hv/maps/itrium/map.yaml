@@ -326,10 +326,10 @@ Actors:
 	Generator3: generator
 		Owner: Synaty Corporation
 		Location: 35,43
-	Storage: storage
+	Generator4: generator
 		Owner: Synaty Corporation
 		Location: 24,42
-	Refinery: refinery
+	Storage: storage
 		Owner: Synaty Corporation
 		Location: 29,40
 		FreeActor: False
