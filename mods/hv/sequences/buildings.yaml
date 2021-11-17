@@ -1057,16 +1057,16 @@ uplink:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 0
-	idle: bits/uplink-sc.png
+	idle: bits/uplink.png
 		Start: 0
 		ZOffset: 500
-	animation: bits/uplink-sc.png
+	animation: bits/uplink.png
 		Start: 2
 		Length: 6
 		Tick: 100
 		Reverses: true
 		ZOffset: 550
-	damaged-idle: bits/uplink-sc.png
+	damaged-idle: bits/uplink.png
 		Start: 1
 		ZOffset: 500
 	shadow-overlay: bits/uplink-shadow.png
