@@ -23,10 +23,9 @@ Player:
 		ProductionTypes: module, factory-yi, factory-sc, starport-yi, starport-sc, harbor-yi, harbor-sc
 		NavalProductionTypes: harbor-yi, harbor-sc
 		MinerTypes: miner, miner2
-		RefineryTypes: refinery
-		SiloTypes: storage
+		RefineryTypes: storage
 		BuildingLimits:
-			refinery: 1
+			storage: 1
 			module: 4
 			factory-yi: 4
 			factory-sc: 4
@@ -38,13 +37,12 @@ Player:
 			techcenter: 1
 			harbor-yi: 1
 			harbor-sc: 1
-			storage: 5
 			field: 1
 			artilleryturret: 1
 			uplink: 1
 			silo: 1
 		BuildingFractions:
-			refinery: 2
+			storage: 2
 			module: 1
 			radar-yi: 1
 			radar-sc: 1

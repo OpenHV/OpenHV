@@ -61,7 +61,7 @@ Actors:
 		Location: 55,9
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor6: refinery
+	Actor6: storage
 		Location: 59,118
 		Faction: Random
 		Owner: Yuruki Industries
@@ -678,15 +678,15 @@ Actors:
 		Location: 81,21
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor244: storage
+	Actor244: generator
 		Location: 85,22
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor245: storage
+	Actor245: generator
 		Location: 88,22
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor246: refinery
+	Actor246: storage
 		Location: 69,13
 		Faction: Random
 		Owner: Synaty Corporation
@@ -945,13 +945,13 @@ Actors:
 	Actor325: generator
 		Owner: Yuruki Industries
 		Location: 80,125
-	Actor326: storage
+	Actor326: generator
 		Owner: Yuruki Industries
 		Location: 52,119
-	Actor327: storage
+	Actor327: generator
 		Owner: Yuruki Industries
 		Location: 55,121
-	Actor328: storage
+	Actor328: generator
 		Owner: Yuruki Industries
 		Location: 52,123
 	Actor310: bunker

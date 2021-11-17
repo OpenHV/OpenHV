@@ -70,7 +70,7 @@ Actors:
 	Base: base
 		Owner: Yuruki Industries
 		Location: 46,49
-	Actor10: refinery
+	Actor10: storage
 		Owner: Synaty Corporation
 		Location: 5,5
 		FreeActor: False
