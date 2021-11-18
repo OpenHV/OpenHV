@@ -752,6 +752,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@South1:
 		ExitCell: 0,4
 		Sequence: active-creation
+	WithProductionExitOverlay@Done1:
+		ExitCell: 0,4
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@South2:
 		ExitCell: 1,4
 		SpawnOffset: -50,800,0
@@ -763,6 +767,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@South2:
 		ExitCell: 1,4
 		Sequence: active-creation
+	WithProductionExitOverlay@Done2:
+		ExitCell: 1,4
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@West1:
 		ExitCell: -1,1
 		SpawnOffset: -50,800,0
@@ -773,6 +781,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@West1:
 		ExitCell: -1,1
 		Sequence: active-creation
+	WithProductionExitOverlay@Done3:
+		ExitCell: -1,1
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@West2:
 		ExitCell: -1,2
 		SpawnOffset: -50,800,0
@@ -783,6 +795,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@West2:
 		ExitCell: -1,2
 		Sequence: active-creation
+	WithProductionExitOverlay@Done4:
+		ExitCell: -1,2
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@West3:
 		ExitCell: -1,3
 		SpawnOffset: -50,800,0
@@ -793,6 +809,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@West3:
 		ExitCell: -1,3
 		Sequence: active-creation
+	WithProductionExitOverlay@Done5:
+		ExitCell: -1,3
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@West4:
 		ExitCell: -1,4
 		SpawnOffset: -50,800,0
@@ -803,6 +823,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@West4:
 		ExitCell: -1,4
 		Sequence: active-creation
+	WithProductionExitOverlay@Done6:
+		ExitCell: -1,4
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@East1:
 		ExitCell: 2,1
 		SpawnOffset: -50,800,0
@@ -813,6 +837,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@East1:
 		ExitCell: 2,1
 		Sequence: active-creation
+	WithProductionExitOverlay@Done7:
+		ExitCell: 2,1
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@East2:
 		ExitCell: 2,2
 		SpawnOffset: -50,800,0
@@ -823,6 +851,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@East2:
 		ExitCell: 2,2
 		Sequence: active-creation
+	WithProductionExitOverlay@Done8:
+		ExitCell: 2,2
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@East3:
 		ExitCell: 2,3
 		SpawnOffset: -50,800,0
@@ -833,6 +865,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@East3:
 		ExitCell: 2,3
 		Sequence: active-creation
+	WithProductionExitOverlay@Done9:
+		ExitCell: 2,3
+		Sequence: production-done
+		RequiresCondition: !burning
 	Exit@East4:
 		ExitCell: 2,4
 		SpawnOffset: -50,800,0
@@ -843,6 +879,10 @@ FACTORY-YI:
 	WithProductionExitOverlay@East4:
 		ExitCell: 2,4
 		Sequence: active-creation
+	WithProductionExitOverlay@Done10:
+		ExitCell: 2,4
+		Sequence: production-done
+		RequiresCondition: !burning
 	Production:
 		Produces: Vehicle
 	ProductionBar:
@@ -868,14 +908,6 @@ FACTORY-YI:
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
-	WithProductionExitOverlay@Done1:
-		ExitCell: 0,2
-		Sequence: production-done
-		RequiresCondition: !build-incomplete && !burning
-	WithProductionExitOverlay@Done2:
-		ExitCell: 1,2
-		Sequence: production-done
-		RequiresCondition: !build-incomplete && !burning
 
 FACTORY-SC:
 	Inherits: FACTORY-YI
