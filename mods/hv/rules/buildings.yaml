@@ -1180,6 +1180,7 @@ ARTILLERYTURRET:
 		Cursor: attack
 		BlockedCursor: howitzer-blocked
 		Icon: howitzer
+		OrderName: FireMission
 		ChargeInterval: 3000
 		DisplayRadarPing: true
 		Description: Artillery Strike
