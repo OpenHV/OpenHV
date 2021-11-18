@@ -47,7 +47,7 @@ namespace OpenRA.Mods.HV.Activities
 					return;
 
 				var value = resourceValue * payload;
-				resources.GiveResources(value);
+				resources.GiveCash(value);
 				var amount = resources.Resources - initialAmount;
 
 				if (self.Owner.IsAlliedWith(self.World.RenderPlayer) && amount > 0)
