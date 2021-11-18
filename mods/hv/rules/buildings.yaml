@@ -454,10 +454,10 @@ MODULE:
 		Produces: Scouts
 	GrantExternalConditionToProduced:
 		Condition: produced
-	WithProductionDoorAnimation@1:
+	WithProductionDoorAnimation:
 		ExitCells: 0,2, 1,2
 		ReplayBackwards: true
-		RequiresCondition: !burning
+		RequiresCondition: !build-incomplete && !burning
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
@@ -633,7 +633,7 @@ STARPORT-YI:
 	WithProductionExitOverlay:
 		ExitCell: 0,0
 		Sequence: production-done
-		RequiresCondition: !burning
+		RequiresCondition: !build-incomplete && !burning
 
 STARPORT-SC:
 	Inherits: STARPORT-YI
@@ -856,11 +856,11 @@ FACTORY-YI:
 	WithProductionExitOverlay@Done1:
 		ExitCell: 0,2
 		Sequence: production-done
-		RequiresCondition: !burning
+		RequiresCondition: !build-incomplete && !burning
 	WithProductionExitOverlay@Done2:
 		ExitCell: 1,2
 		Sequence: production-done
-		RequiresCondition: !burning
+		RequiresCondition: !build-incomplete && !burning
 
 FACTORY-SC:
 	Inherits: FACTORY-YI
