@@ -437,19 +437,23 @@ MODULE:
 		ExitCell: 1,2
 		ProductionTypes: Scouts
 		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
 	Exit@South2:
 		SpawnOffset: 150,800,0
 		ExitCell: 0,2
 		ProductionTypes: Scouts
 		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
 	Exit@North1:
 		SpawnOffset: -150,-800,0
 		ExitCell: 1,-1
 		ProductionTypes: Scouts
+		RequiresCondition: !being-captured && !build-incomplete
 	Exit@North2:
 		SpawnOffset: 150,-800,0
 		ExitCell: 0,-1
 		ProductionTypes: Scouts
+		RequiresCondition: !being-captured && !build-incomplete
 	Production:
 		Produces: Scouts
 	GrantExternalConditionToProduced:
@@ -582,7 +586,8 @@ STARPORT-YI:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Exit@1:
+	Exit:
+		RequiresCondition: !being-captured && !build-incomplete
 		SpawnOffset: 0,-256,0
 		ExitCell: 0,0
 		Facing: 896
@@ -743,6 +748,7 @@ FACTORY-YI:
 		ProductionTypes: Vehicle
 		ExitDelay: 20
 		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@South1:
 		ExitCell: 0,4
 		Sequence: active-creation
@@ -753,6 +759,7 @@ FACTORY-YI:
 		ProductionTypes: Vehicle
 		ExitDelay: 20
 		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@South2:
 		ExitCell: 1,4
 		Sequence: active-creation
@@ -762,6 +769,7 @@ FACTORY-YI:
 		Facing: 768
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West1:
 		ExitCell: -1,1
 		Sequence: active-creation
@@ -771,6 +779,7 @@ FACTORY-YI:
 		Facing: 768
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West2:
 		ExitCell: -1,2
 		Sequence: active-creation
@@ -780,6 +789,7 @@ FACTORY-YI:
 		Facing: 768
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West3:
 		ExitCell: -1,3
 		Sequence: active-creation
@@ -789,6 +799,7 @@ FACTORY-YI:
 		Facing: 768
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West4:
 		ExitCell: -1,4
 		Sequence: active-creation
@@ -798,6 +809,7 @@ FACTORY-YI:
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East1:
 		ExitCell: 2,1
 		Sequence: active-creation
@@ -807,6 +819,7 @@ FACTORY-YI:
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East2:
 		ExitCell: 2,2
 		Sequence: active-creation
@@ -816,6 +829,7 @@ FACTORY-YI:
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East3:
 		ExitCell: 2,3
 		Sequence: active-creation
@@ -825,6 +839,7 @@ FACTORY-YI:
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
+		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East4:
 		ExitCell: 2,4
 		Sequence: active-creation
@@ -1656,18 +1671,22 @@ HARBOR-YI:
 		ProductionTypes: Ship
 		Facing: 512
 		Priority: 2
+		RequiresCondition: !being-captured && !build-incomplete
 	Exit@Back:
 		ExitCell: 1,-1
 		ProductionTypes: Ship
 		Facing: 872
+		RequiresCondition: !being-captured && !build-incomplete
 	Exit@Right:
 		ExitCell: 3,1
 		ProductionTypes: Ship
 		Facing: 768
+		RequiresCondition: !being-captured && !build-incomplete
 	Exit@Left:
 		ExitCell: -1,1
 		ProductionTypes: Ship
 		Facing: 512
+		RequiresCondition: !being-captured && !build-incomplete
 	Production:
 		Produces: Ship
 	PrimaryBuilding:

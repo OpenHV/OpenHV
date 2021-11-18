@@ -259,7 +259,7 @@ CARRIER:
 		SpawnAllAtOnce: true
 	WithCarrierParentPipsDecoration:
 	WithCarrierHatchAnimation:
-	Exit@0:
+	Exit:
 		SpawnOffset: 0,0,0
 		Facing: 0
 	Armament:
