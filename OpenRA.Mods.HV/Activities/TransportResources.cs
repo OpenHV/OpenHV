@@ -48,10 +48,9 @@ namespace OpenRA.Mods.HV.Activities
 
 				var value = resourceValue * payload;
 				resources.GiveCash(value);
-				var amount = resources.Resources - initialAmount;
 
-				if (self.Owner.IsAlliedWith(self.World.RenderPlayer) && amount > 0)
-					self.World.AddFrameEndTask(w => w.Add(new FloatingText(targetActor.CenterPosition, targetOwner.Color, FloatingText.FormatCashTick(amount), 30)));
+				if (self.Owner.IsAlliedWith(self.World.RenderPlayer) && value > 0)
+					self.World.AddFrameEndTask(w => w.Add(new FloatingText(targetActor.CenterPosition, targetOwner.Color, FloatingText.FormatCashTick(value), 30)));
 
 				foreach (var notify in targetActor.TraitsImplementing<INotifyResourceTransport>())
 					notify.Delivered(spawner, targetActor);
