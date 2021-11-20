@@ -26,9 +26,9 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: yi
-		Enemies: Yuruki Industries, Synaty Corporation
-	PlayerReference@Synaty Corporation:
-		Name: Synaty Corporation
+		Enemies: Yuruki Industries, Synapol Corporation
+	PlayerReference@Synapol Corporation:
+		Name: Synapol Corporation
 		NonCombatant: True
 		Faction: sc
 		Color: 805040
@@ -40,7 +40,7 @@ Players:
 		Faction: yi
 		LockColor: True
 		Color: 003897
-		Enemies: Synaty Corporation, Creeps
+		Enemies: Synapol Corporation, Creeps
 
 Actors:
 	Actor154: icicle2
@@ -56,153 +56,153 @@ Actors:
 		Owner: Neutral
 		Location: 24,33
 	Actor4: miner2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 15,2
 	Actor5: miner2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 32,8
 	Actor6: miner2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 42,26
 	Actor7: miner2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 35,20
 	Base: base
 		Owner: Yuruki Industries
 		Location: 46,49
 	Actor10: storage
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 5,5
 		FreeActor: False
 	Actor11: factory4
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 16,37
 	Actor12: module
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 24,38
 	Actor16: storage
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 6,14
 	Actor17: storage
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 25,44
 	Actor18: base2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 16,51
 	Actor19: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 16,58
 	Actor20: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 19,57
 	Actor21: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 22,55
 	Actor22: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 22,44
 	Actor23: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 12,37
 	Actor24: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 9,39
 	Actor27: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 3,3
 	Actor28: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 11,2
 	Actor30: artil
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 22,9
 		Facing: 761
 	Actor31: tank11
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 32,19
 		Facing: 991
 	Actor34: tank11
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 25,20
 		Facing: 864
 	Actor32: balloon
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Facing: 384
 		Location: 27,14
 	Actor33: scout1
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 36,10
 		Facing: 800
 	Actor35: scout2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 33,12
 		Facing: 753
 	Actor36: scout2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 30,9
 		Facing: 800
 	Actor37: scout1
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 35,25
 		Facing: 103
 	Actor38: scout1
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 41,24
 		Facing: 206
 	Actor39: scout1
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 39,29
 		Facing: 142
 	Actor40: scout1
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 32,27
 		Facing: 39
 	Actor41: scout1
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 31,23
 		Facing: 15
 	Actor42: radar2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 20,37
 	Actor43: tradplat
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 17,43
 	Actor44: tyriantank
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 24,8
 		Facing: 793
 	Actor45: tyriantank
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 22,23
 		Facing: 919
 	Actor46: tyriantank
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 28,28
 		Facing: 951
 	Actor47: turret2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 25,30
 		Stance: AttackAnything
 		TurretFacing: 896
 	Actor48: turret2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 30,3
 		TurretFacing: 737
 		Stance: AttackAnything
 	Actor49: bunker2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 19,30
 		Stance: AttackAnything
 	Actor50: bunker2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 32,33
 		Stance: AttackAnything
 

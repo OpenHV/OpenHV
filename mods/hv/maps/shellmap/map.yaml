@@ -31,8 +31,8 @@ Players:
 		Faction: yi
 		Color: 003897
 		Enemies: Creeps
-	PlayerReference@Synaty Corporation:
-		Name: Synaty Corporation
+	PlayerReference@Synapol Corporation:
+		Name: Synapol Corporation
 		Faction: sc
 		Color: 805040
 		Enemies: Creeps
@@ -56,11 +56,11 @@ Actors:
 	Actor4: miner2
 		Location: 82,9
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor5: miner2
 		Location: 55,9
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor6: storage
 		Location: 59,118
 		Faction: Random
@@ -97,24 +97,24 @@ Actors:
 	Actor16: starport2
 		Location: 50,28
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor18: factory4
 		Location: 71,31
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor20: radar2
 		Location: 67,23
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor27: howitzer
 		Location: 77,28
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		TurretFacing: 372
 	Actor28: televtr2
 		Location: 64,31
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor29: televatr
 		Location: 89,102
 		Faction: Random
@@ -630,66 +630,66 @@ Actors:
 	Actor218: base2
 		Location: 67,26
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor232: starport2
 		Location: 52,24
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor233: turret2
 		Location: 75,37
 		Faction: Random
 		TurretFacing: 658
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor234: turret2
 		Location: 67,37
 		Faction: Random
 		TurretFacing: 459
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor235: turret2
 		Location: 59,35
 		Faction: Random
 		TurretFacing: 380
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor236: bunker2
 		Location: 80,37
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor237: bunker2
 		Location: 71,38
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor238: bunker2
 		Location: 63,37
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor239: bunker2
 		Location: 55,35
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor240: bunker2
 		Location: 92,27
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor241: bunker2
 		Location: 95,26
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor242: uplink
 		Location: 81,21
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor244: generator
 		Location: 85,22
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor245: generator
 		Location: 88,22
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor246: storage
 		Location: 69,13
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		FreeActor: False
 	Actor247: starport
 		Location: 86,112
@@ -741,16 +741,16 @@ Actors:
 		Location: 52,32
 		Faction: Random
 		TurretFacing: 412
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor261: aaturret2
 		Location: 81,32
 		Faction: Random
 		TurretFacing: 483
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor262: aaturret2
 		Location: 92,21
 		Faction: Random
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		TurretFacing: 689
 	Actor263: big_rock
 		Owner: Neutral
@@ -883,55 +883,55 @@ Actors:
 		Faction: Random
 		Owner: Yuruki Industries
 	Actor308: tradplat
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 70,27
 	Actor309: techcenter
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 75,32
 	Actor305: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 52,21
 	Actor304: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 55,20
 	Actor303: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 58,18
 	Actor311: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 61,17
 	Actor312: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 64,17
 	Actor313: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 68,18
 	Actor314: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 71,18
 	Actor315: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 74,17
 	Actor316: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 77,17
 	Actor302: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 80,18
 	Actor317: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 76,22
 	Actor319: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 73,23
 	Actor318: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 70,24
 	Actor320: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 64,27
 	Actor321: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 64,23
 	Actor322: generator
 		Owner: Yuruki Industries
@@ -987,18 +987,18 @@ Actors:
 		Owner: Yuruki Industries
 		Location: 80,91
 	Actor338: aaturret2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 79,26
 		TurretFacing: 626
 	Actor339: turret2
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 46,30
 		TurretFacing: 380
 	Actor340: techcenter
 		Owner: Yuruki Industries
 		Location: 58,113
 	Actor341: module
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 67,32
 
 Rules: rules.yaml

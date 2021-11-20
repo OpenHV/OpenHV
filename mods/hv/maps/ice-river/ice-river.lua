@@ -21,7 +21,7 @@ end
 
 WorldLoaded = function()
 	player = Player.GetPlayer("Yuruki Industries")
-	enemy = Player.GetPlayer("Synaty Corporation")
+	enemy = Player.GetPlayer("Synapol Corporation")
 
 	InitObjectives(player)
 

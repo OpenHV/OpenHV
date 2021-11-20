@@ -28,9 +28,9 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: yi
-		Enemies: Yuruki Industries, Synaty Corporation
-	PlayerReference@Synaty Corporation:
-		Name: Synaty Corporation
+		Enemies: Yuruki Industries, Synapol Corporation
+	PlayerReference@Synapol Corporation:
+		Name: Synapol Corporation
 		NonCombatant: True
 		Faction: sc
 		Color: 805040
@@ -42,18 +42,18 @@ Players:
 		Faction: yi
 		LockColor: True
 		Color: 003897
-		Enemies: Synaty Corporation, Creeps
+		Enemies: Synapol Corporation, Creeps
 
 Actors:
 	Scout1: scout1
 		Location: 22,32
 		Faction: yi
 		Facing: 182
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout2: scout2
 		Location: 29,37
 		Faction: yi
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Facing: 28
 	Base: base
 		Owner: Yuruki Industries
@@ -61,7 +61,7 @@ Actors:
 	Ballon: balloon
 		Facing: 384
 		Location: 26,34
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor41: trees17
 		Owner: Neutral
 		Location: 46,40
@@ -77,11 +77,11 @@ Actors:
 	Miner1: miner2
 		Location: 22,37
 		Faction: yi
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Miner2: miner2
 		Location: 32,32
 		Faction: yi
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor12: crow
 		Owner: Neutral
 		Facing: 384
@@ -139,43 +139,43 @@ Actors:
 		Location: 31,36
 		Faction: yi
 		Facing: 618
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout9: scout2
 		SubCell: 1
 		Location: 26,40
 		Faction: yi
 		Facing: 384
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout4: scout1
 		SubCell: 1
 		Location: 20,36
 		Faction: yi
 		Facing: 384
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout3: scout1
 		SubCell: 1
 		Location: 22,35
 		Faction: yi
 		Facing: 111
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout6: scout1
 		SubCell: 1
 		Location: 30,39
 		Faction: yi
 		Facing: 824
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout7: scout1
 		SubCell: 1
 		Location: 32,40
 		Faction: yi
 		Facing: 642
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Scout5: scout1
 		SubCell: 1
 		Location: 22,42
 		Faction: yi
 		Facing: 475
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 	Actor105: lamppost
 		Owner: Neutral
 		Location: 50,21
@@ -318,19 +318,19 @@ Actors:
 		Owner: Neutral
 		Location: 50,28
 	Generator1: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 38,38
 	Generator2: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 41,41
 	Generator3: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 35,43
 	Generator4: generator
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 24,42
 	Storage: storage
-		Owner: Synaty Corporation
+		Owner: Synapol Corporation
 		Location: 29,40
 		FreeActor: False
 
