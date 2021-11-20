@@ -162,7 +162,7 @@ TRANSPRT:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 125
+		Speed: 110
 		PauseOnCondition: notmobile || ecmdisabled
 	RevealsShroud:
 		Range: 8c0
