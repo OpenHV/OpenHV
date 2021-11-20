@@ -801,7 +801,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
-		RepairActors: harbor-yi, harbor-sc
+		RepairActors: harbor, harbor2
 		CloseEnough: 2c0
 
 ^Waterflow:

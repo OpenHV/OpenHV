@@ -1,9 +1,9 @@
 # License: CC-BY-SA-4.0
 
-HARBOR-YI:
+HARBOR:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR-SC:
+HARBOR2:
 	Buildable:
 		Prerequisites: ~disabled

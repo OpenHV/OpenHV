@@ -34,11 +34,11 @@ World:
 	MissionData:
 		Briefing: A bridgehead on planet Itrium has been successfully established. The mission is now to expand Yuruki Industries footprint. Reception for interplanetary televation is still being worked on. Your arsenal will be limited for the time being.
 
-STARPORT-YI:
+STARPORT:
 	Buildable:
 		Prerequisites: ~disabled
 
-STARPORT-SC:
+STARPORT2:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -58,7 +58,7 @@ UPLINK:
 	Buildable:
 		Prerequisites: ~disabled
 
-ARTILLERYTURRET:
+HOWITZER:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -70,11 +70,11 @@ TELEVTR2:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR-YI:
+HARBOR:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR-SC:
+HARBOR2:
 	Buildable:
 		Prerequisites: ~disabled
 

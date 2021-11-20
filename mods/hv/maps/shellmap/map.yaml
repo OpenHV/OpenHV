@@ -78,7 +78,7 @@ Actors:
 		Location: 60,109
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor12: radar-yi
+	Actor12: radar
 		Location: 76,101
 		Faction: Random
 		Owner: Yuruki Industries
@@ -90,23 +90,23 @@ Actors:
 		Location: 81,103
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor15: starport-yi
+	Actor15: starport
 		Location: 83,110
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor16: starport-sc
+	Actor16: starport2
 		Location: 50,28
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor18: factory-sc
+	Actor18: factory4
 		Location: 71,31
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor20: radar-sc
+	Actor20: radar2
 		Location: 67,23
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor27: artilleryturret
+	Actor27: howitzer
 		Location: 77,28
 		Faction: Random
 		Owner: Synaty Corporation
@@ -627,11 +627,11 @@ Actors:
 	Actor217: treegrs10
 		Owner: Neutral
 		Location: 10,117
-	Actor218: base-sc
+	Actor218: base2
 		Location: 67,26
 		Faction: Random
 		Owner: Synaty Corporation
-	Actor232: starport-sc
+	Actor232: starport2
 		Location: 52,24
 		Faction: Random
 		Owner: Synaty Corporation
@@ -691,11 +691,11 @@ Actors:
 		Faction: Random
 		Owner: Synaty Corporation
 		FreeActor: False
-	Actor247: starport-yi
+	Actor247: starport
 		Location: 86,112
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor248: factory-yi
+	Actor248: factory4
 		Location: 64,111
 		Faction: Random
 		Owner: Yuruki Industries
@@ -703,7 +703,7 @@ Actors:
 		Location: 67,121
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor251: harbor-yi
+	Actor251: harbor
 		Location: 98,124
 		Faction: Random
 		Owner: Yuruki Industries
@@ -878,7 +878,7 @@ Actors:
 		Location: 71,118
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor307: harbor-yi
+	Actor307: harbor
 		Location: 23,125
 		Faction: Random
 		Owner: Yuruki Industries

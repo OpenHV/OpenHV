@@ -101,41 +101,41 @@ base:
 		Start: 0
 		Offset: 0, 0
 
-base-sc:
+base2:
 	Inherits: base
 	Inherits@Flame: ^BuildingFlame3
 	Defaults:
 		Offset: 10, -30
-	build: bits/base-yi.png
+	build: bits/base2.png
 		Frames: 4, 5, 6, 4, 5, 6, 4, 5 ,6
 		Length: *
 		Tick: 50
-	idle: bits/base-yi.png
-	damaged-idle: bits/base-yi.png
+	idle: bits/base2.png
+	damaged-idle: bits/base2.png
 		Start: 7
 		Length: 1
-	damaged-build: bits/base-yi.png
+	damaged-build: bits/base2.png
 		Start: 7
 		Length: 1
-	production-inprogress: bits/base-yi.png
+	production-inprogress: bits/base2.png
 		Length: 3
 		Reverses: true
 		Tick: 150
-	idle-platform1: bits/platform-sc.png
-	damaged-idle-platform1: bits/platform-sc.png
-	make-platform1: bits/platform-sc.png
+	idle-platform1: bits/platform2.png
+	damaged-idle-platform1: bits/platform2.png
+	make-platform1: bits/platform2.png
 	active-platform1: bits/creation-sc.png
-	damaged-active-platform1: bits/creation-damaged-sc.png
-	idle-platform2: bits/platform-sc.png
-	damaged-idle-platform2: bits/platform-sc.png
-	make-platform2: bits/platform-sc.png
+	damaged-active-platform1: bits/creation2-damaged.png
+	idle-platform2: bits/platform2.png
+	damaged-idle-platform2: bits/platform2.png
+	make-platform2: bits/platform2.png
 	active-platform2: bits/creation-sc.png
-	damaged-active-platform2: bits/creation-damaged-sc.png
+	damaged-active-platform2: bits/creation2-damaged.png
 	icon: bits/buildings-icons.png
 		Start: 27
 		Offset: 0, 0
 
-generator-yi:
+generator:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -8
@@ -168,19 +168,19 @@ generator-yi:
 		Start: 4
 		Offset: 0, 0
 
-generator-sc:
-	Inherits: generator-yi
+generator2:
+	Inherits: generator
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -8
-	idle: bits/generator-sc.png
+	idle: bits/generator2.png
 		Length: 15
 		Tick: 80
-	damaged-idle: bits/generator-sc.png
+	damaged-idle: bits/generator2.png
 		Start: 15
 		Length: 1
 
-radar-yi:
+radar:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -4
@@ -206,7 +206,7 @@ radar-yi:
 		Start: 7
 		Offset: 0, 1
 
-radar-sc:
+radar2:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -4
@@ -263,17 +263,17 @@ tradplat-yi:
 		Start: 11
 		Offset: 0, 2
 
-tradplat-sc:
+tradplat2:
 	Inherits: tradplat-yi
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 1
-	idle: bits/tradplat-sc.png
+	idle: bits/tradplat2.png
 		ZOffset: -1c511
-	damaged-idle: bits/tradplat-sc.png
+	damaged-idle: bits/tradplat2.png
 		Start: 4
 		ZOffset: -1c511
-	active: bits/tradplat-sc.png
+	active: bits/tradplat2.png
 		Frames: 1, 2, 3, 2, 1
 		Length: 5
 		ZOffset: -1c511
@@ -322,19 +322,19 @@ module-yi:
 		Start: 6
 		Offset: 0, 0
 
-module-sc:
+module2:
 	Inherits: module-yi
-	door: bits/module-sc.png
-	idle: bits/module-sc.png
-	shadow-overlay: bits/module-shadow-sc.png
+	door: bits/module2.png
+	idle: bits/module2.png
+	shadow-overlay: bits/module2-shadow.png
 		Start: 0
 		ZOffset: 1768
 		Offset: 5, 7
-	damaged-shadow-overlay: bits/module-shadow-sc.png
+	damaged-shadow-overlay: bits/module2-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 5, 7
-	production-inprogress: bits/module-sc.png
+	production-inprogress: bits/module2.png
 		Start: 10
 		Length: 8
 		Reverses: True
@@ -397,7 +397,7 @@ miner2:
 		Start: 16
 		Offset: 0, 2
 
-starport-yi:
+starport:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -2
@@ -437,7 +437,7 @@ starport-yi:
 		Start: 9
 		Offset: 0, 3
 
-starport-sc:
+starport2:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -2
@@ -562,11 +562,11 @@ factory2:
 		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
 		Tick: 38
 		Offset: 10, 30
-	active-creation: bits/creatn2.png
+	active-creation: bits/creation4.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
-	damaged-active-creation: bits/creatn2-damaged.png
+	damaged-active-creation: bits/creation4-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
@@ -578,56 +578,56 @@ factory2:
 		Start: 1
 		Offset: 0, 1
 
-factory-sc:
+factory4:
 	Inherits: factory2
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: -1, -22
 	idle: bits/null.png
-	idle-online: bits/factory-sc.png
-	idle-offline: bits/factory-sc.png
+	idle-online: bits/factory4.png
+	idle-offline: bits/factory4.png
 	shadow-overlay: bits/factory2-shadow.png
 		ZOffset: 1768
 		Offset: 5, -12
-	damaged-idle-online: bits/factory-sc.png
+	damaged-idle-online: bits/factory4.png
 		Start: 15
-	damaged-idle-offline: bits/factory-sc.png
+	damaged-idle-offline: bits/factory4.png
 		Start: 15
 	damaged-shadow-overlay: bits/factory2-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 5, -12
-	production-inprogress: bits/factory-sc.png
+	production-inprogress: bits/factory4.png
 		Start: 1
 		Length: 10
 		Reverses: True
 		Tick: 80
 		ZOffset: 1500
-	production-done: bits/factory-sc.png
+	production-done: bits/factory4.png
 		Start: 11
 		Length: 4
 		Reverses: True
 		Tick: 100
 		ZOffset: 1500
-	idle-platform1: bits/platform-sc.png
-	damaged-idle-platform1: bits/platform-sc.png
-	make-platform1: bits/platform-sc.png
-	idle-platform2: bits/platform-sc.png
-	damaged-idle-platform2: bits/platform-sc.png
-	make-platform2: bits/platform-sc.png
-	idle-platform3: bits/platform-sc.png
-	damaged-idle-platform3: bits/platform-sc.png
-	make-platform3: bits/platform-sc.png
-	idle-platform4: bits/platform-sc.png
-	damaged-idle-platform4: bits/platform-sc.png
-	make-platform4: bits/platform-sc.png
-	active-creation: bits/creatn2-sc.png
-	damaged-active-creation: bits/creatn2-damaged-sc.png
+	idle-platform1: bits/platform2.png
+	damaged-idle-platform1: bits/platform2.png
+	make-platform1: bits/platform2.png
+	idle-platform2: bits/platform2.png
+	damaged-idle-platform2: bits/platform2.png
+	make-platform2: bits/platform2.png
+	idle-platform3: bits/platform2.png
+	damaged-idle-platform3: bits/platform2.png
+	make-platform3: bits/platform2.png
+	idle-platform4: bits/platform2.png
+	damaged-idle-platform4: bits/platform2.png
+	make-platform4: bits/platform2.png
+	active-creation: bits/creation3.png
+	damaged-active-creation: bits/creation3-damaged.png
 	icon: bits/buildings-icons.png
 		Start: 1
 		Offset: 0, 1
 
-factory-yi:
+factory3:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -24
@@ -718,11 +718,11 @@ factory-yi:
 		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
 		Tick: 38
 		Offset: 10, 30
-	active-creation: bits/creatn2.png
+	active-creation: bits/creation4.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
-	damaged-active-creation: bits/creatn2-damaged.png
+	damaged-active-creation: bits/creation4-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
@@ -827,10 +827,10 @@ turret2:
 		Offset: 5, 3
 	damaged-idle: bits/turret.png
 		Start: 1
-	turret: bits/turret-sc.png
+	turret: bits/turret2.png
 		Facings: 8
 		Offset: 0, -7
-	shoot: bits/turret-sc.png
+	shoot: bits/turret2.png
 		Start: 8
 		Length: 2
 		Tick: 50
@@ -974,37 +974,37 @@ field-yi:
 		Start: 3
 		Offset: 0, 1
 
-field-sc:
+field2:
 	Inherits: field-yi
 	Inherits@Flame: ^BuildingFlame
-	idle: bits/field-sc.png
+	idle: bits/field2.png
 	shadow-overlay: bits/field-shadow.png
 		ZOffset: 1768
 		Offset: 2, 3
-	charged: bits/field-sc.png
+	charged: bits/field2.png
 		Length: 4
 		Tick: 100
-	loop: bits/field-sc.png
+	loop: bits/field2.png
 		Start: 4
 		Length: 3
 		Reverses: True
 		Tick: 100
-	end: bits/field-sc.png
+	end: bits/field2.png
 		Frames: 4, 3, 2, 1
 		Length: 4
 		Tick: 100
-	damaged-idle: bits/field-sc.png
+	damaged-idle: bits/field2.png
 		Start: 7
-	damaged-charged: bits/field-sc.png
+	damaged-charged: bits/field2.png
 		Start: 7
 		Length: 3
 		Tick: 100
-	damaged-loop: bits/field-sc.png
+	damaged-loop: bits/field2.png
 		Start: 11
 		Length: 3
 		Reverses: True
 		Tick: 100
-	damaged-end: bits/field-sc.png
+	damaged-end: bits/field2.png
 		Frames: 11, 10, 9, 8
 		Length: 4
 		Tick: 100
@@ -1089,21 +1089,21 @@ uplink:
 		Start: 24
 		Offset: 0, 1
 
-artilleryturret:
+howitzer:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		Offset: 0, -20
-	idle: bits/artilery2.png
+	idle: bits/howitzer.png
 		Start: 0
-	shadow-overlay: bits/artilery2-shadow.png
+	shadow-overlay: bits/howitzer-shadow.png
 		ZOffset: 1768
 		Offset: 2, 4
-	damaged-idle: bits/artilery2.png
+	damaged-idle: bits/howitzer.png
 		Start: 1
-	turret: bits/artilery2.png
+	turret: bits/howitzer.png
 		Start: 2
 		Facings: 8
-	shoot: bits/artilery2.png
+	shoot: bits/howitzer.png
 		Start: 10
 		Facings: 8
 		Tick: 300
@@ -1171,7 +1171,7 @@ televtr2:
 	icon: bits/buildings-icons.png
 		Start: 13
 
-harbor-yi:
+harbor:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 2, -5
@@ -1210,26 +1210,26 @@ harbor-yi:
 		Start: 5
 		Offset: 0, 4
 
-harbor-sc:
-	Inherits: harbor-yi
+harbor2:
+	Inherits: harbor
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 2, -5
-	idle: bits/harbor-sc.png
+	idle: bits/harbor2.png
 		ZOffset: 1000
-	idle-entry: bits/harbor-sc.png
+	idle-entry: bits/harbor2.png
 		Start: 2
 		ZOffset: -2000
-	shadow-overlay: bits/harbor-sc-shadow.png
+	shadow-overlay: bits/harbor2-shadow.png
 		ZOffset: -1768
 		Offset: 9, -2
-	production-inprogress: bits/harbor-sc.png
+	production-inprogress: bits/harbor2.png
 		Start: 3
 		Length: 7
 		Reverses: true
 		Tick: 80
 		ZOffset: 1500
-	damaged-idle: bits/harbor-sc.png
+	damaged-idle: bits/harbor2.png
 		Start: 1
 		ZOffset: 1000
 	icon: bits/buildings-icons.png
@@ -1274,21 +1274,21 @@ wall:
 		Start: 1
 	icon: bits/icon.png
 
-techcenter-yi:
+techcenter:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -9
-	idle: bits/tech-center.png
+	idle: bits/techcenter.png
 		Start: 0
-	shadow-overlay: bits/tech-center-shadow.png
+	shadow-overlay: bits/techcenter-shadow.png
 		ZOffset: 1768
 		Offset: 6, -3
-	damaged-shadow-overlay: bits/tech-center-shadow-damaged.png
+	damaged-shadow-overlay: bits/techcenter-shadow-damaged.png
 		ZOffset: 1768
 		Offset: 6, -3
-	damaged-idle: bits/tech-center.png
+	damaged-idle: bits/techcenter.png
 		Start: 1
-	animation: bits/tech-center.png
+	animation: bits/techcenter.png
 		Start: 2
 		Length: 10
 		Tick: 50
@@ -1308,22 +1308,22 @@ techcenter-yi:
 		Start: 18
 		Offset: 0, 2
 
-techcenter-sc:
-	Inherits: techcenter-yi
+techcenter2:
+	Inherits: techcenter
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -9
-	idle: bits/tech-center-sc.png
+	idle: bits/techcenter2.png
 		Start: 0
-	shadow-overlay: bits/tech-center-shadow.png
+	shadow-overlay: bits/techcenter-shadow.png
 		ZOffset: 1768
 		Offset: 6, -3
-	damaged-shadow-overlay: bits/tech-center-shadow-damaged.png
+	damaged-shadow-overlay: bits/techcenter-shadow-damaged.png
 		ZOffset: 1768
 		Offset: 6, -3
-	damaged-idle: bits/tech-center-sc.png
+	damaged-idle: bits/techcenter2.png
 		Start: 1
-	animation: bits/tech-center-sc.png
+	animation: bits/techcenter2.png
 		Start: 2
 		Length: 10
 		Tick: 50
@@ -1360,18 +1360,18 @@ techbuilding:
 		Offset: 15, 8
 	icon: bits/icon.png
 
-storage-yi:
+storage2:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -1
-	idle: bits/storage-yi.png
+	idle: bits/storage2.png
 		Start: 0
-	shadow-overlay: bits/storage-yi-shadow.png
+	shadow-overlay: bits/storage2-shadow.png
 		ZOffset: 1768
 		Offset: 2, 1
-	damaged-idle: bits/storage-yi.png
+	damaged-idle: bits/storage2.png
 		Start: 1
-	animation: bits/storage-yi.png
+	animation: bits/storage2.png
 		Frames: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2
 		Length: *
 		Reverses: True
@@ -1448,30 +1448,30 @@ storage-yi:
 		Start: 23
 		Offset: 0, 1
 
-storage-sc:
-	Inherits: storage-yi
+storage:
+	Inherits: storage2
 	Defaults:
 		Offset: 0, -1
-	idle: bits/storage-sc.png
+	idle: bits/storage.png
 		Start: 13
-	damaged-idle: bits/storage-sc.png
+	damaged-idle: bits/storage.png
 		Start: 14
-	animation: bits/storage-sc.png
+	animation: bits/storage.png
 		Frames: 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 		Length: *
 		Tick: 50
-	idle-platform1: bits/platform-sc.png
-	damaged-idle-platform1: bits/platform-sc.png
-	make-platform1: bits/platform-sc.png
-	idle-platform2: bits/platform-sc.png
-	damaged-idle-platform2: bits/platform-sc.png
-	make-platform2: bits/platform-sc.png
-	idle-platform3: bits/platform-sc.png
-	damaged-idle-platform3: bits/platform-sc.png
-	make-platform3: bits/platform-sc.png
-	idle-platform4: bits/platform-sc.png
-	damaged-idle-platform4: bits/platform-sc.png
-	make-platform4: bits/platform-sc.png
+	idle-platform1: bits/platform2.png
+	damaged-idle-platform1: bits/platform2.png
+	make-platform1: bits/platform2.png
+	idle-platform2: bits/platform2.png
+	damaged-idle-platform2: bits/platform2.png
+	make-platform2: bits/platform2.png
+	idle-platform3: bits/platform2.png
+	damaged-idle-platform3: bits/platform2.png
+	make-platform3: bits/platform2.png
+	idle-platform4: bits/platform2.png
+	damaged-idle-platform4: bits/platform2.png
+	make-platform4: bits/platform2.png
 	icon: bits/buildings-icons.png
 		Start: 10
 		Offset: 0, 0

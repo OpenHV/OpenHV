@@ -21,11 +21,11 @@ TECHNICIAN:
 	Buildable:
 		Prerequisites: ~disabled
 
-RADAR-YI:
+RADAR:
 	Buildable:
 		Prerequisites: ~disabled
 
-RADAR-SC:
+RADAR2:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -33,19 +33,19 @@ TRADPLAT:
 	Buildable:
 		Prerequisites: ~disabled
 
-STARPORT-YI:
+STARPORT:
 	Buildable:
 		Prerequisites: ~disabled
 
-STARPORT-SC:
+STARPORT2:
 	Buildable:
 		Prerequisites: ~disabled
 
-FACTORY-YI:
+FACTORY3:
 	Buildable:
 		Prerequisites: ~disabled
 
-FACTORY-SC:
+FACTORY4:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -89,7 +89,7 @@ UPLINK:
 	Buildable:
 		Prerequisites: ~disabled
 
-ARTILLERYTURRET:
+HOWITZER:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -101,11 +101,11 @@ TELEVTR2:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR-YI:
+HARBOR:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR-SC:
+HARBOR2:
 	Buildable:
 		Prerequisites: ~disabled
 

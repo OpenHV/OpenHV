@@ -74,7 +74,7 @@ Actors:
 		Owner: Synaty Corporation
 		Location: 5,5
 		FreeActor: False
-	Actor11: factory-sc
+	Actor11: factory4
 		Owner: Synaty Corporation
 		Location: 16,37
 	Actor12: module
@@ -86,7 +86,7 @@ Actors:
 	Actor17: storage
 		Owner: Synaty Corporation
 		Location: 25,44
-	Actor18: base-sc
+	Actor18: base2
 		Owner: Synaty Corporation
 		Location: 16,51
 	Actor19: generator
@@ -169,7 +169,7 @@ Actors:
 		SubCell: 1
 		Location: 31,23
 		Facing: 15
-	Actor42: radar-sc
+	Actor42: radar2
 		Owner: Synaty Corporation
 		Location: 20,37
 	Actor43: tradplat
