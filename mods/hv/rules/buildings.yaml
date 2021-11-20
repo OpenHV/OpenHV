@@ -303,6 +303,8 @@ RADAR:
 		SelectTargetSpeechNotification: SelectTarget
 		OrderName: FlushBombers
 		EndChargeSpeechNotification: AirStrikeReady
+		BeginChargeSpeechNotification: AirStrikeCharging
+		IncomingSpeechNotification: AirStrikeIncoming
 	SupportPowerChargeBar:
 
 RADAR2:
@@ -327,6 +329,8 @@ RADAR2:
 		SelectTargetSpeechNotification: SelectTarget
 		EndChargeSpeechNotification: DroppodReady
 		LaunchSpeechNotification: ReinforcementsHaveArrived
+		BeginChargeSpeechNotification: DroppodCharging
+		IncomingSpeechNotification: DroppodIncoming
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -1224,7 +1228,7 @@ HOWITZER:
 		BeginChargeSpeechNotification: HowitzerCharging
 		EndChargeSpeechNotification: HowitzerReady
 		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: HowitzerDetected
+		IncomingSpeechNotification: HowitzerIncoming
 		CircleBorderWidth: 3
 	AttackTurreted:
 		RequiresCondition: !build-incomplete && !disabled
@@ -1286,6 +1290,7 @@ FIELD:
 		BlockedCursor: force-field-blocked
 		BeginChargeSpeechNotification: ForceFieldCharging
 		EndChargeSpeechNotification: ForceFieldReady
+		IncomingSpeechNotification: ForceFieldEngaged
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		OrderName: ShieldsUp
@@ -1364,7 +1369,7 @@ SILO:
 		SupportPowerPaletteOrder: 10
 		BeginChargeSpeechNotification: MissileCharging
 		EndChargeSpeechNotification: MissileReady
-		IncomingSpeechNotification: MissileLaunchDetected
+		IncomingSpeechNotification: MissileIncoming
 		OrderName: Nukem
 		SelectTargetSpeechNotification: SelectTarget
 	SupportPowerChargeBar:
@@ -1441,7 +1446,7 @@ UPLINK:
 		SelectTargetSpeechNotification: SelectTarget
 		BeginChargeSpeechNotification: OrbitalRailgunCharging
 		EndChargeSpeechNotification: OrbitalRailgunReady
-		IncomingSpeechNotification: OrbitalRailgunDetected
+		IncomingSpeechNotification: OrbitalRailgunFired
 	Power:
 		Amount: -150
 	MustBeDestroyed:

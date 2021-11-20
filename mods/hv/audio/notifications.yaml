@@ -7,6 +7,8 @@ Speech:
 		GameLoaded: game_loaded
 		GameSaved: game_saved
 		AirStrikeReady: airstrike_ready
+		AirStrikeCharging: airstrike_prepping
+		AirStrikeIncoming: airstrike_incoming
 		BaseAttack: we_are_under_attack
 		Building: building
 		BuildingCannotPlaceAudio: building_cannot_be_placed
@@ -16,25 +18,32 @@ Speech:
 		BuildingSold: building_sold
 		Cancelled: cancel
 		DroppodReady: droppod_ready
+		DroppodCharging: droppod_charging
+		DroppodIncoming: droppod_incoming
 		EnemyUnitsDetected: enemy_in_range
 		HowitzerDetected: howitzer_detected
 		HowitzerCharging: howitzer_prepping
 		HowitzerReady: howitzer_ready
+		HowitzerIncoming: enemy_barage_incoming
 		MinerUnderAttack: miner_under_attack
 		MiningTowerUnderAttack: mining_tower_under_attack
 		InsufficientFunds: insufficient_funding
 		LowPower: no_power
-		MissileLaunchDetected: missile_launch_detected
+		MissileIncoming: nuke_incoming
 		MissileCharging: nuke_prepping
 		MissileReady: nuke_ready
+		MissileDetected: nuke_detected
 		MinerReady: miner_mining_tower_ready
 		MissionAccomplished: mission_accomplished
 		MissionFailed: mission_failed
 		ForceFieldCharging: force_field_charging
 		ForceFieldReady: force_field_ready
+		ForceFieldDetected: force_field_detected
+		ForceFieldEngaged: force_field_engaged
 		NewOptions: new_construction_options
 		OnHold: on_hold
 		OrbitalRailgunDetected: railgun_detected
+		OrbitalRailgunFired: railgun_fired
 		OrbitalRailgunCharging: railgun_charging
 		OrbitalRailgunReady: railgun_ready
 		PrimaryBuildingSelected: primary_building_selected
