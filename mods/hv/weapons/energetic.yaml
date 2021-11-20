@@ -8,7 +8,7 @@ railgun:
 	Projectile: LaserZap
 		Width: 0c100
 		Shape: Cylindrical
-		ZOffset: 2000
+		ZOffset: 2048
 		Color: FE0303
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
@@ -215,7 +215,7 @@ LightningBolt:
 		Distortion: 200
 		DistortionAnimation: 200
 		SegmentLength: 0c512
-		ZOffset: 2000
+		ZOffset: 2048
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 3250
