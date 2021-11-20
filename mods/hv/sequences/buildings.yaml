@@ -827,14 +827,15 @@ turret2:
 		Offset: 5, 3
 	damaged-idle: bits/turret.png
 		Start: 1
-	turret: bits/turret2.png
+	turret: bits/turret-sc.png
 		Facings: 8
-		Offset: 1, -8
-	shoot: bits/turret2.png
+		Offset: 0, -7
+	shoot: bits/turret-sc.png
 		Start: 8
+		Length: 2
+		Tick: 50
 		Facings: 8
-		Tick: 100
-		Offset: 1, -8
+		Offset: 0, -7
 	make: bits/build.png
 		Length: 39
 		Tick: 30
