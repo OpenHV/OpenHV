@@ -142,6 +142,7 @@ generator:
 	idle: bits/generator.png
 		Length: 15
 		Tick: 80
+		ZOffset: 2048
 	shadow-overlay: bits/generator-shadow.png
 		ZOffset: 1768
 		Offset: 12, 11
@@ -1366,6 +1367,7 @@ storage2:
 		Offset: 0, -1
 	idle: bits/storage2.png
 		Start: 0
+		ZOffset: 2048
 	shadow-overlay: bits/storage2-shadow.png
 		ZOffset: 1768
 		Offset: 2, 1
