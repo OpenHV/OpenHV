@@ -1210,7 +1210,7 @@ HOWITZER:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	Power:
-		Amount: -120
+		Amount: -150
 	Armament:
 		Weapon: TurretArtillery
 		LocalOffset: 1500,50,1400
@@ -1230,6 +1230,7 @@ HOWITZER:
 		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: HowitzerIncoming
 		CircleBorderWidth: 3
+		SupportPowerPaletteOrder: 20
 	AttackTurreted:
 		RequiresCondition: !build-incomplete && !disabled
 		PauseOnCondition: !attacking
