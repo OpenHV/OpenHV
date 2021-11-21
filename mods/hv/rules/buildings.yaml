@@ -173,7 +173,8 @@ BASE2:
 		BlueTint: 0
 	RenderSprites:
 		Image: base2
-	-MapEditorData:
+	ProvidesPrerequisite:
+		Prerequisite: base
 
 GENERATOR:
 	Inherits: ^BaseBuilding

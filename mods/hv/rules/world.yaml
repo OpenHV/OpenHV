@@ -281,29 +281,40 @@ World:
 		CheckboxDisplayOrder: 8
 	TimeLimitManager:
 	CreateMapPlayers:
-	StartingUnits@Base:
+	StartingUnits@BaseYI:
 		Class: none
 		ClassName: Base only
-		Factions: yi, sc
+		Factions: yi
 		BaseActor: base
-	StartingUnits@Miner:
+	StartingUnits@BaseSC:
+		Class: none
+		ClassName: Base only
+		Factions: sc
+		BaseActor: base2
+	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: Base + Miner
-		Factions: yi, sc
+		Factions: yi
 		BaseActor: base
 		SupportActors: miner
-	StartingUnits@ScoutSC:
-		Class: scout
-		ClassName: Base + Scout
+	StartingUnits@MinerSC:
+		Class: miner
+		ClassName: Base + Miner
 		Factions: sc
-		BaseActor: base
-		SupportActors: balloon
+		BaseActor: base2
+		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
 		ClassName: Base + Scout
 		Factions: yi
 		BaseActor: base
 		SupportActors: saucer
+	StartingUnits@ScoutSC:
+		Class: scout
+		ClassName: Base + Scout
+		Factions: sc
+		BaseActor: base2
+		SupportActors: balloon
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnStartingUnits:
