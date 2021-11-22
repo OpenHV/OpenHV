@@ -148,7 +148,6 @@ generator:
 		Offset: 12, 11
 	damaged-idle: bits/generator.png
 		Start: 15
-		Length: 1
 	damaged-shadow-overlay: bits/generator-shadow.png
 		Start: 1
 		ZOffset: 1768
@@ -175,11 +174,12 @@ generator2:
 	Defaults:
 		Offset: 0, -8
 	idle: bits/generator2.png
-		Length: 15
-		Tick: 80
+		Length: 16
+		Tick: 75
 	damaged-idle: bits/generator2.png
-		Start: 15
-		Length: 1
+		Start: 16
+	icon: bits/buildings-icons.png
+		Start: 31
 
 radar:
 	Inherits@Flame: ^BuildingFlame
