@@ -1670,6 +1670,9 @@ HARBOR:
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds ships.
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0
 	Valued:
 		Cost: 1000
 	Tooltip:
