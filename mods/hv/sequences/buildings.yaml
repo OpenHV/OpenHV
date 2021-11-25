@@ -496,10 +496,9 @@ factory2:
 		Tick: 80
 		ZOffset: 1500
 	production-done: bits/factory2.png
-		Start: 11
-		Length: 4
-		Reverses: True
-		Tick: 100
+		Frames: 11, 12, 13, 14, 13, 12, 11
+		Length:	*
+		Tick: 80
 		ZOffset: 1500
 	make: bits/build.png
 		Length: 39
@@ -602,13 +601,12 @@ factory4:
 		Start: 1
 		Length: 10
 		Reverses: True
-		Tick: 80
+		Tick: 70
 		ZOffset: 1500
 	production-done: bits/factory4.png
-		Start: 11
-		Length: 4
-		Reverses: True
-		Tick: 100
+		Frames: 11, 12, 13, 14, 13, 12, 11
+		Length:	*
+		Tick: 80
 		ZOffset: 1500
 	idle-platform1: bits/platform2.png
 	damaged-idle-platform1: bits/platform2.png
