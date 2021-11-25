@@ -99,7 +99,8 @@ banshee:
 copter2:
 	idle: bits/copter2.png
 		Facings: 8
-	fly: bits/copter2b.png
+	fly: bits/copter2.png
+		Start: 8
 		Length: 4
 		Facings: 8
 		Tick: 50
