@@ -44,5 +44,10 @@ MOTHER:
 	StrategicPoint:
 	ProximityCapturable:
 	RenderSprites:
+		PlayerPalette: green
 	MapEditorData:
 		Categories: Mothership
+	WithIdleOverlay@Shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true

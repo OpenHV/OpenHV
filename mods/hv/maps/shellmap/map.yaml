@@ -38,13 +38,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: mother2b
-		Location: 59,27
-		Facing: 384
-		Owner: Neutral
-	Actor1: mother
-		Owner: Neutral
-		Location: 60,90
 	Actor2: miner2
 		Location: 42,103
 		Faction: Random
@@ -63,7 +56,6 @@ Actors:
 		Owner: Synapol Corporation
 	Actor6: storage
 		Location: 59,118
-		Faction: Random
 		Owner: Yuruki Industries
 		FreeActor: False
 	Actor9: base
@@ -674,10 +666,6 @@ Actors:
 		Location: 95,26
 		Faction: Random
 		Owner: Synapol Corporation
-	Actor242: uplink
-		Location: 81,21
-		Faction: Random
-		Owner: Synapol Corporation
 	Actor244: generator
 		Location: 85,22
 		Faction: Random
@@ -686,11 +674,6 @@ Actors:
 		Location: 88,22
 		Faction: Random
 		Owner: Synapol Corporation
-	Actor246: storage
-		Location: 69,13
-		Faction: Random
-		Owner: Synapol Corporation
-		FreeActor: False
 	Actor247: starport
 		Location: 86,112
 		Faction: Random
@@ -874,10 +857,6 @@ Actors:
 		Location: 71,125
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor306: silo
-		Location: 71,118
-		Faction: Random
-		Owner: Yuruki Industries
 	Actor307: harbor
 		Location: 23,125
 		Faction: Random
@@ -1000,5 +979,25 @@ Actors:
 	Actor341: module
 		Owner: Synapol Corporation
 		Location: 67,32
+	Actor342: mother2c
+		Owner: Neutral
+		Facing: 384
+		Location: 59,27
+	Actor343: storage
+		Owner: Synapol Corporation
+		Location: 69,13
+		FreeActor: False
+	Actor1: mother
+		Location: 60,90
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor344: silo
+		Faction: Random
+		Location: 81,22
+		Owner: Synapol Corporation
+	Actor306: uplink
+		Faction: Random
+		Location: 71,118
+		Owner: Yuruki Industries
 
 Rules: rules.yaml
