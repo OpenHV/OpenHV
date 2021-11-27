@@ -303,7 +303,7 @@ TreeAsh15:
 	Inherits: ^TreeAsh
 	LaysTerrain:
 		Offset: 0,1
-		Template: 1304
+		Template: 1476
 
 TreeMud1:
 	Inherits: ^TreeMud
@@ -378,7 +378,7 @@ TreeMud14:
 TreeMud15:
 	Inherits: ^TreeMud
 	LaysTerrain:
-		Template: 1407
+		Template: 1475
 		Offset: 0,1
 
 TreeMudSnow1:

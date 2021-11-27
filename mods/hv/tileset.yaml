@@ -11199,3 +11199,19 @@ Templates:
 		Categories: Snow, Grass
 		Tiles:
 			0: Snow
+	Template@1475:
+		Id: 1475
+		Images: bits/terrain/treegrsmnch.png
+		Frames: 14
+		Size: 1,1
+		Categories: Grass, Plant
+		Tiles:
+			0: Plant
+	Template@1476:
+		Id: 1476
+		Images: bits/terrain/treeashgrs.png
+		Frames: 13
+		Size: 1,1
+		Categories: Plant
+		Tiles:
+			0: Stone
