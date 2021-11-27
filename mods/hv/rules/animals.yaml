@@ -120,6 +120,8 @@ SEAMNSTR:
 	WithIdleAnimation:
 		Interval: 200, 400
 		Sequences: emerge
+	-GrantConditionOnDamageState:
+	-SpawnsShrapnel@DamageSparks:
 
 WORM:
 	Inherits: BEAST
