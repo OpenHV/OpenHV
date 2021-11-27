@@ -1,4 +1,5 @@
 # Enforce LF normalization on Windows
+*.pal eol=lf
 *.yaml eol=lf
 *.lua eol=lf
 *.cs eol=lf
