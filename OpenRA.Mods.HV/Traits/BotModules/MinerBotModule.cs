@@ -22,6 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Manages AI miner deployment logic.")]
 	public class MinerBotModuleInfo : ConditionalTraitInfo
 	{
+		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Actor types that can deploy onto resources.")]
 		public readonly HashSet<string> DeployableActorTypes = new HashSet<string>();
@@ -33,6 +34,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Terrain types that can be targeted for deployment.")]
 		public readonly HashSet<string> DeployableTerrainTypes = new HashSet<string>();
 
+		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Actor types that have been deployed onto resources.")]
 		public readonly HashSet<string> DeployedActorTypes = new HashSet<string>();

@@ -21,6 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class DeployDetectorBotModuleInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
+		[ActorReference]
 		[Desc("Actor types that can deploy.")]
 		public readonly HashSet<string> DeployableActorTypes = new HashSet<string>();
 

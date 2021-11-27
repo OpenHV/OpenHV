@@ -129,7 +129,7 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2
 	DeployDetectorBotModule:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: tank4
+		DeployableActorTypes: radartank
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
