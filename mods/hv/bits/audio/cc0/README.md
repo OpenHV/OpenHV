@@ -3,6 +3,8 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [Freqman_fx376.wav](https://freesound.org/people/FreqMan/sounds/32542/) by Freqman
 * [Freqman_fx376-reverse.wav](https://freesound.org/people/FreqMan/sounds/32542/) by Freqman
 * [Quedicemipez__teleportation.wav](https://freesound.org/people/quedicemipez/sounds/522704/) by Quedicemipez
+* [Quedicemipez_teleportation-barrier.wav](https://freesound.org/people/quedicemipez/sounds/522704/) by Quedicemipez
+* [Quedicemipez_teleportation-barrier-sell.wav](https://freesound.org/people/quedicemipez/sounds/522704/) by Quedicemipez
 * [Sonic1/2/3.wav](https://freesound.org/people/tutarap/sounds/341956/) by kafokafo
 * [impact_sangnamsa.wav](https://freesound.org/people/sangnamsa/sounds/473941/) by sangnamsa
 * [stealth_on_humanoide9000.wav](https://freesound.org/people/humanoide9000/sounds/422245/) by humanoide9000
