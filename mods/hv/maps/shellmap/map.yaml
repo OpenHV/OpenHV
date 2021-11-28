@@ -678,10 +678,6 @@ Actors:
 		Location: 86,112
 		Faction: Random
 		Owner: Yuruki Industries
-	Actor248: factory4
-		Location: 64,111
-		Faction: Random
-		Owner: Yuruki Industries
 	Actor249: field
 		Location: 67,121
 		Faction: Random
@@ -998,6 +994,10 @@ Actors:
 	Actor306: uplink
 		Faction: Random
 		Location: 71,118
+		Owner: Yuruki Industries
+	Actor345: factory3
+		Faction: Random
+		Location: 64,111
 		Owner: Yuruki Industries
 
 Rules: rules.yaml
