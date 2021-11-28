@@ -1276,6 +1276,22 @@ wall:
 		Start: 1
 	icon: bits/icon.png
 
+barrier:
+	Defaults:
+		Offset: 0,-5
+	idle: bits/barrier.png
+		Length: 16
+	damaged-idle: bits/barrier.png
+		Start: 16
+		Length: 16
+	make-overlay: bits/barrier-teleport.png
+		Length: 15
+		Tick: 25
+		ZOffset: 2048
+	icon: bits/buildings-icons.png
+		Start: 32
+		Offset: 0, 0
+
 techcenter:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
