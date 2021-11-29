@@ -16,6 +16,7 @@ Player:
 		ExcessPowerIncrement: 40
 		ExcessPowerIncreaseThreshold: 4
 		ResourceDistance: 6
+		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base
 		PowerTypes: generator
 		BarracksTypes: module
