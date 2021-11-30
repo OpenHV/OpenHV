@@ -1289,6 +1289,46 @@ barrier:
 		Start: 32
 		Offset: 0, 0
 
+gate-horizontal:
+	Defaults:
+		Offset: 0,-3
+	idle: bits/gate-horizontal.png
+		Length: 16
+	open: bits/gate-horizontal.png
+		Start: 15
+		Offset: 0,-3,0
+		ZRamp: 1
+		ZOffset: -2024
+	damaged-idle: bits/gate-horizontal.png
+		Start: 16
+		Length: 16
+	damaged-open: bits/gate-horizontal.png
+		Start: 31
+		Offset: 0,-3,0
+		ZRamp: 1
+		ZOffset: -2024
+	make-overlay: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 3096
+	icon: bits/buildings-icons.png
+		Start: 33
+		Offset: 0, 0
+
+gate-vertical:
+	Inherits: gate-horizontal
+	Defaults:
+		Offset: 0,-8
+	idle: bits/gate-vertical.png
+	open: bits/gate-vertical.png
+		Offset: 0,-8,0
+	damaged-idle: bits/gate-vertical.png
+	damaged-open: bits/gate-vertical.png
+		Offset: 0,-8,0
+	icon: bits/buildings-icons.png
+		Start: 34
+		Offset: 0, 0
+
 techcenter:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
