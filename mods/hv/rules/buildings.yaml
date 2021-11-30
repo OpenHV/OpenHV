@@ -482,7 +482,7 @@ MODULE:
 		Font: TinyPixel
 	RenderSprites:
 		PlayerPalette: green
-		Image: module-yi
+		Image: module
 		FactionImages:
 			sc: module2
 	WithIdleOverlay@Shadow:

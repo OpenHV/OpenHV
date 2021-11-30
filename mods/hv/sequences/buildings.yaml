@@ -283,7 +283,7 @@ tradplat2:
 		Start: 28
 		Offset: 0, 2
 
-module-yi:
+module:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, 2
@@ -324,16 +324,13 @@ module-yi:
 		Offset: 0, 0
 
 module2:
-	Inherits: module-yi
+	Inherits: module
 	door: bits/module2.png
 	idle: bits/module2.png
+	damaged-idle: bits/module2.png
 	shadow-overlay: bits/module2-shadow.png
-		Start: 0
-		ZOffset: 1768
 		Offset: 5, 7
 	damaged-shadow-overlay: bits/module2-shadow.png
-		Start: 1
-		ZOffset: 1768
 		Offset: 5, 7
 	production-inprogress: bits/module2.png
 		Start: 10
