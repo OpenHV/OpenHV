@@ -383,7 +383,7 @@ TRADPLAT:
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
 		PlayerPalette: green
-		Image: tradplat-yi
+		Image: tradplat
 		FactionImages:
 			sc: tradplat2
 	WithIdleOverlay@Shadow:
@@ -1307,7 +1307,7 @@ FIELD:
 		RequiredForShortGame: false
 	RenderSprites:
 		PlayerPalette: green
-		Image: field-yi
+		Image: field
 		FactionImages:
 			sc: field2
 	WithIdleOverlay@Shadow:
