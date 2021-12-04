@@ -13,12 +13,6 @@ SCOUT1:
 		Name: Machine Gun Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	RevealsShroud:
-		Range: 7c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
 	Armament@Primary:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
@@ -45,12 +39,6 @@ SCOUT2:
 		Name: Rocket Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	RevealsShroud:
-		Range: 7c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
 	Armament@Primary:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
@@ -82,12 +70,6 @@ MORTARPOD:
 		Name: Mortar Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	RevealsShroud:
-		Range: 7c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
 	Armament@Primary:
 		Weapon: mortargun
 		MuzzleSequence: muzzle
@@ -125,10 +107,6 @@ SNIPERPOD:
 		Locomotor: pod
 	RevealsShroud:
 		Range: 8c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
 	Armament@Primary:
 		Weapon: SniperRifle
 		MuzzleSequence: muzzle
@@ -173,9 +151,3 @@ TECHNICIAN:
 		Voice: Move
 	RenderSprites:
 		PlayerPalette: green
-	RevealsShroud:
-		Range: 6c0
-		MinRange: 4c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0

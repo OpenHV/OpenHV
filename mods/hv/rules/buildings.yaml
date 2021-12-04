@@ -201,10 +201,10 @@ GENERATOR:
 		Type: Steel
 	RevealsShroud:
 		Range: 4c0
-		MinRange: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Power:
 		Amount: 130
 	Targetable:
@@ -261,7 +261,6 @@ RADAR:
 	RevealsShroud@Offline:
 		Range: 5c0
 		RequiresCondition: disabled
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -361,10 +360,10 @@ TRADPLAT:
 		Type: Steel
 	RevealsShroud:
 		Range: 5c0
-		MinRange: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Reservable:
 	RallyPoint:
 		IsPlayerPalette: true
@@ -424,10 +423,10 @@ MODULE:
 		Type: Steel
 	RevealsShroud:
 		Range: 5c0
-		MinRange: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
@@ -542,7 +541,7 @@ MINER2:
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c0
 		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
@@ -583,10 +582,10 @@ STARPORT:
 		Type: Steel
 	RevealsShroud:
 		Range: 5c0
-		MinRange: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Exit:
 		RequiresCondition: !being-captured && !build-incomplete
 		SpawnOffset: 0,-256,0
@@ -681,11 +680,11 @@ FACTORY3:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 4c768
-		MinRange: 4c0
+		Range: 5c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@BuildingName:
@@ -948,7 +947,7 @@ TECHCENTER:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 4c0
+		Range: 5c0
 		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
@@ -1002,6 +1001,8 @@ BUNKER:
 	HitShape:
 		Type: Circle
 			Radius: 512
+	RevealsShroud:
+		Range: 7c0
 	WithRangeCircle:
 		Type: Turret
 		Width: 2
@@ -1049,6 +1050,8 @@ TURRET:
 		Width: 2
 		BorderWidth: 3
 		Range: 8c0
+	RevealsShroud:
+		Range: 7c0
 	AttackTurreted:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
@@ -1200,13 +1203,12 @@ HOWITZER:
 	Health:
 		HP: 100000
 	RevealsShroud:
-		Range: 12c0
+		Range: 8c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
 		Range: 5c0
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -1496,11 +1498,11 @@ STORAGE:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 4c0
-		MinRange: 4c0
+		Range: 5c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Power:
 		Amount: -30
 	RenderSprites:
@@ -1595,12 +1597,12 @@ TELEVATR:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 6c0
+		Range: 5c0
+		MinRange: 2c0
 		RequiresCondition: !disabled
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Power:
 		Amount: -200
 	MustBeDestroyed:
@@ -1686,11 +1688,11 @@ HARBOR:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 4c768
-		MinRange: 4c0
+		Range: 5c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	RallyPoint:
 		Path: 1,3
 		IsPlayerPalette: true
@@ -2098,17 +2100,16 @@ TECHBUILDING:
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
+		Range: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 		RequiresCondition: !disabled && !ownerless
 	RevealsShroud@Offline:
-		Range: 5c0
-		MinRange: 4c0
+		Range: 2c0
 		RevealGeneratedShroud: False
 		RequiresCondition: disabled && !ownerless
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
@@ -2224,17 +2225,16 @@ TECHMINER:
 	WithSpriteBody:
 		PauseOnCondition: disabled
 	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
+		Range: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 		RequiresCondition: !disabled && !ownerless
 	RevealsShroud@Offline:
-		Range: 5c0
-		MinRange: 4c0
+		Range: 2c0
 		RevealGeneratedShroud: False
 		RequiresCondition: disabled && !ownerless
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	RenderSprites:
 		PlayerPalette: green
 	MustBeDestroyed:
@@ -2300,17 +2300,16 @@ TECHCOMLINK:
 		Amount: -40
 		RequiresCondition: !ownerless
 	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
-		RevealGeneratedShroud: false
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
 		RequiresCondition: !disabled && !ownerless
 	RevealsShroud@Offline:
-		Range: 5c0
-		MinRange: 4c0
+		Range: 3c0
 		RevealGeneratedShroud: False
 		RequiresCondition: disabled && !ownerless
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	RenderSprites:
 		PlayerPalette: green
 	MustBeDestroyed:

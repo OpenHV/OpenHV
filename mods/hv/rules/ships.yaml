@@ -70,11 +70,11 @@ BOAT:
 		Speed: 100
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 6c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	Turreted:
 		TurnSpeed: 60
 		Offset: 150,0,100
@@ -114,18 +114,18 @@ BOAT2:
 		Speed: 75
 		TurnSpeed: 40
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 6c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	Turreted:
 		TurnSpeed: 40
 	Armament:
 		Weapon: railgun
 		Recoil: 100
 		RecoilRecovery: 25
-		LocalOffset: 500,0,0 # TODO: to be adjusted
+		LocalOffset: 500,0,0
 	AttackTurreted:
 	WithSpriteTurret:
 	RenderSprites:
@@ -155,11 +155,11 @@ BOAT4:
 		Speed: 55
 		TurnSpeed: 40
 	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
+		Range: 7c0
+		MinRange: 3c0
 		RevealGeneratedShroud: false
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	AttackFrontal:
 		FacingTolerance: 25
 	WithMissileSpawnerParentPipsDecoration:
@@ -236,8 +236,8 @@ CARRIER:
 		Type: Heavy
 	RevealsShroud:
 		Range: 7c0
+		MinRange: 3c0
 		Type: CenterPosition
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -249,6 +249,9 @@ CARRIER:
 		Voice: Move
 	RevealsShroud:
 		Range: 7c0
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 3c0
 	AttackFrontal:
 		FacingTolerance: 128
 	RenderSprites:

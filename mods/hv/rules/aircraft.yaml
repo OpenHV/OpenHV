@@ -19,8 +19,8 @@ PLANE1:
 		HP: 10000
 	RevealsShroud:
 		Range: 10c0
-		Type: GroundPosition
 		MinRange: 4c0
+		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -76,9 +76,9 @@ PLANE2:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
+		Range: 11c0
 		MinRange: 4c0
+		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -136,8 +136,8 @@ COPTER:
 		HP: 10000
 	RevealsShroud:
 		Range: 10c0
-		Type: GroundPosition
 		MinRange: 4c0
+		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -181,11 +181,11 @@ SAUCER:
 		HP: 8000
 	RevealsShroud:
 		Range: 18c0
+		MinRange: 6c0
 		Type: GroundPosition
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 6c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16
@@ -220,9 +220,9 @@ BANSHEE:
 	Health:
 		HP: 10000
 	RevealsShroud:
-		Range: 10c0
-		Type: GroundPosition
+		Range: 11c0
 		MinRange: 4c0
+		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -260,8 +260,8 @@ COPTER2:
 		HP: 15000
 	RevealsShroud:
 		Range: 8c0
-		Type: GroundPosition
 		MinRange: 4c0
+		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -318,11 +318,11 @@ BALLOON:
 		HP: 8000
 	RevealsShroud:
 		Range: 18c0
+		MinRange: 6c0
 		Type: GroundPosition
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 6c0
 		Type: GroundPosition
 	Aircraft:
 		Speed: 70
@@ -360,8 +360,8 @@ DROPSHIP:
 		HP: 15000
 	RevealsShroud:
 		Range: 8c0
-		Type: GroundPosition
 		MinRange: 4c0
+		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
@@ -420,12 +420,12 @@ DROPSHIP.Husk:
 		SpawnAtLastPosition: false
 		Type: CenterPosition
 	RevealsShroud:
-		MinRange: 8c0
 		Range: 4c0
+		MinRange: 2c0
 		Type: GroundPosition
 		RevealGeneratedShroud: false
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 		Type: GroundPosition
 	RenderSprites:
 		Image: dropship
@@ -443,11 +443,11 @@ DRONE:
 		Type: Light
 	RevealsShroud:
 		Range: 4c0
+		MinRange: 2c0
 		Type: GroundPosition
-		MinRange: 1c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 1c0
+		Range: 2c0
 		Type: GroundPosition
 	Armament:
 		Weapon: DroneBlaster
