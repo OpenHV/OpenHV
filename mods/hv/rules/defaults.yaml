@@ -165,6 +165,12 @@
 	Crushable:
 		CrushClasses: Pods
 		WarnProbability: 15
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
 
 ^Scrap:
 	Interactable:
@@ -509,14 +515,13 @@
 	Armor:
 		Type: Steel
 	RevealsShroud:
-		Range: 10c0
+		Range: 8c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	RevealsShroud@Offline:
 		RequiresCondition: !disabled
 		Range: 5c0
-		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
