@@ -396,7 +396,7 @@ starport:
 		Offset: -3, 17
 	icon: bits/buildings-icons.png
 		Start: 9
-		Offset: 0, 3
+		Offset: 0, 1
 
 starport2:
 	Inherits@Flame: ^BuildingFlame2
@@ -429,7 +429,7 @@ starport2:
 		Offset: -3, 17
 	icon: bits/buildings-icons.png
 		Start: 17
-		Offset: 0, 3
+		Offset: 0, 1
 
 factory2:
 	Inherits@Flame: ^BuildingFlame2
