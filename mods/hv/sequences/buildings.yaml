@@ -1217,9 +1217,9 @@ techcenter:
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Offset: 4, -18
+		Offset: 2, -20
 	flame2:
-		Offset: 15, 8
+		Offset: 8, 4
 	icon: bits/buildings-icons.png
 		Start: 18
 		Offset: 0, 2
@@ -1227,10 +1227,13 @@ techcenter:
 techcenter2:
 	Inherits: techcenter
 	idle: bits/techcenter2.png
-	shadow-overlay: bits/techcenter-shadow.png
-	damaged-shadow-overlay: bits/techcenter-shadow-damaged.png
+	shadow-overlay: bits/techcenter2-shadow.png
+	damaged-shadow-overlay: bits/techcenter2-shadow-damaged.png
 	damaged-idle: bits/techcenter2.png
 	animation: bits/techcenter2.png
+		Tick: 100
+	icon: bits/buildings-icons.png
+		Start: 35
 
 techbuilding:
 	Inherits@Flame: ^BuildingFlame2
