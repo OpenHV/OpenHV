@@ -1846,9 +1846,6 @@ BARRIER:
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: false
 	-ShakeOnDeath:
-	WithShadow:
-		Offset: 200,200,0
-		ZOffset: -1000
 	-Selectable:
 	Interactable:
 	Replaceable:
@@ -1916,9 +1913,6 @@ BARRIER:
 	WithConstructionBeamOverlay:
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: false
-	WithShadow:
-		Offset: 200,200,0
-		ZOffset: -1000
 	Sellable:
 		SellSounds: Quedicemipez_teleportation-barrier-sell.wav
 
