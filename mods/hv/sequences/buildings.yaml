@@ -1129,15 +1129,18 @@ wall:
 
 barrier:
 	Defaults:
-		Offset: 0,-5
+		Offset: 3,-2
 	idle: bits/barrier.png
 		Length: 16
+		ShadowStart: 32
 	damaged-idle: bits/barrier.png
 		Start: 16
 		Length: 16
+		ShadowStart: 32
 	make-overlay: bits/barrier-teleport.png
 		Length: 15
 		Tick: 25
+		Offset: 0,-5
 		ZOffset: 2048
 	icon: bits/buildings-icons.png
 		Start: 32
@@ -1145,22 +1148,26 @@ barrier:
 
 gate-horizontal:
 	Defaults:
-		Offset: 0,-3
+		Offset: 2,0
 	idle: bits/gate-horizontal.png
 		Length: 16
+		ShadowStart: 32
 	open: bits/gate-horizontal.png
 		Start: 15
-		Offset: 0,-3,0
+		Offset: 2,0,0
 		ZRamp: 1
-		ZOffset: -2024
+		ZOffset: -3036
+		ShadowStart: 47
 	damaged-idle: bits/gate-horizontal.png
 		Start: 16
 		Length: 16
+		ShadowStart: 32
 	damaged-open: bits/gate-horizontal.png
 		Start: 31
-		Offset: 0,-3,0
+		Offset: 2,0,0
 		ZRamp: 1
-		ZOffset: -2024
+		ZOffset: -3036
+		ShadowStart: 47
 	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
@@ -1172,13 +1179,13 @@ gate-horizontal:
 gate-vertical:
 	Inherits: gate-horizontal
 	Defaults:
-		Offset: 0,-8
+		Offset: 3,-4
 	idle: bits/gate-vertical.png
 	open: bits/gate-vertical.png
-		Offset: 0,-8,0
+		Offset: 3,-4,0
 	damaged-idle: bits/gate-vertical.png
 	damaged-open: bits/gate-vertical.png
-		Offset: 0,-8,0
+		Offset: 3,-4,0
 	icon: bits/buildings-icons.png
 		Start: 34
 		Offset: 0, 0
