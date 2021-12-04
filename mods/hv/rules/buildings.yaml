@@ -975,7 +975,7 @@ TECHCENTER:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@animation:
 		Sequence: animation
-		RequiresCondition: !build-incomplete && !disabled
+		RequiresCondition: !build-incomplete && !disabled && !burning
 
 BUNKER:
 	Inherits: ^DefenseBuilding
