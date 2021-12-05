@@ -522,6 +522,7 @@ MINER2:
 		Deposits:
 			iron: 10000
 			gold: 15000
+		DepletionNotification: ResourcesDepleted
 		Colors:
 			iron: 878787
 			gold: F07000

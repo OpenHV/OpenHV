@@ -55,7 +55,8 @@ Speech:
 		UnitReady: unit_ready
 		UnitRepaired: unit_repaired
 		ReinforcementsHaveArrived: reinforcements_have_arrived
-		SelectTarget: select_target.wav
+		SelectTarget: select_target
+		ResourcesDepleted: resources_depleted
 
 Sounds:
 	DefaultVariant: .wav

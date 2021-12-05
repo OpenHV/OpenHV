@@ -46,6 +46,10 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Defines to which players the bar is to be shown.")]
 		public readonly Dictionary<string, Color> Colors = new Dictionary<string, Color>();
 
+		[NotificationReference("Speech")]
+		[Desc("The audio notification type to play when the resources are exhausted.")]
+		public string DepletionNotification = null;
+
 		public override object Create(ActorInitializer init) { return new ResourceCollector(init.Self, this); }
 	}
 
@@ -126,6 +130,8 @@ namespace OpenRA.Mods.HV.Traits
 
 					foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
 						notify.Depletion(self);
+
+					Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.DepletionNotification, self.Owner.Faction.InternalName);
 				}
 
 				if (limitedResources != null && limitedResources.IsTraitEnabled() && limitedResources.Enabled)
