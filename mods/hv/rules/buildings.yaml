@@ -1106,7 +1106,7 @@ AATURRET:
 		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: module, starport, ~structures.yi
+		Prerequisites: radar, ~structures.yi
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
@@ -1151,7 +1151,7 @@ AATURRET2:
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: module, starport, ~structures.sc
+		Prerequisites: radar, ~structures.sc
 		Description: Anti-Air base defense.\nRequires power to operate.
 	Valued:
 		Cost: 1250
@@ -1672,7 +1672,7 @@ HARBOR:
 	Selectable:
 		Bounds: 3072, 2348, 0, -560
 	Buildable:
-		Prerequisites: factory, ~structures.yi
+		Prerequisites: module, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: Builds ships.
@@ -1779,7 +1779,7 @@ HARBOR2:
 	ProvidesPrerequisite@Faction:
 		Prerequisite: harbor.sc
 	Buildable:
-		Prerequisites: factory, ~structures.sc
+		Prerequisites: module, ~structures.sc
 
 BARRIER:
 	Inherits: ^Building
