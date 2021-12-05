@@ -300,10 +300,10 @@ RADAR:
 		UseDirectionalTarget: true
 		DirectionArrowAnimation: direction
 		SupportPowerPaletteOrder: 30
-		SelectTargetSpeechNotification: SelectTarget
 		OrderName: FlushBombers
-		EndChargeSpeechNotification: AirStrikeReady
 		BeginChargeSpeechNotification: AirStrikeCharging
+		EndChargeSpeechNotification: AirStrikeReady
+		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: AirStrikeIncoming
 	SupportPowerChargeBar:
 
@@ -326,10 +326,9 @@ RADAR2:
 		Drops: 12,12
 		OrderName: EjectPods
 		SupportPowerPaletteOrder: 30
-		SelectTargetSpeechNotification: SelectTarget
-		EndChargeSpeechNotification: DroppodReady
-		LaunchSpeechNotification: ReinforcementsHaveArrived
 		BeginChargeSpeechNotification: DroppodCharging
+		EndChargeSpeechNotification: DroppodReady
+		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: DroppodIncoming
 
 TRADPLAT:
@@ -1297,11 +1296,11 @@ FIELD:
 		DetectedSpeechNotification: ForceFieldDetected
 		BeginChargeSpeechNotification: ForceFieldCharging
 		EndChargeSpeechNotification: ForceFieldReady
+		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: ForceFieldEngaged
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		OrderName: ShieldsUp
-		SelectTargetSpeechNotification: SelectTarget
 		LaunchSound: force_field_autistic-lucario.wav
 	SupportPowerChargeBar:
 	WithSupportPowerChargedAnimation:
@@ -1377,9 +1376,9 @@ SILO:
 		DetectedSpeechNotification: NukeDetected
 		BeginChargeSpeechNotification: NukeCharging
 		EndChargeSpeechNotification: NukeReady
+		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: NukeIncoming
 		OrderName: Nukem
-		SelectTargetSpeechNotification: SelectTarget
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
