@@ -70,7 +70,9 @@ Player:
 		SquadSize: 20
 		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8, technician
 		NavalUnitsTypes: boat, heavyboat
+		AirUnitsTypes: plane1, plane2, copter, banshee
 		ConstructionYardTypes: base
+		ProtectionTypes: base, miner2, storage, module, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, startport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai

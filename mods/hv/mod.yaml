@@ -238,6 +238,7 @@ GitHubWebServices:
 
 DiscordService:
 	ApplicationId: 730762985772941312
+	Tooltip: Open Source Pixelart Science-Fiction Real-Time-Strategy game
 
 GameSpeeds:
 	DefaultSpeed: default

@@ -1228,6 +1228,7 @@ HOWITZER:
 		DisplayRadarPing: true
 		Description: Artillery Strike
 		LongDesc: Fires a long range barrage across the map.
+		DetectedSpeechNotification: HowitzerDetected
 		BeginChargeSpeechNotification: HowitzerCharging
 		EndChargeSpeechNotification: HowitzerReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -1292,6 +1293,7 @@ FIELD:
 		Icon: shield
 		Cursor: force-field
 		BlockedCursor: force-field-blocked
+		DetectedSpeechNotification: ForceFieldDetected
 		BeginChargeSpeechNotification: ForceFieldCharging
 		EndChargeSpeechNotification: ForceFieldReady
 		IncomingSpeechNotification: ForceFieldEngaged
@@ -1371,9 +1373,10 @@ SILO:
 		DisplayRadarPing: true
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 10
-		BeginChargeSpeechNotification: MissileCharging
-		EndChargeSpeechNotification: MissileReady
-		IncomingSpeechNotification: MissileIncoming
+		DetectedSpeechNotification: NukeDetected
+		BeginChargeSpeechNotification: NukeCharging
+		EndChargeSpeechNotification: NukeReady
+		IncomingSpeechNotification: NukeIncoming
 		OrderName: Nukem
 		SelectTargetSpeechNotification: SelectTarget
 	SupportPowerChargeBar:
@@ -1447,9 +1450,10 @@ UPLINK:
 		DisplayRadarPing: true
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 10
-		SelectTargetSpeechNotification: SelectTarget
+		DetectedSpeechNotification: OrbitalRailgunDetected
 		BeginChargeSpeechNotification: OrbitalRailgunCharging
 		EndChargeSpeechNotification: OrbitalRailgunReady
+		SelectTargetSpeechNotification: SelectTarget
 		IncomingSpeechNotification: OrbitalRailgunFired
 	Power:
 		Amount: -150

@@ -29,10 +29,10 @@ Speech:
 		MiningTowerUnderAttack: mining_tower_under_attack
 		InsufficientFunds: insufficient_funding
 		LowPower: no_power
-		MissileIncoming: nuke_incoming
-		MissileCharging: nuke_prepping
-		MissileReady: nuke_ready
-		MissileDetected: nuke_detected
+		NukeIncoming: nuke_incoming
+		NukeCharging: nuke_prepping
+		NukeReady: nuke_ready
+		NukeDetected: nuke_detected
 		MinerReady: miner_mining_tower_ready
 		MissionAccomplished: mission_accomplished
 		MissionFailed: mission_failed
@@ -61,8 +61,11 @@ Sounds:
 	DefaultVariant: .wav
 	Notifications:
 		ClickSound: klinkp75
+			AllowInterrupt: true
 		ClickDisabledSound: klinkp90
 		Beacon: placebeacon
+			AllowInterrupt: true
 		RadarDown: radaroff
 		RadarUp: radaron
 		ChatLineSound: radiobeep
+			AllowInterrupt: true
