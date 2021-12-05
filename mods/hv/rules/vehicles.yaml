@@ -449,10 +449,10 @@ TANK7:
 		Type: Heavy
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
-		Voice: Attack
+		Voice: Action
 	Armament:
 		Weapon: StealthTankMissile
-		LocalOffset: 213,43,128, 213,-43,128
+		LocalOffset: 213,0,128
 	Mobile:
 		Speed: 120
 	RevealsShroud:
@@ -471,8 +471,12 @@ TANK7:
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
+	WithAttackAnimation:
+		Sequence: shoot
 	RenderSprites:
 		PlayerPalette: green
+	Voiced:
+		VoiceSet: StealthTankVoice
 
 TANK11:
 	Inherits: ^TrackedVehicle

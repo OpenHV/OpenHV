@@ -115,6 +115,12 @@ bullet13:
 		Tick: 40
 		ZOffset: 2030
 
+bullet14:
+	idle: bits/bullet14.png
+		Length: 2
+		Facings: 8
+		ZOffset: 2030
+
 nuclear:
 	up: bits/blank.png
 	down: bits/nuclear_bomb.png
@@ -268,6 +274,11 @@ artillery-trail:
 	idle: bits/artillery-trail.png
 		Length: *
 		Tick: 80
+
+stealthtank-trail:
+	idle: bits/stealthtank-trail.png
+		Length: *
+		Tick: 60
 
 shells:
 	shell_flying: bits/shells.png

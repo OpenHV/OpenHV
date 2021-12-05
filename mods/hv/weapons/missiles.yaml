@@ -252,7 +252,7 @@ StealthTankMissile:
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
 	Range: 7c0
-	Report: rocketlaunch02.wav
+	Report: newlocknew_missile.wav
 	Burst: 2
 	BurstDelays: 10
 	Projectile: Missile
@@ -260,6 +260,8 @@ StealthTankMissile:
 		HorizontalRateOfTurn: 40
 		Speed: 213
 		RangeLimit: 8c409
+		Image: bullet14
+		TrailImage: stealthtank-trail
 	Warhead@Damage: SpreadDamage
 		Damage: 6000
 		Versus:

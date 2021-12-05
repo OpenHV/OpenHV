@@ -99,6 +99,10 @@ tank6:
 tank7:
 	idle: bits/tank7.png
 		Facings: 8
+	shoot: bits/tank7.png
+		Start: 8
+		Facings: 8
+		Tick: 200
 	icon: bits/units-icons.png
 		Start: 10
 
