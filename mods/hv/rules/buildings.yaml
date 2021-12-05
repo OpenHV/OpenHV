@@ -291,8 +291,8 @@ RADAR:
 		ChargeInterval: 3750
 		SquadSize: 3
 		QuantizedFacings: 8
-		Description: Air Strike
-		LongDesc: Deploy an aerial bombing run.
+		Name: Air Strike
+		Description: Deploy an aerial bombing run.
 		UnitType: bomber1
 		DisplayBeacon: false
 		DisplayRadarPing: true
@@ -316,8 +316,8 @@ RADAR2:
 		Cursor: droppod
 		PauseOnCondition: disabled
 		Icon: droppods
-		Description: Drop Pods
-		LongDesc: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
+		Name: Drop Pods
+		Description: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
 		DisplayRadarPing: true
 		ChargeInterval: 3750
 		UnitTypes: droppod1, droppod2
@@ -1226,8 +1226,8 @@ HOWITZER:
 		OrderName: FireMission
 		ChargeInterval: 3000
 		DisplayRadarPing: true
-		Description: Artillery Strike
-		LongDesc: Fires a long range barrage across the map.
+		Name: Artillery Strike
+		Description: Fires a long range barrage across the map.
 		DetectedSpeechNotification: HowitzerDetected
 		BeginChargeSpeechNotification: HowitzerCharging
 		EndChargeSpeechNotification: HowitzerReady
@@ -1283,8 +1283,8 @@ FIELD:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		ChargeInterval: 3000
-		Description: Force Field
-		LongDesc: Makes a group of units invulnerable\nfor 30 seconds.
+		Name: Force Field
+		Description: Makes a group of units invulnerable\nfor 30 seconds.
 		Duration: 750
 		DisplayRadarPing: true
 		Condition: shield
@@ -1363,8 +1363,8 @@ SILO:
 		Cursor: nuke
 		Icon: nuke
 		ChargeInterval: 13500
-		Description: Atom Bomb
-		LongDesc: Drop an atomic bomb\nat a target location.
+		Name: Atom Bomb
+		Description: Drop an atomic bomb\nat a target location.
 		MissileWeapon: nuclear
 		MissileDelay: 5
 		SkipAscent: true
@@ -1445,8 +1445,8 @@ UPLINK:
 		Icon: railgun
 		Cursor: railgun
 		ChargeInterval: 9000
-		Description: Orbital Railgun
-		LongDesc: Initiate a surgical strike.\nApplies instant damage to a small area.
+		Name: Orbital Railgun
+		Description: Initiate a surgical strike.\nApplies instant damage to a small area.
 		DisplayRadarPing: true
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 10
@@ -2276,8 +2276,8 @@ TECHCOMLINK:
 		ValidRelationships: Neutral, Enemy
 	SpawnActorPower:
 		Icon: radar
-		Description: Active Radar
-		LongDesc: Reveals the battlefield and cloaked units \nin the vicinity for a short time.
+		Name: Active Radar
+		Description: Reveals the battlefield and cloaked units \nin the vicinity for a short time.
 		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: radarsweep
