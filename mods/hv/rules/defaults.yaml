@@ -139,6 +139,8 @@
 	Demolishable:
 	AnnounceOnSeen:
 		Notification: EnemyUnitsDetected
+	DetectCloaked:
+		Range: 1c0
 
 ^Pod:
 	Inherits: ^Vehicle
@@ -171,6 +173,8 @@
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
+	DetectCloaked:
+		Range: 1c0
 
 ^Scrap:
 	Interactable:
@@ -542,6 +546,8 @@
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	-CommandBarBlacklist:
+	DetectCloaked:
+		Range: 5c0
 
 ^Prop:
 	Inherits: ^Building

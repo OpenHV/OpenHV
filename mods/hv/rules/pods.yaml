@@ -119,6 +119,8 @@ SNIPERPOD:
 	WithMuzzleOverlay:
 	RenderSprites:
 		PlayerPalette: green
+	DetectCloaked:
+		Range: 2c0
 
 TECHNICIAN:
 	Inherits: ^Pod
