@@ -24,7 +24,6 @@
     <releaseNotes>https://github.com/OpenHV/OpenHV/releases</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" />
-      <dependency id="dotnet4.7.2" />
     </dependencies>
   </metadata>
   <files>
