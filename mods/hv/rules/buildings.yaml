@@ -557,6 +557,12 @@ MINER2:
 		RequiresCondition: !build-incomplete && !critical
 	Capturable:
 		RequiresCondition: !build-incomplete
+	-Sellable:
+	Transforms:
+		PauseOnCondition: build-incomplete || being-captured
+		IntoActor: miner
+		Facing: 750
+		Offset: 1,2
 
 STARPORT:
 	Inherits: ^BaseBuilding
