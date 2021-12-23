@@ -23,13 +23,16 @@
 			Ore: 100
 			Crater: 100
 			Grass: 100
+			Grass Ramp: 100
 			Grass Pit: 100
 			Road: 100
 			Mountain: 100
 			Ice: 100
 			Snow: 100
+			Snow Ramp: 100
 			Red Snow: 100
 			Sand: 100
+			Sand Ramp: 100
 			Stone: 100
 			Tech: 100
 	Locomotor@Pod:
@@ -41,13 +44,16 @@
 			Ore: 90
 			Crater: 90
 			Grass: 90
+			Grass Ramp: 80
 			Grass Pit: 90
 			Road: 100
 			Mountain: 90
 			Ice: 80
 			Snow: 90
+			Snow Ramp: 80
 			Red Snow: 90
 			Sand: 90
+			Sand Ramp: 80
 			Stone: 100
 			Tech: 100
 	Locomotor@Wheeled:
@@ -58,13 +64,16 @@
 			Ore: 90
 			Crater: 90
 			Grass: 90
+			Grass Ramp: 80
 			Grass Pit: 90
 			Road: 100
 			Mountain: 90
 			Ice: 80
 			Snow: 90
+			Snow Ramp: 80
 			Red Snow: 90
 			Sand: 90
+			Sand Ramp: 80
 			Stone: 100
 			Tech: 100
 	Locomotor@Tracked:
@@ -76,13 +85,16 @@
 			Ore: 100
 			Crater: 100
 			Grass: 100
+			Grass Ramp: 100
 			Grass Pit: 100
 			Road: 100
 			Mountain: 100
 			Ice: 100
 			Snow: 100
+			Snow Ramp: 100
 			Red Snow: 100
 			Sand: 100
+			Sand Ramp: 100
 			Stone: 100
 			Plant: 50
 			Tech: 100
@@ -94,13 +106,16 @@
 			Ore: 100
 			Crater: 100
 			Grass: 100
+			Grass Ramp: 100
 			Grass Pit: 100
 			Road: 100
 			Mountain: 100
 			Ice: 100
 			Snow: 100
+			Snow Ramp: 100
 			Red Snow: 100
 			Sand: 100
+			Sand Ramp: 100
 			Stone: 100
 			Tech: 100
 	Locomotor@Naval:

@@ -52,6 +52,10 @@ Terrain:
 		TargetTypes: Ground
 		Color: 125405
 		AcceptsSmudgeType: Crater
+	TerrainType@GrassRamp:
+		Type: Grass Ramp
+		TargetTypes: Ground
+		Color: 125405
 	TerrainType@Cliff:
 		Type: Cliff
 		TargetTypes: Ground
@@ -77,6 +81,10 @@ Terrain:
 		TargetTypes: Ground
 		Color: BDC0D5
 		AcceptsSmudgeType: Crater
+	TerrainType@SnowRamp:
+		Type: Snow Ramp
+		TargetTypes: Ground
+		Color: BDC0D5
 	TerrainType@RedSnow:
 		Type: Red Snow
 		TargetTypes: Ground
@@ -87,6 +95,10 @@ Terrain:
 		TargetTypes: Ground
 		Color: D0A090
 		AcceptsSmudgeType: Crater
+	TerrainType@SandRamp:
+		Type: Sand Ramp
+		TargetTypes: Ground
+		Color: D0A090
 	TerrainType@Plant:
 		Type: Plant
 		TargetTypes: Ground
@@ -969,36 +981,36 @@ Templates:
 		Images: bits/terrain/grass.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 3DB137
 	Template@118:
 		Id: 118
 		Images: bits/terrain/grass.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 3DB137
 	Template@119:
 		Id: 119
 		Images: bits/terrain/grass.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@120:
 		Id: 120
 		Images: bits/terrain/grass.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 3DB137
 	Template@121:
 		Id: 121
@@ -1044,72 +1056,72 @@ Templates:
 		Images: bits/terrain/grass.png
 		Frames: 5
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@123:
 		Id: 123
 		Images: bits/terrain/grass.png
 		Frames: 6
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@124:
 		Id: 124
 		Images: bits/terrain/grass.png
 		Frames: 7
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@125:
 		Id: 125
 		Images: bits/terrain/grass.png
 		Frames: 8
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 3DB137
 	Template@126:
 		Id: 126
 		Images: bits/terrain/grass.png
 		Frames: 9
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@127:
 		Id: 127
 		Images: bits/terrain/grass.png
 		Frames: 10
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@128:
 		Id: 128
 		Images: bits/terrain/grass.png
 		Frames: 11
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 0B3A00
 	Template@129:
 		Id: 129
 		Images: bits/terrain/grass.png
 		Frames: 12
 		Size: 1,1
-		Categories: Grass
+		Categories: Grass, Ramp
 		Tiles:
-			0: Grass
+			0: Grass Ramp
 				MinColor: 3DB137
 	Template@130:
 		Id: 130
@@ -4348,9 +4360,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 0
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@564:
@@ -4358,9 +4370,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 1
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@565:
@@ -4368,9 +4380,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 2
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@566:
@@ -4378,9 +4390,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 3
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@567:
@@ -4407,9 +4419,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 5
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@569:
@@ -4417,9 +4429,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 6
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@570:
@@ -4427,9 +4439,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 7
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@571:
@@ -4437,9 +4449,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 8
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@572:
@@ -4447,9 +4459,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 9
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@573:
@@ -4457,9 +4469,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 10
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@574:
@@ -4467,9 +4479,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 11
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@575:
@@ -5850,9 +5862,9 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 0
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: E0E0F0
 				MaxColor: E0E0F0
 	Template@766:
@@ -5860,9 +5872,9 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 1
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: E0E0F0
 				MaxColor: E0E0F0
 	Template@767:
@@ -5870,17 +5882,17 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 2
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 	Template@768:
 		Id: 768
 		Images: bits/terrain/snow.png
 		Frames: 3
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: E0E0F0
 				MaxColor: E0E0F0
 	Template@769:
@@ -5932,9 +5944,9 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 5
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 				MaxColor: AEB4C8
 	Template@771:
@@ -5942,17 +5954,17 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 6
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 	Template@772:
 		Id: 772
 		Images: bits/terrain/snow.png
 		Frames: 7
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 				MaxColor: E0E0F0
 	Template@773:
@@ -5960,18 +5972,18 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 8
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 	Template@774:
 		Id: 774
 		Images: bits/terrain/snow.png
 		Frames: 9
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 				MaxColor: AEB4C8
 	Template@775:
@@ -5979,9 +5991,9 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 10
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 				MaxColor: AEB4C8
 	Template@776:
@@ -5989,9 +6001,9 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 11
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 				MaxColor: AEB4C8
 	Template@777:
@@ -5999,9 +6011,9 @@ Templates:
 		Images: bits/terrain/snow.png
 		Frames: 12
 		Size: 1,1
-		Categories: Snow
+		Categories: Snow, Ramp
 		Tiles:
-			0: Snow
+			0: Snow Ramp
 				MinColor: AEB4C8
 				MaxColor: AEB4C8
 	Template@778:
