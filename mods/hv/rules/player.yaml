@@ -88,6 +88,14 @@ Player:
 		CancelledAudio: Cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+	ClassicProductionQueue@Trade:
+		Type: Trade
+		DisplayOrder: 4
+		BuildDurationModifier: 212
+		BlockedAudio: # NoRoom
+		QueuedAudio: # OrderPlaced
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4

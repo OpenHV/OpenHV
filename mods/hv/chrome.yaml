@@ -110,6 +110,9 @@ production-icons:
 		ship: 496, 48, 16, 16
 		ship-disabled: 496, 64, 16, 16
 		ship-alert: 496, 80, 16, 16
+		trade: 496, 0, 16, 16
+		trade-disabled: 496, 16, 16, 16
+		trade-alert: 496, 32, 16, 16
 
 order-icons:
 	Inherits: ^Chrome

@@ -539,3 +539,31 @@ BOMBER1:
 		FacingTolerance: 512
 	Armament:
 		Weapon: Bomb
+
+COPTER2.AirDrop:
+	Inherits: COPTER2
+	RejectsOrders:
+	Aircraft:
+		IdleBehavior: LeaveMap
+		Repulsable: false
+	-Selectable:
+	Interactable:
+	-MapEditorData:
+	RenderSprites:
+		Image: copter2
+	UpdatesPlayerStatistics:
+		OverrideActor: copter2
+
+DROPSHIP.AirDrop:
+	Inherits: DROPSHIP
+	RejectsOrders:
+	Aircraft:
+		IdleBehavior: LeaveMap
+		Repulsable: false
+	-Selectable:
+	Interactable:
+	-MapEditorData:
+	RenderSprites:
+		Image: dropship
+	UpdatesPlayerStatistics:
+		OverrideActor: dropship

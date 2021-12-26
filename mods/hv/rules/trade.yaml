@@ -1,0 +1,215 @@
+# License: CC-BY-SA-4.0
+
+TANK3.TRADE:
+	Inherits: TANK3
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank3
+	UpdatesPlayerStatistics:
+		OverrideActor: tank3
+
+TYRIANTANK.TRADE:
+	Inherits: TYRIANTANK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tyriantank
+	UpdatesPlayerStatistics:
+		OverrideActor: tyriantank
+
+AATANK.TRADE:
+	Inherits: AATANK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: aatank
+	UpdatesPlayerStatistics:
+		OverrideActor: aatank
+
+AATANK2.TRADE:
+	Inherits: AATANK2
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: aatank2
+	UpdatesPlayerStatistics:
+		OverrideActor: aatank2
+
+TRANSPRT.TRADE:
+	Inherits: TRANSPRT
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: transprt
+	UpdatesPlayerStatistics:
+		OverrideActor: transprt
+
+ARTIL.TRADE:
+	Inherits: ARTIL
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: artil
+	UpdatesPlayerStatistics:
+		OverrideActor: artil
+
+RADARTANK.TRADE:
+	Inherits: RADARTANK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: radartank
+	UpdatesPlayerStatistics:
+		OverrideActor: radartank
+
+TANK16.TRADE:
+	Inherits: TANK16
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank16
+	UpdatesPlayerStatistics:
+		OverrideActor: tank16
+
+TANK6.TRADE:
+	Inherits: TANK6
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank6
+	UpdatesPlayerStatistics:
+		OverrideActor: tank6
+
+TANK5.TRADE:
+	Inherits: TANK5
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank5
+	UpdatesPlayerStatistics:
+		OverrideActor: tank5
+
+TANK10.TRADE:
+	Inherits: TANK10
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank10
+	UpdatesPlayerStatistics:
+		OverrideActor: tank10
+
+TANK7.TRADE:
+	Inherits: TANK7
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank7
+	UpdatesPlayerStatistics:
+		OverrideActor: tank7
+
+TANK11.TRADE:
+	Inherits: TANK11
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank11
+	UpdatesPlayerStatistics:
+		OverrideActor: tank11
+
+TANK15.TRADE:
+	Inherits: TANK15
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank15
+	UpdatesPlayerStatistics:
+		OverrideActor: tank15
+
+BUILDER.TRADE:
+	Inherits: BUILDER
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: builder
+
+MINER.TRADE:
+	Inherits: MINER
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: miner
+	UpdatesPlayerStatistics:
+		OverrideActor: miner
+
+MISSILE_TANK.TRADE:
+	Inherits: MISSILE_TANK
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: missile_tank
+	UpdatesPlayerStatistics:
+		OverrideActor: missile_tank
+
+TANK8.TRADE:
+	Inherits: TANK8
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank8
+	UpdatesPlayerStatistics:
+		OverrideActor: tank8

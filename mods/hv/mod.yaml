@@ -50,6 +50,7 @@ Rules:
 	hv|rules/defaults.yaml
 	hv|rules/terrain.yaml
 	hv|rules/mothership.yaml
+	hv|rules/trade.yaml
 
 Sequences:
 	hv|sequences/animals.yaml

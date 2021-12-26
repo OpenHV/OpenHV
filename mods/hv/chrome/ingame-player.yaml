@@ -458,6 +458,7 @@ Container@PLAYER_WIDGETS:
 					SymbolsFont: TinyPixel
 					IconSize: 62, 46
 					IconMargin: 1, 1
+					MinimumRows: 5
 					ClockPalette: shadow
 					NotBuildablePalette: shadow
 					IconSpriteOffset: -1, -1
@@ -553,6 +554,21 @@ Container@PLAYER_WIDGETS:
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Ship
 							Key: ProductionTypeNaval
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@TRADE:
+							Y: 186
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Trade
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Trade
+							Key: ProductionTypeTrade
 							Children:
 								Image@ICON:
 									X: 6

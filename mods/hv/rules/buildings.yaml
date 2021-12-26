@@ -339,7 +339,7 @@ TRADPLAT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
-		Description: Repairs and sells vehicles for credits.
+		Description: Repairs and sells vehicles for credits.\nAllows buying units on the free market.
 		Prerequisites: factory
 	Valued:
 		Cost: 1200
@@ -363,6 +363,38 @@ TRADPLAT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
+	GrantConditionOnFaction@Aircraft:
+		Condition: aircraft
+		Factions: yi
+	ProductionAirdrop@Aircraft:
+		Produces: Trade
+		ActorType: dropship.airdrop
+		ReadyAudio: ReinforcementsHaveArrived
+		PauseOnCondition: disabled
+		RequiresCondition: aircraft
+		BaselineSpawn: True
+	GrantConditionOnFaction@Helicopters:
+		Condition: helicopters
+		Factions: sc
+	ProductionAirdrop@Helicopters:
+		Produces: Trade
+		ActorType: copter2.airdrop
+		ReadyAudio: ReinforcementsHaveArrived
+		PauseOnCondition: disabled
+		RequiresCondition: helicopters
+		BaselineSpawn: True
+	Exit@North:
+		ExitCell: 0,-2
+		ProductionTypes: Trade
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@South:
+		ExitCell: 0,2
+		ProductionTypes: Trade
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	PrimaryBuilding:
+		ProductionQueues: Trade
 	Reservable:
 	RallyPoint:
 		IsPlayerPalette: true

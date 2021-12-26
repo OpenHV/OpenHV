@@ -24,6 +24,10 @@ ProductionTypeNaval: I
 	Description: Naval Tab
 	Types: Production, Player
 
+ProductionTypeTrade: O
+	Description: Trade Tab
+	Types: Production, Player
+
 ToggleVariant: V
 	Description: Rotate Building
 	Types: Production, Player
