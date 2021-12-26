@@ -2319,7 +2319,7 @@ TECHCOMLINK:
 		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: radarsweep
-		Terrain: Crater, Cliff, Grass, Grass Pit, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
+		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Plant, Stone, Swamp, Tech
 		AllowUnderShroud: true
 		LifeTime: 250
 		EffectImage: moveflsh

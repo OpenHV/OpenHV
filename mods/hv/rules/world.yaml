@@ -125,6 +125,7 @@
 			Littoral: 100
 			Pelagic: 100
 			Oceanic: 100
+			Rapids: 50
 	Faction@0:
 		Name: Yuruki
 		InternalName: yi
@@ -357,11 +358,6 @@ World:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
 				MaxDensity: 3
-			#water:
-			#	ResourceIndex: 3
-			#	TerrainType: Littoral
-			#	AllowedTerrainTypes: Crater
-			#	MaxDensity: 1
 	LimitedResources:
 	CubeSpawner:
 		CheckboxDisplayOrder: 1

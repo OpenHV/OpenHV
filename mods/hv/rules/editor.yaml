@@ -33,11 +33,6 @@ EditorWorld:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
 				MaxDensity: 3
-			water:
-				ResourceIndex: 3
-				TerrainType: Littoral
-				AllowedTerrainTypes: Crater
-				MaxDensity: 1
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:

@@ -816,32 +816,6 @@
 		RepairActors: harbor, harbor2
 		CloseEnough: 2c0
 
-^Waterflow:
-	Inherits@1: ^SpriteActor
-	Interactable:
-	HiddenUnderShroud:
-	Tooltip:
-		Name: Waterflow
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	AppearsOnRadar:
-	RadarColorFromTerrain:
-		Terrain: Littoral
-	AppearsOnMapPreview:
-		Terrain: Littoral
-	Floods:
-		Interval: 15
-		MaxRange: 1000
-	MapEditorData:
-		Categories: Water
-		ExcludeTilesets: PLANET # TODO: not finished
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
-
 ^Cube:
 	Interactable:
 	HiddenUnderFog:

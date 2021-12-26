@@ -34,6 +34,10 @@ Terrain:
 		Type: Oceanic
 		TargetTypes: Water
 		Color: 001A53
+	TerrainType@Rapids:
+		Type: Rapids
+		TargetTypes: Water
+		Color: A8D2F4
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
@@ -11227,3 +11231,99 @@ Templates:
 		Categories: Plant
 		Tiles:
 			0: Stone
+	Template@1477:
+		Id: 1477
+		Images: bits/terrain/watrflow.png
+		Frames: 0
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1478:
+		Id: 1478
+		Images: bits/terrain/watrflow.png
+		Frames: 1
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1479:
+		Id: 1479
+		Images: bits/terrain/watrflow.png
+		Frames: 2
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1480:
+		Id: 1480
+		Images: bits/terrain/watrflow.png
+		Frames: 3
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1481:
+		Id: 1481
+		Images: bits/terrain/watrflow.png
+		Frames: 4
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1482:
+		Id: 1482
+		Images: bits/terrain/watrflow.png
+		Frames: 5
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1483:
+		Id: 1483
+		Images: bits/terrain/watrflow.png
+		Frames: 6
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1484:
+		Id: 1484
+		Images: bits/terrain/watrflow.png
+		Frames: 7
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1485:
+		Id: 1485
+		Images: bits/terrain/watrflow.png
+		Frames: 8
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1486:
+		Id: 1486
+		Images: bits/terrain/watrflow.png
+		Frames: 9
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1487:
+		Id: 1487
+		Images: bits/terrain/watrflow.png
+		Frames: 10
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
+	Template@1488:
+		Id: 1488
+		Images: bits/terrain/watrflow.png
+		Frames: 11
+		Size: 1,1
+		Categories: Littoral
+		Tiles:
+			0: Rapids
