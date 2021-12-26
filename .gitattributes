@@ -11,4 +11,4 @@
 *.cs     diff=csharp
 
 # https://github.com/github/linguist/blob/master/docs/overrides.md
-*.yaml linguist-language=SaltStack
+*.yaml linguist-language=Text
