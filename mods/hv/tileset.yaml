@@ -6052,18 +6052,10 @@ Templates:
 		Categories: Red Snow, Snow
 		Tiles:
 			0: Snow
-	Template@782:
-		Id: 782
-		Images: bits/terrain/snow2.png
-		Frames: 4
-		Size: 1,1
-		Categories: Red Snow
-		Tiles:
-			0: Red Snow
 	Template@783:
 		Id: 783
 		Images: bits/terrain/snow2.png
-		Frames: 5
+		Frames: 4
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6071,7 +6063,7 @@ Templates:
 	Template@784:
 		Id: 784
 		Images: bits/terrain/snow2.png
-		Frames: 6
+		Frames: 5
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6079,7 +6071,7 @@ Templates:
 	Template@785:
 		Id: 785
 		Images: bits/terrain/snow2.png
-		Frames: 7
+		Frames: 6
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6087,7 +6079,7 @@ Templates:
 	Template@786:
 		Id: 786
 		Images: bits/terrain/snow2.png
-		Frames: 8
+		Frames: 7
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6095,7 +6087,7 @@ Templates:
 	Template@787:
 		Id: 787
 		Images: bits/terrain/snow2.png
-		Frames: 9
+		Frames: 8
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6103,7 +6095,7 @@ Templates:
 	Template@788:
 		Id: 788
 		Images: bits/terrain/snow2.png
-		Frames: 10
+		Frames: 9
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6111,7 +6103,7 @@ Templates:
 	Template@789:
 		Id: 789
 		Images: bits/terrain/snow2.png
-		Frames: 11
+		Frames: 10
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:
@@ -6119,7 +6111,7 @@ Templates:
 	Template@790:
 		Id: 790
 		Images: bits/terrain/snow2.png
-		Frames: 12
+		Frames: 11
 		Size: 1,1
 		Categories: Red Snow, Snow
 		Tiles:

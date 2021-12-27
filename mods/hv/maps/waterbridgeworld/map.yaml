@@ -52,7 +52,6 @@ Actors:
 	Actor0: pyramid
 		Owner: Neutral
 		Location: 4,6
-		Health: 100
 	Actor1: pyramid2
 		Owner: Neutral
 		Location: 78,64
