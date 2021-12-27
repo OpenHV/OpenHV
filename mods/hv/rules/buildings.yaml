@@ -363,25 +363,11 @@ TRADPLAT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
-	GrantConditionOnFaction@Aircraft:
-		Condition: aircraft
-		Factions: yi
-	ProductionAirdrop@Aircraft:
+	ProductionAirdrop:
 		Produces: Trade
-		ActorType: dropship.airdrop
+		ActorType: cargoship
 		ReadyAudio: ReinforcementsHaveArrived
 		PauseOnCondition: disabled
-		RequiresCondition: aircraft
-		BaselineSpawn: True
-	GrantConditionOnFaction@Helicopters:
-		Condition: helicopters
-		Factions: sc
-	ProductionAirdrop@Helicopters:
-		Produces: Trade
-		ActorType: copter2.airdrop
-		ReadyAudio: ReinforcementsHaveArrived
-		PauseOnCondition: disabled
-		RequiresCondition: helicopters
 		BaselineSpawn: True
 	Exit@North:
 		ExitCell: 0,-2
@@ -394,7 +380,16 @@ TRADPLAT:
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
 		ProductionQueues: Trade
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
 	Reservable:
 	RallyPoint:
 		IsPlayerPalette: true

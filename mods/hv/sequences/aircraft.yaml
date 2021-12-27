@@ -163,3 +163,16 @@ bomber1:
 	idle: bits/bomber1.png
 		Facings: 8
 		ZOffset: 2048
+
+cargoship:
+	liftoff: bits/cargoship.png
+		Facings: 8
+	unloaded: bits/cargoship.png
+		Start: 8
+		Facings: 8
+	landing: bits/cargoship.png
+		Start: 16
+		Facings: 8
+	idle: bits/cargoship.png
+		Start: 24
+		Facings: 8

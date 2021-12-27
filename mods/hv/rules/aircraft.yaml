@@ -540,30 +540,41 @@ BOMBER1:
 	Armament:
 		Weapon: Bomb
 
-COPTER2.AirDrop:
-	Inherits: COPTER2
+CARGOSHIP:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	OwnerLostAction:
+		Action: Kill
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	WithFacingSpriteBody:
+	WithLandingUnloadAnimation:
 	RejectsOrders:
-	Aircraft:
-		IdleBehavior: LeaveMap
-		Repulsable: false
-	-Selectable:
 	Interactable:
-	-MapEditorData:
-	RenderSprites:
-		Image: copter2
-	UpdatesPlayerStatistics:
-		OverrideActor: copter2
-
-DROPSHIP.AirDrop:
-	Inherits: DROPSHIP
-	RejectsOrders:
 	Aircraft:
+		TurnSpeed: 20
+		Speed: 400
+		VTOL: True
+		Repulsable: False
+		MaximumPitch: 36
+		CruiseAltitude: 2560
 		IdleBehavior: LeaveMap
-		Repulsable: false
-	-Selectable:
+		TurnToLand: False
 	Interactable:
-	-MapEditorData:
-	RenderSprites:
-		Image: dropship
+	Tooltip:
+		Name: Supply Aircraft
+	Valued:
+		Cost: 2000
 	UpdatesPlayerStatistics:
-		OverrideActor: dropship
+		AddToAssetsValue: false
+	HiddenUnderFog:
+		AlwaysVisibleRelationships: None
+		Type: CenterPosition
+	DamageMultiplier@Invulnerable:
+		Modifier: 0
