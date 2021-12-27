@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -104,8 +104,8 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				case "BeginMinefield":
 					var start = self.World.Map.CellContaining(target.CenterPosition);
-					if (self.World.OrderGenerator is MinefieldOrderGenerator)
-						((MinefieldOrderGenerator)self.World.OrderGenerator).AddMinelayer(self, start);
+					if (self.World.OrderGenerator is MinefieldOrderGenerator minefieldOrderGenerator)
+						minefieldOrderGenerator.AddMinelayer(self);
 					else
 						self.World.OrderGenerator = new MinefieldOrderGenerator(self, start, queued);
 
@@ -215,6 +215,7 @@ namespace OpenRA.Mods.HV.Traits
 			public MinefieldOrderGenerator(Actor a, CPos xy, bool queued)
 			{
 				minelayers = new List<Actor>() { a };
+				minelayer = a.Trait<Minelayer>();
 				minefieldStart = xy;
 				this.queued = queued;
 
@@ -229,11 +230,9 @@ namespace OpenRA.Mods.HV.Traits
 				var blockedSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileInvalidName);
 				blockedTile = blockedSequence.GetSprite(0);
 				blockedAlpha = blockedSequence.GetAlpha(0);
-
-				minelayer = a.Trait<Minelayer>();
 			}
 
-			public void AddMinelayer(Actor a, CPos xy)
+			public void AddMinelayer(Actor a)
 			{
 				minelayers.Add(a);
 			}
