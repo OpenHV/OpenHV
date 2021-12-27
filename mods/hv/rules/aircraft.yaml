@@ -553,6 +553,8 @@ CARGOSHIP:
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
+	RenderSprites:
+		PlayerPalette: green
 	WithFacingSpriteBody:
 	WithLandingUnloadAnimation:
 	RejectsOrders:
