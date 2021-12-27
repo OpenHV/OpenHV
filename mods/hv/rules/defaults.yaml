@@ -871,8 +871,8 @@
 	WithSpriteBody:
 	HiddenUnderFog:
 	Mine:
-		CrushClasses: mine
-		DetonateClasses: mine
+		CrushClasses: Mine
+		DetonateClasses: Mine
 		AvoidFriendly: true
 		BlockFriendly: true
 	Health:

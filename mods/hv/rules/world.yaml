@@ -37,7 +37,7 @@
 			Tech: 100
 	Locomotor@Pod:
 		Name: pod
-		Crushes: Cube, Scrap
+		Crushes: Cube, Scrap, Mine
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
@@ -58,7 +58,7 @@
 			Tech: 100
 	Locomotor@Wheeled:
 		Name: wheeled
-		Crushes: Cube, Scrap
+		Crushes: Cube, Scrap, Mine
 		TerrainSpeeds:
 			Clear: 90
 			Ore: 90
@@ -78,7 +78,7 @@
 			Tech: 100
 	Locomotor@Tracked:
 		Name: tracked
-		Crushes: Tree, Cube, Scrap, Pods
+		Crushes: Tree, Cube, Scrap, Pods, Mine
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 100
@@ -100,7 +100,7 @@
 			Tech: 100
 	Locomotor@LightTracked:
 		Name: lighttracked
-		Crushes: Cube, Scrap
+		Crushes: Cube, Scrap, Mine
 		TerrainSpeeds:
 			Clear: 100
 			Ore: 100
