@@ -57,6 +57,8 @@ Speech:
 		ReinforcementsHaveArrived: reinforcements_have_arrived
 		SelectTarget: select_target
 		ResourcesDepleted: resources_depleted
+		NoRoom: not_enough_space
+		OrderPlaced: order_placed
 
 Sounds:
 	DefaultVariant: .wav

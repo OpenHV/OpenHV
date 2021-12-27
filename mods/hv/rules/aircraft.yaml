@@ -551,8 +551,8 @@ CARGOSHIP:
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
 	WithShadow:
-		Offset: 43, 128, 0
-		ZOffset: -129
+		Offset: 356, 256, 0
+		ZOffset: -256
 	RenderSprites:
 		PlayerPalette: green
 	WithFacingSpriteBody:
@@ -561,7 +561,7 @@ CARGOSHIP:
 	Interactable:
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 400
+		Speed: 150
 		VTOL: True
 		Repulsable: False
 		MaximumPitch: 36

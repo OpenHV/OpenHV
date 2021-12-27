@@ -92,8 +92,8 @@ Player:
 		Type: Trade
 		DisplayOrder: 4
 		BuildDurationModifier: 212
-		BlockedAudio: # NoRoom
-		QueuedAudio: # OrderPlaced
+		BlockedAudio: NoRoom
+		QueuedAudio: OrderPlaced
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	ClassicProductionQueue@Aircraft:
