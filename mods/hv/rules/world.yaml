@@ -126,6 +126,16 @@
 			Pelagic: 100
 			Oceanic: 100
 			Rapids: 50
+	Locomotor@Water:
+		Name: water
+		TerrainSpeeds:
+			Clear: 100
+			Ore: 100
+			Crater: 100
+			Snow: 100
+			Grass: 100
+			Mountain: 100
+			Red Snow: 100
 	Faction@0:
 		Name: Yuruki
 		InternalName: yi
@@ -154,10 +164,6 @@
 				Sequences: iron
 				Palette: effect
 				Name: Mineable Resource Deposit
-			water:
-				Sequences: waterflow
-				Palette: terrain
-				Name: Water
 	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
 		Filename: bits/colors.pal
@@ -277,6 +283,7 @@ World:
 	ForestLayer:
 		Trees: treegrs1, treegrs2, treegrs3, treegrs4, treegrs5, treegrs6, treegrs7, treegrs8, treegrs9, treegrs12, treegrs13, treegrs14, treegrs15, trees1, trees2, trees3, trees5, trees6, trees7, trees8, trees9, trees10, trees11, trees12, trees13, trees14, trees15, trees16
 	DomainIndex:
+	LiquidTerrainLayer:
 	SmudgeLayer@Craters:
 		Type: Crater
 		Sequence: craters

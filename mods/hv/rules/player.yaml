@@ -7,7 +7,6 @@
 		ResourceValues:
 			gold: 180
 			iron: 100
-			water: 0
 
 Player:
 	Inherits: ^BasePlayer

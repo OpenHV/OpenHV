@@ -68,3 +68,6 @@ cloud:
 	cloud3f: bits/cloud3.png
 		FlipX: true
 		FlipY: true
+
+fountain:
+	idle: bits/fountain.png
