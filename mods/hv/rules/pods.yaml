@@ -39,11 +39,11 @@ SCOUT2:
 		Name: Rocket Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Armament@Primary:
+	Armament@Ground:
 		Weapon: LightAntiTankRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
-	Armament@Secondary:
+	Armament@Air:
 		Weapon: LightAntiAirRocket
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0

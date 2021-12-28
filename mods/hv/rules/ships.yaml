@@ -6,14 +6,14 @@ BOAT3:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: AA Boat
+		Name: Missile Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: harbor
 		BuildPaletteOrder: 40
-		Description: Light Anti-Air boat.
+		Description: Versatile light ship.\nFires AA and AG rockets.\nCan detect submarines.\n
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -32,13 +32,14 @@ BOAT3:
 	Turreted:
 		TurnSpeed: 120
 		Offset: -50,0,100
-	Armament:
-		Weapon: BoatMissile_AA
+	Armament@Air:
+		Weapon: BoatMissileAntiAir
+		LocalOffset: 0,0,0
+	Armament@Ground:
+		Weapon: BoatMissileAntiGround
 		LocalOffset: 0,0,0
 	AttackTurreted:
 	WithSpriteTurret:
-	WithTurretAttackAnimation:
-		Sequence: shoot
 	DetectCloaked:
 		CloakTypes: Underwater
 		Range: 6c0

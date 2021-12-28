@@ -59,7 +59,7 @@ ChainGun:
 		Blockable: false
 	MinRange: 0c768
 	Burst: 4
-	Warhead@1Dam: SpreadDamage
+	Warhead@Damage: SpreadDamage
 		Spread: 64
 		Damage: 1000
 		Versus:

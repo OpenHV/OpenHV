@@ -3,7 +3,7 @@ DroneLauncher:
 	Range: 25c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
-	Warhead@1Dam: TargetDamage
+	Warhead@Damage: TargetDamage
 		ValidTargets: Ground, Water
 
 MissileLauncher:
