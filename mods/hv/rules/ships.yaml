@@ -196,7 +196,7 @@ SLCM:
 	Tooltip:
 		Name: Submarine-launched cruise missile
 	Health:
-		HP: 50
+		HP: 5000
 	Armor:
 		Type: Light
 	BallisticMissile:

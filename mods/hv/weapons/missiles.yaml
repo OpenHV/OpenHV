@@ -370,7 +370,7 @@ DropshipMissile:
 CruiseMissileImpact:
 	Warhead@Damage: SpreadDamage
 		Spread: 512
-		Damage: 11000
+		Damage: 16000
 		ValidTargets: Ground, Water
 		Versus:
 			None: 100
