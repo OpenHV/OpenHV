@@ -68,6 +68,10 @@ Terrain:
 		Type: Mountain
 		TargetTypes: Ground
 		Color: B08070
+	TerrainType@MountainRamp:
+		Type: Mountain Ramp
+		TargetTypes: Ground
+		Color: B08070
 	TerrainType@Rock:
 		Type: Rock
 		TargetTypes: Ground
@@ -3876,105 +3880,105 @@ Templates:
 		Images: bits/terrain/mountains.png
 		Frames: 0
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@496:
 		Id: 496
 		Images: bits/terrain/mountains.png
 		Frames: 1
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@497:
 		Id: 497
 		Images: bits/terrain/mountains.png
 		Frames: 2
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@498:
 		Id: 498
 		Images: bits/terrain/mountains.png
 		Frames: 3
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@499:
 		Id: 499
 		Images: bits/terrain/mountains.png
 		Frames: 4
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@500:
 		Id: 500
 		Images: bits/terrain/mountains.png
 		Frames: 5
 		Size: 1,1
-		Categories: Mountain, Cliff
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Cliff
+			0: Mountain Ramp
 	Template@501:
 		Id: 501
 		Images: bits/terrain/mountains.png
 		Frames: 6
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@502:
 		Id: 502
 		Images: bits/terrain/mountains.png
 		Frames: 7
 		Size: 1,1
-		Categories: Mountain, Cliff
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Cliff
+			0: Mountain Ramp
 	Template@503:
 		Id: 503
 		Images: bits/terrain/mountains.png
 		Frames: 8
 		Size: 1,1
-		Categories: Mountain
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Mountain
+			0: Mountain Ramp
 	Template@504:
 		Id: 504
 		Images: bits/terrain/mountains.png
 		Frames: 9
 		Size: 1,1
-		Categories: Mountain, Cliff
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Cliff
+			0: Mountain Ramp
 	Template@505:
 		Id: 505
 		Images: bits/terrain/mountains.png
 		Frames: 10
 		Size: 1,1
-		Categories: Mountain, Cliff
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Cliff
+			0: Mountain Ramp
 	Template@506:
 		Id: 506
 		Images: bits/terrain/mountains.png
 		Frames: 11
 		Size: 1,1
-		Categories: Mountain, Cliff
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Cliff
+			0: Mountain Ramp
 	Template@507:
 		Id: 507
 		Images: bits/terrain/mountains.png
 		Frames: 12
 		Size: 1,1
-		Categories: Mountain, Cliff
+		Categories: Mountain, Ramp
 		Tiles:
-			0: Cliff
+			0: Mountain Ramp
 	Template@508:
 		Id: 508
 		Images: bits/terrain/road.png

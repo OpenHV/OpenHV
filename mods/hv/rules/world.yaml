@@ -27,6 +27,7 @@
 			Grass Pit: 100
 			Road: 100
 			Mountain: 100
+			Mountain Ramp: 100
 			Ice: 100
 			Snow: 100
 			Snow Ramp: 100
@@ -48,6 +49,7 @@
 			Grass Pit: 90
 			Road: 100
 			Mountain: 90
+			Mountain Ramp: 70
 			Ice: 80
 			Snow: 90
 			Snow Ramp: 80
@@ -68,6 +70,7 @@
 			Grass Pit: 90
 			Road: 100
 			Mountain: 90
+			Mountain Ramp: 80
 			Ice: 80
 			Snow: 90
 			Snow Ramp: 80
@@ -89,6 +92,7 @@
 			Grass Pit: 100
 			Road: 100
 			Mountain: 100
+			Mountain Ramp: 100
 			Ice: 100
 			Snow: 100
 			Snow Ramp: 100
@@ -110,6 +114,7 @@
 			Grass Pit: 100
 			Road: 100
 			Mountain: 100
+			Mountain Ramp: 100
 			Ice: 100
 			Snow: 100
 			Snow Ramp: 100

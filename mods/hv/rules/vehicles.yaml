@@ -249,7 +249,7 @@ RADARTANK:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Facing: 512
-		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech
 		Voice: Move
 	Repairable:
 		RequireForceMoveCondition: !undeployed
