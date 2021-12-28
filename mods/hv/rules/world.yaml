@@ -289,6 +289,10 @@ World:
 		Trees: treegrs1, treegrs2, treegrs3, treegrs4, treegrs5, treegrs6, treegrs7, treegrs8, treegrs9, treegrs12, treegrs13, treegrs14, treegrs15, trees1, trees2, trees3, trees5, trees6, trees7, trees8, trees9, trees10, trees11, trees12, trees13, trees14, trees15, trees16
 	DomainIndex:
 	LiquidTerrainLayer:
+	LiquidEdgeRenderer:
+		Image: waterflow
+		BlockTerrainTypes: Cliff
+		CoveredTerrainTypes: Littoral
 	SmudgeLayer@Craters:
 		Type: Crater
 		Sequence: craters

@@ -136,3 +136,7 @@ trees16:
 
 trees17:
 	idle: bits/terrain/trees17.png
+
+waterflow:
+	idle: bits/watrflow.png
+		Length: 12

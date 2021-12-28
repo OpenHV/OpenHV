@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -11,22 +11,41 @@
 
 using System;
 using System.Collections.Generic;
-using OpenRA.Mods.Common.Traits;
+using System.Linq;
+using OpenRA.Graphics;
+using OpenRA.Primitives;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Used to render liquids.", "Attach this to the world actor")]
-	public class LiquidTerrainRendererInfo : ResourceRendererInfo
+	[TraitLocation(SystemActors.World)]
+	[Desc("Used to render the border of liquids.", "Attach this to the world actor")]
+	public class LiquidEdgeRendererInfo : TraitInfo, Requires<LiquidTerrainLayerInfo>
 	{
-		public override object Create(ActorInitializer init) { return new LiquidTerrainRenderer(init.Self, this); }
+		[FieldLoader.Require]
+		[Desc("Sequence image that holds the different variants.")]
+		public readonly string Image = null;
+
+		[SequenceReference(nameof(Image))]
+		public readonly string Sequence = "idle";
+
+		[PaletteReference]
+		[Desc("Palette used for rendering the resource sprites.")]
+		public readonly string Palette = TileSet.TerrainPaletteInternalName;
+
+		public readonly string[] BlockTerrainTypes = Array.Empty<string>();
+		public readonly string[] CoveredTerrainTypes = Array.Empty<string>();
+
+		public override object Create(ActorInitializer init) { return new LiquidEdgeRenderer(init.Self, this); }
 	}
 
-	public class LiquidTerrainRenderer : ResourceRenderer
+	public class LiquidEdgeRenderer : IWorldLoaded, IRenderOverlay, ITickRender
 	{
 		[Flags]
-		public enum ClearSides : byte
+		public enum BitMask : byte
 		{
-			None = 0x0,
+			None = 0x00,
+
 			Left = 0x1,
 			Top = 0x2,
 			Right = 0x4,
@@ -37,75 +56,120 @@ namespace OpenRA.Mods.HV.Traits
 			BottomLeft = 0x40,
 			BottomRight = 0x80,
 
-			All = 0xFF
+			All = 0xFF,
 		}
 
-		// TODO: incomplete
-		public static readonly Dictionary<ClearSides, int> SpriteMap = new Dictionary<ClearSides, int>()
+		static readonly Dictionary<BitMask, int> SpriteMap = new Dictionary<BitMask, int>()
 		{
-			{ ClearSides.Top, 0 },
-			{ ClearSides.Top | ClearSides.TopLeft | ClearSides.TopRight, 0 },
-			{ ClearSides.Left | ClearSides.Top | ClearSides.Bottom | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 1 },
-			{ ClearSides.Left | ClearSides.Top | ClearSides.TopLeft | ClearSides.BottomLeft, 1 },
-			{ ClearSides.BottomLeft | ClearSides.Left | ClearSides.TopLeft | ClearSides.Top | ClearSides.TopRight, 1 },
-			{ ClearSides.Left | ClearSides.TopLeft | ClearSides.BottomLeft, 2 },
-			{ ClearSides.Left, 2 },
-			{ ClearSides.Left | ClearSides.Bottom | ClearSides.TopLeft | ClearSides.BottomLeft | ClearSides.BottomRight, 3 },
-			{ ClearSides.Bottom, 4 },
-			{ ClearSides.Bottom | ClearSides.BottomLeft | ClearSides.BottomRight, 4 },
-			{ ClearSides.Right | ClearSides.Bottom | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 5 },
-			{ ClearSides.Right, 6 },
-			{ ClearSides.Right | ClearSides.TopRight | ClearSides.BottomRight, 6 },
-			{ ClearSides.Top | ClearSides.Right | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomRight, 7 },
-			{ ClearSides.Top | ClearSides.Right | ClearSides.TopLeft | ClearSides.TopRight | ClearSides.BottomLeft | ClearSides.BottomRight, 7 },
-			{ ClearSides.None, 8 },
-			{ ClearSides.TopLeft, 17 },
-			{ ClearSides.BottomLeft, 19 },
-			{ ClearSides.BottomRight, 20 },
-			{ ClearSides.TopRight, 21 }
+			{ BitMask.Bottom | BitMask.BottomLeft | BitMask.BottomRight, 0 },
+			{ BitMask.BottomRight, 1 },
+			{ BitMask.Right | BitMask.TopRight | BitMask.BottomRight, 2 },
+			{ BitMask.TopRight, 3 },
+			{ BitMask.Top | BitMask.TopLeft | BitMask.TopRight, 4 },
+			{ BitMask.TopLeft, 5 },
+			{ BitMask.Left | BitMask.TopLeft | BitMask.BottomLeft, 6 },
+			{ BitMask.BottomLeft, 7 },
+			{ BitMask.Right | BitMask.Bottom | BitMask.TopRight | BitMask.BottomLeft | BitMask.BottomRight, 8 },
+			{ BitMask.Top | BitMask.Right | BitMask.TopLeft | BitMask.TopRight | BitMask.BottomRight, 9 },
+			{ BitMask.Left | BitMask.Top | BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft, 10 },
+			{ BitMask.Left | BitMask.Bottom | BitMask.TopLeft | BitMask.BottomLeft | BitMask.BottomRight, 11 },
 		};
 
-		public LiquidTerrainRenderer(Actor self, LiquidTerrainRendererInfo info)
-			: base(self, info) { }
+		readonly LiquidTerrainLayer liquidTerrainLayer;
+		readonly LiquidEdgeRendererInfo info;
+		readonly ISpriteSequence spriteSequence;
+		readonly Map map;
 
-		bool CellContains(CPos cell, string resourceType)
+		readonly Queue<CPos> cleanDirty = new Queue<CPos>();
+		readonly HashSet<CPos> dirty = new HashSet<CPos>();
+
+		TerrainSpriteLayer spriteLayer;
+		PaletteReference paletteReference;
+
+		public LiquidEdgeRenderer(Actor self, LiquidEdgeRendererInfo info)
 		{
-			return RenderContents.Contains(cell) && RenderContents[cell].Type == resourceType;
+			liquidTerrainLayer = self.Trait<LiquidTerrainLayer>();
+			liquidTerrainLayer.Covered.CellEntryChanged += AddDirtyCell;
+			spriteSequence = self.World.Map.Rules.Sequences.GetSequence(info.Image, info.Sequence);
+			map = self.World.Map;
+			this.info = info;
 		}
 
-		ClearSides FindClearSides(CPos cell, string resourceType)
+		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
-			var clearSides = ClearSides.None;
-			if (!CellContains(cell + new CVec(0, -1), resourceType))
-				clearSides |= ClearSides.Top | ClearSides.TopLeft | ClearSides.TopRight;
+			paletteReference = wr.Palette(info.Palette);
+			var first = spriteSequence.GetSprite(0);
+			var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
+			spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, first.BlendMode, wr.World.Type != WorldType.Editor);
+		}
 
-			if (!CellContains(cell + new CVec(-1, 0), resourceType))
-				clearSides |= ClearSides.Left | ClearSides.TopLeft | ClearSides.BottomLeft;
+		void AddDirtyCell(CPos cell)
+		{
+			dirty.Add(cell);
+		}
 
-			if (!CellContains(cell + new CVec(1, 0), resourceType))
-				clearSides |= ClearSides.Right | ClearSides.TopRight | ClearSides.BottomRight;
+		BitMask FindClearSides(CPos cell)
+		{
+			var clearSides = BitMask.None;
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(0, -1)))
+				clearSides |= BitMask.Top | BitMask.TopLeft | BitMask.TopRight;
 
-			if (!CellContains(cell + new CVec(0, 1), resourceType))
-				clearSides |= ClearSides.Bottom | ClearSides.BottomLeft | ClearSides.BottomRight;
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(-1, 0)))
+				clearSides |= BitMask.Left | BitMask.TopLeft | BitMask.BottomLeft;
 
-			if (!CellContains(cell + new CVec(-1, -1), resourceType))
-				clearSides |= ClearSides.TopLeft;
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(1, 0)))
+				clearSides |= BitMask.Right | BitMask.TopRight | BitMask.BottomRight;
 
-			if (!CellContains(cell + new CVec(1, -1), resourceType))
-				clearSides |= ClearSides.TopRight;
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(0, 1)))
+				clearSides |= BitMask.Bottom | BitMask.BottomLeft | BitMask.BottomRight;
 
-			if (!CellContains(cell + new CVec(-1, 1), resourceType))
-				clearSides |= ClearSides.BottomLeft;
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(-1, -1)))
+				clearSides |= BitMask.TopLeft;
 
-			if (!CellContains(cell + new CVec(1, 1), resourceType))
-				clearSides |= ClearSides.BottomRight;
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(1, -1)))
+				clearSides |= BitMask.TopRight;
+
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(-1, 1)))
+				clearSides |= BitMask.BottomLeft;
+
+			if (liquidTerrainLayer.ContainsTile(cell + new CVec(1, 1)))
+				clearSides |= BitMask.BottomRight;
 
 			return clearSides;
 		}
 
-		protected override void UpdateRenderedSprite(CPos cell, RendererCellContents content)
+		void IRenderOverlay.Render(WorldRenderer wr)
 		{
-			UpdateRenderedSpriteInner(cell, content);
+			spriteLayer.Draw(wr.Viewport);
+		}
+
+		protected void UpdateSpriteLayers(CPos cell, ISpriteSequence sequence, int frame, PaletteReference palette)
+		{
+			if (sequence != null)
+				spriteLayer.Update(cell, sequence, palette, frame);
+			else
+				spriteLayer.Clear(cell);
+		}
+
+		void ITickRender.TickRender(WorldRenderer wr, Actor self)
+		{
+			foreach (var cell in dirty)
+			{
+				if (!wr.World.FogObscures(cell))
+				{
+					UpdateRenderedSprite(cell);
+					cleanDirty.Enqueue(cell);
+				}
+			}
+
+			while (cleanDirty.Count > 0)
+				dirty.Remove(cleanDirty.Dequeue());
+		}
+
+		void UpdateRenderedSprite(CPos cell)
+		{
+			if (info.BlockTerrainTypes.Contains(map.GetTerrainInfo(cell).Type))
+				return;
 
 			var directions = CVec.Directions;
 			for (var i = 0; i < directions.Length; i++)
@@ -114,22 +178,21 @@ namespace OpenRA.Mods.HV.Traits
 
 		void UpdateRenderedSpriteInner(CPos cell)
 		{
-			UpdateRenderedSpriteInner(cell, RenderContents[cell]);
-		}
-
-		void UpdateRenderedSpriteInner(CPos cell, RendererCellContents content)
-		{
-			var density = content.Density;
-			var renderType = content.Type;
-
-			if (density > 0 && renderType != null)
+			if (info.BlockTerrainTypes.Contains(map.GetTerrainInfo(cell).Type) || info.CoveredTerrainTypes.Contains(map.GetTerrainInfo(cell).Type))
 			{
-				var clear = FindClearSides(cell, content.Type);
-				if (SpriteMap.TryGetValue(clear, out var index))
-					UpdateSpriteLayers(cell, content.Sequence, index, content.Palette);
-				else
-					Log.Write("debug", "{1}: SpriteMap does not contain an index for ClearSides type '{0}'".F(clear, cell));
+				UpdateSpriteLayers(cell, null, 0, null);
+				return;
 			}
+
+			var clear = FindClearSides(cell);
+			if (clear == BitMask.All)
+			{
+				UpdateSpriteLayers(cell, null, 0, null);
+				return;
+			}
+
+			if (SpriteMap.TryGetValue(clear, out var index))
+				UpdateSpriteLayers(cell, spriteSequence, index, paletteReference);
 			else
 				UpdateSpriteLayers(cell, null, 0, null);
 		}
