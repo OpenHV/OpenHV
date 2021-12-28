@@ -196,27 +196,6 @@ ShipMissile:
 			Heavy: 125
 			Concrete: 100
 
-ShipMissile_AA:
-	Inherits: AntiAirRocket
-	ReloadDelay: 50
-	Range: 9c0
-	MinRange: 2c0
-	Burst: 2
-	BurstDelays: 7
-	Projectile: Missile
-		Speed: 256
-		Inaccuracy: 316
-		CruiseAltitude: 2c0
-		RangeLimit: 14c410
-	Warhead@1Dam: SpreadDamage
-		Damage: 700
-		Versus:
-			None: 10
-			Wood: 90
-			Light: 90
-			Heavy: 125
-			Concrete: 100
-
 BoatMissile_AA:
 	ReloadDelay: 50
 	Report: rocketlaunch03.wav
