@@ -6,14 +6,14 @@ BOAT3:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Light Boat
+		Name: AA Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: harbor
 		BuildPaletteOrder: 40
-		Description: Anti-Air light boat.
+		Description: Light Anti-Air boat.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
