@@ -19,4 +19,5 @@ Content of this folder indicates assets made by various authors, under the defau
 * [force_field_autistic-lucario.wav](https://freesound.org/people/Autistic%20Lucario/sounds/142607/) by autistic-lucario
 * [worm_death_inspectorj.wav](https://freesound.org/people/InspectorJ/sounds/401943/) by InspectorJ
 * [flyingmonster_death_robinhood76.wav](https://freesound.org/people/Robinhood76/sounds/100800/) by Robinhood76
-* [newlocknew_missile.wav](https://freesound.org/people/newlocknew/sounds/514039/) by newlockne
+* [newlocknew_missile.wav](https://freesound.org/people/newlocknew/sounds/514039/) by newlocknew
+* [ricochet1-10_rakurka.wav](https://freesound.org/people/rakurka/sounds/109957/) by rakurka

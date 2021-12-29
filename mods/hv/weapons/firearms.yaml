@@ -18,6 +18,7 @@ LightMachineGun:
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
 		ValidTargets: Ground
+		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
@@ -72,6 +73,7 @@ ChainGun:
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
 		ValidTargets: Ground
+		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
@@ -206,6 +208,7 @@ BoatMachineGun:
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
 		ValidTargets: Ground
+		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
