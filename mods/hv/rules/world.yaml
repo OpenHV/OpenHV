@@ -396,6 +396,24 @@ World:
 		Image: swmpani
 		Sequence: idle
 		Palette: effect
+	TerrainTileAnimation@Water:
+		Tiles: 33
+		Interval: 1,1
+		Image: wateranim
+		Sequence: idle
+		Palette: effect
+	TerrainTileAnimation@Water2:
+		Tiles: 33
+		Interval: 1,1
+		Image: wateranim2
+		Sequence: idle
+		Palette: effect
+	TerrainTileAnimation@Water3:
+		Tiles: 33
+		Interval: 1,1
+		Image: wateranim3
+		Sequence: idle
+		Palette: effect
 	OrderEffects:
 		TerrainFlashImage: moveflsh
 		TerrainFlashSequence: idle
