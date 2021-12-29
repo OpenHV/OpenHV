@@ -180,3 +180,47 @@ BunkerSniperRifle:
 	ReloadDelay: 20
 	Range: 11c0
 	Burst: 1
+
+BoatMachineGun:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	StartBurstReport: machinegun_SuperPhat.wav
+	BurstDelays: 1
+	ReloadDelay: 20
+	Range: 6c0
+	Burst: 4
+	Projectile: Bullet
+		Inaccuracy: 0c256
+		Speed: 800
+		Image: bullet1
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		Spread: 24
+		Damage: 1000
+		Versus:
+			None: 150
+			Steel: 20
+			Light: 50
+			Heavy: 20
+			Concrete: 5
+	Warhead@Effect: CreateEffect
+		Image: hit
+		Explosions: spark_a, spark_b, spark_c, spark_d
+		ValidTargets: Ground
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash_small
+		Explosions: lava_splash_small_a, lava_splash_small_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash_small
+		Explosions: swamp_splash_small_a, swamp_splash_small_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: Video_Game_Splash-Ploor.wav

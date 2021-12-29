@@ -20,8 +20,8 @@
 		Versus:
 			None: 90
 			Steel: 75
-			Light: 75
-			Heavy: 125
+			Light: 100
+			Heavy: 130
 			Wood: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
