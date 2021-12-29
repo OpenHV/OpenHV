@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common;
@@ -146,13 +147,13 @@ namespace OpenRA.Mods.HV.Warheads
 					CurrentMuzzleFacing = () => shrapnelFacing,
 
 					DamageModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IFirepowerModifier>()
-						.Select(a => a.GetFirepowerModifier()).ToArray() : new int[0],
+						.Select(a => a.GetFirepowerModifier()).ToArray() : Array.Empty<int>(),
 
 					InaccuracyModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IInaccuracyModifier>()
-						.Select(a => a.GetInaccuracyModifier()).ToArray() : new int[0],
+						.Select(a => a.GetInaccuracyModifier()).ToArray() : Array.Empty<int>(),
 
 					RangeModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IRangeModifier>()
-						.Select(a => a.GetRangeModifier()).ToArray() : new int[0],
+						.Select(a => a.GetRangeModifier()).ToArray() : Array.Empty<int>(),
 
 					Source = source,
 					CurrentSource = () => source,

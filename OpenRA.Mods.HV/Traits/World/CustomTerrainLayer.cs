@@ -68,8 +68,8 @@ namespace OpenRA.Mods.HV.Traits
 					{
 						// Terrain tiles define their origin at the topleft
 						var s = terrainRenderer.TileSprite(tile.Value);
-						var ss = new Sprite(s.Sheet, s.Bounds, s.ZRamp, float2.Zero, s.Channel, s.BlendMode);
-						render.Update(kv.Key, ss, paletteReference);
+						var sprite = new Sprite(s.Sheet, s.Bounds, s.ZRamp, float2.Zero, s.Channel, s.BlendMode);
+						render.Update(kv.Key, sprite, paletteReference);
 					}
 					else
 						render.Clear(kv.Key);

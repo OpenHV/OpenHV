@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -18,7 +18,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Warheads
 {
-	[Desc("Warhead extension class that adds functions from `CreateEffectWarhead`.")]
+	[Desc("Warhead extension class that adds functions from " + nameof(CreateEffectWarhead) + ".")]
 	public abstract class ImpactAirWarhead : Warhead
 	{
 		[Desc("Whether to consider actors in determining whether the explosion should happen. If false, only terrain will be considered.")]
