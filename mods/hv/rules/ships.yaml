@@ -6,18 +6,18 @@ BOAT3:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Missile Boat
+		Name: Light Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: harbor
 		BuildPaletteOrder: 40
-		Description: Versatile light ship.\nFires AA and AG rockets.\nCan detect submarines.\n
+		Description: Versatile light ship.\nTargets both air and ground foes.\nCan detect submarines.\n
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 23000
 	Armor:
 		Type: Light
 	Mobile:
@@ -31,14 +31,15 @@ BOAT3:
 		Range: 4c0
 	Turreted:
 		TurnSpeed: 120
-		Offset: -50,0,100
 	Armament@Air:
 		Weapon: BoatMissileAntiAir
-		LocalOffset: 0,0,0
+		LocalOffset: 0,200,0
 	Armament@Ground:
-		Weapon: BoatMissileAntiGround
-		LocalOffset: 0,0,0
+		Weapon: BoatMachineGun
+		MuzzleSequence: muzzle
+		LocalOffset: 250,0,50
 	AttackTurreted:
+		Armaments: primary, secondary
 	WithSpriteTurret:
 	DetectCloaked:
 		CloakTypes: Underwater
@@ -46,6 +47,8 @@ BOAT3:
 	RenderDetectionCircle:
 	RenderSprites:
 		PlayerPalette: green
+	WithMuzzleOverlay:
+		IgnoreOffset: True
 
 BOAT:
 	Inherits: ^Ship

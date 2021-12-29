@@ -196,36 +196,6 @@ ShipMissile:
 			Heavy: 125
 			Concrete: 100
 
-BoatMissileAntiGround:
-	Inherits: ^AntiGroundMissile
-	ReloadDelay: 50
-	Report: rocketlaunch03.wav
-	Range: 9c0
-	MinRange: 1c0
-	Projectile: Missile
-		Speed: 350
-		Blockable: false
-		Inaccuracy: 128
-		Image: bullet6
-		Shadow: true
-		HorizontalRateOfTurn: 20
-		RangeLimit: 15c0
-		TrailImage: smoke
-		CruiseAltitude: 2c0
-	Warhead@Damage: SpreadDamage
-		Spread: 128
-		Damage: 2500
-		Versus:
-			None: 30
-			Wood: 90
-			Light: 90
-			Heavy: 115
-			Concrete: 100
-	Warhead@Effect: CreateEffect
-		Explosions: small
-		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
-
 BoatMissileAntiAir:
 	ReloadDelay: 50
 	Report: rocketlaunch03.wav
@@ -236,11 +206,11 @@ BoatMissileAntiAir:
 		Speed: 350
 		Blockable: false
 		Inaccuracy: 128
-		Image: bullet6
+		Image: bullet7
 		Shadow: true
 		HorizontalRateOfTurn: 20
 		RangeLimit: 15c0
-		TrailImage: smoke
+		TrailImage: small_smoke
 		CruiseAltitude: 2c0
 	Warhead@Damage: SpreadDamage
 		Spread: 128
