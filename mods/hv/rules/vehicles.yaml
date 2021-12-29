@@ -630,53 +630,6 @@ TANK15:
 	DetectCloaked:
 		Range: 2c0
 
-ARTIL2:
-	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Valued:
-		Cost: 850
-	Tooltip:
-		Name: Artillery
-	Buildable:
-		Queue: Vehicle
-		Prerequisites: radar, factory, ~disabled
-		BuildPaletteOrder: 150
-		Description: Mobile long range weapon.
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 10000
-	Armor:
-		Type: Light
-	Mobile:
-		TurnSpeed: 8
-		Speed: 80
-		Locomotor: lighttracked
-	RevealsShroud:
-		Range: 5c0
-		MinRange: 2c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 2c0
-	Armament:
-		Weapon: SmallArtillery
-		LocalOffset: 550,0,800
-		MuzzleSequence: muzzle
-	AttackFrontal:
-		Armaments: primary
-		TargetFrozenActors: true
-		ForceFireIgnoresActors: true
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-	WithMuzzleOverlay:
-		IgnoreOffset: True
-	Explodes:
-		Weapon: ArtilleryExplode
-		EmptyWeapon: UnitExplodeSmall
-		LoadedChance: 75
-	RenderSprites:
-		PlayerPalette: green
-
 ARTIL3:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
