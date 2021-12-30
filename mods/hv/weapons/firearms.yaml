@@ -27,19 +27,19 @@ LightMachineGun:
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash_small
 		Explosions: swamp_splash_small_a, swamp_splash_small_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	ReloadDelay: 20
 	Range: 5c0
 	Burst: 2
@@ -88,19 +88,19 @@ ChainGun:
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash_small
 		Explosions: swamp_splash_small_a, swamp_splash_small_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 
 ChainGun.Shuttle:
 	Inherits: ChainGun
@@ -142,19 +142,19 @@ ShellCasing:
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash_small
 		Explosions: swamp_splash_small_a, swamp_splash_small_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 
 Vulcan:
 	Inherits: ChainGun
@@ -231,16 +231,16 @@ BoatMachineGun:
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash_small
 		Explosions: swamp_splash_small_a, swamp_splash_small_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav

@@ -36,19 +36,19 @@ railgun:
 		Explosions: water_splash_a, water_splash_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash
 		Explosions: lava_splash_a, lava_splash_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash
 		Explosions: swamp_splash_a, swamp_splash_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 RedLaser:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -166,19 +166,19 @@ Plasma:
 		Explosions: water_splash_a, water_splash_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash
 		Explosions: lava_splash_a, lava_splash_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash
 		Explosions: swamp_splash_a, swamp_splash_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 VoltageArc:
 	ReloadDelay: 50
@@ -361,16 +361,16 @@ DroneBlaster:
 		Explosions: water_splash_a, water_splash_b
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 	Warhead@LavaEffect: CreateEffect
 		Image: lava_splash
 		Explosions: lava_splash_a, lava_splash_b
 		ValidTargets: Lava
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 	Warhead@SwampEffect: CreateEffect
 		Image: swamp_splash
 		Explosions: swamp_splash_a, swamp_splash_b
 		ValidTargets: Swamp
 		InvalidTargets: Ship, Structure
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
