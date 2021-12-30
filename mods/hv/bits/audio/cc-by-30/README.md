@@ -21,3 +21,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [flyingmonster_death_robinhood76.wav](https://freesound.org/people/Robinhood76/sounds/100800/) by Robinhood76
 * [newlocknew_missile.wav](https://freesound.org/people/newlocknew/sounds/514039/) by newlocknew
 * [ricochet1-10_rakurka.wav](https://freesound.org/people/rakurka/sounds/109957/) by rakurka
+* [missile_julien-nicolas.wav](https://freesound.org/people/rakurka/sounds/109957/) by julien nicolas

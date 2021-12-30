@@ -399,7 +399,7 @@ CruiseMissileImpact:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: medium
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion_juverisetila.wav
 	Warhead@WaterEffect: CreateEffect
 		Image: water_splash
 		Explosions: water_splash_a, water_splash_b
