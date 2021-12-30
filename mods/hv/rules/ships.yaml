@@ -33,7 +33,7 @@ BOAT3:
 		TurnSpeed: 120
 	Armament@Air:
 		Weapon: BoatMissileAntiAir
-		LocalOffset: 0,200,0
+		LocalOffset: 0,100,0
 	Armament@Ground:
 		Weapon: BoatMachineGun
 		MuzzleSequence: muzzle
