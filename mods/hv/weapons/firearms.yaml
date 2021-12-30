@@ -1,6 +1,8 @@
 # License: CC-BY-SA-4.0
 
 LightMachineGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: machinegunburst01.wav, machinegunburst02.wav
 	Projectile: InstantHit
@@ -17,29 +19,6 @@ LightMachineGun:
 	Warhead@Incendiary: TreeDamage
 		Spread: 24
 		Damage: 1000
-	Warhead@Effect: CreateEffect
-		Image: hit
-		Explosions: spark_a, spark_b, spark_c, spark_d
-		ValidTargets: Ground
-		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash_small
-		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash_small
-		Explosions: lava_splash_small_a, lava_splash_small_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash_small
-		Explosions: swamp_splash_small_a, swamp_splash_small_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 	ReloadDelay: 20
 	Range: 5c0
 	Burst: 2
@@ -58,6 +37,8 @@ BunkerChaingun:
 	Burst: 1
 
 ChainGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
 	ReloadDelay: 10
 	Range: 6c0
@@ -78,29 +59,6 @@ ChainGun:
 	Warhead@Incendiary: TreeDamage
 		Spread: 64
 		Damage: 1000
-	Warhead@Effect: CreateEffect
-		Image: hit
-		Explosions: spark_a, spark_b, spark_c, spark_d
-		ValidTargets: Ground
-		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash_small
-		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash_small
-		Explosions: lava_splash_small_a, lava_splash_small_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash_small
-		Explosions: swamp_splash_small_a, swamp_splash_small_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 
 ChainGun.Shuttle:
 	Inherits: ChainGun
@@ -123,6 +81,7 @@ ChainGun.Shuttle:
 		Damage: 1000
 
 ShellCasing:
+	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 1c0
@@ -137,24 +96,6 @@ ShellCasing:
 		Image: shells
 		Explosions: shell_a, shell_b, shell_c, shell_d
 		ValidTargets: Ground
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash_small
-		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash_small
-		Explosions: lava_splash_small_a, lava_splash_small_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash_small
-		Explosions: swamp_splash_small_a, swamp_splash_small_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 
 Vulcan:
 	Inherits: ChainGun
@@ -201,6 +142,8 @@ BunkerSniperRifle:
 	Burst: 1
 
 BoatMachineGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	StartBurstReport: machinegun_SuperPhat.wav
 	BurstDelays: 1
@@ -221,26 +164,3 @@ BoatMachineGun:
 			Light: 50
 			Heavy: 20
 			Concrete: 5
-	Warhead@Effect: CreateEffect
-		Image: hit
-		Explosions: spark_a, spark_b, spark_c, spark_d
-		ValidTargets: Ground
-		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash_small
-		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash_small
-		Explosions: lava_splash_small_a, lava_splash_small_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash_small
-		Explosions: swamp_splash_small_a, swamp_splash_small_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav

@@ -45,8 +45,6 @@ BOAT3:
 		CloakTypes: Underwater
 		Range: 6c0
 	RenderDetectionCircle:
-	RenderSprites:
-		PlayerPalette: green
 	WithMuzzleOverlay:
 		IgnoreOffset: True
 
@@ -91,8 +89,6 @@ BOAT:
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 
 BOAT2:
 	Inherits: ^Ship
@@ -132,8 +128,6 @@ BOAT2:
 		LocalOffset: 500,0,0
 	AttackTurreted:
 	WithSpriteTurret:
-	RenderSprites:
-		PlayerPalette: green
 
 BOAT4:
 	Inherits: ^Ship
@@ -190,8 +184,6 @@ BOAT4:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	RenderSprites:
-		PlayerPalette: green
 
 SLCM:
 	Inherits: ^ShootableMissile
@@ -258,8 +250,6 @@ CARRIER:
 		Range: 3c0
 	AttackFrontal:
 		FacingTolerance: 128
-	RenderSprites:
-		PlayerPalette: green
 	CarrierParent:
 		Actors: drone, drone, drone
 		RespawnTicks: 300

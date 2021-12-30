@@ -1,4 +1,5 @@
 Bomb:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 60
 	Burst: 5
@@ -34,21 +35,3 @@ Bomb:
 		Explosions: medium
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav

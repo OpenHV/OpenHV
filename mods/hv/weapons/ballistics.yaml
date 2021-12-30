@@ -1,6 +1,7 @@
 # License: CC-BY-SA-4.0
 
 ^Cannon:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: tankfire01.wav
 	ReloadDelay: 70
@@ -31,24 +32,6 @@
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 ^Artillery:
 	Inherits: ^Cannon
@@ -121,6 +104,7 @@ DoubleBarrelledArtillery:
 		Percentage: 40
 
 TurretCannon:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: tankfire03.wav
 	ReloadDelay: 25
@@ -148,24 +132,6 @@ TurretCannon:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion02.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 Turret2Cannon:
 	Inherits: TurretCannon
@@ -292,6 +258,7 @@ TurretArtillery:
 		ImpactSounds: explosion07.wav, explosion08.wav
 
 30mm:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 30
 	Range: 4c0
@@ -318,24 +285,6 @@ TurretArtillery:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 105mm:
 	Inherits: ^Cannon
@@ -349,6 +298,7 @@ TurretArtillery:
 			Heavy: 115
 
 mortargun:
+	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Report: grenade-launcher_lemudcrab.wav
@@ -384,21 +334,3 @@ mortargun:
 		Explosions: small
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash_small
-		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash_small
-		Explosions: lava_splash_small_a, lava_splash_small_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash_small
-		Explosions: swamp_splash_small_a, swamp_splash_small_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav

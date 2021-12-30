@@ -56,8 +56,6 @@ PLANE1:
 		TrailLength: 12
 	Selectable:
 		Bounds: 1024, 1024
-	RenderSprites:
-		PlayerPalette: green
 
 PLANE2:
 	Inherits: ^Plane
@@ -114,8 +112,6 @@ PLANE2:
 		Offset: -298,164,0
 		TrailLength: 12
 		ZOffset: -1000
-	RenderSprites:
-		PlayerPalette: green
 
 COPTER:
 	Inherits: ^Helicopter
@@ -157,8 +153,6 @@ COPTER:
 		LocalOffset: 0,0,0
 	Selectable:
 		Bounds: 1228, 1228
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay:
 		Sequence: propeller
 	WithTurretAttackAnimation:
@@ -200,8 +194,6 @@ SAUCER:
 		IsDecoration: true
 		Sequence: shadow-overlay
 		Palette: shadow
-	RenderSprites:
-		PlayerPalette: green
 
 BANSHEE:
 	Inherits: ^Helicopter
@@ -239,8 +231,6 @@ BANSHEE:
 		LocalOffset: 700,200,0, 700,-200,0
 	Selectable:
 		DecorationBounds: 1228, 1228
-	RenderSprites:
-		PlayerPalette: green
 	WithMuzzleOverlay:
 
 COPTER2:
@@ -295,8 +285,6 @@ COPTER2:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
-	RenderSprites:
-		PlayerPalette: green
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
@@ -340,8 +328,6 @@ BALLOON:
 		IsDecoration: true
 		Sequence: shadow-overlay
 		Palette: shadow
-	RenderSprites:
-		PlayerPalette: green
 
 DROPSHIP:
 	Inherits: ^Helicopter
@@ -395,8 +381,6 @@ DROPSHIP:
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
 		Voice: Unload
-	RenderSprites:
-		PlayerPalette: green
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
@@ -429,7 +413,6 @@ DROPSHIP.Husk:
 		Type: GroundPosition
 	RenderSprites:
 		Image: dropship
-		PlayerPalette: green
 
 DRONE:
 	Inherits: ^SpawnedPlane
@@ -459,8 +442,6 @@ DRONE:
 		AltitudeVelocity: 240
 		VTOL: true
 		Repulsable: false
-	RenderSprites:
-		PlayerPalette: green
 	AttackAircraft:
 		FacingTolerance: 20
 		Voice: Attack
@@ -503,8 +484,6 @@ LANDEDPOD:
 		Type: Heavy
 	-ShakeOnDeath:
 	-ThrowsShrapnel:
-	RenderSprites:
-		PlayerPalette: green
 	-MapEditorData:
 
 BOMBER1:
@@ -517,8 +496,6 @@ BOMBER1:
 	HiddenUnderFog:
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
-	RenderSprites:
-		PlayerPalette: green
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 356, 256, 0
@@ -553,8 +530,6 @@ CARGOSHIP:
 	WithShadow:
 		Offset: 356, 256, 0
 		ZOffset: -256
-	RenderSprites:
-		PlayerPalette: green
 	WithFacingSpriteBody:
 	WithLandingUnloadAnimation:
 	RejectsOrders:

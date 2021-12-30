@@ -39,24 +39,6 @@
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 ^AntiAirMissile:
 	Inherits: ^AntiGroundMissile
@@ -65,6 +47,7 @@
 		ImpactActors: false
 
 AntiGroundRocket:
+	Inherits: BigSplash
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
 	MinRange: 1c256
@@ -122,6 +105,7 @@ MissileTankRocket:
 		Damage: 6000
 
 LightAntiTankRocket:
+	Inherits: SmallSplash
 	Inherits: ^AntiGroundMissile
 	ReloadDelay: 70
 	Projectile: Missile
@@ -147,24 +131,6 @@ LightAntiTankRocket:
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
 		Damage: 2500
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash_small
-		Explosions: water_splash_small_a, water_splash_small_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash_small
-		Explosions: lava_splash_small_a, lava_splash_small_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash_small
-		Explosions: swamp_splash_small_a, swamp_splash_small_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 
 LightAntiAirRocket:
 	Inherits: ^AntiAirMissile
@@ -252,6 +218,7 @@ BoatMissileAntiAir:
 
 StealthTankMissile:
 	Inherits: ^AntiGroundMissile
+	Inherits: BigSplash
 	ReloadDelay: 70
 	Range: 7c0
 	Report: newlocknew_missile.wav
@@ -359,6 +326,7 @@ TowerMissile:
 
 DropshipMissile:
 	Inherits: ^AntiGroundMissile
+	Inherits: BigSplash
 	ReloadDelay: 100
 	Range: 8c0
 	Report: rocketlaunch01.wav
@@ -383,6 +351,7 @@ DropshipMissile:
 		Damage: 2500
 
 CruiseMissileImpact:
+	Inherits: BigSplash
 	Warhead@Damage: SpreadDamage
 		Spread: 512
 		Damage: 16000
@@ -403,21 +372,3 @@ CruiseMissileImpact:
 		Explosions: medium
 		ValidTargets: Ground
 		ImpactSounds: explosion_juverisetila.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav

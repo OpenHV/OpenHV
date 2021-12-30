@@ -43,8 +43,6 @@ MOTHER:
 		Range: 4c0
 	StrategicPoint:
 	ProximityCapturable:
-	RenderSprites:
-		PlayerPalette: green
 	MapEditorData:
 		Categories: Mothership
 	WithIdleOverlay@Shadow:

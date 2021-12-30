@@ -73,6 +73,7 @@ Weapons:
 	hv|weapons/bombs.yaml
 	hv|weapons/debris.yaml
 	hv|weapons/fake.yaml
+	hv|weapons/common.yaml
 
 TileSets:
 	hv|tileset.yaml
