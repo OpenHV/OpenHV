@@ -55,6 +55,10 @@ ForestFire:
 			Concrete: 10
 		DamageTypes: Fire
 		AffectsParent: true
+	Warhead@Incendiary: TreeDamage
+		Damage: 50
+		Falloff: 100, 36, 12
+		Spread: 0c768
 
 Spaceman:
 	ReloadDelay: 60
@@ -74,10 +78,10 @@ Spaceman:
 		ValidTargets: Water
 		InvalidTargets: Ship, Structure
 		ImpactSounds: Video_Game_Splash-Ploor.wav
-	Warhead@LavaEffect_1: CreateEffect
+	Warhead@LavaFlame: CreateEffect
 		Explosions: flame
 		ValidTargets: Lava
-	Warhead@LavaEffect_2: CreateEffect
+	Warhead@LavaSplash: CreateEffect
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Lava

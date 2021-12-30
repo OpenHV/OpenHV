@@ -23,6 +23,10 @@ railgun:
 			Light: 125
 			Heavy: 155
 			Wood: 10
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 8000
+		Percentage: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -62,6 +66,9 @@ RedLaser:
 		SecondaryBeamColor: FF000030
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
+		Spread: 42
+		Damage: 3000
+	Warhead@Incendiary: TreeDamage
 		Spread: 42
 		Damage: 3000
 
@@ -147,6 +154,9 @@ Plasma:
 			Light: 75
 			Heavy: 175
 			Concrete: 50
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2400
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
@@ -195,6 +205,10 @@ VoltageArc:
 			Wood: 10
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 		DamageTypes: Electricity
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 8000
+		Percentage: 10
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 4
@@ -226,6 +240,10 @@ LightningBolt:
 			Light: 90
 			Heavy: 115
 			Concrete: 100
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 3250
+		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
@@ -250,6 +268,10 @@ LightningBoltLight:
 			Light: 90
 			Heavy: 115
 			Concrete: 100
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2000
+		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
@@ -284,6 +306,10 @@ RailgunStrike:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Water, Ground, Tree, Air
 		DamageTypes: Fire
+	Warhead@IncendiaryImpact: TreeDamage
+		Spread: 1c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
 	Warhead@DamageArea: SpreadDamage
 		Spread: 1c0
 		Damage: 25000
@@ -291,6 +317,10 @@ RailgunStrike:
 		Delay: 3
 		ValidTargets: Water, Ground, Tree, Air
 		DamageTypes: Fire
+	Warhead@IncendiaryArea: TreeDamage
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
 
 DroneBlaster:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -318,6 +348,10 @@ DroneBlaster:
 			Light: 75
 			Heavy: 75
 			Concrete: 50
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 3000
+		Percentage: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
