@@ -559,12 +559,11 @@ MINER2:
 	WithMakeAnimation:
 		Condition: build-incomplete
 	Building:
-		Footprint: == == xx
-		Dimensions: 2,3
+		Footprint: xx
+		Dimensions: 2,1
 		RequiresBaseProvider: false
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
 		AllowPlacementOnResources: true
-		LocalCenterOffset: 0,1024,0
 	-RequiresBuildableArea:
 	-GivesBuildableArea:
 	RevealsShroud:
@@ -589,7 +588,6 @@ MINER2:
 		PauseOnCondition: build-incomplete || being-captured
 		IntoActor: miner
 		Facing: 750
-		Offset: 1,2
 
 STARPORT:
 	Inherits: ^BaseBuilding

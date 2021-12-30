@@ -300,7 +300,7 @@ module2:
 		Length: 8
 		Reverses: True
 		Tick: 80
-		ZOffset: 1500
+		ZOffset: 1536
 	icon: bits/buildings-icons.png
 		Start: 30
 		Offset: 0, -1
@@ -309,6 +309,7 @@ miner2:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -20
+		ZOffset: 2048
 	make:
 		Length: 18
 		Tick: 100
