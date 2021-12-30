@@ -286,7 +286,67 @@ World:
 	CustomTerrainDebugOverlay:
 	CustomTerrainLayer:
 	ForestLayer:
-		Trees: treegrs1, treegrs2, treegrs3, treegrs4, treegrs5, treegrs6, treegrs7, treegrs8, treegrs9, treegrs12, treegrs13, treegrs14, treegrs15, trees1, trees2, trees3, trees5, trees6, trees7, trees8, trees9, trees10, trees11, trees12, trees13, trees14, trees15, trees16
+		Image: fire
+		Sequence: flame
+		TransformedTerrain: Crater, Stone
+		CrushedTiles:
+			1272: 1394
+			1273: 1395
+			1274: 1396
+			1275: 1397
+			1276: 1398
+			1277: 1399
+			1278: 1400
+			1279: 1401
+			1280: 1402
+			1281: 1403
+			1282: 1404
+			1283: 1405
+			1285: 1406
+			1287: 1420
+			1288: 1421
+			1289: 1422
+			1291: 1423
+			1292: 1424
+			1293: 1425
+			1294: 1426
+			1295: 1427
+			1296: 1428
+			1297: 1429
+			1298: 1430
+			1299: 1431
+			1300: 1432
+			1301: 1433
+			1302: 1434
+		BurnedTiles:
+			1272: 1435
+			1273: 1436
+			1274: 1437
+			1275: 1438
+			1276: 1439
+			1277: 1440
+			1278: 1441
+			1279: 1442
+			1280: 1443
+			1281: 1444
+			1282: 1445
+			1283: 1446
+			1285: 1447
+			1287: 1448
+			1288: 1449
+			1289: 1450
+			1291: 1451
+			1292: 1452
+			1293: 1453
+			1294: 1454
+			1295: 1455
+			1296: 1456
+			1297: 1457
+			1298: 1458
+			1299: 1459
+			1300: 1460
+			1301: 1461
+			1302: 1462
 	DomainIndex:
 	LiquidTerrainLayer:
 	LiquidEdgeRenderer:

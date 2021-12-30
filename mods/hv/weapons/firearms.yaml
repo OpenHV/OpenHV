@@ -14,6 +14,9 @@ LightMachineGun:
 			Light: 30
 			Heavy: 10
 			Concrete: 5
+	Warhead@Incendiary: TreeDamage
+		Spread: 24
+		Damage: 1000
 	Warhead@Effect: CreateEffect
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
@@ -47,6 +50,9 @@ BunkerChaingun:
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 3000
+	Warhead@Incendiary: TreeDamage
+		Spread: 24
+		Damage: 3000
 	ReloadDelay: 15
 	Range: 8c0
 	Burst: 1
@@ -69,6 +75,9 @@ ChainGun:
 			Light: 65
 			Heavy: 35
 			Concrete: 15
+	Warhead@Incendiary: TreeDamage
+		Spread: 64
+		Damage: 1000
 	Warhead@Effect: CreateEffect
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
@@ -109,6 +118,9 @@ ChainGun.Shuttle:
 			Light: 85
 			Heavy: 45
 			Concrete: 28
+	Warhead@Incendiary: TreeDamage
+		Spread: 64
+		Damage: 1000
 
 ShellCasing:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -161,6 +173,9 @@ Vulcan:
 			Light: 20
 			Heavy: 10
 			Concrete: 28
+	Warhead@Incendiary: TreeDamage
+		Spread: 64
+		Damage: 1000
 
 SniperRifle:
 	Inherits: LightMachineGun
@@ -173,6 +188,8 @@ SniperRifle:
 			Light: 55
 			Heavy: 25
 			Concrete: 15
+	Warhead@Incendiary: TreeDamage
+		Spread: 24
 	ReloadDelay: 50
 	Range: 10c0
 	Burst: 1

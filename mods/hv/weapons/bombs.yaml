@@ -25,6 +25,11 @@ Bomb:
 			Light: 75
 			Heavy: 125
 			Wood: 75
+	Warhead@Incendiary: TreeDamage
+		Spread: 512
+		Falloff: 100, 50, 25, 12, 6, 3, 0
+		Damage: 10000
+		Percentage: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: medium
 		ValidTargets: Ground, Tree

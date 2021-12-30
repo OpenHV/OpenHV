@@ -23,6 +23,10 @@
 			Light: 100
 			Heavy: 130
 			Wood: 75
+	Warhead@Incendiary: TreeDamage
+		Damage: 4000
+		Spread: 128
+		Percentage: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
@@ -68,6 +72,10 @@
 			Light: 60
 			Heavy: 25
 			Wood: 40
+	Warhead@Incendiary: TreeDamage
+		Damage: 23000
+		Spread: 426
+		Percentage: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion04.wav, explosion05.wav
@@ -107,6 +115,10 @@ DoubleBarrelledArtillery:
 			Light: 60
 			Heavy: 50
 			Wood: 40
+	Warhead@Incendiary: TreeDamage
+		Damage: 23000
+		Spread: 500
+		Percentage: 40
 
 TurretCannon:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -126,6 +138,9 @@ TurretCannon:
 			Steel: 100
 			Light: 150
 			Heavy: 175
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 5000
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
@@ -173,6 +188,10 @@ Nuclear:
 		Versus:
 			Steel: 25
 			Concrete: 25
+	Warhead@Incendiary: TreeDamage
+		Spread: 1c0
+		Damage: 15000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
 	Warhead@DamageArea1: SpreadDamage
 		DamageTypes: Fire
 		Spread: 2c0
@@ -183,6 +202,10 @@ Nuclear:
 		Versus:
 			Steel: 25
 			Concrete: 25
+	Warhead@Incendiary1: TreeDamage
+		Spread: 2c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
 	Warhead@EffectArea1: CreateEffect
 		ImpactSounds: explosion07.wav
 		Delay: 5
@@ -197,6 +220,10 @@ Nuclear:
 		Versus:
 			Steel: 50
 			Concrete: 25
+	Warhead@Incendiary2: TreeDamage
+		Spread: 3c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
 	Warhead@DamageArea3: SpreadDamage
 		DamageTypes: Fire
 		Spread: 4c0
@@ -206,6 +233,10 @@ Nuclear:
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Concrete: 25
+	Warhead@Incendiary3: TreeDamage
+		Spread: 4c0
+		Damage: 6000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
 	Warhead@DamageArea4: SpreadDamage
 		DamageTypes: Fire
 		Spread: 5c0
@@ -215,6 +246,10 @@ Nuclear:
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			Concrete: 25
+	Warhead@Incendiary3: TreeDamage
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Spread: 5c0
+		Damage: 6000
 	Warhead@Effect: CreateEffect
 		Image: nuclear_explosion
 		Explosions: idle
@@ -248,6 +283,10 @@ TurretArtillery:
 			Light: 65
 			Heavy: 65
 			Wood: 40
+	Warhead@Incendiary: TreeDamage
+		Damage: 30000
+		Spread: 850
+		Percentage: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
 		ImpactSounds: explosion07.wav, explosion08.wav
@@ -269,6 +308,9 @@ TurretArtillery:
 			Wood: 72
 			Light: 100
 			Heavy: 88
+	Warhead@Incendiary: TreeDamage
+		Damage: 2500
+		Percentage: 72
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
@@ -331,6 +373,10 @@ mortargun:
 			Light: 25
 			Heavy: 25
 			Wood: 75
+	Warhead@Incendiary: TreeDamage
+		Spread: 256
+		Damage: 6000
+		Percentage: 75
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25

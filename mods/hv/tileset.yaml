@@ -9664,6 +9664,7 @@ Templates:
 		Images: bits/terrain/treegrs.png
 		Frames: 4
 		Size: 1,1
+		ClearTile: true
 		Categories: Grass, Plant, Terrain
 		Tiles:
 			0: Plant
@@ -9768,6 +9769,7 @@ Templates:
 		Images: bits/terrain/trees.png
 		Frames: 4
 		Size: 1,1
+		ClearTile: true
 		Categories: Snow, Plant, Terrain
 		Tiles:
 			0: Plant
@@ -10569,7 +10571,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1395:
 		Id: 1395
 		Images: bits/terrain/treegrsmnch.png
@@ -10577,7 +10579,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1396:
 		Id: 1396
 		Images: bits/terrain/treegrsmnch.png
@@ -10585,7 +10587,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1397:
 		Id: 1397
 		Images: bits/terrain/treegrsmnch.png
@@ -10593,7 +10595,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1398:
 		Id: 1398
 		Images: bits/terrain/treegrsmnch.png
@@ -10601,7 +10603,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1399:
 		Id: 1399
 		Images: bits/terrain/treegrsmnch.png
@@ -10609,7 +10611,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1400:
 		Id: 1400
 		Images: bits/terrain/treegrsmnch.png
@@ -10617,7 +10619,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1401:
 		Id: 1401
 		Images: bits/terrain/treegrsmnch.png
@@ -10625,7 +10627,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1402:
 		Id: 1402
 		Images: bits/terrain/treegrsmnch.png
@@ -10633,7 +10635,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1403:
 		Id: 1403
 		Images: bits/terrain/treegrsmnch.png
@@ -10641,7 +10643,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1404:
 		Id: 1404
 		Images: bits/terrain/treegrsmnch.png
@@ -10649,7 +10651,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1405:
 		Id: 1405
 		Images: bits/terrain/treegrsmnch.png
@@ -10657,7 +10659,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1406:
 		Id: 1406
 		Images: bits/terrain/treegrsmnch.png
@@ -10665,16 +10667,15 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1407:
 		Id: 1407
 		Images: bits/terrain/treegrsmnch.png
 		Frames: 13
 		Size: 1,1
 		Categories: Grass, Plant
-		ClearTile: true
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1408:
 		Id: 1408
 		Images: bits/terrain/roadplain.png

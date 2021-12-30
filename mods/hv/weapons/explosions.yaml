@@ -14,6 +14,9 @@ BuildingExplode:
 		Versus:
 			None: 90
 			Steel: 75
+	Warhead@Incendiary: TreeDamage
+		Spread: 426
+		Damage: 5000
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
@@ -54,6 +57,9 @@ AntiTankMine:
 		AffectsParent: true
 		InvalidTargets: Mine
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@Incendiary: TreeDamage
+		Spread: 256
+		Damage: 40000
 	Warhead@Effect: CreateEffect
 		Explosions: large_2, large_3
 		ImpactSounds: explosion02.wav
@@ -97,6 +103,10 @@ MortarPodExplode:
 			Light: 25
 			Heavy: 25
 			Wood: 50
+	Warhead@Incendiary: TreeDamage
+		Spread: 512
+		Damage: 7500
+		Percentage: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
