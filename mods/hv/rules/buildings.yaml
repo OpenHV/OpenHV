@@ -1907,11 +1907,18 @@ BARRIER:
 	Armor:
 		Type: Concrete
 	LineBuildNode:
+	GrantConditionOnLineBuildConnection:
+		Condition: connected
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-WithSpriteBody:
-	WithGateSpriteBody:
+	WithGateSpriteBody@Connected:
 		OpenSequence: open
+		RequiresCondition: connected
+	WithGateSpriteBody@Standalone:
+		Sequence: idle-alone
+		OpenSequence: open-alone
+		RequiresCondition: !connected
 	Tooltip:
 		Name: Gate
 	RequiresBuildableArea:
@@ -1962,6 +1969,8 @@ GATE-HORIZONTAL:
 		Bounds: 3072, 1512, 0, -256
 	LineBuildNode:
 		Connections: -1,0, 1,0
+	GrantConditionOnLineBuildConnection:
+		Edges: -1,0, 3,0
 
 GATE-VERTICAL:
 	Inherits: ^GATE
@@ -1977,6 +1986,8 @@ GATE-VERTICAL:
 		Bounds: 1024, 3500, 0, -256
 	LineBuildNode:
 		Connections: 0,-1, 0,1
+	GrantConditionOnLineBuildConnection:
+		Edges: 0,-1, 0,3
 
 WALLTOP:
 	Inherits: ^Wall

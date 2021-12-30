@@ -1169,6 +1169,25 @@ gate-horizontal:
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 47
+	idle-alone: bits/gate-horizontal.png
+		Length: 16
+		ShadowStart: 48
+	open-alone: bits/gate-horizontal.png
+		Start: 15
+		Offset: 2,0,0
+		ZRamp: 1
+		ZOffset: -3036
+		ShadowStart: 48
+	damaged-idle-alone: bits/gate-horizontal.png
+		Start: 16
+		Length: 16
+		ShadowStart: 48
+	damaged-open-alone: bits/gate-horizontal.png
+		Start: 31
+		Offset: 2,0,0
+		ZRamp: 1
+		ZOffset: -3036
+		ShadowStart: 48
 	make-overlay: bits/build-vanish.png
 		Length: 26
 		Tick: 30
@@ -1186,6 +1205,12 @@ gate-vertical:
 		Offset: 3,-4,0
 	damaged-idle: bits/gate-vertical.png
 	damaged-open: bits/gate-vertical.png
+		Offset: 3,-4,0
+	idle-alone: bits/gate-vertical.png
+	open-alone: bits/gate-vertical.png
+		Offset: 3,-4,0
+	damaged-idle-alone: bits/gate-vertical.png
+	damaged-open-alone: bits/gate-vertical.png
 		Offset: 3,-4,0
 	icon: bits/buildings-icons.png
 		Start: 34
