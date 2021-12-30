@@ -666,14 +666,6 @@ Actors:
 		Location: 95,26
 		Faction: Random
 		Owner: Synapol Corporation
-	Actor244: generator
-		Location: 85,22
-		Faction: Random
-		Owner: Synapol Corporation
-	Actor245: generator
-		Location: 88,22
-		Faction: Random
-		Owner: Synapol Corporation
 	Actor247: starport
 		Location: 86,112
 		Faction: Random
@@ -999,5 +991,11 @@ Actors:
 		Faction: Random
 		Location: 64,111
 		Owner: Yuruki Industries
+	Actor346: generator
+		Owner: Synapol Corporation
+		Location: 85,22
+	Actor347: generator
+		Owner: Synapol Corporation
+		Location: 88,22
 
 Rules: rules.yaml
