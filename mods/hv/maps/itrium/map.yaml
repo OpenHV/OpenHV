@@ -74,14 +74,6 @@ Actors:
 	Actor45: cave
 		Owner: Neutral
 		Location: 1,31
-	Miner1: miner2
-		Location: 22,37
-		Faction: yi
-		Owner: Synapol Corporation
-	Miner2: miner2
-		Location: 32,32
-		Faction: yi
-		Owner: Synapol Corporation
 	Actor12: crow
 		Owner: Neutral
 		Facing: 384
@@ -333,5 +325,11 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 29,40
 		FreeActor: False
+	Miner1: miner2
+		Owner: Synapol Corporation
+		Location: 22,39
+	Miner2: miner2
+		Owner: Synapol Corporation
+		Location: 33,34
 
 Rules: hv|rules/campaign.yaml, rules.yaml
