@@ -1,0 +1,46 @@
+BigSplash:
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash
+		Explosions: water_splash_a, water_splash_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash
+		Explosions: lava_splash_a, lava_splash_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash
+		Explosions: swamp_splash_a, swamp_splash_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
+
+SmallSplash:
+	Warhead@WaterEffect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water
+		InvalidTargets: Ship, Structure
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
+	Warhead@LavaEffect: CreateEffect
+		Image: lava_splash_small
+		Explosions: lava_splash_small_a, lava_splash_small_b
+		ValidTargets: Lava
+		InvalidTargets: Ship, Structure
+		ImpactSounds: small-lava-splash1_dheming_oneirophile.wav, small-lava-splash2_dheming_oneirophile.wav, small-lava-splash3_dheming_oneirophile.wav, small-lava-splash4_dheming_oneirophile.wav, small-lava-splash5_dheming_oneirophile.wav
+	Warhead@SwampEffect: CreateEffect
+		Image: swamp_splash_small
+		Explosions: swamp_splash_small_a, swamp_splash_small_b
+		ValidTargets: Swamp
+		InvalidTargets: Ship, Structure
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
+
+Ricochet:
+	Warhead@Effect: CreateEffect
+		Image: hit
+		Explosions: spark_a, spark_b, spark_c, spark_d
+		ValidTargets: Ground
+		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav

@@ -164,8 +164,6 @@ PROP4:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-	RenderSprites:
-		PlayerPalette: green
 
 PROP5:
 	Inherits: ^Prop

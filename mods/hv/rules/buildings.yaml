@@ -56,8 +56,6 @@ BASE:
 		ProductionType: Vehicle
 	ProductionSound:
 		Files: Quedicemipez__teleportation.wav
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -211,7 +209,6 @@ GENERATOR:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
 	RenderSprites:
-		PlayerPalette: green
 		Image: generator
 		FactionImages:
 			sc: generator2
@@ -270,8 +267,6 @@ RADAR:
 		Amount: -40
 	ProvidesPrerequisite@BuildingName:
 		Prerequisite: radar
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -407,7 +402,6 @@ TRADPLAT:
 		Amount: -30
 	ProvidesPrerequisite@BuildingName:
 	RenderSprites:
-		PlayerPalette: green
 		Image: tradplat
 		FactionImages:
 			sc: tradplat2
@@ -506,7 +500,6 @@ MODULE:
 		Text: PRIMARY
 		Font: TinyPixel
 	RenderSprites:
-		PlayerPalette: green
 		Image: module
 		FactionImages:
 			sc: module2
@@ -572,8 +565,6 @@ MINER2:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
-	RenderSprites:
-		PlayerPalette: green
 	GrantConditionOnDamageState@CRITICAL:
 		Condition: critical
 		ValidDamageStates: Critical
@@ -649,8 +640,6 @@ STARPORT:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -725,8 +714,6 @@ FACTORY3:
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.yi
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -988,7 +975,6 @@ TECHCENTER:
 	Targetable:
 		TargetTypes: Ground, Structure
 	RenderSprites:
-		PlayerPalette: green
 		Image: techcenter
 		FactionImages:
 			sc: techcenter2
@@ -1209,8 +1195,6 @@ AATURRET2:
 	AttackTurreted:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
-	RenderSprites:
-		PlayerPalette: green
 
 HOWITZER:
 	Inherits: ^DefenseBuilding
@@ -1277,8 +1261,6 @@ HOWITZER:
 		TurnSpeed: 60
 		RequiresCondition: !build-incomplete
 		RealignDelay: -1
-	RenderSprites:
-		PlayerPalette: green
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -1341,7 +1323,6 @@ FIELD:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	RenderSprites:
-		PlayerPalette: green
 		Image: field
 		FactionImages:
 			sc: field2
@@ -1415,8 +1396,6 @@ SILO:
 		Amount: -150
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@lights:
 		Sequence: animation_lights
 		RequiresCondition: !build-incomplete
@@ -1490,8 +1469,6 @@ UPLINK:
 		Amount: -150
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@lights:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
@@ -1541,7 +1518,6 @@ STORAGE:
 	Power:
 		Amount: -30
 	RenderSprites:
-		PlayerPalette: green
 		Image: storage2
 		FactionImages:
 			sc: storage
@@ -1660,8 +1636,6 @@ TELEVATR:
 		RequiresSelection: true
 		Text: EXIT
 		Font: TinyPixel
-	RenderSprites:
-		PlayerPalette: green
 	PlaceBuildingVariants:
 		Actors: televtr2
 	WithIdleOverlay@Shadow:
@@ -1776,8 +1750,6 @@ HARBOR:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -1845,8 +1817,6 @@ BARRIER:
 		Value: 0
 	Targetable:
 		TargetTypes: Ground, Wall, NoAutoTarget
-	RenderSprites:
-		PlayerPalette: green
 	Health:
 		HP: 100000
 	Armor:
@@ -1926,8 +1896,6 @@ BARRIER:
 		Adjacent: 6
 	Targetable:
 		TargetTypes: Ground, Wall, NoAutoTarget
-	RenderSprites:
-		PlayerPalette: green
 	MapEditorData:
 		Categories: Wall
 	Gate:
@@ -2154,8 +2122,6 @@ TECHBUILDING:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
-	RenderSprites:
-		PlayerPalette: green
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
@@ -2276,8 +2242,6 @@ TECHMINER:
 		RequiresCondition: disabled && !ownerless
 	RevealsShroud@Hacked:
 		Range: 2c0
-	RenderSprites:
-		PlayerPalette: green
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-Sellable:
@@ -2351,8 +2315,6 @@ TECHCOMLINK:
 		RequiresCondition: disabled && !ownerless
 	RevealsShroud@Hacked:
 		Range: 3c0
-	RenderSprites:
-		PlayerPalette: green
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-Sellable:

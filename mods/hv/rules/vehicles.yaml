@@ -41,8 +41,6 @@ TANK3:
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 
 TYRIANTANK:
 	Inherits: TANK3
@@ -92,8 +90,6 @@ AATANK:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
 	WithSpriteTurret:
-	RenderSprites:
-		PlayerPalette: green
 
 AATANK2:
 	Inherits: AATANK
@@ -145,8 +141,6 @@ TRANSPRT:
 		PortCones: 88, 88, 88, 88, 88, 88
 	Selectable:
 		DecorationBounds: 2048, 1843
-	RenderSprites:
-		PlayerPalette: green
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -197,8 +191,6 @@ ARTIL:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
-	RenderSprites:
-		PlayerPalette: green
 
 RADARTANK:
 	Inherits: ^TrackedVehicle
@@ -261,8 +253,6 @@ RADARTANK:
 		TrailCount: 3
 	WithFacingSpriteBody:
 		RequiresCondition: undeployed
-	RenderSprites:
-		PlayerPalette: green
 	DetectCloaked:
 		Range: 8c0
 		RequiresCondition: !ecmdisabled && undeployed
@@ -311,8 +301,6 @@ TANK16:
 		InitialStance: AttackAnything
 	AutoTargetPriority@Default:
 		ValidTargets: Vehicle
-	RenderSprites:
-		PlayerPalette: green
 
 TANK6:
 	Inherits: ^TrackedVehicle
@@ -355,8 +343,6 @@ TANK6:
 		RearmActors: tradplat
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
-	RenderSprites:
-		PlayerPalette: green
 
 TANK5:
 	Inherits: ^TrackedVehicle
@@ -392,8 +378,6 @@ TANK5:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	RenderSprites:
-		PlayerPalette: green
 
 TANK10:
 	Inherits: ^TrackedVehicle
@@ -429,8 +413,6 @@ TANK10:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
-	RenderSprites:
-		PlayerPalette: green
 
 TANK7:
 	Inherits: ^TrackedVehicle
@@ -476,8 +458,6 @@ TANK7:
 		ValidDamageStates: Critical
 	WithAttackAnimation:
 		Sequence: shoot
-	RenderSprites:
-		PlayerPalette: green
 	Voiced:
 		VoiceSet: StealthTankVoice
 
@@ -513,8 +493,6 @@ TANK11:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	RenderSprites:
-		PlayerPalette: green
 
 TANK12:
 	Inherits: ^TrackedVehicle
@@ -552,8 +530,6 @@ TANK12:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	RenderSprites:
-		PlayerPalette: green
 
 TANK13:
 	Inherits: ^Vehicle
@@ -582,13 +558,9 @@ TANK13:
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
-	RenderSprites:
-		PlayerPalette: green
 
 TANK14:
 	Inherits: TANK13
-	RenderSprites:
-		PlayerPalette: green
 
 TANK15:
 	Inherits: ^TrackedVehicle
@@ -625,8 +597,6 @@ TANK15:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
-	RenderSprites:
-		PlayerPalette: green
 	DetectCloaked:
 		Range: 2c0
 
@@ -673,8 +643,6 @@ ARTIL3:
 	WithMuzzleOverlay:
 	Selectable:
 		DecorationBounds: 1536, 1536
-	RenderSprites:
-		PlayerPalette: green
 
 BUILDER:
 	Inherits: ^Vehicle
@@ -713,7 +681,6 @@ BUILDER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	RenderSprites:
-		PlayerPalette: green
 		Image: builder1
 		FactionImages:
 			sc: builder4
@@ -746,8 +713,6 @@ MINER:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	RenderSprites:
-		PlayerPalette: green
 	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Ore
@@ -802,8 +767,6 @@ MISSILE_TANK:
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 
 TANK8:
 	Inherits: ^TrackedVehicle
@@ -825,8 +788,6 @@ TANK8:
 		Type: Heavy
 	Mobile:
 		Speed: 150
-	RenderSprites:
-		PlayerPalette: green
 	RevealsShroud:
 		Range: 7c0
 		MinRange: 3c0
@@ -871,8 +832,6 @@ TANK1:
 	Passenger:
 		CustomPipType: red
 		Voice: Move
-	RenderSprites:
-		PlayerPalette: green
 
 TANK2:
 	Inherits: ^TrackedVehicle
@@ -907,8 +866,6 @@ TANK2:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	RenderSprites:
-		PlayerPalette: green
 
 TANKER1:
 	Inherits: ^Vehicle
@@ -937,8 +894,6 @@ TANKER1:
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
-	RenderSprites:
-		PlayerPalette: green
 
 TANKER2:
 	Inherits: TANKER1

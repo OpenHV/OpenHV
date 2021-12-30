@@ -23,8 +23,6 @@ SCOUT1:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 
 SCOUT2:
 	Inherits: ^Pod
@@ -54,8 +52,6 @@ SCOUT2:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 
 MORTARPOD:
 	Inherits: ^Pod
@@ -81,8 +77,6 @@ MORTARPOD:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 	Explodes:
 		Weapon: MortarPodExplode
 		EmptyWeapon: MortarPodExplode
@@ -117,8 +111,6 @@ SNIPERPOD:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 	WithMuzzleOverlay:
-	RenderSprites:
-		PlayerPalette: green
 	DetectCloaked:
 		Range: 2c0
 
@@ -151,5 +143,3 @@ TECHNICIAN:
 	Mobile:
 		Speed: 70
 		Voice: Move
-	RenderSprites:
-		PlayerPalette: green
