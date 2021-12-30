@@ -24,3 +24,5 @@ Content of this folder indicates assets made by various authors, under the defau
 * [missile_julien-nicolas.wav](https://freesound.org/people/rakurka/sounds/109957/) by julien nicolas
 * [small-water-splash1-5_siliconesound.wav](https://freesound.org/people/SiliconeSound/sounds/609428/) by SiliconeSound
 * [big-water-splash1-4_cgeffex.wav](https://freesound.org/people/CGEffex/sounds/98335/) by CGEffex
+* [small-lava-splash1-5_dheming_oneirophile.wav](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
+* [big-lava-splash1-5_dheming_oneirophile.wav](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
