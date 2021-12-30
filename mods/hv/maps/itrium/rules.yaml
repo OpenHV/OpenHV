@@ -13,6 +13,14 @@ World:
 BASE:
 	-Sellable:
 
+BARRIER:
+	Buildable:
+		Prerequisites: ~disabled
+
+^GATE:
+	Buildable:
+		Prerequisites: ~disabled
+
 SNIPERPOD:
 	Buildable:
 		Prerequisites: ~disabled

@@ -1827,7 +1827,7 @@ BARRIER:
 		Description: Basic wall defense.
 	RequiresBuildableArea:
 		AreaTypes: building
-		Adjacent: 4
+		Adjacent: 6
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	Sellable:
@@ -1843,9 +1843,6 @@ BARRIER:
 		Cost: 200
 	CustomSellValue:
 		Value: 0
-	RequiresBuildableArea:
-		AreaTypes: building
-		Adjacent: 6
 	Targetable:
 		TargetTypes: Ground, Wall, NoAutoTarget
 	RenderSprites:
@@ -1944,8 +1941,6 @@ BARRIER:
 	Explodes:
 		Weapon: UnitExplodeLarge
 		EmptyWeapon: UnitExplodeLarge
-	MapEditorData:
-		Categories: Wall
 	-ShakeOnDeath:
 	WithConstructionBeamOverlay:
 	UpdatesPlayerStatistics:
