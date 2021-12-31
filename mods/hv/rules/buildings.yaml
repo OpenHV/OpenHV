@@ -1883,9 +1883,11 @@ BARRIER:
 		RequiredForShortGame: false
 	-WithSpriteBody:
 	WithGateSpriteBody@Connected:
+		Name: connected
 		OpenSequence: open
 		RequiresCondition: connected
 	WithGateSpriteBody@Standalone:
+		Name: standalone
 		Sequence: idle-alone
 		OpenSequence: open-alone
 		RequiresCondition: !connected
