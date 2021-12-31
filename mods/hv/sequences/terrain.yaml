@@ -69,70 +69,14 @@ swmpbubl:
 		Tick: 60
 		Length: *
 
-treegrs1:
-
-treegrs2:
-
-treegrs3:
-
-treegrs4:
-
-treegrs5:
-
-treegrs6:
-
-treegrs7:
-
-treegrs8:
-
-treegrs9:
-
 treegrs10:
 	idle: bits/terrain/treegrs10.png
 
 treegrs11:
 	idle: bits/terrain/treegrs11.png
 
-treegrs12:
-
-treegrs13:
-
-treegrs14:
-
-treegrs15:
-
-trees1:
-
-trees2:
-
-trees3:
-
 trees4:
 	idle: bits/terrain/trees4.png
-
-trees5:
-
-trees6:
-
-trees7:
-
-trees8:
-
-trees9:
-
-trees10:
-
-trees11:
-
-trees12:
-
-trees13:
-
-trees14:
-
-trees15:
-
-trees16:
 
 trees17:
 	idle: bits/terrain/trees17.png
