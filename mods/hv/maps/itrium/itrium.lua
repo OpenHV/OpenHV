@@ -14,7 +14,7 @@ Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Sc
 Civilians = { TechMiner1, TechMiner2 }
 
 Tick = function()
-	if (player.PowerProvided <= 20 or player.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
+	if (Human.PowerProvided <= 20 or Human.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
 		HasPower = false
 		Media.DisplayMessage("Build a power plant to generate electricity.", "Reminder")
 	else
@@ -22,7 +22,7 @@ Tick = function()
 	end
 
 	if not HasMiner and not Mining and HasPower and DateTime.GameTime % DateTime.Seconds(20) == 0 then
-		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "storage") and actor.Owner == player end)
+		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "storage") and actor.Owner == Human end)
 		if #miners == 0 then
 			Media.DisplayMessage("Build a storage to collect resources.", "Reminder")
 			HasMiner = false
@@ -32,7 +32,7 @@ Tick = function()
 	end
 
 	if HasPower and HasMiner and DateTime.GameTime % DateTime.Seconds(30) == 0 then
-		local deployedMiners = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "miner2" and actor.Owner == player end)
+		local deployedMiners = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "miner2" and actor.Owner == Human end)
 		if #deployedMiners == 0 then
 			Media.DisplayMessage("Deploy the miner on the mountain top with mineral deposits.", "Reminder")
 			Mining = false
@@ -42,39 +42,39 @@ Tick = function()
 	end
 
 	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(40) == 0 then
-		if player.Resources > player.ResourceCapacity * 0.8 then
+		if Human.Resources > Human.ResourceCapacity * 0.8 then
 			Media.DisplayMessage("Build a silo to store additional resources.", "Reminder")
 		end
 	end
 
 	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(20) == 0 then
-		local modules = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "module" and actor.Owner == player end)
+		local modules = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "module" and actor.Owner == Human end)
 		if #modules == 0 then
 			Media.DisplayMessage("Build a module to train pods.", "Reminder")
 		end
 	end
 
-	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not player.IsObjectiveCompleted(bridgehead) and CheckForBase(player, BaseBuildings) then
-		player.MarkCompletedObjective(bridgehead)
+	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(Bridgehead) and CheckForBase(Human, BaseBuildings) then
+		Human.MarkCompletedObjective(Bridgehead)
 	end
 
-	if enemy.Resources >= enemy.ResourceCapacity * 0.75 then
-		enemy.Cash = enemy.Cash + enemy.Resources - enemy.ResourceCapacity * 0.25
-		enemy.Resources = enemy.ResourceCapacity * 0.25
+	if Enemy.Resources >= Enemy.ResourceCapacity * 0.75 then
+		Enemy.Cash = Enemy.Cash + Enemy.Resources - Enemy.ResourceCapacity * 0.25
+		Enemy.Resources = Enemy.ResourceCapacity * 0.25
 	end
 end
 
 WorldLoaded = function()
-	player = Player.GetPlayer("Yuruki Industries")
-	enemy = Player.GetPlayer("Synapol Corporation")
+	Human = Player.GetPlayer("Yuruki Industries")
+	Enemy = Player.GetPlayer("Synapol Corporation")
 
-	InitObjectives(player)
+	InitObjectives(Human)
 
-	killColonists = player.AddPrimaryObjective("Eliminate all colonists in the area.")
-	Trigger.OnAllKilledOrCaptured(Colonists, function() player.MarkCompletedObjective(killColonists) end)
+	KillColonists = Human.AddPrimaryObjective("Eliminate all colonists in the area.")
+	Trigger.OnAllKilledOrCaptured(Colonists, function() Human.MarkCompletedObjective(KillColonists) end)
 
-	bridgehead = player.AddPrimaryObjective("Build all available structures.")
-	Trigger.OnKilled(Base, function() player.MarkFailedObjective(bridgehead) end)
+	Bridgehead = Human.AddPrimaryObjective("Build all available structures.")
+	Trigger.OnKilled(Base, function() Human.MarkFailedObjective(Bridgehead) end)
 
 	Camera.Position = Base.CenterPosition
 end

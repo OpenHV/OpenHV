@@ -8,24 +8,24 @@
 ]]
 
 Tick = function()
-	if enemy.Resources >= enemy.ResourceCapacity * 0.75 then
-		enemy.Cash = enemy.Cash + enemy.Resources - enemy.ResourceCapacity * 0.25
-		enemy.Resources = enemy.ResourceCapacity * 0.25
+	if Enemy.Resources >= Enemy.ResourceCapacity * 0.75 then
+		Enemy.Cash = Enemy.Cash + Enemy.Resources - Enemy.ResourceCapacity * 0.25
+		Enemy.Resources = Enemy.ResourceCapacity * 0.25
 	end
 
-	if enemy.HasNoRequiredUnits() then
-		player.MarkCompletedObjective(EnemyEliminatedObjective)
+	if Enemy.HasNoRequiredUnits() then
+		Human.MarkCompletedObjective(EnemyEliminatedObjective)
 	end
 
 end
 
 WorldLoaded = function()
-	player = Player.GetPlayer("Yuruki Industries")
-	enemy = Player.GetPlayer("Synapol Corporation")
+	Human = Player.GetPlayer("Yuruki Industries")
+	Enemy = Player.GetPlayer("Synapol Corporation")
 
-	InitObjectives(player)
+	InitObjectives(Human)
 
-	EnemyEliminatedObjective = player.AddPrimaryObjective("Eliminate all competitors in the area.")
+	EnemyEliminatedObjective = Human.AddPrimaryObjective("Eliminate all competitors in the area.")
 
 	Camera.Position = Base.CenterPosition
 end
