@@ -93,63 +93,63 @@ Actors:
 		Location: 12,101
 	Actor14: resource_light
 		Owner: Neutral
-		Location: 38,50
+		Location: 33,18
 	Actor15: resource_light
 		Owner: Neutral
-		Location: 39,39
+		Location: 49,38
 	Actor16: resource_light
 		Owner: Neutral
-		Location: 50,38
+		Location: 38,39
 	Actor17: resource_light
 		Owner: Neutral
-		Location: 34,18
+		Location: 18,33
 	Actor18: resource_light
 		Owner: Neutral
-		Location: 19,33
+		Location: 37,50
 	Actor19: resource_light
 		Owner: Neutral
-		Location: 38,63
+		Location: 37,63
 	Actor20: resource_light
 		Owner: Neutral
-		Location: 39,74
+		Location: 38,74
 	Actor21: resource_light
 		Owner: Neutral
-		Location: 50,75
+		Location: 49,75
 	Actor22: resource_light
 		Owner: Neutral
-		Location: 34,95
+		Location: 18,80
 	Actor23: resource_light
 		Owner: Neutral
-		Location: 19,80
+		Location: 33,95
 	Actor24: resource_light
 		Owner: Neutral
-		Location: 80,95
+		Location: 63,75
 	Actor25: resource_light
 		Owner: Neutral
-		Location: 95,80
+		Location: 74,74
 	Actor26: resource_light
 		Owner: Neutral
-		Location: 75,74
+		Location: 94,80
 	Actor27: resource_light
 		Owner: Neutral
-		Location: 76,63
+		Location: 75,63
 	Actor28: resource_light
 		Owner: Neutral
-		Location: 64,75
+		Location: 79,95
 	Actor29: resource_light
 		Owner: Neutral
-		Location: 76,50
+		Location: 75,50
 	Actor34: resource_light
 		Owner: Neutral
-		Location: 75,39
+		Location: 74,39
 	Actor35: resource_light
 		Owner: Neutral
-		Location: 64,38
+		Location: 63,38
 	Actor36: resource_light
 		Owner: Neutral
-		Location: 95,33
+		Location: 94,33
 	Actor37: resource_light
 		Owner: Neutral
-		Location: 80,18
+		Location: 79,18
 
 Rules: rules.yaml

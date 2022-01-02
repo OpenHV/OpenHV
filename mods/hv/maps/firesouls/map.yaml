@@ -303,27 +303,12 @@ Actors:
 	Actor134: smallfirelight
 		Owner: Neutral
 		Location: 96,73
-	Actor140: resourcelight
-		Owner: Neutral
-		Location: 90,27
-	Actor141: resourcelight
-		Owner: Neutral
-		Location: 90,35
-	Actor143: resourcelight
-		Owner: Neutral
-		Location: 8,70
 	Actor150: baselight
 		Owner: Neutral
 		Location: 75,31
 	Actor149: baselight
 		Owner: Neutral
 		Location: 22,66
-	Actor151: resourcelight
-		Owner: Neutral
-		Location: 30,90
-	Actor152: resourcelight
-		Owner: Neutral
-		Location: 68,7
 	Actor153: smallfirelight
 		Owner: Neutral
 		Location: 17,86
@@ -378,18 +363,6 @@ Actors:
 	Actor157: resourcelight
 		Owner: Neutral
 		Location: 30,7
-	Actor165: resourcelight
-		Owner: Neutral
-		Location: 68,72
-	Actor166: resourcelight
-		Owner: Neutral
-		Location: 68,59
-	Actor167: resourcelight
-		Owner: Neutral
-		Location: 30,38
-	Actor168: resourcelight
-		Owner: Neutral
-		Location: 30,25
 	Actor118: pyramid
 		Owner: Neutral
 		Location: 82,81
@@ -414,8 +387,35 @@ Actors:
 	Actor170: resourcelight
 		Owner: Neutral
 		Location: 11,34
+	Actor168: resourcelight
+		Owner: Neutral
+		Location: 29,25
+	Actor167: resourcelight
+		Owner: Neutral
+		Location: 29,38
 	Actor142: resourcelight
 		Owner: Neutral
-		Location: 8,62
+		Location: 7,62
+	Actor143: resourcelight
+		Owner: Neutral
+		Location: 7,70
+	Actor151: resourcelight
+		Owner: Neutral
+		Location: 29,90
+	Actor165: resourcelight
+		Owner: Neutral
+		Location: 67,72
+	Actor166: resourcelight
+		Owner: Neutral
+		Location: 67,59
+	Actor140: resourcelight
+		Owner: Neutral
+		Location: 89,27
+	Actor141: resourcelight
+		Owner: Neutral
+		Location: 89,35
+	Actor152: resourcelight
+		Owner: Neutral
+		Location: 67,7
 
 Rules: rules.yaml

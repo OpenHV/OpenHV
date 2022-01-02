@@ -38,22 +38,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor2: miner2
-		Location: 42,103
-		Faction: Random
-		Owner: Yuruki Industries
-	Actor3: miner2
-		Location: 79,118
-		Faction: Random
-		Owner: Yuruki Industries
-	Actor4: miner2
-		Location: 82,9
-		Faction: Random
-		Owner: Synapol Corporation
-	Actor5: miner2
-		Location: 55,9
-		Faction: Random
-		Owner: Synapol Corporation
 	Actor6: storage
 		Location: 59,118
 		Owner: Yuruki Industries
@@ -997,5 +981,21 @@ Actors:
 	Actor347: generator
 		Owner: Synapol Corporation
 		Location: 88,22
+	Actor348: miner2
+		Faction: Random
+		Location: 82,11
+		Owner: Synapol Corporation
+	Actor349: miner2
+		Faction: Random
+		Location: 55,11
+		Owner: Synapol Corporation
+	Actor350: miner2
+		Faction: Random
+		Location: 42,105
+		Owner: Yuruki Industries
+	Actor351: miner2
+		Faction: Random
+		Location: 79,120
+		Owner: Yuruki Industries
 
 Rules: rules.yaml

@@ -55,18 +55,6 @@ Actors:
 	Actor157: icicle1
 		Owner: Neutral
 		Location: 24,33
-	Actor4: miner2
-		Owner: Synapol Corporation
-		Location: 15,2
-	Actor5: miner2
-		Owner: Synapol Corporation
-		Location: 32,8
-	Actor6: miner2
-		Owner: Synapol Corporation
-		Location: 42,26
-	Actor7: miner2
-		Owner: Synapol Corporation
-		Location: 35,20
 	Base: base
 		Owner: Yuruki Industries
 		Location: 46,49
@@ -205,5 +193,17 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 32,33
 		Stance: AttackAnything
+	Actor51: miner2
+		Owner: Synapol Corporation
+		Location: 15,4
+	Actor52: miner2
+		Owner: Synapol Corporation
+		Location: 32,10
+	Actor53: miner2
+		Owner: Synapol Corporation
+		Location: 35,22
+	Actor54: miner2
+		Owner: Synapol Corporation
+		Location: 42,28
 
 Rules: hv|rules/campaign.yaml, rules.yaml

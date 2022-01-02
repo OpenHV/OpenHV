@@ -136,36 +136,6 @@ Actors:
 	Actor39: resourcelight
 		Owner: Neutral
 		Location: 10,87
-	Actor40: resourcelight
-		Owner: Neutral
-		Location: 44,75
-	Actor42: resourcelight
-		Owner: Neutral
-		Location: 75,59
-	Actor43: resourcelight
-		Owner: Neutral
-		Location: 93,49
-	Actor44: resourcelight
-		Owner: Neutral
-		Location: 54,22
-	Actor46: resourcelight
-		Owner: Neutral
-		Location: 23,38
-	Actor47: resourcelight
-		Owner: Neutral
-		Location: 5,49
-	Actor48: resourcelight
-		Owner: Neutral
-		Location: 17,70
-	Actor49: resourcelight
-		Owner: Neutral
-		Location: 27,81
-	Actor50: resourcelight
-		Owner: Neutral
-		Location: 71,16
-	Actor51: resourcelight
-		Owner: Neutral
-		Location: 81,27
 	Actor52: smallfirelight
 		Owner: Neutral
 		Location: 18,79
@@ -193,12 +163,6 @@ Actors:
 	Actor60: techminer
 		Owner: Neutral
 		Location: 87,86
-	Actor61: resourcelight
-		Owner: Neutral
-		Location: 59,93
-	Actor62: resourcelight
-		Owner: Neutral
-		Location: 39,4
 	Actor65: mediumfirelight
 		Owner: Neutral
 		Location: 19,16
@@ -241,5 +205,41 @@ Actors:
 	Actor76: icicle1
 		Owner: Neutral
 		Location: 70,8
+	Actor61: resourcelight
+		Owner: Neutral
+		Location: 22,38
+	Actor62: resourcelight
+		Owner: Neutral
+		Location: 4,49
+	Actor77: resourcelight
+		Owner: Neutral
+		Location: 16,70
+	Actor78: resourcelight
+		Owner: Neutral
+		Location: 26,81
+	Actor79: resourcelight
+		Owner: Neutral
+		Location: 43,75
+	Actor80: resourcelight
+		Owner: Neutral
+		Location: 58,93
+	Actor81: resourcelight
+		Owner: Neutral
+		Location: 74,59
+	Actor82: resourcelight
+		Owner: Neutral
+		Location: 92,49
+	Actor83: resourcelight
+		Owner: Neutral
+		Location: 80,27
+	Actor84: resourcelight
+		Owner: Neutral
+		Location: 70,16
+	Actor85: resourcelight
+		Owner: Neutral
+		Location: 53,22
+	Actor86: resourcelight
+		Owner: Neutral
+		Location: 38,4
 
 Rules: rules.yaml

@@ -16,8 +16,6 @@ Visibility: Lobby
 
 Categories: Conquest
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
