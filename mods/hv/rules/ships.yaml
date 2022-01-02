@@ -44,7 +44,6 @@ BOAT3:
 	DetectCloaked:
 		CloakTypes: Underwater
 		Range: 6c0
-	RenderDetectionCircle:
 	WithMuzzleOverlay:
 		IgnoreOffset: True
 
