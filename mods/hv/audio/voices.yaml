@@ -17,9 +17,9 @@ GenericVoice2:
 BeastVoice:
 	DefaultVariant: .wav
 	Voices:
-		Select: lion_growling-Mike_Koenig
-		Action: tiger_growling-Mike_Koenig
-		Die: tyrannosaurus_rex-Mike_Koenig
+		Select: beast_select
+		Action: beast_move
+		Die: beast_die
 
 WormVoice:
 	DefaultVariant: .wav
