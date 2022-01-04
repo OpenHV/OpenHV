@@ -4,7 +4,7 @@ railgun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 8c0
 	ReloadDelay: 50
-	Report: ray_gun-Mike_Koenig.wav
+	Report: raygun_newlocknew.wav
 	Projectile: LaserZap
 		Width: 0c100
 		Shape: Cylindrical
@@ -54,7 +54,7 @@ RedLaser:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 40
 	Range: 5c512
-	Report: ray_gun-Mike_Koenig.wav
+	Report: raygun_newlocknew.wav
 	Projectile: LaserZap
 		ZOffset: 2047
 		Color: FF000080
@@ -299,7 +299,7 @@ ElectricSpark:
 
 RailgunStrike:
 	ValidTargets: Water, Ground, Tree, Air
-	Report: ray_gun-Mike_Koenig.wav
+	Report: raygun_newlocknew.wav
 	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 10000
