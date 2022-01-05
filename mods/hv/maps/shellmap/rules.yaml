@@ -2,6 +2,6 @@ World:
 	LuaScript:
 		Scripts: shellmap.lua
 	MusicPlaylist:
-		BackgroundMusic: the struggle loop
+		BackgroundMusic: dark atmosphere to synth
 		AllowMuteBackgroundMusic: true
 		DisableWorldSounds: true
