@@ -133,7 +133,7 @@ Plasma:
 	BurstDelays: 5
 	Range: 6c0
 	MinRange: 0c512
-	Report: laser_Cannon-Mike_Koenig.wav
+	Report: lasercannon_newlocknew.wav
 	Projectile: Bullet
 		Speed: 350
 		Blockable: false
