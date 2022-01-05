@@ -5,7 +5,6 @@ Content of this folder indicates assets made by various authors, under the defau
 * [ccbygrenadelaunch01.wav](http://soundbible.com/2140-Grenade-Launcher-2.html) by Daniel Simon
 * [ccbysmgfire02.wav](http://soundbible.com/1575-High-Definition-Machine-Gun.html) by WEL
 * [lasercannon_newlocknew.wav](https://freesound.org/people/newlocknew/sounds/514024/) by newlocknew
-* [charging-Mike_Koenig.wav](http://soundbible.com/1771-Laser-Cannon.html) by Mike Koenig, edited by Dzierzan.
 * [blaster-newlocknew.wav](https://freesound.org/people/newlocknew/sounds/520056/) by newlocknew, edited by Dzierzan.
 * [blaster1/2/3-tutarap.wav](https://freesound.org/people/tutarap/sounds/341956/) by tutarap
 * [twisterman_silenced-gun-1.wav](https://freesound.org/people/twisterman/sounds/163583/) by twisterman
