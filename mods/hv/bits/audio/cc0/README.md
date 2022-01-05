@@ -16,3 +16,4 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [lowpolygon_gate-in/out.wav](https://freesound.org/people/lowpolygon/sounds/421722/) by lowpolygon
 * [machinegun_SuperPhat.wav](https://freesound.org/people/SuperPhat/sounds/417689/) by SuperPhat
 * [explosion_juverisetila.wav](https://freesound.org/people/JuveriSetila/sounds/514133/) by JuveriSetila
+* [charging_plasterbrain.wav](https://freesound.org/people/magnuswaker/sounds/588242/) by magnuswaker

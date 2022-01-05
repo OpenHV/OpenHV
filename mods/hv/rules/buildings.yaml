@@ -1160,7 +1160,7 @@ AATURRET:
 		ChargingCondition: charging
 	AmbientSound:
 		RequiresCondition: charging
-		SoundFiles: charging-Mike_Koenig.wav
+		SoundFiles: charging_plasterbrain.wav
 		Interval: 30, 40
 
 AATURRET2:
