@@ -21,6 +21,13 @@ BeastVoice:
 		Action: beast_move
 		Die: beast_die
 
+SeedVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: seed_select
+		Action: seed_move
+		Die: seed_die
+
 WormVoice:
 	DefaultVariant: .wav
 	Voices:
