@@ -11,9 +11,10 @@
 
 using System;
 using System.Collections.Generic;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Modifies the production cost of this actor for a specific queue or when a prerequisite is granted. " +
 		"Requires " + nameof(VariedCostManager) + " on the " + nameof(World) + " actor.")]

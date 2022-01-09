@@ -12,7 +12,7 @@
 using System.Collections.Generic;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World)]
 	[Desc("Keeps cost variations in sync. Attach this to the world actor.")]

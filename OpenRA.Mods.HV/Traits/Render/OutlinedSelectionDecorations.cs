@@ -11,11 +11,13 @@
 
 using System.Collections.Generic;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.HV.Graphics;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits.Render
+namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Displays thick and outlined healthbars as well as sprite based selection boxes.")]
 	public class OutlinedSelectionDecorationsInfo : SelectionDecorationsBaseInfo, Requires<InteractableInfo>
