@@ -27,7 +27,7 @@ Packages:
 	hv|bits/audio/dzierzan/announcer
 	hv|bits/audio/dzierzan/stealthtank
 	hv|bits/audio/dzierzan/beast
-	hv|bits/audio/dzierzan/seed	
+	hv|bits/audio/dzierzan/seed
 	hv|bits/audio/flamewh33l/
 	hv|bits/audio/timbeek/
 
@@ -104,7 +104,7 @@ ChromeLayout:
 	common|chrome/ingame-infoobjectives.yaml
 	common|chrome/ingame-infostats.yaml
 	common|chrome/ingame-info-lobby-options.yaml
-	common|chrome/ingame-menu.yaml
+	hv|chrome/ingame-menu.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debuginfo.yaml
