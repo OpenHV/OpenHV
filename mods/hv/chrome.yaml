@@ -514,6 +514,8 @@ scrollheader-selected:
 
 scrollitem-nohover:
 
+scrollitem-nohover-hover:
+
 logos:
 	Inherits: ^Logo
 	Regions:
