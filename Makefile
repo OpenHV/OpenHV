@@ -3,11 +3,11 @@
 # to compile, run:
 #   make
 #
-# to compile using Mono (version 6.4 or greater) instead of .NET 5, run:
+# to compile using Mono (version 6.4 or greater) instead of .NET 6, run:
 #   make RUNTIME=mono
 #
 # to compile using system libraries for native dependencies, run:
-#   make [RUNTIME=net5] TARGETPLATFORM=unix-generic
+#   make [RUNTIME=net6] TARGETPLATFORM=unix-generic
 #
 # to remove the files created by compiling, run:
 #   make clean
@@ -19,10 +19,10 @@
 #   make check-scripts
 #
 # to check the engine and your mod dlls for StyleCop violations, run:
-#   make [RUNTIME=net5] check
+#   make [RUNTIME=net6] check
 #
 # to check your mod yaml for errors, run:
-#   make [RUNTIME=net5] test
+#   make [RUNTIME=net6] test
 #
 # the following are internal sdk helpers that are not intended to be run directly:
 #   make check-variables
@@ -54,7 +54,7 @@ BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
 
-RUNTIME ?= net5
+RUNTIME ?= net6
 
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
