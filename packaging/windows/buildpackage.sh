@@ -85,7 +85,7 @@ function build_platform()
 	fi
 
 	echo "Building core files (${PLATFORM})"
-	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}" "win-${PLATFORM}" "net5" "False" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}" "win-${PLATFORM}" "net6" "False" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}"
 	rm -rf "${BUILTDIR}/global mix database.dat"
 
@@ -95,7 +95,7 @@ function build_platform()
 	done
 
 	echo "Building mod files (${PLATFORM})"
-	install_mod_assemblies "${TEMPLATE_ROOT}" "${BUILTDIR}" "win-${PLATFORM}" "net5" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+	install_mod_assemblies "${TEMPLATE_ROOT}" "${BUILTDIR}" "win-${PLATFORM}" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 	cp -Lr "${TEMPLATE_ROOT}/mods/"* "${BUILTDIR}/mods"
 

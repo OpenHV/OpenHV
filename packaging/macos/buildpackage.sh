@@ -130,12 +130,12 @@ build_platform() {
 		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.9" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher-mono.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.9
 	else
-		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.13" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.13
+		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.14" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.14
 	fi
 
 	echo "Building core files"
-	RUNTIME="net5"
+	RUNTIME="net6"
 	if [ "${PLATFORM}" = "compat" ]; then
 		RUNTIME="mono"
 	fi
