@@ -2,6 +2,6 @@ World:
 	LuaScript:
 		Scripts: shellmap.lua
 	MusicPlaylist:
-		BackgroundMusic: dark atmosphere to synth
+		BackgroundMusic: background
 		AllowMuteBackgroundMusic: true
 		DisableWorldSounds: true
