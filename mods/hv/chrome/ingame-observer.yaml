@@ -386,7 +386,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Miners
+									Text: Mining
 									Align: Right
 									Shadow: True
 						Container@PRODUCTION_STATS_HEADERS:
