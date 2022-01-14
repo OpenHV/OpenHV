@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -55,9 +55,9 @@ namespace OpenRA.Mods.HV.Projectiles
 
 	public class EnergyBolt : IProjectile, ISync
 	{
-		private readonly EnergyBoltInfo info;
-		private readonly Color[] colors;
-		private readonly WPos[] offsets;
+		readonly EnergyBoltInfo info;
+		readonly Color[] colors;
+		readonly WPos[] offsets;
 
 		readonly WVec leftVector;
 		readonly WVec upVector;
