@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -11,11 +11,12 @@
 
 using System;
 using System.IO;
-using System.Net;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using OpenHV;
+using OpenRA.Support;
 
 namespace OpenRA.Mods.HV
 {
@@ -40,19 +41,22 @@ namespace OpenRA.Mods.HV
 
 		public void FetchRelease(Action onParsed)
 		{
-			Action<DownloadDataCompletedEventArgs> onComplete = i =>
+			Task.Run(async () =>
 			{
-				if (i.Error != null)
-				{
-					Log.Write("debug", i.Error.StackTrace);
-					return;
-				}
-
 				try
 				{
+					var httpClient = HttpClientFactory.Create();
+					var metadata = Game.ModData.Manifest.Metadata;
+					var header = new ProductHeaderValue(metadata.Title);
+					var userAgent = new ProductInfoHeaderValue(header);
+					httpClient.DefaultRequestHeaders.UserAgent.Add(userAgent);
+
+					var url = new HttpQueryBuilder(LatestRelease).ToString();
+					var response = await httpClient.GetStringAsync(url);
+					var cacheFile = Path.Combine(Platform.SupportDir, GameNewsFileName);
+
 					var oldPublishingDate = DateTime.MinValue;
 
-					var cacheFile = Path.Combine(Platform.SupportDir, GameNewsFileName);
 					if (File.Exists(cacheFile))
 					{
 						var oldNews = File.ReadAllText(cacheFile);
@@ -60,67 +64,68 @@ namespace OpenRA.Mods.HV
 						oldPublishingDate = (DateTime)oldJson["published_at"];
 					}
 
-					File.WriteAllBytes(cacheFile, i.Result);
+					await File.WriteAllTextAsync(cacheFile, response);
 
-					var data = Encoding.UTF8.GetString(i.Result);
-					var json = JObject.Parse(data);
-					var tagname = (int)json["tag_name"];
-					var prerelease = (bool)json["prerelease"];
-
-					int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version);
-
-					var status = ModVersionStatus.Unknown;
-					if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
-						status = ModVersionStatus.Unknown;
-					else if (tagname > version)
+					Game.RunAfterTick(() => // run on the main thread
 					{
-						if (prerelease)
-							status = ModVersionStatus.PlaytestAvailable;
-						else
-							status = ModVersionStatus.Outdated;
-					}
-					else if (tagname == version)
-						status = ModVersionStatus.Latest;
+						var data = File.ReadAllText(cacheFile);
+						var json = JObject.Parse(data);
+						var tagname = (int)json["tag_name"];
+						var prerelease = (bool)json["prerelease"];
 
-					Game.RunAfterTick(() => ModVersionStatus = status);
+						if (!int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version))
+							Log.Write("debug", "Error parsing version number.");
 
-					var publishingDate = (DateTime)json["published_at"];
-					if (publishingDate > oldPublishingDate)
-						NewsAlert = true;
+						var status = ModVersionStatus.Unknown;
+						if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
+							status = ModVersionStatus.Unknown;
+						else if (tagname > version)
+						{
+							if (prerelease)
+								status = ModVersionStatus.PlaytestAvailable;
+							else
+								status = ModVersionStatus.Outdated;
+						}
+						else if (tagname == version)
+							status = ModVersionStatus.Latest;
 
-					var body = (string)json["body"];
-					body = StripSpecialCharacters(body);
-					body = StripMarkdown(body);
-					body = body.Replace("* ", "• ");
+						ModVersionStatus = status;
 
-					var newsItem = new NewsItem
-					{
-						Title = "Release {0}".F(tagname),
-						Author = "OpenHV Team",
-						DateTime = publishingDate,
-						Content = body
-					};
+						var publishingDate = (DateTime)json["published_at"];
+						if (publishingDate > oldPublishingDate)
+							NewsAlert = true;
 
-					Game.RunAfterTick(() => NewsItem = newsItem);
+						var body = (string)json["body"];
+						body = StripSpecialCharacters(body);
+						body = StripMarkdown(body);
+						body = body.Replace("* ", "• ");
 
-					Game.RunAfterTick(onParsed);
+						var newsItem = new NewsItem
+						{
+							Title = $"Release {tagname}",
+							Author = "OpenHV Team",
+							DateTime = publishingDate,
+							Content = body
+						};
+
+						NewsItem = newsItem;
+						onParsed();
+					});
 				}
 				catch (Exception e)
 				{
 					Log.Write("debug", e.StackTrace);
 				}
-			};
-
-			new DownloadWithAgent(LatestRelease, _ => { }, onComplete);
+			});
 		}
 
-		string StripMarkdown(string content)
+		static string StripMarkdown(string content)
 		{
 			// remove links
 			return Regex.Replace(content, "\\[(.*?)\\][\\[\\(].*?[\\]\\)]", "$1");
 		}
 
-		string StripSpecialCharacters(string content)
+		static string StripSpecialCharacters(string content)
 		{
 			return Encoding.ASCII.GetString(
 				Encoding.Convert(

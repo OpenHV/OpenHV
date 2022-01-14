@@ -234,7 +234,7 @@ SpriteSequenceFormat: DefaultSpriteSequence
 ModelSequenceFormat: PlaceholderModelSequence
 
 AssetBrowser:
-	SupportedExtensions: .png
+	SpriteExtensions: .png
 
 WebServices:
 
