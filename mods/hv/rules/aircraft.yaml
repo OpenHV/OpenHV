@@ -150,7 +150,7 @@ COPTER:
 	WithSpriteTurret:
 	Armament@Primary:
 		Weapon: ChainGun
-		LocalOffset: 0,0,0
+		LocalOffset: 200,0,0
 	Selectable:
 		Bounds: 1228, 1228
 	WithIdleOverlay:
@@ -243,7 +243,7 @@ COPTER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: radar, ~starport.sc
-		Description: Vehicle Transport Helicopter.\n  Unarmed
+		Description: Vehicle Transport Helicopter.\n Armed with light machine gun.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -272,11 +272,11 @@ COPTER2:
 		DecorationBounds: 2048, 1843
 	Turreted:
 		TurnSpeed: 80
-		Offset: 0,0,100
+		Offset: 600,0,100
 	AttackTurreted:
-	Armament@Primary:
+	Armament:
 		Weapon: Vulcan
-		LocalOffset: 0,0,-100
+		LocalOffset: 0,0,-400
 	Cargo:
 		Types: Scout
 		MaxWeight: 5
@@ -339,7 +339,7 @@ DROPSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: radar, ~starport.yi
-		Description: Vehicle Transport Shuttle.
+		Description: Vehicle Transport Shuttle. \n  Armed with light missiles.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

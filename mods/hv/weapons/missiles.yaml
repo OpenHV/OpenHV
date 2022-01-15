@@ -160,6 +160,7 @@ RapidAntiTankRocket:
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile
+	Inherits: BigSplash
 	ReloadDelay: 50
 	Range: 9c0
 	MinRange: 2c0
@@ -341,7 +342,7 @@ DropshipMissile:
 		Spread: 128
 		Damage: 2500
 		Versus:
-			None: 10
+			None: 35
 			Steel: 50
 			Light: 25
 			Heavy: 50
