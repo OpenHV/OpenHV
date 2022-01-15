@@ -31,8 +31,22 @@ SPAWNUNITCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
 		Sequence: blue
-	SpawnUnitCrateAction:
+	SpawnUnitCrateAction@AssaultTank:
 		Units: tank3
+		ValidFactions: yi
+		SelectionShares: 10
+	SpawnUnitCrateAction@TyrianTank:
+		Units: tyriantank
+		ValidFactions: sc
+		SelectionShares: 10
+	SpawnUnitCrateAction@RailgunTank:
+		Units: tank5
+		ValidFactions: sc
+		SelectionShares: 1
+	SpawnUnitCrateAction@LightningTank:
+		Units: tank10
+		ValidFactions: yi
+		SelectionShares: 1
 
 SCRAP1:
 	Inherits: ^Scrap

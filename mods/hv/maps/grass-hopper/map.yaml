@@ -1,0 +1,97 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Grass Hopper
+
+Author: Matt
+
+Tileset: PLANET
+
+MapSize: 34,34
+
+Bounds: 1,1,32,32
+
+Visibility: Lobby
+
+Categories: Cube Hunter
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1, Multi2, Multi3, Multi4, Multi5, Multi6, Multi7
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi4:
+		Name: Multi4
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi5:
+		Name: Multi5
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi6:
+		Name: Multi6
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi7:
+		Name: Multi7
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 15,15
+	Actor1: mpspawn
+		Owner: Neutral
+		Location: 15,16
+	Actor2: mpspawn
+		Owner: Neutral
+		Location: 15,17
+	Actor3: mpspawn
+		Owner: Neutral
+		Location: 16,17
+	Actor4: mpspawn
+		Owner: Neutral
+		Location: 17,17
+	Actor5: mpspawn
+		Owner: Neutral
+		Location: 17,16
+	Actor6: mpspawn
+		Owner: Neutral
+		Location: 17,15
+	Actor7: mpspawn
+		Owner: Neutral
+		Location: 16,15
+
+Rules: rules.yaml

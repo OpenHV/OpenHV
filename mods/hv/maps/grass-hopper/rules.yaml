@@ -1,0 +1,65 @@
+World:
+	CubeSpawner:
+		CheckboxDisplayOrder: 1
+		CheckboxVisible: True
+		CheckboxLocked: True
+		CheckboxEnabled: True
+		CubeActors: healcube, spawnunitcube
+		CubeActorShares: 10, 90
+		SpawnInterval: 125
+		InitialSpawnDelay: 0
+	-StartingUnits@BaseYI:
+	-StartingUnits@BaseSC:
+	-StartingUnits@MinerYI:
+	-StartingUnits@MinerSC:
+	-StartingUnits@ScoutYI:
+	-StartingUnits@ScoutSC:
+	StartingUnits@CubeHunter:
+		Class: none
+		ClassName: Builder
+		Factions: yi, sc
+		BaseActor: builder
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxVisible: False
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxEnabled: False
+		BuildRadiusCheckboxVisible: False
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxEnabled: False
+	MapOptions:
+		ShortGameCheckboxVisible: False
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxEnabled: False
+	LimitedResources:
+		CheckboxVisible: False
+		CheckboxLocked: True
+		CheckboxEnabled: False
+	MapStartingLocations:
+		SeparateTeamSpawnsCheckboxEnabled: False
+		SeparateTeamSpawnsCheckboxLocked: True
+		SeparateTeamSpawnsCheckboxVisible: False
+
+Player:
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		FogCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxVisible: False
+	PlayerResources:
+		DefaultCashDropdownLocked: True
+		DefaultCashDropdownVisible: False
+		DefaultCash: 0
+	-ModularBot@RogueAI:
+	ModularBot@CubeHunter:
+		Name: Cube Hunter AI
+		Type: hunter
+	GrantConditionOnBotOwner@CubeHunter:
+		Condition: enable-cube-hunter-ai
+		Bots: hunter
+	CubePickupBotModule:
+		RequiresCondition: enable-cube-hunter-ai
+		ScanForCubesInterval: 10
+		EnemyAvoidanceRadius: 0
+
