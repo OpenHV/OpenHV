@@ -440,8 +440,8 @@ World:
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
-		CubeActors: moneycube, revealmapcube, cloakcube
-		CubeActorShares: 90, 10, 40
+		CubeActors: moneycube, revealmapcube, cloakcube, healcube
+		CubeActorShares: 90, 10, 40, 20
 	TerrainTileAnimation@LavaBubble:
 		Tiles: 323
 		Image: lavabubl

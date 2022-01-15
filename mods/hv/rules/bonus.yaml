@@ -21,6 +21,12 @@ CLOAKCUBE:
 	GrantExternalConditionCrateAction@cloak:
 		Condition: crate-cloak
 
+HEALCUBE:
+	Inherits: ^Cube
+	WithSpriteBody:
+		Sequence: orange
+	HealActorsCrateAction:
+
 SCRAP1:
 	Inherits: ^Scrap
 
