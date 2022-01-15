@@ -139,6 +139,9 @@ Player:
 		ScoutActorTypes: balloon, saucer
 		MoveRadius: 20
 		RequiresCondition: enable-rogue-ai
+	DefensiveSupportPowerBotModule:
+		RequiresCondition: enable-rogue-ai
+		OrderName: ShieldsUp
 	SupportPowerBotModule:
 		RequiresCondition: enable-rogue-ai
 		Decisions:
@@ -157,21 +160,6 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
-			Shield:
-				OrderName: ShieldsUp
-				MinimumAttractiveness: 1000
-				Consideration@1:
-					Against: Ally
-					Types: Vehicle
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 7c0
-				Consideration@2:
-					Against: Enemy
-					Types: Structure, Vehicle
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 5c0
 			DropPods:
 				OrderName: EjectPods
 				MinimumAttractiveness: 5
