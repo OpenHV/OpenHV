@@ -11,13 +11,13 @@ MONEYCUBE:
 REVEALMAPCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
-		Sequence: blue
+		Sequence: grey
 	RevealMapCrateAction:
 
 CLOAKCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
-		Sequence: grey
+		Sequence: turquoise
 	GrantExternalConditionCrateAction@cloak:
 		Condition: crate-cloak
 
@@ -26,6 +26,13 @@ HEALCUBE:
 	WithSpriteBody:
 		Sequence: orange
 	HealActorsCrateAction:
+
+SPAWNUNITCUBE:
+	Inherits: ^Cube
+	WithSpriteBody:
+		Sequence: blue
+	SpawnUnitCrateAction:
+		Units: tank3
 
 SCRAP1:
 	Inherits: ^Scrap
