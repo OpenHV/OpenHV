@@ -43,7 +43,13 @@ ChainGun:
 	ReloadDelay: 10
 	Range: 6c0
 	Report: ccbysmgfire01.wav
-	Projectile: InstantHit
+	Projectile: Bullet
+		Inaccuracy: 0c256
+		Speed: 1000
+		Shadow: false
+		ContrailLength: 3
+		ContrailWidth: 0c32
+		ContrailColor: F4AC00
 		Blockable: false
 	MinRange: 0c768
 	Burst: 4
@@ -98,12 +104,22 @@ ShellCasing:
 		ValidTargets: Ground
 
 Vulcan:
-	Inherits: ChainGun
-	ReloadDelay: 80
-	Burst: 20
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	BurstDelays: 1
+	ReloadDelay: 20
+	Range: 6c0
+	MinRange: 0c768
+	Burst: 3
 	StartBurstReport: ccbysmgfire02.wav
-	Report:
-	Projectile: InstantHit
+	Projectile: Bullet
+		Inaccuracy: 0c256
+		Speed: 1000
+		Shadow: false
+		ContrailLength: 3
+		ContrailWidth: 0c32
+		ContrailColor: F4AC00
 		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Spread: 64
@@ -152,9 +168,10 @@ BoatMachineGun:
 	Burst: 4
 	Projectile: Bullet
 		Inaccuracy: 0c256
-		Speed: 800
-		Image: bullet1
-		Shadow: false
+		Speed: 1000
+		ContrailLength: 3
+		ContrailWidth: 0c32
+		ContrailColor: F4AC00
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000
