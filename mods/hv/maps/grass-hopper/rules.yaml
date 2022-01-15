@@ -63,3 +63,5 @@ Player:
 		ScanForCubesInterval: 10
 		EnemyAvoidanceRadius: 0
 
+^Vehicle:
+	-AnnounceOnSeen:
