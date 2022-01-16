@@ -67,7 +67,7 @@ Actors:
 		Location: 90,70
 	Actor2: barrier
 		Location: 70,70
-		Owner: Creeps
+		Owner: Neutral
 	Actor3: barrier
 		Owner: Neutral
 		Location: 70,90
