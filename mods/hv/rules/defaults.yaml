@@ -861,6 +861,8 @@
 		Categories: Wall
 	OwnerLostAction:
 		Action: ChangeOwner
+	Targetable:
+		TargetTypes: NoAutoTarget
 
 ^Mine:
 	Inherits: ^SpriteActor
