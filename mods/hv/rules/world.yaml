@@ -38,6 +38,7 @@
 			Sand Ramp: 100
 			Stone: 100
 			Tech: 100
+			Rail: 90
 	Locomotor@Pod:
 		Name: pod
 		Crushes: Cube, Scrap, Mine
@@ -60,6 +61,7 @@
 			Sand Ramp: 80
 			Stone: 100
 			Tech: 100
+			Rail: 80
 	Locomotor@Wheeled:
 		Name: wheeled
 		Crushes: Cube, Scrap, Mine
@@ -81,6 +83,7 @@
 			Sand Ramp: 80
 			Stone: 100
 			Tech: 100
+			Rail: 80
 	Locomotor@Tracked:
 		Name: tracked
 		Crushes: Tree, Cube, Scrap, Pods, Mine
@@ -104,6 +107,7 @@
 			Stone: 100
 			Plant: 50
 			Tech: 100
+			Rail: 100
 	Locomotor@LightTracked:
 		Name: lighttracked
 		Crushes: Cube, Scrap, Mine
@@ -125,6 +129,7 @@
 			Sand Ramp: 100
 			Stone: 100
 			Tech: 100
+			Rail: 100
 	Locomotor@Naval:
 		Name: naval
 		Crushes: Cube

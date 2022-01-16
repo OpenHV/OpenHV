@@ -184,7 +184,7 @@
 		ShowOwnerRow: false
 	Crate:
 		Duration: 6000
-		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail
 		CrushClass: Scrap
 	RenderSprites:
 		Palette: terrain
@@ -309,7 +309,7 @@
 		Speed: 300
 		CruiseAltitude: 16c0
 		MaximumPitch: 110
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail
 	HiddenUnderFog:
 		Type: CenterPosition
 	BodyOrientation:
@@ -349,7 +349,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail
 		InitialFacing: 896
 		CanSlide: True
 	Hovers@Cruising:
@@ -464,7 +464,7 @@
 	Inherits@Handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail
 		AllowInvalidPlacement: false
 		BuildSounds: Freqman_fx376.wav
 	RequiresBuildableArea:
