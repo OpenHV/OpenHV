@@ -2,6 +2,7 @@
 	TerrainLighting:
 		Intensity: 0.95
 
+World:
 	CloudSpawner:
 		Image: cloud
 		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
