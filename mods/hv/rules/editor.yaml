@@ -26,12 +26,12 @@ EditorWorld:
 			gold:
 				ResourceIndex: 1
 				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant
 				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
 				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant
 				MaxDensity: 3
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
