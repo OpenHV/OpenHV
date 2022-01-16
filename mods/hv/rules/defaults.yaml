@@ -741,6 +741,8 @@
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+	KillsSelf:
+		RemoveInstead: true
 
 ^TreeAsh:
 	Interactable:
@@ -761,6 +763,8 @@
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+	KillsSelf:
+		RemoveInstead: true
 
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld
