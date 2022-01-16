@@ -1,0 +1,183 @@
+# License: CC-BY-SA-4.0
+
+Player:
+	-ConquestVictoryConditions:
+	PlayerResources:
+		DefaultCash: 1000
+		DefaultCashDropdownLocked: True
+		DefaultCashDropdownVisible: False
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		FogCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxVisible: False
+	-ModularBot@RogueAI:
+
+World:
+	LuaScript:
+		Scripts: crater-defense.lua
+	MissionData:
+		Briefing: Commander! The harbors around the Crater Lake are under attack. Use the old railway network to connect your turrets to the energy grid. We are holding the grounds at the exits of the trench, but don't allow too many breaches so our defenses are not overwhelmed.
+	-CubeSpawner:
+	StartingUnits@BaseYI:
+		Class: none
+		ClassName: Base only
+		Factions: yi
+		BaseActor: towerbase
+	StartingUnits@BaseSC:
+		Class: none
+		ClassName: Base only
+		Factions: sc
+		BaseActor: towerbase
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxVisible: False
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxEnabled: False
+		BuildRadiusCheckboxVisible: False
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxEnabled: False
+	ScrapOptions:
+		CheckboxEnabled: False
+		CheckboxLocked: True
+		CheckboxVisible: False
+
+EditorWorld:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Rail
+
+Entry:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: Enemy Spawn Waypoint
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: System
+
+Exit:
+	Inherits: Entry
+	EditorOnlyTooltip:
+		Name: Enemy Exit Waypoint
+
+^Vehicle:
+	GivesBounty:
+		Percentage: 50
+	MustBeDestroyed:
+
+^TrackedVehicle:
+	GivesBounty:
+		Percentage: 75
+	MustBeDestroyed:
+	SpawnScrapOnDeath:
+		Probability: 0
+
+^DefenseBuilding:
+	Targetable:
+		TargetTypes: NoAutoTarget
+	Building:
+		RequiresBaseProvider: false
+		TerrainTypes: Rail
+	-RequiresBuildableArea:
+
+TOWERBASE:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	ProvidesPrerequisite@BuildingName:
+	ProvidesPrerequisite@Yuruki:
+		Factions: yi
+		Prerequisite: structures.yi
+	ProvidesPrerequisite@Synapol:
+		Factions: sc
+		Prerequisite: structures.sc
+	Production:
+		Produces: Defense
+
+BUNKER:
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.yi
+	Power:
+		Amount: 0
+	Cargo:
+		UnloadTerrainTypes: None
+
+BUNKER2:
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.sc
+	Power:
+		Amount: 0
+	Cargo:
+		UnloadTerrainTypes: None
+
+TURRET:
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.yi
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x x
+		Dimensions: 2,1
+		LocalCenterOffset: 0,0,0
+	-WithIdleOverlay@Shadow:
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+
+TURRET2:
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.sc
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x x
+		Dimensions: 2,1
+		LocalCenterOffset: 0,0,0
+	-WithIdleOverlay@Shadow:
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+
+AATURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET2:
+	Buildable:
+		Prerequisites: ~disabled
+
+BARRIER:
+	Buildable:
+		Prerequisites: ~disabled
+
+^GATE:
+	Buildable:
+		Prerequisites: ~disabled
+
+FIELD:
+	Buildable:
+		Prerequisites: ~disabled
+
+SILO:
+	Buildable:
+		Prerequisites: ~disabled
+
+UPLINK:
+	Buildable:
+		Prerequisites: ~disabled
+
+HOWITZER:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVATR:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVTR2:
+	Buildable:
+		Prerequisites: ~disabled
