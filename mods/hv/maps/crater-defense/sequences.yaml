@@ -1,0 +1,5 @@
+entry:
+	idle: maps/crater-defense/arrow-down.png
+
+exit:
+	idle: maps/crater-defense/arrow-left.png

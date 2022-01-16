@@ -1,0 +1,58 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Crater Defense
+
+Author: Matt
+
+Tileset: PLANET
+
+MapSize: 34,34
+
+Bounds: 1,1,32,32
+
+Visibility: MissionSelector
+
+Categories: Tower Defense
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Color: 003897
+		Enemies: Multi0
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: sc
+		LockFaction: True
+		Color: 805040
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 3,8
+	EntryWaypoint1: entry
+		Owner: Neutral
+		Location: 16,1
+	EntryWaypoint2: entry
+		Owner: Neutral
+		Location: 17,1
+	ExitWaypoint1: exit
+		Owner: Neutral
+		Location: 1,25
+	ExitWaypoint2: exit
+		Owner: Neutral
+		Location: 1,26
+
+Rules: rules.yaml
+
+Sequences: sequences.yaml
