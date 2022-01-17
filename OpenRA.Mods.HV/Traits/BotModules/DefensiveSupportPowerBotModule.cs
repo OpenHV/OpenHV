@@ -73,6 +73,9 @@ namespace OpenRA.Mods.HV.Traits
 					continue;
 
 				var possibleTargets = world.FindActorsOnCircle(self.CenterPosition, info.Range);
+				if (possibleTargets.Any(p => !p.Owner.IsAlliedWith(player)))
+					continue;
+
 				if (possibleTargets.Count() < info.MinimumTargets)
 					continue;
 
