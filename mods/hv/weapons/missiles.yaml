@@ -172,12 +172,12 @@ ShipMissile:
 		CruiseAltitude: 2c0
 		RangeLimit: 14c410
 	Warhead@Damage: SpreadDamage
-		Damage: 700
+		Damage: 4000
 		Versus:
-			None: 25
-			Wood: 90
-			Light: 90
-			Heavy: 125
+			None: 30
+			Steel: 90
+			Light: 100
+			Heavy: 150
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Damage: 700

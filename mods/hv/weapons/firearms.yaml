@@ -69,15 +69,15 @@ ChainGun:
 ChainGun.Shuttle:
 	Inherits: ChainGun
 	ReloadDelay: 3
-	Range: 5c0
-	MinRange: 3c0
+	Range: 6c0
+	MinRange: 2c0
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Spread: 64
 		Damage: 1000
 		Versus:
-			None: 210
+			None: 260
 			Steel: 75
 			Light: 85
 			Heavy: 45
