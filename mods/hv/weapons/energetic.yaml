@@ -1,6 +1,7 @@
 # License: CC-BY-SA-4.0
 
 railgun:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 8c0
 	ReloadDelay: 50
@@ -31,24 +32,6 @@ railgun:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 RedLaser:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -127,6 +110,7 @@ Repair:
 		Spread: 1
 
 Plasma:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Burst: 3
@@ -161,24 +145,6 @@ Plasma:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
 
 VoltageArc:
 	ReloadDelay: 50
@@ -323,6 +289,7 @@ RailgunStrike:
 		Falloff: 100, 50, 25, 0
 
 DroneBlaster:
+	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Range: 5c0
@@ -356,21 +323,3 @@ DroneBlaster:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
-	Warhead@WaterEffect: CreateEffect
-		Image: water_splash
-		Explosions: water_splash_a, water_splash_b
-		ValidTargets: Water
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
-	Warhead@LavaEffect: CreateEffect
-		Image: lava_splash
-		Explosions: lava_splash_a, lava_splash_b
-		ValidTargets: Lava
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-lava-splash1_dheming_oneirophile.wav, big-lava-splash2_dheming_oneirophile.wav, big-lava-splash3_dheming_oneirophile.wav, big-lava-splash4_dheming_oneirophile.wav, big-lava-splash5_dheming_oneirophile.wav
-	Warhead@SwampEffect: CreateEffect
-		Image: swamp_splash
-		Explosions: swamp_splash_a, swamp_splash_b
-		ValidTargets: Swamp
-		InvalidTargets: Ship, Structure
-		ImpactSounds: big-water-splash1_cgeffex.wav, big-water-splash2_cgeffex.wav, big-water-splash3_cgeffex.wav, big-water-splash4_cgeffex.wav
