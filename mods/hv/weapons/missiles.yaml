@@ -373,3 +373,29 @@ CruiseMissileImpact:
 		Explosions: medium
 		ValidTargets: Ground
 		ImpactSounds: explosion_juverisetila.wav
+
+Torpedo:
+	Inherits: BigSplash
+	ValidTargets: Ship, WaterBuilding, Water
+	ReloadDelay: 50
+	Range: 8c0
+	Report: torpedo_murraysortz.wav
+	Warhead@Damage: SpreadDamage
+		Spread: 256
+		Damage: 10000
+		ValidTargets: Ground, Water, Ship, WaterBuilding
+		Versus:
+			None: 100
+			Steel: 50
+			Light: 75
+			Heavy: 100
+			Concrete: 100
+	Projectile: Bullet
+		Speed: 350
+		Image: bullet1
+		Palette: shadow
+		TrailImage: bubble
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ship, Ground, WaterBuilding

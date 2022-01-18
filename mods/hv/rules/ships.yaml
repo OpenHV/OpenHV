@@ -58,7 +58,7 @@ BOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor
+		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 40
 		Description: A boat with a turret
 	UpdatesPlayerStatistics:
@@ -89,6 +89,52 @@ BOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
+SUBMARINE2:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: Submarine
+		GenericName: Submarine
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.yi
+		BuildPaletteOrder: 40
+		Description: Submarine with powerful torpedos.
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 55000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 80
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament:
+		Weapon: Torpedo
+		LocalOffset: 600,0,0
+	AttackFrontal:
+		FacingTolerance: 25
+	Cloak:
+		CloakTypes: Underwater
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakSound: submarine_out_szegvari.wav
+		UncloakSound: submarine_in_szegvari.wav
+		Palette: shadow
+		PauseOnCondition: cloak-force-disabled
+	GrantConditionOnDamageState@Uncloak:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical, Heavy
+
 BOAT2:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -100,7 +146,7 @@ BOAT2:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor, techcenter
+		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 40
 		Description: A heavy boat with a railgun.
 	UpdatesPlayerStatistics:
