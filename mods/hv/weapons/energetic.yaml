@@ -146,7 +146,7 @@ Plasma:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
-		Damage: 2400
+		Damage: 3500
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			None: 25
