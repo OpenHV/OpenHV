@@ -225,6 +225,10 @@
 		Name: cube
 		Filename: bits/cube.pal
 		TransparentIndex: 255
+	PaletteFromGimpOrJascFile@shadows:
+		Name: shadow-decoration
+		Filename: bits/shadow-decoration.pal
+		TransparentIndex: 255
 	PaletteFromRGBA@Shadow:
 		Name: shadow
 		R: 0

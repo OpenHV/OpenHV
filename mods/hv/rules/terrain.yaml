@@ -12,6 +12,55 @@ BIG_ROCK:
 		Footprint: ==== xxxx xxxx
 		Dimensions: 4,3
 
+ROCK1:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+ROCK3:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+ROCK6:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+ROCK2:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+ROCK4:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+ROCK7:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+ROCK5:
+	Inherits: ^Rock
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
 GRSSMISC6:
 	Inherits: ^Rock
 	Building:
@@ -35,6 +84,12 @@ ICICLE2:
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
+
+ICICLE4:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
 
 MNTMISC8:
 	Inherits: ^Rock
@@ -78,6 +133,32 @@ STNROCK2:
 		Footprint: _ = x
 		Dimensions: 1,3
 
+STNROCK3:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+STNROCK4:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK5:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK6:
+	Inherits: ^Rock
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
 TREEGRS10:
 	Inherits: ^Tree
 	Building:
@@ -94,6 +175,10 @@ TREEGRS10:
 		Actor: TreeMud15
 	SpawnActorOnDeath@Ash:
 		Actor: TreeAsh15
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
 
 TREEGRS11:
 	Inherits: ^Tree
@@ -111,6 +196,10 @@ TREEGRS11:
 		Actor: TreeMud15
 	SpawnActorOnDeath@Ash:
 		Actor: TreeAsh15
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
 
 TreeAsh15:
 	Inherits: ^TreeAsh
@@ -158,6 +247,10 @@ TREES4:
 		Actor: TreeMudSnow16
 	SpawnActorOnDeath@Ash:
 		Actor: TreeAshSnow18
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
 
 TREES17:
 	Inherits: ^Tree
@@ -175,3 +268,7 @@ TREES17:
 		Actor: TreeMudSnow16
 	SpawnActorOnDeath@Ash:
 		Actor: TreeAshSnow17
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
