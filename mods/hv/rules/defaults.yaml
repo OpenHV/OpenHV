@@ -665,6 +665,10 @@
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
 
 ^ForceFieldCompatible:
 	WithColoredOverlay@ForceField:

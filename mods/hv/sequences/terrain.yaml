@@ -2,21 +2,59 @@
 
 cave:
 	idle: bits/terrain/cave.png
+	shadow-overlay: bits/terrain/cave-shadow.png
 
 big_rock:
 	idle: bits/terrain/big_rock.png
+	shadow-overlay: bits/terrain/big_rock-shadow.png
+
+rock1:
+	idle: bits/terrain/rock1.png
+	shadow-overlay: bits/terrain/rock1-shadow.png
+
+rock2:
+	idle: bits/terrain/rock2.png
+	shadow-overlay: bits/terrain/rock2-shadow.png
+
+rock3:
+	idle: bits/terrain/rock3.png
+	shadow-overlay: bits/terrain/rock3-shadow.png
+
+rock4:
+	idle: bits/terrain/rock4.png
+	shadow-overlay: bits/terrain/rock4-shadow.png
+
+rock5:
+	idle: bits/terrain/rock5.png
+	shadow-overlay: bits/terrain/rock5-shadow.png
+
+rock6:
+	idle: bits/terrain/rock6.png
+	shadow-overlay: bits/terrain/rock6-shadow.png
+
+rock7:
+	idle: bits/terrain/rock7.png
+	shadow-overlay: bits/terrain/rock7-shadow.png
 
 grssmisc6:
 	idle: bits/terrain/grssmisc6.png
+	shadow-overlay: bits/terrain/grssmisc6-shadow.png
 
 grssmisc7:
 	idle: bits/terrain/grssmisc7.png
+	shadow-overlay: bits/terrain/grssmisc7-shadow.png
 
 icicle1:
 	idle: bits/terrain/icicle1.png
+	shadow-overlay: bits/terrain/icicle1-shadow.png
 
 icicle2:
 	idle: bits/terrain/icicle2.png
+	shadow-overlay: bits/terrain/icicle2-shadow.png
+
+icicle4:
+	idle: bits/terrain/icicle4.png
+	shadow-overlay: bits/terrain/icicle4-shadow.png
 
 lavabubl:
 	active: bits/terrain/lavabubl.png
@@ -26,21 +64,31 @@ lavabubl:
 mntmisc8:
 	idle: bits/terrain/mntmisc8.png
 		Offset: 0, -2
+	shadow-overlay: bits/terrain/mntmisc8-shadow.png
+		Offset: 0, -2
 
 mntmisc9:
 	idle: bits/terrain/mntmisc9.png
+		Offset: 0, -4
+	shadow-overlay: bits/terrain/mntmisc9-shadow.png
 		Offset: 0, -4
 
 sandmisc6:
 	idle: bits/terrain/sandmisc6.png
 		Offset: 0, 2
+	shadow-overlay: bits/terrain/sandmisc6-shadow.png
+		Offset: 0, 2
 
 sandmisc7:
 	idle: bits/terrain/sandmisc7.png
 		Offset: 0, -2
+	shadow-overlay: bits/terrain/sandmisc7-shadow.png
+		Offset: 0, -2
 
 sandmisc8:
 	idle: bits/terrain/sandmisc8.png
+		Offset: 0, -2
+	shadow-overlay: bits/terrain/sandmisc8-shadow.png
 		Offset: 0, -2
 
 craters:
@@ -54,9 +102,27 @@ craters:
 
 stnrock1:
 	idle: bits/terrain/stnrock1.png
+	shadow-overlay: bits/terrain/stnrock1-shadow.png
 
 stnrock2:
 	idle: bits/terrain/stnrock2.png
+	shadow-overlay: bits/terrain/stnrock2-shadow.png
+
+stnrock3:
+	idle: bits/terrain/stnrock3.png
+	shadow-overlay: bits/terrain/stnrock3-shadow.png
+
+stnrock4:
+	idle: bits/terrain/stnrock4.png
+	shadow-overlay: bits/terrain/stnrock4-shadow.png
+
+stnrock5:
+	idle: bits/terrain/stnrock5.png
+	shadow-overlay: bits/terrain/stnrock5-shadow.png
+
+stnrock6:
+	idle: bits/terrain/stnrock6.png
+	shadow-overlay: bits/terrain/stnrock6-shadow.png
 
 swmpani:
 	idle: bits/terrain/swmpani.png
@@ -71,15 +137,19 @@ swmpbubl:
 
 treegrs10:
 	idle: bits/terrain/treegrs10.png
+	shadow-overlay: bits/terrain/treegrs10-shadow.png
 
 treegrs11:
 	idle: bits/terrain/treegrs11.png
+	shadow-overlay: bits/terrain/treegrs11-shadow.png
 
 trees4:
 	idle: bits/terrain/trees4.png
+	shadow-overlay: bits/terrain/trees4-shadow.png
 
 trees17:
 	idle: bits/terrain/trees17.png
+	shadow-overlay: bits/terrain/trees17-shadow.png
 
 waterflow:
 	idle: bits/watrflow.png
