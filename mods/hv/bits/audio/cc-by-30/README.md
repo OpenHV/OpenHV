@@ -22,3 +22,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [big-water-splash1-4_cgeffex.wav](https://freesound.org/people/CGEffex/sounds/98335/) by CGEffex
 * [small-lava-splash1-5_dheming_oneirophile.wav](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
 * [big-lava-splash1-5_dheming_oneirophile.wav](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
+* [torpedo_murraysortz.wav](https://freesound.org/people/murraysortz/sounds/192501/) by murraysortz. Mixed with Dzierzan's voice.

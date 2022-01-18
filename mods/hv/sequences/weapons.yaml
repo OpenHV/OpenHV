@@ -300,3 +300,8 @@ shells:
 		Start: 3
 		Tick: 3000
 		ZOffset: -100
+
+bubble:
+	idle: bits/bubble.png
+		Length: *
+		Tick: 60

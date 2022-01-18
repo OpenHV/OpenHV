@@ -1693,6 +1693,8 @@ HARBOR:
 		Footprint: xxx x=x ___
 		Dimensions: 3,3
 		TerrainTypes: Littoral
+	Targetable:
+		TargetTypes: Ground, Structure, WaterBuilding
 	Health:
 		HP: 40000
 	Armor:
