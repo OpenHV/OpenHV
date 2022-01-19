@@ -223,6 +223,7 @@
 		Bounds: 1024, 1024
 	Aircraft:
 		AirborneCondition: airborne
+		CruiseAltitude: 2c0
 		InitialFacing: 768
 		Voice: Move
 	Targetable@Ground:
