@@ -11328,3 +11328,99 @@ Templates:
 		Categories: Littoral
 		Tiles:
 			0: Rapids
+	Template@1489:
+		Id: 1489
+		Images: bits/terrain/tch2swamp.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1490:
+		Id: 1490
+		Images: bits/terrain/tch2swamp.png
+		Frames: 1
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1491:
+		Id: 1491
+		Images: bits/terrain/tch2swamp.png
+		Frames: 2
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1492:
+		Id: 1492
+		Images: bits/terrain/tch2swamp.png
+		Frames: 3
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1493:
+		Id: 1493
+		Images: bits/terrain/tch2swamp.png
+		Frames: 4
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1494:
+		Id: 1494
+		Images: bits/terrain/tch2swamp.png
+		Frames: 5
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1495:
+		Id: 1495
+		Images: bits/terrain/tch2swamp.png
+		Frames: 6
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1496:
+		Id: 1496
+		Images: bits/terrain/tch2swamp.png
+		Frames: 7
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1497:
+		Id: 1497
+		Images: bits/terrain/tch2swamp.png
+		Frames: 8
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1498:
+		Id: 1498
+		Images: bits/terrain/tch2swamp.png
+		Frames: 9
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1499:
+		Id: 1499
+		Images: bits/terrain/tch2swamp.png
+		Frames: 10
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
+	Template@1500:
+		Id: 1500
+		Images: bits/terrain/tch2swamp.png
+		Frames: 11
+		Size: 1,1
+		Categories: Tech, Swamp
+		Tiles:
+			0: Cliff
