@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -36,8 +36,8 @@ namespace OpenRA.Mods.Common.UtilityCommands
 
 			var width = 0;
 			var height = 0;
-			var data = new byte[0];
-			var palette = new Color[0];
+			var data = Array.Empty<byte>();
+			var palette = Array.Empty<Color>();
 			var embeddedData = new Dictionary<string, string>();
 
 			var sprites = Directory.GetFiles(args[1], args[2], SearchOption.TopDirectoryOnly);

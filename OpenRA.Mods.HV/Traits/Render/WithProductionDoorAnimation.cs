@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
@@ -21,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 	{
 		[FieldLoader.Require]
 		[Desc("Exit offset associated with the animation.")]
-		public readonly CVec[] ExitCells = { };
+		public readonly CVec[] ExitCells = Array.Empty<CVec>();
 
 		[SequenceReference]
 		public readonly string Sequence = "door";
