@@ -11,7 +11,7 @@ BOAT3:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: harbor
+		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 40
 		Description: Versatile light ship.\nTargets both air and ground foes.\nCan detect submarines.\n
 	UpdatesPlayerStatistics:
@@ -46,6 +46,58 @@ BOAT3:
 		Range: 6c0
 	WithMuzzleOverlay:
 		IgnoreOffset: True
+
+PATROLBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Patrol boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.yi
+		BuildPaletteOrder: 40
+		Description: Light patrol boat.\nExcellent against air units.\nNot effective against other units.\nCan detect submarines.\n
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 150
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 120
+		Offset: 150,0,50
+	Armament@Air:
+		Weapon: PatrolBoatAir
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 250,0,50
+	Armament@Ground:
+		Weapon: PatrolBoatGround
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 250,0,50
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 6c0
+	WithMuzzleOverlay:
 
 BOAT:
 	Inherits: ^Ship
