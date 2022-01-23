@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -62,7 +62,7 @@ namespace OpenRA.Mods.HV.Traits
 		int burst;
 		AmmoPool ammoPool;
 
-		List<(int Delay, Action Action)> delayedActions = new List<(int, Action)>();
+		readonly List<(int Delay, Action Action)> delayedActions = new List<(int, Action)>();
 
 		public PeriodicDischarge(Actor self, PeriodicDischargeInfo info)
 			: base(info)
@@ -76,7 +76,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override void Created(Actor self)
 		{
-			ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(la => la.Info.Name == Info.AmmoPoolName);
+			ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(pool => pool.Info.Name == Info.AmmoPoolName);
 
 			base.Created(self);
 		}

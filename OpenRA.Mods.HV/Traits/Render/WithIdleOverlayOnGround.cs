@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -43,8 +43,11 @@ namespace OpenRA.Mods.HV.Traits.Render
 				facing = () => f;
 			}
 
-			var anim = new Animation(init.World, image, facing);
-			anim.IsDecoration = IsDecoration;
+			var anim = new Animation(init.World, image, facing)
+			{
+				IsDecoration = IsDecoration
+			};
+
 			anim.PlayRepeating(RenderSprites.NormalizeSequence(anim, init.GetDamageState(), Sequence));
 
 			var body = init.Actor.TraitInfo<BodyOrientationInfo>();
@@ -71,8 +74,11 @@ namespace OpenRA.Mods.HV.Traits.Render
 			var body = self.Trait<BodyOrientation>();
 
 			var image = info.Image ?? rs.GetImage(self);
-			overlay = new Animation(self.World, image, () => IsTraitPaused);
-			overlay.IsDecoration = info.IsDecoration;
+			overlay = new Animation(self.World, image, () => IsTraitPaused)
+			{
+				IsDecoration = info.IsDecoration
+			};
+
 			if (info.StartSequence != null)
 				overlay.PlayThen(RenderSprites.NormalizeSequence(overlay, self.GetDamageState(), info.StartSequence),
 					() => overlay.PlayRepeating(RenderSprites.NormalizeSequence(overlay, self.GetDamageState(), info.Sequence)));
