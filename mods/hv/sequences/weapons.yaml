@@ -121,6 +121,13 @@ bullet14:
 		Facings: 8
 		ZOffset: 2030
 
+bullet15:
+	idle: bits/bullet15.png
+		Length: 6
+		Tick: 100
+		Reverses: True
+		ZOffset: 2030
+
 nuclear:
 	up: bits/blank.png
 	down: bits/nuclear_bomb.png

@@ -94,3 +94,15 @@ submarine2:
 		Facings: 8
 	icon: bits/units-icons.png
 		Start: 50
+
+patrolboat:
+	idle: bits/patrolboat.png
+		Facings: 8
+	turret: bits/patrolboat.png
+		Start: 8
+		Facings: 8
+	muzzle: bits/muzzle5.png
+		Length: 3
+		Tick: 80
+	icon: bits/units-icons.png
+		Start: 51
