@@ -103,6 +103,12 @@ MNTMISC9:
 		Footprint: x
 		Dimensions: 1,1
 
+MNTMISC11:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
 SANDMISC6:
 	Inherits: ^Rock
 	Building:
@@ -172,9 +178,11 @@ TREEGRS10:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud15
+		Actor: TREEMUD
+		Offset: 0,1
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAsh15
+		Actor: TREEASH
+		Offset: 0,1
 	WithIdleOverlay:
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
@@ -193,43 +201,54 @@ TREEGRS11:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMud15
+		Actor: TREEMUD
+		Offset: 0,1
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAsh15
+		Actor: TREEASH
+		Offset: 0,1
 	WithIdleOverlay:
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
 		IsDecoration: true
 
-TreeAsh15:
-	Inherits: ^TreeAsh
-	LaysTerrain:
-		Offset: 0,1
-		Template: 1476
+TREEGRS12:
+	Inherits: ^Tree
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
+	SpawnActorOnDeath@Crush:
+		Actor: TREEMUD
+	SpawnActorOnDeath@Ash:
+		Actor: TREEASH
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
 
-TreeMud15:
-	Inherits: ^TreeMud
-	LaysTerrain:
-		Template: 1475
-		Offset: 0,1
+TREEMUD:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	-MapEditorData:
 
-TreeMudSnow16:
-	Inherits: ^TreeMud
-	LaysTerrain:
-		Offset: 0,1
-		Template: 1432
-
-TreeAshSnow17:
-	Inherits: ^TreeAsh
-	LaysTerrain:
-		Offset: 0,1
-		Template: 1457
-
-TreeAshSnow18:
-	Inherits: ^TreeAsh
-	LaysTerrain:
-		Offset: 0,1
-		Template: 1460
+TREEASH:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	-MapEditorData:
 
 TREES4:
 	Inherits: ^Tree
@@ -244,9 +263,11 @@ TREES4:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMudSnow16
+		Actor: TREEMUD
+		Offset: 0,1
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAshSnow18
+		Actor: TREEASH
+		Offset: 0,1
 	WithIdleOverlay:
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
@@ -265,9 +286,34 @@ TREES17:
 	AppearsOnMapPreview:
 		Terrain: Plant
 	SpawnActorOnDeath@Crush:
-		Actor: TreeMudSnow16
+		Actor: TREEMUD
+		Offset: 0,1
 	SpawnActorOnDeath@Ash:
-		Actor: TreeAshSnow17
+		Actor: TREEASH
+		Offset: 0,1
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
+
+TREES18:
+	Inherits: ^Tree
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
+	SpawnActorOnDeath@Crush:
+		Actor: TREEMUD
+		Offset: 0,1
+	SpawnActorOnDeath@Ash:
+		Actor: TREEASH
+		Offset: 0,1
 	WithIdleOverlay:
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
