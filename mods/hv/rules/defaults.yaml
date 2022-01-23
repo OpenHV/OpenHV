@@ -727,50 +727,6 @@
 		Weapon: ForestFire
 		RequiresCondition: burning
 
-^TreeMud:
-	Interactable:
-	AppearsOnRadar:
-	RadarColorFromTerrain:
-		Terrain: Crater
-	AppearsOnMapPreview:
-		Terrain: Crater
-	Building:
-		Footprint: =
-		Dimensions: 1,1
-	Tooltip:
-		Name: Run Over Tree
-		ShowOwnerRow: false
-	HiddenUnderShroud:
-		Type: CenterPosition
-	MapEditorData:
-		Categories: Decoration
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
-	KillsSelf:
-		RemoveInstead: true
-
-^TreeAsh:
-	Interactable:
-	AppearsOnRadar:
-	RadarColorFromTerrain:
-		Terrain: Stone
-	AppearsOnMapPreview:
-		Terrain: Stone
-	Building:
-		Footprint: =
-		Dimensions: 1,1
-	Tooltip:
-		Name: Burnt Tree
-		ShowOwnerRow: false
-	HiddenUnderShroud:
-		Type: CenterPosition
-	MapEditorData:
-		Categories: Decoration
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
-	KillsSelf:
-		RemoveInstead: true
-
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor

@@ -73,6 +73,10 @@ mntmisc9:
 	shadow-overlay: bits/terrain/mntmisc9-shadow.png
 		Offset: 0, -4
 
+mntmisc11:
+	idle: bits/terrain/mntmisc11.png
+	shadow-overlay: bits/terrain/mntmisc11-shadow.png
+
 sandmisc6:
 	idle: bits/terrain/sandmisc6.png
 		Offset: 0, 2
@@ -143,13 +147,39 @@ treegrs11:
 	idle: bits/terrain/treegrs11.png
 	shadow-overlay: bits/terrain/treegrs11-shadow.png
 
+treegrs12:
+	idle: bits/terrain/treegrs12.png
+	shadow-overlay: bits/terrain/treegrs12-shadow.png
+
 trees4:
 	idle: bits/terrain/trees4.png
+		Offset: 0, 10
 	shadow-overlay: bits/terrain/trees4-shadow.png
+		Offset: 0, 10
 
 trees17:
 	idle: bits/terrain/trees17.png
+		Offset: 0, 10
 	shadow-overlay: bits/terrain/trees17-shadow.png
+		Offset: 0, 10
+
+trees18:
+	idle: bits/terrain/trees18.png
+		Offset: 1, 10
+	shadow-overlay: bits/terrain/trees18-shadow.png
+		Offset: 1, 10
+
+treemud:
+	idle: bits/terrain/treemud.png
+		ZOffset: -2048
+	shadow-overlay: bits/terrain/treemud-shadow.png
+		ZOffset: -2048
+
+treeash:
+	idle: bits/terrain/treeash2.png
+		ZOffset: -2048
+	shadow-overlay: bits/terrain/treeash2-shadow.png
+		ZOffset: -2048
 
 waterflow:
 	idle: bits/watrflow.png
