@@ -122,6 +122,7 @@ SEAMNSTR:
 		Sequences: emerge
 	-GrantConditionOnDamageState:
 	-SpawnsShrapnel@DamageSparks:
+	-LeavesTrails:
 
 WORM:
 	Inherits: BEAST

@@ -106,3 +106,9 @@ patrolboat:
 		Tick: 80
 	icon: bits/units-icons.png
 		Start: 51
+
+watertrail:
+	idle: bits/water-trail.png
+		Length: 7
+		Tick: 80
+		ZOffset: -2048
