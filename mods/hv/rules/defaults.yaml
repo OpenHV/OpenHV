@@ -775,6 +775,11 @@
 	RepairableNear:
 		RepairActors: harbor, harbor2
 		CloseEnough: 2c0
+	LeavesTrails:
+		Image: watertrail
+		MovingInterval: 4
+		StartDelay: 4
+		Type: CenterPosition
 
 ^Cube:
 	Interactable:

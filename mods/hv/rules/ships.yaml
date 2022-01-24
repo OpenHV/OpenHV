@@ -186,6 +186,8 @@ SUBMARINE2:
 	GrantConditionOnDamageState@Uncloak:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical, Heavy
+	LeavesTrails:
+		RequiresCondition: cloak-force-disabled
 
 BOAT2:
 	Inherits: ^Ship
@@ -281,6 +283,8 @@ BOAT4:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
+	LeavesTrails:
+		RequiresCondition: cloak-force-disabled
 
 SLCM:
 	Inherits: ^ShootableMissile
