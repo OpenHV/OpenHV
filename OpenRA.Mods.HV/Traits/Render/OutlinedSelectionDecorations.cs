@@ -240,7 +240,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 				yield break;
 
 			var bounds = interactable.DecorationBounds(self, wr);
-			yield return new OutlinedSelectionBoxAnnotationRenderable(self, bounds, displayHealth, displayExtra);
+			yield return new OutlinedSelectionBarsAnnotationRenderable(self, bounds, displayHealth, displayExtra);
 		}
 
 		IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer wr)
