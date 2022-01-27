@@ -269,5 +269,14 @@ Actors:
 	Actor89: lavalight
 		Owner: Neutral
 		Location: 17,29
+	Actor71: rock6
+		Owner: Neutral
+		Location: 27,38
+	Actor91: rock6
+		Owner: Neutral
+		Location: 52,29
+	Actor92: rock7
+		Owner: Neutral
+		Location: 30,51
 
 Rules: rules.yaml

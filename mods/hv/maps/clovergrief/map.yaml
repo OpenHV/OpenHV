@@ -151,5 +151,29 @@ Actors:
 	Actor37: resource_light
 		Owner: Neutral
 		Location: 79,18
+	Actor38: rock6
+		Owner: Neutral
+		Location: 77,70
+	Actor39: rock6
+		Owner: Neutral
+		Location: 36,70
+	Actor40: rock6
+		Owner: Neutral
+		Location: 36,43
+	Actor41: rock6
+		Owner: Neutral
+		Location: 77,43
+	Actor42: rock7
+		Owner: Neutral
+		Location: 70,77
+	Actor43: rock7
+		Owner: Neutral
+		Location: 43,77
+	Actor44: rock7
+		Owner: Neutral
+		Location: 43,36
+	Actor45: rock7
+		Owner: Neutral
+		Location: 70,36
 
 Rules: rules.yaml

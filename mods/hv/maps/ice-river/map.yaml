@@ -205,5 +205,11 @@ Actors:
 	Actor54: miner2
 		Owner: Synapol Corporation
 		Location: 42,28
+	Actor55: rock1
+		Owner: Neutral
+		Location: 53,49
+	Actor56: rock2
+		Owner: Neutral
+		Location: 56,9
 
 Rules: hv|rules/campaign.yaml, rules.yaml

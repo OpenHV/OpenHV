@@ -65,9 +65,6 @@ Actors:
 	Actor1: mntmisc8
 		Owner: Neutral
 		Location: 126,122
-	Actor2: mntmisc9
-		Owner: Neutral
-		Location: 120,126
 	Actor3: mntmisc9
 		Owner: Neutral
 		Location: 115,127
@@ -498,10 +495,6 @@ Actors:
 		Owner: Neutral
 		Location: 16,16
 		Facing: 1015
-	Actor163: worm
-		Owner: Neutral
-		Location: 114,117
-		Facing: 245
 	Actor164: worm
 		Owner: Neutral
 		Location: 95,97
@@ -514,5 +507,66 @@ Actors:
 		Owner: Neutral
 		Location: 60,66
 		Facing: 277
+	Actor167: mntmisc9
+		Owner: Neutral
+		Location: 120,126
+	Actor168: rock5
+		Owner: Neutral
+		Location: 125,125
+	Actor169: rock5
+		Owner: Neutral
+		Location: 3,3
+	Actor170: rock5
+		Owner: Neutral
+		Location: 88,88
+	Actor171: rock8
+		Owner: Neutral
+		Location: 40,41
+	Actor172: rock9
+		Owner: Neutral
+		Location: 122,126
+	Actor173: rock9
+		Owner: Neutral
+		Location: 118,126
+	Actor174: rock9
+		Owner: Neutral
+		Location: 116,126
+	Actor175: rock9
+		Owner: Neutral
+		Location: 126,119
+	Actor176: rock9
+		Owner: Neutral
+		Location: 128,116
+	Actor177: rock9
+		Owner: Neutral
+		Location: 3,6
+	Actor178: rock9
+		Owner: Neutral
+		Location: 3,7
+	Actor179: rock9
+		Owner: Neutral
+		Location: 3,10
+	Actor180: rock9
+		Owner: Neutral
+		Location: 41,40
+	Actor181: rock10
+		Owner: Neutral
+		Location: 127,116
+	Actor182: rock10
+		Owner: Neutral
+		Location: 40,40
+	Actor183: rock10
+		Owner: Neutral
+		Location: 3,12
+	Actor184: rock10
+		Owner: Neutral
+		Location: 7,3
+	Actor185: rock10
+		Owner: Neutral
+		Location: 13,1
+	Actor163: worm
+		Owner: Neutral
+		Location: 114,117
+		Facing: 245
 
 Rules: rules.yaml

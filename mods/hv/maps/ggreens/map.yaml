@@ -16,8 +16,6 @@ Visibility: Lobby
 
 Categories: Conquest
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -150,5 +148,47 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 65,8
+	Actor39: rock6
+		Owner: Neutral
+		Location: 12,58
+	Actor40: rock6
+		Owner: Neutral
+		Location: 29,38
+	Actor41: rock6
+		Owner: Neutral
+		Location: 68,27
+	Actor42: rock6
+		Owner: Neutral
+		Location: 85,7
+	Actor43: rock6
+		Owner: Neutral
+		Location: 79,54
+	Actor44: rock6
+		Owner: Neutral
+		Location: 18,11
+	Actor45: rock7
+		Owner: Neutral
+		Location: 90,58
+	Actor46: rock7
+		Owner: Neutral
+		Location: 20,54
+	Actor47: rock7
+		Owner: Neutral
+		Location: 26,59
+	Actor48: rock7
+		Owner: Neutral
+		Location: 77,11
+	Actor49: rock7
+		Owner: Neutral
+		Location: 71,6
+	Actor50: rock7
+		Owner: Neutral
+		Location: 7,7
+	Actor51: rock7
+		Owner: Neutral
+		Location: 25,44
+	Actor52: rock7
+		Owner: Neutral
+		Location: 72,21
 
 Rules: rules.yaml

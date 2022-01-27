@@ -36,6 +36,26 @@ rock7:
 	idle: bits/terrain/rock7.png
 	shadow-overlay: bits/terrain/rock7-shadow.png
 
+rock8:
+	idle: bits/terrain/rock8.png
+	shadow-overlay: bits/terrain/rock8-shadow.png
+
+rock9:
+	idle: bits/terrain/rock9.png
+	shadow-overlay: bits/terrain/rock9-shadow.png
+
+rock10:
+	idle: bits/terrain/rock10.png
+	shadow-overlay: bits/terrain/rock10-shadow.png
+
+rock11:
+	idle: bits/terrain/rock11.png
+	shadow-overlay: bits/terrain/rock11-shadow.png
+
+rock12:
+	idle: bits/terrain/rock12.png
+	shadow-overlay: bits/terrain/rock12-shadow.png
+
 grssmisc6:
 	idle: bits/terrain/grssmisc6.png
 	shadow-overlay: bits/terrain/grssmisc6-shadow.png

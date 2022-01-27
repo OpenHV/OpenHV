@@ -555,3 +555,21 @@ Actors:
 	Actor97: mother
 		Location: 77,77
 		Owner: Neutral
+	Actor168: rock6
+		Owner: Neutral
+		Location: 153,87
+	Actor169: rock6
+		Owner: Neutral
+		Location: 28,11
+	Actor170: rock7
+		Owner: Neutral
+		Location: 15,68
+	Actor171: rock7
+		Owner: Neutral
+		Location: 115,150
+	Actor172: rock7
+		Owner: Neutral
+		Location: 11,148
+	Actor173: rock7
+		Owner: Neutral
+		Location: 156,141
