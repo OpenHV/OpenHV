@@ -206,5 +206,35 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 38,7
+	Actor54: rock1
+		Owner: Neutral
+		Location: 98,22
+	Actor55: rock1
+		Owner: Neutral
+		Location: 31,43
+	Actor56: rock2
+		Owner: Neutral
+		Location: 70,33
+	Actor57: rock2
+		Owner: Neutral
+		Location: 67,31
+	Actor58: rock2
+		Owner: Neutral
+		Location: 62,34
+	Actor59: rock2
+		Owner: Neutral
+		Location: 59,32
+	Actor60: rock2
+		Owner: Neutral
+		Location: 29,18
+	Actor61: rock2
+		Owner: Neutral
+		Location: 21,19
+	Actor62: rock2
+		Owner: Neutral
+		Location: 100,47
+	Actor63: rock2
+		Owner: Neutral
+		Location: 108,46
 
 Rules: rules.yaml

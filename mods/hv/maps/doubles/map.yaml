@@ -16,8 +16,6 @@ Visibility: Lobby
 
 Categories: Conquest
 
-Translations:
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -338,3 +336,66 @@ Actors:
 	Actor102: techminer
 		Owner: Neutral
 		Location: 46,3
+	Actor103: rock6
+		Owner: Neutral
+		Location: 28,28
+	Actor104: rock6
+		Owner: Neutral
+		Location: 22,24
+	Actor105: rock6
+		Owner: Neutral
+		Location: 14,20
+	Actor106: rock6
+		Owner: Neutral
+		Location: 29,12
+	Actor107: rock6
+		Owner: Neutral
+		Location: 33,17
+	Actor108: rock6
+		Owner: Neutral
+		Location: 47,34
+	Actor109: rock6
+		Owner: Neutral
+		Location: 44,32
+	Actor110: rock6
+		Owner: Neutral
+		Location: 45,42
+	Actor111: rock6
+		Owner: Neutral
+		Location: 61,40
+	Actor112: rock6
+		Owner: Neutral
+		Location: 63,22
+	Actor113: rock6
+		Owner: Neutral
+		Location: 60,17
+	Actor114: rock6
+		Owner: Neutral
+		Location: 54,18
+	Actor115: rock6
+		Owner: Neutral
+		Location: 77,12
+	Actor116: rock6
+		Owner: Neutral
+		Location: 81,22
+	Actor117: rock6
+		Owner: Neutral
+		Location: 87,20
+	Actor118: rock7
+		Owner: Neutral
+		Location: 4,34
+	Actor119: rock7
+		Owner: Neutral
+		Location: 8,25
+	Actor120: rock7
+		Owner: Neutral
+		Location: 11,15
+	Actor121: rock7
+		Owner: Neutral
+		Location: 81,10
+	Actor122: rock7
+		Owner: Neutral
+		Location: 101,10
+	Actor123: rock7
+		Owner: Neutral
+		Location: 100,24

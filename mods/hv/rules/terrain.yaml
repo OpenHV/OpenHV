@@ -26,11 +26,33 @@ ROCK3:
 
 ROCK6:
 	Inherits: ^Rock
-	-Building:
-	-HiddenUnderShroud:
-	AlwaysVisible:
-	Immobile:
-		OccupiesSpace: false
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+ROCK9:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+ROCK10:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+ROCK11:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+ROCK12:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
 
 ROCK2:
 	Inherits: ^Rock
@@ -39,6 +61,7 @@ ROCK2:
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
+
 ROCK4:
 	Inherits: ^Rock
 	-Building:
@@ -48,6 +71,14 @@ ROCK4:
 		OccupiesSpace: false
 
 ROCK7:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+ROCK8:
 	Inherits: ^Rock
 	-Building:
 	-HiddenUnderShroud:

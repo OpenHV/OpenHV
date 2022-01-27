@@ -435,5 +435,65 @@ Actors:
 	Actor159: resourcelight
 		Owner: Neutral
 		Location: 26,63
+	Actor160: rock6
+		Owner: Neutral
+		Location: 56,97
+	Actor161: rock6
+		Owner: Neutral
+		Location: 69,113
+	Actor162: rock6
+		Owner: Neutral
+		Location: 16,69
+	Actor163: rock6
+		Owner: Neutral
+		Location: 32,56
+	Actor164: rock6
+		Owner: Neutral
+		Location: 41,73
+	Actor165: rock6
+		Owner: Neutral
+		Location: 88,56
+	Actor166: rock6
+		Owner: Neutral
+		Location: 97,73
+	Actor167: rock6
+		Owner: Neutral
+		Location: 113,60
+	Actor168: rock6
+		Owner: Neutral
+		Location: 73,32
+	Actor169: rock6
+		Owner: Neutral
+		Location: 60,16
+	Actor170: rock7
+		Owner: Neutral
+		Location: 98,63
+	Actor171: rock7
+		Owner: Neutral
+		Location: 31,66
+	Actor172: rock7
+		Owner: Neutral
+		Location: 56,40
+	Actor173: rock7
+		Owner: Neutral
+		Location: 63,31
+	Actor174: rock7
+		Owner: Neutral
+		Location: 30,5
+	Actor175: rock7
+		Owner: Neutral
+		Location: 125,30
+	Actor176: rock7
+		Owner: Neutral
+		Location: 66,98
+	Actor177: rock7
+		Owner: Neutral
+		Location: 73,88
+	Actor178: rock7
+		Owner: Neutral
+		Location: 100,124
+	Actor179: rock7
+		Owner: Neutral
+		Location: 4,99
 
 Rules: rules.yaml

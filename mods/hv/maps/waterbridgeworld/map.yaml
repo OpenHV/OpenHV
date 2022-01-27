@@ -129,3 +129,30 @@ Actors:
 	Actor29: mpspawn
 		Owner: Neutral
 		Location: 61,17
+	Actor30: rock6
+		Owner: Neutral
+		Location: 60,20
+	Actor31: rock6
+		Owner: Neutral
+		Location: 21,14
+	Actor32: rock7
+		Owner: Neutral
+		Location: 13,66
+	Actor33: rock7
+		Owner: Neutral
+		Location: 16,62
+	Actor34: rock7
+		Owner: Neutral
+		Location: 12,62
+	Actor35: rock7
+		Owner: Neutral
+		Location: 19,66
+	Actor36: rock7
+		Owner: Neutral
+		Location: 25,62
+	Actor37: rock7
+		Owner: Neutral
+		Location: 26,58
+	Actor38: rock7
+		Owner: Neutral
+		Location: 66,21

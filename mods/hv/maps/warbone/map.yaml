@@ -155,3 +155,12 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 64,60
+	Actor30: rock6
+		Owner: Neutral
+		Location: 35,32
+	Actor31: rock7
+		Owner: Neutral
+		Location: 99,35
+	Actor32: rock7
+		Owner: Neutral
+		Location: 77,47

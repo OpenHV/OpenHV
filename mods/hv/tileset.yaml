@@ -1941,15 +1941,7 @@ Templates:
 		Images: bits/terrain/grssmisc.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Rock
-		Tiles:
-			0: Grass
-	Template@236:
-		Id: 236
-		Images: bits/terrain/grssmisc.png
-		Frames: 1
-		Size: 1,1
-		Categories: Grass, Rock
+		Categories: Grass
 		Tiles:
 			0: Grass
 	Template@237:
@@ -1957,15 +1949,7 @@ Templates:
 		Images: bits/terrain/grssmisc.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Rock
-		Tiles:
-			0: Grass
-	Template@238:
-		Id: 238
-		Images: bits/terrain/grssmisc.png
-		Frames: 3
-		Size: 1,1
-		Categories: Grass, Rock
+		Categories: Grass
 		Tiles:
 			0: Grass
 	Template@239:
@@ -1973,7 +1957,7 @@ Templates:
 		Images: bits/terrain/grssmisc.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Rock
+		Categories: Grass
 		Tiles:
 			0: Grass
 	Template@240:
@@ -2581,13 +2565,6 @@ Templates:
 		Categories: Ice, Road
 		Tiles:
 			0: Road
-	Template@318:
-		Id: 318
-		Images: bits/terrain/icicle3.png
-		Size: 1,1
-		Categories: Snow
-		Tiles:
-			0: Rock
 	Template@319:
 		Id: 319
 		Images: bits/terrain/lava.png
@@ -3589,28 +3566,12 @@ Templates:
 		Categories: Mountain, Cliff
 		Tiles:
 			0: Cliff
-	Template@453:
-		Id: 453
-		Images: bits/terrain/mntmisc.png
-		Frames: 0
-		Size: 1,1
-		Categories: Mountain, Rock
-		Tiles:
-			0: Mountain
 	Template@454:
 		Id: 454
 		Images: bits/terrain/mntmisc.png
 		Frames: 1
 		Size: 1,1
 		Categories: Mountain
-		Tiles:
-			0: Mountain
-	Template@455:
-		Id: 455
-		Images: bits/terrain/mntmisc.png
-		Frames: 2
-		Size: 1,1
-		Categories: Mountain, Rock
 		Tiles:
 			0: Mountain
 	Template@456:
@@ -3621,22 +3582,6 @@ Templates:
 		Categories: Mountain
 		Tiles:
 			0: Mountain
-	Template@457:
-		Id: 457
-		Images: bits/terrain/mntmisc.png
-		Frames: 4
-		Size: 1,1
-		Categories: Plant
-		Tiles:
-			0: Plant
-	Template@458:
-		Id: 458
-		Images: bits/terrain/mntmisc.png
-		Frames: 5
-		Size: 1,1
-		Categories: Mountain, Rock
-		Tiles:
-			0: Rock
 	Template@459:
 		Id: 459
 		Images: bits/terrain/mntmisc.png
@@ -3645,16 +3590,6 @@ Templates:
 		Categories: Mountain
 		Tiles:
 			0: Mountain
-	Template@460:
-		Id: 460
-		Images: bits/terrain/mntmisc10.png
-		Size: 2,2
-		Categories: Mountain, Rock
-		Tiles:
-			0: Rock
-			1: Rock
-			2: Rock
-			3: Rock
 	Template@461:
 		Id: 461
 		Images: bits/terrain/mntrdst.png
@@ -4351,22 +4286,6 @@ Templates:
 		Categories: Road
 		Tiles:
 			0: Road
-	Template@561:
-		Id: 561
-		Images: bits/terrain/rock.png
-		Frames: 0
-		Size: 1,1
-		Categories: Rock, Snow
-		Tiles:
-			0: Rock
-	Template@562:
-		Id: 562
-		Images: bits/terrain/rock.png
-		Frames: 1
-		Size: 1,1
-		Categories: Rock, Snow
-		Tiles:
-			0: Snow
 	Template@563:
 		Id: 563
 		Images: bits/terrain/sand.png
@@ -6138,30 +6057,6 @@ Templates:
 		Categories: Red Snow
 		Tiles:
 			0: Red Snow
-	Template@793:
-		Id: 793
-		Images: bits/terrain/snw2-rck.png
-		Frames: 0
-		Size: 1,1
-		Categories: Red Snow, Rock
-		Tiles:
-			0: Rock
-	Template@794:
-		Id: 794
-		Images: bits/terrain/snw2-rck.png
-		Frames: 1
-		Size: 1,1
-		Categories: Red Snow, Rock
-		Tiles:
-			0: Red Snow
-	Template@795:
-		Id: 795
-		Images: bits/terrain/snw2-rck.png
-		Frames: 2
-		Size: 1,1
-		Categories: Red Snow, Rock
-		Tiles:
-			0: Red Snow
 	Template@796:
 		Id: 796
 		Images: bits/terrain/snw2-lav.png
@@ -7839,41 +7734,6 @@ Templates:
 		Categories: Stone, Road
 		Tiles:
 			0: Road
-	Template@1035:
-		Id: 1035
-		Images: bits/terrain/stnmisc.png
-		Frames: 0
-		Size: 1,1
-		Categories: Stone, Rock
-		Tiles:
-			0: Stone
-	Template@1036:
-		Id: 1036
-		Images: bits/terrain/stnmisc.png
-		Frames: 1
-		Size: 1,1
-		Categories: Stone, Rock
-		Tiles:
-			0: Stone
-	Template@1037:
-		Id: 1037
-		Images: bits/terrain/stnmisc.png
-		Frames: 2
-		Size: 1,1
-		Categories: Stone, Rock
-		Tiles:
-			0: Rock
-	Template@1038:
-		Id: 1038
-		Images: bits/terrain/stnmisc.png
-		Frames: 3, 4, 5, 6
-		Size: 2,2
-		Categories: Stone, Rock
-		Tiles:
-			0: Rock
-			1: Rock
-			2: Rock
-			3: Rock
 	Template@1039:
 		Id: 1039
 		Images: bits/terrain/stnrdst.png
@@ -8373,7 +8233,7 @@ Templates:
 		Id: 1103
 		Images: bits/terrain/swmprock.png
 		Size: 1,1
-		Categories: Swamp, Rock
+		Categories: Swamp
 		Tiles:
 			0: Rock
 	Template@1104:
@@ -9809,14 +9669,6 @@ Templates:
 		Categories: Snow, Plant
 		Tiles:
 			0: Snow
-	Template@1297:
-		Id: 1297
-		Images: bits/terrain/trees.png
-		Frames: 9
-		Size: 1,1
-		Categories: Snow, Plant
-		Tiles:
-			0: Plant
 	Template@1298:
 		Id: 1298
 		Images: bits/terrain/trees.png
@@ -9833,14 +9685,6 @@ Templates:
 		Categories: Snow, Plant
 		Tiles:
 			0: Snow
-	Template@1300:
-		Id: 1300
-		Images: bits/terrain/trees.png
-		Frames: 12
-		Size: 1,1
-		Categories: Snow, Plant
-		Tiles:
-			0: Plant
 	Template@1301:
 		Id: 1301
 		Images: bits/terrain/trees.png
