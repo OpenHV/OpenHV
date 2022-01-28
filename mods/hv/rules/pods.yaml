@@ -5,7 +5,7 @@ SCOUT1:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Fast anti-pod vehicle.\nArmed with machine guns.
+		Description: Fast anti-pod vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
 		Prerequisites: module
 	Valued:
 		Cost: 100
@@ -29,7 +29,7 @@ SCOUT2:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Fast anti-vehicle pod.\nShoots rockets.
+		Description: Fast anti-vehicle pod.\nShoots rockets.\n  Strong vs Vehicles and Aircrafts\n  Weak vs Pods
 		Prerequisites: module
 	Valued:
 		Cost: 225
@@ -58,7 +58,7 @@ MORTARPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Fast support vehicle.\nArmed with portable mortar gun.
+		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
 		Prerequisites: module
 	Valued:
 		Cost: 175
@@ -86,7 +86,7 @@ SNIPERPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Long range sniper pod.
+		Description: Long range sniper pod.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
 		Prerequisites: module, radar
 	Valued:
 		Cost: 500

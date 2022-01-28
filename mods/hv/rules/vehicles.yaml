@@ -13,7 +13,7 @@ TANK3:
 		BuildPaletteOrder: 10
 		Prerequisites: ~factory.yi
 		Queue: Vehicle
-		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Mobile:
 		TurnSpeed: 25
 		Speed: 95
@@ -58,7 +58,7 @@ AATANK:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
 		Prerequisites: ~factory.sc
-		Description: Mobile tank with AA missiles.
+		Description: Mobile tank with AA missiles.\n  Strong vs Aircraft\n  Cannot attack grounds units.
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -95,7 +95,7 @@ AATANK2:
 	Inherits: AATANK
 	Buildable:
 		Prerequisites: ~factory.yi
-		Description: Mobile tank with lightning gun.
+		Description: Mobile tank with lightning gun.\n  Strong vs Aircraft\n  Cannot attack grounds units.
 	Armament:
 		Weapon: LightningBoltLight
 		Recoil: 125
@@ -115,7 +115,7 @@ TRANSPRT:
 		Queue: Vehicle
 		Prerequisites: factory, module
 		BuildPaletteOrder: 30
-		Description: Can load infantry pods.\nHas fireports for garrisoned units.
+		Description: Can transport pods.\nHas fireports for garrisoned units.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -159,7 +159,7 @@ ARTIL:
 		Queue: Vehicle
 		Prerequisites: factory, radar
 		BuildPaletteOrder: 40
-		Description: Mobile long range weapon.
+		Description: Mobile long range weapon.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -272,7 +272,7 @@ TANK16:
 		Queue: Vehicle
 		Prerequisites: factory, tradplat
 		BuildPaletteOrder: 60
-		Description: Repairs nearby vehicles.
+		Description: Repairs nearby vehicles.\n  Unarmed
 	Armament:
 		Weapon: Repair
 		Cursor: repair
@@ -309,7 +309,7 @@ TANK6:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
 		Prerequisites: factory, tradplat
-		Description: Lays mines to destroy\nunwary enemy units.\nCan detect mines.\n  Unarmed
+		Description: Lays mines to destroy unwary enemy units.\n  Can detect enemy mines.\n  Unarmed
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -356,7 +356,7 @@ TANK5:
 		Queue: Vehicle
 		Prerequisites: ~factory.sc, techcenter
 		BuildPaletteOrder: 150
-		Description: A powerful tank which shoots laser.
+		Description: A powerful tank which shoots laser.\n  Strong vs Pods, Vehicles and Buildings
 	Armament:
 		Weapon: railgun
 		LocalOffset: 325,350,0
@@ -386,7 +386,7 @@ TANK10:
 		Queue: Vehicle
 		BuildPaletteOrder: 150
 		Prerequisites: ~factory.yi, techcenter
-		Description: Fires electric discharges.
+		Description: Fires electric discharges.\n  Strong vs Pods, Vehicles and Buildings
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -421,7 +421,7 @@ TANK7:
 		Queue: Vehicle
 		BuildPaletteOrder: 120
 		Prerequisites: ~factory.yi, techcenter
-		Description: Cloaked missile tank.\nCan ambush enemies.
+		Description: Cloaked missile tank.\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -473,7 +473,7 @@ TANK11:
 		Queue: Vehicle
 		Prerequisites: ~disabled #factory.sc
 		BuildPaletteOrder: 180
-		Description: Main battle tank.
+		Description: Main battle tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
 		Weapon: ^Cannon
 	AttackFrontal:
@@ -506,7 +506,7 @@ TANK12:
 		Queue: Vehicle
 		Prerequisites: ~disabled #factory.yi
 		BuildPaletteOrder: 190
-		Description: Double barreled tank.
+		Description: Double barreled tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
 		Weapon: 105mm
 		Recoil: 128
@@ -574,7 +574,7 @@ TANK15:
 		Queue: Vehicle
 		Prerequisites: ~factory.sc, techcenter, tradplat
 		BuildPaletteOrder: 110
-		Description: Disables units.
+		Description: Disables units for a brief moment.
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -613,7 +613,7 @@ ARTIL3:
 		Queue: Vehicle
 		BuildPaletteOrder: 140
 		Prerequisites: ~disabled
-		Description: Double barreled artillery tank.
+		Description: Double barreled artillery tank.\n  Strong vs Pods, Vehicles and Buildings
 	Health:
 		HP: 35000
 	Armor:
@@ -649,7 +649,7 @@ BUILDER:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
-		Description: Grants additional build radius.
+		Description: Grants additional build radius.\n  Unarmed
 		Prerequisites: base
 		BuildAtProductionType: Building
 	GivesBuildableArea:
@@ -741,7 +741,7 @@ MISSILE_TANK:
 		Queue: Vehicle
 		Prerequisites: ~factory.sc, radar, techcenter
 		BuildPaletteOrder: 240
-		Description: A tank which shoots missiles.
+		Description: A tank which shoots missiles. \n  Strong vs Vehicles and Buildings\n  Weak vs Pods
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -775,7 +775,7 @@ TANK8:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
 		Prerequisites: ~factory.yi, radar, tradplat
-		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Unarmed
+		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Jams incoming missiles\n  Unarmed
 	Valued:
 		Cost: 400
 	Tooltip:
