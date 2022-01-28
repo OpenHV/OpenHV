@@ -126,7 +126,7 @@ build_platform() {
 		modify_plist "<string>{DISCORD_URL_SCHEME}</string>" "" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 	fi
 
-	if [ "${PLATFORM}" = "compat" ]; then
+	if [ "${PLATFORM}" = "mono" ]; then
 		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.9" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher-mono.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.9
 	else
@@ -136,7 +136,7 @@ build_platform() {
 
 	echo "Building core files"
 	RUNTIME="net6"
-	if [ "${PLATFORM}" = "compat" ]; then
+	if [ "${PLATFORM}" = "mono" ]; then
 		RUNTIME="mono"
 	fi
 
@@ -282,7 +282,7 @@ finalize_package() {
 	INPUT_PATH="${2}"
 	OUTPUT_PATH="${3}"
 
-	if [ "${PLATFORM}" = "compat" ]; then
+	if [ "${PLATFORM}" = "mono" ]; then
 		hdiutil convert "${INPUT_PATH}" -format UDZO -imagekey zlib-level=9 -ov -o "${OUTPUT_PATH}"
 	else
 		# ULFO offers better compression and faster decompression speeds, but is only supported by 10.11+
@@ -292,7 +292,7 @@ finalize_package() {
 }
 
 build_platform "standard" "build.dmg"
-build_platform "compat" "build-compat.dmg"
+build_platform "mono" "build-compat.dmg"
 
 if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
 	security delete-keychain build.keychain
@@ -306,4 +306,4 @@ if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ];
 fi
 
 finalize_package "standard" "build.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}.dmg"
-finalize_package "compat" "build-compat.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}-compat.dmg"
+finalize_package "mono" "build-compat.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}-compat.dmg"

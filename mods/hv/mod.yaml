@@ -163,6 +163,7 @@ Hotkeys:
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
 	common|hotkeys/chat.yaml
+	common|hotkeys/control-groups.yaml
 	hv|hotkeys.yaml
 
 LoadScreen: TextLoadScreen
