@@ -21,7 +21,7 @@ BOAT3:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 150
+		Speed: 125
 		TurnSpeed: 60
 	RevealsShroud:
 		Range: 8c0
@@ -67,7 +67,7 @@ PATROLBOAT:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 150
+		Speed: 125
 		TurnSpeed: 60
 	RevealsShroud:
 		Range: 8c0
