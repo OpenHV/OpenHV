@@ -13,7 +13,7 @@ BOAT3:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 40
-		Description: Versatile light ship.\nTargets both air and ground foes.\nCan detect submarines.\n
+		Description: Versatile light ship.\n  Can detect submarines.\n  Strong vs Pods and Aircrafts\n  Weak vs Vehicles
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -59,7 +59,7 @@ PATROLBOAT:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 40
-		Description: Light patrol boat.\nExcellent against air units.\nNot effective against other units.\nCan detect submarines.\n
+		Description: Light patrol boat.\n  Can detect submarines\n  Strong vs Aircrafts\n  Weak vs Pods, Vehicles and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -110,7 +110,7 @@ BOAT:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 40
-		Description: A boat with a turret
+		Description: A boat with a turret.\n  Strong vs Buildings and Vehicles\n  Weak vs Pods
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -152,7 +152,7 @@ SUBMARINE2:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 40
-		Description: Submarine with powerful torpedos.
+		Description: Submarine with powerful torpedos.\n  Strong vs Vehicles and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -200,7 +200,7 @@ BOAT2:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 40
-		Description: A heavy boat with a railgun.
+		Description: A heavy boat with a railgun.\n  Strong vs Vehicles, Pods and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -239,7 +239,7 @@ BOAT4:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
-		Description: A submarine with powerful long range missiles.
+		Description: A submarine with powerful long range missiles.\n  Strong vs Vehicles, Pods and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -322,7 +322,7 @@ CARRIER:
 		Queue: Ship
 		BuildPaletteOrder: 60
 		Prerequisites: ~harbor.sc, techcenter
-		Description: Launches aerial autonomous attack vessels.
+		Description: Launches aerial autonomous attack vessels.\n  Strong vs Vehicles, Pods and Buildings
 	Valued:
 		Cost: 2000
 	Tooltip:

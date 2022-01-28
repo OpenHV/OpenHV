@@ -45,7 +45,7 @@ BASE:
 		Factions: sc
 		Prerequisite: structures.sc
 	Buildable:
-		Description: Builds structures and builders.
+		Description: Builds structures, builders and miners
 	Production:
 		Produces: Building, Defense, Vehicle
 	ProductionBar@Building:
@@ -236,7 +236,7 @@ RADAR:
 		Queue: Building
 		BuildPaletteOrder: 90
 		Prerequisites: generator, storage, ~structures.yi
-		Description: Provides an overview\nof the battlefield.\nCalls in reinforcements.\nRequires power to operate.
+		Description: Provides an overview\nof the battlefield.\n  Calls in reinforcements.\n  Requires power to operate.
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -312,7 +312,7 @@ RADAR2:
 		PauseOnCondition: disabled
 		Icon: droppods
 		Name: Drop Pods
-		Description: Atmospheric assault reinforcements.\nSmall team of pods drops\nonto target location from orbit.
+		Description: Atmospheric assault reinforcements.\n  Small team of pods drops\nonto target location from orbit.\n  Requires power to operate.
 		DisplayRadarPing: true
 		ChargeInterval: 3750
 		UnitTypes: droppod1, droppod2
@@ -1000,7 +1000,7 @@ BUNKER:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: module, storage, ~structures.yi
-		Description: Basic base defense.\nGood against pods.\nRequires power to operate.
+		Description: Basic base defense.\nGood against pods.\n  Requires power to operate.\n  Strong vs Pods\n  Weak vs Vehicles
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
 	Valued:
@@ -1052,7 +1052,7 @@ TURRET:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: factory, storage, ~structures.yi
-		Description: Base defense.\nGood against vehicles.\nRequires power to operate.
+		Description: Base defense.\nGood against vehicles.\n  Requires power to operate.\n  Strong vs Vehicles\n  Weak vs Pods
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1087,7 +1087,7 @@ TURRET2:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: factory, storage, ~structures.sc
-		Description: Base defense.\nRequires power to operate.
+		Description: Base defense.\n  Requires power to operate.\n  Strong vs Vehicles\n  Weak vs Pods
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1124,7 +1124,7 @@ AATURRET:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.yi
-		Description: Anti-Air base defense.\nRequires power to operate.
+		Description: Anti-Air base defense.\n  Requires power to operate. \n  Strong vs Aircrafts
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -1169,7 +1169,7 @@ AATURRET2:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.sc
-		Description: Anti-Air base defense.\nRequires power to operate.
+		Description: Anti-Air base defense.\n  Requires power to operate. \n  Strong vs Aircrafts
 	Valued:
 		Cost: 1250
 	Tooltip:
@@ -1203,7 +1203,7 @@ HOWITZER:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.sc
-		Description: Advanced base cannon.\nRequires power to operate.\nMaximum 1 can be built
+		Description: Advanced base cannon.\n  Requires power to operate.\n  Maximum 1 can be built
 		BuildLimit: 1
 	Valued:
 		Cost: 2000
@@ -1272,7 +1272,7 @@ FIELD:
 		BuildPaletteOrder: 130
 		Prerequisites: radar, ~structures.yi
 		BuildLimit: 1
-		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\nRequires power to operate.\nMaximum 1 can be built.
+		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\n  Requires power to operate.\n  Maximum 1 can be built.
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1355,7 +1355,7 @@ SILO:
 		BuildPaletteOrder: 140
 		Prerequisites: techcenter, ~structures.sc
 		BuildLimit: 1
-		Description: Orders a nuclear strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Atom Bomb
+		Description: Orders a nuclear strike.\n  Requires power to operate.\n  Maximum 1 can be built.\n  Special Ability: Atom Bomb
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
@@ -1431,7 +1431,7 @@ UPLINK:
 		BuildPaletteOrder: 140
 		Prerequisites: techcenter, ~structures.yi
 		BuildLimit: 1
-		Description: Orders an orbital railgun strike.\nRequires power to operate.\nMaximum 1 can be built.\n  Special Ability: Orbital Railgun
+		Description: Orders an orbital railgun strike.\n  Requires power to operate.\n  Maximum 1 can be built.\n  Special Ability: Orbital Railgun
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
@@ -1596,7 +1596,7 @@ TELEVATR:
 		Queue: Defense
 		BuildPaletteOrder: 120
 		Prerequisites: techcenter
-		Description: Teleports a unit to\nanother televator.\nRequires power to operate.
+		Description: Teleports a unit to\nanother televator.\n  Requires power to operate.
 	Valued:
 		Cost: 1500
 	Tooltip:
