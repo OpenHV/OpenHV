@@ -94,7 +94,7 @@ Assemblies:
 	^BinDir|OpenRA.Mods.HV.dll
 
 ChromeLayout:
-	common|chrome/ingame.yaml
+	hv|chrome/ingame.yaml
 	common|chrome/ingame-chat.yaml
 	common|chrome/ingame-transients.yaml
 	common|chrome/ingame-fmvplayer.yaml
@@ -157,14 +157,14 @@ Voices:
 	hv|audio/voices.yaml
 
 Hotkeys:
-	common|hotkeys/game.yaml
+	hv|hotkeys/game.yaml
 	common|hotkeys/observer.yaml
 	common|hotkeys/production-common.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
 	common|hotkeys/chat.yaml
 	common|hotkeys/control-groups.yaml
-	hv|hotkeys.yaml
+	hv|hotkeys/production.yaml
 
 LoadScreen: TextLoadScreen
 

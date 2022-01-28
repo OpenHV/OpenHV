@@ -1,5 +1,3 @@
-# License: GPL-3.0+
-
 Container@OBSERVER_WIDGETS:
 	Logic: MenuButtonsChromeLogic, LoadIngameChatLogic
 	Children:
