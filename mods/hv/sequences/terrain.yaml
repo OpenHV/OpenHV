@@ -7,74 +7,102 @@ cave:
 big_rock:
 	idle: bits/terrain/big_rock.png
 	shadow-overlay: bits/terrain/big_rock-shadow.png
+		ZOffset: -2048
 
 rock1:
 	idle: bits/terrain/rock1.png
 	shadow-overlay: bits/terrain/rock1-shadow.png
+		ZOffset: -2048
 
 rock2:
 	idle: bits/terrain/rock2.png
 	shadow-overlay: bits/terrain/rock2-shadow.png
+		ZOffset: -2048
 
 rock3:
 	idle: bits/terrain/rock3.png
 	shadow-overlay: bits/terrain/rock3-shadow.png
+		ZOffset: -2048
 
 rock4:
 	idle: bits/terrain/rock4.png
 	shadow-overlay: bits/terrain/rock4-shadow.png
+		ZOffset: -2048
 
 rock5:
 	idle: bits/terrain/rock5.png
 	shadow-overlay: bits/terrain/rock5-shadow.png
+		ZOffset: -2048
 
 rock6:
 	idle: bits/terrain/rock6.png
 	shadow-overlay: bits/terrain/rock6-shadow.png
+		ZOffset: -2048
 
 rock7:
 	idle: bits/terrain/rock7.png
 	shadow-overlay: bits/terrain/rock7-shadow.png
+		ZOffset: -2048
 
 rock8:
 	idle: bits/terrain/rock8.png
 	shadow-overlay: bits/terrain/rock8-shadow.png
+		ZOffset: -2048
 
 rock9:
 	idle: bits/terrain/rock9.png
 	shadow-overlay: bits/terrain/rock9-shadow.png
+		ZOffset: -2048
 
 rock10:
 	idle: bits/terrain/rock10.png
 	shadow-overlay: bits/terrain/rock10-shadow.png
+		ZOffset: -2048
 
 rock11:
 	idle: bits/terrain/rock11.png
 	shadow-overlay: bits/terrain/rock11-shadow.png
+		ZOffset: -2048
 
 rock12:
 	idle: bits/terrain/rock12.png
 	shadow-overlay: bits/terrain/rock12-shadow.png
+		ZOffset: -2048
 
 grssmisc6:
 	idle: bits/terrain/grssmisc6.png
 	shadow-overlay: bits/terrain/grssmisc6-shadow.png
+		ZOffset: -2048
 
 grssmisc7:
 	idle: bits/terrain/grssmisc7.png
 	shadow-overlay: bits/terrain/grssmisc7-shadow.png
+		ZOffset: -2048
+
+grssmisc8:
+	idle: bits/terrain/grssmisc8.png
+	shadow-overlay: bits/terrain/grssmisc8-shadow.png
+		ZOffset: -2048
+
+grssmisc9:
+	idle: bits/terrain/grssmisc9.png
+	shadow-overlay: bits/terrain/grssmisc9-shadow.png
+		ZOffset: -2048
 
 icicle1:
 	idle: bits/terrain/icicle1.png
 	shadow-overlay: bits/terrain/icicle1-shadow.png
+		ZOffset: -2048
 
 icicle2:
 	idle: bits/terrain/icicle2.png
 	shadow-overlay: bits/terrain/icicle2-shadow.png
+		ZOffset: -2048
 
 icicle4:
 	idle: bits/terrain/icicle4.png
 	shadow-overlay: bits/terrain/icicle4-shadow.png
+		ZOffset: -2048
 
 lavabubl:
 	active: bits/terrain/lavabubl.png
@@ -86,34 +114,40 @@ mntmisc8:
 		Offset: 0, -2
 	shadow-overlay: bits/terrain/mntmisc8-shadow.png
 		Offset: 0, -2
+		ZOffset: -2048
 
 mntmisc9:
 	idle: bits/terrain/mntmisc9.png
 		Offset: 0, -4
 	shadow-overlay: bits/terrain/mntmisc9-shadow.png
 		Offset: 0, -4
+		ZOffset: -2048
 
 mntmisc11:
 	idle: bits/terrain/mntmisc11.png
 	shadow-overlay: bits/terrain/mntmisc11-shadow.png
+		ZOffset: -2048
 
 sandmisc6:
 	idle: bits/terrain/sandmisc6.png
 		Offset: 0, 2
 	shadow-overlay: bits/terrain/sandmisc6-shadow.png
 		Offset: 0, 2
+		ZOffset: -2048
 
 sandmisc7:
 	idle: bits/terrain/sandmisc7.png
 		Offset: 0, -2
 	shadow-overlay: bits/terrain/sandmisc7-shadow.png
 		Offset: 0, -2
+		ZOffset: -2048
 
 sandmisc8:
 	idle: bits/terrain/sandmisc8.png
 		Offset: 0, -2
 	shadow-overlay: bits/terrain/sandmisc8-shadow.png
 		Offset: 0, -2
+		ZOffset: -2048
 
 craters:
 	Defaults:
@@ -127,26 +161,77 @@ craters:
 stnrock1:
 	idle: bits/terrain/stnrock1.png
 	shadow-overlay: bits/terrain/stnrock1-shadow.png
+		ZOffset: -2048
 
 stnrock2:
 	idle: bits/terrain/stnrock2.png
 	shadow-overlay: bits/terrain/stnrock2-shadow.png
+		ZOffset: -2048
 
 stnrock3:
 	idle: bits/terrain/stnrock3.png
 	shadow-overlay: bits/terrain/stnrock3-shadow.png
+		ZOffset: -2048
 
 stnrock4:
 	idle: bits/terrain/stnrock4.png
 	shadow-overlay: bits/terrain/stnrock4-shadow.png
+		ZOffset: -2048
 
 stnrock5:
 	idle: bits/terrain/stnrock5.png
 	shadow-overlay: bits/terrain/stnrock5-shadow.png
+		ZOffset: -2048
 
 stnrock6:
 	idle: bits/terrain/stnrock6.png
 	shadow-overlay: bits/terrain/stnrock6-shadow.png
+		ZOffset: -2048
+
+stnrock7:
+	idle: bits/terrain/stnrock7.png
+	shadow-overlay: bits/terrain/stnrock7-shadow.png
+		ZOffset: -2048
+
+stnrock8:
+	idle: bits/terrain/stnrock8.png
+	shadow-overlay: bits/terrain/stnrock8-shadow.png
+		ZOffset: -2048
+
+stnrock9:
+	idle: bits/terrain/stnrock9.png
+	shadow-overlay: bits/terrain/stnrock9-shadow.png
+		ZOffset: -2048
+
+stnrock10:
+	idle: bits/terrain/stnrock10.png
+	shadow-overlay: bits/terrain/stnrock10-shadow.png
+		ZOffset: -2048
+
+stnrock11:
+	idle: bits/terrain/stnrock11.png
+	shadow-overlay: bits/terrain/stnrock11-shadow.png
+		ZOffset: -2048
+
+stnrock12:
+	idle: bits/terrain/stnrock12.png
+	shadow-overlay: bits/terrain/stnrock12-shadow.png
+		ZOffset: -2048
+
+stnrock13:
+	idle: bits/terrain/stnrock13.png
+	shadow-overlay: bits/terrain/stnrock13-shadow.png
+		ZOffset: -2048
+
+stnrock14:
+	idle: bits/terrain/stnrock14.png
+	shadow-overlay: bits/terrain/stnrock14-shadow.png
+		ZOffset: -2048
+
+stnrock15:
+	idle: bits/terrain/stnrock15.png
+	shadow-overlay: bits/terrain/stnrock15-shadow.png
+		ZOffset: -2048
 
 swmpani:
 	idle: bits/terrain/swmpani.png
@@ -162,32 +247,38 @@ swmpbubl:
 treegrs10:
 	idle: bits/terrain/treegrs10.png
 	shadow-overlay: bits/terrain/treegrs10-shadow.png
+		ZOffset: -2048
 
 treegrs11:
 	idle: bits/terrain/treegrs11.png
 	shadow-overlay: bits/terrain/treegrs11-shadow.png
+		ZOffset: -2048
 
 treegrs12:
 	idle: bits/terrain/treegrs12.png
 	shadow-overlay: bits/terrain/treegrs12-shadow.png
+		ZOffset: -2048
 
 trees4:
 	idle: bits/terrain/trees4.png
 		Offset: 0, 10
 	shadow-overlay: bits/terrain/trees4-shadow.png
 		Offset: 0, 10
+		ZOffset: -2048
 
 trees17:
 	idle: bits/terrain/trees17.png
 		Offset: 0, 10
 	shadow-overlay: bits/terrain/trees17-shadow.png
 		Offset: 0, 10
+		ZOffset: -2048
 
 trees18:
 	idle: bits/terrain/trees18.png
 		Offset: 1, 10
 	shadow-overlay: bits/terrain/trees18-shadow.png
 		Offset: 1, 10
+		ZOffset: -2048
 
 treemud:
 	idle: bits/terrain/treemud.png
@@ -222,3 +313,15 @@ wateranim3:
 		Length: *
 		Tick: 240
 		ZOffset: -3072
+
+cactimud:
+	idle: bits/terrain/cactimud.png
+		ZOffset: -2048
+	shadow-overlay: bits/terrain/cactimud-shadow.png
+		ZOffset: -2048
+
+cactiash:
+	idle: bits/terrain/cactiash.png
+		ZOffset: -2048
+	shadow-overlay: bits/terrain/cactiash-shadow.png
+		ZOffset: -2048
