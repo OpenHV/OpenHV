@@ -104,6 +104,18 @@ GRSSMISC7:
 		Footprint: __ == xx =x
 		Dimensions: 2,4
 
+GRSSMISC8:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ x
+		Dimensions: 1,2
+
+GRSSMISC9:
+	Inherits: ^Rock
+	Building:
+		Footprint: _ = x
+		Dimensions: 1,3
+
 ICICLE1:
 	Inherits: ^Rock
 	Building:
@@ -123,22 +135,34 @@ ICICLE4:
 		Dimensions: 1,1
 
 MNTMISC8:
-	Inherits: ^Rock
+	Inherits: ^Tree
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+	SpawnActorOnDeath@Crush:
+		Actor: CACTIMUD
+	SpawnActorOnDeath@Ash:
+		Actor: CACTIASH
 
 MNTMISC9:
-	Inherits: ^Rock
+	Inherits: ^Tree
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+	SpawnActorOnDeath@Crush:
+		Actor: CACTIMUD
+	SpawnActorOnDeath@Ash:
+		Actor: CACTIASH
 
 MNTMISC11:
-	Inherits: ^Rock
+	Inherits: ^Tree
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+	SpawnActorOnDeath@Crush:
+		Actor: CACTIMUD
+	SpawnActorOnDeath@Ash:
+		Actor: CACTIASH
 
 SANDMISC6:
 	Inherits: ^Rock
@@ -190,6 +214,68 @@ STNROCK5:
 		Footprint: x
 		Dimensions: 1,1
 
+STNROCK7:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK8:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+STNROCK9:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK10:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+STNROCK11:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK12:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+STNROCK13:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+
+STNROCK14:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+STNROCK15:
+	Inherits: ^Rock
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
 STNROCK6:
 	Inherits: ^Rock
 	Building:
@@ -201,67 +287,34 @@ TREEGRS10:
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
 	SpawnActorOnDeath@Crush:
 		Actor: TREEMUD
 		Offset: 0,1
 	SpawnActorOnDeath@Ash:
 		Actor: TREEASH
 		Offset: 0,1
-	WithIdleOverlay:
-		Sequence: shadow-overlay
-		Palette: shadow-decoration
-		IsDecoration: true
 
 TREEGRS11:
 	Inherits: ^Tree
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
 	SpawnActorOnDeath@Crush:
 		Actor: TREEMUD
 		Offset: 0,1
 	SpawnActorOnDeath@Ash:
 		Actor: TREEASH
 		Offset: 0,1
-	WithIdleOverlay:
-		Sequence: shadow-overlay
-		Palette: shadow-decoration
-		IsDecoration: true
 
 TREEGRS12:
 	Inherits: ^Tree
 	Building:
 		Footprint: x
 		Dimensions: 1,1
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
 	SpawnActorOnDeath@Crush:
 		Actor: TREEMUD
 	SpawnActorOnDeath@Ash:
 		Actor: TREEASH
-	WithIdleOverlay:
-		Sequence: shadow-overlay
-		Palette: shadow-decoration
-		IsDecoration: true
 
 TREEMUD:
 	Inherits: ^Rock
@@ -286,66 +339,51 @@ TREES4:
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
 	SpawnActorOnDeath@Crush:
 		Actor: TREEMUD
 		Offset: 0,1
 	SpawnActorOnDeath@Ash:
 		Actor: TREEASH
 		Offset: 0,1
-	WithIdleOverlay:
-		Sequence: shadow-overlay
-		Palette: shadow-decoration
-		IsDecoration: true
 
 TREES17:
 	Inherits: ^Tree
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
 	SpawnActorOnDeath@Crush:
 		Actor: TREEMUD
 		Offset: 0,1
 	SpawnActorOnDeath@Ash:
 		Actor: TREEASH
 		Offset: 0,1
-	WithIdleOverlay:
-		Sequence: shadow-overlay
-		Palette: shadow-decoration
-		IsDecoration: true
 
 TREES18:
 	Inherits: ^Tree
 	Building:
 		Footprint: _ x
 		Dimensions: 1,2
-	RenderSprites:
-		Palette: terrain
-	WithSpriteBody:
-	RadarColorFromTerrain:
-		Terrain: Plant
-	AppearsOnMapPreview:
-		Terrain: Plant
 	SpawnActorOnDeath@Crush:
 		Actor: TREEMUD
 		Offset: 0,1
 	SpawnActorOnDeath@Ash:
 		Actor: TREEASH
 		Offset: 0,1
-	WithIdleOverlay:
-		Sequence: shadow-overlay
-		Palette: shadow-decoration
-		IsDecoration: true
+
+CACTIMUD:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	-MapEditorData:
+
+CACTIASH:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	-MapEditorData:

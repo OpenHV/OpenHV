@@ -719,6 +719,7 @@
 		Condition: burning
 		ValidDamageStates: Medium, Heavy, Critical
 	RenderSprites:
+		Palette: terrain
 	WithDamagedOverlay:
 		Image: fire
 		Sequence: flame
@@ -726,6 +727,16 @@
 	PeriodicDischarge:
 		Weapon: ForestFire
 		RequiresCondition: burning
+
+	WithSpriteBody:
+	RadarColorFromTerrain:
+		Terrain: Plant
+	AppearsOnMapPreview:
+		Terrain: Plant
+	WithIdleOverlay:
+		Sequence: shadow-overlay
+		Palette: shadow-decoration
+		IsDecoration: true
 
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld
