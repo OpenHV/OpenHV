@@ -791,6 +791,9 @@
 		MovingInterval: 4
 		StartDelay: 4
 		Type: CenterPosition
+	DetectCloaked:
+		CloakTypes: Underwater
+		Range: 2c0
 
 ^Cube:
 	Interactable:

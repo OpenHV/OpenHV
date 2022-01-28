@@ -42,7 +42,6 @@ BOAT3:
 		Armaments: primary, secondary
 	WithSpriteTurret:
 	DetectCloaked:
-		CloakTypes: Underwater
 		Range: 6c0
 	WithMuzzleOverlay:
 		IgnoreOffset: True
@@ -95,7 +94,6 @@ PATROLBOAT:
 		Armaments: primary, secondary
 	WithSpriteTurret:
 	DetectCloaked:
-		CloakTypes: Underwater
 		Range: 6c0
 	WithMuzzleOverlay:
 
@@ -285,6 +283,8 @@ BOAT4:
 		InitialStanceAI: ReturnFire
 	LeavesTrails:
 		RequiresCondition: cloak-force-disabled
+	DetectCloaked:
+		Range: 1c0
 
 SLCM:
 	Inherits: ^ShootableMissile
@@ -364,3 +364,5 @@ CARRIER:
 		Weapon: DroneLauncher
 	Voiced:
 		VoiceSet: DroneVoice
+	DetectCloaked:
+		Range: 1c0
