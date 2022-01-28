@@ -390,11 +390,14 @@ Torpedo:
 			Light: 75
 			Heavy: 100
 			Concrete: 100
-	Projectile: Bullet
-		Speed: 350
+	Projectile: Missile
+		Speed: 180
 		Image: bullet1
 		Palette: shadow
 		TrailImage: bubble
+		RangeLimit: 9c0
+		HorizontalRateOfTurn: 10
+		VerticalRateOfTurn: 10
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav

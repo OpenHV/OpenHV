@@ -59,8 +59,8 @@ ChainGun:
 		Versus:
 			None: 180
 			Steel: 30
-			Light: 65
-			Heavy: 35
+			Light: 40
+			Heavy: 25
 			Concrete: 15
 	Warhead@Incendiary: TreeDamage
 		Spread: 64
