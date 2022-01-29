@@ -8435,7 +8435,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Crater
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1133:
 		Id: 1133
 		Images: bits/terrain/tch2crtr.png
