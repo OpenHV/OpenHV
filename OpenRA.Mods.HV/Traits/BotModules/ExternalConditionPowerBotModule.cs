@@ -10,37 +10,33 @@
 #endregion
 
 using System.Linq;
-using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Manages bot defensive support power handling.")]
-	public class DefensiveSupportPowerBotModuleInfo : ConditionalTraitInfo, Requires<SupportPowerManagerInfo>
+	public class ExternalConditionPowerBotModuleInfo : ConditionalTraitInfo, Requires<SupportPowerManagerInfo>
 	{
 		[FieldLoader.Require]
 		[Desc("Which support power to use.")]
 		public readonly string OrderName = null;
 
-		[Desc("Range used to find actors with AI ownership.")]
-		public readonly WDist Range = WDist.FromCells(3);
-
 		[Desc("How many friendlies should at least be affected?")]
 		public readonly int MinimumTargets = 4;
 
-		public override object Create(ActorInitializer init) { return new DefensiveSupportPowerBotModule(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new ExternalConditionPowerBotModule(init.Self, this); }
 	}
 
-	public class DefensiveSupportPowerBotModule : ConditionalTrait<DefensiveSupportPowerBotModuleInfo>, IBotRespondToAttack
+	public class ExternalConditionPowerBotModule : ConditionalTrait<ExternalConditionPowerBotModuleInfo>, IBotRespondToAttack
 	{
 		readonly World world;
 		readonly Player player;
-		readonly DefensiveSupportPowerBotModuleInfo info;
+		readonly ExternalConditionPowerBotModuleInfo info;
 
 		SupportPowerManager supportPowerManager;
 
-		public DefensiveSupportPowerBotModule(Actor self, DefensiveSupportPowerBotModuleInfo info)
+		public ExternalConditionPowerBotModule(Actor self, ExternalConditionPowerBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;
@@ -72,7 +68,8 @@ namespace OpenRA.Mods.HV.Traits
 				if (!sp.Ready)
 					continue;
 
-				var possibleTargets = world.FindActorsOnCircle(self.CenterPosition, info.Range);
+				var externalConditionPower = sp.Instances.First() as GrantExternalConditionPower;
+				var possibleTargets = externalConditionPower.UnitsInRange(self.Location);
 				if (possibleTargets.Any(p => !p.Owner.IsAlliedWith(player)))
 					continue;
 

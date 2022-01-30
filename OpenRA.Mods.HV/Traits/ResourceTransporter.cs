@@ -90,13 +90,13 @@ namespace OpenRA.Mods.HV.Traits
 
 			List<CPos> path;
 
-			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, actors.Select(a => a.Location), self.Location, BlockedByActor.None)
-				.WithCustomCost(loc => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
+			using (var search = PathSearch.ToTargetCell(self.World, mobile.Locomotor, self, actors.Select(a => a.Location), self.Location, BlockedByActor.None,
+				location => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && self.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
-					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(loc) - u.CenterPosition).Length))))
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(location) - u.CenterPosition).Length))))
 				path = self.World.WorldActor.Trait<IPathFinder>().FindPath(search);
 
-			if (path.Count != 0)
+			if (path.Count > 0)
 				return actors.First(r => r.Location == path.Last());
 
 			return null;

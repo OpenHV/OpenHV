@@ -139,7 +139,7 @@ Player:
 		ScoutActorTypes: balloon, saucer
 		MoveRadius: 20
 		RequiresCondition: enable-rogue-ai
-	DefensiveSupportPowerBotModule:
+	ExternalConditionPowerBotModule:
 		RequiresCondition: enable-rogue-ai
 		OrderName: ShieldsUp
 	SupportPowerBotModule:

@@ -64,7 +64,6 @@ namespace OpenRA.Mods.HV.Traits
 		int scanForIdleMinersTicks;
 
 		IPathFinder pathfinder;
-		DomainIndex domainIndex;
 		IResourceLayer resourceLayer;
 
 		IBotRequestUnitProduction[] requestUnitProduction;
@@ -106,7 +105,6 @@ namespace OpenRA.Mods.HV.Traits
 			scanForIdleMinersTicks = world.LocalRandom.Next(0, Info.MinimumScanDelay);
 
 			pathfinder = world.WorldActor.Trait<IPathFinder>();
-			domainIndex = world.WorldActor.Trait<DomainIndex>();
 			resourceLayer = world.WorldActor.TraitOrDefault<IResourceLayer>();
 		}
 
@@ -167,18 +165,18 @@ namespace OpenRA.Mods.HV.Traits
 			var towerInfo = AIUtils.GetInfoByCommonName(Info.DeployedActorTypes, player);
 			var buildingInfo = towerInfo.TraitInfo<BuildingInfo>();
 			Func<CPos, bool> isValidResource = cell =>
-				domainIndex.IsPassable(actor.Location, cell, miner.Locomotor)
-					&& Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
+				Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
 					&& miner.Locomotor.CanStayInCell(cell)
 					&& world.CanPlaceBuilding(cell + miner.Transforms.Info.Offset, towerInfo, buildingInfo, actor);
 
-			var path = pathfinder.FindPath(
-				PathSearch.Search(world, miner.Locomotor, actor, BlockedByActor.Stationary, isValidResource)
-					.WithCustomCost(loc => world.FindActorsInCircle(world.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
-						.Where(u => !u.IsDead && actor.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
-						.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(loc) - u.CenterPosition).Length)))
-					.FromPoint(actor.Location));
+			List<CPos> path;
+			using (var search = PathSearch.ToTargetCellByPredicate(
+				world, miner.Locomotor, actor, new[] { actor.Location }, isValidResource, BlockedByActor.Stationary,
+				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
+					.Where(u => !u.IsDead && actor.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length))))
 
+			path = pathfinder.FindPath(search);
 			if (path.Count == 0)
 				return Target.Invalid;
 

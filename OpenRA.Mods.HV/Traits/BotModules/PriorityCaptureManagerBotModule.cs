@@ -64,7 +64,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		int minCaptureDelayTicks;
 		IPathFinder pathfinder;
-		DomainIndex domainIndex;
 		CPos initialBaseCenter;
 
 		public PriorityCaptureManagerBotModule(Actor self, PriorityCaptureManagerBotModuleInfo info)
@@ -92,7 +91,6 @@ namespace OpenRA.Mods.HV.Traits
 			minCaptureDelayTicks = world.LocalRandom.Next(Info.MinimumCaptureDelay);
 
 			pathfinder = world.WorldActor.Trait<IPathFinder>();
-			domainIndex = world.WorldActor.Trait<DomainIndex>();
 		}
 
 		void IBotTick.BotTick(IBot bot)
@@ -229,16 +227,14 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var locomotor = capturer.Trait<Mobile>().Locomotor;
 
-			if (!domainIndex.IsPassable(capturer.Location, target.Location, locomotor))
-				return Target.Invalid;
+			List<CPos> path;
 
-			var path = pathfinder.FindPath(
-				PathSearch.FromPoint(world, locomotor, capturer, capturer.Location, target.Location, BlockedByActor.None)
-					.WithCustomCost(loc => world.FindActorsInCircle(world.Map.CenterOfCell(loc), Info.EnemyAvoidanceRadius)
-						.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
-						.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(loc) - u.CenterPosition).Length)))
-					.FromPoint(capturer.Location));
+			using (var search = PathSearch.ToTargetCell(world, locomotor, capturer, capturer.Location, target.Location, BlockedByActor.None,
+				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
+					.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length))))
 
+			path = pathfinder.FindPath(search);
 			if (path.Count == 0)
 				return Target.Invalid;
 
