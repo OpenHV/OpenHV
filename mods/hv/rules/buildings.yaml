@@ -1118,7 +1118,7 @@ TURRET2:
 
 AATURRET:
 	Inherits: ^DefenseBuilding
-	Inherits@AutoTarget: ^AutoTargetGround
+	Inherits@AutoTarget: ^AutoTargetAir
 	Selectable:
 		Bounds: 2048, 1536, 0, -256
 	Buildable:
