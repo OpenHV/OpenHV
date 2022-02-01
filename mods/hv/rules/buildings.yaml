@@ -1944,6 +1944,8 @@ GATE-HORIZONTAL:
 		Connections: -1,0, 1,0
 	GrantConditionOnLineBuildConnection:
 		Edges: -1,0, 3,0
+	PlaceBuildingVariants:
+		Actors: gate-vertical
 
 GATE-VERTICAL:
 	Inherits: ^GATE
@@ -1961,6 +1963,8 @@ GATE-VERTICAL:
 		Connections: 0,-1, 0,1
 	GrantConditionOnLineBuildConnection:
 		Edges: 0,-1, 0,3
+	PlaceBuildingVariants:
+		Actors: gate-horizontal
 
 WALLTOP:
 	Inherits: ^Wall
