@@ -232,3 +232,13 @@ TANKTRAP:
 		Type: Footprint
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
+
+PROP9:
+	Inherits: PROP4
+	Tooltip:
+		Name: Civilian lightning tower
+
+PROP10:
+	Inherits: PROP4
+	Tooltip:
+		Name: Civilian plasma tower
