@@ -155,3 +155,25 @@ tanktrap:
 	idle: bits/tanktraps.png
 	damaged-idle: bits/tanktraps.png
 		Start: 1
+
+prop9:
+	Defaults:
+		Offset: 0,5
+	idle: bits/prop9.png
+		Length: 5
+		Tick: 80
+	damaged-idle: bits/prop9.png
+		Start: 6
+	shadow-overlay: bits/prop9-10-shadow.png
+		Offset: 13,33
+		ZOffset: 1768
+	damaged-shadow-overlay: bits/prop9-10-shadow.png
+		Start: 1
+		Offset: 13,33
+		ZOffset: 1768
+
+prop10:
+	Inherits: prop9
+	idle: bits/prop10.png
+		Tick: 120
+	damaged-idle: bits/prop10.png
