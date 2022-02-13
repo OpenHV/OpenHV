@@ -7,7 +7,7 @@ PLANE1:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: radar, ~starport.yi
+		Prerequisites: ~starport.yi
 		Description: Attack Ship armed with\na large chain gun.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
 	Valued:
 		Cost: 1000
@@ -63,7 +63,7 @@ PLANE2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar, ~starport.yi
+		Prerequisites: techcenter, ~starport.yi
 		Description: Fast Attack Ship\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
 	Valued:
 		Cost: 1500
@@ -124,7 +124,7 @@ COPTER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: radar, ~starport.sc
+		Prerequisites: ~starport.sc
 		Description: Small Helicopter Gunship\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -242,7 +242,7 @@ COPTER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar, ~starport.sc
+		Prerequisites: ~starport.sc
 		Description: Vehicle Transport Helicopter.\n  Armed with light machine gun.\n  Can lift one vehicle\n  Can transport pods
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -338,7 +338,7 @@ DROPSHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: radar, ~starport.yi
+		Prerequisites: ~starport.yi
 		Description: Vehicle Transport Shuttle.\n  Armed with light missiles.\n  Can lift one vehicle\n  Can transport pods
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -381,6 +381,7 @@ DROPSHIP:
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
 		Voice: Unload
+		PickUpCursor: enter
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
