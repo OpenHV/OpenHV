@@ -20,7 +20,7 @@ MOTHER2C:
 	Inherits: MOTHER2B
 
 MOTHER:
-	Inherits: ^BaseBuilding
+	Inherits: ^Building
 	Inherits@Shape: ^6x8Shape
 	Selectable:
 		Bounds: 5786, 7424
@@ -49,3 +49,5 @@ MOTHER:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
+	CaptureManager:
+		-BeingCapturedCondition: being-captured

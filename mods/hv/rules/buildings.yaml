@@ -56,10 +56,6 @@ BASE:
 		ProductionType: Vehicle
 	ProductionSound:
 		Files: Quedicemipez__teleportation.wav
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
@@ -212,18 +208,6 @@ GENERATOR:
 		Image: generator
 		FactionImages:
 			sc: generator2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -267,18 +251,6 @@ RADAR:
 		Amount: -40
 	ProvidesPrerequisite@BuildingName:
 		Prerequisite: radar
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	AirstrikePower:
 		PauseOnCondition: lowpower
 		Icon: airstrike
@@ -405,18 +377,6 @@ TRADPLAT:
 		Image: tradplat
 		FactionImages:
 			sc: tradplat2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -503,24 +463,12 @@ MODULE:
 		Image: module
 		FactionImages:
 			sc: module2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
 
 MINER2:
-	Inherits: ^BaseBuilding
+	Inherits: ^Building
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame2
 	Selectable:
@@ -548,17 +496,15 @@ MINER2:
 		RequiresCondition: !build-incomplete
 	Exit:
 	WithSpriteBody:
-	WithDrillingAnimation:
 	WithMakeAnimation:
 		Condition: build-incomplete
+	WithDrillingAnimation:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
 		RequiresBaseProvider: false
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
 		AllowPlacementOnResources: true
-	-RequiresBuildableArea:
-	-GivesBuildableArea:
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -572,9 +518,6 @@ MINER2:
 		Palette: green
 		IsPlayerPalette: true
 		RequiresCondition: !build-incomplete && !critical
-	Capturable:
-		RequiresCondition: !build-incomplete
-	-Sellable:
 	Transforms:
 		PauseOnCondition: build-incomplete || being-captured
 		IntoActor: miner
@@ -640,18 +583,6 @@ STARPORT:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithProductionOverlay:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
@@ -714,18 +645,6 @@ FACTORY3:
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.yi
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 		RequiresCondition: !build-incomplete
@@ -978,18 +897,6 @@ TECHCENTER:
 		Image: techcenter
 		FactionImages:
 			sc: techcenter2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@animation:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
@@ -1326,18 +1233,6 @@ FIELD:
 		Image: field
 		FactionImages:
 			sc: field2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -1398,18 +1293,6 @@ SILO:
 		RequiredForShortGame: false
 	WithIdleOverlay@lights:
 		Sequence: animation_lights
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 		RequiresCondition: !build-incomplete
 	WithIdleOverlay@red_light:
 		Sequence: animation_red_light
@@ -1473,18 +1356,6 @@ UPLINK:
 	WithIdleOverlay@lights:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
 
 STORAGE:
 	Inherits: ^BaseBuilding
@@ -1522,18 +1393,6 @@ STORAGE:
 		Image: storage2
 		FactionImages:
 			sc: storage
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	ExitsDebugOverlay:
 	Exit@Top:
 		ExitCell: 2, 0
@@ -1639,18 +1498,6 @@ TELEVATR:
 		Font: TinyPixel
 	PlaceBuildingVariants:
 		Actors: televtr2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 
 TELEVTR2:
 	Inherits: TELEVATR
@@ -1665,10 +1512,6 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 
 HARBOR:
 	Inherits: ^BaseBuilding
@@ -1753,18 +1596,6 @@ HARBOR:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
-	Capturable:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	WithIdleOverlay@Entry:
 		Sequence: idle-entry
 		RequiresCondition: !build-incomplete
@@ -1857,6 +1688,8 @@ BARRIER:
 	Interactable:
 	Replaceable:
 		Types: wall
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 
 ^GATE:
 	Inherits: ^Building
@@ -1927,6 +1760,8 @@ BARRIER:
 		AddToAssetsValue: false
 	Sellable:
 		SellSounds: Quedicemipez_teleportation-barrier-sell.wav
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 
 GATE-HORIZONTAL:
 	Inherits: ^GATE
@@ -2131,10 +1966,6 @@ TECHBUILDING:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	WithIdleOverlay@lights:
 		Sequence: animation-lights
 		RequiresCondition: !disable-lights && !ownerless && !disabled
@@ -2142,8 +1973,6 @@ TECHBUILDING:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
 	-Sellable:
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	OwnerLostAction:
@@ -2209,9 +2038,11 @@ TECHBUILDING:
 		Position: Top
 		Margin: 0, 5
 		RequiresCondition: reconstructor > 4
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 
 TECHMINER:
-	Inherits: ^BaseBuilding
+	Inherits: ^Building
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame2
@@ -2233,8 +2064,6 @@ TECHMINER:
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
 		AllowPlacementOnResources: true
 		LocalCenterOffset: 0,1024,0
-	-RequiresBuildableArea:
-	-GivesBuildableArea:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
@@ -2253,24 +2082,19 @@ TECHMINER:
 		Range: 2c0
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-Sellable:
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
 	CashTrickler:
 		Amount: 200
 		Interval: 500
 		DisplayDuration: 50
 		PauseOnCondition: disabled
 	CashTricklerBar:
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 
 TECHCOMLINK:
-	Inherits: ^BaseBuilding
+	Inherits: ^Building
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
@@ -2308,8 +2132,6 @@ TECHCOMLINK:
 		RequiresBaseProvider: false
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
 		AllowPlacementOnResources: true
-	-RequiresBuildableArea:
-	-GivesBuildableArea:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
@@ -2326,13 +2148,6 @@ TECHCOMLINK:
 		Range: 3c0
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-Sellable:
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
 	WithIdleOverlay@lights:
@@ -2341,3 +2156,5 @@ TECHCOMLINK:
 	GrantConditionOnDamageState@disable-lights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
+	CaptureManager:
+		-BeingCapturedCondition: being-captured

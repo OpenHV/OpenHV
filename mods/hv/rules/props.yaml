@@ -202,7 +202,6 @@ PROP6:
 	RenderSprites:
 		Palette: terrain
 	-ThrowsShrapnel:
-	-ShakeOnDeath:
 	Explodes:
 		Type: Footprint
 		Weapon: PropExplode
@@ -227,7 +226,6 @@ TANKTRAP:
 	Tooltip:
 		Name: Tank Trap
 	-ThrowsShrapnel:
-	-ShakeOnDeath:
 	Explodes:
 		Type: Footprint
 		Weapon: UnitExplodeSmall

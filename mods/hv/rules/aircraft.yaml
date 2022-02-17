@@ -483,7 +483,6 @@ LANDEDPOD:
 	HitShape:
 	Armor:
 		Type: Heavy
-	-ShakeOnDeath:
 	-ThrowsShrapnel:
 	-MapEditorData:
 

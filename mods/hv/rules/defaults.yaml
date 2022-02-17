@@ -459,10 +459,38 @@
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+		RepairingNotification: Repairing
+	WithBuildingRepairDecoration:
+		Image: repair
+		Sequence: idle
+		Position: Center
+	CaptureManager:
+		BeingCapturedCondition: being-captured
+	Capturable:
+		Types: building
+	CapturableProgressBar:
+	CapturableProgressBlink:
+	CaptureNotification:
 
 ^BaseBuilding:
 	Inherits: ^Building
 	Inherits@Handicaps: ^PlayerHandicaps
+	WithMakeAnimation:
+		Condition: build-incomplete
+	WithConstructionBeamOverlay:
+		RequiresCondition: !build-incomplete
+		Condition: beam-incomplete
+	WithIdleOverlay@Shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
+	Capturable:
+		RequiresCondition: !build-incomplete && !beam-incomplete
 	Building:
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail
@@ -473,24 +501,8 @@
 		Adjacent: 4
 	MustBeDestroyed:
 		RequiredForShortGame: true
-	RepairableBuilding:
-		RepairPercent: 40
-		RepairStep: 1000
-		PlayerExperience: 15
-		RepairingNotification: Repairing
-	WithBuildingRepairDecoration:
-		Image: repair
-		Sequence: idle
-		Position: Center
 	GivesBuildableArea:
 		AreaTypes: building
-	CaptureManager:
-		BeingCapturedCondition: being-captured
-	Capturable:
-		Types: building
-	CapturableProgressBar:
-	CapturableProgressBlink:
-	CaptureNotification:
 	Sellable:
 		RequiresCondition: !being-captured
 		SellSounds: Freqman_fx376-reverse.wav
@@ -531,16 +543,6 @@
 		Amount: -60
 	RenderSprites:
 		PlayerPalette: green
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
-	WithMakeAnimation:
-		Condition: build-incomplete
-	WithConstructionBeamOverlay:
-		RequiresCondition: !build-incomplete
-		Condition: beam-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	-CommandBarBlacklist:
@@ -548,15 +550,36 @@
 		Range: 5c0
 
 ^Prop:
-	Inherits: ^Building
-	-Selectable:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Building:
+		Dimensions: 1,1
+		Footprint: x
 	Interactable:
+	FrozenUnderFog:
 	Tooltip:
+		GenericName: Structure
 		ShowOwnerRow: false
 	MapEditorData:
 		Categories: Decoration
+	WithSpriteBody:
+	CommandBarBlacklist:
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
+	ThrowsShrapnel:
+		Weapons: Debris
+		Pieces: 5, 10
+		Range: 1c512, 4c0
+	ThrowsShrapnel@large:
+		Weapons: LargeDebris
+		Pieces: 0, 1
+		Range: 1c512, 4c0
+	Demolishable:
+	UpdatesPlayerStatistics:
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
 
 ^DisableOnLowPower:
 	WithColoredOverlay@Disable:
