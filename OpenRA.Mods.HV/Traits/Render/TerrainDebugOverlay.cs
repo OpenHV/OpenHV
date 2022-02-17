@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	class TerrainDebugOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
 	{
-		const string CommandName = "terraindebug";
+		const string CommandName = "tile-id";
 		const string CommandDesc = "Toggles the terrain debug overlay.";
 
 		public bool Enabled;

@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	class ResourceDensityOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
 	{
-		const string CommandName = "resourcedebug";
+		const string CommandName = "resource-density";
 		const string CommandDesc = "Toggles the resource debug overlay.";
 
 		public bool Enabled;
