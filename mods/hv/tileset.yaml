@@ -11268,3 +11268,67 @@ Templates:
 		Categories: Tech, Swamp
 		Tiles:
 			0: Cliff
+	Template@1501:
+		Id: 1501
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1502:
+		Id: 1502
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1503:
+		Id: 1503
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1504:
+		Id: 1504
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1505:
+		Id: 1505
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1506:
+		Id: 1506
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1507:
+		Id: 1507
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
+	Template@1508:
+		Id: 1508
+		Images: bits/terrain/techcliffend.png
+		Size: 1,1
+		Frames: 7
+		Categories: Tech, Cliff
+		Tiles:
+			0: Cliff
