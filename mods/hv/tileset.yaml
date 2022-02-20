@@ -11332,3 +11332,99 @@ Templates:
 		Categories: Tech, Cliff
 		Tiles:
 			0: Cliff
+	Template@1509:
+		Id: 1509
+		Images: bits/terrain/grs2sand.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1510:
+		Id: 1510
+		Images: bits/terrain/grs2sand.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1511:
+		Id: 1511
+		Images: bits/terrain/grs2sand.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1512:
+		Id: 1512
+		Images: bits/terrain/grs2sand.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1513:
+		Id: 1513
+		Images: bits/terrain/grs2sand.png
+		Frames: 4
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1514:
+		Id: 1514
+		Images: bits/terrain/grs2sand.png
+		Frames: 5
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1515:
+		Id: 1515
+		Images: bits/terrain/grs2sand.png
+		Frames: 6
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1516:
+		Id: 1516
+		Images: bits/terrain/grs2sand.png
+		Frames: 7
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1517:
+		Id: 1517
+		Images: bits/terrain/grs2sand.png
+		Frames: 8
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1518:
+		Id: 1518
+		Images: bits/terrain/grs2sand.png
+		Frames: 9
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1519:
+		Id: 1519
+		Images: bits/terrain/grs2sand.png
+		Frames: 10
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
+	Template@1520:
+		Id: 1520
+		Images: bits/terrain/grs2sand.png
+		Frames: 11
+		Size: 1,1
+		Categories: Grass, Sand
+		Tiles:
+			0: Sand
