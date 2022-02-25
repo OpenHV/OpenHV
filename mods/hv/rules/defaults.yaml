@@ -440,7 +440,6 @@
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-		RequiresCondition: !build-incomplete
 	ShakeOnDeath:
 	Guardable:
 		Range: 3c0
@@ -484,6 +483,8 @@
 ^BaseBuilding:
 	Inherits: ^Building
 	Inherits@Handicaps: ^PlayerHandicaps
+	WithIdleOverlay@Shadow:
+		RequiresCondition: !build-incomplete
 	WithMakeAnimation:
 		Condition: build-incomplete
 	WithConstructionBeamOverlay:
