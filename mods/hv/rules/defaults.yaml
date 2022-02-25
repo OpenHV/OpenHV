@@ -436,6 +436,11 @@
 	ActorPreviewPlaceBuildingPreview:
 		PreviewAlpha: 0.65
 	WithSpriteBody:
+	WithIdleOverlay@Shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
+		RequiresCondition: !build-incomplete
 	ShakeOnDeath:
 	Guardable:
 		Range: 3c0
@@ -484,11 +489,6 @@
 	WithConstructionBeamOverlay:
 		RequiresCondition: !build-incomplete
 		Condition: beam-incomplete
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
-		RequiresCondition: !build-incomplete
 	Capturable:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	Building:

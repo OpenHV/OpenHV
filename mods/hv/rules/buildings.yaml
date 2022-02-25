@@ -496,6 +496,7 @@ MINER2:
 		RequiresCondition: !build-incomplete
 	Exit:
 	WithSpriteBody:
+	-WithIdleOverlay@Shadow:
 	WithMakeAnimation:
 		Condition: build-incomplete
 	WithDrillingAnimation:
