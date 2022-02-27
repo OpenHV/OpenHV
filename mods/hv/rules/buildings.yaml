@@ -45,7 +45,13 @@ BASE:
 		Factions: sc
 		Prerequisite: structures.sc
 	Buildable:
+		Queue: Base
+		BuildPaletteOrder: 1
+		BuildLimit: 1
 		Description: Builds structures, builders and miners
+		Prerequisites: ~structures.yi
+	GrantExternalConditionToOwner@BaseExits:
+		Condition: base
 	Production:
 		Produces: Building, Defense, Vehicle
 	ProductionBar@Building:
@@ -143,10 +149,20 @@ BASE:
 	WithProductionExitOverlay@East3:
 		ExitCell: 2,4
 		Sequence: active-platform2
+	WithIdleOverlay@make-platform1:
+		Sequence: make-platform1
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@make-platform2:
+		Sequence: make-platform2
+		RequiresCondition: build-incomplete
+		PauseOnCondition: !build-incomplete
 	WithIdleOverlay@platform2:
 		Sequence: idle-platform2
+		RequiresCondition: !build-incomplete
 	TerrainLightSource:
 		Range: 2c512
 		Intensity: 0.1
@@ -169,6 +185,12 @@ BASE2:
 		Image: base2
 	ProvidesPrerequisite:
 		Prerequisite: base
+	Buildable:
+		Queue: Base
+		BuildPaletteOrder: 1
+		BuildLimit: 1
+		Description: Builds structures, builders and miners
+		Prerequisites: ~structures.sc
 
 GENERATOR:
 	Inherits: ^BaseBuilding

@@ -684,6 +684,18 @@ BUILDER:
 		Image: builder1
 		FactionImages:
 			sc: builder4
+	GrantConditionOnPrerequisite:
+		Condition: base
+		Prerequisites: base
+	Production:
+		Produces: Base
+		RequiresCondition: !base
+	ProvidesPrerequisite@yi:
+		Factions: yi
+		Prerequisite: structures.yi
+	ProvidesPrerequisite@sc:
+		Factions: sc
+		Prerequisite: structures.sc
 
 MINER:
 	Inherits: ^Vehicle

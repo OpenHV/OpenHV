@@ -46,6 +46,19 @@ Player:
 	EnemyWatcher:
 	PlayerExperience:
 	GameSaveViewportManager:
+	ExternalCondition@Base:
+		Condition: base
+	ClassicProductionQueue@Base:
+		Type: Base
+		DisplayOrder: 0
+		LowPowerModifier: 300
+		ReadyAudio: BuildingReady
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100
+		BuildDurationModifier: 70
 	ClassicProductionQueue@Building:
 		Type: Building
 		DisplayOrder: 0
@@ -54,8 +67,8 @@ Player:
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		SpeedUp: true
-		BuildTimeSpeedReduction: 100, 75, 50, 25
+		SpeedUp: false
+		BuildTimeSpeedReduction: 100
 		BuildDurationModifier: 70
 	ClassicProductionQueue@Defense:
 		Type: Defense
