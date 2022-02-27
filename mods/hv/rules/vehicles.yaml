@@ -690,10 +690,10 @@ BUILDER:
 	Production:
 		Produces: Base
 		RequiresCondition: !base
-	ProvidesPrerequisite@yi:
+	ProvidesPrerequisite@Yuruki:
 		Factions: yi
 		Prerequisite: structures.yi
-	ProvidesPrerequisite@sc:
+	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
 

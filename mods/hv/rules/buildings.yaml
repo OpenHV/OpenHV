@@ -38,10 +38,10 @@ BASE:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@BuildingName:
-	ProvidesPrerequisite@yi:
+	ProvidesPrerequisite@Yuruki:
 		Factions: yi
 		Prerequisite: structures.yi
-	ProvidesPrerequisite@sc:
+	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
 	Buildable:
