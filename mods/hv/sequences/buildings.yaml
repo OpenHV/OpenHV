@@ -112,6 +112,16 @@ base2:
 	damaged-idle: bits/base2.png
 	damaged-build: bits/base2.png
 	production-inprogress: bits/base2.png
+	idle-platform1: bits/platform2.png
+	damaged-idle-platform1: bits/platform2.png
+	make-platform1: bits/platform2.png
+	active-platform1: bits/creation-sc.png
+	damaged-active-platform1: bits/creation2-damaged.png
+	idle-platform2: bits/platform2.png
+	damaged-idle-platform2: bits/platform2.png
+	make-platform2: bits/platform2.png
+	active-platform2: bits/creation-sc.png
+	damaged-active-platform2: bits/creation2-damaged.png
 	icon: bits/buildings-icons.png
 		Start: 27
 		Offset: 0, 0
