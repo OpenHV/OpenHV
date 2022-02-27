@@ -1701,6 +1701,7 @@ BARRIER:
 	LineBuild:
 		Range: 5
 	-WithSpriteBody:
+	-WithIdleOverlay@Shadow:
 	WithWallSpriteBody:
 		Type: wall
 	WithConstructionBeamOverlay:
