@@ -39,12 +39,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: mpspawn
-		Owner: Neutral
-		Location: 16,30
-	Actor1: mpspawn
-		Owner: Neutral
-		Location: 80,30
 	Actor2: prop2
 		Owner: Neutral
 		Location: 85,19
@@ -190,5 +184,11 @@ Actors:
 	Actor52: rock7
 		Owner: Neutral
 		Location: 72,21
+	Actor53: mpspawn
+		Owner: Neutral
+		Location: 16,31
+	Actor54: mpspawn
+		Owner: Neutral
+		Location: 80,31
 
 Rules: rules.yaml

@@ -237,12 +237,6 @@ Actors:
 	Actor111: lamppost
 		Owner: Neutral
 		Location: 58,90
-	Actor114: mpspawn
-		Owner: Neutral
-		Location: 23,64
-	Actor115: mpspawn
-		Owner: Neutral
-		Location: 73,29
 	Actor100: sandmisc7
 		Owner: Neutral
 		Location: 27,28
@@ -417,5 +411,11 @@ Actors:
 	Actor152: resourcelight
 		Owner: Neutral
 		Location: 67,7
+	Actor171: mpspawn
+		Owner: Neutral
+		Location: 23,65
+	Actor172: mpspawn
+		Owner: Neutral
+		Location: 73,30
 
 Rules: rules.yaml

@@ -114,18 +114,6 @@ Actors:
 	Actor25: icelight
 		Owner: Neutral
 		Location: 65,33
-	Actor27: baselight
-		Owner: Neutral
-		Location: 24,32
-	Actor26: baselight
-		Owner: Neutral
-		Location: 106,33
-	Actor28: mpspawn
-		Owner: Neutral
-		Location: 23,28
-	Actor29: mpspawn
-		Owner: Neutral
-		Location: 105,33
 	Actor30: redsmalllight
 		Owner: Neutral
 		Location: 27,16
@@ -236,5 +224,17 @@ Actors:
 	Actor63: rock2
 		Owner: Neutral
 		Location: 108,46
+	Actor64: mpspawn
+		Owner: Neutral
+		Location: 105,34
+	Actor67: mpspawn
+		Owner: Neutral
+		Location: 23,29
+	Actor65: baselight
+		Owner: Neutral
+		Location: 106,36
+	Actor66: baselight
+		Owner: Neutral
+		Location: 24,31
 
 Rules: rules.yaml

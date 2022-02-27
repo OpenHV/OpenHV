@@ -641,12 +641,6 @@ Actors:
 	Actor230: trees4
 		Owner: Neutral
 		Location: 24,0
-	Actor233: mpspawn
-		Owner: Neutral
-		Location: 17,42
-	Actor231: mpspawn
-		Owner: Neutral
-		Location: 89,42
 	Actor232: rock1
 		Owner: Neutral
 		Location: 60,76
@@ -854,5 +848,11 @@ Actors:
 	Actor301: rock7
 		Owner: Neutral
 		Location: 81,82
+	Actor302: mpspawn
+		Owner: Neutral
+		Location: 89,43
+	Actor303: mpspawn
+		Owner: Neutral
+		Location: 17,43
 
 Rules: rules.yaml

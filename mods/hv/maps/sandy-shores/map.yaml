@@ -457,24 +457,6 @@ Actors:
 	Actor151: sandmisc6
 		Owner: Neutral
 		Location: 59,76
-	Actor152: mpspawn
-		Owner: Neutral
-		Location: 38,116
-	Actor153: mpspawn
-		Owner: Neutral
-		Location: 18,111
-	Actor154: mpspawn
-		Owner: Neutral
-		Location: 15,93
-	Actor155: mpspawn
-		Owner: Neutral
-		Location: 115,34
-	Actor156: mpspawn
-		Owner: Neutral
-		Location: 111,16
-	Actor157: mpspawn
-		Owner: Neutral
-		Location: 94,12
 	Actor158: worm
 		Owner: Neutral
 		Location: 62,62
@@ -568,5 +550,23 @@ Actors:
 		Owner: Neutral
 		Location: 114,117
 		Facing: 245
+	Actor186: mpspawn
+		Owner: Neutral
+		Location: 15,94
+	Actor187: mpspawn
+		Owner: Neutral
+		Location: 18,112
+	Actor188: mpspawn
+		Owner: Neutral
+		Location: 38,117
+	Actor189: mpspawn
+		Owner: Neutral
+		Location: 115,35
+	Actor190: mpspawn
+		Owner: Neutral
+		Location: 111,17
+	Actor191: mpspawn
+		Owner: Neutral
+		Location: 94,13
 
 Rules: rules.yaml

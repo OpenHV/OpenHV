@@ -59,9 +59,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: mpspawn
-		Owner: Neutral
-		Location: 111,29
 	Actor1: barrier
 		Owner: Neutral
 		Location: 90,70
@@ -320,21 +317,6 @@ Actors:
 	Actor96: lamppost
 		Owner: Neutral
 		Location: 82,68
-	Actor98: mpspawn
-		Owner: Neutral
-		Location: 132,79
-	Actor99: mpspawn
-		Owner: Neutral
-		Location: 27,79
-	Actor100: mpspawn
-		Owner: Neutral
-		Location: 49,29
-	Actor101: mpspawn
-		Owner: Neutral
-		Location: 49,124
-	Actor102: mpspawn
-		Owner: Neutral
-		Location: 111,124
 	Actor103: prop3
 		Owner: Neutral
 		Location: 83,88
@@ -573,3 +555,21 @@ Actors:
 	Actor173: rock7
 		Owner: Neutral
 		Location: 156,141
+	Actor174: mpspawn
+		Owner: Neutral
+		Location: 49,125
+	Actor175: mpspawn
+		Owner: Neutral
+		Location: 27,80
+	Actor176: mpspawn
+		Owner: Neutral
+		Location: 49,30
+	Actor177: mpspawn
+		Owner: Neutral
+		Location: 111,30
+	Actor178: mpspawn
+		Owner: Neutral
+		Location: 132,80
+	Actor179: mpspawn
+		Owner: Neutral
+		Location: 111,125

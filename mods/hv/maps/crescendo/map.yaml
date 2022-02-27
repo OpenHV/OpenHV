@@ -211,12 +211,6 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 9,49
-	Actor59: mpspawn
-		Owner: Neutral
-		Location: 22,55
-	Actor60: mpspawn
-		Owner: Neutral
-		Location: 74,55
 	Actor67: resourcelight
 		Owner: Neutral
 		Location: 42,16
@@ -307,5 +301,11 @@ Actors:
 	Actor100: rock7
 		Owner: Neutral
 		Location: 67,28
+	Actor101: mpspawn
+		Owner: Neutral
+		Location: 22,56
+	Actor102: mpspawn
+		Owner: Neutral
+		Location: 74,56
 
 Rules: rules.yaml

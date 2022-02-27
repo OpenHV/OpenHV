@@ -4,15 +4,15 @@ BASE:
 	Inherits: ^BaseBuilding
 	Inherits@Flame: ^BuildingFlame3
 	Selectable:
-		Bounds: 2048, 4096, 0, -1024
+		Bounds: 2048, 3072, 0, -512
 	Valued:
 		Cost: 3500
 	Tooltip:
 		Name: Main Base
 	Building:
-		Footprint: === xx= xx= ++=
-		Dimensions: 3,4
-		LocalCenterOffset: -512,1024,0
+		Footprint: xx xx ++
+		Dimensions: 2,3
+		LocalCenterOffset: 0,512,0
 	HitShape:
 		UseTargetableCellsOffsets: true
 		TargetableOffsets: 1024,0,0, -512,-512,0, -512,512,0

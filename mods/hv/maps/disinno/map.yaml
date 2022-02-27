@@ -178,18 +178,6 @@ Actors:
 	Actor64: lamppost
 		Owner: Neutral
 		Location: 96,38
-	Actor65: mpspawn
-		Owner: Neutral
-		Location: 26,24
-	Actor66: mpspawn
-		Owner: Neutral
-		Location: 102,24
-	Actor67: mpspawn
-		Owner: Neutral
-		Location: 102,101
-	Actor68: mpspawn
-		Owner: Neutral
-		Location: 26,101
 	Actor69: lamppost
 		Owner: Neutral
 		Location: 62,116
@@ -313,18 +301,6 @@ Actors:
 	Actor37: prop3
 		Owner: Neutral
 		Location: 40,61
-	Actor109: baselight
-		Owner: Neutral
-		Location: 102,25
-	Actor110: baselight
-		Owner: Neutral
-		Location: 102,102
-	Actor111: baselight
-		Owner: Neutral
-		Location: 26,102
-	Actor112: baselight
-		Owner: Neutral
-		Location: 26,25
 	Actor113: firelight
 		Owner: Neutral
 		Location: 65,64
@@ -664,5 +640,29 @@ Actors:
 	Actor228: resourcelight
 		Owner: Neutral
 		Location: 1,51
+	Actor229: baselight
+		Owner: Neutral
+		Location: 26,26
+	Actor230: mpspawn
+		Owner: Neutral
+		Location: 26,25
+	Actor231: baselight
+		Owner: Neutral
+		Location: 26,103
+	Actor232: mpspawn
+		Owner: Neutral
+		Location: 26,102
+	Actor233: baselight
+		Owner: Neutral
+		Location: 102,103
+	Actor234: mpspawn
+		Owner: Neutral
+		Location: 102,102
+	Actor235: mpspawn
+		Owner: Neutral
+		Location: 102,25
+	Actor236: baselight
+		Owner: Neutral
+		Location: 102,26
 
 Rules: rules.yaml

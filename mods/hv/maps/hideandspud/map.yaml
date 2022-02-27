@@ -109,18 +109,6 @@ Actors:
 	Actor28: mayanobelisk
 		Owner: Neutral
 		Location: 69,52
-	Actor29: mpspawn
-		Owner: Neutral
-		Location: 26,24
-	Actor30: mpspawn
-		Owner: Neutral
-		Location: 102,24
-	Actor31: mpspawn
-		Owner: Neutral
-		Location: 102,101
-	Actor32: mpspawn
-		Owner: Neutral
-		Location: 26,101
 	Actor33: toplight
 		Owner: Neutral
 		Location: 65,64
@@ -495,5 +483,17 @@ Actors:
 	Actor179: rock7
 		Owner: Neutral
 		Location: 4,99
+	Actor180: mpspawn
+		Owner: Neutral
+		Location: 26,25
+	Actor181: mpspawn
+		Owner: Neutral
+		Location: 26,102
+	Actor182: mpspawn
+		Owner: Neutral
+		Location: 102,102
+	Actor183: mpspawn
+		Owner: Neutral
+		Location: 102,25
 
 Rules: rules.yaml

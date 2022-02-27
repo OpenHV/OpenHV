@@ -73,18 +73,6 @@ Actors:
 	Actor20: techminer
 		Owner: Neutral
 		Location: 102,100
-	Actor25: mpspawn
-		Owner: Neutral
-		Location: 37,90
-	Actor26: mpspawn
-		Owner: Neutral
-		Location: 92,90
-	Actor21: mpspawn
-		Owner: Neutral
-		Location: 92,35
-	Actor22: mpspawn
-		Owner: Neutral
-		Location: 36,35
 	Actor23: gull
 		Owner: Neutral
 		Facing: 384
@@ -409,3 +397,15 @@ Actors:
 	Actor129: rock7
 		Owner: Neutral
 		Location: 30,98
+	Actor130: mpspawn
+		Owner: Neutral
+		Location: 36,36
+	Actor131: mpspawn
+		Owner: Neutral
+		Location: 92,36
+	Actor132: mpspawn
+		Owner: Neutral
+		Location: 92,91
+	Actor133: mpspawn
+		Owner: Neutral
+		Location: 37,91

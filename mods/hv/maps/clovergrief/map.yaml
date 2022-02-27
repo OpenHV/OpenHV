@@ -49,33 +49,9 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: mpspawn
-		Owner: Neutral
-		Location: 30,29
-	Actor1: mpspawn
-		Owner: Neutral
-		Location: 82,29
-	Actor2: mpspawn
-		Owner: Neutral
-		Location: 82,80
-	Actor3: mpspawn
-		Owner: Neutral
-		Location: 30,80
 	Actor4: mayanpyramid
 		Owner: Neutral
 		Location: 56,56
-	Actor5: base_light
-		Owner: Neutral
-		Location: 30,30
-	Actor6: base_light
-		Owner: Neutral
-		Location: 82,30
-	Actor7: base_light
-		Owner: Neutral
-		Location: 82,81
-	Actor8: base_light
-		Owner: Neutral
-		Location: 30,81
 	Actor9: central_light
 		Owner: Neutral
 		Location: 57,57
@@ -175,5 +151,29 @@ Actors:
 	Actor45: rock7
 		Owner: Neutral
 		Location: 70,36
+	Actor46: base_light
+		Owner: Neutral
+		Location: 31,30
+	Actor47: mpspawn
+		Owner: Neutral
+		Location: 30,30
+	Actor48: mpspawn
+		Owner: Neutral
+		Location: 82,30
+	Actor49: base_light
+		Owner: Neutral
+		Location: 83,30
+	Actor50: mpspawn
+		Owner: Neutral
+		Location: 82,81
+	Actor51: base_light
+		Owner: Neutral
+		Location: 83,81
+	Actor52: base_light
+		Owner: Neutral
+		Location: 31,81
+	Actor53: mpspawn
+		Owner: Neutral
+		Location: 30,81
 
 Rules: rules.yaml

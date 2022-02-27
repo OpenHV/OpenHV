@@ -120,12 +120,6 @@ Actors:
 	Actor34: prop4
 		Owner: Neutral
 		Location: 60,17
-	Actor39: mpspawn
-		Owner: Neutral
-		Location: 14,28
-	Actor40: mpspawn
-		Owner: Neutral
-		Location: 82,28
 	Actor41: prop3
 		Owner: Neutral
 		Location: 3,24
@@ -325,5 +319,11 @@ Actors:
 	Actor93: greenlight
 		Owner: Neutral
 		Location: 48,0
+	Actor94: mpspawn
+		Owner: Neutral
+		Location: 14,29
+	Actor95: mpspawn
+		Owner: Neutral
+		Location: 82,29
 
 Rules: rules.yaml

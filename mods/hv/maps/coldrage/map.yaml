@@ -103,30 +103,6 @@ Actors:
 	Actor31: firelight
 		Owner: Neutral
 		Location: 59,35
-	Actor19: mpspawn
-		Owner: Neutral
-		Location: 48,13
-	Actor20: mpspawn
-		Owner: Neutral
-		Location: 13,47
-	Actor21: mpspawn
-		Owner: Neutral
-		Location: 82,47
-	Actor22: mpspawn
-		Owner: Neutral
-		Location: 48,80
-	Actor24: baselight
-		Owner: Neutral
-		Location: 48,81
-	Actor25: baselight
-		Owner: Neutral
-		Location: 82,48
-	Actor26: baselight
-		Owner: Neutral
-		Location: 48,14
-	Actor27: baselight
-		Owner: Neutral
-		Location: 13,48
 	Actor36: resourcelight
 		Owner: Neutral
 		Location: 10,9
@@ -328,5 +304,29 @@ Actors:
 	Actor115: rock4
 		Owner: Neutral
 		Location: 87,24
+	Actor116: baselight
+		Owner: Neutral
+		Location: 13,49
+	Actor117: mpspawn
+		Owner: Neutral
+		Location: 13,48
+	Actor118: baselight
+		Owner: Neutral
+		Location: 48,82
+	Actor119: mpspawn
+		Owner: Neutral
+		Location: 48,81
+	Actor120: baselight
+		Owner: Neutral
+		Location: 82,49
+	Actor121: mpspawn
+		Owner: Neutral
+		Location: 82,48
+	Actor122: baselight
+		Owner: Neutral
+		Location: 48,15
+	Actor123: mpspawn
+		Owner: Neutral
+		Location: 48,14
 
 Rules: rules.yaml
