@@ -50,7 +50,7 @@ BASE:
 		BuildLimit: 1
 		Description: Builds structures, builders and miners
 		Prerequisites: ~structures.yi
-	GrantExternalConditionToOwner@BaseExits:
+	GrantExternalConditionToOwner@Base:
 		Condition: base
 	Production:
 		Produces: Building, Defense, Vehicle

@@ -48,6 +48,9 @@ Player:
 	GameSaveViewportManager:
 	ExternalCondition@Base:
 		Condition: base
+	ProvidesPrerequisite@Base:
+		Prerequisite: base
+		RequiresCondition: base
 	ClassicProductionQueue@Base:
 		Type: Base
 		DisplayOrder: 0
