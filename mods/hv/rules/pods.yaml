@@ -22,6 +22,7 @@ SCOUT1:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		FacingTolerance: 0
 	WithMuzzleOverlay:
 
 SCOUT2:
@@ -51,6 +52,7 @@ SCOUT2:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		FacingTolerance: 0
 	WithMuzzleOverlay:
 
 MORTARPOD:
@@ -76,6 +78,7 @@ MORTARPOD:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		FacingTolerance: 0
 	WithMuzzleOverlay:
 	Explodes:
 		Weapon: MortarPodExplode
@@ -110,6 +113,7 @@ SNIPERPOD:
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		FacingTolerance: 0
 	WithMuzzleOverlay:
 	DetectCloaked:
 		Range: 2c0

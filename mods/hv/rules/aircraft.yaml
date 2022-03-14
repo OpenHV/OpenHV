@@ -225,6 +225,7 @@ BANSHEE:
 	Voiced:
 		VoiceSet: BansheeVoice
 	AttackFrontal:
+		FacingTolerance: 0
 	Armament:
 		Weapon: Plasma
 		MuzzleSequence: muzzle
@@ -366,6 +367,7 @@ DROPSHIP:
 		Name: fly
 		RequiresCondition: airborne
 	AttackFrontal:
+		FacingTolerance: 0
 	Armament:
 		Weapon: DropshipMissile
 		LocalOffset: 700,500,0, 700,-500,0

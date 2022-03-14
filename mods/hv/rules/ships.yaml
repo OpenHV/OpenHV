@@ -174,7 +174,7 @@ SUBMARINE2:
 	AttackFrontal:
 		FacingTolerance: 25
 	Cloak:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		InitialDelay: 0
 		CloakDelay: 100
 		CloakSound: submarine_out_szegvari.wav
@@ -268,7 +268,7 @@ BOAT4:
 	Exit:
 		SpawnOffset: 250,0,0
 	Cloak:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		InitialDelay: 0
 		CloakDelay: 100
 		CloakSound: submarine_out_szegvari.wav

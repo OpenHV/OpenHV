@@ -186,6 +186,7 @@ ARTIL:
 		ForceFireIgnoresActors: true
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	WithMuzzleOverlay:
 	Explodes:
 		Weapon: ArtilleryExplode
@@ -281,6 +282,7 @@ TANK16:
 		ForceTargetRelationships: None
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
+		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -335,7 +337,7 @@ TANK6:
 		Ammo: 5
 	DetectCloaked:
 		Range: 5c0
-		CloakTypes: Mine
+		DetectionTypes: Mine
 	RenderDetectionCircle:
 	Explodes:
 		Weapon: AntiTankMine
@@ -363,6 +365,7 @@ TANK5:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -413,6 +416,7 @@ TANK10:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 
 TANK7:
 	Inherits: ^TrackedVehicle
@@ -435,6 +439,7 @@ TANK7:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Action
+		FacingTolerance: 0
 	Armament:
 		Weapon: StealthTankMissile
 		LocalOffset: 213,0,128
@@ -479,6 +484,7 @@ TANK11:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -516,6 +522,7 @@ TANK12:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -580,6 +587,7 @@ TANK15:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -638,6 +646,7 @@ ARTIL3:
 		ForceFireIgnoresActors: true
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	WithAttackAnimation:
 		Sequence: shoot
 	WithMuzzleOverlay:
@@ -861,6 +870,7 @@ TANK2:
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
+		FacingTolerance: 0
 	Armament:
 		Weapon: RedLaser
 		LocalOffset: 500,-250,0

@@ -93,7 +93,7 @@ RADARSWEEP:
 	Immobile:
 		OccupiesSpace: false
 	DetectCloaked:
-		CloakTypes: Cloak, Underwater, Mine
+		DetectionTypes: Cloak, Underwater, Mine
 		Range: 10c0
 	RevealsShroud:
 		Range: 10c0

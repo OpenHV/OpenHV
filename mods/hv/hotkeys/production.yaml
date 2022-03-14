@@ -1,35 +1,44 @@
 ProductionTypeBuilding: E
 	Description: Building Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ProductionTypeDefense: R
 	Description: Defense Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ProductionTypeScouts: T
 	Description: Scouts Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ProductionTypeVehicle: Y
 	Description: Vehicle Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ProductionTypeAircraft: U
 	Description: Aircraft Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ProductionTypeNaval: I
 	Description: Naval Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ProductionTypeTrade: O
 	Description: Trade Tab
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 ToggleVariant: V
 	Description: Rotate Building
-	Types: Production, Player
+	Types: Production
+	Contexts: Player
 
 PowerDown: X
 	Description: Power-down mode
-	Types: OrderGenerator, Player
+	Types: OrderGenerator
+	Contexts: Player

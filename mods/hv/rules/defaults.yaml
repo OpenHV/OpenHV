@@ -751,7 +751,6 @@
 	PeriodicDischarge:
 		Weapon: ForestFire
 		RequiresCondition: burning
-
 	WithSpriteBody:
 	RadarColorFromTerrain:
 		Terrain: Plant
@@ -761,6 +760,7 @@
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
 		IsDecoration: true
+
 
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld
@@ -816,7 +816,7 @@
 		StartDelay: 4
 		Type: CenterPosition
 	DetectCloaked:
-		CloakTypes: Underwater
+		DetectionTypes: Underwater
 		Range: 2c0
 
 ^Cube:
@@ -891,7 +891,7 @@
 	Cloak:
 		UncloakOn: Attack
 		Palette:
-		CloakTypes: Mine
+		DetectionTypes: Mine
 		InitialDelay: 0
 	Tooltip:
 		Name: Mine
