@@ -210,6 +210,7 @@ BOAT2:
 	Mobile:
 		Speed: 75
 		TurnSpeed: 40
+		CanMoveBackward: true
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
