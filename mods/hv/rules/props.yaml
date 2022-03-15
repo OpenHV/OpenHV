@@ -16,10 +16,6 @@ LAMPPOST:
 		BlueTint: 0.01
 	Health:
 		HP: 120000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	ThrowsShrapnel:
 		Pieces: 1, 2
 	-ThrowsShrapnel@large:
@@ -41,10 +37,6 @@ PYRAMID:
 		Name: Pyramid
 	Health:
 		HP: 120000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 
 MAYANPYRAMID:
 	Inherits: PYRAMID
@@ -74,10 +66,6 @@ OBELISK:
 		Name: Obelisk
 	Health:
 		HP: 50000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 
 MAYANOBELISK:
 	Inherits: OBELISK
@@ -97,10 +85,6 @@ PROP1:
 		Name: Civilian tower
 	Health:
 		HP: 60000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	RenderSprites:
 		Palette: terrain
 
@@ -116,10 +100,6 @@ PROP2:
 		Name: Civilian tower
 	Health:
 		HP: 60000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	WithIdleOverlay@animation:
 		Sequence: animation
 		RequiresCondition: !disable
@@ -141,10 +121,6 @@ PROP3:
 		Name: Civilian structure
 	Health:
 		HP: 60000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	RenderSprites:
 		Palette: terrain
 
@@ -160,10 +136,6 @@ PROP4:
 		Name: Civilian tower
 	Health:
 		HP: 60000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 
 PROP5:
 	Inherits: ^Prop
@@ -178,10 +150,6 @@ PROP5:
 		Name: Civilian structure
 	Health:
 		HP: 100000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 
 PROP6:
 	Inherits: ^Prop
@@ -195,10 +163,6 @@ PROP6:
 		Name: Civilian structure
 	Health:
 		HP: 60000
-	WithIdleOverlay@Shadow:
-		Sequence: shadow-overlay
-		Palette: shadow
-		IsDecoration: true
 	RenderSprites:
 		Palette: terrain
 	-ThrowsShrapnel:

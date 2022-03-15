@@ -581,6 +581,10 @@
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+	WithIdleOverlay@Shadow:
+		Sequence: shadow-overlay
+		Palette: shadow
+		IsDecoration: true
 
 ^DisableOnLowPower:
 	WithColoredOverlay@Disable:
@@ -690,7 +694,7 @@
 		Categories: Decoration
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
-	WithIdleOverlay:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
 		IsDecoration: true
@@ -756,7 +760,7 @@
 		Terrain: Plant
 	AppearsOnMapPreview:
 		Terrain: Plant
-	WithIdleOverlay:
+	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
 		IsDecoration: true
