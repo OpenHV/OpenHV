@@ -1742,6 +1742,7 @@ BARRIER:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-WithSpriteBody:
+	-WithIdleOverlay@Shadow:
 	WithGateSpriteBody@Connected:
 		Name: connected
 		OpenSequence: open
