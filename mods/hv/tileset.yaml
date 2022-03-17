@@ -11428,3 +11428,371 @@ Templates:
 		Categories: Grass, Sand
 		Tiles:
 			0: Sand
+	Template@1521:
+		Id: 1521
+		Images: bits/terrain/techhazard.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1522:
+		Id: 1522
+		Images: bits/terrain/techhazard.png
+		Frames: 1
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1523:
+		Id: 1523
+		Images: bits/terrain/techhazard.png
+		Frames: 2
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1524:
+		Id: 1524
+		Images: bits/terrain/techhazard.png
+		Frames: 3
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1525:
+		Id: 1525
+		Images: bits/terrain/techhazard.png
+		Frames: 4
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1526:
+		Id: 1526
+		Images: bits/terrain/techhazard.png
+		Frames: 5
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1527:
+		Id: 1527
+		Images: bits/terrain/techhazard.png
+		Frames: 6
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1528:
+		Id: 1528
+		Images: bits/terrain/techhazard.png
+		Frames: 7
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1529:
+		Id: 1529
+		Images: bits/terrain/techhazard.png
+		Frames: 8
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1530:
+		Id: 1530
+		Images: bits/terrain/techhazard.png
+		Frames: 9
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1531:
+		Id: 1531
+		Images: bits/terrain/techhazard.png
+		Frames: 10
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1532:
+		Id: 1532
+		Images: bits/terrain/techhazard.png
+		Frames: 11
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1533:
+		Id: 1533
+		Images: bits/terrain/techhazard.png
+		Frames: 12
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1534:
+		Id: 1534
+		Images: bits/terrain/techhazard.png
+		Frames: 13
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1535:
+		Id: 1535
+		Images: bits/terrain/techhazard.png
+		Frames: 14
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1536:
+		Id: 1536
+		Images: bits/terrain/techletters.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1537:
+		Id: 1537
+		Images: bits/terrain/techletters.png
+		Frames: 1
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1538:
+		Id: 1538
+		Images: bits/terrain/techletters.png
+		Frames: 2
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1539:
+		Id: 1539
+		Images: bits/terrain/techletters.png
+		Frames: 3
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1540:
+		Id: 1540
+		Images: bits/terrain/techletters.png
+		Frames: 4
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1541:
+		Id: 1541
+		Images: bits/terrain/techletters.png
+		Frames: 5
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1542:
+		Id: 1542
+		Images: bits/terrain/techletters.png
+		Frames: 6
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1543:
+		Id: 1543
+		Images: bits/terrain/techletters.png
+		Frames: 7
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1544:
+		Id: 1544
+		Images: bits/terrain/techletters.png
+		Frames: 8
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1545:
+		Id: 1545
+		Images: bits/terrain/techletters.png
+		Frames: 9
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1546:
+		Id: 1546
+		Images: bits/terrain/technumbers.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1547:
+		Id: 1547
+		Images: bits/terrain/technumbers.png
+		Frames: 1
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1548:
+		Id: 1548
+		Images: bits/terrain/technumbers.png
+		Frames: 2
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1549:
+		Id: 1549
+		Images: bits/terrain/technumbers.png
+		Frames: 3
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1550:
+		Id: 1550
+		Images: bits/terrain/technumbers.png
+		Frames: 4
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1551:
+		Id: 1551
+		Images: bits/terrain/technumbers.png
+		Frames: 5
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1552:
+		Id: 1552
+		Images: bits/terrain/technumbers.png
+		Frames: 6
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1553:
+		Id: 1553
+		Images: bits/terrain/technumbers.png
+		Frames: 7
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1554:
+		Id: 1554
+		Images: bits/terrain/technumbers.png
+		Frames: 8
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1555:
+		Id: 1555
+		Images: bits/terrain/technumbers.png
+		Frames: 9
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1556:
+		Id: 1556
+		Images: bits/terrain/techsymbols.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1557:
+		Id: 1557
+		Images: bits/terrain/techsymbols.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1558:
+		Id: 1558
+		Images: bits/terrain/techsymbols.png
+		Frames: 1
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1559:
+		Id: 1559
+		Images: bits/terrain/techsymbols.png
+		Frames: 2
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1560:
+		Id: 1560
+		Images: bits/terrain/techsymbols.png
+		Frames: 3
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1561:
+		Id: 1561
+		Images: bits/terrain/techsymbols.png
+		Frames: 4
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1562:
+		Id: 1562
+		Images: bits/terrain/techsymbols.png
+		Frames: 5
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1563:
+		Id: 1563
+		Images: bits/terrain/techsymbols.png
+		Frames: 6
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1564:
+		Id: 1564
+		Images: bits/terrain/techsymbols.png
+		Frames: 7
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1565:
+		Id: 1565
+		Images: bits/terrain/techsymbols.png
+		Frames: 8
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
+	Template@1566:
+		Id: 1566
+		Images: bits/terrain/techsymbols.png
+		Frames: 9
+		Size: 1,1
+		Categories: Tech
+		Tiles:
+			0: Tech
