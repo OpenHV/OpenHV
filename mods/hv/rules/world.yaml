@@ -373,9 +373,9 @@ World:
 	MapBuildRadius:
 		AllyBuildRadiusCheckboxDisplayOrder: 4
 		BuildRadiusCheckboxDisplayOrder: 5
-		BuildRadiusCheckboxLocked: true
+		BuildRadiusCheckboxLocked: false
 		BuildRadiusCheckboxEnabled: true
-		BuildRadiusCheckboxVisible: false
+		BuildRadiusCheckboxVisible: true
 		BuildRadiusCheckboxDescription: Limits structure placement to areas around base and builders.
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
