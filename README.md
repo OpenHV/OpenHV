@@ -2,7 +2,7 @@
 
 A mod for [OpenRA](http://www.openra.net) based on the [Hard Vacuum](https://lostgarden.home.blog/2005/03/27/game-post-mortem-hard-vacuum/) design by Daniel Cook. It aims to be an open content real-time strategy game with no exceptions. Set in the distant future where mega corporation battle themselves this standalone title comes with multiplayer (LAN and internet) support, competent skirmish bots as well as an integrated map editor. It allows for spectators to join and replays to be shared.
 
-![Preview](https://img.itch.zone/aW1hZ2UvNjg5NjY5LzM4MzY5MjUucG5n/original/VzlKJN.png)
+![Preview](https://upload.wikimedia.org/wikipedia/commons/7/75/OpenHV_Anti_Freeze.png)
 
 # Getting Started
 
