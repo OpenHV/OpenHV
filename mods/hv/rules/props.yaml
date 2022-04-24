@@ -53,6 +53,7 @@ PYRAMID2:
 		Name: Small Pyramid
 	Health:
 		HP: 60000
+	-WithIdleOverlay@Shadow:
 
 OBELISK:
 	Inherits: ^Prop
