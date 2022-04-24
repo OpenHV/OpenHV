@@ -192,6 +192,44 @@ BASE2:
 		Description: Builds structures, builders and miners
 		Prerequisites: ~structures.sc
 
+OUTPOST:
+	Inherits: ^BaseBuilding
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Outpost
+	Health:
+		HP: 50000
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	HitShape:
+		Type: Circle
+			Radius: 512
+	RevealsShroud:
+		Range: 8c0
+	RenderSprites:
+		Image: outpost
+		FactionImages:
+			sc: outpost2
+	BaseProvider:
+		Range: 7c0
+		CircleWidth: 2
+		CircleBorderWidth: 4
+	GrantConditionOnPrerequisite:
+		Condition: base
+		Prerequisites: base
+	Production:
+		Produces: Base
+		RequiresCondition: !base
+	ProvidesPrerequisite@Yuruki:
+		Factions: yi
+		Prerequisite: structures.yi
+	ProvidesPrerequisite@Synapol:
+		Factions: sc
+		Prerequisite: structures.sc
+
 GENERATOR:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape

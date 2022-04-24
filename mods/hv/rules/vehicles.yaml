@@ -661,14 +661,6 @@ BUILDER:
 		Description: Grants additional build radius.\n  Unarmed
 		Prerequisites: base
 		BuildAtProductionType: Building
-	GivesBuildableArea:
-		AreaTypes: building
-	BaseProvider:
-		Cooldown: 75
-		Range: 3c0
-		PauseOnCondition: enemy-radius
-	GrantConditionInsideEnemyBuildRadius:
-		Condition: enemy-radius
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -693,18 +685,15 @@ BUILDER:
 		Image: builder1
 		FactionImages:
 			sc: builder4
-	GrantConditionOnPrerequisite:
-		Condition: base
-		Prerequisites: base
-	Production:
-		Produces: Base
-		RequiresCondition: !base
-	ProvidesPrerequisite@Yuruki:
-		Factions: yi
-		Prerequisite: structures.yi
-	ProvidesPrerequisite@Synapol:
-		Factions: sc
-		Prerequisite: structures.sc
+	GrantConditionOnTerrain:
+		Condition: validterrain
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+	Transforms:
+		PauseOnCondition: !validterrain
+		IntoActor: outpost
+		NoTransformNotification: BuildingCannotPlaceAudio
+		TransformNotification:
+		Voice:
 
 MINER:
 	Inherits: ^Vehicle
