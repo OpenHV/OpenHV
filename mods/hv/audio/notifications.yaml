@@ -59,6 +59,7 @@ Speech:
 		ResourcesDepleted: resources_depleted
 		NoRoom: not_enough_space
 		OrderPlaced: order_placed
+		OutpostEstablished: outpost_established
 
 Sounds:
 	DefaultVariant: .wav
