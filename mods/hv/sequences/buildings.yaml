@@ -128,6 +128,8 @@ base2:
 
 outpost:
 	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		Offset: 0, -5
 	idle: bits/outpost.png
 		Length: 4
 		Tick: 180
@@ -136,7 +138,7 @@ outpost:
 		Length: 1
 	shadow-overlay: bits/outpost-shadow.png
 		ZOffset: -1768
-		Offset: 6,22
+		Offset: 6,17
 	make: bits/build.png
 		Length: 39
 		Tick: 30

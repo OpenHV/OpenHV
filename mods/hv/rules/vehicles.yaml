@@ -692,8 +692,12 @@ BUILDER:
 		PauseOnCondition: !validterrain
 		IntoActor: outpost
 		NoTransformNotification: BuildingCannotPlaceAudio
-		TransformNotification:
-		Voice:
+		TransformNotification: OutpostEstablished
+		TransformSounds: Freqman_fx376.wav
+		Voice: Deploying
+		Facing: 512
+	Voiced:
+		VoiceSet: BuilderVoice
 
 MINER:
 	Inherits: ^Vehicle

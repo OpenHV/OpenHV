@@ -201,8 +201,8 @@ OUTPOST:
 	Health:
 		HP: 50000
 	Building:
-		Footprint: x
-		Dimensions: 1,1
+		Footprint: = x
+		Dimensions: 1,2
 		LocalCenterOffset: 0,0,0
 	HitShape:
 		Type: Circle

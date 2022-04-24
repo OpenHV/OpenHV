@@ -154,3 +154,12 @@ StealthTankVoice:
 		Move: stealthtank_acknowledged, stealthtank_affirmative, stealthtank_at_once, stealthtank_good_copy, stealthtank_move_out, stealthtank_moving, stealthtank_they_wont_see_me, stealthtank_quickly
 		Action: stealthtank_consider_it_dead, stealthtank_engaging, stealthtank_leave_no_survivors, stealthtank_missile_barrage, stealthtank_shoot_to_kill, stealthtank_target, stealthtank_fire_the_missiles
 		Guard: guarding
+
+BuilderVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: builder_awaiting_orders, builder_builder_ready, builder_copy, builder_im_ready, builder_ready_to_expand, builder_receiving, builder_sir, builder_orders
+		Move: builder_acknowledged, builder_affirmative, builder_as_you_wish, builder_at_once, builder_enroute, builder_good_copy, builder_lets_go, builder_move_out, builder_on_my_way, builder_yes_sir
+		Action: builder_acknowledged, builder_affirmative, builder_as_you_wish, builder_at_once, builder_good_copy, builder_yes_sir
+		Deploying: builder_deploying, builder_expanding, builder_setting_up, builder_taking_position
+		Guard: guarding
