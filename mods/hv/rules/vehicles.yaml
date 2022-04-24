@@ -72,7 +72,7 @@ AATANK:
 	Mobile:
 		TurnSpeed: 35
 		Speed: 115
-		Locomotor: lighttracked
+		Locomotor: wheeled
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -169,7 +169,7 @@ ARTIL:
 	Mobile:
 		TurnSpeed: 15
 		Speed: 95
-		Locomotor: lighttracked
+		Locomotor: wheeled
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 3c0
@@ -629,7 +629,7 @@ ARTIL3:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 85
-		Locomotor: lighttracked
+		Locomotor: wheeled
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -682,7 +682,7 @@ BUILDER:
 	Mobile:
 		TurnSpeed: 32
 		Speed: 100
-		Locomotor: lighttracked
+		Locomotor: wheeled
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0

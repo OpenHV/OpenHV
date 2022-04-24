@@ -109,28 +109,6 @@
 			Plant: 50
 			Tech: 100
 			Rail: 100
-	Locomotor@LightTracked:
-		Name: lighttracked
-		Crushes: Cube, Scrap, Mine
-		TerrainSpeeds:
-			Clear: 100
-			Ore: 100
-			Crater: 100
-			Grass: 100
-			Grass Ramp: 100
-			Grass Pit: 100
-			Road: 100
-			Mountain: 100
-			Mountain Ramp: 100
-			Ice: 100
-			Snow: 100
-			Snow Ramp: 100
-			Red Snow: 100
-			Sand: 100
-			Sand Ramp: 100
-			Stone: 100
-			Tech: 100
-			Rail: 100
 	Locomotor@Naval:
 		Name: naval
 		Crushes: Cube
