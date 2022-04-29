@@ -24,3 +24,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [big-lava-splash1-5_dheming_oneirophile.wav](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
 * [torpedo_murraysortz.wav](https://freesound.org/people/murraysortz/sounds/192501/) by murraysortz. Mixed with Dzierzan's voice.
 * [boatgun_johandeecke.wav](https://freesound.org/people/JohanDeecke/sounds/369528/) by JohanDeecke.
+* [flame_newlocknew.wav](https://freesound.org/people/newlocknew/sounds/614724/) by newlocknew.

@@ -236,3 +236,37 @@ PatrolBoatGround:
 		Explosions: small
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
+
+Flamethrower:
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	StartBurstReport: flame_newlocknew.wav
+	ReloadDelay: 50
+	Burst: 6
+	BurstDelays: 0
+	Range: 3c0
+	Projectile: Bullet
+		Image: bullet16
+		Speed: 200
+		Blockable: false
+		LaunchAngle: 50
+		Inaccuracy: 0c512
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		Spread: 128
+		Damage: 4000
+		Versus:
+			None: 90
+			Steel: 45
+			Light: 8
+			Heavy: 5
+			Wood: 100
+	Warhead@Incendiary: TreeDamage
+		Damage: 4000
+		Spread: 128
+		Percentage: 75
+	Warhead@FireEffect: CreateEffect
+		Image: lava_splash_small
+		Explosions: lava_splash_small_a, lava_splash_small_b
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		ImpactSounds: fire_effect_1_GregorQuendel, fire_effect_2_GregorQuendel, fire_effect_3_GregorQuendel, fire_effect_4_GregorQuendel

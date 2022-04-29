@@ -447,12 +447,16 @@ MODULE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
-		Prerequisites: generator
-		Description: Produces very light vehicles.
+		Prerequisites: generator, ~structures.yi
+		Description: Produces very light pod vehicles.
+	ProvidesPrerequisite@Faction:
+		Prerequisite: module.yi
+	ProvidesPrerequisite@Generic:
+		Prerequisite: module
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Module
+		Name: Yuruki Industries Pod Assembly
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -519,13 +523,20 @@ MODULE:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	RenderSprites:
-		Image: module
-		FactionImages:
-			sc: module2
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
+
+MODULE2:
+	Inherits: MODULE
+	Buildable:
+		Prerequisites: generator, ~structures.sc
+	ProvidesPrerequisite@Faction:
+		Prerequisite: module.sc
+	RenderSprites:
+		Image: module2
+	Tooltip:
+		Name: Synapol Corporation Pod Assembly
 
 MINER2:
 	Inherits: ^Building
