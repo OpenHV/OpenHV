@@ -6,7 +6,7 @@ SCOUT1:
 	Buildable:
 		Queue: Scouts
 		Description: Fast anti-pod vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
-		Prerequisites: module
+		Prerequisites: ~module
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -31,7 +31,7 @@ SCOUT2:
 	Buildable:
 		Queue: Scouts
 		Description: Fast anti-vehicle pod.\nShoots rockets.\n  Strong vs Vehicles and Aircrafts\n  Weak vs Pods
-		Prerequisites: module
+		Prerequisites: ~module
 	Valued:
 		Cost: 225
 	Tooltip:
@@ -61,7 +61,7 @@ MORTARPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
-		Prerequisites: module
+		Prerequisites: ~module.yi, factory
 	Valued:
 		Cost: 175
 	Tooltip:
@@ -90,7 +90,7 @@ SNIPERPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Long range sniper pod.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
-		Prerequisites: module, radar
+		Prerequisites: ~module, radar
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -118,13 +118,48 @@ SNIPERPOD:
 	DetectCloaked:
 		Range: 2c0
 
+FLAMETHROWERPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Scouts
+		Description: Short range flame pod.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
+		Prerequisites: ~module.sc, factory
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Flame Pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Mobile:
+		Speed: 70
+		Locomotor: pod
+	RevealsShroud:
+		Range: 8c0
+	Armament@Primary:
+		Weapon: Flamethrower
+		LocalOffset: 200,175,0, 200,-175,0
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: Flamethrower
+	AttackFrontal:
+		PauseOnCondition: ecmdisabled
+		FacingTolerance: 10
+	DetectCloaked:
+		Range: 2c0
+	Explodes:
+		Weapon: FlamePodExplode
+		EmptyWeapon: FlamePodExplode
+
 TECHNICIAN:
 	Inherits: ^Pod
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Scouts
 		Description: Armored technician.\nInfiltrates and captures enemy structures.\n  Unarmed
-		Prerequisites: module
+		Prerequisites: ~module
 	Valued:
 		Cost: 500
 	Tooltip:

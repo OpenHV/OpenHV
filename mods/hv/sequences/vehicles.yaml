@@ -359,6 +359,18 @@ technician:
 	icon: bits/units-icons.png
 		Start: 42
 
+flamethrowerpod:
+	idle: bits/flamethrowerpod.png
+		Facings: 8
+		Length: 2
+		Tick: 60
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon: bits/units-icons.png
+		Start: 52
+
 tyriantank:
 	idle: bits/tyriantank.png
 		Start: 0
