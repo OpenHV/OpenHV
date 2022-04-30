@@ -163,3 +163,11 @@ BuilderVoice:
 		Action: builder_acknowledged, builder_affirmative, builder_as_you_wish, builder_at_once, builder_good_copy, builder_yes_sir
 		Deploying: builder_deploying, builder_expanding, builder_setting_up, builder_taking_position
 		Guard: guarding
+
+FlamePodVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: flamepod_copy, flamepod_I_need_orders, flamepod_im_listening, flamepod_need_a_light, flamepod_ready_to_burn, flamepod_receiving, flamepod_tanks_full, flamepod_ready_to_ignite
+		Move: flamepod_affirmative, flamepod_as_you_wish, flamepod_going, flamepod_good_copy, flamepod_on_my_way, flamepod_roger_that, flamepod_yes_sir, flamepod_ten_four, flamepod_whatever
+		Action: flamepod_burn_alive, flamepod_cleansing_fire, flamepod_purge_them, flamepod_with_pleasure, flamepod_set_them_on_fire, flamepod_eradicate, flamepod_hahaha, flamepod_I_love_that_smell
+		Guard: guarding
