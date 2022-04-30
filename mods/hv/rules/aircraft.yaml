@@ -487,6 +487,7 @@ LANDEDPOD:
 		Type: Heavy
 	-ThrowsShrapnel:
 	-MapEditorData:
+	-WithIdleOverlay@Shadow:
 
 BOMBER1:
 	Inherits@Exists: ^ExistsInWorld
