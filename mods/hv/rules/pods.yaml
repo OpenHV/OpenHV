@@ -185,3 +185,46 @@ TECHNICIAN:
 	Mobile:
 		Speed: 70
 		Voice: Move
+
+HACKERPOD:
+	Inherits: ^Pod
+	Inherits@Selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Scouts
+		Description: Hacker pod.\nSteals money from the global network.\n  Unarmed
+		Prerequisites: ~module, techcenter
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Hacker pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 17500
+	GrantConditionOnDeploy:
+		PauseOnCondition: ecmdisabled
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Facing: 512
+		DeploySounds: hackerpod_deploy_mincedbeats.wav
+		UndeploySounds: hackerpod_undeploy_mincedbeats.wav
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech
+	WithMakeAnimation:
+		Sequence: extend
+		BodyNames: deployed
+	WithFacingSpriteBody:
+		RequiresCondition: undeployed
+	Repairable:
+		RequireForceMoveCondition: !undeployed
+	WithSpriteBody@DEPLOYED:
+		RequiresCondition: !undeployed && real-actor
+		Sequence: extended
+		Name: deployed
+	GrantCondition@PreviewWorkaround:
+		Condition: real-actor
+	CashTrickler:
+		Interval: 50
+		Amount: 5
+		RequiresCondition: deployed
