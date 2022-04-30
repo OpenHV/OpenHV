@@ -18,3 +18,4 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [explosion_juverisetila.wav](https://freesound.org/people/JuveriSetila/sounds/514133/) by JuveriSetila
 * [charging_plasterbrain.wav](https://freesound.org/people/magnuswaker/sounds/588242/) by magnuswaker
 * [flame_explode_magnuswaker.wav](https://freesound.org/people/magnuswaker/sounds/592572/) by magnuswaker
+* [hackerpod_deploy/undeploy_mincedbeats.wav](https://freesound.org/people/mincedbeats/sounds/630563/) by mincedbeats

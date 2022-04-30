@@ -371,6 +371,25 @@ flamethrowerpod:
 	icon: bits/units-icons.png
 		Start: 52
 
+hackerpod:
+	idle: bits/hackerpod.png
+		Facings: 8
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	extend: bits/hackerpod.png
+		Start: 8
+		Length: 7
+		Tick: 60
+	extended: bits/hackerpod.png
+		Start: 14
+		Length: 4
+		Reverses: true	
+		Tick: 60
+	icon: bits/units-icons.png
+		Start: 53
+
 tyriantank:
 	idle: bits/tyriantank.png
 		Start: 0
