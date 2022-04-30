@@ -430,11 +430,8 @@
 	Health:
 		HP: 40000
 	Building:
-		Dimensions: 1,1
 		Footprint: x
-		AllowPlacementOnResources: false
-	ActorPreviewPlaceBuildingPreview:
-		PreviewAlpha: 0.65
+	FootprintPlaceBuildingPreview:
 	WithSpriteBody:
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
