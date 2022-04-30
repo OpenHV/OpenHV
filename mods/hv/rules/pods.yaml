@@ -144,7 +144,7 @@ FLAMETHROWERPOD:
 		LocalOffset: 200,175,0, 200,-175,0
 	Armament@Garrisoned:
 		Name: garrisoned
-		Weapon: Flamethrower
+		Weapon: BunkerFlamethrower
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		FacingTolerance: 10

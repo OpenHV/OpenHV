@@ -134,6 +134,24 @@ bullet16:
 		Tick: 60
 		ZOffset: 2030
 
+bullet17:
+	idle: bits/bullet17.png
+		Facings: 8
+		Length: 3
+		Tick: 60
+		ZOffset: 2030
+
+bullet17-trace:
+	flame_trace_a: bits/bullet17-trace.png
+		Length: 4
+		Tick: 40
+		ZOffset: 2000
+	flame_trace_b: bits/bullet17-trace.png
+		Start: 3
+		Length: 4
+		Tick: 40
+		ZOffset: 2000
+
 nuclear:
 	up: bits/blank.png
 	down: bits/nuclear_bomb.png

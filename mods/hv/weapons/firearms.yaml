@@ -242,10 +242,13 @@ Flamethrower:
 	StartBurstReport: flame_newlocknew.wav
 	ReloadDelay: 50
 	Burst: 6
-	BurstDelays: 0
+	BurstDelays: 1
 	Range: 3c0
 	Projectile: Bullet
-		Image: bullet16
+		Image: bullet17
+		TrailImage: bullet17-trace
+		TrailSequences: flame_trace_a, flame_trace_b
+		TrailInterval: 1
 		Speed: 200
 		Blockable: false
 		LaunchAngle: 50
@@ -270,3 +273,8 @@ Flamethrower:
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		ImpactSounds: fire_effect_1_GregorQuendel, fire_effect_2_GregorQuendel, fire_effect_3_GregorQuendel, fire_effect_4_GregorQuendel
+
+BunkerFlamethrower:
+	Inherits: Flamethrower
+	ReloadDelay: 40
+	Range: 8c0
