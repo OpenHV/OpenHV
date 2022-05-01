@@ -205,3 +205,6 @@ PROP10:
 	Inherits: PROP4
 	Tooltip:
 		Name: Civilian plasma tower
+
+PROP11:
+	Inherits: PROP3
