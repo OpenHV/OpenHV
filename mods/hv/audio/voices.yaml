@@ -171,3 +171,12 @@ FlamePodVoice:
 		Move: flamepod_affirmative, flamepod_as_you_wish, flamepod_going, flamepod_good_copy, flamepod_on_my_way, flamepod_roger_that, flamepod_yes_sir, flamepod_ten_four, flamepod_whatever
 		Action: flamepod_burn_alive, flamepod_cleansing_fire, flamepod_purge_them, flamepod_with_pleasure, flamepod_set_them_on_fire, flamepod_eradicate, flamepod_hahaha, flamepod_I_love_that_smell
 		Guard: guarding
+
+HackerPodVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: hackerpod_copy, hackerpod_hacker_ready, hackerpod_im_ready, hackerpod_receiving, hackerpod_waiting, hackerpod_sir
+		Move: hackerpod_acknowledged, hackerpod_at_once, hackerpod_good_copy, hackerpod_gotcha, hackerpod_lets_go, hackerpod_move_out, hackerpod_moving, hackerpod_yes_sir, hackerpod_as_you_wish
+		Action: hackerpod_acknowledged, hackerpod_at_once, hackerpod_good_copy, hackerpod_gotcha, hackerpod_yes_sir, hackerpod_as_you_wish
+		Deploying: hackerpod_deploying, hackerpod_setting_up, hackerpod_stealing_money, hackerpod_taking_position
+		Guard: guarding
