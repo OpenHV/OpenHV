@@ -201,6 +201,8 @@ HACKERPOD:
 		AddToArmyValue: true
 	Health:
 		HP: 17500
+	Mobile:
+		Voice: Move
 	GrantConditionOnDeploy:
 		PauseOnCondition: ecmdisabled
 		DeployedCondition: deployed
@@ -211,6 +213,7 @@ HACKERPOD:
 		DeploySounds: hackerpod_deploy_mincedbeats.wav
 		UndeploySounds: hackerpod_undeploy_mincedbeats.wav
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech
+		Voice: Deploying
 	WithMakeAnimation:
 		Sequence: extend
 		BodyNames: deployed
@@ -228,3 +231,5 @@ HACKERPOD:
 		Interval: 50
 		Amount: 5
 		RequiresCondition: deployed
+	Voiced:
+		VoiceSet: HackerPodVoice
