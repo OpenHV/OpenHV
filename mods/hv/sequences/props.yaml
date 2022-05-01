@@ -177,3 +177,16 @@ prop10:
 	idle: bits/prop10.png
 		Tick: 120
 	damaged-idle: bits/prop10.png
+
+prop11:
+	Defaults:
+		Offset: -5,-1
+	idle: bits/prop11.png
+		Length: 4
+		Reverses: True
+		Tick: 80
+	damaged-idle: bits/prop11.png
+		Start: 4
+	shadow-overlay: bits/prop11-shadow.png
+		Offset: 0,5
+		ZOffset: 1768
