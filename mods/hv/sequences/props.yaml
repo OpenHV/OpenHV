@@ -190,3 +190,16 @@ prop11:
 	shadow-overlay: bits/prop11-shadow.png
 		Offset: 0,5
 		ZOffset: 1768
+
+prop12:
+	Defaults:
+		Offset: 0,0
+	idle: bits/prop12.png
+		Length: 3
+		Reverses: True
+		Tick: 120
+	damaged-idle: bits/prop12.png
+		Start: 3
+	shadow-overlay: bits/prop12-shadow.png
+		Offset: 2,3
+		ZOffset: -1768

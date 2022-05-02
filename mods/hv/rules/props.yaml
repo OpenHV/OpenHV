@@ -208,3 +208,8 @@ PROP10:
 
 PROP11:
 	Inherits: PROP3
+
+PROP12:
+	Inherits: PROP3
+	Health:
+		HP: 30000
