@@ -147,6 +147,7 @@ COPTER:
 		TurnSpeed: 80
 		Offset: 200,0,-100
 	AttackTurreted:
+		RequiresCondition: airborne
 	WithSpriteTurret:
 	Armament@Primary:
 		Weapon: ChainGun
@@ -226,6 +227,7 @@ BANSHEE:
 		VoiceSet: BansheeVoice
 	AttackFrontal:
 		FacingTolerance: 0
+		RequiresCondition: airborne
 	Armament:
 		Weapon: Plasma
 		MuzzleSequence: muzzle
@@ -275,6 +277,7 @@ COPTER2:
 		TurnSpeed: 80
 		Offset: 600,0,100
 	AttackTurreted:
+		RequiresCondition: airborne
 	Armament:
 		Weapon: Vulcan
 		LocalOffset: 0,0,-400
@@ -368,6 +371,7 @@ DROPSHIP:
 		RequiresCondition: airborne
 	AttackFrontal:
 		FacingTolerance: 0
+		RequiresCondition: airborne
 	Armament:
 		Weapon: DropshipMissile
 		LocalOffset: 700,500,0, 700,-500,0
