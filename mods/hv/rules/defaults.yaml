@@ -596,8 +596,10 @@
 
 ^DisableOnLowPowerOrPowerDown:
 	Inherits: ^DisableOnLowPower
+	GrantConditionOnSell:
+		Condition: selling
 	GrantCondition@Disable:
-		RequiresCondition: lowpower || powerdown
+		RequiresCondition: (lowpower || powerdown) && !selling
 		Condition: disabled
 	ToggleConditionOnOrder:
 		Condition: powerdown
@@ -606,12 +608,12 @@
 		Image: poweroff
 		Sequence: offline
 		Palette: chrome
-		RequiresCondition: powerdown
+		RequiresCondition: powerdown && !selling
 		Position: Center
 		Offsets:
 			repairing: 10, 0
 	PowerMultiplier@PowerDown:
-		RequiresCondition: powerdown
+		RequiresCondition: powerdown && !selling
 		Modifier: 0
 	RepairableBuilding:
 		RepairCondition: repairing
