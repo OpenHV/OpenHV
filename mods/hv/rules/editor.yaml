@@ -38,6 +38,20 @@ EditorWorld:
 				TerrainType: Blocked
 				AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail
 				MaxDensity: 1
+	ResourceRenderer:
+		ResourceTypes:
+			gold:
+				Sequences: gold
+				Palette: effect
+				Name: Mineable Resource Deposit
+			iron:
+				Sequences: iron
+				Palette: effect
+				Name: Mineable Resource Deposit
+			blocked:
+				Sequences: blocked
+				Palette: effect
+				Name: No Construction Zone
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:

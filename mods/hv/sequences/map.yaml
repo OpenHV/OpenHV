@@ -8,6 +8,8 @@ resources:
 	blocked: bits/hatching.png
 		Start: 1
 		Length: 1
+	invisible: bits/null.png
+		Length: 1
 	waterflow: bits/watrflow.png
 		Length: *
 

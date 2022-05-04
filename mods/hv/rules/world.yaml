@@ -149,20 +149,6 @@
 		RandomFactionMembers: yi, sc
 		Side: Random
 		Description: Random Corporation\nA random corporation will be chosen when the game starts.
-	ResourceRenderer:
-		ResourceTypes:
-			gold:
-				Sequences: gold
-				Palette: effect
-				Name: Mineable Resource Deposit
-			iron:
-				Sequences: iron
-				Palette: effect
-				Name: Mineable Resource Deposit
-			blocked:
-				Sequences: blocked
-				Palette: effect
-				Name: No Construction Zone
 	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
 		Filename: bits/colors.pal
@@ -283,6 +269,20 @@ World:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	CustomTerrainDebugOverlay:
 	CustomTerrainLayer:
+	ResourceRenderer:
+		ResourceTypes:
+			gold:
+				Sequences: gold
+				Palette: effect
+				Name: Mineable Resource Deposit
+			iron:
+				Sequences: iron
+				Palette: effect
+				Name: Mineable Resource Deposit
+			blocked:
+				Sequences: invisible
+				Palette: effect
+				Name: No Construction Zone
 	ForestLayer:
 		Image: fire
 		Sequence: flame
