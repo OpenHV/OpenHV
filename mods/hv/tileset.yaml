@@ -10,6 +10,9 @@ Terrain:
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground
+	TerrainType@Blocked:
+		Type: Blocked
+		TargetTypes: Ground
 	TerrainType@Ore:
 		Type: Ore
 		TargetTypes: Ground

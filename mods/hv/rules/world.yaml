@@ -40,6 +40,7 @@
 			Stone: 100
 			Tech: 100
 			Rail: 90
+			Blocked: 100
 	Locomotor@Pod:
 		Name: pod
 		Crushes: Cube, Scrap, Mine
@@ -63,6 +64,7 @@
 			Stone: 100
 			Tech: 100
 			Rail: 80
+			Blocked: 90
 	Locomotor@Wheeled:
 		Name: wheeled
 		Crushes: Cube, Scrap, Mine
@@ -85,6 +87,7 @@
 			Stone: 100
 			Tech: 100
 			Rail: 80
+			Blocked: 90
 	Locomotor@Tracked:
 		Name: tracked
 		Crushes: Tree, Cube, Scrap, Pods, Mine
@@ -109,6 +112,7 @@
 			Plant: 50
 			Tech: 100
 			Rail: 100
+			Blocked: 100
 	Locomotor@Naval:
 		Name: naval
 		Crushes: Cube
@@ -155,6 +159,10 @@
 				Sequences: iron
 				Palette: effect
 				Name: Mineable Resource Deposit
+			blocked:
+				Sequences: blocked
+				Palette: effect
+				Name: No Construction Zone
 	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
 		Filename: bits/colors.pal
@@ -424,6 +432,11 @@ World:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech
 				MaxDensity: 3
+			blocked:
+				ResourceIndex: 3
+				TerrainType: Blocked
+				AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail
+				MaxDensity: 1
 	LimitedResources:
 	CubeSpawner:
 		CheckboxDisplayOrder: 1

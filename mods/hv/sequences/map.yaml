@@ -5,6 +5,9 @@ resources:
 		Length: 3
 	gold: bits/gold.png
 	iron: bits/iron.png
+	blocked: bits/hatching.png
+		Start: 1
+		Length: 1
 	waterflow: bits/watrflow.png
 		Length: *
 
