@@ -896,5 +896,45 @@ Actors:
 	Actor310: trees17
 		Owner: Neutral
 		Location: 119,51
+	Actor311: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 120,78
+	Actor312: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 118,76
+	Actor313: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 118,80
+	Actor314: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 11,81
+	Actor315: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 9,83
+	Actor316: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 11,85
+	Actor317: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 83,75
+	Actor318: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 85,77
+	Actor319: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 46,86
+	Actor320: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 44,84
 
 Rules: rules.yaml
