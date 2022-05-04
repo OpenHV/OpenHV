@@ -197,24 +197,6 @@ Actors:
 	Actor49: icicle2
 		Owner: Neutral
 		Location: 62,60
-	Actor50: mpspawn
-		Owner: Neutral
-		Location: 36,15
-	Actor51: mpspawn
-		Owner: Neutral
-		Location: 64,19
-	Actor52: mpspawn
-		Owner: Neutral
-		Location: 94,12
-	Actor53: mpspawn
-		Owner: Neutral
-		Location: 34,145
-	Actor54: mpspawn
-		Owner: Neutral
-		Location: 64,138
-	Actor55: mpspawn
-		Owner: Neutral
-		Location: 92,142
 	Actor59: baselight
 		Owner: Neutral
 		Location: 93,143
@@ -936,5 +918,23 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 44,84
+	Actor321: mpspawn
+		Owner: Neutral
+		Location: 34,146
+	Actor322: mpspawn
+		Owner: Neutral
+		Location: 64,139
+	Actor323: mpspawn
+		Owner: Neutral
+		Location: 92,143
+	Actor324: mpspawn
+		Owner: Neutral
+		Location: 94,13
+	Actor325: mpspawn
+		Owner: Neutral
+		Location: 64,20
+	Actor326: mpspawn
+		Owner: Neutral
+		Location: 36,16
 
 Rules: rules.yaml
