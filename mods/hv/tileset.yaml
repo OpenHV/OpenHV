@@ -5880,6 +5880,11 @@ Templates:
 			BorderTypes: Snow
 			BorderTransitions: 1465, 1471, 1466, 1463, 1468, 1467, 1473, 1474
 			Corners: 1469, 1472, 1464, 1470
+		AutoConnect@Dirt:
+			Type: Dirt
+			BorderTypes: Snow
+			BorderTransitions: 1607, 1612, 1608, 1605, 1610, 1609, 1614, 1615
+			Corners: 1611, 1613, 1606, 1604
 		Tiles:
 			0: Snow
 	Template@770:
@@ -12105,7 +12110,6 @@ Templates:
 		Categories: Dirt
 		Tiles:
 			0: Dirt
-
 	Template@1604:
 		Id: 1604
 		Images: bits/terrain/dirt-snow.png
@@ -12113,7 +12117,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1605:
 		Id: 1605
 		Images: bits/terrain/dirt-snow.png
@@ -12121,7 +12125,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1606:
 		Id: 1606
 		Images: bits/terrain/dirt-snow.png
@@ -12129,7 +12133,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1607:
 		Id: 1607
 		Images: bits/terrain/dirt-snow.png
@@ -12137,7 +12141,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1608:
 		Id: 1608
 		Images: bits/terrain/dirt-snow.png
@@ -12145,7 +12149,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1609:
 		Id: 1609
 		Images: bits/terrain/dirt-snow.png
@@ -12153,7 +12157,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1610:
 		Id: 1610
 		Images: bits/terrain/dirt-snow.png
@@ -12161,7 +12165,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1611:
 		Id: 1611
 		Images: bits/terrain/dirt-snow.png
@@ -12169,7 +12173,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1612:
 		Id: 1612
 		Images: bits/terrain/dirt-snow.png
@@ -12177,7 +12181,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1613:
 		Id: 1613
 		Images: bits/terrain/dirt-snow.png
@@ -12185,7 +12189,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1614:
 		Id: 1614
 		Images: bits/terrain/dirt-snow.png
@@ -12193,7 +12197,7 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
 	Template@1615:
 		Id: 1615
 		Images: bits/terrain/dirt-snow.png
@@ -12201,4 +12205,4 @@ Templates:
 		Size: 1,1
 		Categories: Dirt, Snow
 		Tiles:
-			0: Dirt
+			0: Snow
