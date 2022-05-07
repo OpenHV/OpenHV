@@ -180,7 +180,7 @@ prop10:
 
 prop11:
 	Defaults:
-		Offset: -5,-1
+		Offset: 0,-3
 	idle: bits/prop11.png
 		Length: 4
 		Reverses: True
@@ -188,8 +188,8 @@ prop11:
 	damaged-idle: bits/prop11.png
 		Start: 4
 	shadow-overlay: bits/prop11-shadow.png
-		Offset: 0,5
-		ZOffset: 1768
+		Offset: 5,3
+		ZOffset: -1768
 
 prop12:
 	Defaults:
