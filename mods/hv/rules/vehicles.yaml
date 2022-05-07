@@ -242,7 +242,7 @@ RADARTANK:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Facing: 512
-		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
 		Voice: Move
 	Repairable:
 		RequireForceMoveCondition: !undeployed
@@ -687,7 +687,7 @@ BUILDER:
 			sc: builder4
 	GrantConditionOnTerrain:
 		Condition: validterrain
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
 	Transforms:
 		PauseOnCondition: !validterrain
 		IntoActor: outpost

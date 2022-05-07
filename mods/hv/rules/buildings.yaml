@@ -575,7 +575,7 @@ MINER2:
 		Footprint: xx
 		Dimensions: 2,1
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
 		AllowPlacementOnResources: true
 	RevealsShroud:
 		Range: 5c0
@@ -1695,7 +1695,7 @@ BARRIER:
 	Inherits@Handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
 		AllowInvalidPlacement: false
 		BuildSounds: Quedicemipez_teleportation-barrier.wav
 	Buildable:
@@ -1769,7 +1769,7 @@ BARRIER:
 	Inherits@Handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
 		AllowInvalidPlacement: false
 		BuildSounds: Freqman_fx376-gate.wav
 	Buildable:
@@ -2135,7 +2135,7 @@ TECHMINER:
 		Footprint: == == xx
 		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
 		AllowPlacementOnResources: true
 		LocalCenterOffset: 0,1024,0
 	Power:
@@ -2189,7 +2189,7 @@ TECHCOMLINK:
 		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: radarsweep
-		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Plant, Stone, Swamp, Tech
+		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Plant, Stone, Swamp, Tech, Dirt
 		AllowUnderShroud: true
 		LifeTime: 250
 		EffectImage: moveflsh
@@ -2204,7 +2204,7 @@ TECHCOMLINK:
 		Footprint: == xx
 		Dimensions: 2,2
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
 		AllowPlacementOnResources: true
 	Power:
 		Amount: -40

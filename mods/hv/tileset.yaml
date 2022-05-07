@@ -4,7 +4,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech, Dirt
 
 Terrain:
 	TerrainType@Clear:
@@ -130,6 +130,10 @@ Terrain:
 		Type: Shore
 		TargetTypes: Shore
 		Color: E0B0A0
+	TerrainType@Dirt:
+		Type: Dirt
+		TargetTypes: Dirt
+		Color: 805040
 
 Templates:
 	Template@0:
@@ -1064,6 +1068,11 @@ Templates:
 			BorderTypes: Grass
 			BorderTransitions: 1273, 1277, 1279, 1275, 1283, 1281, 1282, 1285
 			Corners: 1274, 1280, 1278, 1272
+		AutoConnect@Dirt:
+			Type: Dirt
+			BorderTypes: Grass
+			BorderTransitions: 1571, 1576, 1572, 1569, 1574, 1573, 1578, 1579
+			Corners: 1575, 1577, 1570, 1568
 		Tiles:
 			0: Grass
 	Template@122:
@@ -11799,3 +11808,397 @@ Templates:
 		Categories: Tech
 		Tiles:
 			0: Tech
+	Template@1567:
+		Id: 1567
+		Images: bits/terrain/dirt.png
+		Frames: 0
+		Size: 1,1
+		ClearTile: true
+		Categories: Dirt, Terrain
+		Tiles:
+			0: Dirt
+	Template@1568:
+		Id: 1568
+		Images: bits/terrain/dirt.png
+		Frames: 1
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1569:
+		Id: 1569
+		Images: bits/terrain/dirt.png
+		Frames: 2
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1570:
+		Id: 1570
+		Images: bits/terrain/dirt.png
+		Frames: 3
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1571:
+		Id: 1571
+		Images: bits/terrain/dirt.png
+		Frames: 4
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1572:
+		Id: 1572
+		Images: bits/terrain/dirt.png
+		Frames: 5
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1573:
+		Id: 1573
+		Images: bits/terrain/dirt.png
+		Frames: 6
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1574:
+		Id: 1574
+		Images: bits/terrain/dirt.png
+		Frames: 7
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1575:
+		Id: 1575
+		Images: bits/terrain/dirt.png
+		Frames: 8
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1576:
+		Id: 1576
+		Images: bits/terrain/dirt.png
+		Frames: 9
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1577:
+		Id: 1577
+		Images: bits/terrain/dirt.png
+		Frames: 10
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1578:
+		Id: 1578
+		Images: bits/terrain/dirt.png
+		Frames: 11
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1579:
+		Id: 1579
+		Images: bits/terrain/dirt.png
+		Frames: 12
+		Size: 1,1
+		Categories: Dirt, Grass
+		Tiles:
+			0: Grass
+	Template@1580:
+		Id: 1580
+		Images: bits/terrain/dirtmisc.png
+		Frames: 0
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1581:
+		Id: 1581
+		Images: bits/terrain/dirtmisc.png
+		Frames: 1
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1582:
+		Id: 1582
+		Images: bits/terrain/dirtmisc.png
+		Frames: 2
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1583:
+		Id: 1583
+		Images: bits/terrain/dirtmisc.png
+		Frames: 3
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1584:
+		Id: 1584
+		Images: bits/terrain/dirtmisc.png
+		Frames: 4
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1585:
+		Id: 1585
+		Images: bits/terrain/dirtmisc.png
+		Frames: 5
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1586:
+		Id: 1586
+		Images: bits/terrain/dirtmisc.png
+		Frames: 6
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1587:
+		Id: 1587
+		Images: bits/terrain/dirtmisc.png
+		Frames: 7
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1588:
+		Id: 1588
+		Images: bits/terrain/dirtmisc.png
+		Frames: 8
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1589:
+		Id: 1589
+		Images: bits/terrain/dirtmisc.png
+		Frames: 9
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1590:
+		Id: 1590
+		Images: bits/terrain/dirtmisc.png
+		Frames: 10
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1591:
+		Id: 1591
+		Images: bits/terrain/dirtmisc.png
+		Frames: 11
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1592:
+		Id: 1592
+		Images: bits/terrain/dirtmisc.png
+		Frames: 12
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1593:
+		Id: 1593
+		Images: bits/terrain/dirtmisc.png
+		Frames: 13
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1594:
+		Id: 1594
+		Images: bits/terrain/dirtmisc.png
+		Frames: 14
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1595:
+		Id: 1595
+		Images: bits/terrain/dirtmisc.png
+		Frames: 15
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1596:
+		Id: 1596
+		Images: bits/terrain/dirtmisc.png
+		Frames: 16
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1597:
+		Id: 1597
+		Images: bits/terrain/dirtmisc.png
+		Frames: 17
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1598:
+		Id: 1598
+		Images: bits/terrain/dirtmisc.png
+		Frames: 18
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1599:
+		Id: 1599
+		Images: bits/terrain/dirtmisc.png
+		Frames: 19
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1600:
+		Id: 1600
+		Images: bits/terrain/dirtmisc.png
+		Frames: 20
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1601:
+		Id: 1601
+		Images: bits/terrain/dirtmisc.png
+		Frames: 21
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1602:
+		Id: 1602
+		Images: bits/terrain/dirtmisc.png
+		Frames: 22
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+	Template@1603:
+		Id: 1603
+		Images: bits/terrain/dirtmisc.png
+		Frames: 23
+		Size: 1,1
+		Categories: Dirt
+		Tiles:
+			0: Dirt
+
+	Template@1604:
+		Id: 1604
+		Images: bits/terrain/dirt-snow.png
+		Frames: 0
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1605:
+		Id: 1605
+		Images: bits/terrain/dirt-snow.png
+		Frames: 1
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1606:
+		Id: 1606
+		Images: bits/terrain/dirt-snow.png
+		Frames: 2
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1607:
+		Id: 1607
+		Images: bits/terrain/dirt-snow.png
+		Frames: 3
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1608:
+		Id: 1608
+		Images: bits/terrain/dirt-snow.png
+		Frames: 4
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1609:
+		Id: 1609
+		Images: bits/terrain/dirt-snow.png
+		Frames: 5
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1610:
+		Id: 1610
+		Images: bits/terrain/dirt-snow.png
+		Frames: 6
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1611:
+		Id: 1611
+		Images: bits/terrain/dirt-snow.png
+		Frames: 7
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1612:
+		Id: 1612
+		Images: bits/terrain/dirt-snow.png
+		Frames: 8
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1613:
+		Id: 1613
+		Images: bits/terrain/dirt-snow.png
+		Frames: 9
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1614:
+		Id: 1614
+		Images: bits/terrain/dirt-snow.png
+		Frames: 10
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
+	Template@1615:
+		Id: 1615
+		Images: bits/terrain/dirt-snow.png
+		Frames: 11
+		Size: 1,1
+		Categories: Dirt, Snow
+		Tiles:
+			0: Dirt
