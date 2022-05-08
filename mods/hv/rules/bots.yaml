@@ -30,6 +30,7 @@ Player:
 		MinerTypes: miner, miner2
 		RefineryTypes: storage
 		BuildingLimits:
+			base: 1
 			storage: 1
 			module: 4
 			factory3: 4
@@ -47,6 +48,7 @@ Player:
 			uplink: 1
 			silo: 1
 		BuildingFractions:
+			base: 1
 			storage: 2
 			module: 1
 			module2: 1
