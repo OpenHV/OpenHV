@@ -131,7 +131,7 @@ Player:
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
-		PriorityCapturableActorTypes: techbuilding
+		PriorityCapturableActorTypes: techbuilding, techminer, techcomlink
 		MaximumCaptureTargetOptions: 15
 	MinerBotModule:
 		RequiresCondition: enable-rogue-ai
