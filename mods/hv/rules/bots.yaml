@@ -9,6 +9,10 @@ Player:
 		Bots: rogue
 	BaseBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
+	BuilderBotModule@RogueAI:
+		RequiresCondition: enable-rogue-ai
+		BuilderTypes: builder
+		MinimumBaseRadius: 15
 	CustomBaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		MinimumExcessPower: 60
@@ -80,6 +84,7 @@ Player:
 		UnitQueues: Scouts, Vehicle, Aircraft, Ship
 		UnitsToBuild:
 			miner: 3
+			builder: 1
 			radartank: 1
 			tank3: 5
 			tank5: 5
@@ -110,7 +115,7 @@ Player:
 			carrier: 2
 		UnitLimits:
 			miner: 1
-			builder: 0
+			builder: 1
 			balloon: 2
 			saucer: 2
 			radartank: 1
@@ -119,6 +124,8 @@ Player:
 			boat4: 4
 			carrier: 4
 			technician: 1
+		UnitDelays:
+			builder: 15000
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
