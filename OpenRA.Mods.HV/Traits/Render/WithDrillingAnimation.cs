@@ -20,8 +20,12 @@ namespace OpenRA.Mods.Common.HV.Render
 	public class WithDrillingAnimationInfo : TraitInfo, Requires<WithSpriteBodyInfo>, Requires<ResourceCollectorInfo>
 	{
 		[SequenceReference]
-		[Desc("Sequence name to use")]
+		[Desc("Sequence name to use when mining a full resource spot.")]
 		public readonly string Sequence = "active";
+
+		[SequenceReference]
+		[Desc("Sequence name to use when resources are getting exhausted")]
+		public readonly string DecreasedVolumeSequence = "depleted";
 
 		[Desc("Which sprite body to play the animation on.")]
 		public readonly string Body = "body";
@@ -47,7 +51,7 @@ namespace OpenRA.Mods.Common.HV.Render
 
 		void INotifyResourceCollection.Depletion(Actor self)
 		{
-			body.CancelCustomAnimation(self);
+			body.PlayCustomAnimationRepeating(self, info.DecreasedVolumeSequence);
 		}
 	}
 }

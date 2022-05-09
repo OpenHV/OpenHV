@@ -48,10 +48,10 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 			overlay = new Animation(self.World, rs.GetImage(self), () => IsTraitPaused);
 			overlay.PlayFetchIndex(info.Sequence, () =>
-				(10 * overlay.CurrentSequence.Length - 1) * resourceCollector.Resources / (10 * resourceCollector.Info.Capacity));
+				(10 * overlay.CurrentSequence.Length - 1) * resourceCollector.Truckload / (10 * resourceCollector.Info.Capacity));
 
 			var anim = new AnimationWithOffset(overlay, null,
-				() => IsTraitDisabled || resourceCollector.Resources == 0,
+				() => IsTraitDisabled || resourceCollector.Truckload == 0,
 				p => RenderUtils.ZOffsetFromCenter(self, p, 1));
 
 			rs.Add(anim, info.Palette, info.IsPlayerPalette);

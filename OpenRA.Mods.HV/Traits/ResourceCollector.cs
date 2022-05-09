@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -40,6 +40,15 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("How much can be mined in total before depletion.")]
 		public readonly Dictionary<string, int> Deposits = new Dictionary<string, int>();
 
+		[Desc("Number of ticks to wait between gathering resources when depleted.")]
+		public readonly int LeftoversInterval = 100;
+
+		[Desc("How many resources to keep at all times.")]
+		public readonly int MinimumReserves = 900;
+
+		[Desc("Lowest number of resource denseness to keep at all times.")]
+		public readonly int MinimumDensity = 1;
+
 		[Desc("Defines to which players the bar is to be shown.")]
 		public readonly PlayerRelationship DisplayRelationships = PlayerRelationship.Ally;
 
@@ -61,7 +70,6 @@ namespace OpenRA.Mods.HV.Traits
 		readonly IResourceLayer resourceLayer;
 		readonly Building building;
 
-		LimitedResources limitedResources;
 		string resourceType = null;
 		int total;
 		int deposit;
@@ -70,7 +78,7 @@ namespace OpenRA.Mods.HV.Traits
 		bool depleted;
 
 		[Sync]
-		public int Resources { get; private set; }
+		public int Truckload { get; private set; }
 
 		public ResourceCollector(Actor self, ResourceCollectorInfo info)
 			: base(info)
@@ -104,8 +112,6 @@ namespace OpenRA.Mods.HV.Traits
 			if (deposit > 0)
 				foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
 					notify.Mining(self);
-
-			limitedResources = self.Owner.World.WorldActor.TraitOrDefault<LimitedResources>();
 		}
 
 		void ITick.Tick(Actor self)
@@ -116,15 +122,12 @@ namespace OpenRA.Mods.HV.Traits
 			if (IsTraitPaused || IsTraitDisabled)
 				return;
 
-			if (depleted)
-				return;
-
 			if (--ticks < 0)
 			{
-				ticks = info.Interval;
-				Resources += info.Amount;
-				left -= info.Amount;
-				if (left < info.Capacity)
+				ticks = depleted ? info.LeftoversInterval : info.Interval;
+				Truckload += info.Amount;
+				left = Math.Max(left - info.Amount, info.MinimumReserves);
+				if (left < info.Capacity && !depleted)
 				{
 					depleted = true;
 
@@ -134,34 +137,24 @@ namespace OpenRA.Mods.HV.Traits
 					Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.DepletionNotification, self.Owner.Faction.InternalName);
 				}
 
-				if (limitedResources != null && limitedResources.IsTraitEnabled() && limitedResources.Enabled)
+				var density = Math.Max(Math.Round(left / (float)deposit), info.MinimumDensity);
+				var cells = building.Info.Tiles(self.Location);
+				foreach (var cell in cells)
 				{
-					var density = (int)Math.Round(left / (float)deposit);
-					var cells = building.Info.Tiles(self.Location);
-					foreach (var cell in cells)
-					{
-						var resource = resourceLayer.GetResource(cell);
-						if (resource.Density > density)
-							resourceLayer.RemoveResource(resource.Type, cell);
-					}
+					var resource = resourceLayer.GetResource(cell);
+					if (resource.Density > density)
+						resourceLayer.RemoveResource(resource.Type, cell);
 				}
 
-				if (Resources >= info.Capacity || depleted)
+				if (Truckload >= info.Capacity)
 				{
-					if (depleted)
-					{
-						Resources += left;
-						left = 0;
-					}
-
 					var exit = self.Exits().RandomOrDefault(self.World.SharedRandom);
 					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
 					var actorInfo = self.World.Map.Rules.Actors[vehicle];
 
 					if (resourceType != null)
 						SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType);
-
-					Resources = 0;
+					Truckload = 0;
 				}
 			}
 		}

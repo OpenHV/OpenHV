@@ -372,6 +372,20 @@ miner2:
 				Length: 3
 				Tick: 300
 				Offset: 15, 36
+	depleted:
+		Length: 3
+		Tick: 600
+		ShadowStart: 3
+		Combine:
+			bits/miner2.png:
+				Start: 18
+				Length: 3
+				Tick: 600
+			bits/miner2-shadow.png:
+				Start: 18
+				Length: 3
+				Tick: 600
+				Offset: 15, 36
 	damaged-active:
 		ShadowStart: 1
 		Length: 1

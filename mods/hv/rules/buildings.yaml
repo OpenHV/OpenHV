@@ -556,6 +556,8 @@ MINER2:
 		Interval: 75
 		Amount: 70
 		Capacity: 700
+		LeftoversInterval: 150
+		MinimumReserves: 600
 		DeliveryVehicleType: tanker1
 		Deposits:
 			iron: 10000

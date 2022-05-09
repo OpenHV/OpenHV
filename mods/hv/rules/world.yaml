@@ -437,7 +437,6 @@ World:
 				TerrainType: Blocked
 				AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
 				MaxDensity: 1
-	LimitedResources:
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Dirt
