@@ -53,6 +53,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public string ResourceType;
 		public Actor LinkedCollector;
+		public int[] Multipliers;
 
 		readonly Mobile mobile;
 
@@ -73,7 +74,7 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var target = Target.FromActor(destination);
-			self.QueueActivity(new TransportResources(self, target, Info.Capacity, ResourceType, LinkedCollector));
+			self.QueueActivity(new TransportResources(self, target, Info.Capacity, Multipliers, ResourceType, LinkedCollector));
 		}
 
 		void INotifyCreated.Created(Actor self)
@@ -146,7 +147,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (accepts == null)
 					return;
 
-				self.QueueActivity(order.Queued, new TransportResources(self, order.Target, Info.Capacity, ResourceType, LinkedCollector));
+				self.QueueActivity(order.Queued, new TransportResources(self, order.Target, Info.Capacity, Multipliers, ResourceType, LinkedCollector));
 				self.ShowTargetLines();
 			}
 		}

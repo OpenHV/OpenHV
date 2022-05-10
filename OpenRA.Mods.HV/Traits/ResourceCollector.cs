@@ -40,8 +40,8 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("How much can be mined in total before depletion.")]
 		public readonly Dictionary<string, int> Deposits = new Dictionary<string, int>();
 
-		[Desc("Number of ticks to wait between gathering resources when depleted.")]
-		public readonly int LeftoversInterval = 100;
+		[Desc("Reduce payout by this percentage when resources are depleted.")]
+		public readonly int DepletionModifier = 10;
 
 		[Desc("How many resources to keep at all times.")]
 		public readonly int MinimumReserves = 900;
@@ -124,7 +124,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (--ticks < 0)
 			{
-				ticks = depleted ? info.LeftoversInterval : info.Interval;
+				ticks = info.Interval;
 				Truckload += info.Amount;
 				left = Math.Max(left - info.Amount, info.MinimumReserves);
 				var density = Math.Max(Math.Round(left / (float)deposit), info.MinimumDensity);
@@ -153,13 +153,17 @@ namespace OpenRA.Mods.HV.Traits
 					var actorInfo = self.World.Map.Rules.Actors[vehicle];
 
 					if (resourceType != null)
-						SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType);
+					{
+						var multipliers = depleted ? new int[1] { Info.DepletionModifier } : new int[1] { 100 };
+						SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType, multipliers);
+					}
+
 					Truckload = 0;
 				}
 			}
 		}
 
-		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo, string resourceType)
+		public void SpawnDeliveryVehicle(Actor self, ActorInfo actorInfo, ExitInfo exitInfo, string resourceType, int[] multipliers)
 		{
 			if (string.IsNullOrEmpty(resourceType))
 				return;
@@ -205,6 +209,7 @@ namespace OpenRA.Mods.HV.Traits
 				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, typeDictionary);
 				deliveryVehicle.Trait<ResourceTransporter>().ResourceType = resourceType;
 				deliveryVehicle.Trait<ResourceTransporter>().LinkedCollector = self;
+				deliveryVehicle.Trait<ResourceTransporter>().Multipliers = multipliers;
 
 				var move = deliveryVehicle.TraitOrDefault<IMove>();
 				if (exitInfo != null && move != null)

@@ -556,7 +556,7 @@ MINER2:
 		Interval: 75
 		Amount: 70
 		Capacity: 700
-		LeftoversInterval: 150
+		DepletionModifier: 25
 		MinimumReserves: 600
 		DeliveryVehicleType: tanker1
 		Deposits:
