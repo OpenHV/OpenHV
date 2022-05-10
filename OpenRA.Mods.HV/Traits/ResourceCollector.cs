@@ -127,7 +127,8 @@ namespace OpenRA.Mods.HV.Traits
 				ticks = depleted ? info.LeftoversInterval : info.Interval;
 				Truckload += info.Amount;
 				left = Math.Max(left - info.Amount, info.MinimumReserves);
-				if (left < info.Capacity && !depleted)
+				var density = Math.Max(Math.Round(left / (float)deposit), info.MinimumDensity);
+				if (density == info.MinimumDensity && !depleted)
 				{
 					depleted = true;
 
@@ -137,7 +138,6 @@ namespace OpenRA.Mods.HV.Traits
 					Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.DepletionNotification, self.Owner.Faction.InternalName);
 				}
 
-				var density = Math.Max(Math.Round(left / (float)deposit), info.MinimumDensity);
 				var cells = building.Info.Tiles(self.Location);
 				foreach (var cell in cells)
 				{
