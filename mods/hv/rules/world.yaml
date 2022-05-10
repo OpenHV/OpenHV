@@ -25,6 +25,7 @@
 			Clear: 100
 			Ore: 100
 			Crater: 100
+			Dirt: 100
 			Grass: 100
 			Grass Ramp: 100
 			Grass Pit: 100
@@ -49,6 +50,7 @@
 			Clear: 90
 			Ore: 90
 			Crater: 90
+			Dirt: 90
 			Grass: 90
 			Grass Ramp: 80
 			Grass Pit: 90
@@ -72,6 +74,7 @@
 			Clear: 90
 			Ore: 90
 			Crater: 90
+			Dirt: 90
 			Grass: 90
 			Grass Ramp: 80
 			Grass Pit: 90
@@ -96,6 +99,7 @@
 			Clear: 100
 			Ore: 100
 			Crater: 100
+			Dirt: 100
 			Grass: 100
 			Grass Ramp: 100
 			Grass Pit: 100
