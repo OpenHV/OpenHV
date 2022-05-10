@@ -15,7 +15,7 @@ Player:
 		MinimumBaseRadius: 15
 	CustomBaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		MinimumExcessPower: 60
+		MinimumExcessPower: 20
 		MaximumExcessPower: 160
 		ExcessPowerIncrement: 40
 		ExcessPowerIncreaseThreshold: 4
