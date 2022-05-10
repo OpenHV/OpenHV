@@ -27,7 +27,6 @@ Player:
 		VehiclesFactoryTypes: factory3, factory4
 		ProductionTypes: module, module2, factory3, factory4, starport, starport2, harbor, harbor2
 		NavalProductionTypes: harbor, harbor2
-		MinerTypes: miner, miner2
 		RefineryTypes: storage
 		BuildingLimits:
 			base: 1

@@ -29,9 +29,6 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Tells the AI what building types are considered refineries.")]
 		public readonly HashSet<string> RefineryTypes = new HashSet<string>();
 
-		[Desc("Tells the AI what building types are considered miners.")]
-		public readonly HashSet<string> MinerTypes = new HashSet<string>();
-
 		[Desc("Tells the AI what building types are considered power plants.")]
 		public readonly HashSet<string> PowerTypes = new HashSet<string>();
 
@@ -259,7 +256,6 @@ namespace OpenRA.Mods.HV.Traits
 		public bool HasAdequateRefineryCount =>
 			!Info.RefineryTypes.Any() ||
 			AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= Info.MinimumRefineryCount ||
-			AIUtils.CountBuildingByCommonName(Info.MinerTypes, player) == 0 ||
 			AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
 			AIUtils.CountBuildingByCommonName(Info.ConstructionYardTypes, player) == 0;
 
