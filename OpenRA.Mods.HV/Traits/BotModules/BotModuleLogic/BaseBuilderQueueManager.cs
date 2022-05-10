@@ -441,7 +441,6 @@ namespace OpenRA.Mods.HV.Traits
 			switch (type)
 			{
 				case BuildingType.Defense:
-
 					// Build near the closest enemy structure
 					var closestEnemy = world.ActorsHavingTrait<Building>().Where(a => !a.Disposed && player.RelationshipWith(a.Owner) == PlayerRelationship.Enemy)
 						.ClosestTo(world.Map.CenterOfCell(baseBuilder.DefenseCenter));
@@ -450,6 +449,20 @@ namespace OpenRA.Mods.HV.Traits
 					return findPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);
 
 				case BuildingType.Refinery:
+					// Try and place the refinery near a resource field
+					if (resourceLayer != null)
+					{
+						var nearbyResources = world.Map.FindTilesInAnnulus(baseCenter, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius)
+							.Where(a => resourceLayer.GetResource(a).Type != null)
+							.Shuffle(world.LocalRandom).Take(baseBuilder.Info.MaximumResourceCellsToCheck);
+
+						foreach (var resource in nearbyResources)
+							return findPos(baseCenter, resource, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius);
+					}
+
+					// Try and find a free spot somewhere else in the base
+					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius);
+
 				case BuildingType.Building:
 					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius,
 						distanceToBaseIsImportant ? baseBuilder.Info.MaximumBaseRadius : world.Map.Grid.MaximumTileSearchRange);

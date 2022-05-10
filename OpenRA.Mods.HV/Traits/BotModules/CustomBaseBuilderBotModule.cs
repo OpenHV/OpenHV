@@ -92,6 +92,9 @@ namespace OpenRA.Mods.HV.Traits
 			"for StructureProductionResumeDelay before retrying.")]
 		public readonly int MaximumFailedPlacementAttempts = 3;
 
+		[Desc("How many randomly chosen cells with resources to check when deciding refinery placement.")]
+		public readonly int MaximumResourceCellsToCheck = 3;
+
 		[Desc("Delay (in ticks) until rechecking for new BaseProviders.")]
 		public readonly int CheckForNewBasesDelay = 1500;
 
