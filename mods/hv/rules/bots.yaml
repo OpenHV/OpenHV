@@ -101,6 +101,7 @@ Player:
 			scout2: 1
 			mortarpod: 1
 			flamepod: 1
+			elitepod: 1
 			technician: 1
 			missile_tank: 5
 			plane2: 5
