@@ -233,3 +233,36 @@ HACKERPOD:
 		RequiresCondition: deployed
 	Voiced:
 		VoiceSet: HackerPodVoice
+
+ELITEPOD:
+	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Scouts
+		Description: Elite airborn pod.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
+		Prerequisites: ~module, techcenter
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Elite Pod
+	Health:
+		HP: 9000
+	Aircraft:
+		TurnSpeed: 50
+		CruiseAltitude: 1c0
+		Speed: 100
+		IdealSeparation: 1c0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: HeavyMachineGun
+		MuzzleSequence: muzzle
+		LocalOffset: 0,-300,0,   0,300,0
+	AttackFrontal:
+		FacingTolerance: 10
+	WithMuzzleOverlay:
+	WithMoveAnimation:
+	-Explodes@SpawnPilot:
+	-GrantRandomCondition@SpawnPilot:
+	Voiced:
+		VoiceSet: ElitePodVoice
