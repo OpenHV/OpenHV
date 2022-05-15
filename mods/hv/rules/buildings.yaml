@@ -1365,7 +1365,7 @@ SILO:
 		Amount: -150
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	WithIdleOverlay@lights:
+	WithIdleOverlay@Lights:
 		Sequence: animation_lights
 		RequiresCondition: !build-incomplete
 	WithIdleOverlay@red_light:
@@ -1427,7 +1427,7 @@ UPLINK:
 		Amount: -150
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	WithIdleOverlay@lights:
+	WithIdleOverlay@Lights:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
 
@@ -2042,10 +2042,10 @@ TECHBUILDING:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
-	WithIdleOverlay@lights:
+	WithIdleOverlay@Lights:
 		Sequence: animation-lights
 		RequiresCondition: !disable-lights && !ownerless && !disabled
-	GrantConditionOnDamageState@disable-lights:
+	GrantConditionOnDamageState@BrokenLights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
 	-Sellable:
@@ -2053,10 +2053,10 @@ TECHBUILDING:
 		RequiredForShortGame: false
 	OwnerLostAction:
 		Action: ChangeOwner
-	TooltipDescription@ally:
+	TooltipDescription@Allies:
 		Description: Provides self-healing to units when powered.
 		ValidRelationships: Ally
-	TooltipDescription@other:
+	TooltipDescription@Others:
 		Description: Capture and provide power to enable self-healing for units.
 		ValidRelationships: Neutral, Enemy
 	GrantConditionOnNeutralOwner:
@@ -2126,10 +2126,10 @@ TECHMINER:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
 		Name: Tech Mining Tower
-	TooltipDescription@ally:
+	TooltipDescription@Allies:
 		Description: Provides additional resources.
 		ValidRelationships: Ally
-	TooltipDescription@other:
+	TooltipDescription@Others:
 		Description: Capture and provide additional resources.
 		ValidRelationships: Neutral, Enemy
 	ProvidesPrerequisite@BuildingName:
@@ -2178,10 +2178,10 @@ TECHCOMLINK:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
 		Name: Tech Communication Link
-	TooltipDescription@ally:
+	TooltipDescription@Allies:
 		Description: Provides battlefield intelligence.
 		ValidRelationships: Ally
-	TooltipDescription@other:
+	TooltipDescription@Others:
 		Description: Capture to gain intelligence support.
 		ValidRelationships: Neutral, Enemy
 	SpawnActorPower:
@@ -2226,10 +2226,10 @@ TECHCOMLINK:
 		RequiredForShortGame: false
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
-	WithIdleOverlay@lights:
+	WithIdleOverlay@Lights:
 		Sequence: animation
 		RequiresCondition: !disable-lights && !ownerless && !disabled
-	GrantConditionOnDamageState@disable-lights:
+	GrantConditionOnDamageState@BrokenLights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
 	CaptureManager:
