@@ -20,3 +20,4 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [flame_explode_magnuswaker.wav](https://freesound.org/people/magnuswaker/sounds/592572/) by magnuswaker
 * [hackerpod_deploy/undeploy_mincedbeats.wav](https://freesound.org/people/mincedbeats/sounds/630563/) by mincedbeats
 * [machine_gun_pgi.wav](https://freesound.org/people/pgi/sounds/212607/) by pgi
+* [bomberpod_action/attack/select.wav](https://freesound.org/people/audioorange123/sounds/218742/) by audioorange123

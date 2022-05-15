@@ -441,6 +441,22 @@ elitepod:
 	icon: bits/units-icons.png
 		Start: 54
 
+bomberpod:
+	idle: bits/pod.png
+		Facings: 8
+		Offset: 0,-3
+	animation: bits/pod.png
+		Start: 8
+		Facings: 8
+		Tick: 30
+		Offset: 0,-3
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon: bits/units-icons.png
+		Start: 55
+
 tyriantank:
 	idle: bits/tyriantank.png
 		Start: 0
