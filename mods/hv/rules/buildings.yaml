@@ -2234,3 +2234,57 @@ TECHCOMLINK:
 		ValidDamageStates: Heavy, Critical
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
+
+WATCHTOWER:
+	Inherits: ^Building
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame2
+	Selectable:
+		Bounds: 2048, 1664, 0, 256
+	Tooltip:
+		Name: Watch Tower
+	TooltipDescription@Allies:
+		Description: Provides additional vision.
+		ValidRelationships: Ally
+	TooltipDescription@Others:
+		Description: Move units near to connect.
+		ValidRelationships: Neutral, Enemy
+	ProvidesPrerequisite@BuildingName:
+	Building:
+		Footprint: == xx
+		Dimensions: 2,2
+		RequiresBaseProvider: false
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
+		AllowPlacementOnResources: true
+	Power:
+		Amount: -40
+		RequiresCondition: !ownerless
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+		RequiresCondition: !disabled && !ownerless
+	RevealsShroud@Offline:
+		Range: 10c0
+		RevealGeneratedShroud: False
+		RequiresCondition: disabled && !ownerless
+	RevealsShroud@Hacked:
+		Range: 7c0
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	GrantConditionOnNeutralOwner:
+		Condition: ownerless
+	WithIdleOverlay@Lights:
+		Sequence: animation
+		RequiresCondition: !disable-lights && !ownerless && !disabled
+	GrantConditionOnDamageState@BrokenLights:
+		Condition: disable-lights
+		ValidDamageStates: Heavy, Critical
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
+	ProximityCapturable:
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:

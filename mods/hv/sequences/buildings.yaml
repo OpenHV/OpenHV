@@ -1500,3 +1500,21 @@ techcomlink:
 	flame2:
 		Offset: -13, -6
 	icon: bits/icon.png
+
+watchtower:
+	Inherits@Flame: ^BuildingFlame2
+	idle: bits/watchtower.png
+	damaged-idle: bits/watchtower.png
+		Start: 1
+	animation: bits/watchtower.png
+		Start: 2
+		Length: 4
+		Tick: 200
+	shadow-overlay: bits/watchtower-shadow.png
+		ZOffset: -1768
+		Offset: 3, 20
+	flame:
+		Offset: 3, -4
+	flame2:
+		Offset: -13, -6
+	icon: bits/icon.png
