@@ -279,11 +279,13 @@ BOMBERPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Remote controlled mines. \nExplodes buildings.\n  Unarmed
-		Prerequisites: ~module
+		Prerequisites: ~module, radar
 	Valued:
-		Cost: 500
+		Cost: 600
 	Tooltip:
 		Name: Bomber Pod
+	Health:
+		HP: 20000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	-Guard:
@@ -291,6 +293,7 @@ BOMBERPOD:
 		Interval: 25, 25
 		Sequences: animation
 	Mobile:
+		Speed: 90
 		Voice: Move
 	Voiced:
 		VoiceSet: BomberPodVoice
