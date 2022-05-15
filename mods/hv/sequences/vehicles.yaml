@@ -620,3 +620,37 @@ energyball:
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 50
+
+minipod:
+	idle: bits/minipod.png
+		Facings: 8
+	die: bits/minipod-death.png
+		Length: 6
+		Tick: 80
+		Offset: 1,-1
+	icon: bits/null.png
+
+minipod2:
+	Inherits: minipod
+	idle: bits/minipod2.png
+	die: bits/minipod2-death.png
+
+minipod3:
+	Inherits: minipod
+	idle: bits/minipod3.png
+	die: bits/minipod3-death.png
+
+minipod4:
+	Inherits: minipod
+	idle: bits/minipod4.png
+	die: bits/minipod4-death.png
+
+minipod5:
+	Inherits: minipod
+	idle: bits/minipod5.png
+	die: bits/minipod5-death.png
+
+minipod6:
+	Inherits: minipod
+	idle: bits/minipod6.png
+	die: bits/minipod6-death.png

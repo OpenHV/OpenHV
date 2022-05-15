@@ -196,3 +196,11 @@ BomberPodVoice:
 		Move: bomberpod_action1, bomberpod_action2, bomberpod_action3, bomberpod_action4
 		Action: bomberpod_attack1, bomberpod_attack2, bomberpod_attack3, bomberpod_attack4
 		Guard: guarding
+
+
+CivilianPodVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: civilianpod_yes, civilianpod_hmmm, civilianpod_im_here, civilianpod_what_do_you_want
+		Move: civilianpod_going, civilianpod_ok, civilianpod_sure, civilianpod_yep, civilianpod_aha, civilianpod_good
+		Action: civilianpod_aha, civilianpod_cool, civilianpod_good, civilianpod_sure, civilianpod_yep
