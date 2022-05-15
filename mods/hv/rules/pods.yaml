@@ -278,12 +278,12 @@ BOMBERPOD:
 	Inherits: ^Pod
 	Buildable:
 		Queue: Scouts
-		Description: Pod. \nDoes nothing.\n  Unarmed
+		Description: Remote controlled mines. \nExplodes buildings.\n  Unarmed
 		Prerequisites: ~module
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Pod
+		Name: Bomber Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	-Guard:
@@ -294,3 +294,8 @@ BOMBERPOD:
 		Voice: Move
 	Voiced:
 		VoiceSet: BomberPodVoice
+	Demolition:
+		DetonationDelay: 0
+		Flashes: 0
+		EnterBehaviour: Suicide
+		Cursor: ability
