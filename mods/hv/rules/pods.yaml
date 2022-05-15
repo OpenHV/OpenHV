@@ -89,7 +89,7 @@ SNIPERPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Long range sniper pod.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
+		Description: Long range sniper pod.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
 		Prerequisites: ~module, radar
 	Valued:
 		Cost: 500
@@ -117,6 +117,13 @@ SNIPERPOD:
 	WithMuzzleOverlay:
 	DetectCloaked:
 		Range: 2c0
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 120
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Move
+		IsPlayerPalette: true
 
 FLAMETHROWERPOD:
 	Inherits: ^Pod
