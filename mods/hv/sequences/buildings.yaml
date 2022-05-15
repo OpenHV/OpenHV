@@ -1503,6 +1503,8 @@ comlink:
 
 watchtower:
 	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -1
 	idle: bits/watchtower.png
 	damaged-idle: bits/watchtower.png
 		Start: 1
