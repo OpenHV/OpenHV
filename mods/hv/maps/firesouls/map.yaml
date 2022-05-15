@@ -363,10 +363,10 @@ Actors:
 	Actor119: pyramid
 		Owner: Neutral
 		Location: 14,14
-	Actor135: techcomlink
+	Actor135: comlink
 		Owner: Neutral
 		Location: 10,33
-	Actor136: techcomlink
+	Actor136: comlink
 		Owner: Neutral
 		Location: 86,62
 	Actor137: resourcelight

@@ -104,16 +104,16 @@ Actors:
 	Actor16: prop8
 		Owner: Neutral
 		Location: 57,84
-	Actor18: techminer
+	Actor18: extractor
 		Owner: Neutral
 		Location: 32,68
-	Actor19: techminer
+	Actor19: extractor
 		Owner: Neutral
 		Location: 32,89
-	Actor20: techminer
+	Actor20: extractor
 		Owner: Neutral
 		Location: 96,68
-	Actor21: techminer
+	Actor21: extractor
 		Owner: Neutral
 		Location: 96,89
 	Actor17: prop8
@@ -389,7 +389,7 @@ Actors:
 	Actor124: resourcelight
 		Owner: Neutral
 		Location: 11,9
-	Actor126: techcomlink
+	Actor126: comlink
 		Owner: Neutral
 		Location: 64,80
 	Actor128: small_water_light

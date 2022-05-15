@@ -382,16 +382,16 @@ Actors:
 	Actor127: lamppost
 		Owner: Neutral
 		Location: 82,80
-	Actor119: techminer
+	Actor119: extractor
 		Owner: Neutral
 		Location: 103,102
-	Actor128: techminer
+	Actor128: extractor
 		Owner: Neutral
 		Location: 25,24
-	Actor129: techminer
+	Actor129: extractor
 		Owner: Neutral
 		Location: 106,77
-	Actor130: techminer
+	Actor130: extractor
 		Owner: Neutral
 		Location: 22,47
 	Actor131: prop2

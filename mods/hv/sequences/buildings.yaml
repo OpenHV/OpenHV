@@ -1308,18 +1308,18 @@ techcenter2:
 	icon: bits/buildings-icons.png
 		Start: 35
 
-techbuilding:
+reconstructor:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -6
-	idle: bits/tech-building.png
+	idle: bits/reconstructor.png
 		Start: 0
-	shadow-overlay: bits/tech-building-shadow.png
+	shadow-overlay: bits/reconstructor-shadow.png
 		ZOffset: -1768
 		Offset: 2, 0
-	damaged-idle: bits/tech-building.png
+	damaged-idle: bits/reconstructor.png
 		Start: 1
-	animation-lights: bits/tech-building.png
+	animation-lights: bits/reconstructor.png
 		Start: 2
 		Length: 3
 		Tick: 200
@@ -1454,24 +1454,24 @@ storage:
 		Start: 10
 		Offset: 0, 0
 
-techminer:
+extractor:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -18
-	idle: bits/techminer.png
+	idle: bits/extractor.png
 		Start: 2
 		Length: 8
 		Tick: 200
-	damaged-idle: bits/techminer.png
+	damaged-idle: bits/extractor.png
 		Start: 1
-	shadow-overlay: bits/techminer-shadow.png
+	shadow-overlay: bits/extractor-shadow.png
 		Start: 0
 		Length: 5
 		Tick: 200
 		Reverses: True
 		ZOffset: 1768
 		Offset: 8,13
-	damaged-shadow-overlay: bits/techminer-shadow.png
+	damaged-shadow-overlay: bits/extractor-shadow.png
 		Start: 5
 		ZOffset: 1768
 		Offset: 8,13
@@ -1481,7 +1481,7 @@ techminer:
 		Offset: -13, -6
 	icon: bits/icon.png
 
-techcomlink:
+comlink:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
 		Offset: 0, -1

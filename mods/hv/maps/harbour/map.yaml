@@ -269,16 +269,16 @@ Actors:
 	Actor75: barrier
 		Owner: Neutral
 		Location: 90,71
-	Actor76: techminer
+	Actor76: extractor
 		Owner: Neutral
 		Location: 87,70
-	Actor77: techminer
+	Actor77: extractor
 		Owner: Neutral
 		Location: 72,70
-	Actor78: techminer
+	Actor78: extractor
 		Owner: Neutral
 		Location: 72,86
-	Actor79: techminer
+	Actor79: extractor
 		Owner: Neutral
 		Location: 87,86
 	Actor85: prop4

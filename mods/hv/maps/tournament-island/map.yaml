@@ -61,16 +61,16 @@ Actors:
 	Actor8: lamppost
 		Owner: Neutral
 		Location: 68,68
-	Actor17: techminer
+	Actor17: extractor
 		Owner: Neutral
 		Location: 23,100
-	Actor18: techminer
+	Actor18: extractor
 		Owner: Neutral
 		Location: 22,21
-	Actor19: techminer
+	Actor19: extractor
 		Owner: Neutral
 		Location: 103,21
-	Actor20: techminer
+	Actor20: extractor
 		Owner: Neutral
 		Location: 102,100
 	Actor23: gull
@@ -97,16 +97,16 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 117,114
-	Actor30: techminer
+	Actor30: extractor
 		Owner: Neutral
 		Location: 7,117
-	Actor32: techminer
+	Actor32: extractor
 		Owner: Neutral
 		Location: 7,6
-	Actor33: techminer
+	Actor33: extractor
 		Owner: Neutral
 		Location: 119,6
-	Actor34: techminer
+	Actor34: extractor
 		Owner: Neutral
 		Location: 119,117
 	Actor35: prop4
@@ -289,7 +289,7 @@ Actors:
 	Actor93: sparklamp
 		Owner: Neutral
 		Location: 63,65
-	Actor94: techbuilding
+	Actor94: reconstructor
 		Owner: Neutral
 		Location: 63,62
 	Actor95: prop6

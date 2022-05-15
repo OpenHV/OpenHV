@@ -124,19 +124,19 @@ Actors:
 	Actor55: prop5
 		Owner: Neutral
 		Location: 78,13
-	Actor56: techminer
+	Actor56: extractor
 		Owner: Neutral
 		Location: 9,8
-	Actor58: techcomlink
+	Actor58: comlink
 		Owner: Neutral
 		Location: 9,87
-	Actor59: techcomlink
+	Actor59: comlink
 		Owner: Neutral
 		Location: 87,9
 	Actor57: resourcelight
 		Owner: Neutral
 		Location: 87,87
-	Actor60: techminer
+	Actor60: extractor
 		Owner: Neutral
 		Location: 87,86
 	Actor65: mediumfirelight

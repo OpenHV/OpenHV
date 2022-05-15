@@ -59,7 +59,7 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor15: techbuilding
+	Actor15: reconstructor
 		Owner: Neutral
 		Location: 176,10
 	Actor16: prop5
@@ -146,10 +146,10 @@ Actors:
 	Actor46: grssmisc6
 		Owner: Neutral
 		Location: 77,30
-	Actor53: techminer
+	Actor53: extractor
 		Owner: Neutral
 		Location: 128,53
-	Actor52: techbuilding
+	Actor52: reconstructor
 		Owner: Neutral
 		Location: 69,65
 	Actor48: grssmisc6

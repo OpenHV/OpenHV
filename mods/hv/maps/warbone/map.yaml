@@ -61,7 +61,7 @@ Actors:
 	Actor3: mpspawn
 		Owner: Neutral
 		Location: 111,10
-	Actor4: techbuilding
+	Actor4: reconstructor
 		Owner: Neutral
 		Location: 60,62
 	Actor5: pyramid

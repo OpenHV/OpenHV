@@ -241,10 +241,10 @@ Actors:
 	Actor87: resourcelight
 		Owner: Neutral
 		Location: 27,28
-	Actor79: techminer
+	Actor79: extractor
 		Owner: Neutral
 		Location: 50,59
-	Actor80: techminer
+	Actor80: extractor
 		Owner: Neutral
 		Location: 46,59
 	Actor81: resourcelight

@@ -55,16 +55,16 @@ Actors:
 	Actor2: mayanpyramid
 		Owner: Neutral
 		Location: 60,60
-	Actor11: techcomlink
+	Actor11: comlink
 		Owner: Neutral
 		Location: 119,73
-	Actor12: techcomlink
+	Actor12: comlink
 		Owner: Neutral
 		Location: 54,118
-	Actor13: techminer
+	Actor13: extractor
 		Owner: Neutral
 		Location: 66,59
-	Actor14: techminer
+	Actor14: extractor
 		Owner: Neutral
 		Location: 62,66
 	Actor15: mayanpyramid
@@ -79,10 +79,10 @@ Actors:
 	Actor18: mayanpyramid
 		Owner: Neutral
 		Location: 38,52
-	Actor19: techcomlink
+	Actor19: comlink
 		Owner: Neutral
 		Location: 9,54
-	Actor20: techcomlink
+	Actor20: comlink
 		Owner: Neutral
 		Location: 74,9
 	Actor21: mayanobelisk

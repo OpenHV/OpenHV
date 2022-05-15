@@ -217,16 +217,16 @@ Actors:
 	Actor83: pyramid2
 		Owner: Neutral
 		Location: 11,44
-	Actor76: techminer
+	Actor76: extractor
 		Owner: Neutral
 		Location: 54,52
-	Actor77: techminer
+	Actor77: extractor
 		Owner: Neutral
 		Location: 47,52
-	Actor80: techminer
+	Actor80: extractor
 		Owner: Neutral
 		Location: 47,30
-	Actor81: techminer
+	Actor81: extractor
 		Owner: Neutral
 		Location: 54,30
 

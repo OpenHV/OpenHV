@@ -69,28 +69,28 @@ Actors:
 	Actor9: icicle1
 		Owner: Neutral
 		Location: 76,31
-	Actor10: techminer
+	Actor10: extractor
 		Owner: Neutral
 		Location: 70,15
-	Actor11: techminer
+	Actor11: extractor
 		Owner: Neutral
 		Location: 58,15
-	Actor12: techminer
+	Actor12: extractor
 		Owner: Neutral
 		Location: 77,17
-	Actor13: techminer
+	Actor13: extractor
 		Owner: Neutral
 		Location: 51,17
-	Actor15: techminer
+	Actor15: extractor
 		Owner: Neutral
 		Location: 70,46
-	Actor16: techminer
+	Actor16: extractor
 		Owner: Neutral
 		Location: 58,46
-	Actor17: techminer
+	Actor17: extractor
 		Owner: Neutral
 		Location: 77,44
-	Actor18: techminer
+	Actor18: extractor
 		Owner: Neutral
 		Location: 51,44
 	Actor19: icicle2

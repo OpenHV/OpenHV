@@ -2010,7 +2010,7 @@ DESTROYEDWALLTOPRIGHT:
 	WithSpriteBody:
 		Sequence: destroyed-topright
 
-TECHBUILDING:
+RECONSTRUCTOR:
 	Inherits: ^BaseBuilding
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
@@ -2117,7 +2117,7 @@ TECHBUILDING:
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
 
-TECHMINER:
+EXTRACTOR:
 	Inherits: ^Building
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
@@ -2125,7 +2125,7 @@ TECHMINER:
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
-		Name: Tech Mining Tower
+		Name: Resource Extractor
 	TooltipDescription@Allies:
 		Description: Provides additional resources.
 		ValidRelationships: Ally
@@ -2169,7 +2169,7 @@ TECHMINER:
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
 
-TECHCOMLINK:
+COMLINK:
 	Inherits: ^Building
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
@@ -2177,7 +2177,7 @@ TECHCOMLINK:
 	Selectable:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
-		Name: Tech Communication Link
+		Name: Communication Link
 	TooltipDescription@Allies:
 		Description: Provides battlefield intelligence.
 		ValidRelationships: Ally

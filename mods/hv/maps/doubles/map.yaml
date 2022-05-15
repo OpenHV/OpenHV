@@ -291,7 +291,7 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 15,45
-	Actor87: techbuilding
+	Actor87: reconstructor
 		Owner: Neutral
 		Location: 54,46
 	Actor89: lamppost
@@ -303,25 +303,25 @@ Actors:
 	Actor91: prop2
 		Owner: Neutral
 		Location: 46,49
-	Actor96: techminer
+	Actor96: extractor
 		Owner: Neutral
 		Location: 3,43
-	Actor98: techminer
+	Actor98: extractor
 		Owner: Neutral
 		Location: 2,1
-	Actor99: techminer
+	Actor99: extractor
 		Owner: Neutral
 		Location: 106,1
-	Actor100: techminer
+	Actor100: extractor
 		Owner: Neutral
 		Location: 105,43
 	Actor101: prop2
 		Owner: Neutral
 		Location: 63,49
-	Actor92: techminer
+	Actor92: extractor
 		Owner: Neutral
 		Location: 62,3
-	Actor102: techminer
+	Actor102: extractor
 		Owner: Neutral
 		Location: 46,3
 	Actor103: rock6
