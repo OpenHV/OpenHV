@@ -266,3 +266,24 @@ ELITEPOD:
 	-GrantRandomCondition@SpawnPilot:
 	Voiced:
 		VoiceSet: ElitePodVoice
+
+BOMBERPOD:
+	Inherits: ^Pod
+	Buildable:
+		Queue: Scouts
+		Description: Pod. \nDoes nothing.\n  Unarmed
+		Prerequisites: ~module
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	-Guard:
+	WithIdleAnimation:
+		Interval: 25, 25
+		Sequences: animation
+	Mobile:
+		Voice: Move
+	Voiced:
+		VoiceSet: BomberPodVoice

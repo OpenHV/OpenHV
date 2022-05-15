@@ -188,3 +188,11 @@ ElitePodVoice:
 		Move: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_changing_location, elitepod_flying_high, elitepod_good_copy, elitepod_new_destination_set, elitepod_on_my_way, elitepod_orders_recieved, elitepod_right_away_sir, elitepod_yes_sir, elitepod_ten_four
 		Action: elitepod_engaging, elitepod_lethal_force_engaged, elitepod_target_locked, elitepod_weapons_hot, elitepod_yes_sir, elitepod_destroy, elitepod_waste_them, elitepod_death_from_above
 		Guard: guarding
+
+BomberPodVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: bomberpod_select1, bomberpod_select2, bomberpod_select3, bomberpod_select4
+		Move: bomberpod_action1, bomberpod_action2, bomberpod_action3, bomberpod_action4
+		Action: bomberpod_attack1, bomberpod_attack2, bomberpod_attack3, bomberpod_attack4
+		Guard: guarding
