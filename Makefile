@@ -32,7 +32,7 @@
 #   make check-sdk-scripts
 #   make check-packaging-scripts
 
-.PHONY: check-sdk-scripts check-packaging-scripts check-variables engine all clean version check-scripts check test
+.PHONY: check-sdk-scripts check-packaging-scripts check-variables engine all clean version check-scripts check test install
 .DEFAULT_GOAL := all
 
 PYTHON = $(shell command -v python3 2> /dev/null)
@@ -74,6 +74,10 @@ TARGETPLATFORM = unix-generic
 endif
 endif
 endif
+
+prefix ?= /usr/local
+libdir ?= $(prefix)/lib
+gamedir ?= $(libdir)/openhv
 
 check-sdk-scripts:
 	@awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format: file must be saved using unix-style (CR, not CRLF) line endings.\n"; exit 1)
@@ -147,6 +151,13 @@ endif
 else
 	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build --source $(NUGET_SOURCE) -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
+
+install:
+	@sh -c '. ./packaging/functions.sh; install_mod_assemblies . $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) ./engine $(NUGET_SOURCE)'
+	@sh -c '. ./engine/packaging/functions.sh; install_assemblies ./engine $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) True False False'
+	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir) hv'
+	@rm -f "$(DESTDIR)$(gamedir)/global mix database.dat"
+	@cp -Lr mods/hv $(DESTDIR)$(gamedir)
 
 clean: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
