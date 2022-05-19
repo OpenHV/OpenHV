@@ -24,6 +24,8 @@ install_mod_assemblies() {
 	ORIG_PWD=$(pwd)
 	cd "${SRC_PATH}" || exit 1
 
+	mkdir -p "${DEST_PATH}"
+
 	if [ "${RUNTIME}" = "mono" ]; then
 		echo "Building assemblies"
 
