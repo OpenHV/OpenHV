@@ -9,6 +9,9 @@
 # to compile using system libraries for native dependencies, run:
 #   make [RUNTIME=net6] TARGETPLATFORM=unix-generic
 #
+# to compile using a local nuget cache, run:
+#   make [RUNTIME=net6] NUGET_SOURCE=./nuget
+#
 # to remove the files created by compiling, run:
 #   make clean
 #
@@ -55,6 +58,8 @@ MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
 
 RUNTIME ?= net6
+
+NUGET_SOURCE ?= ""
 
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
@@ -140,7 +145,7 @@ ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true \;
 endif
 else
-	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
+	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build --source $(NUGET_SOURCE) -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
 
 clean: engine
@@ -173,7 +178,7 @@ ifneq ("$(MOD_SOLUTION_FILES)","")
 ifeq ($(RUNTIME), mono)
 	@$(MSBUILD) -t:build -restore -p:Configuration=Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 else
-	@$(DOTNET) build -c Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
+	@$(DOTNET) build --source $(NUGET_SOURCE) -c Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 endif
 endif
 	@echo "Checking for explicit interface violations..."
