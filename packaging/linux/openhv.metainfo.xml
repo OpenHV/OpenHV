@@ -16,20 +16,16 @@
   <launchable type="desktop-id">openhv.desktop</launchable>
   <screenshots>
     <screenshot>
-      <image>https://img.itch.zone/aW1hZ2UvNjg5NjY5LzM4MzY5MjUucG5n/original/VzlKJN.png</image>
-      <caption>Snow</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://media.moddb.com/images/mods/1/48/47842/EhK29FRXYAAkWhL.1.png</image>
-      <caption>Base</caption>
+      <image>https://img.itch.zone/aW1hZ2UvNjg5NjY5Lzc2NjI2MjMucG5n/original/sT6U6%2F.png</image>
+      <caption>fortified base</caption>
     </screenshot>
     <screenshot>
       <image>https://media.discordapp.net/attachments/415154443261050901/878982936924418048/Screenshot_from_2021-07-31_13-18-44.png</image>
-      <caption>Editor</caption>
+      <caption>in-game map editor</caption>
     </screenshot>
     <screenshot>
-      <image>https://media.moddb.com/images/mods/1/48/47842/army.png</image>
-      <caption>Multiplayer</caption>
+      <image>https://media.moddb.com/images/articles/1/302/301662/unknown.png</image>
+      <caption>spectator mode</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://openhv.itch.io/openhv</url>
