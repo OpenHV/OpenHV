@@ -46,6 +46,7 @@ else
 fi
 
 APPDIR="${PACKAGING_DIR}/${PACKAGING_INSTALLER_NAME}.appdir"
+PREFIX="/usr"
 
 # Set the working dir to the location of this script
 cd "${PACKAGING_DIR}"
@@ -57,6 +58,7 @@ if [ ! -f "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/Makefile" ]; then
 fi
 
 . "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/functions.sh"
+. "${TEMPLATE_ROOT}/packaging/linux/functions.sh"
 . "${TEMPLATE_ROOT}/packaging/functions.sh"
 
 if [ ! -d "${OUTPUTDIR}" ]; then
@@ -65,28 +67,25 @@ if [ ! -d "${OUTPUTDIR}" ]; then
 fi
 
 echo "Building core files"
-install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/openra" "linux-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
-install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}/usr/lib/openra"
-rm -rf "${APPDIR}/usr/lib/openra/global mix database.dat"
-
-mkdir -p "${APPDIR}/usr/share/metainfo"
-install -m644 "${PACKAGING_DIR}/openhv.metainfo.xml" "${APPDIR}/usr/share/metainfo"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv" "linux-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv"
+rm -rf "${APPDIR}${PREFIX}/lib/openhv/global mix database.dat"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
-	mkdir -p "${APPDIR}/usr/lib/openra/$(dirname "${f}")"
-	cp -r "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/${f}" "${APPDIR}/usr/lib/openra/${f}"
+	mkdir -p "${APPDIR}${PREFIX}/lib/openhv/$(dirname "${f}")"
+	cp -r "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/${f}" "${APPDIR}${PREFIX}/lib/openhv/${f}"
 done
 
 echo "Building mod files"
-install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}/usr/lib/openra" "linux-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}${PREFIX}/lib/openhv" "linux-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
-cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}/usr/lib/openra/mods"
+cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}${PREFIX}/lib/openhv/mods"
 
-set_engine_version "${ENGINE_VERSION}" "${APPDIR}/usr/lib/openra"
+set_engine_version "${ENGINE_VERSION}" "${APPDIR}${PREFIX}/lib/openhv"
 if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then
-	set_mod_version "${TAG}" "${APPDIR}/usr/lib/openra/mods/${MOD_ID}/mod.yaml"
+	set_mod_version "${TAG}" "${APPDIR}${PREFIX}/lib/openhv/mods/${MOD_ID}/mod.yaml"
 else
-	MOD_VERSION=$(grep 'Version:' "${APPDIR}/usr/lib/openra/mods/${MOD_ID}/mod.yaml" | awk '{print $2}')
+	MOD_VERSION=$(grep 'Version:' "${APPDIR}${PREFIX}/lib/openhv/mods/${MOD_ID}/mod.yaml" | awk '{print $2}')
 	echo "Mod version ${MOD_VERSION} will remain unchanged.";
 fi
 
@@ -104,48 +103,15 @@ echo "Building AppImage"
 sed "s/openra-{MODID}/openhv/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/AppRun.in" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" > "${APPDIR}/AppRun"
 chmod 0755 "${APPDIR}/AppRun"
 
-if [ -n "${PACKAGING_DISCORD_APPID}" ]; then
-	sed "s/{DISCORDAPPID}/${PACKAGING_DISCORD_APPID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.desktop.discord.in" > temp.desktop.in
-	sed "s/{DISCORDAPPID}/${PACKAGING_DISCORD_APPID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-mimeinfo.xml.discord.in" > temp.xml.in
-else
-	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.desktop.in" temp.desktop.in
-	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-mimeinfo.xml.in" temp.xml.in
-fi
+BINDIR="${APPDIR}${PREFIX}/bin"
+install_executables "${BINDIR}" "${TEMPLATE_ROOT}" "${ENGINE_DIRECTORY}" "${MOD_ID}" "${TAG}" "${PACKAGING_DISPLAY_NAME}" "${PACKAGING_INSTALLER_NAME}" "${PACKAGING_FAQ_URL}"
 
-mkdir -p "${APPDIR}/usr/share/applications"
-chmod 0644 temp.desktop.in
-sed "s/openra-{MODID}-{TAG}/openra-${MOD_ID}-${TAG}/g" temp.desktop.in | sed "s/openra-{MODID}/openhv/g" | sed "s/OpenRA - {MODNAME}/OpenHV/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/applications/openhv.desktop"
-cp "${APPDIR}/usr/share/applications/openhv.desktop" "${APPDIR}/openhv.desktop"
-rm temp.desktop.in
+DATADIR="${APPDIR}${PREFIX}/share"
+install_metadata "${DATADIR}" "${TEMPLATE_ROOT}" "${ENGINE_DIRECTORY}"  "${MOD_ID}" "${TAG}" "${PACKAGING_DISPLAY_NAME}" "${PACKAGING_DISCORD_APPID}" "${PACKAGING_DIR}" "${ARTWORK_DIR}"
+cp "${DATADIR}/applications/openhv.desktop" "${APPDIR}/openhv.desktop"
+cp "${DATADIR}/icons/hicolor/256x256/apps/openhv.png" "${APPDIR}/openhv.png"
 
-mkdir -p "${APPDIR}/usr/share/mime/packages"
-chmod 0644 temp.xml.in
-sed "s/openra-{MODID}-{TAG}/openra-${MOD_ID}-${TAG}/g" temp.xml.in | sed "s/openra-{MODID}/openhv/g" | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/mime/packages/openhv.xml"
-rm temp.xml.in
-
-if [ -f "${ARTWORK_DIR}/icon_scalable.svg" ]; then
-	install -Dm644 "${ARTWORK_DIR}/icon_scalable.svg" "${APPDIR}/usr/share/icons/hicolor/scalable/apps/openhv.svg"
-fi
-
-for i in 16x16 32x32 48x48 64x64 128x128 256x256 512x512 1024x1024; do
-	if [ -f "${ARTWORK_DIR}/icon_${i}.png" ]; then
-		install -Dm644 "${ARTWORK_DIR}/icon_${i}.png" "${APPDIR}/usr/share/icons/hicolor/${i}/apps/openhv.png"
-		install -m644 "${ARTWORK_DIR}/icon_${i}.png" "${APPDIR}/openhv.png"
-	fi
-done
-
-install -d "${APPDIR}/usr/bin"
-
-sed "s/openra-{MODID}/openhv/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.appimage.in" | sed "s/{MODID}/${MOD_ID}/g" | sed "s/{TAG}/${TAG}/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{MODINSTALLERNAME}/${PACKAGING_INSTALLER_NAME}/g" | sed "s|{MODFAQURL}|${PACKAGING_FAQ_URL}|g" > "${APPDIR}/usr/bin/openhv"
-chmod 0755 "${APPDIR}/usr/bin/openhv"
-
-sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-server.appimage.in" > "${APPDIR}/usr/bin/openhv-server"
-chmod 0755 "${APPDIR}/usr/bin/openhv-server"
-
-sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-utility.appimage.in" > "${APPDIR}/usr/bin/openhv-utility"
-chmod 0755 "${APPDIR}/usr/bin/openhv-utility"
-
-install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${APPDIR}/usr/bin/gtk-dialog.py"
+install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${APPDIR}${BINDIR}/gtk-dialog.py"
 
 chmod a+x appimagetool-x86_64.AppImage
 APPIMAGE="${PACKAGING_INSTALLER_NAME}-${TAG}-x86_64.AppImage"

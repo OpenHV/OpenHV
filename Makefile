@@ -78,8 +78,9 @@ endif
 prefix ?= /usr/local
 datadir ?= $(prefix)/share
 mandir ?= $(datadir)/man
-libdir ?= $(prefix)/lib
-gamedir ?= $(libdir)/openhv
+bindir = $(prefix)/bin
+libdir = $(prefix)/lib
+gamedir = $(libdir)/openhv
 
 check-sdk-scripts:
 	@awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format: file must be saved using unix-style (CR, not CRLF) line endings.\n"; exit 1)
@@ -157,6 +158,8 @@ endif
 install:
 	@sh -c '. ./packaging/functions.sh; install_mod_assemblies . $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) ./engine $(NUGET_SOURCE)'
 	@sh -c '. ./engine/packaging/functions.sh; install_assemblies ./engine $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) True False False'
+	@sh -c '. ./packaging/linux/functions.sh; install_executables $(DESTDIR)$(bindir) . ./engine hv $(VERSION) OpenHV OpenHV https://github.com/OpenHV/OpenHV/wiki/FAQ'
+	@sh -c '. ./packaging/linux/functions.sh; install_metadata $(DESTDIR)$(datadir) . ./engine hv $(VERSION) OpenHV 730762985772941312 ./packaging/linux ./packaging/artwork'
 	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir) hv'
 	@rm -f "$(DESTDIR)$(gamedir)/global mix database.dat"
 	@cp -Lr mods/hv $(DESTDIR)$(gamedir)
