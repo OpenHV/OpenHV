@@ -19,7 +19,6 @@ install_mod_assemblies() {
 	TARGETPLATFORM="${3}"
 	RUNTIME="${4}"
 	ENGINE_PATH="${5}"
-	NUGET_SOURCE="${6}"
 
 	ORIG_PWD=$(pwd)
 	cd "${SRC_PATH}" || exit 1
@@ -50,7 +49,7 @@ install_mod_assemblies() {
 			done
 		fi
 	else
-		find . -maxdepth 1 -name '*.sln' -exec dotnet publish -c Release --source "${NUGET_SOURCE}" -p:TargetPlatform="${TARGETPLATFORM}" -r "${TARGETPLATFORM}" -o "${DEST_PATH}" --self-contained true \;
+		find . -maxdepth 1 -name '*.sln' -exec dotnet publish -c Release -p:TargetPlatform="${TARGETPLATFORM}" -r "${TARGETPLATFORM}" -o "${DEST_PATH}" --self-contained true \;
 		cd "${ORIG_PWD}" || exit 1
 	fi
 }

@@ -9,9 +9,6 @@
 # to compile using system libraries for native dependencies, run:
 #   make [RUNTIME=net6] TARGETPLATFORM=unix-generic
 #
-# to compile using a local nuget cache, run:
-#   make [RUNTIME=net6] NUGET_SOURCE=./nuget
-#
 # to remove the files created by compiling, run:
 #   make clean
 #
@@ -58,8 +55,6 @@ MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
 
 RUNTIME ?= net6
-
-NUGET_SOURCE ?= ""
 
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
@@ -152,11 +147,11 @@ ifneq ("$(MOD_SOLUTION_FILES)","")
 	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true \;
 endif
 else
-	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build --source $(NUGET_SOURCE) -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
+	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
 
 install:
-	@sh -c '. ./packaging/functions.sh; install_mod_assemblies . $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) ./engine $(NUGET_SOURCE)'
+	@sh -c '. ./packaging/functions.sh; install_mod_assemblies . $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) ./engine'
 	@sh -c '. ./engine/packaging/functions.sh; install_assemblies ./engine $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) True False False'
 	@sh -c '. ./packaging/linux/functions.sh; install_executables $(DESTDIR)$(bindir) . ./engine hv $(VERSION) OpenHV OpenHV https://github.com/OpenHV/OpenHV/wiki/FAQ'
 	@sh -c '. ./packaging/linux/functions.sh; install_metadata $(DESTDIR)$(datadir) . ./engine hv $(VERSION) OpenHV 730762985772941312 ./packaging/linux ./packaging/artwork'
@@ -196,7 +191,7 @@ ifneq ("$(MOD_SOLUTION_FILES)","")
 ifeq ($(RUNTIME), mono)
 	@$(MSBUILD) -t:build -restore -p:Configuration=Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 else
-	@$(DOTNET) build --source $(NUGET_SOURCE) -c Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
+	@$(DOTNET) build -c Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
 endif
 endif
 	@echo "Checking for explicit interface violations..."
