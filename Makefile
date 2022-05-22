@@ -76,6 +76,8 @@ endif
 endif
 
 prefix ?= /usr/local
+datadir ?= $(prefix)/share
+mandir ?= $(datadir)/man
 libdir ?= $(prefix)/lib
 gamedir ?= $(libdir)/openhv
 
@@ -158,6 +160,8 @@ install:
 	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir) hv'
 	@rm -f "$(DESTDIR)$(gamedir)/global mix database.dat"
 	@cp -Lr mods/hv $(DESTDIR)$(gamedir)
+	@mkdir -p $(DESTDIR)$(mandir)/man6/
+	@./utility.sh all --man-page > $(DESTDIR)$(mandir)/man6/openhv.6
 
 clean: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
