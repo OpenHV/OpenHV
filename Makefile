@@ -150,11 +150,19 @@ else
 	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
 
-install: all
+install: install-assemblies install-executables install-metadata install-data
+
+install-assemblies:
 	@sh -c '. ./packaging/functions.sh; install_mod_assemblies . $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) ./engine'
 	@sh -c '. ./engine/packaging/functions.sh; install_assemblies ./engine $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) True False False'
+
+install-executables:
 	@sh -c '. ./packaging/linux/functions.sh; install_executables $(DESTDIR)$(bindir) . ./engine hv $(VERSION) OpenHV OpenHV https://github.com/OpenHV/OpenHV/wiki/FAQ'
+
+install-metadata:
 	@sh -c '. ./packaging/linux/functions.sh; install_metadata $(DESTDIR)$(datadir) . ./engine hv $(VERSION) OpenHV 730762985772941312 ./packaging/linux ./packaging/artwork'
+
+install-data:
 	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir) hv'
 	@rm -f "$(DESTDIR)$(gamedir)/global mix database.dat"
 	@cp -Lr mods/hv $(DESTDIR)$(gamedir)
