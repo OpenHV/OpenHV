@@ -111,7 +111,7 @@ install_metadata "${DATADIR}" "${TEMPLATE_ROOT}" "${ENGINE_DIRECTORY}"  "${MOD_I
 cp "${DATADIR}/applications/openhv.desktop" "${APPDIR}/openhv.desktop"
 cp "${DATADIR}/icons/hicolor/256x256/apps/openhv.png" "${APPDIR}/openhv.png"
 
-install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${APPDIR}${BINDIR}/gtk-dialog.py"
+install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${BINDIR}/gtk-dialog.py"
 
 chmod a+x appimagetool-x86_64.AppImage
 APPIMAGE="${PACKAGING_INSTALLER_NAME}-${TAG}-x86_64.AppImage"
