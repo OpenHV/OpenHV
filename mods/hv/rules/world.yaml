@@ -366,7 +366,7 @@ World:
 		BuildRadiusCheckboxLocked: false
 		BuildRadiusCheckboxEnabled: true
 		BuildRadiusCheckboxVisible: true
-		BuildRadiusCheckboxDescription: Limits structure placement to areas around base and builders.
+		BuildRadiusCheckboxDescription: Limits structure placement to areas around base and outposts.
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
