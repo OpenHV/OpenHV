@@ -167,6 +167,8 @@ install-data:
 	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir)'
 	@rm -f "$(DESTDIR)$(gamedir)/global mix database.dat"
 	@cp -Lr mods/hv $(DESTDIR)$(gamedir)/mods/
+
+install-man: engine
 	@mkdir -p $(DESTDIR)$(mandir)/man6/
 	@./utility.sh all --man-page > $(DESTDIR)$(mandir)/man6/openhv.6
 
