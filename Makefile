@@ -163,9 +163,10 @@ install-metadata:
 	@sh -c '. ./packaging/linux/functions.sh; install_metadata $(DESTDIR)$(datadir) . ./engine hv $(VERSION) OpenHV 730762985772941312 ./packaging/linux ./packaging/artwork'
 
 install-data:
-	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir) hv'
+	@mkdir -p $(DESTDIR)$(gamedir)/mods/
+	@sh -c '. ./engine/packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir)'
 	@rm -f "$(DESTDIR)$(gamedir)/global mix database.dat"
-	@cp -Lr mods/hv $(DESTDIR)$(gamedir)
+	@cp -Lr mods/hv $(DESTDIR)$(gamedir)/mods/
 	@mkdir -p $(DESTDIR)$(mandir)/man6/
 	@./utility.sh all --man-page > $(DESTDIR)$(mandir)/man6/openhv.6
 
