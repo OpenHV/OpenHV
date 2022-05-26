@@ -65,5 +65,7 @@ install_metadata() {
 		fi
 	done
 
-	install -Dm0644 "${PACKAGING_DIR}/openhv.metainfo.xml" "${DATADIR}/metainfo/openhv.metainfo.xml"
+	DATE=`git show -s --format=%cd --date=format:'%Y-%m-%d'`
+	mkdir -p "${DATADIR}/metainfo/"
+	sed "s/{VERSION}/${TAG}/g" ${PACKAGING_DIR}/openhv.metainfo.xml.in | sed "s/{DATE}/${DATE}/g"  > "${DATADIR}/metainfo/openhv.metainfo.xml"
 }
