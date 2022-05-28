@@ -11725,14 +11725,6 @@ Templates:
 		Categories: Tech
 		Tiles:
 			0: Tech
-	Template@1556:
-		Id: 1556
-		Images: bits/terrain/techsymbols.png
-		Frames: 0
-		Size: 1,1
-		Categories: Tech
-		Tiles:
-			0: Tech
 	Template@1557:
 		Id: 1557
 		Images: bits/terrain/techsymbols.png
