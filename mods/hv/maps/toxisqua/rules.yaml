@@ -1,0 +1,110 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.80
+	IndexedPlayerPalette@RedLamp:
+		BaseName: redlamp
+		BasePalette: player
+		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
+		PlayerIndex:
+			Neutral: 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 2
+		AllowModifiers: True
+
+SPARKLAMP:
+	RenderSprites:
+		PlayerPalette: redlamp
+
+TOXI-LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 10c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.75
+		BlueTint: 0.10
+
+TOXI-X-LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 1.00
+		BlueTint: 0.10
+
+RESOURCELIGHT-RED:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.90
+		GreenTint: 0.40
+		BlueTint: 0.40
+
+World:
+	CubeSpawner:
+		CheckboxDisplayOrder: 1
+		CheckboxVisible: True
+		CheckboxLocked: True
+		CheckboxEnabled: True
+		CubeActors: healcube, spawnunitcube
+		CubeActorShares: 10, 90
+		SpawnInterval: 250
+		InitialSpawnDelay: 0
+	-StartingUnits@BaseYI:
+	-StartingUnits@BaseSC:
+	-StartingUnits@MinerYI:
+	-StartingUnits@MinerSC:
+	-StartingUnits@ScoutYI:
+	-StartingUnits@ScoutSC:
+	StartingUnits@CubeHunter:
+		Class: none
+		ClassName: Builder
+		Factions: yi, sc
+		BaseActor: builder
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxVisible: False
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxEnabled: False
+		BuildRadiusCheckboxVisible: False
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxEnabled: False
+	MapOptions:
+		ShortGameCheckboxVisible: False
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxEnabled: False
+	MapStartingLocations:
+		SeparateTeamSpawnsCheckboxEnabled: False
+		SeparateTeamSpawnsCheckboxLocked: True
+		SeparateTeamSpawnsCheckboxVisible: False
+
+Player:
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		FogCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxVisible: False
+	PlayerResources:
+		DefaultCashDropdownLocked: True
+		DefaultCashDropdownVisible: False
+		DefaultCash: 0
+	-ModularBot@RogueAI:
+	ModularBot@CubeHunter:
+		Name: Cube Hunter AI
+		Type: hunter
+	GrantConditionOnBotOwner@CubeHunter:
+		Condition: enable-cube-hunter-ai
+		Bots: hunter
+	CubePickupBotModule:
+		RequiresCondition: enable-cube-hunter-ai
+		ScanForCubesInterval: 10
+		EnemyAvoidanceRadius: 0
+
+^Vehicle:
+	-AnnounceOnSeen:
+
+BUILDER:
+	-WithFacingSpriteBody:
+	WithRandomFacingSpriteBody:
+		Images: builder1, builder2, builder3, builder4, builder5

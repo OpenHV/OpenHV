@@ -1,0 +1,284 @@
+MapFormat: 11
+
+RequiresMod: hv
+
+Title: Toxicity Squared
+
+Author: SiegeSpud
+
+Tileset: PLANET
+
+MapSize: 66,66
+
+Bounds: 1,1,64,64
+
+Visibility: Lobby
+
+Categories: Cube Hunter
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Multi0, Multi1, Multi2, Multi3
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi2:
+		Name: Multi2
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi3:
+		Name: Multi3
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: prop9
+		Owner: Neutral
+		Location: 42,22
+	Actor1: prop9
+		Owner: Neutral
+		Location: 23,22
+	Actor2: prop9
+		Owner: Neutral
+		Location: 23,41
+	Actor3: prop9
+		Owner: Neutral
+		Location: 42,41
+	Actor4: mpspawn
+		Owner: Neutral
+		Location: 25,25
+	Actor5: mpspawn
+		Owner: Neutral
+		Location: 40,25
+	Actor6: mpspawn
+		Owner: Neutral
+		Location: 25,40
+	Actor7: mpspawn
+		Owner: Neutral
+		Location: 40,40
+	Actor8: stnrock5
+		Owner: Neutral
+		Location: 54,9
+	Actor9: stnrock5
+		Owner: Neutral
+		Location: 9,11
+	Actor10: stnrock5
+		Owner: Neutral
+		Location: 11,56
+	Actor11: stnrock5
+		Owner: Neutral
+		Location: 56,54
+	Actor12: stnrock4
+		Owner: Neutral
+		Location: 16,10
+	Actor13: stnrock4
+		Owner: Neutral
+		Location: 55,16
+	Actor14: stnrock4
+		Owner: Neutral
+		Location: 49,55
+	Actor15: stnrock4
+		Owner: Neutral
+		Location: 10,49
+	Actor16: stnrock12
+		Owner: Neutral
+		Location: 37,57
+	Actor17: stnrock12
+		Owner: Neutral
+		Location: 8,37
+	Actor18: stnrock12
+		Owner: Neutral
+		Location: 28,8
+	Actor19: stnrock12
+		Owner: Neutral
+		Location: 57,28
+	Actor20: stnrock10
+		Owner: Neutral
+		Location: 38,5
+	Actor21: stnrock10
+		Owner: Neutral
+		Location: 60,38
+	Actor22: stnrock10
+		Owner: Neutral
+		Location: 27,60
+	Actor23: stnrock10
+		Owner: Neutral
+		Location: 5,27
+	Actor24: stnrock11
+		Owner: Neutral
+		Location: 28,56
+	Actor25: stnrock11
+		Owner: Neutral
+		Location: 9,28
+	Actor26: stnrock11
+		Owner: Neutral
+		Location: 39,9
+	Actor27: stnrock11
+		Owner: Neutral
+		Location: 56,37
+	Actor34: toxi-light
+		Owner: Neutral
+		Location: 33,32
+	Actor35: toxi-light
+		Owner: Neutral
+		Location: 17,23
+	Actor36: toxi-light
+		Owner: Neutral
+		Location: 23,17
+	Actor33: toxi-light
+		Owner: Neutral
+		Location: 50,32
+	Actor38: toxi-light
+		Owner: Neutral
+		Location: 32,14
+	Actor37: toxi-light
+		Owner: Neutral
+		Location: 48,42
+	Actor39: toxi-light
+		Owner: Neutral
+		Location: 17,42
+	Actor41: toxi-light
+		Owner: Neutral
+		Location: 16,33
+	Actor40: toxi-light
+		Owner: Neutral
+		Location: 23,48
+	Actor42: toxi-light
+		Owner: Neutral
+		Location: 42,48
+	Actor43: toxi-light
+		Owner: Neutral
+		Location: 33,50
+	Actor31: toxi-light
+		Owner: Neutral
+		Location: 48,23
+	Actor32: toxi-light
+		Owner: Neutral
+		Location: 42,17
+	Actor44: resourcelight-red
+		Owner: Neutral
+		Location: 25,25
+	Actor45: resourcelight-red
+		Owner: Neutral
+		Location: 40,25
+	Actor46: resourcelight-red
+		Owner: Neutral
+		Location: 40,40
+	Actor47: resourcelight-red
+		Owner: Neutral
+		Location: 25,40
+	Actor48: sparklamp
+		Owner: Neutral
+		Location: 5,19
+	Actor49: sparklamp
+		Owner: Neutral
+		Location: 19,5
+	Actor50: sparklamp
+		Owner: Neutral
+		Location: 46,5
+	Actor51: sparklamp
+		Owner: Neutral
+		Location: 60,19
+	Actor52: sparklamp
+		Owner: Neutral
+		Location: 60,46
+	Actor53: sparklamp
+		Owner: Neutral
+		Location: 46,60
+	Actor54: sparklamp
+		Owner: Neutral
+		Location: 19,60
+	Actor55: sparklamp
+		Owner: Neutral
+		Location: 5,46
+	Actor56: sparklamp
+		Owner: Neutral
+		Location: 5,35
+	Actor57: sparklamp
+		Owner: Neutral
+		Location: 5,29
+	Actor58: sparklamp
+		Owner: Neutral
+		Location: 30,5
+	Actor59: sparklamp
+		Owner: Neutral
+		Location: 35,5
+	Actor60: sparklamp
+		Owner: Neutral
+		Location: 60,30
+	Actor61: sparklamp
+		Owner: Neutral
+		Location: 60,35
+	Actor62: sparklamp
+		Owner: Neutral
+		Location: 35,60
+	Actor63: sparklamp
+		Owner: Neutral
+		Location: 30,60
+	Actor64: resourcelight-red
+		Owner: Neutral
+		Location: 46,60
+	Actor65: resourcelight-red
+		Owner: Neutral
+		Location: 35,60
+	Actor66: resourcelight-red
+		Owner: Neutral
+		Location: 30,60
+	Actor67: resourcelight-red
+		Owner: Neutral
+		Location: 19,60
+	Actor68: resourcelight-red
+		Owner: Neutral
+		Location: 5,46
+	Actor69: resourcelight-red
+		Owner: Neutral
+		Location: 5,35
+	Actor70: resourcelight-red
+		Owner: Neutral
+		Location: 5,29
+	Actor71: resourcelight-red
+		Owner: Neutral
+		Location: 5,19
+	Actor72: resourcelight-red
+		Owner: Neutral
+		Location: 19,5
+	Actor73: resourcelight-red
+		Owner: Neutral
+		Location: 30,5
+	Actor74: resourcelight-red
+		Owner: Neutral
+		Location: 35,5
+	Actor75: resourcelight-red
+		Owner: Neutral
+		Location: 46,5
+	Actor76: resourcelight-red
+		Owner: Neutral
+		Location: 60,19
+	Actor77: resourcelight-red
+		Owner: Neutral
+		Location: 60,30
+	Actor78: resourcelight-red
+		Owner: Neutral
+		Location: 60,35
+	Actor79: resourcelight-red
+		Owner: Neutral
+		Location: 60,46
+
+Rules: rules.yaml
