@@ -105,6 +105,8 @@ Player:
 	-AnnounceOnSeen:
 
 BUILDER:
+	-Transforms:
+	-GrantConditionOnTerrain:
 	-WithFacingSpriteBody:
 	WithRandomFacingSpriteBody:
 		Images: builder1, builder2, builder3, builder4, builder5
