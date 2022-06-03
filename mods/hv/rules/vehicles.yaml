@@ -736,6 +736,7 @@ MINER:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2
 		Facing: 750
+		Offset: 0,-2
 		NoTransformNotification: BuildingCannotPlaceAudio
 		TransformNotification: MinerReady
 		Voice: Deploying
