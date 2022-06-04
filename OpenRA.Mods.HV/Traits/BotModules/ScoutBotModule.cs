@@ -73,8 +73,8 @@ namespace OpenRA.Mods.HV.Traits
 				scouts.Remove(a);
 
 			// TODO: Look for a more performance friendly way to update this list
-			var newDetectors = world.Actors.Where(a => Info.ScoutActorTypes.Contains(a.Info.Name) && a.Owner == player && !scouts.Contains(a));
-			foreach (var a in newDetectors)
+			var newScouts = world.Actors.Where(a => Info.ScoutActorTypes.Contains(a.Info.Name) && a.Owner == player && !scouts.Contains(a));
+			foreach (var a in newScouts)
 				scouts.Add(a);
 
 			foreach (var scout in scouts)

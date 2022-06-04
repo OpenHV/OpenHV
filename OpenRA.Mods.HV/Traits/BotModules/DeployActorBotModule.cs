@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019, 2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -17,8 +17,8 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Manages AI cloak detector deployment logic. For use with the regular `SquadManagerBotModule`.")]
-	public class DeployDetectorBotModuleInfo : ConditionalTraitInfo
+	[Desc("Deploys units when idle.")]
+	public class DeployActorBotModuleInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
 		[ActorReference]
@@ -26,12 +26,12 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly HashSet<string> DeployableActorTypes = new HashSet<string>();
 
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
-		public readonly int MinimumScanDelay = 20;
+		public readonly int MinimumScanDelay = 100;
 
-		public override object Create(ActorInitializer init) { return new DeployDetectorBotModule(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new DeployActorBotModule(init.Self, this); }
 	}
 
-	public class DeployDetectorBotModule : ConditionalTrait<DeployDetectorBotModuleInfo>, IBotTick
+	public class DeployActorBotModule : ConditionalTrait<DeployActorBotModuleInfo>, IBotTick
 	{
 		readonly World world;
 		readonly Player player;
@@ -40,21 +40,21 @@ namespace OpenRA.Mods.HV.Traits
 
 		int scanForIdleDetectorsTicks;
 
-		class DetectorTraitWrapper
+		class ActorTraitWrapper
 		{
 			public readonly Actor Actor;
 			public readonly GrantConditionOnDeploy GrantConditionOnDeploy;
 
-			public DetectorTraitWrapper(Actor actor)
+			public ActorTraitWrapper(Actor actor)
 			{
 				Actor = actor;
 				GrantConditionOnDeploy = actor.Trait<GrantConditionOnDeploy>();
 			}
 		}
 
-		readonly Dictionary<Actor, DetectorTraitWrapper> detectors = new Dictionary<Actor, DetectorTraitWrapper>();
+		readonly Dictionary<Actor, ActorTraitWrapper> actors = new Dictionary<Actor, ActorTraitWrapper>();
 
-		public DeployDetectorBotModule(Actor self, DeployDetectorBotModuleInfo info)
+		public DeployActorBotModule(Actor self, DeployActorBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;
@@ -76,21 +76,24 @@ namespace OpenRA.Mods.HV.Traits
 
 			scanForIdleDetectorsTicks = Info.MinimumScanDelay;
 
-			var toRemove = detectors.Keys.Where(unitCannotBeOrdered).ToList();
+			var toRemove = actors.Keys.Where(unitCannotBeOrdered).ToList();
 			foreach (var a in toRemove)
-				detectors.Remove(a);
+				actors.Remove(a);
 
 			// TODO: Look for a more performance friendly way to update this list
-			var newDetectors = world.Actors.Where(a => Info.DeployableActorTypes.Contains(a.Info.Name) && a.Owner == player && !detectors.ContainsKey(a));
-			foreach (var a in newDetectors)
-				detectors[a] = new DetectorTraitWrapper(a);
+			var newActors = world.Actors.Where(a => Info.DeployableActorTypes.Contains(a.Info.Name) && a.Owner == player && !actors.ContainsKey(a));
+			foreach (var a in newActors)
+				actors[a] = new ActorTraitWrapper(a);
 
-			foreach (var detector in detectors)
+			foreach (var actor in actors)
 			{
-				if (detector.Value.GrantConditionOnDeploy.DeployState != DeployState.Undeployed)
+				if (actor.Value.GrantConditionOnDeploy.DeployState != DeployState.Undeployed)
 					continue;
 
-				bot.QueueOrder(new Order("GrantConditionOnDeploy", detector.Key, true));
+				if (!actor.Key.IsIdle)
+					continue;
+
+				bot.QueueOrder(new Order("GrantConditionOnDeploy", actor.Key, true));
 			}
 		}
 	}
