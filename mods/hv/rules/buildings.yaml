@@ -2264,11 +2264,16 @@ WATCHTOWER:
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
-		RevealGeneratedShroud: False
-		RequiresCondition: !disabled && !ownerless
+		RevealGeneratedShroud: false
+		RequiresCondition: !disabled && !ownerless && !boosted
+	RevealsShroud@Boosted:
+		Range: 12c0
+		MinRange: 3c0
+		RevealGeneratedShroud: false
+		RequiresCondition: !disabled && !ownerless && boosted
 	RevealsShroud@Offline:
 		Range: 10c0
-		RevealGeneratedShroud: False
+		RevealGeneratedShroud: false
 		RequiresCondition: disabled && !ownerless
 	RevealsShroud@Hacked:
 		Range: 7c0
@@ -2276,6 +2281,8 @@ WATCHTOWER:
 		RequiredForShortGame: false
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
+	GrantConditionOnProximity:
+		Condition: boosted
 	WithIdleOverlay@Lights:
 		Sequence: animation
 		RequiresCondition: !disable-lights && !ownerless && !disabled
@@ -2285,6 +2292,7 @@ WATCHTOWER:
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
 	ProximityCapturable:
+		Sticky: true
 	-Capturable:
 	-CapturableProgressBar:
 	-CapturableProgressBlink:
