@@ -26,8 +26,8 @@ Players:
 		Name: Flames
 		NonCombatant: True
 		Faction: yi
-		Enemies: FireBrigade
 		Color: FF8000
+		Enemies: FireBrigade
 	PlayerReference@FireBrigade:
 		Name: FireBrigade
 		Playable: True

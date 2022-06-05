@@ -40,6 +40,46 @@ WATERTANK:
 	RenderSprites:
 		PlayerPalette: green
 
+FIRETRUCK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Fire Fighting Truck
+		GenericName: Truck
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: base
+		BuildPaletteOrder: 240
+		Description: Armored Fire Truck
+	Armament:
+		Weapon: WaterCannon
+		LocalOffset: 400,-50,0
+	AttackTurreted:
+		PauseOnCondition: ecmdisabled
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 25
+		Offset: 150,0,150
+	WithSpriteTurret:
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 6c0
+	RenderSprites:
+		PlayerPalette: green
+
 TREEFLAME:
 	Inherits@Shape: ^1x1Shape
 	Inherits@Selection: ^Selectable

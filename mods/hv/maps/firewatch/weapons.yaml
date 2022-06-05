@@ -26,4 +26,4 @@ WaterCannon:
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water, Ground
-		ImpactSounds: Video_Game_Splash-Ploor.wav
+		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
