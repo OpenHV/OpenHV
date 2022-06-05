@@ -14,9 +14,9 @@ WATERTANK:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: base
+		Prerequisites: ~base
 		BuildPaletteOrder: 240
-		Description: Armored Fire Truck
+		Description: Armored Fire Fighting Vehicle
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
@@ -41,7 +41,7 @@ WATERTANK:
 		PlayerPalette: green
 
 FIRETRUCK:
-	Inherits: ^TrackedVehicle
+	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	AutoTargetPriority@Default:
 		ValidTargets: Fire
@@ -54,9 +54,9 @@ FIRETRUCK:
 		GenericName: Truck
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: base
+		Prerequisites: ~base
 		BuildPaletteOrder: 240
-		Description: Armored Fire Truck
+		Description: Civilian Fire Engine
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
