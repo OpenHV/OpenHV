@@ -60,8 +60,11 @@ FIRETRUCK:
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
+	AttackMove:
+		TargetLineColor: 0000FF
 	AttackTurreted:
 		Voice: Attack
+		TargetLineColor: 0000FF
 	Turreted:
 		TurnSpeed: 25
 		Offset: 150,0,150
