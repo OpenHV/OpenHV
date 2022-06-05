@@ -21,7 +21,7 @@ WATERTANK:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
 	AttackFrontal:
-		Voice: Attack
+		Voice: Action
 		TargetLineColor: 0000FF
 	AttackMove:
 		TargetLineColor: 0000FF
@@ -63,7 +63,7 @@ FIRETRUCK:
 	AttackMove:
 		TargetLineColor: 0000FF
 	AttackTurreted:
-		Voice: Attack
+		Voice: Action
 		TargetLineColor: 0000FF
 	Turreted:
 		TurnSpeed: 25
