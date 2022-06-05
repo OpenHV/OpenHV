@@ -61,7 +61,6 @@ FIRETRUCK:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
 	AttackTurreted:
-		PauseOnCondition: ecmdisabled
 		Voice: Attack
 	Turreted:
 		TurnSpeed: 25
