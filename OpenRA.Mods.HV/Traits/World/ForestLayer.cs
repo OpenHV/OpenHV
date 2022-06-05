@@ -154,6 +154,10 @@ namespace OpenRA.Mods.HV.Traits
 		void INotifyCrushed.OnCrush(Actor self, Actor crusher, BitSet<CrushClass> crushClasses)
 		{
 			var cell = crusher.Location;
+			var uv = cell.ToMPos(world.Map);
+			if (hitpoints[uv] == 0)
+				return;
+
 			var originalTile = self.World.Map.Tiles[cell];
 			var replacement = info.CrushedTiles[originalTile.Type];
 			var replacementTile = new TerrainTile(replacement, 0x00);
