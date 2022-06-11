@@ -15,7 +15,7 @@ WATERTANK:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: ~base
-		BuildPaletteOrder: 240
+		BuildPaletteOrder: 200
 		Description: Armored Fire Fighting Vehicle
 	Armament:
 		Weapon: WaterCannon
@@ -55,7 +55,7 @@ FIRETRUCK:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: ~base
-		BuildPaletteOrder: 240
+		BuildPaletteOrder: 100
 		Description: Civilian Fire Engine
 	Armament:
 		Weapon: WaterCannon
@@ -81,6 +81,33 @@ FIRETRUCK:
 		Range: 6c0
 	RenderSprites:
 		PlayerPalette: green
+
+FIREFIGHTERPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Buildable:
+		Queue: Vehicle
+		Prerequisites: ~base
+		Description: Volunteer firefighter pod on duty.
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Firefighter Pod
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament@Primary:
+		Weapon: WaterCannonSmall
+		LocalOffset: 250,0,50
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: WaterCannonSmall
+	AttackFrontal:
+		FacingTolerance: 0
 
 TREEFLAME:
 	Inherits@Shape: ^1x1Shape
