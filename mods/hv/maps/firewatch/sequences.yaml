@@ -19,5 +19,14 @@ firetruck:
 		Facings: 8
 	turret: maps/firewatch/firetruck.png
 		Start: 8
-		Facings: 8		
+		Facings: 8
 	icon: maps/firewatch/firetruck-icon.png
+
+firefighterpod:
+	idle: maps/firewatch/firefighterpod.png
+		Facings: 8
+	die: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon: maps/firewatch/firefighterpod-icon.png
