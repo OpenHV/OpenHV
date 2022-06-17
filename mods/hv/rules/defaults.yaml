@@ -431,7 +431,8 @@
 		HP: 40000
 	Building:
 		Footprint: x
-	FootprintPlaceBuildingPreview:
+	ActorPreviewPlaceBuildingPreview:
+		PreviewAlpha: 0.40
 	WithSpriteBody:
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
