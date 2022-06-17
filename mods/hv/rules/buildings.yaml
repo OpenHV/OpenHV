@@ -69,85 +69,85 @@ BASE:
 	ExitsDebugOverlay:
 	Exit@South1:
 		RequiresCondition: !being-captured
-		ExitCell: 0,4
+		ExitCell: 0,3
 		SpawnOffset: -512,512,0
 		Facing: 512
 		ProductionTypes: Building, Vehicle
 		ExitDelay: 20
 		Priority: 10
 	WithProductionExitOverlay@South1:
-		ExitCell: 0,4
+		ExitCell: 0,3
 		Sequence: active-platform1
 	Exit@South2:
 		RequiresCondition: !being-captured
-		ExitCell: 1,4
+		ExitCell: 1,3
 		SpawnOffset: 512,512,0
 		Facing: 512
 		ProductionTypes: Building, Vehicle
 		ExitDelay: 20
 		Priority: 10
 	WithProductionExitOverlay@South2:
-		ExitCell: 1,4
+		ExitCell: 1,3
 		Sequence: active-platform2
 	Exit@West1:
 		RequiresCondition: !being-captured
-		ExitCell: -1,2
+		ExitCell: -1,1
 		SpawnOffset: -512,512,0
 		Facing: 768
 		ProductionTypes: Building, Vehicle
 		ExitDelay: 20
 	WithProductionExitOverlay@West1:
-		ExitCell: -1,2
+		ExitCell: -1,1
 		Sequence: active-platform1
 	Exit@West2:
 		RequiresCondition: !being-captured
-		ExitCell: -1,3
+		ExitCell: -1,2
 		SpawnOffset: -512,512,0
 		Facing: 768
 		ProductionTypes: Building, Vehicle
 		ExitDelay: 20
 	WithProductionExitOverlay@West2:
-		ExitCell: -1,3
+		ExitCell: -1,2
 		Sequence: active-platform1
 	Exit@West3:
 		RequiresCondition: !being-captured
-		ExitCell: -1,4
+		ExitCell: -1,3
 		SpawnOffset: -512,512,0
 		Facing: 768
 		ProductionTypes: Vehicle
 		ExitDelay: 20
 	WithProductionExitOverlay@West3:
-		ExitCell: -1,4
+		ExitCell: -1,3
 		Sequence: active-platform1
 	Exit@East1:
 		RequiresCondition: !being-captured
-		ExitCell: 2,2
+		ExitCell: 2,1
 		SpawnOffset: 512,512,0
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
 	WithProductionExitOverlay@East1:
-		ExitCell: 2,2
+		ExitCell: 2,1
 		Sequence: active-platform2
 	Exit@East2:
 		RequiresCondition: !being-captured
-		ExitCell: 2,3
+		ExitCell: 2,2
 		SpawnOffset: 512,512,0
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
 	WithProductionExitOverlay@East2:
-		ExitCell: 2,3
+		ExitCell: 2,2
 		Sequence: active-platform2
 	Exit@East3:
 		RequiresCondition: !being-captured
-		ExitCell: 2,4
+		ExitCell: 2,3
 		SpawnOffset: 512,512,0
 		Facing: 256
 		ProductionTypes: Vehicle
 		ExitDelay: 20
 	WithProductionExitOverlay@East3:
-		ExitCell: 2,4
+		ExitCell: 2,3
 		Sequence: active-platform2
 	WithIdleOverlay@make-platform1:
 		Sequence: make-platform1
