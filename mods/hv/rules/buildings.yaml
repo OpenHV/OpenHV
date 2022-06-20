@@ -540,7 +540,7 @@ MODULE2:
 
 MINER2:
 	Inherits: ^Building
-	Inherits@Shape: ^2x1Shape
+	Inherits@Shape: ^2x3Shape
 	Inherits@Flame: ^BuildingFlame2
 	Selectable:
 		Bounds: 2048, 3072, 0, 0
