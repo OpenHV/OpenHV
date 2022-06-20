@@ -2012,7 +2012,7 @@ DESTROYEDWALLTOPRIGHT:
 		Sequence: destroyed-topright
 
 RECONSTRUCTOR:
-	Inherits: ^BaseBuilding
+	Inherits: ^Building
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame
@@ -2049,7 +2049,6 @@ RECONSTRUCTOR:
 	GrantConditionOnDamageState@BrokenLights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
-	-Sellable:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	OwnerLostAction:
