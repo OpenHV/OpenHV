@@ -271,6 +271,14 @@ ELITEPOD:
 	WithMoveAnimation:
 	-Explodes@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Voiced:
 		VoiceSet: ElitePodVoice
 
