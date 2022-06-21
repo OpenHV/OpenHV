@@ -103,7 +103,7 @@ SNIPERPOD:
 		Speed: 70
 		Locomotor: pod
 	RevealsShroud:
-		Range: 8c0
+		Range: 10c0
 	Armament@Primary:
 		Weapon: SniperRifle
 		MuzzleSequence: muzzle
@@ -246,7 +246,7 @@ ELITEPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Elite airborn pod.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
+		Description: Elite airborn pod.\nArmed with heavy machine gun.\n  Strong vs Pod and Light Vehicles\n  Weak vs Buildings.
 		Prerequisites: ~module, techcenter
 	Valued:
 		Cost: 750

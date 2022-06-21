@@ -57,9 +57,9 @@ ChainGun:
 		Spread: 64
 		Damage: 1000
 		Versus:
-			None: 180
+			None: 160
 			Steel: 30
-			Light: 40
+			Light: 35
 			Heavy: 25
 			Concrete: 15
 	Warhead@Incendiary: TreeDamage
@@ -259,8 +259,8 @@ Flamethrower:
 		Spread: 128
 		Damage: 4000
 		Versus:
-			None: 90
-			Steel: 45
+			None: 45
+			Steel: 22
 			Light: 8
 			Heavy: 5
 			Wood: 100
@@ -290,8 +290,8 @@ HeavyMachineGun:
 		Spread: 24
 		Damage: 1000
 		Versus:
-			None: 200
-			Steel: 35
+			None: 100
+			Steel: 20
 			Light: 50
 			Heavy: 25
 			Concrete: 10

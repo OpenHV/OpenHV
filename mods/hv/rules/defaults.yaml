@@ -183,11 +183,11 @@
 		CrushClasses: Pods
 		WarnProbability: 15
 	RevealsShroud:
-		Range: 4c0
-		MinRange: 2c0
+		Range: 8c0
+		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 2c0
+		Range: 8c0
 	DetectCloaked:
 		Range: 1c0
 
