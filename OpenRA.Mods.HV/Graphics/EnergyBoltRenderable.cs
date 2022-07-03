@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Graphics
 		public int ZOffset { get { return zOffset; } }
 		public bool IsDecoration { get { return true; } }
 
-		public IRenderable WithPalette(PaletteReference newPalette) { return this; }
+		public IRenderable WithPalette() { return this; }
 		public IRenderable WithZOffset(int newOffset) { return new EnergyBoltRenderable(offsets, newOffset, width, color); }
 		public IRenderable OffsetBy(in WVec vec)
 		{

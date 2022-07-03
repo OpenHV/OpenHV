@@ -47,7 +47,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 			var overlay = new Animation(init.World, rs.GetImage(init.Self));
 			var anim = new AnimationWithOffset(overlay,
-				() => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(init.Self, init.Self.Orientation))),
+				() => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(init.Self.Orientation))),
 				() => IsTraitDisabled);
 
 			// Remove the animation once it is complete

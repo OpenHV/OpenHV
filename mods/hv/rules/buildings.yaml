@@ -1348,6 +1348,7 @@ SILO:
 		Name: Atom Bomb
 		Description: Drop an atomic bomb\nat a target location.
 		MissileWeapon: nuclear
+		MissileImage: nuclear
 		MissileDelay: 5
 		SkipAscent: true
 		DisplayTimerRelationships: Ally, Neutral, Enemy

@@ -385,7 +385,7 @@ hackerpod:
 	extended: bits/hackerpod.png
 		Start: 14
 		Length: 4
-		Reverses: true	
+		Reverses: true
 		Tick: 60
 	icon: bits/units-icons.png
 		Start: 53

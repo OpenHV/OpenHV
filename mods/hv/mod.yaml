@@ -153,6 +153,9 @@ ChromeLayout:
 	hv|chrome/ingame-player.yaml
 	hv|chrome/gamesave-loading.yaml
 
+Translations:
+	common|languages/en.ftl
+
 Music:
 	hv|audio/music.yaml
 
@@ -171,6 +174,7 @@ Hotkeys:
 	common|hotkeys/chat.yaml
 	common|hotkeys/control-groups.yaml
 	hv|hotkeys/production.yaml
+	common|hotkeys/editor.yaml
 
 LoadScreen: TextLoadScreen
 
@@ -227,6 +231,8 @@ MapGrid:
 	Type: Rectangular
 	SubCellOffsets: 0,0,0, -256,-256,0, 256,-256,0, 0,256,0
 	DefaultSubCell: 1
+
+DefaultOrderGenerator: UnitOrderGenerator
 
 TerrainFormat: CustomTerrain
 

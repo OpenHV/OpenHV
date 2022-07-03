@@ -53,7 +53,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 			overlay = new Animation(init.World, info.Image ?? renderSprites.GetImage(init.Self));
 			var body = init.Self.Trait<BodyOrientation>();
 			animation = new AnimationWithOffset(overlay,
-				() => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(init.Self, init.Self.Orientation))),
+				() => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(init.Self.Orientation))),
 				() => false);
 		}
 

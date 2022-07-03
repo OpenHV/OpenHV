@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Orders;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Activities;
 using OpenRA.Traits;
@@ -89,13 +88,10 @@ namespace OpenRA.Mods.HV.Traits
 			 ? self.World.ActorsHavingTrait<ResourceCollector>().Where(r => r.Owner == self.Owner)
 			 : self.World.ActorsHavingTrait<AcceptsDeliveredResources>().Where(r => r.Owner == self.Owner);
 
-			List<CPos> path;
-
-			using (var search = PathSearch.ToTargetCell(self.World, mobile.Locomotor, self, actors.Select(a => a.Location), self.Location, BlockedByActor.None,
+			var path = mobile.PathFinder.FindUnitPathToTargetCell(self, actors.Select(a => a.Location), mobile.ToCell, BlockedByActor.None,
 				location => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && self.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
-					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(location) - u.CenterPosition).Length))))
-				path = self.World.WorldActor.Trait<IPathFinder>().FindPath(search);
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(location) - u.CenterPosition).Length)));
 
 			if (path.Count > 0)
 				return actors.First(r => r.Location == path.Last());

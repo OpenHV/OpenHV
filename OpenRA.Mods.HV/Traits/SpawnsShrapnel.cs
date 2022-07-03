@@ -88,7 +88,7 @@ namespace OpenRA.Mods.HV.Traits
 					: Info.Delay[0];
 
 			var localoffset = body != null
-					? body.LocalToWorld(Info.LocalOffset.Rotate(body.QuantizeOrientation(self, self.Orientation)))
+					? body.LocalToWorld(Info.LocalOffset.Rotate(body.QuantizeOrientation(self.Orientation)))
 					: Info.LocalOffset;
 
 			var position = self.CenterPosition + localoffset;

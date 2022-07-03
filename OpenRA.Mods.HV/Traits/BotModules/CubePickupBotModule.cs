@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see AUTHORS)
+ * Copyright 2021, 2022 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -129,17 +128,13 @@ namespace OpenRA.Mods.HV.Traits
 
 		Target PathToNextcube(Actor collector, Actor cube)
 		{
-			var locomotor = collector.Trait<Mobile>().Locomotor;
-
-			List<CPos> path;
-
-			using (var search = PathSearch.ToTargetCell(
-				world, locomotor, collector, collector.Location, cube.Location, BlockedByActor.Stationary,
+			var mobile = collector.Trait<Mobile>();
+			var path = mobile.PathFinder.FindUnitPathToTargetCell(
+				collector, new[] { collector.Location }, cube.Location, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && collector.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
-					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length))))
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));
 
-			path = pathfinder.FindPath(search);
 			if (path.Count == 0)
 				return Target.Invalid;
 

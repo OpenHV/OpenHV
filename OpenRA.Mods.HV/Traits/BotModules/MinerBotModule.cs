@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -63,7 +62,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		int scanForIdleMinersTicks;
 
-		IPathFinder pathfinder;
 		IResourceLayer resourceLayer;
 
 		IBotRequestUnitProduction[] requestUnitProduction;
@@ -71,14 +69,13 @@ namespace OpenRA.Mods.HV.Traits
 		class MinerTraitWrapper
 		{
 			public readonly Actor Actor;
-			public readonly Locomotor Locomotor;
+			public readonly Mobile Mobile;
 			public readonly Transforms Transforms;
 
 			public MinerTraitWrapper(Actor actor)
 			{
 				Actor = actor;
-				var mobile = actor.Trait<Mobile>();
-				Locomotor = mobile.Locomotor;
+				Mobile = actor.Trait<Mobile>();
 				Transforms = actor.Trait<Transforms>();
 			}
 		}
@@ -104,7 +101,6 @@ namespace OpenRA.Mods.HV.Traits
 			// PERF: Avoid all AIs reevaluating assignments on the same tick, randomize their initial evaluation delay.
 			scanForIdleMinersTicks = world.LocalRandom.Next(0, Info.MinimumScanDelay);
 
-			pathfinder = world.WorldActor.Trait<IPathFinder>();
 			resourceLayer = world.WorldActor.TraitOrDefault<IResourceLayer>();
 		}
 
@@ -166,17 +162,15 @@ namespace OpenRA.Mods.HV.Traits
 			var buildingInfo = towerInfo.TraitInfo<BuildingInfo>();
 			Func<CPos, bool> isValidResource = cell =>
 				Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
-					&& miner.Locomotor.CanStayInCell(cell)
+					&& miner.Mobile.Locomotor.CanStayInCell(cell)
 					&& world.CanPlaceBuilding(cell + miner.Transforms.Info.Offset, towerInfo, buildingInfo, actor);
 
-			List<CPos> path;
-			using (var search = PathSearch.ToTargetCellByPredicate(
-				world, miner.Locomotor, actor, new[] { actor.Location }, isValidResource, BlockedByActor.Stationary,
+			var path = miner.Mobile.PathFinder.FindUnitPathToTargetCellByPredicate(
+				actor, new[] { actor.Location }, isValidResource, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && actor.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
-					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length))))
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));
 
-			path = pathfinder.FindPath(search);
 			if (path.Count == 0)
 				return Target.Invalid;
 

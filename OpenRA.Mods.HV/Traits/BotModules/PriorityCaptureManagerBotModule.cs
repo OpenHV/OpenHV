@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -225,16 +224,12 @@ namespace OpenRA.Mods.HV.Traits
 
 		Target SafePath(Actor capturer, Actor target)
 		{
-			var locomotor = capturer.Trait<Mobile>().Locomotor;
-
-			List<CPos> path;
-
-			using (var search = PathSearch.ToTargetCell(world, locomotor, capturer, capturer.Location, target.Location, BlockedByActor.None,
+			var mobile = capturer.Trait<Mobile>();
+			var path = mobile.PathFinder.FindUnitPathToTargetCell(capturer, new[] { mobile.ToCell }, target.Location, BlockedByActor.None,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
-					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length))))
+					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));
 
-			path = pathfinder.FindPath(search);
 			if (path.Count == 0)
 				return Target.Invalid;
 
