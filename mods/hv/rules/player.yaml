@@ -140,15 +140,3 @@ Player:
 	ProvidesPrerequisite@Reconstructor:
 		Prerequisite: reconstructor
 		RequiresCondition: reconstructor
-	ProvidesPrerequisite@Reconstructor2:
-		Prerequisite: reconstructor2
-		RequiresCondition: reconstructor > 1
-	ProvidesPrerequisite@Reconstructor3:
-		Prerequisite: reconstructor3
-		RequiresCondition: reconstructor > 2
-	ProvidesPrerequisite@Reconstructor4:
-		Prerequisite: reconstructor4
-		RequiresCondition: reconstructor > 3
-	ProvidesPrerequisite@Reconstructor5:
-		Prerequisite: reconstructor5
-		RequiresCondition: reconstructor > 4

@@ -2065,56 +2065,6 @@ RECONSTRUCTOR:
 	GrantExternalConditionToOwner@Reconstructor:
 		Condition: reconstructor
 		RequiresCondition: !disabled && !ownerless
-	GrantConditionOnPrerequisite@Reconstructor:
-		Condition: reconstructor
-		Prerequisites: reconstructor
-	GrantConditionOnPrerequisite@Reconstructor2:
-		Condition: reconstructor
-		Prerequisites: reconstructor2
-	GrantConditionOnPrerequisite@Reconstructor3:
-		Condition: reconstructor
-		Prerequisites: reconstructor3
-	GrantConditionOnPrerequisite@Reconstructor4:
-		Condition: reconstructor
-		Prerequisites: reconstructor4
-	GrantConditionOnPrerequisite@Reconstructor5:
-		Condition: reconstructor
-		Prerequisites: reconstructor5
-	WithTextDecoration@Reconstructor:
-		RequiresSelection: true
-		Text: COUNT: 1
-		Font: TinyPixel
-		Position: Top
-		Margin: 0, 5
-		RequiresCondition: reconstructor == 1
-	WithTextDecoration@Reconstructor2:
-		RequiresSelection: true
-		Text: COUNT: 2
-		Font: TinyPixel
-		Position: Top
-		Margin: 0, 5
-		RequiresCondition: reconstructor == 2
-	WithTextDecoration@Reconstructor3:
-		RequiresSelection: true
-		Text: COUNT: 3
-		Font: TinyPixel
-		Position: Top
-		Margin: 0, 5
-		RequiresCondition: reconstructor == 3
-	WithTextDecoration@Reconstructor4:
-		RequiresSelection: true
-		Text: COUNT: 4
-		Font: TinyPixel
-		Position: Top
-		Margin: 0, 5
-		RequiresCondition: reconstructor == 4
-	WithTextDecoration@Reconstructor5:
-		RequiresSelection: true
-		Text: COUNT: 4+
-		Font: TinyPixel
-		Position: Top
-		Margin: 0, 5
-		RequiresCondition: reconstructor > 4
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
 
