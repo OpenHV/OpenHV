@@ -42,6 +42,9 @@ BEAST:
 	-TeleportNetworkTransportable:
 	-WithTeleportEnergyOverlay:
 	-SpawnScrapOnDeath:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
 
 CROW:
 	Inherits: ^Plane
@@ -69,6 +72,9 @@ CROW:
 	-Selectable:
 	Interactable:
 	-Targetable@Airborne:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
 
 GULL:
 	Inherits: CROW
@@ -121,6 +127,9 @@ SEAMNSTR:
 		Interval: 200, 400
 		Sequences: emerge
 	-GrantConditionOnDamageState:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
 	-SpawnsShrapnel@DamageSparks:
 	-LeavesTrails:
 
@@ -172,5 +181,8 @@ FLYINGMONSTER:
 	-Explodes:
 	-Explodes@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
 	-Selectable:
 	Interactable:
