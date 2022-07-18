@@ -237,6 +237,8 @@ radar2:
 	Inherits: radar
 	idle: bits/radar2.png
 	shadow-overlay: bits/radar2-shadow.png
+	damaged-shadow-overlay: bits/radar2-shadow.png
+		Start: 0
 	damaged-idle: bits/radar2.png
 	icon: bits/buildings-icons.png
 		Start: 20
