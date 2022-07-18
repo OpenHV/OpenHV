@@ -43,56 +43,67 @@ hit:
 bullet1:
 	idle: bits/bullet1.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet2:
 	idle: bits/bullet2.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet3:
 	idle: bits/bullet3.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet4:
 	idle: bits/bullet4.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 	effect: bits/bullet4.png
 		Start: 8
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet5:
 	idle: bits/bullet5.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet6:
 	idle: bits/bullet6.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet7:
 	idle: bits/bullet7.png
 		Length: 2
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet8:
 	idle: bits/bullet8.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet9:
 	idle: bits/bullet9.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet10:
 	idle: bits/bullet10.png
 		Facings: 8
+		InterpolatedFacings: 16
 		Length: 2
 		Tick: 50
 		ZOffset: 2030
@@ -100,6 +111,7 @@ bullet10:
 slcm:
 	idle: bits/bullet11.png
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet12:
@@ -119,6 +131,7 @@ bullet14:
 	idle: bits/bullet14.png
 		Length: 2
 		Facings: 8
+		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet15:
@@ -137,6 +150,7 @@ bullet16:
 bullet17:
 	idle: bits/bullet17.png
 		Facings: 8
+		InterpolatedFacings: 16
 		Length: 3
 		Tick: 60
 		ZOffset: 2030
