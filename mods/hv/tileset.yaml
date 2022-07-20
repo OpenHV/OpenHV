@@ -12198,3 +12198,100 @@ Templates:
 		Categories: Dirt, Snow
 		Tiles:
 			0: Snow
+
+	Template@1616:
+		Id: 1616
+		Images: bits/terrain/dirt-sand.png
+		Frames: 0
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1617:
+		Id: 1617
+		Images: bits/terrain/dirt-sand.png
+		Frames: 1
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1618:
+		Id: 1618
+		Images: bits/terrain/dirt-sand.png
+		Frames: 2
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1619:
+		Id: 1619
+		Images: bits/terrain/dirt-sand.png
+		Frames: 3
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1620:
+		Id: 1620
+		Images: bits/terrain/dirt-sand.png
+		Frames: 4
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1621:
+		Id: 1621
+		Images: bits/terrain/dirt-sand.png
+		Frames: 5
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1622:
+		Id: 1622
+		Images: bits/terrain/dirt-sand.png
+		Frames: 6
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1623:
+		Id: 1623
+		Images: bits/terrain/dirt-sand.png
+		Frames: 7
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1624:
+		Id: 1624
+		Images: bits/terrain/dirt-sand.png
+		Frames: 8
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1625:
+		Id: 1625
+		Images: bits/terrain/dirt-sand.png
+		Frames: 9
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1626:
+		Id: 1626
+		Images: bits/terrain/dirt-sand.png
+		Frames: 10
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
+	Template@1627:
+		Id: 1627
+		Images: bits/terrain/dirt-sand.png
+		Frames: 11
+		Size: 1,1
+		Categories: Dirt, Sand
+		Tiles:
+			0: Sand
