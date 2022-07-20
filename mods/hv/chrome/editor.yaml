@@ -628,19 +628,13 @@ Container@EDITOR_WORLD_ROOT:
 			X: 630
 			Width: 120
 			Height: 25
-			Text: Auto Tile
-			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Even out tile transitions
-			TooltipContainer: TOOLTIP_CONTAINER
+			Text: Overlays
 			Font: Bold
 		Button@DEBUG_BUTTON:
 			X: 760
 			Width: 70
 			Height: 25
-			Text: Debug
-			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Show the terrain types
-			TooltipContainer: TOOLTIP_CONTAINER
+			Align: Left
 			Font: Bold
 		Label@COORDINATE_LABEL:
 			X: 840
