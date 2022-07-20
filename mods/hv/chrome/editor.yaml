@@ -203,21 +203,12 @@ Container@EDITOR_ROOT:
 		TooltipContainer@TOOLTIP_CONTAINER:
 
 Container@EDITOR_WORLD_ROOT:
-	Logic: LoadIngamePerfLogic, MapEditorLogic, ActorEditLogic, MapOverlaysLogic
+	Logic: LoadIngamePerfLogic, CustomMapEditorLogic, ActorEditLogic, MapOverlaysLogic
 		ToggleGridOverlayKey: EditorToggleGridOverlay
 		ToggleBuildableOverlayKey: EditorToggleBuildableOverlay
-		EditPanelPadding: 14
 	Children:
 		LogicKeyListener@OVERLAY_KEYHANDLER:
 		Container@PERF_ROOT:
-		Label@COORDINATE_LABEL:
-			X: 25
-			Y: WINDOW_BOTTOM - 25
-			Width: 50
-			Height: 25
-			Align: Left
-			Font: Bold
-			Contrast: true
 		EditorViewportController@MAP_EDITOR:
 			Width: WINDOW_RIGHT
 			Height: WINDOW_BOTTOM
@@ -282,7 +273,6 @@ Container@EDITOR_WORLD_ROOT:
 										Slider@OPTION:
 											X: 75
 											Y: 1
-											Width: 210
 											Width: 149
 											Height: 20
 										TextField@VALUE:
@@ -585,7 +575,7 @@ Container@EDITOR_WORLD_ROOT:
 			MenuContainer: INGAME_MENU
 			HideIngameUI: true
 			Pause: true
-			Width: 160
+			Width: 60
 			Height: 25
 			Text: Menu
 			TooltipText: Menu
@@ -593,7 +583,7 @@ Container@EDITOR_WORLD_ROOT:
 			Font: Bold
 			Key: escape
 		Button@COPYPASTE_BUTTON:
-			X: 170
+			X: 70
 			Width: 90
 			Height: 25
 			Text: Copy/Paste
@@ -601,45 +591,41 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipText: Copy
 			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
-			Key: c ctrl
+			Key: EditorCopy
 		DropDownButton@COPYFILTER_BUTTON:
-			X: 270
+			X: 170
 			Width: 140
 			Height: 25
 			Text: Copy Filters
 			Font: Bold
-		Button@GRID_BUTTON:
-			X: 420
-			Width: 70
-			Height: 25
-			Text: Grid
-			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Toggle the terrain grid
-			TooltipContainer: TOOLTIP_CONTAINER
-			Font: Bold
-			Key: f1
 		Button@UNDO_BUTTON:
-			X: 500
+			X: 320
 			Height: 25
-			Width: 90
+			Width: 70
 			Text: Undo
 			Font: Bold
-			Key: z ctrl
+			Key: EditorUndo
 			TooltipTemplate: BUTTON_TOOLTIP
 			TooltipText: Undo last step
 			TooltipContainer: TOOLTIP_CONTAINER
 		Button@REDO_BUTTON:
-			X: 600
+			X: 400
 			Height: 25
-			Width: 90
+			Width: 70
 			Text: Redo
 			Font: Bold
-			Key: y ctrl
+			Key: EditorRedo
 			TooltipTemplate: BUTTON_TOOLTIP
 			TooltipText: Redo last step
 			TooltipContainer: TOOLTIP_CONTAINER
+		DropDownButton@OVERLAY_BUTTON:
+			X: 480
+			Width: 140
+			Height: 25
+			Text: Overlays
+			Font: Bold
 		Button@AUTOTILE_BUTTON:
-			X: 700
+			X: 630
 			Width: 120
 			Height: 25
 			Text: Auto Tile
@@ -648,7 +634,7 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
 		Button@DEBUG_BUTTON:
-			X: 830
+			X: 760
 			Width: 70
 			Height: 25
 			Text: Debug
@@ -656,16 +642,13 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipText: Show the terrain types
 			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
-		Button@BUILDABLE_BUTTON:
-			X: 910
-			Width: 90
+		Label@COORDINATE_LABEL:
+			X: 840
+			Width: 50
 			Height: 25
-			Text: Buildable
+			Align: Left
 			Font: Bold
-			Key: f2
-			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Toggle unbuildable cells
-			TooltipContainer: TOOLTIP_CONTAINER
+			Contrast: true
 
 ScrollPanel@CATEGORY_FILTER_PANEL:
 	Width: 240
@@ -699,6 +682,17 @@ ScrollPanel@CATEGORY_FILTER_PANEL:
 ScrollPanel@COPY_FILTER_PANEL:
 	Width: 140
 	Height: 65
+	Children:
+		Checkbox@CATEGORY_TEMPLATE:
+			X: 5
+			Y: 5
+			Width: PARENT_RIGHT - 29
+			Height: 20
+			Visible: false
+
+ScrollPanel@OVERLAY_PANEL:
+	Width: 140
+	Height: 45
 	Children:
 		Checkbox@CATEGORY_TEMPLATE:
 			X: 5
