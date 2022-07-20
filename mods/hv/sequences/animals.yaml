@@ -20,10 +20,22 @@ crow:
 		Tick: 100
 	icon: bits/icon.png
 
+crow2:
+	idle: bits/crow2.png
+		Length: 8
+		Tick: 80
+	icon: bits/icon.png
+
 gull:
 	idle: bits/gull.png
 		Length: 5
 		Tick: 100
+	icon: bits/icon.png
+
+gull2:
+	idle: bits/gull2.png
+		Length: 8
+		Tick: 80
 	icon: bits/icon.png
 
 seed:
