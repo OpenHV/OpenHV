@@ -76,10 +76,20 @@ CROW:
 	-WithDecoration@Reconstructor:
 	-GrantConditionOnPrerequisite@Reconstructor:
 
+CROW2:
+	Inherits: CROW
+	Tooltip:
+		Name: Crow
+
 GULL:
 	Inherits: CROW
 	Tooltip:
 		Name: Seagulls
+
+GULL2:
+	Inherits: CROW
+	Tooltip:
+		Name: Seagull
 
 SEED:
 	Inherits: BEAST
