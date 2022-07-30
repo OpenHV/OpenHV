@@ -213,3 +213,29 @@ PROP12:
 	Inherits: PROP3
 	Health:
 		HP: 30000
+
+RAIL:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: +
+		Dimensions: 1,1
+	Tooltip:
+		Name: Rail
+	-ThrowsShrapnel:
+	-ThrowsShrapnel@large:
+	-Explodes:
+	HitShape:
+		Type: Circle
+			Radius: 512
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 6
+	-WithSpriteBody:
+	-WithIdleOverlay@Shadow:
+	WithWallSpriteBody:
+		Type: rail
+	Replaceable:
+		Types: rail

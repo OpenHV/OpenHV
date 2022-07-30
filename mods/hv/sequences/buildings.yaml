@@ -1527,3 +1527,11 @@ watchtower:
 	flame2:
 		Offset: -13, -6
 	icon: bits/icon.png
+
+rail:
+	Defaults:
+		Offset: 0,0
+	idle: bits/rail.png
+		Length: 16
+		ZOffset: -1024
+	icon: bits/icon.png
