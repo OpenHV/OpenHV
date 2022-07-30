@@ -566,6 +566,20 @@ tanker2:
 	icon: bits/units-icons.png
 		Start: 43
 
+tanker3:
+	idle: bits/tanker2.png
+		Start: 8
+		Facings: 8
+	icon: bits/units-icons.png
+		Start: 18
+
+tanker4:
+	idle: bits/tanker2.png
+		Start: 0
+		Facings: 8
+	icon: bits/units-icons.png
+		Start: 18
+
 aatank:
 	idle: bits/aatank.png
 		Start: 0
