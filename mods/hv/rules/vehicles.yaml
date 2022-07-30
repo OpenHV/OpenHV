@@ -910,6 +910,10 @@ TANKER1:
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:
+	RenderSprites:
+		Image: tanker1
+		FactionImages:
+			sc: tanker3
 
 TANKER2:
 	Inherits: TANKER1
@@ -918,3 +922,7 @@ TANKER2:
 	Tooltip:
 		Name: Empty Resource Transporter
 	-SpawnActorOnDeath:
+	RenderSprites:
+		Image: tanker2
+		FactionImages:
+			sc: tanker4
