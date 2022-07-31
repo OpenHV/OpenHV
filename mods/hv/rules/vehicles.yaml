@@ -538,37 +538,6 @@ TANK12:
 	RevealsShroud@Hacked:
 		Range: 3c0
 
-TANK13:
-	Inherits: ^Vehicle
-	Inherits@Selection: ^SelectableSupportUnit
-	Buildable:
-		Prerequisites: ~disabled
-		Description: Transports resources to the headquarter.\n  Unarmed
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Armored Resource Transporter
-	Health:
-		HP: 11000
-	Armor:
-		Type: Light
-	Mobile:
-		Speed: 128
-	RevealsShroud:
-		Range: 5c0
-		MinRange: 3c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 3c0
-	ResourceTransporter:
-		Capacity: 7
-	SpawnActorOnDeath:
-		Actor: goldball
-	-SpawnScrapOnDeath:
-
-TANK14:
-	Inherits: TANK13
-
 TANK15:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
