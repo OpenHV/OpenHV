@@ -176,3 +176,14 @@ cargoship:
 	idle: bits/cargoship.png
 		Start: 24
 		Facings: 8
+
+parachute:
+	idle: bits/parachute.png
+		Length: 6
+	closing: bits/parachute.png
+		Start: 6
+		Length: 12
+		Tick: 60
+	opening: bits/parachute.png
+		Frames: 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7
+		Tick: 120

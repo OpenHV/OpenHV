@@ -60,6 +60,21 @@
 	ExternalCondition@CrateCloak:
 		Condition: crate-cloak
 
+^Parachutable:
+	Parachutable:
+		FallRate: 26
+		KilledOnImpassableTerrain: true
+		ParachutingCondition: parachute
+	Targetable:
+		RequiresCondition: !parachute
+	WithParachute:
+		Image: parachute
+		Sequence: idle
+		OpeningSequence: opening
+		ClosingSequence: closing
+		Offset: 0,-200,200
+		RequiresCondition: parachute
+
 ^Husk:
 	Interactable:
 	Health:
@@ -83,6 +98,7 @@
 	Inherits@Shield: ^ForceFieldCompatible
 	Inherits@ECM: ^DisabledByECM
 	Inherits@Cloak: ^Cloakable
+	Inherits@Parachute: ^Parachutable
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps

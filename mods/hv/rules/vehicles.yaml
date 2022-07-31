@@ -476,7 +476,7 @@ TANK11:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~disabled #factory.sc
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 180
 		Description: Main battle tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
@@ -510,7 +510,7 @@ TANK12:
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~disabled #factory.yi
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 190
 		Description: Double barreled tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:

@@ -1534,3 +1534,22 @@ rail:
 		Length: 16
 		ZOffset: -1024
 	icon: bits/icon.png
+
+dropzone:
+	Inherits@Flame: ^BuildingFlame2
+	idle: bits/dropzone.png
+		ZOffset: -1c511
+	active: bits/dropzone.png
+		Length: 8
+		ZOffset: -1c511
+		Tick: 200
+	damaged-idle: bits/dropzone.png
+		Start: 8
+		ZOffset: -1c511
+	shadow-overlay: bits/dropzone-shadow.png
+		ZOffset: -1c768
+	flame:
+		Offset: 3, -4
+	flame2:
+		Offset: -13, -6
+	icon: bits/icon.png
