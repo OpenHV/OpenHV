@@ -438,7 +438,6 @@
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-	ShakeOnDeath:
 	Guardable:
 		Range: 3c0
 	Tooltip:
@@ -461,6 +460,7 @@
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+	ShakeOnDeath:
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1000
@@ -551,17 +551,22 @@
 ^Prop:
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
+	Interactable:
+	Targetable:
+		TargetTypes: Ground, Structure
+	Armor:
+		Type: Steel
+	Health:
+		HP: 40000
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-	Interactable:
 	FrozenUnderFog:
 	Tooltip:
 		GenericName: Structure
 		ShowOwnerRow: false
 	MapEditorData:
 		Categories: Decoration
-	WithSpriteBody:
 	CommandBarBlacklist:
 	RequiresSpecificOwners:
 		ValidOwnerNames: Neutral
@@ -574,11 +579,12 @@
 		Pieces: 0, 1
 		Range: 1c512, 4c0
 	Demolishable:
-	UpdatesPlayerStatistics:
 	Explodes:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
+	ShakeOnDeath:
+	WithSpriteBody:
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
