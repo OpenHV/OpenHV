@@ -472,7 +472,7 @@ TANK11:
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: Medium Tank
+		Name: Mercenary Tank
 		GenericName: Tank
 	Buildable:
 		Queue: Vehicle
@@ -481,6 +481,8 @@ TANK11:
 		Description: Main battle tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
 		Weapon: ^Cannon
+		MuzzleSequence: muzzle
+		LocalOffset: 500,0,50
 	AttackFrontal:
 		PauseOnCondition: ecmdisabled
 		Voice: Attack
@@ -492,51 +494,24 @@ TANK11:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 85
+		TurnSpeed: 25
+		Speed: 90
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
+	WithMuzzleOverlay:
 
 TANK12:
-	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Valued:
-		Cost: 1150
-	Tooltip:
-		Name: Heavy Tank
-		GenericName: Tank
+	Inherits: TANK11
 	Buildable:
-		Queue: Vehicle
-		Prerequisites: ~disabled
 		BuildPaletteOrder: 190
 		Description: Double barreled tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
-		Weapon: 105mm
-		Recoil: 128
-		RecoilRecovery: 38
-		LocalOffset: 768,85,90, 768,-85,90
-		MuzzleSequence: muzzle
-	AttackFrontal:
-		PauseOnCondition: ecmdisabled
-		Voice: Attack
-		FacingTolerance: 0
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 60000
-	Armor:
-		Type: Heavy
-	Mobile:
-		Speed: 71
-	RevealsShroud:
-		Range: 6c0
-		MinRange: 3c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 3c0
+		Weapon: doublecannon
+		LocalOffset: 500,85,50, 500,-85,50
 
 TANK15:
 	Inherits: ^TrackedVehicle

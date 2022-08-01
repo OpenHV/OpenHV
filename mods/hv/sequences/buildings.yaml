@@ -1528,8 +1528,6 @@ watchtower:
 	icon: bits/icon.png
 
 rail:
-	Defaults:
-		Offset: 0,0
 	idle: bits/rail.png
 		Length: 16
 		ZOffset: -1024
@@ -1537,12 +1535,14 @@ rail:
 
 dropzone:
 	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, 1
 	idle: bits/dropzone.png
 		ZOffset: -1c511
 	active: bits/dropzone.png
 		Length: 8
 		ZOffset: -1c511
-		Tick: 200
+		Tick: 150
 	damaged-idle: bits/dropzone.png
 		Start: 8
 		ZOffset: -1c511

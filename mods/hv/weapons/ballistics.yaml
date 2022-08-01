@@ -286,16 +286,12 @@ TurretArtillery:
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 
-105mm:
+doublecannon:
 	Inherits: ^Cannon
 	ReloadDelay: 70
 	Burst: 2
-	Report: tankfire02.wav
-	Projectile: Bullet
-		Image: bullet5
 	Warhead@Damage: SpreadDamage
-		Versus:
-			Heavy: 115
+		Damage: 2000
 
 mortargun:
 	Inherits: SmallSplash
