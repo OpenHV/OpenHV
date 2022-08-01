@@ -179,11 +179,15 @@ cargoship:
 
 parachute:
 	idle: bits/parachute.png
-		Length: 6
+		Length: 8
+		Offset: -2, -7
 	closing: bits/parachute.png
-		Start: 6
-		Length: 12
+		Start: 8
+		Length: 10
 		Tick: 60
+		ZOffset: -1024
+		Offset: -2, -7
 	opening: bits/parachute.png
-		Frames: 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7
-		Tick: 120
+		Frames: 17, 16, 15, 14, 13, 12, 11, 10, 9
+		Tick: 100
+		Offset: -2, -7
