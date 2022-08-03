@@ -562,3 +562,40 @@ CARGOSHIP:
 		Type: CenterPosition
 	DamageMultiplier@Invulnerable:
 		Modifier: 0
+
+AIRLIFTER:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	OwnerLostAction:
+		Action: Kill
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RejectsOrders:
+	Interactable:
+	Aircraft:
+		TurnSpeed: 25
+		Speed: 200
+		VTOL: True
+		Repulsable: False
+		MaximumPitch: 36
+		CruiseAltitude: 2560
+		IdleBehavior: LeaveMap
+		TurnToLand: False
+	Tooltip:
+		Name: Transport Aircraft
+	Valued:
+		Cost: 2000
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	HiddenUnderFog:
+		AlwaysVisibleRelationships: None
+		Type: CenterPosition
+	DamageMultiplier@Invulnerable:
+		Modifier: 0

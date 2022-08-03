@@ -2293,7 +2293,7 @@ DROPZONE:
 		RequiresCondition: !disabled && !ownerless
 	ProductionParadrop:
 		ReadyAudio: ReinforcementsHaveArrived
-		ActorType: cargoship
+		ActorType: airlifter
 		Produces: Reinforcements
 		ReadyTextNotification: Reinforcements arrived
 		RequiresCondition: !disabled && !ownerless
