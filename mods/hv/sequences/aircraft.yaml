@@ -191,3 +191,7 @@ parachute:
 		Frames: 17, 16, 15, 14, 13, 12, 11, 10, 9
 		Tick: 100
 		Offset: -2, -7
+
+airlifter:
+	idle: bits/airlifter.png
+		Facings: 8
