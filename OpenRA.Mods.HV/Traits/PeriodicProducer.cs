@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[ActorReference]
 		[FieldLoader.Require]
-		[Desc("Actors to produce.")]
+		[Desc("Random actors to choose from.")]
 		public readonly string[] Actors = null;
 
 		[FieldLoader.Require]
@@ -75,23 +75,21 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (!IsTraitDisabled && --ticks < 0)
 			{
-				var sp = self.TraitsImplementing<Production>()
+				var production = self.TraitsImplementing<Production>()
 				.FirstOrDefault(p => !p.IsTraitDisabled && !p.IsTraitPaused && p.Info.Produces.Contains(info.Type));
 
 				var activated = false;
 
-				if (sp != null)
+				if (production != null)
 				{
-					foreach (var name in info.Actors)
+					var name = info.Actors.Random(self.World.SharedRandom);
+					var inits = new TypeDictionary
 					{
-						var inits = new TypeDictionary
-						{
-							new OwnerInit(self.Owner),
-							new FactionInit(sp.Faction)
-						};
+						new OwnerInit(self.Owner),
+						new FactionInit(production.Faction)
+					};
 
-						activated |= sp.Produce(self, self.World.Map.Rules.Actors[name.ToLowerInvariant()], info.Type, inits, 0);
-					}
+					activated |= production.Produce(self, self.World.Map.Rules.Actors[name.ToLowerInvariant()], info.Type, inits, 0);
 				}
 
 				if (activated)

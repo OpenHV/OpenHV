@@ -2285,7 +2285,7 @@ DROPZONE:
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
 	PeriodicProducer:
-		Actors: tank11
+		Actors: tank11, tank12
 		Type: Reinforcements
 		ChargeDuration: 1500
 		ShowSelectionBar: true
