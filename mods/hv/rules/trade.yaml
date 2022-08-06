@@ -144,18 +144,6 @@ TANK7.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: tank7
 
-TANK11.TRADE:
-	Inherits: TANK11
-	Buildable:
-		Queue: Trade
-	VariedCostMultiplier:
-		Queues: Trade
-	-MapEditorData:
-	RenderSprites:
-		Image: tank11
-	UpdatesPlayerStatistics:
-		OverrideActor: tank11
-
 TANK15.TRADE:
 	Inherits: TANK15
 	Buildable:
