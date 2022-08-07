@@ -890,9 +890,6 @@ Actors:
 	Actor323: generator
 		Owner: Yuruki Industries
 		Location: 75,125
-	Actor324: generator
-		Owner: Yuruki Industries
-		Location: 78,123
 	Actor325: generator
 		Owner: Yuruki Industries
 		Location: 80,125
@@ -948,9 +945,6 @@ Actors:
 	Actor340: techcenter
 		Owner: Yuruki Industries
 		Location: 58,113
-	Actor341: module
-		Owner: Synapol Corporation
-		Location: 67,32
 	Actor342: mother2c
 		Owner: Neutral
 		Facing: 384
@@ -981,22 +975,6 @@ Actors:
 	Actor347: generator
 		Owner: Synapol Corporation
 		Location: 88,22
-	Actor348: miner2
-		Faction: Random
-		Location: 82,11
-		Owner: Synapol Corporation
-	Actor349: miner2
-		Faction: Random
-		Location: 55,11
-		Owner: Synapol Corporation
-	Actor350: miner2
-		Faction: Random
-		Location: 42,105
-		Owner: Yuruki Industries
-	Actor351: miner2
-		Faction: Random
-		Location: 79,120
-		Owner: Yuruki Industries
 	Actor352: rock5
 		Owner: Neutral
 		Location: 62,46
@@ -2616,5 +2594,23 @@ Actors:
 	Actor938: bunker2
 		Owner: Synapol Corporation
 		Location: 84,27
+	Actor939: module2
+		Owner: Synapol Corporation
+		Location: 67,32
+	Actor940: miner2
+		Owner: Synapol Corporation
+		Location: 82,9
+	Actor941: miner2
+		Owner: Synapol Corporation
+		Location: 55,9
+	Actor324: generator
+		Owner: Yuruki Industries
+		Location: 78,123
+	Actor942: miner2
+		Owner: Yuruki Industries
+		Location: 42,103
+	Actor943: miner2
+		Owner: Yuruki Industries
+		Location: 79,118
 
 Rules: rules.yaml

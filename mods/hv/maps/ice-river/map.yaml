@@ -71,9 +71,11 @@ Actors:
 	Actor16: storage
 		Owner: Synapol Corporation
 		Location: 6,14
+		FreeActor: False
 	Actor17: storage
 		Owner: Synapol Corporation
 		Location: 25,44
+		FreeActor: False
 	Actor18: base2
 		Owner: Synapol Corporation
 		Location: 16,51
@@ -122,11 +124,6 @@ Actors:
 		SubCell: 1
 		Location: 36,10
 		Facing: 800
-	Actor35: scout2
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 33,12
-		Facing: 753
 	Actor36: scout2
 		Owner: Synapol Corporation
 		SubCell: 1
@@ -193,23 +190,23 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 32,33
 		Stance: AttackAnything
-	Actor51: miner2
-		Owner: Synapol Corporation
-		Location: 15,4
-	Actor52: miner2
-		Owner: Synapol Corporation
-		Location: 32,10
-	Actor53: miner2
-		Owner: Synapol Corporation
-		Location: 35,22
-	Actor54: miner2
-		Owner: Synapol Corporation
-		Location: 42,28
 	Actor55: rock1
 		Owner: Neutral
 		Location: 53,49
 	Actor56: rock2
 		Owner: Neutral
 		Location: 56,9
+	Actor53: miner2
+		Owner: Synapol Corporation
+		Location: 35,20
+	Actor54: miner2
+		Owner: Synapol Corporation
+		Location: 42,26
+	Actor51: miner2
+		Owner: Synapol Corporation
+		Location: 15,2
+	Actor52: miner2
+		Owner: Synapol Corporation
+		Location: 32,8
 
 Rules: hv|rules/campaign.yaml, rules.yaml
