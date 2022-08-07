@@ -64,7 +64,9 @@ Player:
 			bunker: 7
 			bunker2: 7
 			turret: 5
+			turret2: 5
 			aaturret: 3
+			aaturret2: 3
 			howitzer: 1
 			uplink: 1
 			field: 1
