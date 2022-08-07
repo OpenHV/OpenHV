@@ -225,7 +225,7 @@ namespace OpenRA.Mods.HV.Traits
 		Target SafePath(Actor capturer, Actor target)
 		{
 			var mobile = capturer.Trait<Mobile>();
-			var path = mobile.PathFinder.FindUnitPathToTargetCell(capturer, new[] { mobile.ToCell }, target.Location, BlockedByActor.None,
+			var path = mobile.PathFinder.FindPathToTargetCell(capturer, new[] { mobile.ToCell }, target.Location, BlockedByActor.None,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));

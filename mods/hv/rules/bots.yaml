@@ -28,6 +28,7 @@ Player:
 		ProductionTypes: module, module2, factory3, factory4, starport, starport2, harbor, harbor2
 		NavalProductionTypes: harbor, harbor2
 		RefineryTypes: storage
+		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
 		BuildingLimits:
 			base: 1
 			storage: 1

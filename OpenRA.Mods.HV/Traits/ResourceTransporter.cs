@@ -88,7 +88,7 @@ namespace OpenRA.Mods.HV.Traits
 			 ? self.World.ActorsHavingTrait<ResourceCollector>().Where(r => r.Owner == self.Owner)
 			 : self.World.ActorsHavingTrait<AcceptsDeliveredResources>().Where(r => r.Owner == self.Owner);
 
-			var path = mobile.PathFinder.FindUnitPathToTargetCell(self, actors.Select(a => a.Location), mobile.ToCell, BlockedByActor.None,
+			var path = mobile.PathFinder.FindPathToTargetCell(self, actors.Select(a => a.Location), mobile.ToCell, BlockedByActor.None,
 				location => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && self.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(location) - u.CenterPosition).Length)));

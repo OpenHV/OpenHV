@@ -129,7 +129,7 @@ namespace OpenRA.Mods.HV.Traits
 		Target PathToNextcube(Actor collector, Actor cube)
 		{
 			var mobile = collector.Trait<Mobile>();
-			var path = mobile.PathFinder.FindUnitPathToTargetCell(
+			var path = mobile.PathFinder.FindPathToTargetCell(
 				collector, new[] { collector.Location }, cube.Location, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && collector.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)

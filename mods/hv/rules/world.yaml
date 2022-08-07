@@ -265,6 +265,8 @@ World:
 	DevCommands:
 	DebugVisualizationCommands:
 	ExitsDebugOverlayManager:
+	PathFinderOverlay:
+	HierarchicalPathFinderOverlay:
 	PlayerCommands:
 	HelpCommand:
 	ScreenShaker:
@@ -348,7 +350,6 @@ World:
 			1300: 1460
 			1301: 1461
 			1302: 1462
-	DomainIndex:
 	LiquidTerrainLayer:
 	LiquidEdgeRenderer:
 		Image: waterflow

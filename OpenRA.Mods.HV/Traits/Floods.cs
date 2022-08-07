@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -49,7 +49,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly List<CPos> floodedCells = new List<CPos>();
 		readonly ITemplatedTerrainInfo terrainInfo;
 		readonly Map map;
-		readonly DomainIndex domainIndex;
+		readonly IPathFinder pathFinder;
 		readonly CPos origin;
 		readonly Locomotor locomotor;
 
@@ -61,7 +61,7 @@ namespace OpenRA.Mods.HV.Traits
 			origin = self.Location;
 			floodedCells.Add(origin);
 			map = self.World.Map;
-			domainIndex = self.World.WorldActor.Trait<DomainIndex>();
+			pathFinder = self.World.WorldActor.Trait<IPathFinder>();
 			locomotor = self.World.WorldActor.TraitsImplementing<Locomotor>().First(l => l.Info.Name == info.Locomotor);
 
 			if (!(map.Rules.TerrainInfo is ITemplatedTerrainInfo terrainInfo))
@@ -107,7 +107,10 @@ namespace OpenRA.Mods.HV.Traits
 
 			foreach (var cell in waveFront)
 			{
-				if (!info.StopTerrainTypes.Contains(map.GetTerrainInfo(cell).Type) && !domainIndex.IsPassable(origin, cell, locomotor))
+				if (!info.StopTerrainTypes.Contains(map.GetTerrainInfo(cell).Type))
+					continue;
+
+				if (!pathFinder.PathExistsForLocomotor(locomotor, origin, cell))
 					continue;
 
 				var originalTile = map.Tiles[cell];

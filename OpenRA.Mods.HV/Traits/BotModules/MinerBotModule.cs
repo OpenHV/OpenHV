@@ -165,7 +165,7 @@ namespace OpenRA.Mods.HV.Traits
 					&& miner.Mobile.Locomotor.CanStayInCell(cell)
 					&& world.CanPlaceBuilding(cell + miner.Transforms.Info.Offset, towerInfo, buildingInfo, actor);
 
-			var path = miner.Mobile.PathFinder.FindUnitPathToTargetCellByPredicate(
+			var path = miner.Mobile.PathFinder.FindPathToTargetCellByPredicate(
 				actor, new[] { actor.Location }, isValidResource, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && actor.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
