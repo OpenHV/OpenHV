@@ -62,15 +62,15 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new ResourceCollector(init.Self, this); }
 	}
 
-	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, ITick, ISync, ISelectionBar
+	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, INotifyCreated, INotifyAddedToWorld, ITick, ISync, ISelectionBar
 	{
 		readonly ResourceCollectorInfo info;
 		readonly Actor self;
 		readonly Lazy<RallyPoint> rallyPoint;
-		readonly IResourceLayer resourceLayer;
 		readonly Building building;
+		readonly IResourceLayer resourceLayer;
 
-		string resourceType = null;
+		string resourceType;
 		int total;
 		int deposit;
 		int left;
@@ -88,13 +88,18 @@ namespace OpenRA.Mods.HV.Traits
 
 			ticks = info.InitialDelay;
 
-			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 			building = self.Trait<Building>();
+			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 
 			rallyPoint = Exts.Lazy(() => self.IsDead ? null : self.TraitOrDefault<RallyPoint>());
 		}
 
-		protected override void TraitEnabled(Actor self)
+		void INotifyAddedToWorld.AddedToWorld(Actor self)
+		{
+			self.World.AddFrameEndTask(w => InitializeResources(self));
+		}
+
+		void InitializeResources(Actor self)
 		{
 			var cells = building.Info.Tiles(self.Location);
 			foreach (var cell in cells)
@@ -108,7 +113,10 @@ namespace OpenRA.Mods.HV.Traits
 					left = total;
 				}
 			}
+		}
 
+		protected override void TraitEnabled(Actor self)
+		{
 			if (deposit > 0)
 				foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
 					notify.Mining(self);
@@ -152,11 +160,8 @@ namespace OpenRA.Mods.HV.Traits
 					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
 					var actorInfo = self.World.Map.Rules.Actors[vehicle];
 
-					if (resourceType != null)
-					{
-						var multipliers = depleted ? new int[1] { Info.DepletionModifier } : new int[1] { 100 };
-						SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType, multipliers);
-					}
+					var multipliers = depleted ? new int[1] { Info.DepletionModifier } : new int[1] { 100 };
+					SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType, multipliers);
 
 					Truckload = 0;
 				}
