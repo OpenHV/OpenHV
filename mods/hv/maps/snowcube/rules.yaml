@@ -1,0 +1,132 @@
+World:
+	GlobalLightingPaletteEffect:
+		Red: 0.90
+		Green: 1.0
+		Blue: 1.1
+		Ambient: 1.0
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+
+	CubeSpawner:
+		CheckboxDisplayOrder: 1
+		CheckboxVisible: True
+		CheckboxLocked: True
+		CheckboxEnabled: True
+		CubeActors: healcube, spawnunitcube
+		CubeActorShares: 10, 90
+		SpawnInterval: 200
+		InitialSpawnDelay: 0
+	-StartingUnits@BaseYI:
+	-StartingUnits@BaseSC:
+	-StartingUnits@MinerYI:
+	-StartingUnits@MinerSC:
+	-StartingUnits@ScoutYI:
+	-StartingUnits@ScoutSC:
+	StartingUnits@CubeHunter:
+		Class: none
+		ClassName: Builder
+		Factions: yi, sc
+		BaseActor: builder
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxVisible: False
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxEnabled: False
+		BuildRadiusCheckboxVisible: False
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxEnabled: False
+	MapOptions:
+		ShortGameCheckboxVisible: False
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxEnabled: False
+	MapStartingLocations:
+		SeparateTeamSpawnsCheckboxEnabled: False
+		SeparateTeamSpawnsCheckboxLocked: True
+		SeparateTeamSpawnsCheckboxVisible: False
+
+Player:
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		FogCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxVisible: False
+	PlayerResources:
+		DefaultCashDropdownLocked: True
+		DefaultCashDropdownVisible: False
+		DefaultCash: 0
+	-ModularBot@RogueAI:
+	ModularBot@CubeHunter:
+		Name: Cube Hunter AI
+		Type: hunter
+	GrantConditionOnBotOwner@CubeHunter:
+		Condition: enable-cube-hunter-ai
+		Bots: hunter
+	CubePickupBotModule:
+		RequiresCondition: enable-cube-hunter-ai
+		ScanForCubesInterval: 10
+		EnemyAvoidanceRadius: 0
+
+^Vehicle:
+	-AnnounceOnSeen:
+
+BUILDER:
+	-WithFacingSpriteBody:
+	WithRandomFacingSpriteBody:
+		Images: builder1, builder2, builder3, builder4, builder5
+
+FORESTLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 5c640
+		Intensity: 0.01
+		RedTint: -0.3
+		GreenTint: 0.0
+		BlueTint: -0.1
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 03c640
+		Intensity: 0.01
+		RedTint: 0.70
+		GreenTint: 0.25
+		BlueTint: 0.25
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 18c640
+		Intensity: 0.01
+		RedTint: 0.25
+		GreenTint: 0.30
+		BlueTint: 0.55
+
+SMALL_WATER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 12c640
+		Intensity: 0.01
+		RedTint: 0.00
+		GreenTint: 0.15
+		BlueTint: 0.40
+
+PITLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: -0.1
+		GreenTint: -0.2
+		BlueTint: -0.2
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
