@@ -59,12 +59,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: watchtower
-		Owner: Neutral
-		Location: 38,21
-	Actor1: watchtower
-		Owner: Neutral
-		Location: 26,42
 	Actor2: prop8
 		Owner: Neutral
 		Location: 24,43
@@ -377,5 +371,11 @@ Actors:
 	Actor105: resourcelight
 		Owner: Neutral
 		Location: 7,59
+	Actor106: prop5
+		Owner: Neutral
+		Location: 38,21
+	Actor107: prop5
+		Owner: Neutral
+		Location: 26,42
 
 Rules: rules.yaml
