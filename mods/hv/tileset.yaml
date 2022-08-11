@@ -8813,6 +8813,11 @@ Templates:
 			BorderTypes: Tech, Cliff
 			BorderTransitions: 1158, 1164, 1160, 1155, 1162, 1161, 1166, 1167
 			Corners: 1163, 1165, 1156, 1154
+		AutoConnect@Swamp:
+			Type: Swamp
+			BorderTypes: Tech, Cliff
+			BorderTransitions: 1492, 1497, 1493, 1490, 1495, 1494, 1499, 1500
+			Corners: 1496, 1498, 1491, 1489
 		Tiles:
 			0: Tech
 	Template@1182:
