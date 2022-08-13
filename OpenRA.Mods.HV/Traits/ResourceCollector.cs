@@ -62,7 +62,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new ResourceCollector(init.Self, this); }
 	}
 
-	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, INotifyCreated, INotifyAddedToWorld, ITick, ISync, ISelectionBar
+	public class ResourceCollector : PausableConditionalTrait<ResourceCollectorInfo>, INotifyCreated, ITick, ISync, ISelectionBar
 	{
 		readonly ResourceCollectorInfo info;
 		readonly Actor self;
@@ -94,8 +94,9 @@ namespace OpenRA.Mods.HV.Traits
 			rallyPoint = Exts.Lazy(() => self.IsDead ? null : self.TraitOrDefault<RallyPoint>());
 		}
 
-		void INotifyAddedToWorld.AddedToWorld(Actor self)
+		protected override void TraitEnabled(Actor self)
 		{
+			// Delay this by one tick to fix pre-placed mining towers.
 			self.World.AddFrameEndTask(w => InitializeResources(self));
 		}
 
@@ -113,10 +114,7 @@ namespace OpenRA.Mods.HV.Traits
 					left = total;
 				}
 			}
-		}
 
-		protected override void TraitEnabled(Actor self)
-		{
 			if (deposit > 0)
 				foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
 					notify.Mining(self);
