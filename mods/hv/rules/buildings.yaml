@@ -554,10 +554,10 @@ MINER2:
 	ResourceCollector:
 		InitialDelay: 100
 		Interval: 75
-		Amount: 70
-		Capacity: 700
+		Amount: 80
+		Capacity: 800
 		DepletionModifier: 25
-		MinimumReserves: 600
+		MinimumReserves: 700
 		DeliveryVehicleType: tanker1
 		Deposits:
 			iron: 10000

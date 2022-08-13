@@ -853,7 +853,7 @@ TANKER1:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	ResourceTransporter:
-		Capacity: 7
+		Capacity: 8
 	SpawnActorOnDeath:
 		Actor: goldball
 	-SpawnScrapOnDeath:

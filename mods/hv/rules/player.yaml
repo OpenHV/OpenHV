@@ -5,7 +5,7 @@
 	Shroud:
 	PlayerResources:
 		ResourceValues:
-			gold: 180
+			gold: 200
 			iron: 100
 
 Player:
