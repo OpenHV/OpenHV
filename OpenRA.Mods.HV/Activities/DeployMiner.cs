@@ -23,12 +23,14 @@ namespace OpenRA.Mods.HV.Activities
 		readonly IMove movement;
 		CPos? location;
 		readonly HashSet<string> terrainTypes;
+		readonly Color targetLineColor;
 
-		public DeployMiner(Actor self, CPos? location, HashSet<string> terrainTypes)
+		public DeployMiner(Actor self, CPos? location, HashSet<string> terrainTypes, Color targetLineColor)
 		{
 			movement = self.Trait<IMove>();
 			this.location = location;
 			this.terrainTypes = terrainTypes;
+			this.targetLineColor = targetLineColor;
 		}
 
 		protected override void OnFirstRun(Actor self)
@@ -55,7 +57,7 @@ namespace OpenRA.Mods.HV.Activities
 		public override IEnumerable<TargetLineNode> TargetLineNodes(Actor self)
 		{
 			if (location != null)
-				yield return new TargetLineNode(Target.FromCell(self.World, location.Value), Color.Crimson);
+				yield return new TargetLineNode(Target.FromCell(self.World, location.Value), targetLineColor);
 		}
 
 		bool CanDeploy(Actor self, CPos cell)

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -12,6 +12,7 @@
 using System.Collections.Generic;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Activities;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -31,16 +32,21 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Voice to use when ordered to lay a minefield.")]
 		public readonly string Voice = "Action";
 
-		public override object Create(ActorInitializer init) { return new Miner(this); }
+		[Desc("Defines to which players the target lines are shown.")]
+		public readonly Dictionary<string, Color> Colors = new Dictionary<string, Color>();
+
+		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}
 
 	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice
 	{
 		public readonly MinerInfo Info;
+		readonly IResourceLayer resourceLayer;
 
-		public Miner(MinerInfo info)
+		public Miner(MinerInfo info, Actor self)
 		{
 			Info = info;
+			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 		}
 
 		IEnumerable<IOrderTargeter> IIssueOrder.Orders
@@ -69,8 +75,9 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var cell = self.World.Map.CellContaining(order.Target.CenterPosition);
+			var targetLineColor = Info.Colors[resourceLayer.GetResource(cell).Type];
 			if (IsCellAcceptable(self, cell))
-				self.QueueActivity(order.Queued, new DeployMiner(self, cell, Info.TerrainTypes));
+				self.QueueActivity(order.Queued, new DeployMiner(self, cell, Info.TerrainTypes, targetLineColor));
 
 			self.ShowTargetLines();
 		}

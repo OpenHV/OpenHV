@@ -676,6 +676,9 @@ MINER:
 		TerrainTypes: Ore
 	Miner:
 		TerrainTypes: Ore
+		Colors:
+			iron: 878787
+			gold: F07000
 	Transforms:
 		PauseOnCondition: !validterrain
 		IntoActor: miner2
