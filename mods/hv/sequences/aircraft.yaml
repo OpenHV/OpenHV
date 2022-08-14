@@ -195,3 +195,9 @@ parachute:
 airlifter:
 	idle: bits/airlifter.png
 		Facings: 8
+
+landing:
+	idle: large_smoke.png
+		Length: *
+		Tick: 50
+		ZOffset: -512

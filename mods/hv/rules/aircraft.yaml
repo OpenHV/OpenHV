@@ -292,6 +292,8 @@ COPTER2:
 	WithCargoPipsDecoration:
 		Position: Top
 		RequiresSelection: true
+	WithAircraftLandingEffect:
+		Image: landing
 
 BALLOON:
 	Inherits: ^Helicopter
@@ -393,6 +395,8 @@ DROPSHIP:
 		RequiresSelection: true
 	SpawnActorOnDeath:
 		Actor: DROPSHIP.Husk
+	WithAircraftLandingEffect:
+		Image: landing
 
 DROPSHIP.Husk:
 	Inherits: ^PlaneHusk
