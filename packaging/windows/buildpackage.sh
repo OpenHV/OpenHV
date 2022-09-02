@@ -108,7 +108,7 @@ function build_platform()
 	fi
 
 	# Create multi-resolution icon
-	convert "${ARTWORK_DIR}/icon_16x16.png" "${ARTWORK_DIR}/icon_24x24.png" "${ARTWORK_DIR}/icon_32x32.png" "${ARTWORK_DIR}/icon_48x48.png" "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/${MOD_ID}.ico"
+	convert "${ARTWORK_DIR}/icon_32x32.png" "${ARTWORK_DIR}/icon_64x64.png" "${ARTWORK_DIR}/icon_128x128.png" "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/${MOD_ID}.ico"
 
 	echo "Compiling Windows launcher (${PLATFORM})"
 	install_windows_launcher "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}" "win-${PLATFORM}" "${MOD_ID}" "${PACKAGING_WINDOWS_LAUNCHER_NAME}"  "${PACKAGING_DISPLAY_NAME}" "${PACKAGING_FAQ_URL}"

@@ -59,7 +59,7 @@ install_metadata() {
 		install -Dm644 "${ARTWORK_DIR}/icon_scalable.svg" "${DATADIR}/icons/hicolor/scalable/apps/openhv.svg"
 	fi
 
-	for i in 16x16 32x32 48x48 64x64 128x128 256x256 512x512 1024x1024; do
+	for i in 32x32 64x64 128x128 256x256 512x512 1024x1024; do
 		if [ -f "${ARTWORK_DIR}/icon_${i}.png" ]; then
 			install -Dm644 "${ARTWORK_DIR}/icon_${i}.png" "${DATADIR}/icons/hicolor/${i}/apps/openhv.png"
 		fi
