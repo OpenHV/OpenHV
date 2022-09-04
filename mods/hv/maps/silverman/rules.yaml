@@ -1,0 +1,68 @@
+World:
+	GlobalLightingPaletteEffect:
+		Red: 1.00
+		Green: 1.05
+		Blue: 0.90
+		Ambient: 0.80
+
+FOREST_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 08c640
+		Intensity: 0.01
+		RedTint: -0.3
+		GreenTint: 0.0
+		BlueTint: -0.1
+
+RESOURCE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 03c640
+		Intensity: 0.01
+		RedTint: 0.75
+		GreenTint: 0.35
+		BlueTint: 0.40
+
+BASE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 19c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.70
+
+PIT_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 10c640
+		Intensity: 0.01
+		RedTint: -0.1
+		GreenTint: -0.3
+		BlueTint: -0.2
+
+MEDIUM_FIRELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 12c640
+		Intensity: 0.01
+		RedTint: 1.45
+		GreenTint: 0.55
+		BlueTint: 0.65
+
+SMALL_FIRELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 08c640
+		Intensity: 0.01
+		RedTint: 1.35
+		GreenTint: 0.55
+		BlueTint: 0.65
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
