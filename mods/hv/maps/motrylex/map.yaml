@@ -382,12 +382,6 @@ Actors:
 	Actor207: sparklamp
 		Owner: Neutral
 		Location: 79,27
-	Actor204: resourcelight-red
-		Owner: Neutral
-		Location: 131,11
-	Actor223: resourcelight-red
-		Owner: Neutral
-		Location: 15,11
 	Actor74: stnrock6
 		Owner: Neutral
 		Location: 63,55
@@ -529,12 +523,6 @@ Actors:
 	Actor302: motyl-x-light
 		Owner: Neutral
 		Location: 142,142
-	Actor303: resourcelight-red
-		Owner: Neutral
-		Location: 15,134
-	Actor304: resourcelight-red
-		Owner: Neutral
-		Location: 131,134
 	Actor314: sparklamp
 		Owner: Neutral
 		Location: 10,86
@@ -848,12 +836,6 @@ Actors:
 	Actor158: prop10
 		Owner: Neutral
 		Location: 68,101
-	Actor463: resourcelight-red
-		Owner: Neutral
-		Location: 57,11
-	Actor464: resourcelight-red
-		Owner: Neutral
-		Location: 89,11
 	Actor465: prop11
 		Owner: Neutral
 		Location: 35,11
@@ -899,18 +881,6 @@ Actors:
 	Actor429: prop3
 		Owner: Neutral
 		Location: 14,2
-	Actor339: resourcelight-red
-		Owner: Neutral
-		Location: 57,134
-	Actor340: resourcelight-red
-		Owner: Neutral
-		Location: 89,134
-	Actor470: resourcelight-red
-		Owner: Neutral
-		Location: 73,123
-	Actor477: resourcelight-red
-		Owner: Neutral
-		Location: 73,22
 	Actor478: stnrock4
 		Owner: Neutral
 		Location: 48,21
@@ -1413,5 +1383,35 @@ Actors:
 	Actor599: stnrock4
 		Owner: Neutral
 		Location: 97,124
+	Actor452: resourcelight-red
+		Owner: Neutral
+		Location: 131,135
+	Actor600: resourcelight-red
+		Owner: Neutral
+		Location: 58,135
+	Actor479: resourcelight-red
+		Owner: Neutral
+		Location: 88,135
+	Actor601: resourcelight-red
+		Owner: Neutral
+		Location: 15,135
+	Actor463: resourcelight-red
+		Owner: Neutral
+		Location: 58,10
+	Actor602: resourcelight-red
+		Owner: Neutral
+		Location: 15,10
+	Actor464: resourcelight-red
+		Owner: Neutral
+		Location: 88,10
+	Actor603: resourcelight-red
+		Owner: Neutral
+		Location: 131,10
+	Actor477: resourcelight-red
+		Owner: Neutral
+		Location: 73,23
+	Actor470: resourcelight-red
+		Owner: Neutral
+		Location: 73,122
 
 Rules: rules.yaml
