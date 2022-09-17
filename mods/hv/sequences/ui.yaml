@@ -14,7 +14,7 @@ overlay:
 	target-valid:
 
 editor-overlay:
-	Defaults: bits/overlay.png
+	Defaults: bits/hatching.png
 	copy:
 	paste:
 		Start: 1
