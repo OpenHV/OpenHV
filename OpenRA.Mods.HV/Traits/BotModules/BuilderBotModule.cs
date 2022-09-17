@@ -50,11 +50,6 @@ namespace OpenRA.Mods.HV.Traits
 		readonly World world;
 		readonly Player player;
 
-		readonly Predicate<Actor> unitCannotBeOrdered;
-
-		IBotPositionsUpdated[] notifyPositionsUpdated;
-		IBotRequestUnitProduction[] requestUnitProduction;
-
 		CPos initialBaseCenter;
 		int scanInterval;
 		bool firstTick = true;
@@ -64,13 +59,6 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			world = self.World;
 			player = self.Owner;
-			unitCannotBeOrdered = a => a.Owner != player || a.IsDead || !a.IsInWorld;
-		}
-
-		protected override void Created(Actor self)
-		{
-			notifyPositionsUpdated = self.Owner.PlayerActor.TraitsImplementing<IBotPositionsUpdated>().ToArray();
-			requestUnitProduction = self.Owner.PlayerActor.TraitsImplementing<IBotRequestUnitProduction>().ToArray();
 		}
 
 		protected override void TraitEnabled(Actor self)
