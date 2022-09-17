@@ -39,7 +39,7 @@ namespace OpenRA.Mods.HV.Lint
 				foreach (var cell in map.AllCells)
 				{
 					var resourceIndex = map.Resources[cell].Type;
-					if (resourceIndex > 0 && resourceIndex < 3)
+					if (resourceIndex > 0)
 					{
 						var footprintTiles = building.Tiles(cell + transforms.Offset);
 						foreach (var footprintTile in footprintTiles)

@@ -285,10 +285,6 @@ World:
 				Sequences: iron
 				Palette: effect
 				Name: Mineable Resource Deposit
-			blocked:
-				Sequences: invisible
-				Palette: effect
-				Name: No Construction Zone
 	ForestLayer:
 		FlameActor: treeflame
 		TransformedTerrain: Crater, Stone
@@ -436,11 +432,6 @@ World:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt
 				MaxDensity: 3
-			blocked:
-				ResourceIndex: 3
-				TerrainType: Blocked
-				AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
-				MaxDensity: 1
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Dirt
