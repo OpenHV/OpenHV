@@ -228,13 +228,14 @@ observer-scrollpanel-button-disabled:
 	Inherits: ^Dialog
 	PanelRegion: 768, 384, 2, 2, 124, 124, 2, 2
 
-observer-scrollheader-selected:
-	Inherits: ^Dialog
-	PanelRegion: 768, 384, 2, 2, 124, 124, 2, 2
+observer-scrollheader:
+	Inherits: observer-scrollpanel-button-disabled
 
-observer-scrollitem-selected:
-	Inherits: ^Dialog
-	PanelRegion: 896, 256, 2, 2, 124, 124, 2, 2
+observer-scrollheader-highlighted:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollitem-highlighted:
+	Inherits: observer-scrollpanel-button-pressed
 
 observer-scrollitem-hover:
 	Inherits: ^Dialog
@@ -523,18 +524,23 @@ checkbox-highlighted-pressed:
 checkbox-highlighted-disabled:
 	Inherits: checkbox-disabled
 
-scrollitem-selected:
-	Inherits: button-pressed
+scrollitem:
 
 scrollitem-hover:
 	Inherits: button
 
-scrollheader-selected:
-	Inherits: button
+scrollitem-highlighted:
+	Inherits: button-pressed
 
 scrollitem-nohover:
 
-scrollitem-nohover-hover:
+scrollitem-nohover-highlighted:
+
+scrollheader:
+	Inherits: button
+
+scrollheader-highlighted:
+	Inherits: button
 
 logos:
 	Inherits: ^Logo

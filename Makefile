@@ -227,13 +227,13 @@ test: all
 docs: engine
 	@echo
 	@echo "Generating trait documentation..."
-	@./utility.sh --docs > traits.md
+	@./utility.sh --docs $(VERSION) | python3 ./engine/packaging/format-docs.py > traits.md
 	@echo "Generating weapon documentation..."
-	@./utility.sh --weapon-docs > weapons.md
+	@./utility.sh --weapon-docs $(VERSION) | python3 ./engine/packaging/format-docs.py > weapons.md
 	@echo "Generating settings documentation..."
-	@./utility.sh --settings-docs > settings.md
+	@./utility.sh --sprite-sequence-docs $(VERSION) | python3 ./engine/packaging/format-docs.py > sprites.md
 	@echo "Generating Lua documentation..."
-	@./utility.sh --lua-docs > lua.md
+	@./utility.sh --lua-docs $(VERSION) > lua.md
 
 bits: engine
 ifneq ("$(BIT_FILES)","")

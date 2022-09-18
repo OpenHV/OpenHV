@@ -88,6 +88,9 @@ jobs:
           ./utility.sh --weapon-docs "${GIT_TAG}" > "weapons.md"
           sed "s/of OpenRA/of OpenHV/g" "weapons.md" > "docs/api/release/weapons.md"
           sed -i '/^## /d' docs/api/release/weapons.md
+          ./utility.sh --sprite-sequence-docs "${GIT_TAG}" > "sprites.md"
+          sed "s/of OpenRA/of OpenHV/g" "sprites.md" > "docs/api/release/sprites.md"
+          sed -i '/^## /d' docs/api/release/sprites.md
           ./utility.sh --lua-docs "${GIT_TAG}" > "lua.md"
           sed "s/of OpenRA/of OpenHV/g" "lua.md" | sed "s/OpenRA allows/OpenHV allows/g"  > "docs/api/release/lua.md"
 

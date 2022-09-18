@@ -248,6 +248,7 @@ ModelSequenceFormat: PlaceholderModelSequence
 
 AssetBrowser:
 	SpriteExtensions: .png
+	AudioExtensions: .wav
 
 WebServices:
 
