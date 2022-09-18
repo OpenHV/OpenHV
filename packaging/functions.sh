@@ -53,3 +53,39 @@ install_mod_assemblies() {
 		cd "${ORIG_PWD}" || exit 1
 	fi
 }
+
+# Copy the core engine and specified mod data to the target directory
+# Arguments:
+#   SRC_PATH: Path to the root engine directory
+#   DEST_PATH: Path to the root of the install destination (will be created if necessary)
+# Used by:
+#   Makefile (install target for local installs and downstream packaging)
+#   Linux AppImage packaging
+#   macOS packaging
+#   Windows packaging
+#   Mod SDK Linux AppImage packaging
+#   Mod SDK macOS packaging
+#   Mod SDK Windows packaging
+install_data() (
+	set -o errexit || exit $?
+
+	SRC_PATH="${1}"
+	DEST_PATH="${2}"
+	shift 2
+
+	echo "Installing engine files to ${DEST_PATH}"
+	for FILE in VERSION AUTHORS COPYING IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP; do
+		install -m644 "${SRC_PATH}/${FILE}" "${DEST_PATH}"
+	done
+
+	cp -r "${SRC_PATH}/glsl" "${DEST_PATH}"
+	cp -r "${SRC_PATH}/lua" "${DEST_PATH}"
+
+	install -d "${DEST_PATH}/mods"
+
+	echo "Installing common mod files to ${DEST_PATH}"
+	cp -r "${SRC_PATH}/mods/common" "${DEST_PATH}/mods/"
+
+	echo "Installing Hard Vacuum mod files to ${DEST_PATH}"
+	cp -r "${SRC_PATH}/../mods/hv" "${DEST_PATH}/mods/"
+)
