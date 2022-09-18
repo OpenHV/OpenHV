@@ -643,6 +643,30 @@ BUILDER:
 	Voiced:
 		VoiceSet: BuilderVoice
 
+COLLECTOR:
+	Inherits: ^Vehicle
+	Tooltip:
+		Name: Collector
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Mobile:
+		TurnSpeed: 32
+		Speed: 100
+		Locomotor: wheeled
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	-WithFacingSpriteBody:
+	RenderSprites:
+		Image: builder1
+	WithRandomFacingSpriteBody:
+		Images: builder1, builder2, builder3, builder4, builder5
+
 MINER:
 	Inherits: ^Vehicle
 	Inherits@Selection: ^SelectableEconomicUnit

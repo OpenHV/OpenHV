@@ -16,9 +16,9 @@ World:
 	-StartingUnits@ScoutSC:
 	StartingUnits@CubeHunter:
 		Class: none
-		ClassName: Builder
+		ClassName: Collector
 		Factions: yi, sc
-		BaseActor: builder
+		BaseActor: collector
 	MapBuildRadius:
 		AllyBuildRadiusCheckboxVisible: False
 		AllyBuildRadiusCheckboxLocked: True
@@ -61,10 +61,3 @@ Player:
 
 ^Vehicle:
 	-AnnounceOnSeen:
-
-BUILDER:
-	-Transforms:
-	-GrantConditionOnTerrain:
-	-WithFacingSpriteBody:
-	WithRandomFacingSpriteBody:
-		Images: builder1, builder2, builder3, builder4, builder5
