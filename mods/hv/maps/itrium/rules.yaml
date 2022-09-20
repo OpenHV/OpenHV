@@ -29,6 +29,26 @@ TECHNICIAN:
 	Buildable:
 		Prerequisites: ~disabled
 
+MORTARPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+FLAMETHROWERPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+HACKERPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+ELITEPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+BOMBERPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
 RADAR:
 	Buildable:
 		Prerequisites: ~disabled
@@ -138,9 +158,5 @@ TANK16:
 		Prerequisites: ~disabled
 
 TANK6:
-	Buildable:
-		Prerequisites: ~disabled
-
-MORTARPOD:
 	Buildable:
 		Prerequisites: ~disabled
