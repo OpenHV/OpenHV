@@ -397,15 +397,16 @@ TRADPLAT:
 		PauseOnCondition: disabled
 		BaselineSpawn: True
 	Exit@North:
-		ExitCell: 0,-2
+		ExitCell: 1,-1
 		ProductionTypes: Trade
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@South:
-		ExitCell: 0,2
+		ExitCell: 1,3
 		ProductionTypes: Trade
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
+	ExitsDebugOverlay:
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
