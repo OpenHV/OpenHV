@@ -977,6 +977,37 @@ TECHCENTER:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
 
+ORESMELT:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^1x2Shape
+	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Ore Smelter
+	Buildable:
+		Queue: Building
+		Description: Hacker pod.\nSteals money from the global network.\n  Unarmed
+		Prerequisites: ~structures.sc, techcenter
+	Health:
+		HP: 40000
+	Power:
+		Amount: -80
+	Building:
+		Footprint: = x
+		Dimensions: 1,2
+		LocalCenterOffset: 0,0,0
+	RevealsShroud:
+		Range: 4c0
+	WithIdleAnimation:
+		Interval: 80
+		RequiresCondition: !disabled && !burning
+	CashTrickler:
+		Interval: 50
+		Amount: 10
+		RequiresCondition: !build-incomplete && !disabled
+
 BUNKER:
 	Inherits: ^DefenseBuilding
 	Inherits@AutoTarget: ^AutoTargetGround

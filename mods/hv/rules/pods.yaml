@@ -199,7 +199,7 @@ HACKERPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Hacker pod.\nSteals money from the global network.\n  Unarmed
-		Prerequisites: ~module, techcenter
+		Prerequisites: ~module.yi, techcenter
 	Valued:
 		Cost: 700
 	Tooltip:
