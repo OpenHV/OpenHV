@@ -148,7 +148,7 @@ namespace OpenRA.Mods.HV.Traits
 
 					var priorityCaptures = Math.Min(capturers.Count(), priorityTargets.Count());
 
-					for (int i = 0; i < priorityCaptures; i++)
+					for (var i = 0; i < priorityCaptures; i++)
 					{
 						var capturer = capturers.First();
 
@@ -208,6 +208,10 @@ namespace OpenRA.Mods.HV.Traits
 				var nearestTargetActors = capturableTargetOptions.OrderBy(target => (target.CenterPosition - capturer.Actor.CenterPosition).LengthSquared);
 				foreach (var nearestTargetActor in nearestTargetActors)
 				{
+					var attack = nearestTargetActor.TraitOrDefault<AttackBase>();
+					if (attack != null && attack.HasAnyValidWeapons(Target.FromActor(capturer.Actor)))
+						continue;
+
 					var safeTarget = SafePath(capturer.Actor, nearestTargetActor);
 					if (safeTarget.Type == TargetType.Invalid)
 						continue;
@@ -222,7 +226,7 @@ namespace OpenRA.Mods.HV.Traits
 		Target SafePath(Actor capturer, Actor target)
 		{
 			var mobile = capturer.Trait<Mobile>();
-			var path = mobile.PathFinder.FindPathToTargetCell(capturer, new[] { mobile.ToCell }, target.Location, BlockedByActor.None,
+			var path = mobile.PathFinder.FindPathToTargetCell(capturer, new[] { mobile.ToCell }, target.Location, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));
