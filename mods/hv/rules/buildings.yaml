@@ -2334,3 +2334,30 @@ DROPZONE:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
+
+FLAGPOST:
+	Inherits: ^Building
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Flagpost
+	Health:
+		HP: 50000
+	Building:
+		Footprint: = x
+		Dimensions: 1,2
+		LocalCenterOffset: 0,0,0
+	HitShape:
+		Type: Circle
+			Radius: 512
+	RevealsShroud:
+		Range: 8c0
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
+	StrategicPoint:
+	ProximityCapturable:
+	GrantConditionOnNeutralOwner:
+		Condition: ownerless
+	WithIdleOverlay@Flag:
+		Sequence: flag
+		RequiresCondition: !ownerless

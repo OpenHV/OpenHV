@@ -41,8 +41,6 @@ MOTHER:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	StrategicPoint:
-	ProximityCapturable:
 	MapEditorData:
 		Categories: Mothership
 	WithIdleOverlay@Shadow:
