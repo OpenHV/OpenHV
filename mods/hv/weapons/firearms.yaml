@@ -49,7 +49,7 @@ ChainGun:
 		Shadow: false
 		ContrailLength: 3
 		ContrailWidth: 0c32
-		ContrailColor: F4AC00
+		ContrailStartColor: F4AC00
 		Blockable: false
 	MinRange: 0c768
 	Burst: 4
@@ -119,7 +119,7 @@ Vulcan:
 		Shadow: false
 		ContrailLength: 3
 		ContrailWidth: 0c32
-		ContrailColor: F4AC00
+		ContrailStartColor: F4AC00
 		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Spread: 64
@@ -171,7 +171,7 @@ BoatMachineGun:
 		Speed: 1000
 		ContrailLength: 3
 		ContrailWidth: 0c32
-		ContrailColor: F4AC00
+		ContrailStartColor: F4AC00
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000
@@ -221,7 +221,7 @@ PatrolBoatGround:
 		Inaccuracy: 0c256
 		ContrailLength: 4
 		ContrailWidth: 0c32
-		ContrailColor: F29100
+		ContrailStartColor: F29100
 	Warhead@Damage: SpreadDamage
 		Spread: 126
 		Damage: 500

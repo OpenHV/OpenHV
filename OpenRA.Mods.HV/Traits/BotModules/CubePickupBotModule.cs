@@ -50,7 +50,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		CubeSpawner cubeSpawner;
 
-		IPathFinder pathfinder;
 		int scanForcubesTicks;
 
 		readonly List<Actor> alreadyPursuitcubes = new List<Actor>();
@@ -71,7 +70,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override void TraitEnabled(Actor self)
 		{
-			pathfinder = world.WorldActor.Trait<IPathFinder>();
 			scanForcubesTicks = Info.ScanForCubesInterval;
 		}
 

@@ -62,7 +62,6 @@ namespace OpenRA.Mods.HV.Traits
 		readonly int maximumCaptureTargetOptions;
 
 		int minCaptureDelayTicks;
-		IPathFinder pathfinder;
 		CPos initialBaseCenter;
 
 		public PriorityCaptureManagerBotModule(Actor self, PriorityCaptureManagerBotModuleInfo info)
@@ -88,8 +87,6 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			// Avoid all AIs reevaluating assignments on the same tick, randomize their initial evaluation delay.
 			minCaptureDelayTicks = world.LocalRandom.Next(Info.MinimumCaptureDelay);
-
-			pathfinder = world.WorldActor.Trait<IPathFinder>();
 		}
 
 		void IBotTick.BotTick(IBot bot)

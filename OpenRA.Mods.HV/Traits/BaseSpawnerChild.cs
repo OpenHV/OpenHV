@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021, 2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -38,7 +38,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly BaseSpawnerChildInfo info;
 
-		int parentDeadToken = Actor.InvalidConditionToken;
 		BaseSpawnerParent spawnerParent = null;
 
 		public Actor Parent { get; private set; }
@@ -74,7 +73,7 @@ namespace OpenRA.Mods.HV.Traits
 			this.spawnerParent = spawnerParent;
 		}
 
-		bool TargetSwitched(Target lastTarget, Target newTarget)
+		static bool TargetSwitched(Target lastTarget, Target newTarget)
 		{
 			if (newTarget.Type != lastTarget.Type)
 				return true;
@@ -122,7 +121,7 @@ namespace OpenRA.Mods.HV.Traits
 		public virtual void OnParentKilled(Actor self, Actor attacker, SpawnerChildDisposal disposal)
 		{
 			if (!string.IsNullOrEmpty(info.ParentDeadCondition))
-				parentDeadToken = self.GrantCondition(info.ParentDeadCondition);
+				self.GrantCondition(info.ParentDeadCondition);
 
 			switch (disposal)
 			{

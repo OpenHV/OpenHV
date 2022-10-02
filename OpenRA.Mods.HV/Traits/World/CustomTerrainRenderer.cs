@@ -20,6 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Terrain
 {
+	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	public class CustomTerrainRendererInfo : TraitInfo, ITiledTerrainRendererInfo
 	{
 		bool ITiledTerrainRendererInfo.ValidateTileSprites(ITemplatedTerrainInfo terrainInfo, Action<string> onError)

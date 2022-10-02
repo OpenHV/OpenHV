@@ -9,7 +9,6 @@ World:
 		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
 		Palette: cloud
 		Speed: 20, 30
-
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		CheckboxVisible: True

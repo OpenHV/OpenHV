@@ -12218,7 +12218,6 @@ Templates:
 		Categories: Dirt, Snow
 		Tiles:
 			0: Snow
-
 	Template@1616:
 		Id: 1616
 		Images: bits/terrain/dirt-sand.png

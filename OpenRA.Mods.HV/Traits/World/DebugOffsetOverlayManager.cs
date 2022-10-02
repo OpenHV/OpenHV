@@ -15,6 +15,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	public class DebugOffsetOverlayManagerInfo : TraitInfo
 	{
 		public override object Create(ActorInitializer init) { return new DebugOffsetOverlayManager(init.Self); }

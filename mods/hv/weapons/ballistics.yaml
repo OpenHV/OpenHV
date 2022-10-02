@@ -307,7 +307,7 @@ mortargun:
 		LaunchAngle: 80
 		Inaccuracy: 0c512
 		ContrailLength: 10
-		ContrailColor: 811000
+		ContrailStartColor: 811000
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
