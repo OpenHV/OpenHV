@@ -1559,12 +1559,12 @@ oresmelt:
 	Defaults:
 		Offset: 0, -5
 	idle: bits/oresmelt.png
-		Length: 1
 	active: bits/oresmelt.png
-		Length: 9
-		Tick: 180
+		Start: 1
+		Length: 10
+		Tick: 140
 	damaged-idle: bits/oresmelt.png
-		Start: 4
+		Start: 11
 		Length: 1
 	shadow-overlay: bits/oresmelt-shadow.png
 		ZOffset: -1768
@@ -1577,7 +1577,9 @@ oresmelt:
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
-	icon: bits/null.png # TODO
+	icon: bits/buildings-icons.png
+		Start: 36
+		Offset: 0, 1
 
 flagpost:
 	Inherits@Flame: ^BuildingFlame
@@ -1589,6 +1591,7 @@ flagpost:
 		Start: 6
 	flag: bits/flagpost.png
 		Length: 5
+		Reverses: true
 		Tick: 180
 	shadow-overlay: bits/flagpost-shadow.png
 		ZOffset: -1768
