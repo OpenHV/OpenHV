@@ -988,7 +988,7 @@ ORESMELT:
 		Name: Ore Smelter
 	Buildable:
 		Queue: Building
-		Description: Hacker pod.\nSteals money from the global network.\n  Unarmed
+		Description: Ore Smelter.\nProcesses resources for extra credits.
 		Prerequisites: ~structures.sc, techcenter
 	Health:
 		HP: 40000
