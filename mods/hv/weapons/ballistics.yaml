@@ -230,7 +230,7 @@ TurretArtillery:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: heavycannonfire01.wav
 	ReloadDelay: 150
-	Range: 64c0
+	Range: 1024c0
 	MinRange: 12c0
 	Burst: 5
 	BurstDelays: 20
