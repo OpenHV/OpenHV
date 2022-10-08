@@ -790,6 +790,10 @@ turret:
 
 turret2:
 	Inherits: turret
+	idle: bits/turret2-base.png
+		Start: 0
+	damaged-idle: bits/turret2-base.png
+		Start: 1
 	turret: bits/turret2.png
 		Start: 0
 		Facings: 8
