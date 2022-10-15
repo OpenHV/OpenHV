@@ -203,3 +203,24 @@ prop12:
 	shadow-overlay: bits/prop12-shadow.png
 		Offset: 2,3
 		ZOffset: -1768
+
+prop13:
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Offset: 0, -6
+	idle: bits/prop13.png
+		Start: 0
+	shadow-overlay: bits/prop13-shadow.png
+		ZOffset: -1768
+		Offset: 2, 0
+	damaged-idle: bits/prop13.png
+		Start: 1
+	animation: bits/prop13.png
+		Start: 2
+		Length: 3
+		Tick: 200
+	flame:
+		Offset: 4, -18
+	flame2:
+		Offset: 15, 8
+	icon: bits/icon.png
