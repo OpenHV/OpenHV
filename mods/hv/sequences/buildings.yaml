@@ -1588,7 +1588,7 @@ oresmelt:
 flagpost:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
-		Offset: 0, -5
+		Offset: -2, -3
 	idle: bits/flagpost.png
 		Start: 5
 	damaged-idle: bits/flagpost.png
@@ -1599,5 +1599,5 @@ flagpost:
 		Tick: 180
 	shadow-overlay: bits/flagpost-shadow.png
 		ZOffset: -1768
-		Offset: 5,11
+		Offset: 3,14
 	icon: bits/null.png
