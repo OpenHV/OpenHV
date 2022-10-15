@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -291,9 +291,6 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 15,45
-	Actor87: reconstructor
-		Owner: Neutral
-		Location: 54,46
 	Actor89: lamppost
 		Owner: Neutral
 		Location: 52,48
@@ -399,3 +396,6 @@ Actors:
 	Actor127: mpspawn
 		Owner: Neutral
 		Location: 90,6
+	Actor128: reconstructor
+		Owner: Neutral
+		Location: 54,45

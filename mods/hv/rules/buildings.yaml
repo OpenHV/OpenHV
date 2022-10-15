@@ -2054,7 +2054,7 @@ RECONSTRUCTOR:
 	Tooltip:
 		Name: Tech Reconstructor
 	Building:
-		Footprint: xx xx
+		Footprint: == xx
 		Dimensions: 2,2
 	Targetable:
 		TargetTypes: Ground, Structure

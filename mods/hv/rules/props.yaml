@@ -214,6 +214,25 @@ PROP12:
 	Health:
 		HP: 30000
 
+PROP13:
+	Inherits: ^Prop
+	Inherits@Shape: ^2x2Shape
+	Interactable:
+		Bounds: 2048, 2048
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Civilian building
+	Health:
+		HP: 120000
+	WithIdleOverlay@animation:
+		Sequence: animation
+		RequiresCondition: !disable
+	GrantConditionOnDamageState@disable:
+		Condition: disable
+		ValidDamageStates: Heavy, Critical
+
 RAIL:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
