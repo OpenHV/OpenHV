@@ -203,7 +203,6 @@ OUTPOST:
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
-		LocalCenterOffset: 0,0,0
 	HitShape:
 		Type: Circle
 			Radius: 512
@@ -997,7 +996,6 @@ ORESMELT:
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
-		LocalCenterOffset: 0,0,0
 	RevealsShroud:
 		Range: 4c0
 	WithIdleAnimation:
@@ -2346,7 +2344,6 @@ FLAGPOST:
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
-		LocalCenterOffset: 0,0,0
 	HitShape:
 		Type: Circle
 			Radius: 512
