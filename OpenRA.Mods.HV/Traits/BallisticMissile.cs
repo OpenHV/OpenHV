@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int MinAirborneAltitude = 5;
 
 		[Desc("Types of damage missile explosion is triggered with. Leave empty for no damage types.")]
-		public readonly BitSet<DamageType> DamageTypes = default(BitSet<DamageType>);
+		public readonly BitSet<DamageType> DamageTypes = default;
 
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while airborne.")]

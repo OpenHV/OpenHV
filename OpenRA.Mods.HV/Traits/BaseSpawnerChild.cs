@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly bool AllowOwnerChange = false;
 
 		[Desc("Types of damage this actor explodes with due to an unallowed child action. Leave empty for no damage types.")]
-		public readonly BitSet<DamageType> DamageTypes = default(BitSet<DamageType>);
+		public readonly BitSet<DamageType> DamageTypes = default;
 
 		public override object Create(ActorInitializer init) { return new BaseSpawnerChild(this); }
 	}
