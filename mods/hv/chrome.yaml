@@ -162,21 +162,28 @@ command-icons:
 		queue-orders: 680, 0, 24, 24
 		queue-orders-disabled: 680, 24, 24, 24
 
+command-icons-highlighted:
+	Inherits: command-icons
+
 stance-icons:
 	Inherits: ^Chrome
 	Regions:
 		attack-anything: 512, 48, 16, 16
 		attack-anything-disabled: 528, 48, 16, 16
-		attack-anything-active: 544, 48, 16, 16
 		defend: 560, 48, 16, 16
 		defend-disabled: 576, 48, 16, 16
-		defend-active: 592, 48, 16, 16
 		return-fire: 608, 48, 16, 16
 		return-fire-disabled: 624, 48, 16, 16
-		return-fire-active: 640, 48, 16, 16
 		hold-fire: 656, 48, 16, 16
 		hold-fire-disabled: 672, 48, 16, 16
-		hold-fire-active: 688, 48, 16, 16
+
+stance-icons-highlighted:
+	Inherits: stance-icons
+	Regions:
+		attack-anything:  544, 48, 16, 16
+		defend: 592, 48, 16, 16
+		return-fire: 640, 48, 16, 16
+		hold-fire: 688, 48, 16, 16
 
 sidebar-observer:
 	Inherits: ^Chrome
