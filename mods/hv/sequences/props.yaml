@@ -158,14 +158,14 @@ tanktrap:
 
 prop9:
 	Defaults:
-		Offset: 0,5
+		Offset: 0,-5
 	idle: bits/prop9.png
 		Length: 5
 		Tick: 80
 	damaged-idle: bits/prop9.png
 		Start: 6
 	shadow-overlay: bits/prop9-10-shadow.png
-		Offset: 13,33
+		Offset: 13,23
 		ZOffset: 1768
 	damaged-shadow-overlay: bits/prop9-10-shadow.png
 		Start: 1

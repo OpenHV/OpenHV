@@ -197,12 +197,17 @@ TANKTRAP:
 		EmptyWeapon: UnitExplodeSmall
 
 PROP9:
-	Inherits: PROP4
+	Inherits: ^Prop
+	Inherits@Shape: ^1x2Shape
+	Interactable:
 	Tooltip:
 		Name: Civilian lightning tower
+	Building:
+		Footprint: = x
+		Dimensions: 1,2
 
 PROP10:
-	Inherits: PROP4
+	Inherits: PROP9
 	Tooltip:
 		Name: Civilian plasma tower
 
