@@ -43,6 +43,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		readonly RenderSprites renderSprites;
 		readonly WithConstructionBeamOverlayInfo info;
 		readonly AnimationWithOffset anim;
+		readonly bool skipMakeAnimation;
 
 		int token = Actor.InvalidConditionToken;
 
@@ -51,8 +52,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 		{
 			this.info = info;
 
-			var skipMakeAnimsInit = init.GetOrDefault<SkipMakeAnimsInit>(info);
-			if (skipMakeAnimsInit != null)
+			skipMakeAnimation = init.Contains<SkipMakeAnimsInit>(info);
+			if (skipMakeAnimation)
 				return;
 
 			renderSprites = init.Self.Trait<RenderSprites>();
@@ -64,6 +65,9 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 		protected override void TraitEnabled(Actor self)
 		{
+			if (skipMakeAnimation)
+				return;
+
 			if (token == Actor.InvalidConditionToken)
 				token = self.GrantCondition(info.Condition);
 
