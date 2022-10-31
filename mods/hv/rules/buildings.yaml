@@ -900,6 +900,7 @@ FACTORY3:
 		RequiresCondition: !burning
 	Production:
 		Produces: Vehicle
+		RequiresCondition: !powerdown
 	ProductionBar:
 		ProductionType: Vehicle
 	ProductionSound:
@@ -1687,6 +1688,7 @@ HARBOR:
 		RequiresCondition: !being-captured && !build-incomplete
 	Production:
 		Produces: Ship
+		RequiresCondition: !powerdown
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
