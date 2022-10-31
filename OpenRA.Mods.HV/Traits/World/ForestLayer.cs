@@ -98,6 +98,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly CellLayer<(Color, Color)> radarColor;
 		readonly Dictionary<CPos, TerrainTile?> dirty;
 		readonly List<(CPos Cell, SubCell SubCell)> occupied;
+		readonly CPos occupiedCell;
 
 		TerrainSpriteLayer render;
 		PaletteReference paletteReference;
@@ -108,6 +109,8 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			this.info = info;
 			world = self.World;
+
+			occupiedCell = world.Map.AllCells.First(c => world.Map.Contains(c));
 			hitpoints = new CellLayer<int>(world.Map);
 			terrainRenderer = self.Trait<ITiledTerrainRenderer>();
 			radarColor = new CellLayer<(Color, Color)>(world.Map);
@@ -133,8 +136,8 @@ namespace OpenRA.Mods.HV.Traits
 			w.ActorMap.AddInfluence(w.WorldActor, this);
 		}
 
-		public CPos TopLeft => CPos.Zero;
-		public WPos CenterPosition => WPos.Zero;
+		public CPos TopLeft => occupiedCell; // for Crushable IsAtGroundLevel checks
+		public WPos CenterPosition => world.Map.CenterOfCell(occupiedCell);
 		public (CPos Cell, SubCell SubCell)[] OccupiedCells() { return occupied.ToArray(); }
 
 		bool ICrushable.CrushableBy(Actor self, Actor crusher, BitSet<CrushClass> crushClasses)
