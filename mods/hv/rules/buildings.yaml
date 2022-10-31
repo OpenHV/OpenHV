@@ -310,6 +310,7 @@ RADAR:
 		Amount: -40
 	ProvidesPrerequisite@BuildingName:
 		Prerequisite: radar
+		RequiresCondition: !powerdown
 	AirstrikePower:
 		PauseOnCondition: lowpower
 		Icon: airstrike
@@ -433,6 +434,7 @@ TRADPLAT:
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@BuildingName:
+		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: tradplat
 		FactionImages:
@@ -720,6 +722,7 @@ FACTORY3:
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.yi
+		RequiresCondition: !powerdown
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 		RequiresCondition: !build-incomplete
@@ -927,6 +930,7 @@ FACTORY4:
 		Prerequisites: module, storage, ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.sc
+		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: factory4
 	Tooltip:
@@ -950,6 +954,7 @@ TECHCENTER:
 		Name: Technology Download Center
 	ProvidesPrerequisite@BuildingName:
 		Prerequisite: techcenter
+		RequiresCondition: !powerdown
 	Building:
 		Footprint: == xx xx
 		Dimensions: 2,3
@@ -1584,7 +1589,6 @@ TELEVATR:
 		Amount: -200
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	ProvidesPrerequisite@BuildingName:
 	TeleportNetworkPrimaryExit:
 	TeleportNetwork:
 		Type: subspace
@@ -1695,6 +1699,7 @@ HARBOR:
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: harbor.yi
+		RequiresCondition: !powerdown
 	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
 		Position: Top
@@ -1721,6 +1726,7 @@ HARBOR2:
 		Image: harbor2
 	ProvidesPrerequisite@Faction:
 		Prerequisite: harbor.sc
+		RequiresCondition: !powerdown
 	Buildable:
 		Prerequisites: module, ~structures.sc
 
