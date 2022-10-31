@@ -674,7 +674,7 @@ MINER:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
-		Prerequisites: storage
+		Prerequisites: base, storage
 		BuildAtProductionType: Building
 	Valued:
 		Cost: 1100
