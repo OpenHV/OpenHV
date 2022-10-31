@@ -72,7 +72,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 23
 							Height: 23
 							X: 4
-							Y: 2
+							Y: 6
 						Label@LABEL:
 							X: 34
 							Width: PARENT_RIGHT
