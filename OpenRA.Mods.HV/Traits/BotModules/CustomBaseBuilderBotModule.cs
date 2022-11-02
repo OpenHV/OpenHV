@@ -83,7 +83,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Additional delay (in ticks) added between structure production checks when actively building things.",
 			"Note: The total delay is gamespeed OrderLatency x 4 + this + StructureProductionRandomBonusDelay.")]
-		public readonly int StructureProductionActiveDelay = 0;
+		public readonly int StructureProductionActiveDelay = 25;
 
 		[Desc("A random delay (in ticks) of up to this is added to active/inactive production delays.")]
 		public readonly int StructureProductionRandomBonusDelay = 10;
