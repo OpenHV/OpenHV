@@ -238,6 +238,7 @@ BANSHEE:
 
 COPTER2:
 	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -338,6 +339,7 @@ BALLOON:
 
 DROPSHIP:
 	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 900
 	Tooltip:
