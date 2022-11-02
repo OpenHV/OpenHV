@@ -290,7 +290,8 @@ COPTER2:
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
 	WithCargoPipsDecoration:
-		Position: Top
+		Position: BottomLeft
+		Margin: 4, 3
 		RequiresSelection: true
 	WithAircraftLandingEffect:
 		Image: landing
@@ -391,7 +392,8 @@ DROPSHIP:
 		Voice: Unload
 		PickUpCursor: enter
 	WithCargoPipsDecoration:
-		Position: Top
+		Position: BottomLeft
+		Margin: 4, 3
 		RequiresSelection: true
 	SpawnActorOnDeath:
 		Actor: DROPSHIP.Husk

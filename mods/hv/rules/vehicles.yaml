@@ -143,6 +143,7 @@ TRANSPRT:
 		DecorationBounds: 2048, 1843
 	WithCargoPipsDecoration:
 		Position: BottomLeft
+		Margin: 4, 3
 		RequiresSelection: true
 	WithTeleportEnergyOverlay:
 		Image: energyball
