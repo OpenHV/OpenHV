@@ -140,7 +140,7 @@ namespace OpenRA.Mods.HV.Traits
 				// TODO: Derive this from BuildingCommonNames instead
 				var type = BuildingType.Building;
 				CPos? location = null;
-				string orderString = "PlaceBuilding";
+				var orderString = "PlaceBuilding";
 
 				// Check if Building is a plug for other Building
 				var actorInfo = world.Map.Rules.Actors[currentBuilding.Item];
