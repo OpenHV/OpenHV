@@ -345,6 +345,10 @@ TANK6:
 		RearmActors: tradplat
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
 
 TANK5:
 	Inherits: ^TrackedVehicle
