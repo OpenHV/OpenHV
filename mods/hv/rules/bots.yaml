@@ -17,8 +17,6 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		MinimumExcessPower: 20
 		MaximumExcessPower: 160
-		ExcessPowerIncrement: 40
-		ExcessPowerIncreaseThreshold: 4
 		ResourceDistance: 6
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base
