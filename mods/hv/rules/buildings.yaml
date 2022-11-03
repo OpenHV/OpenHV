@@ -259,7 +259,7 @@ GENERATOR:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: 130
+		Amount: 120
 	Targetable:
 		TargetTypes: Ground, Structure
 	ScalePowerWithHealth:
@@ -988,7 +988,7 @@ ORESMELT:
 	Inherits@Flame: ^BuildingFlame
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Valued:
-		Cost: 1400
+		Cost: 1200
 	Tooltip:
 		Name: Ore Smelter
 	Buildable:
