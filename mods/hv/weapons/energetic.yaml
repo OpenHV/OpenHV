@@ -182,7 +182,7 @@ VoltageArc:
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 
 LightningBolt:
-	ReloadDelay: 50
+	ReloadDelay: 20
 	Range: 9c0
 	Report: lightningbolt.wav
 	ValidTargets: Air
@@ -198,7 +198,7 @@ LightningBolt:
 		ZOffset: 2048
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 3250
+		Damage: 4000
 		ValidTargets: Air
 		Versus:
 			None: 30
