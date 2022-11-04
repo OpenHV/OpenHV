@@ -208,8 +208,6 @@
 	WithSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 1
-	MapEditorData:
-		Categories: System
 	CollectScrapCrateAction:
 	ScrapValue:
 
