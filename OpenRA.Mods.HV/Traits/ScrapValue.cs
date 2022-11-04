@@ -19,6 +19,10 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Percentage of the killed actor's value.")]
 		public readonly int Percentage = 10;
 
+		[Desc("How much the scrap is worth when pre-placed with the map editor.")]
+		public readonly int MinimumFallbackAmount = 40;
+		public readonly int MaximumFallbackAmount = 200;
+
 		public override object Create(ActorInitializer init) { return new ScrapValue(init, this); }
 	}
 
@@ -28,7 +32,11 @@ namespace OpenRA.Mods.HV.Traits
 
 		public ScrapValue(ActorInitializer init, ScrapValueInfo info)
 		{
-			Bounty = init.Get<ValueInit>(info).Value * info.Percentage / 100;
+			var value = init.GetOrDefault<ValueInit>(info);
+			if (value != null)
+				Bounty = value.Value * info.Percentage / 100;
+			else
+				Bounty = init.Self.World.SharedRandom.Next(info.MinimumFallbackAmount, info.MaximumFallbackAmount);
 		}
 	}
 }

@@ -210,6 +210,8 @@
 		QuantizedFacings: 1
 	CollectScrapCrateAction:
 	ScrapValue:
+	MapEditorData:
+		Categories: System
 
 ^TrackedVehicle:
 	Inherits: ^Vehicle
