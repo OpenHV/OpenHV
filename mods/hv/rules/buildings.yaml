@@ -1803,8 +1803,11 @@ BARRIER:
 	Interactable:
 	Replaceable:
 		Types: wall
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
+	-CaptureManager:
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureNotification:
 
 ^GATE:
 	Inherits: ^Building
