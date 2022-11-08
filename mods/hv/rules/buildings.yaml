@@ -2274,14 +2274,13 @@ WATCHTOWER:
 	GrantConditionOnDamageState@BrokenLights:
 		Condition: disable-lights
 		ValidDamageStates: Heavy, Critical
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
-	ProximityCapturable:
-		Sticky: true
+	-CaptureManager:
 	-Capturable:
 	-CapturableProgressBar:
 	-CapturableProgressBlink:
 	-CaptureNotification:
+	ProximityCapturable:
+		Sticky: true
 
 DROPZONE:
 	Inherits: ^Building
@@ -2360,10 +2359,12 @@ FLAGPOST:
 			Radius: 512
 	RevealsShroud:
 		Range: 8c0
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
-	StrategicPoint:
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CaptureManager:
 	ProximityCapturable:
+	StrategicPoint:
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
 	WithIdleOverlay@Flag:
