@@ -1017,7 +1017,7 @@ BUNKER:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: module, storage, ~structures.yi
+		Prerequisites: module, ~structures.yi
 		Description: Basic base defense.\nGood against pods.\n  Requires power to operate.\n  Strong vs Pods\n  Weak vs Vehicles
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
@@ -1060,7 +1060,7 @@ BUNKER:
 BUNKER2:
 	Inherits: BUNKER
 	Buildable:
-		Prerequisites: module, storage, ~structures.sc
+		Prerequisites: module, ~structures.sc
 	AttackGarrisoned:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 
@@ -1069,7 +1069,7 @@ TURRET:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, storage, ~structures.yi
+		Prerequisites: factory, ~structures.yi
 		Description: Base defense.\nGood against vehicles.\n  Requires power to operate.\n  Strong vs Vehicles\n  Weak vs Pods
 	Valued:
 		Cost: 1000
@@ -1104,7 +1104,7 @@ TURRET2:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, storage, ~structures.sc
+		Prerequisites: factory, ~structures.sc
 		Description: Base defense.\n  Requires power to operate.\n  Strong vs Vehicles\n  Weak vs Pods
 	Valued:
 		Cost: 1000
