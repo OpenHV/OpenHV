@@ -29,13 +29,13 @@ Players:
 		NonCombatant: True
 		Faction: yi
 		Enemies: Yuruki Industries, Synapol Corporation
-	PlayerReference@Synapol Corporation:
+	PlayerReference@Synapol:
 		Name: Synapol Corporation
 		NonCombatant: True
 		Faction: sc
 		Color: 805040
 		Enemies: Yuruki Industries, Creeps
-	PlayerReference@Yuruki Industries:
+	PlayerReference@Yuruki:
 		Name: Yuruki Industries
 		Playable: True
 		LockFaction: True

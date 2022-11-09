@@ -26,12 +26,12 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
-	PlayerReference@Yuruki Industries:
+	PlayerReference@Yuruki:
 		Name: Yuruki Industries
 		Faction: yi
 		Color: 003897
 		Enemies: Creeps
-	PlayerReference@Synapol Corporation:
+	PlayerReference@Synapol:
 		Name: Synapol Corporation
 		Faction: sc
 		Color: 805040

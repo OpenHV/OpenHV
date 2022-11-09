@@ -135,13 +135,13 @@
 			Grass: 100
 			Mountain: 100
 			Red Snow: 100
-	Faction@0:
+	Faction@Yuruki:
 		Name: Yuruki
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
 		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Mortar Pod\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapon:\n    - Air Strike\n    - Field Generator\n    - Orbital Railgun Strike
-	Faction@1:
+	Faction@Synapol:
 		Name: Synapol
 		InternalName: sc
 		Side: Corporations
