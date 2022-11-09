@@ -8,7 +8,7 @@ MONEYCUBE:
 		Amount: 1000
 		UseCashTick: true
 
-REVEALMAPCUBE:
+REVEALCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
 		Sequence: grey
@@ -27,7 +27,7 @@ HEALCUBE:
 		Sequence: orange
 	HealActorsCrateAction:
 
-SPAWNUNITCUBE:
+SPAWNCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
 		Sequence: blue

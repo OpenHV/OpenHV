@@ -33,7 +33,7 @@ MORTARPOD:
 	Buildable:
 		Prerequisites: ~disabled
 
-FLAMETHROWERPOD:
+FLAMEPOD:
 	Buildable:
 		Prerequisites: ~disabled
 

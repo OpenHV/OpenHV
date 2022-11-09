@@ -46,7 +46,7 @@ World:
 		CheckboxVisible: True
 		CheckboxLocked: True
 		CheckboxEnabled: True
-		CubeActors: healcube, spawnunitcube
+		CubeActors: healcube, spawncube
 		CubeActorShares: 10, 90
 		SpawnInterval: 250
 		InitialSpawnDelay: 0

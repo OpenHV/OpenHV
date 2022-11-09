@@ -1882,7 +1882,7 @@ BARRIER:
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
 
-GATE-HORIZONTAL:
+HGATE:
 	Inherits: ^GATE
 	Building:
 		Dimensions: 3,1
@@ -1899,9 +1899,11 @@ GATE-HORIZONTAL:
 	GrantConditionOnLineBuildConnection:
 		Edges: -1,0, 3,0
 	PlaceBuildingVariants:
-		Actors: gate-vertical
+		Actors: vgate
+	RenderSprites:
+		Image: gate-horizontal
 
-GATE-VERTICAL:
+VGATE:
 	Inherits: ^GATE
 	Building:
 		Dimensions: 1,3
@@ -1918,9 +1920,11 @@ GATE-VERTICAL:
 	GrantConditionOnLineBuildConnection:
 		Edges: 0,-1, 0,3
 	PlaceBuildingVariants:
-		Actors: gate-horizontal
+		Actors: hgate
+	RenderSprites:
+		Image: gate-vertical
 
-WALLTOP:
+WALLT:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:
@@ -1931,7 +1935,7 @@ WALLTOP:
 	WithSpriteBody:
 		Sequence: top
 
-WALLTOPLEFT:
+WALLTL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:
@@ -1942,7 +1946,7 @@ WALLTOPLEFT:
 	WithSpriteBody:
 		Sequence: topleft
 
-WALLLEFT:
+WALLL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:
@@ -1953,7 +1957,7 @@ WALLLEFT:
 	WithSpriteBody:
 		Sequence: left
 
-WALLBOTTOMLEFT:
+WALLBL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -1961,7 +1965,7 @@ WALLBOTTOMLEFT:
 	WithSpriteBody:
 		Sequence: bottomleft
 
-WALLBOTTOM:
+WALLB:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -1969,7 +1973,7 @@ WALLBOTTOM:
 	WithSpriteBody:
 		Sequence: bottom
 
-WALLBOTTOMRIGHT:
+WALLBR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -1977,7 +1981,7 @@ WALLBOTTOMRIGHT:
 	WithSpriteBody:
 		Sequence: bottomright
 
-WALLRIGHT:
+WALLR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:
@@ -1988,7 +1992,7 @@ WALLRIGHT:
 	WithSpriteBody:
 		Sequence: right
 
-WALLTOPRIGHT:
+WALLTR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:
@@ -1999,7 +2003,7 @@ WALLTOPRIGHT:
 	WithSpriteBody:
 		Sequence: topright
 
-DESTROYEDWALLLEFT:
+DWALLL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -2007,7 +2011,7 @@ DESTROYEDWALLLEFT:
 	WithSpriteBody:
 		Sequence: destroyed-left
 
-DESTROYEDWALLRIGHT:
+DWALLR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -2015,7 +2019,7 @@ DESTROYEDWALLRIGHT:
 	WithSpriteBody:
 		Sequence: destroyed-right
 
-DESTROYEDWALLBOTTOMLEFT:
+DWALLBL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -2023,7 +2027,7 @@ DESTROYEDWALLBOTTOMLEFT:
 	WithSpriteBody:
 		Sequence: destroyed-bottomleft
 
-DESTROYEDWALLBOTTOMRIGHT:
+DWALLBR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
 	Interactable:
@@ -2031,7 +2035,7 @@ DESTROYEDWALLBOTTOMRIGHT:
 	WithSpriteBody:
 		Sequence: destroyed-bottomright
 
-DESTROYEDWALLTOPLEFT:
+DWALLTL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:
@@ -2042,7 +2046,7 @@ DESTROYEDWALLTOPLEFT:
 	WithSpriteBody:
 		Sequence: destroyed-topleft
 
-DESTROYEDWALLTOPRIGHT:
+DWALLTR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape
 	Building:

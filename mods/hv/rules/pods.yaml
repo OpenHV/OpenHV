@@ -125,7 +125,7 @@ SNIPERPOD:
 		UncloakOn: Attack, Unload, Move
 		IsPlayerPalette: true
 
-FLAMETHROWERPOD:
+FLAMEPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
@@ -311,7 +311,7 @@ BOMBERPOD:
 		EnterBehaviour: Suicide
 		Cursor: ability
 
-MINIPOD:
+MINIPOD1:
 	Inherits: ^Pod
 	Valued:
 		Cost: 100
@@ -346,16 +346,16 @@ MINIPOD:
 		VoiceSet: CivilianPodVoice
 
 MINIPOD2:
-	Inherits: MINIPOD
+	Inherits: MINIPOD1
 
 MINIPOD3:
-	Inherits: MINIPOD
+	Inherits: MINIPOD1
 
 MINIPOD4:
-	Inherits: MINIPOD
+	Inherits: MINIPOD1
 
 MINIPOD5:
-	Inherits: MINIPOD
+	Inherits: MINIPOD1
 
 MINIPOD6:
-	Inherits: MINIPOD
+	Inherits: MINIPOD1

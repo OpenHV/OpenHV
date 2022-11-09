@@ -394,7 +394,7 @@ technician:
 	icon: bits/units-icons.png
 		Start: 42
 
-flamethrowerpod:
+flamepod:
 	idle: bits/flamethrowerpod.png
 		Facings: 8
 		Length: 2
@@ -670,36 +670,36 @@ energyball:
 		Length: *
 		Tick: 50
 
-minipod:
-	idle: bits/minipod.png
+minipod1:
+	idle: bits/minipod1.png
 		Facings: 8
-	die: bits/minipod-death.png
+	die: bits/minipod1-death.png
 		Length: 6
 		Tick: 80
 		Offset: 1,-1
 	icon: bits/null.png
 
 minipod2:
-	Inherits: minipod
+	Inherits: minipod1
 	idle: bits/minipod2.png
 	die: bits/minipod2-death.png
 
 minipod3:
-	Inherits: minipod
+	Inherits: minipod1
 	idle: bits/minipod3.png
 	die: bits/minipod3-death.png
 
 minipod4:
-	Inherits: minipod
+	Inherits: minipod1
 	idle: bits/minipod4.png
 	die: bits/minipod4-death.png
 
 minipod5:
-	Inherits: minipod
+	Inherits: minipod1
 	idle: bits/minipod5.png
 	die: bits/minipod5-death.png
 
 minipod6:
-	Inherits: minipod
+	Inherits: minipod1
 	idle: bits/minipod6.png
 	die: bits/minipod6-death.png
