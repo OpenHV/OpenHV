@@ -178,17 +178,17 @@ MINER.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: miner
 
-MISSILE_TANK.TRADE:
-	Inherits: MISSILE_TANK
+MISSILETANK.TRADE:
+	Inherits: MISSILETANK
 	Buildable:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: missile_tank
+		Image: missiletank
 	UpdatesPlayerStatistics:
-		OverrideActor: missile_tank
+		OverrideActor: missiletank
 
 TANK8.TRADE:
 	Inherits: TANK8

@@ -507,7 +507,7 @@ Actors:
 	Actor158: grssmisc7
 		Owner: Neutral
 		Location: 133,148
-	Actor159: big_rock
+	Actor159: bigrock
 		Owner: Neutral
 		Location: 44,10
 	Actor160: grssmisc7

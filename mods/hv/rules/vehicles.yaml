@@ -720,7 +720,7 @@ MINER:
 		VoiceSet: MinerVoice
 	-Guard:
 
-MISSILE_TANK:
+MISSILETANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:

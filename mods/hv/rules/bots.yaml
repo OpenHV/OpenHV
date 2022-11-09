@@ -103,7 +103,7 @@ Player:
 			elitepod: 1
 			hackerpod: 1
 			technician: 1
-			missile_tank: 5
+			missiletank: 5
 			plane2: 5
 			plane1: 5
 			copter: 5

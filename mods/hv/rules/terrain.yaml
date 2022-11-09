@@ -6,7 +6,7 @@ CAVE:
 		Footprint: ____ ==== xxxx xxxx =xx=
 		Dimensions: 4,5
 
-BIG_ROCK:
+BIGROCK:
 	Inherits: ^Rock
 	Building:
 		Footprint: ==== xxxx xxxx

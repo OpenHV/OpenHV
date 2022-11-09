@@ -105,10 +105,10 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 29,1
-	Actor27: big_rock
+	Actor27: bigrock
 		Owner: Neutral
 		Location: 45,30
-	Actor28: big_rock
+	Actor28: bigrock
 		Owner: Neutral
 		Location: 60,19
 	Actor29: grssmisc7

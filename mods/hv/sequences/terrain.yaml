@@ -4,9 +4,9 @@ cave:
 	idle: bits/terrain/cave.png
 	shadow-overlay: bits/terrain/cave-shadow.png
 
-big_rock:
-	idle: bits/terrain/big_rock.png
-	shadow-overlay: bits/terrain/big_rock-shadow.png
+bigrock:
+	idle: bits/terrain/bigrock.png
+	shadow-overlay: bits/terrain/bigrock-shadow.png
 		ZOffset: -2048
 
 rock1:

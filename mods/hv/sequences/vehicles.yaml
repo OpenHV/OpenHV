@@ -574,11 +574,11 @@ builder5:
 	icon: bits/units-icons.png
 		Start: 21
 
-missile_tank:
-	idle: bits/missile_tank.png
+missiletank:
+	idle: bits/missiletank.png
 		Start: 0
 		Facings: 8
-	turret: bits/missile_tank.png
+	turret: bits/missiletank.png
 		Start: 8
 		Facings: 8
 	muzzle: bits/muzzle.png

@@ -707,28 +707,28 @@ Actors:
 		Faction: Random
 		Owner: Synapol Corporation
 		TurretFacing: 689
-	Actor263: big_rock
+	Actor263: bigrock
 		Owner: Neutral
 		Location: 62,65
-	Actor264: big_rock
+	Actor264: bigrock
 		Owner: Neutral
 		Location: 25,48
-	Actor265: big_rock
+	Actor265: bigrock
 		Owner: Neutral
 		Location: 2,28
-	Actor266: big_rock
+	Actor266: bigrock
 		Owner: Neutral
 		Location: 119,48
-	Actor267: big_rock
+	Actor267: bigrock
 		Owner: Neutral
 		Location: 120,20
-	Actor268: big_rock
+	Actor268: bigrock
 		Owner: Neutral
 		Location: 103,95
-	Actor269: big_rock
+	Actor269: bigrock
 		Owner: Neutral
 		Location: 115,106
-	Actor270: big_rock
+	Actor270: bigrock
 		Owner: Neutral
 		Location: 14,86
 	Actor271: grssmisc7
