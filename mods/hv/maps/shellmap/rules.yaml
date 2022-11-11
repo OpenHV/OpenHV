@@ -5,3 +5,60 @@ World:
 		BackgroundMusic: background
 		AllowMuteBackgroundMusic: true
 		DisableWorldSounds: true
+
+	TerrainLighting:
+		Intensity: 0.65
+
+BASE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.75
+		GreenTint: 0.75
+		BlueTint: 1.00
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.30
+		BlueTint: -0.30
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.55
+		BlueTint: 0.85
+
+SMALL_BLUE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 7c640
+		Intensity: 0.01
+		RedTint: 0.35
+		GreenTint: 0.45
+		BlueTint: 0.85
+
+SMALL_RED_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 7c640
+		Intensity: 0.01
+		RedTint: 0.85
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+SWAMP_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 10c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.75
+		BlueTint: 0.10
