@@ -1646,7 +1646,7 @@ HARBOR:
 	Building:
 		Footprint: xxx x=x ___
 		Dimensions: 3,3
-		TerrainTypes: Littoral
+		TerrainTypes: Littoral, Pelagic
 	Targetable:
 		TargetTypes: Ground, Structure, WaterBuilding
 	Health:
