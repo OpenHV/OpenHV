@@ -4,13 +4,13 @@ RequiresMod: hv
 
 Title: Business As Usual
 
-Author: Graion Dilach
+Author: Graion Dilach, SiegeSpud
 
 Tileset: PLANET
 
-MapSize: 42,66
+MapSize: 50,74
 
-Bounds: 1,1,40,64
+Bounds: 1,1,48,72
 
 Visibility: Lobby
 
@@ -39,57 +39,197 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: mpspawn
-		Owner: Neutral
-		Location: 21,15
-	Actor1: lamppost
-		Owner: Neutral
-		Location: 9,28
-	Actor2: lamppost
-		Owner: Neutral
-		Location: 14,28
-	Actor3: lamppost
-		Owner: Neutral
-		Location: 27,28
-	Actor4: lamppost
-		Owner: Neutral
-		Location: 32,28
-	Actor5: lamppost
-		Owner: Neutral
-		Location: 10,31
-	Actor6: lamppost
-		Owner: Neutral
-		Location: 13,31
-	Actor7: lamppost
-		Owner: Neutral
-		Location: 28,31
-	Actor8: lamppost
-		Owner: Neutral
-		Location: 31,31
-	Actor9: lamppost
-		Owner: Neutral
-		Location: 10,34
-	Actor10: lamppost
-		Owner: Neutral
-		Location: 13,34
-	Actor11: lamppost
-		Owner: Neutral
-		Location: 28,34
 	Actor12: lamppost
 		Owner: Neutral
-		Location: 31,34
+		Location: 13,32
 	Actor13: lamppost
 		Owner: Neutral
-		Location: 9,37
+		Location: 18,32
 	Actor14: lamppost
 		Owner: Neutral
-		Location: 14,37
+		Location: 31,32
 	Actor15: lamppost
 		Owner: Neutral
-		Location: 27,37
+		Location: 36,32
 	Actor16: lamppost
 		Owner: Neutral
-		Location: 32,37
-	Actor17: mpspawn
+		Location: 14,35
+	Actor17: lamppost
 		Owner: Neutral
-		Location: 20,50
+		Location: 17,35
+	Actor18: prop12
+		Owner: Neutral
+		Location: 26,35
+	Actor19: lamppost
+		Owner: Neutral
+		Location: 32,35
+	Actor20: lamppost
+		Owner: Neutral
+		Location: 35,35
+	Actor21: lamppost
+		Owner: Neutral
+		Location: 14,38
+	Actor22: lamppost
+		Owner: Neutral
+		Location: 17,38
+	Actor23: prop12
+		Owner: Neutral
+		Location: 23,38
+	Actor24: lamppost
+		Owner: Neutral
+		Location: 32,38
+	Actor25: lamppost
+		Owner: Neutral
+		Location: 35,38
+	Actor27: lamppost
+		Owner: Neutral
+		Location: 13,41
+	Actor28: lamppost
+		Owner: Neutral
+		Location: 18,41
+	Actor29: lamppost
+		Owner: Neutral
+		Location: 31,41
+	Actor34: lamppost
+		Owner: Neutral
+		Location: 36,41
+	Actor30: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 7,4
+	Actor31: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 6,6
+	Actor32: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 4,7
+	Actor33: prop12
+		Owner: Neutral
+		Location: 9,9
+	Actor42: prop12
+		Owner: Neutral
+		Location: 10,10
+	Actor36: prop12
+		Owner: Neutral
+		Location: 39,63
+	Actor37: prop12
+		Owner: Neutral
+		Location: 40,64
+	Actor38: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 45,66
+	Actor39: seamnstr
+		Owner: Neutral
+		Facing: 384
+		Location: 43,67
+	Actor41: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 42,69
+	Actor43: resource_light
+		Owner: Neutral
+		Location: 16,23
+	Actor44: resource_light
+		Owner: Neutral
+		Location: 34,29
+	Actor45: resource_light
+		Owner: Neutral
+		Location: 34,15
+	Actor46: resource_light
+		Owner: Neutral
+		Location: 34,50
+	Actor47: resource_light
+		Owner: Neutral
+		Location: 16,44
+	Actor48: resource_light
+		Owner: Neutral
+		Location: 16,58
+	Actor51: lava_light
+		Owner: Neutral
+		Location: 25,37
+	Actor52: water_light
+		Owner: Neutral
+		Location: 46,38
+	Actor53: water_light
+		Owner: Neutral
+		Location: 43,54
+	Actor54: water_light
+		Owner: Neutral
+		Location: 36,60
+	Actor55: water_light
+		Owner: Neutral
+		Location: 3,35
+	Actor56: water_light
+		Owner: Neutral
+		Location: 6,19
+	Actor57: water_light
+		Owner: Neutral
+		Location: 13,13
+	Actor58: water_light
+		Owner: Neutral
+		Location: 3,58
+	Actor59: water_light
+		Owner: Neutral
+		Location: 46,16
+	Actor60: water_light
+		Owner: Neutral
+		Location: 30,68
+	Actor61: water_light
+		Owner: Neutral
+		Location: 18,4
+	Actor62: water_light
+		Owner: Neutral
+		Location: 33,5
+	Actor63: water_light
+		Owner: Neutral
+		Location: 16,68
+	Actor67: base_light
+		Owner: Neutral
+		Location: 25,52
+	Actor69: base_light
+		Owner: Neutral
+		Location: 25,19
+	Actor72: dark_light
+		Owner: Neutral
+		Location: 47,71
+	Actor73: dark_light
+		Owner: Neutral
+		Location: 2,71
+	Actor74: dark_light
+		Owner: Neutral
+		Location: 2,2
+	Actor75: dark_light
+		Owner: Neutral
+		Location: 47,2
+	Actor76: dark_light
+		Owner: Neutral
+		Location: 38,23
+	Actor77: dark_light
+		Owner: Neutral
+		Location: 11,50
+	Actor66: mpspawn
+		Owner: Neutral
+		Location: 24,19
+	Actor68: mpspawn
+		Owner: Neutral
+		Location: 24,52
+	Actor64: dark_light
+		Owner: Neutral
+		Location: 36,34
+	Actor65: dark_light
+		Owner: Neutral
+		Location: 36,39
+	Actor70: dark_light
+		Owner: Neutral
+		Location: 18,34
+	Actor71: dark_light
+		Owner: Neutral
+		Location: 18,39
+	Actor78: resource_light
+		Owner: Neutral
+		Location: 12,36
+
+Rules: rules.yaml
