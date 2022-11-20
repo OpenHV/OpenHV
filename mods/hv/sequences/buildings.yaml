@@ -1553,6 +1553,7 @@ dropzone:
 oresmelt:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
+		ZOffset: 512
 		Offset: 0, -5
 	idle: bits/oresmelt.png
 	active: bits/oresmelt.png
