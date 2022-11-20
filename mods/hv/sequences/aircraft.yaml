@@ -35,16 +35,10 @@ plane2:
 copter:
 	idle: bits/copter.png
 		Facings: 8
-	propeller: copter.png
-		Start: 8
 		Length: 4
 		Tick: 50
-	turret: copter.png
-		Start: 12
-		Facings: 8
-		ZOffset: -100
-	shoot: copter.png
-		Start: 20
+	muzzle: copter.png
+		Start: 32
 		Length: 3
 		Facings: 8
 		ZOffset: -100

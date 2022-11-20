@@ -148,16 +148,13 @@ COPTER:
 		Offset: 200,0,-100
 	AttackTurreted:
 		RequiresCondition: airborne
-	WithSpriteTurret:
-	Armament@Primary:
+	Armament:
 		Weapon: ChainGun
-		LocalOffset: 200,0,0
+		LocalOffset: 50,0,0
+		MuzzleSequence: muzzle
 	Selectable:
 		Bounds: 1228, 1228
-	WithIdleOverlay:
-		Sequence: propeller
-	WithTurretAttackAnimation:
-		Sequence: shoot
+	WithMuzzleOverlay:
 
 SAUCER:
 	Inherits: ^Helicopter
