@@ -10664,7 +10664,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1421:
 		Id: 1421
 		Images: bits/terrain/treesmnch.png
@@ -10672,7 +10672,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1422:
 		Id: 1422
 		Images: bits/terrain/treesmnch.png
@@ -10680,7 +10680,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1423:
 		Id: 1423
 		Images: bits/terrain/treesmnch.png
@@ -10688,7 +10688,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1424:
 		Id: 1424
 		Images: bits/terrain/treesmnch.png
@@ -10696,7 +10696,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1425:
 		Id: 1425
 		Images: bits/terrain/treesmnch.png
@@ -10704,7 +10704,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1426:
 		Id: 1426
 		Images: bits/terrain/treesmnch.png
@@ -10712,7 +10712,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1427:
 		Id: 1427
 		Images: bits/terrain/treesmnch.png
@@ -10720,7 +10720,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1428:
 		Id: 1428
 		Images: bits/terrain/treesmnch.png
@@ -10728,7 +10728,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1429:
 		Id: 1429
 		Images: bits/terrain/treesmnch.png
@@ -10736,7 +10736,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1430:
 		Id: 1430
 		Images: bits/terrain/treesmnch.png
@@ -10744,7 +10744,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1431:
 		Id: 1431
 		Images: bits/terrain/treesmnch.png
@@ -10752,7 +10752,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1432:
 		Id: 1432
 		Images: bits/terrain/treesmnch.png
@@ -10760,7 +10760,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1433:
 		Id: 1433
 		Images: bits/terrain/treesmnch.png
@@ -10768,7 +10768,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1434:
 		Id: 1434
 		Images: bits/terrain/treesmnch.png
@@ -10776,7 +10776,7 @@ Templates:
 		Size: 1,1
 		Categories: Snow, Plant
 		Tiles:
-			0: Plant
+			0: Crater
 	Template@1435:
 		Id: 1435
 		Images: bits/terrain/treeashgrs.png
