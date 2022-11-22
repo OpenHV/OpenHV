@@ -607,7 +607,7 @@ BUILDER:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
-		Description: Grants additional build radius.\n  Unarmed
+		Description: Deploys into outpost which\ngrants additional build radius\nand allows base reconstruction.\n  Unarmed
 		Prerequisites: base
 		BuildAtProductionType: Building
 	Valued:
