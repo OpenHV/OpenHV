@@ -41,9 +41,6 @@ BASE:
 	ProvidesPrerequisite@Yuruki:
 		Factions: yi
 		Prerequisite: structures.yi
-	ProvidesPrerequisite@Synapol:
-		Factions: sc
-		Prerequisite: structures.sc
 	Buildable:
 		Queue: Base
 		BuildPaletteOrder: 1
@@ -191,6 +188,9 @@ BASE2:
 		BuildLimit: 1
 		Description: Builds structures, builders and miners
 		Prerequisites: ~structures.sc
+	ProvidesPrerequisite@Synapol:
+		Factions: sc
+		Prerequisite: structures.sc
 
 OUTPOST:
 	Inherits: ^BaseBuilding
@@ -208,10 +208,6 @@ OUTPOST:
 			Radius: 512
 	RevealsShroud:
 		Range: 8c0
-	RenderSprites:
-		Image: outpost
-		FactionImages:
-			sc: outpost2
 	BaseProvider:
 		Range: 7c0
 		CircleWidth: 2
@@ -225,6 +221,9 @@ OUTPOST:
 	ProvidesPrerequisite@Yuruki:
 		Factions: yi
 		Prerequisite: structures.yi
+
+OUTPOST2:
+	Inherits: OUTPOST
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
