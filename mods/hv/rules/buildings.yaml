@@ -366,7 +366,7 @@ TRADPLAT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
-		Description: Repairs and sells vehicles for credits.\nAllows buying units on the free market.
+		Description: Repairs vehicles for credits.\nAllows buying units on the free market.
 		Prerequisites: factory
 	Valued:
 		Cost: 1200
