@@ -519,7 +519,7 @@
 	GivesBuildableArea:
 		AreaTypes: building
 	Sellable:
-		RequiresCondition: !being-captured
+		RequiresCondition: !being-captured && !build-incomplete && !beam-incomplete
 		SellSounds: Freqman_fx376-reverse.wav
 		Notification: BuildingSold
 	BotRepairOrSellCaptures:
