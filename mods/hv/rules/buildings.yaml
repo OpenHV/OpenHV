@@ -39,14 +39,13 @@ BASE:
 		Amount: 0
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
-		Factions: yi
 		Prerequisite: structures.yi
 	Buildable:
 		Queue: Base
 		BuildPaletteOrder: 1
 		BuildLimit: 1
 		Description: Builds structures, builders and miners
-		Prerequisites: ~structures.yi
+		Prerequisites: outpost, ~structures.yi
 	GrantExternalConditionToOwner@Base:
 		Condition: base
 	Production:
@@ -180,17 +179,10 @@ BASE2:
 		BlueTint: 0
 	RenderSprites:
 		Image: base2
-	ProvidesPrerequisite:
-		Prerequisite: base
-	Buildable:
-		Queue: Base
-		BuildPaletteOrder: 1
-		BuildLimit: 1
-		Description: Builds structures, builders and miners
-		Prerequisites: ~structures.sc
 	ProvidesPrerequisite@Synapol:
-		Factions: sc
 		Prerequisite: structures.sc
+	Buildable:
+		Prerequisites: outpost2, ~structures.sc
 
 OUTPOST:
 	Inherits: ^BaseBuilding
@@ -218,12 +210,13 @@ OUTPOST:
 	Production:
 		Produces: Base
 		RequiresCondition: !base
+	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
-		Factions: yi
 		Prerequisite: structures.yi
 
 OUTPOST2:
 	Inherits: OUTPOST
+	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
