@@ -288,7 +288,7 @@ HeavyMachineGun:
 	BurstDelays: 2
 	Warhead@Damage: SpreadDamage
 		Spread: 24
-		Damage: 1000
+		Damage: 300
 		Versus:
 			None: 200
 			Steel: 35
