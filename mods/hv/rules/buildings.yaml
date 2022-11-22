@@ -1588,7 +1588,7 @@ TELEVATR:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: -200
+		Amount: -50
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	TeleportNetworkPrimaryExit:
