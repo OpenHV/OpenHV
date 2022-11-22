@@ -497,8 +497,10 @@
 		RequiredForShortGame: true
 	GivesBuildableArea:
 		AreaTypes: building
+	Demolishable:
+		Condition: being-demolished
 	Sellable:
-		RequiresCondition: !being-captured && !build-incomplete && !beam-incomplete
+		RequiresCondition: !being-captured && !build-incomplete && !beam-incomplete && !being-demolished
 		SellSounds: Freqman_fx376-reverse.wav
 		Notification: BuildingSold
 	BotRepairOrSellCaptures:
