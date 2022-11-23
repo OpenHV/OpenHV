@@ -371,7 +371,7 @@ World:
 		CheckboxDisplayOrder: 8
 	TimeLimitManager:
 	VariedCostManager:
-		Multiplier: 110, 150
+		Multiplier: 110, 120
 	CreateMapPlayers:
 	StartingUnits@BaseYI:
 		Class: none
