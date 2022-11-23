@@ -394,8 +394,38 @@ DROPSHIP:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+	SpawnActorOnDeath:
+		Actor: DROPSHIP.Husk
+		RequiresCondition: airborne
 	WithAircraftLandingEffect:
 		Image: landing
+
+DROPSHIP.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Crashing Transport Dropship
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 43
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: dropship
 
 DRONE:
 	Inherits: ^SpawnedPlane
