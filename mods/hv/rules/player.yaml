@@ -106,7 +106,7 @@ Player:
 	ClassicProductionQueue@Trade:
 		Type: Trade
 		DisplayOrder: 4
-		BuildDurationModifier: 212
+		BuildDurationModifier: 85
 		BlockedAudio: NoRoom
 		QueuedAudio: OrderPlaced
 		OnHoldAudio: OnHold
