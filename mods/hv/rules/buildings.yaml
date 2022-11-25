@@ -179,6 +179,7 @@ BASE2:
 		BlueTint: 0
 	RenderSprites:
 		Image: base2
+	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Synapol:
 		Prerequisite: structures.sc
 	Buildable:
@@ -216,7 +217,7 @@ OUTPOST:
 
 OUTPOST2:
 	Inherits: OUTPOST
-	ProvidesPrerequisite@BuildingName:
+	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
