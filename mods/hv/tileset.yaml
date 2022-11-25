@@ -2337,7 +2337,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Littoral
+			0: IceCliff
 	Template@286:
 		Id: 286
 		Images: bits/terrain/icebrk.png
@@ -2361,7 +2361,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Littoral
+			0: IceCliff
 	Template@289:
 		Id: 289
 		Images: bits/terrain/icebrk.png
@@ -2377,7 +2377,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Littoral
+			0: IceCliff
 	Template@291:
 		Id: 291
 		Images: bits/terrain/icebrk.png
@@ -2385,7 +2385,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Littoral
+			0: IceCliff
 	Template@292:
 		Id: 292
 		Images: bits/terrain/icebrk.png
