@@ -21,7 +21,7 @@ SCOUT1:
 		Weapon: BunkerChaingun
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
@@ -51,7 +51,7 @@ SCOUT2:
 		Weapon: RapidAntiTankRocket
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
@@ -77,7 +77,7 @@ MORTARPOD:
 		Weapon: mortargun
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 	Explodes:
@@ -112,7 +112,7 @@ SNIPERPOD:
 		Weapon: BunkerSniperRifle
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 	DetectCloaked:
@@ -153,7 +153,7 @@ FLAMEPOD:
 		Name: garrisoned
 		Weapon: BunkerFlamethrower
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		FacingTolerance: 10
 	DetectCloaked:
 		Range: 2c0
@@ -211,7 +211,7 @@ HACKERPOD:
 	Mobile:
 		Voice: Move
 	GrantConditionOnDeploy:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		UndeployOnMove: true

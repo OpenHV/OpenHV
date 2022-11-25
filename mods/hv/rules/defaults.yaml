@@ -935,15 +935,15 @@
 
 ^DisabledByECM:
 	WithColoredOverlay@ECMdisabled:
-		RequiresCondition: ecmdisabled
+		RequiresCondition: ecm-disabled
 		Color: 000000B4
 	TimedConditionBar@ECMdisabled:
-		Condition: ecmdisabled
+		Condition: ecm-disabled
 		Color: 00FF00
 	ExternalCondition@ECMdisabled:
-		Condition: ecmdisabled
+		Condition: ecm-disabled
 	Mobile:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 
 ^BuildingFlame:
 	GrantConditionOnDamageState:

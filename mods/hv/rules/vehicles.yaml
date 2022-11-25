@@ -37,7 +37,7 @@ TANK3:
 		MuzzleSequence: muzzle
 		LocalOffset: 500,-50,-50
 	AttackTurreted:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
@@ -87,7 +87,7 @@ AATANK:
 		RecoilRecovery: 38
 		LocalOffset: 250,250,150, 250,-250,150
 	AttackTurreted:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 	WithSpriteTurret:
 
@@ -124,7 +124,7 @@ TRANSPRT:
 		Type: Heavy
 	Mobile:
 		Speed: 110
-		PauseOnCondition: notmobile || ecmdisabled
+		PauseOnCondition: notmobile || ecm-disabled
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -185,7 +185,7 @@ ARTIL:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
@@ -235,7 +235,7 @@ RADARTANK:
 		Sequence: extend
 		BodyNames: deployed
 	GrantConditionOnDeploy:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
@@ -255,10 +255,10 @@ RADARTANK:
 		RequiresCondition: undeployed
 	DetectCloaked:
 		Range: 8c0
-		RequiresCondition: !ecmdisabled && undeployed
+		RequiresCondition: !ecm-disabled && undeployed
 	DetectCloaked@Deployed:
 		Range: 14c0
-		RequiresCondition: !ecmdisabled && !undeployed
+		RequiresCondition: !ecm-disabled && !undeployed
 
 TANK16:
 	Inherits: ^TrackedVehicle
@@ -280,7 +280,7 @@ TANK16:
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -366,7 +366,7 @@ TANK5:
 		Weapon: railgun
 		LocalOffset: 325,350,0
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -417,7 +417,7 @@ TANK10:
 		Weapon: VoltageArc
 		LocalOffset: 0,0,213
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 
@@ -440,7 +440,7 @@ TANK7:
 	Armor:
 		Type: Heavy
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Action
 		FacingTolerance: 0
 	Armament:
@@ -460,7 +460,7 @@ TANK7:
 		CloakSound: stealth_on_humanoide9000.wav
 		UncloakSound: stealth_off_humanoide9000.wav
 		IsPlayerPalette: true
-		PauseOnCondition: cloak-force-disabled || ecmdisabled
+		PauseOnCondition: cloak-force-disabled || ecm-disabled
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
@@ -487,7 +487,7 @@ TANK11:
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,50
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -532,7 +532,7 @@ TANK15:
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -591,7 +591,7 @@ ARTIL3:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	WithAttackAnimation:
@@ -752,7 +752,7 @@ MISSILETANK:
 		Weapon: MissileTankRocket
 		LocalOffset: 500,0,0
 	AttackTurreted:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
@@ -836,7 +836,7 @@ TANK2:
 		BuildPaletteOrder: 210
 		Description: Fires lasers.
 	AttackFrontal:
-		PauseOnCondition: ecmdisabled
+		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	Armament:
