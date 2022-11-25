@@ -229,11 +229,9 @@ HACKERPOD:
 	Repairable:
 		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
-		RequiresCondition: !undeployed && real-actor
+		RequiresCondition: !undeployed
 		Sequence: extended
 		Name: deployed
-	GrantCondition@PreviewWorkaround:
-		Condition: real-actor
 	CashTrickler:
 		Interval: 50
 		Amount: 5
