@@ -7,6 +7,7 @@ LightMachineGun:
 	Report: machinegunburst01.wav, machinegunburst02.wav
 	Projectile: InstantHit
 		Inaccuracy: 0c256
+		Blockable: true
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000
@@ -286,6 +287,8 @@ HeavyMachineGun:
 	Range: 6c0
 	Burst: 4
 	BurstDelays: 2
+	Projectile: InstantHit
+		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 300
