@@ -131,7 +131,7 @@ Player:
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
 		MaximumCaptureTargetOptions: 15
 	MinerBotModule:
 		RequiresCondition: enable-rogue-ai
