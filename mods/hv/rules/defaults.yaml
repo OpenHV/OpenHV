@@ -586,8 +586,6 @@
 	MapEditorData:
 		Categories: Decoration
 	CommandBarBlacklist:
-	RequiresSpecificOwners:
-		ValidOwnerNames: Neutral
 	ThrowsShrapnel:
 		Weapons: Debris
 		Pieces: 5, 10
