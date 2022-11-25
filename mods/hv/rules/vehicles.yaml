@@ -234,8 +234,6 @@ RADARTANK:
 	WithMakeAnimation:
 		Sequence: extend
 		BodyNames: deployed
-	GrantCondition@PreviewWorkaround:
-		Condition: real-actor
 	GrantConditionOnDeploy:
 		PauseOnCondition: ecmdisabled
 		DeployedCondition: deployed
@@ -248,7 +246,7 @@ RADARTANK:
 	Repairable:
 		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
-		RequiresCondition: !undeployed && real-actor
+		RequiresCondition: !undeployed
 		Sequence: extended
 		Name: deployed
 	RenderDetectionCircle:
