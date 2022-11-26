@@ -642,6 +642,7 @@ BUILDER:
 		TransformNotification: OutpostEstablished
 		TransformSounds: Freqman_fx376.wav
 		Voice: Deploying
+		Offset: 0,-1
 		Facing: 512
 	Voiced:
 		VoiceSet: BuilderVoice
