@@ -151,11 +151,6 @@ prop8:
 	shadow-overlay: bits/prop8-shadow.png
 		Offset: 1,4
 
-tanktrap:
-	idle: bits/tanktraps.png
-	damaged-idle: bits/tanktraps.png
-		Start: 1
-
 prop9:
 	Defaults:
 		Offset: 0,-5
@@ -224,3 +219,10 @@ prop13:
 	flame2:
 		Offset: 15, 8
 	icon: bits/icon.png
+
+tanktrap:
+	idle: bits/tanktrap.png
+	damaged-idle: bits/tanktrap.png
+		Start: 1
+	shadow-overlay: bits/tanktrap-shadow.png
+		Offset: 2, 3
