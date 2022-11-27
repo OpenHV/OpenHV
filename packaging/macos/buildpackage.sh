@@ -20,6 +20,11 @@ if [[ "$OSTYPE" != "darwin"* ]]; then
 	exit 1
 fi
 
+if [ $# -ne "4" ]; then
+	echo "Usage: $(basename "$0") tag outputdir platform dmg"
+	exit 1
+fi
+
 command -v make >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires make."; exit 1; }
 command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires python 3."; exit 1; }
 
@@ -121,6 +126,7 @@ build_platform() {
 	modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 
 	if [ -n "${DISCORD_APPID}" ]; then
+		echo "Setting Discord App ID"
 		modify_plist "{DISCORD_URL_SCHEME}" "discord-${DISCORD_APPID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 	else
 		modify_plist "<string>{DISCORD_URL_SCHEME}</string>" "" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
@@ -175,7 +181,7 @@ build_platform() {
 
 	# Sign binaries with developer certificate
 	if [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
-		codesign -s "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/entitlements.plist" --deep "${LAUNCHER_DIR}"
+		codesign --sign "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/entitlements.plist" --deep "${LAUNCHER_DIR}"
 	fi
 
 	echo "Packaging disk image"
@@ -232,47 +238,27 @@ notarize_package() {
 	NOTARIZE_DMG_PATH="${DMG_PATH%.*}"-notarization.dmg
 	echo "Submitting ${DMG_PATH} for notarization"
 
-	# Reset xcode search path to fix xcrun not finding altool
+	# Reset xcode search path to fix xcrun not finding notarytool
 	sudo xcode-select -r
 
 	# Create a temporary read-only dmg for submission (notarization service rejects read/write images)
 	hdiutil convert "${DMG_PATH}" -format ULFO -ov -o "${NOTARIZE_DMG_PATH}"
 
-	NOTARIZATION_UUID=$(xcrun altool --notarize-app --primary-bundle-id "net.openra.modsdk" -u "${MACOS_DEVELOPER_USERNAME}" -p "${MACOS_DEVELOPER_PASSWORD}" --file "${NOTARIZE_DMG_PATH}" 2>&1 | awk -F' = ' '/RequestUUID/ { print $2; exit }')
-	if [ -z "${NOTARIZATION_UUID}" ]; then
-		echo "Submission failed"
-		exit 1
-	fi
+	xcrun notarytool submit "${NOTARIZE_DMG_PATH}" --wait --apple-id "${MACOS_DEVELOPER_USERNAME}" --password "${MACOS_DEVELOPER_PASSWORD}" --team-id "${MACOS_DEVELOPER_IDENTITY}"
 
-	echo "${DMG_PATH} submission UUID is ${NOTARIZATION_UUID}"
 	rm "${NOTARIZE_DMG_PATH}"
 
-	while :; do
-		sleep 30
-		NOTARIZATION_RESULT=$(xcrun altool --notarization-info "${NOTARIZATION_UUID}" -u "${MACOS_DEVELOPER_USERNAME}" -p "${MACOS_DEVELOPER_PASSWORD}" 2>&1 | awk -F': ' '/Status/ { print $2; exit }')
-		echo "${DMG_PATH}: ${NOTARIZATION_RESULT}"
+	echo "${DMG_PATH}: Stapling tickets"
+	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${DMG_PATH}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
+	sleep 2
 
-		if [ "${NOTARIZATION_RESULT}" == "invalid" ]; then
-			NOTARIZATION_LOG_URL=$(xcrun altool --notarization-info "${NOTARIZATION_UUID}" -u "${MACOS_DEVELOPER_USERNAME}" -p "${MACOS_DEVELOPER_PASSWORD}" 2>&1 | awk -F': ' '/LogFileURL/ { print $2; exit }')
-			echo "${NOTARIZATION_UUID} failed notarization with error:"
-			curl -s "${NOTARIZATION_LOG_URL}" -w "\n"
-			exit 1
-		fi
+	xcrun stapler staple "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
+	xcrun stapler validate "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
 
-		if [ "${NOTARIZATION_RESULT}" == "success" ]; then
-			echo "${DMG_PATH}: Stapling tickets"
-			DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${DMG_PATH}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
-			sleep 2
+	sync
+	sync
 
-			xcrun stapler staple "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
-
-			sync
-			sync
-
-			hdiutil detach "${DMG_DEVICE}"
-			break
-		fi
-	done
+	hdiutil detach "${DMG_DEVICE}"
 }
 
 finalize_package() {
@@ -281,27 +267,25 @@ finalize_package() {
 	OUTPUT_PATH="${3}"
 
 	if [ "${PLATFORM}" = "mono" ]; then
-		hdiutil convert "${INPUT_PATH}" -format UDZO -imagekey zlib-level=9 -ov -o "${OUTPUT_PATH}"
+		hdiutil convert "${INPUT_PATH}" -format UDZO -imagekey zlib-level=9 -ov -o "${OUTPUT_PATH}-mono.dmg"
 	else
 		# ULFO offers better compression and faster decompression speeds, but is only supported by 10.11+
-		hdiutil convert "${INPUT_PATH}" -format ULFO -ov -o "${OUTPUT_PATH}"
+		hdiutil convert "${INPUT_PATH}" -format ULFO -ov -o "${OUTPUT_PATH}.dmg"
 	fi
 	rm "${INPUT_PATH}"
 }
 
-build_platform "standard" "build.dmg"
-build_platform "mono" "build-mono.dmg"
+PLATFORM="$3"
+DISK_IMAGE="$4"
+
+build_platform "${PLATFORM}" "${DISK_IMAGE}"
 
 if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
 	security delete-keychain build.keychain
 fi
 
-if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ]; then
-	# Parallelize processing
-	(notarize_package "build.dmg") &
-	(notarize_package "build-mono.dmg") &
-	wait
+if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
+	notarize_package "${DISK_IMAGE}"
 fi
 
-finalize_package "standard" "build.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}.dmg"
-finalize_package "mono" "build-mono.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}-mono.dmg"
+finalize_package "${PLATFORM}" "${DISK_IMAGE}" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}"
