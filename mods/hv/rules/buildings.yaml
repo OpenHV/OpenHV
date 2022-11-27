@@ -68,7 +68,7 @@ BASE:
 		ExitCell: 0,3
 		SpawnOffset: -512,512,0
 		Facing: 512
-		ProductionTypes: Building, Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 		Priority: 10
 	WithProductionExitOverlay@South1:
@@ -79,7 +79,7 @@ BASE:
 		ExitCell: 1,3
 		SpawnOffset: 512,512,0
 		Facing: 512
-		ProductionTypes: Building, Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 		Priority: 10
 	WithProductionExitOverlay@South2:
@@ -90,7 +90,7 @@ BASE:
 		ExitCell: -1,1
 		SpawnOffset: -512,512,0
 		Facing: 768
-		ProductionTypes: Building, Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 	WithProductionExitOverlay@West1:
 		ExitCell: -1,1
@@ -100,7 +100,7 @@ BASE:
 		ExitCell: -1,2
 		SpawnOffset: -512,512,0
 		Facing: 768
-		ProductionTypes: Building, Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 	WithProductionExitOverlay@West2:
 		ExitCell: -1,2
@@ -110,7 +110,7 @@ BASE:
 		ExitCell: -1,3
 		SpawnOffset: -512,512,0
 		Facing: 768
-		ProductionTypes: Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 	WithProductionExitOverlay@West3:
 		ExitCell: -1,3
@@ -120,7 +120,7 @@ BASE:
 		ExitCell: 2,1
 		SpawnOffset: 512,512,0
 		Facing: 256
-		ProductionTypes: Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 	WithProductionExitOverlay@East1:
 		ExitCell: 2,1
@@ -130,7 +130,7 @@ BASE:
 		ExitCell: 2,2
 		SpawnOffset: 512,512,0
 		Facing: 256
-		ProductionTypes: Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 	WithProductionExitOverlay@East2:
 		ExitCell: 2,2
@@ -140,7 +140,7 @@ BASE:
 		ExitCell: 2,3
 		SpawnOffset: 512,512,0
 		Facing: 256
-		ProductionTypes: Vehicle
+		ProductionTypes: Building
 		ExitDelay: 20
 	WithProductionExitOverlay@East3:
 		ExitCell: 2,3
