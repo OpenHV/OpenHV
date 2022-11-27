@@ -294,6 +294,7 @@ COPTER2:
 	SpawnActorOnDeath:
 		Actor: COPTER2.Husk
 		RequiresCondition: airborne
+	-Explodes@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
 
@@ -428,6 +429,7 @@ DROPSHIP:
 	SpawnActorOnDeath:
 		Actor: DROPSHIP.Husk
 		RequiresCondition: airborne
+	-Explodes@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
 
