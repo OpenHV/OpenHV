@@ -44,6 +44,12 @@ namespace OpenRA.Mods.HV.Lint
 						var footprintTiles = building.Tiles(cell + transforms.Offset);
 						foreach (var footprintTile in footprintTiles)
 						{
+							if (!map.Contains(footprintTile))
+							{
+								emitError($"Mining tower at {footprintTile} is out of map bounds!");
+								continue;
+							}
+
 							if (!building.TerrainTypes.Contains(map.GetTerrainInfo(footprintTile).Type))
 								emitError($"Can't construct mining tower at {footprintTile}!");
 						}

@@ -179,6 +179,9 @@ namespace OpenRA.Mods.HV.Traits
 			if (exitInfo != null && self.OccupiesSpace != null && actorInfo.HasTraitInfo<IOccupySpaceInfo>())
 			{
 				exit = self.Location + exitInfo.ExitCell;
+				if (!self.World.Map.Contains(exit))
+					return;
+
 				var spawn = self.CenterPosition + exitInfo.SpawnOffset;
 				var to = self.World.Map.CenterOfCell(exit);
 
