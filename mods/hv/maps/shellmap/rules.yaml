@@ -5,7 +5,6 @@ World:
 		BackgroundMusic: background
 		AllowMuteBackgroundMusic: true
 		DisableWorldSounds: true
-
 	TerrainLighting:
 		Intensity: 0.65
 
