@@ -106,11 +106,11 @@ namespace OpenRA.Mods.HV.Traits
 					+ (cubes < info.Maximum && info.Maximum > info.Minimum ? 1 : 0);
 
 				for (var n = 0; n < toSpawn; n++)
-					Spawncube(self);
+					SpawnCube(self);
 			}
 		}
 
-		void Spawncube(Actor self)
+		void SpawnCube(Actor self)
 		{
 			var dropCell = ChooseDropCell(self, 100);
 
@@ -118,7 +118,7 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var location = dropCell.Value;
-			var cubeActor = ChoosecubeActor();
+			var cubeActor = ChooseCubeActor();
 
 			self.World.AddFrameEndTask(w =>
 			{
@@ -148,7 +148,7 @@ namespace OpenRA.Mods.HV.Traits
 			return null;
 		}
 
-		string ChoosecubeActor()
+		string ChooseCubeActor()
 		{
 			var cubeshares = info.CubeActorShares;
 			var n = self.World.SharedRandom.Next(cubeshares.Sum());
@@ -164,12 +164,12 @@ namespace OpenRA.Mods.HV.Traits
 			return null;
 		}
 
-		public void Incrementcubes()
+		public void IncrementCubes()
 		{
 			cubes++;
 		}
 
-		public void Decrementcubes()
+		public void DecrementCubes()
 		{
 			cubes--;
 		}

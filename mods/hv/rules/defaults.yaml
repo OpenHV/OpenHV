@@ -198,7 +198,7 @@
 		Name: Scrap
 		GenericName: Scrap
 		ShowOwnerRow: false
-	Crate:
+	Collectible:
 		Duration: 6000
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
 		CrushClass: Scrap
@@ -852,7 +852,7 @@
 		Name: Cube
 		GenericName: Cube
 		ShowOwnerRow: false
-	Crate:
+	Collectible:
 		Duration: 6000
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain
 		CrushClass: Cube

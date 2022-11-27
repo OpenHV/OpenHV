@@ -70,7 +70,7 @@ GOLDBALL:
 		Name: Refined Resources
 		GenericName: Gold
 		ShowOwnerRow: false
-	Crate:
+	Collectible:
 		Duration: 6000
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 		CrushClass: Scrap

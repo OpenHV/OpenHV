@@ -83,7 +83,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			scanForcubesTicks = Info.ScanForCubesInterval;
 
-			var cubes = world.ActorsHavingTrait<Crate>().ToList();
+			var cubes = world.ActorsHavingTrait<Collectible>().ToList();
 			if (!cubes.Any())
 				return;
 
