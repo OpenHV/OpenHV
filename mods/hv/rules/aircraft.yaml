@@ -291,8 +291,39 @@ COPTER2:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+	SpawnActorOnDeath:
+		Actor: COPTER2.Husk
+		RequiresCondition: airborne
 	WithAircraftLandingEffect:
 		Image: landing
+
+COPTER2.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: Crashing Transport Helicopter
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 43
+		MaximumSpinSpeed: 64
+	LeavesTrails:
+		Offsets: -353,0,171
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: copter2
 
 BALLOON:
 	Inherits: ^Helicopter
