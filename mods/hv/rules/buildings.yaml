@@ -606,7 +606,7 @@ STARPORT:
 		Queue: Building
 		BuildPaletteOrder: 120
 		Prerequisites: radar, ~structures.yi
-		Description: Produces helicopters and shuttles.
+		Description: Produces aircraft.
 	Valued:
 		Cost: 700
 	Building:
