@@ -2687,15 +2687,18 @@ Actors:
 	Actor1148: storage
 		Owner: Yuruki Industries
 		Location: 33,103
+		FreeActor: False
 	Actor1145: storage
 		Owner: Yuruki Industries
 		Location: 33,96
+		FreeActor: False
 	Actor1149: tradplat
 		Owner: Yuruki Industries
 		Location: 46,85
 	Actor1160: storage
 		Owner: Yuruki Industries
 		Location: 45,99
+		FreeActor: False
 	Actor971: barrier
 		Owner: Yuruki Industries
 		Location: 72,95
