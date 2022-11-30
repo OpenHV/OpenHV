@@ -405,9 +405,11 @@ miner2:
 		Start: 22
 		Length: 6
 	flame:
-		Offset: 3, -4
+		Offset: 3, 16
+		ZOffset: 3072
 	flame2:
-		Offset: -13, -6
+		Offset: -13, 14
+		ZOffset: 3072
 	icon: bits/buildings-icons.png
 		Start: 16
 		Offset: 0, 2
