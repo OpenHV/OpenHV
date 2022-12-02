@@ -29,6 +29,18 @@ PLANE1:
 		Weapon: ChainGun.Shuttle
 		LocalOffset: 256,0,0
 		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 10
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 5
+	ReloadAmmoPool:
+		Delay: 70
+		Count: 2
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
@@ -84,6 +96,18 @@ PLANE2:
 	Armament:
 		Weapon: ShipMissile
 		LocalOffset: 256,375,0, 256,-375,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 6
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 3
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 2
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
@@ -152,6 +176,18 @@ COPTER:
 		Weapon: ChainGun
 		LocalOffset: 50,0,0
 		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 10
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 5
+	ReloadAmmoPool:
+		Delay: 70
+		Count: 2
 	Selectable:
 		Bounds: 1228, 1228
 	WithMuzzleOverlay:
@@ -229,6 +265,18 @@ BANSHEE:
 		Weapon: Plasma
 		MuzzleSequence: muzzle
 		LocalOffset: 700,200,0, 700,-200,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 6
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 3
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 2
 	Selectable:
 		DecorationBounds: 1228, 1228
 	WithMuzzleOverlay:
