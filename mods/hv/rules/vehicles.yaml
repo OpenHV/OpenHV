@@ -528,7 +528,7 @@ TANK15:
 		Queue: Vehicle
 		Prerequisites: ~factory.sc, techcenter, tradplat
 		BuildPaletteOrder: 110
-		Description: Disables units for a brief moment.
+		Description: Disables units for a brief moment.\n  Jams incoming missiles.
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -765,7 +765,7 @@ TANK8:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
 		Prerequisites: ~factory.yi, radar, tradplat
-		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Jams incoming missiles\n  Unarmed
+		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Jams incoming missiles.\n  Unarmed
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -781,13 +781,14 @@ TANK8:
 	RevealsShroud:
 		Range: 7c0
 		MinRange: 3c0
-	CreatesShroud:
-		Range: 9c0
 	RevealsShroud@Hacked:
 		Range: 3c0
+	CreatesShroud:
+		Range: 9c0
 	RenderShroudCircle:
-	DetectCloaked:
-		Range: 2c0
+	JamsMissiles:
+		Range: 5c0
+		DeflectionRelationships: Neutral, Enemy
 
 TANK1:
 	Inherits: ^Vehicle
