@@ -849,6 +849,30 @@
 		DetectionTypes: Underwater
 		Range: 2c0
 
+^Submarine:
+	Inherits: ^Ship
+	GrantConditionOnDeploy:
+		DeployedCondition: submerged
+	Cloak:
+		DetectionTypes: Underwater
+		InitialDelay: 0
+		CloakDelay: 100
+		CloakedCondition: underwater
+		CloakSound: submarine_out_szegvari.wav
+		UncloakSound: submarine_in_szegvari.wav
+		Palette: shadow
+		PauseOnCondition: cloak-force-disabled
+		RequiresCondition: submerged
+	GrantConditionOnDamageState@Uncloak:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical, Heavy
+	LeavesTrails:
+		RequiresCondition: cloak-force-disabled
+	RenderDetectionCircle:
+	SpeedMultiplier@Surfaced:
+		Modifier: 75
+		RequiresCondition: !underwater
+
 ^Cube:
 	Interactable:
 	HiddenUnderFog:

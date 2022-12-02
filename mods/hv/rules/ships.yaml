@@ -140,7 +140,7 @@ BOAT:
 	WithMuzzleOverlay:
 
 SUBMARINE2:
-	Inherits: ^Ship
+	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1250
@@ -164,28 +164,21 @@ SUBMARINE2:
 		TurnSpeed: 60
 	RevealsShroud:
 		Range: 6c0
-		MinRange: 3c0
-		RevealGeneratedShroud: False
+		MinRange: 1c0
+		RevealGeneratedShroud: false
+		RequiresCondition: !underwater
 	RevealsShroud@Hacked:
+		Range: 1c0
+	RevealsShroud@Underwater:
 		Range: 3c0
+		MinRange: 1c0
+		RevealGeneratedShroud: false
+		RequiresCondition: underwater
 	Armament:
 		Weapon: Torpedo
 		LocalOffset: 600,0,0
 	AttackFrontal:
 		FacingTolerance: 25
-	Cloak:
-		DetectionTypes: Underwater
-		InitialDelay: 0
-		CloakDelay: 100
-		CloakSound: submarine_out_szegvari.wav
-		UncloakSound: submarine_in_szegvari.wav
-		Palette: shadow
-		PauseOnCondition: cloak-force-disabled
-	GrantConditionOnDamageState@Uncloak:
-		Condition: cloak-force-disabled
-		ValidDamageStates: Critical, Heavy
-	LeavesTrails:
-		RequiresCondition: cloak-force-disabled
 
 BOAT2:
 	Inherits: ^Ship
@@ -227,8 +220,8 @@ BOAT2:
 	AttackTurreted:
 	WithSpriteTurret:
 
-BOAT4:
-	Inherits: ^Ship
+SUBMARINE:
+	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1750
@@ -252,10 +245,16 @@ BOAT4:
 		TurnSpeed: 40
 	RevealsShroud:
 		Range: 7c0
-		MinRange: 3c0
+		MinRange: 1c0
 		RevealGeneratedShroud: false
+		RequiresCondition: !underwater
 	RevealsShroud@Hacked:
-		Range: 3c0
+		Range: 1c0
+	RevealsShroud@Underwater:
+		Range: 4c0
+		MinRange: 1c0
+		RevealGeneratedShroud: false
+		RequiresCondition: underwater
 	AttackFrontal:
 		FacingTolerance: 25
 	WithMissileSpawnerParentPipsDecoration:
@@ -268,22 +267,9 @@ BOAT4:
 		RespawnTicks: 120
 	Exit:
 		SpawnOffset: 250,0,0
-	Cloak:
-		DetectionTypes: Underwater
-		InitialDelay: 0
-		CloakDelay: 100
-		CloakSound: submarine_out_szegvari.wav
-		UncloakSound: submarine_in_szegvari.wav
-		Palette: shadow
-		PauseOnCondition: cloak-force-disabled
-	GrantConditionOnDamageState@Uncloak:
-		Condition: cloak-force-disabled
-		ValidDamageStates: Critical, Heavy
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	LeavesTrails:
-		RequiresCondition: cloak-force-disabled
 	DetectCloaked:
 		Range: 1c0
 

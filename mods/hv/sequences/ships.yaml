@@ -68,7 +68,7 @@ boat3:
 	icon: bits/units-icons.png
 		Start: 14
 
-boat4:
+submarine:
 	idle: bits/submarine.png
 		Facings: 8
 	shoot: bits/submarine.png

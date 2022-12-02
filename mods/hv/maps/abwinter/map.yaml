@@ -1046,22 +1046,22 @@ Actors:
 		Owner: Creeps
 		Health: 25
 		Facing: 384
-	Actor783: boat4
+	Actor783: submarine
 		Owner: Creeps
 		Location: 31,64
 		Facing: 384
 		Stance: AttackAnything
-	Actor787: boat4
+	Actor787: submarine
 		Owner: Creeps
 		Stance: AttackAnything
 		Facing: 384
 		Location: 64,31
-	Actor788: boat4
+	Actor788: submarine
 		Owner: Creeps
 		Stance: AttackAnything
 		Facing: 384
 		Location: 98,65
-	Actor789: boat4
+	Actor789: submarine
 		Owner: Creeps
 		Stance: AttackAnything
 		Facing: 384
