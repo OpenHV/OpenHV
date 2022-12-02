@@ -8,7 +8,7 @@ PLANE1:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.yi
-		Description: Attack Ship armed with\na large chain gun.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
+		Description: Attack Ship armed with\na large chain gun.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -125,7 +125,7 @@ COPTER:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.sc
-		Description: Small Helicopter Gunship\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
+		Description: Small Helicopter Gunship\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -244,7 +244,7 @@ COPTER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
-		Description: Vehicle Transport Helicopter.\n  Armed with light machine gun.\n  Can lift one vehicle\n  Can transport pods
+		Description: Vehicle Transport Helicopter.\n  Armed with light machine gun.\n\n  Can load pods\n  and lift one tank.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -378,7 +378,7 @@ DROPSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.yi
-		Description: Vehicle Transport Shuttle.\n  Armed with light missiles.\n  Can lift one vehicle\n  Can transport pods
+		Description: Vehicle Transport Shuttle.\n  Armed with light missiles.\n  Can load pods\n  and lift one tank.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

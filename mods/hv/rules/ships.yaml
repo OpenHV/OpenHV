@@ -13,7 +13,7 @@ BOAT3:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 40
-		Description: Versatile light ship.\n  Can detect submarines.\n  Strong vs Pods and Aircrafts\n  Weak vs Vehicles
+		Description: Versatile light ship.\n  Can detect submarines.\n  Strong vs Pods and Aircrafts\n  Weak vs Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

@@ -359,7 +359,7 @@ TRADPLAT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
-		Description: Repairs vehicles for credits.\nAllows buying units on the free market.
+		Description: Repairs vehicles and aircraft for credits.\nAllows buying units on the free market.
 		Prerequisites: factory
 	Valued:
 		Cost: 1200
@@ -444,7 +444,7 @@ MODULE:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: generator, ~structures.yi
-		Description: Produces very light pod vehicles.
+		Description: Produces very light vehicles.
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.yi
 	ProvidesPrerequisite@Generic:
@@ -687,7 +687,7 @@ FACTORY3:
 		Prerequisites: module, storage, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
-		Description: Builds vehicles.
+		Description: Builds tanks.
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1012,7 +1012,7 @@ BUNKER:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: module, ~structures.yi
-		Description: Basic base defense.\nGood against pods.\n  Requires power to operate.\n  Strong vs Pods\n  Weak vs Vehicles
+		Description: Light base defense.\n  Requires power to operate.\n  Strong vs Pods\n  Weak vs Tanks
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
 	Valued:
@@ -1064,7 +1064,7 @@ TURRET:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: factory, ~structures.yi
-		Description: Base defense.\nGood against vehicles.\n  Requires power to operate.\n  Strong vs Vehicles\n  Weak vs Pods
+		Description: Base defense.\n  Requires power to operate.\n  Strong vs Tanks, Ships\n  Weak vs Pods
 	Valued:
 		Cost: 1000
 	Tooltip:

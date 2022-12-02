@@ -5,7 +5,7 @@ SCOUT1:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Fast anti-pod vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
+		Description: Fast scout vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
 		Prerequisites: ~module
 	Valued:
 		Cost: 100
@@ -30,7 +30,7 @@ SCOUT2:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Fast anti-vehicle pod.\nShoots rockets.\n  Strong vs Vehicles and Aircrafts\n  Weak vs Pods
+		Description: Fast scout vehicle.\nShoots surface to air/ground rockets.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
 		Prerequisites: ~module
 	Valued:
 		Cost: 225
@@ -60,7 +60,7 @@ MORTARPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
+		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 		Prerequisites: ~module.yi, factory
 	Valued:
 		Cost: 175
@@ -89,7 +89,7 @@ SNIPERPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Long range sniper pod.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Vehicles and Buildings
+		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
 		Prerequisites: ~module, radar
 	Valued:
 		Cost: 500
@@ -130,7 +130,7 @@ FLAMEPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Short range flame pod.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
+		Description: Short range flame thrower.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 		Prerequisites: ~module.sc, factory
 	Valued:
 		Cost: 350
@@ -168,7 +168,7 @@ TECHNICIAN:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Scouts
-		Description: Armored technician.\nInfiltrates and captures enemy structures.\n  Unarmed
+		Description: Field technician.\nInfiltrates and captures enemy structures.\n  Unarmed
 		Prerequisites: ~module
 	Valued:
 		Cost: 500
@@ -198,7 +198,7 @@ HACKERPOD:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Scouts
-		Description: Hacker pod.\nSteals money from the global network.\n  Unarmed
+		Description: Mobile Hackerspace.\nSteals money from the global network.\n  Unarmed
 		Prerequisites: ~module.yi, techcenter
 	Valued:
 		Cost: 700
@@ -244,7 +244,7 @@ ELITEPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Scouts
-		Description: Elite airborn pod.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
+		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
 		Prerequisites: ~module, techcenter
 	Valued:
 		Cost: 750
@@ -284,7 +284,7 @@ BOMBERPOD:
 	Inherits: ^Pod
 	Buildable:
 		Queue: Scouts
-		Description: Remote controlled mines. \nExplodes buildings.\n  Unarmed
+		Description: Remote controlled mine. \nExplodes buildings.\n  Unarmed
 		Prerequisites: ~module, radar
 	Valued:
 		Cost: 600
@@ -314,8 +314,8 @@ MINIPOD1:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Civilian pod
-		GenericName: Civilian pod
+		Name: Civilian
+		GenericName: Civilian
 	Health:
 		HP: 10000
 	Mobile:

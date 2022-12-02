@@ -160,7 +160,7 @@ ARTIL:
 		Queue: Vehicle
 		Prerequisites: factory, radar
 		BuildPaletteOrder: 40
-		Description: Mobile long range weapon.\n  Strong vs Pods and Buildings\n  Weak vs Vehicles
+		Description: Mobile long range weapon.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
