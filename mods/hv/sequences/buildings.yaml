@@ -361,9 +361,28 @@ miner2:
 				Offset: 15, 36
 				Length: 18
 				Tick: 100
-	idle: bits/miner2.png
-		Start: 18
+	idle:
+		ShadowStart: 1
 		Length: 1
+		Combine:
+			bits/miner2.png:
+				Start: 18
+				Length: 1
+			bits/miner2-shadow.png:
+				Start: 18
+				Length: 1
+				Offset: 15, 36
+	damaged-idle:
+		ShadowStart: 1
+		Length: 1
+		Combine:
+			bits/miner2.png:
+				Start: 21
+				Length: 1
+			bits/miner2-shadow.png:
+				Start: 21
+				Length: 1
+				Offset: 15, 36
 	active:
 		Length: 3
 		Tick: 300
