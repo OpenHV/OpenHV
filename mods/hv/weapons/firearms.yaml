@@ -293,8 +293,8 @@ HeavyMachineGun:
 		Spread: 24
 		Damage: 300
 		Versus:
-			None: 200
-			Steel: 35
-			Light: 50
-			Heavy: 25
+			None: 300
+			Steel: 40
+			Light: 55
+			Heavy: 35
 			Concrete: 10
