@@ -26,6 +26,7 @@ jobs:
         run: |
           make engine
           mkdir -p build/linux
+          sudo apt install libfuse2
           ./packaging/linux/buildpackage.sh "${GIT_TAG}" "${PWD}/build/linux"
 
       - name: Upload Packages
