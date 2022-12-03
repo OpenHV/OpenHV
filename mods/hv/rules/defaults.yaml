@@ -818,9 +818,6 @@
 		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Water, Ship
-	GrantConditionOnDamageState@Damaged:
-		Condition: damaged
-		ValidDamageStates: Light, Medium, Heavy, Critical
 	HiddenUnderFog:
 	AttackMove:
 	ProximityCaptor:
