@@ -106,7 +106,7 @@ AATANK2:
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 600
 	Tooltip:
