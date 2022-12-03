@@ -192,6 +192,20 @@ TECHNICIAN:
 	Mobile:
 		Speed: 70
 		Voice: Move
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	AutoTargetPriority@Default:
+		ValidTargets: DamagedPod
+	Armament:
+		Weapon: RepairTorch
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
 
 HACKERPOD:
 	Inherits: ^Pod

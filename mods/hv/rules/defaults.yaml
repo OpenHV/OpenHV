@@ -120,7 +120,7 @@
 		TargetTypes: Ground, Vehicle
 	Targetable@Repair:
 		RequiresCondition: damaged
-		TargetTypes: Repair
+		TargetTypes: DamagedVehicle
 	GrantConditionOnDamageState@Damaged:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
@@ -194,6 +194,9 @@
 	RepairableNear:
 		RepairActors: module, module2
 		CloseEnough: 2c0
+	Targetable@Repair:
+		RequiresCondition: damaged
+		TargetTypes: DamagedPod
 
 ^Scrap:
 	Interactable:

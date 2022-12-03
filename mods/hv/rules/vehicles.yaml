@@ -274,7 +274,7 @@ TANK16:
 		BuildPaletteOrder: 60
 		Description: Repairs nearby tanks.\n  Unarmed
 	Armament:
-		Weapon: Repair
+		Weapon: RepairBeam
 		Cursor: repair
 		OutsideRangeCursor: repair
 		TargetRelationships: Ally
@@ -301,7 +301,7 @@ TANK16:
 		ScanRadius: 8
 		InitialStance: AttackAnything
 	AutoTargetPriority@Default:
-		ValidTargets: Vehicle
+		ValidTargets: DamagedVehicle
 
 TANK6:
 	Inherits: ^TrackedVehicle

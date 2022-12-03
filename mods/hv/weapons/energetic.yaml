@@ -89,7 +89,7 @@ ElectronicCountermeasureEffect:
 		Spread: 1
 		Damage: 0
 
-Repair:
+RepairBeam:
 	ReloadDelay: 5
 	Range: 2c0
 	Projectile: LaserZap
@@ -101,12 +101,32 @@ Repair:
 		Duration: 2
 		SecondaryBeamWidth: 144
 		SecondaryBeamColor: f09000
-	ValidTargets: Repair
+	ValidTargets: DamagedVehicle
 	TargetActorCenter: true
 	Warhead@Repair: TargetDamage
 		DebugOverlayColor: 00FF00
 		Damage: -250
-		ValidTargets: Repair
+		ValidTargets: DamagedVehicle
+		Spread: 1
+
+RepairTorch:
+	ReloadDelay: 3
+	Range: 1c0
+	Projectile: LaserZap
+		ZOffset: 2047
+		Color: fffff2
+		SecondaryBeam: true
+		SecondaryBeamZOffset: 2047
+		Width: 24
+		Duration: 2
+		SecondaryBeamWidth: 144
+		SecondaryBeamColor: 0020F0
+	ValidTargets: DamagedPod
+	TargetActorCenter: true
+	Warhead@Repair: TargetDamage
+		DebugOverlayColor: 00FF00
+		Damage: -50
+		ValidTargets: DamagedPod
 		Spread: 1
 
 Plasma:
