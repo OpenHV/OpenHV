@@ -868,7 +868,6 @@
 		ValidDamageStates: Critical, Heavy
 	LeavesTrails:
 		RequiresCondition: cloak-force-disabled
-	RenderDetectionCircle:
 	SpeedMultiplier@Surfaced:
 		Modifier: 75
 		RequiresCondition: !underwater
