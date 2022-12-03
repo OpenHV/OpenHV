@@ -190,6 +190,10 @@
 		Range: 2c0
 	DetectCloaked:
 		Range: 1c0
+	-Repairable:
+	RepairableNear:
+		RepairActors: module, module2
+		CloseEnough: 2c0
 
 ^Scrap:
 	Interactable:

@@ -226,8 +226,6 @@ HACKERPOD:
 		BodyNames: deployed
 	WithFacingSpriteBody:
 		RequiresCondition: undeployed
-	Repairable:
-		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
 		RequiresCondition: !undeployed
 		Sequence: extended

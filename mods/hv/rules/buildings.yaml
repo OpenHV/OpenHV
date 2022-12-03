@@ -444,7 +444,7 @@ MODULE:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: generator, ~structures.yi
-		Description: Produces very light vehicles.
+		Description: Produces and repairs very light vehicles.
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.yi
 	ProvidesPrerequisite@Generic:
@@ -522,6 +522,12 @@ MODULE:
 	WithProductionOverlay@base:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
+	RepairsUnits:
+		HpPerStep: 1000
+		Interval: 7
+		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
 
 MODULE2:
 	Inherits: MODULE

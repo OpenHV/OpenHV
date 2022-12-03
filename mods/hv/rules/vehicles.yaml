@@ -272,7 +272,7 @@ TANK16:
 		Queue: Vehicle
 		Prerequisites: factory, tradplat
 		BuildPaletteOrder: 60
-		Description: Repairs nearby vehicles.\n  Unarmed
+		Description: Repairs nearby tanks.\n  Unarmed
 	Armament:
 		Weapon: Repair
 		Cursor: repair
