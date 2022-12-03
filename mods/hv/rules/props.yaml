@@ -18,7 +18,7 @@ LAMPPOST:
 		HP: 120000
 	ThrowsShrapnel:
 		Pieces: 1, 2
-	-ThrowsShrapnel@large:
+	-ThrowsShrapnel@Large:
 
 SPARKLAMP:
 	Inherits: LAMPPOST
@@ -249,7 +249,7 @@ RAIL:
 	Tooltip:
 		Name: Rail
 	-ThrowsShrapnel:
-	-ThrowsShrapnel@large:
+	-ThrowsShrapnel@Large:
 	-Explodes:
 	HitShape:
 		Type: Circle

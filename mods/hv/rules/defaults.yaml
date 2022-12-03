@@ -476,7 +476,7 @@
 		Weapons: Debris
 		Pieces: 5, 10
 		Range: 1c512, 4c0
-	ThrowsShrapnel@large:
+	ThrowsShrapnel@Large:
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 4c0
@@ -600,7 +600,7 @@
 		Weapons: Debris
 		Pieces: 5, 10
 		Range: 1c512, 4c0
-	ThrowsShrapnel@large:
+	ThrowsShrapnel@Large:
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 4c0
