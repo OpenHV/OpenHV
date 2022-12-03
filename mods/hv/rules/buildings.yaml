@@ -1832,21 +1832,33 @@ BARRIER:
 	Armor:
 		Type: Concrete
 	LineBuildNode:
-	GrantConditionOnLineBuildConnection:
-		Condition: connected
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-WithSpriteBody:
 	-WithIdleOverlay@Shadow:
+	GrantConditionOnLineBuildConnection:
+		Edges: 0,-1, 0,3
+		FirstCondition: top
+		LastCondition: bottom
 	WithGateSpriteBody@Connected:
 		Name: connected
 		OpenSequence: open
-		RequiresCondition: connected
+		RequiresCondition: top && bottom
 	WithGateSpriteBody@Standalone:
 		Name: standalone
 		Sequence: idle-alone
 		OpenSequence: open-alone
-		RequiresCondition: !connected
+		RequiresCondition: !top && !bottom
+	WithGateSpriteBody@Top:
+		Name: top
+		Sequence: idle-top
+		OpenSequence: open-top
+		RequiresCondition: top && !bottom
+	WithGateSpriteBody@Bottom:
+		Name: bottom
+		Sequence: idle-bottom
+		OpenSequence: open-bottom
+		RequiresCondition: !top && bottom
 	Tooltip:
 		Name: Gate
 	RequiresBuildableArea:
@@ -1897,12 +1909,30 @@ HGATE:
 		Bounds: 3072, 1512, 0, -256
 	LineBuildNode:
 		Connections: -1,0, 1,0
-	GrantConditionOnLineBuildConnection:
-		Edges: -1,0, 3,0
 	PlaceBuildingVariants:
 		Actors: vgate
 	RenderSprites:
 		Image: gate-horizontal
+	GrantConditionOnLineBuildConnection:
+		Edges: -1,0, 3,0
+		FirstCondition: left
+		LastCondition: right
+	WithGateSpriteBody@Standalone:
+		RequiresCondition: !left && !right
+	WithGateSpriteBody@Connected:
+		RequiresCondition: left && right
+	-WithGateSpriteBody@Top:
+	WithGateSpriteBody@Left:
+		Name: left
+		Sequence: idle-left
+		OpenSequence: open-left
+		RequiresCondition: left && !right
+	-WithGateSpriteBody@Bottom:
+	WithGateSpriteBody@Right:
+		Name: right
+		Sequence: idle-right
+		OpenSequence: open-right
+		RequiresCondition: right && !left
 
 VGATE:
 	Inherits: ^GATE

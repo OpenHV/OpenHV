@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -20,8 +21,13 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[GrantedConditionReference]
 		[FieldLoader.Require]
-		[Desc("The condition to grant.")]
-		public readonly string Condition = null;
+		[Desc("The condition to grant when left/top is connected.")]
+		public readonly string FirstCondition = null;
+
+		[GrantedConditionReference]
+		[FieldLoader.Require]
+		[Desc("The condition to grant when right/bottom is connected.")]
+		public readonly string LastCondition = null;
 
 		[Desc("Possible connections left/right or top/bottom from top left origin.")]
 		public readonly CVec[] Edges = null;
@@ -34,9 +40,11 @@ namespace OpenRA.Mods.HV.Traits
 		readonly GrantConditionOnLineBuildConnectionInfo info;
 		readonly List<CPos> possibleConnections = new List<CPos>();
 
-		int token = Actor.InvalidConditionToken;
-		int segments;
-		int triggerId;
+		int firstToken = Actor.InvalidConditionToken;
+		int lastToken = Actor.InvalidConditionToken;
+
+		int firstTriggerId;
+		int lastTriggerId;
 
 		public GrantConditionOnLineBuildConnection(Actor self, GrantConditionOnLineBuildConnectionInfo info)
 		{
@@ -49,32 +57,39 @@ namespace OpenRA.Mods.HV.Traits
 
 		void INotifyAddedToWorld.AddedToWorld(Actor self)
 		{
-			void OnEntry(Actor actor)
+			void OnEntryFirst(Actor actor)
 			{
 				if (actor.TraitOrDefault<LineBuild>() != null)
-				{
-					segments++;
-					if (segments == 2)
-						token = self.GrantCondition(info.Condition);
-				}
+					firstToken = self.GrantCondition(info.FirstCondition);
 			}
 
-			void OnExit(Actor actor)
+			void OnExitFirst(Actor actor)
+			{
+				firstToken = self.RevokeCondition(firstToken);
+			}
+
+			var first = new CPos[] { possibleConnections.First() };
+			firstTriggerId = self.World.ActorMap.AddCellTrigger(first, OnEntryFirst, OnExitFirst);
+
+			void OnEntryLast(Actor actor)
 			{
 				if (actor.TraitOrDefault<LineBuild>() != null)
-				{
-					segments--;
-					if (segments == 0)
-						token = self.RevokeCondition(token);
-				}
+					lastToken = self.GrantCondition(info.LastCondition);
 			}
 
-			triggerId = self.World.ActorMap.AddCellTrigger(possibleConnections.ToArray(), OnEntry, OnExit);
+			void OnExitLast(Actor actor)
+			{
+				lastToken = self.RevokeCondition(lastToken);
+			}
+
+			var last = new CPos[] { possibleConnections.Last() };
+			lastTriggerId = self.World.ActorMap.AddCellTrigger(last, OnEntryLast, OnExitLast);
 		}
 
 		void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
 		{
-			self.World.ActorMap.RemoveCellTrigger(triggerId);
+			self.World.ActorMap.RemoveCellTrigger(firstTriggerId);
+			self.World.ActorMap.RemoveCellTrigger(lastTriggerId);
 		}
 	}
 }
