@@ -60,6 +60,7 @@ ElectronicCountermeasure:
 	Range: 7c0
 	Report: Sonic1.wav, Sonic2.wav, Sonic3.wav
 	ValidTargets: Vehicle
+	InvalidTargets: DisabledVehicle
 	Projectile: Bullet
 		Speed: 150
 		Image: bullet4

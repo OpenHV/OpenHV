@@ -121,6 +121,9 @@
 	Targetable@Repair:
 		RequiresCondition: damaged
 		TargetTypes: DamagedVehicle
+	Targetable@Disabled:
+		RequiresCondition: ecm-disabled
+		TargetTypes: DisabledVehicle
 	GrantConditionOnDamageState@Damaged:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
