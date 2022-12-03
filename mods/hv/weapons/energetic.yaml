@@ -73,12 +73,12 @@ ElectronicCountermeasure:
 		Damage: 0
 		ValidTargets: Vehicle
 	Warhead@Effect: FireRadius
-		Weapon: ElectronicCountermeasureEffect
+		Weapon: ElectronicCounterMeasureEffect
 		Amount: 8
 		AffectsParent: true
 		ValidTargets: Ground
 
-ElectronicCountermeasureEffect:
+ElectronicCounterMeasureEffect:
 	ReloadDelay: 1
 	Range: 1c0
 	Projectile: Bullet
