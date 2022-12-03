@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2022 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -15,7 +15,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Grants a condition when this actor is connected to a wall.")]
+	[Desc("Grants a condition when this actor is next to two walls.")]
 	class GrantConditionOnLineBuildConnectionInfo : TraitInfo, Requires<BuildingInfo>
 	{
 		[GrantedConditionReference]
@@ -29,13 +29,14 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new GrantConditionOnLineBuildConnection(init.Self, this); }
 	}
 
-	class GrantConditionOnLineBuildConnection : INotifyLineBuildSegmentsChanged
+	class GrantConditionOnLineBuildConnection : INotifyAddedToWorld, INotifyRemovedFromWorld
 	{
 		readonly GrantConditionOnLineBuildConnectionInfo info;
 		readonly List<CPos> possibleConnections = new List<CPos>();
 
 		int token = Actor.InvalidConditionToken;
 		int segments;
+		int triggerId;
 
 		public GrantConditionOnLineBuildConnection(Actor self, GrantConditionOnLineBuildConnectionInfo info)
 		{
@@ -46,27 +47,34 @@ namespace OpenRA.Mods.HV.Traits
 				possibleConnections.Add(building.TopLeft + edge);
 		}
 
-		void INotifyLineBuildSegmentsChanged.SegmentAdded(Actor self, Actor segment)
+		void INotifyAddedToWorld.AddedToWorld(Actor self)
 		{
-			if (possibleConnections.Contains(segment.Location))
+			void OnEntry(Actor actor)
 			{
-				segments++;
-				if (segments == 2)
-					token = self.GrantCondition(info.Condition);
+				if (actor.TraitOrDefault<LineBuild>() != null)
+				{
+					segments++;
+					if (segments == 2)
+						token = self.GrantCondition(info.Condition);
+				}
 			}
+
+			void OnExit(Actor actor)
+			{
+				if (actor.TraitOrDefault<LineBuild>() != null)
+				{
+					segments--;
+					if (segments == 0)
+						token = self.RevokeCondition(token);
+				}
+			}
+
+			triggerId = self.World.ActorMap.AddCellTrigger(possibleConnections.ToArray(), OnEntry, OnExit);
 		}
 
-		void INotifyLineBuildSegmentsChanged.SegmentRemoved(Actor self, Actor segment)
+		void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
 		{
-			if (token == Actor.InvalidConditionToken)
-				return;
-
-			if (possibleConnections.Contains(segment.Location))
-			{
-				segments--;
-				if (segments == 0)
-					token = self.RevokeCondition(token);
-			}
+			self.World.ActorMap.RemoveCellTrigger(triggerId);
 		}
 	}
 }
