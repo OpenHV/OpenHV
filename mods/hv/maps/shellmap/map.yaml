@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -26,12 +26,12 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
-	PlayerReference@Yuruki:
+	PlayerReference@Yuruki Industries:
 		Name: Yuruki Industries
 		Faction: yi
 		Color: 003897
 		Enemies: Creeps
-	PlayerReference@Synapol:
+	PlayerReference@Synapol Corporation:
 		Name: Synapol Corporation
 		Faction: sc
 		Color: 805040
@@ -50,11 +50,6 @@ Actors:
 		Location: 67,23
 		Faction: Random
 		Owner: Synapol Corporation
-	Actor27: howitzer
-		Location: 77,28
-		Faction: Random
-		Owner: Synapol Corporation
-		TurretFacing: 372
 	Actor28: televtr2
 		Location: 64,31
 		Faction: Random
@@ -639,9 +634,6 @@ Actors:
 	Actor318: generator
 		Owner: Synapol Corporation
 		Location: 70,24
-	Actor320: generator
-		Owner: Synapol Corporation
-		Location: 64,27
 	Actor321: generator
 		Owner: Synapol Corporation
 		Location: 64,23
@@ -2233,8 +2225,8 @@ Actors:
 	Actor1010: minipod3
 		Owner: Yuruki Industries
 		SubCell: 1
-		Facing: 384
 		Location: 65,96
+		Facing: 729
 	Actor1011: minipod3
 		Owner: Yuruki Industries
 		Facing: 384
@@ -2247,9 +2239,9 @@ Actors:
 		SubCell: 1
 	Actor1013: minipod3
 		Owner: Yuruki Industries
-		Facing: 384
 		SubCell: 1
 		Location: 60,95
+		Facing: 0
 	Actor1014: minipod3
 		Owner: Yuruki Industries
 		Facing: 384
@@ -2480,6 +2472,7 @@ Actors:
 	Actor1071: turret
 		Owner: Yuruki Industries
 		Location: 30,80
+		TurretFacing: 103
 	Actor1072: barrier
 		Owner: Yuruki Industries
 		Location: 32,81
@@ -2600,9 +2593,11 @@ Actors:
 	Actor1121: turret
 		Owner: Yuruki Industries
 		Location: 29,85
+		TurretFacing: 261
 	Actor1138: turret
 		Owner: Yuruki Industries
 		Location: 29,95
+		TurretFacing: 222
 	Actor1041: barrier
 		Owner: Yuruki Industries
 		Location: 71,82
@@ -2824,6 +2819,7 @@ Actors:
 	Actor1192: turret
 		Owner: Yuruki Industries
 		Location: 101,80
+		TurretFacing: 927
 	Actor1194: barrier
 		Owner: Yuruki Industries
 		Location: 93,82
@@ -2893,6 +2889,7 @@ Actors:
 	Actor1215: turret
 		Owner: Yuruki Industries
 		Location: 102,85
+		TurretFacing: 769
 	Actor1216: generator
 		Owner: Yuruki Industries
 		Location: 39,104
@@ -2953,6 +2950,7 @@ Actors:
 	Actor1154: turret
 		Owner: Yuruki Industries
 		Location: 29,105
+		TurretFacing: 269
 	Actor1156: barrier
 		Owner: Yuruki Industries
 		Location: 30,107
@@ -2983,6 +2981,7 @@ Actors:
 	Actor1227: turret
 		Owner: Yuruki Industries
 		Location: 29,115
+		TurretFacing: 261
 	Actor1244: barrier
 		Owner: Yuruki Industries
 		Location: 30,117
@@ -3109,9 +3108,6 @@ Actors:
 	Actor1285: barrier
 		Owner: Yuruki Industries
 		Location: 62,124
-	Actor1286: barrier
-		Owner: Yuruki Industries
-		Location: 64,124
 	Actor1287: barrier
 		Owner: Yuruki Industries
 		Location: 64,124
@@ -3199,6 +3195,7 @@ Actors:
 	Actor1315: turret
 		Owner: Yuruki Industries
 		Location: 30,123
+		TurretFacing: 388
 	Actor1316: module2
 		Owner: Synapol Corporation
 		Location: 68,31
@@ -3262,18 +3259,12 @@ Actors:
 	Actor1336: barrier
 		Owner: Yuruki Industries
 		Location: 102,109
-	Actor1337: barrier
-		Owner: Yuruki Industries
-		Location: 102,110
 	Actor1338: barrier
 		Owner: Yuruki Industries
 		Location: 102,110
 	Actor1339: barrier
 		Owner: Yuruki Industries
 		Location: 102,111
-	Actor1340: barrier
-		Owner: Yuruki Industries
-		Location: 102,112
 	Actor1341: barrier
 		Owner: Yuruki Industries
 		Location: 102,112
@@ -3313,12 +3304,15 @@ Actors:
 	Actor1353: turret
 		Owner: Yuruki Industries
 		Location: 102,95
+		TurretFacing: 753
 	Actor1354: turret
 		Owner: Yuruki Industries
 		Location: 102,105
+		TurretFacing: 745
 	Actor1355: turret
 		Owner: Yuruki Industries
 		Location: 102,115
+		TurretFacing: 824
 	Actor1356: barrier
 		Owner: Yuruki Industries
 		Location: 90,124
@@ -3340,9 +3334,6 @@ Actors:
 	Actor1362: barrier
 		Owner: Yuruki Industries
 		Location: 96,124
-	Actor1363: barrier
-		Owner: Yuruki Industries
-		Location: 98,124
 	Actor1364: barrier
 		Owner: Yuruki Industries
 		Location: 97,124
@@ -3370,6 +3361,7 @@ Actors:
 	Actor1372: turret
 		Owner: Yuruki Industries
 		Location: 101,123
+		TurretFacing: 586
 	Actor1375: bunker
 		Owner: Yuruki Industries
 		Location: 103,98
@@ -3787,12 +3779,12 @@ Actors:
 		Location: 96,50
 	Actor1512: seed
 		Owner: Neutral
-		Facing: 384
 		Location: 10,31
+		Facing: 0
 	Actor1516: seed
 		Owner: Neutral
-		Facing: 384
 		Location: 12,33
+		Facing: 753
 	Actor1518: seed
 		Owner: Neutral
 		Facing: 384
@@ -3807,8 +3799,8 @@ Actors:
 		Location: 102,49
 	Actor1522: beast
 		Owner: Neutral
-		Facing: 384
 		Location: 105,51
+		Facing: 602
 	Actor1525: worm
 		Owner: Neutral
 		Facing: 384
@@ -3831,8 +3823,8 @@ Actors:
 		Location: 42,29
 	Actor1532: worm
 		Owner: Neutral
-		Facing: 384
 		Location: 41,28
+		Facing: 0
 	Actor1533: worm
 		Owner: Neutral
 		Facing: 384
@@ -3863,8 +3855,8 @@ Actors:
 		Location: 27,127
 	Actor1547: flyingmonster
 		Owner: Neutral
-		Facing: 384
 		Location: 12,63
+		Facing: 658
 	Actor1548: flyingmonster
 		Owner: Neutral
 		Facing: 384
@@ -3926,8 +3918,8 @@ Actors:
 		Location: 9,35
 	Actor1517: flyingmonster
 		Owner: Neutral
-		Facing: 384
 		Location: 110,67
+		Facing: 499
 	Actor1468: resourcelight
 		Owner: Neutral
 		Location: 117,107
@@ -3956,10 +3948,198 @@ Actors:
 		Owner: Neutral
 		Location: 13,85
 	Actor1470: resourcelight
-		Owner: Neutral
 		Location: 28,121
-	Actor1469: miner2
 		Owner: Neutral
+	Actor1469: miner2
 		Location: 27,119
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor1536: worm
+		Owner: Neutral
+		Location: 75,52
+		Facing: 658
+	Actor1539: worm
+		Owner: Neutral
+		Location: 103,35
+		Facing: 682
+	Actor1540: worm
+		Owner: Neutral
+		Location: 100,15
+		Facing: 1007
+	Actor1544: worm
+		Owner: Neutral
+		Location: 42,12
+		Facing: 578
+	Actor1545: crow2
+		Owner: Neutral
+		Facing: 384
+		Location: 23,97
+	Actor1546: crow2
+		Owner: Neutral
+		Facing: 384
+		Location: 83,4
+	Actor1558: gull2
+		Owner: Neutral
+		Facing: 384
+		Location: 113,122
+	Actor1286: minipod1
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 60,106
+	Actor1337: minipod1
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 87,105
+	Actor1340: minipod5
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 42,96
+	Actor1363: minipod5
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 44,89
+	Actor1562: minipod1
+		Owner: Yuruki Industries
+		SubCell: 1
+		Location: 87,112
+		Facing: 808
+	Actor1563: minipod4
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 69,117
+	Actor1564: minipod6
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 44,121
+	Actor1565: minipod6
+		Owner: Yuruki Industries
+		SubCell: 1
+		Location: 43,111
+		Facing: 674
+	Actor1566: minipod4
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 5,59
+	Actor1567: minipod4
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 12,55
+	Actor1568: minipod3
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 11,53
+	Actor1569: minipod3
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 7,50
+	Actor1570: minipod6
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 14,57
+	Actor1571: minipod6
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 4,62
+	Actor1572: minipod4
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 3,53
+	Actor1573: minipod4
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 4,49
+	Actor1574: minipod5
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 9,55
+	Actor1575: minipod5
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 9,49
+	Actor320: generator
+		Owner: Synapol Corporation
+		Location: 64,27
+	Actor27: howitzer
+		Location: 77,28
+		Faction: Random
+		Owner: Synapol Corporation
+		TurretFacing: 372
+	Actor1576: minipod6
+		Owner: Synapol Corporation
+		SubCell: 1
+		Facing: 384
+		Location: 75,29
+	Actor1577: minipod6
+		Owner: Synapol Corporation
+		Facing: 384
+		SubCell: 1
+		Location: 74,27
+	Actor1578: minipod6
+		Owner: Synapol Corporation
+		Facing: 384
+		SubCell: 1
+		Location: 67,30
+	Actor1579: minipod6
+		Owner: Synapol Corporation
+		Facing: 384
+		SubCell: 1
+		Location: 63,30
+	Actor1580: minipod6
+		Owner: Synapol Corporation
+		Facing: 384
+		SubCell: 1
+		Location: 63,26
+	Actor1581: minipod6
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 64,21
+		Facing: 547
+	Actor1582: minipod6
+		Owner: Synapol Corporation
+		Facing: 384
+		SubCell: 1
+		Location: 67,22
+	Actor1583: minipod6
+		Owner: Synapol Corporation
+		Facing: 384
+		SubCell: 1
+		Location: 77,20
+	Actor1584: minipod6
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 84,25
+		Facing: 71
+	Actor1585: minipod6
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 79,32
+		Facing: 697
+	Actor1586: minipod6
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 65,34
+		Facing: 547
+	Actor1587: prop8
+		Owner: Neutral
+		Location: 101,50
+	Actor1588: prop4
+		Owner: Neutral
+		Location: 105,49
 
 Rules: rules.yaml
