@@ -65,7 +65,8 @@ namespace OpenRA.Mods.HV.Traits
 
 			void OnExitFirst(Actor actor)
 			{
-				firstToken = self.RevokeCondition(firstToken);
+				if (firstToken != Actor.InvalidConditionToken)
+					firstToken = self.RevokeCondition(firstToken);
 			}
 
 			var first = new CPos[] { possibleConnections.First() };
@@ -79,7 +80,8 @@ namespace OpenRA.Mods.HV.Traits
 
 			void OnExitLast(Actor actor)
 			{
-				lastToken = self.RevokeCondition(lastToken);
+				if (lastToken != Actor.InvalidConditionToken)
+					lastToken = self.RevokeCondition(lastToken);
 			}
 
 			var last = new CPos[] { possibleConnections.Last() };
