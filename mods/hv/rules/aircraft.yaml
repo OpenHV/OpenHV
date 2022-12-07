@@ -331,10 +331,6 @@ COPTER2:
 		Types: Scout
 		MaxWeight: 5
 		AfterUnloadDelay: 40
-	Carryall:
-		BeforeLoadDelay: 10
-		BeforeUnloadDelay: 10
-		LocalOffset: 0,0,-200
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -460,21 +456,12 @@ DROPSHIP:
 		LocalOffset: 700,500,0, 700,-500,0
 	Selectable:
 		DecorationBounds: 2048, 1848
-	Cargo:
-		Types: Scout
-		MaxWeight: 4
-		AfterUnloadDelay: 40
-		UnloadVoice: Unload
 	Carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
 		Voice: Unload
 		PickUpCursor: enter
-	WithCargoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
 	SpawnActorOnDeath:
 		Actor: DROPSHIP.Husk
 		RequiresCondition: airborne
