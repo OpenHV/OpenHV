@@ -606,7 +606,7 @@ BUILDER:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
 		Description: Deploys into outpost which\ngrants additional build radius\nand allows base reconstruction.\n  Unarmed
-		Prerequisites: base
+		Prerequisites: ~structures.yi
 		BuildAtProductionType: Building
 	Valued:
 		Cost: 1000
@@ -630,8 +630,6 @@ BUILDER:
 		Range: 3c0
 	RenderSprites:
 		Image: builder1
-		FactionImages:
-			sc: builder4
 	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
@@ -646,6 +644,15 @@ BUILDER:
 		Facing: 512
 	Voiced:
 		VoiceSet: BuilderVoice
+
+BUILDER2:
+	Inherits: BUILDER
+	Buildable:
+		Prerequisites: ~structures.sc
+	RenderSprites:
+		Image: builder4
+	Transforms:
+		IntoActor: outpost2
 
 COLLECTOR:
 	Inherits: ^Vehicle
