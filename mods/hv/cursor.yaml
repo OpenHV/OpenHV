@@ -4,74 +4,40 @@ Cursors:
 	bits/cursors1.png: cursor
 		scroll-t:
 			Start: 18
-			X: 0
-			Y: 0
 		scroll-tl:
 			Start: 19
-			X: 0
-			Y: 0
 		scroll-l:
 			Start: 20
-			X: 0
-			Y: 0
 		scroll-bl:
 			Start: 21
-			X: 0
-			Y: 0
 		scroll-b:
 			Start: 22
-			X: 0
-			Y: 0
 		scroll-br:
 			Start: 23
-			X: 0
-			Y: 0
 		scroll-r:
 			Start: 24
-			X: 0
-			Y: 0
 		scroll-tr:
 			Start: 25
-			X: 0
-			Y: 0
 		scroll-t-blocked:
 			Start: 26
-			X: 0
-			Y: 0
 		scroll-tl-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		scroll-l-blocked:
 			Start: 28
-			X: 0
-			Y: 0
 		scroll-bl-blocked:
 			Start: 29
-			X: 0
-			Y: 0
 		scroll-b-blocked:
 			Start: 30
-			X: 0
-			Y: 0
 		scroll-br-blocked:
 			Start: 31
-			X: 0
-			Y: 0
 		scroll-r-blocked:
 			Start: 32
-			X: 0
-			Y: 0
 		scroll-tr-blocked:
 			Start: 33
-			X: 0
-			Y: 0
 	bits/cursors2.png: cursor
 		select:
 			Start: 15
 			Length: 8
-			X: 0
-			Y: 0
 	bits/cursors2.png: cursor
 		default:
 			Start: 0
@@ -93,255 +59,143 @@ Cursors:
 		move:
 			Start: 6
 			Length: 6
-			X: 0
-			Y: 0
 		move-minimap:
 			Start: 6
 			Length: 6
-			X: 0
-			Y: 0
 		move-rough:
 			Start: 6
 			Length: 6
-			X: 0
-			Y: 0
 		move-blocked:
 			Start: 34
-			X: 0
-			Y: 0
 		move-blocked-minimap:
 			Start: 34
-			X: 0
-			Y: 0
 	bits/cursors1.png: cursor
 		attack:
 			Start: 0
 			Length: 6
-			X: 0
-			Y: 0
 		attack-minimap:
 			Start: 0
 			Length: 6
-			X: 0
-			Y: 0
 		attackoutsiderange:
 			Start: 0
 			Length: 6
-			X: 0
-			Y: 0
 		attackoutsiderange-minimap:
 			Start: 0
 			Length: 6
-			X: 0
-			Y: 0
 		ability:
 			Start: 36
 			Length: 6
-			X: 0
-			Y: 0
 		ability-minimap:
 			Start: 36
 			Length: 6
-			X: 0
-			Y: 0
 	bits/cursors1.png: cursor
 		harvest:
 			Start: 0
 			Length: 6
-			X: 0
-			Y: 0
 		harvest-minimap:
 			Start: 0
 			Length: 6
-			X: 0
-			Y: 0
 	bits/cursors2.png: cursor
 		enter:
 			Start: 23
 			Length: 3
-			X: 0
-			Y: 0
 		enter-minimap:
 			Start: 23
 			Length: 3
-			X: 0
-			Y: 0
 		enter-blocked:
 			Start: 26
-			X: 0
-			Y: 0
 		enter-blocked-minimap:
 			Start: 26
-			X: 0
-			Y: 0
 		guard:
 			Start: 28
-			X: 0
-			Y: 0
 		guard-minimap:
 			Start: 28
-			X: 0
-			Y: 0
 		capture:
 			Start: 23
 			Length: 3
-			X: 0
-			Y: 0
 		capture-minimap:
 			Start: 23
 			Length: 3
-			X: 0
-			Y: 0
 	bits/cursors2.png: cursor
 		joystick-all:
 			Start: 1
-			X: 0
-			Y: 0
 		joystick-t-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		joystick-tr-blocked:
 			Start: 327
-			X: 0
-			Y: 0
 		joystick-r-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		joystick-br-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		joystick-b-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		joystick-bl-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		joystick-l-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 		joystick-tl-blocked:
 			Start: 27
-			X: 0
-			Y: 0
 	bits/cursors2.png: cursor
 		deploy:
 			Start: 4
 			Length: 4
-			X: 0
-			Y: 0
 		deploy-blocked:
 			Start: 8
-			X: 0
-			Y: 0
 		goldwrench:
 			Start: 20
-			X: 0
-			Y: 0
 		goldwrench-blocked:
 			Start: 21
-			X: 0
-			Y: 0
 		sell:
 			Start: 2
-			X: 0
-			Y: 0
 		sell-blocked:
 			Start: 3
-			X: 0
-			Y: 0
 		repair:
 			Start: 11
-			X: 0
-			Y: 0
 		repair-blocked:
 			Start: 12
-			X: 0
-			Y: 0
 		sell2:
 			Start: 2
 			Length: 10
-			X: 0
-			Y: 0
 		powerdown-blocked:
 			Start: 10
-			X: 0
-			Y: 0
 		powerdown:
 			Start: 9
-			X: 0
-			Y: 0
 	bits/cursors1.png: cursor
 		attackmove:
 			Start: 12
 			Length: 6
-			X: 0
-			Y: 0
 		attackmove-minimap:
 			Start: 12
 			Length: 6
-			X: 0
-			Y: 0
 		attackmove-blocked:
 			Start: 35
-			X: 0
-			Y: 0
 		attackmove-blocked-minimap:
 			Start: 35
-			X: 0
-			Y: 0
 		assaultmove:
 			Start: 12
 			Length: 6
-			X: 0
-			Y: 0
 		assaultmove-minimap:
 			Start: 12
 			Length: 6
-			X: 0
-			Y: 0
 		assaultmove-blocked:
 			Start: 35
-			X: 0
-			Y: 0
 		assaultmove-blocked-minimap:
 			Start: 35
-			X: 0
-			Y: 0
 
 	bits/cursors1.png: cursor
 		railgun:
 			Start: 46
-			X: 0
-			Y: 0
 		airstrike:
 			Start: 43
-			X: 0
-			Y: 0
 		force-field:
 			Start: 45
-			X: 0
-			Y: 0
 		droppod:
 			Start: 44
-			X: 0
-			Y: 0
 
 	bits/cursors2.png: cursor
 		nuke:
 			Start: 29
-			X: 0
-			Y: 0
 		force-field-blocked:
 			Start: 13
-			X: 0
-			Y: 0
 		howitzer-blocked:
 			Start: 14
-			X: 0
-			Y: 0
