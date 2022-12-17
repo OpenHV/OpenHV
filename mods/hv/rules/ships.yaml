@@ -386,7 +386,7 @@ NAVALTRANSPORT:
 	DetectCloaked:
 		Range: 1c0
 	WithLandingCraftAnimation:
-		OpenTerrainTypes: Clear, Shore
+		OpenTerrainTypes: Shore
 	Cargo:
 		Types: Scout
 		MaxWeight: 10
