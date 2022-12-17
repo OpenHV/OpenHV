@@ -26,21 +26,9 @@ PLANE1:
 		Range: 4c0
 		Type: GroundPosition
 	Armament@Primary:
-		Weapon: ChainGun.Shuttle
+		Weapon: AircraftChainGun
 		LocalOffset: 256,0,0
 		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 10
-		AmmoCondition: ammo
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-		PipCount: 5
-	ReloadAmmoPool:
-		Delay: 70
-		Count: 2
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
@@ -172,21 +160,9 @@ COPTER:
 	AttackTurreted:
 		RequiresCondition: airborne
 	Armament:
-		Weapon: ChainGun
+		Weapon: HelicopterChainGun
 		LocalOffset: 50,0,0
 		MuzzleSequence: muzzle
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 10
-		AmmoCondition: ammo
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-		PipCount: 5
-	ReloadAmmoPool:
-		Delay: 70
-		Count: 2
 	Selectable:
 		Bounds: 1228, 1228
 	WithMuzzleOverlay:
