@@ -31,7 +31,7 @@ PLANE1:
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 20
+		Ammo: 10
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -98,15 +98,14 @@ PLANE2:
 		LocalOffset: 256,375,0, 256,-375,0
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 6
+		Ammo: 4
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 3
 	ReloadAmmoPool:
-		Delay: 100
+		Delay: 200
 		Count: 2
 	AttackAircraft:
 		FacingTolerance: 20
@@ -178,7 +177,7 @@ COPTER:
 		MuzzleSequence: muzzle
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 30
+		Ammo: 10
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -186,7 +185,7 @@ COPTER:
 		RequiresSelection: true
 		PipCount: 5
 	ReloadAmmoPool:
-		Delay: 50
+		Delay: 70
 		Count: 2
 	Selectable:
 		Bounds: 1228, 1228
@@ -267,7 +266,7 @@ BANSHEE:
 		LocalOffset: 700,200,0, 700,-200,0
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 12
+		Ammo: 6
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -275,7 +274,7 @@ BANSHEE:
 		RequiresSelection: true
 		PipCount: 3
 	ReloadAmmoPool:
-		Delay: 80
+		Delay: 100
 		Count: 2
 	Selectable:
 		DecorationBounds: 1228, 1228

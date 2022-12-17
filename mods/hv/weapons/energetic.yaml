@@ -134,7 +134,7 @@ Plasma:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
-	Burst: 3
+	Burst: 2
 	BurstDelays: 5
 	Range: 6c0
 	MinRange: 0c512
