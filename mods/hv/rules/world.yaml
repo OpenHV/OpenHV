@@ -135,6 +135,15 @@
 			Grass: 100
 			Mountain: 100
 			Red Snow: 100
+	Locomotor@NavalTransport:
+		Name: navaltransport
+		Crushes: Cube
+		TerrainSpeeds:
+			Littoral: 100
+			Pelagic: 100
+			Oceanic: 100
+			Rapids: 50
+			Shore: 75
 	Faction@Yuruki:
 		Name: Yuruki
 		InternalName: yi

@@ -353,3 +353,45 @@ CARRIER:
 		VoiceSet: DroneVoice
 	DetectCloaked:
 		Range: 1c0
+
+NAVALTRANSPORT:
+	Inherits: ^Ship
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Naval Transporter
+		GenericName: Naval Transporter
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor
+		BuildPaletteOrder: 40
+		Description:  General-purpose naval transport.\nCan carry pods.\n  Unarmed
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 50000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Locomotor: navaltransport
+		Speed: 80
+		TurnSpeed: 50
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	DetectCloaked:
+		Range: 1c0
+	WithLandingCraftAnimation:
+		OpenTerrainTypes: Clear, Shore
+	Cargo:
+		Types: Scout
+		MaxWeight: 10
+		AfterUnloadDelay: 40
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 1, -1
+		RequiresSelection: true
