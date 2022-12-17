@@ -112,3 +112,19 @@ watertrail:
 		Length: 7
 		Tick: 80
 		ZOffset: -2048
+
+navaltransport:
+	idle: bits/navaltransport.png
+	open: bits/navaltransport.png
+		Length: 4
+		Tick: 150
+	close: bits/navaltransport.png
+		Frames: 3, 2, 1, 0
+		Length: 4
+		Tick: 150
+	unload: bits/navaltransport.png
+		Start: 3
+		ZOffset: -511
+	icon: bits/units-icons.png
+		Start: 56
+		Offset: 2, 0
