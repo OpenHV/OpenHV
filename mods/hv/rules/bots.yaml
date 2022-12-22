@@ -75,7 +75,7 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank8, technician, hackerpod
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, hackerpod
 		NavalUnitsTypes: boat, heavyboat
 		AirUnitsTypes: plane1, plane2, copter, banshee
 		ConstructionYardTypes: base
@@ -90,6 +90,7 @@ Player:
 			radartank: 1
 			tank3: 5
 			tank5: 5
+			tank6: 1
 			tank7: 1
 			tank8: 1
 			aatank: 3
@@ -121,6 +122,7 @@ Player:
 			balloon: 2
 			saucer: 2
 			radartank: 1
+			tank6: 1
 			tank8: 1
 			boat3: 3
 			submarine: 4
@@ -138,6 +140,13 @@ Player:
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
 		DeployedActorTypes: miner2
+	MinelayerBotModule:
+		RequiresCondition: enable-rogue-ai
+		MinelayingActorTypes: tank6
+		IgnoredEnemyTargetTypes: Building, Defense, Air
+		UseEnemyLocationTargetTypes: Building, Defense
+		AwayFromAlliedTargetTypes: Building, Defense
+		AwayFromEnemyTargetTypes: Building, Defense
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
 		ExcludedUnitTypes: miner, tanker1, tanker2, hackerpod
