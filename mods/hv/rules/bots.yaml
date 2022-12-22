@@ -79,7 +79,7 @@ Player:
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
 		AirUnitsTypes: plane1, plane2, copter, banshee
 		ConstructionYardTypes: base, base2
-		ProtectionTypes: base, base2, outpost, outpost2, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, startport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
