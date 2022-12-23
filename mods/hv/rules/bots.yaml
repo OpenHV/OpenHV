@@ -143,10 +143,10 @@ Player:
 	MinelayerBotModule:
 		RequiresCondition: enable-rogue-ai
 		MinelayingActorTypes: tank6
-		IgnoredEnemyTargetTypes: Building, Defense, Air
-		UseEnemyLocationTargetTypes: Building, Defense
-		AwayFromAlliedTargetTypes: Building, Defense
-		AwayFromEnemyTargetTypes: Building, Defense
+		IgnoredEnemyTargetTypes: Structure, Defense, Air
+		UseEnemyLocationTargetTypes: Structure, Defense
+		AwayFromAlliedTargetTypes: Structure, Defense
+		AwayFromEnemyTargetTypes: Structure, Defense
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
 		ExcludedUnitTypes: miner, tanker1, tanker2, hackerpod
