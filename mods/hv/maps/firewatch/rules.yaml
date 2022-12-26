@@ -1,5 +1,27 @@
 # License: CC-BY-SA-4.0
 
+BASE2:
+	Tooltip:
+		Name: Fire Department
+	Production:
+		Produces: Vehicle
+	Exit@South1:
+		ProductionTypes: Vehicle
+	Exit@South2:
+		ProductionTypes: Vehicle
+	Exit@West1:
+		ProductionTypes: Vehicle
+	Exit@West2:
+		ProductionTypes: Vehicle
+	Exit@West3:
+		ProductionTypes: Vehicle
+	Exit@East1:
+		ProductionTypes: Vehicle
+	Exit@East2:
+		ProductionTypes: Vehicle
+	Exit@East3:
+		ProductionTypes: Vehicle
+
 WATERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -136,79 +158,11 @@ Player:
 		ExploredMapCheckboxLocked: True
 		ExploredMapCheckboxEnabled: True
 
-GENERATOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-MODULE:
-	Buildable:
-		Prerequisites: ~disabled
-
-STORAGE:
+BUILDER2:
 	Buildable:
 		Prerequisites: ~disabled
 
 MINER:
-	Buildable:
-		Prerequisites: ~disabled
-
-RADAR:
-	Buildable:
-		Prerequisites: ~disabled
-
-RADAR2:
-	Buildable:
-		Prerequisites: ~disabled
-
-TRADPLAT:
-	Buildable:
-		Prerequisites: ~disabled
-
-STARPORT:
-	Buildable:
-		Prerequisites: ~disabled
-
-STARPORT2:
-	Buildable:
-		Prerequisites: ~disabled
-
-FACTORY3:
-	Buildable:
-		Prerequisites: ~disabled
-
-TECHCENTER:
-	Buildable:
-		Prerequisites: ~disabled
-
-TURRET:
-	Buildable:
-		Prerequisites: ~disabled
-
-AATURRET:
-	Buildable:
-		Prerequisites: ~disabled
-
-FIELD:
-	Buildable:
-		Prerequisites: ~disabled
-
-SILO:
-	Buildable:
-		Prerequisites: ~disabled
-
-TELEVATR:
-	Buildable:
-		Prerequisites: ~disabled
-
-TELEVTR2:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-BUILDER:
 	Buildable:
 		Prerequisites: ~disabled
 
