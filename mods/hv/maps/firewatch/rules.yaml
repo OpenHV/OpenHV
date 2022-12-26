@@ -131,6 +131,10 @@ FIREFIGHTERPOD:
 		Weapon: WaterCannonSmall
 	AttackFrontal:
 		FacingTolerance: 0
+		Voice: Action
+		TargetLineColor: 0000FF
+	AttackMove:
+		TargetLineColor: 0000FF
 
 TREEFLAME:
 	Inherits@Shape: ^1x1Shape
