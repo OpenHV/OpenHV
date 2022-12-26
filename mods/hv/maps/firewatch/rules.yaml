@@ -21,6 +21,7 @@ BASE2:
 		ProductionTypes: Vehicle
 	Exit@East3:
 		ProductionTypes: Vehicle
+	-BaseProvider:
 
 WATERTANK:
 	Inherits: ^TrackedVehicle
