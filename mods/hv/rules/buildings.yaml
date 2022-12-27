@@ -305,7 +305,7 @@ RADAR:
 		Prerequisite: radar
 		RequiresCondition: !powerdown
 	AirstrikePower:
-		PauseOnCondition: lowpower
+		PauseOnCondition: lowpower || disabled
 		Icon: airstrike
 		Cursor: airstrike
 		ChargeInterval: 3750
@@ -334,7 +334,7 @@ RADAR2:
 	-AirstrikePower:
 	DropPodsPower:
 		Cursor: droppod
-		PauseOnCondition: disabled
+		PauseOnCondition: disabled || disabled
 		Icon: droppods
 		Name: Drop Pods
 		Description: Atmospheric assault reinforcements.\n  Small team of pods drops\nonto target location from orbit.\n  Requires power to operate.
