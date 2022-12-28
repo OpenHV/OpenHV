@@ -13,20 +13,16 @@
 #   MACOS_DEVELOPER_USERNAME: Email address for the developer account
 #   MACOS_DEVELOPER_PASSWORD: App-specific password for the developer account
 #
-set -e
+set -o errexit -o pipefail || exit $?
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
 	echo >&2 "macOS packaging requires a macOS host"
 	exit 1
 fi
 
-if [ $# -ne "4" ]; then
-	echo "Usage: $(basename "$0") tag outputdir platform dmg"
-	exit 1
-fi
-
 command -v make >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires make."; exit 1; }
 command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires python 3."; exit 1; }
+command -v clang >/dev/null 2>&1 || { echo >&2 "macOS packaging requires clang."; exit 1; }
 
 require_variables() {
 	missing=""
@@ -40,8 +36,8 @@ require_variables() {
 	fi
 }
 
-if [ $# -eq "0" ]; then
-	echo "Usage: $(basename "$0") version [outputdir]"
+if [ $# -ne "2" ]; then
+	echo "Usage: $(basename "$0") tag outputdir"
 	exit 1
 fi
 
@@ -104,152 +100,152 @@ modify_plist() {
 	sed "s|$1|$2|g" "$3" > "$3.tmp" && mv "$3.tmp" "$3"
 }
 
-build_platform() {
-	PLATFORM="${1}"
-	DMG_NAME="${2}"
-	LAUNCHER_DIR="${BUILTDIR}/${PACKAGING_OSX_APP_NAME}"
-	LAUNCHER_CONTENTS_DIR="${LAUNCHER_DIR}/Contents"
-	LAUNCHER_ASSEMBLY_DIR="${LAUNCHER_CONTENTS_DIR}/MacOS"
-	LAUNCHER_RESOURCES_DIR="${LAUNCHER_CONTENTS_DIR}/Resources"
+LAUNCHER_DIR="${BUILTDIR}/${PACKAGING_OSX_APP_NAME}"
+LAUNCHER_CONTENTS_DIR="${LAUNCHER_DIR}/Contents"
+LAUNCHER_ASSEMBLY_DIR="${LAUNCHER_CONTENTS_DIR}/MacOS"
+LAUNCHER_RESOURCES_DIR="${LAUNCHER_CONTENTS_DIR}/Resources"
 
-	echo "Building launcher (${PLATFORM})"
+echo "Building launcher"
 
-	mkdir -p "${LAUNCHER_RESOURCES_DIR}"
-	mkdir -p "${LAUNCHER_CONTENTS_DIR}/MacOS"
-	echo "APPL????" > "${LAUNCHER_CONTENTS_DIR}/PkgInfo"
-	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/Info.plist.in" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+mkdir -p "${LAUNCHER_RESOURCES_DIR}"
+mkdir -p "${LAUNCHER_ASSEMBLY_DIR}/x86_64"
+mkdir -p "${LAUNCHER_ASSEMBLY_DIR}/arm64"
+mkdir -p "${LAUNCHER_ASSEMBLY_DIR}/mono"
+echo "APPL????" > "${LAUNCHER_CONTENTS_DIR}/PkgInfo"
+cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/Info.plist.in" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 
-	modify_plist "{DEV_VERSION}" "${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{DEV_VERSION}" "${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.11" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+if [ -n "${DISCORD_APPID}" ]; then
+	modify_plist "{DISCORD_URL_SCHEME}" "discord-${DISCORD_APPID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+else
+	modify_plist "<string>{DISCORD_URL_SCHEME}</string>" "" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+fi
 
-	if [ -n "${DISCORD_APPID}" ]; then
-		echo "Setting Discord App ID"
-		modify_plist "{DISCORD_URL_SCHEME}" "discord-${DISCORD_APPID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	else
-		modify_plist "<string>{DISCORD_URL_SCHEME}</string>" "" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	fi
+# Compile universal (x86_64 + arm64) Launcher and arch-specific apphosts
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/apphost.c" -o "${LAUNCHER_ASSEMBLY_DIR}/apphost-x86_64" -framework AppKit -target x86_64-apple-macos10.15
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/apphost.c" -o "${LAUNCHER_ASSEMBLY_DIR}/apphost-arm64" -framework AppKit -target arm64-apple-macos10.15
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/apphost-mono.c" -o "${LAUNCHER_ASSEMBLY_DIR}/apphost-mono" -framework AppKit -target x86_64-apple-macos10.11
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/checkmono.c" -o "${LAUNCHER_ASSEMBLY_DIR}/checkmono" -framework AppKit -target x86_64-apple-macos10.11
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" -framework AppKit -target x86_64-apple-macos10.11
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64" -framework AppKit -target arm64-apple-macos10.15
+lipo -create -output "${LAUNCHER_ASSEMBLY_DIR}/Launcher" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64"
+rm "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64"
 
-	if [ "${PLATFORM}" = "mono" ]; then
-		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.9" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher-mono.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.9
-	else
-		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.14" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.14
-	fi
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/mono" "osx-x64" "mono" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
+rm -rf "${LAUNCHER_RESOURCES_DIR}/global mix database.dat"
 
-	echo "Building core files"
-	RUNTIME="net6"
-	if [ "${PLATFORM}" = "mono" ]; then
-		RUNTIME="mono"
-	fi
+for f in ${PACKAGING_COPY_ENGINE_FILES}; do
+	mkdir -p "${LAUNCHER_RESOURCES_DIR}/$(dirname "${f}")"
+	cp -r "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/${f}" "${LAUNCHER_RESOURCES_DIR}/${f}"
+done
 
-	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
-	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
-	rm -rf "${LAUNCHER_RESOURCES_DIR}/global mix database.dat"
+echo "Building mod files"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/mono" "osx-x64" "mono" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
-	for f in ${PACKAGING_COPY_ENGINE_FILES}; do
-		mkdir -p "${LAUNCHER_RESOURCES_DIR}/$(dirname "${f}")"
-		cp -r "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/${f}" "${LAUNCHER_RESOURCES_DIR}/${f}"
-	done
+cp -LR "${TEMPLATE_ROOT}mods/"* "${LAUNCHER_RESOURCES_DIR}/mods"
 
-	echo "Building mod files"
-	install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+set_engine_version "${ENGINE_VERSION}" "${LAUNCHER_RESOURCES_DIR}"
+if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then
+	set_mod_version "${TAG}" "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml"
+else
+	MOD_VERSION=$(grep 'Version:' "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml" | awk '{print $2}')
+	echo "Mod version ${MOD_VERSION} will remain unchanged.";
+fi
 
-	cp -LR "${TEMPLATE_ROOT}mods/"* "${LAUNCHER_RESOURCES_DIR}/mods"
+# Assemble multi-resolution icon
+mkdir "${BUILTDIR}/mod.iconset"
+cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_16x16@2.png"
+cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_32x32.png"
+cp "${ARTWORK_DIR}/icon_64x64.png" "${BUILTDIR}/mod.iconset/icon_32x32@2x.png"
+cp "${ARTWORK_DIR}/icon_128x128.png" "${BUILTDIR}/mod.iconset/icon_128x128.png"
+cp "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/mod.iconset/icon_128x128@2x.png"
+cp "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/mod.iconset/icon_256x256.png"
+cp "${ARTWORK_DIR}/icon_512x512.png" "${BUILTDIR}/mod.iconset/icon_256x256@2x.png"
+iconutil --convert icns "${BUILTDIR}/mod.iconset" -o "${LAUNCHER_RESOURCES_DIR}/${MOD_ID}.icns"
+rm -rf "${BUILTDIR}/mod.iconset"
 
-	set_engine_version "${ENGINE_VERSION}" "${LAUNCHER_RESOURCES_DIR}"
-	if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then
-		set_mod_version "${TAG}" "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml"
-	else
-		MOD_VERSION=$(grep 'Version:' "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml" | awk '{print $2}')
-		echo "Mod version ${MOD_VERSION} will remain unchanged.";
-	fi
+# Sign binaries with developer certificate
+if [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
+	codesign -s "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/entitlements.plist" --deep "${LAUNCHER_DIR}"
+fi
 
-	# Assemble multi-resolution icon
-	mkdir "${BUILTDIR}/mod.iconset"
-	cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_32x32.png"
-	cp "${ARTWORK_DIR}/icon_64x64.png" "${BUILTDIR}/mod.iconset/icon_32x32@2x.png"
-	cp "${ARTWORK_DIR}/icon_128x128.png" "${BUILTDIR}/mod.iconset/icon_128x128.png"
-	cp "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/mod.iconset/icon_128x128@2x.png"
-	cp "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/mod.iconset/icon_256x256.png"
-	cp "${ARTWORK_DIR}/icon_512x512.png" "${BUILTDIR}/mod.iconset/icon_256x256@2x.png"
-	iconutil --convert icns "${BUILTDIR}/mod.iconset" -o "${LAUNCHER_RESOURCES_DIR}/${MOD_ID}.icns"
-	rm -rf "${BUILTDIR}/mod.iconset"
+echo "Packaging disk image"
+hdiutil create "build.dmg" -format UDRW -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -srcfolder "${BUILTDIR}"
+DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${PACKAGING_DIR}/build.dmg" | egrep '^/dev/' | sed 1q | awk '{print $1}')
+sleep 2
 
-	# Sign binaries with developer certificate
-	if [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
-		codesign --sign "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/entitlements.plist" --deep "${LAUNCHER_DIR}"
-	fi
+# Background image is created from source svg in artsrc repository
+mkdir "/Volumes/${PACKAGING_DISPLAY_NAME}/.background/"
+tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/macos-background-2x.png" -out "/Volumes/${PACKAGING_DISPLAY_NAME}/.background/background.tiff"
 
-	echo "Packaging disk image"
-	hdiutil create "${PACKAGING_DIR}/${DMG_NAME}" -format UDRW -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -srcfolder "${BUILTDIR}"
-	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${PACKAGING_DIR}/${DMG_NAME}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
-	sleep 2
+cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
 
-	# Background image is created from source svg in artsrc repository
-	mkdir "/Volumes/${PACKAGING_DISPLAY_NAME}/.background/"
-	tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/macos-background-2x.png" -out "/Volumes/${PACKAGING_DISPLAY_NAME}/.background/background.tiff"
+echo '
+   tell application "Finder"
+     tell disk "'${PACKAGING_DISPLAY_NAME}'"
+           open
+           set current view of container window to icon view
+           set toolbar visible of container window to false
+           set statusbar visible of container window to false
+           set the bounds of container window to {400, 100, 1000, 550}
+           set theViewOptions to the icon view options of container window
+           set arrangement of theViewOptions to not arranged
+           set icon size of theViewOptions to 72
+           set background picture of theViewOptions to file ".background:background.tiff"
+           make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
+           set position of item "'${PACKAGING_OSX_APP_NAME}'" of container window to {'${PACKAGING_OSX_DMG_MOD_ICON_POSITION}'}
+           set position of item "Applications" of container window to {'${PACKAGING_OSX_DMG_APPLICATION_ICON_POSITION}'}
+           set position of item ".background" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+           set position of item ".fseventsd" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+           set position of item ".VolumeIcon.icns" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+           update without registering applications
+           delay 5
+           close
+     end tell
+   end tell
+' | osascript
 
-	cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
+# HACK: Copy the volume icon again - something in the previous step seems to delete it...?
+cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
+SetFile -c icnC "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
+SetFile -a C "/Volumes/${PACKAGING_DISPLAY_NAME}"
 
-	echo '
-	   tell application "Finder"
-	     tell disk "'${PACKAGING_DISPLAY_NAME}'"
-	           open
-	           set current view of container window to icon view
-	           set toolbar visible of container window to false
-	           set statusbar visible of container window to false
-	           set the bounds of container window to {400, 100, 1000, 550}
-	           set theViewOptions to the icon view options of container window
-	           set arrangement of theViewOptions to not arranged
-	           set icon size of theViewOptions to 72
-	           set background picture of theViewOptions to file ".background:background.tiff"
-	           make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
-	           set position of item "'${PACKAGING_OSX_APP_NAME}'" of container window to {'${PACKAGING_OSX_DMG_MOD_ICON_POSITION}'}
-	           set position of item "Applications" of container window to {'${PACKAGING_OSX_DMG_APPLICATION_ICON_POSITION}'}
-	           set position of item ".background" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
-	           set position of item ".fseventsd" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
-	           set position of item ".VolumeIcon.icns" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
-	           update without registering applications
-	           delay 5
-	           close
-	     end tell
-	   end tell
-	' | osascript
+chmod -Rf go-w "/Volumes/${PACKAGING_DISPLAY_NAME}"
+sync
+sync
 
-	# HACK: Copy the volume icon again - something in the previous step seems to delete it...?
-	cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
-	SetFile -c icnC "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
-	SetFile -a C "/Volumes/${PACKAGING_DISPLAY_NAME}"
+hdiutil detach "${DMG_DEVICE}"
+rm -rf "${BUILTDIR}"
 
-	chmod -Rf go-w "/Volumes/${PACKAGING_DISPLAY_NAME}"
-	sync
-	sync
+if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
+	security delete-keychain build.keychain
+fi
 
-	hdiutil detach "${DMG_DEVICE}"
-	rm -rf "${BUILTDIR}"
-}
+if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
+	echo "Submitting build for notarization"
 
-notarize_package() {
-	DMG_PATH="${1}"
-	NOTARIZE_DMG_PATH="${DMG_PATH%.*}"-notarization.dmg
-	echo "Submitting ${DMG_PATH} for notarization"
-
-	# Reset xcode search path to fix xcrun not finding notarytool
+	# Reset xcode search path to fix xcrun not finding altool
 	sudo xcode-select -r
 
 	# Create a temporary read-only dmg for submission (notarization service rejects read/write images)
-	hdiutil convert "${DMG_PATH}" -format ULFO -ov -o "${NOTARIZE_DMG_PATH}"
+	hdiutil convert "build.dmg" -format ULFO -ov -o "build-notarization.dmg"
 
-	xcrun notarytool submit "${NOTARIZE_DMG_PATH}" --wait --apple-id "${MACOS_DEVELOPER_USERNAME}" --password "${MACOS_DEVELOPER_PASSWORD}" --team-id "${MACOS_DEVELOPER_IDENTITY}"
+	xcrun notarytool submit "build-notarization.dmg" --wait --apple-id "${MACOS_DEVELOPER_USERNAME}" --password "${MACOS_DEVELOPER_PASSWORD}" --team-id "${MACOS_DEVELOPER_IDENTITY}"
 
-	rm "${NOTARIZE_DMG_PATH}"
+	rm "build-notarization.dmg"
 
-	echo "${DMG_PATH}: Stapling tickets"
-	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${DMG_PATH}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
+	echo "Stapling tickets"
+	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "build.dmg" | egrep '^/dev/' | sed 1q | awk '{print $1}')
 	sleep 2
 
 	xcrun stapler staple "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
@@ -259,33 +255,7 @@ notarize_package() {
 	sync
 
 	hdiutil detach "${DMG_DEVICE}"
-}
-
-finalize_package() {
-	PLATFORM="${1}"
-	INPUT_PATH="${2}"
-	OUTPUT_PATH="${3}"
-
-	if [ "${PLATFORM}" = "mono" ]; then
-		hdiutil convert "${INPUT_PATH}" -format UDZO -imagekey zlib-level=9 -ov -o "${OUTPUT_PATH}-mono.dmg"
-	else
-		# ULFO offers better compression and faster decompression speeds, but is only supported by 10.11+
-		hdiutil convert "${INPUT_PATH}" -format ULFO -ov -o "${OUTPUT_PATH}.dmg"
-	fi
-	rm "${INPUT_PATH}"
-}
-
-PLATFORM="$3"
-DISK_IMAGE="$4"
-
-build_platform "${PLATFORM}" "${DISK_IMAGE}"
-
-if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
-	security delete-keychain build.keychain
 fi
 
-if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
-	notarize_package "${DISK_IMAGE}"
-fi
-
-finalize_package "${PLATFORM}" "${DISK_IMAGE}" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}"
+hdiutil convert "build.dmg" -format ULFO -ov -o "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}.dmg"
+rm "build.dmg"

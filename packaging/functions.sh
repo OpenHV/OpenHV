@@ -37,13 +37,13 @@ install_mod_assemblies() {
 			install -m644 "${LIB}" "${DEST_PATH}"
 		done
 
-		if [ "${TARGETPLATFORM}" = "linux-x64" ]; then
+		if [ "${TARGETPLATFORM}" = "linux-x64" ] || [ "${TARGETPLATFORM}" = "linux-arm64" ]; then
 			for LIB in "${ENGINE_PATH}/bin/"*.so; do
 				install -m755 "${LIB}" "${DEST_PATH}"
 			done
 		fi
 
-		if [ "${TARGETPLATFORM}" = "osx-x64" ]; then
+		if [ "${TARGETPLATFORM}" = "osx-x64" ] || [ "${TARGETPLATFORM}" = "osx-arm64" ]; then
 			for LIB in "${ENGINE_PATH}/bin/"*.dylib; do
 				install -m755 "${LIB}" "${DEST_PATH}"
 			done
