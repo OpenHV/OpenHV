@@ -38,7 +38,7 @@ jobs:
           file_glob: true
           file: build/linux/*
 
-  macos-net:
+  macos:
     name: macOS Disk Image
     runs-on: macos-11
 
