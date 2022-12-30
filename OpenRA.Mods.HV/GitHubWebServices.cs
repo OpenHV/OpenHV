@@ -14,6 +14,7 @@ using System.IO;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using OpenRA.Support;
@@ -61,7 +62,7 @@ namespace OpenRA.Mods.HV
 					{
 						var oldNews = File.ReadAllText(cacheFile);
 						var oldJson = JObject.Parse(oldNews);
-						oldPublishingDate = (DateTime)oldJson["published_at"];
+						oldPublishingDate = oldJson["published_at"].Value<DateTime>();
 					}
 
 					await File.WriteAllTextAsync(cacheFile, response);
@@ -70,8 +71,12 @@ namespace OpenRA.Mods.HV
 					{
 						var data = File.ReadAllText(cacheFile);
 						var json = JObject.Parse(data);
-						var tagname = (int)json["tag_name"];
-						var prerelease = (bool)json["prerelease"];
+						var tagname = json["tag_name"].Value<string>();
+						var digits = string.Concat(tagname.TakeWhile(c => char.IsDigit(c)));
+						if (!int.TryParse(digits, out var parsedVersion))
+							Log.Write("debug", "Error parsing tag name.");
+
+						var prerelease = json["prerelease"].Value<bool>();
 
 						if (!int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version))
 							Log.Write("debug", "Error parsing version number.");
@@ -79,23 +84,18 @@ namespace OpenRA.Mods.HV
 						var status = ModVersionStatus.Unknown;
 						if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
 							status = ModVersionStatus.Unknown;
-						else if (tagname > version)
-						{
-							if (prerelease)
-								status = ModVersionStatus.PlaytestAvailable;
-							else
-								status = ModVersionStatus.Outdated;
-						}
-						else if (tagname == version)
+						else if (parsedVersion > version)
+							status = prerelease ? ModVersionStatus.PlaytestAvailable : ModVersionStatus.Outdated;
+						else if (parsedVersion == version)
 							status = ModVersionStatus.Latest;
 
 						ModVersionStatus = status;
 
-						var publishingDate = (DateTime)json["published_at"];
+						var publishingDate = json["published_at"].Value<DateTime>();
 						if (publishingDate > oldPublishingDate)
 							NewsAlert = true;
 
-						var body = (string)json["body"];
+						var body = json["body"].Value<string>();
 						body = StripSpecialCharacters(body);
 						body = StripMarkdown(body);
 						body = body.Replace("* ", "• ");
