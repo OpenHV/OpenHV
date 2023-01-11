@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -73,7 +73,7 @@ namespace OpenRA.Mods.HV.Warheads
 
 			for (var i = 0; i < amount; i++)
 			{
-				Target radiusTarget = Target.Invalid;
+				var radiusTarget = Target.Invalid;
 
 				var rotation = WRot.FromFacing(i * offset);
 				var targetpos = epicenter + new WVec(weapon.Range.Length, 0, 0).Rotate(rotation);

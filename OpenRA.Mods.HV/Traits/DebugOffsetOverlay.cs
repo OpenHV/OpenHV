@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -109,8 +109,8 @@ namespace OpenRA.Mods.HV.Traits
 					if (setoffsets.Length != 3)
 						break;
 
-					int[] setoffset = new int[3];
-					for (int i = 0; i < setoffsets.Length; i++)
+					var setoffset = new int[3];
+					for (var i = 0; i < setoffsets.Length; i++)
 						int.TryParse(setoffsets[i], out setoffset[i]);
 
 					devOffset = new WVec(setoffset[0], setoffset[1], setoffset[2]);
@@ -122,8 +122,8 @@ namespace OpenRA.Mods.HV.Traits
 					if (addoffsets.Length != 3)
 						break;
 
-					int[] addoffset = new int[3];
-					for (int i = 0; i < addoffsets.Length; i++)
+					var addoffset = new int[3];
+					for (var i = 0; i < addoffsets.Length; i++)
 						int.TryParse(addoffsets[i], out addoffset[i]);
 
 					devOffset += new WVec(addoffset[0], addoffset[1], addoffset[2]);

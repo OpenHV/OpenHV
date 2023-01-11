@@ -1,5 +1,5 @@
 --[[
-   Copyright 2021, 2022 The OpeHV Developers (see CREDITS)
+   Copyright 2021-2022 The OpeHV Developers (see CREDITS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of

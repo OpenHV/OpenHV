@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -56,8 +56,8 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 			panel.Get<ButtonWidget>("CREATE_BUTTON").OnClick = () =>
 			{
-				int.TryParse(widthTextField.Text, out int width);
-				int.TryParse(heightTextField.Text, out int height);
+				int.TryParse(widthTextField.Text, out var width);
+				int.TryParse(heightTextField.Text, out var height);
 
 				// Require at least a 2x2 playable area so that the
 				// ground is visible through the edge shroud

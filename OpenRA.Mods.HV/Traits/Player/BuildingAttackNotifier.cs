@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -77,9 +77,9 @@ namespace OpenRA.Mods.HV.Traits
 				Game.Sound.PlayNotification(rules, self.Owner, "Speech", info.Notification, self.Owner.Faction.InternalName);
 
 				if (info.AllyNotification != null)
-					foreach (Player p in self.World.Players)
-						if (p != self.Owner && p.IsAlliedWith(self.Owner) && p != e.Attacker.Owner)
-							Game.Sound.PlayNotification(rules, p, "Speech", info.AllyNotification, p.Faction.InternalName);
+					foreach (var player in self.World.Players)
+						if (player != self.Owner && player.IsAlliedWith(self.Owner) && player != e.Attacker.Owner)
+							Game.Sound.PlayNotification(rules, player, "Speech", info.AllyNotification, player.Faction.InternalName);
 
 				radarPings?.Add(() => self.Owner.IsAlliedWith(self.World.RenderPlayer), self.CenterPosition, info.RadarPingColor, info.RadarPingDuration);
 
