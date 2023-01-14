@@ -174,6 +174,10 @@ Function ${UN}Clean
 	Delete $INSTDIR\IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP
 	RMDir /r $INSTDIR\Support
 
+	!ifndef USE_PROGRAMFILES32
+		SetRegView 64
+	!endif
+
 	DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGING_WINDOWS_REGISTRY_KEY}"
 	DeleteRegKey HKLM "Software\Classes\openra-${MOD_ID}-${TAG}"
 
