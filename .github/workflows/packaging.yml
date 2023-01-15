@@ -51,6 +51,9 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
+      - name: Install GNU Core Utils
+        run: brew install coreutils
+
       - name: Prepare Environment
         run: echo "GIT_TAG=${GITHUB_REF#refs/tags/}" >> ${GITHUB_ENV}
 
