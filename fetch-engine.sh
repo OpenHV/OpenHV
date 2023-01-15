@@ -3,12 +3,6 @@
 # This should not be called manually
 
 command -v curl >/dev/null 2>&1 || command -v wget > /dev/null 2>&1 || { echo >&2 "OpenHV requires curl or wget."; exit 1; }
-if command -v python3 >/dev/null 2>&1; then
-	PYTHON="python3"
-else
-	command -v python >/dev/null 2>&1 || { echo >&2 "OpenHV requires python."; exit 1; }
-	PYTHON="python"
-fi
 
 require_variables() {
 	missing=""
