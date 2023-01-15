@@ -21,7 +21,6 @@ if [[ "$OSTYPE" != "darwin"* ]]; then
 fi
 
 command -v make >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires make."; exit 1; }
-command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires python 3."; exit 1; }
 command -v clang >/dev/null 2>&1 || { echo >&2 "macOS packaging requires clang."; exit 1; }
 
 require_variables() {
@@ -41,7 +40,7 @@ if [ $# -ne "2" ]; then
 	exit 1
 fi
 
-PACKAGING_DIR=$(python3 -c "import os; print(os.path.dirname(os.path.realpath('$0')))")
+PACKAGING_DIR=$(dirname $(realpath "$0"))
 TEMPLATE_ROOT="${PACKAGING_DIR}/../../"
 ARTWORK_DIR="${PACKAGING_DIR}/../artwork/"
 
@@ -80,9 +79,9 @@ fi
 
 TAG="$1"
 if [ $# -eq "1" ]; then
-	OUTPUTDIR=$(python3 -c "import os; print(os.path.realpath('.'))")
+	OUTPUTDIR=$(realpath .)
 else
-	OUTPUTDIR=$(python3 -c "import os; print(os.path.realpath('$2'))")
+	OUTPUTDIR=$(realpath "$2")
 fi
 
 if [ ! -d "${OUTPUTDIR}" ]; then

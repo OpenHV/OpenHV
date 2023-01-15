@@ -2,7 +2,6 @@
 set -e
 command -v makensis >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Windows packaging requires makensis."; exit 1; }
 command -v convert >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Windows packaging requires ImageMagick."; exit 1; }
-command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Windows packaging requires python 3."; exit 1; }
 
 require_variables() {
 	missing=""
@@ -21,7 +20,7 @@ if [ $# -eq "0" ]; then
 	exit 1
 fi
 
-PACKAGING_DIR=$(python3 -c "import os; print(os.path.dirname(os.path.realpath('$0')))")
+PACKAGING_DIR=$(dirname $(realpath "$0"))
 TEMPLATE_ROOT="${PACKAGING_DIR}/../../"
 ARTWORK_DIR="${PACKAGING_DIR}/../artwork/"
 
@@ -39,9 +38,9 @@ require_variables "MOD_ID" "ENGINE_DIRECTORY" "PACKAGING_DISPLAY_NAME" "PACKAGIN
 
 TAG="$1"
 if [ $# -eq "1" ]; then
-	OUTPUTDIR=$(python3 -c "import os; print(os.path.realpath('.'))")
+	OUTPUTDIR=$(realpath .)
 else
-	OUTPUTDIR=$(python3 -c "import os; print(os.path.realpath('$2'))")
+	OUTPUTDIR=$(realpath "$2")
 fi
 
 BUILTDIR="${PACKAGING_DIR}/build"
