@@ -29,7 +29,7 @@ require_variables() {
 	fi
 }
 
-TEMPLATE_LAUNCHER=$(${PYTHON} -c "import os; print(os.path.realpath('$0'))")
+TEMPLATE_LAUNCHER=$(realpath "$0")
 TEMPLATE_ROOT=$(dirname "${TEMPLATE_LAUNCHER}")
 MOD_SEARCH_PATHS="${TEMPLATE_ROOT}/mods,./mods"
 
