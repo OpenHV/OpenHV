@@ -42,7 +42,7 @@ seed:
 	idle: bits/seed.png
 		Facings: 8
 	move: bits/seed-move.png
-		Tick: 180
+		Tick: 160
 		Length: 3
 		Facings: 8
 	die: bits/blood1.png
@@ -60,7 +60,7 @@ seamnstr:
 	emerge: bits/seamnstr.png
 		Length: 29
 		Facings: 8
-		Tick: 75
+		Tick: 80
 		ZOffset: 100
 
 worm:
@@ -70,7 +70,7 @@ worm:
 	move: bits/worm.png
 		Length: 2
 		Facings: 8
-		Tick: 180
+		Tick: 160
 	die: bits/worm.png
 		Start: 16
 		Length: 10

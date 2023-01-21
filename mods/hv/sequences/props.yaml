@@ -88,7 +88,7 @@ prop2:
 		Start: 2
 		Length: 4
 		Reverses: True
-		Tick: 100
+		Tick: 120
 
 prop3:
 	Defaults:

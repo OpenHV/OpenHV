@@ -23,22 +23,22 @@ explosion:
 nuclear_explosion:
 	idle: bits/nuclear_cloud.png
 		Length: 22
-		Tick: 60
+		Tick: 40
 		ZOffset: 2050
 
 hit:
 	spark_a: bits/sparks1.png
 		Length: 7
-		Tick: 60
+		Tick: 40
 	spark_b: bits/sparks2.png
 		Length: 10
-		Tick: 60
+		Tick: 40
 	spark_c: bits/sparks3.png
 		Length: 10
-		Tick: 60
+		Tick: 40
 	spark_d: bits/sparks4.png
 		Length: 7
-		Tick: 60
+		Tick: 40
 
 bullet1:
 	idle: bits/bullet1.png
@@ -105,7 +105,7 @@ bullet10:
 		Facings: 8
 		InterpolatedFacings: 16
 		Length: 2
-		Tick: 50
+		Tick: 40
 		ZOffset: 2030
 
 slcm:
@@ -117,7 +117,7 @@ slcm:
 bullet12:
 	idle: bits/bullet12.png
 		Length: 3
-		Tick: 100
+		Tick: 120
 		Reverses: True
 		ZOffset: 2030
 
@@ -137,14 +137,14 @@ bullet14:
 bullet15:
 	idle: bits/bullet15.png
 		Length: 6
-		Tick: 100
+		Tick: 120
 		Reverses: True
 		ZOffset: 2030
 
 bullet16:
 	idle: bits/bullet16.png
 		Length: 4
-		Tick: 60
+		Tick: 40
 		ZOffset: 2030
 
 bullet17:
@@ -152,7 +152,7 @@ bullet17:
 		Facings: 8
 		InterpolatedFacings: 16
 		Length: 3
-		Tick: 60
+		Tick: 40
 		ZOffset: 2030
 
 bullet17-trace:
@@ -175,92 +175,92 @@ railgun:
 	idle: bits/railgunsfx.png
 		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
 		Length: *
-		Tick: 20
+		Tick: 40
 		Offset: 0, -42
 		ZOffset: 1023
 
 smoke:
 	idle: bits/smoke.png
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 2020
 
 small_smoke:
 	idle: bits/small_smoke.png
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 2020
 
 water_splash:
 	water_splash_a: bits/water_splash.png
 		Start: 0
 		Length: 9
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 	water_splash_b: bits/water_splash.png
 		Start: 9
 		Length: 9
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 
 water_splash_small:
 	water_splash_small_a: bits/water_splash_small.png
 		Start: 0
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 	water_splash_small_b: bits/water_splash_small.png
 		Start: 6
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 
 lava_splash:
 	lava_splash_a: bits/lava_splash.png
 		Start: 0
 		Length: 9
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 	lava_splash_b: bits/lava_splash.png
 		Start: 9
 		Length: 9
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 
 lava_splash_small:
 	lava_splash_small_a: bits/lava_splash_small.png
 		Start: 0
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 	lava_splash_small_b: bits/lava_splash_small.png
 		Start: 6
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 
 swamp_splash:
 	swamp_splash_a: bits/swamp_splash.png
 		Start: 0
 		Length: 9
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 	swamp_splash_b: bits/swamp_splash.png
 		Start: 9
 		Length: 9
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 
 swamp_splash_small:
 	swamp_splash_small_a: bits/swamp_splash_small.png
 		Start: 0
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 	swamp_splash_small_b: bits/swamp_splash_small.png
 		Start: 6
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 1000
 
 mine1:
@@ -285,7 +285,7 @@ mine4:
 debris:
 	Defaults:
 		Length: 6
-		Tick: 60
+		Tick: 40
 		ZOffset: 2020
 	small: bits/junk.png
 		Length: 4
@@ -298,7 +298,7 @@ fire:
 		Length: 5
 		ZOffset: 512
 		Offset: 0, -10
-		Tick: 60
+		Tick: 40
 
 pixelsparks:
 	Defaults: bits/pixelsparks.png
@@ -323,12 +323,12 @@ artillery-trail:
 stealthtank-trail:
 	idle: bits/stealthtank-trail.png
 		Length: *
-		Tick: 60
+		Tick: 40
 
 shells:
 	shell_flying: bits/shells.png
 		Length: 4
-		Tick: 75
+		Tick: 80
 	shell_a: bits/shells.png
 		Start: 0
 		Tick: 3000
@@ -349,4 +349,4 @@ shells:
 bubble:
 	idle: bits/bubble.png
 		Length: *
-		Tick: 60
+		Tick: 40
