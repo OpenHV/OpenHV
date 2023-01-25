@@ -113,7 +113,7 @@ icicle4:
 
 lavabubl:
 	active: bits/terrain/lavabubl.png
-		Tick: 80
+		Tick: 60
 		Length: *
 
 mntmisc8:
@@ -254,11 +254,11 @@ swmpani:
 	idle: bits/terrain/swmpani.png
 		Frames: 1, 2, 3, 2, 1
 		Length: *
-		Tick: 240
+		Tick: 250
 
 swmpbubl:
 	active: bits/terrain/swmpbubl.png
-		Tick: 80
+		Tick: 60
 		Length: *
 
 treegrs10:

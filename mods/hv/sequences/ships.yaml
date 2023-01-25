@@ -9,7 +9,7 @@ boat:
 	muzzle: bits/muzzle2.png
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	icon: bits/units-icons.png
 		Start: 15
 
@@ -64,7 +64,7 @@ boat3:
 				Offset: 0,0
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	icon: bits/units-icons.png
 		Start: 14
 
@@ -85,7 +85,7 @@ carrier:
 	open: bits/carrier.png
 		Start: 1
 		Length: 3
-		Tick: 120
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 46
 
@@ -117,11 +117,11 @@ navaltransport:
 	idle: bits/navaltransport.png
 	open: bits/navaltransport.png
 		Length: 4
-		Tick: 160
+		Tick: 150
 	close: bits/navaltransport.png
 		Frames: 3, 2, 1, 0
 		Length: 4
-		Tick: 160
+		Tick: 150
 	unload: bits/navaltransport.png
 		Start: 3
 		ZOffset: -511

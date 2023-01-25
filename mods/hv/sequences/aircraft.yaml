@@ -12,7 +12,7 @@ ship2:
 	muzzle: muzzle2.png
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	icon: units-icons.png
 		Start: 33
 
@@ -22,7 +22,7 @@ plane1:
 	muzzle: muzzle2.png
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	icon: units-icons.png
 		Start: 48
 
@@ -36,7 +36,7 @@ copter:
 	idle: bits/copter.png
 		Facings: 8
 		Length: 4
-		Tick: 40
+		Tick: 50
 	muzzle: copter.png
 		Start: 32
 		Length: 3
@@ -49,7 +49,7 @@ banshee:
 	idle: bits/banshee.png
 		Length: 4
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	muzzle:
 		Combine:
 			muzzle4.png: #N
@@ -86,7 +86,7 @@ banshee:
 				Offset: -3,4
 		Length: 2
 		Facings: 8
-		Tick: 120
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 36
 
@@ -97,7 +97,7 @@ copter2:
 		Start: 8
 		Length: 4
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	icon: bits/units-icons.png
 		Start: 24
 
@@ -178,12 +178,12 @@ parachute:
 	closing: bits/parachute.png
 		Start: 8
 		Length: 10
-		Tick: 40
+		Tick: 60
 		ZOffset: -1024
 		Offset: -2, -7
 	opening: bits/parachute.png
 		Frames: 17, 16, 15, 14, 13, 12, 11, 10, 9
-		Tick: 80
+		Tick: 100
 		Offset: -2, -7
 
 airlifter:
@@ -193,5 +193,5 @@ airlifter:
 landing:
 	idle: large_smoke.png
 		Length: *
-		Tick: 40
+		Tick: 50
 		ZOffset: -512

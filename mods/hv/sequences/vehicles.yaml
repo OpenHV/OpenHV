@@ -54,7 +54,7 @@ tank3:
 				Offset: -1,-1
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	icon: bits/units-icons.png
 		Start: 37
 
@@ -64,7 +64,7 @@ radartank:
 	extend: bits/radartank.png
 		Start: 8
 		Length: 4
-		Tick: 120
+		Tick: 100
 	extended: bits/radartank.png
 		Start: 11
 		Length: 8
@@ -244,7 +244,7 @@ artil:
 	muzzle: bits/artlflsh.png
 		Length: 3
 		Facings: 8
-		Tick: 120
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 2
 
@@ -254,7 +254,7 @@ artil3:
 	shoot: bits/artil3.png
 		Start: 8
 		Facings: 8
-		Tick: 120
+		Tick: 100
 	muzzle:
 		Combine:
 			artlflsh.png: #N
@@ -301,7 +301,7 @@ scout1:
 	muzzle: bits/muzzle2.png
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	die: bits/poddeath.png
 		Length: 7
 		Tick: 80
@@ -315,7 +315,7 @@ scout2:
 	muzzle: bits/muzzle2.png
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	die: bits/poddeath.png
 		Length: 7
 		Tick: 80
@@ -362,7 +362,7 @@ mortarpod:
 				Offset: 2,4
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	die: bits/poddeath.png
 		Length: 7
 		Tick: 80
@@ -376,7 +376,7 @@ sniperpod:
 	muzzle: bits/muzzle3.png
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 	die: bits/poddeath.png
 		Length: 7
 		Tick: 80
@@ -398,7 +398,7 @@ flamepod:
 	idle: bits/flamethrowerpod.png
 		Facings: 8
 		Length: 2
-		Tick: 40
+		Tick: 60
 	die: bits/poddeath.png
 		Length: 7
 		Tick: 80
@@ -416,12 +416,12 @@ hackerpod:
 	extend: bits/hackerpod.png
 		Start: 8
 		Length: 7
-		Tick: 40
+		Tick: 60
 	extended: bits/hackerpod.png
 		Start: 14
 		Length: 4
 		Reverses: true
-		Tick: 40
+		Tick: 60
 	icon: bits/units-icons.png
 		Start: 53
 
@@ -432,7 +432,7 @@ elitepod:
 		ZOffset: 1024
 	move: bits/elitepod.png
 		Length: 2
-		Tick: 40
+		Tick: 60
 		Facings: 8
 		ZOffset: 1024
 	muzzle:
@@ -471,7 +471,7 @@ elitepod:
 				Offset: 0,0
 		Length: 3
 		Facings: 8
-		Tick: 40
+		Tick: 50
 		ZOffset: 1024
 	icon: bits/units-icons.png
 		Start: 54
@@ -483,7 +483,7 @@ bomberpod:
 	animation: bits/pod.png
 		Start: 8
 		Facings: 8
-		Tick: 40
+		Tick: 30
 		Offset: 0,-3
 	die: bits/poddeath.png
 		Length: 7
@@ -634,7 +634,7 @@ aatank2:
 	shoot: bits/aatank2.png
 		Start: 16
 		Facings: 8
-		Tick: 120
+		Tick: 100
 	icon: bits/units-icons.png
 		Start: 38
 
@@ -668,7 +668,7 @@ energyball:
 	appear: bits/teleport.png
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
-		Tick: 40
+		Tick: 50
 
 minipod1:
 	idle: bits/minipod1.png
