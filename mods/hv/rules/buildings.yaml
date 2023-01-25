@@ -1006,7 +1006,7 @@ ORESMELT:
 		Range: 4c0
 	WithIdleAnimation:
 		Interval: 80
-		RequiresCondition: !disabled && !burning
+		RequiresCondition: !disabled && !burning && !selling
 	CashTrickler:
 		Interval: 50
 		Amount: 10
