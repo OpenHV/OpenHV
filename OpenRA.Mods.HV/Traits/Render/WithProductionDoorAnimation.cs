@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -36,9 +36,11 @@ namespace OpenRA.Mods.HV.Traits.Render
 		public override object Create(ActorInitializer init) { return new WithProductionDoorAnimation(init.Self, this); }
 	}
 
-	class WithProductionDoorAnimation : ConditionalTrait<WithProductionDoorAnimationInfo>, INotifyProduction
+	class WithProductionDoorAnimation : ConditionalTrait<WithProductionDoorAnimationInfo>, INotifyProduction, INotifySold
 	{
 		readonly WithSpriteBody body;
+
+		bool selling;
 
 		public WithProductionDoorAnimation(Actor self, WithProductionDoorAnimationInfo info)
 			: base(info)
@@ -59,7 +61,14 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 		protected override void TraitDisabled(Actor self)
 		{
-			body.CancelCustomAnimation(self);
+			if (!selling)
+				body.CancelCustomAnimation(self);
+		}
+
+		void INotifySold.Sold(Actor self) { }
+		void INotifySold.Selling(Actor self)
+		{
+			selling = true;
 		}
 	}
 }

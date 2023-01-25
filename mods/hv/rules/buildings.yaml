@@ -519,7 +519,7 @@ MODULE:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	WithProductionOverlay@base:
+	WithProductionOverlay:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
 	RepairsUnits:
