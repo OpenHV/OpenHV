@@ -806,7 +806,7 @@ TANK1:
 		GenericName: Buggy
 	Buildable:
 		BuildPaletteOrder: 200
-		Prerequisites: ~disabled #, factory.sc
+		Prerequisites: factory.yi, radar
 		Queue: Vehicle
 		Description: Remote controlled vehicle\narmed with explosives.
 	UpdatesPlayerStatistics:

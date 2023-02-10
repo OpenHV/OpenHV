@@ -102,7 +102,8 @@ RADARTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK6:
+
+TANK1:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -110,11 +111,19 @@ TANK5:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK10:
+TANK6:
 	Buildable:
 		Prerequisites: ~disabled
 
 TANK7:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK8:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK10:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -123,10 +132,6 @@ TANK15:
 		Prerequisites: ~disabled
 
 MISSILETANK:
-	Buildable:
-		Prerequisites: ~disabled
-
-TANK8:
 	Buildable:
 		Prerequisites: ~disabled
 

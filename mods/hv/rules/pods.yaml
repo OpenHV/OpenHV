@@ -297,7 +297,7 @@ BOMBERPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Remote controlled mine. \nExplodes buildings.\n  Unarmed
-		Prerequisites: ~module, radar
+		Prerequisites: ~module.sc, radar
 	Valued:
 		Cost: 600
 	Tooltip:
