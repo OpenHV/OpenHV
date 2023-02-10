@@ -90,7 +90,7 @@ SNIPERPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
-		Prerequisites: ~module.sc, radar
+		Prerequisites: ~module.yi, radar
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -257,7 +257,7 @@ ELITEPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
-		Prerequisites: ~module, techcenter
+		Prerequisites: ~module.sc, techcenter
 	Valued:
 		Cost: 600
 	Tooltip:
