@@ -90,7 +90,7 @@ SNIPERPOD:
 	Buildable:
 		Queue: Scouts
 		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
-		Prerequisites: ~module, radar
+		Prerequisites: ~module.sc, radar
 	Valued:
 		Cost: 500
 	Tooltip:
