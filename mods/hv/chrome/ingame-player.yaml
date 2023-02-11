@@ -543,16 +543,16 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@SCOUTS:
+						ProductionTypeButton@PODS:
 							Y: 62
 							Width: 28
 							Height: 28
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Scouts
+							TooltipText: Pods
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Scouts
-							Key: ProductionTypeScouts
+							ProductionGroup: Pods
+							Key: ProductionTypePods
 							Children:
 								Image@ICON:
 									X: 6

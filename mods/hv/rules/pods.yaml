@@ -4,7 +4,7 @@ SCOUT1:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Fast scout vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
 		Prerequisites: ~module
 		BuildPaletteOrder: 10
@@ -30,7 +30,7 @@ SCOUT2:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Fast scout vehicle.\nShoots surface to air/ground rockets.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
 		Prerequisites: ~module
 		BuildPaletteOrder: 20
@@ -61,7 +61,7 @@ MORTARPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 		Prerequisites: ~module.yi, factory
 		BuildPaletteOrder: 40
@@ -91,7 +91,7 @@ SNIPERPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 50
@@ -133,7 +133,7 @@ FLAMEPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Short range flame thrower.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 40
@@ -172,7 +172,7 @@ TECHNICIAN:
 	Inherits: ^Pod
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Field technician.\nInfiltrates and captures enemy structures.\n  Unarmed
 		Prerequisites: ~module
 		BuildPaletteOrder: 30
@@ -217,7 +217,7 @@ HACKERPOD:
 	Inherits: ^Pod
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Mobile Hackerspace.\nSteals money from the global network.\n  Unarmed
 		Prerequisites: ~module.yi, techcenter
 		BuildPaletteOrder: 60
@@ -262,7 +262,7 @@ ELITEPOD:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
 		Prerequisites: ~module.sc, techcenter
 		BuildPaletteOrder: 60
@@ -303,7 +303,7 @@ ELITEPOD:
 BOMBERPOD:
 	Inherits: ^Pod
 	Buildable:
-		Queue: Scouts
+		Queue: Pods
 		Description: Remote controlled mine. \nExplodes buildings.\n  Unarmed
 		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 50

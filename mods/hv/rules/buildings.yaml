@@ -475,27 +475,27 @@ MODULE:
 	Exit@South1:
 		SpawnOffset: -150,800,0
 		ExitCell: 1,2
-		ProductionTypes: Scouts
+		ProductionTypes: Pods
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@South2:
 		SpawnOffset: 150,800,0
 		ExitCell: 0,2
-		ProductionTypes: Scouts
+		ProductionTypes: Pods
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@North1:
 		SpawnOffset: -150,-800,0
 		ExitCell: 1,-1
-		ProductionTypes: Scouts
+		ProductionTypes: Pods
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@North2:
 		SpawnOffset: 150,-800,0
 		ExitCell: 0,-1
-		ProductionTypes: Scouts
+		ProductionTypes: Pods
 		RequiresCondition: !being-captured && !build-incomplete
 	Production:
-		Produces: Scouts
+		Produces: Pods
 	GrantExternalConditionToProduced:
 		Condition: produced
 	WithProductionDoorAnimation:
@@ -506,7 +506,7 @@ MODULE:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
 	ProductionBar:
-		ProductionType: Scouts
+		ProductionType: Pods
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@BuildingName:

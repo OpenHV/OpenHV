@@ -83,8 +83,8 @@ Player:
 		CancelledAudio: Cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-	ClassicProductionQueue@Scouts:
-		Type: Scouts
+	ClassicProductionQueue@Pods:
+		Type: Pods
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady

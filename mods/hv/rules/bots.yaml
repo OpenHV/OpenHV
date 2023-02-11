@@ -83,7 +83,7 @@ Player:
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
-		UnitQueues: Scouts, Vehicle, Aircraft, Ship
+		UnitQueues: Pods, Vehicle, Aircraft, Ship
 		UnitsToBuild:
 			miner: 3
 			builder: 1

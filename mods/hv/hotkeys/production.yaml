@@ -8,8 +8,8 @@ ProductionTypeDefense: R
 	Types: Production
 	Contexts: Player
 
-ProductionTypeScouts: T
-	Description: Scouts Tab
+ProductionTypePods: T
+	Description: Pods Tab
 	Types: Production
 	Contexts: Player
 
