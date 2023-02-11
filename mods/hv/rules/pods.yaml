@@ -7,6 +7,7 @@ SCOUT1:
 		Queue: Scouts
 		Description: Fast scout vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
 		Prerequisites: ~module
+		BuildPaletteOrder: 10
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -32,6 +33,7 @@ SCOUT2:
 		Queue: Scouts
 		Description: Fast scout vehicle.\nShoots surface to air/ground rockets.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
 		Prerequisites: ~module
+		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
 	Tooltip:
@@ -62,6 +64,7 @@ MORTARPOD:
 		Queue: Scouts
 		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 		Prerequisites: ~module.yi, factory
+		BuildPaletteOrder: 40
 	Valued:
 		Cost: 175
 	Tooltip:
@@ -91,6 +94,7 @@ SNIPERPOD:
 		Queue: Scouts
 		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
 		Prerequisites: ~module.yi, radar
+		BuildPaletteOrder: 50
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -132,6 +136,7 @@ FLAMEPOD:
 		Queue: Scouts
 		Description: Short range flame thrower.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 		Prerequisites: ~module.sc, factory
+		BuildPaletteOrder: 40
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -170,6 +175,7 @@ TECHNICIAN:
 		Queue: Scouts
 		Description: Field technician.\nInfiltrates and captures enemy structures.\n  Unarmed
 		Prerequisites: ~module
+		BuildPaletteOrder: 30
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -214,6 +220,7 @@ HACKERPOD:
 		Queue: Scouts
 		Description: Mobile Hackerspace.\nSteals money from the global network.\n  Unarmed
 		Prerequisites: ~module.yi, techcenter
+		BuildPaletteOrder: 60
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -258,6 +265,7 @@ ELITEPOD:
 		Queue: Scouts
 		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
 		Prerequisites: ~module.sc, techcenter
+		BuildPaletteOrder: 60
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -298,6 +306,7 @@ BOMBERPOD:
 		Queue: Scouts
 		Description: Remote controlled mine. \nExplodes buildings.\n  Unarmed
 		Prerequisites: ~module.sc, radar
+		BuildPaletteOrder: 50
 	Valued:
 		Cost: 600
 	Tooltip:
