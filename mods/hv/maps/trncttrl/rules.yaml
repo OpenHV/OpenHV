@@ -55,3 +55,11 @@ SWAMP_LIGHT:
 		RedTint: 0.25
 		GreenTint: 1.10
 		BlueTint: 0.35
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled

@@ -353,15 +353,9 @@ Actors:
 	Actor130: dark_light
 		Owner: Neutral
 		Location: 112,54
-	Actor131: mpspawn
-		Owner: Neutral
-		Location: 22,95
 	Actor132: base_light
 		Owner: Neutral
 		Location: 23,95
-	Actor123: mpspawn
-		Owner: Neutral
-		Location: 55,21
 	Actor126: base_light
 		Owner: Neutral
 		Location: 56,21
@@ -401,9 +395,6 @@ Actors:
 	Actor146: stnrock10
 		Owner: Neutral
 		Location: 106,55
-	Actor127: mpspawn
-		Owner: Neutral
-		Location: 93,87
 	Actor128: base_light
 		Owner: Neutral
 		Location: 94,87
@@ -929,9 +920,6 @@ Actors:
 	Actor318: resourcelight
 		Owner: Neutral
 		Location: 63,19
-	Actor320: resourcelight
-		Owner: Neutral
-		Location: 55,27
 	Actor321: resourcelight
 		Owner: Neutral
 		Location: 67,34
@@ -1175,5 +1163,23 @@ Actors:
 	Actor408: small_red_light
 		Owner: Neutral
 		Location: 99,10
+	Actor409: mpspawn
+		Owner: Neutral
+		Location: 55,21
+	Actor410: mpspawn
+		Owner: Neutral
+		Location: 93,87
+	Actor411: mpspawn
+		Owner: Neutral
+		Location: 22,95
+	Actor412: resourcelight
+		Owner: Neutral
+		Location: 54,11
+	Actor413: dark_light
+		Owner: Neutral
+		Location: 56,32
+	Actor414: resourcelight
+		Owner: Neutral
+		Location: 55,28
 
 Rules: rules.yaml
