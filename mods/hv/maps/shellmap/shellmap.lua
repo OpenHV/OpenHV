@@ -9,18 +9,18 @@
 ]]
 
 
-ticks = 0
-speed = 5
+Ticks = 0
+Speed = 5
 
 Tick = function()
-	ticks = ticks + 1
+	Ticks = Ticks + 1
 
-	if ticks > 1 or not Map.IsPausedShellmap then
-		local t = (ticks + 45) % (360 * speed) * (math.pi / 180) / speed;
-		Camera.Position = viewportOrigin + WVec.New(19200 * math.sin(t), 28800 * math.cos(t), 0)
+	if Ticks > 1 or not Map.IsPausedShellmap then
+		local t = (Ticks + 45) % (360 * Speed) * (math.pi / 180) / Speed;
+		Camera.Position = ViewportOrigin + WVec.New(19200 * math.sin(t), 28800 * math.cos(t), 0)
 	end
 end
 
 WorldLoaded = function()
-	viewportOrigin = Camera.Position
+	ViewportOrigin = Camera.Position
 end
