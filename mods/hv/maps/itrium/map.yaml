@@ -352,10 +352,10 @@ Actors:
 	Actor90: trees18
 		Owner: Neutral
 		Location: 18,15
-	Actor91: miner2
+	Miner1: miner2
 		Owner: Synapol Corporation
 		Location: 24,30
-	Actor92: miner2
+	Miner2: miner2
 		Owner: Synapol Corporation
 		Location: 30,31
 
