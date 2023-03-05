@@ -18,15 +18,19 @@ Player:
 		Types: Player
 	PowerManager:
 		SpeechNotification: LowPower
+		TextNotification: Low power.
 	TechTree:
 	AllyRepair:
 	PlaceBuilding:
 		ToggleVariantKey: ToggleVariant
 		NewOptionsNotification: NewOptions
+		NewOptionsTextNotification: New construction options.
 		CannotPlaceNotification: BuildingCannotPlaceAudio
+		CannotPlaceTextNotification: Building cannot be placed.
 	SupportPowerManager:
 	PlayerResources:
 		InsufficientFundsNotification: InsufficientFunds
+		InsufficientFundsTextNotification: Insufficient funding.
 		SelectableCash: 5000, 7500, 10000, 15000, 20000
 		DefaultCash: 7500
 	DeveloperMode:
@@ -56,9 +60,13 @@ Player:
 		DisplayOrder: 0
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
+		ReadyTextNotification: Building ready.
 		QueuedAudio: Building
+		QueuedTextNotification: Building.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100
 		BuildDurationModifier: 70
@@ -67,9 +75,13 @@ Player:
 		DisplayOrder: 0
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
+		ReadyTextNotification: Building ready.
 		QueuedAudio: Building
+		QueuedTextNotification: Building.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: false
 		BuildTimeSpeedReduction: 100
 		BuildDurationModifier: 70
@@ -78,9 +90,13 @@ Player:
 		DisplayOrder: 1
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
+		ReadyTextNotification: Building ready.
 		QueuedAudio: Building
+		QueuedTextNotification: Building.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Pods:
@@ -88,9 +104,13 @@ Player:
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		QueuedAudio: Training
+		QueuedTextNotification: Training.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Vehicles:
@@ -98,9 +118,13 @@ Player:
 		DisplayOrder: 3
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		QueuedAudio: Training
+		QueuedTextNotification: Training.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Trade:
@@ -108,17 +132,25 @@ Player:
 		DisplayOrder: 4
 		BuildDurationModifier: 85
 		BlockedAudio: NoRoom
+		BlockedTextNotification: Not enough space.
 		QueuedAudio: OrderPlaced
+		QueuedTextNotification: Order placed.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		QueuedAudio: Training
+		QueuedTextNotification: Training.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Naval:
@@ -126,9 +158,13 @@ Player:
 		DisplayOrder: 5
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
 		QueuedAudio: Training
+		QueuedTextNotification: Training.
 		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
 		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	PlayerRadarTerrain:

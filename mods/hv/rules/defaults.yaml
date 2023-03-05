@@ -153,10 +153,12 @@
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	Carryable:
 	Demolishable:
 	AnnounceOnSeen:
 		Notification: EnemyUnitsDetected
+		TextNotification: Enemy units detected.
 	DetectCloaked:
 		Range: 1c0
 
@@ -278,6 +280,7 @@
 	Repairable:
 		RepairActors: tradplat
 	ActorLostNotification:
+		TextNotification: Unit lost.
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -492,6 +495,7 @@
 		RepairStep: 1000
 		PlayerExperience: 15
 		RepairingNotification: Repairing
+		RepairingTextNotification: Repairing.
 	WithBuildingRepairDecoration:
 		Image: repair
 		Sequence: idle
@@ -503,6 +507,7 @@
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	CaptureNotification:
+		TextNotification: Building captured.
 
 ^BaseBuilding:
 	Inherits: ^Building
@@ -537,6 +542,7 @@
 	BotRepairOrSellCaptures:
 	ActorLostNotification:
 		Notification: BuildingLost
+		TextNotification: Building lost.
 
 ^DefenseBuilding:
 	Inherits: ^BaseBuilding
@@ -650,6 +656,7 @@
 		Modifier: 0
 	RepairableBuilding:
 		RepairCondition: repairing
+		RepairingTextNotification: Repairing.
 	WithBuildingRepairDecoration:
 		Offsets:
 			powerdown: -10, 0
