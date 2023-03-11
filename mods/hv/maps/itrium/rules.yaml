@@ -154,10 +154,14 @@ RADARTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK16:
+TANK1:
 	Buildable:
 		Prerequisites: ~disabled
 
 TANK6:
+	Buildable:
+		Prerequisites: ~disabled
+
+TANK16:
 	Buildable:
 		Prerequisites: ~disabled
