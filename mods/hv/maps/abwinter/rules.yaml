@@ -1,0 +1,82 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.95
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+	IndexedPlayerPalette@RedLamp:
+		BaseName: redlamp
+		BasePalette: player
+		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
+		PlayerIndex:
+			Neutral: 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 2
+		AllowModifiers: True
+
+SPARKLAMP:
+	RenderSprites:
+		PlayerPalette: redlamp
+
+FORESTLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 5c640
+		Intensity: 0.01
+		RedTint: -0.2
+		GreenTint: 0.0
+		BlueTint: -0.1
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 04c640
+		Intensity: 0.01
+		RedTint: 0.65
+		GreenTint: 0.25
+		BlueTint: 0.25
+
+RESOURCELIGHT_ROZMYTE:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 08c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.20
+		BlueTint: 0.30
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.25
+		GreenTint: 0.30
+		BlueTint: 0.55
+
+SMALL_WATER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 7c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.20
+		BlueTint: 0.45
+
+LARGE_WATER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 14c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.20
+		BlueTint: 0.45
+
+PITLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 06c640
+		Intensity: 0.01
+		RedTint: -0.2
+		GreenTint: -0.2
+		BlueTint: -0.2
