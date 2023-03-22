@@ -33,28 +33,6 @@ railgun:
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 
-RedLaser:
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 40
-	Range: 5c512
-	Report: raygun_newlocknew.wav
-	Projectile: LaserZap
-		ZOffset: 2047
-		Color: FF000080
-		SecondaryBeam: true
-		SecondaryBeamZOffset: 2047
-		Width: 36
-		Duration: 8
-		SecondaryBeamWidth: 144
-		SecondaryBeamColor: FF000030
-	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
-		Spread: 42
-		Damage: 3000
-	Warhead@Incendiary: TreeDamage
-		Spread: 42
-		Damage: 3000
-
 ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 7c0

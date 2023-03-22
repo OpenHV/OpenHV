@@ -88,6 +88,8 @@ Player:
 			miner: 3
 			builder: 1
 			radartank: 1
+			tank1: 3
+			tank2: 3
 			tank3: 5
 			tank5: 5
 			tank6: 1

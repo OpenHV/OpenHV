@@ -102,10 +102,6 @@ RADARTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK1:
-	Buildable:
-		Prerequisites: ~disabled
-
 TANK5:
 	Buildable:
 		Prerequisites: ~disabled

@@ -59,6 +59,23 @@ BunkerChaingun:
 			Heavy: 10
 			Concrete: 5
 
+BuggyChainGun:
+	Inherits: ^ChainGun
+	ReloadDelay: 30
+	Range: 4c0
+	Burst: 5
+	Warhead@Damage: SpreadDamage
+		Damage: 1000
+		Versus:
+			None: 150
+
+BikeChainGun:
+	Inherits: ^ChainGun
+	ReloadDelay: 20
+	Range: 4c0
+	Warhead@Damage: SpreadDamage
+		Damage: 800
+
 HelicopterChainGun:
 	Inherits: ^ChainGun
 	ReloadDelay: 10

@@ -10,7 +10,7 @@ TANK3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 20
 		Prerequisites: ~factory.yi
 		Queue: Vehicle
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Pods
@@ -56,7 +56,7 @@ AATANK:
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 30
 		Prerequisites: ~factory.sc
 		Description: Mobile tank with AA missiles.\n  Strong vs Aircraft\n  Cannot attack grounds units.
 	Valued:
@@ -114,7 +114,7 @@ TRANSPRT:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: factory, module
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 40
 		Description: Can transport pods.\nHas fireports for garrisoned units.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -159,7 +159,7 @@ ARTIL:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: factory, radar
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 50
 		Description: Mobile long range weapon.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -200,7 +200,7 @@ RADARTANK:
 	-AppearsOnRadar:
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 60
 		Prerequisites: factory, radar
 		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
 	Valued:
@@ -271,7 +271,7 @@ TANK16:
 	Buildable:
 		Queue: Vehicle
 		Prerequisites: factory, tradplat
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 70
 		Description: Repairs nearby tanks.\n  Unarmed
 	Armament:
 		Weapon: RepairBeam
@@ -308,7 +308,7 @@ TANK6:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 80
 		Prerequisites: factory, tradplat
 		Description: Lays mines to destroy unwary enemy units.\n  Can detect enemy mines.\n  Unarmed
 	Valued:
@@ -604,7 +604,7 @@ BUILDER:
 	Inherits: ^Vehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 100
 		Description: Deploys into outpost which\ngrants additional build radius\nand allows base reconstruction.\n  Unarmed
 		Prerequisites: ~structures.yi
 		BuildAtProductionType: Building
@@ -803,16 +803,24 @@ TANK8:
 
 TANK1:
 	Inherits: ^Vehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Ramp Buggy
 		GenericName: Buggy
 	Buildable:
-		BuildPaletteOrder: 200
-		Prerequisites: factory.yi, radar
+		BuildPaletteOrder: 10
+		Prerequisites: ~factory.yi
 		Queue: Vehicle
-		Description: Remote controlled vehicle\narmed with explosives.
+		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		Voice: Attack
+		FacingTolerance: 0
+	Armament:
+		Weapon: BuggyChainGun
+		LocalOffset: 180,0,110
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -827,33 +835,26 @@ TANK1:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	Demolition:
-		DetonationDelay: 45
-		EnterBehaviour: Dispose
-		Cursor: ability
-	Passenger:
-		CustomPipType: red
-		Voice: Move
 
 TANK2:
-	Inherits: ^TrackedVehicle
+	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Laser Bike
+		Name: Gatling Bike
 		GenericName: Bike
 	Buildable:
 		Queue: Vehicle
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 210
-		Description: Fires lasers.
+		Prerequisites: ~factory.sc
+		BuildPaletteOrder: 10
+		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
 	Armament:
-		Weapon: RedLaser
+		Weapon: BikeChainGun
 		LocalOffset: 500,-250,0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -862,7 +863,7 @@ TANK2:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 500
+		Speed: 140
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0

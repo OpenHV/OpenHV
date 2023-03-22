@@ -155,7 +155,7 @@
 		InternalName: sc
 		Side: Corporations
 		Selectable: true
-		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Flame Pod\n    - Sniper Pod\n    - Bomber Pod\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
+		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Flame Pod\n    - Sniper Pod\n    - Gatling Bike\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
 	Faction@Random:
 		Name: Any
 		InternalName: Random
