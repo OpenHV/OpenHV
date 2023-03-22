@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 					continue;
 
 				var row = table.NewRow();
-				var tooltip = actorInfo.TraitInfoOrDefault<TooltipInfo>();
+				var tooltip = actorInfo.TraitInfos<TooltipInfo>().FirstOrDefault();
 				row["Name"] = tooltip != null ? tooltip.Name : actorInfo.Name;
 
 				var value = actorInfo.TraitInfoOrDefault<ValuedInfo>();
