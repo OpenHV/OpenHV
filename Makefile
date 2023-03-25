@@ -154,8 +154,13 @@ endif
 install: install-assemblies install-executables install-metadata install-data
 
 install-assemblies:
-	@sh -c '. ./packaging/functions.sh; install_mod_assemblies . $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) ./engine'
-	@sh -c '. ./engine/packaging/functions.sh; install_assemblies ./engine $(DESTDIR)$(gamedir) $(TARGETPLATFORM) $(RUNTIME) True False False'
+	@mkdir -p $(DESTDIR)$(gamedir)
+	@cp -r engine/bin/* $(DESTDIR)$(gamedir)
+	@rm $(DESTDIR)$(gamedir)/OpenRA.Mods.Cnc.dll
+	@rm $(DESTDIR)$(gamedir)/OpenRA.Mods.D2k.dll
+ifeq ("$(TARGETPLATFORM)","unix-generic")
+	@rm $(DESTDIR)$(gamedir)/*.so
+endif
 
 install-executables:
 	@sh -c '. ./packaging/linux/functions.sh; install_executables $(DESTDIR)$(bindir) . ./engine hv $(VERSION) OpenHV OpenHV https://github.com/OpenHV/OpenHV/wiki/FAQ'
