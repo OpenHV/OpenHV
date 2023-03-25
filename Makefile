@@ -140,6 +140,10 @@ check-variables:
 engine: check-variables check-sdk-scripts
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
+ifeq ("$(TARGETPLATFORM)","unix-generic")
+	@rm $(ENGINE_DIRECTORY)/bin/*.so
+	@cd $(ENGINE_DIRECTORY) && ./configure-system-libraries.sh
+endif
 
 all: engine
 ifeq ($(RUNTIME), mono)
@@ -155,12 +159,9 @@ install: install-assemblies install-executables install-metadata install-data in
 
 install-assemblies:
 	@mkdir -p $(DESTDIR)$(gamedir)
-	@cp -r engine/bin/* $(DESTDIR)$(gamedir)
+	@cp -r $(ENGINE_DIRECTORY)/bin/* $(DESTDIR)$(gamedir)
 	@rm $(DESTDIR)$(gamedir)/OpenRA.Mods.Cnc.dll
 	@rm $(DESTDIR)$(gamedir)/OpenRA.Mods.D2k.dll
-ifeq ("$(TARGETPLATFORM)","unix-generic")
-	@rm $(DESTDIR)$(gamedir)/*.so
-endif
 
 install-executables:
 	@sh -c '. ./packaging/linux/functions.sh; install_executables $(DESTDIR)$(bindir) . ./engine hv $(VERSION) OpenHV OpenHV https://github.com/OpenHV/OpenHV/wiki/FAQ'
