@@ -151,7 +151,7 @@ else
 	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 endif
 
-install: install-assemblies install-executables install-metadata install-data
+install: install-assemblies install-executables install-metadata install-data install-man
 
 install-assemblies:
 	@mkdir -p $(DESTDIR)$(gamedir)
@@ -171,9 +171,15 @@ install-metadata:
 install-data:
 	@sh -c '. ./packaging/functions.sh; install_data ./engine $(DESTDIR)$(gamedir)'
 
-install-man: engine
+install-man:
 	@mkdir -p $(DESTDIR)$(mandir)/man6/
-	@./utility.sh all --man-page > $(DESTDIR)$(mandir)/man6/openhv.6
+	@./utility.sh --man-page > $(DESTDIR)$(mandir)/man6/openhv.6
+	@sed -i 's/An Open Source modernization of the early 2D Command \& Conquer games./An Open Source Pixelart Science-Fiction Real-Time-Strategy game/' $(DESTDIR)$(mandir)/man6/openhv.6
+	@sed -i 's#http://bugs.openra.net#https://github.com/OpenHV/OpenHV/issues#g' $(DESTDIR)$(mandir)/man6/openhv.6
+	@sed -i 's/OPENRA/OPENHV/g' $(DESTDIR)$(mandir)/man6/openhv.6
+	@sed -i 's/OpenRA/OpenHV/g' $(DESTDIR)$(mandir)/man6/openhv.6
+	@sed -i 's/openra/openhv/g' $(DESTDIR)$(mandir)/man6/openhv.6
+	@sed -i '/Game\.Mod/d' $(DESTDIR)$(mandir)/man6/openhv.6
 
 clean: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
