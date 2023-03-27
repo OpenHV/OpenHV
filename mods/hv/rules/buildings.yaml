@@ -46,6 +46,10 @@ BASE:
 		BuildLimit: 1
 		Description: Builds structures, builders and miners
 		Prerequisites: outpost, ~structures.yi
+	Encyclopedia:
+		Description: This base of operations is able to summon new buildings as well as utility vehicles such as miners or builders. New buildings are only allowed within a base radius. You can also spawn buildings into an allied base radius. To extend the build radius you need to train builders which can deploy into outposts. Protect the base building at all costs. If your base ever gets destroyed, select an outpost and request a new main base for a possible comeback.
+		Order: 10
+		Category: Buildings
 	GrantExternalConditionToOwner@Base:
 		Condition: base
 	Production:
@@ -184,6 +188,7 @@ BASE2:
 		Prerequisite: structures.sc
 	Buildable:
 		Prerequisites: outpost2, ~structures.sc
+	-Encyclopedia:
 
 OUTPOST:
 	Inherits: ^BaseBuilding
@@ -191,6 +196,10 @@ OUTPOST:
 		Cost: 1000
 	Tooltip:
 		Name: Outpost
+	Encyclopedia:
+		Description: This structure cannot be summoned on the main base like the others. It is created by deploying a builder. Thus it can be used to extend the base radius or even create bridge heads far away from the main base. Another important feature is that it is the only building than can build another base, but only in the event of the initial main base getting destroyed.
+		Order: 30
+		Category: Buildings
 	Health:
 		HP: 50000
 	Building:
@@ -221,6 +230,7 @@ OUTPOST2:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
+	-Encyclopedia:
 
 GENERATOR:
 	Inherits: ^BaseBuilding
@@ -233,6 +243,10 @@ GENERATOR:
 		BuildPaletteOrder: 10
 		Prerequisites: base
 		Description: Generates power for other structures.
+	Encyclopedia:
+		Description: Generators power the base. Loss of power effects buildings individually. Without power the radar shows no minimap, production is slowed down, support power charging is paused, base defense system stop operating.\nTo restore power you can build more generators or as a short term action disable certain buildings by clicking the zap button and selected buildings to power down. With power lines cut the actions are more drastic: buildings will be unable to produce or contribute to the tech tree also canceling current production queues if they are effected.\nAlways plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
+		Order: 10
+		Category: Buildings
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -273,6 +287,10 @@ RADAR:
 		BuildPaletteOrder: 90
 		Prerequisites: generator, storage, ~structures.yi
 		Description: Provides an overview\nof the battlefield.\n  Calls in reinforcements.\n  Requires power to operate.
+	Encyclopedia:
+		Description: The radar enables a minimap on top right screen of the command interface. It also provides a larger amount of local vision around itself. As a tech building it is opening up the aerial branch of units. It also provides the first tier of support powers which can be an air strike or orbital drop pod reinforcements to be placed anywhere on the battlefield. For the air strike hold the mouse button and move the pointer to set the flight path.
+		Order: 40
+		Category: Buildings
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -354,6 +372,7 @@ RADAR2:
 		SelectTargetTextNotification: Select target.
 		IncomingSpeechNotification: DroppodIncoming
 		IncomingTextNotification: Drop Pod incoming.
+	-Encyclopedia:
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
@@ -365,6 +384,10 @@ TRADPLAT:
 		BuildPaletteOrder: 100
 		Description: Repairs vehicles and aircraft for credits.\nAllows buying units on the free market.
 		Prerequisites: factory
+	Encyclopedia:
+		Description: The trade platform provides access to the free market. For a certain amount of credits damaged vehicles can be ordered here and get repaired. Alternatively select the repair icon on the top right of the command interface and click a damaged vehicle which will then automatically head to the nearest trade platform for repairs. As a tech building the trade platform opens up the tank path. It also serves as an additional vehicle production queue by allowing orders from outside. These vary in price and are more expensive than local production.
+		Order: 50
+		Category: Buildings
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -452,6 +475,10 @@ MODULE:
 		BuildPaletteOrder: 30
 		Prerequisites: generator, ~structures.yi
 		Description: Produces and repairs very light vehicles.
+	Encyclopedia:
+		Description: The module is the assembly for the smallest type of vehicle: the pods. They are very lightly armored and only contain one occupant, but provide some mobility and protection against harsh environments on planets with limited terraforming. Pods can come back in the immediate vicinity of the module to bandage wounds and provide some quick repairs on the vehicle.
+		Order: 50
+		Category: Buildings
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.yi
 	ProvidesPrerequisite@Generic:
@@ -459,7 +486,7 @@ MODULE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Yuruki Industries Pod Assembly
+		Name: Module
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -546,8 +573,7 @@ MODULE2:
 		Prerequisite: module.sc
 	RenderSprites:
 		Image: module2
-	Tooltip:
-		Name: Synapol Corporation Pod Assembly
+	-Encyclopedia:
 
 MINER2:
 	Inherits: ^Building
@@ -557,6 +583,10 @@ MINER2:
 		Bounds: 2048, 3072, 0, 0
 	Tooltip:
 		Name: Mining Tower
+	Encyclopedia:
+		Description: The mining tower is errected by creating a miner in the vehicle queue from either main base or factory and ordering it upon a metal bar symbol on the map where gold is more valueable than iron. Once deployed it will start mining and after certain intervals release a tanker which will carry back to a storage building upon then the credits can be spent. When the resources are depleted, the extraction value drops. Right-click on a mining tower to redeploy it into a miner again to move it onto a different spot.
+		Order: 50
+		Category: Buildings
 	Valued:
 		Cost: 1000
 	Health:
