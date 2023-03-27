@@ -70,6 +70,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			mainMenu.Get<ButtonWidget>("EXTRAS_BUTTON").OnClick = () => SwitchMenu(MenuType.Extras);
 
+			mainMenu.Get<ButtonWidget>("ENCYCLOPEDIA_BUTTON").OnClick = OpenEncyclopediaPanel;
+
 			mainMenu.Get<ButtonWidget>("QUIT_BUTTON").OnClick = Game.Exit;
 
 			// Singleplayer menu
@@ -351,6 +353,15 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				{ "onExit", () => SwitchMenu(MenuType.Singleplayer) },
 				{ "onStart", () => { RemoveShellmapUI(); lastGameState = MenuPanel.Missions; } },
 				{ "initialMap", map }
+			});
+		}
+
+		void OpenEncyclopediaPanel()
+		{
+			SwitchMenu(MenuType.None);
+			Game.OpenWindow("ENCYCLOPEDIA_PANEL", new WidgetArgs
+			{
+				{ "onExit", () => SwitchMenu(MenuType.Singleplayer) }
 			});
 		}
 
