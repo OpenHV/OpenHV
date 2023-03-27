@@ -361,7 +361,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			SwitchMenu(MenuType.None);
 			Game.OpenWindow("ENCYCLOPEDIA_PANEL", new WidgetArgs
 			{
-				{ "onExit", () => SwitchMenu(MenuType.Singleplayer) }
+				{ "onExit", () => SwitchMenu(MenuType.Main) }
 			});
 		}
 
