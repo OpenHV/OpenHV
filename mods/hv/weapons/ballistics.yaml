@@ -19,7 +19,7 @@
 		Spread: 128
 		Damage: 4000
 		Versus:
-			None: 90
+			None: 20
 			Steel: 75
 			Light: 100
 			Heavy: 130
