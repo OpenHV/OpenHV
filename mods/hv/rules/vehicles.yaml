@@ -814,17 +814,22 @@ TANK1:
 		Prerequisites: ~factory.yi
 		Queue: Vehicle
 		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
-	AttackFrontal:
+	Turreted:
+		TurnSpeed: 40
+		Offset: 0,0,150
+	AttackTurreted:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
-		FacingTolerance: 0
+	WithSpriteTurret:
 	Armament:
 		Weapon: BuggyChainGun
-		LocalOffset: 180,0,110
+		LocalOffset: 50,50,0, 50,-100,0
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9000
+		HP: 8000
 	Armor:
 		Type: Light
 	Mobile:
@@ -856,14 +861,17 @@ TANK2:
 	Armament:
 		Weapon: BikeChainGun
 		LocalOffset: 500,-250,0
+	WithAttackAnimation:
+		Sequence: shoot
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 10000
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 140
+		TurnSpeed: 40
+		Speed: 160
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0

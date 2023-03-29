@@ -60,21 +60,34 @@ BunkerChaingun:
 			Concrete: 5
 
 BuggyChainGun:
-	Inherits: ^ChainGun
-	ReloadDelay: 30
-	Range: 4c0
-	Burst: 5
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	StartBurstReport: machinegun_SuperPhat.wav
+	BurstDelays: 1
+	ReloadDelay: 20
+	Range: 6c0
+	Burst: 4
+	Projectile: Bullet
+		Inaccuracy: 0c256
+		Speed: 1000
+		ContrailLength: 3
+		ContrailWidth: 0c32
+		ContrailStartColor: F4AC00
 	Warhead@Damage: SpreadDamage
+		Spread: 24
 		Damage: 1000
 		Versus:
-			None: 150
+			None: 175
+			Steel: 20
+			Light: 30
+			Heavy: 10
+			Concrete: 5
 
 BikeChainGun:
-	Inherits: ^ChainGun
-	ReloadDelay: 20
-	Range: 4c0
-	Warhead@Damage: SpreadDamage
-		Damage: 800
+	Inherits: BuggyChainGun
+	StartBurstReport: ccbysmgfire02.wav
+	BurstDelays: 2
 
 HelicopterChainGun:
 	Inherits: ^ChainGun

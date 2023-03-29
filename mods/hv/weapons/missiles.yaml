@@ -107,9 +107,9 @@ MissileTankRocket:
 LightAntiTankRocket:
 	Inherits: SmallSplash
 	Inherits: ^AntiGroundMissile
-	ReloadDelay: 70
+	ReloadDelay: 60
 	Projectile: Missile
-		Speed: 213
+		Speed: 260
 		Arm: 2
 		Blockable: false
 		Inaccuracy: 128
