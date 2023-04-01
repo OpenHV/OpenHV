@@ -882,7 +882,7 @@ TANK2:
 
 TANKER1:
 	Inherits: ^Vehicle
-	Inherits@Selection: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableEconomicUnit
 	Buildable:
 		Prerequisites: ~disabled
 		Description: Transports resources to the headquarter.\n  Unarmed
