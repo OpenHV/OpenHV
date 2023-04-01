@@ -683,7 +683,7 @@ COLLECTOR:
 
 MINER:
 	Inherits: ^Vehicle
-	Inherits@Selection: ^SelectableEconomicUnit
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
