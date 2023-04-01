@@ -602,6 +602,7 @@ ARTIL3:
 
 BUILDER:
 	Inherits: ^Vehicle
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 100
