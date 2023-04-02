@@ -11,9 +11,10 @@
 
 using System.Collections.Generic;
 using System.Diagnostics;
+using OpenRA.Mods.Common.LoadScreens;
 using OpenRA.Primitives;
 
-namespace OpenRA.Mods.Common.LoadScreens
+namespace OpenRA.Mods.HV
 {
 	public sealed class TextLoadScreen : BlankLoadScreen
 	{
