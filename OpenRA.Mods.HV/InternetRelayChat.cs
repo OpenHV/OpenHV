@@ -68,9 +68,9 @@ namespace OpenRA.Mods.HV
 
 	public sealed class InternetRelayChat : IGlobalModData
 	{
-		public readonly string Hostname = "irc.quakenet.org";
-		public readonly int Port = 6667;
-		public readonly string Channel = "openhv";
+		public readonly string Hostname = "irc.freegamedev.net";
+		public readonly int Port = 6697;
+		public readonly string Channel = "openhv-lobby";
 		public readonly string QuitMessage = "Battle control terminated!";
 		public readonly string TimeStampFormat = "HH:mm";
 
@@ -147,6 +147,7 @@ namespace OpenRA.Mods.HV
 			{
 				try
 				{
+					client.UseSsl = true;
 					client.Connect(Hostname, Port);
 				}
 				catch (Exception e)
