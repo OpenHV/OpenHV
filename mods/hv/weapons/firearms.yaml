@@ -79,7 +79,7 @@ BuggyChainGun:
 		Damage: 1000
 		Versus:
 			None: 175
-			Steel: 20
+			Steel: 10
 			Light: 30
 			Heavy: 10
 			Concrete: 5
