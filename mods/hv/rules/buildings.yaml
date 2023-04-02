@@ -1532,7 +1532,7 @@ STORAGE:
 	Selectable:
 		Bounds: 2048, 2048
 	Building:
-		Footprint: ==+= +xx= =xx+ =+==
+		Footprint: __+_ +xx_ _xx+ _+__
 		Dimensions: 4,4
 	Buildable:
 		BuildPaletteOrder: 35
