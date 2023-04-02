@@ -73,7 +73,6 @@ namespace OpenRA.Mods.HV
 		public readonly string Channel = "openhv";
 		public readonly string QuitMessage = "Battle control terminated!";
 		public readonly string TimeStampFormat = "HH:mm";
-		public readonly bool ConnectAutomatically = false;
 
 		readonly IrcClient client = new IrcClient();
 		volatile Channel channel;

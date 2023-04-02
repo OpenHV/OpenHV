@@ -93,9 +93,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			mainPanel.IsVisible = () => globalChat.ConnectionStatus != ChatConnectionStatus.Disconnected;
 
 			mainPanel.Get<LabelWidget>("CHANNEL_TOPIC").GetText = () => globalChat.Topic;
-
-			if (globalChat.ConnectAutomatically)
-				globalChat.Connect(nickName);
 		}
 
 		Widget MakeHistoryWidget(object o)
