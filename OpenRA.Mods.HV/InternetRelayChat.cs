@@ -110,6 +110,7 @@ namespace OpenRA.Mods.HV
 			client.OnNickChange += OnNickChange;
 
 			client.OnChannelMessage += (_, e) => AddMessage(e.Data.Nick, e.Data.Message);
+			client.OnChannelNotice += (_, e) => AddNotification(e.Data.Message);
 			client.OnOp += (_, e) => SetUserOp(e.Whom, true);
 			client.OnDeop += (_, e) => SetUserOp(e.Whom, false);
 			client.OnVoice += (_, e) => SetUserVoiced(e.Whom, true);
@@ -165,6 +166,12 @@ namespace OpenRA.Mods.HV
 
 		void AddNotification(string text)
 		{
+			if (text == "----" || text.StartsWith("**") || text.StartsWith("<") || text.StartsWith("Image"))
+				return;
+
+			if (text.StartsWith("#####"))
+				text = text.Replace("#####", "").Trim();
+
 			var message = new ChatMessage(DateTime.Now, TimeStampFormat, ChatMessageType.Notification, null, text);
 			Game.RunAfterTick(() =>
 			{
