@@ -9,3 +9,6 @@ Metrics:
 	SystemMessageColor: FFFF00
 	TextContrastColorDark: 000000
 	TextContrastColorLight: 000000
+	GlobalChatNotificationColor: FFFF00
+	GlobalChatTextColor: FFFFFF
+	GlobalChatPlayerNameColor: FFFFFF

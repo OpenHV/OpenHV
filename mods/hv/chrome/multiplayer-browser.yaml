@@ -1,9 +1,9 @@
 Background@MULTIPLAYER_PANEL:
 	Logic: CustomMultiplayerLogic
 	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	Y: (WINDOW_BOTTOM - 560) / 2
 	Width: 900
-	Height: 600
+	Height: 575
 	Children:
 		Label@TITLE:
 			Y: 16
@@ -76,7 +76,7 @@ Background@MULTIPLAYER_PANEL:
 			X: 20
 			Y: 67
 			Width: 675
-			Height: PARENT_BOTTOM - 122
+			Height: PARENT_BOTTOM - 322
 			TopBottomSpacing: 2
 			Children:
 				ScrollItem@HEADER_TEMPLATE:
@@ -205,14 +205,14 @@ Background@MULTIPLAYER_PANEL:
 					Font: Bold
 		DropDownButton@FILTERS_DROPDOWNBUTTON:
 			X: 20
-			Y: PARENT_BOTTOM - HEIGHT - 20
+			Y: PARENT_BOTTOM - HEIGHT - 225
 			Width: 158
 			Height: 25
 			Text: Filter Games
 			Font: Bold
 		Button@RELOAD_BUTTON:
 			X: 182
-			Y: PARENT_BOTTOM - HEIGHT - 20
+			Y: PARENT_BOTTOM - HEIGHT - 225
 			Width: 26
 			Height: 25
 			Children:
@@ -228,25 +228,30 @@ Background@MULTIPLAYER_PANEL:
 						LogicTicker@ANIMATION:
 		Label@PLAYER_COUNT:
 			X: 254
-			Y: PARENT_BOTTOM - HEIGHT - 20
+			Y: PARENT_BOTTOM - HEIGHT - 225
 			Width: 190
 			Height: 25
 			Align: Center
 			Font: Bold
 		Button@DIRECTCONNECT_BUTTON:
 			X: 490
-			Y: PARENT_BOTTOM - HEIGHT - 20
+			Y: PARENT_BOTTOM - HEIGHT - 225
 			Width: 100
 			Height: 25
 			Text: Direct IP
 			Font: Bold
 		Button@CREATE_BUTTON:
 			X: 595
-			Y: PARENT_BOTTOM - HEIGHT - 20
+			Y: PARENT_BOTTOM - HEIGHT - 225
 			Width: 100
 			Height: 25
 			Text: Create
 			Font: Bold
+		Container@GLOBALCHAT_ROOT:
+			X: 20
+			Y: 360
+			Width: PARENT_RIGHT - 225
+			Height: PARENT_BOTTOM - 380
 		Button@BACK_BUTTON:
 			Key: escape
 			X: PARENT_RIGHT - WIDTH - 20
@@ -256,3 +261,4 @@ Background@MULTIPLAYER_PANEL:
 			Text: Back
 			Font: Bold
 		TooltipContainer@TOOLTIP_CONTAINER:
+

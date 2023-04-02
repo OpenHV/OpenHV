@@ -11,5 +11,6 @@
       <Private>False</Private>
     </ProjectReference>
     <PackageReference Include="DiffPlex" Version="1.7.0" />
+    <PackageReference Include="Cyberboss.SmartIrc4net.Standard" Version="0.4.7" />
   </ItemGroup>
 </Project>

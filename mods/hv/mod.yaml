@@ -138,6 +138,7 @@ ChromeLayout:
 	common|chrome/multiplayer-browserpanels.yaml
 	common|chrome/multiplayer-createserver.yaml
 	common|chrome/multiplayer-directconnect.yaml
+	hv|chrome/multiplayer-globalchat.yaml
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
@@ -255,6 +256,8 @@ WebServices:
 
 GitHubWebServices:
 	GameNewsFileName: hv-news.json
+
+InternetRelayChat:
 
 DiscordService:
 	ApplicationId: 730762985772941312

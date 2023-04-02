@@ -62,6 +62,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			createServerButton.Disabled = !hasMaps;
 
 			widget.Get<ButtonWidget>("BACK_BUTTON").OnClick = () => { Ui.CloseWindow(); onExit(); };
+			Game.LoadWidget(null, "GLOBALCHAT_PANEL", widget.Get("GLOBALCHAT_ROOT"), new WidgetArgs());
 
 			if (directConnectEndPoint != null)
 			{
