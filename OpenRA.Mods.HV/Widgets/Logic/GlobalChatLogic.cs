@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly ScrollPanelWidget nicknamePanel;
 		readonly Widget nicknameTemplate;
 		readonly TextFieldWidget inputBox;
-		readonly InternetRelayChat globalChat;
+		readonly InternetRelayChat internetRelayChat;
 
 		readonly Color textColor;
 		readonly Color notificationColor;
@@ -43,13 +43,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var textLabel = chatTemplate.Get<LabelWidget>("TEXT");
 			textLabel.GetColor = () => textColor;
 
-			globalChat = modData.Manifest.Get<InternetRelayChat>();
+			internetRelayChat = modData.Manifest.Get<InternetRelayChat>();
 
-			historyPanel.Bind(globalChat.History, MakeHistoryWidget, HistoryWidgetEquals, true);
-			nicknamePanel.Bind(globalChat.Users, MakeUserWidget, UserWidgetEquals, false);
+			historyPanel.Bind(internetRelayChat.History, MakeHistoryWidget, HistoryWidgetEquals, true);
+			nicknamePanel.Bind(internetRelayChat.Users, MakeUserWidget, UserWidgetEquals, false);
 
 			inputBox = widget.Get<TextFieldWidget>("CHAT_TEXTFIELD");
-			inputBox.IsDisabled = () => globalChat.ConnectionStatus != ChatConnectionStatus.Joined;
+			inputBox.IsDisabled = () => internetRelayChat.ConnectionStatus != ChatConnectionStatus.Joined;
 			inputBox.OnEnterKey = _ =>
 			{
 				if (inputBox.Text.Length == 0)
@@ -58,10 +58,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				if (inputBox.Text.StartsWith("/nick "))
 				{
 					var nick = inputBox.Text.Replace("/nick ", string.Empty);
-					globalChat.TrySetNickname(nick);
+					internetRelayChat.TrySetNickname(nick);
 				}
 				else
-					globalChat.SendMessage(inputBox.Text);
+					internetRelayChat.SendMessage(inputBox.Text);
 
 				inputBox.Text = "";
 
@@ -71,28 +71,28 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			// IRC protocol limits messages to 510 characters + CRLF
 			inputBox.MaxLength = 510;
 
-			var nickName = globalChat.SanitizedName(Game.Settings.Player.Name);
+			var nickName = internetRelayChat.SanitizedName(Game.Settings.Player.Name);
 			var nicknameBox = widget.Get<TextFieldWidget>("NICKNAME_TEXTFIELD");
 			nicknameBox.Text = nickName;
 			nicknameBox.OnTextEdited = () =>
 			{
-				nicknameBox.Text = globalChat.SanitizedName(nicknameBox.Text);
+				nicknameBox.Text = internetRelayChat.SanitizedName(nicknameBox.Text);
 			};
 
 			var connectPanel = widget.Get("GLOBALCHAT_CONNECT_PANEL");
-			connectPanel.IsVisible = () => globalChat.ConnectionStatus == ChatConnectionStatus.Disconnected;
+			connectPanel.IsVisible = () => internetRelayChat.ConnectionStatus == ChatConnectionStatus.Disconnected;
 
 			var disconnectButton = widget.Get<ButtonWidget>("DISCONNECT_BUTTON");
-			disconnectButton.OnClick = globalChat.Disconnect;
+			disconnectButton.OnClick = internetRelayChat.Disconnect;
 
 			var connectButton = connectPanel.Get<ButtonWidget>("CONNECT_BUTTON");
-			connectButton.IsDisabled = () => !globalChat.IsValidNickname(nicknameBox.Text);
-			connectButton.OnClick = () => globalChat.Connect(nicknameBox.Text);
+			connectButton.IsDisabled = () => !internetRelayChat.IsValidNickname(nicknameBox.Text);
+			connectButton.OnClick = () => internetRelayChat.Connect(nicknameBox.Text);
 
 			var mainPanel = widget.Get("GLOBALCHAT_MAIN_PANEL");
-			mainPanel.IsVisible = () => globalChat.ConnectionStatus != ChatConnectionStatus.Disconnected;
+			mainPanel.IsVisible = () => internetRelayChat.ConnectionStatus != ChatConnectionStatus.Disconnected;
 
-			mainPanel.Get<LabelWidget>("CHANNEL_TOPIC").GetText = () => globalChat.Topic;
+			mainPanel.Get<LabelWidget>("CHANNEL_TOPIC").GetText = () => internetRelayChat.Topic;
 		}
 
 		Widget MakeHistoryWidget(object o)
@@ -116,7 +116,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		Widget MakeUserWidget(object o)
 		{
 			var nick = (string)o;
-			var client = globalChat.Users[nick];
+			var client = internetRelayChat.Users[nick];
 
 			var item = nicknameTemplate.Clone();
 			item.Id = client.Name;
