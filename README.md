@@ -4,11 +4,11 @@ A mod for [OpenRA](https://www.openra.net) based on the [Hard Vacuum](https://lo
 
 ![Preview](https://upload.wikimedia.org/wikipedia/commons/7/75/OpenHV_Anti_Freeze.png)
 
-# Getting Started
+# Getting Started [![Packaging status](https://repology.org/badge/tiny-repos/openhv.svg)](https://repology.org/project/openra/versions)
 
 To launch the project from the development environment you must first compile the project by running `make.cmd` (Windows), or opening a terminal in the SDK directory and running `make` (Linux / macOS). You can then run `launch-game.cmd` (Windows) or `launch-game.sh` (Linux / macOS) to run the game. More details on [building](https://github.com/OpenHV/OpenHV/wiki/Build) the game are available at the wiki.
 
-# Licensing
+# Licensing ![GPL](https://img.shields.io/github/license/OpenHV/OpenHV)
 
 OpenHV just like the OpenRA engine and SDK scripts is made available under the [GPLv3](https://github.com/OpenHV/OpenHV/blob/master/COPYING) license.
 
