@@ -36,7 +36,7 @@ BASE:
 		CircleBorderWidth: 4
 	WithBuildingPlacedAnimation:
 	Power:
-		Amount: 0
+		Amount: 120
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
 		Prerequisite: structures.yi
@@ -241,7 +241,6 @@ GENERATOR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
-		Prerequisites: base
 		Description: Generates power for other structures.
 	Encyclopedia:
 		Description: Generators power the base. Loss of power effects buildings individually. Without power the radar shows no minimap, production is slowed down, support power charging is paused, base defense system stop operating.\nTo restore power you can build more generators or as a short term action disable certain buildings by clicking the zap button and selected buildings to power down. With power lines cut the actions are more drastic: buildings will be unable to produce or contribute to the tech tree also canceling current production queues if they are effected.\nAlways plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
@@ -285,7 +284,7 @@ RADAR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
-		Prerequisites: generator, storage, ~structures.yi
+		Prerequisites: storage, ~structures.yi
 		Description: Provides an overview\nof the battlefield.\n  Calls in reinforcements.\n  Requires power to operate.
 	Encyclopedia:
 		Description: The radar enables a minimap on top right screen of the command interface. It also provides a larger amount of local vision around itself. As a tech building it is opening up the aerial branch of units. It also provides the first tier of support powers which can be an air strike or orbital drop pod reinforcements to be placed anywhere on the battlefield. For the air strike hold the mouse button and move the pointer to set the flight path.
@@ -348,7 +347,7 @@ RADAR:
 RADAR2:
 	Inherits: RADAR
 	Buildable:
-		Prerequisites: generator, storage, ~structures.sc
+		Prerequisites: storage, ~structures.sc
 	-AirstrikePower:
 	DropPodsPower:
 		Cursor: droppod
@@ -473,7 +472,7 @@ MODULE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
-		Prerequisites: generator, ~structures.yi
+		Prerequisites: ~structures.yi
 		Description: Produces and repairs very light vehicles.
 	Encyclopedia:
 		Description: The module is the assembly for the smallest type of vehicle: the pods. They are very lightly armored and only contain one occupant, but provide some mobility and protection against harsh environments on planets with limited terraforming. Pods can come back in the immediate vicinity of the module to bandage wounds and provide some quick repairs on the vehicle.
@@ -568,7 +567,7 @@ MODULE:
 MODULE2:
 	Inherits: MODULE
 	Buildable:
-		Prerequisites: generator, ~structures.sc
+		Prerequisites: ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.sc
 	RenderSprites:
@@ -1537,7 +1536,6 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Prerequisites: generator
 		Description: Stores excess refined\nresources.
 	Valued:
 		Cost: 1400
