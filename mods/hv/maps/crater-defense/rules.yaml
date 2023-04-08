@@ -68,12 +68,12 @@ Exit:
 
 ^Vehicle:
 	GivesBounty:
-		Percentage: 50
+		Percentage: 25
 	MustBeDestroyed:
 
 ^TrackedVehicle:
 	GivesBounty:
-		Percentage: 75
+		Percentage: 50
 	MustBeDestroyed:
 	SpawnScrapOnDeath:
 		Probability: 0
@@ -121,6 +121,8 @@ TURRET:
 		Prerequisites: ~towerbase, ~structures.yi
 	Power:
 		Amount: 0
+        Valued:
+               Cost: 2000
 	Building:
 		Footprint: x x
 		Dimensions: 2,1
