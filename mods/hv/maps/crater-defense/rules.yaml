@@ -14,6 +14,8 @@ Player:
 		ExploredMapCheckboxEnabled: True
 		ExploredMapCheckboxVisible: False
 	-ModularBot@RogueAI:
+	ClassicProductionQueue@Defense:
+		BuildDurationModifier: 25
 
 World:
 	LuaScript:
@@ -68,12 +70,12 @@ Exit:
 
 ^Vehicle:
 	GivesBounty:
-		Percentage: 50
+		Percentage: 25
 	MustBeDestroyed:
 
 ^TrackedVehicle:
 	GivesBounty:
-		Percentage: 75
+		Percentage: 50
 	MustBeDestroyed:
 	SpawnScrapOnDeath:
 		Probability: 0
@@ -157,7 +159,7 @@ CLUSTERTURRET:
 	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: ~towerbase, ~bunker, ~turret, ~amplifier, ~structures.sc
+		Prerequisites: ~towerbase, bunker, turret, ~structures.sc
 		Description: Base defense.\n  Requires power to operate.\n  Strong vs Tanks and Pods
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
@@ -202,7 +204,7 @@ AMPLIFIER:
 	Inherits: ^DefenseBuilding
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: ~towerbase, ~bunker, ~turret, ~structures.sc
+		Prerequisites: ~towerbase, bunker, turret, clusterturret, ~structures.sc
 		Description: Weapon range amplifier.\n  Requires power to operate.
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
