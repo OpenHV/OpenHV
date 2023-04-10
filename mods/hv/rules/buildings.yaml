@@ -172,6 +172,8 @@ BASE:
 	WithProductionOverlay@base:
 		Sequence: production-inprogress
 		RequiresCondition: !burning
+	AcceptsDeliveredResources:
+		DeliveryVehicleType: tanker2
 
 BASE2:
 	Inherits: BASE
