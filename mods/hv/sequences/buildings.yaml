@@ -1652,7 +1652,7 @@ oresmelt:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
 		ZOffset: 512
-		Offset: 0, -5
+		Offset: 0, -2
 	idle: bits/oresmelt.png
 	active: bits/oresmelt.png
 		Start: 1
