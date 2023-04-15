@@ -1,7 +1,9 @@
 #!/bin/sh
+# example launch script, see https://github.com/OpenHV/OpenHV/wiki/Server for details
+
 # Usage:
 #  $ ./launch-dedicated.sh # Launch a dedicated server with default settings
-#  $ Mod="<mod id>" ./launch-dedicated.sh # Launch a dedicated server with default settings but override the Mod
+#  $ NAME="My Server" ./launch-dedicated.sh # Launch a dedicated server with default settings but override the server name.
 #  Read the file to see which settings you can override
 
 set -e
@@ -46,6 +48,7 @@ LAUNCH_MOD="${Mod:-"${MOD_ID}"}"
 LISTEN_PORT="${ListenPort:-"1234"}"
 ADVERTISE_ONLINE="${AdvertiseOnline:-"True"}"
 PASSWORD="${Password:-""}"
+RECORD_REPLAYS="${RecordReplays:-"False"}"
 
 REQUIRE_AUTHENTICATION="${RequireAuthentication:-"False"}"
 PROFILE_ID_BLACKLIST="${ProfileIDBlacklist:-""}"
@@ -54,7 +57,10 @@ PROFILE_ID_WHITELIST="${ProfileIDWhitelist:-""}"
 ENABLE_SINGLE_PLAYER="${EnableSingleplayer:-"False"}"
 ENABLE_SYNC_REPORTS="${EnableSyncReports:-"False"}"
 ENABLE_GEOIP="${EnableGeoIP:-"True"}"
+ENABLE_LINT_CHECKS="${EnableLintChecks:-"True"}"
 SHARE_ANONYMISED_IPS="${ShareAnonymizedIPs:-"True"}"
+
+FLOOD_LIMIT_JOIN_COOLDOWN="${FloodLimitJoinCooldown:-"5000"}"
 
 SUPPORT_DIR="${SupportDir:-""}"
 
@@ -68,16 +74,22 @@ fi
 cd "${ENGINE_DIRECTORY}"
 
 while true; do
-     MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" ${RUNTIME_LAUNCHER} bin/OpenRA.Server.dll Engine.EngineDir=".." Game.Mod="${LAUNCH_MOD}" \
-     Server.Name="${NAME}" Server.ListenPort="${LISTEN_PORT}" \
-     Server.AdvertiseOnline="${ADVERTISE_ONLINE}" \
-     Server.Password="${PASSWORD}" \
-     Server.RequireAuthentication="${REQUIRE_AUTHENTICATION}" \
-     Server.ProfileIDBlacklist="${PROFILE_ID_BLACKLIST}" \
-     Server.ProfileIDWhitelist="${PROFILE_ID_WHITELIST}" \
-     Server.EnableSingleplayer="${ENABLE_SINGLE_PLAYER}" \
-     Server.EnableSyncReports="${ENABLE_SYNC_REPORTS}" \
-     Server.EnableGeoIP="${ENABLE_GEOIP}" \
-     Server.ShareAnonymizedIPs="${SHARE_ANONYMISED_IPS}" \
-     Engine.SupportDir="${SUPPORT_DIR}"
+	MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS}" \
+	${RUNTIME_LAUNCHER} bin/OpenRA.Server.dll Engine.EngineDir=".." Game.Mod="${LAUNCH_MOD}" \
+	Server.Name="${NAME}" \
+	Server.Map="${MAP}" \
+	Server.ListenPort="${LISTEN_PORT}" \
+	Server.AdvertiseOnline="${ADVERTISE_ONLINE}" \
+	Server.Password="${PASSWORD}" \
+	Server.RecordReplays="${RECORD_REPLAYS}" \
+	Server.RequireAuthentication="${REQUIRE_AUTHENTICATION}" \
+	Server.ProfileIDBlacklist="${PROFILE_ID_BLACKLIST}" \
+	Server.ProfileIDWhitelist="${PROFILE_ID_WHITELIST}" \
+	Server.EnableSingleplayer="${ENABLE_SINGLE_PLAYER}" \
+	Server.EnableSyncReports="${ENABLE_SYNC_REPORTS}" \
+	Server.EnableGeoIP="${ENABLE_GEOIP}" \
+	Server.EnableLintChecks="${ENABLE_LINT_CHECKS}" \
+	Server.ShareAnonymizedIPs="${SHARE_ANONYMISED_IPS}" \
+	Server.FloodLimitJoinCooldown="${FLOOD_LIMIT_JOIN_COOLDOWN}" \
+	Engine.SupportDir="${SUPPORT_DIR}"
 done

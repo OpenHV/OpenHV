@@ -1,11 +1,13 @@
-:: example launch script, see https://github.com/OpenRA/OpenRA/wiki/Dedicated for details
+:: example launch script, see https://github.com/OpenHV/OpenHV/wiki/Server for details
 
 @echo on
 
 set Name="Dedicated Server"
+set Map=""
 set ListenPort=1234
 set AdvertiseOnline=True
 set Password=""
+set RecordReplays=False
 
 set RequireAuthentication=False
 set ProfileIDBlacklist=""
@@ -14,7 +16,10 @@ set ProfileIDWhitelist=""
 set EnableSingleplayer=False
 set EnableSyncReports=False
 set EnableGeoIP=True
+set EnableLintChecks=True
 set ShareAnonymizedIPs=True
+
+set FloodLimitJoinCooldown=5000
 
 @echo off
 setlocal EnableDelayedExpansion
@@ -33,7 +38,7 @@ if not exist %ENGINE_DIRECTORY%\bin\OpenRA.exe goto noengine
 cd %ENGINE_DIRECTORY%
 
 :loop
-bin\OpenRA.Server.exe Game.Mod=%MOD_ID% Engine.EngineDir=".." Server.Name=%Name% Server.ListenPort=%ListenPort% Server.AdvertiseOnline=%AdvertiseOnline% Server.EnableSingleplayer=%EnableSingleplayer% Server.Password=%Password% Server.RequireAuthentication=%RequireAuthentication% Server.ProfileIDBlacklist=%ProfileIDBlacklist% Server.ProfileIDWhitelist=%ProfileIDWhitelist% Server.EnableSyncReports=%EnableSyncReports% Server.EnableGeoIP=%EnableGeoIP% Server.ShareAnonymizedIPs=%ShareAnonymizedIPs% Engine.SupportDir=%SupportDir%
+bin\OpenRA.Server.exe Game.Mod=%MOD_ID% Engine.EngineDir=".." Server.Name=%Name% Server.Map=%Map% Server.ListenPort=%ListenPort% Server.AdvertiseOnline=%AdvertiseOnline% Server.EnableSingleplayer=%EnableSingleplayer% Server.Password=%Password% Server.RequireAuthentication=%RequireAuthentication% Server.RecordReplays=%RecordReplays% Server.ProfileIDBlacklist=%ProfileIDBlacklist% Server.ProfileIDWhitelist=%ProfileIDWhitelist% Server.EnableSyncReports=%EnableSyncReports% Server.EnableGeoIP=%EnableGeoIP% Server.ShareAnonymizedIPs=%ShareAnonymizedIPs% Server.EnableLintChecks=%EnableLintChecks% Engine.SupportDir=%SupportDir% Server.FloodLimitJoinCooldown=%FloodLimitJoinCooldown%
 goto loop
 
 :noengine
