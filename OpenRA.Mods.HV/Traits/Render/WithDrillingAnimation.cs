@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see AUTHORS)
+ * Copyright 2019-2023 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -47,6 +47,11 @@ namespace OpenRA.Mods.Common.HV.Render
 		void INotifyResourceCollection.Mining(Actor self)
 		{
 			body.PlayCustomAnimationRepeating(self, info.Sequence);
+		}
+
+		void INotifyResourceCollection.Suspended(Actor self)
+		{
+			body.CancelCustomAnimation(self);
 		}
 
 		void INotifyResourceCollection.Depletion(Actor self)

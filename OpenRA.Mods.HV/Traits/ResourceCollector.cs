@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
@@ -76,6 +77,7 @@ namespace OpenRA.Mods.HV.Traits
 		int left;
 		int ticks;
 		bool depleted;
+		bool suspended;
 
 		[Sync]
 		public int Truckload { get; private set; }
@@ -131,6 +133,24 @@ namespace OpenRA.Mods.HV.Traits
 			if (--ticks < 0)
 			{
 				ticks = info.Interval;
+
+				if (!self.Owner.World.ActorsWithTrait<AcceptsDeliveredResources>().Any(d => d.Actor.Owner == self.Owner))
+				{
+					foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
+						notify.Suspended(self);
+
+					suspended = true;
+
+					return;
+				}
+				else if (suspended)
+				{
+					foreach (var notify in self.TraitsImplementing<INotifyResourceCollection>())
+						notify.Mining(self);
+
+					suspended = false;
+				}
+
 				Truckload += info.Amount;
 				left = Math.Max(left - info.Amount, info.MinimumReserves);
 				var density = Math.Max(Math.Round(left / (float)deposit), info.MinimumDensity);
