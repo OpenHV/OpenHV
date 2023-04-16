@@ -33,6 +33,7 @@
   <url type="help">https://github.com/OpenHV/OpenHV/wiki</url>
   <url type="faq">https://github.com/OpenHV/OpenHV/wiki/FAQ</url>
   <url type="contact">https://matrix.to/#/+openhv:matrix.org</url>
+  <url type="donation">https://opencollective.com/openhv</url>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-realistic">moderate</content_attribute>
     <content_attribute id="violence-bloodshed">moderate</content_attribute>
