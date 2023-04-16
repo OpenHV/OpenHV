@@ -101,22 +101,29 @@ TOWERBASE:
 		Produces: Defense
 
 BUNKER:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		Prerequisites: ~towerbase, ~structures.yi
 	Power:
 		Amount: 0
 	Cargo:
 		UnloadTerrainTypes: None
+	ProvidesPrerequisite:
+		Prerequisite: bunker
 
 BUNKER2:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		Prerequisites: ~towerbase, ~structures.sc
 	Power:
 		Amount: 0
 	Cargo:
 		UnloadTerrainTypes: None
+	ProvidesPrerequisite:
+		Prerequisite: bunker
 
 TURRET:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		Prerequisites: ~towerbase, ~structures.yi
 	Power:
@@ -125,11 +132,11 @@ TURRET:
 		Footprint: x x
 		Dimensions: 2,1
 		LocalCenterOffset: 0,0,0
-	-WithIdleOverlay@Shadow:
-	Selectable:
-		Bounds: 1256, 1480, 0, -256
+	ProvidesPrerequisite:
+		Prerequisite: turret
 
 TURRET2:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
 	Buildable:
 		Prerequisites: ~towerbase, ~structures.sc
 	Power:
@@ -138,9 +145,102 @@ TURRET2:
 		Footprint: x x
 		Dimensions: 2,1
 		LocalCenterOffset: 0,0,0
-	-WithIdleOverlay@Shadow:
+	ProvidesPrerequisite:
+		Prerequisite: turret
+
+SCOUT1:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+
+CLUSTERTURRET:
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~towerbase, ~bunker, ~turret, ~amplifier, ~structures.sc
+		Description: Base defense.\n  Requires power to operate.\n  Strong vs Tanks and Pods
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Cluster Turret
+	Health:
+		HP: 55000
+	Armament:
+		Weapon: cluster
+		LocalOffset: 0,0,400
+		FireDelay: 6
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 8c0
+	RevealsShroud:
+		Range: 7c0
+	AttackTurreted:
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithAttackAnimation@Normal:
+		Sequence: shoot
+		RequiresCondition: !burning
+	WithAttackAnimation@Damaged:
+		Sequence: shoot-damaged
+		RequiresCondition: burning
+	Turreted:
+		TurnSpeed: 512
+		RealignDelay: -1
+		RequiresCondition: !build-incomplete
+
+AMPLIFIER:
+	Inherits: ^DefenseBuilding
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: ~towerbase, ~bunker, ~turret, ~structures.sc
+		Description: Weapon range amplifier.\n  Requires power to operate.
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: Amplifier
+	Health:
+		HP: 55000
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 4c0
+	RevealsShroud:
+		Range: 7c0
+	WithIdleOverlay:
+		Sequence: animation
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	ProximityExternalCondition:
+		Condition: weapon-range-upgrade
+		Range: 4c0
+	ProvidesPrerequisite:
+		Prerequisite: amplifier
+
+^WeaponRangeUpgrade:
+	RangeMultiplier:
+		Modifier: 175
+		RequiresCondition: weapon-range-upgrade
+	ExternalCondition:
+		Condition: weapon-range-upgrade
 
 AATURRET:
 	Buildable:

@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -31,8 +31,8 @@ Players:
 	PlayerReference@Multi0:
 		Name: Multi0
 		Playable: True
-		Faction: sc
 		LockFaction: True
+		Faction: sc
 		Color: 805040
 		Enemies: Creeps
 
@@ -56,3 +56,5 @@ Actors:
 Rules: rules.yaml
 
 Sequences: sequences.yaml
+
+Weapons: weapons.yaml
