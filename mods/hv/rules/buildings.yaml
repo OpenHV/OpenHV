@@ -197,7 +197,7 @@ OUTPOST:
 	Tooltip:
 		Name: Outpost
 	Encyclopedia:
-		Description: This structure cannot be summoned on the main base like the others. It is created by deploying a builder. Thus it can be used to extend the base radius or even create bridge heads far away from the main base. Another important feature is that it is the only building than can build another base, but only in the event of the initial main base getting destroyed.
+		Description: This structure cannot be summoned on the main base like the others. It is created by deploying a builder. Thus it can be used to extend the base radius or even create bridge heads far away from the main base. Another important feature is that it is the only building that can build another base, but only in the event of the initial main base getting destroyed.
 		Order: 30
 		Category: Buildings
 	Health:
@@ -243,7 +243,7 @@ GENERATOR:
 		BuildPaletteOrder: 10
 		Description: Generates power for other structures.
 	Encyclopedia:
-		Description: Generators power the base. Loss of power effects buildings individually. Without power the radar shows no minimap, production is slowed down, support power charging is paused, base defense system stop operating.\nTo restore power you can build more generators or as a short term action disable certain buildings by clicking the zap button and selected buildings to power down. With power lines cut the actions are more drastic: buildings will be unable to produce or contribute to the tech tree also canceling current production queues if they are effected.\nAlways plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
+		Description: Generators power the base. Loss of power effects buildings individually. Without power the radar shows no minimap, production is slowed down, support power charging is paused, base defense system stop operating.\n\nTo restore power you can build more generators or as a short term action disable certain buildings by clicking the zap button and selected buildings to power down. With power lines cut the actions are more drastic: buildings will be unable to produce or contribute to the tech tree also canceling current production queues if they are effected.\n\nAlways plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
 		Order: 10
 		Category: Buildings
 	Valued:
@@ -646,6 +646,10 @@ STARPORT:
 		Bounds: 2048, 3072
 	Tooltip:
 		Name: Starport
+	Encyclopedia:
+		Description: The starport is the base of operations for the air force. Underground facilities construct new aircraft that are self-sufficient for the time of the battle requiring no refueling nor rearming.
+		Order: 60
+		Category: Buildings
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 120
@@ -713,6 +717,7 @@ STARPORT2:
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.sc
 	-WithProductionExitOverlay:
+	-Encyclopedia:
 
 FACTORY:
 	AlwaysVisible:
@@ -735,7 +740,11 @@ FACTORY3:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Yuruki Industries Vehicle Factory
+		Name: Vehicle Factory
+	Encyclopedia:
+		Description: The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Righ-click on the ground to set a rally point for new vehicles to gather around.
+		Order: 70
+		Category: Buildings
 	Building:
 		Footprint: xx xx ++ ++
 		Dimensions: 2,4
@@ -972,8 +981,7 @@ FACTORY4:
 		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: factory4
-	Tooltip:
-		Name: Synapol Corporation Vehicle Factory
+	-Encyclopedia:
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
@@ -991,6 +999,10 @@ TECHCENTER:
 		Cost: 2000
 	Tooltip:
 		Name: Technology Download Center
+	Encyclopedia:
+		Description: Company policy is that classified technology can not be transported with unguarded colony ships. It has be wired in from an encrypted interstellar connection and stored in a secure facility. Only then the production facilities get access to the blue prints for machinery designed to resolve conflicts fast and efficient. This facilities requires a lot of power to keep the servers running. Powering it down and access to restricted technology is temporarily lost.
+		Order: 80
+		Category: Buildings
 	ProvidesPrerequisite@BuildingName:
 		Prerequisite: techcenter
 		RequiresCondition: !powerdown
@@ -1029,6 +1041,10 @@ ORESMELT:
 		Cost: 1200
 	Tooltip:
 		Name: Ore Smelter
+	Encyclopedia:
+		Description: The ore smelter is an economy boosting building for long lasting conflicts. It refines the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. Heating up the ore however requires a lot of energy.
+		Order: 90
+		Category: Buildings
 	Buildable:
 		Queue: Building
 		Description: Ore Smelter.\nProcesses resources for extra credits.
@@ -1063,6 +1079,10 @@ BUNKER:
 		Cost: 600
 	Tooltip:
 		Name: Bunker
+	Encyclopedia:
+		Description: The bunker houses a single machine gun nest that is effective against lightly armored pods. While being protected against small arms, rockets or tank shells quickly destroy the bunker including its inhabitants. Right-click on the building to force the personnel to leave. Order another pod type inside to change the weaponry.
+		Order: 100
+		Category: Buildings
 	Health:
 		HP: 40000
 	Turreted:
@@ -1101,6 +1121,7 @@ BUNKER2:
 		Prerequisites: module, ~structures.sc
 	AttackGarrisoned:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
+	-Encyclopedia:
 
 TURRET:
 	Inherits: ^DefenseBuilding
@@ -1113,6 +1134,10 @@ TURRET:
 		Cost: 1000
 	Tooltip:
 		Name: Turret
+	Encyclopedia:
+		Description: The turret is a basic defense against armored vehicles. It is ineffective against pods and can't attack air units. With power turned off the turret can't operate making it vulnerable.
+		Order: 110
+		Category: Buildings
 	Health:
 		HP: 55000
 	Armament:
@@ -1230,6 +1255,10 @@ AATURRET2:
 		Cost: 1250
 	Tooltip:
 		Name: AA Turret
+	Encyclopedia:
+		Description: This ground based anti-air defense system quickly downs enemy aircraft. It can also take down ballistic rockets inside its radius of operation. It requires power to operate and can be individually turned off to protect the power grid.
+		Order: 110
+		Category: Buildings
 	Health:
 		HP: 55000
 	Armament:
@@ -1265,6 +1294,10 @@ HOWITZER:
 		Cost: 2000
 	Tooltip:
 		Name: Grand Howitzer
+	Encyclopedia:
+		Description: A large cannon with a range that spans over the whole battlefield. It can fire a barrage of multiple shells at once. The shells can not be intercepted. It takes a while to reload so only the battlefield command is allowed to operate it manually. It softens up the defenses, making a followup strike force even more effective.
+		Order: 110
+		Category: Buildings
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1337,6 +1370,10 @@ FIELD:
 		Cost: 1500
 	Tooltip:
 		Name: Force Field Generator
+	Encyclopedia:
+		Description: Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amout of energy.
+		Order: 120
+		Category: Buildings
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1403,6 +1440,10 @@ SILO:
 		Cost: 2500
 	Tooltip:
 		Name: Launch Command
+	Encyclopedia:
+		Description: The planet side launch command connects to an orbital bomber who can strike anywhere on the battlefield. While the effect is devastating on the battlefield the effectiveness of the weapon is countered by its long reload times which also require power to operate. A well placed strike followed up by an attack squad can oftentimes change the tide of the battle.
+		Order: 120
+		Category: Buildings
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
@@ -1472,6 +1513,10 @@ UPLINK:
 		Cost: 2500
 	Tooltip:
 		Name: Orbital Strike Uplink Command
+	Encyclopedia:
+		Description: An orbital railgun uses electromagnetic force to launch high-velocity projectiles. It is a more surgical strike than the nuclear bomb and it cannot be evaded. However it damages only the area surrounding the impact. It requires a long time to reload and consumes energy in that process.
+		Order: 130
+		Category: Buildings
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
@@ -1543,6 +1588,10 @@ STORAGE:
 		TargetTypes: Ground, Structure
 	Tooltip:
 		Name: Storage
+	Encyclopedia:
+		Description: Storage buildings are the center of mining operations. Upon fabrication it spawns a miner that can be sent to a resource deposit and it also allows the construction of additional miners in the factory. Once a storage and a mining tower exists, tankers will automatically deliver resources from mining operations into the storage building where the compensation takes place. With no storage building to drop off available all mining operations will halt.
+		Order: 10
+		Category: Buildings
 	Health:
 		HP: 55000
 	Armor:
@@ -1626,6 +1675,10 @@ TELEVATR:
 		Cost: 1500
 	Tooltip:
 		Name: Televator
+	Encyclopedia:
+		Description: Televators can instantly transport any vehicle onto a connected televator. To select the destination in a televator network with more than two endpoints, select and then right-click on the exit. All nodes require power to operate. Televators can be rotated as two building variants exist.
+		Order: 200
+		Category: Buildings
 	Building:
 		Footprint: ++
 		Dimensions: 2,1
@@ -1677,6 +1730,7 @@ TELEVTR2:
 	Building:
 		Footprint: + +
 		Dimensions: 1,2
+	-Encyclopedia:
 
 HARBOR:
 	Inherits: ^BaseBuilding
@@ -1697,6 +1751,10 @@ HARBOR:
 		Cost: 1000
 	Tooltip:
 		Name: Harbor
+	Encyclopedia:
+		Description: The harbor is the production site for the navy. It also operates as a repair bay for damaged vessels. It can only be placed on shallow waters.
+		Order: 250
+		Category: Buildings
 	Building:
 		Footprint: xxx x=x ___
 		Dimensions: 3,3
@@ -1788,6 +1846,7 @@ HARBOR2:
 		RequiresCondition: !powerdown
 	Buildable:
 		Prerequisites: module, ~structures.sc
+	-Encyclopedia:
 
 BARRIER:
 	Inherits: ^Building
@@ -1816,6 +1875,10 @@ BARRIER:
 		Bounds: 1024, 1512, 0, -256
 	Tooltip:
 		Name: Wall
+	Encyclopedia:
+		Description: Barriers are very basic defense buildings that block bullets. They don't have to be destroyed in order to conquer an enemy base.
+		Order: 220
+		Category: Buildings
 	Valued:
 		Cost: 200
 	CustomSellValue:
@@ -1989,6 +2052,10 @@ HGATE:
 		Sequence: idle-right
 		OpenSequence: open-right
 		RequiresCondition: right && !left
+	Encyclopedia:
+		Description: Gates can be placed onto or next to walls which will then automatically connect with them. Gates open for friendly units to not disrupt mining operations on heavily fortified outposts.
+		Order: 230
+		Category: Buildings
 
 VGATE:
 	Inherits: ^GATE
@@ -2153,6 +2220,10 @@ RECONSTRUCTOR:
 		Bounds: 2048, 2457, 0, -204
 	Tooltip:
 		Name: Tech Reconstructor
+	Encyclopedia:
+		Description: Both machine and human operator can be healed and restored using nano technology. This advanced form of medicine is only available on some planets which also made it affordable due to universal healthcare plans for the local population. Capture a facilty to grant access to your troops. Lasts only as long as the facility is in possession.
+		Order: 300
+		Category: Buildings
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
@@ -2209,6 +2280,10 @@ EXTRACTOR:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
 		Name: Resource Extractor
+	Encyclopedia:
+		Description: Civilians in the area might also try to harvest the planet's resources. Capture the facility to keep it running but force all the profits onto the company's account.
+		Order: 320
+		Category: Buildings
 	TooltipDescription@Allies:
 		Description: Provides additional resources.
 		ValidRelationships: Ally
@@ -2261,6 +2336,10 @@ COMLINK:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
 		Name: Communication Link
+	Encyclopedia:
+		Description: On planets with a satellite network civilian communication arrays can be captured and used to spy on your opponent anywhere on the battlefield for as long as the satellite stays in range. It requires power and takes time to reposition again.
+		Order: 330
+		Category: Buildings
 	TooltipDescription@Allies:
 		Description: Provides battlefield intelligence.
 		ValidRelationships: Ally
@@ -2327,6 +2406,10 @@ WATCHTOWER:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
 		Name: Watch Tower
+	Encyclopedia:
+		Description: A larger building equipped with sensors to surveill the area. It does not require an engineer to capture, but only some forces stationed next to it in order to gain access.
+		Order: 340
+		Category: Buildings
 	TooltipDescription@Allies:
 		Description: Provides additional vision.
 		ValidRelationships: Ally
@@ -2380,6 +2463,10 @@ DROPZONE:
 	Inherits@Flame: ^BuildingFlame2
 	Tooltip:
 		Name: Drop Zone
+	Encyclopedia:
+		Description: Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
+		Order: 350
+		Category: Buildings
 	TooltipDescription:
 		Description: Airborne reinforcement pad
 	Building:
@@ -2440,6 +2527,10 @@ FLAGPOST:
 		Cost: 1000
 	Tooltip:
 		Name: Flagpost
+	Encyclopedia:
+		Description: This flag marks an objective that has to be controlled for a certain amount of time in order to gain strategic victory over your opponent.
+		Order: 400
+		Category: Buildings
 	Health:
 		HP: 50000
 	Building:
