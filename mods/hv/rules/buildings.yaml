@@ -149,18 +149,14 @@ BASE:
 	WithProductionExitOverlay@East3:
 		ExitCell: 2,3
 		Sequence: active-platform2
-	WithIdleOverlay@make-platform1:
+	WithMakeOverlay@Platform1:
 		Sequence: make-platform1
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform1:
+	WithIdleOverlay@Platform1:
 		Sequence: idle-platform1
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform2:
+	WithMakeOverlay@Platform2:
 		Sequence: make-platform2
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform2:
+	WithIdleOverlay@Platform2:
 		Sequence: idle-platform2
 		RequiresCondition: !build-incomplete
 	TerrainLightSource:
@@ -169,7 +165,7 @@ BASE:
 		RedTint: 0
 		GreenTint: 0
 		BlueTint: 0.4
-	WithProductionOverlay@base:
+	WithProductionOverlay@Base:
 		Sequence: production-inprogress
 		RequiresCondition: !burning
 
@@ -770,34 +766,26 @@ FACTORY3:
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.yi
 		RequiresCondition: !powerdown
-	WithIdleOverlay@platform1:
+	WithIdleOverlay@Platform1:
 		Sequence: idle-platform1
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform1:
+	WithMakeOverlay@Platform1:
 		Sequence: make-platform1
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform2:
+	WithIdleOverlay@Platform2:
 		Sequence: idle-platform2
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform2:
+	WithMakeOverlay@Platform2:
 		Sequence: make-platform2
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform3:
+	WithIdleOverlay@Platform3:
 		Sequence: idle-platform3
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform3:
+	WithMakeOverlay@Platform3:
 		Sequence: make-platform3
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform4:
+	WithIdleOverlay@Platform4:
 		Sequence: idle-platform4
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform4:
+	WithMakeOverlay@Platform4:
 		Sequence: make-platform4
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
 	RallyPoint:
 		IsPlayerPalette: true
 		Palette: green
@@ -1631,31 +1619,23 @@ STORAGE:
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform1:
+	WithMakeOverlay@Platform1:
 		Sequence: make-platform1
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform2:
+	WithIdleOverlay@Platform2:
 		Sequence: idle-platform2
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform2:
+	WithMakeOverlay@Platform2:
 		Sequence: make-platform2
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform3:
+	WithIdleOverlay@Platform3:
 		Sequence: idle-platform3
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform3:
+	WithMakeOverlay@Platform3:
 		Sequence: make-platform3
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
-	WithIdleOverlay@platform4:
+	WithIdleOverlay@Platform4:
 		Sequence: idle-platform4
 		RequiresCondition: !build-incomplete
-	WithIdleOverlay@make-platform4:
+	WithMakeOverlay@Platform4:
 		Sequence: make-platform4
-		RequiresCondition: build-incomplete
-		PauseOnCondition: !build-incomplete
 
 TELEVATR:
 	Inherits: ^BaseBuilding

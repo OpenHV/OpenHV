@@ -75,7 +75,6 @@ base:
 		Offset: -10, 10
 	make-platform1: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -10, 10
 	active-platform1: bits/creation.png
@@ -96,7 +95,6 @@ base:
 		Offset: 10, 10
 	make-platform2: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 10, 10
 	active-platform2: bits/creation.png
@@ -556,7 +554,6 @@ factory2:
 		Offset: -10, 10
 	make-platform1: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -10, 10
 	idle-platform2: bits/platform.png
@@ -569,7 +566,6 @@ factory2:
 		Offset: 10, 10
 	make-platform2: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 10, 10
 	idle-platform3: bits/platform.png
@@ -582,7 +578,6 @@ factory2:
 		Offset: -10, 30
 	make-platform3: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -10, 30
 	idle-platform4: bits/platform.png
@@ -595,7 +590,6 @@ factory2:
 		Offset: 10, 30
 	make-platform4: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 10, 30
 	active-creation: bits/creation4.png
@@ -686,7 +680,6 @@ factory3:
 		Offset: -10, 10
 	make-platform1: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -10, 10
 	idle-platform2: bits/platform.png
@@ -699,7 +692,6 @@ factory3:
 		Offset: 10, 10
 	make-platform2: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 10, 10
 	idle-platform3: bits/platform.png
@@ -712,7 +704,6 @@ factory3:
 		Offset: -10, 30
 	make-platform3: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -10, 30
 	idle-platform4: bits/platform.png
@@ -725,7 +716,6 @@ factory3:
 		Offset: 10, 30
 	make-platform4: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 10, 30
 	active-creation: bits/creation4.png
@@ -1472,7 +1462,6 @@ storage2:
 		Offset: -30, -10
 	make-platform1: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -30, -10
 		ZOffset: -2c511
@@ -1486,7 +1475,6 @@ storage2:
 		Offset: 30, 10
 	make-platform2: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 30, 10
 		ZOffset: -2c511
@@ -1500,7 +1488,6 @@ storage2:
 		Offset: -10, 30
 	make-platform3: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: -10, 30
 		ZOffset: -2c511
@@ -1514,7 +1501,6 @@ storage2:
 		Offset: 10, -30
 	make-platform4: bits/platform.png
 		Length: 31
-		Reverses: true
 		tick: 40
 		Offset: 10, -30
 		ZOffset: -2c511
