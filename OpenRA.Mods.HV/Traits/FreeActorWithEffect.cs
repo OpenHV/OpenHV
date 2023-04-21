@@ -31,6 +31,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Custom palette name")]
 		public readonly string Palette = null;
 
+		[Desc("Start after this duration of miliseconds.")]
+		public readonly int Delay = 0;
+
 		public override object Create(ActorInitializer init) { return new FreeActorWithEffect(init, this); }
 	}
 
@@ -53,16 +56,19 @@ namespace OpenRA.Mods.HV.Traits
 
 			var location = self.Location + Info.SpawnOffset;
 			var position = self.World.Map.CenterOfCell(location);
-			self.World.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
 
-			self.World.AddFrameEndTask(w =>
+			Game.RunAfterDelay(info.Delay, () =>
 			{
-				w.CreateActor(Info.Actor, new TypeDictionary
+				self.World.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
+				self.World.AddFrameEndTask(w =>
 				{
-					new ParentActorInit(self),
-					new LocationInit(location),
-					new OwnerInit(self.Owner),
-					new FacingInit(Info.Facing),
+					w.CreateActor(Info.Actor, new TypeDictionary
+					{
+						new ParentActorInit(self),
+						new LocationInit(location),
+						new OwnerInit(self.Owner),
+						new FacingInit(Info.Facing),
+					});
 				});
 			});
 		}

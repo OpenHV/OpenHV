@@ -1621,11 +1621,12 @@ STORAGE:
 		DeliveryVehicleType: tanker2
 	FreeActorWithEffect:
 		Actor: miner
-		SpawnOffset: 2,3
+		SpawnOffset: 1,3
 		Facing: 512
 		Palette: effect
 		Image: energyball
 		Sequence: appear
+		Delay: 2000
 	ProvidesPrerequisite@BuildingName:
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
