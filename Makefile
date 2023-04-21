@@ -140,11 +140,11 @@ check-variables:
 engine: check-variables check-sdk-scripts
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
-ifeq ("$(RUNTIME)","net6")
 ifeq ("$(TARGETPLATFORM)","unix-generic")
+ifeq ("$(RUNTIME)","net6")
 	@rm $(ENGINE_DIRECTORY)/bin/*.so
-	@cd $(ENGINE_DIRECTORY) && ./configure-system-libraries.sh
 endif
+	@cd $(ENGINE_DIRECTORY) && ./configure-system-libraries.sh
 endif
 
 all: engine
