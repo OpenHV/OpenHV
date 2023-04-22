@@ -30,7 +30,7 @@ World:
 		Palette: cloud
 		Speed: 20, 30
 	LuaScript:
-		Scripts: hv|scripts/campaign.lua, ice-river.lua
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, ice-river.lua
 	MissionData:
 		Briefing: A bridgehead on planet Itrium has been successfully established. The mission is now to expand Yuruki Industries footprint. Reception for interplanetary televation is still being worked on. Your arsenal will be limited for the time being.
 

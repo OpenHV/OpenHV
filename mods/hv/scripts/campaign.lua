@@ -1,5 +1,5 @@
 --[[
-   Copyright 2020 The OpenHV Developers (see AUTHORS)
+   Copyright 2023 The OpenHV Developers (see AUTHORS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -9,22 +9,12 @@
 
 Difficulty = Map.LobbyOption("difficulty")
 
-IdleHunt = function(actor)
-	if actor.HasProperty("Hunt") and not actor.IsDead then
-		Trigger.OnIdle(actor, actor.Hunt)
-	end
-end
-
 InitObjectives = function(player)
-	Trigger.OnObjectiveAdded(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
-	end)
-
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), UserInterface.Translate("objective-completed"))
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective failed")
+		Media.DisplayMessage(p.GetObjectiveDescription(id), UserInterface.Translate("objective-failed"))
 	end)
 
 	Trigger.OnPlayerWon(player, function()
@@ -47,3 +37,4 @@ CheckForBase = function(player, buildingTypes)
 
 	return count == #buildingTypes
 end
+

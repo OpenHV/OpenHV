@@ -47,3 +47,5 @@ Rules: hv|rules/campaign.yaml, rules.yaml
 Sequences: sequences.yaml
 
 Weapons: weapons.yaml
+
+Translations: hv|languages/lua/en.ftl

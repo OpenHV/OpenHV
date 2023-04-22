@@ -1,5 +1,5 @@
 --[[
-   Copyright 2020 The OpenHV Developers (see AUTHORS)
+   Copyright 2023 The OpenHV Developers (see AUTHORS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -11,10 +11,11 @@ BaseBuildings = { "base", "generator", "miner2", "module" }
 
 Colonists = { Scout1, Scout2, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Generator4, Storage}
 
+Reminder = UserInterface.Translate("reminder")
 Tick = function()
 	if (Human.PowerProvided <= 20 or Human.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
 		HasPower = false
-		Media.DisplayMessage("Build a power plant to generate electricity.", "Reminder")
+		Media.DisplayMessage(UserInterface.Translate("build-power-plant"), Reminder)
 	else
 		HasPower = true
 	end
@@ -22,7 +23,7 @@ Tick = function()
 	if not HasMiner and not Mining and HasPower and DateTime.GameTime % DateTime.Seconds(20) == 0 then
 		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "storage") and actor.Owner == Human end)
 		if #miners == 0 then
-			Media.DisplayMessage("Build a storage to collect resources.", "Reminder")
+			Media.DisplayMessage(UserInterface.Translate("build-storage"), Reminder)
 			HasMiner = false
 		else
 			HasMiner = true
@@ -32,23 +33,17 @@ Tick = function()
 	if HasPower and HasMiner and DateTime.GameTime % DateTime.Seconds(30) == 0 then
 		local deployedMiners = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "miner2" and actor.Owner == Human end)
 		if #deployedMiners == 0 then
-			Media.DisplayMessage("Deploy the miner on the mountain top with mineral deposits.", "Reminder")
+			Media.DisplayMessage(UserInterface.Translate("deploy-miner"), Reminder)
 			Mining = false
 		else
 			Mining = true
 		end
 	end
 
-	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(40) == 0 then
-		if Human.Resources > Human.ResourceCapacity * 0.8 then
-			Media.DisplayMessage("Build a silo to store additional resources.", "Reminder")
-		end
-	end
-
 	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(20) == 0 then
 		local modules = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "module" and actor.Owner == Human end)
 		if #modules == 0 then
-			Media.DisplayMessage("Build a module to train pods.", "Reminder")
+			Media.DisplayMessage(UserInterface.Translate("build-module"), Reminder)
 		end
 	end
 
@@ -68,10 +63,10 @@ WorldLoaded = function()
 
 	InitObjectives(Human)
 
-	KillColonists = Human.AddPrimaryObjective("Eliminate all colonists in the area.")
+	KillColonists = AddPrimaryObjective(Human, "eliminate-all-colonist")
 	Trigger.OnAllKilledOrCaptured(Colonists, function() Human.MarkCompletedObjective(KillColonists) end)
 
-	Bridgehead = Human.AddPrimaryObjective("Build all available structures.")
+	Bridgehead = AddPrimaryObjective(Human, "build-all-structures")
 	Trigger.OnKilled(Base, function() Human.MarkFailedObjective(Bridgehead) end)
 
 	Camera.Position = Base.CenterPosition

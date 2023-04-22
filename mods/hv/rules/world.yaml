@@ -371,7 +371,6 @@ World:
 		BuildRadiusCheckboxLocked: false
 		BuildRadiusCheckboxEnabled: true
 		BuildRadiusCheckboxVisible: true
-		BuildRadiusCheckboxDescription: Limits structure placement to areas around base and outposts.
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
@@ -384,35 +383,35 @@ World:
 	CreateMapPlayers:
 	StartingUnits@BaseYI:
 		Class: none
-		ClassName: Base only
+		ClassName: starting-units.base-only
 		Factions: yi
 		BaseActor: base
 	StartingUnits@BaseSC:
 		Class: none
-		ClassName: Base only
+		ClassName: starting-units.base-only
 		Factions: sc
 		BaseActor: base2
 	StartingUnits@MinerYI:
 		Class: miner
-		ClassName: Base + Miner
+		ClassName: starting-units.base-miner
 		Factions: yi
 		BaseActor: base
 		SupportActors: miner
 	StartingUnits@MinerSC:
 		Class: miner
-		ClassName: Base + Miner
+		ClassName: starting-units.base-miner
 		Factions: sc
 		BaseActor: base2
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
-		ClassName: Base + Scout
+		ClassName: starting-units.base-scout
 		Factions: yi
 		BaseActor: base
 		SupportActors: saucer
 	StartingUnits@ScoutSC:
 		Class: scout
-		ClassName: Base + Scout
+		ClassName: starting-units.base-scout
 		Factions: sc
 		BaseActor: base2
 		SupportActors: balloon

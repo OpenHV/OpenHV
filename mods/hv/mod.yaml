@@ -113,6 +113,7 @@ ChromeLayout:
 	hv|chrome/ingame-menu.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
 	hv|chrome/main-menu.yaml
@@ -158,6 +159,7 @@ ChromeLayout:
 
 Translations:
 	common|languages/en.ftl
+	hv|languages/rules/en.ftl
 
 Music:
 	hv|audio/music.yaml

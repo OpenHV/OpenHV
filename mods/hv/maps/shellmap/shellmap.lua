@@ -1,6 +1,6 @@
 
 --[[
-   Copyright 2021 The OpenHV Developers (see AUTHORS)
+   Copyright 2021-2023 The OpenHV Developers (see AUTHORS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see AUTHORS)
+ * Copyright 2019-2023 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,11 +21,13 @@ namespace OpenRA.Mods.HV.Traits
 	[TraitLocation(SystemActors.World)]
 	public class CubeSpawnerInfo : TraitInfo, ILobbyOptions
 	{
+		[TranslationReference]
 		[Desc("Descriptive label for the cubes checkbox in the lobby.")]
-		public readonly string CheckboxLabel = "Cubes";
+		public readonly string CheckboxLabel = "crates.label";
 
+		[TranslationReference]
 		[Desc("Tooltip description for the cubes checkbox in the lobby.")]
-		public readonly string CheckboxDescription = "Collect cubes with units to receive random bonuses";
+		public readonly string CheckboxDescription = "crates.description";
 
 		[Desc("Default value of the cubes checkbox in the lobby.")]
 		public readonly bool CheckboxEnabled = false;
@@ -63,7 +65,9 @@ namespace OpenRA.Mods.HV.Traits
 
 		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(MapPreview map)
 		{
-			yield return new LobbyBooleanOption("cubes", CheckboxLabel, CheckboxDescription, CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
+			yield return new LobbyBooleanOption("cubes", Game.ModData.Translation.GetString(CheckboxLabel),
+				Game.ModData.Translation.GetString(CheckboxDescription),
+				CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
 		}
 
 		public override object Create(ActorInitializer init) { return new CubeSpawner(init.Self, this); }

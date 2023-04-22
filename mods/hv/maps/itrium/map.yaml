@@ -360,3 +360,5 @@ Actors:
 		Location: 30,31
 
 Rules: hv|rules/campaign.yaml, rules.yaml
+
+Translations: hv|languages/lua/en.ftl

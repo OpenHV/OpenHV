@@ -34,7 +34,7 @@ WorldLoaded = function()
 	HumanPlayer = Player.GetPlayer("Multi0")
 	EnemyPlayer = Player.GetPlayer("Creeps")
 
-	TowerDefenseObjective = HumanPlayer.AddPrimaryObjective("Do not allow too many enemies to exit the trench.")
+	TowerDefenseObjective = AddPrimaryObjective(HumanPlayer, "not-too-many-enemies-through-trench")
 	UpdateGameStateText()
 
 	Trigger.OnEnteredFootprint(ExitTriggerArea, function(actor)
@@ -49,9 +49,24 @@ WorldLoaded = function()
 	SendNextWave()
 end
 
+CachedWaves = -1
+CachedBreaches = -1
 function UpdateGameStateText()
-	UserInterface.SetMissionText("\n\n\nWave: " .. Wave .. "/" .. #Waves .. "\n\nTolerable Breaches: " .. Breaches)
+	if CachedWaves == Waves then
+		return
+	end
+	CachedWaves = Waves
+
+	if CachedBreaches == Breaches then
+		return
+	end
+	CachedBreaches = Breaches
+
+	local currentWave = UserInterface.Translate("current-wave", { ["wave"] = Wave, ["waves"] = #Waves })
+	local tolerableBreaches = UserInterface.Translate("tolerable-breaches", { [ "breaches"] = Breaches })
+	UserInterface.SetMissionText("\n\n\n" .. currentWave .. "\n\n" .. tolerableBreaches)
 end
+
 
 SendNextWave = function()
 	local wave = Waves[Wave]
@@ -74,7 +89,7 @@ Tick = function()
 	if LastWave and not HumanPlayer.IsObjectiveCompleted(TowerDefenseObjective) then
 		Trigger.AfterDelay(200, function()
 			if not Won and #EnemyPlayer.GetGroundAttackers() == 0 then
-				Media.DisplayMessage("No more enemies incoming.")
+				Media.DisplayMessage(UserInterface.Translate("no-more-enemies"))
 				HumanPlayer.MarkCompletedObjective(TowerDefenseObjective)
 				Won = true
 			end

@@ -211,3 +211,5 @@ Actors:
 		Owner: Synapol Corporation
 
 Rules: hv|rules/campaign.yaml, rules.yaml
+
+Translations: hv|languages/lua/en.ftl

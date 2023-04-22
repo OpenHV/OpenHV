@@ -1,5 +1,5 @@
 --[[
-   Copyright 2021-2022 The OpeHV Developers (see CREDITS)
+   Copyright 2021-2023 The OpeHV Developers (see CREDITS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -73,19 +73,24 @@ WorldLoaded = function()
 
 	Human = Player.GetPlayer("FireBrigade")
 	InitObjectives(Human)
-	ForestObjective = Human.AddPrimaryObjective("Save the forests.")
-	FivePercentObjective = Human.AddSecondaryObjective("Save 95 % of the forest.")
-	TenPercentObjective = Human.AddSecondaryObjective("Save 90 % of the forest.")
-	FifteenPercentObjective = Human.AddSecondaryObjective("Save 85 % of the forest.")
-	TwentyPercentObjective = Human.AddSecondaryObjective("Save 80 % of the forest.")
-	TwentyFivePercentObjective = Human.AddSecondaryObjective("Save 75 % of the forest.")
-	ThirtyPercentObjective = Human.AddSecondaryObjective("Save 70 % of the forest.")
+	ForestObjective = AddPrimaryObjective(Human, "save-the-forests")
+	FivePercentObjective = AddSecondaryObjective(Human, "save-95-percent")
+	TenPercentObjective = AddSecondaryObjective(Human, "save-90-percent")
+	FifteenPercentObjective = AddSecondaryObjective(Human, "save-85-percent")
+	TwentyPercentObjective = AddSecondaryObjective(Human, "save-80-percent")
+	TwentyFivePercentObjective = AddSecondaryObjective(Human, "save-75-percent")
+	ThirtyPercentObjective = AddSecondaryObjective(Human, "save-70-percent")
 end
 
+CachedburnedPercentage = -1
 UpdateForestStatus = function()
-	local currentColor = HSLColor.White
 	local burnedPercentage = (1 - Forest.TreesLeft / Forest.TotalTrees) * 100
+	if (CachedburnedPercentage == burnedPercentage) then
+		return
+	end
+	CachedburnedPercentage = burnedPercentage
 
+	local currentColor = HSLColor.White
 	if burnedPercentage > 30 then
 		currentColor = HSLColor.DarkRed
 		Human.MarkFailedObjective(ThirtyPercentObjective)
@@ -106,7 +111,8 @@ UpdateForestStatus = function()
 		Human.MarkFailedObjective(FivePercentObjective)
 	end
 
-	UserInterface.SetMissionText(math.floor(burnedPercentage) .. "% of the forests destroyed.", currentColor)
+	local text = UserInterface.Translate("forest-destroyed", { ["percentage"] = math.floor(burnedPercentage) })
+	UserInterface.SetMissionText(text, currentColor)
 
 	if Forest.TreesLeft < 1 then
 		Human.MarkFailedObjective(ForestObjective)
