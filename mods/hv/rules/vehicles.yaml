@@ -795,9 +795,13 @@ TANK8:
 		MinRange: 3c0
 	RevealsShroud@Hacked:
 		Range: 3c0
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
 	CreatesShroud:
 		Range: 9c0
+		RequiresCondition: deployed
 	RenderShroudCircle:
+		RequiresCondition: deployed
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
