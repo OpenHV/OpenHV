@@ -330,8 +330,14 @@ namespace OpenRA.Mods.HV.Traits
 				if (!buildableThings.Any(b => b.Name == name))
 					continue;
 
+				// Check the number of this structure and its variants
+				var actorInfo = world.Map.Rules.Actors[name];
+				var buildingVariantInfo = actorInfo.TraitInfoOrDefault<PlaceBuildingVariantsInfo>();
+				var variants = buildingVariantInfo?.Actors ?? Array.Empty<string>();
+
+				var count = playerBuildings.Count(a => a.Info.Name == name || variants.Contains(a.Info.Name));
+
 				// Do we want to build this structure?
-				var count = playerBuildings.Count(a => a.Info.Name == name);
 				if (count * 100 > frac.Value * playerBuildings.Length)
 					continue;
 
@@ -396,27 +402,76 @@ namespace OpenRA.Mods.HV.Traits
 			return false;
 		}
 
-		CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
+		(CPos? Location, int Variant) ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
 		{
 			var actorInfo = world.Map.Rules.Actors[actorType];
 			var buildingInfo = actorInfo.TraitInfoOrDefault<BuildingInfo>();
 			if (buildingInfo == null)
-				return null;
+				return (null, 0);
 
 			// Find the buildable cell that is closest to pos and centered around center
-			Func<CPos, CPos, int, int, CPos?> findPos = (center, target, minRange, maxRange) =>
+			(CPos? Location, int Variant) FindPos(CPos center, CPos target, int minRange, int maxRange)
 			{
+				var actorVariant = 0;
+				var buildingVariantInfo = actorInfo.TraitInfoOrDefault<PlaceBuildingVariantsInfo>();
+				var variantActorInfo = actorInfo;
+				var variantBuildingInfo = buildingInfo;
+
 				var cells = world.Map.FindTilesInAnnulus(center, minRange, maxRange);
 
 				// Sort by distance to target if we have one
 				if (center != target)
+				{
 					cells = cells.OrderBy(c => (c - target).LengthSquared);
+
+					// Rotate building if we have a Facings in buildingVariantInfo.
+					// If we don't have Facings in buildingVariantInfo, use a random variant
+					if (buildingVariantInfo?.Actors != null)
+					{
+						if (buildingVariantInfo.Facings != null)
+						{
+							var vector = world.Map.CenterOfCell(target) - world.Map.CenterOfCell(center);
+
+							// The rotation Y point to upside vertically, so -Y = Y(rotation)
+							var desireFacing = new WAngle(WAngle.ArcSin((int)((long)Math.Abs(vector.X) * 1024 / vector.Length)).Angle);
+							if (vector.X > 0 && vector.Y >= 0)
+								desireFacing = new WAngle(512) - desireFacing;
+							else if (vector.X < 0 && vector.Y >= 0)
+								desireFacing = new WAngle(512) + desireFacing;
+							else if (vector.X < 0 && vector.Y < 0)
+								desireFacing = -desireFacing;
+
+							for (int i = 0, e = 1024; i < buildingVariantInfo.Facings.Length; i++)
+							{
+								var minDelta = Math.Min((desireFacing - buildingVariantInfo.Facings[i]).Angle, (buildingVariantInfo.Facings[i] - desireFacing).Angle);
+								if (e > minDelta)
+								{
+									e = minDelta;
+									actorVariant = i;
+								}
+							}
+						}
+						else
+							actorVariant = world.LocalRandom.Next(buildingVariantInfo.Actors.Length + 1);
+					}
+				}
 				else
+				{
 					cells = cells.Shuffle(world.LocalRandom);
+
+					if (buildingVariantInfo?.Actors != null)
+						actorVariant = world.LocalRandom.Next(buildingVariantInfo.Actors.Length + 1);
+				}
+
+				if (actorVariant != 0)
+				{
+					variantActorInfo = world.Map.Rules.Actors[buildingVariantInfo.Actors[actorVariant - 1]];
+					variantBuildingInfo = variantActorInfo.TraitInfoOrDefault<BuildingInfo>();
+				}
 
 				foreach (var cell in cells)
 				{
-					if (!world.CanPlaceBuilding(cell, actorInfo, buildingInfo, null))
+					if (!world.CanPlaceBuilding(cell, variantActorInfo, variantBuildingInfo, null))
 						continue;
 
 					// Don't clutter the base
@@ -429,12 +484,11 @@ namespace OpenRA.Mods.HV.Traits
 
 					if (distanceToBaseIsImportant && !buildingInfo.IsCloseEnoughToBase(world, player, actorInfo, cell))
 						continue;
-
-					return cell;
+					return (cell, actorVariant);
 				}
 
-				return null;
-			};
+				return (null, 0);
+			}
 
 			var baseCenter = baseBuilder.GetRandomBaseCenter();
 
