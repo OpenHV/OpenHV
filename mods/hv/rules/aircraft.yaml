@@ -4,6 +4,7 @@ PLANE1:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
@@ -60,6 +61,7 @@ PLANE1:
 PLANE2:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
@@ -128,6 +130,7 @@ COPTER:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -206,6 +209,7 @@ SAUCER:
 
 BANSHEE:
 	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
@@ -258,6 +262,7 @@ BANSHEE:
 
 COPTER2:
 	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 900
@@ -392,6 +397,7 @@ BALLOON:
 
 DROPSHIP:
 	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 900

@@ -186,8 +186,6 @@ FLYINGMONSTER:
 	-Guard:
 	-Repairable:
 	-MustBeDestroyed:
-	-GrantConditionOnDamageState:
-	-SpawnsShrapnel@DamageSparks:
 	-Explodes:
 	-Explodes@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:

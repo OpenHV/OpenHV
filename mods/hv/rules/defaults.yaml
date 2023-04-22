@@ -236,7 +236,6 @@
 	Inherits@Selection: ^SelectableCombatUnit
 	Inherits@Decoration: ^SelectionDecorations
 	Inherits@Shield: ^ForceFieldCompatible
-	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
 	Huntable:
@@ -1014,6 +1013,25 @@
 		Weapon: DamageSpark
 		Amount: 6
 		Delay: 192, 384
+
+^SmokeEmitter:
+	GrantConditionOnDamageState:
+		Condition: emits-smoke
+		ValidDamageStates: Heavy, Critical
+	FloatingSpriteEmitter@Smoke:
+		RequiresCondition: emits-smoke
+		Palette: effect
+		Image: smoke
+		Sequences: idle
+		Lifetime: 15, 20
+		Speed: 3
+		Gravity: 50
+		SpawnFrequency: 5, 10
+		RandomFacing: true
+		RandomRate: 4
+		Offset: 0, 0, 200
+		TurnRate: 3
+		Duration: -1
 
 ^ReconstructorHeal:
 	ChangesHealth@Reconstructor:

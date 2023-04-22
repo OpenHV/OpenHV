@@ -58,6 +58,8 @@ DROPSHIP.colorpicker:
 	Inherits: DROPSHIP
 	-Buildable:
 	-MapEditorData:
+	-GrantConditionOnDamageState:
+	-FloatingSpriteEmitter@Smoke
 	RenderSprites:
 		Image: dropship
 		Palette: colorpicker
