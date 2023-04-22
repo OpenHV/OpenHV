@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 {
 	public class ResourceTransporterInfo : TraitInfo, Requires<MobileInfo>
 	{
-		public readonly HashSet<string> DeliveryBuildings = new HashSet<string>();
+		public readonly HashSet<string> DeliveryBuildings = new();
 
 		[Desc("How much resources it can carry.")]
 		public readonly int Capacity = 10;

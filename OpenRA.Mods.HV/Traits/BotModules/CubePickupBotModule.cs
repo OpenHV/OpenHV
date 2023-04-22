@@ -22,10 +22,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class CubePickupBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that should not start hunting for cubes.")]
-		public readonly HashSet<string> ExcludedUnitTypes = new HashSet<string>();
+		public readonly HashSet<string> ExcludedUnitTypes = new();
 
 		[Desc("Only these actor types should start hunting for cubes.")]
-		public readonly HashSet<string> IncludedUnitTypes = new HashSet<string>();
+		public readonly HashSet<string> IncludedUnitTypes = new();
 
 		[Desc("Interval (in ticks) between giving out orders to idle units.")]
 		public readonly int ScanForCubesInterval = 50;
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		int scanForcubesTicks;
 
-		readonly List<Actor> alreadyPursuitcubes = new List<Actor>();
+		readonly List<Actor> alreadyPursuitcubes = new();
 
 		public CubePickupBotModule(Actor self, CubePickupBotModuleInfo info)
 			: base(info)

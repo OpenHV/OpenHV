@@ -74,11 +74,11 @@ namespace OpenRA.Mods.HV
 		public readonly string QuitMessage = "Battle control terminated!";
 		public readonly string TimeStampFormat = "HH:mm";
 
-		readonly IrcClient client = new IrcClient();
+		readonly IrcClient client = new();
 		volatile Channel channel;
 
-		public readonly ObservableSortedDictionary<string, ChatUser> Users = new ObservableSortedDictionary<string, ChatUser>(StringComparer.InvariantCultureIgnoreCase);
-		public readonly ObservableList<ChatMessage> History = new ObservableList<ChatMessage>();
+		public readonly ObservableSortedDictionary<string, ChatUser> Users = new(StringComparer.InvariantCultureIgnoreCase);
+		public readonly ObservableList<ChatMessage> History = new();
 
 		volatile string topic;
 		public string Topic { get { return topic; } }
@@ -315,11 +315,11 @@ namespace OpenRA.Mods.HV
 				return null;
 
 			if (char.IsDigit(clean[0]))
-				return SanitizedName(clean.Substring(1));
+				return SanitizedName(clean[1..]);
 
 			// Source: https://tools.ietf.org/html/rfc2812#section-1.2.1
 			if (clean.Length > 9)
-				clean = clean.Substring(0, 9);
+				clean = clean[..9];
 
 			return clean;
 		}

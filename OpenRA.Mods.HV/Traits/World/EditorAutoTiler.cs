@@ -64,7 +64,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Map map;
 		readonly ITemplatedTerrainInfo terrainInfo;
-		readonly Queue<UndoTile> undoTiles = new Queue<UndoTile>();
+		readonly Queue<UndoTile> undoTiles = new();
 
 		public AutoConnectEditorAction(Map map)
 		{
@@ -91,7 +91,7 @@ namespace OpenRA.Mods.HV.Traits
 			BitMask.Bottom | BitMask.Right,
 		};
 
-		static readonly Dictionary<BitMask, CVec[]> MatchingBorderCells = new Dictionary<BitMask, CVec[]>()
+		static readonly Dictionary<BitMask, CVec[]> MatchingBorderCells = new()
 		{
 			{ BitMask.Top | BitMask.Left | BitMask.Right, new[] { new CVec(0, 1) } },
 			{ BitMask.Top | BitMask.Right | BitMask.Bottom, new[] { new CVec(-1, 0) } },

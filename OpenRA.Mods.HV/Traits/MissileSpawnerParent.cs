@@ -34,7 +34,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Conditions to grant when specified actors are contained inside the transport.",
 			"A dictionary of [actor id]: [condition].")]
-		public readonly Dictionary<string, string> SpawnContainConditions = new Dictionary<string, string>();
+		public readonly Dictionary<string, string> SpawnContainConditions = new();
 
 		[GrantedConditionReference]
 		public IEnumerable<string> LinterSpawnContainConditions { get { return SpawnContainConditions.Values; } }
@@ -44,10 +44,10 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class MissileSpawnerParent : BaseSpawnerParent, ITick, INotifyAttack
 	{
-		readonly Dictionary<string, Stack<int>> spawnContainTokens = new Dictionary<string, Stack<int>>();
+		readonly Dictionary<string, Stack<int>> spawnContainTokens = new();
 		readonly MissileSpawnerParentInfo info;
 
-		readonly Stack<int> loadedTokens = new Stack<int>();
+		readonly Stack<int> loadedTokens = new();
 
 		int respawnTicks = 0;
 

@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string[] Prerequisites = Array.Empty<string>();
 
 		[Desc("Production queues that this cost will apply to.")]
-		public readonly HashSet<string> Queues = new HashSet<string>();
+		public readonly HashSet<string> Queues = new();
 
 		[Desc("Set this if items should get the same random pricing.")]
 		public readonly string Group = null;

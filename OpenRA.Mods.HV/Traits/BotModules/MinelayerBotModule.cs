@@ -119,12 +119,12 @@ namespace OpenRA.Mods.HV.Traits
 				while (conflictPositionLength > 0)
 				{
 					minelayingPosition = conflictPositionQueue[0].Value;
-					var check = HasInvalidActorInCircle(world.Map.CenterOfCell(minelayingPosition), WDist.FromCells(Info.AwayFromCellDistance));
-					if (check.hasInvalidActors)
+					var (hasInvalidActors, hasEnemyNearby) = HasInvalidActorInCircle(world.Map.CenterOfCell(minelayingPosition), WDist.FromCells(Info.AwayFromCellDistance));
+					if (hasInvalidActors)
 						DequeueFirstConflictPosition();
 					else
 					{
-						layMineOnHalfway = check.hasEnemyNearby;
+						layMineOnHalfway = hasEnemyNearby;
 						break;
 					}
 				}
@@ -167,8 +167,8 @@ namespace OpenRA.Mods.HV.Traits
 						while (favoritePositionsLength > 0)
 						{
 							minelayingPosition = favoritePositions[currentFavoritePositionIndex].Value;
-							var check = HasInvalidActorInCircle(world.Map.CenterOfCell(minelayingPosition), WDist.FromCells(Info.AwayFromCellDistance));
-							if (check.hasInvalidActors)
+							var (hasInvalidActors, hasEnemyNearby) = HasInvalidActorInCircle(world.Map.CenterOfCell(minelayingPosition), WDist.FromCells(Info.AwayFromCellDistance));
+							if (hasInvalidActors)
 							{
 								DeleteCurrentFavoritePosition();
 								if (favoritePositionsLength == 0)
@@ -176,7 +176,7 @@ namespace OpenRA.Mods.HV.Traits
 							}
 							else
 							{
-								layMineOnHalfway = check.hasEnemyNearby;
+								layMineOnHalfway = hasEnemyNearby;
 								useFavoritePosition = true;
 								break;
 							}
@@ -256,7 +256,7 @@ namespace OpenRA.Mods.HV.Traits
 			favoritePositions[favoritePositionsLength - 1] = null;
 
 			if (--favoritePositionsLength > 0)
-				currentFavoritePositionIndex = currentFavoritePositionIndex % favoritePositionsLength;
+				currentFavoritePositionIndex %= favoritePositionsLength;
 		}
 
 		void AddPositionToFavoritePositions(CPos cpos)
@@ -301,7 +301,7 @@ namespace OpenRA.Mods.HV.Traits
 			return !targetTypes.IsEmpty && !targetTypes.Overlaps(Info.IgnoredEnemyTargetTypes);
 		}
 
-		(bool hasInvalidActors, bool hasEnemyNearby) HasInvalidActorInCircle(WPos pos, WDist dist)
+		(bool HasInvalidActors, bool HasEnemyNearby) HasInvalidActorInCircle(WPos pos, WDist dist)
 		{
 			var hasInvalidActor = false;
 			var hasEnemyActor = false;
@@ -344,7 +344,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			alertedTicks = RepeatedAltertTicks;
 
-			var hasInvalidActor = HasInvalidActorInCircle(self.CenterPosition, WDist.FromCells(Info.AwayFromCellDistance)).hasInvalidActors;
+			var hasInvalidActor = HasInvalidActorInCircle(self.CenterPosition, WDist.FromCells(Info.AwayFromCellDistance)).HasInvalidActors;
 			if (hasInvalidActor)
 				return;
 

@@ -38,7 +38,7 @@ namespace OpenRA.Mods.HV.Traits
 	class GrantConditionOnLineBuildConnection : INotifyAddedToWorld, INotifyRemovedFromWorld
 	{
 		readonly GrantConditionOnLineBuildConnectionInfo info;
-		readonly List<CPos> possibleConnections = new List<CPos>();
+		readonly List<CPos> possibleConnections = new();
 
 		int firstToken = Actor.InvalidConditionToken;
 		int lastToken = Actor.InvalidConditionToken;

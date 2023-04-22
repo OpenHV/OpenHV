@@ -96,7 +96,7 @@ namespace OpenRA.Mods.HV.Activities
 			MoveForward(self);
 			if (missile.Pitch != WAngle.Zero)
 			{
-				if ((missile.Pitch.Angle < missile.TurnSpeed.Angle) || ((1024 - missile.Pitch.Angle) < missile.TurnSpeed.Angle))
+				if ((missile.Pitch.Angle < missile.TurnSpeed.Angle) || (1024 - missile.Pitch.Angle < missile.TurnSpeed.Angle))
 					missile.Pitch = WAngle.Zero;
 				else
 					missile.Pitch -= missile.TurnSpeed;
@@ -106,7 +106,7 @@ namespace OpenRA.Mods.HV.Activities
 			var yawDiff = targetYaw - missile.Facing;
 			if (yawDiff != WAngle.Zero)
 			{
-				if ((yawDiff.Angle < missile.TurnSpeed.Angle) || ((1024 - yawDiff.Angle) < missile.TurnSpeed.Angle))
+				if ((yawDiff.Angle < missile.TurnSpeed.Angle) || (1024 - yawDiff.Angle < missile.TurnSpeed.Angle))
 					missile.Facing = targetYaw;
 				else
 				{
@@ -138,7 +138,7 @@ namespace OpenRA.Mods.HV.Activities
 			var pitchDiff = targetPitch - missile.Pitch;
 			if (pitchDiff != WAngle.Zero)
 			{
-				if ((pitchDiff.Angle < missile.TurnSpeed.Angle) || ((1024 - pitchDiff.Angle) < missile.TurnSpeed.Angle))
+				if ((pitchDiff.Angle < missile.TurnSpeed.Angle) || (1024 - pitchDiff.Angle < missile.TurnSpeed.Angle))
 					missile.Pitch = targetPitch;
 				else
 				{
@@ -153,7 +153,7 @@ namespace OpenRA.Mods.HV.Activities
 			var yawDiff = targetYaw - missile.Facing;
 			if (yawDiff != WAngle.Zero)
 			{
-				if ((yawDiff.Angle < missile.TurnSpeed.Angle) || ((1024 - yawDiff.Angle) < missile.TurnSpeed.Angle))
+				if ((yawDiff.Angle < missile.TurnSpeed.Angle) || (1024 - yawDiff.Angle < missile.TurnSpeed.Angle))
 					missile.Facing = targetYaw;
 				else
 				{

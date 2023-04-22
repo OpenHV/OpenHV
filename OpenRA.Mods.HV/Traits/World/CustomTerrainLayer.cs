@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class CustomTerrainLayer : IRenderOverlay, IWorldLoaded, ITickRender, INotifyActorDisposing
 	{
 		readonly CustomTerrainLayerInfo info;
-		readonly Dictionary<CPos, TerrainTile?> dirty = new Dictionary<CPos, TerrainTile?>();
+		readonly Dictionary<CPos, TerrainTile?> dirty = new();
 		readonly ITiledTerrainRenderer terrainRenderer;
 		readonly Map map;
 

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022 The OpenHV Developers (see AUTHORS)
+ * Copyright 2022, 2023 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -22,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class BuilderBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that can deploy into outposts.")]
-		public readonly HashSet<string> BuilderTypes = new HashSet<string>();
+		public readonly HashSet<string> BuilderTypes = new();
 
 		[Desc("Delay (in ticks) between looking for and giving out orders to new builders.")]
 		public readonly int ScanForNewBuilderInterval = 20;
@@ -122,7 +121,7 @@ namespace OpenRA.Mods.HV.Traits
 				return null;
 
 			// Find the buildable cell that is closest to pos and centered around center
-			Func<CPos, CPos, int, int, CPos?> findPos = (center, target, minRange, maxRange) =>
+			CPos? FindPos(CPos center, CPos target, int minRange, int maxRange)
 			{
 				var cells = world.Map.FindTilesInAnnulus(center, minRange, maxRange);
 
@@ -137,11 +136,11 @@ namespace OpenRA.Mods.HV.Traits
 						return cell;
 
 				return null;
-			};
+			}
 
 			var baseCenter = GetRandomBaseCenter();
 
-			return findPos(baseCenter, baseCenter, Info.MinimumBaseRadius, Info.MaximumBaseRadius);
+			return FindPos(baseCenter, baseCenter, Info.MinimumBaseRadius, Info.MaximumBaseRadius);
 		}
 
 		List<MiniYamlNode> IGameSaveTraitData.IssueTraitData(Actor self)

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -45,8 +45,7 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 			layer = self.World.WorldActor.Trait<CustomTerrainLayer>();
 
-			var terrainInfo = self.World.Map.Rules.TerrainInfo as ITemplatedTerrainInfo;
-			if (terrainInfo == null)
+			if (self.World.Map.Rules.TerrainInfo is not ITemplatedTerrainInfo terrainInfo)
 				throw new InvalidDataException("LaysTerrain requires a template-based tileset.");
 
 			template = terrainInfo.Templates[info.Template];

@@ -28,7 +28,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string[] Units = Array.Empty<string>();
 
 		[Desc("Factions that are allowed to trigger this action.")]
-		public readonly HashSet<string> ValidFactions = new HashSet<string>();
+		public readonly HashSet<string> ValidFactions = new();
 
 		[Desc("Override the owner of the newly spawned unit: e.g. Creeps or Neutral")]
 		public readonly string Owner = null;
@@ -47,7 +47,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly Actor self;
 		readonly SpawnUnitCrateActionInfo info;
-		readonly List<CPos> usedCells = new List<CPos>();
+		readonly List<CPos> usedCells = new();
 
 		public SpawnUnitCrateAction(Actor self, SpawnUnitCrateActionInfo info)
 			: base(self, info)

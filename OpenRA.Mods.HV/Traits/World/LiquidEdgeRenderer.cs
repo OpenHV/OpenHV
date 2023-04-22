@@ -59,7 +59,7 @@ namespace OpenRA.Mods.HV.Traits
 			All = 0xFF,
 		}
 
-		static readonly Dictionary<BitMask, int> SpriteMap = new Dictionary<BitMask, int>()
+		static readonly Dictionary<BitMask, int> SpriteMap = new()
 		{
 			{ BitMask.Bottom | BitMask.BottomLeft | BitMask.BottomRight, 0 },
 			{ BitMask.BottomRight, 1 },
@@ -80,8 +80,8 @@ namespace OpenRA.Mods.HV.Traits
 		readonly ISpriteSequence spriteSequence;
 		readonly Map map;
 
-		readonly Queue<CPos> cleanDirty = new Queue<CPos>();
-		readonly HashSet<CPos> dirty = new HashSet<CPos>();
+		readonly Queue<CPos> cleanDirty = new();
+		readonly HashSet<CPos> dirty = new();
 
 		TerrainSpriteLayer spriteLayer;
 		PaletteReference paletteReference;

@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int AdjustmentDelay = 1000;
 
 		[Desc("Range of percentage modifiers to apply.")]
-		public readonly int2 Multiplier = new int2(100, 125);
+		public readonly int2 Multiplier = new(100, 125);
 
 		public override object Create(ActorInitializer init) { return new VariedCostManager(init.Self, this); }
 	}
@@ -41,11 +41,11 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class VariedCostManager : ITick
 	{
-		public readonly Dictionary<string, int> CachedCostPercentage = new Dictionary<string, int>();
+		public readonly Dictionary<string, int> CachedCostPercentage = new();
 
 		readonly VariedCostManagerInfo info;
 
-		readonly Dictionary<ActorInfo, VariedCostTraitInfoWrapper> variedCostTraitInfo = new Dictionary<ActorInfo, VariedCostTraitInfoWrapper>();
+		readonly Dictionary<ActorInfo, VariedCostTraitInfoWrapper> variedCostTraitInfo = new();
 
 		int tick;
 

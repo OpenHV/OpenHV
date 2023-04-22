@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021, 2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -51,9 +51,9 @@ namespace OpenRA.Mods.HV.Traits
 			public new CarrierChild SpawnerChild;
 		}
 
-		readonly Dictionary<string, Stack<int>> spawnContainTokens = new Dictionary<string, Stack<int>>();
+		readonly Dictionary<string, Stack<int>> spawnContainTokens = new();
 		readonly CarrierParentInfo info;
-		readonly Stack<int> loadedTokens = new Stack<int>();
+		readonly Stack<int> loadedTokens = new();
 
 		CarrierChildEntry[] childEntries;
 
@@ -133,8 +133,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			SpawnIntoWorld(self, carrierChildEntry.Actor, self.CenterPosition);
 
-			Stack<int> spawnContainToken;
-			if (spawnContainTokens.TryGetValue(a.Info.Name, out spawnContainToken) && spawnContainToken.Any())
+			if (spawnContainTokens.TryGetValue(a.Info.Name, out var spawnContainToken) && spawnContainToken.Any())
 				self.RevokeCondition(spawnContainToken.Pop());
 
 			if (loadedTokens.Any())

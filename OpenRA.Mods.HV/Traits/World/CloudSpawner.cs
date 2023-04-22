@@ -43,17 +43,17 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int WindDirection = 8;
 
 		[Desc("Spawn and remove the cloud this far outside the map.")]
-		public readonly WDist Cordon = new WDist(7680);
+		public readonly WDist Cordon = new(7680);
 
 		[FieldLoader.Require]
 		[Desc("Cloud forward movement. Two values mean the cloud speed randomizes between them.")]
 		public readonly WDist[] Speed;
 
 		[Desc("The altitude of the cloud.")]
-		public readonly WDist CruiseAltitude = new WDist(2560);
+		public readonly WDist CruiseAltitude = new(2560);
 
 		[Desc("Distance margin where the cloud can be removed.")]
-		public readonly WDist CloseEnough = new WDist(128);
+		public readonly WDist CloseEnough = new(128);
 
 		[Desc("Should we pre-spawn clouds covers the map?")]
 		public readonly bool ShouldPrespawn = true;

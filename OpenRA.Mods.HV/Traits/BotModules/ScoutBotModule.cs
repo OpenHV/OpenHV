@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that are sent around the map.")]
-		public readonly HashSet<string> ScoutActorTypes = new HashSet<string>();
+		public readonly HashSet<string> ScoutActorTypes = new();
 
 		[Desc("Minimum delay (in ticks) between searching for ScoutActorTypes.")]
 		public readonly int MinimumScanDelay = 200;
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class ScoutBotModule : ConditionalTrait<ScoutBotModuleInfo>, IBotTick
 	{
-		readonly List<Actor> scouts = new List<Actor>();
+		readonly List<Actor> scouts = new();
 
 		readonly World world;
 		readonly Player player;

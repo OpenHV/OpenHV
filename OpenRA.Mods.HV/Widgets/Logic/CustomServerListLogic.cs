@@ -233,13 +233,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			progressText.IsVisible = () => searchStatus != SearchStatus.Hidden;
 			progressText.GetText = ProgressLabelText;
 
-			var gs = Game.Settings.Game;
-			Action<MPGameFilters> toggleFilterFlag = f =>
+			var gameSettings = Game.Settings.Game;
+			void ToggleFilterFlag(MPGameFilters filter)
 			{
-				gs.MPGameFilters ^= f;
+				gameSettings.MPGameFilters ^= filter;
 				Game.Settings.Save();
 				RefreshServerList();
-			};
+			}
 
 			var filtersButton = widget.GetOrNull<DropDownButtonWidget>("FILTERS_DROPDOWNBUTTON");
 			if (filtersButton != null)
@@ -253,36 +253,36 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				var showWaitingCheckbox = filtersPanel.GetOrNull<CheckboxWidget>("WAITING_FOR_PLAYERS");
 				if (showWaitingCheckbox != null)
 				{
-					showWaitingCheckbox.IsChecked = () => gs.MPGameFilters.HasFlag(MPGameFilters.Waiting);
-					showWaitingCheckbox.OnClick = () => toggleFilterFlag(MPGameFilters.Waiting);
+					showWaitingCheckbox.IsChecked = () => gameSettings.MPGameFilters.HasFlag(MPGameFilters.Waiting);
+					showWaitingCheckbox.OnClick = () => ToggleFilterFlag(MPGameFilters.Waiting);
 				}
 
 				var showEmptyCheckbox = filtersPanel.GetOrNull<CheckboxWidget>("EMPTY");
 				if (showEmptyCheckbox != null)
 				{
-					showEmptyCheckbox.IsChecked = () => gs.MPGameFilters.HasFlag(MPGameFilters.Empty);
-					showEmptyCheckbox.OnClick = () => toggleFilterFlag(MPGameFilters.Empty);
+					showEmptyCheckbox.IsChecked = () => gameSettings.MPGameFilters.HasFlag(MPGameFilters.Empty);
+					showEmptyCheckbox.OnClick = () => ToggleFilterFlag(MPGameFilters.Empty);
 				}
 
 				var showAlreadyStartedCheckbox = filtersPanel.GetOrNull<CheckboxWidget>("ALREADY_STARTED");
 				if (showAlreadyStartedCheckbox != null)
 				{
-					showAlreadyStartedCheckbox.IsChecked = () => gs.MPGameFilters.HasFlag(MPGameFilters.Started);
-					showAlreadyStartedCheckbox.OnClick = () => toggleFilterFlag(MPGameFilters.Started);
+					showAlreadyStartedCheckbox.IsChecked = () => gameSettings.MPGameFilters.HasFlag(MPGameFilters.Started);
+					showAlreadyStartedCheckbox.OnClick = () => ToggleFilterFlag(MPGameFilters.Started);
 				}
 
 				var showProtectedCheckbox = filtersPanel.GetOrNull<CheckboxWidget>("PASSWORD_PROTECTED");
 				if (showProtectedCheckbox != null)
 				{
-					showProtectedCheckbox.IsChecked = () => gs.MPGameFilters.HasFlag(MPGameFilters.Protected);
-					showProtectedCheckbox.OnClick = () => toggleFilterFlag(MPGameFilters.Protected);
+					showProtectedCheckbox.IsChecked = () => gameSettings.MPGameFilters.HasFlag(MPGameFilters.Protected);
+					showProtectedCheckbox.OnClick = () => ToggleFilterFlag(MPGameFilters.Protected);
 				}
 
 				var showIncompatibleCheckbox = filtersPanel.GetOrNull<CheckboxWidget>("INCOMPATIBLE_VERSION");
 				if (showIncompatibleCheckbox != null)
 				{
-					showIncompatibleCheckbox.IsChecked = () => gs.MPGameFilters.HasFlag(MPGameFilters.Incompatible);
-					showIncompatibleCheckbox.OnClick = () => toggleFilterFlag(MPGameFilters.Incompatible);
+					showIncompatibleCheckbox.IsChecked = () => gameSettings.MPGameFilters.HasFlag(MPGameFilters.Incompatible);
+					showIncompatibleCheckbox.OnClick = () => ToggleFilterFlag(MPGameFilters.Incompatible);
 				}
 
 				filtersButton.IsDisabled = () => searchStatus == SearchStatus.Fetching;
@@ -695,26 +695,26 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				header.Get<LabelWidget>("LABEL").GetText = () => headerTitle;
 				rows.Add(header);
 
-				Func<GameServer, int> listOrder = g =>
+				static int ListOrder(GameServer gameServer)
 				{
 					// Servers waiting for players are always first
-					if (g.State == (int)ServerState.WaitingPlayers && g.Players > 0)
+					if (gameServer.State == (int)ServerState.WaitingPlayers && gameServer.Players > 0)
 						return 0;
 
 					// Then servers with spectators
-					if (g.State == (int)ServerState.WaitingPlayers && g.Spectators > 0)
+					if (gameServer.State == (int)ServerState.WaitingPlayers && gameServer.Spectators > 0)
 						return 1;
 
 					// Then active games
-					if (g.State >= (int)ServerState.GameStarted)
+					if (gameServer.State >= (int)ServerState.GameStarted)
 						return 2;
 
 					// Empty servers are shown at the end because a flood of empty servers
 					// at the top of the game list make the community look dead
 					return 3;
-				};
+				}
 
-				foreach (var modGamesByState in modGames.GroupBy(listOrder).OrderBy(g => g.Key))
+				foreach (var modGamesByState in modGames.GroupBy(ListOrder).OrderBy(g => g.Key))
 				{
 					// Sort 'Playing' games by Started, others by number of players
 					foreach (var game in modGamesByState.Key == 2 ? modGamesByState.OrderByDescending(g => g.Started) : modGamesByState.OrderByDescending(g => g.Players))
@@ -846,7 +846,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			if (game.State == (int)ServerState.WaitingPlayers && !filters.HasFlag(MPGameFilters.Waiting) && game.Players != 0)
 				return true;
 
-			if ((game.Players + game.Spectators) == 0 && !filters.HasFlag(MPGameFilters.Empty))
+			if (game.Players + game.Spectators == 0 && !filters.HasFlag(MPGameFilters.Empty))
 				return true;
 
 			if (!game.IsCompatible && !filters.HasFlag(MPGameFilters.Incompatible))

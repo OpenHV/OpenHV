@@ -88,7 +88,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			// Close the multiplayer browser
 			Ui.CloseWindow();
 
-			Action onLobbyExit = () =>
+			void OnLobbyExit()
 			{
 				// Open a fresh copy of the multiplayer browser
 				Ui.OpenWindow("MULTIPLAYER_PANEL", new WidgetArgs
@@ -101,12 +101,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				Game.Disconnect();
 
 				DiscordService.UpdateStatus(DiscordState.InMenu);
-			};
+			}
 
 			Game.OpenWindow("SERVER_LOBBY", new WidgetArgs
 			{
 				{ "onStart", onStart },
-				{ "onExit", onLobbyExit },
+				{ "onExit", OnLobbyExit },
 				{ "skirmishMode", false }
 			});
 		}

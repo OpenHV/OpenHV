@@ -38,18 +38,19 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				.Select(t => (Type: t.Value.Id,
 					Description: terrainInfo.TerrainTypes[terrainInfo.GetTerrainInfo(new TerrainTile(t.Key, 0)).TerrainType].Type));
 
-			Func<string, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
+			ScrollItemWidget SetupItem(string option, ScrollItemWidget template)
 			{
 				var item = ScrollItemWidget.Setup(template,
 					() => tileDropDown.Text == option,
-					() => { tileDropDown.Text = option; });
+					() => tileDropDown.Text = option);
 				item.Get<LabelWidget>("LABEL").GetText = () => option;
 				return item;
-			};
+			}
+
 			tileDropDown.Text = clearTiles.First().Description;
 			var options = clearTiles.Select(t => t.Description);
 			tileDropDown.OnClick = () =>
-				tileDropDown.ShowDropDown("LABEL_DROPDOWN_TEMPLATE", 210, options, setupItem);
+				tileDropDown.ShowDropDown("LABEL_DROPDOWN_TEMPLATE", 210, options, SetupItem);
 
 			var widthTextField = panel.Get<TextFieldWidget>("WIDTH");
 			var heightTextField = panel.Get<TextFieldWidget>("HEIGHT");

@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Condition = null;
 
 		[Desc("Name of the armaments that grant this condition.")]
-		public readonly HashSet<string> ArmamentNames = new HashSet<string>() { "primary" };
+		public readonly HashSet<string> ArmamentNames = new() { "primary" };
 
 		[FieldLoader.Require]
 		public readonly int RevokeDelay;

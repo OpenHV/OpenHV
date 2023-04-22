@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2022, 2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Duration = 0;
 
 		[Desc("Allowed to land on.")]
-		public readonly HashSet<string> TerrainTypes = new HashSet<string>();
+		public readonly HashSet<string> TerrainTypes = new();
 
 		[Desc("Define actors that can collect crates by setting this into the Crushes field from the Mobile trait.")]
 		public readonly string CrushClass = "crate";
@@ -126,15 +126,15 @@ namespace OpenRA.Mods.HV.Traits
 				var totalShares = shares.Sum(a => a.Shares);
 				var n = self.World.SharedRandom.Next(totalShares);
 
-				foreach (var s in shares)
+				foreach (var (action, share) in shares)
 				{
-					if (n < s.Shares)
+					if (n < share)
 					{
-						s.Action.Activate(crusher);
+						action.Activate(crusher);
 						return;
 					}
 
-					n -= s.Shares;
+					n -= share;
 				}
 			}
 		}

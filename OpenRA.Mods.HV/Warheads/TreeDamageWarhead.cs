@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Warheads
 	public class TreeDamageWarhead : DamageWarhead, IRulesetLoaded<WeaponInfo>
 	{
 		[Desc("Range between falloff steps.")]
-		public readonly WDist Spread = new WDist(43);
+		public readonly WDist Spread = new(43);
 
 		[Desc("Damage percentage at each range step")]
 		public readonly int[] Falloff = { 100, 37, 14, 5, 0 };
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Warheads
 		{
 			var layer = firedBy.World.WorldActor.Trait<ForestLayer>();
 			var minRange = WDist.Zero.Length / 1024;
-			var maxRange = Range[Range.Length - 1].Length / 1024;
+			var maxRange = Range[^1].Length / 1024;
 			var impactCell = firedBy.World.Map.CellContaining(pos);
 			foreach (var cell in firedBy.World.Map.FindTilesInAnnulus(impactCell, minRange, maxRange))
 			{
@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Warheads
 
 				// The range to target is more than the range the warhead covers,
 				// so GetDamageFalloff() is going to give us 0 and we're going to do 0 damage anyway, so bail early.
-				if (falloffDistance > Range[Range.Length - 1].Length)
+				if (falloffDistance > Range[^1].Length)
 					continue;
 
 				var localModifiers = args.DamageModifiers.Append(GetDamageFalloff(falloffDistance)).ToArray();

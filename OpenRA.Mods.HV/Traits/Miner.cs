@@ -26,14 +26,14 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Terrain types that can be targeted for deployment.")]
-		public readonly HashSet<string> TerrainTypes = new HashSet<string>();
+		public readonly HashSet<string> TerrainTypes = new();
 
 		[VoiceReference]
 		[Desc("Voice to use when ordered to lay a minefield.")]
 		public readonly string Voice = "Action";
 
 		[Desc("Defines to which players the target lines are shown.")]
-		public readonly Dictionary<string, Color> Colors = new Dictionary<string, Color>();
+		public readonly Dictionary<string, Color> Colors = new();
 
 		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}

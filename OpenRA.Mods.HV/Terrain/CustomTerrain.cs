@@ -97,7 +97,7 @@ namespace OpenRA.Mods.HV.Terrain
 
 		[FieldLoader.Ignore]
 		public readonly TerrainTypeInfo[] TerrainInfo;
-		readonly Dictionary<string, byte> terrainIndexByType = new Dictionary<string, byte>();
+		readonly Dictionary<string, byte> terrainIndexByType = new();
 		readonly byte defaultWalkableTerrainIndex;
 
 		public CustomTerrain(IReadOnlyFileSystem fileSystem, string filepath)

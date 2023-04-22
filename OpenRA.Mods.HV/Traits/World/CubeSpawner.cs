@@ -54,7 +54,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int InitialSpawnDelay = 0;
 
 		[Desc("Which terrain types can we drop on?")]
-		public readonly HashSet<string> ValidGround = new HashSet<string> { "Clear" };
+		public readonly HashSet<string> ValidGround = new() { "Clear" };
 
 		[ActorReference]
 		[Desc("Cube actors to drop.")]

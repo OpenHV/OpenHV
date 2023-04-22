@@ -61,7 +61,7 @@ namespace OpenRA.Mods.HV.Traits
 			return ret;
 		}
 
-		public static void PopulateMapPreviewSignatureCells(Map map, Dictionary<string, ResourceTypeInfo> resources, List<(MPos, Color)> destinationBuffer)
+		public static void PopulateMapPreviewSignatureCells(Map map, Dictionary<string, ResourceTypeInfo> resources, List<(MPos Uv, Color Color)> destinationBuffer)
 		{
 			var terrainInfo = map.Rules.TerrainInfo;
 			var colors = resources.Values.ToDictionary(
@@ -79,7 +79,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		void IMapPreviewSignatureInfo.PopulateMapPreviewSignatureCells(Map map, ActorInfo ai, ActorReference s, List<(MPos, Color)> destinationBuffer)
+		void IMapPreviewSignatureInfo.PopulateMapPreviewSignatureCells(Map map, ActorInfo ai, ActorReference s, List<(MPos Uv, Color Color)> destinationBuffer)
 		{
 			PopulateMapPreviewSignatureCells(map, ResourceTypes, destinationBuffer);
 		}

@@ -164,7 +164,7 @@ namespace OpenRA.Mods.HV.Traits
 					else if (baseBuilder.Info.RefineryTypes.Contains(actorInfo.Name))
 						type = BuildingType.Refinery;
 
-					location = ChooseBuildLocation(currentBuilding.Item, true, type);
+					location = ChooseBuildLocation(currentBuilding.Item, true, type).Location;
 				}
 
 				if (location == null)
@@ -223,8 +223,8 @@ namespace OpenRA.Mods.HV.Traits
 
 		bool HasSufficientPowerForActor(ActorInfo actorInfo)
 		{
-			return powerManager == null || (actorInfo.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault)
-				.Sum(p => p.Amount) + powerManager.ExcessPower) >= baseBuilder.Info.MinimumExcessPower;
+			return powerManager == null || actorInfo.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault)
+				.Sum(p => p.Amount) + powerManager.ExcessPower >= baseBuilder.Info.MinimumExcessPower;
 		}
 
 		ActorInfo ChooseBuildingToBuild(ProductionQueue queue)
@@ -441,14 +441,17 @@ namespace OpenRA.Mods.HV.Traits
 			switch (type)
 			{
 				case BuildingType.Defense:
+
 					// Build near the closest enemy structure
 					var closestEnemy = world.ActorsHavingTrait<Building>().Where(a => !a.Disposed && player.RelationshipWith(a.Owner) == PlayerRelationship.Enemy)
 						.ClosestTo(world.Map.CenterOfCell(baseBuilder.DefenseCenter));
 
 					var targetCell = closestEnemy != null ? closestEnemy.Location : baseCenter;
-					return findPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);
+
+					return FindPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);
 
 				case BuildingType.Refinery:
+
 					// Try and place the refinery near a resource field
 					if (resourceLayer != null)
 					{
@@ -456,20 +459,24 @@ namespace OpenRA.Mods.HV.Traits
 							.Where(a => resourceLayer.GetResource(a).Type != null)
 							.Shuffle(world.LocalRandom).Take(baseBuilder.Info.MaximumResourceCellsToCheck);
 
-						foreach (var resource in nearbyResources)
-							return findPos(baseCenter, resource, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius);
+						foreach (var r in nearbyResources)
+						{
+							var found = FindPos(baseCenter, r, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius);
+							if (found.Location != null)
+								return found;
+						}
 					}
 
 					// Try and find a free spot somewhere else in the base
-					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius);
+					return FindPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius, baseBuilder.Info.MaximumBaseRadius);
 
 				case BuildingType.Building:
-					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius,
+					return FindPos(baseCenter, baseCenter, baseBuilder.Info.MinimumBaseRadius,
 						distanceToBaseIsImportant ? baseBuilder.Info.MaximumBaseRadius : world.Map.Grid.MaximumTileSearchRange);
 			}
 
 			// Can't find a build location
-			return null;
+			return (null, 0);
 		}
 	}
 }

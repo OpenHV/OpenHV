@@ -36,8 +36,8 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class DebugOffsetOverlay : Requires<BodyOrientationInfo>, IRenderAnnotations, INotifyCreated
 	{
-		static readonly WVec TargetPosHLine = new WVec(0, 128, 0);
-		static readonly WVec TargetPosVLine = new WVec(128, 0, 0);
+		static readonly WVec TargetPosHLine = new(0, 128, 0);
+		static readonly WVec TargetPosVLine = new(128, 0, 0);
 
 		Turreted[] turrets;
 		BodyOrientation coords;

@@ -62,7 +62,7 @@ namespace OpenRA.Mods.HV.Traits
 		int burst;
 		AmmoPool ammoPool;
 
-		readonly List<(int Delay, Action Action)> delayedActions = new List<(int, Action)>();
+		readonly List<(int Delay, Action Action)> delayedActions = new();
 
 		public PeriodicDischarge(Actor self, PeriodicDischargeInfo info)
 			: base(info)

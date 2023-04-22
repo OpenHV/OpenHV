@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -30,7 +30,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int MaxTiles = 10000;
 
 		[Desc("Which tile ID to replace with which flooded variant")]
-		public readonly Dictionary<ushort, ushort> ReplacementTiles = new Dictionary<ushort, ushort>();
+		public readonly Dictionary<ushort, ushort> ReplacementTiles = new();
 
 		[Desc("Terrain type that should be converted albeit unpathable.")]
 		public readonly string[] StopTerrainTypes = Array.Empty<string>();
@@ -46,7 +46,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly FloodsInfo info;
 		readonly LiquidTerrainLayer liquidTerrainLayer;
-		readonly List<CPos> floodedCells = new List<CPos>();
+		readonly List<CPos> floodedCells = new();
 		readonly ITemplatedTerrainInfo terrainInfo;
 		readonly Map map;
 		readonly IPathFinder pathFinder;
@@ -64,7 +64,7 @@ namespace OpenRA.Mods.HV.Traits
 			pathFinder = self.World.WorldActor.Trait<IPathFinder>();
 			locomotor = self.World.WorldActor.TraitsImplementing<Locomotor>().First(l => l.Info.Name == info.Locomotor);
 
-			if (!(map.Rules.TerrainInfo is ITemplatedTerrainInfo terrainInfo))
+			if (self.World.Map.Rules.TerrainInfo is not ITemplatedTerrainInfo terrainInfo)
 				throw new InvalidDataException($"{nameof(Floods)} requires a template-based tileset.");
 
 			this.terrainInfo = terrainInfo;

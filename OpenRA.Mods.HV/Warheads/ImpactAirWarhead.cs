@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Warheads
 		[Desc("Whether to consider actors in determining whether the explosion should happen. If false, only terrain will be considered.")]
 		public readonly bool ImpactActors = true;
 
-		static readonly BitSet<TargetableType> TargetTypeAir = new BitSet<TargetableType>("Air");
+		static readonly BitSet<TargetableType> TargetTypeAir = new("Air");
 
 		/// <summary>Checks if there are any actors at impact position and if the warhead is valid against any of them.</summary>
 		protected ImpactActorType ActorTypeAtImpact(World world, WPos pos, Actor firedBy)

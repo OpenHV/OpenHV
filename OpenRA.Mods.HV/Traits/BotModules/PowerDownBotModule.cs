@@ -37,7 +37,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly Func<Actor, bool> isToggledBuildingsValid;
 
 		// We keep a list to track toggled buildings for performance.
-		List<BuildingPowerWrapper> toggledBuildings = new List<BuildingPowerWrapper>();
+		List<BuildingPowerWrapper> toggledBuildings = new();
 
 		class BuildingPowerWrapper
 		{

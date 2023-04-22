@@ -214,25 +214,15 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			menuType = MenuType.StartupPrompts;
 
-			Action onIntroductionComplete = () =>
-			{
-				Action onSysInfoComplete = () =>
-				{
-					SwitchMenu(MenuType.Main);
-				};
-
-				onSysInfoComplete();
-			};
-
 			if (IntroductionPromptLogic.ShouldShowPrompt())
 			{
 				Game.OpenWindow("MAINMENU_INTRODUCTION_PROMPT", new WidgetArgs
 				{
-					{ "onComplete", onIntroductionComplete }
+					{ "onComplete", () => SwitchMenu(MenuType.Main) }
 				});
 			}
 			else
-				onIntroductionComplete();
+				SwitchMenu(MenuType.Main);
 
 			Game.OnShellmapLoaded += OpenMenuBasedOnLastGame;
 
@@ -311,7 +301,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			});
 		}
 
-		void LoadMapIntoEditor(string uid)
+		static void LoadMapIntoEditor(string uid)
 		{
 			// HACK: Work around a synced-code change check.
 			// It's not clear why this is needed here, but not in the other places that load maps.

@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 		[FieldLoader.Require]
 		[ActorReference]
 		[Desc("Actor types that can deploy.")]
-		public readonly HashSet<string> DeployableActorTypes = new HashSet<string>();
+		public readonly HashSet<string> DeployableActorTypes = new();
 
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
 		public readonly int MinimumScanDelay = 100;
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		readonly Dictionary<Actor, ActorTraitWrapper> actors = new Dictionary<Actor, ActorTraitWrapper>();
+		readonly Dictionary<Actor, ActorTraitWrapper> actors = new();
 
 		public DeployActorBotModule(Actor self, DeployActorBotModuleInfo info)
 			: base(info)

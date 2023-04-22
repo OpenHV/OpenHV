@@ -26,7 +26,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string[] UnitTypes = null;
 
 		[Desc("Number of drop pods spawned.")]
-		public readonly int2 Drops = new int2(3, 5);
+		public readonly int2 Drops = new(3, 5);
 
 		[Desc("Sets the approach direction.")]
 		public readonly WAngle PodFacing = WAngle.Zero;

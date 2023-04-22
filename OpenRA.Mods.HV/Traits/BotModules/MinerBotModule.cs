@@ -24,19 +24,19 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Actor types that can deploy onto resources.")]
-		public readonly HashSet<string> DeployableActorTypes = new HashSet<string>();
+		public readonly HashSet<string> DeployableActorTypes = new();
 
 		[Desc("Where to request production of additional deployable actors.")]
 		public readonly string VehiclesQueue = "Vehicle";
 
 		[FieldLoader.Require]
 		[Desc("Terrain types that can be targeted for deployment.")]
-		public readonly HashSet<string> DeployableTerrainTypes = new HashSet<string>();
+		public readonly HashSet<string> DeployableTerrainTypes = new();
 
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Actor types that have been deployed onto resources.")]
-		public readonly HashSet<string> DeployedActorTypes = new HashSet<string>();
+		public readonly HashSet<string> DeployedActorTypes = new();
 
 		[Desc("Prioritize this many resource towers before building other units.")]
 		public readonly int MinimumDeployedActors = 1;
@@ -80,7 +80,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		readonly Dictionary<Actor, MinerTraitWrapper> miners = new Dictionary<Actor, MinerTraitWrapper>();
+		readonly Dictionary<Actor, MinerTraitWrapper> miners = new();
 
 		public MinerBotModule(Actor self, MinerBotModuleInfo info)
 			: base(info)
@@ -160,13 +160,13 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var towerInfo = AIUtils.GetInfoByCommonName(Info.DeployedActorTypes, player);
 			var buildingInfo = towerInfo.TraitInfo<BuildingInfo>();
-			Func<CPos, bool> isValidResource = cell =>
+			bool IsValidResource(CPos cell) =>
 				Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
 					&& miner.Mobile.Locomotor.CanStayInCell(cell)
 					&& world.CanPlaceBuilding(cell + miner.Transforms.Info.Offset, towerInfo, buildingInfo, actor);
 
 			var path = miner.Mobile.PathFinder.FindPathToTargetCellByPredicate(
-				actor, new[] { actor.Location }, isValidResource, BlockedByActor.Stationary,
+				actor, new[] { actor.Location }, IsValidResource, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && actor.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));

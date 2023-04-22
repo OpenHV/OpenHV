@@ -33,7 +33,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly CellLayer<bool> Covered;
 
 		readonly LiquidTerrainLayerInfo info;
-		readonly Dictionary<CPos, TerrainTile?> dirty = new Dictionary<CPos, TerrainTile?>();
+		readonly Dictionary<CPos, TerrainTile?> dirty = new();
 		readonly ITiledTerrainRenderer terrainRenderer;
 		readonly World world;
 		readonly CellLayer<(Color, Color)> radarColor;

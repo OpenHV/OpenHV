@@ -116,7 +116,7 @@ namespace OpenRA.Mods.HV.Projectiles
 				var numSegments = (direction.Length - 1) / info.SegmentLength.Length + 1;
 				offsets = new WPos[numSegments + 1];
 				offsets[0] = source;
-				offsets[offsets.Length - 1] = target;
+				offsets[^1] = target;
 
 				for (var i = 1; i < numSegments; i++)
 				{

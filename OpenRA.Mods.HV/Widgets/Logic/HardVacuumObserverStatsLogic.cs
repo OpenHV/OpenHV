@@ -111,7 +111,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			teamTemplate = playerStatsPanel.Get<ScrollItemWidget>("TEAM_TEMPLATE");
 
 			var statsDropDown = widget.Get<DropDownButtonWidget>("STATS_DROPDOWN");
-			Func<string, ObserverStatsPanel, ScrollItemWidget, Action, StatsDropDownOption> createStatsOption = (title, panel, template, a) =>
+			StatsDropDownOption CreateStatsOption(string title, ObserverStatsPanel panel, ScrollItemWidget template, Action a)
 			{
 				return new StatsDropDownOption
 				{
@@ -130,7 +130,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						Ui.ResetTooltips();
 					}
 				};
-			};
+			}
 
 			var statsDropDownOptions = new StatsDropDownOption[]
 			{
@@ -146,26 +146,26 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						activePanel = ObserverStatsPanel.None;
 					}
 				},
-				createStatsOption("Basic", ObserverStatsPanel.Basic, basicPlayerTemplate, () => DisplayStats(BasicStats)),
-				createStatsOption("Economy", ObserverStatsPanel.Economy, economyPlayerTemplate, () => DisplayStats(EconomyStats)),
-				createStatsOption("Production", ObserverStatsPanel.Production, productionPlayerTemplate, () => DisplayStats(ProductionStats)),
-				createStatsOption("Support Powers", ObserverStatsPanel.SupportPowers, supportPowersPlayerTemplate, () => DisplayStats(SupportPowerStats)),
-				createStatsOption("Combat", ObserverStatsPanel.Combat, combatPlayerTemplate, () => DisplayStats(CombatStats)),
-				createStatsOption("Army", ObserverStatsPanel.Army, armyPlayerTemplate, () => DisplayStats(ArmyStats)),
-				createStatsOption("Earnings (graph)", ObserverStatsPanel.Graph, null, () => IncomeGraph()),
-				createStatsOption("Army (graph)", ObserverStatsPanel.ArmyGraph, null, () => ArmyValueGraph()),
+				CreateStatsOption("Basic", ObserverStatsPanel.Basic, basicPlayerTemplate, () => DisplayStats(BasicStats)),
+				CreateStatsOption("Economy", ObserverStatsPanel.Economy, economyPlayerTemplate, () => DisplayStats(EconomyStats)),
+				CreateStatsOption("Production", ObserverStatsPanel.Production, productionPlayerTemplate, () => DisplayStats(ProductionStats)),
+				CreateStatsOption("Support Powers", ObserverStatsPanel.SupportPowers, supportPowersPlayerTemplate, () => DisplayStats(SupportPowerStats)),
+				CreateStatsOption("Combat", ObserverStatsPanel.Combat, combatPlayerTemplate, () => DisplayStats(CombatStats)),
+				CreateStatsOption("Army", ObserverStatsPanel.Army, armyPlayerTemplate, () => DisplayStats(ArmyStats)),
+				CreateStatsOption("Earnings (graph)", ObserverStatsPanel.Graph, null, () => IncomeGraph()),
+				CreateStatsOption("Army (graph)", ObserverStatsPanel.ArmyGraph, null, () => ArmyValueGraph()),
 			};
 
-			Func<StatsDropDownOption, ScrollItemWidget, ScrollItemWidget> setupItem = (option, template) =>
+			ScrollItemWidget SetupItem(StatsDropDownOption option, ScrollItemWidget template)
 			{
 				var item = ScrollItemWidget.Setup(template, option.IsSelected, option.OnClick);
 				item.Get<LabelWidget>("LABEL").GetText = () => option.Title;
 				return item;
-			};
+			}
 
 			var statsDropDownPanelTemplate = logicArgs.TryGetValue("StatsDropDownPanelTemplate", out yaml) ? yaml.Value : "LABEL_DROPDOWN_TEMPLATE";
 
-			statsDropDown.OnMouseDown = _ => statsDropDown.ShowDropDown(statsDropDownPanelTemplate, 230, statsDropDownOptions, setupItem);
+			statsDropDown.OnMouseDown = _ => statsDropDown.ShowDropDown(statsDropDownPanelTemplate, 230, statsDropDownOptions, SetupItem);
 			statsDropDownOptions[0].OnClick();
 
 			var keyListener = statsDropDown.Get<LogicKeyListenerWidget>("STATS_DROPDOWN_KEYHANDLER");
@@ -473,7 +473,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			return template;
 		}
 
-		void SetupPlayerColor(Player player, ScrollItemWidget template, ColorBlockWidget colorBlockWidget, GradientColorBlockWidget gradientColorBlockWidget)
+		static void SetupPlayerColor(Player player, ScrollItemWidget template, ColorBlockWidget colorBlockWidget, GradientColorBlockWidget gradientColorBlockWidget)
 		{
 			var color = Color.FromArgb(128, player.Color.R, player.Color.G, player.Color.B);
 			var hoverColor = Color.FromArgb(192, player.Color.R, player.Color.G, player.Color.B);

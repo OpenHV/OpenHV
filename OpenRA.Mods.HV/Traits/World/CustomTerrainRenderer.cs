@@ -27,14 +27,14 @@ namespace OpenRA.Mods.HV.Terrain
 		{
 			var missingImages = new HashSet<string>();
 			var failed = false;
-			Action<uint, string> onMissingImage = (id, f) =>
+			void OnMissingImage(uint id, string f)
 			{
-				onError("\tTemplate `{0}` references sprite `{1}` that does not exist.".F(id, f));
+				onError($"\tTemplate `{id}` references sprite `{f}` that does not exist.");
 				missingImages.Add(f);
 				failed = true;
-			};
+			}
 
-			var tileCache = new CustomTileCache((CustomTerrain)terrainInfo, onMissingImage);
+			var tileCache = new CustomTileCache((CustomTerrain)terrainInfo, OnMissingImage);
 			foreach (var t in terrainInfo.Templates)
 			{
 				var templateInfo = (CustomTerrainTemplateInfo)t.Value;
@@ -141,7 +141,7 @@ namespace OpenRA.Mods.HV.Terrain
 			{
 				for (var x = 0; x < template.Size.X; x++)
 				{
-					var tile = new TerrainTile(template.Id, (byte)(i++));
+					var tile = new TerrainTile(template.Id, (byte)i++);
 					if (!terrainInfo.TryGetTileInfo(tile, out var tileInfo))
 						continue;
 
@@ -160,8 +160,7 @@ namespace OpenRA.Mods.HV.Terrain
 
 		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderUIPreview(WorldRenderer wr, TerrainTemplateInfo t, int2 origin, float scale)
 		{
-			var template = t as CustomTerrainTemplateInfo;
-			if (template == null)
+			if (t is not CustomTerrainTemplateInfo template)
 				yield break;
 
 			var ts = map.Grid.TileSize;
@@ -189,7 +188,7 @@ namespace OpenRA.Mods.HV.Terrain
 
 		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderPreview(WorldRenderer wr, TerrainTemplateInfo t, WPos origin)
 		{
-			if (!(t is CustomTerrainTemplateInfo template))
+			if (t is not CustomTerrainTemplateInfo template)
 				yield break;
 
 			var i = 0;

@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 	{
 		[FieldLoader.Require]
 		[Desc("Exit offset associated with the animation.")]
-		public readonly CVec ExitCell = new CVec(0, 0);
+		public readonly CVec ExitCell = new(0, 0);
 
 		[SequenceReference]
 		[FieldLoader.Require]
@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 			if (IsTraitDisabled)
 				return;
 
-			if (info.ExitCell == (exit - self.Location))
+			if (info.ExitCell == exit - self.Location)
 			{
 				active = true;
 				var sequence = RenderSprites.NormalizeSequence(overlay, self.GetDamageState(), info.Sequence);

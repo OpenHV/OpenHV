@@ -34,22 +34,22 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly WDist BeginCruiseAltitude = WDist.FromCells(7);
 
 		[Desc("How fast it changes direction.")]
-		public readonly WAngle TurnSpeed = new WAngle(25);
+		public readonly WAngle TurnSpeed = new(25);
 
 		[Desc("The actor starts hitting the target when the horizontal distance is less than this value.")]
 		public readonly WDist HitRange = WDist.FromCells(4);
 
 		[Desc("If the actor is closer to the target than this value, it will explode.")]
-		public readonly WDist ExplosionRange = new WDist(1536);
+		public readonly WDist ExplosionRange = new(1536);
 
 		[Desc("The acceleration of the actor during the launch phase, the speed during the launch phase will not be more than the speed value.")]
 		public readonly WDist LaunchAcceleration = WDist.Zero;
 
 		[Desc("Unit acceleration during the strike, no upper limit for speed value.")]
-		public readonly WDist HitAcceleration = new WDist(20);
+		public readonly WDist HitAcceleration = new(20);
 
 		[Desc("Projectile speed in WDist / tick, two values indicate variable velocity.")]
-		public readonly WDist Speed = new WDist(17);
+		public readonly WDist Speed = new(17);
 
 		[Desc("In angle. Missile is launched at this pitch and the intial tangential line of the ballistic path will be this.")]
 		public readonly WAngle LaunchAngle = WAngle.Zero;
@@ -91,7 +91,6 @@ namespace OpenRA.Mods.HV.Traits
 		readonly Actor self;
 
 		IEnumerable<int> speedModifiers;
-		WRot orientation;
 
 		public Target Target;
 		public WVec MoveDirection;
@@ -99,23 +98,23 @@ namespace OpenRA.Mods.HV.Traits
 		[Sync]
 		public WAngle Facing
 		{
-			get { return orientation.Yaw; }
-			set { orientation = orientation.WithYaw(value); }
+			get => Orientation.Yaw;
+			set => Orientation = Orientation.WithYaw(value);
 		}
 
 		public WAngle Pitch
 		{
-			get { return orientation.Pitch; }
-			set { orientation = orientation.WithPitch(value); }
+			get => Orientation.Pitch;
+			set => Orientation = Orientation.WithPitch(value);
 		}
 
 		public WAngle Roll
 		{
-			get { return orientation.Roll; }
-			set { orientation = orientation.WithRoll(value); }
+			get => Orientation.Roll;
+			set => Orientation = Orientation.WithRoll(value);
 		}
 
-		public WRot Orientation { get { return orientation; } }
+		public WRot Orientation { get; private set; }
 
 		[Sync]
 		public WPos CenterPosition { get; private set; }
@@ -278,7 +277,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public CPos NearestMoveableCell(CPos cell) { return cell; }
 
-		public MovementType CurrentMovementTypes { get { return MovementType.Horizontal | MovementType.Vertical; } set { } }
+		public MovementType CurrentMovementTypes { get => MovementType.Horizontal | MovementType.Vertical; set { } }
 
 		public bool CanEnterTargetNow(Actor self, in Target target)
 		{

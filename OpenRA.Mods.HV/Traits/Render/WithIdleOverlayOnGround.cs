@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -51,15 +51,9 @@ namespace OpenRA.Mods.HV.Traits.Render
 			anim.PlayRepeating(RenderSprites.NormalizeSequence(anim, init.GetDamageState(), Sequence));
 
 			var body = init.Actor.TraitInfo<BodyOrientationInfo>();
-			Func<WRot> orientation = () => body.QuantizeOrientation(WRot.FromYaw(facing()), facings);
-			Func<WVec> offset = () => body.LocalToWorld(Offset.Rotate(orientation()));
-			Func<int> zOffset = () =>
-			{
-				var tmpOffset = offset();
-				return tmpOffset.Y + tmpOffset.Z + 1;
-			};
-
-			yield return new SpriteActorPreview(anim, offset, zOffset, p);
+			var orientation = body.QuantizeOrientation(WRot.FromYaw(facing()), facings);
+			var offset = body.LocalToWorld(Offset.Rotate(orientation));
+			yield return new SpriteActorPreview(anim, () => offset, () => offset.Y + offset.Z + 1, p);
 		}
 	}
 

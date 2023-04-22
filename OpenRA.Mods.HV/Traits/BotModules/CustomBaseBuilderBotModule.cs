@@ -21,37 +21,37 @@ namespace OpenRA.Mods.HV.Traits
 	public class CustomBaseBuilderBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Tells the AI what building types are considered construction yards.")]
-		public readonly HashSet<string> ConstructionYardTypes = new HashSet<string>();
+		public readonly HashSet<string> ConstructionYardTypes = new();
 
 		[Desc("Tells the AI what building types are considered vehicle production facilities.")]
-		public readonly HashSet<string> VehiclesFactoryTypes = new HashSet<string>();
+		public readonly HashSet<string> VehiclesFactoryTypes = new();
 
 		[Desc("Tells the AI what building types are considered refineries.")]
-		public readonly HashSet<string> RefineryTypes = new HashSet<string>();
+		public readonly HashSet<string> RefineryTypes = new();
 
 		[Desc("Tells the AI what building types are considered power plants.")]
-		public readonly HashSet<string> PowerTypes = new HashSet<string>();
+		public readonly HashSet<string> PowerTypes = new();
 
 		[Desc("Tells the AI what building types are considered infantry production facilities.")]
-		public readonly HashSet<string> BarracksTypes = new HashSet<string>();
+		public readonly HashSet<string> BarracksTypes = new();
 
 		[Desc("Tells the AI what building types are considered production facilities.")]
-		public readonly HashSet<string> ProductionTypes = new HashSet<string>();
+		public readonly HashSet<string> ProductionTypes = new();
 
 		[Desc("Tells the AI what building types are considered naval production facilities.")]
-		public readonly HashSet<string> NavalProductionTypes = new HashSet<string>();
+		public readonly HashSet<string> NavalProductionTypes = new();
 
 		[Desc("Tells the AI what building types are considered silos (resource storage).")]
-		public readonly HashSet<string> SiloTypes = new HashSet<string>();
+		public readonly HashSet<string> SiloTypes = new();
 
 		[Desc("Tells the AI what building types are considered defenses.")]
-		public readonly HashSet<string> DefenseTypes = new HashSet<string>();
+		public readonly HashSet<string> DefenseTypes = new();
 
 		[Desc("Production queues AI uses for buildings.")]
-		public readonly HashSet<string> BuildingQueues = new HashSet<string> { "Building" };
+		public readonly HashSet<string> BuildingQueues = new() { "Building" };
 
 		[Desc("Production queues AI uses for defenses.")]
-		public readonly HashSet<string> DefenseQueues = new HashSet<string> { "Defense" };
+		public readonly HashSet<string> DefenseQueues = new() { "Defense" };
 
 		[Desc("Minimum distance in cells from center of the base when checking for building placement.")]
 		public readonly int MinimumBaseRadius = 2;
@@ -122,7 +122,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int CheckForWaterRadius = 8;
 
 		[Desc("Terrain types which are considered water for base building purposes.")]
-		public readonly HashSet<string> WaterTerrainTypes = new HashSet<string> { "Water" };
+		public readonly HashSet<string> WaterTerrainTypes = new() { "Water" };
 
 		[Desc("What buildings to the AI should build.", "What integer percentage of the total base must be this type of building.")]
 		public readonly Dictionary<string, int> BuildingFractions = null;
@@ -159,7 +159,7 @@ namespace OpenRA.Mods.HV.Traits
 		CPos initialBaseCenter;
 		CPos defenseCenter;
 
-		readonly List<CustomBaseBuilderQueueManager> builders = new List<CustomBaseBuilderQueueManager>();
+		readonly List<CustomBaseBuilderQueueManager> builders = new();
 
 		public CustomBaseBuilderBotModule(Actor self, CustomBaseBuilderBotModuleInfo info)
 			: base(info)

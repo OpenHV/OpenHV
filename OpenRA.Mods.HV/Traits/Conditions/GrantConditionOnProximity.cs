@@ -34,7 +34,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly GrantConditionOnProximityInfo info;
 		readonly Actor self;
-		readonly List<Actor> actorsInRange = new List<Actor>();
+		readonly List<Actor> actorsInRange = new();
 
 		int proximityTrigger;
 		WPos previousPosition;
