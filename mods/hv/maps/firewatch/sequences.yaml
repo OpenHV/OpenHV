@@ -1,32 +1,42 @@
 # License: CC-BY-SA-4.0
 
 waterball:
-	idle: bits/waterball.png
+	idle:
+		Filename: bits/waterball.png
 		Length: *
 		Facings: 1
 		ZOffset: 2030
 
 watertank:
-	idle: bits/tank13.png
+	idle:
+		Filename: bits/tank13.png
 		Facings: 8
-	shoot: bits/tank14.png
+	shoot:
+		Filename: bits/tank14.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 29
 
 firetruck:
-	idle: maps/firewatch/firetruck.png
+	idle:
+		Filename: maps/firewatch/firetruck.png
 		Facings: 8
-	turret: maps/firewatch/firetruck.png
+	turret:
+		Filename: maps/firewatch/firetruck.png
 		Start: 8
 		Facings: 8
-	icon: maps/firewatch/firetruck-icon.png
+	icon:
+		Filename: maps/firewatch/firetruck-icon.png
 
 firefighterpod:
-	idle: maps/firewatch/firefighterpod.png
+	idle:
+		Filename: maps/firewatch/firefighterpod.png
 		Facings: 8
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: maps/firewatch/firefighterpod-icon.png
+	icon:
+		Filename: maps/firewatch/firefighterpod-icon.png

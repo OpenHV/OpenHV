@@ -23,11 +23,11 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[TranslationReference]
 		[Desc("Descriptive label for the cubes checkbox in the lobby.")]
-		public readonly string CheckboxLabel = "crates.label";
+		public readonly string CheckboxLabel = "checkbox-crates.label";
 
 		[TranslationReference]
 		[Desc("Tooltip description for the cubes checkbox in the lobby.")]
-		public readonly string CheckboxDescription = "crates.description";
+		public readonly string CheckboxDescription = "checkbox-crates.description";
 
 		[Desc("Default value of the cubes checkbox in the lobby.")]
 		public readonly bool CheckboxEnabled = false;

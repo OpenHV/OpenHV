@@ -1,65 +1,86 @@
 entry:
-	idle: maps/crater-defense/artwork/arrow-down.png
+	idle:
+		Filename: maps/crater-defense/artwork/arrow-down.png
 
 exit:
-	idle: maps/crater-defense/artwork/arrow-left.png
+	idle:
+		Filename: maps/crater-defense/artwork/arrow-left.png
 
 clusterturret:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
+		Filename: clusterturret
 		Offset: 0, -3
-	idle: maps/crater-defense/artwork/clusterturret.png
+	idle:
+		Filename: maps/crater-defense/artwork/clusterturret.png
 		Start: 0
-	shadow-overlay: maps/crater-defense/artwork/clusterturret-shadow.png
+	shadow-overlay:
+		Filename: maps/crater-defense/artwork/clusterturret-shadow.png
 		ZOffset: -1768
 		Offset: 5, 5
-	damaged-idle: maps/crater-defense/artwork/clusterturret.png
+	damaged-idle:
+		Filename: maps/crater-defense/artwork/clusterturret.png
 		Start: 9
-	shoot: maps/crater-defense/artwork/clusterturret.png
+	shoot:
+		Filename: maps/crater-defense/artwork/clusterturret.png
 		Start: 0
 		Length: 9
 		Reverses: True
-	shoot-damaged: maps/crater-defense/artwork/clusterturret.png
+	shoot-damaged:
+		Filename: maps/crater-defense/artwork/clusterturret.png
 		Start: 9
 		Length: 9
 		Reverses: True
-	make: bits/build.png
+	make:
+		Filename: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
-	make-overlay: bits/build-vanish.png
+	make-overlay:
+		Filename: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
+		Filename: bits/flame2.png
 		Offset: 0, -2
-	icon: maps/crater-defense/artwork/clusterturret-icon.png
+	icon:
+		Filename: maps/crater-defense/artwork/clusterturret-icon.png
 		Offset: 0, 1
 
 amplifier:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
+		Filename: amplifier
 		Offset: 7, -8
-	idle: maps/crater-defense/artwork/amplifier.png
+	idle:
+		Filename: maps/crater-defense/artwork/amplifier.png
 		Start: 0
-	shadow-overlay: maps/crater-defense/artwork/amplifier-shadow.png
+	shadow-overlay:
+		Filename: maps/crater-defense/artwork/amplifier-shadow.png
 		ZOffset: -1768
 		Offset: 3, 3
-	damaged-idle: maps/crater-defense/artwork/amplifier.png
+	damaged-idle:
+		Filename: maps/crater-defense/artwork/amplifier.png
 		Start: 1
-	animation: maps/crater-defense/artwork/amplifier.png
+	animation:
+		Filename: maps/crater-defense/artwork/amplifier.png
 		Start: 2
 		Length: 7
 		Tick: 100
-	make: bits/build.png
+	make:
+		Filename: bits/build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
-	make-overlay: bits/build-vanish.png
+	make-overlay:
+		Filename: bits/build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
+		Filename: bits/flame2.png
 		Offset: 0, -2
-	icon: maps/crater-defense/artwork/amplifier-icon.png
+	icon:
+		Filename: maps/crater-defense/artwork/amplifier-icon.png
 		Offset: 0, 1

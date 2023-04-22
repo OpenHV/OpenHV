@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public readonly string AmmoPoolName = "primary";
 
-		public readonly WDist MinefieldDepth = new WDist(1536);
+		public readonly WDist MinefieldDepth = new(1536);
 
 		[VoiceReference]
 		[Desc("Voice to use when ordered to lay a minefield.")]
@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly Color TargetLineColor = Color.Crimson;
 
 		[Desc("Only allow laying mines on listed terrain types. Leave empty to allow all terrain types.")]
-		public readonly HashSet<string> TerrainTypes = new HashSet<string>();
+		public readonly HashSet<string> TerrainTypes = new();
 
 		[CursorReference]
 		[Desc("Cursor to display when able to lay a mine.")]
@@ -67,6 +67,13 @@ namespace OpenRA.Mods.HV.Traits
 		[CursorReference]
 		[Desc("Cursor to display when unable to lay a mine.")]
 		public readonly string DeployBlockedCursor = "deploy-blocked";
+
+		[CursorReference]
+		[Desc("Cursor to display when able to lay a mine.")]
+		public readonly string AbilityCursor = "ability";
+
+		[Desc("Ammo the minelayer consumes per mine.")]
+		public readonly int AmmoUsage = 1;
 
 		public override object Create(ActorInitializer init) { return new Minelayer(init.Self, this); }
 	}
@@ -86,14 +93,14 @@ namespace OpenRA.Mods.HV.Traits
 			Info = info;
 			this.self = self;
 
-			Tile = self.World.Map.Rules.Sequences.GetSequence("overlay", Info.TileValidName).GetSprite(0);
+			Tile = self.World.Map.Sequences.GetSequence("overlay", Info.TileValidName).GetSprite(0);
 		}
 
 		IEnumerable<IOrderTargeter> IIssueOrder.Orders
 		{
 			get
 			{
-				yield return new BeginMinefieldOrderTargeter();
+				yield return new BeginMinefieldOrderTargeter(Info.AbilityCursor);
 				yield return new DeployOrderTargeter("PlaceMine", 5, () => IsCellAcceptable(self, self.Location) ? Info.DeployCursor : Info.DeployBlockedCursor);
 			}
 		}
@@ -146,11 +153,10 @@ namespace OpenRA.Mods.HV.Traits
 				minefieldStart = order.ExtraLocation;
 
 				var movement = self.Trait<IPositionable>();
-				var mobile = movement as Mobile;
 
 				var minefield = GetMinefieldCells(minefieldStart, cell, Info.MinefieldDepth)
 					.Where(c => IsCellAcceptable(self, c) && self.Owner.Shroud.IsExplored(c)
-						&& movement.CanEnterCell(c, null, BlockedByActor.Immovable) && (mobile != null && mobile.CanStayInCell(c)))
+						&& movement.CanEnterCell(c, null, BlockedByActor.Immovable) && movement is Mobile mobile && mobile.CanStayInCell(c))
 					.OrderBy(c => (c - minefieldStart).LengthSquared).ToList();
 
 				self.QueueActivity(order.Queued, new LayMines(self, minefield));
@@ -181,7 +187,7 @@ namespace OpenRA.Mods.HV.Traits
 			// TODO: proper endcaps, if anyone cares (which won't happen unless depth is large)
 			var p = end - start;
 			var q = new float2(p.Y, -p.X);
-			q = (start != end) ? (1 / q.Length) * q : new float2(1, 0);
+			q = (start != end) ? 1 / q.Length * q : new float2(1, 0);
 			var c = -float2.Dot(q, new float2(start.X, start.Y));
 
 			// return all points such that |ax + by + c| < depth
@@ -211,6 +217,7 @@ namespace OpenRA.Mods.HV.Traits
 			readonly float validAlpha, unknownAlpha, blockedAlpha;
 			readonly CPos minefieldStart;
 			readonly bool queued;
+			readonly string cursor;
 
 			public MinefieldOrderGenerator(Actor a, CPos xy, bool queued)
 			{
@@ -219,17 +226,21 @@ namespace OpenRA.Mods.HV.Traits
 				minefieldStart = xy;
 				this.queued = queued;
 
-				var validSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileValidName);
+				var sequences = a.World.Map.Sequences;
+
+				var validSequence = sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileValidName);
 				validTile = validSequence.GetSprite(0);
 				validAlpha = validSequence.GetAlpha(0);
 
-				var unknownSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileUnknownName);
+				var unknownSequence = sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileUnknownName);
 				unknownTile = unknownSequence.GetSprite(0);
 				unknownAlpha = unknownSequence.GetAlpha(0);
 
-				var blockedSequence = a.World.Map.Rules.Sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileInvalidName);
+				var blockedSequence = sequences.GetSequence(minelayer.Info.TileImage, minelayer.Info.TileInvalidName);
 				blockedTile = blockedSequence.GetSprite(0);
 				blockedAlpha = blockedSequence.GetAlpha(0);
+
+				cursor = minelayer.Info.AbilityCursor;
 			}
 
 			public void AddMinelayer(Actor a)
@@ -257,7 +268,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				minelayers.Clear();
 				minelayers.AddRange(selected.Where(s => !s.IsDead && s.Info.HasTraitInfo<MinelayerInfo>()));
-				if (!minelayers.Any())
+				if (minelayers.Count == 0)
 					world.CancelInputMode();
 			}
 
@@ -310,14 +321,22 @@ namespace OpenRA.Mods.HV.Traits
 
 			protected override string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)
 			{
-				return minelayers.First().Trait<Minelayer>().Info.Cursor;
+				return cursor;
 			}
 		}
 
 		class BeginMinefieldOrderTargeter : IOrderTargeter
 		{
-			public string OrderID { get { return "BeginMinefield"; } }
-			public int OrderPriority { get { return 5; } }
+			public string OrderID => "BeginMinefield";
+			public int OrderPriority => 5;
+
+			readonly string cursor;
+
+			public BeginMinefieldOrderTargeter(string cursor)
+			{
+				this.cursor = cursor;
+			}
+
 			public bool TargetOverridesSelection(Actor self, in Target target, List<Actor> actorsAt, CPos xy, TargetModifiers modifiers) { return true; }
 
 			public bool CanTarget(Actor self, in Target target, ref TargetModifiers modifiers, ref string cursor)
@@ -329,8 +348,8 @@ namespace OpenRA.Mods.HV.Traits
 				if (!self.World.Map.Contains(location))
 					return false;
 
-				var minelayer = self.Trait<Minelayer>();
-				cursor = minelayer.Info.Cursor;
+				cursor = this.cursor;
+
 				IsQueued = modifiers.HasModifier(TargetModifiers.ForceQueue);
 
 				return modifiers.HasModifier(TargetModifiers.ForceAttack);

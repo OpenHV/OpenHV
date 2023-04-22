@@ -1,89 +1,116 @@
 # License: CC-BY-SA-4.0
 
 beast:
-	idle: bits/beast.png
+	idle:
+		Filename: bits/beast.png
 		Facings: 8
-	move: bits/beast.png
+	move:
+		Filename: bits/beast.png
 		Start: 8
 		Tick: 80
 		Length: 4
 		Facings: 8
-	die: bits/beast-die.png
+	die:
+		Filename: bits/beast-die.png
 		Length: 12
 		Tick: 120
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 35
 
 crow:
-	idle: bits/crow.png
+	idle:
+		Filename: bits/crow.png
 		Length: 5
 		Tick: 100
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 crow2:
-	idle: bits/crow2.png
+	idle:
+		Filename: bits/crow2.png
 		Length: 8
 		Tick: 80
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 gull:
-	idle: bits/gull.png
+	idle:
+		Filename: bits/gull.png
 		Length: 5
 		Tick: 100
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 gull2:
-	idle: bits/gull2.png
+	idle:
+		Filename: bits/gull2.png
 		Length: 8
 		Tick: 80
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 seed:
-	idle: bits/seed.png
+	idle:
+		Filename: bits/seed.png
 		Facings: 8
-	move: bits/seed-move.png
+	move:
+		Filename: bits/seed-move.png
 		Tick: 180
 		Length: 3
 		Facings: 8
-	die: bits/blood1.png
+	die:
+		Filename: bits/blood1.png
 		Length: 8
 		Tick: 100
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 seamnstr:
-	idle: bits/seamnstr-move.png
+	idle:
+		Filename: bits/seamnstr-move.png
 		Length: 6
 		Tick: 100
 		ZOffset: -500
-	die: bits/blood1.png
-	icon: bits/icon.png
-	emerge: bits/seamnstr.png
+	die:
+		Filename: bits/blood1.png
+	icon:
+		Filename: bits/icon.png
+	emerge:
+		Filename: bits/seamnstr.png
 		Length: 29
 		Facings: 8
 		Tick: 75
 		ZOffset: 100
 
 worm:
-	idle: bits/worm.png
+	idle:
+		Filename: bits/worm.png
 		Frames: 0, 2, 4, 6, 8, 10, 12, 14
 		Facings: 8
-	move: bits/worm.png
+	move:
+		Filename: bits/worm.png
 		Length: 2
 		Facings: 8
 		Tick: 180
-	die: bits/worm.png
+	die:
+		Filename: bits/worm.png
 		Start: 16
 		Length: 10
 		Tick: 80
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 flyingmonster:
-	idle: bits/flyingmonster.png
+	idle:
+		Filename: bits/flyingmonster.png
 		Length: 4
 		Facings: 8
 		Tick: 200
 		Offset: -2,-1
-	die: bits/blood1.png
+	die:
+		Filename: bits/blood1.png
 		Length: 8
 		Tick: 100
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png

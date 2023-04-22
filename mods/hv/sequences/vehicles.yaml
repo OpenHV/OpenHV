@@ -1,516 +1,650 @@
 # License: CC-BY-SA-4.0
 
 tank1:
-	idle: bits/tank1.png
+	idle:
+		Filename: bits/tank1.png
 		Facings: 8
-	turret: bits/tank1.png
+	turret:
+		Filename: bits/tank1.png
 		Start: 8
 		Facings: 8
 	muzzle:
 		Combine:
-			muzzle2.png: #N
+			0: #N
+				Filename: muzzle2.png
 				Start: 0
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #NW
+			1: #NW
+				Filename: muzzle2.png
 				Start: 3
 				Length: 3
 				Offset: 1,-1
-			muzzle2.png: #W
+			2: #W
+				Filename: muzzle2.png
 				Start: 6
 				Length: 3
 				Offset: 0,-2
-			muzzle2.png: #SW
+			3: #SW
+				Filename: muzzle2.png
 				Start: 9
 				Length: 3
 				Offset: -2,-1
-			muzzle2.png: #S
+			4: #S
+				Filename: muzzle2.png
 				Start: 12
 				Length: 3
 				Offset: -1,-1
-			muzzle2.png: #SE
+			5: #SE
+				Filename: muzzle2.png
 				Start: 15
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #E
+			6: #E
+				Filename: muzzle2.png
 				Start: 18
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #NE
+			7: #NE
+				Filename: muzzle2.png
 				Start: 21
 				Length: 3
 				Offset: 0,0
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 31
 
 tank2:
-	idle: bits/tank2.png
+	idle:
+		Filename: bits/tank2.png
 		Facings: 8
-	shoot: bits/tank2.png
+	shoot:
+		Filename: bits/tank2.png
 		Start: 8
 		Facings: 8
 		Length: 5
 		Tick: 50
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 8
 
 tank3:
-	idle: bits/tank3.png
+	idle:
+		Filename: bits/tank3.png
 		Facings: 8
-	turret: bits/tank3.png
+	turret:
+		Filename: bits/tank3.png
 		Start: 8
 		Facings: 8
 	muzzle:
 		Combine:
-			muzzle2.png: #N
+			0: #N
+				Filename: muzzle2.png
 				Start: 0
 				Length: 3
 				Offset: 1,1
-			muzzle2.png: #NW
+			1: #NW
+				Filename: muzzle2.png
 				Start: 3
 				Length: 3
 				Offset: 1,-2
-			muzzle2.png: #W
+			2: #W
+				Filename: muzzle2.png
 				Start: 6
 				Length: 3
 				Offset: 0,-2
-			muzzle2.png: #SW
+			3: #SW
+				Filename: muzzle2.png
 				Start: 9
 				Length: 3
 				Offset: 0,-1
-			muzzle2.png: #S
+			4: #S
+				Filename: muzzle2.png
 				Start: 12
 				Length: 3
 				Offset: -1,-3
-			muzzle2.png: #SE
+			5: #SE
+				Filename: muzzle2.png
 				Start: 15
 				Length: 3
 				Offset: -2,1
-			muzzle2.png: #E
+			6: #E
+				Filename: muzzle2.png
 				Start: 18
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #NE
+			7: #NE
+				Filename: muzzle2.png
 				Start: 21
 				Length: 3
 				Offset: -1,-1
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 37
 
 radartank:
-	idle: bits/radartank.png
+	idle:
+		Filename: bits/radartank.png
 		Facings: 8
-	extend: bits/radartank.png
+	extend:
+		Filename: bits/radartank.png
 		Start: 8
 		Length: 4
 		Tick: 100
-	extended: bits/radartank.png
+	extended:
+		Filename: bits/radartank.png
 		Start: 11
 		Length: 8
 		Tick: 120
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 47
 
 tank4:
-	idle: bits/tank4.png
+	idle:
+		Filename: bits/tank4.png
 		Facings: 8
-	extend: bits/tank4-extend.png
+	extend:
+		Filename: bits/tank4-extend.png
 		Start: 3
 		Length: 3
 		Tick: 180
-	extended: bits/tank4-extend.png
+	extended:
+		Filename: bits/tank4-extend.png
 		Start: 5
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 38
 
 tank5:
-	idle: bits/tank5.png
+	idle:
+		Filename: bits/tank5.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 6
 
 tank6:
-	idle: bits/tank6.png
+	idle:
+		Filename: bits/tank6.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 7
 
 tank7:
-	idle: bits/tank7.png
+	idle:
+		Filename: bits/tank7.png
 		Facings: 8
-	shoot: bits/tank7.png
+	shoot:
+		Filename: bits/tank7.png
 		Start: 8
 		Facings: 8
 		Tick: 200
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 10
 
 tank8:
-	idle: bits/tank8.png
+	idle:
+		Filename: bits/tank8.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 26
 
 tank9:
-	idle: bits/tank9.png
+	idle:
+		Filename: bits/tank9.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 27
 
 tank10:
-	idle: bits/tank10.png
+	idle:
+		Filename: bits/tank10.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 25
 
 tank11:
-	idle: bits/tank11.png
+	idle:
+		Filename: bits/tank11.png
 		Facings: 8
 	muzzle: bits/muzzle.png
 		Combine:
-			muzzle.png: #N
+			0: #N
+				Filename: muzzle.png
 				Start: 0
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #NW
+			1: #NW
+				Filename: muzzle.png
 				Start: 8
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #W
+			2: #W
+				Filename: muzzle.png
 				Start: 16
 				Length: 8
 				Offset: 1, -5
-			muzzle.png: #SW
+			3: #SW
+				Filename: muzzle.png
 				Start: 24
 				Length: 8
 				Offset: 1, -2
-			muzzle.png: #S
+			4: #S
+				Filename: muzzle.png
 				Start: 32
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #SE
+			5: #SE
+				Filename: muzzle.png
 				Start: 40
 				Length: 8
 				Offset: 2, -2
-			muzzle.png: #E
+			6: #E
+				Filename: muzzle.png
 				Start: 48
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #NE
+			7: #NE
+				Filename: muzzle.png
 				Start: 56
 				Length: 8
 				Offset: 0, -5
 		Length: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 11
 
 tank12:
-	idle: bits/tank12.png
+	idle:
+		Filename: bits/tank12.png
 		Facings: 8
 	muzzle: bits/muzzle.png
 		Combine:
-			muzzle.png: #N
+			0: #N
+				Filename: muzzle.png
 				Start: 0
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #NW
+			1: #NW
+				Filename: muzzle.png
 				Start: 8
 				Length: 8
 				Offset: 3, -6
-			muzzle.png: #W
+			2: #W
+				Filename: muzzle.png
 				Start: 16
 				Length: 8
 				Offset: 1, -5
-			muzzle.png: #SW
+			3: #SW
+				Filename: muzzle.png
 				Start: 24
 				Length: 8
 				Offset: 1, -2
-			muzzle.png: #S
+			4: #S
+				Filename: muzzle.png
 				Start: 32
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #SE
+			5: #SE
+				Filename: muzzle.png
 				Start: 40
 				Length: 8
 				Offset: 2, -2
-			muzzle.png: #E
+			6: #E
+				Filename: muzzle.png
 				Start: 48
 				Length: 8
 				Offset: 2, -5
-			muzzle.png: #NE
+			7: #NE
+				Filename: muzzle.png
 				Start: 56
 				Length: 8
 				Offset: 0, -7
 		Length: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 12
 
 tank13:
-	idle: bits/tank13.png
+	idle:
+		Filename: bits/tank13.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 28
 
 tank14:
-	idle: bits/tank14.png
+	idle:
+		Filename: bits/tank14.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 29
 
 tank15:
-	idle: bits/tank15.png
+	idle:
+		Filename: bits/tank15.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 9
 
 tank16:
-	idle: bits/tank16.png
+	idle:
+		Filename: bits/tank16.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 30
 
 transprt:
-	idle: bits/transprt.png
+	idle:
+		Filename: bits/transprt.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 13
 
 artil:
-	idle: bits/artil.png
+	idle:
+		Filename: bits/artil.png
 		Facings: 8
-	muzzle: bits/artlflsh.png
+	muzzle:
+		Filename: bits/artlflsh.png
 		Length: 3
 		Facings: 8
 		Tick: 100
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 2
 
 artil3:
-	idle: bits/artil3.png
+	idle:
+		Filename: bits/artil3.png
 		Facings: 8
-	shoot: bits/artil3.png
+	shoot:
+		Filename: bits/artil3.png
 		Start: 8
 		Facings: 8
 		Tick: 100
 	muzzle:
 		Combine:
-			artlflsh.png: #N
+			0: #N
+				Filename: artlflsh.png
 				Start: 0
 				Length: 3
 				Offset: 0,9
-			artlflsh.png: #NW
+			1: #NW
+				Filename: artlflsh.png
 				Start: 3
 				Length: 3
 				Offset: 0,9
-			artlflsh.png: #W
+			2: #W
+				Filename: artlflsh.png
 				Start: 6
 				Length: 3
 				Offset: -1,3
-			artlflsh.png: #SW
+			3: #SW
+				Filename: artlflsh.png
 				Start: 9
 				Length: 3
 				Offset: -3,-4
-			artlflsh.png: #S
+			4: #S
+				Filename: artlflsh.png
 				Start: 12
 				Length: 3
 				Offset: 0,-4
-			artlflsh.png: #SE
+			5: #SE
+				Filename: artlflsh.png
 				Start: 15
 				Length: 3
 				Offset: 3,-4
-			artlflsh.png: #E
+			6: #E
+				Filename: artlflsh.png
 				Start: 18
 				Length: 3
 				Offset: 1,3
-			artlflsh.png: #NE
+			7: #NE
+				Filename: artlflsh.png
 				Start: 21
 				Length: 3
 				Offset: 0,9
 		Length: 3
 		Facings: 8
 		Tick: 80
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 3
 
 scout1:
-	idle: bits/scout1.png
+	idle:
+		Filename: bits/scout1.png
 		Facings: 8
-	muzzle: bits/muzzle2.png
+	muzzle:
+		Filename: bits/muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 0
 
 scout2:
-	idle: bits/scout2.png
+	idle:
+		Filename: bits/scout2.png
 		Facings: 8
-	muzzle: bits/muzzle2.png
+	muzzle:
+		Filename: bits/muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 1
 
 mortarpod:
-	idle: bits/mortarpod.png
+	idle:
+		Filename: bits/mortarpod.png
 		Facings: 8
 	muzzle:
 		Combine:
-			artlflsh.png: #N
+			0: #N
+				Filename: artlflsh.png
 				Start: 0
 				Length: 3
 				Offset: -1,3
-			artlflsh.png: #NW
+			1: #NW
+				Filename: artlflsh.png
 				Start: 3
 				Length: 3
 				Offset: -2,4
-			artlflsh.png: #W
+			2: #W
+				Filename: artlflsh.png
 				Start: 6
 				Length: 3
 				Offset: 0,3
-			artlflsh.png: #SW
+			3: #SW
+				Filename: artlflsh.png
 				Start: 9
 				Length: 3
 				Offset: 0,-2
-			artlflsh.png: #S
+			4: #S
+				Filename: artlflsh.png
 				Start: 12
 				Length: 3
 				Offset: -1,-2
-			artlflsh.png: #SE
+			5: #SE
+				Filename: artlflsh.png
 				Start: 15
 				Length: 3
 				Offset: 0,-2
-			artlflsh.png: #E
+			6: #E
+				Filename: artlflsh.png
 				Start: 18
 				Length: 3
 				Offset: 0,3
-			artlflsh.png: #NE
+			7: #NE
+				Filename: artlflsh.png
 				Start: 21
 				Length: 3
 				Offset: 2,4
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 41
 
 sniperpod:
-	idle: bits/sniperpod.png
+	idle:
+		Filename: bits/sniperpod.png
 		Facings: 8
-	muzzle: bits/muzzle3.png
+	muzzle:
+		Filename: bits/muzzle3.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 44
 
 technician:
-	idle: bits/technician.png
+	idle:
+		Filename: bits/technician.png
 		Facings: 8
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 42
 
 flamepod:
-	idle: bits/flamethrowerpod.png
+	idle:
+		Filename: bits/flamethrowerpod.png
 		Facings: 8
 		Length: 2
 		Tick: 60
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 52
 
 hackerpod:
-	idle: bits/hackerpod.png
+	idle:
+		Filename: bits/hackerpod.png
 		Facings: 8
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	extend: bits/hackerpod.png
+	extend:
+		Filename: bits/hackerpod.png
 		Start: 8
 		Length: 7
 		Tick: 60
-	extended: bits/hackerpod.png
+	extended:
+		Filename: bits/hackerpod.png
 		Start: 14
 		Length: 4
 		Reverses: true
 		Tick: 60
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 53
 
 elitepod:
-	idle: bits/elitepod.png
+	idle:
+		Filename: bits/elitepod.png
 		Frames: 0, 2, 4, 6, 8, 10, 12, 14
 		Facings: 8
 		ZOffset: 1024
-	move: bits/elitepod.png
+	move:
+		Filename: bits/elitepod.png
 		Length: 2
 		Tick: 60
 		Facings: 8
 		ZOffset: 1024
 	muzzle:
 		Combine:
-			muzzle2.png: #N
+			0: #N
+				Filename: muzzle2.png
 				Start: 0
 				Length: 3
 				Offset: 1,0
-			muzzle2.png: #NW
+			1: #NW
+				Filename: muzzle2.png
 				Start: 3
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #W
+			2: #W
+				Filename: muzzle2.png
 				Start: 6
 				Length: 3
 				Offset: -1,-1
-			muzzle2.png: #SW
+			3: #SW
+				Filename: muzzle2.png
 				Start: 9
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #S
+			4: #S
+				Filename: muzzle2.png
 				Start: 12
 				Length: 3
 				Offset: 1,0
-			muzzle2.png: #SE
+			5: #SE
+				Filename: muzzle2.png
 				Start: 15
 				Length: 3
 				Offset: 0,0
-			muzzle2.png: #E
+			6: #E
+				Filename: muzzle2.png
 				Start: 18
 				Length: 3
 				Offset: 1,-1
-			muzzle2.png: #NE
+			7: #NE
+				Filename: muzzle2.png
 				Start: 21
 				Length: 3
 				Offset: 0,0
@@ -518,233 +652,302 @@ elitepod:
 		Facings: 8
 		Tick: 50
 		ZOffset: 1024
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 54
 
 bomberpod:
-	idle: bits/pod.png
+	idle:
+		Filename: bits/pod.png
 		Facings: 8
 		Offset: 0,-3
-	animation: bits/pod.png
+	animation:
+		Filename: bits/pod.png
 		Start: 8
 		Facings: 8
 		Tick: 30
 		Offset: 0,-3
-	die: bits/poddeath.png
+	die:
+		Filename: bits/poddeath.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 55
 
 tyriantank:
-	idle: bits/tyriantank.png
+	idle:
+		Filename: bits/tyriantank.png
 		Start: 0
 		Facings: 8
-	turret: bits/tyriantank.png
+	turret:
+		Filename: bits/tyriantank.png
 		Start: 8
 		Facings: 8
 	muzzle: bits/muzzle.png
 		Combine:
-			muzzle.png: #N
+			0: #N
+				Filename: muzzle.png
 				Start: 0
 				Length: 8
 				Offset: 3,-10
-			muzzle.png: #NW
+			1: #NW
+				Filename: muzzle.png
 				Start: 8
 				Length: 8
 				Offset: -1,-10
-			muzzle.png: #W
+			2: #W
+				Filename: muzzle.png
 				Start: 16
 				Length: 8
 				Offset: -2,-6
-			muzzle.png: #SW
+			3: #SW
+				Filename: muzzle.png
 				Start: 24
 				Length: 8
 				Offset: -3,1
-			muzzle.png: #S
+			4: #S
+				Filename: muzzle.png
 				Start: 32
 				Length: 8
 				Offset: 1,0
-			muzzle.png: #SE
+			5: #SE
+				Filename: muzzle.png
 				Start: 40
 				Length: 8
 				Offset: 4,2
-			muzzle.png: #E
+			6: #E
+				Filename: muzzle.png
 				Start: 48
 				Length: 8
 				Offset: 6,-4
-			muzzle.png: #NE
+			7: #NE
+				Filename: muzzle.png
 				Start: 56
 				Length: 8
 				Offset: 6,-9
 		Length: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 32
 
 miner:
-	idle: bits/miner.png
+	idle:
+		Filename: bits/miner.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 5
 
 builder1:
-	idle: bits/builder1.png
+	idle:
+		Filename: bits/builder1.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 17
 
 builder2:
-	idle: bits/builder2.png
+	idle:
+		Filename: bits/builder2.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 18
 
 builder3:
-	idle: bits/builder3.png
+	idle:
+		Filename: bits/builder3.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 19
 
 builder4:
-	idle: bits/builder4.png
+	idle:
+		Filename: bits/builder4.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 20
 
 builder5:
-	idle: bits/builder5.png
+	idle:
+		Filename: bits/builder5.png
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 21
 
 missiletank:
-	idle: bits/missiletank.png
+	idle:
+		Filename: bits/missiletank.png
 		Start: 0
 		Facings: 8
-	turret: bits/missiletank.png
+	turret:
+		Filename: bits/missiletank.png
 		Start: 8
 		Facings: 8
-	muzzle: bits/muzzle.png
+	muzzle:
+		Filename: bits/muzzle.png
 		Length: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 4
 
 tanker1:
-	idle: bits/tanker.png
+	idle:
+		Filename: bits/tanker.png
 		Start: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 43
 
 tanker2:
-	idle: bits/tanker.png
+	idle:
+		Filename: bits/tanker.png
 		Start: 0
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 43
 
 tanker3:
-	idle: bits/tanker2.png
+	idle:
+		Filename: bits/tanker2.png
 		Start: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 18
 
 tanker4:
-	idle: bits/tanker2.png
+	idle:
+		Filename: bits/tanker2.png
 		Start: 0
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 18
 
 aatank:
-	idle: bits/aatank.png
+	idle:
+		Filename: bits/aatank.png
 		Start: 0
 		Facings: 8
-	turret: bits/aatank.png
+	turret:
+		Filename: bits/aatank.png
 		Start: 8
 		Facings: 8
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 35
 
 aatank2:
-	idle: bits/aatank2.png
+	idle:
+		Filename: bits/aatank2.png
 		Facings: 8
-	turret: bits/aatank2.png
+	turret:
+		Filename: bits/aatank2.png
 		Start: 8
 		Facings: 8
-	shoot: bits/aatank2.png
+	shoot:
+		Filename: bits/aatank2.png
 		Start: 16
 		Facings: 8
 		Tick: 100
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 38
 
 scrap1:
-	idle: bits/objects.png
+	idle:
+		Filename: bits/objects.png
 
 scrap2:
-	idle: bits/objects.png
+	idle:
+		Filename: bits/objects.png
 		Start: 1
 
 scrap3:
-	idle: bits/objects.png
+	idle:
+		Filename: bits/objects.png
 		Start: 2
 
 scrap4:
-	idle: bits/objects.png
+	idle:
+		Filename: bits/objects.png
 		Start: 3
 
 scrap5:
-	idle: bits/objects.png
+	idle:
+		Filename: bits/objects.png
 		Start: 4
 
 goldball:
-	idle: bits/goldball.png
+	idle:
+		Filename: bits/goldball.png
 
 energyball:
-	teleport: bits/teleport.png
+	teleport:
+		Filename: bits/teleport.png
 		Length: 10
-	teleport-large: bits/teleprt2.png
+	teleport-large:
+		Filename: bits/teleprt2.png
 		Length: 9
-	appear: bits/teleport.png
+	appear:
+		Filename: bits/teleport.png
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 50
 
 minipod1:
-	idle: bits/minipod1.png
+	idle:
+		Filename: bits/minipod1.png
 		Facings: 8
-	die: bits/minipod1-death.png
+	die:
+		Filename: bits/minipod1-death.png
 		Length: 6
 		Tick: 80
 		Offset: 1,-1
-	icon: bits/null.png
+	icon:
+		Filename: bits/null.png
 
 minipod2:
 	Inherits: minipod1
-	idle: bits/minipod2.png
-	die: bits/minipod2-death.png
+	idle:
+		Filename: bits/minipod2.png
+	die:
+		Filename: bits/minipod2-death.png
 
 minipod3:
 	Inherits: minipod1
-	idle: bits/minipod3.png
-	die: bits/minipod3-death.png
+	idle:
+		Filename: bits/minipod3.png
+	die:
+		Filename: bits/minipod3-death.png
 
 minipod4:
 	Inherits: minipod1
-	idle: bits/minipod4.png
-	die: bits/minipod4-death.png
+	idle:
+		Filename: bits/minipod4.png
+	die:
+		Filename: bits/minipod4-death.png
 
 minipod5:
 	Inherits: minipod1
-	idle: bits/minipod5.png
-	die: bits/minipod5-death.png
+	idle:
+		Filename: bits/minipod5.png
+	die:
+		Filename: bits/minipod5-death.png
 
 minipod6:
 	Inherits: minipod1
-	idle: bits/minipod6.png
-	die: bits/minipod6-death.png
+	idle:
+		Filename: bits/minipod6.png
+	die:
+		Filename: bits/minipod6-death.png

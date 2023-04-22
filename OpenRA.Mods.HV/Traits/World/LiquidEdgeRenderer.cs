@@ -90,7 +90,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			liquidTerrainLayer = self.Trait<LiquidTerrainLayer>();
 			liquidTerrainLayer.Covered.CellEntryChanged += AddDirtyCell;
-			spriteSequence = self.World.Map.Rules.Sequences.GetSequence(info.Image, info.Sequence);
+			spriteSequence = self.World.Map.Sequences.GetSequence(info.Image, info.Sequence);
 			map = self.World.Map;
 			this.info = info;
 		}

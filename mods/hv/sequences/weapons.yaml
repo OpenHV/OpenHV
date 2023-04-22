@@ -4,104 +4,130 @@ explosion:
 	Defaults:
 		Length: *
 		ZOffset: 2047
-	small: bits/expsmall.png
-	small_2: bits/expsmall2.png
-	medium: bits/explosn.png
-	medium_2: bits/explosn2.png
-	large: bits/explobig.png
-	large_f: bits/explobig.png
+	small:
+		Filename: bits/expsmall.png
+	small_2:
+		Filename: bits/expsmall2.png
+	medium:
+		Filename: bits/explosn.png
+	medium_2:
+		Filename: bits/explosn2.png
+	large:
+		Filename: bits/explobig.png
+	large_f:
+		Filename: bits/explobig.png
 		FlipX: true
 		FlipY: true
-	large_2: bits/explobig2.png
+	large_2:
+		Filename: bits/explobig2.png
 		Tick: 80
-	large_3: bits/explobig3.png
+	large_3:
+		Filename: bits/explobig3.png
 		Tick: 80
-	blood: bits/blood1.png
-	flame: bits/flame2.png
+	blood:
+		Filename: bits/blood1.png
+	flame:
+		Filename: bits/flame2.png
 		Offset: 0, -9
 
 nuclear_explosion:
-	idle: bits/nuclear_cloud.png
+	idle:
+		Filename: bits/nuclear_cloud.png
 		Length: 22
 		Tick: 60
 		ZOffset: 2050
 
 hit:
-	spark_a: bits/sparks1.png
+	spark_a:
+		Filename: bits/sparks1.png
 		Length: 7
 		Tick: 60
-	spark_b: bits/sparks2.png
+	spark_b:
+		Filename: bits/sparks2.png
 		Length: 10
 		Tick: 60
-	spark_c: bits/sparks3.png
+	spark_c:
+		Filename: bits/sparks3.png
 		Length: 10
 		Tick: 60
-	spark_d: bits/sparks4.png
+	spark_d:
+		Filename: bits/sparks4.png
 		Length: 7
 		Tick: 60
 
 bullet1:
-	idle: bits/bullet1.png
+	idle:
+		Filename: bits/bullet1.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet2:
-	idle: bits/bullet2.png
+	idle:
+		Filename: bits/bullet2.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet3:
-	idle: bits/bullet3.png
+	idle:
+		Filename: bits/bullet3.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet4:
-	idle: bits/bullet4.png
+	idle:
+		Filename: bits/bullet4.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
-	effect: bits/bullet4.png
+	effect:
+		Filename: bits/bullet4.png
 		Start: 8
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet5:
-	idle: bits/bullet5.png
+	idle:
+		Filename: bits/bullet5.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet6:
-	idle: bits/bullet6.png
+	idle:
+		Filename: bits/bullet6.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet7:
-	idle: bits/bullet7.png
+	idle:
+		Filename: bits/bullet7.png
 		Length: 2
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet8:
-	idle: bits/bullet8.png
+	idle:
+		Filename: bits/bullet8.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet9:
-	idle: bits/bullet9.png
+	idle:
+		Filename: bits/bullet9.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet10:
-	idle: bits/bullet10.png
+	idle:
+		Filename: bits/bullet10.png
 		Facings: 8
 		InterpolatedFacings: 16
 		Length: 2
@@ -109,46 +135,53 @@ bullet10:
 		ZOffset: 2030
 
 slcm:
-	idle: bits/bullet11.png
+	idle:
+		Filename: bits/bullet11.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet12:
-	idle: bits/bullet12.png
+	idle:
+		Filename: bits/bullet12.png
 		Length: 3
 		Tick: 100
 		Reverses: True
 		ZOffset: 2030
 
 bullet13:
-	idle: bits/bullet13.png
+	idle:
+		Filename: bits/bullet13.png
 		Length: 10
 		Tick: 40
 		ZOffset: 2030
 
 bullet14:
-	idle: bits/bullet14.png
+	idle:
+		Filename: bits/bullet14.png
 		Length: 2
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
 bullet15:
-	idle: bits/bullet15.png
+	idle:
+		Filename: bits/bullet15.png
 		Length: 6
 		Tick: 100
 		Reverses: True
 		ZOffset: 2030
 
 bullet16:
-	idle: bits/bullet16.png
+	idle:
+		Filename: bits/bullet16.png
 		Length: 4
 		Tick: 60
 		ZOffset: 2030
 
 bullet17:
-	idle: bits/bullet17.png
+	idle:
+		Filename: bits/bullet17.png
 		Facings: 8
 		InterpolatedFacings: 16
 		Length: 3
@@ -156,23 +189,28 @@ bullet17:
 		ZOffset: 2030
 
 bullet17-trace:
-	flame_trace_a: bits/bullet17-trace.png
+	flame_trace_a:
+		Filename: bits/bullet17-trace.png
 		Length: 4
 		Tick: 40
 		ZOffset: 2000
-	flame_trace_b: bits/bullet17-trace.png
+	flame_trace_b:
+		Filename: bits/bullet17-trace.png
 		Start: 3
 		Length: 4
 		Tick: 40
 		ZOffset: 2000
 
 nuclear:
-	up: bits/blank.png
-	down: bits/nuclear_bomb.png
+	up:
+		Filename: bits/blank.png
+	down:
+		Filename: bits/nuclear_bomb.png
 		ZOffset: 2030
 
 railgun:
-	idle: bits/railgunsfx.png
+	idle:
+		Filename: bits/railgunsfx.png
 		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
 		Length: *
 		Tick: 20
@@ -180,105 +218,123 @@ railgun:
 		ZOffset: 1023
 
 smoke:
-	idle: bits/smoke.png
+	idle:
+		Filename: bits/smoke.png
 		Length: 6
 		Tick: 60
 		ZOffset: 2020
 
 small_smoke:
-	idle: bits/small_smoke.png
+	idle:
+		Filename: bits/small_smoke.png
 		Length: 6
 		Tick: 60
 		ZOffset: 2020
 
 water_splash:
-	water_splash_a: bits/water_splash.png
+	water_splash_a:
+		Filename: bits/water_splash.png
 		Start: 0
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
-	water_splash_b: bits/water_splash.png
+	water_splash_b:
+		Filename: bits/water_splash.png
 		Start: 9
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
 
 water_splash_small:
-	water_splash_small_a: bits/water_splash_small.png
+	water_splash_small_a:
+		Filename: bits/water_splash_small.png
 		Start: 0
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
-	water_splash_small_b: bits/water_splash_small.png
+	water_splash_small_b:
+		Filename: bits/water_splash_small.png
 		Start: 6
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
 
 lava_splash:
-	lava_splash_a: bits/lava_splash.png
+	lava_splash_a:
+		Filename: bits/lava_splash.png
 		Start: 0
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
-	lava_splash_b: bits/lava_splash.png
+	lava_splash_b:
+		Filename: bits/lava_splash.png
 		Start: 9
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
 
 lava_splash_small:
-	lava_splash_small_a: bits/lava_splash_small.png
+	lava_splash_small_a:
+		Filename: bits/lava_splash_small.png
 		Start: 0
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
-	lava_splash_small_b: bits/lava_splash_small.png
+	lava_splash_small_b:
+		Filename: bits/lava_splash_small.png
 		Start: 6
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
 
 swamp_splash:
-	swamp_splash_a: bits/swamp_splash.png
+	swamp_splash_a:
+		Filename: bits/swamp_splash.png
 		Start: 0
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
-	swamp_splash_b: bits/swamp_splash.png
+	swamp_splash_b:
+		Filename: bits/swamp_splash.png
 		Start: 9
 		Length: 9
 		Tick: 60
 		ZOffset: 1000
 
 swamp_splash_small:
-	swamp_splash_small_a: bits/swamp_splash_small.png
+	swamp_splash_small_a:
+		Filename: bits/swamp_splash_small.png
 		Start: 0
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
-	swamp_splash_small_b: bits/swamp_splash_small.png
+	swamp_splash_small_b:
+		Filename: bits/swamp_splash_small.png
 		Start: 6
 		Length: 6
 		Tick: 60
 		ZOffset: 1000
 
 mine1:
-	idle: bits/mines.png
+	idle:
+		Filename: bits/mines.png
 		ZOffset: -512
 
 mine2:
-	idle: bits/mines.png
+	idle:
+		Filename: bits/mines.png
 		Start: 1
 		ZOffset: -512
 
 mine3:
-	idle: bits/mines.png
+	idle:
+		Filename: bits/mines.png
 		Start: 2
 		ZOffset: -512
 
 mine4:
-	idle: bits/mines.png
+	idle:
+		Filename: bits/mines.png
 		Start: 3
 		ZOffset: -512
 
@@ -287,21 +343,27 @@ debris:
 		Length: 6
 		Tick: 60
 		ZOffset: 2020
-	small: bits/junk.png
+	small:
+		Filename: bits/junk.png
 		Length: 4
-	small2: bits/debris2.png
-	small3: bits/debris3.png
-	large: bits/debris1.png
+	small2:
+		Filename: bits/debris2.png
+	small3:
+		Filename: bits/debris3.png
+	large:
+		Filename: bits/debris1.png
 
 fire:
-	flame: bits/flame.png
+	flame:
+		Filename: bits/flame.png
 		Length: 5
 		ZOffset: 512
 		Offset: 0, -10
 		Tick: 60
 
 pixelsparks:
-	Defaults: bits/pixelsparks.png
+	Defaults:
+		Filename: bits/pixelsparks.png
 	damage:
 		Length: 9
 		Tick: 120
@@ -311,42 +373,51 @@ pixelsparks:
 		Tick: 120
 
 spaceman:
-	idle: bits/spaceman.png
+	idle:
+		Filename: bits/spaceman.png
 		Frames: 0, 1, 2, 1
 		Length: *
 
 artillery-trail:
-	idle: bits/artillery-trail.png
+	idle:
+		Filename: bits/artillery-trail.png
 		Length: *
 		Tick: 80
 
 stealthtank-trail:
-	idle: bits/stealthtank-trail.png
+	idle:
+		Filename: bits/stealthtank-trail.png
 		Length: *
 		Tick: 60
 
 shells:
-	shell_flying: bits/shells.png
+	shell_flying:
+		Filename: bits/shells.png
 		Length: 4
 		Tick: 75
-	shell_a: bits/shells.png
+	shell_a:
+		Filename: bits/shells.png
 		Start: 0
 		Tick: 3000
 		ZOffset: -100
-	shell_b: bits/shells.png
+	shell_b:
+		Filename: bits/shells.png
 		Start: 1
 		Tick: 3000
 		ZOffset: -100
-	shell_c: bits/shells.png
+	shell_c:
+		Filename: bits/shells.png
 		Start: 2
 		Tick: 3000
 		ZOffset: -100
-	shell_d: bits/shells.png
+	shell_d:
+		Filename: bits/shells.png
 		Start: 3
 		Tick: 3000
 		ZOffset: -100
 
 bubble:
-	idle: bits/bubble.png
+	idle:
+		Filename: bits/bubble.png
 		Length: *
 		Tick: 60

@@ -1,48 +1,64 @@
 # License: CC-BY-SA-4.0
 
 lamppost:
-	idle: bits/lamppost.png
-	shadow-overlay: bits/lamppost.png
+	idle:
+		Filename: bits/lamppost.png
+	shadow-overlay:
+		Filename: bits/lamppost.png
 		Start: 1
 
 sparklamp:
-	idle: bits/sparklamp.png
-	shadow-overlay: bits/sparklamp.png
+	idle:
+		Filename: bits/sparklamp.png
+	shadow-overlay:
+		Filename: bits/sparklamp.png
 		Start: 1
 
 pyramid:
 	Defaults:
 		Offset: -1,-2
-	idle: bits/pyramid.png
-	damaged-idle: bits/pyramid.png
+	idle:
+		Filename: bits/pyramid.png
+	damaged-idle:
+		Filename: bits/pyramid.png
 		Start: 1
-	shadow-overlay: bits/pyramid-shadow.png
+	shadow-overlay:
+		Filename: bits/pyramid-shadow.png
 		Offset: 1,6
 
 mayanpyramid:
 	Defaults:
 		Offset: -1,-2
-	idle: bits/mayanpyramid.png
-	damaged-idle: bits/mayanpyramid.png
+	idle:
+		Filename: bits/mayanpyramid.png
+	damaged-idle:
+		Filename: bits/mayanpyramid.png
 		Start: 1
-	shadow-overlay: bits/pyramid-shadow.png
+	shadow-overlay:
+		Filename: bits/pyramid-shadow.png
 		Offset: 1,6
 
 pyramid2:
-	idle: bits/pyramid2.png
-	damaged-idle: bits/pyramid2.png
+	idle:
+		Filename: bits/pyramid2.png
+	damaged-idle:
+		Filename: bits/pyramid2.png
 		Start: 1
 
 obelisk:
 	Defaults:
 		Offset: 0,-3
-	idle: bits/obelisk.png
-	damaged-idle: bits/obelisk.png
+	idle:
+		Filename: bits/obelisk.png
+	damaged-idle:
+		Filename: bits/obelisk.png
 		Start: 1
-	shadow-overlay: bits/obelisk-shadow.png
+	shadow-overlay:
+		Filename: bits/obelisk-shadow.png
 		Offset: 4,8
 		ZOffset: 1768
-	damaged-shadow-overlay: bits/obelisk-shadow.png
+	damaged-shadow-overlay:
+		Filename: bits/obelisk-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 4,8
@@ -50,41 +66,54 @@ obelisk:
 mayanobelisk:
 	Defaults:
 		Offset: 0,-3
-	idle: bits/obelisk_mayan.png
-	damaged-idle: bits/obelisk_mayan.png
+	idle:
+		Filename: bits/obelisk_mayan.png
+	damaged-idle:
+		Filename: bits/obelisk_mayan.png
 		Start: 1
-	shadow-overlay: bits/obelisk-shadow.png
+	shadow-overlay:
+		Filename: bits/obelisk-shadow.png
 		Offset: 4,8
 		ZOffset: 1768
-	damaged-shadow-overlay: bits/obelisk-shadow.png
+	damaged-shadow-overlay:
+		Filename: bits/obelisk-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 4,8
 
 mayanpyramid2:
-	idle: bits/mayanpyramid2.png
-	damaged-idle: bits/mayanpyramid2.png
+	idle:
+		Filename: bits/mayanpyramid2.png
+	damaged-idle:
+		Filename: bits/mayanpyramid2.png
 		Start: 1
 
 prop1:
 	Defaults:
 		Offset: -1, -18
-	idle: bits/prop1.png
-	damaged-idle: bits/prop1.png
+	idle:
+		Filename: bits/prop1.png
+	damaged-idle:
+		Filename: bits/prop1.png
 		Start: 1
-	shadow-overlay: bits/prop1-shadow.png
+	shadow-overlay:
+		Filename: bits/prop1-shadow.png
 		Offset: 13,13
 
 prop2:
 	Defaults:
 		Offset: 0, -12
-	idle: bits/prop2.png
-	damaged-idle: bits/prop2.png
+	idle:
+		Filename: bits/prop2.png
+	damaged-idle:
+		Filename: bits/prop2.png
 		Start: 1
-	shadow-overlay: bits/prop2-shadow.png
+	shadow-overlay:
+		Filename: bits/prop2-shadow.png
 		ZOffset: -1768
 		Offset: 9, 9
-	animation: bits/prop2.png
+	animation:
+		Filename: bits/prop2.png
 		Start: 2
 		Length: 4
 		Reverses: True
@@ -93,24 +122,31 @@ prop2:
 prop3:
 	Defaults:
 		Offset: 0,-3
-	idle: bits/prop3.png
+	idle:
+		Filename: bits/prop3.png
 		Frames: 0, 1, 2, 1
 		Length: 4
 		Tick: 200
-	damaged-idle: bits/prop3.png
+	damaged-idle:
+		Filename: bits/prop3.png
 		Start: 3
-	shadow-overlay: bits/prop3-shadow.png
+	shadow-overlay:
+		Filename: bits/prop3-shadow.png
 		Offset: 1,0
 
 prop4:
 	Defaults:
 		Offset: -1,-15
-	idle: bits/prop4.png
-	damaged-idle: bits/prop4.png
+	idle:
+		Filename: bits/prop4.png
+	damaged-idle:
+		Filename: bits/prop4.png
 		Start: 1
-	shadow-overlay: bits/prop4-shadow.png
+	shadow-overlay:
+		Filename: bits/prop4-shadow.png
 		Offset: 9,10
-	damaged-shadow-overlay: bits/prop4-shadow.png
+	damaged-shadow-overlay:
+		Filename: bits/prop4-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 9,10
@@ -118,111 +154,146 @@ prop4:
 prop5:
 	Defaults:
 		Offset: 0,0
-	idle: bits/prop5.png
-	damaged-idle: bits/prop5.png
+	idle:
+		Filename: bits/prop5.png
+	damaged-idle:
+		Filename: bits/prop5.png
 		Start: 1
-	shadow-overlay: bits/prop5-shadow.png
+	shadow-overlay:
+		Filename: bits/prop5-shadow.png
 		Offset: 1,6
 
 prop6:
 	Defaults:
 		Offset: 0,0
-	idle: bits/prop6.png
-	damaged-idle: bits/prop6.png
+	idle:
+		Filename: bits/prop6.png
+	damaged-idle:
+		Filename: bits/prop6.png
 		Start: 1
-	shadow-overlay: bits/prop6-shadow.png
+	shadow-overlay:
+		Filename: bits/prop6-shadow.png
 		Offset: 1,4
 
 prop7:
 	Defaults:
 		Offset: 0,0
-	idle: bits/prop7.png
-	damaged-idle: bits/prop7.png
+	idle:
+		Filename: bits/prop7.png
+	damaged-idle:
+		Filename: bits/prop7.png
 		Start: 1
-	shadow-overlay: bits/prop7-shadow.png
+	shadow-overlay:
+		Filename: bits/prop7-shadow.png
 		Offset: 1,4
 
 prop8:
 	Defaults:
 		Offset: 0,0
-	idle: bits/prop8.png
-	damaged-idle: bits/prop8.png
+	idle:
+		Filename: bits/prop8.png
+	damaged-idle:
+		Filename: bits/prop8.png
 		Start: 1
-	shadow-overlay: bits/prop8-shadow.png
+	shadow-overlay:
+		Filename: bits/prop8-shadow.png
 		Offset: 1,4
 
 prop9:
 	Defaults:
 		Offset: 0,-5
-	idle: bits/prop9.png
+	idle:
+		Filename: bits/prop9.png
 		Length: 5
 		Tick: 80
-	damaged-idle: bits/prop9.png
+	damaged-idle:
+		Filename: bits/prop9.png
 		Start: 6
-	shadow-overlay: bits/prop9-10-shadow.png
+	shadow-overlay:
+		Filename: bits/prop9-10-shadow.png
 		Offset: 13,23
 		ZOffset: 1768
-	damaged-shadow-overlay: bits/prop9-10-shadow.png
+	damaged-shadow-overlay:
+		Filename: bits/prop9-10-shadow.png
 		Start: 1
 		Offset: 13,33
 		ZOffset: 1768
 
 prop10:
 	Inherits: prop9
-	idle: bits/prop10.png
+	idle:
+		Filename: bits/prop10.png
 		Tick: 120
-	damaged-idle: bits/prop10.png
+	damaged-idle:
+		Filename: bits/prop10.png
 
 prop11:
 	Defaults:
 		Offset: 0,-3
-	idle: bits/prop11.png
+	idle:
+		Filename: bits/prop11.png
 		Length: 4
 		Reverses: True
 		Tick: 80
-	damaged-idle: bits/prop11.png
+	damaged-idle:
+		Filename: bits/prop11.png
 		Start: 4
-	shadow-overlay: bits/prop11-shadow.png
+	shadow-overlay:
+		Filename: bits/prop11-shadow.png
 		Offset: 5,3
 		ZOffset: -1768
 
 prop12:
 	Defaults:
 		Offset: 0,0
-	idle: bits/prop12.png
+	idle:
+		Filename: bits/prop12.png
 		Length: 3
 		Reverses: True
 		Tick: 120
-	damaged-idle: bits/prop12.png
+	damaged-idle:
+		Filename: bits/prop12.png
 		Start: 3
-	shadow-overlay: bits/prop12-shadow.png
+	shadow-overlay:
+		Filename: bits/prop12-shadow.png
 		Offset: 2,3
 		ZOffset: -1768
 
 prop13:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
+		Filename: prop13
 		Offset: 0, -6
-	idle: bits/prop13.png
+	idle:
+		Filename: bits/prop13.png
 		Start: 0
-	shadow-overlay: bits/prop13-shadow.png
+	shadow-overlay:
+		Filename: bits/prop13-shadow.png
 		ZOffset: -1768
 		Offset: 2, 0
-	damaged-idle: bits/prop13.png
+	damaged-idle:
+		Filename: bits/prop13.png
 		Start: 1
-	animation: bits/prop13.png
+	animation:
+		Filename: bits/prop13.png
 		Start: 2
 		Length: 3
 		Tick: 200
 	flame:
+		Filename: bits/flame2.png
 		Offset: 4, -18
 	flame2:
+		Filename: bits/flame2.png
 		Offset: 15, 8
-	icon: bits/icon.png
+	icon:
+		Filename: bits/icon.png
 
 tanktrap:
-	idle: bits/tanktrap.png
-	damaged-idle: bits/tanktrap.png
+	idle:
+		Filename: bits/tanktrap.png
+	damaged-idle:
+		Filename: bits/tanktrap.png
 		Start: 1
-	shadow-overlay: bits/tanktrap-shadow.png
+	shadow-overlay:
+		Filename: bits/tanktrap-shadow.png
 		Offset: 2, 3

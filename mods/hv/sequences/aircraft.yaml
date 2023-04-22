@@ -1,197 +1,251 @@
 # License: CC-BY-SA-4.0
 
 ship1:
-	idle: bits/ship1.png
+	idle:
+		Filename: bits/ship1.png
 		Facings: 8
-	icon: units-icons.png
+	icon:
+		Filename: units-icons.png
 		Start: 34
 
 ship2:
-	idle: bits/ship2.png
+	idle:
+		Filename: bits/ship2.png
 		Facings: 8
-	muzzle: muzzle2.png
+	muzzle:
+		Filename: muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: units-icons.png
+	icon:
+		Filename: units-icons.png
 		Start: 33
 
 plane1:
-	idle: bits/plane1.png
+	idle:
+		Filename: bits/plane1.png
 		Facings: 8
-	muzzle: muzzle2.png
+	muzzle:
+		Filename: muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
-	icon: units-icons.png
+	icon:
+		Filename: units-icons.png
 		Start: 48
 
 plane2:
-	idle: bits/plane2.png
+	idle:
+		Filename: bits/plane2.png
 		Facings: 8
-	icon: units-icons.png
+	icon:
+		Filename: units-icons.png
 		Start: 49
 
 copter:
-	idle: bits/copter.png
+	idle:
+		Filename: bits/copter.png
 		Facings: 8
 		Length: 4
 		Tick: 50
-	muzzle: copter.png
+	muzzle:
+		Filename: copter.png
 		Start: 32
 		Length: 3
 		Facings: 8
 		ZOffset: -100
-	icon: units-icons.png
+	icon:
+		Filename: units-icons.png
 		Start: 23
 
 banshee:
-	idle: bits/banshee.png
+	idle:
+		Filename: bits/banshee.png
 		Length: 4
 		Facings: 8
 		Tick: 50
 	muzzle:
 		Combine:
-			muzzle4.png: #N
+			0: #N
+				Filename: muzzle4.png
 				Start: 0
 				Length: 2
 				Offset: 0,6
-			muzzle4.png: #NW
+			1: #NW
+				Filename: muzzle4.png
 				Start: 2
 				Length: 2
 				Offset: 3,4
-			muzzle4.png: #W
+			2: #W
+				Filename: muzzle4.png
 				Start: 4
 				Length: 2
 				Offset: 4,2
-			muzzle4.png: #SW
+			3: #SW
+				Filename: muzzle4.png
 				Start: 6
 				Length: 2
 				Offset: 2,-2
-			muzzle4.png: #S
+			4: #S
+				Filename: muzzle4.png
 				Start: 8
 				Length: 2
 				Offset: 0,-3
-			muzzle4.png: #SE
+			5: #SE
+				Filename: muzzle4.png
 				Start: 10
 				Length: 2
 				Offset: -2,-2
-			muzzle4.png: #E
+			6: #E
+				Filename: muzzle4.png
 				Start: 12
 				Length: 2
 				Offset: -4,2
-			muzzle4.png: #NE
+			7: #NE
+				Filename: muzzle4.png
 				Start: 14
 				Length: 2
 				Offset: -3,4
 		Length: 2
 		Facings: 8
 		Tick: 100
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 36
 
 copter2:
-	idle: bits/copter2.png
+	idle:
+		Filename: bits/copter2.png
 		Facings: 8
-	fly: bits/copter2.png
+	fly:
+		Filename: bits/copter2.png
 		Start: 8
 		Length: 4
 		Facings: 8
 		Tick: 50
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 24
 
 balloon:
-	idle: bits/balloon.png
-	shadow-overlay: bits/balloon-shadow.png
+	idle:
+		Filename: bits/balloon.png
+	shadow-overlay:
+		Filename: bits/balloon-shadow.png
 		Offset: 15, -1
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 22
 
 mother2b:
-	idle: bits/mother2b.png
-	icon: bits/icon.png
+	idle:
+		Filename: bits/mother2b.png
+	icon:
+		Filename: bits/icon.png
 
 mother2c:
-	idle: bits/mother2c.png
-	icon: bits/icon.png
+	idle:
+		Filename: bits/mother2c.png
+	icon:
+		Filename: bits/icon.png
 
 dropship:
-	idle: bits/dropship.png
+	idle:
+		Filename: bits/dropship.png
 		Facings: 8
-	fly: bits/dropship.png
+	fly:
+		Filename: bits/dropship.png
 		Start: 8
 		Facings: 8
-	shoot: bits/dropship.png
+	shoot:
+		Filename: bits/dropship.png
 		Start: 8
 		Facings: 8
-	icon: units-icons.png
+	icon:
+		Filename: units-icons.png
 		Start: 39
 
 saucer:
-	idle: bits/saucer.png
+	idle:
+		Filename: bits/saucer.png
 		ZOffset: 2050
-	shadow-overlay: bits/saucer-shadow.png
+	shadow-overlay:
+		Filename: bits/saucer-shadow.png
 		Offset: 15, -1
-	icon: bits/units-icons.png
+	icon:
+		Filename: bits/units-icons.png
 		Start: 40
 
 drone:
-	idle: bits/drone.png
+	idle:
+		Filename: bits/drone.png
 		Facings: 8
-	shoot: bits/drone.png
+	shoot:
+		Filename: bits/drone.png
 		Facings: 8
 		Start: 8
 
 droppod:
-	idle: bits/droppod.png
+	idle:
+		Filename: bits/droppod.png
 		Length: 5
 		Tick: 200
 
 landedpod:
-	idle: bits/droppod.png
+	idle:
+		Filename: bits/droppod.png
 		Start: 5
 		Offset: 0,2
 
 bomber1:
-	idle: bits/bomber1.png
+	idle:
+		Filename: bits/bomber1.png
 		Facings: 8
 		ZOffset: 2048
 
 cargoship:
-	liftoff: bits/cargoship.png
+	liftoff:
+		Filename: bits/cargoship.png
 		Facings: 8
-	unloaded: bits/cargoship.png
+	unloaded:
+		Filename: bits/cargoship.png
 		Start: 8
 		Facings: 8
-	landing: bits/cargoship.png
+	landing:
+		Filename: bits/cargoship.png
 		Start: 16
 		Facings: 8
-	idle: bits/cargoship.png
+	idle:
+		Filename: bits/cargoship.png
 		Start: 24
 		Facings: 8
 
 parachute:
-	idle: bits/parachute.png
+	idle:
+		Filename: bits/parachute.png
 		Length: 8
 		Offset: -2, -7
-	closing: bits/parachute.png
+	closing:
+		Filename: bits/parachute.png
 		Start: 8
 		Length: 10
 		Tick: 60
 		ZOffset: -1024
 		Offset: -2, -7
-	opening: bits/parachute.png
+	opening:
+		Filename: bits/parachute.png
 		Frames: 17, 16, 15, 14, 13, 12, 11, 10, 9
 		Tick: 100
 		Offset: -2, -7
 
 airlifter:
-	idle: bits/airlifter.png
+	idle:
+		Filename: bits/airlifter.png
 		Facings: 8
 
 landing:
-	idle: large_smoke.png
+	idle:
+		Filename: large_smoke.png
 		Length: *
 		Tick: 50
 		ZOffset: -512

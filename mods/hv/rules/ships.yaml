@@ -366,7 +366,7 @@ NAVALTRANSPORT:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor
 		BuildPaletteOrder: 40
-		Description:  General-purpose naval transport.\nCan carry pods.\n  Unarmed
+		Description: General-purpose naval transport.\nCan carry pods.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

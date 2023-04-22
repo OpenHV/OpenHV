@@ -47,7 +47,7 @@ BunkerChaingun:
 		Speed: 1000
 		Shadow: false
 		ContrailLength: 3
-		ContrailWidth: 0c32
+		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
 		Blockable: false
 	Warhead@Damage: SpreadDamage
@@ -72,7 +72,7 @@ BuggyChainGun:
 		Inaccuracy: 0c256
 		Speed: 1000
 		ContrailLength: 3
-		ContrailWidth: 0c32
+		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
 	Warhead@Damage: SpreadDamage
 		Spread: 24
@@ -144,7 +144,7 @@ Vulcan:
 		Speed: 1000
 		Shadow: false
 		ContrailLength: 3
-		ContrailWidth: 0c32
+		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
 		Blockable: false
 	Warhead@Damage: SpreadDamage
@@ -196,7 +196,7 @@ BoatMachineGun:
 		Inaccuracy: 0c256
 		Speed: 1000
 		ContrailLength: 3
-		ContrailWidth: 0c32
+		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
 	Warhead@Damage: SpreadDamage
 		Spread: 24
@@ -246,7 +246,7 @@ PatrolBoatGround:
 		LaunchAngle: 100
 		Inaccuracy: 0c256
 		ContrailLength: 4
-		ContrailWidth: 0c32
+		ContrailStartWidth: 0c32
 		ContrailStartColor: F29100
 	Warhead@Damage: SpreadDamage
 		Spread: 126

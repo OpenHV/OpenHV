@@ -383,35 +383,35 @@ World:
 	CreateMapPlayers:
 	StartingUnits@BaseYI:
 		Class: none
-		ClassName: starting-units.base-only
+		ClassName: options-starting-units.base-only
 		Factions: yi
 		BaseActor: base
 	StartingUnits@BaseSC:
 		Class: none
-		ClassName: starting-units.base-only
+		ClassName: options-starting-units.base-only
 		Factions: sc
 		BaseActor: base2
 	StartingUnits@MinerYI:
 		Class: miner
-		ClassName: starting-units.base-miner
+		ClassName: options-starting-units.base-miner
 		Factions: yi
 		BaseActor: base
 		SupportActors: miner
 	StartingUnits@MinerSC:
 		Class: miner
-		ClassName: starting-units.base-miner
+		ClassName: options-starting-units.base-miner
 		Factions: sc
 		BaseActor: base2
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
-		ClassName: starting-units.base-scout
+		ClassName: options-starting-units.base-scout
 		Factions: yi
 		BaseActor: base
 		SupportActors: saucer
 	StartingUnits@ScoutSC:
 		Class: scout
-		ClassName: starting-units.base-scout
+		ClassName: options-starting-units.base-scout
 		Factions: sc
 		BaseActor: base2
 		SupportActors: balloon
@@ -487,5 +487,4 @@ World:
 		TerrainFlashPalette: moveflash
 	ColorPickerManager:
 		PreviewActor: dropship.colorpicker
-		PresetHues: 0, 0.13, 0.18, 0.3, 0.475, 0.625, 0.82, 0.89, 0.97, 0.05, 0.23, 0.375, 0.525, 0.6, 0.75, 0.85
-		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.5, 0.35, 0.4, 0.4, 0.5, 0.5, 0.4, 0.35
+		PresetColors: F21818, F2BC18, DAF218, 18F26F, 18BEF2, 1821F2, BA18F2, F218BC, F29191, F2DF79, CDF291, 79F2BF, 91DBF2, 7997F2, CD91F2, F279E6

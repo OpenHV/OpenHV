@@ -180,7 +180,7 @@ stance-icons:
 stance-icons-highlighted:
 	Inherits: stance-icons
 	Regions:
-		attack-anything:  544, 48, 16, 16
+		attack-anything: 544, 48, 16, 16
 		defend: 592, 48, 16, 16
 		return-fire: 640, 48, 16, 16
 		hold-fire: 688, 48, 16, 16
