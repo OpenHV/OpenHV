@@ -101,6 +101,7 @@ TOWERBASE:
 		Prerequisite: structures.sc
 	Production:
 		Produces: Defense
+	ProvidesRadar:
 
 BUNKER:
 	Inherits@Amplifier: ^WeaponRangeUpgrade
