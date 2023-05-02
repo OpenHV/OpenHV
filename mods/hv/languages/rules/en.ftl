@@ -19,3 +19,7 @@ checkbox-build-radius =
 checkbox-crates =
     .label = Cubes
     .description = Collect cubes with units to receive random bonuses
+
+## ScriptLobbyDropdown@Difficulty
+options-difficulty =
+    .normal = Normal

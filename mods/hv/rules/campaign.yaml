@@ -17,9 +17,10 @@ World:
 		ShortGameCheckboxEnabled: False
 	ScriptLobbyDropdown@Difficulty:
 		ID: difficulty
-		Label: Difficulty
+		Label: dropdown-difficulty.label
+		Description: dropdown-difficulty.description
 		Values:
-			normal: Normal
+			normal: options-difficulty.normal
 		Default: normal
 		Locked: true
 

@@ -65,9 +65,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(MapPreview map)
 		{
-			yield return new LobbyBooleanOption("cubes", Game.ModData.Translation.GetString(CheckboxLabel),
-				Game.ModData.Translation.GetString(CheckboxDescription),
-				CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
+			yield return new LobbyBooleanOption(map, "cubes", CheckboxLabel, CheckboxDescription, CheckboxVisible, CheckboxDisplayOrder, CheckboxEnabled, CheckboxLocked);
 		}
 
 		public override object Create(ActorInitializer init) { return new CubeSpawner(init.Self, this); }

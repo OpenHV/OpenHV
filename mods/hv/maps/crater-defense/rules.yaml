@@ -25,12 +25,12 @@ World:
 	-CubeSpawner:
 	StartingUnits@BaseYI:
 		Class: none
-		ClassName: Base only
+		ClassName: options-starting-units.base-only
 		Factions: yi
 		BaseActor: towerbase
 	StartingUnits@BaseSC:
 		Class: none
-		ClassName: Base only
+		ClassName: options-starting-units.base-only
 		Factions: sc
 		BaseActor: towerbase
 	MapBuildRadius:

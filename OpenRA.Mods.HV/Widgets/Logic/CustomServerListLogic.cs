@@ -28,72 +28,73 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 	public class CustomServerListLogic : ChromeLogic
 	{
 		[TranslationReference]
-		static readonly string SearchStatusFailed = "search-status-failed";
+		const string SearchStatusFailed = "label-search-status-failed";
 
 		[TranslationReference]
-		static readonly string SearchStatusNoGames = "search-status-no-games";
+		const string SearchStatusNoGames = "label-search-status-no-games";
 
 		[TranslationReference("players")]
-		static readonly string PlayersOnline = "players-online";
+		const string PlayersOnline = "label-players-online-count";
 
 		[TranslationReference]
-		static readonly string NoServerSelected = "no-server-selected";
-		readonly string noServerSelected;
+		const string NoServerSelected = "label-no-server-selected";
 
 		[TranslationReference]
-		static readonly string MapStatusSearching = "map-status-searching";
-		readonly string mapStatusSearching;
+		const string MapStatusSearching = "label-map-status-searching";
 
 		[TranslationReference]
-		static readonly string MapClassificationUnknown = "map-classification-unknown";
-		readonly string mapClassificationUnknown;
+		const string MapClassificationUnknown = "label-map-classification-unknown";
 
 		[TranslationReference("players")]
-		static readonly string PlayersLabel = "players-label";
+		const string PlayersLabel = "label-players-count";
 
 		[TranslationReference("bots")]
-		static readonly string BotsLabel = "bots-label";
+		const string BotsLabel = "label-bots-count";
 
 		[TranslationReference("spectators")]
-		static readonly string SpectatorsLabel = "spectators-label";
+		const string SpectatorsLabel = "label-spectators-count";
 
 		[TranslationReference]
-		static readonly string Players = "players";
+		const string Players = "label-players";
 
 		[TranslationReference("team")]
-		static readonly string TeamNumber = "team-number";
+		const string TeamNumber = "label-team-name";
 
 		[TranslationReference]
-		static readonly string NoTeam = "no-team";
+		const string NoTeam = "label-no-team";
 
 		[TranslationReference]
-		static readonly string Spectators = "spectators";
+		const string Spectators = "label-spectators";
 
 		[TranslationReference("players")]
-		static readonly string OtherPlayers = "n-other-players";
+		const string OtherPlayers = "label-other-players-count";
 
 		[TranslationReference]
-		static readonly string Playing = "playing";
-		readonly string playing;
+		const string Playing = "label-playing";
 
 		[TranslationReference]
-		static readonly string Waiting = "waiting";
-		readonly string waiting;
+		const string Waiting = "label-waiting";
 
 		[TranslationReference("minutes")]
-		static readonly string InProgress = "in-progress-for";
+		const string InProgress = "label-in-progress-for";
 
 		[TranslationReference]
-		static readonly string PasswordProtected = "password-protected";
+		const string PasswordProtected = "label-password-protected";
 
 		[TranslationReference]
-		static readonly string WaitingForPlayers = "waiting-for-players";
+		const string WaitingForPlayers = "label-waiting-for-players";
 
 		[TranslationReference]
-		static readonly string ServerShuttingDown = "server-shutting-down";
+		const string ServerShuttingDown = "label-server-shutting-down";
 
 		[TranslationReference]
-		static readonly string UnknownServerState = "unknown-server-state";
+		const string UnknownServerState = "label-unknown-server-state";
+
+		readonly string noServerSelected;
+		readonly string mapStatusSearching;
+		readonly string mapClassificationUnknown;
+		readonly string playing;
+		readonly string waiting;
 
 		readonly Color incompatibleVersionColor;
 		readonly Color incompatibleProtectedGameColor;
@@ -147,8 +148,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		{
 			switch (searchStatus)
 			{
-				case SearchStatus.Failed: return modData.Translation.GetString(SearchStatusFailed);
-				case SearchStatus.NoGames: return modData.Translation.GetString(SearchStatusNoGames);
+				case SearchStatus.Failed: return TranslationProvider.GetString(SearchStatusFailed);
+				case SearchStatus.NoGames: return TranslationProvider.GetString(SearchStatusNoGames);
 				default: return "";
 			}
 		}
@@ -159,22 +160,22 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			this.modData = modData;
 			this.onJoin = onJoin;
 
-			playing = modData.Translation.GetString(Playing);
-			waiting = modData.Translation.GetString(Waiting);
+			playing = TranslationProvider.GetString(Playing);
+			waiting = TranslationProvider.GetString(Waiting);
 
-			noServerSelected = modData.Translation.GetString(NoServerSelected);
-			mapStatusSearching = modData.Translation.GetString(MapStatusSearching);
-			mapClassificationUnknown = modData.Translation.GetString(MapClassificationUnknown);
+			noServerSelected = TranslationProvider.GetString(NoServerSelected);
+			mapStatusSearching = TranslationProvider.GetString(MapStatusSearching);
+			mapClassificationUnknown = TranslationProvider.GetString(MapClassificationUnknown);
 
-			players = new CachedTransform<int, string>(i => modData.Translation.GetString(PlayersLabel, Translation.Arguments("players", i)));
-			bots = new CachedTransform<int, string>(i => modData.Translation.GetString(BotsLabel, Translation.Arguments("bots", i)));
-			spectators = new CachedTransform<int, string>(i => modData.Translation.GetString(SpectatorsLabel, Translation.Arguments("spectators", i)));
+			players = new CachedTransform<int, string>(i => TranslationProvider.GetString(PlayersLabel, Translation.Arguments("players", i)));
+			bots = new CachedTransform<int, string>(i => TranslationProvider.GetString(BotsLabel, Translation.Arguments("bots", i)));
+			spectators = new CachedTransform<int, string>(i => TranslationProvider.GetString(SpectatorsLabel, Translation.Arguments("spectators", i)));
 
-			minutes = new CachedTransform<double, string>(i => modData.Translation.GetString(InProgress, Translation.Arguments("minutes", i)));
-			passwordProtected = modData.Translation.GetString(PasswordProtected);
-			waitingForPlayers = modData.Translation.GetString(WaitingForPlayers);
-			serverShuttingDown = modData.Translation.GetString(ServerShuttingDown);
-			unknownServerState = modData.Translation.GetString(UnknownServerState);
+			minutes = new CachedTransform<double, string>(i => TranslationProvider.GetString(InProgress, Translation.Arguments("minutes", i)));
+			passwordProtected = TranslationProvider.GetString(PasswordProtected);
+			waitingForPlayers = TranslationProvider.GetString(WaitingForPlayers);
+			serverShuttingDown = TranslationProvider.GetString(ServerShuttingDown);
+			unknownServerState = TranslationProvider.GetString(UnknownServerState);
 
 			services = modData.Manifest.Get<WebServices>();
 			webServices = modData.Manifest.Get<GitHubWebServices>();
@@ -321,7 +322,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var playersLabel = widget.GetOrNull<LabelWidget>("PLAYER_COUNT");
 			if (playersLabel != null)
 			{
-				var playersText = new CachedTransform<int, string>(p => modData.Translation.GetString(PlayersOnline, Translation.Arguments("players", p)));
+				var playersText = new CachedTransform<int, string>(p => TranslationProvider.GetString(PlayersOnline, Translation.Arguments("players", p)));
 				playersLabel.IsVisible = () => playerCount != 0;
 				playersLabel.GetText = () => playersText.Update(playerCount);
 			}
@@ -581,14 +582,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var noTeams = players.Count() == 1;
 			foreach (var p in players)
 			{
-				var label = noTeams ? modData.Translation.GetString(Players) : p.Key > 0
-					? modData.Translation.GetString(TeamNumber, Translation.Arguments("team", p.Key))
-					: modData.Translation.GetString(NoTeam);
+				var label = noTeams ? TranslationProvider.GetString(Players) : p.Key > 0
+					? TranslationProvider.GetString(TeamNumber, Translation.Arguments("team", p.Key))
+					: TranslationProvider.GetString(NoTeam);
 				teams.Add(label, p);
 			}
 
 			if (server.Clients.Any(c => c.IsSpectator))
-				teams.Add(modData.Translation.GetString(Spectators), server.Clients.Where(c => c.IsSpectator));
+				teams.Add(TranslationProvider.GetString(Spectators), server.Clients.Where(c => c.IsSpectator));
 
 			var factionInfo = modData.DefaultRules.Actors[SystemActors.World].TraitInfos<FactionInfo>();
 			foreach (var kv in teams)
@@ -764,7 +765,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 								if (game.Clients.Length > 10)
 									displayClients = displayClients
 										.Take(9)
-										.Append(modData.Translation.GetString(OtherPlayers, Translation.Arguments("players", game.Clients.Length - 9)));
+										.Append(TranslationProvider.GetString(OtherPlayers, Translation.Arguments("players", game.Clients.Length - 9)));
 
 								var tooltip = displayClients.JoinWith("\n");
 								players.GetTooltipText = () => tooltip;

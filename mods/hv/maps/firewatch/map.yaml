@@ -48,4 +48,4 @@ Sequences: sequences.yaml
 
 Weapons: weapons.yaml
 
-Translations: hv|languages/lua/en.ftl
+Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl
