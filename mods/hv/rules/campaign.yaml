@@ -4,9 +4,6 @@ World:
 	-CubeSpawner:
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES
-	MapCreeps:
-		CheckboxLocked: True
-		CheckboxEnabled: False
 	MapBuildRadius:
 		AllyBuildRadiusCheckboxLocked: True
 		AllyBuildRadiusCheckboxEnabled: False
