@@ -220,7 +220,6 @@ generator:
 		Filename: bits/generator.png
 		Length: 15
 		Tick: 80
-		ZOffset: 2048
 	shadow-overlay:
 		Filename: bits/generator-shadow.png
 		ZOffset: 1768
@@ -237,12 +236,12 @@ generator:
 		Filename: build.png
 		Length: 39
 		Tick: 30
-		ZOffset: 3096
+		ZOffset: 2048
 	make-overlay:
 		Filename: bits/build-vanish.png
 		Length: 26
 		Tick: 30
-		ZOffset: 3096
+		ZOffset: 2048
 	flame:
 		Filename: bits/flame2.png
 		Offset: 0, 2
