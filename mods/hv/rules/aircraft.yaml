@@ -272,7 +272,7 @@ COPTER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
-		Description: Vehicle Transport Helicopter.\n  Armed with light machine gun.\n\n  Can load pods\n  and lift one tank.
+		Description: Vehicle Transport Helicopter.\n  Armed with light machine gun.\n\n  Can load pods\n  and lift one vehicle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -287,7 +287,7 @@ COPTER2:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 180
+		Speed: 135
 		AltitudeVelocity: 0c58
 	Voiced:
 		VoiceSet: TransportHelicopterVoice
@@ -407,7 +407,7 @@ DROPSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.yi
-		Description: Vehicle Transport Shuttle.\n  Armed with light missiles.\n  Can load pods\n  and lift one tank.
+		Description: Vehicle Transport Shuttle.\n  Armed with light missiles.\n  Can load pods\n  and lift one vehicle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -422,7 +422,7 @@ DROPSHIP:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
-		Speed: 180
+		Speed: 135
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
 	Voiced:
