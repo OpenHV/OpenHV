@@ -309,7 +309,7 @@ COPTER2:
 		LocalOffset: 0,0,-400
 	Cargo:
 		Types: Scout
-		MaxWeight: 5
+		MaxWeight: 8
 		AfterUnloadDelay: 40
 	Carryall:
 		BeforeLoadDelay: 10
@@ -443,7 +443,7 @@ DROPSHIP:
 		DecorationBounds: 2048, 1848
 	Cargo:
 		Types: Scout
-		MaxWeight: 4
+		MaxWeight: 8
 		AfterUnloadDelay: 40
 		UnloadVoice: Unload
 	Carryall:
