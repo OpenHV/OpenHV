@@ -184,8 +184,7 @@ namespace OpenRA.Mods.HV.Traits
 					}
 				}
 
-				if (minelayers == null)
-					minelayers = world.ActorsWithTrait<Minelayer>().Where(at => !unitCannotBeOrderedOrIsBusy(at.Actor)).ToArray();
+				minelayers ??= world.ActorsWithTrait<Minelayer>().Where(at => !unitCannotBeOrderedOrIsBusy(at.Actor)).ToArray();
 
 				if (minelayers.Length == 0)
 					return;

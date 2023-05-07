@@ -34,8 +34,7 @@ namespace OpenRA.Mods.HV
 				return;
 
 			// Start the timer on the first render
-			if (lastUpdate == null)
-				lastUpdate = Stopwatch.StartNew();
+			lastUpdate ??= Stopwatch.StartNew();
 
 			Game.Renderer.BeginUI();
 			DisplayInner(Game.Renderer);

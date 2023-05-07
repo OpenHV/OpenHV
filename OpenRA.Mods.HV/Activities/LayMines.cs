@@ -42,8 +42,7 @@ namespace OpenRA.Mods.HV.Activities
 
 		protected override void OnFirstRun(Actor self)
 		{
-			if (minefield == null)
-				minefield = new List<CPos> { self.Location };
+			minefield ??= new List<CPos> { self.Location };
 		}
 
 		CPos? NextValidCell(Actor self)

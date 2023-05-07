@@ -52,8 +52,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic.Ingame
 				.Skip(1)
 				.FirstOrDefault();
 
-			if (next == null)
-				next = miners.First();
+			next ??= miners.First();
 
 			selection.Combine(world, new Actor[] { next }, false, true);
 			viewport.Center(selection.Actors);
