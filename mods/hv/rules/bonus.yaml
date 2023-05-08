@@ -18,7 +18,7 @@ REVEALCUBE:
 CLOAKCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
-		Sequence: turquoise
+		Sequence: brown
 	GrantExternalConditionCrateAction@cloak:
 		Condition: crate-cloak
 		TextNotification: Unit cloaked.
@@ -50,6 +50,15 @@ SPAWNCUBE:
 		Units: tank10
 		ValidFactions: yi
 		SelectionShares: 1
+
+DUPLICATECUBE:
+	Inherits: ^Cube
+	WithSpriteBody:
+		Sequence: turquoise
+	DuplicateUnitCrateAction:
+		MaxAmount: 5
+		MinAmount: 1
+		MaxDuplicateValue: 1500
 
 SCRAP1:
 	Inherits: ^Scrap
