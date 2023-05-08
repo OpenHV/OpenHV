@@ -18,7 +18,7 @@
     <docsUrl>https://github.com/OpenHV/OpenHV/wiki</docsUrl>
     <iconUrl>https://openhv.github.io/images/chocolatey/icon.png</iconUrl>
     <tags>game rts sci-fi</tags>
-    <copyright>© 2021 OpenHV Developers</copyright>
+    <copyright>© 2023 OpenHV Developers</copyright>
     <licenseUrl>https://github.com/OpenHV/OpenHV/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://github.com/OpenHV/OpenHV/releases</releaseNotes>
