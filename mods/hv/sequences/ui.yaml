@@ -59,8 +59,6 @@ rallypoint:
 		ZOffset: 3072
 		Tick: 200
 		Offset: -7,-7
-	circles:
-		Filename: bits/null.png
 
 beacon:
 	idle:

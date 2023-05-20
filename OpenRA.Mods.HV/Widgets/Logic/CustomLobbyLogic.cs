@@ -474,7 +474,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				if (globalChatUnreadMessages == 0 || chatPanel == ChatPanelType.Global)
 					return globalChatLabel;
 
-				return globalChatLabel + " ({0})".F(globalChatUnreadMessages);
+				return globalChatLabel + $" ({globalChatUnreadMessages})";
 			};
 
 			globalChatLastReadMessages = internetRelayChat.History.Count(m => m.Type == ChatMessageType.Message);

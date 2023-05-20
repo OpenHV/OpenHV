@@ -63,6 +63,7 @@ BASE:
 	ProductionSound:
 		Files: Quedicemipez__teleportation.wav
 	RallyPoint:
+		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
@@ -436,6 +437,7 @@ TRADPLAT:
 		Font: TinyPixel
 	Reservable:
 	RallyPoint:
+		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
@@ -497,6 +499,7 @@ MODULE:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	RallyPoint:
+		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
@@ -672,6 +675,7 @@ STARPORT:
 		ExitCell: 0,0
 		Facing: 896
 	RallyPoint:
+		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
@@ -787,6 +791,7 @@ FACTORY3:
 	WithMakeOverlay@Platform4:
 		Sequence: make-platform4
 	RallyPoint:
+		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
@@ -1683,6 +1688,7 @@ TELEVATR:
 		Type: subspace
 	WithTeleportChargeAnimation:
 	RallyPoint:
+		CirclesSequence:
 		Path: 1,1
 		IsPlayerPalette: true
 		Palette: green
@@ -1753,6 +1759,7 @@ HARBOR:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	RallyPoint:
+		CirclesSequence:
 		Path: 1,3
 		IsPlayerPalette: true
 		Palette: green
@@ -2498,6 +2505,7 @@ DROPZONE:
 		ProductionTypes: Reinforcements
 		RequiresCondition: !being-captured
 	RallyPoint:
+		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2

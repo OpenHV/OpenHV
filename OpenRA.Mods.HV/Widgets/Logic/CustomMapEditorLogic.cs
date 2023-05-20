@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -99,7 +99,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					var cell = worldRenderer.Viewport.ViewToWorld(Viewport.LastMousePos);
 					var map = worldRenderer.World.Map;
 					return map.Height.Contains(cell) ?
-						"{0},{1} ({2})".F(cell, map.Height[cell], map.Tiles[cell].Type) : "";
+						$"{cell},{map.Height[cell]} ({map.Tiles[cell].Type})" : "";
 				};
 			}
 

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,6 +21,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 {
 	public class CustomMainMenuLogic : ChromeLogic
 	{
+		[TranslationReference]
+		const string LoadingNews = "label-loading-news";
+
+		[TranslationReference("author", "datetime")]
+		const string AuthorDateTime = "label-author-datetime";
+
 		protected enum MenuType { Main, Singleplayer, Extras, MapEditor, StartupPrompts, None }
 
 		protected enum MenuPanel { None, Missions, Skirmish, Multiplayer, MapEditor, Replays, GameSaves }
@@ -186,7 +192,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				newsPanel.RemoveChild(newsTemplate);
 
 				newsStatus = newsPanel.Get<LabelWidget>("NEWS_STATUS");
-				SetNewsStatus("Loading news");
+				SetNewsStatus(TranslationProvider.GetString(LoadingNews));
 			}
 
 			Game.OnRemoteDirectConnect += OnRemoteDirectConnect;
@@ -262,14 +268,17 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var newsItem = webServices.NewsItem;
 			if (newsItem == null)
 			{
-				SetNewsStatus("Failed to retrieve news");
+				Log.Write("debug", "News retrieval failed.");
 				return;
 			}
 
 			titleLabel.GetText = () => newsItem.Title;
 
 			var authorDateTimeLabel = newsWidget.Get<LabelWidget>("AUTHOR_DATETIME");
-			var authorDateTime = authorDateTimeLabel.Text.F(newsItem.Author, newsItem.DateTime.ToLocalTime());
+			var authorDateTime = TranslationProvider.GetString(AuthorDateTime, Translation.Arguments(
+					"author", newsItem.Author,
+					"datetime", newsItem.DateTime.ToLocalTime()));
+
 			authorDateTimeLabel.GetText = () => authorDateTime;
 
 			var contentLabel = newsWidget.Get<LabelWidget>("CONTENT");

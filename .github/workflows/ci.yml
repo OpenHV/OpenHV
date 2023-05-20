@@ -39,7 +39,7 @@ jobs:
         run: |
           sudo apt-get install lua5.1
           make check-scripts
-          make test
+          make TREAT_WARNINGS_AS_ERRORS=true test
 
   linux-mono:
     name: Linux (mono)

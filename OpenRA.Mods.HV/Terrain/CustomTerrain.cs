@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -122,7 +122,7 @@ namespace OpenRA.Mods.HV.Terrain
 				var tt = TerrainInfo[i].Type;
 
 				if (terrainIndexByType.ContainsKey(tt))
-					throw new YamlException("Duplicate terrain type '{0}' in '{1}'.".F(tt, filepath));
+					throw new YamlException($"Duplicate terrain type '{tt}' in '{filepath}'.");
 
 				terrainIndexByType.Add(tt, i);
 			}
@@ -144,7 +144,7 @@ namespace OpenRA.Mods.HV.Terrain
 			if (terrainIndexByType.TryGetValue(type, out var index))
 				return index;
 
-			throw new InvalidDataException("Tileset '{0}' lacks terrain type '{1}'".F(Id, type));
+			throw new InvalidDataException($"Tileset '{Id}' lacks terrain type '{type}'");
 		}
 
 		public byte GetTerrainIndex(TerrainTile r)

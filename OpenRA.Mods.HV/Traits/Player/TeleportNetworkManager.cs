@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (!teleporters.Any())
 				throw new YamlException("TeleportNetworkManager without TeleportNetwork actors.");
 			if (!teleporters.Any(a => a.TraitInfo<TeleportNetworkInfo>().Type == Type))
-				throw new YamlException("Can't find a TeleportNetwork with Type '{0}'".F(Type));
+				throw new YamlException($"Can't find a TeleportNetwork with Type '{Type}'");
 		}
 
 		public override object Create(ActorInitializer init) { return new TeleportNetworkManager(this); }
