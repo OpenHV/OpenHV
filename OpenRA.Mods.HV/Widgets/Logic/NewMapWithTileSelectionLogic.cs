@@ -101,6 +101,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 					{ "onSave", afterSave },
 					{ "onExit", () => { Ui.CloseWindow(); onExit(); } },
 					{ "map", map },
+					{ "world", world },
 					{ "playerDefinitions", map.PlayerDefinitions },
 					{ "actorDefinitions", map.ActorDefinitions }
 				});
