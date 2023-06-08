@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.inputs.tag }}
 
@@ -28,7 +28,7 @@ jobs:
           make all
 
       - name: Clone Wiki
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: openhv/openhv.wiki
           token: ${{ secrets.DOCS_TOKEN }}
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.inputs.tag }}
 
@@ -72,7 +72,7 @@ jobs:
           make all
 
       - name: Clone OpenHV docs
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: openhv/docs
           token: ${{ secrets.DOCS_TOKEN }}
