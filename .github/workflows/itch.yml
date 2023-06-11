@@ -7,6 +7,8 @@ on:
         description: 'Git Tag'
         required: true
 
+permissions: {}
+
 jobs:
   itch:
     name: Deploy to itch.io
