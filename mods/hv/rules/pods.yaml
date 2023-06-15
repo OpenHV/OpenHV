@@ -304,7 +304,7 @@ BOMBERPOD:
 	Inherits: ^Pod
 	Buildable:
 		Queue: Pods
-		Description: Remote controlled mine. \nExplodes buildings.\n  Unarmed
+		Description: Remote controlled mine. \nExplodes when reaches enemy.
 		Prerequisites: ~module, radar
 		BuildPaletteOrder: 50
 	Valued:
@@ -312,7 +312,7 @@ BOMBERPOD:
 	Tooltip:
 		Name: Bomber Pod
 	Health:
-		HP: 20000
+		HP: 25000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	-Guard:
@@ -320,15 +320,23 @@ BOMBERPOD:
 		Interval: 25, 25
 		Sequences: animation
 	Mobile:
-		Speed: 90
+		Speed: 110
 		Voice: Move
 	Voiced:
 		VoiceSet: BomberPodVoice
-	Demolition:
-		DetonationDelay: 0
-		Flashes: 0
-		EnterBehaviour: Suicide
-		Cursor: ability
+	Explodes:
+		Weapon: BomberPodExplosion
+		EmptyWeapon: BomberPodExplosion
+		DamageSource: Killer
+	AttackFrontal:
+	Armament:
+		Weapon: BomberPodWeapon
+		MuzzlePalette:
+	GrantConditionOnAttack:
+		Condition: triggered
+	KillsSelf:
+		RequiresCondition: triggered
+	-WithDeathAnimation:
 
 MINIPOD1:
 	Inherits: ^Pod
