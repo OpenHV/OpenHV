@@ -57,7 +57,8 @@ ShipVoice:
 	Voices:
 		Select: shipselect1, shipselect2, shipselect3, shipselect4, shipselect5
 		Move: shipmove1, shipmove2, shipmove3, shipmove4
-		Action: shipattack1, shipattack2, shipattack3, shipattack4, shipattack5
+		Action: shipmove1, shipmove2, shipmove3, shipmove4
+		Attack: shipattack1, shipattack2, shipattack3, shipattack4, shipattack5
 		Guard: guarding
 
 TransportHelicopterVoice:

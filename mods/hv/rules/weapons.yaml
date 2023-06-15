@@ -11,3 +11,10 @@ MINE3:
 
 MINE4:
 	Inherits: ^Mine
+
+WATER-MINE:
+	Inherits: ^Mine
+	Tooltip:
+		Name: Water mine
+	Cloak:
+		DetectionTypes: WaterMine
