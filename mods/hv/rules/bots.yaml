@@ -106,6 +106,7 @@ Player:
 			elitepod: 1
 			hackerpod: 1
 			technician: 1
+			bomberpod: 1
 			missiletank: 5
 			plane2: 5
 			plane1: 5
@@ -130,6 +131,7 @@ Player:
 			submarine: 4
 			carrier: 4
 			technician: 1
+			bomberpod: 3
 		UnitDelays:
 			builder: 15000
 	PriorityCaptureManagerBotModule:
