@@ -395,3 +395,52 @@ NAVALTRANSPORT:
 		Position: BottomLeft
 		Margin: 1, -1
 		RequiresSelection: true
+
+WATERMINELAYER:
+	Inherits: ^Ship
+	Inherits@Selection: ^SelectableSupportUnit
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Naval Minelayer
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor, tradplat
+		BuildPaletteOrder: 40
+		Description: Lays underwater mines to destroy unwary enemy ships.\n  Can detect enemy mines.\n  Unarmed
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 21000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 128
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	Minelayer:
+		Mines: water-mine
+	MineImmune:
+	DetectCloaked:
+		Range: 5c0
+		DetectionTypes: WaterMine
+	RenderDetectionCircle:
+	Explodes:
+		Weapon: AntiTankMine
+	Rearmable:
+		RearmActors: harbor
+	Targetable:
+		TargetTypes: Ground, Vehicle, Mine
+	AmmoPool:
+		Ammo: 5
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true

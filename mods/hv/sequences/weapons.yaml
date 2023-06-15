@@ -421,3 +421,10 @@ bubble:
 		Filename: bits/bubble.png
 		Length: *
 		Tick: 60
+
+water-mine:
+	idle:
+		Filename: bits/water-mine.png
+		Length: 8
+		Tick: 100
+		ZOffset: -512
