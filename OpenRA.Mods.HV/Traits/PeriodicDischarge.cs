@@ -136,12 +136,8 @@ namespace OpenRA.Mods.HV.Traits
 					burst = weapon.Burst;
 
 					if (weapon.AfterFireSound != null && weapon.AfterFireSound.Any())
-					{
 						ScheduleDelayedAction(weapon.AfterFireSoundDelay, () =>
-						{
-							Game.Sound.Play(SoundType.World, weapon.AfterFireSound.Random(self.World.SharedRandom), self.CenterPosition);
-						});
-					}
+							Game.Sound.Play(SoundType.World, weapon.AfterFireSound.Random(self.World.SharedRandom), self.CenterPosition));
 				}
 			}
 		}

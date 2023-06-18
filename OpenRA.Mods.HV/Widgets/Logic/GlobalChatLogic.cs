@@ -74,10 +74,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var nickName = internetRelayChat.SanitizedName(Game.Settings.Player.Name);
 			var nicknameBox = widget.Get<TextFieldWidget>("NICKNAME_TEXTFIELD");
 			nicknameBox.Text = nickName;
-			nicknameBox.OnTextEdited = () =>
-			{
-				nicknameBox.Text = internetRelayChat.SanitizedName(nicknameBox.Text);
-			};
+			nicknameBox.OnTextEdited = () => nicknameBox.Text = internetRelayChat.SanitizedName(nicknameBox.Text);
 
 			var connectPanel = widget.Get("GLOBALCHAT_CONNECT_PANEL");
 			connectPanel.IsVisible = () => internetRelayChat.ConnectionStatus == ChatConnectionStatus.Disconnected;

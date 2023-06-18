@@ -120,11 +120,7 @@ namespace OpenRA.Mods.HV.Traits
 				self.RevokeCondition(loadedTokens.Pop());
 
 			// Queue attack order, too.
-			self.World.AddFrameEndTask(w =>
-			{
-				// invalidate the slave entry so that slave will regen.
-				childEntry.Actor = null;
-			});
+			self.World.AddFrameEndTask(w => childEntry.Actor = null); // invalidate the slave entry so that slave will regen.
 
 			// Set clock so that regen happens.
 			if (respawnTicks <= 0) // Don't interrupt an already running timer!

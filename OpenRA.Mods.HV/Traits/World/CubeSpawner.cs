@@ -122,10 +122,8 @@ namespace OpenRA.Mods.HV.Traits
 			var location = dropCell.Value;
 			var cubeActor = ChooseCubeActor();
 
-			self.World.AddFrameEndTask(w =>
-			{
-				w.CreateActor(cubeActor, new TypeDictionary { new OwnerInit(w.WorldActor.Owner), new LocationInit(location) });
-			});
+			self.World.AddFrameEndTask(w => w.CreateActor(cubeActor,
+				new TypeDictionary { new OwnerInit(w.WorldActor.Owner), new LocationInit(location) }));
 		}
 
 		CPos? ChooseDropCell(Actor self, int maxTries)
