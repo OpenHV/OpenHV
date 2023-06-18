@@ -110,9 +110,6 @@ Section "Game" GAME
 			"$OUTDIR\${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe" "" "" "" ""
 	!insertmacro MUI_STARTMENU_WRITE_END
 
-	SetOutPath "$INSTDIR\lua"
-	File "${SRCDIR}\lua\*.lua"
-
 	SetOutPath "$INSTDIR\glsl"
 	File "${SRCDIR}\glsl\*.frag"
 	File "${SRCDIR}\glsl\*.vert"
