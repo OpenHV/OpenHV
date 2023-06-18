@@ -302,6 +302,7 @@ ELITEPOD:
 
 BOMBERPOD:
 	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		Queue: Pods
 		Description: Remote controlled mine. \nExplodes when reaches enemy.
