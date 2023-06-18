@@ -47,11 +47,10 @@ jobs:
           sed -i "s/{VERSION}/${version}/g" "packaging/windows/chocolatey/openhv.nuspec"
 
       - name: Pack Release
-        uses: crazy-max/ghaction-chocolatey@v2
-        with:
-          args: pack packaging/windows/chocolatey/openhv.nuspec --outputdirectory packaging/windows/chocolatey
+        run: |
+          choco pack packaging/windows/chocolatey/openhv.nuspec --outputdirectory packaging/windows/chocolatey
 
       - name: Upload Release
-        uses: crazy-max/ghaction-chocolatey@v2
-        with:
-          args: push packaging/windows/chocolatey/openhv.${{ steps.version.outputs.nuget }}.nupkg -s https://push.chocolatey.org/ -k ${{ secrets.CHOCO_KEY }}
+        run: |
+          package=$(find packaging/windows/chocolatey/ -type f -name "*.nupkg")
+          choco push $package -s https://push.chocolatey.org/ -k ${{ secrets.CHOCO_KEY }} --allow-unofficial
