@@ -65,12 +65,12 @@ Background@MULTIPLAYER_PANEL:
 					Align: Center
 					Text: You are running an unrecognized version of OpenHV. Download the latest version from www.openhv.net
 					Font: TinyBold
-				Label@PLAYTEST_AVAILABLE_LABEL:
+				Label@PRERELEASE_AVAILABLE_LABEL:
 					X: 5
 					Width: PARENT_RIGHT - 10
 					Height: 20
 					Align: Center
-					Text: A preview of the next OpenHV release is available for testing. Download the playtest from www.openhv.net
+					Text: A preview of the next OpenHV release is available for testing. Download the pre-release from www.openhv.net
 					Font: TinyBold
 		ScrollPanel@SERVER_LIST:
 			X: 20

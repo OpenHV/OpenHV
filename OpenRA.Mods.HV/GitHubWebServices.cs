@@ -21,7 +21,7 @@ using OpenRA.Support;
 
 namespace OpenRA.Mods.HV
 {
-	public enum ModVersionStatus { NotChecked, Latest, Outdated, Unknown, PlaytestAvailable }
+	public enum ModVersionStatus { NotChecked, Latest, Outdated, Unknown, PrereleaseAvailable }
 
 	public class NewsItem
 	{
@@ -33,7 +33,7 @@ namespace OpenRA.Mods.HV
 
 	public class GitHubWebServices : IGlobalModData
 	{
-		public readonly string LatestRelease = "https://api.github.com/repos/OpenHV/OpenHV/releases/latest";
+		public readonly string LatestRelease = "https://api.github.com/repos/OpenHV/OpenHV/releases";
 		public readonly string GameNewsFileName = "news.json";
 
 		public ModVersionStatus ModVersionStatus { get; private set; }
@@ -61,7 +61,7 @@ namespace OpenRA.Mods.HV
 					if (File.Exists(cacheFile))
 					{
 						var oldNews = File.ReadAllText(cacheFile);
-						var oldJson = JObject.Parse(oldNews);
+						var oldJson = JArray.Parse(oldNews).First();
 						oldPublishingDate = oldJson["published_at"].Value<DateTime>();
 					}
 
@@ -70,7 +70,8 @@ namespace OpenRA.Mods.HV
 					Game.RunAfterTick(() => // run on the main thread
 					{
 						var data = File.ReadAllText(cacheFile);
-						var json = JObject.Parse(data);
+						var json = JArray.Parse(data).First();
+
 						var tagname = json["tag_name"].Value<string>();
 						var digits = string.Concat(tagname.TakeWhile(c => char.IsDigit(c)));
 						if (!int.TryParse(digits, out var parsedVersion))
@@ -85,7 +86,7 @@ namespace OpenRA.Mods.HV
 						if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
 							status = ModVersionStatus.Unknown;
 						else if (parsedVersion > version)
-							status = prerelease ? ModVersionStatus.PlaytestAvailable : ModVersionStatus.Outdated;
+							status = prerelease ? ModVersionStatus.PrereleaseAvailable : ModVersionStatus.Outdated;
 						else if (parsedVersion == version)
 							status = ModVersionStatus.Latest;
 
@@ -102,7 +103,7 @@ namespace OpenRA.Mods.HV
 
 						var newsItem = new NewsItem
 						{
-							Title = $"Release {tagname}",
+							Title = prerelease ? $"Pre-Release {tagname}" : $"Release {tagname}",
 							Author = "OpenHV Team",
 							DateTime = publishingDate,
 							Content = body

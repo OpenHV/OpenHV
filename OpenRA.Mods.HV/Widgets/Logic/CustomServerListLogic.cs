@@ -199,7 +199,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				noticeContainer.IsVisible = () => showNotices;
 				noticeContainer.Get("OUTDATED_VERSION_LABEL").IsVisible = () => webServices.ModVersionStatus == ModVersionStatus.Outdated;
 				noticeContainer.Get("UNKNOWN_VERSION_LABEL").IsVisible = () => webServices.ModVersionStatus == ModVersionStatus.Unknown;
-				noticeContainer.Get("PLAYTEST_AVAILABLE_LABEL").IsVisible = () => webServices.ModVersionStatus == ModVersionStatus.PlaytestAvailable;
+				noticeContainer.Get("PRERELEASE_AVAILABLE_LABEL").IsVisible = () => webServices.ModVersionStatus == ModVersionStatus.PrereleaseAvailable;
 			}
 
 			var noticeWatcher = widget.Get<LogicTickerWidget>("NOTICE_WATCHER");

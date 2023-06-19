@@ -52,7 +52,7 @@ Container@LOBBY_SERVERS_BIN:
 					Align: Center
 					Text: You are running an unrecognized version of OpenHV. Download the latest version from www.openhv.net
 					Font: TinyBold
-				Label@PLAYTEST_AVAILABLE_LABEL:
+				Label@PRERELEASE_AVAILABLE_LABEL:
 					X: 5
 					Width: PARENT_RIGHT - 10
 					Height: 20
