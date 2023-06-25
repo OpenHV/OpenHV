@@ -777,7 +777,7 @@ TANK8:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
 		Prerequisites: ~factory.yi, radar, tradplat
-		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Jams incoming missiles.\n  Temporarily changes allegiance of targeted units.
+		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Temporarily changes allegiance of targeted units.
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -802,9 +802,6 @@ TANK8:
 		RequiresCondition: deployed
 	RenderShroudCircle:
 		RequiresCondition: deployed
-	JamsMissiles:
-		Range: 5c0
-		DeflectionRelationships: Neutral, Enemy
 	Armament:
 		Weapon: HackBack
 	AttackFrontal:
