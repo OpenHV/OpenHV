@@ -1,6 +1,6 @@
 # License: CC-BY-SA-4.0
 
-railgun:
+Railgun:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 8c0

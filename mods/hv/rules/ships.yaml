@@ -213,7 +213,7 @@ BOAT2:
 	Turreted:
 		TurnSpeed: 40
 	Armament:
-		Weapon: railgun
+		Weapon: Railgun
 		Recoil: 100
 		RecoilRecovery: 25
 		LocalOffset: 500,0,0
