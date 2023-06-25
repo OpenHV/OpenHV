@@ -772,14 +772,14 @@ MISSILETANK:
 
 TANK8:
 	Inherits: ^TrackedVehicle
-	Inherits@Selection: ^SelectableSupportUnit
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 200
 		Prerequisites: ~factory.yi, radar, tradplat
-		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Jams incoming missiles.\n  Unarmed
+		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Jams incoming missiles.\n  Temporarily changes allegiance of targeted units.
 	Valued:
-		Cost: 400
+		Cost: 700
 	Tooltip:
 		Name: Hacker Tank
 	UpdatesPlayerStatistics:
@@ -805,6 +805,9 @@ TANK8:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
+	Armament:
+		Weapon: HackBack
+	AttackFrontal:
 
 TANK1:
 	Inherits: ^Vehicle

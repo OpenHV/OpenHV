@@ -322,3 +322,27 @@ DroneBlaster:
 		Explosions: small
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
+
+HackBack:
+	ReloadDelay: 160
+	Range: 6c0
+	Report: lightningbolt.wav
+	ValidTargets: Vehicle
+	Projectile: EnergyBolt
+		Radius: 3
+		Duration: 7
+		InnerLightness: 100
+		OuterLightness: 50
+		Color: ECE454
+		Distortion: 100
+		DistortionAnimation: 100
+		SegmentLength: 0c256
+		ZOffset: 2048
+	Warhead@Damage: SpreadDamage
+		Damage: 1000
+		Spread: 480
+	Warhead@Hack: ChangeOwner
+		Range: 512
+		Duration: 375
+		InvalidTargets: Structure
+		ValidRelationships: Enemy, Neutral

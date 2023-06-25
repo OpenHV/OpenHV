@@ -124,6 +124,7 @@
 	Targetable@Disabled:
 		RequiresCondition: ecm-disabled
 		TargetTypes: DisabledVehicle
+	TemporaryOwnerManager:
 	GrantConditionOnDamageState@Damaged:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
