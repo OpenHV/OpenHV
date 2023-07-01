@@ -70,7 +70,7 @@ namespace OpenRA.Mods.HV.Traits
 			toggleTick = world.LocalRandom.Next(Info.Interval);
 		}
 
-		int GetTogglePowerChanging(Actor a)
+		static int GetTogglePowerChanging(Actor a)
 		{
 			var powerChangingIfToggled = 0;
 			var powerTraits = a.TraitsImplementing<Power>().Where(t => !t.IsTraitDisabled).ToArray();

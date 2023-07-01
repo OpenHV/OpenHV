@@ -616,6 +616,9 @@ dotnet_code_quality.api_surface = all
 #dotnet_code_quality.CA1010.additional_required_generic_interfaces =
 dotnet_diagnostic.CA1010.severity = warning
 
+# Abstract types should not have public constructors.
+dotnet_diagnostic.CA1012.severity = warning
+
 # Mark attributes with 'AttributeUsageAttribute'.
 dotnet_diagnostic.CA1018.severity = warning
 
@@ -630,6 +633,9 @@ dotnet_diagnostic.CA1047.severity = warning
 
 # Declare types in namespaces.
 dotnet_diagnostic.CA1050.severity = warning
+
+# Static holder types should be 'Static' or 'NotInheritable'.
+dotnet_diagnostic.CA1052.severity = warning
 
 # Do not hide base class methods.
 dotnet_diagnostic.CA1061.severity = warning
@@ -686,8 +692,16 @@ dotnet_diagnostic.CA1717.severity = warning
 ### Performance Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/performance-warnings
 
+# Use Literals Where Appropriate.
+#dotnet_code_quality.CA1802.required_modifiers = static
+dotnet_diagnostic.CA1802.severity = warning
+
 # Remove empty finalizers.
 dotnet_diagnostic.CA1821.severity = warning
+
+# Mark members as static.
+dotnet_code_quality.CA1822.api_surface = private,internal
+dotnet_diagnostic.CA1822.severity = warning
 
 # Avoid unused private fields.
 dotnet_diagnostic.CA1823.severity = warning
@@ -753,8 +767,8 @@ dotnet_diagnostic.CA1843.severity = warning
 # Provide memory-based overrides of async methods when subclassing 'Stream'.
 dotnet_diagnostic.CA1844.severity = warning
 
-# Use span-based 'string.Concat'.
-dotnet_diagnostic.CA1845.severity = warning
+# Use span-based 'string.Concat'. (Not available on mono)
+dotnet_diagnostic.CA1845.severity = none
 
 # Prefer AsSpan over Substring.
 dotnet_diagnostic.CA1846.severity = warning
@@ -768,8 +782,14 @@ dotnet_diagnostic.CA1849.severity = warning
 # Prefer static HashData method over ComputeHash. (Not available on mono)
 dotnet_diagnostic.CA1850.severity = none
 
+# Seal internal types.
+dotnet_diagnostic.CA1852.severity = warning
+
 # Unnecessary call to 'Dictionary.ContainsKey(key)'.
 dotnet_diagnostic.CA1853.severity = warning
+
+# Prefer the IDictionary.TryGetValue(TKey, out TValue) method.
+dotnet_diagnostic.CA1854.severity = warning
 
 # Use Span<T>.Clear() instead of Span<T>.Fill().
 dotnet_diagnostic.CA1855.severity = warning
@@ -812,6 +832,9 @@ dotnet_diagnostic.CA5351.severity = warning
 
 ### Usage Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/usage-warnings
+
+# Call GC.SuppressFinalize correctly.
+dotnet_diagnostic.CA1816.severity = warning
 
 # Rethrow to preserve stack details.
 dotnet_diagnostic.CA2200.severity = warning
