@@ -42,6 +42,7 @@ HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
 BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
+PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 
 MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
@@ -254,6 +255,19 @@ ifneq ("$(BIT_FILES)","")
 	@for SPRITE in $(BIT_FILES); do \
 		echo $${SPRITE}; \
 		./utility.sh --png-sheet-import ../$${SPRITE}; \
+	done
+
+	@echo "Recompressing sprite PNGs"
+	@for SPRITE in $(BIT_FILES); do \
+		zopflipng --keepcolortype --keepchunks=tEXt -y -m $${SPRITE} $${SPRITE}; \
+	done
+endif
+
+maps:
+ifneq ("$(PREVIEW_FILES)","")
+	@echo "Recompressing map preview PNGs"
+	@for SPRITE in $(PREVIEW_FILES); do \
+		zopflipng --keepcolortype -y -m $${SPRITE} $${SPRITE}; \
 	done
 endif
 
