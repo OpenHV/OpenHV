@@ -610,46 +610,46 @@ Actors:
 	Actor311: rail
 		Owner: Neutral
 		Location: 12,35
-	Actor288: mine3
+	Actor288: landmine
 		Owner: Creeps
 		Location: 32,31
-	Actor289: mine3
+	Actor289: landmine
 		Owner: Creeps
 		Location: 32,30
-	Actor290: mine3
+	Actor290: landmine
 		Owner: Creeps
 		Location: 31,29
-	Actor291: mine3
+	Actor291: landmine
 		Owner: Creeps
 		Location: 31,28
-	Actor292: mine3
+	Actor292: landmine
 		Owner: Creeps
 		Location: 30,27
-	Actor293: mine3
+	Actor293: landmine
 		Owner: Creeps
 		Location: 30,26
-	Actor294: mine3
+	Actor294: landmine
 		Owner: Creeps
 		Location: 29,25
-	Actor315: mine3
+	Actor315: landmine
 		Owner: Creeps
 		Location: 25,26
-	Actor316: mine3
+	Actor316: landmine
 		Owner: Creeps
 		Location: 25,27
-	Actor317: mine3
+	Actor317: landmine
 		Owner: Creeps
 		Location: 26,28
-	Actor318: mine3
+	Actor318: landmine
 		Owner: Creeps
 		Location: 26,29
-	Actor319: mine3
+	Actor319: landmine
 		Owner: Creeps
 		Location: 27,30
-	Actor320: mine3
+	Actor320: landmine
 		Owner: Creeps
 		Location: 27,31
-	Actor321: mine3
+	Actor321: landmine
 		Owner: Creeps
 		Location: 28,32
 	Actor283: rail
@@ -760,10 +760,10 @@ Actors:
 	Actor329: extractor
 		Owner: Neutral
 		Location: 28,43
-	Actor270: mine3
+	Actor270: landmine
 		Owner: Creeps
 		Location: 44,18
-	Actor286: mine3
+	Actor286: landmine
 		Owner: Creeps
 		Location: 13,39
 	Actor312: icicle2

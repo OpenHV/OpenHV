@@ -422,7 +422,7 @@ bubble:
 		Length: *
 		Tick: 60
 
-water-mine:
+watermine:
 	idle:
 		Filename: bits/water-mine.png
 		Length: 8

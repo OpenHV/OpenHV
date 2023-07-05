@@ -426,7 +426,7 @@ WATERMINELAYER:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Minelayer:
-		Mines: water-mine
+		Mine: watermine
 	MineImmune:
 	DetectCloaked:
 		Range: 5c0

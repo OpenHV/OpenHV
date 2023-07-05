@@ -1,20 +1,16 @@
 # License: CC-BY-SA-4.0
 
-MINE1:
+LANDMINE:
 	Inherits: ^Mine
+	RenderSprites:
+		Image: mine1
+	WithRandomSpriteBody:
+		Images: mine1, mine2, mine3, mine4
 
-MINE2:
-	Inherits: ^Mine
-
-MINE3:
-	Inherits: ^Mine
-
-MINE4:
-	Inherits: ^Mine
-
-WATER-MINE:
+WATERMINE:
 	Inherits: ^Mine
 	Tooltip:
 		Name: Water mine
 	Cloak:
 		DetectionTypes: WaterMine
+	WithSpriteBody:

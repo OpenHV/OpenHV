@@ -14,18 +14,18 @@ using OpenRA.Mods.Common.Traits.Render;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Picks sprites from a random actor.")]
-	class WithRandomSpriteBodyInfo : WithSpriteBodyInfo
+	class WithRandomFacingSpriteBodyInfo : WithFacingSpriteBodyInfo
 	{
 		[FieldLoader.Require]
 		[Desc("The sequence names that define the actor sprites.")]
 		public readonly string[] Images = null;
 
-		public override object Create(ActorInitializer init) { return new WithRandomSpriteBody(init, this); }
+		public override object Create(ActorInitializer init) { return new WithRandomFacingSpriteBody(init, this); }
 	}
 
-	class WithRandomSpriteBody : WithSpriteBody
+	class WithRandomFacingSpriteBody : WithFacingSpriteBody
 	{
-		public WithRandomSpriteBody(ActorInitializer init, WithRandomSpriteBodyInfo info)
+		public WithRandomFacingSpriteBody(ActorInitializer init, WithRandomFacingSpriteBodyInfo info)
 			: base(init, info)
 		{
 			var self = init.Self;

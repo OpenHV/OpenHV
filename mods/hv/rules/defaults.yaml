@@ -933,7 +933,6 @@
 	Selectable:
 		Bounds: 1024, 1024
 		Priority: 5
-	WithSpriteBody:
 	HiddenUnderFog:
 	Mine:
 		CrushClasses: Mine

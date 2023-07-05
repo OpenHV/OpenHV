@@ -330,7 +330,7 @@ TANK6:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Minelayer:
-		Mines: mine1, mine2, mine3, mine4
+		Mine: landmine
 	MineImmune:
 	AmmoPool:
 		Ammo: 5

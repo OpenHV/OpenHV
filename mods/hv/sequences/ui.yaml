@@ -6,6 +6,8 @@ overlay:
 	build-valid:
 	build-invalid:
 		Start: 1
+	build-unknown:
+		Start: 3
 	target-unknown:
 		Start: 3
 	target-select:
