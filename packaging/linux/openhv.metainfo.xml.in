@@ -35,12 +35,8 @@
   <url type="contact">https://matrix.to/#/+openhv:matrix.org</url>
   <url type="donation">https://opencollective.com/openhv</url>
   <content_rating type="oars-1.1">
-    <content_attribute id="violence-realistic">moderate</content_attribute>
+    <content_attribute id="violence-fantasy">moderate</content_attribute>
     <content_attribute id="violence-bloodshed">moderate</content_attribute>
-    <content_attribute id="violence-worship">moderate</content_attribute>
-    <content_attribute id="drugs-tobacco">moderate</content_attribute>
-    <content_attribute id="language-profanity">mild</content_attribute>
-    <content_attribute id="language-humor">mild</content_attribute>
     <content_attribute id="social-chat">intense</content_attribute>
   </content_rating>
   <releases>
