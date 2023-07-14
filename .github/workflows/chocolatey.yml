@@ -43,7 +43,7 @@ jobs:
         run: |
           tag=${{ github.event.inputs.tag }}
           version="${tag:0:4}.${tag:4:2}.${tag:6:2}"
-          echo "::set-output name=nuget::$version"
+          echo "nuget=$version" >> $GITHUB_OUTPUT
           sed -i "s/{VERSION}/${version}/g" "packaging/windows/chocolatey/openhv.nuspec"
 
       - name: Pack Release
