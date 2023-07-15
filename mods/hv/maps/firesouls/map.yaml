@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -39,114 +39,6 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor5: lamppost
-		Owner: Neutral
-		Location: 41,13
-	Actor6: lamppost
-		Owner: Neutral
-		Location: 56,13
-	Actor7: lamppost
-		Owner: Neutral
-		Location: 44,13
-	Actor8: lamppost
-		Owner: Neutral
-		Location: 53,13
-	Actor9: lamppost
-		Owner: Neutral
-		Location: 47,13
-	Actor10: lamppost
-		Owner: Neutral
-		Location: 50,13
-	Actor11: lamppost
-		Owner: Neutral
-		Location: 41,19
-	Actor12: lamppost
-		Owner: Neutral
-		Location: 44,19
-	Actor13: lamppost
-		Owner: Neutral
-		Location: 47,19
-	Actor14: lamppost
-		Owner: Neutral
-		Location: 50,19
-	Actor15: lamppost
-		Owner: Neutral
-		Location: 53,19
-	Actor16: lamppost
-		Owner: Neutral
-		Location: 56,19
-	Actor34: lamppost
-		Owner: Neutral
-		Location: 41,44
-	Actor35: lamppost
-		Owner: Neutral
-		Location: 44,44
-	Actor36: lamppost
-		Owner: Neutral
-		Location: 47,44
-	Actor37: lamppost
-		Owner: Neutral
-		Location: 50,44
-	Actor38: lamppost
-		Owner: Neutral
-		Location: 53,44
-	Actor39: lamppost
-		Owner: Neutral
-		Location: 56,44
-	Actor42: lamppost
-		Owner: Neutral
-		Location: 41,53
-	Actor43: lamppost
-		Owner: Neutral
-		Location: 44,53
-	Actor44: lamppost
-		Owner: Neutral
-		Location: 47,53
-	Actor45: lamppost
-		Owner: Neutral
-		Location: 50,53
-	Actor46: lamppost
-		Owner: Neutral
-		Location: 53,53
-	Actor47: lamppost
-		Owner: Neutral
-		Location: 56,53
-	Actor49: lamppost
-		Owner: Neutral
-		Location: 41,78
-	Actor50: lamppost
-		Owner: Neutral
-		Location: 44,78
-	Actor51: lamppost
-		Owner: Neutral
-		Location: 47,78
-	Actor52: lamppost
-		Owner: Neutral
-		Location: 50,78
-	Actor53: lamppost
-		Owner: Neutral
-		Location: 53,78
-	Actor54: lamppost
-		Owner: Neutral
-		Location: 56,78
-	Actor57: lamppost
-		Owner: Neutral
-		Location: 41,84
-	Actor58: lamppost
-		Owner: Neutral
-		Location: 44,84
-	Actor59: lamppost
-		Owner: Neutral
-		Location: 47,84
-	Actor60: lamppost
-		Owner: Neutral
-		Location: 50,84
-	Actor61: lamppost
-		Owner: Neutral
-		Location: 53,84
-	Actor62: lamppost
-		Owner: Neutral
-		Location: 56,84
 	Actor79: firelight
 		Owner: Neutral
 		Location: 49,39
@@ -180,24 +72,12 @@ Actors:
 	Actor84: lamppost
 		Owner: Neutral
 		Location: 39,38
-	Actor86: prop4
-		Owner: Neutral
-		Location: 39,44
-	Actor87: prop4
-		Owner: Neutral
-		Location: 39,53
 	Actor90: lamppost
 		Owner: Neutral
 		Location: 39,59
 	Actor92: lamppost
 		Owner: Neutral
 		Location: 39,72
-	Actor104: prop4
-		Owner: Neutral
-		Location: 39,78
-	Actor105: prop4
-		Owner: Neutral
-		Location: 39,84
 	Actor106: lamppost
 		Owner: Neutral
 		Location: 39,90
@@ -216,24 +96,12 @@ Actors:
 	Actor77: lamppost
 		Owner: Neutral
 		Location: 58,38
-	Actor89: prop4
-		Owner: Neutral
-		Location: 58,44
-	Actor91: prop4
-		Owner: Neutral
-		Location: 58,53
 	Actor94: lamppost
 		Owner: Neutral
 		Location: 58,59
 	Actor107: lamppost
 		Owner: Neutral
 		Location: 58,72
-	Actor109: prop4
-		Owner: Neutral
-		Location: 58,78
-	Actor110: prop4
-		Owner: Neutral
-		Location: 58,84
 	Actor111: lamppost
 		Owner: Neutral
 		Location: 58,90
@@ -381,33 +249,9 @@ Actors:
 	Actor170: resourcelight
 		Owner: Neutral
 		Location: 11,34
-	Actor168: resourcelight
-		Owner: Neutral
-		Location: 29,25
-	Actor167: resourcelight
-		Owner: Neutral
-		Location: 29,38
-	Actor142: resourcelight
-		Owner: Neutral
-		Location: 7,62
-	Actor143: resourcelight
-		Owner: Neutral
-		Location: 7,70
 	Actor151: resourcelight
 		Owner: Neutral
 		Location: 29,90
-	Actor165: resourcelight
-		Owner: Neutral
-		Location: 67,72
-	Actor166: resourcelight
-		Owner: Neutral
-		Location: 67,59
-	Actor140: resourcelight
-		Owner: Neutral
-		Location: 89,27
-	Actor141: resourcelight
-		Owner: Neutral
-		Location: 89,35
 	Actor152: resourcelight
 		Owner: Neutral
 		Location: 67,7
@@ -417,5 +261,173 @@ Actors:
 	Actor172: mpspawn
 		Owner: Neutral
 		Location: 73,30
+	Actor140: resourcelight
+		Owner: Neutral
+		Location: 8,62
+	Actor141: resourcelight
+		Owner: Neutral
+		Location: 8,70
+	Actor142: resourcelight
+		Owner: Neutral
+		Location: 90,27
+	Actor143: resourcelight
+		Owner: Neutral
+		Location: 90,35
+	Actor165: resourcelight
+		Owner: Neutral
+		Location: 30,25
+	Actor166: resourcelight
+		Owner: Neutral
+		Location: 30,38
+	Actor167: resourcelight
+		Owner: Neutral
+		Location: 68,59
+	Actor168: resourcelight
+		Owner: Neutral
+		Location: 68,72
+	Actor91: lamppost
+		Owner: Neutral
+		Location: 55,19
+	Actor93: lamppost
+		Owner: Neutral
+		Location: 42,19
+	Actor97: lamppost
+		Owner: Neutral
+		Location: 46,19
+	Actor98: lamppost
+		Owner: Neutral
+		Location: 51,19
+	Actor99: lamppost
+		Owner: Neutral
+		Location: 42,13
+	Actor104: lamppost
+		Owner: Neutral
+		Location: 55,13
+	Actor105: lamppost
+		Owner: Neutral
+		Location: 51,13
+	Actor109: lamppost
+		Owner: Neutral
+		Location: 46,13
+	Actor110: prop4
+		Owner: Neutral
+		Location: 39,44
+	Actor114: lamppost
+		Owner: Neutral
+		Location: 42,44
+	Actor115: lamppost
+		Owner: Neutral
+		Location: 46,44
+	Actor116: lamppost
+		Owner: Neutral
+		Location: 51,44
+	Actor117: lamppost
+		Owner: Neutral
+		Location: 55,44
+	Actor173: prop4
+		Owner: Neutral
+		Location: 58,44
+	Actor101: prop4
+		Owner: Neutral
+		Location: 39,53
+	Actor102: lamppost
+		Owner: Neutral
+		Location: 42,53
+	Actor174: lamppost
+		Owner: Neutral
+		Location: 46,53
+	Actor175: lamppost
+		Owner: Neutral
+		Location: 51,53
+	Actor176: lamppost
+		Owner: Neutral
+		Location: 55,53
+	Actor177: prop4
+		Owner: Neutral
+		Location: 58,53
+	Actor178: prop4
+		Owner: Neutral
+		Location: 39,84
+	Actor179: lamppost
+		Owner: Neutral
+		Location: 42,84
+	Actor180: lamppost
+		Owner: Neutral
+		Location: 46,84
+	Actor181: lamppost
+		Owner: Neutral
+		Location: 51,84
+	Actor182: lamppost
+		Owner: Neutral
+		Location: 55,84
+	Actor183: prop4
+		Owner: Neutral
+		Location: 58,84
+	Actor184: prop4
+		Owner: Neutral
+		Location: 39,78
+	Actor185: lamppost
+		Owner: Neutral
+		Location: 42,78
+	Actor186: lamppost
+		Owner: Neutral
+		Location: 46,78
+	Actor187: lamppost
+		Owner: Neutral
+		Location: 51,78
+	Actor188: lamppost
+		Owner: Neutral
+		Location: 55,78
+	Actor189: prop4
+		Owner: Neutral
+		Location: 58,78
+	Actor190: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 89,77
+	Actor191: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 86,73
+	Actor192: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 90,74
+	Actor193: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 8,23
+	Actor194: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 9,20
+	Actor195: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 12,24
+	Actor196: crow
+		Owner: Neutral
+		Facing: 384
+		Location: 95,5
+	Actor197: crow
+		Owner: Neutral
+		Facing: 384
+		Location: 92,2
+	Actor198: crow
+		Owner: Neutral
+		Facing: 384
+		Location: 5,95
+	Actor199: crow
+		Owner: Neutral
+		Facing: 384
+		Location: 2,92
+	Actor200: crow2
+		Owner: Neutral
+		Facing: 384
+		Location: 34,84
+	Actor201: crow2
+		Owner: Neutral
+		Facing: 384
+		Location: 63,13
 
 Rules: rules.yaml
