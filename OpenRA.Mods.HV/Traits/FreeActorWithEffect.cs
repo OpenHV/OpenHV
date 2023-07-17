@@ -31,15 +31,18 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Custom palette name")]
 		public readonly string Palette = null;
 
-		[Desc("Start after this duration of miliseconds.")]
+		[Desc("Start after this duration in ticks.")]
 		public readonly int Delay = 0;
 
 		public override object Create(ActorInitializer init) { return new FreeActorWithEffect(init, this); }
 	}
 
-	public class FreeActorWithEffect : FreeActor
+	public class FreeActorWithEffect : FreeActor, ITick, ISync
 	{
 		readonly FreeActorWithEffectInfo info;
+
+		[Sync]
+		int delay;
 
 		public FreeActorWithEffect(ActorInitializer init, FreeActorWithEffectInfo info)
 			: base(init, info)
@@ -49,26 +52,35 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override void TraitEnabled(Actor self)
 		{
+			delay = info.Delay;
+		}
+
+		void ITick.Tick(Actor self)
+		{
 			if (!allowSpawn)
 				return;
 
-			allowSpawn = info.AllowRespawn;
+			if (--delay < 0)
+			{
+				SpawnActor(self);
+				allowSpawn = info.AllowRespawn;
+			}
+		}
 
+		void SpawnActor(Actor self)
+		{
 			var location = self.Location + Info.SpawnOffset;
 			var position = self.World.Map.CenterOfCell(location);
 
-			Game.RunAfterDelay(info.Delay, () =>
+			self.World.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
+			self.World.AddFrameEndTask(w =>
 			{
-				self.World.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
-				self.World.AddFrameEndTask(w =>
+				w.CreateActor(Info.Actor, new TypeDictionary
 				{
-					w.CreateActor(Info.Actor, new TypeDictionary
-					{
-						new ParentActorInit(self),
-						new LocationInit(location),
-						new OwnerInit(self.Owner),
-						new FacingInit(Info.Facing),
-					});
+					new ParentActorInit(self),
+					new LocationInit(location),
+					new OwnerInit(self.Owner),
+					new FacingInit(Info.Facing),
 				});
 			});
 		}

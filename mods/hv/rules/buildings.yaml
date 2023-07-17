@@ -1619,7 +1619,7 @@ STORAGE:
 		Palette: effect
 		Image: energyball
 		Sequence: appear
-		Delay: 2000
+		Delay: 50
 	ProvidesPrerequisite@BuildingName:
 	WithIdleOverlay@platform1:
 		Sequence: idle-platform1
