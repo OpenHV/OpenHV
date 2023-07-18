@@ -182,7 +182,8 @@ Hotkeys:
 	hv|hotkeys/production.yaml
 	common|hotkeys/editor.yaml
 
-LoadScreen: TextLoadScreen
+LoadScreen: StripeLoadScreen
+	Image: hv|uibits/loadscreen.png
 
 ServerTraits:
 	LobbyCommands

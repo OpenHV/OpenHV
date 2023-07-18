@@ -14,7 +14,7 @@ using System.Diagnostics;
 using OpenRA.Mods.Common.LoadScreens;
 using OpenRA.Primitives;
 
-namespace OpenRA.Mods.HV
+namespace OpenRA.Mods.HV.LoadScreens
 {
 	public sealed class TextLoadScreen : BlankLoadScreen
 	{
