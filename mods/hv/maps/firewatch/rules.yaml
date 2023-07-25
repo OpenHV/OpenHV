@@ -49,6 +49,8 @@ WATERTANK:
 		TargetLineColor: 0000FF
 	AttackMove:
 		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
 	WithAttackAnimation:
 		Sequence: shoot
 	UpdatesPlayerStatistics:
@@ -86,6 +88,8 @@ FIRETRUCK:
 		LocalOffset: 400,-50,0
 	AttackMove:
 		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
 	AttackTurreted:
 		Voice: Action
 		TargetLineColor: 0000FF
@@ -136,6 +140,8 @@ FIREFIGHTERPOD:
 		TargetLineColor: 0000FF
 	AttackMove:
 		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
 
 TREEFLAME:
 	Inherits@Shape: ^1x1Shape
