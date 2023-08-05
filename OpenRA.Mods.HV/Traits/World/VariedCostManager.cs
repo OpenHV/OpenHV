@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new VariedCostManager(init.Self, this); }
 	}
 
-	class VariedCostTraitInfoWrapper
+	public class VariedCostTraitInfoWrapper
 	{
 		public readonly ActorInfo ActorInfo;
 		public readonly VariedCostMultiplierInfo VariedCostMultiplierInfo;

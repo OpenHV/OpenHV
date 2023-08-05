@@ -16,7 +16,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Gives cash to the collector.")]
-	class CollectScrapCrateActionInfo : CrateActionInfo, Requires<ScrapValueInfo>
+	public class CollectScrapCrateActionInfo : CrateActionInfo, Requires<ScrapValueInfo>
 	{
 		[Desc("Should the collected amount be displayed as a cash tick?")]
 		public bool UseCashTick = true;
@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new CollectScrapCrateAction(init.Self, this); }
 	}
 
-	class CollectScrapCrateAction : CrateAction
+	public class CollectScrapCrateAction : CrateAction
 	{
 		readonly CollectScrapCrateActionInfo info;
 

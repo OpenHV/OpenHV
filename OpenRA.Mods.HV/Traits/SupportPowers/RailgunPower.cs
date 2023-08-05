@@ -17,7 +17,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	class RailgunPowerInfo : SupportPowerInfo, IRulesetLoaded
+	public class RailgunPowerInfo : SupportPowerInfo, IRulesetLoaded
 	{
 		[Desc("Range of cells the camera should reveal around target cell.")]
 		public readonly WDist CameraRange = WDist.Zero;
@@ -66,7 +66,7 @@ namespace OpenRA.Mods.HV.Traits
 		}
 	}
 
-	class RailgunPower : SupportPower
+	public class RailgunPower : SupportPower
 	{
 		readonly RailgunPowerInfo info;
 

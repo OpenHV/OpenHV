@@ -20,14 +20,14 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Displays terrain tile IDs colored by terrain type.")]
-	class TerrainTypeOverlayInfo : TraitInfo
+	public class TerrainTypeOverlayInfo : TraitInfo
 	{
 		public readonly string Font = "TinyBold";
 
 		public override object Create(ActorInitializer init) { return new TerrainTypeOverlay(this); }
 	}
 
-	class TerrainTypeOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
+	public class TerrainTypeOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
 	{
 		const string CommandName = "tile-id";
 		const string CommandDesc = "Toggles the terrain type overlay.";

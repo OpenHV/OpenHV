@@ -101,7 +101,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 
 							foreach (var armorType in armorList)
 							{
-								var vs = damageWarhead.Versus.ContainsKey(armorType) ? damageWarhead.Versus[armorType] : 100;
+								var vs = damageWarhead.Versus.TryGetValue(armorType, out var versus) ? versus : 100;
 								row["vs. " + armorType] = Math.Round(damagePerSecond * vs / 100, 1, MidpointRounding.AwayFromZero);
 							}
 						}

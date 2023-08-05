@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 		}
 	}
 
-	class PeriodicDischarge : ConditionalTrait<PeriodicDischargeInfo>, ITick, INotifyCreated
+	public class PeriodicDischarge : ConditionalTrait<PeriodicDischargeInfo>, ITick, INotifyCreated
 	{
 		readonly PeriodicDischargeInfo info;
 		readonly WeaponInfo weapon;

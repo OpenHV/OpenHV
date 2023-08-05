@@ -559,7 +559,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			get { return players.Count() + (hasTeams ? teams.Count() : 0) > 10; }
 		}
 
-		class StatsDropDownOption
+		sealed class StatsDropDownOption
 		{
 			public string Title;
 			public Func<bool> IsSelected;

@@ -14,7 +14,7 @@ using OpenRA.Mods.Common.Traits.Render;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Picks sprites from a random actor.")]
-	class WithRandomSpriteBodyInfo : WithSpriteBodyInfo
+	public class WithRandomSpriteBodyInfo : WithSpriteBodyInfo
 	{
 		[FieldLoader.Require]
 		[Desc("The sequence names that define the actor sprites.")]
@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		public override object Create(ActorInitializer init) { return new WithRandomSpriteBody(init, this); }
 	}
 
-	class WithRandomSpriteBody : WithSpriteBody
+	public class WithRandomSpriteBody : WithSpriteBody
 	{
 		public WithRandomSpriteBody(ActorInitializer init, WithRandomSpriteBodyInfo info)
 			: base(init, info)

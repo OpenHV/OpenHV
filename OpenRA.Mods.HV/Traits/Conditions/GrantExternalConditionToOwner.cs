@@ -16,7 +16,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Grants an external condition to the owner player's actor.")]
-	class GrantExternalConditionToOwnerInfo : ConditionalTraitInfo
+	public class GrantExternalConditionToOwnerInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
 		public readonly string Condition = null;
@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new GrantExternalConditionToOwner(this); }
 	}
 
-	class GrantExternalConditionToOwner : ConditionalTrait<GrantExternalConditionToOwnerInfo>, INotifyRemovedFromWorld, INotifyAddedToWorld, INotifyOwnerChanged, INotifyKilled
+	public class GrantExternalConditionToOwner : ConditionalTrait<GrantExternalConditionToOwnerInfo>, INotifyRemovedFromWorld, INotifyAddedToWorld, INotifyOwnerChanged, INotifyKilled
 	{
 		int conditionToken = Actor.InvalidConditionToken;
 		ExternalCondition playerConditionTrait;

@@ -20,7 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	class AttackOrderPowerInfo : SupportPowerInfo, Requires<AttackBaseInfo>
+	public class AttackOrderPowerInfo : SupportPowerInfo, Requires<AttackBaseInfo>
 	{
 		[Desc("Range circle color.")]
 		public readonly Color CircleColor = Color.Red;

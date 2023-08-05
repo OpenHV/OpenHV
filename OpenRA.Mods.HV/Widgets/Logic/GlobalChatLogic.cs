@@ -15,7 +15,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
 {
-	class GlobalChatLogic : ChromeLogic
+	public class GlobalChatLogic : ChromeLogic
 	{
 		readonly ScrollPanelWidget historyPanel;
 		readonly ContainerWidget chatTemplate;
