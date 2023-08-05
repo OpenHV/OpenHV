@@ -328,7 +328,6 @@ RADAR:
 		Name: Air Strike
 		Description: Deploy an aerial bombing run.
 		UnitType: bomber1
-		DisplayBeacon: false
 		DisplayRadarPing: true
 		CameraActor: camera
 		UseDirectionalTarget: true
@@ -1469,7 +1468,6 @@ SILO:
 		MissileDelay: 5
 		SkipAscent: true
 		DisplayTimerRelationships: Ally, Neutral, Enemy
-		DisplayBeacon: false
 		DisplayRadarPing: true
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 10
