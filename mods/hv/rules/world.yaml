@@ -144,6 +144,7 @@
 			Oceanic: 100
 			Rapids: 50
 			Shore: 75
+			IceCliff: 75
 	Faction@Yuruki:
 		Name: Yuruki
 		InternalName: yi

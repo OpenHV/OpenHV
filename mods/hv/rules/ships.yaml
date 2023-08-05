@@ -386,9 +386,9 @@ NAVALTRANSPORT:
 	DetectCloaked:
 		Range: 1c0
 	WithLandingCraftAnimation:
-		OpenTerrainTypes: Shore
+		OpenTerrainTypes: Shore, IceCliff
 	Cargo:
-		Types: Scout
+		Types: Scout, Vehicle
 		MaxWeight: 10
 		AfterUnloadDelay: 40
 	WithCargoPipsDecoration:

@@ -148,6 +148,7 @@ TRANSPRT:
 	WithTeleportEnergyOverlay:
 		Image: energyball
 		Sequence: teleport-large
+	-Passenger:
 
 ARTIL:
 	Inherits: ^TrackedVehicle
@@ -599,6 +600,7 @@ ARTIL3:
 	WithMuzzleOverlay:
 	Selectable:
 		DecorationBounds: 1536, 1536
+	-Passenger:
 
 BUILDER:
 	Inherits: ^Vehicle
