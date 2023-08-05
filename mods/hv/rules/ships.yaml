@@ -427,7 +427,7 @@ WATERMINELAYER:
 		Range: 2c0
 	Minelayer:
 		Mine: watermine
-		PreLayDelay: 20
+		PreLayDelay: 12
 		AfterLayingDelay: 20
 	MineImmune:
 	DetectCloaked:
@@ -442,9 +442,17 @@ WATERMINELAYER:
 		TargetTypes: Ground, Vehicle, Mine
 	AmmoPool:
 		Ammo: 5
+		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
 	WithDeployMineAnimation:
 		Sequence: deploy
+		RequiresCondition: ammo
+	WithFacingSpriteBody:
+		RequiresCondition: ammo
+	WithFacingSpriteBody@WithoutAmmo:
+		Name: mineless
+		Sequence: idle-empty
+		RequiresCondition: !ammo
