@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -20,23 +20,23 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Displays terrain tile IDs colored by terrain type.")]
-	class TerrainDebugOverlayInfo : TraitInfo
+	class TerrainTypeOverlayInfo : TraitInfo
 	{
 		public readonly string Font = "TinyBold";
 
-		public override object Create(ActorInitializer init) { return new TerrainDebugOverlay(this); }
+		public override object Create(ActorInitializer init) { return new TerrainTypeOverlay(this); }
 	}
 
-	class TerrainDebugOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
+	class TerrainTypeOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
 	{
 		const string CommandName = "tile-id";
-		const string CommandDesc = "Toggles the terrain debug overlay.";
+		const string CommandDesc = "Toggles the terrain type overlay.";
 
 		public bool Enabled;
 
 		readonly SpriteFont font;
 
-		public TerrainDebugOverlay(TerrainDebugOverlayInfo info)
+		public TerrainTypeOverlay(TerrainTypeOverlayInfo info)
 		{
 			font = Game.Renderer.Fonts[info.Font];
 		}

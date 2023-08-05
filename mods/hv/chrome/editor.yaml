@@ -204,9 +204,10 @@ Container@EDITOR_ROOT:
 		TooltipContainer@TOOLTIP_CONTAINER:
 
 Container@EDITOR_WORLD_ROOT:
-	Logic: LoadIngamePerfLogic, CustomMapEditorLogic, ActorEditLogic, MapOverlaysLogic
+	Logic: LoadIngamePerfLogic, CustomMapEditorLogic, ActorEditLogic, CustomMapOverlaysLogic
 		ToggleGridOverlayKey: EditorToggleGridOverlay
 		ToggleBuildableOverlayKey: EditorToggleBuildableOverlay
+		ToggleTerrainTypeOverlayKey: EditorToggleTerrainTypeOverlayKey
 	Children:
 		LogicKeyListener@OVERLAY_KEYHANDLER:
 		Container@PERF_ROOT:
@@ -634,15 +635,6 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipText: Even out tile transitions
 			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
-		Button@DEBUG_BUTTON:
-			X: 760
-			Width: 70
-			Height: 25
-			Text: Debug
-			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: Show the terrain types
-			TooltipContainer: TOOLTIP_CONTAINER
-			Font: Bold
 		Label@COORDINATE_LABEL:
 			X: 840
 			Width: 50
@@ -682,7 +674,9 @@ ScrollPanel@CATEGORY_FILTER_PANEL:
 
 ScrollPanel@COPY_FILTER_PANEL:
 	Width: 140
-	Height: 65
+	Height: 80
+	ItemSpacing: 5
+	TopBottomSpacing: 0
 	Children:
 		Checkbox@CATEGORY_TEMPLATE:
 			X: 5
@@ -693,7 +687,9 @@ ScrollPanel@COPY_FILTER_PANEL:
 
 ScrollPanel@OVERLAY_PANEL:
 	Width: 140
-	Height: 45
+	Height: 80
+	ItemSpacing: 5
+	TopBottomSpacing: 0
 	Children:
 		Checkbox@CATEGORY_TEMPLATE:
 			X: 5

@@ -181,6 +181,7 @@ Hotkeys:
 	common|hotkeys/control-groups.yaml
 	hv|hotkeys/production.yaml
 	common|hotkeys/editor.yaml
+	hv|hotkeys/editor.yaml
 
 LoadScreen: StripeLoadScreen
 	Image: hv|uibits/loadscreen.png

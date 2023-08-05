@@ -10,7 +10,6 @@
 #endregion
 
 using OpenRA.Graphics;
-using OpenRA.Mods.Common.Lint;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.HV.Traits;
@@ -27,27 +26,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		{
 			var editorViewport = widget.Get<EditorViewportControllerWidget>("MAP_EDITOR");
 
-			var gridButton = widget.GetOrNull<ButtonWidget>("GRID_BUTTON");
-			if (gridButton != null)
-			{
-				var terrainGeometryTrait = world.WorldActor.Trait<TerrainGeometryOverlay>();
-				gridButton.OnClick = () => terrainGeometryTrait.Enabled ^= true;
-				gridButton.IsHighlighted = () => terrainGeometryTrait.Enabled;
-			}
-
-			var lockButton = widget.GetOrNull<ButtonWidget>("BUILDABLE_BUTTON");
-			if (lockButton != null)
-			{
-				var buildableTerrainTrait = world.WorldActor.TraitOrDefault<BuildableTerrainOverlay>();
-				if (buildableTerrainTrait != null)
-				{
-					lockButton.OnClick = () => buildableTerrainTrait.Enabled ^= true;
-					lockButton.IsHighlighted = () => buildableTerrainTrait.Enabled;
-				}
-				else
-					lockButton.Disabled = true;
-			}
-
 			var autoTileButton = widget.GetOrNull<ButtonWidget>("AUTOTILE_BUTTON");
 			if (autoTileButton != null)
 			{
@@ -56,14 +34,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					var autoTiler = world.WorldActor.Trait<EditorAutoTiler>();
 					autoTiler.CleanEdges();
 				};
-			}
-
-			var debugButton = widget.GetOrNull<ButtonWidget>("DEBUG_BUTTON");
-			if (debugButton != null)
-			{
-				var terrainDebugTrait = world.WorldActor.Trait<TerrainDebugOverlay>();
-				debugButton.OnClick = () => terrainDebugTrait.Enabled ^= true;
-				debugButton.IsHighlighted = () => terrainDebugTrait.Enabled;
 			}
 
 			var copypasteButton = widget.GetOrNull<ButtonWidget>("COPYPASTE_BUTTON");
@@ -89,8 +59,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				{
 					var cell = worldRenderer.Viewport.ViewToWorld(Viewport.LastMousePos);
 					var map = worldRenderer.World.Map;
-					return map.Height.Contains(cell) ?
-						$"{cell},{map.Height[cell]} ({map.Tiles[cell].Type})" : "";
+					return map.Height.Contains(cell) ? $"{cell},{map.Height[cell]} ({map.Tiles[cell].Type})" : "";
 				};
 			}
 

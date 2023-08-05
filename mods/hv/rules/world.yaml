@@ -10,7 +10,7 @@
 		VictoryMusic: the struggle loop
 		DefeatMusic: the story continues
 	TerrainGeometryOverlay:
-	TerrainDebugOverlay:
+	TerrainTypeOverlay:
 	ResourceDensityOverlay:
 	DebugVisualizations:
 	DebugOffsetOverlayManager:

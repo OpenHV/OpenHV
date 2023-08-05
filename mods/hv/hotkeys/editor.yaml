@@ -1,0 +1,4 @@
+EditorToggleTerrainTypeOverlayKey: F3
+	Description: Terrain Type Overlay
+	Types: Editor
+	Contexts: Editor
