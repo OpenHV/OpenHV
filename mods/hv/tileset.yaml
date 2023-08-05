@@ -2177,7 +2177,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceCliff
 	Template@265:
 		Id: 265
 		Images: bits/terrain/ice2watr.png
