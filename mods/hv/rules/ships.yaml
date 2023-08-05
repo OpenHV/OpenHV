@@ -427,6 +427,8 @@ WATERMINELAYER:
 		Range: 2c0
 	Minelayer:
 		Mine: watermine
+		PreLayDelay: 20
+		AfterLayingDelay: 20
 	MineImmune:
 	DetectCloaked:
 		Range: 5c0
@@ -444,3 +446,5 @@ WATERMINELAYER:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+	WithDeployMineAnimation:
+		Sequence: deploy

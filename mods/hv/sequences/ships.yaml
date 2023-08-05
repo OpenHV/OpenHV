@@ -166,10 +166,10 @@ navaltransport:
 		Offset: 2, 0
 
 waterminelayer:
-	idle:
+	deploy:
 		Filename: bits/water-minelayer.png
 		Facings: 8
-	idle-empty:
+	idle:
 		Filename: bits/water-minelayer.png
 		Start: 8
 		Facings: 8
