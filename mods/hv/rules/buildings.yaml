@@ -1540,6 +1540,7 @@ UPLINK:
 		ChargeInterval: 9000
 		Name: Orbital Railgun
 		Description: Initiate a surgical strike.\nApplies instant damage to a small area.
+		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: true
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 10
