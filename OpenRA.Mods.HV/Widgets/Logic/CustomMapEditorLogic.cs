@@ -18,7 +18,6 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
 {
-	[ChromeLogicArgsHotkeys("ChangeZoomKey")]
 	public class CustomMapEditorLogic : ChromeLogic
 	{
 		MapCopyFilters copyFilters = MapCopyFilters.All;
@@ -70,15 +69,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var copypasteButton = widget.GetOrNull<ButtonWidget>("COPYPASTE_BUTTON");
 			if (copypasteButton != null)
 			{
-				// HACK: Replace Ctrl with Cmd on macOS
-				// TODO: Add platform-specific override support to HotkeyManager
-				// and then port the editor hotkeys to this system.
 				var copyPasteKey = copypasteButton.Key.GetValue();
-				if (Platform.CurrentPlatform == PlatformType.OSX && copyPasteKey.Modifiers.HasModifier(Modifiers.Ctrl))
-				{
-					var modified = new Hotkey(copyPasteKey.Key, copyPasteKey.Modifiers & ~Modifiers.Ctrl | Modifiers.Meta);
-					copypasteButton.Key = FieldLoader.GetValue<HotkeyReference>("Key", modified.ToString());
-				}
 
 				copypasteButton.OnClick = () => editorViewport.SetBrush(new EditorCopyPasteBrush(editorViewport, worldRenderer, () => copyFilters));
 				copypasteButton.IsHighlighted = () => editorViewport.CurrentBrush is EditorCopyPasteBrush;
