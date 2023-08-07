@@ -40,6 +40,8 @@
     <content_attribute id="social-chat">intense</content_attribute>
   </content_rating>
   <releases>
-    <release version="{VERSION}" date="{DATE}" />
+    <release version="{VERSION}" date="{DATE}">
+      <url>https://github.com/OpenHV/OpenHV/releases/tag/{VERSION}</url>
+    </release>
   </releases>
 </component>
