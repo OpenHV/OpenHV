@@ -18,10 +18,10 @@
 sidebar:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 438, 128, 244, 288
-		background-iconrow: 438, 409, 244, 50
-		background-bottom: 438, 459, 244, 7
-		background-supportoverlay: 484, 410, 64, 48
+		background-top: 438, 121, 245, 291
+		background-iconrow: 438, 412, 245, 51
+		background-bottom: 438, 463, 245, 7
+		background-supportoverlay: 482, 412, 66, 50
 
 sidebar-button:
 	Inherits: ^Chrome
@@ -89,58 +89,64 @@ power-icons:
 		power-normal: 350, 0, 12, 18
 		power-critical: 363, 0, 12, 18
 
+cash-icons:
+	Inherits: ^Chrome
+	Regions:
+		cash-normal: 450, 80, 10, 16
+		cash-critical: 450, 80, 10, 16
+
 production-icons:
 	Inherits: ^Chrome
 	Regions:
-		building: 384, 0, 16, 16
-		building-disabled: 384, 16, 16, 16
-		building-alert: 384, 32, 16, 16
-		defense: 400, 0, 16, 16
-		defense-disabled: 400, 16, 16, 16
-		defense-alert: 400, 32, 16, 16
-		pods: 416, 0, 16, 16
-		pods-disabled: 416, 16, 16, 16
-		pods-alert: 416, 32, 16, 16
-		vehicle: 432, 0, 16, 16
-		vehicle-disabled: 432, 16, 16, 16
-		vehicle-alert: 432, 32, 16, 16
-		aircraft: 448, 0, 16, 16
-		aircraft-disabled: 448, 16, 16, 16
-		aircraft-alert: 448, 32, 16, 16
-		ship: 496, 48, 16, 16
-		ship-disabled: 496, 64, 16, 16
-		ship-alert: 496, 80, 16, 16
-		trade: 496, 0, 16, 16
-		trade-disabled: 496, 16, 16, 16
-		trade-alert: 496, 32, 16, 16
+		building: 64, 197, 28, 27
+		building-disabled: 96, 197, 28, 27
+		building-alert: 128, 197, 28, 27
+		defense: 64, 293, 28, 27
+		defense-disabled: 96, 293, 28, 27
+		defense-alert: 128, 293, 28, 27
+		pods: 64, 326, 28, 27
+		pods-disabled: 96, 326, 28, 27
+		pods-alert: 128, 326, 28, 27
+		vehicle: 64, 229, 28, 27
+		vehicle-disabled: 96, 229, 28, 27
+		vehicle-alert: 128, 229, 28, 27
+		aircraft: 64, 261, 28, 27
+		aircraft-disabled: 96, 261, 28, 27
+		aircraft-alert: 128, 261, 28, 27
+		ship: 64, 389, 28, 27
+		ship-disabled: 96, 389, 28, 27
+		ship-alert: 128, 389, 28, 27
+		trade: 64, 357, 28, 27
+		trade-disabled: 96, 357, 28, 27
+		trade-alert: 128, 357, 28, 27
 
 order-icons:
 	Inherits: ^Chrome
 	Regions:
-		options: 480, 0, 16, 16
-		options-disabled: 480, 16, 16, 16
-		options-active: 480, 32, 16, 16
-		debug: 351, 48, 16, 16
-		debug-disabled: 351, 64, 16, 16
-		debug-active: 351, 80, 16, 16
-		diplomacy: 464, 48, 16, 16
-		diplomacy-disabled: 464, 64, 16, 16
-		diplomacy-active: 464, 80, 16, 16
-		sell: 496, 0, 16, 16
-		sell-disabled: 496, 16, 16, 16
-		sell-active: 496, 32, 16, 16
-		repair: 384, 48, 16, 16
-		repair-disabled: 384, 64, 16, 16
-		repair-active: 384, 80, 16, 16
-		beacon: 400, 48, 16, 16
-		beacon-disabled: 400, 64, 16, 16
-		beacon-active: 400, 80, 16, 16
-		power: 480, 48, 16, 16
-		power-disabled: 480, 64, 16, 16
-		power-active: 480, 80, 16, 16
-		stats: 368, 48, 16, 16
-		stats-disabled: 368, 64, 16, 16
-		stats-active: 368, 80, 16, 16
+		options: 160, 325, 28, 27
+		options-disabled: 192, 325, 28, 27
+		options-active: 224, 325, 28, 27
+		debug: 160, 357, 28, 27
+		debug-disabled: 192, 357, 28, 27
+		debug-active: 224, 357, 28, 27
+		diplomacy: 160, 421, 28, 27
+		diplomacy-disabled: 192, 421, 28, 27
+		diplomacy-active: 224, 421, 28, 27
+		sell: 160, 293, 28, 27
+		sell-disabled: 192, 293, 28, 27
+		sell-active: 224, 293, 28, 27
+		repair: 160, 197, 28, 27
+		repair-disabled: 192, 197, 28, 27
+		repair-active: 224, 197, 28, 27
+		beacon: 160, 229, 28, 27
+		beacon-disabled: 192, 229, 28, 27
+		beacon-active: 224, 229, 28, 27
+		power: 160, 261, 28, 27
+		power-disabled: 192, 261, 28, 27
+		power-active: 224, 261, 28, 27
+		stats: 160, 389, 28, 27
+		stats-disabled: 192, 389, 28, 27
+		stats-active: 224, 389, 28, 27
 
 command-icons:
 	Inherits: ^Chrome
