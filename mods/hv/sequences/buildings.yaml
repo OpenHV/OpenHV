@@ -302,7 +302,7 @@ radar:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 7
-		Offset: 0, 1
+		Offset: 0, 0
 
 radar2:
 	Inherits: radar
@@ -319,7 +319,7 @@ radar2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 20
-		Offset: 0, 1
+		Offset: 0, 0
 
 tradplat:
 	Inherits@Flame: ^BuildingFlame2
@@ -365,7 +365,7 @@ tradplat:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 11
-		Offset: 0, 2
+		Offset: 0, 0
 
 tradplat2:
 	Inherits: tradplat
@@ -454,7 +454,7 @@ module2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 30
-		Offset: 0, -1
+		Offset: 0, 0
 
 miner2:
 	Inherits@Flame: ^BuildingFlame2
@@ -565,7 +565,7 @@ miner2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 16
-		Offset: 0, 2
+		Offset: 0, 0
 
 starport:
 	Inherits@Flame: ^BuildingFlame2
@@ -617,7 +617,7 @@ starport:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 9
-		Offset: 0, 1
+		Offset: 0, 0
 
 starport2:
 	Inherits@Flame: ^BuildingFlame2
@@ -661,7 +661,7 @@ starport2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 17
-		Offset: 0, 1
+		Offset: 0, 0
 
 factory2:
 	Inherits@Flame: ^BuildingFlame2
@@ -793,7 +793,7 @@ factory2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 1
-		Offset: 0, 1
+		Offset: 0, 0
 
 factory4:
 	Inherits: factory2
@@ -968,7 +968,7 @@ factory3:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 2
-		Offset: 0, 1
+		Offset: 0, 0
 
 bunker:
 	Inherits@Flame: ^BuildingFlame
@@ -1001,7 +1001,7 @@ bunker:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 25
-		Offset: 0, 1
+		Offset: 0, 0
 
 bunker2:
 	Inherits: bunker
@@ -1056,7 +1056,7 @@ turret:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 14
-		Offset: 0, 1
+		Offset: 0, 0
 
 turret2:
 	Inherits: turret
@@ -1130,7 +1130,7 @@ aaturret:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 19
-		Offset: 0, 1
+		Offset: 0, 0
 
 aaturret2:
 	Inherits: aaturret
@@ -1167,7 +1167,7 @@ aaturret2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 22
-		Offset: 0, 1
+		Offset: 0, 0
 
 field:
 	Inherits@Flame: ^BuildingFlame
@@ -1227,7 +1227,7 @@ field:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 3
-		Offset: 0, 1
+		Offset: 0, 0
 
 field2:
 	Inherits: field
@@ -1300,7 +1300,7 @@ silo:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 8
-		Offset: 0, 1
+		Offset: 0, 0
 
 uplink:
 	Inherits@Flame: ^BuildingFlame2
@@ -1345,7 +1345,7 @@ uplink:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 24
-		Offset: 0, 1
+		Offset: 0, 0
 
 howitzer:
 	Inherits@Flame: ^BuildingFlame
@@ -1505,7 +1505,7 @@ harbor:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 5
-		Offset: 0, 4
+		Offset: 0, 0
 
 harbor2:
 	Inherits: harbor
@@ -1523,7 +1523,7 @@ harbor2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 29
-		Offset: 0, 1
+		Offset: 0, 0
 
 mother:
 	Inherits@Flame: ^BuildingFlame
@@ -1829,7 +1829,7 @@ techcenter:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 18
-		Offset: 0, 2
+		Offset: 0, 0
 
 techcenter2:
 	Inherits: techcenter
@@ -1982,7 +1982,7 @@ storage2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 23
-		Offset: 0, 1
+		Offset: 0, 0
 
 storage:
 	Inherits: storage2
@@ -2190,7 +2190,7 @@ oresmelt:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 36
-		Offset: 0, 1
+		Offset: 0, 0
 
 flagpost:
 	Inherits@Flame: ^BuildingFlame

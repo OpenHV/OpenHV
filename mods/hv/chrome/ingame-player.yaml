@@ -294,23 +294,23 @@ Container@PLAYER_WIDGETS:
 					Text: Audio Muted
 					Contrast: true
 		Image@SIDEBAR_BACKGROUND_TOP:
-			X: WINDOW_RIGHT - 250
-			Y: 10
-			Width: 244
-			Height: 287
+			X: WINDOW_RIGHT - 245
+			Y: 0
+			Width: 245
+			Height: 291
 			ImageCollection: sidebar
 			ImageName: background-top
 			ClickThrough: false
 			Children:
 				Container@TOP_BUTTONS:
 					Logic: MenuButtonsChromeLogic
-					X: 12
-					Y: 1
+					X: 45
+					Y: 4
 					Children:
 						Button@BEACON_BUTTON:
 							Logic: BeaconOrderButtonLogic
 							Width: 28
-							Height: 28
+							Height: 27
 							Background: sidebar-button
 							Key: PlaceBeacon
 							TooltipText: Place Beacon
@@ -318,14 +318,14 @@ Container@PLAYER_WIDGETS:
 							VisualHeight: 0
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: order-icons
 						Button@SELL_BUTTON:
 							Logic: SellOrderButtonLogic
 							X: 32
 							Width: 28
-							Height: 28
+							Height: 27
 							Background: sidebar-button
 							Key: Sell
 							TooltipText: Sell
@@ -333,14 +333,14 @@ Container@PLAYER_WIDGETS:
 							VisualHeight: 0
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: order-icons
 						Button@POWER_BUTTON:
 							Logic: PowerdownOrderButtonLogic
 							X: 64
 							Width: 28
-							Height: 28
+							Height: 27
 							Background: sidebar-button
 							Key: PowerDown
 							TooltipText: Power Down
@@ -348,14 +348,14 @@ Container@PLAYER_WIDGETS:
 							VisualHeight: 0
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: order-icons
 						Button@REPAIR_BUTTON:
 							Logic: RepairOrderButtonLogic
 							X: 96
 							Width: 28
-							Height: 28
+							Height: 27
 							Background: sidebar-button
 							Key: Repair
 							TooltipText: Repair
@@ -363,29 +363,13 @@ Container@PLAYER_WIDGETS:
 							VisualHeight: 0
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: order-icons
-						MenuButton@DEBUG_BUTTON:
+						MenuButton@OPTIONS_BUTTON:
 							X: 128
 							Width: 28
-							Height: 28
-							Background: sidebar-button
-							Key: escape Shift
-							TooltipText: Debug Menu
-							TooltipContainer: TOOLTIP_CONTAINER
-							DisableWorldSounds: true
-							VisualHeight: 0
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 6
-									ImageCollection: order-icons
-									ImageName: debug
-						MenuButton@OPTIONS_BUTTON:
-							X: 192
-							Width: 28
-							Height: 28
+							Height: 27
 							Background: sidebar-button
 							Key: escape
 							TooltipText: Options
@@ -394,23 +378,39 @@ Container@PLAYER_WIDGETS:
 							VisualHeight: 0
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: order-icons
 									ImageName: options
+						MenuButton@DEBUG_BUTTON:
+							X: 160
+							Width: 28
+							Height: 27
+							Background: sidebar-button
+							Key: escape Shift
+							TooltipText: Debug Menu
+							TooltipContainer: TOOLTIP_CONTAINER
+							DisableWorldSounds: true
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 0
+									Y: 0
+									ImageCollection: order-icons
+									ImageName: debug
 				Container@RADAR:
 					Logic: IngameRadarDisplayLogic
 					Children:
 						LogicTicker@RADAR_TICKER:
 						ColorBlock@RADAR_FADETOBLACK:
 							X: 13
-							Y: 33
+							Y: 40
 							Width: 224
 							Height: 224
 						Radar@RADAR_MINIMAP:
 							WorldInteractionController: INTERACTION_CONTROLLER
 							X: 14
-							Y: 34
+							Y: 40
 							Width: 222
 							Height: 222
 							SoundUp: RadarUp
@@ -418,26 +418,32 @@ Container@PLAYER_WIDGETS:
 							Children:
 				Label@GAME_TIMER:
 					Logic: GameTimerLogic
-					X: 3
-					Y: 258
+					X: 2
+					Y: 268
 					Width: PARENT_RIGHT
 					Height: 23
 					Align: Center
 					Font: TinyBold
 				LabelWithTooltip@CASH:
 					Logic: IngameCashCounterLogic
-					X: 35
-					Y: 258
+					X: 26
+					Y: 270
 					Width: 50
 					Height: 23
 					Font: Bold
 					Text: {0}
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: SIMPLE_TOOLTIP
+					Children:
+						Image@CASH_ICON:
+							X: PARENT_RIGHT - 6
+							Y: 2
+							ImageCollection: cash-icons
+							ImageName: cash-normal
 				LabelWithTooltip@POWER:
 					Logic: IngamePowerCounterLogic
 					X: PARENT_RIGHT - WIDTH - 30
-					Y: 258
+					Y: 270
 					Width: 50
 					Height: 23
 					Align: Right
@@ -448,7 +454,7 @@ Container@PLAYER_WIDGETS:
 					Children:
 						Image@POWER_ICON:
 							X: PARENT_RIGHT + 4
-							Y: 3
+							Y: 2
 							ImageCollection: power-icons
 							ImageName: power-normal
 		Container@HPF_ROOT:
@@ -458,51 +464,51 @@ Container@PLAYER_WIDGETS:
 			Width: 200
 		Container@SIDEBAR_PRODUCTION:
 			Logic: ClassicProductionLogic
-			X: WINDOW_RIGHT - 250
-			Y: 287
+			X: WINDOW_RIGHT - 245
+			Y: 291
 			Width: 238
 			Height: 250
 			Children:
 				Container@PALETTE_BACKGROUND:
 					Children:
 						Image@ROW_TEMPLATE:
-							Width: 244
-							Height: 48
+							Width: 245
+							Height: 51
 							ClickThrough: false
 							ImageCollection: sidebar
 							ImageName: background-iconrow
 						Image@BOTTOM_CAP:
-							Width: 238
-							Height: 8
+							Width: 245
+							Height: 7
 							ClickThrough: false
 							ImageCollection: sidebar
 							ImageName: background-bottom
 				LogicTicker@PRODUCTION_TICKER:
 				ProductionPalette@PRODUCTION_PALETTE:
-					X: 49
-					Y: 4
+					X: 46
+					Y: 1
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
 					HoldText: ON HOLD
 					OverlayFont: TinyPixel
 					SymbolsFont: TinyPixel
-					IconSize: 62, 46
-					IconMargin: 1, 1
+					IconSize: 63, 47
+					IconMargin: 1, 4
 					MinimumRows: 5
 					ClockPalette: shadow
 					NotBuildablePalette: shadow
-					IconSpriteOffset: -1, -1
+					IconSpriteOffset: 0,0
 					HotkeyPrefix: Production
 					HotkeyCount: 24
 				Container@PRODUCTION_TYPES:
-					X: 7
-					Y: 2
+					X: 10
+					Y: 4
 					Width: 29
 					Height: 240
 					Children:
 						ProductionTypeButton@BUILDING:
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Buildings
@@ -511,13 +517,13 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypeBuilding
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@DEFENSE:
 							Y: 31
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Defense
@@ -526,13 +532,13 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypeDefense
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@PODS:
 							Y: 62
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Pods
@@ -541,13 +547,13 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypePods
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 1
 									ImageCollection: production-icons
 						ProductionTypeButton@VEHICLE:
 							Y: 93
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Vehicles
@@ -556,13 +562,13 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypeVehicle
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@AIRCRAFT:
 							Y: 124
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Aircraft
@@ -571,13 +577,13 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypeAircraft
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@NAVAL:
 							Y: 155
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Naval
@@ -586,13 +592,13 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypeNaval
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@TRADE:
 							Y: 186
 							Width: 28
-							Height: 28
+							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
 							TooltipText: Trade
@@ -601,8 +607,8 @@ Container@PLAYER_WIDGETS:
 							Key: ProductionTypeTrade
 							Children:
 								Image@ICON:
-									X: 6
-									Y: 6
+									X: 0
+									Y: 0
 									ImageCollection: production-icons
 						Button@SCROLL_UP_BUTTON:
 							Y: 186
