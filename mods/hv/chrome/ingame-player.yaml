@@ -426,7 +426,7 @@ Container@PLAYER_WIDGETS:
 					Font: TinyBold
 				LabelWithTooltip@CASH:
 					Logic: IngameCashCounterLogic
-					X: 26
+					X: 40
 					Y: 270
 					Width: 50
 					Height: 23
@@ -436,7 +436,7 @@ Container@PLAYER_WIDGETS:
 					TooltipTemplate: SIMPLE_TOOLTIP
 					Children:
 						Image@CASH_ICON:
-							X: PARENT_RIGHT - 6
+							X: PARENT_RIGHT - 70
 							Y: 2
 							ImageCollection: cash-icons
 							ImageName: cash-normal
@@ -453,7 +453,7 @@ Container@PLAYER_WIDGETS:
 					TooltipTemplate: SIMPLE_TOOLTIP
 					Children:
 						Image@POWER_ICON:
-							X: PARENT_RIGHT + 4
+							X: PARENT_RIGHT + 6
 							Y: 2
 							ImageCollection: power-icons
 							ImageName: power-normal
