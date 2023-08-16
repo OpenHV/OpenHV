@@ -14,7 +14,7 @@ using System.IO;
 
 namespace OpenRA.Mods.HV.UtilityCommands
 {
-	class ExportCharacterSeparatedRules : IUtilityCommand
+	sealed class ExportCharacterSeparatedRules : IUtilityCommand
 	{
 		string IUtilityCommand.Name { get { return "--generate-dps-table"; } }
 

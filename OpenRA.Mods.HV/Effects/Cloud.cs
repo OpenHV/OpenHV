@@ -16,7 +16,7 @@ using OpenRA.Mods.HV.Traits;
 
 namespace OpenRA.Mods.HV.Effects
 {
-	class Cloud : IEffect, ISpatiallyPartitionable
+	sealed class Cloud : IEffect, ISpatiallyPartitionable
 	{
 		readonly World world;
 		readonly Animation animation;

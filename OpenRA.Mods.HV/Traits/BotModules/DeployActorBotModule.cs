@@ -40,7 +40,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		int scanForIdleDetectorsTicks;
 
-		class ActorTraitWrapper
+		sealed class ActorTraitWrapper
 		{
 			public readonly Actor Actor;
 			public readonly GrantConditionOnDeploy GrantConditionOnDeploy;

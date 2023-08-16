@@ -18,7 +18,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	class CustomBaseBuilderQueueManager
+	sealed class CustomBaseBuilderQueueManager
 	{
 		readonly string category;
 

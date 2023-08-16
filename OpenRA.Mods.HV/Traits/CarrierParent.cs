@@ -44,7 +44,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class CarrierParent : BaseSpawnerParent, ITick, INotifyAttack, INotifyBecomingIdle
 	{
-		class CarrierChildEntry : BaseSpawnerChildEntry
+		sealed class CarrierChildEntry : BaseSpawnerChildEntry
 		{
 			public int RearmTicks = 0;
 			public bool IsLaunched = false;

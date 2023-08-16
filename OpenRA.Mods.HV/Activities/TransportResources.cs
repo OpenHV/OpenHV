@@ -19,7 +19,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Activities
 {
-	class TransportResources : Enter
+	sealed class TransportResources : Enter
 	{
 		readonly int payload;
 		readonly int[] multipliers;

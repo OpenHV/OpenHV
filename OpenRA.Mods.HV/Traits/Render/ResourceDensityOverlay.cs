@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new ResourceDensityOverlay(this); }
 	}
 
-	class ResourceDensityOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
+	sealed class ResourceDensityOverlay : IWorldLoaded, IChatCommand, IRenderAnnotations
 	{
 		const string CommandName = "resource-density";
 		const string CommandDesc = "Toggles the resource debug overlay.";

@@ -21,7 +21,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Lets the actor spread liquid tiles around it in straight lines.")]
-	class FloodsInfo : ConditionalTraitInfo
+	sealed class FloodsInfo : ConditionalTraitInfo
 	{
 		[Desc("Speed in ticks between each wave.")]
 		public readonly int Interval = 10;

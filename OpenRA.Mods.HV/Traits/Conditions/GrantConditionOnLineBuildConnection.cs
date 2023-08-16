@@ -17,7 +17,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Grants a condition when this actor is next to two walls.")]
-	class GrantConditionOnLineBuildConnectionInfo : TraitInfo, Requires<BuildingInfo>
+	sealed class GrantConditionOnLineBuildConnectionInfo : TraitInfo, Requires<BuildingInfo>
 	{
 		[GrantedConditionReference]
 		[FieldLoader.Require]

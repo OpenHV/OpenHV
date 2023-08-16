@@ -45,7 +45,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new AttackOrderPower(init.Self, this); }
 	}
 
-	class AttackOrderPower : SupportPower, INotifyCreated, INotifyBurstComplete
+	sealed class AttackOrderPower : SupportPower, INotifyCreated, INotifyBurstComplete
 	{
 		readonly AttackOrderPowerInfo info;
 

@@ -952,7 +952,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		}
 	}
 
-	class DropDownOption
+	sealed class DropDownOption
 	{
 		public string Title;
 		public Func<bool> IsSelected = () => false;

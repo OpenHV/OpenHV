@@ -15,7 +15,7 @@ using OpenRA.Mods.Common.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Change the owner on condition and revert back when it isn't met anymore.")]
-	class ChangesOwnerInfo : ConditionalTraitInfo
+	sealed class ChangesOwnerInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
 		[Desc("The new owner.")]
@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new ChangesOwner(init.Self, this); }
 	}
 
-	class ChangesOwner : ConditionalTrait<ChangesOwnerInfo>
+	sealed class ChangesOwner : ConditionalTrait<ChangesOwnerInfo>
 	{
 		readonly Player oldOwner;
 		readonly Player newOwner;
