@@ -26,7 +26,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new PowerDownBotModule(init.Self, this); }
 	}
 
-	public class PowerDownBotModule : ConditionalTrait<PowerDownBotModuleInfo>, IBotTick
+	public class PowerDownBotModule : ConditionalTrait<PowerDownBotModuleInfo>, IBotTick, IGameSaveTraitData
 	{
 		readonly World world;
 		readonly Player player;
@@ -39,7 +39,7 @@ namespace OpenRA.Mods.HV.Traits
 		// We keep a list to track toggled buildings for performance.
 		List<BuildingPowerWrapper> toggledBuildings = new();
 
-		class BuildingPowerWrapper
+		sealed class BuildingPowerWrapper
 		{
 			public int ExpectedPowerChanging;
 			public Actor Actor;
@@ -57,7 +57,7 @@ namespace OpenRA.Mods.HV.Traits
 			world = self.World;
 			player = self.Owner;
 
-			isToggledBuildingsValid = a => a.Owner == self.Owner && !a.IsDead && a.IsInWorld;
+			isToggledBuildingsValid = a => a != null && a.Owner == self.Owner && !a.IsDead && a.IsInWorld;
 		}
 
 		protected override void Created(Actor self)
@@ -74,7 +74,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var powerChangingIfToggled = 0;
 			var powerTraits = a.TraitsImplementing<Power>().Where(t => !t.IsTraitDisabled).ToArray();
-			if (powerTraits.Any())
+			if (powerTraits.Length > 0)
 			{
 				var powerMulTraits = a.TraitsImplementing<PowerMultiplier>().ToArray();
 				powerChangingIfToggled = powerTraits.Sum(p => p.Info.Amount) * (powerMulTraits.Sum(p => p.Info.Modifier) - 100) / 100;
@@ -154,6 +154,39 @@ namespace OpenRA.Mods.HV.Traits
 				bot.QueueOrder(new Order("PowerDown", null, false, groupedActors: togglingBuildings.ToArray()));
 
 			toggleTick = Info.Interval;
+		}
+
+		List<MiniYamlNode> IGameSaveTraitData.IssueTraitData(Actor self)
+		{
+			if (IsTraitDisabled)
+				return null;
+
+			var data = new List<MiniYamlNode>();
+			foreach (var tb in toggledBuildings.Where(td => isToggledBuildingsValid(td.Actor)))
+				data.Add(new MiniYamlNode(FieldSaver.FormatValue(tb.Actor.ActorID), FieldSaver.FormatValue(tb.ExpectedPowerChanging)));
+
+			return new List<MiniYamlNode>()
+			{
+				new MiniYamlNode("ToggledBuildings", new MiniYaml("", data))
+			};
+		}
+
+		void IGameSaveTraitData.ResolveTraitData(Actor self, List<MiniYamlNode> data)
+		{
+			if (self.World.IsReplay)
+				return;
+
+			var toggledBuildingsNode = data.FirstOrDefault(n => n.Key == "ToggledBuildings");
+			if (toggledBuildingsNode != null)
+			{
+				foreach (var n in toggledBuildingsNode.Value.Nodes)
+				{
+					var a = self.World.GetActorById(FieldLoader.GetValue<uint>(n.Key, n.Key));
+
+					if (isToggledBuildingsValid(a))
+						toggledBuildings.Add(new BuildingPowerWrapper(a, FieldLoader.GetValue<int>(n.Key, n.Value.Value)));
+				}
+			}
 		}
 	}
 }
