@@ -407,7 +407,7 @@ WATERMINELAYER:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor, tradplat
+		Prerequisites: ~harbor.yi, tradplat
 		BuildPaletteOrder: 40
 		Description: Lays underwater mines to destroy unwary enemy ships.\n  Can detect enemy mines.\n  Unarmed
 	UpdatesPlayerStatistics:
@@ -427,7 +427,7 @@ WATERMINELAYER:
 		Range: 2c0
 	Minelayer:
 		Mine: watermine
-		PreLayDelay: 20
+		PreLayDelay: 14
 		AfterLayingDelay: 20
 	MineImmune:
 	DetectCloaked:
@@ -442,9 +442,22 @@ WATERMINELAYER:
 		TargetTypes: Ground, Vehicle, Mine
 	AmmoPool:
 		Ammo: 5
+		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
 	WithDeployMineAnimation:
 		Sequence: deploy
+		RequiresCondition: ammo
+	WithFacingSpriteBody:
+		RequiresCondition: ammo
+	WithFacingSpriteBody@WithoutAmmo:
+		Name: mineless
+		Sequence: idle-empty
+		RequiresCondition: !ammo
+
+WATERMINELAYER2:
+	Inherits: WATERMINELAYER
+	Buildable:
+		Prerequisites: ~harbor.sc, tradplat
