@@ -17,7 +17,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Manages AI powerdown.")]
+	[Desc("Manages AI temporary power shutdowns.")]
 	public class PowerDownBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Delay (in ticks) between toggling powerdown.")]
@@ -44,10 +44,10 @@ namespace OpenRA.Mods.HV.Traits
 			public int ExpectedPowerChanging;
 			public Actor Actor;
 
-			public BuildingPowerWrapper(Actor a, int p)
+			public BuildingPowerWrapper(Actor actor, int powerChanging)
 			{
-				Actor = a;
-				ExpectedPowerChanging = p;
+				Actor = actor;
+				ExpectedPowerChanging = powerChanging;
 			}
 		}
 
@@ -70,15 +70,15 @@ namespace OpenRA.Mods.HV.Traits
 			toggleTick = world.LocalRandom.Next(Info.Interval);
 		}
 
-		static int GetTogglePowerChanging(Actor a)
+		static int GetTogglePowerChanging(Actor actor)
 		{
 			var powerChangingIfToggled = 0;
-			var powerTraits = a.TraitsImplementing<Power>().Where(t => !t.IsTraitDisabled).ToArray();
+			var powerTraits = actor.TraitsImplementing<Power>().Where(t => !t.IsTraitDisabled).ToArray();
 			if (powerTraits.Length > 0)
 			{
-				var powerMulTraits = a.TraitsImplementing<PowerMultiplier>().ToArray();
-				powerChangingIfToggled = powerTraits.Sum(p => p.Info.Amount) * (powerMulTraits.Sum(p => p.Info.Modifier) - 100) / 100;
-				if (powerMulTraits.Any(t => !t.IsTraitDisabled))
+				var powerMultipliers = actor.TraitsImplementing<PowerMultiplier>().ToArray();
+				powerChangingIfToggled = powerTraits.Sum(p => p.Info.Amount) * (powerMultipliers.Sum(p => p.Info.Modifier) - 100) / 100;
+				if (powerMultipliers.Any(t => !t.IsTraitDisabled))
 					powerChangingIfToggled = -powerChangingIfToggled;
 			}
 
@@ -97,11 +97,11 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var toggleableBuildings = new List<BuildingPowerWrapper>();
 
-			foreach (var a in GetToggleableBuildings(bot))
+			foreach (var actor in GetToggleableBuildings(bot))
 			{
-				var powerChanging = GetTogglePowerChanging(a);
+				var powerChanging = GetTogglePowerChanging(actor);
 				if (powerChanging > 0)
-					toggleableBuildings.Add(new BuildingPowerWrapper(a, powerChanging));
+					toggleableBuildings.Add(new BuildingPowerWrapper(actor, powerChanging));
 			}
 
 			return toggleableBuildings.OrderBy(bpw => bpw.ExpectedPowerChanging);
@@ -124,12 +124,12 @@ namespace OpenRA.Mods.HV.Traits
 				toggledBuildings = toggledBuildings.Where(bpw => isToggledBuildingsValid(bpw.Actor)).OrderByDescending(bpw => bpw.ExpectedPowerChanging).ToList();
 				for (var i = 0; i < toggledBuildings.Count; i++)
 				{
-					var bpw = toggledBuildings[i];
-					if (power + bpw.ExpectedPowerChanging < 0)
+					var building = toggledBuildings[i];
+					if (power + building.ExpectedPowerChanging < 0)
 						continue;
 
-					togglingBuildings.Add(bpw.Actor);
-					power += bpw.ExpectedPowerChanging;
+					togglingBuildings.Add(building.Actor);
+					power += building.ExpectedPowerChanging;
 					toggledBuildings.RemoveAt(i);
 				}
 			}
@@ -139,14 +139,14 @@ namespace OpenRA.Mods.HV.Traits
 			else if (power < 0)
 			{
 				var buildingsCanBeOff = GetOnlineBuildings(bot);
-				foreach (var bpw in buildingsCanBeOff)
+				foreach (var building in buildingsCanBeOff)
 				{
 					if (power > 0)
 						break;
 
-					togglingBuildings.Add(bpw.Actor);
-					toggledBuildings.Add(new BuildingPowerWrapper(bpw.Actor, -bpw.ExpectedPowerChanging));
-					power += bpw.ExpectedPowerChanging;
+					togglingBuildings.Add(building.Actor);
+					toggledBuildings.Add(new BuildingPowerWrapper(building.Actor, -building.ExpectedPowerChanging));
+					power += building.ExpectedPowerChanging;
 				}
 			}
 
@@ -162,8 +162,8 @@ namespace OpenRA.Mods.HV.Traits
 				return null;
 
 			var data = new List<MiniYamlNode>();
-			foreach (var tb in toggledBuildings.Where(td => isToggledBuildingsValid(td.Actor)))
-				data.Add(new MiniYamlNode(FieldSaver.FormatValue(tb.Actor.ActorID), FieldSaver.FormatValue(tb.ExpectedPowerChanging)));
+			foreach (var building in toggledBuildings.Where(bpw => isToggledBuildingsValid(bpw.Actor)))
+				data.Add(new MiniYamlNode(FieldSaver.FormatValue(building.Actor.ActorID), FieldSaver.FormatValue(building.ExpectedPowerChanging)));
 
 			return new List<MiniYamlNode>()
 			{
@@ -179,12 +179,11 @@ namespace OpenRA.Mods.HV.Traits
 			var toggledBuildingsNode = data.FirstOrDefault(n => n.Key == "ToggledBuildings");
 			if (toggledBuildingsNode != null)
 			{
-				foreach (var n in toggledBuildingsNode.Value.Nodes)
+				foreach (var node in toggledBuildingsNode.Value.Nodes)
 				{
-					var a = self.World.GetActorById(FieldLoader.GetValue<uint>(n.Key, n.Key));
-
-					if (isToggledBuildingsValid(a))
-						toggledBuildings.Add(new BuildingPowerWrapper(a, FieldLoader.GetValue<int>(n.Key, n.Value.Value)));
+					var actor = self.World.GetActorById(FieldLoader.GetValue<uint>(node.Key, node.Key));
+					if (isToggledBuildingsValid(actor))
+						toggledBuildings.Add(new BuildingPowerWrapper(actor, FieldLoader.GetValue<int>(node.Key, node.Value.Value)));
 				}
 			}
 		}
