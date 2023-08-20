@@ -508,6 +508,7 @@
 	CapturableProgressBlink:
 	CaptureNotification:
 		TextNotification: Building captured.
+	AcceptsDeliveredCash:
 
 ^BaseBuilding:
 	Inherits: ^Building

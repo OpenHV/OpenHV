@@ -925,3 +925,29 @@ TANKER2:
 		Image: tanker2
 		FactionImages:
 			sc: tanker4
+
+TANK13:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: LightVehicle
+		BuildPaletteOrder: 50
+		Prerequisites: storage
+		Description: Moves cash to other players.\n  Unarmed
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Money Transport
+	Health:
+		HP: 11000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 113
+	RevealsShroud:
+		Range: 4c0
+	DeliversCash:
+		Payload: 500
+		PlayerExperience: 5
+	SpawnActorOnDeath:
+		Actor: moneycube
