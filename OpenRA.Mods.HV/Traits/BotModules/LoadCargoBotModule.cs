@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -19,13 +19,13 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.Player)]
-	[Desc("Manages AI load unit related with Cargo and Passenger traits.")]
+	[Desc("Manages AI load unit related with " + nameof(Cargo) + " and " + nameof(Passenger) + " traits.")]
 	public class LoadCargoBotModuleInfo : ConditionalTraitInfo
 	{
-		[Desc("Actor types that can be targeted for load, must have Cargo.")]
+		[Desc("Actor types that can be targeted for load, must have " + nameof(Cargo) + ".")]
 		public readonly HashSet<string> TransportTypes = default;
 
-		[Desc("Actor types that used for loading, must have Passenger.")]
+		[Desc("Actor types that used for loading, must have " + nameof(Passenger) + ".")]
 		public readonly HashSet<string> PassengerTypes = default;
 
 		[Desc("Allow enter allied transport.")]
@@ -61,10 +61,12 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			world = self.World;
 			player = self.Owner;
+
 			if (info.OnlyEnterOwnerPlayer)
 				invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || a.Owner != player;
 			else
 				invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || a.Owner.RelationshipWith(player) != PlayerRelationship.Ally;
+
 			unitCannotBeOrdered = a => a == null || a.IsDead || !a.IsInWorld || a.Owner != player;
 			unitCannotBeOrderedOrIsBusy = a => unitCannotBeOrdered(a) || (!a.IsIdle && !(a.CurrentActivity is FlyIdle));
 		}
@@ -81,20 +83,19 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				minAssignRoleDelayTicks = Info.ScanTick;
 
-				var tcs = world.ActorsWithTrait<Cargo>().Where(
-				at =>
+				var transporters = world.ActorsWithTrait<Cargo>().Where(at =>
 				{
 					var health = at.Actor.TraitOrDefault<IHealth>()?.DamageState;
 					return Info.TransportTypes.Contains(at.Actor.Info.Name) && !invalidTransport(at.Actor)
 					&& at.Trait.HasSpace(1) && (health == null || health < Info.ValidDamageState);
 				}).ToArray();
 
-				if (tcs.Length == 0)
+				if (transporters.Length == 0)
 					return;
 
-				var tc = tcs.Random(world.LocalRandom);
-				var cargo = tc.Trait;
-				var transport = tc.Actor;
+				var transporter = transporters.Random(world.LocalRandom);
+				var cargo = transporter.Trait;
+				var transport = transporter.Actor;
 				var spaceTaken = 0;
 
 				var passengers = world.ActorsWithTrait<Passenger>().Where(at => !unitCannotBeOrderedOrIsBusy(at.Actor) && Info.PassengerTypes.Contains(at.Actor.Info.Name) && cargo.HasSpace(at.Trait.Info.Weight) && (at.Actor.CenterPosition - transport.CenterPosition).HorizontalLengthSquared <= Info.MaxDistance.LengthSquared)
