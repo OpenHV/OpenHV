@@ -550,8 +550,23 @@ Container@PLAYER_WIDGETS:
 									X: 0
 									Y: 1
 									ImageCollection: production-icons
-						ProductionTypeButton@VEHICLE:
+						ProductionTypeButton@LIGHTVEHICLES:
 							Y: 93
+							Width: 28
+							Height: 27
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Light Vehicles
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: LightVehicles
+							Key: ProductionTypeLightVehicles
+							Children:
+								Image@ICON:
+									X: 0
+									Y: 0
+									ImageCollection: production-icons
+						ProductionTypeButton@VEHICLE:
+							Y: 124
 							Width: 28
 							Height: 27
 							VisualHeight: 0
@@ -566,7 +581,7 @@ Container@PLAYER_WIDGETS:
 									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@AIRCRAFT:
-							Y: 124
+							Y: 155
 							Width: 28
 							Height: 27
 							VisualHeight: 0
@@ -581,7 +596,7 @@ Container@PLAYER_WIDGETS:
 									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@NAVAL:
-							Y: 155
+							Y: 186
 							Width: 28
 							Height: 27
 							VisualHeight: 0
@@ -596,7 +611,7 @@ Container@PLAYER_WIDGETS:
 									Y: 0
 									ImageCollection: production-icons
 						ProductionTypeButton@TRADE:
-							Y: 186
+							Y: 218
 							Width: 28
 							Height: 27
 							VisualHeight: 0

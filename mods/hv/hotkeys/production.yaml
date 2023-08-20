@@ -33,6 +33,11 @@ ProductionTypeTrade: O
 	Types: Production
 	Contexts: Player
 
+ProductionTypeLightVehicles: K
+	Description: Workers Tab
+	Types: Production
+	Contexts: Player
+
 ToggleVariant: V
 	Description: Rotate Building
 	Types: Production
