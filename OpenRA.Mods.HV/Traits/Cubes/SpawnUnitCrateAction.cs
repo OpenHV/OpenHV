@@ -20,7 +20,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Spawns units when collected and optionally plays an effect overlay.")]
-	class SpawnUnitCrateActionInfo : CrateActionInfo
+	sealed class SpawnUnitCrateActionInfo : CrateActionInfo
 	{
 		[ActorReference]
 		[FieldLoader.Require]
@@ -43,7 +43,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new SpawnUnitCrateAction(init.Self, this); }
 	}
 
-	class SpawnUnitCrateAction : CrateAction
+	sealed class SpawnUnitCrateAction : CrateAction
 	{
 		readonly Actor self;
 		readonly SpawnUnitCrateActionInfo info;

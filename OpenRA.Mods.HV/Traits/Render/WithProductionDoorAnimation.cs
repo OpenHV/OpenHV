@@ -18,7 +18,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits.Render
 {
 	[Desc("Play an animation when a unit exits after production finished.")]
-	class WithProductionDoorAnimationInfo : ConditionalTraitInfo, Requires<WithSpriteBodyInfo>
+	sealed class WithProductionDoorAnimationInfo : ConditionalTraitInfo, Requires<WithSpriteBodyInfo>
 	{
 		[FieldLoader.Require]
 		[Desc("Exit offset associated with the animation.")]
@@ -36,7 +36,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 		public override object Create(ActorInitializer init) { return new WithProductionDoorAnimation(init.Self, this); }
 	}
 
-	class WithProductionDoorAnimation : ConditionalTrait<WithProductionDoorAnimationInfo>, INotifyProduction, INotifySold
+	sealed class WithProductionDoorAnimation : ConditionalTrait<WithProductionDoorAnimationInfo>, INotifyProduction, INotifySold
 	{
 		readonly WithSpriteBody body;
 

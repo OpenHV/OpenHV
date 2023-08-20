@@ -21,7 +21,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Activities
 {
-	class EnterTeleportNetwork : Enter
+	sealed class EnterTeleportNetwork : Enter
 	{
 		enum EnterState { Approaching, Entering, Exiting, Finished }
 

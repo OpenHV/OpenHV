@@ -102,7 +102,7 @@ namespace OpenRA.Mods.HV.Traits
 			return Info.TerrainTypes.Contains(terrainType);
 		}
 
-		class DeployMinerOrderTargeter : IOrderTargeter
+		public class DeployMinerOrderTargeter : IOrderTargeter
 		{
 			public string OrderID { get { return "DeployMiner"; } }
 			public int OrderPriority { get { return 10; } }

@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 		}
 	}
 
-	class AutoConnectEditorAction : IEditorAction
+	sealed class AutoConnectEditorAction : IEditorAction
 	{
 		public string Text { get; private set; }
 
@@ -215,7 +215,7 @@ namespace OpenRA.Mods.HV.Traits
 		}
 	}
 
-	class UndoTile
+	sealed class UndoTile
 	{
 		public CPos Cell { get; private set; }
 		public TerrainTile MapTile { get; private set; }

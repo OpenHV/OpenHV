@@ -42,7 +42,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new Floods(init.Self, this); }
 	}
 
-	class Floods : ConditionalTrait<FloodsInfo>, ITick
+	sealed class Floods : ConditionalTrait<FloodsInfo>, ITick
 	{
 		readonly FloodsInfo info;
 		readonly LiquidTerrainLayer liquidTerrainLayer;

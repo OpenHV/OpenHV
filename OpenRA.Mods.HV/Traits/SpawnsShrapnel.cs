@@ -63,7 +63,7 @@ namespace OpenRA.Mods.HV.Traits
 		}
 	}
 
-	class SpawnsShrapnel : PausableConditionalTrait<SpawnsShrapnelInfo>, ITick, ISync
+	sealed class SpawnsShrapnel : PausableConditionalTrait<SpawnsShrapnelInfo>, ITick, ISync
 	{
 		readonly World world;
 		readonly BodyOrientation body;

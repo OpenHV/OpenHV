@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new GrantConditionOnLineBuildConnection(init.Self, this); }
 	}
 
-	class GrantConditionOnLineBuildConnection : INotifyAddedToWorld, INotifyRemovedFromWorld
+	sealed class GrantConditionOnLineBuildConnection : INotifyAddedToWorld, INotifyRemovedFromWorld
 	{
 		readonly GrantConditionOnLineBuildConnectionInfo info;
 		readonly List<CPos> possibleConnections = new();

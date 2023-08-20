@@ -18,7 +18,7 @@ using OpenRA.FileFormats;
 
 namespace OpenRA.Mods.HV.UtilityCommands
 {
-	class CheckSpriteMetadata : IUtilityCommand
+	sealed class CheckSpriteMetadata : IUtilityCommand
 	{
 		string IUtilityCommand.Name { get { return "--check-sprite-metadata"; } }
 

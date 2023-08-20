@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Displays resource density colored by type.")]
-	class ResourceDensityOverlayInfo : TraitInfo
+	sealed class ResourceDensityOverlayInfo : TraitInfo
 	{
 		public readonly string Font = "TinyBold";
 
