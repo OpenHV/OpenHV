@@ -1073,6 +1073,11 @@ Templates:
 			BorderTypes: Grass
 			BorderTransitions: 1571, 1576, 1572, 1569, 1574, 1573, 1578, 1579
 			Corners: 1575, 1577, 1570, 1568
+		AutoConnect@Sand:
+			Type: Sand
+			BorderTypes: Grass
+			BorderTransitions: 1512, 1517, 1513, 1510, 1515, 1514, 1519, 1520
+			Corners: 1516, 1518, 1511, 1509
 		Tiles:
 			0: Grass
 	Template@122:
@@ -11376,7 +11381,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1510:
 		Id: 1510
 		Images: bits/terrain/grs2sand.png
@@ -11384,7 +11389,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1511:
 		Id: 1511
 		Images: bits/terrain/grs2sand.png
@@ -11392,7 +11397,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1512:
 		Id: 1512
 		Images: bits/terrain/grs2sand.png
@@ -11400,7 +11405,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1513:
 		Id: 1513
 		Images: bits/terrain/grs2sand.png
@@ -11408,7 +11413,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1514:
 		Id: 1514
 		Images: bits/terrain/grs2sand.png
@@ -11416,7 +11421,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1515:
 		Id: 1515
 		Images: bits/terrain/grs2sand.png
@@ -11424,7 +11429,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1516:
 		Id: 1516
 		Images: bits/terrain/grs2sand.png
@@ -11432,7 +11437,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1517:
 		Id: 1517
 		Images: bits/terrain/grs2sand.png
@@ -11440,7 +11445,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1518:
 		Id: 1518
 		Images: bits/terrain/grs2sand.png
@@ -11448,7 +11453,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1519:
 		Id: 1519
 		Images: bits/terrain/grs2sand.png
@@ -11456,7 +11461,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1520:
 		Id: 1520
 		Images: bits/terrain/grs2sand.png
@@ -11464,7 +11469,7 @@ Templates:
 		Size: 1,1
 		Categories: Grass, Sand
 		Tiles:
-			0: Sand
+			0: Grass
 	Template@1521:
 		Id: 1521
 		Images: bits/terrain/techhazard.png
