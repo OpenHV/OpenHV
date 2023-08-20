@@ -604,11 +604,11 @@ BUILDER:
 	Inherits: ^Vehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Vehicle
+		Queue: LightVehicles
 		BuildPaletteOrder: 100
 		Description: Deploys into outpost which\ngrants additional build radius\nand allows base reconstruction.\n  Unarmed
 		Prerequisites: ~structures.yi
-		BuildAtProductionType: Building
+		BuildAtProductionType: LightVehicles
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -685,11 +685,11 @@ MINER:
 	Inherits: ^Vehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Vehicle
+		Queue: LightVehicles
 		BuildPaletteOrder: 10
 		Description: Builds mining facilities.\n  Unarmed
 		Prerequisites: base, storage
-		BuildAtProductionType: Building
+		BuildAtProductionType: LightVehicles
 	Valued:
 		Cost: 1100
 	Tooltip:

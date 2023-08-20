@@ -119,6 +119,9 @@ production-icons:
 		trade: 64, 357, 28, 27
 		trade-disabled: 96, 357, 28, 27
 		trade-alert: 128, 357, 28, 27
+		lightvehicles: 64, 421, 28, 27
+		lightvehicles-disabled: 96, 421, 28, 27
+		lightvehicles-alert: 128, 421, 28, 27
 
 order-icons:
 	Inherits: ^Chrome

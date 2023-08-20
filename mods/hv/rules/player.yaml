@@ -167,6 +167,20 @@ Player:
 		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+	ClassicProductionQueue@LightVehicles:
+		Type: LightVehicles
+		DisplayOrder: 5
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
+		QueuedAudio: Training
+		QueuedTextNotification: Training.
+		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
+		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 75, 50, 25
 	PlayerRadarTerrain:
 	TeleportNetworkManager:
 		Type: subspace
