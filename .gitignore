@@ -11,3 +11,4 @@ StyleCopViolations.xml
 .DS_Store
 .directory
 /.vscode/settings.json
+/.vs
