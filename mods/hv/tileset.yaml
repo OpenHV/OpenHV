@@ -9159,7 +9159,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 0
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1224:
@@ -9167,7 +9167,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 1
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1225:
@@ -9175,7 +9175,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 2
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1226:
@@ -9183,7 +9183,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 3
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1227:
@@ -9191,7 +9191,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 4
 		Size: 1,1
-		Categories: Littoral, Terrain, Oceanic
+		Categories: Terrain, Oceanic
 		Tiles:
 			0: Oceanic
 	Template@1228:
@@ -9199,7 +9199,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 5
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1229:
@@ -9207,7 +9207,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 6
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1230:
@@ -9215,7 +9215,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 7
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1231:
@@ -9223,7 +9223,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 8
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1232:
@@ -9231,7 +9231,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 9
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1233:
@@ -9239,7 +9239,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 10
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1234:
@@ -9247,7 +9247,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 11
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1235:
@@ -9255,7 +9255,7 @@ Templates:
 		Images: bits/terrain/water2.png
 		Frames: 12
 		Size: 1,1
-		Categories: Littoral, Pelagic
+		Categories: Oceanic, Pelagic
 		Tiles:
 			0: Pelagic
 	Template@1236:
@@ -10294,7 +10294,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1375:
@@ -10302,7 +10302,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1376:
@@ -10310,7 +10310,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1377:
@@ -10318,7 +10318,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1378:
@@ -10326,7 +10326,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 4
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1379:
@@ -10334,7 +10334,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 5
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1380:
@@ -10342,7 +10342,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 6
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1381:
@@ -10350,7 +10350,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 7
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1382:
@@ -10358,7 +10358,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 8
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1383:
@@ -10366,7 +10366,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 9
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1384:
@@ -10374,7 +10374,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 10
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1385:
@@ -10382,7 +10382,7 @@ Templates:
 		Images: bits/terrain/snd2watrshore.png
 		Frames: 11
 		Size: 1,1
-		Categories: Grass, Littoral, Shore
+		Categories: Sand, Littoral, Shore
 		Tiles:
 			0: Shore
 	Template@1386:
@@ -10390,7 +10390,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1387:
@@ -10398,7 +10398,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1388:
@@ -10406,7 +10406,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1389:
@@ -10414,7 +10414,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff1.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1390:
@@ -10422,7 +10422,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 0
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1391:
@@ -10430,7 +10430,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 1
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1392:
@@ -10438,7 +10438,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 2
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1393:
@@ -10446,7 +10446,7 @@ Templates:
 		Images: bits/terrain/snd2wtr_shore2cliff2.png
 		Frames: 3
 		Size: 1,1
-		Categories: Grass, Littoral, Shore, Cliff
+		Categories: Sand, Littoral, Shore, Cliff
 		Tiles:
 			0: Cliff
 	Template@1394:
