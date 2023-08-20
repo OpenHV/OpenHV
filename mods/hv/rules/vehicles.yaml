@@ -106,7 +106,7 @@ AATANK2:
 
 TRANSPRT:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -262,7 +262,7 @@ RADARTANK:
 
 TANK16:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -351,7 +351,7 @@ TANK6:
 
 TANK5:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -423,7 +423,7 @@ TANK10:
 
 TANK7:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: HeavyVehicle
 		BuildPaletteOrder: 70
@@ -471,7 +471,7 @@ TANK7:
 
 TANK11:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -518,7 +518,7 @@ TANK12:
 
 TANK15:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1000
 	Tooltip:

@@ -89,7 +89,7 @@ MORTARPOD:
 
 SNIPERPOD:
 	Inherits: ^Pod
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
 		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
@@ -131,7 +131,7 @@ SNIPERPOD:
 
 FLAMEPOD:
 	Inherits: ^Pod
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
 		Description: Short range flame thrower.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
