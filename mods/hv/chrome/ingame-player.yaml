@@ -535,7 +535,7 @@ Container@PLAYER_WIDGETS:
 									X: 0
 									Y: 0
 									ImageCollection: production-icons
-						ProductionTypeButton@PODS:
+						ProductionTypeButton@POD:
 							Y: 62
 							Width: 28
 							Height: 27
@@ -543,14 +543,14 @@ Container@PLAYER_WIDGETS:
 							Background: sidebar-button
 							TooltipText: Pods
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Pods
-							Key: ProductionTypePods
+							ProductionGroup: Pod
+							Key: ProductionTypePod
 							Children:
 								Image@ICON:
 									X: 0
 									Y: 1
 									ImageCollection: production-icons
-						ProductionTypeButton@LIGHTVEHICLES:
+						ProductionTypeButton@LIGHT_VEHICLE:
 							Y: 93
 							Width: 28
 							Height: 27
@@ -558,23 +558,23 @@ Container@PLAYER_WIDGETS:
 							Background: sidebar-button
 							TooltipText: Light Vehicles
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: LightVehicles
-							Key: ProductionTypeLightVehicles
+							ProductionGroup: LightVehicle
+							Key: ProductionTypeLightVehicle
 							Children:
 								Image@ICON:
 									X: 0
 									Y: 0
 									ImageCollection: production-icons
-						ProductionTypeButton@VEHICLE:
+						ProductionTypeButton@HEAVY_VEHICLE:
 							Y: 124
 							Width: 28
 							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Vehicles
+							TooltipText: Heavy Vehicles
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Vehicle
-							Key: ProductionTypeVehicle
+							ProductionGroup: HeavyVehicle
+							Key: ProductionTypeHeavyVehicle
 							Children:
 								Image@ICON:
 									X: 0

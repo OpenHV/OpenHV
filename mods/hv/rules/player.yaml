@@ -99,8 +99,8 @@ Player:
 		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-	ClassicProductionQueue@Pods:
-		Type: Pods
+	ClassicProductionQueue@Pod:
+		Type: Pod
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
@@ -113,8 +113,22 @@ Player:
 		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-	ClassicProductionQueue@Vehicles:
-		Type: Vehicle
+	ClassicProductionQueue@LightVehicle:
+		Type: LightVehicle
+		DisplayOrder: 5
+		LowPowerModifier: 300
+		ReadyAudio: UnitReady
+		ReadyTextNotification: Unit ready.
+		QueuedAudio: Training
+		QueuedTextNotification: Training.
+		OnHoldAudio: OnHold
+		OnHoldTextNotification: On hold.
+		CancelledAudio: Cancelled
+		CancelledTextNotification: Cancelled.
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 75, 50, 25
+	ClassicProductionQueue@HeavyVehicle:
+		Type: HeavyVehicle
 		DisplayOrder: 3
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
@@ -167,20 +181,7 @@ Player:
 		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-	ClassicProductionQueue@LightVehicles:
-		Type: LightVehicles
-		DisplayOrder: 5
-		LowPowerModifier: 300
-		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
-		QueuedAudio: Training
-		QueuedTextNotification: Training.
-		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
-		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
-		SpeedUp: true
-		BuildTimeSpeedReduction: 100, 75, 50, 25
+
 	PlayerRadarTerrain:
 	TeleportNetworkManager:
 		Type: subspace

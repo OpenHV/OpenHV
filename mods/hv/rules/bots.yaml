@@ -83,7 +83,7 @@ Player:
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
-		UnitQueues: Pods, Vehicle, Aircraft, Ship, LightVehicles
+		UnitQueues: Pod, LightVehicle, HeavyVehicle, Aircraft, Ship
 		UnitsToBuild:
 			miner: 3
 			builder: 1
@@ -151,7 +151,7 @@ Player:
 		DeployableActorTypes: miner
 		DeployableTerrainTypes: Ore
 		DeployedActorTypes: miner2
-		VehiclesQueue: LightVehicles
+		VehiclesQueue: LightVehicle
 	MinelayerBotModule:
 		RequiresCondition: enable-rogue-ai
 		MinelayingActorTypes: tank6, waterminelayer, waterminelayer2

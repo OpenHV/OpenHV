@@ -12,7 +12,7 @@ TANK3:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~factory.yi
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Mobile:
 		TurnSpeed: 25
@@ -55,7 +55,7 @@ AATANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		BuildPaletteOrder: 30
 		Prerequisites: ~factory.sc
 		Description: Mobile tank with AA missiles.\n  Strong vs Aircraft\n  Cannot attack grounds units.
@@ -112,7 +112,7 @@ TRANSPRT:
 	Tooltip:
 		Name: Transport Tank
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Prerequisites: factory, module
 		BuildPaletteOrder: 40
 		Description: Can transport pods.\nHas fireports for garrisoned units.
@@ -157,7 +157,7 @@ ARTIL:
 	Tooltip:
 		Name: Artillery
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Prerequisites: factory, radar
 		BuildPaletteOrder: 50
 		Description: Mobile long range weapon.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
@@ -199,9 +199,9 @@ RADARTANK:
 	Inherits@Selection: ^SelectableSupportUnit
 	-AppearsOnRadar:
 	Buildable:
-		Queue: Vehicle
+		Queue: LightVehicle
 		BuildPaletteOrder: 60
-		Prerequisites: factory, radar
+		Prerequisites: radar
 		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
 	Valued:
 		Cost: 400
@@ -269,8 +269,8 @@ TANK16:
 		Name: Mobile Repair Vehicle
 		GenericName: Tank
 	Buildable:
-		Queue: Vehicle
-		Prerequisites: factory, tradplat
+		Queue: LightVehicle
+		Prerequisites: tradplat
 		BuildPaletteOrder: 70
 		Description: Repairs nearby tanks.\n  Unarmed
 	Armament:
@@ -307,9 +307,9 @@ TANK6:
 	Inherits: ^TrackedVehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Vehicle
+		Queue: LightVehicle
 		BuildPaletteOrder: 80
-		Prerequisites: factory, tradplat
+		Prerequisites: tradplat
 		Description: Lays mines to destroy unwary enemy units.\n  Can detect enemy mines.\n  Unarmed
 	Valued:
 		Cost: 700
@@ -358,7 +358,7 @@ TANK5:
 		Name: Railgun Tank
 		GenericName: Tank
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Prerequisites: ~factory.sc, techcenter
 		BuildPaletteOrder: 150
 		Description: A powerful tank which shoots laser.\n  Strong vs Pods, Vehicles and Buildings
@@ -389,8 +389,8 @@ TANK10:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 150
+		Queue: HeavyVehicle
+		BuildPaletteOrder: 80
 		Prerequisites: ~factory.yi, techcenter
 		Description: Fires electric discharges.\n  Strong vs Pods, Vehicles and Buildings
 	Valued:
@@ -425,8 +425,8 @@ TANK7:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 120
+		Queue: HeavyVehicle
+		BuildPaletteOrder: 70
 		Prerequisites: ~factory.yi, techcenter
 		Description: Cloaked missile tank.\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
 	Valued:
@@ -478,7 +478,7 @@ TANK11:
 		Name: Mercenary Tank
 		GenericName: Tank
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 180
 		Description: Main battle tank.\n  Strong vs Vehicles\n  Weak vs Pods
@@ -525,7 +525,7 @@ TANK15:
 		Name: Countermeasure Tank
 		GenericName: ECM Tank
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Prerequisites: ~factory.sc, techcenter, tradplat
 		BuildPaletteOrder: 110
 		Description: Disables units for a brief moment.\n  Jams incoming missiles.
@@ -565,7 +565,7 @@ ARTIL3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		BuildPaletteOrder: 140
 		Prerequisites: ~disabled
 		Description: Double barreled artillery tank.\n  Strong vs Pods, Vehicles and Buildings
@@ -604,11 +604,10 @@ BUILDER:
 	Inherits: ^Vehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: LightVehicles
-		BuildPaletteOrder: 100
+		Queue: LightVehicle
+		BuildPaletteOrder: 10
 		Description: Deploys into outpost which\ngrants additional build radius\nand allows base reconstruction.\n  Unarmed
 		Prerequisites: ~structures.yi
-		BuildAtProductionType: LightVehicles
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -685,11 +684,10 @@ MINER:
 	Inherits: ^Vehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: LightVehicles
-		BuildPaletteOrder: 10
+		Queue: LightVehicle
+		BuildPaletteOrder: 20
 		Description: Builds mining facilities.\n  Unarmed
-		Prerequisites: base, storage
-		BuildAtProductionType: LightVehicles
+		Prerequisites: storage
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -740,7 +738,7 @@ MISSILETANK:
 		Name: Missile Tank
 		GenericName: Tank
 	Buildable:
-		Queue: Vehicle
+		Queue: HeavyVehicle
 		Prerequisites: ~factory.sc, radar, techcenter
 		BuildPaletteOrder: 240
 		Description: A tank which shoots missiles. \n  Strong vs Vehicles and Buildings\n  Weak vs Pods
@@ -774,8 +772,8 @@ TANK8:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 200
+		Queue: HeavyVehicle
+		BuildPaletteOrder: 60
 		Prerequisites: ~factory.yi, radar, tradplat
 		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Temporarily changes allegiance of targeted units.
 	Valued:
@@ -815,9 +813,9 @@ TANK1:
 		Name: Ramp Buggy
 		GenericName: Buggy
 	Buildable:
-		BuildPaletteOrder: 10
-		Prerequisites: ~factory.yi
-		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: module, ~structures.yi
+		Queue: LightVehicle
 		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
 	Turreted:
 		TurnSpeed: 40
@@ -855,9 +853,9 @@ TANK2:
 		Name: Gatling Bike
 		GenericName: Bike
 	Buildable:
-		Queue: Vehicle
-		Prerequisites: ~factory.sc
-		BuildPaletteOrder: 10
+		Queue: LightVehicle
+		Prerequisites: module, ~structures.sc
+		BuildPaletteOrder: 30
 		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled

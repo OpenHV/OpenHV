@@ -8,13 +8,18 @@ ProductionTypeDefense: R
 	Types: Production
 	Contexts: Player
 
-ProductionTypePods: T
-	Description: Pods Tab
+ProductionTypePod: T
+	Description: Pod Tab
 	Types: Production
 	Contexts: Player
 
-ProductionTypeVehicle: Y
-	Description: Vehicle Tab
+ProductionTypeLightVehicle: K
+	Description: Light Vehicle Tab
+	Types: Production
+	Contexts: Player
+
+ProductionTypeHeavyVehicle: Y
+	Description: Heavy Vehicle Tab
 	Types: Production
 	Contexts: Player
 
@@ -30,11 +35,6 @@ ProductionTypeNaval: I
 
 ProductionTypeTrade: O
 	Description: Trade Tab
-	Types: Production
-	Contexts: Player
-
-ProductionTypeLightVehicles: K
-	Description: Workers Tab
 	Types: Production
 	Contexts: Player
 

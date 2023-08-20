@@ -104,12 +104,15 @@ production-icons:
 		defense: 64, 293, 28, 27
 		defense-disabled: 96, 293, 28, 27
 		defense-alert: 128, 293, 28, 27
-		pods: 64, 326, 28, 27
-		pods-disabled: 96, 326, 28, 27
-		pods-alert: 128, 326, 28, 27
-		vehicle: 64, 229, 28, 27
-		vehicle-disabled: 96, 229, 28, 27
-		vehicle-alert: 128, 229, 28, 27
+		pod: 64, 326, 28, 27
+		pod-disabled: 96, 326, 28, 27
+		pod-alert: 128, 326, 28, 27
+		lightvehicle: 64, 421, 28, 27
+		lightvehicle-disabled: 96, 421, 28, 27
+		lightvehicle-alert: 128, 421, 28, 27
+		heavyvehicle: 64, 229, 28, 27
+		heavyvehicle-disabled: 96, 229, 28, 27
+		heavyvehicle-alert: 128, 229, 28, 27
 		aircraft: 64, 261, 28, 27
 		aircraft-disabled: 96, 261, 28, 27
 		aircraft-alert: 128, 261, 28, 27
@@ -119,9 +122,6 @@ production-icons:
 		trade: 64, 357, 28, 27
 		trade-disabled: 96, 357, 28, 27
 		trade-alert: 128, 357, 28, 27
-		lightvehicles: 64, 421, 28, 27
-		lightvehicles-disabled: 96, 421, 28, 27
-		lightvehicles-alert: 128, 421, 28, 27
 
 order-icons:
 	Inherits: ^Chrome
