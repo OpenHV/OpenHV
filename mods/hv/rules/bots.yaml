@@ -105,6 +105,7 @@ Player:
 			mortarpod: 1
 			flamepod: 1
 			elitepod: 1
+			sniperpod: 1
 			hackerpod: 1
 			technician: 1
 			bomberpod: 1
