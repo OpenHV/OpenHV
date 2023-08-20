@@ -37,7 +37,7 @@ BunkerChaingun:
 	Range: 8c0
 	Burst: 1
 
-^ChainGun:
+^AircraftChainGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
@@ -58,6 +58,7 @@ BunkerChaingun:
 			Light: 20
 			Heavy: 10
 			Concrete: 5
+		ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
 
 BuggyChainGun:
 	Inherits: SmallSplash
@@ -90,7 +91,7 @@ BikeChainGun:
 	BurstDelays: 2
 
 HelicopterChainGun:
-	Inherits: ^ChainGun
+	Inherits: ^AircraftChainGun
 	ReloadDelay: 10
 	Range: 6c0
 	MinRange: 0c768
@@ -102,7 +103,7 @@ HelicopterChainGun:
 		Damage: 1000
 
 AircraftChainGun:
-	Inherits: ^ChainGun
+	Inherits: ^AircraftChainGun
 	ReloadDelay: 3
 	Range: 6c0
 	MinRange: 2c0
