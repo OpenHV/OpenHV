@@ -138,6 +138,7 @@ Player:
 			waterminelayer2: 1
 			technician: 1
 			bomberpod: 3
+			transprt: 1
 		UnitDelays:
 			builder: 15000
 	PriorityCaptureManagerBotModule:
