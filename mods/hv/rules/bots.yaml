@@ -98,6 +98,7 @@ Player:
 			aatank: 3
 			tank15: 1
 			tank16: 1
+			transprt: 1
 			artil: 5
 			scout1: 1
 			scout2: 1
@@ -154,6 +155,10 @@ Player:
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
 		ExcludedUnitTypes: miner, tanker1, tanker2, hackerpod
+	LoadCargoBotModule:
+		RequiresCondition: enable-rogue-ai
+		TransportTypes: transprt
+		PassengerTypes: mortarpod, flamepod, scout1, scout2
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, hackerpod
