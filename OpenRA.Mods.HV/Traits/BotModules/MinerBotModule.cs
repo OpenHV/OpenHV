@@ -66,7 +66,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		IBotRequestUnitProduction[] requestUnitProduction;
 
-		class MinerTraitWrapper
+		sealed class MinerTraitWrapper
 		{
 			public readonly Actor Actor;
 			public readonly Mobile Mobile;

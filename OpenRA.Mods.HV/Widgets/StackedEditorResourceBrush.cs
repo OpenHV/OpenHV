@@ -104,7 +104,7 @@ namespace OpenRA.Mods.HV.Widgets
 		}
 	}
 
-	class AddResourcesEditorAction : IEditorAction
+	sealed class AddResourcesEditorAction : IEditorAction
 	{
 		public string Text { get; private set; }
 

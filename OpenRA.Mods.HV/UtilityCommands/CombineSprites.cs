@@ -18,7 +18,7 @@ using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Common.UtilityCommands
 {
-	class CombineSprites : IUtilityCommand
+	sealed class CombineSprites : IUtilityCommand
 	{
 		string IUtilityCommand.Name { get { return "--combine-png"; } }
 
