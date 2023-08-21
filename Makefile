@@ -224,12 +224,6 @@ endif
 	@echo "Checking for incorrect conditional trait interface overrides..."
 	@./utility.sh --check-conditional-trait-interface-overrides
 
-check-lua:
-	@echo
-	@echo "Checking for Lua syntax errors..."
-	@luac -p $(shell find mods/*/maps/* -iname '*.lua')
-	@luac -p $(shell find mods/*/scripts/* -iname '*.lua')
-
 test: all
 	@echo
 	@echo "Testing $(MOD_ID) mod MiniYAML..."
