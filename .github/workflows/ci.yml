@@ -83,6 +83,7 @@ jobs:
         run: |
           # Work around runtime failures on the GH Actions runner
           dotnet nuget locals all --clear
+          echo "::remove-matcher owner=csc::"
           .\make.ps1 check
 
       - name: Check Mods
