@@ -12,21 +12,18 @@
 using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.LoadScreens;
-using OpenRA.Mods.Common.Widgets;
 using OpenRA.Primitives;
 
 namespace OpenRA.Mods.HV.LoadScreens
 {
-	public sealed class StripeLoadScreen : SheetLoadScreen
+	public sealed class PanelLoadScreen : SheetLoadScreen
 	{
-		Rectangle stripeRect;
-		Sprite stripe;
+		float2 panelPosition;
+		Sprite panel;
 
 		Sheet lastSheet;
 		int lastDensity;
 		Size lastResolution;
-
-		readonly string[] messages = { "Loading..." };
 
 		public override void Init(ModData modData, Dictionary<string, string> info)
 		{
@@ -39,24 +36,17 @@ namespace OpenRA.Mods.HV.LoadScreens
 			{
 				lastSheet = s;
 				lastDensity = density;
-				stripe = CreateSprite(s, density, new(0, 0, 256, 256));
+				panel = CreateSprite(s, density, new Rectangle(0, 0, 512, 512));
 			}
 
 			if (r.Resolution != lastResolution)
 			{
 				lastResolution = r.Resolution;
-				stripeRect = new Rectangle(0, lastResolution.Height / 2 - 128, lastResolution.Width, 256);
+				panelPosition = new float2(lastResolution.Width / 2 - 256, lastResolution.Height / 2 - 256);
 			}
 
-			if (stripe != null)
-				WidgetUtils.FillRectWithSprite(stripeRect, stripe);
-
-			if (r.Fonts != null)
-			{
-				var text = messages.Random(Game.CosmeticRandom);
-				var textSize = r.Fonts["Bold"].Measure(text);
-				r.Fonts["Bold"].DrawText(text, new float2(r.Resolution.Width - textSize.X - 20, r.Resolution.Height - textSize.Y - 20), Color.White);
-			}
+			if (panel != null)
+				r.RgbaSpriteRenderer.DrawSprite(panel, panelPosition);
 		}
 	}
 }

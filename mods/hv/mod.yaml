@@ -183,7 +183,7 @@ Hotkeys:
 	common|hotkeys/editor.yaml
 	hv|hotkeys/editor.yaml
 
-LoadScreen: StripeLoadScreen
+LoadScreen: PanelLoadScreen
 	Image: hv|uibits/loadscreen.png
 
 ServerTraits:
