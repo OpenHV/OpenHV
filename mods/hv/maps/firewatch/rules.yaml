@@ -202,6 +202,10 @@ TANK6:
 	Buildable:
 		Prerequisites: ~disabled
 
+TANK13:
+	Buildable:
+		Prerequisites: ~disabled
+
 TANK16:
 	Buildable:
 		Prerequisites: ~disabled
