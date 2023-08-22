@@ -107,12 +107,12 @@ production-icons:
 		pod: 64, 326, 28, 27
 		pod-disabled: 96, 326, 28, 27
 		pod-alert: 128, 326, 28, 27
-		lightvehicle: 64, 421, 28, 27
-		lightvehicle-disabled: 96, 421, 28, 27
-		lightvehicle-alert: 128, 421, 28, 27
-		heavyvehicle: 64, 229, 28, 27
-		heavyvehicle-disabled: 96, 229, 28, 27
-		heavyvehicle-alert: 128, 229, 28, 27
+		utility: 64, 421, 28, 27
+		utility-disabled: 96, 421, 28, 27
+		utility-alert: 128, 421, 28, 27
+		tank: 64, 229, 28, 27
+		tank-disabled: 96, 229, 28, 27
+		tank-alert: 128, 229, 28, 27
 		aircraft: 64, 261, 28, 27
 		aircraft-disabled: 96, 261, 28, 27
 		aircraft-alert: 128, 261, 28, 27

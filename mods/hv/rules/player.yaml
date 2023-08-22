@@ -113,8 +113,8 @@ Player:
 		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-	ClassicProductionQueue@LightVehicle:
-		Type: LightVehicle
+	ClassicProductionQueue@Utility:
+		Type: Utility
 		DisplayOrder: 5
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
@@ -127,8 +127,8 @@ Player:
 		CancelledTextNotification: Cancelled.
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-	ClassicProductionQueue@HeavyVehicle:
-		Type: HeavyVehicle
+	ClassicProductionQueue@Tank:
+		Type: Tank
 		DisplayOrder: 3
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady

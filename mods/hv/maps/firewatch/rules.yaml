@@ -4,23 +4,23 @@ BASE2:
 	Tooltip:
 		Name: Fire Department
 	Production:
-		Produces: LightVehicle
+		Produces: Utility
 	Exit@South1:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@South2:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@West1:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@West2:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@West3:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@East1:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@East2:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	Exit@East3:
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 	-BaseProvider:
 	ProvidesRadar:
 
@@ -37,7 +37,7 @@ WATERTANK:
 		Name: Fire Fighting Tank
 		GenericName: Tank
 	Buildable:
-		Queue: LightVehicle
+		Queue: Utility
 		Prerequisites: ~base
 		BuildPaletteOrder: 200
 		Description: Armored Fire Fighting Vehicle
@@ -79,7 +79,7 @@ FIRETRUCK:
 		Name: Fire Fighting Truck
 		GenericName: Truck
 	Buildable:
-		Queue: LightVehicle
+		Queue: Utility
 		Prerequisites: ~base
 		BuildPaletteOrder: 100
 		Description: Civilian Fire Engine
@@ -118,7 +118,7 @@ FIREFIGHTERPOD:
 	AutoTargetPriority@AttackAnything:
 		ValidTargets: Fire
 	Buildable:
-		Queue: LightVehicle
+		Queue: Utility
 		Prerequisites: ~base
 		Description: Volunteer firefighter pod on duty.
 		BuildPaletteOrder: 50

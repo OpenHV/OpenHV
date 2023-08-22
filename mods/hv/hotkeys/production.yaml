@@ -13,13 +13,13 @@ ProductionTypePod: T
 	Types: Production
 	Contexts: Player
 
-ProductionTypeLightVehicle: K
-	Description: Light Vehicle Tab
+ProductionTypeUtility: K
+	Description: Utility Tab
 	Types: Production
 	Contexts: Player
 
-ProductionTypeHeavyVehicle: Y
-	Description: Heavy Vehicle Tab
+ProductionTypeTank: Y
+	Description: Tank Tab
 	Types: Production
 	Contexts: Player
 

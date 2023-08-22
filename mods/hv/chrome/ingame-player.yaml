@@ -556,10 +556,10 @@ Container@PLAYER_WIDGETS:
 							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Light Vehicles
+							TooltipText: Utility
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: LightVehicle
-							Key: ProductionTypeLightVehicle
+							ProductionGroup: Utility
+							Key: ProductionTypeUtility
 							Children:
 								Image@ICON:
 									X: 0
@@ -571,10 +571,10 @@ Container@PLAYER_WIDGETS:
 							Height: 27
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Heavy Vehicles
+							TooltipText: Tank
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: HeavyVehicle
-							Key: ProductionTypeHeavyVehicle
+							ProductionGroup: Tank
+							Key: ProductionTypeTank
 							Children:
 								Image@ICON:
 									X: 0

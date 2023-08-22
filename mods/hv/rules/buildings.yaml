@@ -53,13 +53,13 @@ BASE:
 	GrantExternalConditionToOwner@Base:
 		Condition: base
 	Production:
-		Produces: Building, Defense, LightVehicle
+		Produces: Building, Defense, Utility
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:
 		ProductionType: Defense
-	ProductionBar@LightVehicle:
-		ProductionType: LightVehicle
+	ProductionBar@Utility:
+		ProductionType: Utility
 	ProductionSound:
 		Files: Quedicemipez__teleportation.wav
 	RallyPoint:
@@ -73,7 +73,7 @@ BASE:
 		ExitCell: 0,3
 		SpawnOffset: -512,512,0
 		Facing: 512
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 		Priority: 10
 	WithProductionExitOverlay@South1:
@@ -84,7 +84,7 @@ BASE:
 		ExitCell: 1,3
 		SpawnOffset: 512,512,0
 		Facing: 512
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 		Priority: 10
 	WithProductionExitOverlay@South2:
@@ -95,7 +95,7 @@ BASE:
 		ExitCell: -1,1
 		SpawnOffset: -512,512,0
 		Facing: 768
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 	WithProductionExitOverlay@West1:
 		ExitCell: -1,1
@@ -105,7 +105,7 @@ BASE:
 		ExitCell: -1,2
 		SpawnOffset: -512,512,0
 		Facing: 768
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 	WithProductionExitOverlay@West2:
 		ExitCell: -1,2
@@ -115,7 +115,7 @@ BASE:
 		ExitCell: -1,3
 		SpawnOffset: -512,512,0
 		Facing: 768
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 	WithProductionExitOverlay@West3:
 		ExitCell: -1,3
@@ -125,7 +125,7 @@ BASE:
 		ExitCell: 2,1
 		SpawnOffset: 512,512,0
 		Facing: 256
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 	WithProductionExitOverlay@East1:
 		ExitCell: 2,1
@@ -135,7 +135,7 @@ BASE:
 		ExitCell: 2,2
 		SpawnOffset: 512,512,0
 		Facing: 256
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 	WithProductionExitOverlay@East2:
 		ExitCell: 2,2
@@ -145,7 +145,7 @@ BASE:
 		ExitCell: 2,3
 		SpawnOffset: 512,512,0
 		Facing: 256
-		ProductionTypes: LightVehicle
+		ProductionTypes: Utility
 		ExitDelay: 20
 	WithProductionExitOverlay@East3:
 		ExitCell: 2,3
@@ -799,7 +799,7 @@ FACTORY3:
 		ExitCell: 0,4
 		SpawnOffset: -50,800,0
 		Facing: 512
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
@@ -814,7 +814,7 @@ FACTORY3:
 		ExitCell: 1,4
 		SpawnOffset: -50,800,0
 		Facing: 512
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
@@ -829,7 +829,7 @@ FACTORY3:
 		ExitCell: -1,1
 		SpawnOffset: -50,800,0
 		Facing: 768
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West1:
@@ -843,7 +843,7 @@ FACTORY3:
 		ExitCell: -1,2
 		SpawnOffset: -50,800,0
 		Facing: 768
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West2:
@@ -857,7 +857,7 @@ FACTORY3:
 		ExitCell: -1,3
 		SpawnOffset: -50,800,0
 		Facing: 768
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West3:
@@ -871,7 +871,7 @@ FACTORY3:
 		ExitCell: -1,4
 		SpawnOffset: -50,800,0
 		Facing: 768
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@West4:
@@ -885,7 +885,7 @@ FACTORY3:
 		ExitCell: 2,1
 		SpawnOffset: -50,800,0
 		Facing: 256
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East1:
@@ -899,7 +899,7 @@ FACTORY3:
 		ExitCell: 2,2
 		SpawnOffset: -50,800,0
 		Facing: 256
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East2:
@@ -913,7 +913,7 @@ FACTORY3:
 		ExitCell: 2,3
 		SpawnOffset: -50,800,0
 		Facing: 256
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East3:
@@ -927,7 +927,7 @@ FACTORY3:
 		ExitCell: 2,4
 		SpawnOffset: -50,800,0
 		Facing: 256
-		ProductionTypes: HeavyVehicle
+		ProductionTypes: Tank
 		ExitDelay: 20
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@East4:
@@ -938,10 +938,10 @@ FACTORY3:
 		Sequence: production-done
 		RequiresCondition: !burning
 	Production:
-		Produces: HeavyVehicle
+		Produces: Tank
 		RequiresCondition: !powerdown
 	ProductionBar:
-		ProductionType: HeavyVehicle
+		ProductionType: Tank
 	ProductionSound:
 		Files: Quedicemipez__teleportation.wav
 	PrimaryBuilding:
