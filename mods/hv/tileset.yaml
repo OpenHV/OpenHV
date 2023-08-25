@@ -7573,9 +7573,9 @@ Templates:
 	Template@1005:
 		Id: 1005
 		Images: bits/terrain/stne2snw.png
-		Frames: 6, 7, 8, 9
+		Frames: 6, 7, 8
 		Size: 1,3
-		Categories: Stone, Cliff
+		Categories: Stone, Cliff, Snow
 		Tiles:
 			0: Cliff
 			1: Cliff
@@ -7596,6 +7596,14 @@ Templates:
 		Categories: Snow
 		Tiles:
 			0: Snow
+	Template@1008:
+		Id: 1008
+		Images: bits/terrain/stne2snw.png
+		Frames: 9
+		Size: 1,1
+		Categories: Stone, Snow
+		Tiles:
+			0: Stone
 	Template@1012:
 		Id: 1012
 		Images: bits/terrain/stne2snw.png
