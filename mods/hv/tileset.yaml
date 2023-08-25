@@ -4360,6 +4360,11 @@ Templates:
 			BorderTypes: Sand, Cliff
 			BorderTransitions: 742, 748, 744, 739, 746, 745, 750, 751
 			Corners: 747, 749, 740, 738
+		AutoConnect@Dirt:
+			Type: Dirt
+			BorderTypes: Sand
+			BorderTransitions: 1619, 1624, 1620, 1617, 1622, 1621, 1626, 1627
+			Corners: 1623, 1625, 1618, 1616
 		Tiles:
 			0: Sand
 	Template@568:
