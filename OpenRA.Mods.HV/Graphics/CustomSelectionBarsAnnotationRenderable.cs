@@ -15,34 +15,34 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Graphics
 {
-	public class OutlinedSelectionBarsAnnotationRenderable : IRenderable, IFinalizedRenderable
+	public class CustomSelectionBarsAnnotationRenderable : IRenderable, IFinalizedRenderable
 	{
 		readonly Actor actor;
 		readonly Rectangle decorationBounds;
 
-		public OutlinedSelectionBarsAnnotationRenderable(Actor actor, Rectangle decorationBounds, bool displayHealth, bool displayExtra)
+		public CustomSelectionBarsAnnotationRenderable(Actor actor, Rectangle decorationBounds, bool displayHealth, bool displayExtra)
 			: this(actor.CenterPosition, actor, decorationBounds)
 		{
 			DisplayHealth = displayHealth;
 			DisplayExtra = displayExtra;
 		}
 
-		public OutlinedSelectionBarsAnnotationRenderable(WPos pos, Actor actor, Rectangle decorationBounds)
+		public CustomSelectionBarsAnnotationRenderable(WPos pos, Actor actor, Rectangle decorationBounds)
 		{
 			Pos = pos;
 			this.actor = actor;
 			this.decorationBounds = decorationBounds;
 		}
 
-		public WPos Pos { get; private set; }
-		public bool DisplayHealth { get; private set; }
-		public bool DisplayExtra { get; private set; }
+		public WPos Pos { get; }
+		public bool DisplayHealth { get; }
+		public bool DisplayExtra { get; }
 
 		public int ZOffset => 0;
 		public bool IsDecoration => true;
 
 		public IRenderable WithZOffset(int newOffset) { return this; }
-		public IRenderable OffsetBy(in WVec vec) { return new OutlinedSelectionBarsAnnotationRenderable(Pos + vec, actor, decorationBounds); }
+		public IRenderable OffsetBy(in WVec vec) { return new CustomSelectionBarsAnnotationRenderable(Pos + vec, actor, decorationBounds); }
 		public IRenderable AsDecoration() { return this; }
 
 		void DrawExtraBars(float2 start, float2 end)
@@ -86,8 +86,8 @@ namespace OpenRA.Mods.HV.Graphics
 			if (Game.Settings.Game.UsePlayerStanceColors)
 				return actor.Owner.PlayerRelationshipColor(actor);
 
-			return health.DamageState == DamageState.Critical ? Color.OrangeRed :
-				health.DamageState == DamageState.Heavy ? Color.Gold : Color.LimeGreen;
+			return health.DamageState == DamageState.Critical ? Color.FromArgb(255, 128, 21, 21) :
+				health.DamageState == DamageState.Heavy ? Color.FromArgb(255, 250, 227, 59) : Color.FromArgb(255, 57, 171, 47);
 		}
 
 		void DrawHealthBar(IHealth health, float2 start, float2 end)
@@ -95,29 +95,47 @@ namespace OpenRA.Mods.HV.Graphics
 			if (health == null || health.IsDead)
 				return;
 
-			var c = Color.FromArgb(128, 30, 30, 30);
-			var c2 = Color.FromArgb(128, 10, 10, 10);
-			var p = new float2(0, -4);
-			var q = new float2(0, -3);
-			var r = new float2(0, -2);
+			var blackoutline = Color.FromArgb(255, 4, 4, 4);
+			var p = new float2(0, -5);
+			var q = new float2(0, -4);
+			var r = new float2(0, -3);
+			var t = new float2(0, -2);
+			var left = new float2(-1, 0);
+			var right = new float2(1, 0);
 
 			var healthColor = GetHealthColor(health);
-			var borderColor = Color.Black;
+			var healthColor2 = Color.FromArgb(
+				255,
+				healthColor.R - 20,
+				healthColor.G - 20,
+				healthColor.B - 20);
 
 			var z = float3.Lerp(start, end, (float)health.HP / health.MaxHP);
 
 			var cr = Game.Renderer.RgbaColorRenderer;
-			cr.DrawLine(start + p, end + p, 1, c);
-			cr.DrawLine(start + q, end + q, 1, c2);
-			cr.DrawLine(start + r, end + r, 1, c);
+			cr.DrawLine(start + p, end + p, 1, blackoutline);
+			cr.DrawLine(start + q, end + q, 1, blackoutline);
+			cr.DrawLine(start + r, end + r, 1, blackoutline);
+			cr.DrawLine(start + t, end + t, 1, blackoutline);
 
-			cr.DrawLine(start + p, z + p, 1, borderColor);
+			cr.DrawLine(start + p, z + p, 1, blackoutline);
 			cr.DrawLine(start + q, z + q, 1, healthColor);
-			cr.DrawLine(start + r, z + r, 1, borderColor);
+			cr.DrawLine(start + r, z + r, 1, healthColor2);
+			cr.DrawLine(start + t, z + t, 1, blackoutline);
+
+			cr.DrawLine(start + p + left, start + p, 1, blackoutline);
+			cr.DrawLine(start + q + left, start + q, 1, blackoutline);
+			cr.DrawLine(start + r + left, start + r, 1, blackoutline);
+			cr.DrawLine(start + t + left, start + t, 1, blackoutline);
+
+			cr.DrawLine(end + p, end + p + right, 1, blackoutline);
+			cr.DrawLine(end + q, end + q + right, 1, blackoutline);
+			cr.DrawLine(end + r, end + r + right, 1, blackoutline);
+			cr.DrawLine(end + t, end + t + right, 1, blackoutline);
 
 			if (health.DisplayHP != health.HP)
 			{
-				var deltaColor = Color.OrangeRed;
+				var deltaColor = Color.FromArgb(255, 96, 0, 0);
 				var deltaColor2 = Color.FromArgb(
 					255,
 					deltaColor.R / 2,
@@ -127,7 +145,8 @@ namespace OpenRA.Mods.HV.Graphics
 
 				cr.DrawLine(z + p, zz + p, 1, deltaColor2);
 				cr.DrawLine(z + q, zz + q, 1, deltaColor);
-				cr.DrawLine(z + r, zz + r, 1, deltaColor2);
+				cr.DrawLine(z + r, zz + r, 1, deltaColor);
+				cr.DrawLine(z + t, zz + t, 1, deltaColor2);
 			}
 		}
 
