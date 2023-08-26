@@ -43,7 +43,7 @@
 		PriorityModifiers: Ctrl, Alt
 
 ^SelectionDecorations:
-	OutlinedSelectionDecorations:
+	CustomSelectionDecorations:
 	WithTextControlGroupDecoration:
 
 ^PlayerHandicaps:
@@ -449,8 +449,6 @@
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
 	Inherits@Decoration: ^SelectionDecorations
-	OutlinedSelectionDecorations:
-		Spacers: true
 	Huntable:
 	OwnerLostAction:
 		Action: Kill

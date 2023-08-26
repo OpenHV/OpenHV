@@ -121,7 +121,6 @@ SEAMNSTR:
 		Type: Heavy
 	-Selectable:
 	Interactable:
-	-OutlinedSelectionDecorations:
 	Mobile:
 		TurnSpeed: 60
 		Speed: 28
