@@ -207,6 +207,11 @@
 	Targetable@Repair:
 		RequiresCondition: damaged
 		TargetTypes: DamagedPod
+	Selectable:
+		Bounds: 512,512,0,0
+	HitShape:
+		Type: Circle
+			Radius: 256
 
 ^Scrap:
 	Interactable:
