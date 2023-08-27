@@ -149,7 +149,7 @@ repair:
 	idle:
 		Filename: bits/building-repair.png
 		Length: *
-		Tick: 200
+		Tick: 100
 
 poweroff:
 	offline:
