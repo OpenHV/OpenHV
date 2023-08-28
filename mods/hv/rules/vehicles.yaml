@@ -349,6 +349,8 @@ TANK6:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+	WithDeployMineAnimation:
+		Sequence: deploy
 
 TANK5:
 	Inherits: ^TrackedVehicle
