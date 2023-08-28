@@ -319,11 +319,12 @@ TANK6:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 21000
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
 		Speed: 128
+		TurnSpeed: 60
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -332,6 +333,8 @@ TANK6:
 		Range: 2c0
 	Minelayer:
 		Mine: landmine
+		PreLayDelay: 14
+		AfterLayingDelay: 20
 	MineImmune:
 	AmmoPool:
 		Ammo: 5
