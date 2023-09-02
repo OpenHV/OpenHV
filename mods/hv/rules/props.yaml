@@ -238,6 +238,36 @@ PROP13:
 		Condition: disable
 		ValidDamageStates: Heavy, Critical
 
+ELECTRICPAD:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	Tooltip:
+		Name: Electric pad
+	Health:
+		HP: 30000
+	WithIdleOverlay@animation:
+		Sequence: animation
+		RequiresCondition: !disable
+	GrantConditionOnDamageState@disable:
+		Condition: disable
+		ValidDamageStates: Heavy, Critical
+	-WithIdleOverlay@Shadow:
+	-ShakeOnDeath:
+	Explodes:
+		Type: CenterPosition
+
+ELECTRICPAD2:
+	Inherits: ELECTRICPAD
+	-WithIdleOverlay@animation:
+	-GrantConditionOnDamageState@disable:
+	RenderSprites:
+		Image: ELECTRICPAD
+
 RAIL:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape

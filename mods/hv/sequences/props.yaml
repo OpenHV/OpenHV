@@ -297,3 +297,18 @@ tanktrap:
 	shadow-overlay:
 		Filename: bits/tanktrap-shadow.png
 		Offset: 2, 3
+
+electricpad:
+	idle:
+		Filename: bits/electricpad.png
+		ZOffset: -1024
+	damaged-idle:
+		Filename: bits/electricpad.png
+		Start: 1
+		ZOffset: -1024
+	animation:
+		Filename: bits/electricpad.png
+		Start: 2
+		Length: 8
+		Tick: 60
+		ZOffset: -1024
