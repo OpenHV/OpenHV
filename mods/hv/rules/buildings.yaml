@@ -20,7 +20,7 @@ BASE:
 			TopLeft: -1024, -2048
 			BottomRight: 1024, 1024
 	Health:
-		HP: 210000
+		HP: 250000
 	Armor:
 		Type: Steel
 	RevealsShroud:
