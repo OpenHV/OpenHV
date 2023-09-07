@@ -161,7 +161,7 @@ BASE:
 		Sequence: idle-platform2
 		RequiresCondition: !build-incomplete
 	TerrainLightSource:
-		Range: 2c512
+		Range: 3c512
 		Intensity: 0.1
 		RedTint: 0
 		GreenTint: 0
@@ -173,7 +173,7 @@ BASE:
 BASE2:
 	Inherits: BASE
 	TerrainLightSource:
-		Range: 2c512
+		Range: 3c512
 		Intensity: 0.1
 		RedTint: 0.4
 		GreenTint: 0
@@ -220,6 +220,12 @@ OUTPOST:
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
 		Prerequisite: structures.yi
+  	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0
+		GreenTint: 0
+		BlueTint: 0.4
 
 OUTPOST2:
 	Inherits: OUTPOST
@@ -227,6 +233,12 @@ OUTPOST2:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
 		Prerequisite: structures.sc
+  	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0.4
+		GreenTint: 0
+		BlueTint: 0
 	-Encyclopedia:
 
 GENERATOR:
@@ -1346,6 +1358,12 @@ HOWITZER:
 		TurnSpeed: 60
 		RequiresCondition: !build-incomplete
 		RealignDelay: -1
+  	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0.4
+		GreenTint: 0
+		BlueTint: 0
 
 FIELD:
 	Inherits: ^BaseBuilding
@@ -1420,6 +1438,12 @@ FIELD:
 		Image: field
 		FactionImages:
 			sc: field2
+   	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0
+		GreenTint: 0
+		BlueTint: 0.4
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -1492,6 +1516,12 @@ SILO:
 	WithIdleOverlay@red_light:
 		Sequence: animation_red_light
 		RequiresCondition: !build-incomplete
+  	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0.4
+		GreenTint: 0
+		BlueTint: 0
 
 UPLINK:
 	Inherits: ^BaseBuilding
@@ -1560,6 +1590,12 @@ UPLINK:
 	WithIdleOverlay@Lights:
 		Sequence: animation
 		RequiresCondition: !build-incomplete
+  	TerrainLightSource:
+		Range: 2c512
+		Intensity: 0.1
+		RedTint: 0
+		GreenTint: 0
+		BlueTint: 0.4
 
 STORAGE:
 	Inherits: ^BaseBuilding
