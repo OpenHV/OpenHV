@@ -22,13 +22,13 @@ Container@PLAYER_WIDGETS:
 						Image@ICON_TEMPLATE:
 							X: 0 - 2
 							Y: 0 - 2
-							Width: 62
-							Height: 46
+							Width: 63
+							Height: 47
 							IgnoreMouseOver: true
 							ImageCollection: sidebar
 							ImageName: background-supportoverlay
 				SupportPowers@SUPPORT_PALETTE:
-					IconSize: 62, 46
+					IconSize: 63, 47
 					IconSpriteOffset: -1, -1
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: READY
