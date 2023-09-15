@@ -18,18 +18,35 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[Flags]
+	public enum LoadRequirement
+	{
+		All = 0,
+		IdleUnit = 1,
+	}
+
+	[Flags]
+	public enum TransportOwner
+	{
+		Self = 0,
+		AlliedBot = 1,
+		Allies = 2
+	}
+
 	[TraitLocation(SystemActors.Player)]
 	[Desc("Manages AI load unit related with " + nameof(Cargo) + " and " + nameof(Passenger) + " traits.")]
 	public class LoadCargoBotModuleInfo : ConditionalTraitInfo
 	{
-		[Desc("Actor types that can be targeted for load, must have " + nameof(Cargo) + ".")]
-		public readonly HashSet<string> TransportTypes = default;
+		[Desc("Actor types that can be targeted for load, must have " + nameof(Cargo) + ".",
+			"The flag represents if this transport only requires idle unit. Possible values are: All, IdleUnit")]
+		public readonly Dictionary<string, LoadRequirement> TransportTypesAndLoadRequirement = default;
 
 		[Desc("Actor types that used for loading, must have " + nameof(Passenger) + ".")]
 		public readonly HashSet<string> PassengerTypes = default;
 
-		[Desc("Allow enter allied transport.")]
-		public readonly bool OnlyEnterOwnerPlayer = true;
+		[Desc("The type of relationship that can be targeted for load. Possible values are: Self, AlliedBot and Allies",
+			"AlliedBot means AI will load transport for another allied bot player.")]
+		public readonly TransportOwner ValidTransportOwner = TransportOwner.Self;
 
 		[Desc("Scan suitable actors and target in this interval.")]
 		public readonly int ScanTick = 317;
@@ -37,16 +54,13 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Don't load passengers to this actor if damage state is worse than this.")]
 		public readonly DamageState ValidDamageState = DamageState.Heavy;
 
-		[Desc("Unload passengers to this actor if damage state is worse than this.")]
-		public readonly DamageState UnloadDamageState = DamageState.Heavy;
-
 		[Desc("Don't load passengers that are further than this distance to this actor.")]
 		public readonly WDist MaxDistance = WDist.FromCells(20);
 
 		public override object Create(ActorInitializer init) { return new LoadCargoBotModule(init.Self, this); }
 	}
 
-	public class LoadCargoBotModule : ConditionalTrait<LoadCargoBotModuleInfo>, IBotTick, IBotRespondToAttack
+	public class LoadCargoBotModule : ConditionalTrait<LoadCargoBotModuleInfo>, IBotTick
 	{
 		readonly World world;
 		readonly Player player;
@@ -62,10 +76,18 @@ namespace OpenRA.Mods.HV.Traits
 			world = self.World;
 			player = self.Owner;
 
-			if (info.OnlyEnterOwnerPlayer)
-				invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || a.Owner != player;
-			else
-				invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || a.Owner.RelationshipWith(player) != PlayerRelationship.Ally;
+			switch (info.ValidTransportOwner)
+			{
+				case TransportOwner.Self:
+					invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || a.Owner != player;
+					break;
+				case TransportOwner.AlliedBot:
+					invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || !a.Owner.IsBot || a.Owner.RelationshipWith(player) != PlayerRelationship.Ally;
+					break;
+				case TransportOwner.Allies:
+					invalidTransport = a => a == null || a.IsDead || !a.IsInWorld || a.Owner.RelationshipWith(player) != PlayerRelationship.Ally;
+					break;
+			}
 
 			unitCannotBeOrdered = a => a == null || a.IsDead || !a.IsInWorld || a.Owner != player;
 			unitCannotBeOrderedOrIsBusy = a => unitCannotBeOrdered(a) || (!a.IsIdle && a.CurrentActivity is not FlyIdle);
@@ -83,10 +105,11 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				minAssignRoleDelayTicks = Info.ScanTick;
 
+				// TODO: Next engine upgrade will make Cargo conditional, add 'IsTraitDisabled' check here.
 				var transporters = world.ActorsWithTrait<Cargo>().Where(at =>
 				{
 					var health = at.Actor.TraitOrDefault<IHealth>()?.DamageState;
-					return Info.TransportTypes.Contains(at.Actor.Info.Name) && !invalidTransport(at.Actor)
+					return Info.TransportTypesAndLoadRequirement.ContainsKey(at.Actor.Info.Name) && !invalidTransport(at.Actor)
 					&& at.Trait.HasSpace(1) && (health == null || health < Info.ValidDamageState);
 				}).ToArray();
 
@@ -98,7 +121,13 @@ namespace OpenRA.Mods.HV.Traits
 				var transport = transporter.Actor;
 				var spaceTaken = 0;
 
-				var passengers = world.ActorsWithTrait<Passenger>().Where(at => !unitCannotBeOrderedOrIsBusy(at.Actor) && Info.PassengerTypes.Contains(at.Actor.Info.Name) && cargo.HasSpace(at.Trait.Info.Weight) && (at.Actor.CenterPosition - transport.CenterPosition).HorizontalLengthSquared <= Info.MaxDistance.LengthSquared)
+				Predicate<Actor> invalidPassenger;
+				if (Info.TransportTypesAndLoadRequirement[transport.Info.Name] == LoadRequirement.IdleUnit)
+					invalidPassenger = unitCannotBeOrderedOrIsBusy;
+				else
+					invalidPassenger = unitCannotBeOrdered;
+
+				var passengers = world.ActorsWithTrait<Passenger>().Where(at => Info.PassengerTypes.Contains(at.Actor.Info.Name) && !invalidPassenger(at.Actor) && cargo.HasSpace(at.Trait.Info.Weight) && (at.Actor.CenterPosition - transport.CenterPosition).HorizontalLengthSquared <= Info.MaxDistance.LengthSquared)
 					.OrderBy(at => (at.Actor.CenterPosition - transport.CenterPosition).HorizontalLengthSquared);
 
 				var orderedActors = new List<Actor>();
@@ -122,18 +151,6 @@ namespace OpenRA.Mods.HV.Traits
 				if (orderedActors.Count > 0)
 					bot.QueueOrder(new Order("EnterTransport", null, Target.FromActor(transport), false, groupedActors: orderedActors.ToArray()));
 			}
-		}
-
-		void IBotRespondToAttack.RespondToAttack(IBot bot, Actor self, AttackInfo e)
-		{
-			if (!Info.TransportTypes.Contains(self.Info.Name))
-				return;
-
-			var health = self.TraitOrDefault<IHealth>()?.DamageState;
-			var cargo = self.TraitOrDefault<Cargo>();
-
-			if ((health == null || health >= Info.UnloadDamageState) && cargo != null && !cargo.IsEmpty())
-				bot.QueueOrder(new Order("Unload", self, false));
 		}
 	}
 }

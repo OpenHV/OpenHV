@@ -164,8 +164,12 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, hackerpod
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, scout1, scout2
+		TransportTypesAndLoadRequirement:
+			transprt: All
+			copter2: IdleUnit
+			dropship: IdleUnit
+		ValidTransportOwner: AlliedBot
+		PassengerTypes: mortarpod, flamepod, scout1, scout2, sniperpod
 	ExternalBotOrdersManager:
 		RequiresCondition: enable-rogue-ai
 	PowerDownBotModule:

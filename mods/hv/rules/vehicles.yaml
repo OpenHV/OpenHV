@@ -149,6 +149,12 @@ TRANSPRT:
 		Image: energyball
 		Sequence: teleport-large
 	-Passenger:
+	IssueOrderToBot@AI:
+		OrderName: Unload
+		RequiresCondition: throw-sparks
+		OrderChance: 100
+		OrderTrigger: Periodically
+		OrderInterval: 20
 
 ARTIL:
 	Inherits: ^TrackedVehicle
