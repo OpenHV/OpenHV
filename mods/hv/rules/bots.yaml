@@ -95,7 +95,8 @@ Player:
 			tank6: 1
 			tank7: 1
 			tank8: 1
-			aatank: 3
+			aatank: 60
+			aatank2: 60
 			tank15: 1
 			tank16: 1
 			transprt: 1
