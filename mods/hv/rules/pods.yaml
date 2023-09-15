@@ -203,6 +203,7 @@ TECHNICIAN:
 		InitialStance: AttackAnything
 	AutoTargetPriority@Default:
 		ValidTargets: DamagedPod
+	AttackMove:
 	Armament:
 		Weapon: RepairTorch
 		Cursor: repair

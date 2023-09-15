@@ -138,7 +138,7 @@ Player:
 			carrier: 4
 			waterminelayer: 1
 			waterminelayer2: 1
-			technician: 1
+			technician: 2
 			bomberpod: 3
 			transprt: 1
 			copter2: 1
@@ -191,7 +191,6 @@ Player:
 				AttackDesireOfEach: 30
 				MoveToOrderName: AssaultMove
 				MoveBackOrderName: AssaultMove
-				TryGetHealed: false
 			copter2:
 				AttackDesireOfEach: 30
 				MoveToOrderName: Move
@@ -203,6 +202,19 @@ Player:
 				AttackOrderName: Unload
 				MoveBackOrderName: AssaultMove
 		ValidTargets: Structure
+		InvalidTargets: Air, Water
+		TargetDistances: Random
+	SendUnitToAttackBotModule@RepairSquad:
+		RequiresCondition: enable-rogue-ai
+		ActorTypesAndAttackOptions: 
+			technician:
+				AttackDesireOfEach: 100
+				MoveBackOrderName: AttackMove
+			tank16:
+				AttackDesireOfEach: 100
+				MoveBackOrderName: AttackMove
+		ValidRelationships: Ally
+		ValidTargets: DamagedPod, DamagedVehicle
 		InvalidTargets: Air, Water
 		TargetDistances: Random
 	ExternalConditionPowerBotModule:
