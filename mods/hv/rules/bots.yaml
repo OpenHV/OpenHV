@@ -180,10 +180,15 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	SendUnitToAttackBotModule:
 		RequiresCondition: enable-rogue-ai
-		ActorTypesAndAttackDesire: 
-			bomberpod: 30
-		ValidTargets: Structure, Vehicle
+		ActorTypesAndAttackOptions: 
+			bomberpod: 
+				AttackDesireOfEach: 30
+				MoveToOrderName: AssaultMove
+				MoveBackOrderName: AssaultMove
+				TryGetHealed: false
+		ValidTargets: Structure
 		InvalidTargets: Air, Water
+		TargetDistances: Random
 	ExternalConditionPowerBotModule:
 		RequiresCondition: enable-rogue-ai
 		OrderName: ShieldsUp
