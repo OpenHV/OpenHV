@@ -311,6 +311,7 @@ COPTER2:
 		Types: Scout
 		MaxWeight: 8
 		AfterUnloadDelay: 40
+		LoadedCondition: loaded
 	Carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
@@ -326,6 +327,11 @@ COPTER2:
 	-GrantRandomCondition@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
+	IssueOrderToBot@AI:
+		RequiresCondition: loaded
+		OrderName: Unload
+		OrderChance: 100
+		OrderInterval: 110
 
 COPTER2.Husk:
 	Inherits: ^PlaneHusk
@@ -446,6 +452,7 @@ DROPSHIP:
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		UnloadVoice: Unload
+		LoadedCondition: loaded
 	Carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
@@ -459,6 +466,11 @@ DROPSHIP:
 	SpawnActorOnDeath:
 		Actor: DROPSHIP.Husk
 		RequiresCondition: airborne
+	IssueOrderToBot@AI:
+		RequiresCondition: loaded
+		OrderName: Unload
+		OrderChance: 100
+		OrderInterval: 110
 	-GrantRandomCondition@SpawnPilot:
 	-Explodes@SpawnPilot:
 	WithAircraftLandingEffect:

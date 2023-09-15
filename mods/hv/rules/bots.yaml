@@ -75,13 +75,13 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, hackerpod, waterminelayer, waterminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, tank16, technician, hackerpod, waterminelayer, waterminelayer2, bomberpod, dropship, copter2, aatank, aatank2
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
 		AirUnitsTypes: plane1, plane2, copter, banshee
 		ConstructionYardTypes: base, base2
 		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
-		IdleBaseUnitsMaximum: 30
+		IdleBaseUnitsMaximum: 60
 		RequiresCondition: enable-rogue-ai
 		UnitQueues: Pod, Utility, Tank, Aircraft, Ship
 		UnitsToBuild:
@@ -113,6 +113,8 @@ Player:
 			plane2: 5
 			plane1: 5
 			copter: 5
+			copter2: 1
+			dropship: 1
 			banshee: 5
 			balloon: 1
 			saucer: 1
@@ -139,6 +141,10 @@ Player:
 			technician: 1
 			bomberpod: 3
 			transprt: 1
+			copter2: 1
+			dropship: 1
+			aatank: 3
+			aatank2: 3
 		UnitDelays:
 			builder: 15000
 	PriorityCaptureManagerBotModule:
@@ -178,7 +184,7 @@ Player:
 		ScoutActorTypes: balloon, saucer
 		MoveRadius: 20
 		RequiresCondition: enable-rogue-ai
-	SendUnitToAttackBotModule:
+	SendUnitToAttackBotModule@AttackBuilding:
 		RequiresCondition: enable-rogue-ai
 		ActorTypesAndAttackOptions: 
 			bomberpod: 
@@ -186,6 +192,16 @@ Player:
 				MoveToOrderName: AssaultMove
 				MoveBackOrderName: AssaultMove
 				TryGetHealed: false
+			copter2:
+				AttackDesireOfEach: 30
+				MoveToOrderName: Move
+				AttackOrderName: Unload
+				MoveBackOrderName: AssaultMove
+			dropship:
+				AttackDesireOfEach: 30
+				MoveToOrderName: Move
+				AttackOrderName: Unload
+				MoveBackOrderName: AssaultMove
 		ValidTargets: Structure
 		InvalidTargets: Air, Water
 		TargetDistances: Random
