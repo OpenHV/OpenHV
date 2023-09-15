@@ -255,6 +255,12 @@ HACKERPOD:
 		Interval: 50
 		Amount: 5
 		RequiresCondition: deployed
+	IssueOrderToBot:
+		OrderTrigger: BecomingIdle
+		OrderName: GrantConditionOnDeploy
+		OrderChance: 100
+		OrderInterval: 40
+		RequiresCondition: undeployed
 	Voiced:
 		VoiceSet: HackerPodVoice
 

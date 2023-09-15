@@ -260,6 +260,12 @@ RADARTANK:
 	DetectCloaked@Deployed:
 		Range: 14c0
 		RequiresCondition: !ecm-disabled && !undeployed
+	IssueOrderToBot:
+		OrderTrigger: BecomingIdle
+		OrderName: GrantConditionOnDeploy
+		OrderChance: 100
+		OrderInterval: 40
+		RequiresCondition: undeployed
 
 TANK16:
 	Inherits: ^TrackedVehicle

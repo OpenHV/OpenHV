@@ -166,9 +166,8 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: transprt
 		PassengerTypes: mortarpod, flamepod, scout1, scout2
-	DeployActorBotModule:
+	ExternalBotOrdersManager:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank, hackerpod
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
