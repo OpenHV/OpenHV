@@ -70,6 +70,13 @@ Player:
 			uplink: 1
 			field: 1
 			silo: 1
+		BuildingDelays:
+			radar: 4000
+			radar2: 4000
+			howitzer: 8000
+			field: 8000
+			silo: 9000
+			uplink: 9000
 	BuildingRepairBotModule:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
