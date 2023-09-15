@@ -37,6 +37,7 @@ Player:
 			radar2: 1
 			starport: 4
 			starport2: 4
+			oresmelt: 4
 			tradplat: 1
 			techcenter: 1
 			harbor: 1
@@ -60,6 +61,7 @@ Player:
 			starport: 1
 			starport2: 1
 			techcenter: 1
+			oresmelt: 2
 			bunker: 7
 			bunker2: 7
 			turret: 5
