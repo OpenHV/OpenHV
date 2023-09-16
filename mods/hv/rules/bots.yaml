@@ -61,7 +61,7 @@ Player:
 			starport: 1
 			starport2: 1
 			techcenter: 1
-			oresmelt: 2
+			oresmelt: 9
 			bunker: 7
 			bunker2: 7
 			turret: 5
@@ -108,7 +108,7 @@ Player:
 			flamepod: 1
 			elitepod: 1
 			sniperpod: 1
-			hackerpod: 1
+			hackerpod: 9
 			technician: 1
 			bomberpod: 1
 			missiletank: 5
@@ -140,6 +140,7 @@ Player:
 			waterminelayer2: 1
 			technician: 1
 			bomberpod: 3
+			hackerpod: 9
 			transprt: 1
 		UnitDelays:
 			builder: 15000
