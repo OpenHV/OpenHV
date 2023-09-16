@@ -147,6 +147,12 @@ PROP5:
 		Footprint: == xx
 		Dimensions: 2,2
 		LocalCenterOffset: 0,350,0
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -200,0,0
+		Type: Rectangle
+			TopLeft: -1024, -256
+			BottomRight: 1024, 756
 	Tooltip:
 		Name: Civilian structure
 	Health:
@@ -198,13 +204,19 @@ TANKTRAP:
 
 PROP9:
 	Inherits: ^Prop
-	Inherits@Shape: ^1x2Shape
+	Inherits@Shape: ^1x1Shape
 	Interactable:
 	Tooltip:
 		Name: Civilian lightning tower
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: -512,0,0
+		Type: Rectangle
+			TopLeft: -512, 0
+			BottomRight: 512, 1024
 
 PROP10:
 	Inherits: PROP9

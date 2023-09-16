@@ -1056,6 +1056,10 @@ ORESMELT:
 		Queue: Building
 		Description: Ore Smelter.\nProcesses resources for extra credits.
 		Prerequisites: ~structures.sc, techcenter
+	HitShape:
+		Type: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 1024
 	Health:
 		HP: 40000
 	Power:
@@ -1534,8 +1538,10 @@ UPLINK:
 		Footprint: == == xx
 		Dimensions: 2,3
 	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -1024,0,0
 		Type: Rectangle
-			TopLeft: -1048, -512
+			TopLeft: -1048, 512
 			BottomRight: 1048, 1524
 	Health:
 		HP: 100000
@@ -2218,7 +2224,7 @@ DWALLTR:
 RECONSTRUCTOR:
 	Inherits: ^Building
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
-	Inherits@Shape: ^2x2Shape
+	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
@@ -2231,6 +2237,12 @@ RECONSTRUCTOR:
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -512,0,0
+		Type: Rectangle
+			TopLeft: -1024, 0
+			BottomRight: 1024, 1024
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
@@ -2298,9 +2310,6 @@ EXTRACTOR:
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
-		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
-		AllowPlacementOnResources: true
 		LocalCenterOffset: 0,1024,0
 	Power:
 		Amount: -40
@@ -2371,9 +2380,12 @@ COMLINK:
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
-		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
-		AllowPlacementOnResources: true
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -512,0,0
+		Type: Rectangle
+			TopLeft: -1024, 0
+			BottomRight: 1024, 1024
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
@@ -2423,7 +2435,12 @@ WATCHTOWER:
 	Building:
 		Footprint: == xx
 		Dimensions: 2,2
-		RequiresBaseProvider: false
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -512,0,0
+		Type: Rectangle
+			TopLeft: -1024, 0
+			BottomRight: 1024, 1024
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -2476,7 +2493,6 @@ DROPZONE:
 	Building:
 		Footprint: x+x +++ x+x
 		Dimensions: 3,3
-		RequiresBaseProvider: False
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
@@ -2542,8 +2558,11 @@ FLAGPOST:
 		Footprint: = x
 		Dimensions: 1,2
 	HitShape:
-		Type: Circle
-			Radius: 512
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: -512,0,0
+		Type: Rectangle
+			TopLeft: -512, 0
+			BottomRight: 512, 1024
 	RevealsShroud:
 		Range: 8c0
 	-Capturable:
