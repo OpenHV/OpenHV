@@ -565,6 +565,10 @@
 		Footprint: == xx
 		Dimensions: 2,2
 		LocalCenterOffset: 0,512,0
+	HitShape:
+		Type: Rectangle
+			TopLeft: -756, -512
+			BottomRight: 756, 512
 	Targetable:
 		TargetTypes: Ground, Structure, Defense
 	Armor:
