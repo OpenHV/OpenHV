@@ -38,7 +38,7 @@ jobs:
       - name: Check Mod
         run: |
           sudo apt-get install lua5.1
-          make check-scripts
+          make check-scripts -j2
           make TREAT_WARNINGS_AS_ERRORS=true test
 
   linux-mono:

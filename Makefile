@@ -44,6 +44,8 @@ MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
 BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 
+CHECK_TARGETS = $(addprefix check-, $(BIT_FILES))
+
 MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
 
@@ -266,10 +268,10 @@ ifneq ("$(PREVIEW_FILES)","")
 endif
 
 check-bits: engine
-ifneq ("$(BIT_FILES)","")
 	@echo "Checking PNG sheet metadata..."
-	@for SPRITE in $(BIT_FILES); do \
-		echo $${SPRITE}; \
-		./utility.sh --check-sprite-metadata ../$${SPRITE} || exit 1 ;\
-	done
-endif
+	@$(MAKE) $(CHECK_TARGETS)
+
+# Static pattern rule
+$(CHECK_TARGETS): check-%: %
+	@echo "$<"
+	@./utility.sh --check-sprite-metadata ../$< || exit 1
