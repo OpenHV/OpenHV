@@ -293,3 +293,25 @@ RAIL:
 		Type: rail
 	Replaceable:
 		Types: rail
+
+CRATE1:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	Tooltip:
+		Name: Crates
+	Health:
+		HP: 1000
+	RenderSprites:
+		Palette: terrain
+	-WithIdleOverlay@Shadow:
+
+CRATE2:
+	Inherits: CRATE1
+
+CRATE3:
+	Inherits: CRATE1

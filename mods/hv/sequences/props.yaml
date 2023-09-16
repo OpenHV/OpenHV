@@ -312,3 +312,20 @@ electricpad:
 		Length: 8
 		Tick: 60
 		ZOffset: -1024
+
+crate1:
+	idle:
+		Filename: bits/crates.png
+		ZOffset: -512
+
+crate2:
+	idle:
+		Filename: bits/crates.png
+		Start: 1
+		ZOffset: -512
+
+crate3:
+	idle:
+		Filename: bits/crates.png
+		Start: 2
+		ZOffset: -512
