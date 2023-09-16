@@ -288,6 +288,30 @@ prop13:
 	icon:
 		Filename: bits/icon.png
 
+prop14:
+	Defaults:
+		Offset: 0,0
+	idle:
+		Filename: bits/prop14.png
+		Length: 3
+		Reverses: True
+		Tick: 120
+	damaged-idle:
+		Filename: bits/prop14.png
+		Start: 3
+
+prop15:
+	Defaults:
+		Offset: 0,0
+	idle:
+		Filename: bits/prop15.png
+		Length: 3
+		Reverses: True
+		Tick: 120
+	damaged-idle:
+		Filename: bits/prop15.png
+		Start: 3
+
 tanktrap:
 	idle:
 		Filename: bits/tanktrap.png

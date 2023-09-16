@@ -250,6 +250,26 @@ PROP13:
 		Condition: disable
 		ValidDamageStates: Heavy, Critical
 
+PROP14:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Civilian structure
+	Health:
+		HP: 60000
+	-WithIdleOverlay@Shadow:
+	WithShadow:
+		Offset: 64,64,0
+		ZOffset: -1768
+
+PROP15:
+	Inherits: PROP14
+
 ELECTRICPAD:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
