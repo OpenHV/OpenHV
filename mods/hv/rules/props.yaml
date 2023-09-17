@@ -270,6 +270,22 @@ PROP14:
 PROP15:
 	Inherits: PROP14
 
+PROP16:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Civilian structure
+	Health:
+		HP: 60000
+
+PROP17:
+	Inherits: PROP16
+
 ELECTRICPAD:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape

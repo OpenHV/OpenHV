@@ -312,6 +312,38 @@ prop15:
 		Filename: bits/prop15.png
 		Start: 3
 
+prop16:
+	Defaults:
+		Offset: 0,0
+	idle:
+		Filename: bits/prop16.png
+		Length: 4
+		Reverses: True
+		Tick: 100
+	damaged-idle:
+		Filename: bits/prop16.png
+		Start: 4
+	shadow-overlay:
+		Filename: bits/prop16-17-shadow.png
+		Offset: 4, 4
+		ZOffset: -1768
+
+prop17:
+	Defaults:
+		Offset: 0,0
+	idle:
+		Filename: bits/prop17.png
+		Length: 4
+		Reverses: True
+		Tick: 100
+	damaged-idle:
+		Filename: bits/prop17.png
+		Start: 4
+	shadow-overlay:
+		Filename: bits/prop16-17-shadow.png
+		Offset: 4, 4
+		ZOffset: -1768
+
 tanktrap:
 	idle:
 		Filename: bits/tanktrap.png
