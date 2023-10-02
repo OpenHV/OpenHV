@@ -887,7 +887,7 @@
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical, Heavy
 	LeavesTrails:
-		RequiresCondition: cloak-force-disabled
+		RequiresCondition: !submerged
 	SpeedMultiplier@Surfaced:
 		Modifier: 75
 		RequiresCondition: !underwater
