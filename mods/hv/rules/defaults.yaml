@@ -753,7 +753,7 @@
 ^ForceFieldCompatible:
 	WithColoredOverlay@ForceField:
 		RequiresCondition: shield
-		Color: 0000FFB4
+		Color: 00008080
 	DamageMultiplier@ForceField:
 		RequiresCondition: shield
 		Modifier: 0
