@@ -257,6 +257,7 @@ SUBMARINE:
 		RequiresCondition: underwater
 	AttackFrontal:
 		FacingTolerance: 25
+		TargetFrozenActors: true
 	WithMissileSpawnerParentPipsDecoration:
 	WithAttackAnimation:
 		Sequence: shoot
