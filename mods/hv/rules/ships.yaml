@@ -439,7 +439,7 @@ WATERMINELAYER:
 	Rearmable:
 		RearmActors: harbor, harbor2
 	Targetable:
-		TargetTypes: Ground, Vehicle, Mine
+		TargetTypes: Ground, Water, Ship, Mine
 	AmmoPool:
 		Ammo: 5
 		AmmoCondition: ammo
