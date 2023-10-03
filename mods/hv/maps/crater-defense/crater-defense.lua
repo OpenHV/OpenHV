@@ -24,12 +24,8 @@ LastWave = false
 
 ExitTriggerArea = { ExitWaypoint1.Location, ExitWaypoint2.Location }
 
-function CenterCamera()
-	Camera.Position = WPos.New(Map.BottomRight.X / 2, Map.BottomRight.Y / 2, 0)
-end
-
 WorldLoaded = function()
-	CenterCamera()
+	Camera.Position = CenterCamera.CenterPosition
 
 	HumanPlayer = Player.GetPlayer("Multi0")
 	EnemyPlayer = Player.GetPlayer("Creeps")

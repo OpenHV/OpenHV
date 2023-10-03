@@ -52,11 +52,14 @@ Actors:
 	ExitWaypoint2: exit
 		Owner: Neutral
 		Location: 1,26
+	CenterCamera: camera
+		Owner: Neutral
+		Location: 16,16
 
 Rules: rules.yaml
+
+Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl
 
 Sequences: sequences.yaml
 
 Weapons: weapons.yaml
-
-Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl
