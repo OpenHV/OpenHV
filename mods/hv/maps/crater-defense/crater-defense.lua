@@ -52,14 +52,10 @@ end
 CachedWaves = -1
 CachedBreaches = -1
 function UpdateGameStateText()
-	if CachedWaves == Waves then
+	if CachedWaves == Waves and CachedBreaches == Breaches then
 		return
 	end
 	CachedWaves = Waves
-
-	if CachedBreaches == Breaches then
-		return
-	end
 	CachedBreaches = Breaches
 
 	local currentWave = UserInterface.Translate("current-wave", { ["wave"] = Wave, ["waves"] = #Waves })
