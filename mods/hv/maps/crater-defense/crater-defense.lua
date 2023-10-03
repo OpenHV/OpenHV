@@ -43,6 +43,9 @@ WorldLoaded = function()
 		if Breaches < 1 then
 			HumanPlayer.MarkFailedObjective(TowerDefenseObjective)
 		end
+		if Breaches < 0 then
+			Breaches = 0
+		end
 		UpdateGameStateText()
 	end)
 
