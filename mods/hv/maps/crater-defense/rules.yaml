@@ -19,7 +19,7 @@ Player:
 
 World:
 	LuaScript:
-		Scripts: common|scripts/utils.lua, crater-defense.lua
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, crater-defense.lua
 	MissionData:
 		Briefing: Commander! The harbors around the Crater Lake are under attack. Use the old railway network to connect your turrets to the energy grid. We are holding the grounds at the exits of the trench, but don't allow too many breaches so our defenses are not overwhelmed.
 	-CubeSpawner:
@@ -111,6 +111,7 @@ BUNKER:
 		Amount: 0
 	Cargo:
 		UnloadTerrainTypes: None
+		EjectOnSell: False
 	ProvidesPrerequisite:
 		Prerequisite: bunker
 
@@ -122,6 +123,7 @@ BUNKER2:
 		Amount: 0
 	Cargo:
 		UnloadTerrainTypes: None
+		EjectOnSell: False
 	ProvidesPrerequisite:
 		Prerequisite: bunker
 
