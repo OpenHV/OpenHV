@@ -1,4 +1,4 @@
-Wave = 1
+CurrentWave = 1
 Breaches = 10
 
 Machine = { "scout1", "scout1", "scout1" }
@@ -30,6 +30,7 @@ WorldLoaded = function()
 	HumanPlayer = Player.GetPlayer("Multi0")
 	EnemyPlayer = Player.GetPlayer("Creeps")
 
+	InitObjectives(HumanPlayer)
 	TowerDefenseObjective = AddPrimaryObjective(HumanPlayer, "not-too-many-enemies-through-trench")
 	UpdateGameStateText()
 
@@ -48,30 +49,29 @@ WorldLoaded = function()
 	SendNextWave()
 end
 
-CachedWaves = -1
+CachedWave = -1
 CachedBreaches = -1
 function UpdateGameStateText()
-	if CachedWaves == Waves and CachedBreaches == Breaches then
+	if CachedWave == CurrentWave and CachedBreaches == Breaches then
 		return
 	end
-	CachedWaves = Waves
+	CachedWave = CurrentWave
 	CachedBreaches = Breaches
 
-	local currentWave = UserInterface.Translate("current-wave", { ["wave"] = Wave, ["waves"] = #Waves })
+	local waveInfo = UserInterface.Translate("current-wave", { ["wave"] = CurrentWave, ["waves"] = #Waves })
 	local tolerableBreaches = UserInterface.Translate("tolerable-breaches", { [ "breaches"] = Breaches })
-	UserInterface.SetMissionText("\n\n\n" .. currentWave .. "\n\n" .. tolerableBreaches)
+	UserInterface.SetMissionText("\n\n\n" .. waveInfo .. "\n\n" .. tolerableBreaches)
 end
 
-
 SendNextWave = function()
-	local wave = Waves[Wave]
+	local wave = Waves[CurrentWave]
 	Trigger.AfterDelay(wave.delay, function()
 		Utils.Do(wave.units, function(units)
 			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, { EntryWaypoint1.Location, ExitWaypoint1.Location })
 		end)
 		UpdateGameStateText()
-		if Wave < #Waves then
-			Wave = Wave + 1
+		if CurrentWave < #Waves then
+			CurrentWave = CurrentWave + 1
 			SendNextWave()
 		else
 			LastWave = true
