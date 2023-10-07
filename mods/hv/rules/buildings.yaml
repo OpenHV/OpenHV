@@ -2121,6 +2121,14 @@ WALLL:
 	WithSpriteBody:
 		Sequence: left
 
+WALLL2:
+	Inherits: WALLL
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: left
+		Palette: shadow
+		IsDecoration: true
+
 WALLBL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
@@ -2128,6 +2136,11 @@ WALLBL:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: bottomleft
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: bottomleft
+		Palette: shadow
+		IsDecoration: true
 
 WALLB:
 	Inherits: ^Wall
@@ -2136,6 +2149,21 @@ WALLB:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: bottom
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: bottom
+		Palette: shadow
+		IsDecoration: true
+
+WALLB2:
+	Inherits: WALLB
+	WithIdleOverlay@Shadow:
+		Sequence: bottom2
+
+WALLB3:
+	Inherits: WALLB
+	WithIdleOverlay@Shadow:
+		Sequence: bottom3
 
 WALLBR:
 	Inherits: ^Wall
@@ -2144,6 +2172,26 @@ WALLBR:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: bottomright
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: bottomright
+		Palette: shadow
+		IsDecoration: true
+
+WALLBR2:
+	Inherits: WALLBR
+	WithIdleOverlay@Shadow:
+		Sequence: bottomright2
+
+WALLBR3:
+	Inherits: WALLBR
+	WithIdleOverlay@Shadow:
+		Sequence: bottomright3
+
+WALLBR4:
+	Inherits: WALLBR
+	WithIdleOverlay@Shadow:
+		Sequence: bottomright4
 
 WALLR:
 	Inherits: ^Wall
@@ -2155,6 +2203,21 @@ WALLR:
 		Bounds: 1228, 1228
 	WithSpriteBody:
 		Sequence: right
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: right
+		Palette: shadow
+		IsDecoration: true
+
+WALLR2:
+	Inherits: WALLR
+	WithIdleOverlay@Shadow:
+		Sequence: right2
+
+WALLR3:
+	Inherits: WALLR
+	WithIdleOverlay@Shadow:
+		Sequence: right3
 
 WALLTR:
 	Inherits: ^Wall
@@ -2167,6 +2230,69 @@ WALLTR:
 	WithSpriteBody:
 		Sequence: topright
 
+WALLC:
+	Inherits: ^Wall
+	Inherits@Shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 1024, 1024
+	WithSpriteBody:
+		Sequence: center
+
+WALLCORNERBL:
+	Inherits: ^Wall
+	Inherits@Shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 1024, 1024
+	WithSpriteBody:
+		Sequence: cornerbl
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: cornerbl
+		Palette: shadow
+		IsDecoration: true
+
+WALLCORNERBL2:
+	Inherits: WALLCORNERBL
+	WithIdleOverlay@Shadow:
+		Sequence: cornerbl2
+
+WALLCORNERBR:
+	Inherits: ^Wall
+	Inherits@Shape: ^1x1Shape
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Interactable:
+		Bounds: 1024, 1024
+	WithSpriteBody:
+		Sequence: cornerbr
+
+WALLCORNERTR:
+	Inherits: WALLCORNERBR
+	WithSpriteBody:
+		Sequence: cornertr
+
+WALLCORNERTL:
+	Inherits: WALLCORNERBR
+	WithSpriteBody:
+		Sequence: cornertl
+
+WALLREXTRA:
+	Inherits: WALLCORNERBR
+	WithSpriteBody:
+		Sequence: rightextra
+
+WALLLEXTRA:
+	Inherits: WALLCORNERBR
+	WithSpriteBody:
+		Sequence: leftextra
+
 DWALLL:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x2Shape
@@ -2174,6 +2300,11 @@ DWALLL:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-left
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: destroyed-left
+		Palette: shadow
+		IsDecoration: true
 
 DWALLR:
 	Inherits: ^Wall
@@ -2182,6 +2313,11 @@ DWALLR:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-right
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: destroyed-right
+		Palette: shadow
+		IsDecoration: true
 
 DWALLBL:
 	Inherits: ^Wall
@@ -2190,6 +2326,11 @@ DWALLBL:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-bottomleft
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: bottomleft
+		Palette: shadow
+		IsDecoration: true
 
 DWALLBR:
 	Inherits: ^Wall
@@ -2198,6 +2339,49 @@ DWALLBR:
 		Bounds: 1228, 2457
 	WithSpriteBody:
 		Sequence: destroyed-bottomright
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: bottomright
+		Palette: shadow
+		IsDecoration: true
+
+DWALLBR2:
+	Inherits: DWALLBR
+	WithIdleOverlay@Shadow:
+		Sequence: bottomright2
+
+DWALLBR3:
+	Inherits: DWALLBR
+	WithIdleOverlay@Shadow:
+		Sequence: bottomright3
+
+DWALLBR4:
+	Inherits: DWALLBR
+	WithIdleOverlay@Shadow:
+		Sequence: bottomright4
+
+DWALLB:
+	Inherits: ^Wall
+	Inherits@Shape: ^1x2Shape
+	Interactable:
+		Bounds: 1228, 2457
+	WithSpriteBody:
+		Sequence: destroyed-bottom
+	WithIdleOverlay@Shadow:
+		Image: wall-shadow
+		Sequence: bottom
+		Palette: shadow
+		IsDecoration: true
+
+DWALLB2:
+	Inherits: DWALLB
+	WithIdleOverlay@Shadow:
+		Sequence: bottom2
+
+DWALLB3:
+	Inherits: DWALLB
+	WithIdleOverlay@Shadow:
+		Sequence: bottom3
 
 DWALLTL:
 	Inherits: ^Wall
@@ -2206,20 +2390,35 @@ DWALLTL:
 		Dimensions: 1,1
 		Footprint: x
 	Interactable:
-		Bounds: 1228, 1228
+		Bounds: 1024, 1024
 	WithSpriteBody:
 		Sequence: destroyed-topleft
 
+DWALLTL2:
+	Inherits: DWALLTL
+	WithSpriteBody:
+		Sequence: destroyed-topleft2
+
+DWALLT:
+	Inherits: DWALLTL
+	WithSpriteBody:
+		Sequence: destroyed-top
+
 DWALLTR:
-	Inherits: ^Wall
-	Inherits@Shape: ^1x1Shape
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-	Interactable:
-		Bounds: 1228, 1228
+	Inherits: DWALLTL
 	WithSpriteBody:
 		Sequence: destroyed-topright
+
+DWALLTR2:
+	Inherits: DWALLTL
+	WithSpriteBody:
+		Sequence: destroyed-topright2
+
+DWALLTC:
+	Inherits: DWALLTL
+	WithSpriteBody:
+		Sequence: destroyed-center
+
 
 RECONSTRUCTOR:
 	Inherits: ^Building

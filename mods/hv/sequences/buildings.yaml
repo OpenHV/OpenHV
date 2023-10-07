@@ -1535,17 +1535,16 @@ mother:
 		Offset: 11, 20
 
 wall:
+	Defaults:
+		ZOffset: 1770
 	top:
 		Filename: bits/wall.png
-		Offset: 0, 10
 	topleft:
 		Filename: bits/wall.png
 		Start: 1
-		Offset: 0, 10
 	left:
 		Filename: bits/wall.png
 		Start: 2
-		Offset: 0, 10
 	bottomleft:
 		Filename: bits/wall.png
 		Start: 3
@@ -1558,15 +1557,34 @@ wall:
 	right:
 		Filename: wall.png
 		Start: 6
-		Offset: 0, 10
 	topright:
 		Filename: bits/wall.png
 		Start: 7
-		Offset: 0, 10
-	destroyed-left:
+	center:
+		Filename: bits/wall.png
+		Start: 14
+	cornerbl:
+		Filename: bits/wall.png
+		Start: 8
+	cornerbr:
+		Filename: bits/wall.png
+		Start: 9
+	cornertl:
+		Filename: bits/wall.png
+		Start: 10
+	cornertr:
+		Filename: bits/wall.png
+		Start: 11
+	rightextra:
+		Filename: bits/wall.png
+		Start: 12
+	leftextra:
+		Filename: bits/wall.png
+		Start: 13
+	destroyed-right:
 		Filename: bits/walldest1.png
 		Offset: 0, 10
-	destroyed-right:
+	destroyed-left:
 		Filename: bits/walldest1.png
 		Start: 1
 		Offset: 0, 10
@@ -1575,13 +1593,80 @@ wall:
 	destroyed-bottomright:
 		Filename: bits/walldest2.png
 		Start: 1
+	destroyed-bottom:
+		Filename: bits/walldest2.png
+		Start: 2
 	destroyed-topleft:
 		Filename: bits/walldest3.png
+	destroyed-top:
+		Filename: bits/walldest3.png
+		Start: 2
 	destroyed-topright:
 		Filename: bits/walldest3.png
 		Start: 1
+	destroyed-center:
+		Filename: bits/walldest3.png
+		Start: 3
+	destroyed-topleft2:
+		Filename: bits/walldest3.png
+		Start: 4
+	destroyed-topright2:
+		Filename: bits/walldest3.png
+		Start: 5
 	icon:
 		Filename: bits/icon.png
+
+wall-shadow:
+	Defaults:
+		ZOffset: 1768
+	bottomleft:
+		Filename: bits/wall-bottomleft-shadow.png
+		Offset: 2,30
+	bottom:
+		Filename: bits/wall-bottom-shadow.png
+		Offset: 0,32
+	bottom2:
+		Filename: bits/wall-bottom-shadow2.png
+		Offset: 0,32
+	bottom3:
+		Filename: bits/wall-bottom-shadow3.png
+		Offset: 0,32
+	bottomright:
+		Filename: bits/wall-bottomright-shadow.png
+		Offset: 5,12
+	bottomright2:
+		Filename: bits/wall-bottomright-shadow2.png
+		Offset: 5,12
+	bottomright3:
+		Filename: bits/wall-bottomright-shadow3.png
+		Offset: 5,12
+	bottomright4:
+		Filename: bits/wall-bottomright-shadow4.png
+		Offset: 5,12
+	left:
+		Filename: bits/wall-left-shadow.png
+		Offset: -9,2
+	right:
+		Filename: bits/wall-right-shadow.png
+		Offset: 14,0
+	right2:
+		Filename: bits/wall-right-shadow2.png
+		Offset: 14,0
+	right3:
+		Filename: bits/wall-right-shadow3.png
+		Offset: 9,0
+	cornerbl:
+		Filename: bits/wall-cornerbl-shadow.png
+		Offset: 19,-5
+	cornerbl2:
+		Filename: bits/wall-cornerbl-shadow2.png
+		Offset: 10,-6
+	destroyed-left:
+		Filename: bits/wall-destroyed-left-shadow.png
+		Offset: 0,52
+	destroyed-right:
+		Filename: bits/wall-destroyed-right-shadow.png
+		Offset: 1,42
 
 barrier:
 	Defaults:
