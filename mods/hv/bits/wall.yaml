@@ -1,5 +1,17 @@
-FrameSize: 20,40
-FrameAmount: 14
-Offset: 0,0
-Author: Daniel Cook
+Frame[0]: 0,0,20,20;0,0
+Frame[1]: 20,0,20,20;0,0
+Frame[2]: 40,0,20,20;0,0
+Frame[3]: 60,0,20,40;0,0
+Frame[4]: 80,0,20,40;0,0
+Frame[5]: 100,0,20,40;0,0
+Frame[6]: 120,0,20,20;0,0
+Frame[7]: 140,0,20,20;0,0
+Frame[8]: 160,0,20,20;0,0
+Frame[9]: 180,0,20,20;0,0
+Frame[10]: 200,0,20,20;0,0
+Frame[11]: 220,0,20,20;0,0
+Frame[12]: 240,0,20,20;0,0
+Frame[13]: 260,0,20,20;0,0
+Frame[14]: 280,0,20,20;0,0
+Author: Daniel Cook, Pawel Dzierzanowski
 License: CC-BY-3.0-US
