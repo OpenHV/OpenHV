@@ -103,3 +103,45 @@ cloud:
 fountain:
 	idle:
 		Filename: bits/fountain.png
+
+twinkle:
+	Defaults:
+		ZOffset: 512
+		Tick: 60
+	twinkle1:
+		Filename: bits/twinkle.png
+		Length: 4
+	twinkle2:
+		Filename: bits/twinkle.png
+		Start: 4
+		Length: 4
+		Offset: -2,-2
+	twinkle3:
+		Filename: bits/twinkle.png
+		Start: 8
+		Length: 4
+		Offset: 2,1
+	twinkle4:
+		Filename: bits/twinkle.png
+		Start: 12
+		Length: 4
+		Offset: 2,2
+	twinkle5:
+		Filename: bits/twinkle.png
+		Length: 4
+		Offset: 2,3
+	twinkle6:
+		Filename: bits/twinkle.png
+		Start: 4
+		Length: 4
+		Offset: 3,-3
+	twinkle7:
+		Filename: bits/twinkle.png
+		Start: 8
+		Length: 4
+		Offset: 0,-4
+	twinkle8:
+		Filename: bits/twinkle.png
+		Start: 12
+		Length: 4
+		Offset: 0,4

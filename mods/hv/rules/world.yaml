@@ -295,6 +295,13 @@ World:
 				Sequences: iron
 				Palette: effect
 				Name: Mineable Resource Deposit
+	WithResourceAnimation:
+		Types: gold, iron
+		Ratio: 100
+		Interval: 20, 40
+		Image: twinkle
+		Sequences: twinkle1, twinkle2, twinkle3, twinkle4, twinkle5, twinkle6, twinkle7, twinkle8
+		Palette: effect
 	ForestLayer:
 		FlameActor: treeflame
 		TransformedTerrain: Crater, Stone
