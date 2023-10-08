@@ -311,10 +311,14 @@ COPTER2:
 		Types: Scout
 		MaxWeight: 8
 		AfterUnloadDelay: 40
+		RequiresCondition: !carrying
+		LoadedCondition: loaded
 	Carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
+		CarryCondition: carrying
+		RequiresCondition: !loaded
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -446,12 +450,16 @@ DROPSHIP:
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		UnloadVoice: Unload
+		RequiresCondition: !carrying
+		LoadedCondition: loaded
 	Carryall:
 		BeforeLoadDelay: 10
 		BeforeUnloadDelay: 10
 		LocalOffset: 0,0,-200
 		Voice: Unload
 		PickUpCursor: enter
+		CarryCondition: carrying
+		RequiresCondition: !loaded
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
