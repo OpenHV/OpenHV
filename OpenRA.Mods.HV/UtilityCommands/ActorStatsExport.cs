@@ -50,7 +50,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 
 			foreach (var actorInfo in rules.Actors.Values)
 			{
-				if (actorInfo.Name.StartsWith("^"))
+				if (actorInfo.Name.StartsWith("^", StringComparison.Ordinal))
 					continue;
 
 				var buildable = actorInfo.TraitInfoOrDefault<BuildableInfo>();

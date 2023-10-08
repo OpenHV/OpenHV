@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Globalization;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Commands;
 using OpenRA.Mods.Common.Graphics;
@@ -77,7 +78,7 @@ namespace OpenRA.Mods.HV.Traits
 
 				var info = wr.World.Map.GetTerrainInfo(cell);
 
-				yield return new TextAnnotationRenderable(font, center, 0, info.Color, density.ToString());
+				yield return new TextAnnotationRenderable(font, center, 0, info.Color, density.ToString(NumberFormatInfo.CurrentInfo));
 			}
 		}
 

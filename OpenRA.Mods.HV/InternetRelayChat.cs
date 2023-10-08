@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using Meebey.SmartIrc4net;
@@ -53,12 +54,12 @@ namespace OpenRA.Mods.HV
 			Nick = nick;
 			Message = message;
 
-			UID = Interlocked.Increment(ref nextUID).ToString();
+			UID = Interlocked.Increment(ref nextUID).ToString(NumberFormatInfo.CurrentInfo);
 		}
 
 		public override string ToString()
 		{
-			var time = Time.ToString(Format);
+			var time = Time.ToString(Format, NumberFormatInfo.CurrentInfo);
 			if (Type == ChatMessageType.Notification)
 				return $"{time} {Message}";
 
@@ -166,10 +167,13 @@ namespace OpenRA.Mods.HV
 
 		void AddNotification(string text)
 		{
-			if (text == "----" || text.StartsWith("**") || text.StartsWith("<") || text.StartsWith("Image"))
+			if (text == "----" || text.StartsWith("**", StringComparison.Ordinal) || text.StartsWith("<", StringComparison.Ordinal))
 				return;
 
-			if (text.StartsWith("#####"))
+			if (text.StartsWith("Image", StringComparison.Ordinal))
+				return;
+
+			if (text.StartsWith("#####", StringComparison.Ordinal))
 				text = text.Replace("#####", "").Trim();
 
 			var message = new ChatMessage(DateTime.Now, TimeStampFormat, ChatMessageType.Notification, null, text);

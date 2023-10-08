@@ -148,7 +148,7 @@ namespace OpenRA.Mods.HV.Traits
 			return randomConstructionYard?.Location ?? initialBaseCenter;
 		}
 
-		public CPos DefenseCenter => defenseCenter;
+		public CPos DefenseCenter { get; private set; }
 
 		readonly World world;
 		readonly Player player;
@@ -157,7 +157,6 @@ namespace OpenRA.Mods.HV.Traits
 		IResourceLayer resourceLayer;
 		IBotPositionsUpdated[] positionsUpdatedModules;
 		CPos initialBaseCenter;
-		CPos defenseCenter;
 
 		readonly List<CustomBaseBuilderQueueManager> builders = new();
 
@@ -191,7 +190,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void IBotPositionsUpdated.UpdatedDefenseCenter(CPos newLocation)
 		{
-			defenseCenter = newLocation;
+			DefenseCenter = newLocation;
 		}
 
 		bool IBotRequestPauseUnitProduction.PauseUnitProduction => !IsTraitDisabled && !HasAdequateRefineryCount;
@@ -273,7 +272,7 @@ namespace OpenRA.Mods.HV.Traits
 			return new List<MiniYamlNode>()
 			{
 				new MiniYamlNode("InitialBaseCenter", FieldSaver.FormatValue(initialBaseCenter)),
-				new MiniYamlNode("DefenseCenter", FieldSaver.FormatValue(defenseCenter))
+				new MiniYamlNode("DefenseCenter", FieldSaver.FormatValue(DefenseCenter))
 			};
 		}
 
@@ -288,7 +287,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			var defenseCenterNode = data.NodeWithKeyOrDefault("DefenseCenter");
 			if (defenseCenterNode != null)
-				defenseCenter = FieldLoader.GetValue<CPos>("DefenseCenter", defenseCenterNode.Value.Value);
+				DefenseCenter = FieldLoader.GetValue<CPos>("DefenseCenter", defenseCenterNode.Value.Value);
 		}
 	}
 }

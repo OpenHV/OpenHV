@@ -304,7 +304,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				if (reloadIcon != null)
 				{
 					var disabledFrame = 0;
-					var disabledImage = "disabled-" + disabledFrame.ToString();
+					var disabledImage = "disabled-" + disabledFrame.ToStringInvariant();
 					reloadIcon.GetImageName = () => searchStatus == SearchStatus.Fetching ? disabledImage : reloadIcon.ImageName;
 
 					var reloadTicker = reloadIcon.Get<LogicTickerWidget>("ANIMATION");
@@ -313,7 +313,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						reloadTicker.OnTick = () =>
 						{
 							disabledFrame = searchStatus == SearchStatus.Fetching ? (disabledFrame + 1) % 12 : 0;
-							disabledImage = "disabled-" + disabledFrame.ToString();
+							disabledImage = "disabled-" + disabledFrame.ToStringInvariant();
 						};
 					}
 				}
@@ -576,10 +576,11 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var players = server.Clients
 				.Where(c => !c.IsSpectator)
 				.GroupBy(p => p.Team)
-				.OrderBy(g => g.Key);
+				.OrderBy(g => g.Key)
+				.ToList();
 
 			var teams = new Dictionary<string, IEnumerable<GameClient>>();
-			var noTeams = players.Count() == 1;
+			var noTeams = players.Count == 1;
 			foreach (var p in players)
 			{
 				var label = noTeams ? TranslationProvider.GetString(Players) : p.Key > 0

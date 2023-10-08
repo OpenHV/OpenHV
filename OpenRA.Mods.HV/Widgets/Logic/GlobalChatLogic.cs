@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Primitives;
 using OpenRA.Widgets;
@@ -55,7 +56,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				if (inputBox.Text.Length == 0)
 					return true;
 
-				if (inputBox.Text.StartsWith("/nick "))
+				if (inputBox.Text.StartsWith("/nick ", StringComparison.Ordinal))
 				{
 					var nick = inputBox.Text.Replace("/nick ", string.Empty);
 					internetRelayChat.TrySetNickname(nick);

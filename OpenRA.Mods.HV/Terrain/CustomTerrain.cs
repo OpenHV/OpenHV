@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -59,7 +60,7 @@ namespace OpenRA.Mods.HV.Terrain
 		public CustomTerrainTemplateInfo(ITerrainInfo terrainInfo, MiniYaml my)
 			: base(terrainInfo, my)
 		{
-			AutoConnect = my.Nodes.Where(n => n.Key.StartsWith("AutoConnect"))
+			AutoConnect = my.Nodes.Where(n => n.Key.StartsWith("AutoConnect", StringComparison.Ordinal))
 				.Select(y => new AutoConnectInfo(y.Value))
 				.ToArray();
 		}

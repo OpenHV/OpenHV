@@ -72,7 +72,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			this.info = info;
 			var trait = self.Info.TraitInfoOrDefault<TeleportNetworkInfo>();
-			manager = self.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().Where(x => x.Type == trait.Type).First();
+			manager = self.Owner.PlayerActor.TraitsImplementing<TeleportNetworkManager>().First(x => x.Type == trait.Type);
 		}
 
 		public IEnumerable<IOrderTargeter> Orders
