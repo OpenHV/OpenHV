@@ -12,7 +12,7 @@ permissions: {}
 jobs:
   itch:
     name: Deploy to itch.io
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: github.repository == 'openhv/openhv'
     steps:
       - name: Download Packages

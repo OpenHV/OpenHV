@@ -14,7 +14,7 @@ jobs:
   wiki:
     name: Update Wiki
     if: github.repository == 'openhv/openhv'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Clone Repository
         uses: actions/checkout@v3
@@ -58,7 +58,7 @@ jobs:
   docs:
     name: Update openhv.readthedocs.io
     if: github.repository == 'openhv/openhv'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Clone Repository
         uses: actions/checkout@v3
