@@ -10,6 +10,6 @@ To launch the project from the development environment you must first compile th
 
 # Licensing ![GPL](https://img.shields.io/github/license/OpenHV/OpenHV)
 
-OpenHV just like the OpenRA engine and SDK scripts is made available under the [GPLv3](https://github.com/OpenHV/OpenHV/blob/master/COPYING) license.
+OpenHV just like the OpenRA engine and SDK scripts is made available under the [GPLv3](https://github.com/OpenHV/OpenHV/blob/main/COPYING) license.
 
 The mod data files (artwork, sound files, yaml, etc) are not part of the source code and are distributed under different terms. Various [Creative Commons](https://creativecommons.org/) licenses apply. Check the ReadMe files in the sub folders for details.

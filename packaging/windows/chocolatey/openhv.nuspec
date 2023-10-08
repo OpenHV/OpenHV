@@ -11,7 +11,7 @@
 
 ![OpenHV](https://openhv.github.io/images/chocolatey/screenshot.png)
     </description>
-    <packageSourceUrl>https://github.com/OpenHV/OpenHV/tree/master/packaging/windows/chocolatey</packageSourceUrl>
+    <packageSourceUrl>https://github.com/OpenHV/OpenHV/tree/main/packaging/windows/chocolatey</packageSourceUrl>
     <projectUrl>https://www.openhv.net</projectUrl>
     <projectSourceUrl>https://github.com/OpenHV/OpenHV</projectSourceUrl>
     <bugTrackerUrl>https://github.com/OpenHV/OpenHV/issues</bugTrackerUrl>
@@ -19,7 +19,7 @@
     <iconUrl>https://openhv.github.io/images/chocolatey/icon.png</iconUrl>
     <tags>game rts sci-fi</tags>
     <copyright>© 2023 OpenHV Developers</copyright>
-    <licenseUrl>https://github.com/OpenHV/OpenHV/blob/master/COPYING</licenseUrl>
+    <licenseUrl>https://github.com/OpenHV/OpenHV/blob/main/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://github.com/OpenHV/OpenHV/releases</releaseNotes>
     <dependencies>
