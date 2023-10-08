@@ -3,6 +3,7 @@
 ^BasePlayer:
 	AlwaysVisible:
 	Shroud:
+		ExploredMapCheckboxEnabled: True
 	PlayerResources:
 		ResourceValues:
 			gold: 200
