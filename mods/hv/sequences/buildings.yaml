@@ -1549,13 +1549,13 @@ wall:
 		Filename: bits/wall.png
 		Start: 3
 	bottom:
-		Filename: wall.png
+		Filename: bits/wall.png
 		Start: 4
 	bottomright:
 		Filename: bits/wall.png
 		Start: 5
 	right:
-		Filename: wall.png
+		Filename: bits/wall.png
 		Start: 6
 	topright:
 		Filename: bits/wall.png
@@ -1571,16 +1571,16 @@ wall:
 		Start: 9
 	cornertl:
 		Filename: bits/wall.png
-		Start: 10
+		Start: 12
 	cornertr:
 		Filename: bits/wall.png
-		Start: 11
+		Start: 13
 	rightextra:
 		Filename: bits/wall.png
-		Start: 12
+		Start: 10
 	leftextra:
 		Filename: bits/wall.png
-		Start: 13
+		Start: 11
 	destroyed-right:
 		Filename: bits/walldest1.png
 		Offset: 0, 10
