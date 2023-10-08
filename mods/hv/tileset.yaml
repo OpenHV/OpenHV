@@ -7838,17 +7838,17 @@ Templates:
 		Images: bits/terrain/stone.png
 		Frames: 0
 		Size: 1,1
-		Categories: Stone
+		Categories: Stone, Cliff
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1048:
 		Id: 1048
 		Images: bits/terrain/stone.png
 		Frames: 1
 		Size: 1,1
-		Categories: Stone
+		Categories: Stone, Cliff
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1049:
 		Id: 1049
 		Images: bits/terrain/stone.png
@@ -7865,9 +7865,9 @@ Templates:
 		Images: bits/terrain/stone.png
 		Frames: 6
 		Size: 1,1
-		Categories: Stone
+		Categories: Stone, Cliff
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1051:
 		Id: 1051
 		Images: bits/terrain/stone.png
@@ -7883,7 +7883,7 @@ Templates:
 		Size: 1,3
 		Categories: Stone, Cliff
 		Tiles:
-			0: Cliff
+			0: Stone
 			1: Cliff
 			2: Cliff
 	Template@1053:
@@ -7891,17 +7891,17 @@ Templates:
 		Images: bits/terrain/stone.png
 		Frames: 11
 		Size: 1,1
-		Categories: Stone
+		Categories: Stone, Cliff
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1054:
 		Id: 1054
 		Images: bits/terrain/stone.png
 		Frames: 12
 		Size: 1,1
-		Categories: Stone
+		Categories: Stone, Cliff
 		Tiles:
-			0: Stone
+			0: Cliff
 	Template@1055:
 		Id: 1055
 		Images: bits/terrain/stone.png
