@@ -38,11 +38,11 @@ EditorWorld:
 			gold:
 				Sequences: gold
 				Palette: effect
-				Name: Mineable Resource Deposit
+				Name: Precious Metal Deposit
 			iron:
 				Sequences: iron
 				Palette: effect
-				Name: Mineable Resource Deposit
+				Name: Base Metal Deposit
 	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
