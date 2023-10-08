@@ -104,7 +104,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (!cube.IsAtGroundLevel())
 					continue;
 
-				var cubeCollector = idleUnits.ClosestTo(cube);
+				var cubeCollector = idleUnits.ClosestToIgnoringPath(cube);
 				if (cubeCollector == null)
 					continue;
 

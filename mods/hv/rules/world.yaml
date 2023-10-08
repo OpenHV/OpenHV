@@ -432,8 +432,8 @@ World:
 	DebugPauseState:
 	RadarPings:
 	StartGameNotification:
-		LoadedTextNotification: Game loaded.
-		SavedTextNotification: Game saved.
+		LoadedTextNotification: notification-game-loaded
+		SavedTextNotification: notification-game-saved
 	ObjectivesPanel:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:

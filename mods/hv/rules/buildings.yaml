@@ -349,13 +349,13 @@ RADAR2:
 		OrderName: EjectPods
 		SupportPowerPaletteOrder: 30
 		BeginChargeSpeechNotification: DroppodCharging
-		BeginChargeTextNotification: Drop Pod charging.
+		BeginChargeTextNotification: notification-drop-pod-charging
 		EndChargeSpeechNotification: DroppodReady
-		EndChargeTextNotification: Drop Pod ready.
+		EndChargeTextNotification: notification-drop-pod-ready
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
+		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: DroppodIncoming
-		IncomingTextNotification: Drop Pod incoming.
+		IncomingTextNotification: notifications-drop-pod-incoming
 	-Encyclopedia:
 
 TRADPLAT:
@@ -398,7 +398,7 @@ TRADPLAT:
 		Produces: Trade
 		ActorType: cargoship
 		ReadyAudio: ReinforcementsHaveArrived
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcementa-arrived
 		PauseOnCondition: disabled
 		BaselineSpawn: True
 	Exit@North:
@@ -434,9 +434,9 @@ TRADPLAT:
 		Interval: 7
 		PlayerExperience: 15
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Repairing.
+		StartRepairingTextNotification: notifications-repairing
 		FinishRepairingNotification: UnitRepaired
-		FinishRepairingTextNotification: Unit repaired.
+		FinishRepairingTextNotification: notification-unit-repaired
 		RequiresCondition: !disabled
 	WithResupplyAnimation:
 		RequiresCondition: !burning
@@ -548,9 +548,9 @@ MODULE:
 		Interval: 7
 		PlayerExperience: 15
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Repairing.
+		StartRepairingTextNotification: notifications-repairing
 		FinishRepairingNotification: UnitRepaired
-		FinishRepairingTextNotification: Unit repaired.
+		FinishRepairingTextNotification: notification-unit-repaired
 
 MODULE2:
 	Inherits: MODULE
@@ -1322,13 +1322,13 @@ HOWITZER:
 		Name: Artillery Strike
 		Description: Fires a long range barrage across the map.
 		DetectedSpeechNotification: HowitzerDetected
-		DetectedTextNotification: Howitzer detected.
+		DetectedTextNotification: notification-howitzer-detected
 		BeginChargeSpeechNotification: HowitzerCharging
-		BeginChargeTextNotification: Howitzer charging.
+		BeginChargeTextNotification: notification-howitzer-charging
 		EndChargeSpeechNotification: HowitzerReady
-		EndChargeTextNotification: Howitzer ready.
+		EndChargeTextNotification: notification-howitzer-ready
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
+		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: HowitzerIncoming
 		CircleBorderWidth: 3
 		SupportPowerPaletteOrder: 20
@@ -1393,15 +1393,15 @@ FIELD:
 		Cursor: force-field
 		BlockedCursor: force-field-blocked
 		DetectedSpeechNotification: ForceFieldDetected
-		DetectedTextNotification: Force Field detected.
+		DetectedTextNotification: notification-force-field-detected
 		BeginChargeSpeechNotification: ForceFieldCharging
-		BeginChargeTextNotification: Force Field charging.
+		BeginChargeTextNotification: notification-force-field-charging
 		EndChargeSpeechNotification: ForceFieldReady
-		EndChargeTextNotification: Force Field ready.
+		EndChargeTextNotification: notification-force-field-ready
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
+		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: ForceFieldEngaged
-		IncomingTextNotification: Force Field engaged.
+		IncomingTextNotification: notification-force-field-engaged
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		OrderName: ShieldsUp
@@ -1470,13 +1470,13 @@ SILO:
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 10
 		DetectedSpeechNotification: NukeDetected
-		DetectedTextNotification: Nuke detected.
+		DetectedTextNotification: notification-nuke-detected
 		BeginChargeSpeechNotification: NukeCharging
-		BeginChargeTextNotification: Nuke charging.
+		BeginChargeTextNotification: notification-nuke-charging
 		EndChargeSpeechNotification: NukeReady
-		EndChargeTextNotification: Nuke ready.
+		EndChargeTextNotification: notification-nuke-ready
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
+		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: NukeIncoming
 		OrderName: Nukem
 	SupportPowerChargeBar:
@@ -1545,13 +1545,13 @@ UPLINK:
 		CameraRange: 5c0
 		SupportPowerPaletteOrder: 10
 		DetectedSpeechNotification: OrbitalRailgunDetected
-		DetectedTextNotification: Orbital Railgun detected.
+		DetectedTextNotification: notification-railgun-detected
 		BeginChargeSpeechNotification: OrbitalRailgunCharging
-		BeginChargeTextNotification: Orbital Railgun charging.
+		BeginChargeTextNotification: notification-railgun-charging
 		EndChargeSpeechNotification: OrbitalRailgunReady
-		EndChargeTextNotification: Orbital Railgun readdy.
+		EndChargeTextNotification: notification-railgun-ready
 		SelectTargetSpeechNotification: SelectTarget
-		SelectTargetTextNotification: Select target.
+		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
 	Power:
 		Amount: -150
@@ -1820,9 +1820,9 @@ HARBOR:
 		Interval: 7
 		PlayerExperience: 15
 		StartRepairingNotification: Repairing
-		StartRepairingTextNotification: Repairing.
+		StartRepairingTextNotification: notifications-repairing
 		FinishRepairingNotification: UnitRepaired
-		FinishRepairingTextNotification: Unit repaired.
+		FinishRepairingTextNotification: notification-unit-repaired
 		RequiresCondition: !disabled
 
 HARBOR2:
@@ -2710,7 +2710,7 @@ DROPZONE:
 		RequiresCondition: !disabled && !ownerless
 	ProductionParadrop:
 		ReadyAudio: ReinforcementsHaveArrived
-		ReadyTextNotification: Reinforcements have arrived.
+		ReadyTextNotification: notification-reinforcementa-arrived
 		ActorType: airlifter
 		Produces: Reinforcements
 		RequiresCondition: !disabled && !ownerless

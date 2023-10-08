@@ -155,7 +155,7 @@ namespace OpenRA.Mods.HV.Traits
 						var priorityTarget = priorityTargets.First();
 
 						var captureManager = priorityTarget.TraitOrDefault<CaptureManager>();
-						if (captureManager != null && captureManager.CanBeTargetedBy(priorityTarget, capturer.Actor, capturer.Trait))
+						if (captureManager != null && capturer.Trait.CanTarget(captureManager))
 						{
 							var safeTarget = SafePath(capturer.Actor, priorityTarget);
 							if (safeTarget.Type == TargetType.Invalid)
@@ -192,7 +192,7 @@ namespace OpenRA.Mods.HV.Traits
 					if (captureManager == null)
 						return false;
 
-					return capturers.Any(tp => captureManager.CanBeTargetedBy(target, tp.Actor, tp.Trait));
+					return capturers.Any(tp => tp.Trait.CanTarget(captureManager));
 				})
 				.OrderBy(target => (target.CenterPosition - baseCenter).LengthSquared)
 				.Take(maximumCaptureTargetOptions);
@@ -248,12 +248,12 @@ namespace OpenRA.Mods.HV.Traits
 			};
 		}
 
-		void IGameSaveTraitData.ResolveTraitData(Actor self, List<MiniYamlNode> data)
+		void IGameSaveTraitData.ResolveTraitData(Actor self, MiniYaml data)
 		{
 			if (self.World.IsReplay)
 				return;
 
-			var initialBaseCenterNode = data.FirstOrDefault(n => n.Key == "InitialBaseCenter");
+			var initialBaseCenterNode = data.NodeWithKeyOrDefault("InitialBaseCenter");
 			if (initialBaseCenterNode != null)
 				initialBaseCenter = FieldLoader.GetValue<CPos>("InitialBaseCenter", initialBaseCenterNode.Value.Value);
 		}

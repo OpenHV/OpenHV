@@ -171,12 +171,12 @@ namespace OpenRA.Mods.HV.Traits
 			};
 		}
 
-		void IGameSaveTraitData.ResolveTraitData(Actor self, List<MiniYamlNode> data)
+		void IGameSaveTraitData.ResolveTraitData(Actor self, MiniYaml data)
 		{
 			if (self.World.IsReplay)
 				return;
 
-			var toggledBuildingsNode = data.FirstOrDefault(n => n.Key == "ToggledBuildings");
+			var toggledBuildingsNode = data.NodeWithKeyOrDefault("ToggledBuildings");
 			if (toggledBuildingsNode != null)
 			{
 				foreach (var node in toggledBuildingsNode.Value.Nodes)

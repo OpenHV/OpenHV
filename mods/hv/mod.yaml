@@ -147,7 +147,7 @@ ChromeLayout:
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
-	common|chrome/assetbrowser.yaml
+	hv|chrome/assetbrowser.yaml
 	hv|chrome/mission-browser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	hv|chrome/editor.yaml
@@ -251,8 +251,6 @@ SpriteFormats: PngSheet
 SoundFormats: Wav, Ogg
 
 SpriteSequenceFormat: DefaultSpriteSequence
-
-ModelSequenceFormat: PlaceholderModelSequence
 
 AssetBrowser:
 	SpriteExtensions: .png

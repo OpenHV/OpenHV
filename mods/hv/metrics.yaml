@@ -3,7 +3,10 @@
 Metrics:
 	ClickDisabledSound: ClickDisabledSound
 	ClickSound: ClickSound
-	ChatLineSound: ChatLineSound
+	ChatLineSound: ChatLine
+	PlayerJoinedSound: ChatLine
+	LobbyOptionChangedSound: ChatLine
+	PlayerLeftSound: ChatLine
 	TextfieldColorHighlight: 1a1a1a
 	ChatMessageColor: FFFFFF
 	SystemMessageColor: FFFF00

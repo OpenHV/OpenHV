@@ -2,7 +2,7 @@
 
 WaterCannon:
 	ValidTargets: Fire, Ground, Water
-	ReloadDelay: 0
+	ReloadDelay: 1
 	Burst: 15
 	BurstDelays: 1
 	Range: 5c0

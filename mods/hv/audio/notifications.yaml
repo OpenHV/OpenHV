@@ -71,5 +71,5 @@ Sounds:
 			AllowInterrupt: true
 		RadarDown: radaroff
 		RadarUp: radaron
-		ChatLineSound: radiobeep
+		ChatLine: radiobeep
 			AllowInterrupt: true

@@ -13,7 +13,7 @@ REVEALCUBE:
 	WithSpriteBody:
 		Sequence: grey
 	RevealMapCrateAction:
-		TextNotification: Map revealed.
+		TextNotification: notification-map-revealed
 
 CLOAKCUBE:
 	Inherits: ^Cube
@@ -21,14 +21,14 @@ CLOAKCUBE:
 		Sequence: brown
 	GrantExternalConditionCrateAction@cloak:
 		Condition: crate-cloak
-		TextNotification: Unit cloaked.
+		TextNotification: notification-unit-cloaked
 
 HEALCUBE:
 	Inherits: ^Cube
 	WithSpriteBody:
 		Sequence: orange
 	HealActorsCrateAction:
-		TextNotification: Unit repaired.
+		TextNotification: notification-unit-repaired
 
 SPAWNCUBE:
 	Inherits: ^Cube

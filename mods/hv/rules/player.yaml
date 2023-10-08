@@ -19,19 +19,19 @@ Player:
 		Types: Player
 	PowerManager:
 		SpeechNotification: LowPower
-		TextNotification: Low power.
+		TextNotification: notification-low-power
 	TechTree:
 	AllyRepair:
 	PlaceBuilding:
 		ToggleVariantKey: ToggleVariant
 		NewOptionsNotification: NewOptions
-		NewOptionsTextNotification: New construction options.
+		NewOptionsTextNotification: notification-new-construction-options
 		CannotPlaceNotification: BuildingCannotPlaceAudio
-		CannotPlaceTextNotification: Building cannot be placed.
+		CannotPlaceTextNotification: notification-cant-place-building
 	SupportPowerManager:
 	PlayerResources:
 		InsufficientFundsNotification: InsufficientFunds
-		InsufficientFundsTextNotification: Insufficient funding.
+		InsufficientFundsTextNotification: notification-insufficient-funding
 		SelectableCash: 5000, 7500, 10000, 15000, 20000
 		DefaultCash: 7500
 	DeveloperMode:
@@ -61,13 +61,13 @@ Player:
 		DisplayOrder: 0
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
-		ReadyTextNotification: Building ready.
+		ReadyTextNotification: notification-building-ready
 		QueuedAudio: Building
-		QueuedTextNotification: Building.
+		QueuedTextNotification: notification-building
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100
 		BuildDurationModifier: 70
@@ -76,13 +76,13 @@ Player:
 		DisplayOrder: 0
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
-		ReadyTextNotification: Building ready.
+		ReadyTextNotification: notification-building-ready
 		QueuedAudio: Building
-		QueuedTextNotification: Building.
+		QueuedTextNotification: notification-building
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: false
 		BuildTimeSpeedReduction: 100
 		BuildDurationModifier: 70
@@ -91,13 +91,13 @@ Player:
 		DisplayOrder: 1
 		LowPowerModifier: 300
 		ReadyAudio: BuildingReady
-		ReadyTextNotification: Building ready.
+		ReadyTextNotification: notification-building-ready
 		QueuedAudio: Building
-		QueuedTextNotification: Building.
+		QueuedTextNotification: notification-building
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Pod:
@@ -105,13 +105,13 @@ Player:
 		DisplayOrder: 2
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: notification-unit-ready
 		QueuedAudio: Training
-		QueuedTextNotification: Training.
+		QueuedTextNotification: notification-training
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Utility:
@@ -119,13 +119,13 @@ Player:
 		DisplayOrder: 5
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: notification-unit-ready
 		QueuedAudio: Training
-		QueuedTextNotification: Training.
+		QueuedTextNotification: notification-training
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Tank:
@@ -133,13 +133,13 @@ Player:
 		DisplayOrder: 3
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: notification-unit-ready
 		QueuedAudio: Training
-		QueuedTextNotification: Training.
+		QueuedTextNotification: notification-training
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Trade:
@@ -147,25 +147,25 @@ Player:
 		DisplayOrder: 4
 		BuildDurationModifier: 85
 		BlockedAudio: NoRoom
-		BlockedTextNotification: Not enough space.
+		BlockedTextNotification: notification-no-space
 		QueuedAudio: OrderPlaced
-		QueuedTextNotification: Order placed.
+		QueuedTextNotification: notification-order-placed
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: notification-unit-ready
 		QueuedAudio: Training
-		QueuedTextNotification: Training.
+		QueuedTextNotification: notification-training
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 	ClassicProductionQueue@Naval:
@@ -173,13 +173,13 @@ Player:
 		DisplayOrder: 5
 		LowPowerModifier: 300
 		ReadyAudio: UnitReady
-		ReadyTextNotification: Unit ready.
+		ReadyTextNotification: notification-unit-ready
 		QueuedAudio: Training
-		QueuedTextNotification: Training.
+		QueuedTextNotification: notification-training
 		OnHoldAudio: OnHold
-		OnHoldTextNotification: On hold.
+		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
-		CancelledTextNotification: Cancelled.
+		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
 

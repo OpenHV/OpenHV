@@ -490,8 +490,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						if (string.IsNullOrEmpty(bl.Data))
 							continue;
 
-						var game = MiniYaml.FromString(bl.Data)[0].Value;
-						var idNode = game.Nodes.FirstOrDefault(n => n.Key == "Id");
+						var game = new MiniYamlBuilder(MiniYaml.FromString(bl.Data)[0].Value);
+						var idNode = game.NodeWithKeyOrDefault("Id");
 
 						// Skip beacons created by this instance and replace Id by expected int value
 						if (idNode != null && idNode.Value.Value != Platform.SessionGUID.ToString())
@@ -499,13 +499,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 							idNode.Value.Value = "-1";
 
 							// Rewrite the server address with the correct IP
-							var addressNode = game.Nodes.FirstOrDefault(n => n.Key == "Address");
+							var addressNode = game.NodeWithKeyOrDefault("Address");
 							if (addressNode != null)
 								addressNode.Value.Value = bl.Address.ToString().Split(':')[0] + ":" + addressNode.Value.Value.Split(':')[1];
 
-							game.Nodes.Add(new MiniYamlNode("Location", "Local Network"));
+							game.Nodes.Add(new MiniYamlNodeBuilder("Location", "Local Network"));
 
-							lanGames.Add(new GameServer(game));
+							lanGames.Add(new GameServer(game.Build()));
 						}
 					}
 					catch

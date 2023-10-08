@@ -644,9 +644,9 @@ BUILDER:
 		PauseOnCondition: !validterrain
 		IntoActor: outpost
 		NoTransformNotification: BuildingCannotPlaceAudio
-		NoTransformTextNotification: Building cannot be placed.
+		NoTransformTextNotification: notification-cant-place-building
 		TransformNotification: OutpostEstablished
-		TransformTextNotification: Outpost established.
+		TransformTextNotification: notification-outpost-established
 		TransformSounds: Freqman_fx376.wav
 		Voice: Deploying
 		Offset: 0,-1
@@ -728,9 +728,9 @@ MINER:
 		Facing: 750
 		Offset: 0,-2
 		NoTransformNotification: BuildingCannotPlaceAudio
-		NoTransformTextNotification: Building cannot be placed.
+		NoTransformTextNotification: notification-cant-place-building
 		TransformNotification: MinerReady
-		TransformTextNotification: Miner ready.
+		TransformTextNotification: notification-miner-ready
 		TransformSounds: miner_transform.wav
 		Voice: Deploying
 	Voiced:
