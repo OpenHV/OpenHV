@@ -2219,6 +2219,11 @@ WALLR3:
 	WithIdleOverlay@Shadow:
 		Sequence: right3
 
+WALLR4:
+	Inherits: WALLR
+	WithIdleOverlay@Shadow:
+		Sequence: right4
+
 WALLTR:
 	Inherits: ^Wall
 	Inherits@Shape: ^1x1Shape

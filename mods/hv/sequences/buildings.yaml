@@ -1655,9 +1655,12 @@ wall-shadow:
 	right3:
 		Filename: bits/wall-right-shadow3.png
 		Offset: 9,0
+	right4:
+		Filename: bits/wall-right-shadow4.png
+		Offset: 14,0
 	cornerbl:
 		Filename: bits/wall-cornerbl-shadow.png
-		Offset: 19,-5
+		Offset: 20,2
 	cornerbl2:
 		Filename: bits/wall-cornerbl-shadow2.png
 		Offset: 10,-6
