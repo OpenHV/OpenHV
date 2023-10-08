@@ -160,24 +160,12 @@ BASE:
 	WithIdleOverlay@Platform2:
 		Sequence: idle-platform2
 		RequiresCondition: !build-incomplete
-	TerrainLightSource:
-		Range: 3c512
-		Intensity: 0.1
-		RedTint: 0
-		GreenTint: 0
-		BlueTint: 0.4
 	WithProductionOverlay@Base:
 		Sequence: production-inprogress
 		RequiresCondition: !burning
 
 BASE2:
 	Inherits: BASE
-	TerrainLightSource:
-		Range: 3c512
-		Intensity: 0.1
-		RedTint: 0.4
-		GreenTint: 0
-		BlueTint: 0
 	RenderSprites:
 		Image: base2
 	-ProvidesPrerequisite@Yuruki:
@@ -189,12 +177,6 @@ BASE2:
 
 OUTPOST:
 	Inherits: ^BaseBuilding
- 	TerrainLightSource:
-		Range: 1c512
-		Intensity: 0.1
-		RedTint: 0
-		GreenTint: 0
-		BlueTint: 0.4
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -229,12 +211,6 @@ OUTPOST:
 
 OUTPOST2:
 	Inherits: OUTPOST
- 	TerrainLightSource:
-		Range: 1c512
-		Intensity: 0.1
-		RedTint: 0.4
-		GreenTint: 0
-		BlueTint: 0
 	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
