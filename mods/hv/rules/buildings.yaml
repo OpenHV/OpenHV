@@ -1089,7 +1089,7 @@ BUNKER:
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
-		Range: 6c0
+		Range: 8c0
 	Cargo:
 		Types: Scout
 		MaxWeight: 1
