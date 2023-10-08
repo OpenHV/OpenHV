@@ -38,6 +38,8 @@ nuclear_explosion:
 		ZOffset: 2050
 
 hit:
+	Defaults:
+		ZOffset: 512
 	spark_a:
 		Filename: bits/sparks1.png
 		Length: 7
@@ -53,6 +55,20 @@ hit:
 	spark_d:
 		Filename: bits/sparks4.png
 		Length: 7
+		Tick: 60
+	spark_e:
+		Filename: bits/sparks-air.png
+		Length: 5
+		Tick: 60
+	spark_f:
+		Filename: bits/sparks-air.png
+		Start: 5
+		Length: 5
+		Tick: 60
+	spark_g:
+		Filename: bits/sparks-air.png
+		Start: 10
+		Length: 5
 		Tick: 60
 
 bullet1:
