@@ -39,8 +39,13 @@ SmallSplash:
 		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
 
 Ricochet:
-	Warhead@Effect: CreateEffect
+	Warhead@EffectSparkGround: CreateEffect
 		Image: hit
 		Explosions: spark_a, spark_b, spark_c, spark_d
 		ValidTargets: Ground
+		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
+	Warhead@EffectSparkAir: CreateEffect
+		Image: hit
+		Explosions: spark_e, spark_f, spark_g
+		ValidTargets: Air
 		ImpactSounds: ricochet1_rakurka.wav, ricochet2_rakurka.wav, ricochet3_rakurka.wav, ricochet4_rakurka.wav, ricochet5_rakurka.wav, ricochet6_rakurka.wav, ricochet7_rakurka.wav, ricochet8_rakurka.wav, ricochet9_rakurka.wav, ricochet10_rakurka.wav
