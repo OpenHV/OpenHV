@@ -570,6 +570,8 @@ MINER2:
 		Bounds: 2048, 3072, 0, 0
 	Tooltip:
 		Name: Mining Tower
+	Building:
+		UndeploySounds: miner_building_transform.wav
 	Encyclopedia:
 		Description: The mining tower is errected by creating a miner in the vehicle queue from either main base or factory and ordering it upon a metal bar symbol on the map where gold is more valueable than iron. Once deployed it will start mining and after certain intervals release a tanker which will carry back to a storage building upon then the credits can be spent. When the resources are depleted, the extraction value drops. Right-click on a mining tower to redeploy it into a miner again to move it onto a different spot.
 		Order: 50

@@ -731,6 +731,7 @@ MINER:
 		NoTransformTextNotification: Building cannot be placed.
 		TransformNotification: MinerReady
 		TransformTextNotification: Miner ready.
+		TransformSounds: miner_transform.wav
 		Voice: Deploying
 	Voiced:
 		VoiceSet: MinerVoice

@@ -21,3 +21,6 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [hackerpod_deploy/undeploy_mincedbeats.wav](https://freesound.org/people/mincedbeats/sounds/630563/) by mincedbeats
 * [machine_gun_pgi.wav](https://freesound.org/people/pgi/sounds/212607/) by pgi
 * [bomberpod_action/attack/select.wav](https://freesound.org/people/audioorange123/sounds/218742/) by audioorange123
+* [miner_transform/miner_building_transform.wav](https://freesound.org/people/GrayEpic/sounds/696291/) by GrayEpic
+* [miner_transform/miner_building_transform.wav](https://freesound.org/people/chainsaw_dinner_party/sounds/403075/) by chainsaw_dinner_party
+* [miner_transform/miner_building_transform.wav](https://freesound.org/people/behutchi/sounds/442259/) by behutchi
