@@ -1036,10 +1036,10 @@
 		Palette: effect
 		Image: smoke
 		Sequences: idle
-		Lifetime: 15, 20
-		Speed: 3
-		Gravity: 50
-		SpawnFrequency: 5, 10
+		Lifetime: 8
+		Speed: 10
+		Gravity: 80
+		SpawnFrequency: 4, 8
 		RandomFacing: true
 		RandomRate: 4
 		Offset: 0, 0, 200
