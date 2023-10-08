@@ -308,6 +308,7 @@ BunkerFlamethrower:
 
 HeavyMachineGun:
 	Inherits: LightMachineGun
+	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
 	Report: machine_gun_pgi.wav
 	ReloadDelay: 20
 	Range: 6c0
@@ -316,6 +317,7 @@ HeavyMachineGun:
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
 		Spread: 24
 		Damage: 300
 		Versus:
