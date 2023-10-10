@@ -1,0 +1,55 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 1.00
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.35
+		GreenTint: 0.40
+		BlueTint: 0.55
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 21c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.25
+		BlueTint: 0.25
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 06c640
+		RedTint: -0.20
+		GreenTint: -0.20
+		BlueTint: -0.30
+
+DARK_LIGHT_XL:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		RedTint: -0.30
+		GreenTint: -0.30
+		BlueTint: -0.35
+
+
+HILL_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 10c640
+		Intensity: 0.01
+		RedTint: 0.25
+		GreenTint: 0.25
+		BlueTint: 0.25
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
