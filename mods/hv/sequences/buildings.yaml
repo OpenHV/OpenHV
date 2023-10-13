@@ -553,7 +553,7 @@ miner2:
 	silo:
 		Filename: bits/miner2.png
 		Start: 22
-		Length: 10
+		Length: 20
 	flame:
 		Filename: bits/flame2.png
 		Offset: 3, 16
