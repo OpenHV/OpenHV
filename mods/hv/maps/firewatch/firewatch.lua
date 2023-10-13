@@ -85,7 +85,7 @@ end
 CachedburnedPercentage = -1
 UpdateForestStatus = function()
 	local burnedPercentage = (1 - Forest.TreesLeft / Forest.TotalTrees) * 100
-	if (CachedburnedPercentage == burnedPercentage) then
+	if CachedburnedPercentage == burnedPercentage and Forest.TreesBurning > 0 then
 		return
 	end
 	CachedburnedPercentage = burnedPercentage
