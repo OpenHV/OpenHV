@@ -286,7 +286,7 @@ Patriot:
 
 TowerMissile:
 	Inherits: ^AntiAirMissile
-	ReloadDelay: 20
+	ReloadDelay: 46
 	Range: 9c0
 	Report: rocketlaunch03.wav
 	ValidTargets: Air
