@@ -181,7 +181,7 @@ VoltageArc:
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 
 LightningBolt:
-	ReloadDelay: 20
+	ReloadDelay: 60
 	Range: 9c0
 	Report: lightningbolt.wav
 	ValidTargets: Air
