@@ -683,7 +683,7 @@ STARPORT:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
 	Power:
-		Amount: -10
+		Amount: -120
 	Targetable:
 		TargetTypes: Ground, Structure
 	WithTextDecoration@PRIMARY:
@@ -1795,7 +1795,7 @@ HARBOR:
 	ProductionBar:
 		ProductionType: Ship
 	Power:
-		Amount: -150
+		Amount: -120
 	ProvidesPrerequisite@Generic:
 		Prerequisite: harbor
 		RequiresCondition: !powerdown
