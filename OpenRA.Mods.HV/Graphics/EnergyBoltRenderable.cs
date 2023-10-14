@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -15,7 +15,7 @@ using OpenRA.Primitives;
 
 namespace OpenRA.Mods.HV.Graphics
 {
-	public struct EnergyBoltRenderable : IRenderable, IFinalizedRenderable
+	public class EnergyBoltRenderable : IRenderable, IFinalizedRenderable
 	{
 		readonly WPos[] offsets;
 		readonly WDist width;
@@ -29,12 +29,10 @@ namespace OpenRA.Mods.HV.Graphics
 			this.color = color;
 		}
 
-		public WPos Pos { get { return new WPos(offsets[0].X, offsets[0].Y, 0); } }
-		public PaletteReference Palette { get { return null; } }
+		public WPos Pos => new(offsets[0].X, offsets[0].Y, 0);
 		public int ZOffset { get; }
-		public bool IsDecoration { get { return true; } }
+		public bool IsDecoration => true;
 
-		public IRenderable WithPalette() { return this; }
 		public IRenderable WithZOffset(int newOffset) { return new EnergyBoltRenderable(offsets, newOffset, width, color); }
 		public IRenderable OffsetBy(in WVec vec)
 		{
