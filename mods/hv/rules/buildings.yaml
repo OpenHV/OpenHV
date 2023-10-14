@@ -1585,7 +1585,7 @@ STORAGE:
 		Order: 10
 		Category: Buildings
 	Health:
-		HP: 55000
+		HP: 125000
 	Armor:
 		Type: Steel
 	RevealsShroud:
