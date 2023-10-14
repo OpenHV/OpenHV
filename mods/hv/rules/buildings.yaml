@@ -1915,6 +1915,7 @@ BARRIER:
 	-Capturable:
 	-CapturableProgressBar:
 	-CapturableProgressBlink:
+	-CapturableProgressBeep:
 	-CaptureNotification:
 
 ^GATE:
@@ -2655,6 +2656,7 @@ WATCHTOWER:
 	-Capturable:
 	-CapturableProgressBar:
 	-CapturableProgressBlink:
+	-CapturableProgressBeep:
 	-CaptureNotification:
 	ProximityCapturable:
 		Sticky: true
@@ -2750,6 +2752,7 @@ FLAGPOST:
 	-Capturable:
 	-CapturableProgressBar:
 	-CapturableProgressBlink:
+	-CapturableProgressBeep:
 	-CaptureManager:
 	ProximityCapturable:
 	StrategicPoint:

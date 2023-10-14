@@ -513,6 +513,8 @@
 		Types: building
 	CapturableProgressBar:
 	CapturableProgressBlink:
+	CapturableProgressBeep:
+		Sound: beep_matrixxx.wav
 	CaptureNotification:
 		TextNotification: notification-building-captured
 	AcceptsDeliveredCash:

@@ -24,3 +24,4 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [miner_transform/miner_building_transform.wav](https://freesound.org/people/GrayEpic/sounds/696291/) by GrayEpic
 * [miner_transform/miner_building_transform.wav](https://freesound.org/people/chainsaw_dinner_party/sounds/403075/) by chainsaw_dinner_party
 * [miner_transform/miner_building_transform.wav](https://freesound.org/people/behutchi/sounds/442259/) by behutchi
+* [beep_matrixxx.wav](https://freesound.org/people/MATRIXXX_/sounds/657948/) by MATRIXXX_
