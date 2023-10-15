@@ -150,11 +150,11 @@ VoltageArc:
 	Range: 8c0
 	Report: lightningbolt.wav
 	Projectile: EnergyBolt
-		Radius: 2
+		Radius: 3
 		Duration: 5
-		InnerLightness: 192
-		OuterLightness: 96
-		Color: 2668bd
+		InnerLightness: 255
+		OuterLightness: 80
+		Color: 9bc2eb
 		Distortion: 200
 		DistortionAnimation: 150
 		SegmentLength: 0c512
@@ -188,11 +188,11 @@ LightningBolt:
 	Projectile: EnergyBolt
 		Radius: 3
 		Duration: 5
-		InnerLightness: 200
-		OuterLightness: 90
-		Color: 2668bd
+		InnerLightness: 255
+		OuterLightness: 80
+		Color: 9bc2eb
 		Distortion: 200
-		DistortionAnimation: 200
+		DistortionAnimation: 150
 		SegmentLength: 0c512
 		ZOffset: 2048
 	Warhead@Damage: SpreadDamage

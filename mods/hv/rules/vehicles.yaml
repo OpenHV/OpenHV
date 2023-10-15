@@ -421,7 +421,7 @@ TANK10:
 		Range: 3c0
 	Armament:
 		Weapon: VoltageArc
-		LocalOffset: 0,0,213
+		LocalOffset: 0,100,213
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
