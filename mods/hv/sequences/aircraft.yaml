@@ -137,12 +137,6 @@ balloon:
 		Filename: bits/units-icons.png
 		Start: 22
 
-mother2b:
-	idle:
-		Filename: bits/mother2b.png
-	icon:
-		Filename: bits/icon.png
-
 mother2c:
 	idle:
 		Filename: bits/mother2c.png

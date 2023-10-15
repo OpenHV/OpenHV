@@ -1,6 +1,6 @@
 # License: CC-BY-SA-4.0
 
-MOTHER2B:
+MOTHER2C:
 	Inherits: ^Helicopter
 	Health:
 		HP: 800000
@@ -15,9 +15,6 @@ MOTHER2B:
 		DecorationBounds: 6664, 13728
 	MapEditorData:
 		Categories: Mothership
-
-MOTHER2C:
-	Inherits: MOTHER2B
 
 MOTHER:
 	Inherits: ^Building
