@@ -217,6 +217,12 @@ tank10:
 	idle:
 		Filename: bits/tank10.png
 		Facings: 8
+	shoot:
+		Filename: bits/tank10.png
+		Start: 8
+		Facings: 8
+		Length: 3
+		Tick: 60
 	icon:
 		Filename: bits/units-icons.png
 		Start: 25
