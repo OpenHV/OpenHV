@@ -132,7 +132,7 @@ Terrain:
 		Color: E0B0A0
 	TerrainType@Dirt:
 		Type: Dirt
-		TargetTypes: Dirt
+		TargetTypes: Ground
 		Color: 805040
 
 Templates:
