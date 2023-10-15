@@ -128,7 +128,7 @@ Terrain:
 		Color: 2B7D38
 	TerrainType@Shore:
 		Type: Shore
-		TargetTypes: Shore
+		TargetTypes: Ground
 		Color: E0B0A0
 	TerrainType@Dirt:
 		Type: Dirt
