@@ -173,13 +173,13 @@ FlamePodVoice:
 		Action: flamepod_burn_alive, flamepod_cleansing_fire, flamepod_purge_them, flamepod_with_pleasure, flamepod_set_them_on_fire, flamepod_eradicate, flamepod_hahaha, flamepod_I_love_that_smell
 		Guard: guarding
 
-HackerPodVoice:
+BrokerPodVoice:
 	DefaultVariant: .wav
 	Voices:
-		Select: hackerpod_copy, hackerpod_hacker_ready, hackerpod_im_ready, hackerpod_receiving, hackerpod_waiting, hackerpod_sir
-		Move: hackerpod_acknowledged, hackerpod_at_once, hackerpod_good_copy, hackerpod_gotcha, hackerpod_lets_go, hackerpod_move_out, hackerpod_moving, hackerpod_yes_sir, hackerpod_as_you_wish
-		Action: hackerpod_acknowledged, hackerpod_at_once, hackerpod_good_copy, hackerpod_gotcha, hackerpod_yes_sir, hackerpod_as_you_wish
-		Deploying: hackerpod_deploying, hackerpod_setting_up, hackerpod_stealing_money, hackerpod_taking_position
+		Select: brokerpod_copy, brokerpod_hacker_ready, brokerpod_im_ready, brokerpod_receiving, brokerpod_waiting, brokerpod_sir
+		Move: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_lets_go, brokerpod_move_out, brokerpod_moving, brokerpod_yes_sir, brokerpod_as_you_wish
+		Action: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_yes_sir, brokerpod_as_you_wish
+		Deploying: brokerpod_deploying, brokerpod_setting_up, brokerpod_stealing_money, brokerpod_taking_position
 		Guard: guarding
 
 ElitePodVoice:

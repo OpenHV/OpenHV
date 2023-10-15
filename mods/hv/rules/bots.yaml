@@ -84,7 +84,7 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, hackerpod, waterminelayer, waterminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
 		AirUnitsTypes: plane1, plane2, copter, banshee
 		ConstructionYardTypes: base, base2
@@ -115,7 +115,7 @@ Player:
 			flamepod: 1
 			elitepod: 1
 			sniperpod: 1
-			hackerpod: 9
+			brokerpod: 9
 			technician: 1
 			bomberpod: 1
 			missiletank: 5
@@ -147,7 +147,7 @@ Player:
 			waterminelayer2: 1
 			technician: 1
 			bomberpod: 3
-			hackerpod: 9
+			brokerpod: 9
 			transprt: 1
 		UnitDelays:
 			builder: 15000
@@ -171,14 +171,14 @@ Player:
 		AwayFromEnemyTargetTypes: Structure, Defense
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
-		ExcludedUnitTypes: miner, tanker1, tanker2, hackerpod
+		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: transprt
 		PassengerTypes: mortarpod, flamepod, scout1, scout2
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank, hackerpod
+		DeployableActorTypes: radartank, brokerpod
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
@@ -187,7 +187,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	SendUnitToAttackBotModule:
 		RequiresCondition: enable-rogue-ai
-		ActorTypesAndAttackDesire: 
+		ActorTypesAndAttackDesire:
 			bomberpod: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water

@@ -38,7 +38,7 @@ FLAMEPOD:
 	Buildable:
 		Prerequisites: ~disabled
 
-HACKERPOD:
+BROKERPOD:
 	Buildable:
 		Prerequisites: ~disabled
 

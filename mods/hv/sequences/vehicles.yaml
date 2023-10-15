@@ -576,9 +576,9 @@ flamepod:
 		Filename: bits/units-icons.png
 		Start: 52
 
-hackerpod:
+brokerpod:
 	idle:
-		Filename: bits/hackerpod.png
+		Filename: bits/brokerpod.png
 		Facings: 8
 	die:
 		Filename: bits/poddeath.png
@@ -586,12 +586,12 @@ hackerpod:
 		Tick: 80
 		Offset: 0,-2
 	extend:
-		Filename: bits/hackerpod.png
+		Filename: bits/brokerpod.png
 		Start: 8
 		Length: 7
 		Tick: 60
 	extended:
-		Filename: bits/hackerpod.png
+		Filename: bits/brokerpod.png
 		Start: 14
 		Length: 4
 		Reverses: true

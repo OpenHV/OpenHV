@@ -213,18 +213,18 @@ TECHNICIAN:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 
-HACKERPOD:
+BROKERPOD:
 	Inherits: ^Pod
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Pod
-		Description: Mobile Hackerspace.\nSteals money from the global network.\n  Unarmed
+		Description: Financial analyst.\nInvests into stock market for dividents.\n  Unarmed
 		Prerequisites: ~module.yi, techcenter
 		BuildPaletteOrder: 60
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Hacker pod
+		Name: Broker pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -238,8 +238,8 @@ HACKERPOD:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Facing: 512
-		DeploySounds: hackerpod_deploy_mincedbeats.wav
-		UndeploySounds: hackerpod_undeploy_mincedbeats.wav
+		DeploySounds: brokerpod_deploy_mincedbeats.wav
+		UndeploySounds: brokerpod_undeploy_mincedbeats.wav
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
 		Voice: Deploying
 	WithMakeAnimation:
@@ -256,7 +256,7 @@ HACKERPOD:
 		Amount: 5
 		RequiresCondition: deployed
 	Voiced:
-		VoiceSet: HackerPodVoice
+		VoiceSet: BrokerPodVoice
 
 ELITEPOD:
 	Inherits: ^Helicopter
