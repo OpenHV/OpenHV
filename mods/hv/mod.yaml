@@ -147,7 +147,7 @@ ChromeLayout:
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
-	hv|chrome/assetbrowser.yaml
+	common|chrome/assetbrowser.yaml
 	hv|chrome/mission-browser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	hv|chrome/editor.yaml
