@@ -158,6 +158,7 @@ VoltageArc:
 		Distortion: 200
 		DistortionAnimation: 150
 		SegmentLength: 0c512
+		ZOffset: 2048
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128

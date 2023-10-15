@@ -421,11 +421,13 @@ TANK10:
 		Range: 3c0
 	Armament:
 		Weapon: VoltageArc
-		LocalOffset: 0,100,213
+		LocalOffset: 300,0,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
 		FacingTolerance: 0
+	WithAttackAnimation:
+		Sequence: shoot
 
 TANK7:
 	Inherits: ^TrackedVehicle
