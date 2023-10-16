@@ -370,7 +370,7 @@ TANK5:
 		Description: A powerful tank which shoots laser.\n  Strong vs Pods, Vehicles and Buildings
 	Armament:
 		Weapon: railgun
-		LocalOffset: 325,350,0
+		LocalOffset: 325,400,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
