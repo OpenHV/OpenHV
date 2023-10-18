@@ -130,7 +130,7 @@ ChromeLayout:
 	hv|chrome/lobby-globalchat.yaml
 	common|chrome/lobby-mappreview.yaml
 	common|chrome/lobby-players.yaml
-	common|chrome/lobby-options.yaml
+	hv|chrome/lobby-options.yaml
 	common|chrome/lobby-music.yaml
 	hv|chrome/lobby-servers.yaml
 	common|chrome/lobby-kickdialogs.yaml

@@ -510,6 +510,17 @@ checkmark-tick:
 checkmark-highlighted-tick:
 	Inherits: checkmark-tick
 
+checkmark-switch:
+	Inherits: ^Glyphs
+	Regions:
+		checked: 221, 43, 16, 16
+		checked-pressed: 238, 43, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 238, 43, 16, 16
+
+checkmark-highlighted-switch:
+	Inherits: checkmark-switch
+
 checkmark-cross:
 	Inherits: ^Glyphs
 	Regions:
