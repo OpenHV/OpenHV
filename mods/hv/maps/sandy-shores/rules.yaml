@@ -1,5 +1,9 @@
 # License: CC-BY-SA-4.0
 
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.90
+
 HARBOR:
 	Buildable:
 		Prerequisites: ~disabled
@@ -7,3 +11,57 @@ HARBOR:
 HARBOR2:
 	Buildable:
 		Prerequisites: ~disabled
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+LAVA_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 6c640
+		Intensity: 0.01
+		RedTint: 1.10
+		GreenTint: 0.40
+		BlueTint: 0.40
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 8c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+CENTER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.80
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+PURP_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.55
+		GreenTint: 0.35
+		BlueTint: 0.60
+
+BLUE_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.45
+		GreenTint: 0.50
+		BlueTint: 0.90
