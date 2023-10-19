@@ -458,3 +458,23 @@ cactiash:
 	shadow-overlay:
 		Filename: bits/terrain/cactiash-shadow.png
 		ZOffset: -2048
+
+bridgeshadow:
+	Defaults:
+		Filename: bits/terrain/bridge-shadow.png
+		Offset: -1,-1
+		ZOffset: -512
+	shadow1:
+		Start: 0
+	shadow2:
+		Start: 1
+	shadow3:
+		Start: 2
+	shadow4:
+		Start: 3
+	shadow5:
+		Start: 4
+	shadow6:
+		Start: 5
+	shadow7:
+		Start: 6
