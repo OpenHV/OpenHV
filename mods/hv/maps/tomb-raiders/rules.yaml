@@ -18,3 +18,47 @@ World:
 		Green: 1.0
 		Blue: 1.0
 		Ambient: 0.9
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 5c0
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 9c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.35
+		BlueTint: -0.35
+
+LAVA_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 6c640
+		Intensity: 0.01
+		RedTint: 1.10
+		GreenTint: 0.40
+		BlueTint: 0.40
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
