@@ -873,8 +873,6 @@
 
 ^Submarine:
 	Inherits: ^Ship
-	GrantConditionOnDeploy:
-		DeployedCondition: submerged
 	Cloak:
 		DetectionTypes: Underwater
 		InitialDelay: 0
@@ -884,12 +882,11 @@
 		UncloakSound: submarine_in_szegvari.wav
 		Palette: shadow
 		PauseOnCondition: cloak-force-disabled
-		RequiresCondition: submerged
 	GrantConditionOnDamageState@Uncloak:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical, Heavy
 	LeavesTrails:
-		RequiresCondition: !submerged
+		RequiresCondition: !underwater
 	SpeedMultiplier@Surfaced:
 		Modifier: 75
 		RequiresCondition: !underwater
