@@ -1526,7 +1526,6 @@ harbor2:
 		Offset: 0, 0
 
 mother:
-	Inherits@Flame: ^BuildingFlame
 	idle:
 		Filename: bits/mother.png
 	shadow-overlay:
