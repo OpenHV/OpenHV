@@ -2072,7 +2072,7 @@ WALLT:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: x
+		Footprint: =
 	Interactable:
 		Bounds: 1228, 1228
 	WithSpriteBody:
@@ -2083,7 +2083,7 @@ WALLTL:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: x
+		Footprint: =
 	Interactable:
 		Bounds: 1228, 1228
 	WithSpriteBody:
@@ -2208,7 +2208,7 @@ WALLTR:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: x
+		Footprint: =
 	Interactable:
 		Bounds: 1228, 1228
 	WithSpriteBody:
@@ -2372,7 +2372,7 @@ DWALLTL:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: x
+		Footprint: =
 	Interactable:
 		Bounds: 1024, 1024
 	WithSpriteBody:
@@ -2402,7 +2402,9 @@ DWALLTC:
 	Inherits: DWALLTL
 	WithSpriteBody:
 		Sequence: destroyed-center
-
+	Building:
+		Dimensions: 1,1
+		Footprint: x
 
 RECONSTRUCTOR:
 	Inherits: ^Building
