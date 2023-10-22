@@ -1,0 +1,16 @@
+Label@TILESET_LABEL:
+	Text: label-new-map-bg-tileset
+Label@PLAYTEST_AVAILABLE_LABEL:
+	Text: label-notice-container-playtest-available
+Label@PROMPT_TITLE:
+	Text: label-mainmenu-system-info-prompt-title
+Label@PROMPT_TEXT_A:
+	Text: label-mainmenu-system-info-prompt-text-a
+Label@PROMPT_TEXT_B:
+	Text: label-mainmenu-system-info-prompt-text-b
+Checkbox@SYSINFO_CHECKBOX:
+	Text: checkbox-mainmenu-system-info-prompt-sysinfo
+Button@CONTINUE_BUTTON:
+	Text: button-mainmenu-system-info-prompt-continue
+Button@CONTENT_BUTTON:
+	Text: button-main-menu-content

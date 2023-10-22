@@ -156,11 +156,14 @@ ChromeLayout:
 	hv|chrome/ingame-observer.yaml
 	hv|chrome/ingame-player.yaml
 	hv|chrome/gamesave-loading.yaml
+	hv|chrome/unused.yaml
 
 Translations:
 	common|languages/en.ftl
 	common|languages/rules/en.ftl
 	hv|languages/rules/en.ftl
+	common|languages/chrome/en.ftl
+	hv|languages/chrome/en.ftl
 
 Music:
 	hv|audio/music.yaml

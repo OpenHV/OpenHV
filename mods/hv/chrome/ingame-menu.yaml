@@ -30,7 +30,7 @@ Container@INGAME_MENU:
 					Y: 20
 					Width: 200
 					Height: 30
-					Text: Options
+					Text: label-menu-buttons-title
 					Align: Center
 					Font: Bold
 				Button@BUTTON_TEMPLATE:
@@ -39,3 +39,4 @@ Container@INGAME_MENU:
 					Width: 140
 					Height: 30
 					Font: Bold
+

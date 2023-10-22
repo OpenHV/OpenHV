@@ -77,7 +77,7 @@ Container@GLOBALCHAT_PANEL:
 					Y: PARENT_BOTTOM - 25
 					Width: 174
 					Height: 25
-					Text: Leave Chat
+					Text: button-globalchat-main-panel-disconnect
 					Font: Bold
 		Background@GLOBALCHAT_CONNECT_PANEL:
 			Width: PARENT_RIGHT
@@ -88,12 +88,12 @@ Container@GLOBALCHAT_PANEL:
 					Y: PARENT_BOTTOM / 4
 					Width: PARENT_RIGHT
 					Align: Center
-					Text: Global Chat
+					Text: label-globalchat-connect-panel-global-chat
 					Font: Bold
 				Label@NICKNAME_LABEL:
 					X: 200
 					Y: PARENT_BOTTOM / 4 + 35
-					Text: Nickname:
+					Text: label-globalchat-connect-panel-nickname
 				TextField@NICKNAME_TEXTFIELD:
 					X: 270
 					Y: PARENT_BOTTOM / 4 + 25
@@ -104,5 +104,6 @@ Container@GLOBALCHAT_PANEL:
 					Y: PARENT_BOTTOM / 4 + 25
 					Width: 100
 					Height: 25
-					Text: Connect
+					Text: button-globalchat-connect-panel
 					Font: Bold
+

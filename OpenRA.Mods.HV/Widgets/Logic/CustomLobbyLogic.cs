@@ -495,7 +495,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				globalChatInput.TakeKeyboardFocus();
 			};
 
-			var globalChatLabel = globalChatTab.Text;
+			var globalChatLabel = TranslationProvider.GetString(globalChatTab.Text);
 			globalChatTab.GetText = () =>
 			{
 				if (globalChatUnreadMessages == 0 || chatPanel == ChatPanelType.Global)
@@ -568,7 +568,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				chatTextField.TakeKeyboardFocus();
 			};
 
-			var lobbyChatLabel = lobbyChatTab.Text;
+			var lobbyChatLabel = TranslationProvider.GetString(lobbyChatTab.Text);
 			lobbyChatTab.GetText = () =>
 			{
 				if (lobbyChatUnreadMessages == 0 || chatPanel == ChatPanelType.Lobby)
