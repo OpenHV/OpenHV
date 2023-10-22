@@ -263,7 +263,7 @@ ELITEPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pod, Light Vehicles and Buildings.
+		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pods, Light Vehicles and Aircraft.\n  Weak vs Tanks and Buildings.
 		Prerequisites: ~module.sc, techcenter
 		BuildPaletteOrder: 60
 	Valued:
