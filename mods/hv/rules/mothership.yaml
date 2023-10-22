@@ -17,32 +17,24 @@ MOTHER2C:
 		Categories: Mothership
 
 MOTHER:
-	Inherits: ^Building
-	Inherits@Shape: ^6x8Shape
-	Selectable:
-		Bounds: 5786, 7424
-	Valued:
-		Cost: 15000
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@3: ^6x8Shape
 	Tooltip:
-		Name: Mother Ship
+		Name: Mothership Base
 	Building:
-		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx
+		Footprint: ====== =xxxx= xxxxxx xxxxxx =xx=xx =xx=x= =xx=== ==x===
 		Dimensions: 6,8
-	Health:
-		HP: 5000000
-	Armor:
-		Type: Steel
 	RevealsShroud:
 		Range: 16c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
 	MapEditorData:
 		Categories: Mothership
 	WithIdleOverlay@Shadow:
 		Sequence: shadow-overlay
 		Palette: shadow
 		IsDecoration: true
-	CaptureManager:
-		-BeingCapturedCondition: being-captured
+	WithSpriteBody:
+	Interactable:
+	FrozenUnderFog:
