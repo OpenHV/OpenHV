@@ -9,7 +9,7 @@ PLANE1:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.yi
-		Description: Attack Ship armed with\na large chain gun.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
+		Description: Attack Ship armed with\na large chain gun.\n  Strong vs Pods, Buildings and Aircraft\n  Weak vs Tanks
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -139,7 +139,7 @@ COPTER:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.sc
-		Description: Small Helicopter Gunship\n  Strong vs Pods and Buildings\n  Weak vs Tanks
+		Description: Small Helicopter Gunship\n  Strong vs Pods, Buildings and Aircraft\n  Weak vs Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
