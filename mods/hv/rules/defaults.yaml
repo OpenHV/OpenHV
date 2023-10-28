@@ -636,6 +636,41 @@
 		Palette: shadow
 		IsDecoration: true
 
+^Crate:
+	Inherits@Exists: ^ExistsInWorld
+	Interactable:
+		Bounds: 1024, 102
+	Targetable:
+		TargetTypes: Ground, Structure
+	Armor:
+		Type: Steel
+	Health:
+		HP: 1000
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	FrozenUnderFog:
+	Tooltip:
+		Name: Crates
+		GenericName: Crates
+		ShowOwnerRow: false
+	MapEditorData:
+		Categories: Crates
+	CommandBarBlacklist:
+	Demolishable:
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
+	WithSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 1
+	WithShadow:
+		Offset: 128,128,0
+		ZOffset: -512
+	RenderSprites:
+		Palette: terrain
+
 ^DisableOnLowPower:
 	WithColoredOverlay@Disable:
 		RequiresCondition: disabled

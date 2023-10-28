@@ -369,19 +369,111 @@ electricpad:
 		Tick: 60
 		ZOffset: -1024
 
-crate1:
-	idle:
-		Filename: bits/crates.png
+misc:
+	Defaults:
+		Filename: bits/misc.png
 		ZOffset: -512
-
-crate2:
-	idle:
-		Filename: bits/crates.png
+	misc1:
+	misc2:
 		Start: 1
-		ZOffset: -512
-
-crate3:
-	idle:
-		Filename: bits/crates.png
+	misc3:
 		Start: 2
-		ZOffset: -512
+
+crates:
+	Defaults:
+		Filename: bits/crates.png
+	crate1:
+	crate2:
+		Start: 1
+	crate3:
+		Start: 2
+	crate4:
+		Start: 3
+	crate5:
+		Start: 4
+	crate6:
+		Start: 5
+	crate7:
+		Start: 6
+	crate8:
+		Start: 7
+	crate9:
+		Start: 8
+	crate10:
+		Start: 9
+	crate11:
+		Start: 10
+	crate12:
+		Start: 11
+	crate13:
+		Start: 12
+	crate14:
+		Start: 13
+	crate15:
+		Start: 14
+	crate16:
+		Start: 15
+	crate17:
+		Start: 16
+	crate18:
+		Start: 17
+	crate19:
+		Start: 18
+	crate20:
+		Start: 19
+	crate21:
+		Start: 20
+	crate22:
+		Start: 21
+	crate23:
+		Start: 22
+	crate24:
+		Start: 23
+	crate25:
+		Start: 24
+	crate26:
+		Start: 25
+	crate27:
+		Start: 26
+	crate28:
+		Start: 27
+	crate29:
+		Start: 28
+	crate30:
+		Start: 29
+	crate31:
+		Start: 30
+	crate32:
+		Start: 31
+	crate33:
+		Start: 32
+	crate34:
+		Start: 33
+	crate35:
+		Start: 34
+	crate36:
+		Start: 35
+	crate37:
+		Start: 36
+	crate38:
+		Start: 37
+	crate39:
+		Start: 38
+	crate40:
+		Start: 39
+	crate41:
+		Start: 40
+	crate42:
+		Start: 41
+	crate43:
+		Start: 42
+	crate44:
+		Start: 43
+	crate45:
+		Start: 44
+	crate46:
+		Start: 45
+	crate47:
+		Start: 46
+	crate48:
+		Start: 47
