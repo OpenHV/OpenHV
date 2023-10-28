@@ -2412,7 +2412,7 @@ RECONSTRUCTOR:
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
 	Tooltip:
-		Name: Tech Reconstructor
+		Name: Nano Reconstructor
 	Encyclopedia:
 		Description: Both machine and human operator can be healed and restored using nano technology. This advanced form of medicine is only available on some planets which also made it affordable due to universal healthcare plans for the local population. Capture a facilty to grant access to your troops. Lasts only as long as the facility is in possession.
 		Order: 300
