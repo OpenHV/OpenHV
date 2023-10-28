@@ -342,24 +342,268 @@ RAIL:
 	Replaceable:
 		Types: rail
 
-CRATE1:
-	Inherits: ^Prop
+MISC1:
+	Inherits: ^Crate
 	Inherits@Shape: ^1x1Shape
-	Interactable:
-		Bounds: 1024, 1024
-	Building:
-		Footprint: =
-		Dimensions: 1,1
 	Tooltip:
-		Name: Crates
-	Health:
-		HP: 1000
+		Name: Misc
 	RenderSprites:
-		Palette: terrain
-	-WithIdleOverlay@Shadow:
+		Image: misc
+	WithSpriteBody:
+		Sequence: misc1
+	WithShadow:
+		Offset: 64,64,0
+		ZOffset: -512
+
+MISC2:
+	Inherits: MISC1
+	WithSpriteBody:
+		Sequence: misc2
+
+MISC3:
+	Inherits: MISC1
+	WithSpriteBody:
+		Sequence: misc3
+
+CRATE1:
+	Inherits: ^Crate
+	Inherits@Shape: ^1x1Shape
+	RenderSprites:
+		Image: crates
+	WithSpriteBody:
+		Sequence: crate1
 
 CRATE2:
 	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate2
 
 CRATE3:
 	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate3
+
+CRATE4:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate4
+
+CRATE5:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate5
+
+CRATE6:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate6
+
+CRATE7:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate7
+
+CRATE8:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate8
+
+CRATE9:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate9
+
+CRATE10:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate10
+
+CRATE11:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate11
+
+CRATE12:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate12
+
+CRATE13:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate13
+
+CRATE14:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate14
+
+CRATE15:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate15
+
+CRATE16:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate16
+
+CRATE17:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate17
+
+CRATE18:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate18
+
+CRATE19:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate19
+
+CRATE20:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate20
+
+CRATE21:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate21
+
+CRATE22:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate22
+
+CRATE23:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate23
+
+CRATE24:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate24
+
+CRATE25:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate25
+
+CRATE26:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate26
+
+CRATE27:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate27
+
+CRATE28:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate28
+
+CRATE29:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate29
+
+CRATE30:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate30
+
+CRATE31:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate31
+
+CRATE32:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate32
+
+CRATE33:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate33
+
+CRATE34:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate34
+
+CRATE35:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate35
+
+CRATE36:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate36
+
+CRATE37:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate37
+
+CRATE38:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate38
+
+CRATE39:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate39
+
+CRATE40:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate40
+
+CRATE41:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate41
+
+CRATE42:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate42
+
+CRATE43:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate43
+
+CRATE44:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate44
+
+CRATE45:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate45
+
+CRATE46:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate46
+
+CRATE47:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate47
+
+CRATE48:
+	Inherits: CRATE1
+	WithSpriteBody:
+		Sequence: crate48
