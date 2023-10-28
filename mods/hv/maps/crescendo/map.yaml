@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -8,9 +8,9 @@ Author: SiegeSpud
 
 Tileset: PLANET
 
-MapSize: 98,98
+MapSize: 114,114
 
-Bounds: 1,1,96,96
+Bounds: 1,1,112,112
 
 Visibility: Lobby
 
@@ -39,273 +39,609 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor3: lamppost
-		Owner: Neutral
-		Location: 47,43
-	Actor4: lamppost
-		Owner: Neutral
-		Location: 50,43
-	Actor8: lamppost
-		Owner: Neutral
-		Location: 50,57
-	Actor9: lamppost
-		Owner: Neutral
-		Location: 47,57
-	Actor10: grssmisc7
-		Owner: Neutral
-		Location: 30,76
-	Actor11: grssmisc7
-		Owner: Neutral
-		Location: 66,76
-	Actor12: grssmisc6
-		Owner: Neutral
-		Location: 66,78
-	Actor13: grssmisc6
-		Owner: Neutral
-		Location: 30,78
-	Actor18: prop3
-		Owner: Neutral
-		Location: 48,33
-	Actor19: prop3
-		Owner: Neutral
-		Location: 49,33
-	Actor20: prop3
-		Owner: Neutral
-		Location: 49,34
-	Actor21: prop3
-		Owner: Neutral
-		Location: 48,34
-	Actor22: lamppost
-		Owner: Neutral
-		Location: 47,32
-	Actor23: lamppost
-		Owner: Neutral
-		Location: 50,32
-	Actor24: lamppost
-		Owner: Neutral
-		Location: 50,35
-	Actor25: lamppost
-		Owner: Neutral
-		Location: 47,35
-	Actor32: prop1
-		Owner: Neutral
-		Location: 60,83
-	Actor33: prop1
-		Owner: Neutral
-		Location: 37,83
-	Actor38: treegrs10
-		Owner: Neutral
-		Location: 51,34
-	Actor39: treegrs10
-		Owner: Neutral
-		Location: 46,34
-	Actor40: treegrs11
-		Owner: Neutral
-		Location: 47,35
-	Actor41: treegrs11
-		Owner: Neutral
-		Location: 50,35
-	Actor42: treegrs10
-		Owner: Neutral
-		Location: 48,36
-	Actor43: treegrs10
-		Owner: Neutral
-		Location: 49,36
-	Actor37: treegrs11
-		Owner: Neutral
-		Location: 51,32
-	Actor44: treegrs11
-		Owner: Neutral
-		Location: 46,32
-	Actor45: treegrs11
-		Owner: Neutral
-		Location: 48,30
-	Actor46: treegrs11
-		Owner: Neutral
-		Location: 49,30
-	Actor31: lamppost
-		Owner: Neutral
-		Location: 47,22
-	Actor34: lamppost
-		Owner: Neutral
-		Location: 50,22
-	Actor35: prop3
-		Owner: Neutral
-		Location: 48,23
-	Actor36: prop3
-		Owner: Neutral
-		Location: 49,23
-	Actor47: prop3
-		Owner: Neutral
-		Location: 48,24
-	Actor48: prop3
-		Owner: Neutral
-		Location: 49,24
-	Actor49: lamppost
-		Owner: Neutral
-		Location: 47,25
-	Actor50: lamppost
-		Owner: Neutral
-		Location: 50,25
-	Actor51: seed
+	Actor0: seamnstr
 		Owner: Neutral
 		Facing: 384
-		Location: 44,30
-	Actor52: seed
+		Location: 36,17
+	Actor1: seamnstr
 		Owner: Neutral
 		Facing: 384
-		Location: 53,30
-	Actor53: seed
+		Location: 77,17
+	Actor2: gull
 		Owner: Neutral
 		Facing: 384
-		Location: 45,38
-	Actor54: seed
+		Location: 41,18
+	Actor3: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 72,18
+	Actor4: resourcelight
+		Owner: Neutral
+		Location: 50,24
+	Actor5: resourcelight
+		Owner: Neutral
+		Location: 64,24
+	Actor6: rock7
+		Owner: Neutral
+		Location: 39,25
+	Actor7: rock6
+		Owner: Neutral
+		Location: 74,25
+	Actor8: resourcelight
+		Owner: Neutral
+		Location: 36,26
+	Actor12: prop3
+		Owner: Neutral
+		Location: 56,31
+	Actor13: prop3
+		Owner: Neutral
+		Location: 57,31
+	Actor14: prop3
+		Owner: Neutral
+		Location: 56,32
+	Actor15: prop3
+		Owner: Neutral
+		Location: 57,32
+	Actor20: rock6
+		Owner: Neutral
+		Location: 38,36
+	Actor21: rock7
+		Owner: Neutral
+		Location: 75,36
+	Actor24: seed
 		Owner: Neutral
 		Facing: 384
 		Location: 52,38
-	Actor55: gull
+	Actor25: seed
 		Owner: Neutral
 		Facing: 384
-		Location: 35,51
-	Actor56: gull
+		Location: 61,38
+	Actor26: rock7
+		Owner: Neutral
+		Location: 34,39
+	Actor27: treegrs11
+		Owner: Neutral
+		Location: 56,38
+	Actor28: treegrs11
+		Owner: Neutral
+		Location: 57,38
+	Actor29: rock6
+		Owner: Neutral
+		Location: 79,39
+	Actor32: treegrs11
+		Owner: Neutral
+		Location: 54,40
+	Actor33: prop3
+		Owner: Neutral
+		Location: 56,41
+	Actor34: prop3
+		Owner: Neutral
+		Location: 57,41
+	Actor35: treegrs11
+		Owner: Neutral
+		Location: 59,40
+	Actor36: prop3
+		Owner: Neutral
+		Location: 56,42
+	Actor37: prop3
+		Owner: Neutral
+		Location: 57,42
+	Actor38: treegrs10
+		Owner: Neutral
+		Location: 54,42
+	Actor41: treegrs10
+		Owner: Neutral
+		Location: 59,42
+	Actor42: treegrs11
+		Owner: Neutral
+		Location: 55,43
+	Actor43: treegrs11
+		Owner: Neutral
+		Location: 58,43
+	Actor45: treegrs10
+		Owner: Neutral
+		Location: 56,44
+	Actor46: treegrs10
+		Owner: Neutral
+		Location: 57,44
+	Actor48: treegrs12
+		Owner: Neutral
+		Location: 22,46
+	Actor50: seed
 		Owner: Neutral
 		Facing: 384
-		Location: 62,51
-	Actor63: gull
+		Location: 53,46
+	Actor51: seed
 		Owner: Neutral
 		Facing: 384
-		Location: 27,28
-	Actor64: gull
+		Location: 60,46
+	Actor53: treegrs12
+		Owner: Neutral
+		Location: 91,46
+	Actor54: treegrs11
+		Owner: Neutral
+		Location: 22,46
+	Actor57: treegrs11
+		Owner: Neutral
+		Location: 91,46
+	Actor58: treegrs10
+		Owner: Neutral
+		Location: 21,47
+	Actor59: treegrs10
+		Owner: Neutral
+		Location: 92,47
+	Actor60: treegrs11
+		Owner: Neutral
+		Location: 21,50
+	Actor61: resourcelight
+		Owner: Neutral
+		Location: 28,51
+	Actor64: resourcelight
+		Owner: Neutral
+		Location: 86,51
+	Actor65: treegrs11
+		Owner: Neutral
+		Location: 92,50
+	Actor66: treegrs10
+		Owner: Neutral
+		Location: 47,51
+	Actor67: treegrs12
+		Owner: Neutral
+		Location: 50,52
+	Actor68: treegrs12
+		Owner: Neutral
+		Location: 63,52
+	Actor69: treegrs10
+		Owner: Neutral
+		Location: 66,51
+	Actor70: treegrs12
+		Owner: Neutral
+		Location: 44,53
+	Actor71: treegrs10
+		Owner: Neutral
+		Location: 45,52
+	Actor72: treegrs11
+		Owner: Neutral
+		Location: 46,52
+	Actor73: treegrs11
+		Owner: Neutral
+		Location: 67,52
+	Actor74: treegrs10
+		Owner: Neutral
+		Location: 68,52
+	Actor75: treegrs12
+		Owner: Neutral
+		Location: 69,53
+	Actor76: treegrs12
+		Owner: Neutral
+		Location: 41,56
+	Actor77: treegrs12
+		Owner: Neutral
+		Location: 72,56
+	Actor78: gull
 		Owner: Neutral
 		Facing: 384
-		Location: 70,28
-	Actor65: gull
+		Location: 17,57
+	Actor79: gull
 		Owner: Neutral
 		Facing: 384
-		Location: 33,10
-	Actor66: gull
+		Location: 96,57
+	Actor80: gull
 		Owner: Neutral
 		Facing: 384
-		Location: 64,10
-	Actor69: seamnstr
+		Location: 43,59
+	Actor81: gull
 		Owner: Neutral
 		Facing: 384
-		Location: 28,9
-	Actor70: seamnstr
+		Location: 70,59
+	Actor82: mpspawn
+		Owner: Neutral
+		Location: 30,64
+	Actor83: mpspawn
+		Owner: Neutral
+		Location: 82,64
+	Actor86: extractor
+		Owner: Neutral
+		Location: 54,68
+	Actor88: extractor
+		Owner: Neutral
+		Location: 58,68
+	Actor91: resourcelight
+		Owner: Neutral
+		Location: 79,75
+	Actor92: resourcelight
+		Owner: Neutral
+		Location: 28,76
+	Actor93: resourcelight
+		Owner: Neutral
+		Location: 86,76
+	Actor94: treegrs12
+		Owner: Neutral
+		Location: 34,82
+	Actor95: treegrs12
+		Owner: Neutral
+		Location: 79,82
+	Actor96: treegrs11
+		Owner: Neutral
+		Location: 30,83
+	Actor97: sandmisc7
+		Owner: Neutral
+		Location: 37,84
+	Actor98: sandmisc7
+		Owner: Neutral
+		Location: 75,84
+	Actor99: treegrs11
+		Owner: Neutral
+		Location: 83,83
+	Actor100: treegrs10
+		Owner: Neutral
+		Location: 28,84
+	Actor101: treegrs12
+		Owner: Neutral
+		Location: 33,85
+	Actor102: treegrs12
+		Owner: Neutral
+		Location: 80,85
+	Actor103: treegrs10
+		Owner: Neutral
+		Location: 85,84
+	Actor104: sandmisc6
+		Owner: Neutral
+		Location: 25,86
+	Actor105: sandmisc6
+		Owner: Neutral
+		Location: 88,86
+	Actor106: seamnstr
 		Owner: Neutral
 		Facing: 384
-		Location: 69,9
-	Actor71: seamnstr
+		Location: 52,90
+	Actor107: seamnstr
 		Owner: Neutral
 		Facing: 384
-		Location: 41,81
-	Actor72: seamnstr
+		Location: 61,90
+	Actor109: watchtower
+		Owner: Neutral
+		Location: 48,91
+	Actor110: watchtower
+		Owner: Neutral
+		Location: 64,91
+	Actor119: watchtower
+		Owner: Neutral
+		Location: 18,13
+	Actor120: watchtower
+		Owner: Neutral
+		Location: 94,13
+	Actor122: treegrs10
+		Owner: Neutral
+		Location: 56,101
+	Actor123: treegrs12
+		Owner: Neutral
+		Location: 57,102
+	Actor118: treegrs11
+		Owner: Neutral
+		Location: 57,102
+	Actor124: stnrock15
+		Owner: Neutral
+		Location: 56,103
+	Actor125: watchtower
+		Owner: Neutral
+		Location: 14,95
+	Actor126: watchtower
+		Owner: Neutral
+		Location: 98,95
+	Actor121: watchtower
+		Owner: Neutral
+		Location: 102,35
+	Actor127: watchtower
+		Owner: Neutral
+		Location: 10,35
+	Actor128: treegrs11
+		Owner: Neutral
+		Location: 57,9
+	Actor129: treegrs11
+		Owner: Neutral
+		Location: 55,8
+	Actor130: treegrs10
+		Owner: Neutral
+		Location: 57,8
+	Actor131: treegrs10
+		Owner: Neutral
+		Location: 56,9
+	Actor132: treegrs11
+		Owner: Neutral
+		Location: 58,8
+	Actor133: stnrock15
+		Owner: Neutral
+		Location: 56,9
+	Actor134: seamnstr
 		Owner: Neutral
 		Facing: 384
-		Location: 56,81
-	Actor57: gull
+		Location: 101,96
+	Actor135: seamnstr
 		Owner: Neutral
 		Facing: 384
-		Location: 88,49
-	Actor58: gull
+		Location: 12,96
+	Actor136: gull2
 		Owner: Neutral
 		Facing: 384
-		Location: 9,49
-	Actor67: resourcelight
+		Location: 95,15
+	Actor137: gull2
 		Owner: Neutral
-		Location: 42,16
-	Actor68: resourcelight
+		Facing: 384
+		Location: 19,15
+	Actor138: gull2
 		Owner: Neutral
-		Location: 55,16
-	Actor75: resourcelight
+		Facing: 384
+		Location: 103,37
+	Actor139: gull2
 		Owner: Neutral
-		Location: 70,67
-	Actor78: resourcelight
+		Facing: 384
+		Location: 10,37
+	Actor141: treegrs11
 		Owner: Neutral
-		Location: 27,67
-	Actor82: resourcelight
+		Location: 72,42
+	Actor142: treegrs11
 		Owner: Neutral
-		Location: 60,83
-	Actor83: resourcelight
+		Location: 41,42
+	Actor143: treegrs12
 		Owner: Neutral
-		Location: 37,83
-	Actor84: resourcelight
+		Location: 71,42
+	Actor144: treegrs12
 		Owner: Neutral
+		Location: 42,42
+	Actor145: treegrs10
+		Owner: Neutral
+		Location: 41,41
+	Actor146: treegrs10
+		Owner: Neutral
+		Location: 72,41
+	Actor147: rock2
+		Owner: Neutral
+		Location: 45,46
+	Actor148: rock2
+		Owner: Neutral
+		Location: 72,47
+	Actor149: rock4
+		Owner: Neutral
+		Location: 68,46
+	Actor150: rock4
+		Owner: Neutral
+		Location: 41,47
+	Actor153: tower_light
+		Owner: Neutral
+		Location: 49,92
+	Actor154: tower_light
+		Owner: Neutral
+		Location: 64,92
+	Actor155: tower_light
+		Owner: Neutral
+		Location: 15,96
+	Actor156: tower_light
+		Owner: Neutral
+		Location: 11,36
+	Actor157: tower_light
+		Owner: Neutral
+		Location: 19,14
+	Actor158: tower_light
+		Owner: Neutral
+		Location: 94,14
+	Actor159: tower_light
+		Owner: Neutral
+		Location: 102,36
+	Actor160: tower_light
+		Owner: Neutral
+		Location: 98,96
+	Actor161: baselight
+		Owner: Neutral
+		Location: 83,64
+	Actor162: baselight
+		Owner: Neutral
+		Location: 31,64
+	Actor163: resourcelight
+		Owner: Neutral
+		Location: 35,75
+	Actor167: water_light
+		Owner: Neutral
+		Location: 57,97
+	Actor168: water_light
+		Owner: Neutral
+		Location: 104,64
+	Actor169: water_light
+		Owner: Neutral
+		Location: 95,90
+	Actor170: water_light
+		Owner: Neutral
+		Location: 94,37
+	Actor172: water_light
+		Owner: Neutral
+		Location: 18,90
+	Actor173: water_light
+		Owner: Neutral
+		Location: 9,64
+	Actor175: water_light
+		Owner: Neutral
+		Location: 18,37
+	Actor178: water_light
+		Owner: Neutral
+		Location: 57,13
+	Actor181: water_light
+		Owner: Neutral
+		Location: 101,77
+	Actor183: dark_light_xl
+		Owner: Neutral
+		Location: 109,104
+	Actor184: dark_light_xl
+		Owner: Neutral
+		Location: 103,108
+	Actor185: dark_light_xl
+		Owner: Neutral
+		Location: 4,104
+	Actor186: dark_light_xl
+		Owner: Neutral
+		Location: 10,108
+	Actor187: dark_light_xl
+		Owner: Neutral
+		Location: 107,12
+	Actor188: dark_light_xl
+		Owner: Neutral
+		Location: 101,6
+	Actor189: dark_light_xl
+		Owner: Neutral
+		Location: 12,6
+	Actor190: dark_light_xl
+		Owner: Neutral
+		Location: 6,12
+	Actor191: dark_light_xl
+		Owner: Neutral
+		Location: 74,112
+	Actor192: dark_light_xl
+		Owner: Neutral
+		Location: 39,112
+	Actor180: tower_light
+		Owner: Neutral
+		Location: 43,45
+	Actor195: tower_light
+		Owner: Neutral
+		Location: 78,36
+	Actor196: tower_light
+		Owner: Neutral
+		Location: 35,36
+	Actor200: red_light
+		Owner: Neutral
+		Location: 57,42
+	Actor201: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 78,37
+	Actor202: gull
+		Owner: Neutral
+		Facing: 384
 		Location: 35,37
-	Actor85: resourcelight
+	Actor204: water_light_small
 		Owner: Neutral
-		Location: 62,37
-	Actor86: resourcelight
+		Location: 64,61
+	Actor194: water_light_small
 		Owner: Neutral
-		Location: 70,28
-	Actor87: resourcelight
+		Location: 66,75
+	Actor209: water_light_small
 		Owner: Neutral
-		Location: 27,28
-	Actor79: extractor
+		Location: 48,75
+	Actor164: water_light
 		Owner: Neutral
-		Location: 50,59
-	Actor80: extractor
+		Location: 57,83
+	Actor206: water_light_small
 		Owner: Neutral
-		Location: 46,59
-	Actor81: resourcelight
+		Location: 102,25
+	Actor207: water_light_small
 		Owner: Neutral
-		Location: 51,61
-	Actor88: resourcelight
+		Location: 107,51
+	Actor210: water_light_small
 		Owner: Neutral
-		Location: 47,61
-	Actor73: resourcelight
+		Location: 108,76
+	Actor211: water_light_small
 		Owner: Neutral
-		Location: 77,68
-	Actor74: resourcelight
+		Location: 107,87
+	Actor212: water_light_small
 		Owner: Neutral
-		Location: 77,43
-	Actor76: resourcelight
+		Location: 90,103
+	Actor213: water_light_small
 		Owner: Neutral
-		Location: 69,18
-	Actor89: resourcelight
+		Location: 77,101
+	Actor214: water_light_small
 		Owner: Neutral
-		Location: 28,18
-	Actor90: resourcelight
+		Location: 70,104
+	Actor215: water_light_small
 		Owner: Neutral
-		Location: 20,43
-	Actor77: resourcelight
+		Location: 35,101
+	Actor216: water_light_small
 		Owner: Neutral
-		Location: 20,68
-	Actor91: rock6
+		Location: 23,103
+	Actor217: water_light_small
 		Owner: Neutral
-		Location: 31,38
-	Actor92: rock6
+		Location: 44,104
+	Actor219: water_light_small
 		Owner: Neutral
-		Location: 30,28
-	Actor93: rock6
+		Location: 5,76
+	Actor218: water_light
 		Owner: Neutral
-		Location: 66,38
-	Actor94: rock6
+		Location: 12,77
+	Actor220: water_light_small
 		Owner: Neutral
-		Location: 71,31
-	Actor95: rock6
+		Location: 6,86
+	Actor221: water_light_small
 		Owner: Neutral
-		Location: 66,17
-	Actor96: rock7
+		Location: 6,50
+	Actor222: water_light_small
 		Owner: Neutral
-		Location: 32,39
-	Actor97: rock7
+		Location: 11,25
+	Actor223: water_light_small
 		Owner: Neutral
-		Location: 65,39
-	Actor98: rock7
+		Location: 24,5
+	Actor224: water_light_small
 		Owner: Neutral
-		Location: 26,31
-	Actor99: rock7
+		Location: 90,5
+	Actor225: water_light_small
 		Owner: Neutral
-		Location: 31,17
-	Actor100: rock7
+		Location: 79,6
+	Actor226: water_light_small
 		Owner: Neutral
-		Location: 67,28
-	Actor101: mpspawn
+		Location: 33,6
+	Actor227: water_light_small
 		Owner: Neutral
-		Location: 22,56
-	Actor102: mpspawn
+		Location: 41,8
+	Actor228: water_light_small
 		Owner: Neutral
-		Location: 74,56
+		Location: 72,8
+	Actor229: water_light_small
+		Owner: Neutral
+		Location: 70,14
+	Actor230: water_light_small
+		Owner: Neutral
+		Location: 43,14
+	Actor231: water_light_small
+		Owner: Neutral
+		Location: 49,61
+	Actor203: red_light
+		Owner: Neutral
+		Location: 57,70
+	Actor205: lamppost
+		Owner: Neutral
+		Location: 59,50
+	Actor232: lamppost
+		Owner: Neutral
+		Location: 54,50
+	Actor235: red_light
+		Owner: Neutral
+		Location: 83,82
+	Actor236: red_light
+		Owner: Neutral
+		Location: 30,82
+	Actor179: tower_light
+		Owner: Neutral
+		Location: 70,45
+	Actor237: red_light
+		Owner: Neutral
+		Location: 56,32
+	Actor197: resourcelight
+		Owner: Neutral
+		Location: 78,26
+	Actor198: water_light
+		Owner: Neutral
+		Location: 89,21
+	Actor199: water_light
+		Owner: Neutral
+		Location: 24,21
+	Actor193: water_light_small
+		Owner: Neutral
+		Location: 67,68
+	Actor208: water_light_small
+		Owner: Neutral
+		Location: 47,68
+	Actor233: lamppost
+		Owner: Neutral
+		Location: 59,65
+	Actor234: lamppost
+		Owner: Neutral
+		Location: 54,65
 
 Rules: rules.yaml
