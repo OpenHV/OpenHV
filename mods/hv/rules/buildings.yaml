@@ -1600,7 +1600,7 @@ STORAGE:
 		Image: storage2
 		FactionImages:
 			sc: storage
-			yi: storage
+			yi: storage2
 	ExitsDebugOverlay:
 	Exit@Top:
 		ExitCell: 2, 0
