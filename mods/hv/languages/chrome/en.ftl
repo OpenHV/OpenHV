@@ -366,17 +366,6 @@ label-ui-scale-dropdown-container = UI Scale:
 checkbox-cursordouble-container = Increase Cursor Size
 button-mainmenu-introduction-prompt-continue = Continue
 
-## mission-browser.yaml
-label-missionbrowser-panel-title = Missions
-label-mission-info-difficulty-desc = Difficulty:
-label-mission-info-gamespeed-desc = Speed:
-button-missionbrowser-panel-start-briefing-video = Watch Briefing
-button-missionbrowser-panel-stop-briefing-video = Stop Briefing
-button-missionbrowser-panel-start-info-video = Watch Info Video
-button-missionbrowser-panel-stop-info-video = Stop Info Video
-button-missionbrowser-panel-startgame = Play
-button-missionbrowser-panel-back = Back
-
 ## multiplayer-browser.yaml
 label-multiplayer-panel-title = Multiplayer
 image-multiplayer-panel-password-protected-tooltip = Requires Password

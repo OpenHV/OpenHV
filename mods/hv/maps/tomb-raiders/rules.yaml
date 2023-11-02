@@ -13,7 +13,7 @@ World:
 		SwingAmplitude: 1.0, 1.5
 		ParticleColors: FFEFD5, FBCEB1, FED8B1
 		LineTailAlphaValue: 0
-	GlobalLightingPaletteEffect:
+	TintPostProcessEffect:
 		Red: 0.9
 		Green: 1.0
 		Blue: 1.0

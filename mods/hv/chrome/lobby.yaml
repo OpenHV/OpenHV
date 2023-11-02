@@ -160,4 +160,3 @@ Background@SERVER_LOBBY:
 			Font: Bold
 		Container@FACTION_DROPDOWN_PANEL_ROOT:
 		TooltipContainer@TOOLTIP_CONTAINER:
-
