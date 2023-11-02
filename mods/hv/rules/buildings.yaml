@@ -1537,7 +1537,7 @@ UPLINK:
 		PauseOnCondition: lowpower
 		Icon: railgun
 		Cursor: railgun
-		ChargeInterval: 9000
+		ChargeInterval: 4500
 		Name: Orbital Railgun
 		Description: Initiate a surgical strike.\nApplies instant damage to a small area.
 		DisplayTimerRelationships: Ally, Neutral, Enemy
