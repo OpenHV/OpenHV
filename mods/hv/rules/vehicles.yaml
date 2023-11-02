@@ -311,7 +311,7 @@ TANK6:
 		Queue: Utility
 		BuildPaletteOrder: 80
 		Prerequisites: tradplat
-		Description: Lays mines to destroy unwary enemy units.\n  Can detect enemy mines.\n  Unarmed
+		Description: Lays smart mines\nthat explode on enemy units\nwhile avoiding ally units.  Can detect enemy mines.\n  Unarmed
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -338,6 +338,7 @@ TANK6:
 	MineImmune:
 	AmmoPool:
 		Ammo: 5
+		RearmSound: mine_reload_oneshotofficial.wav
 	DetectCloaked:
 		Range: 5c0
 		DetectionTypes: Mine

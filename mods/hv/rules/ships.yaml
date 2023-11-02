@@ -398,7 +398,7 @@ WATERMINELAYER:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, tradplat
 		BuildPaletteOrder: 40
-		Description: Lays underwater mines to destroy unwary enemy ships.\n  Can detect enemy mines.\n  Unarmed
+		Description: Lays smart mines\nthat explode on enemy units\nwhile avoiding ally units.\n  Can detect enemy mines.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -432,6 +432,7 @@ WATERMINELAYER:
 	AmmoPool:
 		Ammo: 5
 		AmmoCondition: ammo
+		RearmSound: mine_reload_oneshotofficial.wav
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3

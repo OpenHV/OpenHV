@@ -62,11 +62,18 @@ AntiTankMine:
 		Damage: 40000
 	Warhead@Effect: CreateEffect
 		Explosions: large_2, large_3
-		ImpactSounds: explosion02.wav
+		ImpactSounds: mine_explosion.wav
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 50
 		InvalidTargets: Structure, Wall, Trees
+
+AntiTankWaterMine:
+	Inherits: AntiTankMine
+	Warhead@Effect: CreateEffect
+		Image: water_splash_big
+		Explosions: water_splash_big_a, water_splash_big_b
+		ImpactSounds: water_mine_explosion.wav
 
 PilotSpawn:
 	ValidTargets: Air

@@ -2,6 +2,8 @@
 
 LANDMINE:
 	Inherits: ^Mine
+	Tooltip:
+		Name: AI Mine
 	RenderSprites:
 		Image: mine1
 	WithRandomSpriteBody:
@@ -10,7 +12,10 @@ LANDMINE:
 WATERMINE:
 	Inherits: ^Mine
 	Tooltip:
-		Name: Water mine
+		Name: AI Water Mine
 	Cloak:
 		DetectionTypes: WaterMine
 	WithSpriteBody:
+	Explodes:
+		Weapon: AntiTankWaterMine
+		EmptyWeapon: UnitExplodeSmall
