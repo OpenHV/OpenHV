@@ -275,6 +275,21 @@ water_splash_small:
 		Tick: 60
 		ZOffset: 1000
 
+water_splash_big:
+	water_splash_big_a:
+		Filename: bits/water_splash_big.png
+		Length: 10
+		Tick: 60
+		Offset: 0,-4
+		ZOffset: 1000
+	water_splash_big_b:
+		Filename: bits/water_splash_big.png
+		Length: 10
+		Tick: 60
+		FlipX: true
+		Offset: 0,-4
+		ZOffset: 1000
+
 lava_splash:
 	lava_splash_a:
 		Filename: bits/lava_splash.png
@@ -334,25 +349,25 @@ swamp_splash_small:
 mine1:
 	idle:
 		Filename: bits/mines.png
-		ZOffset: -512
+		ZOffset: -1024
 
 mine2:
 	idle:
 		Filename: bits/mines.png
 		Start: 1
-		ZOffset: -512
+		ZOffset: -1024
 
 mine3:
 	idle:
 		Filename: bits/mines.png
 		Start: 2
-		ZOffset: -512
+		ZOffset: -1024
 
 mine4:
 	idle:
 		Filename: bits/mines.png
 		Start: 3
-		ZOffset: -512
+		ZOffset: -1024
 
 debris:
 	Defaults:
@@ -443,4 +458,4 @@ watermine:
 		Filename: bits/water-mine.png
 		Length: 8
 		Tick: 100
-		ZOffset: -512
+		ZOffset: -1024

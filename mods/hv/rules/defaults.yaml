@@ -984,8 +984,7 @@
 	Mine:
 		CrushClasses: Mine
 		DetonateClasses: Mine
-		AvoidFriendly: true
-		BlockFriendly: true
+		BlockFriendly: false
 	Health:
 		HP: 10000
 		NotifyAppliedDamage: false

@@ -25,3 +25,7 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [miner_transform/miner_building_transform.wav](https://freesound.org/people/chainsaw_dinner_party/sounds/403075/) by chainsaw_dinner_party
 * [miner_transform/miner_building_transform.wav](https://freesound.org/people/behutchi/sounds/442259/) by behutchi
 * [beep_matrixxx.wav](https://freesound.org/people/MATRIXXX_/sounds/657948/) by MATRIXXX_
+* [water_mine_explosion.wav](https://freesound.org/people/Sheyvan/sounds/519008/) by Sheyvan
+* [water_mine_explosion.wav](https://freesound.org/people/qubodup/sounds/182429/) by qubodup
+* [mine_explosion.wav](https://freesound.org/people/qubodup/sounds/182429/) by qubodup
+* [mine_reload_oneshotofficial.wav](https://freesound.org/people/oneshotofficial/sounds/616757/) by oneshotofficial
