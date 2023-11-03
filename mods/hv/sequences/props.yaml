@@ -344,6 +344,44 @@ prop17:
 		Offset: 4, 4
 		ZOffset: -1768
 
+crane:
+	Defaults:
+		ZOffset: 1768
+	idle:
+		Filename: bits/crane.png
+		Offset: 0,-7
+	damaged-idle:
+		Filename: bits/crane.png
+		Start: 1
+		Offset: 0,-7
+	shadow-overlay:
+		Filename: bits/crane-shadow.png
+		Offset: 19,27
+	damaged-shadow-overlay:
+		Filename: bits/crane-shadow.png
+		Start: 1
+		Offset: 19,27
+
+crane2:
+	Defaults:
+		ZOffset: 1768
+	idle:
+		Filename: bits/crane.png
+		Start: 2
+		Offset: 0,-7
+	damaged-idle:
+		Filename: bits/crane.png
+		Start: 3
+		Offset: 0,-7
+	shadow-overlay:
+		Filename: bits/crane-shadow.png
+		Start: 2
+		Offset: 19,27
+	damaged-shadow-overlay:
+		Filename: bits/crane-shadow.png
+		Start: 3
+		Offset: 19,27
+
 tanktrap:
 	idle:
 		Filename: bits/tanktrap.png
