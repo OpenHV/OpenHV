@@ -286,6 +286,24 @@ PROP16:
 PROP17:
 	Inherits: PROP16
 
+CRANE:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: = x
+		Dimensions: 1,2
+	HitShape:
+		UseTargetableCellsOffsets: False
+	Tooltip:
+		Name: Crane
+	Health:
+		HP: 100000
+
+CRANE2:
+	Inherits: CRANE
+
 ELECTRICPAD:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
