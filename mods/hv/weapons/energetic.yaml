@@ -181,6 +181,16 @@ VoltageArc:
 		AffectsParent: true
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 
+PodVoltageArc:
+	Inherits: VoltageArc
+	Range: 6c0
+	Report: lighting_gun_freqman.wav
+	Projectile: EnergyBolt
+		Radius: 2
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 4000
+
 LightningBolt:
 	ReloadDelay: 60
 	Range: 9c0
