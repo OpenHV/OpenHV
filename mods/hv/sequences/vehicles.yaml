@@ -688,6 +688,25 @@ bomberpod:
 		Filename: bits/units-icons.png
 		Start: 55
 
+electricpod:
+	idle:
+		Filename: bits/electricpod.png
+		Facings: 8
+	shoot:
+		Filename: bits/electricpod.png
+		Start: 8
+		Facings: 8
+		Length: 3
+		Tick: 60
+	die:
+		Filename: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon:
+		Filename: bits/units-icons.png
+		Start: 59
+
 tyriantank:
 	idle:
 		Filename: bits/tyriantank.png

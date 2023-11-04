@@ -342,6 +342,38 @@ BOMBERPOD:
 		InitialStance: HoldFire
 	-WithDeathAnimation:
 
+ELECTRICPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: Breakthrough vehicle.\nArmed with lightning gun.\n  Strong vs Pods, Vehicles and Buildings.
+		Prerequisites: ~module.yi, techcenter
+		BuildPaletteOrder: 60
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Electric Pod
+	Health:
+		HP: 10000
+	Mobile:
+		Voice: Move
+	Voiced:
+		VoiceSet: ElectricPodVoice
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament@Primary:
+		Weapon: PodVoltageArc
+		LocalOffset: 350,0,0
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: PodVoltageArc
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithAttackAnimation:
+		Sequence: shoot
+
 MINIPOD1:
 	Inherits: ^Pod
 	Valued:
