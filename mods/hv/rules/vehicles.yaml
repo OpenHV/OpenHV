@@ -843,7 +843,7 @@ TANK1:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 7500
 	Armor:
 		Type: Light
 	Mobile:
@@ -880,12 +880,12 @@ TANK2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 9500
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 40
-		Speed: 160
+		TurnSpeed: 100
+		Speed: 170
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
