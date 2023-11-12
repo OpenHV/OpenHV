@@ -19,11 +19,28 @@ LAMPPOST:
 	ThrowsShrapnel:
 		Pieces: 1, 2
 	-ThrowsShrapnel@Large:
+	-ShakeOnDeath:
 
 SPARKLAMP:
 	Inherits: LAMPPOST
 	Tooltip:
 		Name: Spark Lamp
+
+LAMPPOST2:
+	Inherits: LAMPPOST
+	Inherits@Shape: ^1x2Shape
+	Interactable:
+		Bounds: 1024, 1524
+	Building:
+		Footprint: = x
+		Dimensions: 1,2
+	Tooltip:
+		Name: High Lamp Post
+	TerrainLightSource:
+		Range: 4c512
+		Intensity: 0.3
+	ThrowsShrapnel:
+		Pieces: 2, 3
 
 PYRAMID:
 	Inherits: ^Prop

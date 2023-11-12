@@ -14,6 +14,17 @@ sparklamp:
 		Filename: bits/sparklamp.png
 		Start: 1
 
+lamppost2:
+	idle:
+		Filename: bits/lamppost2.png
+	damaged-idle:
+		Filename: bits/lamppost2.png
+		Start: 1
+	shadow-overlay:
+		Filename: bits/lamppost2-shadow.png
+		Offset: 11,18
+		ZOffset: 1768
+
 pyramid:
 	Defaults:
 		Offset: -1,-2
