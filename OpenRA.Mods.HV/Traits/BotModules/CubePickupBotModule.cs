@@ -18,6 +18,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[TraitLocation(SystemActors.Player)]
 	[Desc("Put this on the Player actor. Manages cube collection.")]
 	public class CubePickupBotModuleInfo : ConditionalTraitInfo
 	{
