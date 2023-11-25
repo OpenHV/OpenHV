@@ -176,7 +176,7 @@ Player:
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, scout1, scout2
+		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod
