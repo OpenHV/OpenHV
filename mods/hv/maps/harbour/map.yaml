@@ -1933,8 +1933,5 @@ Actors:
 	Actor720: crate33
 		Owner: Neutral
 		Location: 108,92
-	Actor721: crane
-		Owner: Neutral
-		Location: 56,75
 
 Rules: rules.yaml
