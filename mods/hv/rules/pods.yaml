@@ -306,7 +306,7 @@ BOMBERPOD:
 	Buildable:
 		Queue: Pod
 		Description: Remote controlled mine. \nExplodes when reaches enemy.
-		Prerequisites: ~module, radar
+		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 600
