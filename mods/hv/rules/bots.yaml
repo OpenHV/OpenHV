@@ -115,6 +115,7 @@ Player:
 			flamepod: 1
 			elitepod: 1
 			sniperpod: 1
+			electricpod: 1
 			brokerpod: 9
 			technician: 1
 			bomberpod: 1
