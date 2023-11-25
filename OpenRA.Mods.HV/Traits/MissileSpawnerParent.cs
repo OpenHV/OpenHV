@@ -73,7 +73,6 @@ namespace OpenRA.Mods.HV.Traits
 		public override void OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
 		{
 			// Do nothing, because missiles can't be captured.
-			return;
 		}
 
 		void INotifyAttack.PreparingAttack(Actor self, in Target target, Armament a, Barrel barrel) { }
@@ -113,10 +112,10 @@ namespace OpenRA.Mods.HV.Traits
 
 			SpawnIntoWorld(self, childEntry.Actor, self.CenterPosition);
 
-			if (spawnContainTokens.TryGetValue(a.Info.Name, out var spawnContainToken) && spawnContainToken.Any())
+			if (spawnContainTokens.TryGetValue(a.Info.Name, out var spawnContainToken) && spawnContainToken.Count > 0)
 				self.RevokeCondition(spawnContainToken.Pop());
 
-			if (loadedTokens.Any())
+			if (loadedTokens.Count > 0)
 				self.RevokeCondition(loadedTokens.Pop());
 
 			// Queue attack order, too.

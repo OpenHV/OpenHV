@@ -53,7 +53,7 @@ namespace OpenRA.Mods.HV.Traits
 			this.category = category;
 			failRetryTicks = baseBuilder.Info.StructureProductionResumeDelay;
 			minimumExcessPower = baseBuilder.Info.MinimumExcessPower;
-			if (!baseBuilder.Info.NavalProductionTypes.Any())
+			if (baseBuilder.Info.NavalProductionTypes.Count < 1)
 				waterState = WaterCheck.DontCheck;
 
 			buildingInfluence = world.WorldActor.Trait<BuildingInfluence>();
@@ -236,13 +236,11 @@ namespace OpenRA.Mods.HV.Traits
 				a => a.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault).Sum(p => p.Amount));
 
 			// First priority is to get out of a low power situation
-			if (powerManager != null && powerManager.ExcessPower < minimumExcessPower)
+			if (powerManager != null && powerManager.ExcessPower < minimumExcessPower &&
+				power != null && power.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault).Sum(p => p.Amount) > 0)
 			{
-				if (power != null && power.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault).Sum(p => p.Amount) > 0)
-				{
-					AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (low power)");
-					return power;
-				}
+				AIUtils.BotDebug($"{queue.Actor.Owner} decided to build {power.Name}: Priority override (low power)");
+				return power;
 			}
 
 			// Next is to build up a strong economy

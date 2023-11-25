@@ -150,7 +150,7 @@ namespace OpenRA.Mods.HV.Traits
 						foreach (var minelayer in minelayers)
 						{
 							var cells = pathFinder.FindPathToTargetCell(minelayer.Actor, new[] { minelayer.Actor.Location }, enemy.Location, BlockedByActor.Immovable, laneBias: false);
-							if (cells != null && !(cells.Count == 0))
+							if (cells != null && cells.Count != 0)
 							{
 								AIUtils.BotDebug($"{player}: try find a location to lay mine.");
 								EnqueueConflictPosition(cells[cells.Count / 2]);
@@ -194,7 +194,7 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var at in minelayers)
 				{
 					var cells = pathFinder.FindPathToTargetCell(at.Actor, new[] { at.Actor.Location }, minelayingPosition, BlockedByActor.Immovable, laneBias: false);
-					if (cells != null && !(cells.Count == 0))
+					if (cells != null && cells.Count != 0)
 					{
 						orderedActors.Add(at.Actor);
 
@@ -227,7 +227,7 @@ namespace OpenRA.Mods.HV.Traits
 
 					var vec = new CVec(Info.MineFieldRadius, Info.MineFieldRadius);
 					bot.QueueOrder(new Order("PlaceMinefield", null, Target.FromCell(world, minelayingPosition + vec), false, groupedActors: orderedActors.ToArray()) { ExtraLocation = minelayingPosition - vec });
-					bot.QueueOrder(new Order("Move", null, Target.FromCell(world, orderedActors.First().Location), true, groupedActors: orderedActors.ToArray()));
+					bot.QueueOrder(new Order("Move", null, Target.FromCell(world, orderedActors[0].Location), true, groupedActors: orderedActors.ToArray()));
 				}
 				else
 				{

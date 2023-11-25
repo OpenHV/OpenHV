@@ -162,7 +162,8 @@ namespace OpenRA.Mods.HV
 				}
 
 				client.Listen();
-			}) { Name = "IrcListenThread", IsBackground = true }.Start();
+			})
+			{ Name = "IrcListenThread", IsBackground = true }.Start();
 		}
 
 		void AddNotification(string text)

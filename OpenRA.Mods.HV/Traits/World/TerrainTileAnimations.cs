@@ -64,7 +64,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void ITick.Tick(Actor self)
 		{
-			if (!cells.Any())
+			if (cells.Length < 1)
 				return;
 
 			if (--ticks <= 0)

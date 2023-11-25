@@ -22,8 +22,6 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class BotRepairOrSellCaptures : INotifyOwnerChanged
 	{
-		public BotRepairOrSellCaptures() { }
-
 		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
 		{
 			if (!newOwner.IsBot)
@@ -42,7 +40,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			var rb = self.TraitOrDefault<RepairableBuilding>();
 			if (rb != null && health.DamageState != DamageState.Undamaged)
-				 self.World.IssueOrder(new Order("RepairBuilding", newOwner.PlayerActor, Target.FromActor(self), false));
+				self.World.IssueOrder(new Order("RepairBuilding", newOwner.PlayerActor, Target.FromActor(self), false));
 		}
 	}
 }

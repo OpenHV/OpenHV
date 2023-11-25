@@ -9,15 +9,11 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 ; 4-column tab indentation
-[*.yaml]
+[*.{cs,csproj,yaml,lua,sh,ps1}]
 indent_style = tab
 indent_size = 4
 
-; 4-column tab indentation and .NET coding conventions
-[*.cs]
-indent_style = tab
-indent_size = 4
-
+; .NET coding conventions
 #### Code Style Rules
 #### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/
 
@@ -73,6 +69,10 @@ dotnet_diagnostic.IDE0200.severity = silent # Requires C# 11
 csharp_style_prefer_top_level_statements = false
 dotnet_diagnostic.IDE0210.severity = warning
 dotnet_diagnostic.IDE0211.severity = warning
+
+# IDE0290 Use primary constructor
+#csharp_style_prefer_primary_constructors = true
+dotnet_diagnostic.IDE0200.severity = silent # Requires C# 12
 
 ## Expression-bodied members
 
@@ -431,10 +431,7 @@ dotnet_diagnostic.IDE0077.severity = warning
 
 ### Formatting Rules (IDE0055)
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0055
-
-# We may eventually wish to enforce this rule, however some existing formatting conflicts with the rule despite being reasonable.
-# Additionally, the rule is buggy and likes to report spuriously after invoking Format Document in the IDE.
-dotnet_diagnostic.IDE0055.severity = none
+dotnet_diagnostic.IDE0055.severity = warning
 
 #dotnet_sort_system_directives_first = true
 #dotnet_separate_import_directive_groups = false
@@ -452,7 +449,7 @@ dotnet_diagnostic.IDE0055.severity = none
 #csharp_indent_labels = one_less_than_current
 #csharp_indent_block_contents = true
 #csharp_indent_braces = false
-#csharp_indent_case_contents_when_block = true
+csharp_indent_case_contents_when_block = false
 
 #csharp_space_after_cast = false
 #csharp_space_after_keywords_in_control_flow_statements = true
@@ -642,6 +639,7 @@ dotnet_diagnostic.SA1649.severity = none # FileNameMustMatchTypeName
 #### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/
 
 # Below we enable specific rules by setting severity to warning.
+# Rules are disabled by setting severity to silent (to still allow use in IDE) or none (to prevent all use).
 # Rules are listed below with any options available.
 # Options are commented out if they match the defaults.
 
@@ -727,6 +725,9 @@ dotnet_diagnostic.CA1417.severity = warning
 
 # Use 'nameof' in place of string.
 dotnet_diagnostic.CA1507.severity = warning
+
+# Avoid redundant length argument.
+dotnet_diagnostic.CA1514.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
 
 ### Naming Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/naming-warnings
@@ -858,6 +859,23 @@ dotnet_diagnostic.CA1858.severity = warning
 # Avoid using 'Enumerable.Any()' extension method.
 dotnet_diagnostic.CA1860.severity = warning
 
+# Prefer the 'IDictionary.TryAdd(TKey, TValue)' method.
+dotnet_diagnostic.CA1864.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+
+# Use 'string.Method(char)' instead of 'string.Method(string)' for string with single char.
+dotnet_diagnostic.CA1865.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1866.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1867.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+
+# Unnecessary call to 'Contains' for sets.
+dotnet_diagnostic.CA1868.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+
+# Cache and reuse 'JsonSerializerOptions' instances.
+dotnet_diagnostic.CA1869.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+
+# Use a cached 'SearchValues' instance.
+dotnet_diagnostic.CA1870.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+
 ### Reliability Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/reliability-warnings
 
@@ -903,6 +921,9 @@ dotnet_diagnostic.CA2207.severity = warning
 # Instantiate argument exceptions correctly.
 dotnet_diagnostic.CA2208.severity = warning
 
+# Non-constant fields should not be visible.
+dotnet_diagnostic.CA2211.severity = silent
+
 # Dispose methods should call base class dispose.
 dotnet_diagnostic.CA2215.severity = warning
 
@@ -917,7 +938,7 @@ dotnet_diagnostic.CA2231.severity = warning
 
 # Provide correct arguments to formatting methods.
 #dotnet_code_quality.CA2241.additional_string_formatting_methods =
-dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = true
+#dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = false
 dotnet_diagnostic.CA2241.severity = warning
 
 # Test for NaN correctly.
@@ -950,37 +971,204 @@ dotnet_diagnostic.CA2251.severity = warning
 # Ensure ThreadStatic is only used with static fields.
 dotnet_diagnostic.CA2259.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
 
-### Roslynator
-### https://github.com/JosefPihrt/Roslynator/tree/main/docs/analyzers
+### Roslynator.Analyzers
+### https://josefpihrt.github.io/docs/roslynator/analyzers
 
+# We disable the rule category by setting severity to none.
 # Below we enable specific rules by setting severity to warning.
+dotnet_analyzer_diagnostic.category-roslynator.severity = none
+
+# Remove redundant 'sealed' modifier.
+dotnet_diagnostic.RCS1034.severity = warning
+
+# Remove argument list from attribute.
+dotnet_diagnostic.RCS1039.severity = warning
+
+# Remove empty initializer.
+dotnet_diagnostic.RCS1041.severity = warning
+
+# Remove enum default underlying type.
+dotnet_diagnostic.RCS1042.severity = warning
+
+# Remove 'partial' modifier from type with a single part.
+dotnet_diagnostic.RCS1043.severity = warning
+
+# Use lambda expression instead of anonymous method.
+dotnet_diagnostic.RCS1048.severity = warning
+
+# Simplify boolean comparison.
+dotnet_diagnostic.RCS1049.severity = warning
+
+# Use compound assignment.
+dotnet_diagnostic.RCS1058.severity = warning
+
+# Avoid locking on publicly accessible instance.
+dotnet_diagnostic.RCS1059.severity = warning
+
+# Merge 'if' with nested 'if'.
+dotnet_diagnostic.RCS1061.severity = warning
+
+# Remove empty 'finally' clause.
+dotnet_diagnostic.RCS1066.severity = warning
+
+# Simplify logical negation.
+dotnet_diagnostic.RCS1068.severity = warning
+
+# Remove redundant base constructor call.
+dotnet_diagnostic.RCS1071.severity = warning
+
+# Remove empty namespace declaration.
+dotnet_diagnostic.RCS1072.severity = warning
+
+# Remove redundant constructor.
+dotnet_diagnostic.RCS1074.severity = warning
+
+# Optimize LINQ method call.
+dotnet_diagnostic.RCS1077.severity = warning
 
 # Use 'Count' property instead of 'Any' method.
 dotnet_diagnostic.RCS1080.severity = warning
 
-# Use read-only auto-implemented property.
-dotnet_diagnostic.RCS1170.severity = warning
+# Use coalesce expression instead of conditional expression.
+dotnet_diagnostic.RCS1084.severity = warning
 
-# Unnecessary interpolated string.
-dotnet_diagnostic.RCS1214.severity = warning
+# Use --/++ operator instead of assignment.
+dotnet_diagnostic.RCS1089.severity = warning
 
-# Unnecessary usage of verbatim string literal.
-dotnet_diagnostic.RCS1192.severity = warning
+# Remove empty region.
+dotnet_diagnostic.RCS1091.severity = warning
 
-# Use pattern matching instead of combination of 'as' operator and null check.
-dotnet_diagnostic.RCS1221.severity = warning
+# Default label should be the last label in a switch section.
+dotnet_diagnostic.RCS1099.severity = warning
 
-# Expression is always equal to 'true'.
-dotnet_diagnostic.RCS1215.severity = warning
+# Unnecessary interpolation.
+dotnet_diagnostic.RCS1105.severity = warning
+
+# Remove redundant 'ToCharArray' call.
+dotnet_diagnostic.RCS1107.severity = warning
+
+# Add 'static' modifier to all partial class declarations.
+dotnet_diagnostic.RCS1108.severity = warning
+
+# Combine 'Enumerable.Where' method chain.
+dotnet_diagnostic.RCS1112.severity = warning
+
+# Use 'string.IsNullOrEmpty' method.
+dotnet_diagnostic.RCS1113.severity = warning
+
+# Mark local variable as const.
+dotnet_diagnostic.RCS1118.severity = warning
+
+# Bitwise operation on enum without Flags attribute.
+dotnet_diagnostic.RCS1130.severity = warning
+
+# Remove redundant overriding member.
+dotnet_diagnostic.RCS1132.severity = warning
+
+# Remove redundant Dispose/Close call.
+dotnet_diagnostic.RCS1133.severity = warning
+
+# Remove redundant statement.
+dotnet_diagnostic.RCS1134.severity = warning
+
+# Merge switch sections with equivalent content.
+dotnet_diagnostic.RCS1136.severity = warning
+
+# Simplify coalesce expression.
+dotnet_diagnostic.RCS1143.severity = warning
+
+# Remove redundant cast.
+dotnet_diagnostic.RCS1151.severity = warning
 
 # Use StringComparison when comparing strings.
 dotnet_diagnostic.RCS1155.severity = warning
 
-# Abstract type should not have public constructors.
-dotnet_diagnostic.RCS1160.severity = warning
+# Use EventHandler<T>.
+dotnet_diagnostic.RCS1159.severity = warning
 
-# Optimize 'Dictionary<TKey, TValue>.ContainsKey' call.
+# Unused type parameter.
+dotnet_diagnostic.RCS1164.severity = warning
+
+# Use read-only auto-implemented property.
+dotnet_diagnostic.RCS1170.severity = warning
+
+# Use 'is' operator instead of 'as' operator.
+dotnet_diagnostic.RCS1172.severity = warning
+
+# Unused 'this' parameter.
+dotnet_diagnostic.RCS1175.severity = warning
+
+# Unnecessary assignment.
+dotnet_diagnostic.RCS1179.severity = warning
+
+# Use constant instead of field.
+dotnet_diagnostic.RCS1187.severity = warning
+
+# Join string expressions.
+dotnet_diagnostic.RCS1190.severity = warning
+
+# Declare enum value as combination of names.
+dotnet_diagnostic.RCS1191.severity = warning
+
+# Unnecessary usage of verbatim string literal.
+dotnet_diagnostic.RCS1192.severity = warning
+
+# Overriding member should not change 'params' modifier.
+dotnet_diagnostic.RCS1193.severity = warning
+
+# Use ^ operator.
+dotnet_diagnostic.RCS1195.severity = warning
+
+# Unnecessary null check.
+dotnet_diagnostic.RCS1199.severity = warning
+
+# Use EventArgs.Empty.
+dotnet_diagnostic.RCS1204.severity = warning
+
+# Order named arguments according to the order of parameters.
+dotnet_diagnostic.RCS1205.severity = warning
+
+# Order type parameter constraints.
+dotnet_diagnostic.RCS1209.severity = warning
+
+# Unnecessary interpolated string.
+dotnet_diagnostic.RCS1214.severity = warning
+
+# Expression is always equal to 'true'.
+dotnet_diagnostic.RCS1215.severity = warning
+
+# Unnecessary unsafe context.
+dotnet_diagnostic.RCS1216.severity = warning
+
+# Simplify code branching.
+dotnet_diagnostic.RCS1218.severity = warning
+
+# Use pattern matching instead of combination of 'is' operator and cast operator.
+dotnet_diagnostic.RCS1220.severity = warning
+
+# Make class sealed.
+dotnet_diagnostic.RCS1225.severity = warning
+
+# Add paragraph to documentation comment.
+dotnet_diagnostic.RCS1226.severity = warning
+
+# Validate arguments correctly.
+dotnet_diagnostic.RCS1227.severity = warning
+
+# Unnecessary explicit use of enumerator.
+dotnet_diagnostic.RCS1230.severity = warning
+
+# Use short-circuiting operator.
+dotnet_diagnostic.RCS1233.severity = warning
+
+# Optimize method call.
 dotnet_diagnostic.RCS1235.severity = warning
 
-# Call extension method as instance method.
-dotnet_diagnostic.RCS1196.severity = warning
+# Use exception filter.
+dotnet_diagnostic.RCS1236.severity = warning
+
+# Use 'for' statement instead of 'while' statement.
+dotnet_diagnostic.RCS1239.severity = warning
+
+# Use element access.
+dotnet_diagnostic.RCS1246.severity = warning

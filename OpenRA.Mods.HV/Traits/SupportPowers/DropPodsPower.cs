@@ -63,7 +63,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public void SendDropPods(Actor self, Order order, WAngle facing)
 		{
-			var actorInfo = self.World.Map.Rules.Actors[info.UnitTypes.First().ToLowerInvariant()];
+			var actorInfo = self.World.Map.Rules.Actors[info.UnitTypes[0].ToLowerInvariant()];
 			var aircraftInfo = actorInfo.TraitInfo<AircraftInfo>();
 			var altitude = aircraftInfo.CruiseAltitude.Length;
 			var approachRotation = WRot.FromYaw(facing);

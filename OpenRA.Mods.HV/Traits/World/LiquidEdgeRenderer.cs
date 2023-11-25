@@ -56,7 +56,7 @@ namespace OpenRA.Mods.HV.Traits
 			BottomLeft = 0x40,
 			BottomRight = 0x80,
 
-			All = 0xFF,
+			All = Left | Top | Right | Bottom | TopLeft | TopRight | BottomLeft | BottomRight,
 		}
 
 		static readonly Dictionary<BitMask, int> SpriteMap = new()

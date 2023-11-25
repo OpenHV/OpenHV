@@ -58,9 +58,8 @@ namespace OpenRA.Mods.HV.Traits.Render
 
 		void INotifySupportPower.Activated(Actor self)
 		{
-			if (!IsTraitDisabled)
-				if (!string.IsNullOrEmpty(info.EndSequence))
-					body.PlayCustomAnimation(self, info.EndSequence);
+			if (!IsTraitDisabled && !string.IsNullOrEmpty(info.EndSequence))
+				body.PlayCustomAnimation(self, info.EndSequence);
 		}
 
 		protected override void TraitDisabled(Actor self)

@@ -44,7 +44,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic.Ingame
 				.Where(a => a.IsInWorld && a.Owner == player)
 				.ToList();
 
-			if (!miners.Any())
+			if (miners.Count < 1)
 				return true;
 
 			var next = miners
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic.Ingame
 				.Skip(1)
 				.FirstOrDefault();
 
-			next ??= miners.First();
+			next ??= miners[0];
 
 			selection.Combine(world, new Actor[] { next }, false, true);
 			viewport.Center(selection.Actors);

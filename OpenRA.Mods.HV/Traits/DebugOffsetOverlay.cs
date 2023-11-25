@@ -46,8 +46,6 @@ namespace OpenRA.Mods.HV.Traits
 		int turret = -1;
 		bool enabled;
 
-		public DebugOffsetOverlay() { }
-
 		void INotifyCreated.Created(Actor self)
 		{
 			turrets = self.TraitsImplementing<Turreted>().ToArray();

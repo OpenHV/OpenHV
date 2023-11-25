@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System.Collections.Generic;
 using System.Diagnostics;
 using OpenRA.Mods.Common.LoadScreens;
 using OpenRA.Primitives;
@@ -21,11 +20,6 @@ namespace OpenRA.Mods.HV.LoadScreens
 		readonly string text = "Loading... ";
 
 		Stopwatch lastUpdate;
-
-		public override void Init(ModData modData, Dictionary<string, string> info)
-		{
-			base.Init(modData, info);
-		}
 
 		public override void Display()
 		{

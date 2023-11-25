@@ -35,6 +35,11 @@ namespace OpenRA.Mods.HV.Terrain
 
 	public sealed class CustomTileCache : IDisposable
 	{
+		// 1x1px transparent tile
+		const int MissingDataLength = 1;
+		const SpriteFrameType MissingFrameType = SpriteFrameType.Indexed8;
+		const SheetType MissingSheetType = SheetType.Indexed;
+
 		readonly Dictionary<ushort, TheaterTemplate> templates = new();
 		readonly Cache<SheetType, SheetBuilder> sheetBuilders;
 		readonly MersenneTwister random;
@@ -100,18 +105,13 @@ namespace OpenRA.Mods.HV.Terrain
 
 				var allSprites = variants.SelectMany(s => s);
 
-				if (onMissingImage != null && !variants.Any())
+				if (onMissingImage != null && variants.Count < 1)
 					continue;
 
-				templates.Add(t.Value.Id, new TheaterTemplate(allSprites.ToArray(), variants.First().Length, templateInfo.Images.Length));
+				templates.Add(t.Value.Id, new TheaterTemplate(allSprites.ToArray(), variants[0].Length, templateInfo.Images.Length));
 			}
 
-			// 1x1px transparent tile
-			var missingDataLength = 1;
-			var missingFrameType = SpriteFrameType.Indexed8;
-			var missingSheetType = SheetType.Indexed;
-
-			MissingTile = sheetBuilders[missingSheetType].Add(new byte[missingDataLength], missingFrameType, new Size(1, 1));
+			MissingTile = sheetBuilders[MissingSheetType].Add(new byte[MissingDataLength], MissingFrameType, new Size(1, 1));
 			foreach (var sb in sheetBuilders.Values)
 				sb.Current.ReleaseBuffer();
 		}
@@ -133,7 +133,7 @@ namespace OpenRA.Mods.HV.Terrain
 			return template.Sprites[start * template.Stride + r.Index];
 		}
 
-		public Sprite MissingTile { get; private set; }
+		public Sprite MissingTile { get; }
 
 		public void Dispose()
 		{

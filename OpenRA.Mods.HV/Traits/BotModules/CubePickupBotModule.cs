@@ -84,16 +84,16 @@ namespace OpenRA.Mods.HV.Traits
 			scanForcubesTicks = Info.ScanForCubesInterval;
 
 			var cubes = world.ActorsHavingTrait<Collectible>().ToList();
-			if (!cubes.Any())
+			if (cubes.Count < 1)
 				return;
 
 			if (Info.CheckTargetsForVisibility)
 				cubes.RemoveAll(c => !c.CanBeViewedByPlayer(player));
 
 			var idleUnits = world.ActorsHavingTrait<Mobile>().Where(a => a.Owner == player && a.IsIdle
-				&& (Info.IncludedUnitTypes.Contains(a.Info.Name) || (!Info.IncludedUnitTypes.Any() && !Info.ExcludedUnitTypes.Contains(a.Info.Name)))).ToList();
+				&& (Info.IncludedUnitTypes.Contains(a.Info.Name) || (Info.IncludedUnitTypes.Count < 1 && !Info.ExcludedUnitTypes.Contains(a.Info.Name)))).ToList();
 
-			if (!idleUnits.Any())
+			if (idleUnits.Count < 1)
 				return;
 
 			foreach (var cube in cubes)

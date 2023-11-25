@@ -135,7 +135,7 @@ namespace OpenRA.Mods.HV.Traits
 			w.ActorMap.AddInfluence(w.WorldActor, this);
 		}
 
-		public CPos TopLeft { get; private set; } // for Crushable IsAtGroundLevel checks
+		public CPos TopLeft { get; } // for Crushable IsAtGroundLevel checks
 		public WPos CenterPosition => world.Map.CenterOfCell(TopLeft);
 		public (CPos Cell, SubCell SubCell)[] OccupiedCells() { return occupied.ToArray(); }
 
@@ -185,7 +185,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (!hitpoints.Contains(cell) || hitpoints[cell] <= 0)
 				return;
 
-			hitpoints[cell] = hitpoints[cell] - damage;
+			hitpoints[cell] -= damage;
 
 			if (hitpoints[cell] < 1)
 			{

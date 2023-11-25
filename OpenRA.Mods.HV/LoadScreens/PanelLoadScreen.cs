@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.LoadScreens;
 using OpenRA.Primitives;
@@ -24,11 +23,6 @@ namespace OpenRA.Mods.HV.LoadScreens
 		Sheet lastSheet;
 		int lastDensity;
 		Size lastResolution;
-
-		public override void Init(ModData modData, Dictionary<string, string> info)
-		{
-			base.Init(modData, info);
-		}
 
 		public override void DisplayInner(Renderer r, Sheet s, int density)
 		{

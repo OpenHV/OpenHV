@@ -754,7 +754,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						if (players != null)
 						{
 							var label = $"{game.Players + game.Bots} / {game.MaxPlayers + game.Bots}"
-							            + (game.Spectators > 0 ? $" + {game.Spectators}" : "");
+								+ (game.Spectators > 0 ? $" + {game.Spectators}" : "");
 
 							var color = canJoin ? players.TextColor : incompatibleGameColor;
 							players.GetText = () => label;

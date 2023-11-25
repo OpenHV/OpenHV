@@ -116,7 +116,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					category.IsChecked = () => buildableTerrainTrait.Enabled;
 					category.OnClick = () => buildableTerrainTrait.Enabled ^= true;
 				}
-                else if (cat.HasFlag(MapOverlays.Type))
+				else if (cat.HasFlag(MapOverlays.Type))
 				{
 					category.IsChecked = () => terrainTypeTrait.Enabled;
 					category.OnClick = () => terrainTypeTrait.Enabled ^= true;

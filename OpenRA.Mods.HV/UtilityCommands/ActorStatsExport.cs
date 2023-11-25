@@ -39,9 +39,8 @@ namespace OpenRA.Mods.HV.UtilityCommands
 			foreach (var actorInfo in rules.Actors.Values)
 			{
 				var armor = actorInfo.TraitInfoOrDefault<ArmorInfo>();
-				if (armor != null)
-					if (!armorList.Contains(armor.Type))
-						armorList.Add(armor.Type);
+				if (armor != null && !armorList.Contains(armor.Type))
+					armorList.Add(armor.Type);
 			}
 
 			armorList.Sort();
@@ -75,7 +74,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 				row["Armor"] = armor != null ? armor.Type : "";
 
 				var armaments = actorInfo.TraitInfos<ArmamentInfo>();
-				if (armaments.Any())
+				if (armaments.Count > 0)
 				{
 					foreach (var armament in armaments)
 					{

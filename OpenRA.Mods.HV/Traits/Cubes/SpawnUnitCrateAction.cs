@@ -61,7 +61,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (collector.Owner.NonCombatant)
 				return false;
 
-			if (info.ValidFactions.Any() && !info.ValidFactions.Contains(collector.Owner.Faction.InternalName))
+			if (info.ValidFactions.Count > 0 && !info.ValidFactions.Contains(collector.Owner.Faction.InternalName))
 				return false;
 
 			foreach (var unit in info.Units)

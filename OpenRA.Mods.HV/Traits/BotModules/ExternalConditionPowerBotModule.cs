@@ -68,7 +68,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (!sp.Ready)
 					continue;
 
-				var externalConditionPower = sp.Instances.First() as GrantExternalConditionPower;
+				var externalConditionPower = sp.Instances[0] as GrantExternalConditionPower;
 				var possibleTargets = externalConditionPower.UnitsInRange(self.Location);
 				if (possibleTargets.Any(p => !p.Owner.IsAlliedWith(player)))
 					continue;

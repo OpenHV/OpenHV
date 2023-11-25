@@ -104,7 +104,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		Session.MapStatus mapStatus;
 
 		bool chatEnabled;
-		bool addBotOnMapLoad;
 		bool disableTeamChat;
 		bool insufficientPlayerSpawns;
 		bool teamChat;
@@ -112,6 +111,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		int globalChatLastReadMessages;
 		int globalChatUnreadMessages;
 		bool updateDiscordStatus = true;
+		bool resetOptionsButtonEnabled;
 		Dictionary<int, SpawnOccupant> spawnOccupants = new();
 
 		readonly string chatLineSound;
@@ -177,13 +177,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			Game.LobbyInfoChanged += UpdatePlayerList;
 			Game.LobbyInfoChanged += UpdateDiscordStatus;
 			Game.LobbyInfoChanged += UpdateSpawnOccupants;
+			Game.LobbyInfoChanged += UpdateOptions;
 			Game.BeforeGameStart += OnGameStart;
 			Game.ConnectionStateChanged += ConnectionStateChanged;
 
-			ChromeMetrics.TryGet<string>("ChatLineSound", out chatLineSound);
-			ChromeMetrics.TryGet<string>("PlayerJoinedSound", out playerJoinedSound);
-			ChromeMetrics.TryGet<string>("PlayerLeftSound", out playerLeftSound);
-			ChromeMetrics.TryGet<string>("LobbyOptionChangedSound", out lobbyOptionChangedSound);
+			ChromeMetrics.TryGet("ChatLineSound", out chatLineSound);
+			ChromeMetrics.TryGet("PlayerJoinedSound", out playerJoinedSound);
+			ChromeMetrics.TryGet("PlayerLeftSound", out playerLeftSound);
+			ChromeMetrics.TryGet("LobbyOptionChangedSound", out lobbyOptionChangedSound);
 
 			var name = lobby.GetOrNull<LabelWidget>("SERVER_NAME");
 			if (name != null)
@@ -246,7 +247,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					var onSelect = new Action<string>(uid =>
 					{
 						// Don't select the same map again, and handle map becoming unavailable
-						if (uid == map.Uid || modData.MapCache[uid].Status != MapStatus.Available)
+						var status = modData.MapCache[uid].Status;
+						if (uid == map.Uid || (status != MapStatus.Available && status != MapStatus.DownloadAvailable))
 							return;
 
 						orderManager.IssueOrder(Order.Command("map " + uid));
@@ -260,6 +262,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					Ui.OpenWindow("MAPCHOOSER_PANEL", new WidgetArgs()
 					{
 						{ "initialMap", modData.MapCache.PickLastModifiedMap(MapVisibility.Lobby) ?? map.Uid },
+						{ "remoteMapPool", orderManager.ServerMapPool },
 						{ "initialTab", MapClassification.System },
 						{ "onExit", modData.MapCache.UpdateMaps },
 						{ "onSelect", Game.IsHost ? onSelect : null },
@@ -271,7 +274,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var slotsButton = lobby.GetOrNull<DropDownButtonWidget>("SLOTS_DROPDOWNBUTTON");
 			if (slotsButton != null)
 			{
-				slotsButton.IsVisible = () => panel != PanelType.Servers;
+				slotsButton.IsVisible = () => panel != PanelType.Servers && panel != PanelType.Options;
 				slotsButton.IsDisabled = () => configurationDisabled() || panel != PanelType.Players ||
 					(orderManager.LobbyInfo.Slots.Values.All(s => !s.AllowBots) &&
 					!orderManager.LobbyInfo.Slots.Any(s => !s.Value.LockTeam && orderManager.LobbyInfo.ClientInSlot(s.Key) != null));
@@ -286,7 +289,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					{
 						var botOptions = new List<DropDownOption>()
 						{
-							new DropDownOption()
+							new()
 							{
 								Title = TranslationProvider.GetString(Add),
 								IsSelected = () => false,
@@ -363,6 +366,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 					slotsButton.ShowDropDown("LABEL_DROPDOWN_TEMPLATE", 175, options, SetupItem);
 				};
+			}
+
+			var resetOptionsButton = lobby.GetOrNull<ButtonWidget>("RESET_OPTIONS_BUTTON");
+			if (resetOptionsButton != null)
+			{
+				resetOptionsButton.IsVisible = () => panel == PanelType.Options;
+				resetOptionsButton.IsDisabled = () => configurationDisabled() || !resetOptionsButtonEnabled;
+				resetOptionsButton.OnMouseDown = _ => orderManager.IssueOrder(Order.Command("reset_options"));
 			}
 
 			var optionsBin = Ui.LoadWidget("LOBBY_OPTIONS_BIN", lobby.Get("TOP_PANELS_ROOT"), new WidgetArgs()
@@ -593,10 +604,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				});
 			}
 
-			// Add a bot on the first lobbyinfo update
-			if (skirmishMode)
-				addBotOnMapLoad = true;
-
 			if (logicArgs.TryGetValue("ChatLineSound", out var yaml))
 				chatLineSound = yaml.Value;
 			if (logicArgs.TryGetValue("PlayerJoinedSound", out yaml))
@@ -665,8 +672,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		void INotificationHandler<TextNotification>.Handle(TextNotification notification)
 		{
-			lobbyChatUnreadMessages += 1;
-
+			lobbyChatUnreadMessages++;
 			var chatLine = chatTemplates[notification.Pool].Clone();
 			WidgetUtils.SetupTextNotification(chatLine, notification, lobbyChatPanel.Bounds.Width - lobbyChatPanel.ScrollbarWidth, true);
 
@@ -700,22 +706,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				return;
 
 			map = modData.MapCache[uid];
+
+			// Tell the server that we have the map
 			if (map.Status == MapStatus.Available)
-			{
-				// Tell the server that we have the map
 				orderManager.IssueOrder(Order.Command($"state {Session.ClientState.NotReady}"));
 
-				if (addBotOnMapLoad)
-				{
-					var slot = orderManager.LobbyInfo.FirstEmptyBotSlot();
-					var bot = map.PlayerActorInfo.TraitInfos<IBotInfo>().Select(t => t.Type).FirstOrDefault();
-					var botController = orderManager.LobbyInfo.Clients.FirstOrDefault(c => c.IsAdmin);
-					if (slot != null && bot != null)
-						orderManager.IssueOrder(Order.Command($"slot_bot {slot} {botController.Index} {bot}"));
-
-					addBotOnMapLoad = false;
-				}
-			}
+			// We don't have the map
 			else if (map.Status != MapStatus.DownloadAvailable && Game.Settings.Game.AllowDownloading)
 				modData.MapCache.QueryRemoteMapDetails(services.MapRepository, new[] { uid });
 		}
@@ -971,6 +967,22 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			spawnOccupants = orderManager.LobbyInfo.Clients
 				.Where(c => c.SpawnPoint != 0)
 				.ToDictionary(c => c.SpawnPoint, c => new SpawnOccupant(c));
+		}
+
+		void UpdateOptions()
+		{
+			if (map == null || map.WorldActorInfo == null)
+				return;
+
+			var serverOptions = orderManager.LobbyInfo.GlobalSettings.LobbyOptions;
+			var mapOptions = map.PlayerActorInfo.TraitInfos<ILobbyOptions>()
+				.Concat(map.WorldActorInfo.TraitInfos<ILobbyOptions>())
+				.SelectMany(t => t.LobbyOptions(map))
+				.Where(o => o.IsVisible)
+				.OrderBy(o => o.DisplayOrder)
+				.ToArray();
+
+			resetOptionsButtonEnabled = mapOptions.Any(o => o.DefaultValue != serverOptions[o.Id].Value);
 		}
 
 		void OnGameStart()

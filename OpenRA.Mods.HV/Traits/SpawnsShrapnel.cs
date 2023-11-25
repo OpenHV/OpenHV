@@ -165,7 +165,7 @@ namespace OpenRA.Mods.HV.Traits
 					if (projectile != null)
 						world.AddFrameEndTask(w => w.Add(projectile));
 
-					if (args.Weapon.Report != null && args.Weapon.Report.Any())
+					if (args.Weapon.Report != null && args.Weapon.Report.Length > 0)
 						Game.Sound.Play(SoundType.World, args.Weapon.Report.Random(world.SharedRandom), position);
 				}
 			}

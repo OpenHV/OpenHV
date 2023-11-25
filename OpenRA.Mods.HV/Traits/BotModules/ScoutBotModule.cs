@@ -74,8 +74,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			// TODO: Look for a more performance friendly way to update this list
 			var newScouts = world.Actors.Where(a => Info.ScoutActorTypes.Contains(a.Info.Name) && a.Owner == player && !scouts.Contains(a));
-			foreach (var a in newScouts)
-				scouts.Add(a);
+			scouts.AddRange(newScouts);
 
 			foreach (var scout in scouts)
 			{

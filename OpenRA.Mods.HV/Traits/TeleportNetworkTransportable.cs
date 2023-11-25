@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (order.OrderID != "TeleportNetworkTransport")
 				return null;
 
-			return new Order(order.OrderID, self, target, queued) { };
+			return new Order(order.OrderID, self, target, queued);
 		}
 
 		// Checks if targeted actor's owner has enough canals (more than 1) of provided type

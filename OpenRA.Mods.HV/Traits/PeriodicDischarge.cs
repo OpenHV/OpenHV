@@ -116,10 +116,10 @@ namespace OpenRA.Mods.HV.Traits
 
 				weapon.Impact(Target.FromPos(self.CenterPosition + localoffset), args);
 
-				if (weapon.Report != null && weapon.Report.Any())
+				if (weapon.Report != null && weapon.Report.Length > 0)
 					Game.Sound.Play(SoundType.World, weapon.Report.Random(self.World.SharedRandom), self.CenterPosition);
 
-				if (burst == weapon.Burst && weapon.StartBurstReport != null && weapon.StartBurstReport.Any())
+				if (burst == weapon.Burst && weapon.StartBurstReport != null && weapon.StartBurstReport.Length > 0)
 					Game.Sound.Play(SoundType.World, weapon.StartBurstReport.Random(self.World.SharedRandom), self.CenterPosition);
 
 				if (--burst > 0)
@@ -135,7 +135,7 @@ namespace OpenRA.Mods.HV.Traits
 					fireDelay = Util.ApplyPercentageModifiers(weapon.ReloadDelay, modifiers);
 					burst = weapon.Burst;
 
-					if (weapon.AfterFireSound != null && weapon.AfterFireSound.Any())
+					if (weapon.AfterFireSound != null && weapon.AfterFireSound.Length > 0)
 						ScheduleDelayedAction(weapon.AfterFireSoundDelay, () =>
 							Game.Sound.Play(SoundType.World, weapon.AfterFireSound.Random(self.World.SharedRandom), self.CenterPosition));
 				}

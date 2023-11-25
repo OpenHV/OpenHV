@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -52,9 +52,9 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override void TraitDisabled(Actor self)
 		{
-			if (!self.IsDead && self.IsInWorld && conditionToken != Actor.InvalidConditionToken)
-				if (playerConditionTrait.TryRevokeCondition(self.Owner.PlayerActor, self, conditionToken))
-					conditionToken = Actor.InvalidConditionToken;
+			if (!self.IsDead && self.IsInWorld && conditionToken != Actor.InvalidConditionToken
+				&& playerConditionTrait.TryRevokeCondition(self.Owner.PlayerActor, self, conditionToken))
+				conditionToken = Actor.InvalidConditionToken;
 		}
 
 		void UpdatePlayerConditionReference(Actor self)
@@ -71,16 +71,16 @@ namespace OpenRA.Mods.HV.Traits
 
 		void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
 		{
-			if (!self.IsDead && !IsTraitDisabled && conditionToken != Actor.InvalidConditionToken)
-				if (playerConditionTrait.TryRevokeCondition(self.Owner.PlayerActor, self, conditionToken))
-					conditionToken = Actor.InvalidConditionToken;
+			if (!self.IsDead && !IsTraitDisabled && conditionToken != Actor.InvalidConditionToken
+				&& playerConditionTrait.TryRevokeCondition(self.Owner.PlayerActor, self, conditionToken))
+				conditionToken = Actor.InvalidConditionToken;
 		}
 
 		void INotifyKilled.Killed(Actor self, AttackInfo e)
 		{
-			if (conditionToken != Actor.InvalidConditionToken)
-				if (playerConditionTrait.TryRevokeCondition(self.Owner.PlayerActor, self, conditionToken))
-					conditionToken = Actor.InvalidConditionToken;
+			if (conditionToken != Actor.InvalidConditionToken
+				&& playerConditionTrait.TryRevokeCondition(self.Owner.PlayerActor, self, conditionToken))
+				conditionToken = Actor.InvalidConditionToken;
 		}
 	}
 }

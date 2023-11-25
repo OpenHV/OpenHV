@@ -69,7 +69,7 @@ namespace OpenRA.Mods.HV.Traits
 					firstToken = self.RevokeCondition(firstToken);
 			}
 
-			var first = new CPos[] { possibleConnections.First() };
+			var first = new CPos[] { possibleConnections[0] };
 			firstTriggerId = self.World.ActorMap.AddCellTrigger(first, OnEntryFirst, OnExitFirst);
 
 			void OnEntryLast(Actor actor)

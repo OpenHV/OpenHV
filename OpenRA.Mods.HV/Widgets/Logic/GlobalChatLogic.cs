@@ -117,7 +117,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		bool HistoryWidgetEquals(Widget widget, object o)
 		{
-			return ((LabelWidget)widget).Id == ((ChatMessage)o).UID;
+			return widget.Id == ((ChatMessage)o).UID;
 		}
 
 		Widget MakeUserWidget(object o)

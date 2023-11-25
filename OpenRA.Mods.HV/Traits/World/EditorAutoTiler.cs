@@ -34,7 +34,7 @@ namespace OpenRA.Mods.HV.Traits
 		BottomLeft = 0x40,
 		BottomRight = 0x80,
 
-		All = 0xFF
+		All = Left | Top | Right | Bottom | TopLeft | TopRight | BottomLeft | BottomRight
 	}
 
 	public class EditorAutoTilerInfo : TraitInfo<EditorAutoTiler> { }
@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	sealed class AutoConnectEditorAction : IEditorAction
 	{
-		public string Text { get; private set; }
+		public string Text { get; }
 
 		readonly Map map;
 		readonly ITemplatedTerrainInfo terrainInfo;
@@ -167,17 +167,12 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					var clear = FindAdjacentTerrain(map, cell, autoConnect.BorderTypes);
 					var index = BorderTileMap.IndexOf(clear);
-					if (index != -1)
+					if (index != -1 && MatchingBorderCells.TryGetValue(clear, out var validNeighbors)
+						&& validNeighbors.All(n => map.GetTerrainInfo(cell + n).Type == autoConnect.Type))
 					{
-						if (MatchingBorderCells.TryGetValue(clear, out var validNeighbors))
-						{
-							if (validNeighbors.All(n => map.GetTerrainInfo(cell + n).Type == autoConnect.Type))
-							{
-								undoTiles.Enqueue(new UndoTile(cell, map.Tiles[cell]));
-								var borderTransitions = autoConnect.BorderTransitions;
-								map.Tiles[cell] = new TerrainTile(borderTransitions[index], 0x00);
-							}
-						}
+						undoTiles.Enqueue(new UndoTile(cell, map.Tiles[cell]));
+						var borderTransitions = autoConnect.BorderTransitions;
+						map.Tiles[cell] = new TerrainTile(borderTransitions[index], 0x00);
 					}
 				}
 			}
@@ -189,17 +184,12 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					var corner = FindCorners(map, cell, autoConnect.BorderTypes);
 					var index = CornerTileMap.IndexOf(corner);
-					if (index != -1)
+					if (index != -1 && MatchingBorderCells.TryGetValue(corner, out var validNeighbors)
+						&& validNeighbors.All(n => map.GetTerrainInfo(cell + n).Type == autoConnect.Type))
 					{
-						if (MatchingBorderCells.TryGetValue(corner, out var validNeighbors))
-						{
-							if (validNeighbors.All(n => map.GetTerrainInfo(cell + n).Type == autoConnect.Type))
-							{
-								undoTiles.Enqueue(new UndoTile(cell, map.Tiles[cell]));
-								var corners = autoConnect.Corners;
-								map.Tiles[cell] = new TerrainTile(corners[index], 0x00);
-							}
-						}
+						undoTiles.Enqueue(new UndoTile(cell, map.Tiles[cell]));
+						var corners = autoConnect.Corners;
+						map.Tiles[cell] = new TerrainTile(corners[index], 0x00);
 					}
 				}
 			}
@@ -217,8 +207,8 @@ namespace OpenRA.Mods.HV.Traits
 
 	sealed class UndoTile
 	{
-		public CPos Cell { get; private set; }
-		public TerrainTile MapTile { get; private set; }
+		public CPos Cell { get; }
+		public TerrainTile MapTile { get; }
 
 		public UndoTile(CPos cell, TerrainTile mapTile)
 		{
