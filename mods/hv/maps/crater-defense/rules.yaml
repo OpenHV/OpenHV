@@ -4,15 +4,17 @@ Player:
 	-ConquestVictoryConditions:
 	PlayerResources:
 		DefaultCash: 1000
-		DefaultCashDropdownLocked: True
-		DefaultCashDropdownVisible: False
+		DefaultCashDropdownLocked: true
+		DefaultCashDropdownVisible: false
+	DeveloperMode:
+		CheckboxVisible: false
 	Shroud:
-		FogCheckboxLocked: True
-		FogCheckboxEnabled: False
-		FogCheckboxVisible: False
-		ExploredMapCheckboxLocked: True
-		ExploredMapCheckboxEnabled: True
-		ExploredMapCheckboxVisible: False
+		FogCheckboxLocked: true
+		FogCheckboxEnabled: false
+		FogCheckboxVisible: false
+		ExploredMapCheckboxLocked: true
+		ExploredMapCheckboxEnabled: true
+		ExploredMapCheckboxVisible: false
 	-ModularBot@RogueAI:
 	ClassicProductionQueue@Defense:
 		BuildDurationModifier: 25
@@ -22,6 +24,7 @@ World:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, crater-defense.lua
 	MissionData:
 		Briefing: Commander! The harbors around the Crater Lake are under attack. Use the old railway network to connect your turrets to the energy grid. We are holding the grounds at the exits of the trench, but don't allow too many breaches so our defenses are not overwhelmed.
+	-MapStartingLocations:
 	-CubeSpawner:
 	StartingUnits@BaseYI:
 		Class: none
@@ -33,17 +36,26 @@ World:
 		ClassName: options-starting-units.base-only
 		Factions: sc
 		BaseActor: towerbase
+	SpawnStartingUnits:
+		DropdownLocked: true
+		DropdownVisible: false
 	MapBuildRadius:
-		AllyBuildRadiusCheckboxVisible: False
-		AllyBuildRadiusCheckboxLocked: True
-		AllyBuildRadiusCheckboxEnabled: False
-		BuildRadiusCheckboxVisible: False
-		BuildRadiusCheckboxLocked: True
-		BuildRadiusCheckboxEnabled: False
+		AllyBuildRadiusCheckboxVisible: false
+		AllyBuildRadiusCheckboxLocked: true
+		AllyBuildRadiusCheckboxEnabled: false
+		BuildRadiusCheckboxVisible: false
+		BuildRadiusCheckboxLocked: true
+		BuildRadiusCheckboxEnabled: false
+	MapOptions:
+		ShortGameCheckboxVisible: false
+		ShortGameCheckboxLocked: true
+		ShortGameCheckboxEnabled: false
+	TimeLimitManager:
+		TimeLimitDropdownVisible: false
 	ScrapOptions:
-		CheckboxEnabled: False
-		CheckboxLocked: True
-		CheckboxVisible: False
+		CheckboxEnabled: false
+		CheckboxLocked: true
+		CheckboxVisible: false
 
 EditorWorld:
 	BuildableTerrainOverlay:

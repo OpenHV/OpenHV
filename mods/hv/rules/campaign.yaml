@@ -5,13 +5,22 @@ World:
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES
 	MapBuildRadius:
-		AllyBuildRadiusCheckboxLocked: True
-		AllyBuildRadiusCheckboxEnabled: False
-		BuildRadiusCheckboxLocked: True
-		BuildRadiusCheckboxEnabled: True
+		AllyBuildRadiusCheckboxVisible: false
+		AllyBuildRadiusCheckboxLocked: true
+		AllyBuildRadiusCheckboxEnabled: false
+		BuildRadiusCheckboxVisible: false
+		BuildRadiusCheckboxLocked: true
+		BuildRadiusCheckboxEnabled: true
 	MapOptions:
-		ShortGameCheckboxLocked: True
-		ShortGameCheckboxEnabled: False
+		ShortGameCheckboxVisible: false
+		ShortGameCheckboxLocked: true
+		ShortGameCheckboxEnabled: false
+	TimeLimitManager:
+		TimeLimitDropdownVisible: false
+	ScrapOptions:
+		CheckboxEnabled: false
+		CheckboxLocked: true
+		CheckboxVisible: false
 	ScriptLobbyDropdown@Difficulty:
 		ID: difficulty
 		Label: dropdown-difficulty.label
@@ -20,6 +29,7 @@ World:
 			normal: options-difficulty.normal
 		Default: normal
 		Locked: true
+		Visible: false
 
 Player:
 	-ConquestVictoryConditions:
@@ -27,13 +37,18 @@ Player:
 		EarlyGameOver: true
 		GameOverDelay: 3000
 	Shroud:
-		FogCheckboxLocked: True
-		FogCheckboxEnabled: True
-		ExploredMapCheckboxLocked: True
-		ExploredMapCheckboxEnabled: False
+		FogCheckboxVisible: false
+		FogCheckboxLocked: true
+		FogCheckboxEnabled: true
+		ExploredMapCheckboxVisible: false
+		ExploredMapCheckboxLocked: true
+		ExploredMapCheckboxEnabled: false
 	PlayerResources:
-		DefaultCashDropdownLocked: True
-		DefaultCash: 5000
+		DefaultCashDropdownVisible: false
+		DefaultCashDropdownLocked: true
+		DefaultCash: 0
+	DeveloperMode:
+		CheckboxVisible: false
 	ModularBot@CampaignAI:
 		Name: Campaign Player AI
 		Type: campaign
