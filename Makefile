@@ -43,6 +43,7 @@ LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
 BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname '*.png' 2> /dev/null)
+MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
 
 CHECK_TARGETS = $(addprefix check-, $(BIT_FILES))
 
@@ -270,6 +271,16 @@ endif
 check-bits: engine
 	@echo "Checking PNG sheet metadata..."
 	@$(MAKE) $(CHECK_TARGETS)
+
+check-maps:
+ifneq ("$(MAP_FOLDERS)","")
+	@echo "Checking Resource Center...";
+	@for MAP in $(MAP_FOLDERS); do \
+		HASH=$$(./utility.sh --map-hash ../$$MAP); \
+		curl -s -o /dev/null -I -w "%{http_code}" "https://resource.openra.net/map/$$HASH" | \
+		grep -q "404" && echo "$$MAP is missing!"; \
+	done
+endif
 
 # Static pattern rule
 $(CHECK_TARGETS): check-%: %
