@@ -53,7 +53,7 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add --all
           git commit -m "Update auto-generated documentation for ${GIT_TAG}"
-          git push origin main
+          git push origin master
 
   docs:
     name: Update openhv.readthedocs.io
@@ -106,5 +106,5 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add --all
           git commit -m "Update auto-generated documentation for ${GIT_TAG}"
-          git push origin main
+          git push origin master
 
