@@ -1,5 +1,6 @@
 Container@GLOBALCHAT_PANEL:
 	Logic: GlobalChatLogic
+		AutoConnect: true
 	Width: PARENT_RIGHT
 	Height: PARENT_BOTTOM
 	Children:

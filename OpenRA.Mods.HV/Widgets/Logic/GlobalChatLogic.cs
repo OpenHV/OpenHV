@@ -10,6 +10,8 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Primitives;
 using OpenRA.Widgets;
@@ -25,12 +27,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly TextFieldWidget inputBox;
 		readonly InternetRelayChat internetRelayChat;
 
+		readonly bool autoConnect;
+
 		readonly Color textColor;
 		readonly Color notificationColor;
 		readonly Color playerColor;
 
 		[ObjectCreator.UseCtor]
-		public GlobalChatLogic(Widget widget, ModData modData)
+		public GlobalChatLogic(Widget widget, ModData modData, Dictionary<string, MiniYaml> logicArgs)
 		{
 			historyPanel = widget.Get<ScrollPanelWidget>("HISTORY_PANEL");
 			chatTemplate = historyPanel.Get<ContainerWidget>("CHAT_TEMPLATE");
@@ -43,6 +47,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			var textLabel = chatTemplate.Get<LabelWidget>("TEXT");
 			textLabel.GetColor = () => textColor;
+
+			autoConnect = FieldLoader.GetValue<bool>("AutoConnect", logicArgs.First().Value.Value);
 
 			internetRelayChat = modData.Manifest.Get<InternetRelayChat>();
 
@@ -91,6 +97,9 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			mainPanel.IsVisible = () => internetRelayChat.ConnectionStatus != ChatConnectionStatus.Disconnected;
 
 			mainPanel.Get<LabelWidget>("CHANNEL_TOPIC").GetText = () => internetRelayChat.Topic;
+
+			if (autoConnect)
+				internetRelayChat.Connect(nickName);
 		}
 
 		Widget MakeHistoryWidget(object o)

@@ -1,5 +1,6 @@
 Container@LOBBY_GLOBALCHAT_PANEL:
 	Logic: GlobalChatLogic
+		AutoConnect: false
 	Width: PARENT_RIGHT
 	Height: PARENT_BOTTOM
 	Children:
