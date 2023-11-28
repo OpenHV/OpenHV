@@ -9,9 +9,6 @@ waterball:
 
 watertank:
 	idle:
-		Filename: bits/tank13.png
-		Facings: 8
-	shoot:
 		Filename: bits/tank14.png
 		Facings: 8
 	icon:

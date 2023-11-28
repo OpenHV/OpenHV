@@ -47,12 +47,11 @@ WATERTANK:
 	AttackFrontal:
 		Voice: Action
 		TargetLineColor: 0000FF
+		FacingTolerance: 30
 	AttackMove:
 		TargetLineColor: 0000FF
 	AutoTarget:
 		ScanRadius: 10
-	WithAttackAnimation:
-		Sequence: shoot
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
