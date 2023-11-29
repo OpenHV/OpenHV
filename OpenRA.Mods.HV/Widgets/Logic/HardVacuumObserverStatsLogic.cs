@@ -114,7 +114,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var statsDropDown = widget.Get<DropDownButtonWidget>("STATS_DROPDOWN");
 			StatsDropDownOption CreateStatsOption(string title, ObserverStatsPanel panel, ScrollItemWidget template, Action a)
 			{
-				return new StatsDropDownOption
+				return new()
 				{
 					Title = title,
 					IsSelected = () => activePanel == panel,

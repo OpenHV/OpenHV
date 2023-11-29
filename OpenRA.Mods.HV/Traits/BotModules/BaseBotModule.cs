@@ -79,7 +79,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			return new List<MiniYamlNode>()
 			{
-				new MiniYamlNode("InitialBaseCenter", FieldSaver.FormatValue(initialBaseCenter))
+				new("InitialBaseCenter", FieldSaver.FormatValue(initialBaseCenter))
 			};
 		}
 
