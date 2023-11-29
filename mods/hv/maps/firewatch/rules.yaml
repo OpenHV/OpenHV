@@ -162,6 +162,10 @@ World:
 		Interval: 5
 
 Player:
+	PlayerResources:
+		DefaultCash: 5000
+		DefaultCashDropdownLocked: true
+		DefaultCashDropdownVisible: false
 	Shroud:
 		FogCheckboxVisible: False
 		FogCheckboxLocked: True
