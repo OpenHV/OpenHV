@@ -7,7 +7,7 @@ MOTHER2C:
 	Aircraft:
 		CanHover: false
 		Speed: 0
-		CruiseAltitude: 2048
+		CruiseAltitude: 4048
 		Repulsable: false
 		-CruisingCondition:
 	-Hovers@Cruising:
