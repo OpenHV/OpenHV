@@ -26,8 +26,8 @@ SPARKLAMP:
 	Tooltip:
 		Name: Spark Lamp
 
-LAMPPOST2:
-	Inherits: LAMPPOST
+STREETLAMP1:
+	Inherits: ^Prop
 	Inherits@Shape: ^1x2Shape
 	Interactable:
 		Bounds: 1024, 1524
@@ -35,12 +35,50 @@ LAMPPOST2:
 		Footprint: = x
 		Dimensions: 1,2
 	Tooltip:
-		Name: High Lamp Post
+		Name: Street Lamp
+	ThrowsShrapnel:
+		Pieces: 2, 3
 	TerrainLightSource:
 		Range: 4c512
 		Intensity: 0.3
-	ThrowsShrapnel:
-		Pieces: 2, 3
+		RedTint: 0.05
+		GreenTint: 0.05
+		BlueTint: 0.01
+	-ThrowsShrapnel@Large:
+	-ShakeOnDeath:
+
+STREETLAMP2:
+	Inherits: STREETLAMP1
+
+STREETLAMP3:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 4c0
+		Intensity: 0.25
+
+STREETLAMP4:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 4c0
+		Intensity: 0.25
+
+STREETLAMP5:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 4c0
+		Intensity: 0.25
+
+STREETLAMP6:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 4c0
+		Intensity: 0.25
+
+STREETLAMP7:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 5c0
+		Intensity: 0.35
 
 PYRAMID:
 	Inherits: ^Prop
