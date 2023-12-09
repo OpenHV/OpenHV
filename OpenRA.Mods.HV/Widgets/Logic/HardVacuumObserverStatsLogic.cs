@@ -135,7 +135,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			var statsDropDownOptions = new StatsDropDownOption[]
 			{
-				new StatsDropDownOption
+				new()
 				{
 					Title = "Information: None",
 					IsSelected = () => activePanel == ObserverStatsPanel.None,
