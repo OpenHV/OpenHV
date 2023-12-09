@@ -21,7 +21,6 @@ namespace OpenRA.Mods.HV.Terrain
 {
 	public class CustomTerrainLoader : ITerrainLoader
 	{
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "IDE0060:Remove unused parameter", Justification = "Load game API")]
 		public CustomTerrainLoader(ModData modData) { }
 
 		public ITerrainInfo ParseTerrain(IReadOnlyFileSystem fileSystem, string path)
