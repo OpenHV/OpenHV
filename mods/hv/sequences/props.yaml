@@ -14,15 +14,107 @@ sparklamp:
 		Filename: bits/sparklamp.png
 		Start: 1
 
-lamppost2:
+streetlamp1:
+	Defaults:
+		Offset: 0,-3
 	idle:
-		Filename: bits/lamppost2.png
+		Filename: bits/streetlamp.png
 	damaged-idle:
-		Filename: bits/lamppost2.png
+		Filename: bits/streetlamp.png
 		Start: 1
 	shadow-overlay:
-		Filename: bits/lamppost2-shadow.png
-		Offset: 11,18
+		Filename: bits/streetlamp-shadow.png
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp2:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp.png
+		Start: 2
+	damaged-idle:
+		Filename: bits/streetlamp.png
+		Start: 3
+	shadow-overlay:
+		Filename: bits/streetlamp-shadow.png
+		Start: 1
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp3:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp.png
+		Start: 4
+	damaged-idle:
+		Filename: bits/streetlamp.png
+		Start: 5
+	shadow-overlay:
+		Filename: bits/streetlamp-shadow.png
+		Start: 2
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp4:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp.png
+		Start: 6
+	damaged-idle:
+		Filename: bits/streetlamp.png
+		Start: 7
+	shadow-overlay:
+		Filename: bits/streetlamp-shadow.png
+		Start: 3
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp5:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp.png
+		Start: 8
+	damaged-idle:
+		Filename: bits/streetlamp.png
+		Start: 9
+	shadow-overlay:
+		Filename: bits/streetlamp-shadow.png
+		Start: 4
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp6:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp.png
+		Start: 10
+	damaged-idle:
+		Filename: bits/streetlamp.png
+		Start: 11
+	shadow-overlay:
+		Filename: bits/streetlamp-shadow.png
+		Start: 5
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp7:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp.png
+		Start: 12
+	damaged-idle:
+		Filename: bits/streetlamp.png
+		Start: 13
+	shadow-overlay:
+		Filename: bits/streetlamp-shadow.png
+		Start: 6
+		Offset: 12,20
 		ZOffset: 1768
 
 pyramid:
