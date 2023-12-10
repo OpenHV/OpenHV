@@ -262,9 +262,9 @@ GENERATOR:
 
 RADAR:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
 	Buildable:
@@ -360,9 +360,9 @@ RADAR2:
 
 TRADPLAT:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -454,6 +454,7 @@ MODULE:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 2448
 	Buildable:
@@ -632,6 +633,7 @@ STARPORT:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x3Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 3072
 	Tooltip:
@@ -718,9 +720,9 @@ FACTORY:
 
 FACTORY3:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x4Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 4096
 	Buildable:
@@ -969,9 +971,9 @@ FACTORY4:
 
 TECHCENTER:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 2560, 0, -256
 	Buildable:
@@ -1346,9 +1348,9 @@ HOWITZER:
 
 FIELD:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
@@ -1421,9 +1423,9 @@ FIELD:
 
 SILO:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Valued:
@@ -1493,9 +1495,9 @@ SILO:
 
 UPLINK:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 3072, 0, 0
 	Valued:
@@ -1644,9 +1646,9 @@ STORAGE:
 
 TELEVATR:
 	Inherits: ^BaseBuilding
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 1024
 	HitShape:
@@ -2408,9 +2410,9 @@ DWALLTC:
 
 RECONSTRUCTOR:
 	Inherits: ^Building
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
 	Tooltip:
@@ -2474,9 +2476,9 @@ RECONSTRUCTOR:
 
 EXTRACTOR:
 	Inherits: ^Building
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
@@ -2527,9 +2529,9 @@ EXTRACTOR:
 
 COMLINK:
 	Inherits: ^Building
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
@@ -2600,9 +2602,9 @@ COMLINK:
 
 WATCHTOWER:
 	Inherits: ^Building
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
@@ -2665,9 +2667,9 @@ WATCHTOWER:
 
 DROPZONE:
 	Inherits: ^Building
-	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Tooltip:
 		Name: Drop Zone
 	Encyclopedia:
