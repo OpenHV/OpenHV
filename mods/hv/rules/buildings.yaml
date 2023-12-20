@@ -1035,7 +1035,7 @@ ORESMELT:
 	Buildable:
 		Queue: Building
 		Description: Ore Smelter.\nProcesses resources for extra credits.
-		Prerequisites: ~structures.sc, techcenter
+		Prerequisites: techcenter
 	HitShape:
 		Type: Rectangle
 			TopLeft: -512, -512
@@ -1067,7 +1067,7 @@ BUNKER:
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
 	Valued:
-		Cost: 600
+		Cost: 650
 	Tooltip:
 		Name: Bunker
 	Encyclopedia:

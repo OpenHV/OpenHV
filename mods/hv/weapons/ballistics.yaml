@@ -302,7 +302,7 @@ mortargun:
 	MinRange: 1c0
 	Projectile: Bullet
 		Image: bullet1
-		Speed: 180
+		Speed: 360
 		Blockable: false
 		LaunchAngle: 80
 		Inaccuracy: 0c512
