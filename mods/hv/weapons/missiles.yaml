@@ -104,60 +104,40 @@ MissileTankRocket:
 	Warhead@Incendiary: TreeDamage
 		Damage: 6000
 
-LightAntiTankRocket:
+LightPodRocket:
 	Inherits: SmallSplash
 	Inherits: ^AntiGroundMissile
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Range: 5c512
 	ReloadDelay: 60
 	Projectile: Missile
-		Speed: 260
+		Speed: 341
 		Arm: 2
 		Blockable: false
-		Inaccuracy: 128
+		Inaccuracy: 0
 		Image: bullet7
 		Shadow: true
-		HorizontalRateOfTurn: 20
-		RangeLimit: 6c0
+		HorizontalRateOfTurn: 60
+		RangeLimit: 9c0
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
 		Damage: 2500
 		Versus:
-			None: 10
+			None: 60
 			Steel: 75
-			Light: 80
-			Heavy: 145
+			Light: 50
+			Heavy: 100
 			Concrete: 50
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
 		Damage: 2500
 
-LightAntiAirRocket:
-	Inherits: ^AntiAirMissile
-	Range: 7c512
-	ReloadDelay: 50
-	Projectile: Missile
-		Arm: 3
-		Image: bullet7
-		Inaccuracy: 0
-		HorizontalRateOfTurn: 100
-		RangeLimit: 9c0
-		Speed: 341
-	Warhead@Damage: SpreadDamage
-		Damage: 2500
-		Versus:
-			None: 200
-			Light: 50
-			Heavy: 100
-	Warhead@Incendiary: TreeDamage
-		Damage: 2500
-
-RapidAntiTankRocket:
-	Inherits: LightAntiTankRocket
+RapidPodRocket:
+	Inherits: LightPodRocket
 	ReloadDelay: 20
 	Range: 8c0
-	Projectile: Missile
-		RangeLimit: 10c0
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile

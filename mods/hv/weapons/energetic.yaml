@@ -183,13 +183,33 @@ VoltageArc:
 
 PodVoltageArc:
 	Inherits: VoltageArc
-	Range: 6c0
+	Range: 5c512
 	Report: lighting_gun_freqman.wav
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	ReloadDelay: 60
 	Projectile: EnergyBolt
 		Radius: 2
+		Arm: 2
+		Inaccuracy: 0
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 4000
+		Damage: 2500
+		Versus:
+			None: 60
+			Steel: 75
+			Light: 50
+			Heavy: 100
+			Concrete: 50
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2500
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+
+RapidPodVoltageArc:
+	Inherits: PodVoltageArc
+	ReloadDelay: 20
+	Range: 8c0
 
 LightningBolt:
 	ReloadDelay: 60
