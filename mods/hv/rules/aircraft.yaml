@@ -128,7 +128,7 @@ PLANE2:
 
 COPTER:
 	Inherits: ^Helicopter
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
