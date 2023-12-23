@@ -26,10 +26,14 @@ PLANE1:
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
-	Armament@Primary:
-		Weapon: AircraftChainGun
-		LocalOffset: 256,0,0
+	Armament@Ground:
+		Weapon: AircraftChainGunGround
 		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	Armament@Air:
+		Weapon: AircraftChainGunAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
@@ -162,10 +166,14 @@ COPTER:
 		Offset: 200,0,-100
 	AttackTurreted:
 		RequiresCondition: airborne
-	Armament:
-		Weapon: HelicopterChainGun
-		LocalOffset: 50,0,0
+	Armament@Ground:
+		Weapon: HelicopterChainGunGround
 		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	Armament@Air:
+		Weapon: HelicopterChainGunAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
 	Selectable:
 		Bounds: 1228, 1228
 	WithMuzzleOverlay:
