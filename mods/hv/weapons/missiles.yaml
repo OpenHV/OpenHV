@@ -14,7 +14,6 @@
 		Image: bullet6
 		Shadow: true
 		HorizontalRateOfTurn: 20
-		RangeLimit: 6c0
 		TrailImage: smoke
 		CruiseAltitude: 2c0
 	Warhead@Smudge: LeaveSmudge
@@ -56,7 +55,6 @@ AntiGroundRocket:
 	Projectile: Missile
 		Speed: 256
 		HorizontalRateOfTurn: 40
-		RangeLimit: 8c512
 	Warhead@Damage: SpreadDamage
 		Damage: 6000
 		Versus:
@@ -77,7 +75,6 @@ AntiAirRocket:
 		Speed: 384
 		Inaccuracy: 128
 		HorizontalRateOfTurn: 40
-		RangeLimit: 7c0
 		TrailImage: smoke
 	Warhead@Damage: SpreadDamage
 		Damage: 4000
@@ -118,7 +115,6 @@ LightPodRocket:
 		Image: bullet7
 		Shadow: true
 		HorizontalRateOfTurn: 60
-		RangeLimit: 9c0
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -148,7 +144,6 @@ ShipMissile:
 		Speed: 256
 		Inaccuracy: 316
 		CruiseAltitude: 2c0
-		RangeLimit: 14c410
 	Warhead@Damage: SpreadDamage
 		Damage: 4000
 		Versus:
@@ -173,7 +168,6 @@ BoatMissileAntiAir:
 		Image: bullet7
 		Shadow: true
 		HorizontalRateOfTurn: 20
-		RangeLimit: 15c0
 		TrailImage: small_smoke
 		CruiseAltitude: 2c0
 	Warhead@Damage: SpreadDamage
@@ -207,7 +201,6 @@ StealthTankMissile:
 		Inaccuracy: 213
 		HorizontalRateOfTurn: 40
 		Speed: 213
-		RangeLimit: 8c409
 		Image: bullet14
 		TrailImage: stealthtank-trail
 	Warhead@Damage: SpreadDamage
@@ -230,7 +223,6 @@ Patriot:
 	Projectile: Missile
 		Arm: 1
 		VerticalRateOfTurn: 140
-		RangeLimit: 25c0
 		Speed: 600
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
@@ -270,7 +262,6 @@ TowerMissile:
 	Projectile: Missile
 		Arm: 1
 		VerticalRateOfTurn: 140
-		RangeLimit: 25c0
 		Speed: 350
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
@@ -314,7 +305,6 @@ DropshipMissile:
 		Inaccuracy: 1000
 		HorizontalRateOfTurn: 40
 		Speed: 200
-		RangeLimit: 10c0
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2500
@@ -372,7 +362,6 @@ Torpedo:
 		Image: bullet1
 		Palette: shadow
 		TrailImage: bubble
-		RangeLimit: 9c0
 		HorizontalRateOfTurn: 10
 		VerticalRateOfTurn: 10
 	Warhead@Effect: CreateEffect
