@@ -10,7 +10,6 @@
 		Speed: 213
 		Arm: 2
 		Blockable: false
-		Inaccuracy: 128
 		Image: bullet6
 		Shadow: true
 		HorizontalRateOfTurn: 20
