@@ -126,13 +126,10 @@ LightPodRocket:
 		Damage: 2500
 		Versus:
 			None: 60
-			Steel: 75
-			Light: 50
+			Steel: 76
+			Light: 75
 			Heavy: 100
 			Concrete: 50
-	Warhead@Incendiary: TreeDamage
-		Spread: 128
-		Damage: 2500
 
 RapidPodRocket:
 	Inherits: LightPodRocket

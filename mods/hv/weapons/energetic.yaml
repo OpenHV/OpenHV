@@ -196,7 +196,7 @@ PodVoltageArc:
 		Damage: 2500
 		Versus:
 			None: 60
-			Steel: 75
+			Steel: 76
 			Light: 50
 			Heavy: 100
 			Concrete: 50
