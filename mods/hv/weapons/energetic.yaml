@@ -193,11 +193,11 @@ PodVoltageArc:
 		Inaccuracy: 0
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 2300
 		Versus:
 			None: 60
 			Steel: 76
-			Light: 50
+			Light: 40
 			Heavy: 100
 			Concrete: 50
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
