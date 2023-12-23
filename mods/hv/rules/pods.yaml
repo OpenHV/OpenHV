@@ -62,7 +62,7 @@ MORTARPOD:
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 50
 	Valued:
-		Cost: 175
+		Cost: 150
 	Tooltip:
 		Name: Mortar Pod
 	UpdatesPlayerStatistics:
