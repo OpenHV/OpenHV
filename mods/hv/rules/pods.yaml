@@ -207,8 +207,8 @@ BROKERPOD:
 	Buildable:
 		Queue: Pod
 		Description: Financial analyst.\nInvests into stock market for dividents.\n  Unarmed
-		Prerequisites: extractor
-		BuildPaletteOrder: 60
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 6
 	Valued:
 		Cost: 700
 	Tooltip:
