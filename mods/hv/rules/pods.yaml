@@ -159,7 +159,7 @@ TECHNICIAN:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Pod
-		Description: Field technician.\nInfiltrates and captures enemy structures.\n  Unarmed
+		Description: Field technician.\nInfiltrates and captures enemy structures.\nHeals pods.\n  Unarmed
 		Prerequisites: ~module
 		BuildPaletteOrder: 30
 	Valued:
