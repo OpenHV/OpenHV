@@ -80,6 +80,19 @@ STREETLAMP7:
 		Range: 5c0
 		Intensity: 0.35
 
+STREETLAMP8:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 4c512
+		Intensity: 0.35
+
+STREETLAMP9:
+	Inherits: STREETLAMP1
+	TerrainLightSource:
+		Range: 5c0
+		Intensity: 0.35
+		BlueTint: 0.2
+
 PYRAMID:
 	Inherits: ^Prop
 	Inherits@Shape: ^2x2Shape
