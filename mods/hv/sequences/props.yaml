@@ -117,6 +117,34 @@ streetlamp7:
 		Offset: 12,20
 		ZOffset: 1768
 
+streetlamp8:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp2.png
+	damaged-idle:
+		Filename: bits/streetlamp2.png
+		Start: 1
+	shadow-overlay:
+		Filename: bits/streetlamp2-shadow.png
+		Offset: 12,20
+		ZOffset: 1768
+
+streetlamp9:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/streetlamp2.png
+		Start: 2
+	damaged-idle:
+		Filename: bits/streetlamp2.png
+		Start: 3
+	shadow-overlay:
+		Filename: bits/streetlamp2-shadow.png
+		Start: 1
+		Offset: 12,20
+		ZOffset: 1768	
+
 pyramid:
 	Defaults:
 		Offset: -1,-2
