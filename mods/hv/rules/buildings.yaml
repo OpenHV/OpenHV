@@ -2517,7 +2517,7 @@ EXTRACTOR:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	CashTrickler:
-		Amount: 200
+		Amount: 125
 		Interval: 500
 		DisplayDuration: 50
 		PauseOnCondition: disabled
