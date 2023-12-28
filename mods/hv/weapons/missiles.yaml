@@ -143,25 +143,21 @@ RapidPodRocket:
 ShipMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
-	ReloadDelay: 50
-	Range: 9c0
-	MinRange: 2c0
-	Burst: 2
-	BurstDelays: 7
+	ValidTargets: Structure, Wall
+	ReloadDelay: 25
+	Range: 8c0
+	MinRange: 1c0
 	Projectile: Missile
 		Speed: 256
 		Inaccuracy: 316
 		CruiseAltitude: 2c0
 	Warhead@Damage: SpreadDamage
-		Damage: 4000
+		Damage: 2000
 		Versus:
-			None: 30
 			Steel: 90
-			Light: 100
-			Heavy: 150
-			Concrete: 100
+			Concrete: 90
 	Warhead@Incendiary: TreeDamage
-		Damage: 700
+		Damage: 2000
 
 BoatMissileAntiAir:
 	ReloadDelay: 50

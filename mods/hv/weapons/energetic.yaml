@@ -110,36 +110,28 @@ RepairTorch:
 
 Plasma:
 	Inherits: BigSplash
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 50
-	Burst: 2
-	BurstDelays: 5
-	Range: 6c0
-	MinRange: 0c512
+	ValidTargets: Structure, Wall
+	ReloadDelay: 10
+	Range: 8c0
+	MinRange: 1c0
 	Report: lasercannon_newlocknew.wav
-	Projectile: Bullet
+	Projectile: Missile
 		Speed: 350
 		Blockable: false
-		Inaccuracy: 512
+		Inaccuracy: 0
 		Image: bullet8
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
-		Spread: 128
-		Damage: 3500
-		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Damage: 1750
 		Versus:
-			None: 25
 			Steel: 85
-			Light: 75
-			Heavy: 175
-			Concrete: 50
+			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 2400
+		Damage: 1750
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
