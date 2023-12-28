@@ -1657,7 +1657,7 @@ TELEVATR:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 120
-		Prerequisites: techcenter
+		Prerequisites: radar
 		Description: Teleports a unit to\nanother televator.\n  Requires power to operate.
 	Valued:
 		Cost: 1500
