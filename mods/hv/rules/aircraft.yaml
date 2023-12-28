@@ -70,7 +70,7 @@ PLANE2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: techcenter, ~starport.yi
-		Description: Fast Attack Ship\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
+		Description: Fast Attack Ship\n  Strong vs Buildings\n  Can't attack Water, Ground or Air Units
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -78,7 +78,7 @@ PLANE2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 4c0
@@ -88,19 +88,20 @@ PLANE2:
 		Range: 4c0
 		Type: GroundPosition
 	Armament:
-		Weapon: ShipMissile
-		LocalOffset: 256,375,0, 256,-375,0
+		Weapon: Plasma
+		LocalOffset: 250,0,0
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 4
+		Ammo: 8
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
+		PipCount: 8
 	ReloadAmmoPool:
-		Delay: 200
-		Count: 2
+		Delay: 100
+		Count: 1
 	AttackAircraft:
 		FacingTolerance: 20
 		PersistentTargeting: false
@@ -109,7 +110,7 @@ PLANE2:
 		CruiseAltitude: 2560
 		InitialFacing: 768
 		TurnSpeed: 20
-		Speed: 200
+		Speed: 155
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	Voiced:
@@ -227,11 +228,11 @@ BANSHEE:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
 		Prerequisites: techcenter, ~starport.sc
-		Description: Heavy Helicopter Gunship\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
+		Description: Heavy Helicopter Gunship\n  Strong vs Buildings\n  Can't attack Water, Ground or Air Units
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 4c0
@@ -249,9 +250,8 @@ BANSHEE:
 		FacingTolerance: 0
 		RequiresCondition: airborne
 	Armament:
-		Weapon: Plasma
-		MuzzleSequence: muzzle
-		LocalOffset: 700,200,0, 700,-200,0
+		Weapon: ShipMissile
+		LocalOffset: 256,125,0, 256,-125,0
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 6
@@ -260,10 +260,10 @@ BANSHEE:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 3
+		PipCount: 6
 	ReloadAmmoPool:
 		Delay: 100
-		Count: 2
+		Count: 1
 	Selectable:
 		DecorationBounds: 1228, 1228
 	WithMuzzleOverlay:
