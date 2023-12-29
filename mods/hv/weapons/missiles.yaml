@@ -300,27 +300,28 @@ TowerMissile:
 DropshipMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
-	ReloadDelay: 100
-	Range: 8c0
+	ReloadDelay: 70
+	Range: 6c0
+	MinRange: 0c768
 	Report: rocketlaunch01.wav
 	Burst: 6
 	BurstDelays: 3
 	Projectile: Missile
 		Inaccuracy: 1000
-		HorizontalRateOfTurn: 40
+		HorizontalRateOfTurn: 90
 		Speed: 200
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 2000
 		Versus:
 			None: 35
-			Steel: 50
-			Light: 25
-			Heavy: 50
-			Concrete: 50
+			Steel: 20
+			Light: 20
+			Heavy: 10
+			Concrete: 20
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 2000
 
 CruiseMissileImpact:
 	Inherits: BigSplash

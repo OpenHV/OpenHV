@@ -271,7 +271,6 @@ BANSHEE:
 COPTER2:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -280,11 +279,13 @@ COPTER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
-		Description: Vehicle Transport Helicopter.\n  Armed with light machine gun.\n\n  Can load pods\n  and lift one vehicle.
+		Description: Vehicle Transport Helicopter.\n  Armed with light missiles.\n  Can load pods\n  and lift one vehicle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 30000
+	Armor:
+		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -307,16 +308,8 @@ COPTER2:
 		RequiresCondition: airborne
 	Selectable:
 		DecorationBounds: 2048, 1843
-	Turreted:
-		TurnSpeed: 80
-		Offset: 600,0,100
-	AttackTurreted:
-		RequiresCondition: airborne
-	Armament:
-		Weapon: Vulcan
-		LocalOffset: 0,0,-400
 	Cargo:
-		Types: Scout
+		Types: Scout, Vehicle
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		RequiresCondition: !carrying
@@ -410,7 +403,6 @@ BALLOON:
 DROPSHIP:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -419,11 +411,13 @@ DROPSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.yi
-		Description: Vehicle Transport Shuttle.\n  Armed with light missiles.\n  Can load pods\n  and lift one vehicle.
+		Description: Vehicle Transport Shuttle.\n  Armed with light machine gun.\n  Can load pods\n  and lift one vehicle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 30000
+	Armor:
+		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -445,16 +439,10 @@ DROPSHIP:
 		Sequence: fly
 		Name: fly
 		RequiresCondition: airborne
-	AttackFrontal:
-		FacingTolerance: 0
-		RequiresCondition: airborne
-	Armament:
-		Weapon: DropshipMissile
-		LocalOffset: 700,500,0, 700,-500,0
 	Selectable:
 		DecorationBounds: 2048, 1848
 	Cargo:
-		Types: Scout
+		Types: Scout, Vehicle
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		UnloadVoice: Unload
