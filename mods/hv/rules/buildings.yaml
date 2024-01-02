@@ -1688,6 +1688,7 @@ TELEVATR:
 	TeleportNetworkPrimaryExit:
 	TeleportNetwork:
 		Type: subspace
+		RequiresCondition: !disabled
 	WithTeleportChargeAnimation:
 	RallyPoint:
 		CirclesSequence:

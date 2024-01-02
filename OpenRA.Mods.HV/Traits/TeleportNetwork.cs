@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -10,12 +10,13 @@
 #endregion
 
 using System.Linq;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("This actor can teleport actors to another actor with the same trait.")]
-	public class TeleportNetworkInfo : TraitInfo, IRulesetLoaded
+	public class TeleportNetworkInfo : ConditionalTraitInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]
 		[Desc("Type of TeleportNetwork that pairs up, in order for it to work.")]
@@ -27,25 +28,24 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Time in ticks to wait for the teleporter to charge up.")]
 		public int Delay = 20;
 
-		public void RulesetLoaded(Ruleset rules, ActorInfo ai)
+		public override void RulesetLoaded(Ruleset rules, ActorInfo ai)
 		{
 			if (!rules.Actors["player"].TraitInfos<TeleportNetworkManagerInfo>().Any(q => Type == q.Type))
 				throw new YamlException($"Can't find a TeleportNetworkManager with Type '{Type}'");
+
+			base.RulesetLoaded(rules, ai);
 		}
 
 		public override object Create(ActorInitializer init) { return new TeleportNetwork(this); }
 	}
 
 	// The teleport network does nothing. The actor teleports itself, upon entering.
-	public class TeleportNetwork : INotifyAddedToWorld, INotifyRemovedFromWorld, INotifyOwnerChanged
+	public class TeleportNetwork : ConditionalTrait<TeleportNetworkInfo>, INotifyAddedToWorld, INotifyRemovedFromWorld, INotifyOwnerChanged
 	{
-		public TeleportNetworkInfo Info;
 		TeleportNetworkManager teleportNetworkManager;
 
 		public TeleportNetwork(TeleportNetworkInfo info)
-		{
-			Info = info;
-		}
+			: base(info) { }
 
 		void IncreaseTeleportNetworkCount(Actor self)
 		{

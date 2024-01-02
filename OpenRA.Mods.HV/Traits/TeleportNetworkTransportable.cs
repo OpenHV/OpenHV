@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -18,7 +18,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Can move actors instantly to primary designated teleport network canal actor.")]
+	[Desc("Can move actors instantly to primary designated teleport network actor.")]
 	public class TeleportNetworkTransportableInfo : TraitInfo
 	{
 		[VoiceReference]
@@ -125,7 +125,7 @@ namespace OpenRA.Mods.HV.Traits
 					return false;
 
 				var trait = target.TraitOrDefault<TeleportNetwork>();
-				if (trait == null)
+				if (trait == null || !trait.IsTraitEnabled())
 					return false;
 
 				if (!target.IsValidTeleportNetworkUser(self)) // block, if primary exit.
