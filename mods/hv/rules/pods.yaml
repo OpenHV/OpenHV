@@ -31,7 +31,7 @@ SCOUT2:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Fast scout vehicle.\nShoots surface to air/ground rockets.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
+		Description: Fast support vehicle.\nShoots surface to air/ground rockets.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
 		Prerequisites: ~module.sc
 		BuildPaletteOrder: 20
 	Valued:
@@ -335,7 +335,7 @@ ELECTRICPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Fast scout vehicle.\nShoots surface to air/ground electricity.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
+		Description: Fast support vehicle.\nShoots surface to air/ground electricity.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
 		Prerequisites: ~module.yi
 		BuildPaletteOrder: 20
 	Valued:
