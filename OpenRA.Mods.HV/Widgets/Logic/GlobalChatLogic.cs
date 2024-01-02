@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023 The OpenHV Developers (see AUTHORS)
+ * Copyright 2023-2024 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -32,6 +32,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly Color textColor;
 		readonly Color notificationColor;
 		readonly Color playerColor;
+		readonly Color historyColor;
 
 		[ObjectCreator.UseCtor]
 		public GlobalChatLogic(Widget widget, ModData modData, Dictionary<string, MiniYaml> logicArgs)
@@ -44,6 +45,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			textColor = ChromeMetrics.Get<Color>("GlobalChatTextColor");
 			notificationColor = ChromeMetrics.Get<Color>("GlobalChatNotificationColor");
 			playerColor = ChromeMetrics.Get<Color>("GlobalChatPlayerNameColor");
+			historyColor = ChromeMetrics.Get<Color>("GlobalChatHistoryColor");
 
 			var textLabel = chatTemplate.Get<LabelWidget>("TEXT");
 			textLabel.GetColor = () => textColor;
@@ -107,9 +109,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var message = (ChatMessage)o;
 			var from = message.Type == ChatMessageType.Notification ? "Battlefield Control" : message.Nick;
 			var prefixColor = message.Type == ChatMessageType.Notification ? notificationColor : playerColor;
+			prefixColor = message.Type == ChatMessageType.PrivateMessage ? historyColor : prefixColor;
+			var messageColor = message.Type == ChatMessageType.PrivateMessage ? historyColor : textColor;
 			var template = (ContainerWidget)chatTemplate.Clone();
-			var notification = new TextNotification(TextNotificationPool.Chat, -1, from, message.Message, prefixColor, textColor);
-			WidgetUtils.SetupTextNotification(template, notification, 100, true);
+			var notification = new TextNotification(TextNotificationPool.Chat, -1, from, message.Message, prefixColor, messageColor);
+			var timestamp = message.Type != ChatMessageType.PrivateMessage;
+			WidgetUtils.SetupTextNotification(template, notification, 100, timestamp);
 
 			template.Id = message.UID;
 			return template;

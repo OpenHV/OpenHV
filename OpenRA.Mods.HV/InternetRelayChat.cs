@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023 The OpenHV Developers (see AUTHORS)
+ * Copyright 2023-2024 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -19,7 +19,7 @@ using OpenRA.Primitives;
 namespace OpenRA.Mods.HV
 {
 	public enum ChatConnectionStatus { Disconnected, Connecting, Connected, Disconnecting, Joined, Error }
-	public enum ChatMessageType { Message, Notification }
+	public enum ChatMessageType { Message, PrivateMessage, Notification }
 
 	public sealed class ChatUser
 	{
@@ -110,7 +110,7 @@ namespace OpenRA.Mods.HV
 			client.OnTopicChange += (_, e) => topic = e.NewTopic;
 			client.OnNickChange += OnNickChange;
 
-			client.OnChannelMessage += (_, e) => AddMessage(e.Data.Nick, e.Data.Message);
+			client.OnChannelMessage += (_, e) => AddMessage(e.Data.Nick, e.Data.Message, e.Data.RawMessageArray[1]);
 			client.OnChannelNotice += (_, e) => AddNotification(e.Data.Message);
 			client.OnOp += (_, e) => SetUserOp(e.Whom, true);
 			client.OnDeop += (_, e) => SetUserOp(e.Whom, false);
@@ -185,9 +185,10 @@ namespace OpenRA.Mods.HV
 			});
 		}
 
-		void AddMessage(string nick, string text)
+		void AddMessage(string nick, string text, string code = "")
 		{
-			var message = new ChatMessage(DateTime.Now, TimeStampFormat, ChatMessageType.Message, nick, text);
+			var type = code == "PRIVMSG" ? ChatMessageType.PrivateMessage : ChatMessageType.Message;
+			var message = new ChatMessage(DateTime.Now, TimeStampFormat, type, nick, text);
 			Game.RunAfterTick(() =>
 			{
 				History.Add(message);
@@ -273,6 +274,8 @@ namespace OpenRA.Mods.HV
 			foreach (var user in channel.Users.Values)
 				Game.RunAfterTick(() =>
 					Users.Add(user.Nick, new ChatUser(user.Nick, user.IsOp, user.IsVoice)));
+
+			client.WriteLine($"history {channel.Name} 24h");
 		}
 
 		void OnNickChange(object sender, NickChangeEventArgs e)
