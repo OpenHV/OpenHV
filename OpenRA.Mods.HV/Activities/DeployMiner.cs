@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -10,7 +10,6 @@
 #endregion
 
 using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -62,7 +61,7 @@ namespace OpenRA.Mods.HV.Activities
 		bool CanDeploy(Actor self, CPos cell)
 		{
 			return terrainTypes.Contains(self.World.Map.GetTerrainInfo(cell).Type) &&
-				self.World.ActorMap.GetActorsAt(cell).All(a => a == self);
+				!self.World.WorldActor.Trait<BuildingInfluence>().AnyBuildingAt(cell);
 		}
 	}
 }
