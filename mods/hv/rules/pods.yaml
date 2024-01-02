@@ -204,12 +204,11 @@ TECHNICIAN:
 BROKERPOD:
 	Inherits: ^Pod
 	Inherits@Selection: ^SelectableSupportUnit
-	# Disabled for now, for skirmish and multiplayer games
-	# Buildable:
-	# 	Queue: Pod
-	# 	Description: Financial analyst.\nInvests into stock market for dividents.\n  Unarmed
-	# 	Prerequisites: techcenter
-	# 	BuildPaletteOrder: 6
+	Buildable:
+		Queue: Pod
+		Description: Financial analyst.\nInvests into stock market for dividents.\n  Unarmed
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 6
 	Valued:
 		Cost: 700
 	Tooltip:
