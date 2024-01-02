@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2022-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 			"A value of zero disables auto-removal.")]
 		public readonly int Duration = 0;
 
-		[Desc("Allowed to land on.")]
+		[Desc("Allowed to emerge on.")]
 		public readonly HashSet<string> TerrainTypes = new();
 
 		[Desc("Define actors that can collect crates by setting this into the Crushes field from the Mobile trait.")]

@@ -153,6 +153,7 @@
 		EmptyWeapon: UnitExplodeSmall
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Carryable:

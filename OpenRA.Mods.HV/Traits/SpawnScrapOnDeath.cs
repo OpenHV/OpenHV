@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
@@ -27,6 +28,9 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Probability the actor spawns.")]
 		public readonly int Probability = 100;
+
+		[Desc("Allowed to spawn on.")]
+		public readonly HashSet<string> TerrainTypes = new();
 
 		[Desc("Map player to use when 'InternalName' is defined on 'OwnerType'.")]
 		public readonly string InternalOwner = "Neutral";
@@ -69,6 +73,10 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			if (Info.DeathType != null && !e.Damage.DamageTypes.Contains(Info.DeathType))
+				return;
+
+			var type = self.World.Map.GetTerrainInfo(self.Location).Type;
+			if (!Info.TerrainTypes.Contains(type))
 				return;
 
 			attackingPlayer = e.Attacker.Owner;
