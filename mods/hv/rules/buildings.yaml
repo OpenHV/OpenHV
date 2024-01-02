@@ -45,7 +45,7 @@ BASE:
 		BuildPaletteOrder: 1
 		BuildLimit: 1
 		Description: Builds structures, builders and miners
-		Prerequisites: outpost, ~structures.yi
+		Prerequisites: outpost, ~base.yi
 	Encyclopedia:
 		Description: This base of operations is able to summon new buildings as well as utility vehicles such as miners or builders. New buildings are only allowed within a base radius. You can also spawn buildings into an allied base radius. To extend the build radius you need to train builders which can deploy into outposts. Protect the base building at all costs. If your base ever gets destroyed, select an outpost and request a new main base for a possible comeback.
 		Order: 10
@@ -172,7 +172,7 @@ BASE2:
 	ProvidesPrerequisite@Synapol:
 		Prerequisite: structures.sc
 	Buildable:
-		Prerequisites: outpost2, ~structures.sc
+		Prerequisites: outpost2, ~base.sc
 	-Encyclopedia:
 
 OUTPOST:
@@ -207,14 +207,14 @@ OUTPOST:
 		RequiresCondition: !base
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
-		Prerequisite: structures.yi
+		Prerequisite: base.yi
 
 OUTPOST2:
 	Inherits: OUTPOST
 	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Synapol:
 		Factions: sc
-		Prerequisite: structures.sc
+		Prerequisite: base.sc
 	-Encyclopedia:
 
 GENERATOR:
