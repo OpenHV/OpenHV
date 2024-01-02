@@ -189,8 +189,6 @@ PodVoltageArc:
 	ReloadDelay: 60
 	Projectile: EnergyBolt
 		Radius: 2
-		Arm: 2
-		Inaccuracy: 0
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2300
