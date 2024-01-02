@@ -150,13 +150,13 @@
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
-		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    -  Mortar Pod\n    -  Sniper Pod\n    - Electric Pod\n    - Ramp Buggy\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapon:\n    - Air Strike\n    - Field Generator\n    - Orbital Railgun Strike
+		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Mortar Pod\n    - Sniper Pod\n    - Electric Pod\n    - Ramp Buggy\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapon:\n    - Air Strike\n    - Field Generator\n    - Orbital Railgun Strike
 	Faction@Synapol:
 		Name: Synapol
 		InternalName: sc
 		Side: Corporations
 		Selectable: true
-		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Flame Pod\n    -  Bomber Pod\n    - Elite Pod\n    - Gatling Bike\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
+		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Flame Pod\n    - Bomber Pod\n    - Elite Pod\n    - Gatling Bike\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
 	Faction@Random:
 		Name: Any
 		InternalName: Random
