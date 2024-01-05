@@ -1220,7 +1220,7 @@ AATURRET:
 		Prerequisites: radar, ~structures.yi
 		Description: Anti-Air base defense.\n  Requires power to operate. \n  Strong vs Aircrafts
 	Valued:
-		Cost: 1250
+		Cost: 1000
 	Tooltip:
 		Name: AA Turret
 	Health:
@@ -1250,9 +1250,9 @@ AATURRET:
 	AttackCharges:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		PauseOnCondition: disabled
-		ChargeLevel: 50
-		ChargeRate: 10
-		DischargeRate: 5
+		ChargeLevel: 5
+		ChargeRate: 5
+		DischargeRate: 1
 		ChargingCondition: charging
 	AmbientSound:
 		RequiresCondition: charging
@@ -1267,7 +1267,7 @@ AATURRET2:
 		Prerequisites: radar, ~structures.sc
 		Description: Anti-Air base defense.\n  Requires power to operate. \n  Strong vs Aircrafts
 	Valued:
-		Cost: 1250
+		Cost: 1000
 	Tooltip:
 		Name: AA Turret
 	Encyclopedia:
@@ -1291,7 +1291,7 @@ AATURRET2:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 	Turreted:
-		TurnSpeed: 120
+		TurnSpeed: 1023
 		RealignDelay: -1
 		RequiresCondition: !build-incomplete
 	AttackTurreted:

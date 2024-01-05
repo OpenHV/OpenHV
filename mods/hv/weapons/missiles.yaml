@@ -246,7 +246,7 @@ Patriot:
 			None: 30
 			Wood: 90
 			Light: 90
-			Heavy: 115
+			Heavy: 300
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -259,7 +259,7 @@ Patriot:
 
 TowerMissile:
 	Inherits: ^AntiAirMissile
-	ReloadDelay: 46
+	ReloadDelay: 45
 	Range: 9c0
 	Report: rocketlaunch03.wav
 	ValidTargets: Air
@@ -270,7 +270,6 @@ TowerMissile:
 		MaximumLaunchSpeed: 96
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 128
 		HorizontalRateOfTurn: 100
 		Acceleration: 96
 		MinimumLaunchAngle: 128

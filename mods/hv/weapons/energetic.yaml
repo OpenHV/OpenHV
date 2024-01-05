@@ -242,6 +242,7 @@ LightningBolt:
 
 LightningBoltLight:
 	Inherits: LightningBolt
+	ReloadDelay: 60
 	Range: 8c0
 	Report: lightningbolt.wav
 	Warhead@Damage: SpreadDamage
