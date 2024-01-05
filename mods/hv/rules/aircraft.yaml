@@ -35,7 +35,7 @@ PLANE1:
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 92
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
@@ -103,7 +103,7 @@ PLANE2:
 		Delay: 100
 		Count: 1
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 92
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
