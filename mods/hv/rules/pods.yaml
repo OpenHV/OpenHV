@@ -293,7 +293,7 @@ ELITEPOD:
 		Prerequisites: ~module, techcenter
 		BuildPaletteOrder: 60
 	Valued:
-		Cost: 600
+		Cost: 650
 	Tooltip:
 		Name: Elite Pod
 	Health:
