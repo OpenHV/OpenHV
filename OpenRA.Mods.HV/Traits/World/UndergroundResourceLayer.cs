@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -119,7 +119,7 @@ namespace OpenRA.Mods.HV.Traits
 		protected readonly CellLayer<ResourceLayerContents> Content;
 		protected readonly Dictionary<byte, string> ResourceTypesByIndex;
 
-		int resCells;
+		int totalResourceCells;
 		IResourceLayerInfo IResourceLayer.Info => info;
 
 		public event Action<CPos, string> CellChanged;
@@ -175,7 +175,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			world.Map.CustomTerrain[cell] = world.Map.Rules.TerrainInfo.GetTerrainIndex(resourceInfo.TerrainType);
-			++resCells;
+			++totalResourceCells;
 
 			return new ResourceLayerContents(resourceType, density.Clamp(1, resourceInfo.MaxDensity));
 		}
@@ -238,7 +238,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				Content[cell] = ResourceLayerContents.Empty;
 				Map.CustomTerrain[cell] = byte.MaxValue;
-				--resCells;
+				--totalResourceCells;
 
 				CellChanged?.Invoke(cell, null);
 			}
@@ -263,7 +263,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			Content[cell] = ResourceLayerContents.Empty;
 			Map.CustomTerrain[cell] = byte.MaxValue;
-			--resCells;
+			--totalResourceCells;
 
 			CellChanged?.Invoke(cell, null);
 		}
@@ -282,6 +282,6 @@ namespace OpenRA.Mods.HV.Traits
 		int IResourceLayer.RemoveResource(string resourceType, CPos cell, int amount) { return RemoveResource(resourceType, cell, amount); }
 		void IResourceLayer.ClearResources(CPos cell) { ClearResources(cell); }
 		bool IResourceLayer.IsVisible(CPos cell) { return !world.FogObscures(cell); }
-		bool IResourceLayer.IsEmpty => resCells < 1;
+		bool IResourceLayer.IsEmpty => totalResourceCells < 1;
 	}
 }

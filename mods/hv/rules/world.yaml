@@ -12,6 +12,9 @@
 	TerrainGeometryOverlay:
 	TerrainTypeOverlay:
 	ResourceDensityOverlay:
+	NoBuildZone:
+		BlockedTerrainType: Blocked
+		MinerActorType: miner2
 	DebugVisualizations:
 	DebugOffsetOverlayManager:
 	TerrainLighting:
