@@ -1,0 +1,59 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.95
+	IndexedPlayerPalette@RedLamp:
+		BaseName: redlamp
+		BasePalette: player
+		RemapIndex: 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49
+		PlayerIndex:
+			Neutral: 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 2
+		AllowModifiers: True
+
+SPARKLAMP:
+	RenderSprites:
+		PlayerPalette: redlamp
+
+TOX-LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.10
+		GreenTint: 0.75
+		BlueTint: 0.10
+
+RESOURCELIGHT-RED:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.90
+		GreenTint: 0.40
+		BlueTint: 0.40
+
+CLEANLIGHT-BLUE:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.90
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 18c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+NEGA-LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 06c640
+		Intensity: 0.01
+		RedTint: -0.10
+		GreenTint: -0.35
+		BlueTint: -0.30
