@@ -4,7 +4,7 @@ BOAT3:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 400
+		Cost: 450
 	Tooltip:
 		Name: Light Boat
 		GenericName: Boat
@@ -49,7 +49,7 @@ PATROLBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 400
+		Cost: 450
 	Tooltip:
 		Name: Patrol boat
 		GenericName: Boat
