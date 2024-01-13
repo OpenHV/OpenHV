@@ -1029,13 +1029,13 @@ ORESMELT:
 	Tooltip:
 		Name: Ore Smelter
 	Encyclopedia:
-		Description: The ore smelter is an economy boosting building for long lasting conflicts. It refines the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. Heating up the ore however requires a lot of energy.
+		Description: The ore smelter is an economy boosting building for long lasting conflicts. It refines the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, heating up the ore requires a lot of energy.
 		Order: 90
 		Category: Buildings
 	Buildable:
 		Queue: Building
 		Description: Ore Smelter.\nProcesses resources for extra credits.
-		Prerequisites: techcenter
+		Prerequisites: ~structures.sc, techcenter
 	HitShape:
 		Type: Rectangle
 			TopLeft: -512, -512
@@ -1049,13 +1049,24 @@ ORESMELT:
 		Dimensions: 1,2
 	RevealsShroud:
 		Range: 4c0
-	WithIdleAnimation:
-		Interval: 80
-		RequiresCondition: !disabled && !burning && !selling
 	CashTrickler:
 		Interval: 50
 		Amount: 10
 		RequiresCondition: !build-incomplete && !disabled
+
+OREPURIFIER:
+	Inherits: ORESMELT
+	Buildable:
+		Prerequisites: ~structures.yi, techcenter
+	Selectable:
+		Bounds: 1024, 2048, 0, 0
+	Tooltip:
+		Name: Ore Purifier
+	Buildable:
+		Description: Ore Purifier.\nProcesses resources for extra credits.
+	Encyclopedia:
+		Description: The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore however requires a lot of energy.
+	-WithIdleOverlay@Shadow:
 
 BUNKER:
 	Inherits: ^DefenseBuilding

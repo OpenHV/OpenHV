@@ -2251,8 +2251,6 @@ oresmelt:
 		Offset: 0, -2
 	idle:
 		Filename: bits/oresmelt.png
-	active:
-		Filename: bits/oresmelt.png
 		Start: 1
 		Length: 10
 		Tick: 140
@@ -2263,7 +2261,7 @@ oresmelt:
 	shadow-overlay:
 		Filename: bits/oresmelt-shadow.png
 		ZOffset: -1768
-		Offset: 8,16
+		Offset: 11,22
 	make:
 		Filename: bits/build.png
 		Length: 39
@@ -2277,6 +2275,54 @@ oresmelt:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 36
+		Offset: 0, 0
+
+orepurifier:
+	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		ZOffset: 512
+		Offset: 0, -2
+	idle:
+		ShadowStart: 7
+		Length: 7
+		Reverses: True
+		Tick: 100
+		Combine:
+			0:
+				Filename: bits/orepurifier.png
+				Length: 7
+				Reverses: True
+				Tick: 100
+			1:
+				Filename: bits/orepurifier-shadow.png
+				Length: 7
+				Reverses: True
+				Tick: 100
+				ZOffset: 1768
+				Offset: 13,24
+	damaged-idle:
+		ShadowStart: 1
+		Combine:
+			0:
+				Filename: bits/orepurifier.png
+				Start: 7
+			1:
+				Filename: bits/orepurifier-shadow.png
+				ZOffset: 1768
+				Offset: 13,24			
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 37
 		Offset: 0, 0
 
 flagpost:
