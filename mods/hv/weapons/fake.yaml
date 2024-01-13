@@ -1,6 +1,7 @@
 DroneLauncher:
 	ReloadDelay: 30
-	Range: 25c0
+	Range: 20c0
+	MinRange: 1c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@Damage: TargetDamage
@@ -8,8 +9,8 @@ DroneLauncher:
 
 MissileLauncher:
 	ReloadDelay: 150
-	Range: 25c0
-	# MinRange: 8c0
+	Range: 20c0
+	MinRange: 1c0
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@Damage: TargetDamage
