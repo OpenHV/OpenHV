@@ -253,9 +253,11 @@ RADARTANK:
 	DetectCloaked:
 		Range: 8c0
 		RequiresCondition: !ecm-disabled && undeployed
+		DetectionTypes: Cloak, Underwater
 	DetectCloaked@Deployed:
 		Range: 14c0
 		RequiresCondition: !ecm-disabled && !undeployed
+		DetectionTypes: Cloak, Underwater
 
 TANK16:
 	Inherits: ^TrackedVehicle
