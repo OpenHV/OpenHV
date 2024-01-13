@@ -210,7 +210,7 @@ BoatMachineGunGround:
 		Versus:
 			None: 190
 			Steel: 9
-			Light: 46
+			Light: 47
 			Heavy: 21
 			Concrete: 5
 
@@ -219,21 +219,19 @@ BoatMachineGunAir:
 	Report: boatgun_johandeecke.wav
 	BurstDelays: 5
 	ReloadDelay: 20
-	Range: 10c0  # 9c0
+	Range: 9c0  # 10c0
 	Burst: 4
 	Projectile: InstantHit
 		Image: bullet1
 		Inaccuracy: 0c512
 	Warhead@Damage: SpreadDamage
 		Spread: 126
-		Damage: 1200
+		Damage: 150
 		ValidTargets: Air
 		Versus:
 			None: 75
-			Steel: 10
 			Light: 25
 			Heavy: 10
-			Concrete: 5
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Air

@@ -165,7 +165,7 @@ BoatMissileAntiGround:
 	Range: 6c0
 	Projectile: Bullet
 		Image: bullet6
-		Speed: 750 # 500 # 250
+		Speed: 1000
 		Blockable: false
 		# LaunchAngle: 100
 		Inaccuracy: 0c256
@@ -177,10 +177,10 @@ BoatMissileAntiGround:
 		Damage: 1000
 		Versus:
 			None: 1500
-			Steel: 80
-			Light: 475
+			Steel: 90
+			Light: 450
 			Heavy: 190
-			Concrete: 5
+			Concrete: 50
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground, Tree
@@ -189,12 +189,12 @@ BoatMissileAntiGround:
 BoatMissileAntiAir:
 	ReloadDelay: 50
 	Report: rocketlaunch03.wav
-	Range: 10c0  # 9c0
+	Range:  9c0  # 10c0
 	ValidTargets: Air
 	Burst: 3
 	BurstDelays: 8
 	Projectile: Missile
-		Speed: 350
+		Speed: 600
 		Blockable: false
 		Inaccuracy: 128
 		Image: bullet7
@@ -202,19 +202,24 @@ BoatMissileAntiAir:
 		HorizontalRateOfTurn: 60
 		TrailImage: small_smoke
 		CruiseAltitude: 2c0
+		RangeLimit: -1
+		VerticalRateOfTurn: 20
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		HorizontalRateOfTurn: 100
+		Acceleration: 96
+		MinimumLaunchAngle: 128
+		MaximumLaunchAngle: 192
+		AllowSnapping: true
+		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 800
+		Damage: 500 # 450 # 400 # 380
 		ValidTargets: Air
 		Versus:
 			None: 30
 			Light: 90
 			Heavy: 115
-			Concrete: 100
-	Warhead@Incendiary: TreeDamage
-		Spread: 128
-		Damage: 2500
-		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
