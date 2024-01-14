@@ -8,6 +8,9 @@ LANDMINE:
 		Image: mine1
 	WithRandomSpriteBody:
 		Images: mine1, mine2, mine3, mine4
+	WithShadow:
+		Offset: 64,64,0
+		ZOffset: -512
 
 WATERMINE:
 	Inherits: ^Mine
