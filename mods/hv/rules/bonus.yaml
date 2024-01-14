@@ -98,6 +98,9 @@ GOLDBALL:
 	GiveCashCrateAction:
 		Amount: 500
 		UseCashTick: true
+	WithShadow:
+		Offset: 128,128,0
+		ZOffset: -512
 
 RADARSWEEP:
 	Interactable:
