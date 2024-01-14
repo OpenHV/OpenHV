@@ -235,6 +235,9 @@
 	ScrapValue:
 	MapEditorData:
 		Categories: System
+	WithShadow:
+		Offset: 128,128,0
+		ZOffset: -512
 
 ^TrackedVehicle:
 	Inherits: ^Vehicle
