@@ -425,7 +425,7 @@ Container@PLAYER_WIDGETS:
 					Align: Center
 					Font: TinyBold
 				LabelWithTooltip@CASH:
-					Logic: IngameCashCounterLogic
+					Logic: CustomIngameCashCounterLogic
 					X: 40
 					Y: 270
 					Width: 50

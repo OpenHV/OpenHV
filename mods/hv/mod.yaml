@@ -161,6 +161,7 @@ ChromeLayout:
 
 Translations:
 	common|languages/en.ftl
+	hv|languages/en.ftl
 	common|languages/rules/en.ftl
 	hv|languages/rules/en.ftl
 	common|languages/chrome/en.ftl
