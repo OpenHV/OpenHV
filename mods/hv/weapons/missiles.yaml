@@ -372,8 +372,9 @@ Torpedo:
 		Image: bullet1
 		Palette: shadow
 		TrailImage: bubble
-		HorizontalRateOfTurn: 10
-		VerticalRateOfTurn: 10
+		HorizontalRateOfTurn: 60
+		VerticalRateOfTurn: 60
+		CruiseAltitude: 0
 		RangeLimit: -1
 	Warhead@Effect: CreateEffect
 		Explosions: small

@@ -349,7 +349,7 @@ MediumBoatCannon:
 	Inherits: ^Cannon
 	ValidTargets: Ship, WaterBuilding, Water
 	Report: tankfire01.wav
-	ReloadDelay: 70
+	ReloadDelay: 25
 	Range: 6c0
 	Projectile: Bullet
 		Speed: 850
@@ -361,12 +361,12 @@ MediumBoatCannon:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 256
-		Damage: 10000
+		Damage: 5000
 		Versus:
 			None: 100
 			Steel: 50
 			Light: 75
-			Heavy: 115  # 125  # 150
+			Heavy: 100
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Damage: 4000

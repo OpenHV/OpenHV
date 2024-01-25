@@ -107,11 +107,11 @@ BOAT:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
-		Description: A boat with a turret.\n  Strong vs Water\n  Can't attack Pods, Buildings, Vehicles and Air
+		Description: A boat with a turret.\n  Strong vs Water\n  Can't attack Pods, Buildings, Vehicles or Air
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 46000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -153,11 +153,11 @@ SUBMARINE2:
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
-		Description: Submarine with powerful torpedos.\n  Strong vs Vehicles and Buildings
+		Description: Submarine with powerful torpedos.\n  Strong vs Water\n  Can't attack Pods, Buildings, Vehicles or Air
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 46000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Mobile:
