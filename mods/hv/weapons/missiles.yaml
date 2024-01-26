@@ -105,7 +105,7 @@ LightPodRocket:
 	Inherits: ^AntiGroundMissile
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Range: 5c512
-	ReloadDelay: 60
+	ReloadDelay: 45
 	Projectile: Missile
 		Speed: 341
 		Arm: 2
@@ -118,12 +118,12 @@ LightPodRocket:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
-		Damage: 2500
+		Damage: 1875
 		Versus:
-			None: 60
-			Steel: 76
-			Light: 60
-			Heavy: 100
+			None: 65
+			Steel: 75
+			Light: 70
+			Heavy: 110
 			Concrete: 50
 
 RapidPodRocket:
