@@ -681,8 +681,10 @@ STARPORT:
 	Reservable:
 	ProvidesPrerequisite@Generic:
 		Prerequisite: starport
+		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.yi
+		RequiresCondition: !powerdown
 	ProductionBar:
 		ProductionType: Aircraft
 	PrimaryBuilding:
@@ -713,6 +715,7 @@ STARPORT2:
 		Prerequisites: radar, ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.sc
+		RequiresCondition: !powerdown
 	-WithProductionExitOverlay:
 	-Encyclopedia:
 
