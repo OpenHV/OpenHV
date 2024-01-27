@@ -468,8 +468,10 @@ MODULE:
 		Category: Buildings
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.yi
+		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Generic:
 		Prerequisite: module
+		RequiresCondition: !powerdown
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -552,6 +554,7 @@ MODULE:
 		StartRepairingTextNotification: notifications-repairing
 		FinishRepairingNotification: UnitRepaired
 		FinishRepairingTextNotification: notification-unit-repaired
+		RequiresCondition: !powerdown
 
 MODULE2:
 	Inherits: MODULE
@@ -559,6 +562,7 @@ MODULE2:
 		Prerequisites: ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.sc
+		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: module2
 	-Encyclopedia:
