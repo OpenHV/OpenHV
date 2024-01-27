@@ -797,7 +797,7 @@
 		Color: 00008080
 	DamageMultiplier@ForceField:
 		RequiresCondition: shield
-		Modifier: 0
+		Modifier: 25
 	TimedConditionBar:
 		Condition: shield
 		Color: 0000FF

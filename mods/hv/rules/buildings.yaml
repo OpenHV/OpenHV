@@ -1396,7 +1396,7 @@ FIELD:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		ChargeInterval: 3000
 		Name: Force Field
-		Description: Makes a group of units invulnerable\nfor 30 seconds.
+		Description: Makes a group of units receive 75% less damage\nfor 30 seconds.
 		Duration: 750
 		DisplayRadarPing: true
 		Condition: shield
