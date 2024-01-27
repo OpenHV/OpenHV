@@ -241,16 +241,16 @@ TurretArtillery:
 		Image: bullet2
 		Shadow: true
 	Warhead@Damage: SpreadDamage
-		Damage: 30000
+		Damage: 25000
 		Spread: 850
 		Versus:
 			None: 150
-			Steel: 65
-			Light: 65
-			Heavy: 65
+			Steel: 60
+			Light: 60
+			Heavy: 60
 			Wood: 40
 	Warhead@Incendiary: TreeDamage
-		Damage: 30000
+		Damage: 25000
 		Spread: 850
 		Percentage: 40
 	Warhead@Effect: CreateEffect
