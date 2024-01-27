@@ -1330,7 +1330,7 @@ HOWITZER:
 		BlockedCursor: howitzer-blocked
 		Icon: howitzer
 		OrderName: FireMission
-		ChargeInterval: 3000
+		ChargeInterval: 4500
 		DisplayRadarPing: true
 		Name: Artillery Strike
 		Description: Fires a long range barrage across the map.
@@ -1394,7 +1394,7 @@ FIELD:
 	GrantExternalConditionPower@ForceField:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
-		ChargeInterval: 3000
+		ChargeInterval: 4500
 		Name: Force Field
 		Description: Makes a group of units receive 75% less damage\nfor 30 seconds.
 		Duration: 750
