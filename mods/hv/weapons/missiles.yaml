@@ -130,6 +130,10 @@ RapidPodRocket:
 	Inherits: LightPodRocket
 	ReloadDelay: 20
 	Range: 8c0
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 2500
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile
