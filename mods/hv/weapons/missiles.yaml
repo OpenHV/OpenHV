@@ -13,7 +13,7 @@
 		Shadow: true
 		HorizontalRateOfTurn: 20
 		TrailImage: smoke
-		CruiseAltitude: 2c0
+		RangeLimit: -1
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
@@ -106,13 +106,18 @@ LightPodRocket:
 	Range: 5c512
 	ReloadDelay: 45
 	Projectile: Missile
-		Speed: 350
+		VerticalRateOfTurn: 140
+		Speed: 600
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
 		Blockable: false
-		Inaccuracy: 0
-		Image: bullet7
 		Shadow: true
 		HorizontalRateOfTurn: 100
-		TrailImage: small_smoke
+		Acceleration: 96
+		MinimumLaunchAngle: 128
+		MaximumLaunchAngle: 192
+		AllowSnapping: true
+
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
