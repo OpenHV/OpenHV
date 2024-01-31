@@ -4,7 +4,6 @@
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Range: 5c0
-	MinRange: 0c512
 	Report: rocketlaunch01.wav
 	Projectile: Missile
 		Speed: 213
@@ -112,7 +111,7 @@ LightPodRocket:
 		Inaccuracy: 0
 		Image: bullet7
 		Shadow: true
-		HorizontalRateOfTurn: 60
+		HorizontalRateOfTurn: 100
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
