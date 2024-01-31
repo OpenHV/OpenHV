@@ -8,7 +8,7 @@
 	Report: rocketlaunch01.wav
 	Projectile: Missile
 		Speed: 213
-		Arm: 2
+		Arm: 0
 		Blockable: false
 		Image: bullet6
 		Shadow: true
@@ -107,8 +107,7 @@ LightPodRocket:
 	Range: 5c512
 	ReloadDelay: 45
 	Projectile: Missile
-		Speed: 341
-		Arm: 2
+		Speed: 350
 		Blockable: false
 		Inaccuracy: 0
 		Image: bullet7
@@ -224,7 +223,6 @@ Patriot:
 	Report: rocketlaunch03.wav
 	ValidTargets: Air
 	Projectile: Missile
-		Arm: 1
 		VerticalRateOfTurn: 140
 		Speed: 600
 		MinimumLaunchSpeed: 75
@@ -263,9 +261,8 @@ TowerMissile:
 	Report: rocketlaunch03.wav
 	ValidTargets: Air
 	Projectile: Missile
-		Arm: 1
 		VerticalRateOfTurn: 140
-		Speed: 350
+		Speed: 600
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
 		Blockable: false
