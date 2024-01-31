@@ -121,7 +121,7 @@ LightPodRocket:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
-		Damage: 1875
+		Damage: 2500
 		Versus:
 			None: 65
 			Steel: 75
