@@ -106,6 +106,7 @@ LightPodRocket:
 	Range: 5c512
 	ReloadDelay: 45
 	Projectile: Missile
+		Image: bullet7
 		VerticalRateOfTurn: 140
 		Speed: 600
 		MinimumLaunchSpeed: 75
@@ -117,7 +118,7 @@ LightPodRocket:
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192
 		AllowSnapping: true
-
+		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
