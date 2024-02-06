@@ -301,7 +301,7 @@ BOMBERPOD:
 	Tooltip:
 		Name: Bomber Pod
 	Health:
-		HP: 25000
+		HP: 10000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	-Guard:
