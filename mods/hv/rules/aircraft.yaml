@@ -206,6 +206,7 @@ SAUCER:
 		TurnSpeed: 16
 		Speed: 70
 		CanForceLand: false
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: SaucerVoice
 	-WithShadow:
@@ -298,6 +299,7 @@ COPTER2:
 		TurnSpeed: 20
 		Speed: 135
 		AltitudeVelocity: 0c58
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: TransportHelicopterVoice
 	WithFacingSpriteBody:
@@ -386,6 +388,7 @@ BALLOON:
 	Aircraft:
 		Speed: 70
 		CanForceLand: false
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: BalloonVoice
 	Guard:
@@ -431,6 +434,7 @@ DROPSHIP:
 		Speed: 135
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: DropshipVoice
 	WithFacingSpriteBody:
