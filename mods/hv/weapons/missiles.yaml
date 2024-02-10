@@ -118,6 +118,7 @@ LightPodRocket:
 		MinimumLaunchAngle: 128
 		MaximumLaunchAngle: 192
 		AllowSnapping: true
+		CloseEnough: 600
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -240,6 +241,7 @@ Patriot:
 		MaximumLaunchAngle: 192
 		CruiseAltitude: 2c0
 		AllowSnapping: true
+		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2000
@@ -279,6 +281,7 @@ TowerMissile:
 		MaximumLaunchAngle: 192
 		CruiseAltitude: 2c0
 		AllowSnapping: true
+		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 4000
