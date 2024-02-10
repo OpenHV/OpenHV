@@ -753,7 +753,7 @@ FACTORY3:
 	HitShape:
 		TargetableOffsets: 0,0,0, -512,-512,0, -512,512,0, -1536,-512,0, -1536,512,0
 	Health:
-		HP: 60000
+		HP: 80000
 	Armor:
 		Type: Steel
 	RevealsShroud:
