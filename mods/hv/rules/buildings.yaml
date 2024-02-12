@@ -339,7 +339,7 @@ RADAR2:
 		PauseOnCondition: disabled || disabled
 		Icon: droppods
 		Name: Drop Pods
-		Description: Atmospheric assault reinforcements.\n  Small team of pods drops\nonto target location from orbit.\n  Requires power to operate.
+		Description: Atmospheric assault reinforcements:\nSmall team of pods drops onto target location from orbit.
 		DisplayRadarPing: true
 		ChargeInterval: 3750
 		UnitTypes: droppod1, droppod2
@@ -1405,7 +1405,7 @@ FIELD:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		ChargeInterval: 4500
 		Name: Force Field
-		Description: Makes a group of units receive 75% less damage\nfor 30 seconds.
+		Description: Protective energy shield:\nReduces damage taken by 75 %\nto a group of units for 30 seconds.
 		Duration: 750
 		DisplayRadarPing: true
 		Condition: shield
