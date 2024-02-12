@@ -520,6 +520,7 @@ MODULE:
 		RequiresCondition: !being-captured && !build-incomplete
 	Production:
 		Produces: Pod
+		RequiresCondition: !powerdown
 	GrantExternalConditionToProduced:
 		Condition: produced
 	WithProductionDoorAnimation:
@@ -678,6 +679,7 @@ STARPORT:
 		LineWidth: 2
 	Production:
 		Produces: Aircraft
+		RequiresCondition: !powerdown
 	Reservable:
 	ProvidesPrerequisite@Generic:
 		Prerequisite: starport
