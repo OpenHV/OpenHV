@@ -357,7 +357,7 @@ HeavyMachineGun:
 		Damage: 300
 		Versus:
 			None: 300
-			Steel: 40
+			Steel: 25
 			Light: 55
-			Heavy: 35
-			Concrete: 10
+			Heavy: 20
+			Concrete: 5
