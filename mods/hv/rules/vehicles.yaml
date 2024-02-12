@@ -10,7 +10,7 @@ TANK3:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 10
 		Prerequisites: ~factory.yi
 		Queue: Tank
 		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Pods
@@ -56,7 +56,7 @@ AATANK:
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
 		Queue: Tank
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 20
 		Prerequisites: ~factory.sc
 		Description: Mobile tank with AA missiles.\n  Strong vs Aircraft\n  Cannot attack grounds units.
 	Valued:
@@ -201,7 +201,7 @@ RADARTANK:
 	-AppearsOnRadar:
 	Buildable:
 		Queue: Utility
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 40
 		Prerequisites: radar
 		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
 	Valued:
@@ -272,7 +272,7 @@ TANK16:
 	Buildable:
 		Queue: Utility
 		Prerequisites: tradplat
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 50
 		Description: Repairs nearby tanks.\n  Unarmed
 	Armament:
 		Weapon: RepairBeam
@@ -309,7 +309,7 @@ TANK6:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Utility
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 60
 		Prerequisites: tradplat
 		Description: Lays smart mines\nthat explode on enemy units\nwhile avoiding ally units.  Can detect enemy mines.\n  Unarmed
 	Valued:
@@ -367,7 +367,7 @@ TANK5:
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 70
 		Description: A powerful tank which shoots laser.\n  Strong vs Pods, Vehicles and Buildings
 	Armament:
 		Weapon: railgun
@@ -397,7 +397,7 @@ TANK10:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 70
 		Prerequisites: ~factory.yi, techcenter
 		Description: Fires electric discharges.\n  Strong vs Pods, Vehicles and Buildings
 	Valued:
@@ -435,7 +435,7 @@ TANK7:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 80
 		Prerequisites: ~factory.yi, techcenter
 		Description: Cloaked missile tank.\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
 	Valued:
@@ -489,7 +489,7 @@ TANK11:
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~disabled
-		BuildPaletteOrder: 180
+		BuildPaletteOrder: 90
 		Description: Main battle tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
 		Weapon: ^Cannon
@@ -519,7 +519,7 @@ TANK11:
 TANK12:
 	Inherits: TANK11
 	Buildable:
-		BuildPaletteOrder: 190
+		BuildPaletteOrder: 90
 		Description: Double barreled tank.\n  Strong vs Vehicles\n  Weak vs Pods
 	Armament:
 		Weapon: doublecannon
@@ -536,7 +536,7 @@ TANK15:
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter, tradplat
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 60
 		Description: Disables units for a brief moment.\n  Jams incoming missiles.
 	Armament:
 		Weapon: ElectronicCountermeasure
@@ -575,7 +575,7 @@ ARTIL3:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Tank
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 100
 		Prerequisites: ~disabled
 		Description: Double barreled artillery tank.\n  Strong vs Pods, Vehicles and Buildings
 	Health:
@@ -751,7 +751,7 @@ MISSILETANK:
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, radar, techcenter
-		BuildPaletteOrder: 240
+		BuildPaletteOrder: 80
 		Description: A tank which shoots missiles. \n  Strong vs Vehicles and Buildings\n  Weak vs Pods
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -942,7 +942,7 @@ TANK13:
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Utility
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 30
 		Prerequisites: storage
 		Description: Moves cash to other players.\n  Unarmed
 	Valued:
