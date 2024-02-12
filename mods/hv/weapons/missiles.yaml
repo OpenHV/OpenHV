@@ -88,6 +88,7 @@ MissileTankRocket:
 	ReloadDelay: 60
 	Burst: 3
 	BurstDelays: 5
+	Range: 6c0
 	Warhead@Damage: SpreadDamage
 		Damage: 6000
 		Versus:
