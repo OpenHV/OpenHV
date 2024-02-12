@@ -107,7 +107,7 @@ LightPodRocket:
 	ReloadDelay: 45
 	Projectile: Missile
 		Image: bullet7
-		VerticalRateOfTurn: 140
+		VerticalRateOfTurn: 40
 		Speed: 600
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
