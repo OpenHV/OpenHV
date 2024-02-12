@@ -14,6 +14,12 @@ SCOUT1:
 		Name: Machine Gun Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
 	Armament@Primary:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
@@ -40,6 +46,12 @@ SCOUT2:
 		Name: Rocket Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
 	Armament@Primary:
 		Weapon: LightPodRocket
 		MuzzleSequence: muzzle
@@ -67,6 +79,12 @@ MORTARPOD:
 		Name: Mortar Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
 	Armament@Primary:
 		Weapon: mortargun
 		MuzzleSequence: muzzle
@@ -100,7 +118,11 @@ SNIPERPOD:
 		Speed: 70
 		Locomotor: pod
 	RevealsShroud:
-		Range: 8c0
+		Range: 10c0
+		MinRange: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 5c0
 	Armament@Primary:
 		Weapon: SniperRifle
 		MuzzleSequence: muzzle
@@ -141,7 +163,11 @@ FLAMEPOD:
 		Locomotor: pod
 		Voice: Move
 	RevealsShroud:
-		Range: 8c0
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
 	Armament@Primary:
 		Weapon: Flamethrower
 		LocalOffset: 200,175,0, 200,-175,0
@@ -168,6 +194,12 @@ TECHNICIAN:
 		Name: Technician Pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
 	CaptureManager:
 	Captures:
 		CaptureTypes: building
@@ -215,6 +247,12 @@ BROKERPOD:
 		Name: Broker pod
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
 	Health:
 		HP: 17500
 	Mobile:
@@ -304,6 +342,12 @@ BOMBERPOD:
 		HP: 10000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
 	-Guard:
 	WithIdleAnimation:
 		Interval: 25, 25
@@ -348,6 +392,12 @@ ELECTRICPOD:
 		VoiceSet: ElectricPodVoice
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
 	Armament@Primary:
 		Weapon: PodVoltageArc
 		LocalOffset: 350,0,0
