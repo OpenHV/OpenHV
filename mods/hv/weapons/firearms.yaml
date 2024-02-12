@@ -89,6 +89,7 @@ BikeChainGun:
 	Inherits: BuggyChainGun
 	StartBurstReport: ccbysmgfire02.wav
 	BurstDelays: 2
+	Range: 7c0
 
 HelicopterChainGunGround:
 	Inherits: ^AircraftChainGun
