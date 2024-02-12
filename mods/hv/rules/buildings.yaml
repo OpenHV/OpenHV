@@ -997,7 +997,7 @@ TECHCENTER:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,512,0
 	Health:
-		HP: 40000
+		HP: 100000
 	Armor:
 		Type: Steel
 	RevealsShroud:
