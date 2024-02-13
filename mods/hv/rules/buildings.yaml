@@ -1105,13 +1105,13 @@ BUNKER:
 	HitShape:
 		Type: Circle
 			Radius: 512
-	RevealsShroud:
-		Range: 7c0
 	WithRangeCircle:
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
 		Range: 8c0
+	RevealsShroud:
+		Range: 9c0
 	Cargo:
 		Types: Scout
 		MaxWeight: 1
@@ -1160,7 +1160,7 @@ TURRET:
 		BorderWidth: 3
 		Range: 8c0
 	RevealsShroud:
-		Range: 7c0
+		Range: 9c0
 	AttackTurreted:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
@@ -1196,6 +1196,8 @@ TURRET2:
 		Width: 2
 		BorderWidth: 3
 		Range: 8c0
+	RevealsShroud:
+		Range: 9c0
 	AttackTurreted:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
@@ -1233,6 +1235,8 @@ AATURRET:
 		Width: 2
 		BorderWidth: 3
 		Range: 9c0
+	RevealsShroud:
+		Range: 10c0
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
@@ -1280,6 +1284,8 @@ AATURRET2:
 		Width: 2
 		BorderWidth: 3
 		Range: 9c0
+	RevealsShroud:
+		Range: 10c0
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
