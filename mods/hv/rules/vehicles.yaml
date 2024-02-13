@@ -532,7 +532,7 @@ TANK12:
 		TurnSpeed: 15
 		Speed: 80
 
-TANK15:
+TANK8:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
@@ -544,7 +544,7 @@ TANK15:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter, tradplat
 		BuildPaletteOrder: 60
-		Description: Disables units for a brief moment.\n  Jams incoming missiles.
+		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Disables units for a brief moment.
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -554,9 +554,9 @@ TANK15:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 7500
 	Armor:
-		Type: Light
+		Type: Heavy
 	Mobile:
 		Speed: 110
 	RevealsShroud:
@@ -565,9 +565,13 @@ TANK15:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	JamsMissiles:
-		Range: 5c0
-		DeflectionRelationships: Neutral, Enemy
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	CreatesShroud:
+		Range: 9c0
+		RequiresCondition: deployed
+	RenderShroudCircle:
+		RequiresCondition: deployed
 	DetectCloaked:
 		Range: 2c0
 
@@ -786,16 +790,16 @@ MISSILETANK:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-TANK8:
+TANK15:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
 		Prerequisites: ~factory.yi, radar, tradplat
-		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Temporarily changes allegiance of targeted units.
+		Description: Jams incoming missiles.\n  Temporarily changes allegiance of targeted units.
 	Valued:
-		Cost: 700
+		Cost: 1000
 	Tooltip:
 		Name: Hacker Tank
 	UpdatesPlayerStatistics:
@@ -812,13 +816,9 @@ TANK8:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-	CreatesShroud:
-		Range: 9c0
-		RequiresCondition: deployed
-	RenderShroudCircle:
-		RequiresCondition: deployed
+	JamsMissiles:
+		Range: 5c0
+		DeflectionRelationships: Neutral, Enemy
 	Armament:
 		Weapon: HackBack
 	AttackFrontal:
