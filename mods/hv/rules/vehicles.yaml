@@ -833,7 +833,7 @@ TANK1:
 		GenericName: Buggy
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: module, ~factory.yi
+		Prerequisites: module, ~factory.sc
 		Queue: Tank
 		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
 	Turreted:
@@ -874,7 +874,7 @@ TANK2:
 		GenericName: Bike
 	Buildable:
 		Queue: Tank
-		Prerequisites: module, ~factory.sc
+		Prerequisites: module, ~factory.yi
 		BuildPaletteOrder: 30
 		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
 	AttackFrontal:
