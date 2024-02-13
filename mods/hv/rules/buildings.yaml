@@ -1924,7 +1924,7 @@ BARRIER:
 	MapEditorData:
 		Categories: Wall
 	RevealsShroud:
-		Range: 1c0
+		Range: 2c0
 	LineBuildNode:
 	LineBuild:
 		Range: 5
@@ -2005,6 +2005,8 @@ BARRIER:
 		TargetTypes: Ground, Wall, NoAutoTarget
 	MapEditorData:
 		Categories: Wall
+	RevealsShroud:
+		Range: 2c0
 	Gate:
 		OpeningSound: lowpolygon_gate-in.wav
 		ClosingSound: lowpolygon_gate-out.wav
