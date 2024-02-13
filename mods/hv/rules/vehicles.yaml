@@ -851,10 +851,11 @@ TANK1:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 7500
+		HP: 10000
 	Armor:
 		Type: Light
 	Mobile:
+		TurnSpeed: 50
 		Speed: 140
 	RevealsShroud:
 		Range: 7c0
