@@ -650,7 +650,7 @@ BUILDER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	RenderSprites:
-		Image: builder1
+		Image: builder4
 	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
@@ -672,8 +672,6 @@ BUILDER2:
 	Inherits: BUILDER
 	Buildable:
 		Prerequisites: ~structures.sc
-	RenderSprites:
-		Image: builder4
 	Transforms:
 		IntoActor: outpost2
 
