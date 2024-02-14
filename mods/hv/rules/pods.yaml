@@ -91,7 +91,7 @@ MORTARPOD:
 		LocalOffset: 0,0,200
 	Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: mortargun
+		Weapon: BunkerMortarGun
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
