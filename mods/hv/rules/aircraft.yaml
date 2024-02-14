@@ -280,7 +280,7 @@ COPTER2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
-		Description: Vehicle Transport Helicopter.\n  Armed with light missiles.\n  Can load pods\n  and lift one vehicle.
+		Description: Vehicle Transport Helicopter.\n  Can load pods\n  and lift one vehicle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -414,7 +414,7 @@ DROPSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.yi
-		Description: Vehicle Transport Shuttle.\n  Armed with light machine gun.\n  Can load pods\n  and lift one vehicle.
+		Description: Vehicle Transport Shuttle.\n  Can load pods\n  and lift one vehicle.
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
