@@ -198,8 +198,8 @@ PodVoltageArc:
 
 RapidPodVoltageArc:
 	Inherits: PodVoltageArc
-	ReloadDelay: 20
 	Range: 8c0
+	ReloadDelay: 30
 
 LightningBolt:
 	ReloadDelay: 60

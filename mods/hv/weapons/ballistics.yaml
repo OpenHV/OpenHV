@@ -330,3 +330,9 @@ mortargun:
 		Explosions: small
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
+
+BunkerMortarGun:
+	Inherits: mortargun
+	Range: 9c0
+	ReloadDelay: 25
+	MinRange: 0

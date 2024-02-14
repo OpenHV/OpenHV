@@ -26,16 +26,9 @@ LightMachineGun:
 
 BunkerChaingun:
 	Inherits: LightMachineGun
-	Report: heavymgburst01.wav, heavymgburst02.wav
-	Warhead@Damage: SpreadDamage
-		Spread: 24
-		Damage: 3000
-	Warhead@Incendiary: TreeDamage
-		Spread: 24
-		Damage: 3000
-	ReloadDelay: 15
+	ReloadDelay: 10
+	BurstDelays: 3
 	Range: 8c0
-	Burst: 1
 
 ^AircraftChainGun:
 	Inherits: SmallSplash
@@ -184,9 +177,7 @@ SniperRifle:
 
 BunkerSniperRifle:
 	Inherits: SniperRifle
-	ReloadDelay: 20
-	Range: 11c0
-	Burst: 1
+	ReloadDelay: 25
 
 BoatMachineGun:
 	Inherits: SmallSplash
@@ -307,8 +298,8 @@ Flamethrower:
 
 BunkerFlamethrower:
 	Inherits: Flamethrower
-	ReloadDelay: 40
-	Range: 8c0
+	ReloadDelay: 25
+	Range: 5c0
 
 HeavyMachineGun:
 	Inherits: LightMachineGun
