@@ -311,7 +311,7 @@ COPTER2:
 	Selectable:
 		DecorationBounds: 2048, 1843
 	Cargo:
-		Types: Scout, Vehicle
+		Types: Scout
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		RequiresCondition: !carrying
@@ -446,7 +446,7 @@ DROPSHIP:
 	Selectable:
 		DecorationBounds: 2048, 1848
 	Cargo:
-		Types: Scout, Vehicle
+		Types: Scout
 		MaxWeight: 8
 		AfterUnloadDelay: 40
 		UnloadVoice: Unload
