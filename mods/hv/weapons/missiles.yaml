@@ -172,6 +172,7 @@ BoatMissileAntiGround:
 		ContrailLength: 4
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F29100
+		RangeLimit: -1
 	Warhead@Damage: SpreadDamage
 		Spread: 126
 		Damage: 1000
@@ -373,6 +374,7 @@ Torpedo:
 		TrailImage: bubble
 		HorizontalRateOfTurn: 10
 		VerticalRateOfTurn: 10
+		RangeLimit: -1
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
