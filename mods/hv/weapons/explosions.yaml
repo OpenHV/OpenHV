@@ -154,6 +154,7 @@ BomberPodWeapon:
 			Light: 350
 			Heavy: 350
 			Wood: 350
+			Concrete: 350
 
 BomberPodExplosion:
 	ValidTargets: Ground, Structure
@@ -167,6 +168,7 @@ BomberPodExplosion:
 			Light: 50
 			Heavy: 50
 			Wood: 100
+			Concrete: 50
 	Warhead@Effect: CreateEffect
 		Image: explosion
 		Explosions: medium, medium_2
