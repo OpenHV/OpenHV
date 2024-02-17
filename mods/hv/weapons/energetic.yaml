@@ -328,7 +328,7 @@ DroneBlaster:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 128
-		Damage: 2000  # 2500  # 2000  # 3000
+		Damage: 2000
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Versus:
 			None: 100
@@ -338,7 +338,7 @@ DroneBlaster:
 			Concrete: 50
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 2000  # 2500  # 2000  # 3000
+		Damage: 2000
 		Percentage: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small
