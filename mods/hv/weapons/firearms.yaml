@@ -219,7 +219,7 @@ BoatMachineGunAir:
 	Report: boatgun_johandeecke.wav
 	BurstDelays: 5
 	ReloadDelay: 20
-	Range: 9c0  # 10c0
+	Range: 9c0
 	Burst: 4
 	Projectile: InstantHit
 		Image: bullet1
