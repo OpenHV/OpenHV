@@ -171,7 +171,6 @@ BoatMissileAntiGround:
 		ContrailLength: 4
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F29100
-		RangeLimit: -1
 	Warhead@Damage: SpreadDamage
 		Spread: 126
 		Damage: 1000
