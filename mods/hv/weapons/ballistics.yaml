@@ -33,6 +33,11 @@
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 
+^CannonYi:
+	Inherits: ^Cannon
+	Projectile: Bullet
+		Image: bullet5
+
 ^Artillery:
 	Inherits: ^Cannon
 	Report: howitzerfire01.wav
