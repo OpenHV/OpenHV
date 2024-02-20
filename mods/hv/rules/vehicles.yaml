@@ -113,7 +113,7 @@ TRANSPRT:
 		Name: Transport Tank
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, module
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 40
 		Description: Can transport pods.
 	UpdatesPlayerStatistics:
