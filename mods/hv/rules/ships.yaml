@@ -299,7 +299,6 @@ SLCM:
 		TurnSpeed: 96
 		Speed: 256
 		LaunchAcceleration: 8
-		FacingTolerance: 92
 		HitAcceleration: 0
 		LaunchSounds: missile_julien-nicolas.wav
 	LeavesTrails:

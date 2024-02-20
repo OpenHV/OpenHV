@@ -222,7 +222,6 @@ BoatMachineGunAir:
 	Range: 9c0
 	Burst: 4
 	Projectile: InstantHit
-		Image: bullet1
 		Inaccuracy: 0c512
 	Warhead@Damage: SpreadDamage
 		Spread: 126
