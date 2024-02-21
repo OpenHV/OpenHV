@@ -33,7 +33,12 @@
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 
-^CannonYi:
+CannonSynapol:
+	Inherits: ^Cannon
+	Projectile: Bullet
+		Image: bullet1
+
+CannonYuruki:
 	Inherits: ^Cannon
 	Projectile: Bullet
 		Image: bullet5
