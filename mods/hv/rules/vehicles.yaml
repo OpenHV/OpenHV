@@ -31,7 +31,7 @@ TANK3:
 		TurnSpeed: 25
 		Offset: -125,0,50
 	Armament:
-		Weapon: ^CannonYi
+		Weapon: CannonYuruki
 		Recoil: 125
 		RecoilRecovery: 38
 		MuzzleSequence: muzzle
@@ -49,7 +49,7 @@ TYRIANTANK:
 	Turreted:
 		Offset: 0,0,0
 	Armament:
-		Weapon: ^Cannon
+		Weapon: CannonSynapol
 		LocalOffset: 550,-50,0
 
 AATANK:
