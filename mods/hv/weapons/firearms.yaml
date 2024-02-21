@@ -279,7 +279,7 @@ Flamethrower:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 4000
+		Damage: 2000
 		Versus:
 			None: 90
 			Steel: 45
@@ -287,7 +287,7 @@ Flamethrower:
 			Heavy: 5
 			Wood: 100
 	Warhead@Incendiary: TreeDamage
-		Damage: 4000
+		Damage: 2000
 		Spread: 128
 		Percentage: 75
 	Warhead@FireEffect: CreateEffect
