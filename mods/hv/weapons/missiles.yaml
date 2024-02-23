@@ -157,28 +157,57 @@ ShipMissile:
 	Warhead@Incendiary: TreeDamage
 		Damage: 2000
 
+BoatMissileAntiGround:
+	Inherits: SmallSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: boatgun_johandeecke.wav
+	ReloadDelay: 58
+	Range: 6c0
+	Projectile: Bullet
+		Image: bullet6
+		Speed: 750 # 500 # 250
+		Blockable: false
+		# LaunchAngle: 100
+		Inaccuracy: 0c256
+		ContrailLength: 4
+		ContrailStartWidth: 0c32
+		ContrailStartColor: F29100
+	Warhead@Damage: SpreadDamage
+		Spread: 126
+		Damage: 1000
+		Versus:
+			None: 1500
+			Steel: 80
+			Light: 475
+			Heavy: 190
+			Concrete: 5
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground, Tree
+		ImpactSounds: explosion06.wav
+
 BoatMissileAntiAir:
 	ReloadDelay: 50
 	Report: rocketlaunch03.wav
-	Range: 9c0
-	MinRange: 1c0
+	Range: 10c0  # 9c0
 	ValidTargets: Air
+	Burst: 3
+	BurstDelays: 8
 	Projectile: Missile
 		Speed: 350
 		Blockable: false
 		Inaccuracy: 128
 		Image: bullet7
 		Shadow: true
-		HorizontalRateOfTurn: 20
+		HorizontalRateOfTurn: 60
 		TrailImage: small_smoke
 		CruiseAltitude: 2c0
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 800
 		ValidTargets: Air
 		Versus:
 			None: 30
-			Wood: 90
 			Light: 90
 			Heavy: 115
 			Concrete: 100
@@ -321,12 +350,11 @@ Torpedo:
 	Inherits: BigSplash
 	ValidTargets: Ship, WaterBuilding, Water
 	ReloadDelay: 50
-	Range: 8c0
+	Range: 6c0
 	Report: torpedo_murraysortz.wav
 	Warhead@Damage: SpreadDamage
 		Spread: 256
 		Damage: 10000
-		ValidTargets: Ground, Water, Ship, WaterBuilding
 		Versus:
 			None: 100
 			Steel: 50
@@ -343,4 +371,3 @@ Torpedo:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
-		ValidTargets: Ship, Ground, WaterBuilding

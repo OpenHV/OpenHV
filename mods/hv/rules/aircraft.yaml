@@ -499,6 +499,7 @@ DROPSHIP.Husk:
 	RenderSprites:
 		Image: dropship
 
+# TODO: How to make it return to the carrier after a certain range is reached (Carrier's max range, for instance)?
 DRONE:
 	Inherits: ^SpawnedPlane
 	Valued:
@@ -528,7 +529,7 @@ DRONE:
 		VTOL: true
 		Repulsable: false
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 92
 		Voice: Attack
 	AmmoPool:
 		Ammo: 5
