@@ -596,8 +596,8 @@ MINER2:
 		MinimumReserves: 700
 		DeliveryVehicleType: tanker1
 		Deposits:
-			iron: 15000
-			gold: 20000
+			iron: 50000
+			gold: 75000
 		DepletionNotification: ResourcesDepleted
 		Colors:
 			iron: 878787
