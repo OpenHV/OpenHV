@@ -4,20 +4,20 @@ BOAT3:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Light Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc
-		BuildPaletteOrder: 40
-		Description: Versatile light ship.\n  Can detect submarines.\n  Strong vs Pods and Aircrafts\n  Weak vs Tanks
+		Prerequisites: ~harbor.yi
+		BuildPaletteOrder: 10
+		Description: Versatile light boat.\n  Strong vs Aircrafts, Navy and Pods\n  Weak vs Vehicles and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 23000
+		HP: 30000
 	Armor:
 		Type: Light
 	Mobile:
@@ -32,17 +32,16 @@ BOAT3:
 	Turreted:
 		TurnSpeed: 120
 	Armament@Air:
-		Weapon: BoatMissileAntiAir
+		Weapon: BoatMachineGunAir
+		MuzzleSequence: muzzle
 		LocalOffset: 0,100,0
 	Armament@Ground:
-		Weapon: BoatMachineGun
+		Weapon: BoatMachineGunGround
 		MuzzleSequence: muzzle
 		LocalOffset: 250,0,50
 	AttackTurreted:
 		Armaments: primary, secondary
 	WithSpriteTurret:
-	DetectCloaked:
-		Range: 6c0
 	WithMuzzleOverlay:
 		IgnoreOffset: True
 
@@ -57,13 +56,13 @@ PATROLBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi
-		BuildPaletteOrder: 40
-		Description: Light patrol boat.\n  Can detect submarines\n  Strong vs Aircrafts\n  Weak vs Pods, Vehicles and Buildings
+		Prerequisites: ~harbor.sc
+		BuildPaletteOrder: 10
+		Description: Versatile light boat.\n  Strong vs Aircrafts, Navy and Pods\n  Weak vs Vehicles and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 21000
+		HP: 30000
 	Armor:
 		Type: Light
 	Mobile:
@@ -79,13 +78,13 @@ PATROLBOAT:
 		TurnSpeed: 120
 		Offset: 150,0,50
 	Armament@Air:
-		Weapon: PatrolBoatAir
+		Weapon: BoatMissileAntiAir
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
 		LocalOffset: 250,0,50
 	Armament@Ground:
-		Weapon: PatrolBoatGround
+		Weapon: BoatMissileAntiGround
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
@@ -93,8 +92,6 @@ PATROLBOAT:
 	AttackTurreted:
 		Armaments: primary, secondary
 	WithSpriteTurret:
-	DetectCloaked:
-		Range: 6c0
 	WithMuzzleOverlay:
 
 BOAT:
@@ -108,9 +105,9 @@ BOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc
-		BuildPaletteOrder: 40
-		Description: A boat with a turret.\n  Strong vs Buildings and Vehicles\n  Weak vs Pods
+		Prerequisites: ~harbor.yi, radar
+		BuildPaletteOrder: 30
+		Description: A boat with a turret.\n  Strong vs Water\n  Can't attack Pods, Buildings, Vehicles and Air
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -126,11 +123,15 @@ BOAT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
+	DetectCloaked:
+		Range: 5c0
+		DetectionTypes: Underwater
+	RenderDetectionCircle:
 	Turreted:
 		TurnSpeed: 60
 		Offset: 150,0,100
 	Armament:
-		Weapon: ^Cannon
+		Weapon: MediumBoatCannon
 		Recoil: 125
 		RecoilRecovery: 38
 		MuzzleSequence: muzzle
@@ -143,24 +144,24 @@ SUBMARINE2:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1250
+		Cost: 800
 	Tooltip:
 		Name: Submarine
 		GenericName: Submarine
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi
-		BuildPaletteOrder: 40
+		Prerequisites: ~harbor.sc, radar
+		BuildPaletteOrder: 30
 		Description: Submarine with powerful torpedos.\n  Strong vs Vehicles and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 55000
+		HP: 46000
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 80
+		Speed: 100
 		TurnSpeed: 60
 	RevealsShroud:
 		Range: 6c0
@@ -168,6 +169,10 @@ SUBMARINE2:
 		RevealGeneratedShroud: false
 	RevealsShroud@Hacked:
 		Range: 1c0
+	DetectCloaked:
+		Range: 5c0
+		DetectionTypes: Underwater
+	RenderDetectionCircle:
 	Armament:
 		Weapon: Torpedo
 		LocalOffset: 600,0,0
@@ -180,14 +185,14 @@ BOAT2:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Heavy Boat
+		Name: Lightning Boat
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
-		BuildPaletteOrder: 40
-		Description: A heavy boat with a railgun.\n  Strong vs Vehicles, Pods and Buildings
+		Prerequisites: ~harbor.yi, techcenter
+		BuildPaletteOrder: 50
+		Description: A heavy boat with a lightning gun.\n  Strong vs Vehicles, Pods and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -207,31 +212,48 @@ BOAT2:
 	Turreted:
 		TurnSpeed: 40
 	Armament:
-		Weapon: Railgun
+		Weapon: VoltageArc
 		Recoil: 100
 		RecoilRecovery: 25
 		LocalOffset: 500,0,0
 	AttackTurreted:
 	WithSpriteTurret:
 
+BOAT4:
+	Inherits: BOAT2
+	Tooltip:
+		Name: Railgun Boat
+		GenericName: Boat
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.sc, techcenter
+		BuildPaletteOrder: 50
+		Description: A heavy boat with a rail gun.\n  Strong vs Vehicles, Pods and Buildings
+	Armament:
+		Weapon: Railgun
+		Recoil: 100
+		RecoilRecovery: 25
+		LocalOffset: 500,0,0
+
 SUBMARINE:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1750
+		Cost: 2000
 	Tooltip:
 		Name: Missile Submarine
 		GenericName: Boat
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, techcenter
-		BuildPaletteOrder: 50
+		Prerequisites: ~harbor.sc, techcenter
+		BuildPaletteOrder: 60
 		Description: A submarine with powerful long range missiles.\n  Strong vs Vehicles, Pods and Buildings
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 80000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -259,8 +281,6 @@ SUBMARINE:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	DetectCloaked:
-		Range: 1c0
 
 SLCM:
 	Inherits: ^ShootableMissile
@@ -276,9 +296,10 @@ SLCM:
 		CreateAngle: 255
 		LaunchAngle: 255
 		PrepareTick: 0
-		TurnSpeed: 24
+		TurnSpeed: 96
 		Speed: 256
 		LaunchAcceleration: 16
+		FacingTolerance: 92
 		HitAcceleration: 16
 		LaunchSounds: missile_julien-nicolas.wav
 	LeavesTrails:
@@ -297,7 +318,7 @@ CARRIER:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 60
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		Description: Launches aerial autonomous attack vessels.\n  Strong vs Vehicles, Pods and Buildings
 	Valued:
 		Cost: 2000
@@ -340,8 +361,6 @@ CARRIER:
 		Weapon: DroneLauncher
 	Voiced:
 		VoiceSet: DroneVoice
-	DetectCloaked:
-		Range: 1c0
 
 NAVALTRANSPORT:
 	Inherits: ^Ship
@@ -354,7 +373,7 @@ NAVALTRANSPORT:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 20
 		Description: General-purpose naval transport.\nCan carry pods.\n  Unarmed
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -372,8 +391,6 @@ NAVALTRANSPORT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	DetectCloaked:
-		Range: 1c0
 	WithLandingCraftAnimation:
 		OpenTerrainTypes: Shore, IceCliff
 	Cargo:
@@ -396,7 +413,7 @@ WATERMINELAYER:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, tradplat
+		Prerequisites: ~harbor.sc, tradplat
 		BuildPaletteOrder: 40
 		Description: Lays smart mines\nthat explode on enemy units\nwhile avoiding ally units.\n  Can detect enemy mines.\n  Unarmed
 	UpdatesPlayerStatistics:
@@ -450,4 +467,4 @@ WATERMINELAYER:
 WATERMINELAYER2:
 	Inherits: WATERMINELAYER
 	Buildable:
-		Prerequisites: ~harbor.sc, tradplat
+		Prerequisites: ~harbor.yi, tradplat

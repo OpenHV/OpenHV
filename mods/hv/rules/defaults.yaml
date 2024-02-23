@@ -907,7 +907,7 @@
 		TerrainTypes: Littoral, Pelagic, Oceanic, Rapids
 	DetectCloaked:
 		DetectionTypes: Underwater
-		Range: 2c0
+		Range: 1c0
 
 ^Submarine:
 	Inherits: ^Ship

@@ -189,7 +189,7 @@ BunkerSniperRifle:
 	Inherits: SniperRifle
 	ReloadDelay: 25
 
-BoatMachineGun:
+BoatMachineGunGround:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -208,65 +208,35 @@ BoatMachineGun:
 		Spread: 24
 		Damage: 1000
 		Versus:
-			None: 150
-			Steel: 20
-			Light: 50
-			Heavy: 20
+			None: 190
+			Steel: 9
+			Light: 46
+			Heavy: 21
 			Concrete: 5
 
-PatrolBoatAir:
+BoatMachineGunAir:
 	ValidTargets: Air
 	Report: boatgun_johandeecke.wav
 	BurstDelays: 5
 	ReloadDelay: 20
-	Range: 6c0
+	Range: 10c0  # 9c0
 	Burst: 4
 	Projectile: InstantHit
+		Image: bullet1
 		Inaccuracy: 0c512
 	Warhead@Damage: SpreadDamage
 		Spread: 126
 		Damage: 1200
 		ValidTargets: Air
 		Versus:
-			None: 150
-			Steel: 20
-			Light: 50
-			Heavy: 20
+			None: 75
+			Steel: 10
+			Light: 25
+			Heavy: 10
 			Concrete: 5
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Air
-		ImpactSounds: explosion06.wav
-
-PatrolBoatGround:
-	Inherits: SmallSplash
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: boatgun_johandeecke.wav
-	ReloadDelay: 30
-	Range: 6c0
-	MinRange: 1c0
-	Projectile: Bullet
-		Image: bullet15
-		Speed: 250
-		Blockable: false
-		LaunchAngle: 100
-		Inaccuracy: 0c256
-		ContrailLength: 4
-		ContrailStartWidth: 0c32
-		ContrailStartColor: F29100
-	Warhead@Damage: SpreadDamage
-		Spread: 126
-		Damage: 500
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
-		Versus:
-			None: 1000
-			Steel: 1
-			Light: 35
-			Heavy: 25
-			Concrete: 1
-	Warhead@GroundEffect: CreateEffect
-		Explosions: small
-		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
 
 Flamethrower:
