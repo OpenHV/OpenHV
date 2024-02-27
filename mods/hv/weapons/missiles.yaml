@@ -218,7 +218,7 @@ BoatMissileAntiAir:
 		Versus:
 			None: 30
 			Light: 90
-			Heavy: 115
+			Heavy: 180
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav

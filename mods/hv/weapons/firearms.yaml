@@ -228,9 +228,9 @@ BoatMachineGunAir:
 		Damage: 150
 		ValidTargets: Air
 		Versus:
-			None: 75
-			Light: 25
-			Heavy: 10
+			None: 30
+			Light: 90
+			Heavy: 180
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Air
