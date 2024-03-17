@@ -347,6 +347,21 @@ RailgunStrike:
 		ValidTargets: Water, Ground, Tree, Air
 		Weapon: RailgunDistortion
 		Amount: 15, 30
+	Warhead@CenterSpark: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 4
+		AffectsParent: true
+		ValidTargets: Water, Ground, Tree, Air
+	Warhead@SparkWave1: FireRadius
+		Weapon: RailgunSparkWave1
+		Amount: 12
+		AffectsParent: true
+		ValidTargets: Water, Ground, Tree, Air
+	Warhead@SparkWave2: FireRadius
+		Weapon: RailgunSparkWave2
+		Amount: 36
+		AffectsParent: true
+		ValidTargets: Water, Ground, Tree, Air
 
 RailgunDistortion:
 	Projectile: EnergyBolt
@@ -358,6 +373,26 @@ RailgunDistortion:
 		SegmentLength: 384
 		FadeOut: true
 	Range: 2c768
+
+RailgunSparkWave1:
+	Projectile: InstantHit
+	Range: 1280
+	ValidTargets: Water, Ground, Tree, Air
+	Warhead@Visual: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 3
+		AffectsParent: true
+		ValidTargets: Water, Ground, Tree, Air
+
+RailgunSparkWave2:
+	Projectile: InstantHit
+	Range: 2560
+	ValidTargets: Water, Ground, Tree, Air
+	Warhead@Visual: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 3
+		AffectsParent: true
+		ValidTargets: Water, Ground, Tree, Air
 
 DroneBlaster:
 	Inherits: BigSplash
