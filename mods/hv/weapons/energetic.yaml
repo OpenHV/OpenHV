@@ -343,6 +343,21 @@ RailgunStrike:
 		Spread: 1c0
 		Damage: 25000
 		Falloff: 100, 50, 25, 0
+	Warhead@Visual: FireRadius
+		ValidTargets: Water, Ground, Tree, Air
+		Weapon: RailgunDistortion
+		Amount: 15, 30
+
+RailgunDistortion:
+	Projectile: EnergyBolt
+		Radius: 2
+		Duration: 12
+		Distortion: 256
+		Color: 8080FF
+		ZOffset: 256
+		SegmentLength: 384
+		FadeOut: true
+	Range: 2c768
 
 DroneBlaster:
 	Inherits: BigSplash
