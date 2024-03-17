@@ -308,8 +308,8 @@ RailgunVisualStage2:
 	Projectile: GravityBomb
 		Image: railgun
 		Sequences: falldown
-		Velocity: 0,0,-60
-		Acceleration: 0,0,-45
+		Velocity: 0,0,-60 # needs to be shared with RailgunStrike
+		Acceleration: 0,0,-45 # needs to be shared with RailgunStrike
 	Warhead@Effect: CreateEffect
 		Image: railgun
 		Explosions: explosion
@@ -318,8 +318,8 @@ RailgunVisualStage2:
 
 RailgunStrike:
 	Projectile: GravityBomb
-		Velocity: 0,0,-60
-		Acceleration: 0,0,-45
+		Velocity: 0,0,-60 # needs to be shared with RailgunVisualStage2
+		Acceleration: 0,0,-45 # needs to be shared with RailgunVisualStage2
 	ValidTargets: Water, Ground, Tree, Air
 	Report: raygun_newlocknew.wav
 	Warhead@DamageImpact: SpreadDamage
