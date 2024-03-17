@@ -12,6 +12,7 @@
 using System;
 using System.Linq;
 using OpenRA.GameRules;
+using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Warheads;
 using OpenRA.Traits;
@@ -31,6 +32,9 @@ namespace OpenRA.Mods.HV.Warheads
 
 		[Desc("Should the weapons be fired around the intended target or at the explosion's epicenter.")]
 		public readonly bool AroundTarget = false;
+
+		[Desc("Should the weapons be fired towards the same altitude of the original explosion.")]
+		public readonly bool TransferAltitude = false;
 
 		WeaponInfo weapon;
 
@@ -78,6 +82,13 @@ namespace OpenRA.Mods.HV.Warheads
 				var rotation = WRot.FromFacing(i * offset);
 				var targetpos = epicenter + new WVec(weapon.Range.Length, 0, 0).Rotate(rotation);
 				var tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, map.CenterOfCell(map.CellContaining(targetpos)).Z));
+
+				if (TransferAltitude)
+				{
+					var altitude = map.DistanceAboveTerrain(pos);
+					tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, map.CenterOfCell(map.CellContaining(targetpos)).Z + altitude.Length));
+				}
+
 				if (weapon.IsValidAgainst(tpos, firedBy.World, firedBy))
 					radiusTarget = tpos;
 

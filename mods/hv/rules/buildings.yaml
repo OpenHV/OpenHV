@@ -1560,7 +1560,14 @@ UPLINK:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	SupportPowerChargeBar:
-	RailgunPower:
+	Power:
+		Amount: -150
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	WithIdleOverlay@Lights:
+		Sequence: animation
+		RequiresCondition: !build-incomplete
+	DetonateWeaponPower:
 		OrderName: Blastem
 		PauseOnCondition: lowpower
 		Icon: railgun
@@ -1581,13 +1588,9 @@ UPLINK:
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
-	Power:
-		Amount: -150
-	MustBeDestroyed:
-		RequiredForShortGame: false
-	WithIdleOverlay@Lights:
-		Sequence: animation
-		RequiresCondition: !build-incomplete
+		ActivationDelay: 0
+		AirburstAltitude: 40c0
+		Weapon: RailgunSetup
 
 STORAGE:
 	Inherits: ^BaseBuilding
