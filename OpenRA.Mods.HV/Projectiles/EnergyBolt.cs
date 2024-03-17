@@ -47,6 +47,9 @@ namespace OpenRA.Mods.HV.Projectiles
 		[Desc("Maximum length per segment.")]
 		public readonly WDist SegmentLength = WDist.Zero;
 
+		[Desc("Fade the beams out during lifetime.")]
+		public readonly bool FadeOut = false;
+
 		[Desc("Equivalent to sequence ZOffset. Controls Z sorting.")]
 		public readonly int ZOffset = 0;
 
@@ -62,6 +65,7 @@ namespace OpenRA.Mods.HV.Projectiles
 		readonly WVec leftVector;
 		readonly WVec upVector;
 		readonly MersenneTwister random;
+		readonly int fadeout;
 
 		[Sync]
 		readonly WPos target;
@@ -85,6 +89,10 @@ namespace OpenRA.Mods.HV.Projectiles
 				var dstB = bw > .5 ? 1 - (1 - 2 * (bw - .5)) * (1 - (float)color.B / 0xff) : 2 * bw * ((float)color.B / 0xff);
 				colors[i] = Color.FromArgb((int)(dstR * 0xff), (int)(dstG * 0xff), (int)(dstB * 0xff));
 			}
+
+			fadeout = 255 / info.Duration;
+			if (fadeout == 0)
+				fadeout++;
 
 			target = args.PassiveTarget;
 			source = args.Source;
@@ -143,17 +151,28 @@ namespace OpenRA.Mods.HV.Projectiles
 		{
 			if (++ticks >= info.Duration)
 				world.AddFrameEndTask(w => w.Remove(this));
-			else if (info.DistortionAnimation != 0)
+			else
 			{
-				for (var i = 1; i < offsets.Length - 1; i++)
+				if (info.DistortionAnimation != 0)
 				{
-					var angle = WAngle.FromDegrees(random.Next(360));
-					var distortion = random.Next(info.DistortionAnimation);
+					for (var i = 1; i < offsets.Length - 1; i++)
+					{
+						var angle = WAngle.FromDegrees(random.Next(360));
+						var distortion = random.Next(info.DistortionAnimation);
 
-					var offset = distortion * angle.Cos() * leftVector / (1024 * 1024)
-						+ distortion * angle.Sin() * upVector / (1024 * 1024);
+						var offset = distortion * angle.Cos() * leftVector / (1024 * 1024)
+							+ distortion * angle.Sin() * upVector / (1024 * 1024);
 
-					offsets[i] += offset;
+						offsets[i] += offset;
+					}
+				}
+
+				if (info.FadeOut)
+				{
+					for (var i = 0; i < colors.Length; i++)
+					{
+						colors[i] = Color.FromArgb(colors[i].A - fadeout, colors[i].R, colors[i].G, colors[i].B);
+					}
 				}
 			}
 		}
