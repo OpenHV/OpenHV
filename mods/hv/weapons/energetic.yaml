@@ -284,7 +284,42 @@ ElectricSpark:
 	Projectile: Bullet
 		Sequences: electric
 
+RailgunSetup:
+	ValidTargets: Water, Ground, Tree, Air
+	Warhead@DamageDelivery: FireCluster
+		Weapon: RailgunStrike
+		Dimensions: 1,1
+		Footprint: X
+	Warhead@Visual: FireRadius
+		ValidTargets: Air
+		Weapon: RailgunVisualStage1
+		Amount: 6
+		TransferAltitude: true
+
+RailgunVisualStage1:
+	Projectile: InstantHit
+	Range: 1280
+	ValidTargets: Water, Ground, Tree, Air
+	Warhead@Visual: FireShrapnel
+		ValidTargets: Water, Ground, Tree, Air
+		Weapon: RailgunVisualStage2
+
+RailgunVisualStage2:
+	Projectile: GravityBomb
+		Image: railgun
+		Sequences: falldown
+		Velocity: 0,0,-60
+		Acceleration: 0,0,-45
+	Warhead@Effect: CreateEffect
+		Image: railgun
+		Explosions: explosion
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree
+
 RailgunStrike:
+	Projectile: GravityBomb
+		Velocity: 0,0,-60
+		Acceleration: 0,0,-45
 	ValidTargets: Water, Ground, Tree, Air
 	Report: raygun_newlocknew.wav
 	Warhead@DamageImpact: SpreadDamage

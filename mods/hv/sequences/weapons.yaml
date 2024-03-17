@@ -232,6 +232,17 @@ railgun:
 		Tick: 20
 		Offset: 0, -42
 		ZOffset: 1023
+	falldown:
+		Filename: bits/railgunsfx.png
+		Frames: 9
+		Length: 1
+		ZOffset: 1023
+	explosion:
+		Filename: bits/railgunsfx.png
+		Frames: 11, 12, 13, 14, 15
+		Length: *
+		Offset: 0, -42
+		ZOffset: 1023
 
 smoke:
 	idle:
