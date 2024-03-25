@@ -29,6 +29,8 @@ explosion:
 	flame:
 		Filename: bits/flame2.png
 		Offset: 0, -9
+	railgun:
+		Filename: bits/railgun-explosion.png
 
 nuclear_explosion:
 	idle:
@@ -226,23 +228,7 @@ nuclear:
 
 railgun:
 	idle:
-		Filename: bits/railgunsfx.png
-		Frames: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
-		Length: *
-		Tick: 20
-		Offset: 0, -42
-		ZOffset: 1023
-	falldown:
-		Filename: bits/railgunsfx.png
-		Frames: 9
-		Length: 1
-		ZOffset: 1023
-	explosion:
-		Filename: bits/railgunsfx.png
-		Frames: 11, 12, 13, 14, 15
-		Length: *
-		Offset: 0, -42
-		ZOffset: 1023
+		Filename: bits/railgun-projectile.png
 
 smoke:
 	idle:

@@ -307,12 +307,11 @@ RailgunVisualStage1:
 RailgunVisualStage2:
 	Projectile: GravityBomb
 		Image: railgun
-		Sequences: falldown
+		Sequences: idle
 		Velocity: 0,0,-60 # needs to be shared with RailgunStrike
 		Acceleration: 0,0,-45 # needs to be shared with RailgunStrike
 	Warhead@Effect: CreateEffect
-		Image: railgun
-		Explosions: explosion
+		Explosions: railgun
 		ImpactSounds: explosion06.wav
 		ValidTargets: Ground, Air, Ship, Tree
 
