@@ -13,6 +13,7 @@ Terrain:
 	TerrainType@Blocked:
 		Type: Blocked
 		TargetTypes: Ground
+		Color: FF0000
 	TerrainType@Ore:
 		Type: Ore
 		TargetTypes: Ground
