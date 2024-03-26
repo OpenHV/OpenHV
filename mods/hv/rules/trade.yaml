@@ -1,5 +1,29 @@
 # License: CC-BY-SA-4.0
 
+TANK1.TRADE:
+	Inherits: TANK1
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank1
+	UpdatesPlayerStatistics:
+		OverrideActor: tank1
+
+TANK2.TRADE:
+	Inherits: TANK2
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: tank2
+	UpdatesPlayerStatistics:
+		OverrideActor: tank2
+
 TANK3.TRADE:
 	Inherits: TANK3
 	Buildable:
