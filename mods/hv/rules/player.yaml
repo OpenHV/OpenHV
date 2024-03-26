@@ -56,21 +56,6 @@ Player:
 	ProvidesPrerequisite@Base:
 		Prerequisite: base
 		RequiresCondition: base
-	ClassicProductionQueue@Base:
-		Type: Base
-		DisplayOrder: 0
-		LowPowerModifier: 300
-		ReadyAudio: BuildingReady
-		ReadyTextNotification: notification-building-ready
-		QueuedAudio: Building
-		QueuedTextNotification: notification-building
-		OnHoldAudio: OnHold
-		OnHoldTextNotification: notification-on-hold
-		CancelledAudio: Cancelled
-		CancelledTextNotification: notification-cancelled
-		SpeedUp: true
-		BuildTimeSpeedReduction: 100
-		BuildDurationModifier: 70
 	ClassicProductionQueue@Building:
 		Type: Building
 		DisplayOrder: 0

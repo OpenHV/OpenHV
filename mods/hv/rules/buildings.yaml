@@ -41,10 +41,10 @@ BASE:
 	ProvidesPrerequisite@Yuruki:
 		Prerequisite: structures.yi
 	Buildable:
-		Queue: Base
-		BuildPaletteOrder: 1
+		Queue: Building
+		BuildPaletteOrder: 900
 		BuildLimit: 1
-		Description: Builds structures, builders and miners
+		Description: Builds structures, builders and miners.\nOnly one can be built.
 		Prerequisites: outpost, ~base.yi
 	Encyclopedia:
 		Description: This base of operations is able to summon new buildings as well as utility vehicles such as miners or builders. New buildings are only allowed within a base radius. You can also spawn buildings into an allied base radius. To extend the build radius you need to train builders which can deploy into outposts. Protect the base building at all costs. If your base ever gets destroyed, select an outpost and request a new main base for a possible comeback.
@@ -203,7 +203,7 @@ OUTPOST:
 		Condition: base
 		Prerequisites: base
 	Production:
-		Produces: Base
+		Produces: Building
 		RequiresCondition: !base
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
@@ -225,6 +225,7 @@ GENERATOR:
 		Bounds: 2048, 3072, 0, -512
 	Buildable:
 		Queue: Building
+		Prerequisites: ~base
 		BuildPaletteOrder: 10
 		Description: Generates power for other structures.
 	Encyclopedia:
@@ -365,9 +366,9 @@ TRADPLAT:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Building
+		Prerequisites: ~base, factory
 		BuildPaletteOrder: 100
 		Description: Repairs vehicles and aircraft for credits.\nAllows buying units on the free market.
-		Prerequisites: factory
 	Encyclopedia:
 		Description: The trade platform provides access to the free market. For a certain amount of credits damaged vehicles can be ordered here and get repaired. Alternatively select the repair icon on the top right of the command interface and click a damaged vehicle which will then automatically head to the nearest trade platform for repairs. As a tech building the trade platform opens up the tank path. It also serves as an additional vehicle production queue by allowing orders from outside. These vary in price and are more expensive than local production.
 		Order: 50
@@ -988,7 +989,7 @@ TECHCENTER:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: radar
+		Prerequisites: ~base, radar
 		Description: Grants access to advanced weaponry.
 	Valued:
 		Cost: 2000
@@ -1604,6 +1605,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
+		Prerequisites: ~base
 		Description: Stores excess resources.
 	Valued:
 		Cost: 1400
