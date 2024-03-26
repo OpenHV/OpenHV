@@ -288,6 +288,9 @@
 	WithFacingSpriteBody:
 	MustBeDestroyed:
 	HitShape:
+	Repairable:
+		RepairActors: tradplat
+		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
 	Repairable:
