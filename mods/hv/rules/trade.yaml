@@ -163,8 +163,22 @@ BUILDER.TRADE:
 	VariedCostMultiplier:
 		Queues: Trade
 	-MapEditorData:
+	RenderSprites:
+		Image: builder4
 	UpdatesPlayerStatistics:
 		OverrideActor: builder
+
+BUILDER2.TRADE:
+	Inherits: BUILDER2
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: builder4
+	UpdatesPlayerStatistics:
+		OverrideActor: builder2
 
 MINER.TRADE:
 	Inherits: MINER
