@@ -132,7 +132,7 @@ TRANSPRT:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	Cargo:
-		Types: Scout
+		Types: Pod
 		MaxWeight: 5
 		LoadingCondition: notmobile
 	Selectable:

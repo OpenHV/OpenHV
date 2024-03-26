@@ -393,7 +393,7 @@ NAVALTRANSPORT:
 	WithLandingCraftAnimation:
 		OpenTerrainTypes: Shore, IceCliff
 	Cargo:
-		Types: Scout, Vehicle
+		Types: Pod, Vehicle
 		MaxWeight: 10
 		AfterUnloadDelay: 40
 	WithCargoPipsDecoration:

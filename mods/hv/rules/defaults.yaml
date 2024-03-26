@@ -181,7 +181,7 @@
 	Armor:
 		Type: None
 	Passenger:
-		CargoType: Scout
+		CargoType: Pod
 		Weight: 1
 	-Carryable:
 	-SpawnScrapOnDeath:
