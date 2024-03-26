@@ -1604,7 +1604,7 @@ STORAGE:
 	Buildable:
 		BuildPaletteOrder: 35
 		Queue: Building
-		Description: Stores excess refined\nresources.
+		Description: Stores excess resources.
 	Valued:
 		Cost: 1400
 	Targetable:
