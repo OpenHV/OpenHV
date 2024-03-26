@@ -1078,6 +1078,11 @@ Templates:
 			BorderTypes: Grass
 			BorderTransitions: 1512, 1517, 1513, 1510, 1515, 1514, 1519, 1520
 			Corners: 1516, 1518, 1511, 1509
+		AutoConnect@Tech:
+			Type: Tech
+			BorderTypes: Grass
+			BorderTransitions: 1632, 1629, 1631, 1636, 1635, 1637, 1630, 1628
+			Corners: 1634, 1633, 1638, 1639
 		Tiles:
 			0: Grass
 	Template@122:
@@ -4365,6 +4370,11 @@ Templates:
 			BorderTypes: Sand
 			BorderTransitions: 1619, 1624, 1620, 1617, 1622, 1621, 1626, 1627
 			Corners: 1623, 1625, 1618, 1616
+		AutoConnect@Tech:
+			Type: Tech
+			BorderTypes: Sand
+			BorderTransitions: 1644, 1641, 1643, 1648, 1647, 1649, 1642, 1640
+			Corners: 1646, 1645, 1650, 1651
 		Tiles:
 			0: Sand
 	Template@568:
@@ -5895,6 +5905,11 @@ Templates:
 			BorderTypes: Snow
 			BorderTransitions: 1607, 1612, 1608, 1605, 1610, 1609, 1614, 1615
 			Corners: 1611, 1613, 1606, 1604
+		AutoConnect@Tech:
+			Type: Tech
+			BorderTypes: Snow
+			BorderTransitions: 1656, 1653, 1655, 1660, 1659, 1661, 1654, 1652
+			Corners: 1658, 1657, 1662, 1663
 		Tiles:
 			0: Snow
 	Template@770:
@@ -8836,21 +8851,6 @@ Templates:
 			BorderTypes: Tech, Cliff
 			BorderTransitions: 1492, 1497, 1493, 1490, 1495, 1494, 1499, 1500
 			Corners: 1496, 1498, 1491, 1489
-		AutoConnect@Grass:
-			Type: Grass
-			BorderTypes: Tech, Cliff
-			BorderTransitions: 1631, 1636, 1632, 1629, 1634, 1633, 1638, 1639
-			Corners: 1635, 1637, 1630, 1628
-		AutoConnect@Sand:
-			Type: Sand
-			BorderTypes: Tech, Cliff
-			BorderTransitions: 1643, 1648, 1644, 1641, 1646, 1645, 1650, 1651
-			Corners: 1647, 1649, 1642, 1640
-		AutoConnect@Snow:
-			Type: Snow
-			BorderTypes: Tech, Cliff
-			BorderTransitions: 1655, 1660, 1656, 1653, 1658, 1657, 1662, 1663
-			Corners: 1659, 1661, 1654, 1652
 		Tiles:
 			0: Tech
 	Template@1182:
@@ -12339,7 +12339,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1629:
 		Id: 1629
 		Images: bits/terrain/tch2grass.png
@@ -12347,7 +12347,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1630:
 		Id: 1630
 		Images: bits/terrain/tch2grass.png
@@ -12355,7 +12355,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1631:
 		Id: 1631
 		Images: bits/terrain/tch2grass.png
@@ -12363,7 +12363,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1632:
 		Id: 1632
 		Images: bits/terrain/tch2grass.png
@@ -12371,7 +12371,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1633:
 		Id: 1633
 		Images: bits/terrain/tch2grass.png
@@ -12379,7 +12379,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1634:
 		Id: 1634
 		Images: bits/terrain/tch2grass.png
@@ -12387,7 +12387,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1635:
 		Id: 1635
 		Images: bits/terrain/tch2grass.png
@@ -12395,7 +12395,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1636:
 		Id: 1636
 		Images: bits/terrain/tch2grass.png
@@ -12403,7 +12403,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1637:
 		Id: 1637
 		Images: bits/terrain/tch2grass.png
@@ -12411,7 +12411,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1638:
 		Id: 1638
 		Images: bits/terrain/tch2grass.png
@@ -12419,7 +12419,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1639:
 		Id: 1639
 		Images: bits/terrain/tch2grass.png
@@ -12427,7 +12427,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Grass
 		Tiles:
-			0: Cliff
+			0: Grass
 	Template@1640:
 		Id: 1640
 		Images: bits/terrain/tch2sand.png
@@ -12435,7 +12435,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1641:
 		Id: 1641
 		Images: bits/terrain/tch2sand.png
@@ -12443,7 +12443,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1642:
 		Id: 1642
 		Images: bits/terrain/tch2sand.png
@@ -12451,7 +12451,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1643:
 		Id: 1643
 		Images: bits/terrain/tch2sand.png
@@ -12459,7 +12459,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1644:
 		Id: 1644
 		Images: bits/terrain/tch2sand.png
@@ -12467,7 +12467,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1645:
 		Id: 1645
 		Images: bits/terrain/tch2sand.png
@@ -12475,7 +12475,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1646:
 		Id: 1646
 		Images: bits/terrain/tch2sand.png
@@ -12483,7 +12483,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1647:
 		Id: 1647
 		Images: bits/terrain/tch2sand.png
@@ -12491,7 +12491,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1648:
 		Id: 1648
 		Images: bits/terrain/tch2sand.png
@@ -12499,7 +12499,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1649:
 		Id: 1649
 		Images: bits/terrain/tch2sand.png
@@ -12507,7 +12507,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1650:
 		Id: 1650
 		Images: bits/terrain/tch2sand.png
@@ -12515,7 +12515,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1651:
 		Id: 1651
 		Images: bits/terrain/tch2sand.png
@@ -12523,7 +12523,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Sand
 		Tiles:
-			0: Cliff
+			0: Sand
 	Template@1652:
 		Id: 1652
 		Images: bits/terrain/tch2snow.png
@@ -12531,7 +12531,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1653:
 		Id: 1653
 		Images: bits/terrain/tch2snow.png
@@ -12539,7 +12539,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1654:
 		Id: 1654
 		Images: bits/terrain/tch2snow.png
@@ -12547,7 +12547,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1655:
 		Id: 1655
 		Images: bits/terrain/tch2snow.png
@@ -12555,7 +12555,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1656:
 		Id: 1656
 		Images: bits/terrain/tch2snow.png
@@ -12563,7 +12563,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1657:
 		Id: 1657
 		Images: bits/terrain/tch2snow.png
@@ -12571,7 +12571,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1658:
 		Id: 1658
 		Images: bits/terrain/tch2snow.png
@@ -12579,7 +12579,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1659:
 		Id: 1659
 		Images: bits/terrain/tch2snow.png
@@ -12587,7 +12587,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1660:
 		Id: 1660
 		Images: bits/terrain/tch2snow.png
@@ -12595,7 +12595,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1661:
 		Id: 1661
 		Images: bits/terrain/tch2snow.png
@@ -12603,7 +12603,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1662:
 		Id: 1662
 		Images: bits/terrain/tch2snow.png
@@ -12611,7 +12611,7 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
 	Template@1663:
 		Id: 1663
 		Images: bits/terrain/tch2snow.png
@@ -12619,4 +12619,4 @@ Templates:
 		Size: 1,1
 		Categories: Tech, Snow
 		Tiles:
-			0: Cliff
+			0: Snow
