@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -67,7 +67,8 @@ namespace OpenRA.Mods.HV.Traits
 
 		void ReturnHome(Actor self)
 		{
-			var safeReturn = string.IsNullOrEmpty(ResourceType) && LinkedCollector != null && !LinkedCollector.IsDead;
+			var linked = LinkedCollector != null && !LinkedCollector.IsDead && LinkedCollector.Owner == self.Owner;
+			var safeReturn = string.IsNullOrEmpty(ResourceType) && linked;
 			var destination = safeReturn ? LinkedCollector : ClosestDestination(self);
 			if (destination == null)
 				return;

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -54,7 +54,7 @@ namespace OpenRA.Mods.HV.Traits
 			var exit = CPos.Zero;
 			var exitLocations = new List<CPos>();
 
-			var td = new TypeDictionary();
+			var typeDictionary = new TypeDictionary();
 
 			if (exitInfo != null && self.OccupiesSpace != null && actorInfo.HasTraitInfo<IOccupySpaceInfo>())
 			{
@@ -68,8 +68,8 @@ namespace OpenRA.Mods.HV.Traits
 					var delta = to - spawn;
 					if (delta.HorizontalLengthSquared == 0)
 					{
-						var fi = actorInfo.TraitInfoOrDefault<IFacingInfo>();
-						initialFacing = fi != null ? fi.GetInitialFacing() : WAngle.Zero;
+						var facing = actorInfo.TraitInfoOrDefault<IFacingInfo>();
+						initialFacing = facing != null ? facing.GetInitialFacing() : WAngle.Zero;
 					}
 					else
 						initialFacing = delta.Yaw;
@@ -79,17 +79,20 @@ namespace OpenRA.Mods.HV.Traits
 
 				exitLocations = rallyPoint.Value != null && rallyPoint.Value.Path.Count > 0 ? rallyPoint.Value.Path : new List<CPos> { exit };
 
-				td.Add(new LocationInit(exit));
-				td.Add(new CenterPositionInit(spawn));
-				td.Add(new FacingInit(initialFacing));
-				td.Add(new OwnerInit(self.Owner));
+				typeDictionary.Add(new LocationInit(exit));
+				typeDictionary.Add(new CenterPositionInit(spawn));
+				typeDictionary.Add(new FacingInit(initialFacing));
+				typeDictionary.Add(new OwnerInit(self.Owner));
 				if (exitInfo != null)
-					td.Add(new CreationActivityDelayInit(exitInfo.ExitDelay));
+					typeDictionary.Add(new CreationActivityDelayInit(exitInfo.ExitDelay));
 			}
 
 			self.World.AddFrameEndTask(w =>
 			{
-				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, td);
+				if (returning.Owner != self.Owner)
+					return;
+
+				var deliveryVehicle = self.World.CreateActor(actorInfo.Name, typeDictionary);
 				deliveryVehicle.Trait<ResourceTransporter>().LinkedCollector = returning;
 
 				var mobile = deliveryVehicle.TraitOrDefault<Mobile>();
