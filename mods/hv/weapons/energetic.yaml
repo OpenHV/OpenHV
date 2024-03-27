@@ -291,7 +291,7 @@ RailgunSetup:
 		Dimensions: 1,1
 		Footprint: X
 	Warhead@Visual: FireRadius
-		ValidTargets: Air
+		ValidTargets: Water, Ground, Tree, Air
 		Weapon: RailgunVisualStage1
 		Amount: 6
 		TransferAltitude: true
@@ -313,7 +313,7 @@ RailgunVisualStage2:
 	Warhead@Effect: CreateEffect
 		Explosions: railgun
 		ImpactSounds: explosion06.wav
-		ValidTargets: Ground, Air, Ship, Tree
+		ValidTargets: Water, Ground, Tree, Air
 
 RailgunStrike:
 	Projectile: GravityBomb
