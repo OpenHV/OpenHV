@@ -642,3 +642,14 @@ dropdown-separators:
 		separator-pressed: 766, 2, 1, 19
 		separator-disabled: 513, 258, 1, 19
 		observer-separator: 769, 258, 1, 19
+
+editor:
+	Inherits: ^Glyphs
+	Regions:
+		select: 103, 171, 16, 16
+		tiles: 35, 171, 16, 16
+		overlays: 52, 171, 16, 16
+		actors: 120, 171, 16, 16
+		tools: 69, 171, 16, 16
+		history: 86, 171, 16, 16
+		erase: 137, 171, 16, 16
