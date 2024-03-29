@@ -1881,7 +1881,7 @@ BARRIER:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Defense
-		Prerequisites: module
+		Prerequisites: module, ~disabled
 		Description: actor-barrier.description
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -1963,7 +1963,7 @@ BARRIER:
 	Buildable:
 		BuildPaletteOrder: 15
 		Queue: Defense
-		Prerequisites: module
+		Prerequisites: module, ~disabled
 		Description: meta-gate.description
 	Replacement:
 		ReplaceableTypes: wall
