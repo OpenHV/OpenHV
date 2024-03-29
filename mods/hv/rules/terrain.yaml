@@ -416,7 +416,7 @@ BRIDGESHADOW1:
 	RenderSprites:
 		Palette: shadow-decoration
 	EditorOnlyTooltip:
-		Name: Shadow for bridges.
+		Name: actor-bridge-shadow
 	BodyOrientation:
 		QuantizedFacings: 1
 	FrozenUnderFog:
