@@ -139,7 +139,7 @@
 		Voice: Guard
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: meta-vehicle-generic-name
 	MustBeDestroyed:
 	WithFacingSpriteBody:
 	BodyOrientation:
@@ -218,8 +218,8 @@
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Scrap
-		GenericName: Scrap
+		Name: meta-scrap.name
+		GenericName: meta-scrap.generic-name
 		ShowOwnerRow: false
 	Collectible:
 		Duration: 6000
@@ -281,7 +281,7 @@
 	ProximityCaptor:
 		Types: Plane
 	Tooltip:
-		GenericName: Plane
+		GenericName: meta-plane-generic-name
 	WithShadow:
 		Offset: 356, 256, 0
 		ZOffset: -256
@@ -316,7 +316,7 @@
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Tooltip:
-		GenericName: Destroyed Plane
+		GenericName: meta-planehusk-generic-name
 	Aircraft:
 	FallsToEarth:
 		Moves: true
@@ -345,7 +345,7 @@
 	Valued:
 		Cost: 10
 	Tooltip:
-		Name: Drop Pod
+		Name: meta-droppod-name
 	Health:
 		HP: 6000
 	Armor:
@@ -388,7 +388,7 @@
 ^Helicopter:
 	Inherits: ^Plane
 	Tooltip:
-		GenericName: Helicopter
+		GenericName: meta-helicopter-generic-name
 	Aircraft:
 		CanHover: true
 		CruisingCondition: cruising
@@ -483,7 +483,7 @@
 	Guardable:
 		Range: 3c0
 	Tooltip:
-		GenericName: Structure
+		GenericName: meta-building-generic-name
 	FrozenUnderFog:
 	MapEditorData:
 		Categories: Building
@@ -617,7 +617,7 @@
 		Footprint: x
 	FrozenUnderFog:
 	Tooltip:
-		GenericName: Structure
+		GenericName: meta-prop-generic-name
 		ShowOwnerRow: false
 	MapEditorData:
 		Categories: Decoration
@@ -657,8 +657,8 @@
 		Footprint: x
 	FrozenUnderFog:
 	Tooltip:
-		Name: Crates
-		GenericName: Crates
+		Name: meta-crate.name
+		GenericName: meta-crate.generic-name
 		ShowOwnerRow: false
 	MapEditorData:
 		Categories: Crates
@@ -770,7 +770,7 @@
 	Inherits@Sprite: ^SpriteActor
 	Interactable:
 	Tooltip:
-		Name: Rock
+		Name: meta-rock-name
 		ShowOwnerRow: false
 	RenderSprites:
 		Palette: terrain
@@ -811,7 +811,7 @@
 	Interactable:
 		Bounds: 1024, 1024
 	Tooltip:
-		Name: Tree
+		Name: meta-tree-name
 		ShowOwnerRow: false
 	Building:
 		Footprint: x
@@ -891,7 +891,7 @@
 		Voice: Guard
 	Guardable:
 	Tooltip:
-		GenericName: Ship
+		GenericName: meta-ship-generic-name
 	MustBeDestroyed:
 	MapEditorData:
 		Categories: Naval
@@ -936,8 +936,8 @@
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Cube
-		GenericName: Cube
+		Name: meta-cube.name
+		GenericName: meta-cube.generic-name
 		ShowOwnerRow: false
 	Collectible:
 		Duration: 6000
@@ -960,7 +960,7 @@
 		Footprint: x x
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit
 	Tooltip:
-		Name: Wall
+		Name: meta-wall-name
 	-GivesExperience:
 	RenderSprites:
 		Palette: effect
@@ -1004,8 +1004,6 @@
 		Palette:
 		DetectionTypes: Mine
 		InitialDelay: 0
-	Tooltip:
-		Name: Mine
 	Targetable:
 		TargetTypes: Ground, Mine
 	Immobile:
@@ -1139,9 +1137,6 @@
 		TargetTypes: Air
 	HiddenUnderFog:
 		Type: GroundPosition
-	Tooltip:
-		Name: Missile
-		GenericName: Missile
 	HitShape:
 	RejectsOrders:
 	Interactable:

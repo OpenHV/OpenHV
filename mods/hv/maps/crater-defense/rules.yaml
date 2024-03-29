@@ -64,7 +64,7 @@ EditorWorld:
 Entry:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: Enemy Spawn Waypoint
+		Name: actor-entry-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -78,7 +78,7 @@ Entry:
 Exit:
 	Inherits: Entry
 	EditorOnlyTooltip:
-		Name: Enemy Exit Waypoint
+		Name: actor-exit-name
 
 ^Vehicle:
 	GivesBounty:
@@ -175,7 +175,7 @@ CLUSTERTURRET:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: ~towerbase, bunker, turret, ~structures.sc
-		Description: Base defense.\n  Requires power to operate.\n  Strong vs Tanks and Pods
+		Description: actor-clusterturret.description
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
 	Power:
@@ -187,7 +187,7 @@ CLUSTERTURRET:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Cluster Turret
+		Name: actor-clusterturret.name
 	Health:
 		HP: 55000
 	Armament:
@@ -220,7 +220,7 @@ AMPLIFIER:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: ~towerbase, bunker, turret, clusterturret, ~structures.sc
-		Description: Weapon range amplifier.\n  Requires power to operate.
+		Description: actor-amplifier.description
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
 	Power:
@@ -232,7 +232,7 @@ AMPLIFIER:
 	Valued:
 		Cost: 1250
 	Tooltip:
-		Name: Amplifier
+		Name: actor-amplifier.name
 	Health:
 		HP: 55000
 	WithRangeCircle:

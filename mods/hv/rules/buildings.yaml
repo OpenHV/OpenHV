@@ -8,7 +8,7 @@ BASE:
 	Valued:
 		Cost: 3500
 	Tooltip:
-		Name: Main Base
+		Name: actor-base.name
 	Building:
 		Footprint: xx xx ++
 		Dimensions: 2,3
@@ -44,10 +44,10 @@ BASE:
 		Queue: Building
 		BuildPaletteOrder: 900
 		BuildLimit: 1
-		Description: Builds structures, builders and miners.\nOnly one can be built.
+		Description: actor-base.description
 		Prerequisites: outpost, ~base.yi
 	Encyclopedia:
-		Description: This base of operations is able to summon new buildings as well as utility vehicles such as miners or builders. New buildings are only allowed within a base radius. You can also spawn buildings into an allied base radius. To extend the build radius you need to train builders which can deploy into outposts. Protect the base building at all costs. If your base ever gets destroyed, select an outpost and request a new main base for a possible comeback.
+		Description: actor-base.encyclopedia
 		Order: 10
 		Category: Buildings
 	GrantExternalConditionToOwner@Base:
@@ -180,9 +180,9 @@ OUTPOST:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Outpost
+		Name: actor-outpost.name
 	Encyclopedia:
-		Description: This structure cannot be summoned on the main base like the others. It is created by deploying a builder. Thus it can be used to extend the base radius or even create bridge heads far away from the main base. Another important feature is that it is the only building that can build another base, but only in the event of the initial main base getting destroyed.
+		Description: actor-outpost.encyclopedia
 		Order: 30
 		Category: Buildings
 	Health:
@@ -227,15 +227,15 @@ GENERATOR:
 		Queue: Building
 		Prerequisites: ~base
 		BuildPaletteOrder: 10
-		Description: Generates power for other structures.
+		Description: actor-generator.description
 	Encyclopedia:
-		Description: Generators power the base. Loss of power effects buildings individually. Without power the radar shows no minimap, production is slowed down, support power charging is paused, base defense system stop operating.\n\nTo restore power you can build more generators or as a short term action disable certain buildings by clicking the zap button and selected buildings to power down. With power lines cut the actions are more drastic: buildings will be unable to produce or contribute to the tech tree also canceling current production queues if they are effected.\n\nAlways plan ahead so you don't accidentally power down your base slowing down your progress. On the other hand it is a vital strategy to destroy enemy power plants to distract the enemy into power micromanagement, losen defenses temporarily and to put enemy on hold.
+		Description: actor-generator.encyclopedia
 		Order: 10
 		Category: Buildings
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Power Plant
+		Name: actor-generator.name
 	ProvidesPrerequisite@BuildingName:
 	Building:
 		Footprint: xx xx
@@ -272,15 +272,15 @@ RADAR:
 		Queue: Building
 		BuildPaletteOrder: 90
 		Prerequisites: storage, ~structures.yi
-		Description: Provides an overview\nof the battlefield.\n  Calls in reinforcements.\n  Requires power to operate.
+		Description: actor-radar.description
 	Encyclopedia:
-		Description: The radar enables a minimap on top right screen of the command interface. It also provides a larger amount of local vision around itself. As a tech building it is opening up the aerial branch of units. It also provides the first tier of support powers which can be an air strike or orbital drop pod reinforcements to be placed anywhere on the battlefield. For the air strike hold the mouse button and move the pointer to set the flight path.
+		Description: actor-radar.encyclopedia
 		Order: 40
 		Category: Buildings
 	Valued:
 		Cost: 1800
 	Tooltip:
-		Name: Radar Dome
+		Name: actor-radar.name
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -368,15 +368,15 @@ TRADPLAT:
 		Queue: Building
 		Prerequisites: ~base, factory
 		BuildPaletteOrder: 100
-		Description: Repairs vehicles and aircraft for credits.\nAllows buying units on the free market.
+		Description: actor-tradplat.description
 	Encyclopedia:
-		Description: The trade platform provides access to the free market. For a certain amount of credits damaged vehicles can be ordered here and get repaired. Alternatively select the repair icon on the top right of the command interface and click a damaged vehicle which will then automatically head to the nearest trade platform for repairs. As a tech building the trade platform opens up the tank path. It also serves as an additional vehicle production queue by allowing orders from outside. These vary in price and are more expensive than local production.
+		Description: actor-tradplat.encyclopedia
 		Order: 50
 		Category: Buildings
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Trade Platform
+		Name: actor-tradplat.name
 	Building:
 		Footprint: x+x x+x x+x
 		Dimensions: 3,3
@@ -462,9 +462,9 @@ MODULE:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: ~structures.yi
-		Description: Produces and repairs very light vehicles.
+		Description: actor-module.description
 	Encyclopedia:
-		Description: The module is the assembly for the smallest type of vehicle: the pods. They are very lightly armored and only contain one occupant, but provide some mobility and protection against harsh environments on planets with limited terraforming. Pods can come back in the immediate vicinity of the module to bandage wounds and provide some quick repairs on the vehicle.
+		Description: actor-module.encyclopedia
 		Order: 50
 		Category: Buildings
 	ProvidesPrerequisite@Faction:
@@ -476,7 +476,7 @@ MODULE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Module
+		Name: actor-module.name
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -576,11 +576,11 @@ MINER2:
 	Selectable:
 		Bounds: 2048, 3072, 0, 0
 	Tooltip:
-		Name: Mining Tower
+		Name: actor-miner2.name
 	Building:
 		UndeploySounds: miner_building_transform.wav
 	Encyclopedia:
-		Description: The mining tower is errected by creating a miner in the vehicle queue from either main base or factory and ordering it upon a metal bar symbol on the map where gold is more valueable than iron. Once deployed it will start mining and after certain intervals release a tanker which will carry back to a storage building upon then the credits can be spent. When the resources are depleted, the extraction value drops. Right-click on a mining tower to redeploy it into a miner again to move it onto a different spot.
+		Description: actor-miner2.encyclopedia
 		Order: 50
 		Category: Buildings
 	Valued:
@@ -643,16 +643,16 @@ STARPORT:
 	Selectable:
 		Bounds: 2048, 3072
 	Tooltip:
-		Name: Starport
+		Name: actor-starport.name
 	Encyclopedia:
-		Description: The starport is the base of operations for the air force. Underground facilities construct new aircraft that are self-sufficient for the time of the battle requiring no refueling nor rearming.
+		Description: actor-starport.encyclopedia
 		Order: 60
 		Category: Buildings
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 120
 		Prerequisites: radar, ~structures.yi
-		Description: Produces aircraft.
+		Description: actor-starport.description
 	Valued:
 		Cost: 700
 	Building:
@@ -726,7 +726,7 @@ FACTORY:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Vehicle Factory
+		Name: actor-factory-name
 
 FACTORY3:
 	Inherits: ^BaseBuilding
@@ -739,13 +739,13 @@ FACTORY3:
 		Prerequisites: module, storage, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
-		Description: Builds tanks.
+		Description: actor-factory3.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Vehicle Factory
+		Name: actor-factory3.name
 	Encyclopedia:
-		Description: The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Righ-click on the ground to set a rally point for new vehicles to gather around.
+		Description: actor-factory3.encyclopedia
 		Order: 70
 		Category: Buildings
 	Building:
@@ -990,13 +990,13 @@ TECHCENTER:
 		Queue: Building
 		BuildPaletteOrder: 110
 		Prerequisites: ~base, radar
-		Description: Grants access to advanced weaponry.
+		Description: actor-techcenter.description
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Technology Download Center
+		Name: actor-techcenter.name
 	Encyclopedia:
-		Description: Company policy is that classified technology can not be transported with unguarded colony ships. It has be wired in from an encrypted interstellar connection and stored in a secure facility. Only then the production facilities get access to the blue prints for machinery designed to resolve conflicts fast and efficient. This facilities requires a lot of power to keep the servers running. Powering it down and access to restricted technology is temporarily lost.
+		Description: actor-techcenter.encyclopedia
 		Order: 80
 		Category: Buildings
 	ProvidesPrerequisite@BuildingName:
@@ -1037,14 +1037,14 @@ ORESMELT:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Ore Smelter
+		Name: actor-oresmelt.name
 	Encyclopedia:
-		Description: The ore smelter is an economy boosting building for long lasting conflicts. It refines the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, heating up the ore requires a lot of energy.
+		Description: actor-oresmelt.encyclopedia
 		Order: 90
 		Category: Buildings
 	Buildable:
 		Queue: Building
-		Description: Ore Smelter.\nProcesses resources for extra credits.
+		Description: actor-oresmelt.description
 		Prerequisites: ~structures.sc, techcenter
 	HitShape:
 		Type: Rectangle
@@ -1071,11 +1071,11 @@ OREPURIFIER:
 	Selectable:
 		Bounds: 1024, 2048, 0, 0
 	Tooltip:
-		Name: Ore Purifier
+		Name: actor-orepurifier.name
 	Buildable:
-		Description: Ore Purifier.\nProcesses resources for extra credits.
+		Description: actor-orepurifier.description
 	Encyclopedia:
-		Description: The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore however requires a lot of energy.
+		Description: actor-orepurifier.encyclopedia
 	-WithIdleOverlay@Shadow:
 
 BUNKER:
@@ -1084,15 +1084,15 @@ BUNKER:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: module, ~structures.yi
-		Description: Light base defense.\n  Requires power to operate.\n  Strong vs Pods\n  Weak vs Tanks
+		Description: actor-bunker.description
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: Bunker
+		Name: actor-bunker.name
 	Encyclopedia:
-		Description: The bunker houses a single machine gun nest that is effective against lightly armored pods. While being protected against small arms, rockets or tank shells quickly destroy the bunker including its inhabitants. Right-click on the building to force the personnel to leave. Order another pod type inside to change the weaponry.
+		Description: actor-bunker.encyclopedia
 		Order: 100
 		Category: Buildings
 	Health:
@@ -1141,13 +1141,13 @@ TURRET:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: factory, ~structures.yi
-		Description: Base defense.\n  Requires power to operate.\n  Strong vs Tanks, Ships\n  Weak vs Pods
+		Description: actor-turret.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Turret
+		Name: actor-turret.name
 	Encyclopedia:
-		Description: The turret is a basic defense against armored vehicles. It is ineffective against pods and can't attack air units. With power turned off the turret can't operate making it vulnerable.
+		Description: actor-turret.encyclopedia
 		Order: 110
 		Category: Buildings
 	Health:
@@ -1180,11 +1180,11 @@ TURRET2:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: factory, ~structures.sc
-		Description: Base defense.\n  Requires power to operate.\n  Strong vs Vehicles\n  Weak vs Pods
+		Description: actor-turret2.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Turret
+		Name: actor-turret2.name
 	Health:
 		HP: 55000
 	Armament:
@@ -1219,11 +1219,11 @@ AATURRET:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.yi
-		Description: Anti-Air base defense.\n  Requires power to operate. \n  Strong vs Aircrafts
+		Description: actor-aaturret.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: AA Turret
+		Name: actor-aaturret.name
 	Health:
 		HP: 55000
 	Armor:
@@ -1266,13 +1266,13 @@ AATURRET2:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.sc
-		Description: Anti-Air base defense.\n  Requires power to operate. \n  Strong vs Aircrafts
+		Description: actor-aaturret2.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: AA Turret
+		Name: actor-aaturret2.name
 	Encyclopedia:
-		Description: This ground based anti-air defense system quickly downs enemy aircraft. It can also take down ballistic rockets inside its radius of operation. It requires power to operate and can be individually turned off to protect the power grid.
+		Description: actor-aaturret2.encyclopedia
 		Order: 110
 		Category: Buildings
 	Health:
@@ -1306,14 +1306,14 @@ HOWITZER:
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.sc
-		Description: Advanced base cannon.\n  Requires power to operate.\n  Maximum 1 can be built
+		Description: actor-howitzer.description
 		BuildLimit: 1
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Grand Howitzer
+		Name: actor-howitzer.name
 	Encyclopedia:
-		Description: A large cannon with a range that spans over the whole battlefield. It can fire a barrage of multiple shells at once. The shells can not be intercepted. It takes a while to reload so only the battlefield command is allowed to operate it manually. It softens up the defenses, making a followup strike force even more effective.
+		Description: actor-howitzer.encyclopedia
 		Order: 110
 		Category: Buildings
 	Building:
@@ -1383,13 +1383,13 @@ FIELD:
 		BuildPaletteOrder: 130
 		Prerequisites: radar, ~structures.yi
 		BuildLimit: 1
-		Description: Errects an electromagnetic barrier\naround a group of units\nfor a short time.\n  Requires power to operate.\n  Maximum 1 can be built.
+		Description: actor-field.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Force Field Generator
+		Name: actor-field.name
 	Encyclopedia:
-		Description: Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amout of energy.
+		Description: actor-field.encyclopedia
 		Order: 120
 		Category: Buildings
 	Building:
@@ -1458,9 +1458,9 @@ SILO:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Launch Command
+		Name: actor-silo.name
 	Encyclopedia:
-		Description: The planet side launch command connects to an orbital bomber who can strike anywhere on the battlefield. While the effect is devastating on the battlefield the effectiveness of the weapon is countered by its long reload times which also require power to operate. A well placed strike followed up by an attack squad can oftentimes change the tide of the battle.
+		Description: actor-silo.encyclopedia
 		Order: 120
 		Category: Buildings
 	Buildable:
@@ -1468,7 +1468,7 @@ SILO:
 		BuildPaletteOrder: 140
 		Prerequisites: techcenter, ~structures.sc
 		BuildLimit: 1
-		Description: Orders a nuclear strike.\n  Requires power to operate.\n  Maximum 1 can be built.\n  Special Ability: Atom Bomb
+		Description: actor-silo.description
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
@@ -1530,9 +1530,9 @@ UPLINK:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Orbital Strike Uplink Command
+		Name: actor-uplink.name
 	Encyclopedia:
-		Description: An orbital railgun uses electromagnetic force to launch high-velocity projectiles. It is a more surgical strike than the nuclear bomb and it cannot be evaded. However it damages only the area surrounding the impact. It requires a long time to reload and consumes energy in that process.
+		Description: actor-uplink.encyclopedia
 		Order: 130
 		Category: Buildings
 	Buildable:
@@ -1540,7 +1540,7 @@ UPLINK:
 		BuildPaletteOrder: 140
 		Prerequisites: techcenter, ~structures.yi
 		BuildLimit: 1
-		Description: Orders an orbital railgun strike.\n  Requires power to operate.\n  Maximum 1 can be built.\n  Special Ability: Orbital Railgun
+		Description: actor-uplink.description
 	Building:
 		Footprint: == == xx
 		Dimensions: 2,3
@@ -1606,15 +1606,15 @@ STORAGE:
 		BuildPaletteOrder: 35
 		Queue: Building
 		Prerequisites: ~base
-		Description: Stores excess resources.
+		Description: actor-storage.description
 	Valued:
 		Cost: 1400
 	Targetable:
 		TargetTypes: Ground, Structure
 	Tooltip:
-		Name: Storage
+		Name: actor-storage.name
 	Encyclopedia:
-		Description: Storage buildings are the center of mining operations. Upon fabrication it spawns a miner that can be sent to a resource deposit and it also allows the construction of additional miners in the factory. Once a storage and a mining tower exists, tankers will automatically deliver resources from mining operations into the storage building where the compensation takes place. With no storage building to drop off available all mining operations will halt.
+		Description: actor-storage.encyclopedia
 		Order: 10
 		Category: Buildings
 	Health:
@@ -1689,13 +1689,13 @@ TELEVATR:
 		Queue: Defense
 		BuildPaletteOrder: 120
 		Prerequisites: radar
-		Description: Teleports a unit to\nanother televator.\n  Requires power to operate.
+		Description: actor-televatr.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Televator
+		Name: actor-televatr.name
 	Encyclopedia:
-		Description: Televators can instantly transport any vehicle onto a connected televator. To select the destination in a televator network with more than two endpoints, select and then right-click on the exit. All nodes require power to operate. Televators can be rotated as two building variants exist.
+		Description: actor-televatr.encyclopedia
 		Order: 200
 		Category: Buildings
 	Building:
@@ -1764,16 +1764,16 @@ HARBOR:
 		Prerequisites: module, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
-		Description: Builds ships.
+		Description: actor-harbor.description
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Harbor
+		Name: actor-harbor.name
 	Encyclopedia:
-		Description: The harbor is the production site for the navy. It also operates as a repair bay for damaged vessels. It can only be placed on shallow waters.
+		Description: actor-harbor.encyclopedia
 		Order: 250
 		Category: Buildings
 	Building:
@@ -1882,7 +1882,7 @@ BARRIER:
 		BuildPaletteOrder: 10
 		Queue: Defense
 		Prerequisites: module
-		Description: Basic wall defense.
+		Description: actor-barrier.description
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 6
@@ -1896,9 +1896,9 @@ BARRIER:
 	Selectable:
 		Bounds: 1024, 1512, 0, -256
 	Tooltip:
-		Name: Wall
+		Name: actor-barrier.name
 	Encyclopedia:
-		Description: Barriers are very basic defense buildings that block bullets. They don't have to be destroyed in order to conquer an enemy base.
+		Description: actor-barrier.encyclopedia
 		Order: 220
 		Category: Buildings
 	Valued:
@@ -1964,7 +1964,7 @@ BARRIER:
 		BuildPaletteOrder: 15
 		Queue: Defense
 		Prerequisites: module
-		Description: Automated barrier that opens for allied units.
+		Description: meta-gate.description
 	Replacement:
 		ReplaceableTypes: wall
 	Valued:
@@ -2002,7 +2002,7 @@ BARRIER:
 		OpenSequence: open-bottom
 		RequiresCondition: !top && bottom
 	Tooltip:
-		Name: Gate
+		Name: meta-gate.name
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 6
@@ -2078,7 +2078,7 @@ HGATE:
 		OpenSequence: open-right
 		RequiresCondition: right && !left
 	Encyclopedia:
-		Description: Gates can be placed onto or next to walls which will then automatically connect with them. Gates open for friendly units to not disrupt mining operations on heavily fortified outposts.
+		Description: actor-hgate-encyclopedia
 		Order: 230
 		Category: Buildings
 
@@ -2450,9 +2450,9 @@ RECONSTRUCTOR:
 	Selectable:
 		Bounds: 2048, 2457, 0, -204
 	Tooltip:
-		Name: Nano Reconstructor
+		Name: actor-reconstructor.name
 	Encyclopedia:
-		Description: Both machine and human operator can be healed and restored using nano technology. This advanced form of medicine is only available on some planets which also made it affordable due to universal healthcare plans for the local population. Capture a facilty to grant access to your troops. Lasts only as long as the facility is in possession.
+		Description: actor-reconstructor.encyclopedia
 		Order: 300
 		Category: Buildings
 	Building:
@@ -2516,9 +2516,9 @@ EXTRACTOR:
 	Selectable:
 		Bounds: 2048, 3072, 0, -1024
 	Tooltip:
-		Name: Resource Extractor
+		Name: actor-extractor.name
 	Encyclopedia:
-		Description: Civilians in the area might also try to harvest the planet's resources. Capture the facility to keep it running but force all the profits onto the company's account.
+		Description: actor-extractor.encyclopedia
 		Order: 320
 		Category: Buildings
 	TooltipDescription@Allies:
@@ -2569,9 +2569,9 @@ COMLINK:
 	Selectable:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
-		Name: Communication Link
+		Name: actor-comlink.name
 	Encyclopedia:
-		Description: On planets with a satellite network civilian communication arrays can be captured and used to spy on your opponent anywhere on the battlefield for as long as the satellite stays in range. It requires power and takes time to reposition again.
+		Description: actor-comlink.encyclopedia
 		Order: 330
 		Category: Buildings
 	TooltipDescription@Allies:
@@ -2642,9 +2642,9 @@ WATCHTOWER:
 	Selectable:
 		Bounds: 2048, 1664, 0, 256
 	Tooltip:
-		Name: Watch Tower
+		Name: actor-watchtower.name
 	Encyclopedia:
-		Description: A larger building equipped with sensors to surveill the area. It does not require an engineer to capture, but only some forces stationed next to it in order to gain access.
+		Description: actor-watchtower.encyclopedia
 		Order: 340
 		Category: Buildings
 	TooltipDescription@Allies:
@@ -2705,9 +2705,9 @@ DROPZONE:
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Tooltip:
-		Name: Drop Zone
+		Name: actor-dropzone.name
 	Encyclopedia:
-		Description: Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
+		Description: actor-dropzone.encyclopedia
 		Order: 350
 		Category: Buildings
 	TooltipDescription:
@@ -2769,9 +2769,9 @@ FLAGPOST:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Flagpost
+		Name: actor-flagpost.name
 	Encyclopedia:
-		Description: This flag marks an objective that has to be controlled for a certain amount of time in order to gain strategic victory over your opponent.
+		Description: actor-flagpost.encyclopedia
 		Order: 400
 		Category: Buildings
 	Health:

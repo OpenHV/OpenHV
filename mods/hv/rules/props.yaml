@@ -7,7 +7,7 @@ LAMPPOST:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Lamp Post
+		Name: actor-lamppost-name
 	TerrainLightSource:
 		Range: 2c512
 		Intensity: 0.2
@@ -24,7 +24,7 @@ LAMPPOST:
 SPARKLAMP:
 	Inherits: LAMPPOST
 	Tooltip:
-		Name: Spark Lamp
+		Name: actor-sparklamp-name
 
 STREETLAMP1:
 	Inherits: ^Prop
@@ -35,7 +35,7 @@ STREETLAMP1:
 		Footprint: = x
 		Dimensions: 1,2
 	Tooltip:
-		Name: Street Lamp
+		Name: actor-streetlamp1-name
 	ThrowsShrapnel:
 		Pieces: 2, 3
 	TerrainLightSource:
@@ -102,7 +102,7 @@ PYRAMID:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Pyramid
+		Name: actor-pyramid-name
 	Health:
 		HP: 120000
 
@@ -118,7 +118,7 @@ PYRAMID2:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Small Pyramid
+		Name: actor-pyramid2-name
 	Health:
 		HP: 60000
 	-WithIdleOverlay@Shadow:
@@ -132,7 +132,7 @@ OBELISK:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Obelisk
+		Name: actor-obelisk-name
 	Health:
 		HP: 50000
 
@@ -151,7 +151,7 @@ PROP1:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian tower
+		Name: actor-prop1-name
 	Health:
 		HP: 60000
 	RenderSprites:
@@ -166,7 +166,7 @@ PROP2:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian tower
+		Name: actor-prop2-name
 	Health:
 		HP: 60000
 	WithIdleOverlay@animation:
@@ -187,7 +187,7 @@ PROP3:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian structure
+		Name: actor-prop3-name
 	Health:
 		HP: 60000
 	RenderSprites:
@@ -202,7 +202,7 @@ PROP4:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian tower
+		Name: actor-prop4-name
 	Health:
 		HP: 60000
 
@@ -222,7 +222,7 @@ PROP5:
 			TopLeft: -1024, -256
 			BottomRight: 1024, 756
 	Tooltip:
-		Name: Civilian structure
+		Name: actor-prop5-name
 	Health:
 		HP: 100000
 
@@ -235,7 +235,7 @@ PROP6:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian structure
+		Name: actor-prop6-name
 	Health:
 		HP: 60000
 	RenderSprites:
@@ -263,7 +263,7 @@ TANKTRAP:
 	Health:
 		HP: 40000
 	Tooltip:
-		Name: Tank Trap
+		Name: actor-tanktrap-name
 	-ThrowsShrapnel:
 	Explodes:
 		Type: Footprint
@@ -275,7 +275,7 @@ PROP9:
 	Inherits@Shape: ^1x1Shape
 	Interactable:
 	Tooltip:
-		Name: Civilian lightning tower
+		Name: actor-prop9-name
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
@@ -289,7 +289,7 @@ PROP9:
 PROP10:
 	Inherits: PROP9
 	Tooltip:
-		Name: Civilian plasma tower
+		Name: actor-prop10-name
 
 PROP11:
 	Inherits: PROP3
@@ -308,7 +308,7 @@ PROP13:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Tooltip:
-		Name: Civilian building
+		Name: actor-prop13-name
 	Health:
 		HP: 120000
 	WithIdleOverlay@animation:
@@ -327,7 +327,7 @@ PROP14:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian structure
+		Name: actor-prop14-name
 	Health:
 		HP: 60000
 	-WithIdleOverlay@Shadow:
@@ -347,7 +347,7 @@ PROP16:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Civilian structure
+		Name: actor-prop16-name
 	Health:
 		HP: 60000
 
@@ -365,7 +365,7 @@ CRANE:
 	HitShape:
 		UseTargetableCellsOffsets: False
 	Tooltip:
-		Name: Crane
+		Name: actor-crane-name
 	Health:
 		HP: 100000
 
@@ -381,7 +381,7 @@ ELECTRICPAD:
 		Footprint: =
 		Dimensions: 1,1
 	Tooltip:
-		Name: Electric pad
+		Name: actor-electricpad-name
 	Health:
 		HP: 30000
 	WithIdleOverlay@animation:
@@ -411,7 +411,7 @@ RAIL:
 		Footprint: +
 		Dimensions: 1,1
 	Tooltip:
-		Name: Rail
+		Name: actor-rail-name
 	-ThrowsShrapnel:
 	-ThrowsShrapnel@Large:
 	-Explodes:
@@ -432,7 +432,7 @@ MISC1:
 	Inherits: ^Crate
 	Inherits@Shape: ^1x1Shape
 	Tooltip:
-		Name: Misc
+		Name: actor-misc1-name
 	RenderSprites:
 		Image: misc
 	WithSpriteBody:

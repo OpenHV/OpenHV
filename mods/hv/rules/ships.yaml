@@ -6,14 +6,14 @@ BOAT3:
 	Valued:
 		Cost: 450
 	Tooltip:
-		Name: Light Boat
-		GenericName: Boat
+		Name: actor-boat3.name
+		GenericName: actor-boat3.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 10
-		Description: Versatile light boat.\n  Strong vs Aircrafts, Navy and Pods\n  Weak vs Vehicles and Buildings
+		Description: actor-boat3.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -51,14 +51,14 @@ PATROLBOAT:
 	Valued:
 		Cost: 450
 	Tooltip:
-		Name: Patrol boat
-		GenericName: Boat
+		Name: actor-patrolboat.name
+		GenericName: actor-patrolboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 10
-		Description: Versatile light boat.\n  Strong vs Aircrafts, Navy and Pods\n  Weak vs Vehicles and Buildings
+		Description: actor-patrolboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -100,14 +100,14 @@ BOAT:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Medium Boat
-		GenericName: Boat
+		Name: actor-boat.name
+		GenericName: actor-boat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
-		Description: A boat with a turret.\n  Strong vs Water\n  Can't attack Pods, Buildings, Vehicles or Air
+		Description: actor-boat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -146,14 +146,14 @@ SUBMARINE2:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Submarine
-		GenericName: Submarine
+		Name: actor-submarine2.name
+		GenericName: actor-submarine2.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
-		Description: Submarine with powerful torpedos.\n  Strong vs Water\n  Can't attack Pods, Buildings, Vehicles or Air
+		Description: actor-submarine2.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -185,14 +185,14 @@ BOAT2:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Lightning Boat
-		GenericName: Boat
+		Name: actor-boat2.name
+		GenericName: actor-boat2.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
-		Description: A heavy boat with a lightning gun.\n  Strong vs Vehicles, Pods and Buildings
+		Description: actor-boat2.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -222,14 +222,14 @@ BOAT2:
 BOAT4:
 	Inherits: BOAT2
 	Tooltip:
-		Name: Railgun Boat
-		GenericName: Boat
+		Name: actor-boat4.name
+		GenericName: actor-boat4.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 50
-		Description: A heavy boat with a rail gun.\n  Strong vs Vehicles, Pods and Buildings
+		Description: actor-boat4.description
 	Armament:
 		Weapon: Railgun
 		Recoil: 100
@@ -242,14 +242,14 @@ SUBMARINE:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Missile Submarine
-		GenericName: Boat
+		Name: actor-submarine.name
+		GenericName: actor-submarine.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 60
-		Description: A submarine with powerful long range missiles.\n  Strong vs Vehicles, Pods and Buildings
+		Description: actor-submarine.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -287,7 +287,7 @@ SLCM:
 	Valued:
 		Cost: 50
 	Tooltip:
-		Name: Submarine-launched cruise missile
+		Name: actor-slcm-name
 	Health:
 		HP: 5000
 	Armor:
@@ -318,11 +318,11 @@ CARRIER:
 		Queue: Ship
 		BuildPaletteOrder: 60
 		Prerequisites: ~harbor.yi, techcenter
-		Description: Launches aerial autonomous attack vessels.\n  Strong vs Vehicles, Pods and Buildings
+		Description: actor-carrier.description
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Drone Ship
+		Name: actor-carrier.name
 	Health:
 		HP: 80000
 	Armor:
@@ -366,14 +366,14 @@ NAVALTRANSPORT:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Naval Transporter
-		GenericName: Naval Transporter
+		Name: actor-navaltransport.name
+		GenericName: actor-navaltransport.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor
 		BuildPaletteOrder: 20
-		Description: General-purpose naval transport.\nCan carry pods.\n  Unarmed
+		Description: actor-navaltransport.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -407,14 +407,14 @@ WATERMINELAYER:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Naval Minelayer
-		GenericName: Boat
+		Name: actor-waterminelayer.name
+		GenericName: actor-waterminelayer.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, tradplat
 		BuildPaletteOrder: 40
-		Description: Lays smart mines\nthat explode on enemy units\nwhile avoiding ally units.\n  Can detect enemy mines.\n  Unarmed
+		Description: actor-waterminelayer.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:

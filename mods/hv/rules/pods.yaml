@@ -5,13 +5,13 @@ SCOUT1:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Fast scout vehicle.\nArmed with machine gun.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
+		Description: actor-scout1.description
 		Prerequisites: ~module
 		BuildPaletteOrder: 10
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Machine Gun Pod
+		Name: actor-scout1.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -37,13 +37,13 @@ SCOUT2:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Fast support vehicle.\nShoots surface to air/ground rockets.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
+		Description: actor-scout2.description
 		Prerequisites: ~module.sc
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: Rocket Pod
+		Name: actor-scout2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -70,13 +70,13 @@ MORTARPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Fast support vehicle.\nArmed with portable mortar gun.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
+		Description: actor-mortarpod.description
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 150
 	Tooltip:
-		Name: Mortar Pod
+		Name: actor-mortarpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -103,13 +103,13 @@ SNIPERPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Long range sniper vehicle.\nCloaked when idle.\n  Strong vs Pods\n  Weak vs Tanks and Buildings
+		Description: actor-sniperpod.description
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Sniper Pod
+		Name: actor-sniperpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -147,13 +147,13 @@ FLAMEPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Short range flame thrower.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
+		Description: actor-flamepod.description
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 40
 	Valued:
 		Cost: 350
 	Tooltip:
-		Name: Flame Pod
+		Name: actor-flamepod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -185,13 +185,13 @@ TECHNICIAN:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Pod
-		Description: Field technician.\nInfiltrates and captures enemy structures.\Repairs pods.\n  Unarmed
+		Description: actor-technician.description
 		Prerequisites: ~module
 		BuildPaletteOrder: 30
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Technician Pod
+		Name: actor-technician.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -238,13 +238,13 @@ BROKERPOD:
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Pod
-		Description: Financial analyst.\nInvests into stock market for dividents.\n  Unarmed
+		Description: actor-brokerpod.description
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 6
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Broker pod
+		Name: actor-brokerpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -289,13 +289,13 @@ ELITEPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Elite airborn vehicle.\nArmed with heavy machine gun.\n  Strong vs Pods, Light Vehicles and Aircraft.\n  Weak vs Tanks and Buildings.
+		Description: actor-elitepod.description
 		Prerequisites: ~module, techcenter
 		BuildPaletteOrder: 60
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: Elite Pod
+		Name: actor-elitepod.name
 	Health:
 		HP: 9000
 	Aircraft:
@@ -331,13 +331,13 @@ BOMBERPOD:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Remote controlled mine. \nExplodes when reaches enemy.
+		Description: actor-bomberpod.description
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 40
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Bomber Pod
+		Name: actor-bomberpod.name
 	Health:
 		HP: 10000
 	UpdatesPlayerStatistics:
@@ -379,13 +379,13 @@ ELECTRICPOD:
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: Fast support vehicle.\nShoots surface to air/ground electricity.\n  Strong vs Tanks and Aircraft\n  Weak vs Pods
+		Description: actor-electricpod.description
 		Prerequisites: ~module.yi
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: Electric Pod
+		Name: actor-electricpod.name
 	Mobile:
 		Voice: Move
 	Voiced:
@@ -415,8 +415,8 @@ MINIPOD1:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Civilian
-		GenericName: Civilian
+		Name: actor-minipod1.name
+		GenericName: actor-minipod1.generic-name
 	Health:
 		HP: 10000
 	Mobile:

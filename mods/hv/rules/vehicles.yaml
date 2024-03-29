@@ -6,14 +6,14 @@ TANK3:
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: Assault Tank
+		Name: actor-tank3.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~factory.yi
 		Queue: Tank
-		Description: Main Battle Tank.\n  Strong vs Vehicles\n  Weak vs Pods
+		Description: actor-tank3.description
 	Mobile:
 		TurnSpeed: 25
 		Speed: 95
@@ -59,11 +59,11 @@ AATANK:
 		Queue: Tank
 		BuildPaletteOrder: 20
 		Prerequisites: ~factory.sc
-		Description: Mobile tank with AA missiles.\n  Strong vs Aircraft\n  Cannot attack grounds units.
+		Description: actor-aatank.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Mobile AA
+		Name: actor-aatank.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -96,7 +96,7 @@ AATANK2:
 	Inherits: AATANK
 	Buildable:
 		Prerequisites: ~factory.yi
-		Description: Mobile tank with lightning gun.\n  Strong vs Aircraft\n  Cannot attack grounds units.
+		Description: actor-aatank2-description
 	Armament:
 		Weapon: LightningBoltLight
 		Recoil: 125
@@ -110,12 +110,12 @@ TRANSPRT:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Transport Tank
+		Name: actor-transprt.name
 	Buildable:
 		Queue: Tank
 		Prerequisites: factory, module
 		BuildPaletteOrder: 40
-		Description: Can transport pods.
+		Description: actor-transprt.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -152,12 +152,12 @@ ARTIL:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Artillery
+		Name: actor-artil.name
 	Buildable:
 		Queue: Tank
 		Prerequisites: factory, radar
 		BuildPaletteOrder: 50
-		Description: Mobile long range weapon.\n  Strong vs Pods and Buildings\n  Weak vs Tanks
+		Description: actor-artil.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -199,14 +199,14 @@ RADARTANK:
 		Queue: Utility
 		BuildPaletteOrder: 40
 		Prerequisites: radar
-		Description: Can detect cloaked units.n\nRange extends when deployed.\n  Unarmed
+		Description: actor-radartank.description
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Reconnaissance Tank
+		Name: actor-radartank.name
 		RequiresCondition: !deployed
 	Tooltip@DEPLOYED:
-		Name: Reconnaissance Tank (deployed)
+		Name: actor-radartank.deployed--name
 		RequiresCondition: deployed
 	Health:
 		HP: 50000
@@ -265,13 +265,13 @@ TANK16:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Mobile Repair Vehicle
-		GenericName: Tank
+		Name: actor-tank16.name
+		GenericName: actor-tank16.generic-name
 	Buildable:
 		Queue: Utility
 		Prerequisites: tradplat
 		BuildPaletteOrder: 50
-		Description: Repairs nearby tanks.\n  Unarmed
+		Description: actor-tank16.description
 	Armament:
 		Weapon: RepairBeam
 		Cursor: repair
@@ -309,11 +309,11 @@ TANK6:
 		Queue: Utility
 		BuildPaletteOrder: 60
 		Prerequisites: tradplat
-		Description: Lays smart mines\nthat explode on enemy units\nwhile avoiding ally units.  Can detect enemy mines.\n  Unarmed
+		Description: actor-tank6.description
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Minelayer
+		Name: actor-tank6.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -360,13 +360,13 @@ TANK5:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Railgun Tank
-		GenericName: Tank
+		Name: actor-tank5.name
+		GenericName: actor-tank5.generic-name
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter
 		BuildPaletteOrder: 70
-		Description: A powerful tank which shoots laser.\n  Strong vs Pods, Vehicles and Buildings
+		Description: actor-tank5.description
 	Armament:
 		Weapon: railgun
 		LocalOffset: 325,400,0
@@ -397,12 +397,12 @@ TANK10:
 		Queue: Tank
 		BuildPaletteOrder: 70
 		Prerequisites: ~factory.yi, techcenter
-		Description: Fires electric discharges.\n  Strong vs Pods, Vehicles and Buildings
+		Description: actor-tank10.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Lightning Tank
-		GenericName: Tank
+		Name: actor-tank10.name
+		GenericName: actor-tank10.generic-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -435,11 +435,11 @@ TANK7:
 		Queue: Tank
 		BuildPaletteOrder: 80
 		Prerequisites: ~factory.yi, techcenter
-		Description: Cloaked missile tank.\n  Strong vs Vehicles and Buildings\n  Weak vs Pods
+		Description: actor-tank7.description
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Stealth Tank
+		Name: actor-tank7.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -482,13 +482,13 @@ TANK11:
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: Mercenary Tank
-		GenericName: Tank
+		Name: actor-tank11.name
+		GenericName: actor-tank11.generic-name
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 90
-		Description: Main battle tank.\n  Strong vs Vehicles\n  Weak vs Pods
+		Description: actor-tank11.description
 	Armament:
 		Weapon: ^Cannon
 		MuzzleSequence: muzzle
@@ -518,7 +518,7 @@ TANK12:
 	Inherits: TANK11
 	Buildable:
 		BuildPaletteOrder: 90
-		Description: Double barreled tank.\n  Strong vs Vehicles\n  Weak vs Pods
+		Description: actor-tank12-description
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
@@ -536,13 +536,13 @@ TANK8:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Countermeasure Tank
-		GenericName: ECM Tank
+		Name: actor-tank8.name
+		GenericName: actor-tank8.generic-name
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter, tradplat
 		BuildPaletteOrder: 60
-		Description: Disrupts satellite video links\nand obscures the battlefield.\n  Disables units for a brief moment.
+		Description: actor-tank8.description
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -579,14 +579,14 @@ ARTIL3:
 	Valued:
 		Cost: 1750
 	Tooltip:
-		Name: Dual Artillery
+		Name: actor-artil3.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 100
 		Prerequisites: ~disabled
-		Description: Double barreled artillery tank.\n  Strong vs Pods, Vehicles and Buildings
+		Description: actor-artil3.description
 	Health:
 		HP: 35000
 	Armor:
@@ -625,12 +625,12 @@ BUILDER:
 	Buildable:
 		Queue: Utility
 		BuildPaletteOrder: 10
-		Description: Deploys into outpost which\ngrants additional build radius\nand allows base reconstruction.\n  Unarmed
+		Description: actor-builder.description
 		Prerequisites: ~structures.yi
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Builder
+		Name: actor-builder.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -676,7 +676,7 @@ BUILDER2:
 COLLECTOR:
 	Inherits: ^Vehicle
 	Tooltip:
-		Name: Collector
+		Name: actor-collector-name
 	Health:
 		HP: 10000
 	Armor:
@@ -703,12 +703,12 @@ MINER:
 	Buildable:
 		Queue: Utility
 		BuildPaletteOrder: 20
-		Description: Builds mining facilities.\n  Unarmed
+		Description: actor-miner.description
 		Prerequisites: storage
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Miner
+		Name: actor-miner.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -753,13 +753,13 @@ MISSILETANK:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: Missile Tank
-		GenericName: Tank
+		Name: actor-missiletank.name
+		GenericName: actor-missiletank.generic-name
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, radar, techcenter
 		BuildPaletteOrder: 80
-		Description: A tank which shoots missiles. \n  Strong vs Vehicles and Buildings\n  Weak vs Pods
+		Description: actor-missiletank.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -793,11 +793,11 @@ TANK15:
 		Queue: Tank
 		BuildPaletteOrder: 60
 		Prerequisites: ~factory.yi, radar, tradplat
-		Description: Jams incoming missiles.\n  Temporarily changes allegiance of targeted units.
+		Description: actor-tank15.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Hacker Tank
+		Name: actor-tank15.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -825,13 +825,13 @@ TANK1:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Ramp Buggy
-		GenericName: Buggy
+		Name: actor-tank1.name
+		GenericName: actor-tank1.generic-name
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: module, ~factory.sc
 		Queue: Tank
-		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
+		Description: actor-tank1.description
 	Turreted:
 		TurnSpeed: 40
 		Offset: 0,0,150
@@ -866,13 +866,13 @@ TANK2:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Gatling Bike
-		GenericName: Bike
+		Name: actor-tank2.name
+		GenericName: actor-tank2.generic-name
 	Buildable:
 		Queue: Tank
 		Prerequisites: module, ~factory.yi
 		BuildPaletteOrder: 30
-		Description: Fires a machine gun. \n  Strong vs Pods\n  Weak vs Tanks, Buildings
+		Description: actor-tank2.description
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
@@ -903,11 +903,11 @@ TANKER1:
 	Inherits@Selection: ^SelectableEconomicUnit
 	Buildable:
 		Prerequisites: ~disabled
-		Description: Transports resources to the headquarter.\n  Unarmed
+		Description: actor-tanker1.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Loaded Resource Transporter
+		Name: actor-tanker1.name
 	Health:
 		HP: 15000
 	Armor:
@@ -933,9 +933,9 @@ TANKER1:
 TANKER2:
 	Inherits: TANKER1
 	Buildable:
-		Description: Collects resources at mining towers.\n  Unarmed
+		Description: actor-tanker2.description
 	Tooltip:
-		Name: Empty Resource Transporter
+		Name: actor-tanker2.name
 	-SpawnActorOnDeath:
 	RenderSprites:
 		Image: tanker2
@@ -949,11 +949,11 @@ TANK13:
 		Queue: Utility
 		BuildPaletteOrder: 30
 		Prerequisites: storage
-		Description: Moves cash to other players.\n  Unarmed
+		Description: actor-tank13.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Money Transport
+		Name: actor-tank13.name
 	Health:
 		HP: 11000
 	Armor:

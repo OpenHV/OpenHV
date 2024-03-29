@@ -9,11 +9,11 @@ PLANE1:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.yi
-		Description: Attack Ship armed with\na large chain gun.\n  Strong vs Pods, Buildings and Aircraft\n  Weak vs Tanks
+		Description: actor-plane1.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Gun Ship
+		Name: actor-plane1.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -70,11 +70,11 @@ PLANE2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: techcenter, ~starport.yi
-		Description: Fast Attack Ship\n  Strong vs Buildings\n  Can't attack Water, Ground or Air Units
+		Description: actor-plane2.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Speeder
+		Name: actor-plane2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -139,12 +139,12 @@ COPTER:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Attack Helicopter
+		Name: actor-copter.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.sc
-		Description: Small Helicopter Gunship\n  Strong vs Pods, Buildings and Aircraft\n  Weak vs Tanks
+		Description: actor-copter.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -184,12 +184,12 @@ SAUCER:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Scout Saucer
+		Name: actor-saucer.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
 		Prerequisites: ~starport.yi
-		Description: Reconnaissance air unit.\n  Unarmed
+		Description: actor-saucer.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -224,12 +224,12 @@ BANSHEE:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Banshee
+		Name: actor-banshee.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
 		Prerequisites: techcenter, ~starport.sc
-		Description: Heavy Helicopter Gunship\n  Strong vs Buildings\n  Can't attack Water, Ground or Air Units
+		Description: actor-banshee.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -275,12 +275,12 @@ COPTER2:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Transport Helicopter
+		Name: actor-copter2.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
-		Description: Vehicle Transport Helicopter.\n  Can load pods\n  and lift one vehicle.
+		Description: actor-copter2.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -337,7 +337,7 @@ COPTER2:
 COPTER2.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Crashing Transport Helicopter
+		Name: actor-copter2-husk-name
 	Aircraft:
 		TurnSpeed: 24
 		Speed: 86
@@ -367,12 +367,12 @@ BALLOON:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Scout Balloon
+		Name: actor-balloon.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
 		Prerequisites: ~starport.sc
-		Description: Reconnaissance air unit.\n Unarmed
+		Description: actor-balloon.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -409,12 +409,12 @@ DROPSHIP:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Heavy Transport Dropship
+		Name: actor-dropship.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.yi
-		Description: Vehicle Transport Shuttle.\n  Can load pods\n  and lift one vehicle.
+		Description: actor-dropship.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -475,7 +475,7 @@ DROPSHIP:
 DROPSHIP.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Crashing Transport Dropship
+		Name: actor-dropship-husk-name
 	Aircraft:
 		TurnSpeed: 24
 		Speed: 86
@@ -504,7 +504,7 @@ DRONE:
 	Valued:
 		Cost: 50
 	Tooltip:
-		Name: Drone
+		Name: actor-drone-name
 	Health:
 		HP: 5000
 	Armor:
@@ -563,7 +563,7 @@ LANDEDPOD:
 	Health:
 		HP: 10000
 	Tooltip:
-		Name: Landed Pod
+		Name: actor-landedpod-name
 	HitShape:
 	Armor:
 		Type: Heavy
@@ -588,7 +588,7 @@ BOMBER1:
 		Offset: 356, 256, 0
 		ZOffset: -256
 	Tooltip:
-		Name: Athmospheric Bomber
+		Name: actor-bomber1-name
 	Health:
 		HP: 2000
 	Armor:
@@ -636,7 +636,7 @@ CARGOSHIP:
 		TurnToLand: False
 	Interactable:
 	Tooltip:
-		Name: Supply Aircraft
+		Name: actor-cargoship-name
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
@@ -673,7 +673,7 @@ AIRLIFTER:
 		IdleBehavior: LeaveMap
 		TurnToLand: False
 	Tooltip:
-		Name: Transport Aircraft
+		Name: actor-airlifter-name
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:

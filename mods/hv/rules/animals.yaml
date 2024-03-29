@@ -5,8 +5,8 @@ BEAST:
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Critter
-		GenericName: Beast
+		Name: actor-beast.name
+		GenericName: actor-beast.generic-name
 	Health:
 		HP: 10000
 	Armor:
@@ -53,7 +53,7 @@ CROW:
 	Health:
 		HP: 100
 	Tooltip:
-		Name: Crows
+		Name: actor-crow-name
 	Aircraft:
 		CruiseAltitude: 2560
 		Repulsable: false
@@ -79,17 +79,17 @@ CROW:
 CROW2:
 	Inherits: CROW
 	Tooltip:
-		Name: Crow
+		Name: actor-crow2-name
 
 GULL:
 	Inherits: CROW
 	Tooltip:
-		Name: Seagulls
+		Name: actor-gull-name
 
 GULL2:
 	Inherits: CROW
 	Tooltip:
-		Name: Seagull
+		Name: actor-gull2-name
 
 SEED:
 	Inherits: BEAST
@@ -114,7 +114,7 @@ SEAMNSTR:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Sea Monster
+		Name: actor-seamnstr-name
 	Health:
 		HP: 70000
 	Armor:
@@ -145,7 +145,7 @@ SEAMNSTR:
 WORM:
 	Inherits: BEAST
 	Tooltip:
-		GenericName: Worm
+		GenericName: actor-worm-generic-name
 	Mobile:
 		Speed: 100
 	Wanders:
@@ -163,7 +163,7 @@ FLYINGMONSTER:
 	Health:
 		HP: 50000
 	Tooltip:
-		Name: Flying monster
+		Name: actor-flyingmonster-name
 	Aircraft:
 		CruiseAltitude: 2560
 		Repulsable: false

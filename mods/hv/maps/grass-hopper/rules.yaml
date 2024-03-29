@@ -16,7 +16,7 @@ World:
 	-StartingUnits@ScoutSC:
 	StartingUnits@CubeHunter:
 		Class: none
-		ClassName: Collector
+		ClassName: actor-world-startingunits-cubehunter-class-name
 		Factions: yi, sc
 		BaseActor: collector
 	MapBuildRadius:

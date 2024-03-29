@@ -282,3 +282,4 @@ Actors:
 		Location: 60,46
 
 Rules: rules.yaml
+Translations: en.ftl

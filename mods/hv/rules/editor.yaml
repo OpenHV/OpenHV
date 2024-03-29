@@ -3,7 +3,7 @@
 MpSpawn:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: Multiplayer spawn point
+		Name: actor-mpspawn-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -67,7 +67,7 @@ DROPSHIP.colorpicker:
 LIGHT:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: Invisible Light Source
+		Name: actor-light-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -91,7 +91,7 @@ LIGHT:
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: Area Reveal Camera
+		Name: actor-camera-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
@@ -110,7 +110,7 @@ CAMERA:
 Fountain:
 	Interactable:
 	EditorOnlyTooltip:
-		Name: Water Source
+		Name: actor-fountain-name
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false

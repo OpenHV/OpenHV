@@ -79,8 +79,8 @@ GOLDBALL:
 	Interactable:
 	HiddenUnderFog:
 	Tooltip:
-		Name: Refined Resources
-		GenericName: Gold
+		Name: actor-goldball.name
+		GenericName: actor-goldball.generic-name
 		ShowOwnerRow: false
 	Collectible:
 		Duration: 6000

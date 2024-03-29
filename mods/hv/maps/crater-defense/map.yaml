@@ -60,7 +60,7 @@ Actors:
 
 Rules: rules.yaml
 
-Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl
+Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl, en.ftl
 
 Sequences: sequences.yaml
 

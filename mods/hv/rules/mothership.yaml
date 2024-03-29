@@ -2,6 +2,8 @@
 
 MOTHER2C:
 	Inherits: ^Helicopter
+	Tooltip:
+		Name: actor-mother2c-name
 	Health:
 		HP: 800000
 	Aircraft:
@@ -21,7 +23,7 @@ MOTHER:
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^6x8Shape
 	Tooltip:
-		Name: Mothership Base
+		Name: actor-mother-name
 	Building:
 		Footprint: ====== =xxxx= xxxxxx xxxxxx =xx=xx =xx=x= =xx=== ==x===
 		Dimensions: 6,8

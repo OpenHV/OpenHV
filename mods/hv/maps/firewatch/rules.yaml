@@ -2,7 +2,7 @@
 
 BASE2:
 	Tooltip:
-		Name: Fire Department
+		Name: actor-base2-name
 	Production:
 		Produces: Utility
 	Exit@South1:
@@ -34,13 +34,13 @@ WATERTANK:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Fire Fighting Tank
-		GenericName: Tank
+		Name: actor-watertank.name
+		GenericName: actor-watertank.generic-name
 	Buildable:
 		Queue: Utility
 		Prerequisites: ~base
 		BuildPaletteOrder: 200
-		Description: Armored Fire Fighting Vehicle
+		Description: actor-watertank.description
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
@@ -76,13 +76,13 @@ FIRETRUCK:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Fire Fighting Truck
-		GenericName: Truck
+		Name: actor-firetruck.name
+		GenericName: actor-firetruck.generic-name
 	Buildable:
 		Queue: Utility
 		Prerequisites: ~base
 		BuildPaletteOrder: 100
-		Description: Civilian Fire Engine
+		Description: actor-firetruck.description
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
@@ -120,12 +120,12 @@ FIREFIGHTERPOD:
 	Buildable:
 		Queue: Utility
 		Prerequisites: ~base
-		Description: Volunteer firefighter pod on duty.
+		Description: actor-firefighterpod.description
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: Firefighter Pod
+		Name: actor-firefighterpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Armament@Primary:

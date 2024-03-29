@@ -3,7 +3,7 @@
 LANDMINE:
 	Inherits: ^Mine
 	Tooltip:
-		Name: AI Mine
+		Name: actor-landmine-name
 	RenderSprites:
 		Image: mine1
 	WithRandomSpriteBody:
@@ -15,7 +15,7 @@ LANDMINE:
 WATERMINE:
 	Inherits: ^Mine
 	Tooltip:
-		Name: AI Water Mine
+		Name: actor-watermine-name
 	Cloak:
 		DetectionTypes: WaterMine
 	WithSpriteBody:
