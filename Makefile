@@ -256,7 +256,7 @@ ifneq ("$(BIT_FILES)","")
 
 	@echo "Recompressing sprite PNGs"
 	@for SPRITE in $(BIT_FILES); do \
-		zopflipng --keepcolortype --keepchunks=tEXt -y -m $${SPRITE} $${SPRITE}; \
+		zopflipng --keepchunks=tEXt -y -m $${SPRITE} $${SPRITE}; \
 	done
 endif
 
@@ -264,7 +264,7 @@ maps:
 ifneq ("$(PREVIEW_FILES)","")
 	@echo "Recompressing map preview PNGs"
 	@for SPRITE in $(PREVIEW_FILES); do \
-		zopflipng --keepcolortype -y -m $${SPRITE} $${SPRITE}; \
+		zopflipng -y -m $${SPRITE} $${SPRITE}; \
 	done
 endif
 
