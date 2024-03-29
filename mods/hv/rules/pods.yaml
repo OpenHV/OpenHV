@@ -141,6 +141,8 @@ SNIPERPOD:
 		UncloakSound:
 		UncloakOn: Attack, Unload, Move
 		IsPlayerPalette: true
+		CloakedPalette: cloak
+		CloakStyle: Palette
 
 FLAMEPOD:
 	Inherits: ^Pod

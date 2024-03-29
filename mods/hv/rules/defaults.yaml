@@ -57,6 +57,8 @@
 		CloakDelay: 90
 		IsPlayerPalette: true
 		UncloakOn: Attack, Unload, Demolish, Damage, Heal
+		CloakedPalette: cloak
+		CloakStyle: Palette
 	ExternalCondition@CrateCloak:
 		Condition: crate-cloak
 
@@ -921,8 +923,9 @@
 		CloakedCondition: underwater
 		CloakSound: submarine_out_szegvari.wav
 		UncloakSound: submarine_in_szegvari.wav
-		Palette: shadow
+		CloakedPalette: shadow
 		PauseOnCondition: cloak-force-disabled
+		CloakStyle: Palette
 	GrantConditionOnDamageState@Uncloak:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical, Heavy
@@ -1001,9 +1004,9 @@
 		EmptyWeapon: UnitExplodeSmall
 	Cloak:
 		UncloakOn: Attack
-		Palette:
 		DetectionTypes: Mine
 		InitialDelay: 0
+		CloakStyle: None
 	Targetable:
 		TargetTypes: Ground, Mine
 	Immobile:

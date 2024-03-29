@@ -468,6 +468,8 @@ TANK7:
 		UncloakSound: stealth_off_humanoide9000.wav
 		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled || ecm-disabled
+		CloakedPalette: cloak
+		CloakStyle: Palette
 	GrantConditionOnDamageState@UNCLOAK:
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical

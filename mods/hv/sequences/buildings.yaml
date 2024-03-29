@@ -2310,7 +2310,7 @@ orepurifier:
 			1:
 				Filename: bits/orepurifier-shadow.png
 				ZOffset: 1768
-				Offset: 13,24			
+				Offset: 13,24
 	make:
 		Filename: bits/build.png
 		Length: 39
