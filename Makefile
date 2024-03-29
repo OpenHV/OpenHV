@@ -256,7 +256,7 @@ ifneq ("$(BIT_FILES)","")
 
 	@echo "Recompressing sprite PNGs"
 	@for SPRITE in $(BIT_FILES); do \
-		zopflipng --keepchunks=tEXt -y -m $${SPRITE} $${SPRITE}; \
+		zopflipng --keepcolortype --keepchunks=tEXt -y -m $${SPRITE} $${SPRITE}; \
 	done
 endif
 
