@@ -321,22 +321,31 @@ actor-hgate-encyclopedia = Gates can be placed onto or next to walls which will 
 
 actor-reconstructor =
    .name = Nano Reconstructor
+   .captured-desc = Provides self-healing to units when powered.
+   .capturable-desc = Capture and provide power to enable self-healing for units.
    .encyclopedia = Both machine and human operator can be healed and restored using nano technology. This advanced form of medicine is only available on some planets which also made it affordable due to universal healthcare plans for the local population. Capture a facilty to grant access to your troops. Lasts only as long as the facility is in possession.
 
 actor-extractor =
    .name = Resource Extractor
+   .captured-desc = Provides additional resources.
+   .capturable-desc = Capture and provide additional resources.
    .encyclopedia = Civilians in the area might also try to harvest the planet's resources. Capture the facility to keep it running but force all the profits onto the company's account.
 
 actor-comlink =
    .name = Communication Link
+   .captured-desc = Provides battlefield intelligence.
+   .capturable-desc = Capture to gain intelligence support.
    .encyclopedia = On planets with a satellite network civilian communication arrays can be captured and used to spy on your opponent anywhere on the battlefield for as long as the satellite stays in range. It requires power and takes time to reposition again.
 
 actor-watchtower =
    .name = Watch Tower
+   .captured-desc = Provides additional vision.
+   .capturable-desc = Move units near to connect.
    .encyclopedia = A larger building equipped with sensors to surveill the area. It does not require an engineer to capture, but only some forces stationed next to it in order to gain access.
 
 actor-dropzone =
    .name = Drop Zone
+   .description = Airborne reinforcement pad
    .encyclopedia = Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
 
 actor-flagpost =

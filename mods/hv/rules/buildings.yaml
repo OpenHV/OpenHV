@@ -2495,10 +2495,10 @@ RECONSTRUCTOR:
 	OwnerLostAction:
 		Action: ChangeOwner
 	TooltipDescription@Allies:
-		Description: Provides self-healing to units when powered.
+		Description: actor-reconstructor.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@Others:
-		Description: Capture and provide power to enable self-healing for units.
+		Description: actor-reconstructor.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
@@ -2522,10 +2522,10 @@ EXTRACTOR:
 		Order: 320
 		Category: Buildings
 	TooltipDescription@Allies:
-		Description: Provides additional resources.
+		Description: actor-extractor.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@Others:
-		Description: Capture and provide additional resources.
+		Description: actor-extractor.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	ProvidesPrerequisite@BuildingName:
 	Building:
@@ -2575,10 +2575,10 @@ COMLINK:
 		Order: 330
 		Category: Buildings
 	TooltipDescription@Allies:
-		Description: Provides battlefield intelligence.
+		Description: actor-comlink.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@Others:
-		Description: Capture to gain intelligence support.
+		Description: actor-comlink.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	SpawnActorPower:
 		Icon: radar
@@ -2648,10 +2648,10 @@ WATCHTOWER:
 		Order: 340
 		Category: Buildings
 	TooltipDescription@Allies:
-		Description: Provides additional vision.
+		Description: actor-watchtower.captured-desc
 		ValidRelationships: Ally
 	TooltipDescription@Others:
-		Description: Move units near to connect.
+		Description: actor-watchtower.capturable-desc
 		ValidRelationships: Neutral, Enemy
 	Building:
 		Footprint: == xx
@@ -2711,7 +2711,7 @@ DROPZONE:
 		Order: 350
 		Category: Buildings
 	TooltipDescription:
-		Description: Airborne reinforcement pad
+		Description: actor-dropzone.description
 	Building:
 		Footprint: x+x +++ x+x
 		Dimensions: 3,3
