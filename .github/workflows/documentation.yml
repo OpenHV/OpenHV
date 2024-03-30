@@ -17,12 +17,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.inputs.tag }}
 
       - name: Install .NET 6
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
@@ -31,7 +31,7 @@ jobs:
           make all
 
       - name: Clone Wiki
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: openhv/openhv.wiki
           token: ${{ secrets.DOCS_TOKEN }}
@@ -61,12 +61,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.inputs.tag }}
 
       - name: Install .NET 6
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
@@ -75,7 +75,7 @@ jobs:
           make all
 
       - name: Clone OpenHV docs
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: openhv/docs
           token: ${{ secrets.DOCS_TOKEN }}
