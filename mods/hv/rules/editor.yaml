@@ -50,6 +50,7 @@ EditorWorld:
 	EditorAutoTiler:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
+	MarkerLayerOverlay:
 
 EditorPlayer:
 	Inherits: ^BasePlayer

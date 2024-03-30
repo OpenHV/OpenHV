@@ -4,11 +4,6 @@ label-new-map-bg-tile = Background:
 label-new-map-bg-width = Width:
 label-new-map-bg-height = Height:
 button-new-map-bg-create = Create
-button-new-map-bg-cancel = Cancel
-
-label-save-map-panel-title =
-   .label = Save Map
-   .label = Title:
 
 label-save-map-panel-author = Author:
 label-save-map-panel-visibility = Visibility:
@@ -16,42 +11,12 @@ dropdownbutton-save-map-panel-visibility-dropdown = Map Visibility
 label-save-map-panel-directory = Directory:
 label-save-map-panel-filename = Filename:
 button-save-map-panel = Save
-button-save-map-panel-back = Cancel
 label-actor-edit-panel-id = ID
 button-container-delete = Delete
-button-container-cancel = Cancel
 button-container-ok = OK
 label-tiles-bg-search = Search:
-label-tiles-bg-categories = Filter:
 label-actors-bg-search = Search:
-label-actors-bg-categories = Filter:
 label-actors-bg-owners = Owner:
-
-button-map-editor-tab-container-tiles =
-   .label = Tiles
-   .tooltip = Tiles
-
-button-map-editor-tab-container-overlays =
-   .label = Overlays
-   .tooltip = Overlays
-
-button-map-editor-tab-container-actors =
-   .label = Actors
-   .tooltip = Actors
-
-button-map-editor-tab-container-history =
-   .label = History
-   .tooltip = History
-
-button-editor-world-root-options =
-   .label = Menu
-   .tooltip = Menu
-
-button-editor-world-root-copypaste =
-   .label = Copy/Paste
-   .tooltip = Copy
-
-dropdownbutton-editor-world-root-copyfilter-button = Copy Filters
 
 button-editor-world-root-undo =
    .label = Undo
@@ -303,28 +268,11 @@ button-server-lobby-disconnect = Leave Game
 
 ## main-menu.yaml
 label-main-menu-mainmenu-title = OpenHV
-button-main-menu-singleplayer = Singleplayer
-button-main-menu-multiplayer = Multiplayer
-button-main-menu-settings = Settings
-button-main-menu-extras = Extras
 button-main-menu-encyclopedia = Encyclopedia
-button-main-menu-quit = Quit
-label-singleplayer-menu-title = Singleplayer
 button-singleplayer-menu-skirmish = Skirmish
-button-singleplayer-menu-missions = Missions
 button-singleplayer-menu-load = Load
-button-singleplayer-menu-back = Back
-label-extras-menu-title = Extras
 button-extras-menu-replays = Replays
-button-extras-menu-music = Music
-button-extras-menu-map-editor = Map Editor
 button-extras-menu-assetbrowser = Asset Browser
-button-extras-menu-credits = Credits
-button-extras-menu-back = Back
-label-map-editor-menu-title = Map Editor
-button-map-editor-menu-new = New Map
-button-map-editor-menu-load = Load Map
-button-map-editor-menu-back = Back
 dropdownbutton-news-bg-button = Subspace Transmissions
 label-update-notice-a = You are running an outdated version of OpenHV.
 label-update-notice-b = Download the latest version from www.github.com
@@ -367,14 +315,12 @@ checkbox-cursordouble-container = Increase Cursor Size
 button-mainmenu-introduction-prompt-continue = Continue
 
 ## multiplayer-browser.yaml
-label-multiplayer-panel-title = Multiplayer
 image-multiplayer-panel-password-protected-tooltip = Requires Password
 image-multiplayer-panel-requires-authentication-tooltip = Requires OpenRA forum account
 button-selected-server-join = Join
 dropdownbutton-multiplayer-panel-filters = Filter Games
 button-multiplayer-panel-directconnect = Direct IP
 button-multiplayer-panel-create = Create
-button-multiplayer-panel-back = Back
 
 ## settings-advanced.yaml
 label-network-section-header = Advanced

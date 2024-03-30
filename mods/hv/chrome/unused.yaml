@@ -10,7 +10,5 @@ Label@PROMPT_TEXT_B:
 	Text: label-mainmenu-system-info-prompt-text-b
 Checkbox@SYSINFO_CHECKBOX:
 	Text: checkbox-mainmenu-system-info-prompt-sysinfo
-Button@CONTINUE_BUTTON:
-	Text: button-mainmenu-system-info-prompt-continue
 Button@CONTENT_BUTTON:
 	Text: button-main-menu-content

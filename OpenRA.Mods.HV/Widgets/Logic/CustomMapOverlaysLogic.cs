@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2023, 2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using OpenRA.Graphics;
 using OpenRA.Mods.Common.Lint;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
@@ -19,7 +20,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
 {
-	[ChromeLogicArgsHotkeys("ToggleGridOverlayKey", "ToggleBuildableOverlayKey", "ToggleTerrainTypeOverlayKey")]
+	[ChromeLogicArgsHotkeys("ToggleGridOverlayKey", "ToggleBuildableOverlayKey", "ToggleMarkerOverlayKey", "ToggleTerrainTypeOverlayKey")]
 	public class CustomMapOverlaysLogic : ChromeLogic
 	{
 		[Flags]
@@ -28,19 +29,22 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			None = 0,
 			Grid = 1,
 			Buildable = 2,
-			Type = 4,
+			Marker = 4,
+			Type = 8,
 		}
 
 		readonly TerrainGeometryOverlay terrainGeometryTrait;
 		readonly BuildableTerrainOverlay buildableTerrainTrait;
+		readonly MarkerLayerOverlay markerLayerTrait;
 		readonly TerrainTypeOverlay terrainTypeTrait;
 
 		[ObjectCreator.UseCtor]
-		public CustomMapOverlaysLogic(Widget widget, World world, ModData modData, Dictionary<string, MiniYaml> logicArgs)
+		public CustomMapOverlaysLogic(Widget widget, World world, ModData modData, WorldRenderer worldRenderer, Dictionary<string, MiniYaml> logicArgs)
 		{
 			terrainGeometryTrait = world.WorldActor.Trait<TerrainGeometryOverlay>();
 			buildableTerrainTrait = world.WorldActor.Trait<BuildableTerrainOverlay>();
 			terrainTypeTrait = world.WorldActor.Trait<TerrainTypeOverlay>();
+			markerLayerTrait = world.WorldActor.Trait<MarkerLayerOverlay>();
 
 			var toggleGridKey = new HotkeyReference();
 			if (logicArgs.TryGetValue("ToggleGridOverlayKey", out var yaml))
@@ -49,6 +53,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var toggleBuildableKey = new HotkeyReference();
 			if (logicArgs.TryGetValue("ToggleBuildableOverlayKey", out yaml))
 				toggleBuildableKey = modData.Hotkeys[yaml.Value];
+
+			var toggleMarkerKey = new HotkeyReference();
+			if (logicArgs.TryGetValue("ToggleMarkerOverlayKey", out yaml))
+				toggleMarkerKey = modData.Hotkeys[yaml.Value];
 
 			var toggleTerrainTypeKey = new HotkeyReference();
 			if (logicArgs.TryGetValue("ToggleTerrainTypeOverlayKey", out yaml))
@@ -69,6 +77,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				if (toggleBuildableKey.IsActivatedBy(e))
 				{
 					buildableTerrainTrait.Enabled ^= true;
+					return true;
+				}
+
+				if (toggleMarkerKey.IsActivatedBy(e))
+				{
+					markerLayerTrait.Enabled ^= true;
 					return true;
 				}
 
@@ -99,7 +113,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var categoriesPanel = Ui.LoadWidget("OVERLAY_PANEL", null, new WidgetArgs());
 			var categoryTemplate = categoriesPanel.Get<CheckboxWidget>("CATEGORY_TEMPLATE");
 
-			MapOverlays[] allCategories = { MapOverlays.Grid, MapOverlays.Buildable, MapOverlays.Type };
+			MapOverlays[] allCategories = { MapOverlays.Grid, MapOverlays.Buildable, MapOverlays.Marker, MapOverlays.Type };
 			foreach (var cat in allCategories)
 			{
 				var category = (CheckboxWidget)categoryTemplate.Clone();
@@ -115,6 +129,11 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				{
 					category.IsChecked = () => buildableTerrainTrait.Enabled;
 					category.OnClick = () => buildableTerrainTrait.Enabled ^= true;
+				}
+				else if (cat.HasFlag(MapOverlays.Marker))
+				{
+					category.IsChecked = () => markerLayerTrait.Enabled;
+					category.OnClick = () => markerLayerTrait.Enabled ^= true;
 				}
 				else if (cat.HasFlag(MapOverlays.Type))
 				{

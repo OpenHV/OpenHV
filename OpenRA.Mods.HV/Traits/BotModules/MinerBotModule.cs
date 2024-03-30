@@ -53,12 +53,15 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new MinerBotModule(init.Self, this); }
 	}
 
-	public class MinerBotModule : ConditionalTrait<MinerBotModuleInfo>, IBotTick
+	public class MinerBotModule : ConditionalTrait<MinerBotModuleInfo>, IBotTick, INotifyActorDisposing
 	{
 		readonly World world;
 		readonly Player player;
 
 		readonly Func<Actor, bool> unitCannotBeOrdered;
+
+		readonly ActorIndex.OwnerAndNamesAndTrait<Mobile> mobileMiners;
+		readonly ActorIndex.OwnerAndNamesAndTrait<Building> towerBuildings;
 
 		int scanForIdleMinersTicks;
 
@@ -80,7 +83,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		readonly Dictionary<Actor, MinerTraitWrapper> miners = new();
+		readonly Dictionary<Actor, MinerTraitWrapper> minerTraits = new();
 
 		public MinerBotModule(Actor self, MinerBotModuleInfo info)
 			: base(info)
@@ -89,6 +92,9 @@ namespace OpenRA.Mods.HV.Traits
 			player = self.Owner;
 
 			unitCannotBeOrdered = a => a.Owner != self.Owner || a.IsDead || !a.IsInWorld;
+
+			mobileMiners = new ActorIndex.OwnerAndNamesAndTrait<Mobile>(world, info.DeployableActorTypes, player);
+			towerBuildings = new ActorIndex.OwnerAndNamesAndTrait<Building>(world, info.DeployedActorTypes, player);
 		}
 
 		protected override void Created(Actor self)
@@ -114,16 +120,13 @@ namespace OpenRA.Mods.HV.Traits
 
 			scanForIdleMinersTicks = Info.MinimumScanDelay;
 
-			var toRemove = miners.Keys.Where(unitCannotBeOrdered).ToList();
-			foreach (var a in toRemove)
-				miners.Remove(a);
+			foreach (var toRemove in minerTraits.Keys.Where(unitCannotBeOrdered).ToList())
+				minerTraits.Remove(toRemove);
 
-			// TODO: Look for a more performance friendly way to update this list
-			var newMiners = world.Actors.Where(a => Info.DeployableActorTypes.Contains(a.Info.Name) && a.Owner == player && !miners.ContainsKey(a));
-			foreach (var a in newMiners)
-				miners[a] = new MinerTraitWrapper(a);
+			foreach (var newMiner in world.Actors.Where(a => Info.DeployableActorTypes.Contains(a.Info.Name) && a.Owner == player && !minerTraits.ContainsKey(a)))
+				minerTraits[newMiner] = new MinerTraitWrapper(newMiner);
 
-			foreach (var miner in miners)
+			foreach (var miner in minerTraits)
 			{
 				if (!miner.Key.IsIdle)
 					continue;
@@ -141,24 +144,19 @@ namespace OpenRA.Mods.HV.Traits
 				bot.QueueOrder(new Order("DeployMiner", miner.Key, newSafeResourcePatch, false));
 			}
 
-			// Keep the economy running before starving out.
-			var queue = AIUtils.FindQueues(player, Info.VehiclesQueue).FirstOrDefault();
-			var minerInfo = AIUtils.GetInfoByCommonName(Info.DeployableActorTypes, player);
-			if (queue == null || !queue.CanBuild(minerInfo))
-				return;
-
 			var unitBuilder = requestUnitProduction.FirstOrDefault(Exts.IsTraitEnabled);
 			if (unitBuilder == null)
 				return;
 
-			var miningTowers = AIUtils.CountBuildingByCommonName(Info.DeployedActorTypes, player);
-			if (miningTowers < Info.MinimumDeployedActors && unitBuilder.RequestedProductionCount(bot, minerInfo.Name) == 0)
-				unitBuilder.RequestUnitProduction(bot, minerInfo.Name);
+			var miningTowers = AIUtils.CountActorByCommonName(towerBuildings);
+			var minerType = Info.DeployableActorTypes.Random(world.LocalRandom);
+			if (miningTowers < Info.MinimumDeployedActors && unitBuilder.RequestedProductionCount(bot, minerType) == 0)
+				unitBuilder.RequestUnitProduction(bot, minerType);
 		}
 
 		Target FindNextResource(Actor actor, MinerTraitWrapper miner)
 		{
-			var towerInfo = AIUtils.GetInfoByCommonName(Info.DeployedActorTypes, player);
+			var towerInfo = actor.Owner.World.Map.Rules.Actors.Single(a => a.Key == miner.Transforms.Info.IntoActor).Value;
 			var buildingInfo = towerInfo.TraitInfo<BuildingInfo>();
 			bool IsValidResource(CPos cell) =>
 				Info.DeployableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type)
@@ -175,6 +173,11 @@ namespace OpenRA.Mods.HV.Traits
 				return Target.Invalid;
 
 			return Target.FromCell(world, path[0]);
+		}
+
+		void INotifyActorDisposing.Disposing(Actor self)
+		{
+			mobileMiners.Dispose();
 		}
 	}
 }

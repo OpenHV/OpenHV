@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2021 The OpenHV Developers (see AUTHORS)
+ * Copyright 2007-2024 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -137,7 +137,7 @@ namespace OpenRA.Mods.HV.Traits
 	}
 
 	public class CustomBaseBuilderBotModule : ConditionalTrait<CustomBaseBuilderBotModuleInfo>, IGameSaveTraitData,
-		IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction
+		IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction, INotifyActorDisposing
 	{
 		public CPos GetRandomBaseCenter()
 		{
@@ -160,11 +160,19 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly List<CustomBaseBuilderQueueManager> builders = new();
 
+		readonly ActorIndex.OwnerAndNamesAndTrait<Building> refineryBuildings;
+		readonly ActorIndex.OwnerAndNamesAndTrait<Building> powerBuildings;
+		readonly ActorIndex.OwnerAndNamesAndTrait<Building> constructionYardBuildings;
+
 		public CustomBaseBuilderBotModule(Actor self, CustomBaseBuilderBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;
 			player = self.Owner;
+
+			refineryBuildings = new ActorIndex.OwnerAndNamesAndTrait<Building>(world, info.RefineryTypes, player);
+			powerBuildings = new ActorIndex.OwnerAndNamesAndTrait<Building>(world, info.PowerTypes, player);
+			constructionYardBuildings = new ActorIndex.OwnerAndNamesAndTrait<Building>(world, info.ConstructionYardTypes, player);
 		}
 
 		protected override void Created(Actor self)
@@ -193,7 +201,7 @@ namespace OpenRA.Mods.HV.Traits
 			DefenseCenter = newLocation;
 		}
 
-		bool IBotRequestPauseUnitProduction.PauseUnitProduction => !IsTraitDisabled && !HasAdequateRefineryCount;
+		bool IBotRequestPauseUnitProduction.PauseUnitProduction => !IsTraitDisabled && !HasAdequateRefineryCount();
 
 		void IBotTick.BotTick(IBot bot)
 		{
@@ -258,11 +266,11 @@ namespace OpenRA.Mods.HV.Traits
 		}
 
 		// Require at least one refinery, unless we can't build it.
-		public bool HasAdequateRefineryCount =>
-			Info.RefineryTypes.Count < 1 ||
-			AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= Info.MinimumRefineryCount ||
-			AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
-			AIUtils.CountBuildingByCommonName(Info.ConstructionYardTypes, player) == 0;
+		public bool HasAdequateRefineryCount() =>
+			Info.RefineryTypes.Count == 0 ||
+			AIUtils.CountActorByCommonName(refineryBuildings) >= Info.MinimumRefineryCount ||
+			AIUtils.CountActorByCommonName(powerBuildings) == 0 ||
+			AIUtils.CountActorByCommonName(constructionYardBuildings) == 0;
 
 		List<MiniYamlNode> IGameSaveTraitData.IssueTraitData(Actor self)
 		{
@@ -288,6 +296,13 @@ namespace OpenRA.Mods.HV.Traits
 			var defenseCenterNode = data.NodeWithKeyOrDefault("DefenseCenter");
 			if (defenseCenterNode != null)
 				DefenseCenter = FieldLoader.GetValue<CPos>("DefenseCenter", defenseCenterNode.Value.Value);
+		}
+
+		void INotifyActorDisposing.Disposing(Actor self)
+		{
+			refineryBuildings.Dispose();
+			powerBuildings.Dispose();
+			constructionYardBuildings.Dispose();
 		}
 	}
 }
