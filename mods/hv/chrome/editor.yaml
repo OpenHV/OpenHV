@@ -304,7 +304,7 @@ Container@EDITOR_WORLD_ROOT:
 			Width: 310
 			Height: WINDOW_BOTTOM - 458
 			Visible: false
-			Logic: LayerSelectorLogic
+			Logic: StackedLayerSelectorLogic
 			Children:
 				ScrollPanel@LAYERTEMPLATE_LIST:
 					X: 10
