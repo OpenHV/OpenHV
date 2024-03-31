@@ -385,7 +385,6 @@ actor-mpspawn-name = Multiplayer spawn point
 actor-light-name = Invisible Light Source
 actor-camera-name = Area Reveal Camera
 actor-fountain-name = Water Source
-actor-bridge-shadow = Shadow for bridges.
 
 ## Mothership
 actor-mother2c-name = Mothership

@@ -288,6 +288,53 @@ World:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	CustomTerrainDebugOverlay:
 	CustomTerrainLayer:
+	UndergroundResourceLayer:
+		ResourceTypes:
+			gold:
+				ResourceIndex: 1
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt
+				MaxDensity: 3
+			iron:
+				ResourceIndex: 2
+				TerrainType: Ore
+				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt
+				MaxDensity: 3
+			bridge-shadow-left:
+				ResourceIndex: 3
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
+			bridge-shadow-bottom-left:
+				ResourceIndex: 4
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
+			bridge-shadow-top-left:
+				ResourceIndex: 5
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
+			bridge-shadow-top:
+				ResourceIndex: 6
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
+			bridge-shadow-fadeout-right:
+				ResourceIndex: 7
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
+			bridge-shadow-fadeout-left:
+				ResourceIndex: 8
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
+			bridge-shadow-corner:
+				ResourceIndex: 9
+				TerrainType: BridgeShadow
+				MaxDensity: 1
+				AllowedTerrainTypes: *
 	ResourceRenderer:
 		ResourceTypes:
 			gold:
@@ -298,6 +345,29 @@ World:
 				Sequences: iron
 				Palette: effect
 				Name: Mineable Resource Deposit
+	BridgeShadowRenderer:
+		BridgeShadowTypes:
+			bridge-shadow-left:
+				Sequence: left
+				Palette: shadow-decoration
+			bridge-shadow-bottom-left:
+				Sequence: bottom-left
+				Palette: shadow-decoration
+			bridge-shadow-top-left:
+				Sequence: top-left
+				Palette: shadow-decoration
+			bridge-shadow-top:
+				Sequence: top
+				Palette: shadow-decoration
+			bridge-shadow-fadeout-right:
+				Sequence: fadeout-right
+				Palette: shadow-decoration
+			bridge-shadow-fadeout-left:
+				Sequence: fadeout-left
+				Palette: shadow-decoration
+			bridge-shadow-corner:
+				Sequence: corner
+				Palette: shadow-decoration
 	WithResourceAnimation:
 		Types: gold, iron
 		Ratio: 100
@@ -441,18 +511,6 @@ World:
 		PanelName: SKIRMISH_STATS
 	LoadWidgetAtGameStart:
 	ScriptTriggers:
-	UndergroundResourceLayer:
-		ResourceTypes:
-			gold:
-				ResourceIndex: 1
-				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt
-				MaxDensity: 3
-			iron:
-				ResourceIndex: 2
-				TerrainType: Ore
-				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Snow, Red Snow, Sand, Plant, Tech, Dirt
-				MaxDensity: 3
 	CubeSpawner:
 		CheckboxDisplayOrder: 1
 		ValidGround: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Dirt

@@ -34,7 +34,7 @@ namespace OpenRA.Mods.HV.Traits
 			public readonly string TerrainType = null;
 
 			[FieldLoader.Require]
-			[Desc("Terrain types that this resource can spawn on.")]
+			[Desc("Terrain types that this resource can spawn on.", "Use * for any.")]
 			public readonly HashSet<string> AllowedTerrainTypes = null;
 
 			[Desc("Maximum number of resource units allowed in a single cell.")]
@@ -159,6 +159,9 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (resourceType == null || !info.ResourceTypes.TryGetValue(resourceType, out var resourceInfo))
 				return false;
+
+			if (resourceInfo.AllowedTerrainTypes.First().Trim() == "*")
+				return true;
 
 			if (!resourceInfo.AllowedTerrainTypes.Contains(Map.GetTerrainInfo(cell).Type))
 				return false;

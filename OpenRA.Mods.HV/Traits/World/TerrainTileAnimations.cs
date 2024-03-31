@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -71,7 +71,13 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				var world = self.World;
 				ticks = Common.Util.RandomInRange(world.LocalRandom, info.Interval);
-				var position = world.Map.CenterOfCell(cells.Random(world.LocalRandom));
+				var cell = cells.Random(world.LocalRandom);
+
+				// Clashes with bridge shadows
+				if (world.Map.CustomTerrain[cell] != byte.MaxValue)
+					return;
+
+				var position = world.Map.CenterOfCell(cell);
 				world.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
 			}
 		}

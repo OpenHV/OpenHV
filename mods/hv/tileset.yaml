@@ -135,6 +135,10 @@ Terrain:
 		Type: Dirt
 		TargetTypes: Ground
 		Color: 805040
+	TerrainType@BridgeShadow
+		Type: BridgeShadow
+		TargetTypes: Ground
+		Color: 000000FF
 
 Templates:
 	Template@0:

@@ -459,22 +459,22 @@ cactiash:
 		Filename: bits/terrain/cactiash-shadow.png
 		ZOffset: -2048
 
-bridgeshadow:
+bridge-shadows:
 	Defaults:
 		Filename: bits/terrain/bridge-shadow.png
 		Offset: -1,-1
 		ZOffset: -512
-	shadow1:
+	left:
 		Start: 0
-	shadow2:
+	bottom-left:
 		Start: 1
-	shadow3:
+	top-left:
 		Start: 2
-	shadow4:
+	top:
 		Start: 3
-	shadow5:
+	fadeout-right:
 		Start: 4
-	shadow6:
+	fadeout-left:
 		Start: 5
-	shadow7:
+	corner:
 		Start: 6

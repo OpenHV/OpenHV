@@ -39,10 +39,9 @@ namespace OpenRA.Mods.HV.Lint
 				foreach (var cell in map.AllCells)
 				{
 					var resourceIndex = map.Resources[cell].Type;
-					if (resourceIndex > 0)
+					if (resourceIndex == 1 || resourceIndex == 2)
 					{
-						var footprintTiles = building.Tiles(cell + transforms.Offset);
-						foreach (var footprintTile in footprintTiles)
+						foreach (var footprintTile in building.Tiles(cell + transforms.Offset))
 						{
 							if (!map.Contains(footprintTile))
 							{
