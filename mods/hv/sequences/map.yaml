@@ -10,9 +10,6 @@ resources:
 	invisible:
 		Filename: bits/null.png
 		Length: 1
-	waterflow:
-		Filename: bits/watrflow.png
-		Length: *
 
 mpspawn:
 	idle:
