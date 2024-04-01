@@ -285,13 +285,13 @@ ElectricSpark:
 		Sequences: electric
 
 RailgunSetup:
-	ValidTargets: Water, Ground, Tree, Air
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@DamageDelivery: FireCluster
 		Weapon: RailgunStrike
 		Dimensions: 1,1
 		Footprint: X
 	Warhead@Visual: FireRadius
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Weapon: RailgunVisualStage1
 		Amount: 6
 		TransferAltitude: true
@@ -299,33 +299,34 @@ RailgunSetup:
 RailgunVisualStage1:
 	Projectile: InstantHit
 	Range: 1280
-	ValidTargets: Water, Ground, Tree, Air
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Visual: FireShrapnel
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Weapon: RailgunVisualStage2
 
 RailgunVisualStage2:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Projectile: GravityBomb
 		Image: railgun
 		Sequences: idle
-		Velocity: 0,0,-60 # needs to be shared with RailgunStrike
-		Acceleration: 0,0,-45 # needs to be shared with RailgunStrike
+		Velocity: 0,0,-60 # needs to be synced with RailgunStrike
+		Acceleration: 0,0,-45 # needs to be synced with RailgunStrike
 	Warhead@Effect: CreateEffect
 		Explosions: railgun
 		ImpactSounds: explosion06.wav
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
 RailgunStrike:
 	Projectile: GravityBomb
-		Velocity: 0,0,-60 # needs to be shared with RailgunVisualStage2
-		Acceleration: 0,0,-45 # needs to be shared with RailgunVisualStage2
-	ValidTargets: Water, Ground, Tree, Air
+		Velocity: 0,0,-60 # needs to be synced with RailgunVisualStage2
+		Acceleration: 0,0,-45 # needs to be synced with RailgunVisualStage2
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Report: raygun_newlocknew.wav
 	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 10000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		DamageTypes: Fire
 		AffectsParent: true
 	Warhead@IncendiaryImpact: TreeDamage
@@ -338,16 +339,17 @@ RailgunStrike:
 		Damage: 25000
 		Falloff: 100, 50, 25, 0
 		Delay: 3
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		DamageTypes: Fire
 		AffectsParent: true
 	Warhead@IncendiaryArea: TreeDamage
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Spread: 1c0
 		Damage: 25000
 		Falloff: 100, 50, 25, 0
 		AffectsParent: true
 	Warhead@Visual: FireRadius
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		Weapon: RailgunDistortion
 		Amount: 15, 30
 		AffectsParent: true
@@ -355,19 +357,20 @@ RailgunStrike:
 		Weapon: ElectricSpark
 		Amount: 4
 		AffectsParent: true
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@SparkWave1: FireRadius
 		Weapon: RailgunSparkWave1
 		Amount: 12
 		AffectsParent: true
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@SparkWave2: FireRadius
 		Weapon: RailgunSparkWave2
 		Amount: 36
 		AffectsParent: true
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
 RailgunDistortion:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Projectile: EnergyBolt
 		Radius: 2
 		Duration: 12
@@ -379,24 +382,26 @@ RailgunDistortion:
 	Range: 2c768
 
 RailgunSparkWave1:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Projectile: InstantHit
 	Range: 1280
-	ValidTargets: Water, Ground, Tree, Air
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Visual: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 3
 		AffectsParent: true
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
 RailgunSparkWave2:
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Projectile: InstantHit
 	Range: 2560
-	ValidTargets: Water, Ground, Tree, Air
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Visual: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 3
 		AffectsParent: true
-		ValidTargets: Water, Ground, Tree, Air
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
 DroneBlaster:
 	Inherits: BigSplash
