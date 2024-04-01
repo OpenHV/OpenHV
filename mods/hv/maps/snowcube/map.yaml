@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -379,4 +379,5 @@ Actors:
 		Location: 26,42
 
 Rules: rules.yaml
+
 Translations: en.ftl
