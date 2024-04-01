@@ -327,10 +327,12 @@ RailgunStrike:
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Water, Ground, Tree, Air
 		DamageTypes: Fire
+		AffectsParent: true
 	Warhead@IncendiaryImpact: TreeDamage
 		Spread: 1c0
 		Damage: 10000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		AffectsParent: true
 	Warhead@DamageArea: SpreadDamage
 		Spread: 1c0
 		Damage: 25000
@@ -338,14 +340,17 @@ RailgunStrike:
 		Delay: 3
 		ValidTargets: Water, Ground, Tree, Air
 		DamageTypes: Fire
+		AffectsParent: true
 	Warhead@IncendiaryArea: TreeDamage
 		Spread: 1c0
 		Damage: 25000
 		Falloff: 100, 50, 25, 0
+		AffectsParent: true
 	Warhead@Visual: FireRadius
 		ValidTargets: Water, Ground, Tree, Air
 		Weapon: RailgunDistortion
 		Amount: 15, 30
+		AffectsParent: true
 	Warhead@CenterSpark: FireShrapnel
 		Weapon: ElectricSpark
 		Amount: 4
