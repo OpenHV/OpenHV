@@ -4,7 +4,8 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <name>OpenHV</name>
-  <summary>Open Source 90s Pixelart Sci-Fi Real Time Strategy game</summary>
+  <developer_name>OpenHV developers</developer_name>
+  <summary>Sci-Fi RTS game</summary>
   <description>
     <p>
       In 1993 a game called Hard Vacuum was in development. Heavily inspired by Dune 2, the father of the modern RTS, it had ambitious goals, but it was never released to the public. Decades later the pixel art was released under a free license. The starting point for this project.
@@ -15,12 +16,12 @@
   </description>
   <launchable type="desktop-id">openhv.desktop</launchable>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image>https://img.itch.zone/aW1hZ2UvNjg5NjY5Lzc2NjI2MjMucG5n/original/sT6U6%2F.png</image>
       <caption>fortified base</caption>
     </screenshot>
     <screenshot>
-      <image>https://media.discordapp.net/attachments/415154443261050901/878982936924418048/Screenshot_from_2021-07-31_13-18-44.png</image>
+      <image>https://media.moddb.com/images/members/1/927/926352/profile/Screenshot_20240401_184914.png</image>
       <caption>in-game map editor</caption>
     </screenshot>
     <screenshot>
