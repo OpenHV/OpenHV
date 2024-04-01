@@ -182,3 +182,18 @@ direction:
 	arrow-tr:
 		Start: 25
 		Offset: 15, -15, 0
+
+mpspawn:
+	idle:
+		Filename: bits/mpspawn.png
+		Length: 1
+
+light:
+	idle:
+		Filename: bits/light.png
+		Length: 1
+
+camera:
+	idle:
+		Filename: bits/camera.png
+		Length: 1

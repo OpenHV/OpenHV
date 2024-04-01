@@ -63,7 +63,7 @@ Rules:
 
 Sequences:
 	hv|sequences/animals.yaml
-	hv|sequences/map.yaml
+	hv|sequences/world.yaml
 	hv|sequences/ui.yaml
 	hv|sequences/vehicles.yaml
 	hv|sequences/aircraft.yaml
