@@ -42,7 +42,7 @@ HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
 BIT_FILES = $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
-PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname '*.png' 2> /dev/null)
+PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname 'map.png' 2> /dev/null)
 MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
 
 CHECK_TARGETS = $(addprefix check-, $(BIT_FILES))
