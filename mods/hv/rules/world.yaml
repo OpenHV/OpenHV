@@ -15,6 +15,7 @@
 	NoBuildZone:
 		BlockedTerrainType: Blocked
 		MinerActorType: miner2
+		ResourceTypes: iron, gold
 	DebugVisualizations:
 	DebugOffsetOverlayManager:
 	TerrainLighting:

@@ -29,6 +29,9 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Building reference for footprint calculation.")]
 		public readonly string MinerActorType = null;
 
+		[Desc("Apply only around these or all if not set.")]
+		public readonly HashSet<string> ResourceTypes = new();
+
 		public override object Create(ActorInitializer init) { return new NoBuildZone(init.Self, this); }
 	}
 
@@ -86,7 +89,13 @@ namespace OpenRA.Mods.HV.Traits
 		bool ResourceAt(CPos cell)
 		{
 			var resource = resourceLayer.GetResource(cell);
-			return !resource.Equals(ResourceLayerContents.Empty);
+			if (resource.Equals(ResourceLayerContents.Empty))
+				return false;
+
+			if (info.ResourceTypes.Count > 0)
+				return info.ResourceTypes.Contains(resource.Type);
+
+			return true;
 		}
 
 		IEnumerable<CPos> GetMinerFootprintAround(CPos cell)
