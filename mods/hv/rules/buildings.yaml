@@ -317,8 +317,8 @@ RADAR:
 		ChargeInterval: 3750
 		SquadSize: 3
 		QuantizedFacings: 8
-		Name: Air Strike
-		Description: Deploy an aerial bombing run.
+		Name: actor-radar.airstrikepower-name
+		Description: actor-radar.airstrikepower-description
 		UnitType: bomber1
 		DisplayRadarPing: true
 		CameraActor: camera
@@ -341,8 +341,8 @@ RADAR2:
 		Cursor: droppod
 		PauseOnCondition: disabled || disabled
 		Icon: droppods
-		Name: Drop Pods
-		Description: Atmospheric assault reinforcements:\nSmall team of pods drops onto target location from orbit.
+		Name: actor-radar2.droppodspower-name
+		Description: actor-radar2.droppodspower-description
 		DisplayRadarPing: true
 		ChargeInterval: 3750
 		UnitTypes: droppod1, droppod2
@@ -1350,8 +1350,8 @@ HOWITZER:
 		OrderName: FireMission
 		ChargeInterval: 4500
 		DisplayRadarPing: true
-		Name: Artillery Strike
-		Description: Fires a long range barrage across the map.
+		Name: actor-howitzer.attackorderpower-name
+		Description: actor-howitzer.attackorderpower-description
 		DetectedSpeechNotification: HowitzerDetected
 		DetectedTextNotification: notification-howitzer-detected
 		BeginChargeSpeechNotification: HowitzerCharging
@@ -1413,8 +1413,8 @@ FIELD:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		ChargeInterval: 4500
-		Name: Force Field
-		Description: Protective energy shield:\nReduces damage taken by 75 %\nto a group of units for 30 seconds.
+		Name: actor-field.force-field-name
+		Description: actor-field.force-field-description
 		Duration: 750
 		DisplayRadarPing: true
 		Condition: shield
@@ -1490,8 +1490,8 @@ SILO:
 		Cursor: nuke
 		Icon: nuke
 		ChargeInterval: 13500
-		Name: Atom Bomb
-		Description: Drop an atomic bomb\nat a target location.
+		Name: actor-silo.nukepower-name
+		Description: actor-silo.nukepower-description
 		MissileWeapon: nuclear
 		MissileImage: nuclear
 		MissileDelay: 5
@@ -1576,8 +1576,8 @@ UPLINK:
 		Icon: railgun
 		Cursor: railgun
 		ChargeInterval: 4500
-		Name: Orbital Railgun
-		Description: Initiate a surgical strike.\nApplies instant damage to a small area.
+		Name: actor-uplink.railgun-name
+		Description: actor-uplink.railgun-description
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: true
 		CameraRange: 5c0
@@ -2584,8 +2584,8 @@ COMLINK:
 		ValidRelationships: Neutral, Enemy
 	SpawnActorPower:
 		Icon: radar
-		Name: Active Radar
-		Description: Reveals the battlefield and cloaked units \nin the vicinity for a short time.
+		Name: actor-comlink.radar-name
+		Description: actor-comlink.radar-description
 		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: radarsweep

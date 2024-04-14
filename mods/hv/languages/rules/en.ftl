@@ -178,6 +178,13 @@ actor-radar =
       Requires power to operate.
    .encyclopedia = The radar enables a minimap on top right screen of the command interface. It also provides a larger amount of local vision around itself. As a tech building it is opening up the aerial branch of units. It also provides the first tier of support powers which can be an air strike or orbital drop pod reinforcements to be placed anywhere on the battlefield. For the air strike hold the mouse button and move the pointer to set the flight path.
    .name = Radar Dome
+   .airstrikepower-name = Air Strike
+   .airstrikepower-description = Deploy an aerial bombing run.
+
+actor-radar2 =
+   .droppodspower-name = Drop Pods
+   .droppodspower-description = Atmospheric assault reinforcements:
+    Small team of pods drops onto target location from orbit.
 
 actor-tradplat =
    .description = Repairs vehicles and aircraft for credits.
@@ -265,6 +272,8 @@ actor-howitzer =
       Maximum 1 can be built
    .name = Grand Howitzer
    .encyclopedia = A large cannon with a range that spans over the whole battlefield. It can fire a barrage of multiple shells at once. The shells can not be intercepted. It takes a while to reload so only the battlefield command is allowed to operate it manually. It softens up the defenses, making a followup strike force even more effective.
+   .attackorderpower-name = Artillery Strike
+   .attackorderpower-description = Fires a long range barrage across the map
 
 actor-field =
    .description = Errects an electromagnetic barrier
@@ -274,6 +283,10 @@ actor-field =
       Maximum 1 can be built.
    .name = Force Field Generator
    .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amout of energy.
+   .force-field-name = Force Field
+   .force-field-description = Protective energy shield:
+    Reduces damage taken by 75 %
+    to a group of units for 30 seconds.
 
 actor-silo =
    .name = Launch Command
@@ -282,6 +295,9 @@ actor-silo =
       Requires power to operate.
       Maximum 1 can be built.
       Special Ability: Atom Bomb
+   .nukepower-name = Atom Bomb
+   .nukepower-description = Drop an atomic bomb
+    at a target location.
 
 actor-uplink =
    .name = Orbital Strike Uplink Command
@@ -290,6 +306,9 @@ actor-uplink =
       Requires power to operate.
       Maximum 1 can be built.
       Special Ability: Orbital Railgun
+   .railgun-name = Orbital Railgun
+   .railgun-description = Initiate a surgical strike.
+    Applies instant damage to a small area.
 
 actor-storage =
    .description = Stores excess resources.
@@ -336,6 +355,9 @@ actor-comlink =
    .captured-desc = Provides battlefield intelligence.
    .capturable-desc = Capture to gain intelligence support.
    .encyclopedia = On planets with a satellite network civilian communication arrays can be captured and used to spy on your opponent anywhere on the battlefield for as long as the satellite stays in range. It requires power and takes time to reposition again.
+   .radar-name = Active Radar
+   .radar-description = Reveals the battlefield and cloaked units
+    in the vicinity for a short time.
 
 actor-watchtower =
    .name = Watch Tower
