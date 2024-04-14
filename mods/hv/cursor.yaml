@@ -48,11 +48,11 @@ Cursors:
 			X: 0
 			Y: -4
 		generic-blocked:
-			Start: 0
+			Start: 14
 			X: 0
 			Y: -4
 		generic-blocked-minimap:
-			Start: 0
+			Start: 14
 			X: 0
 			Y: -4
 	bits/cursors1.png: cursor
