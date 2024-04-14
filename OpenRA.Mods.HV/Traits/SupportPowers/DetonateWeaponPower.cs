@@ -56,6 +56,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly Color TargetCircleColor = Color.White;
 		public readonly bool TargetCircleUsePlayerColor = false;
 
+		[CursorReference]
+		[Desc("Cursor when unable to activate on this position. ")]
+		public readonly string BlockedCursor = "generic-blocked";
+
 		public WeaponInfo WeaponInfo { get; private set; }
 
 		public override object Create(ActorInitializer init) { return new DetonateWeaponPower(init.Self, this); }
@@ -157,7 +161,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		public SelectDetonateWeaponPowerTarget(string order, SupportPowerManager manager, DetonateWeaponPower power)
 		{
-			// Clear selection if using Left-Click Orders
 			if (Game.Settings.Game.UseClassicMouseStyle)
 				manager.Self.World.Selection.Clear();
 
@@ -175,7 +178,6 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override void Tick(World world)
 		{
-			// Cancel the OG if we can't use the power
 			if (!manager.Powers.ContainsKey(order))
 				world.CancelInputMode();
 		}
@@ -205,7 +207,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)
 		{
-			return world.Map.Contains(cell) ? power.Info.Cursor : "generic-blocked";
+			return world.Map.Contains(cell) ? power.Info.Cursor : power.Info.BlockedCursor;
 		}
 	}
 }
