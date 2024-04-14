@@ -199,3 +199,5 @@ Cursors:
 			Start: 13
 		howitzer-blocked:
 			Start: 14
+		droppod-blocked:
+			Start: 14

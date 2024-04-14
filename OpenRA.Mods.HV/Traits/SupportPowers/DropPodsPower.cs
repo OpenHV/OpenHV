@@ -46,7 +46,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[CursorReference]
 		[Desc("Cursor when unable to activate on this position. ")]
-		public readonly string BlockedCursor = "generic-blocked";
+		public readonly string BlockedCursor = "droppod-blocked";
 
 		public override object Create(ActorInitializer init) { return new DropPodsPower(init.Self, this); }
 	}
