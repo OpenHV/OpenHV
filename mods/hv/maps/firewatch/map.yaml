@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -46,8 +46,8 @@ Actors:
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
+Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl, en.ftl
+
 Sequences: sequences.yaml
 
 Weapons: weapons.yaml
-
-Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl, en.ftl

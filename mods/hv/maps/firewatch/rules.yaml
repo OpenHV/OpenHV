@@ -44,6 +44,22 @@ WATERTANK:
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 800
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	ReloadAmmoPool:
+		Delay: 10
+		Count: 10
+		RequiresCondition: refill-water
+	GrantConditionOnTerrain:
+		Condition: refill-water
+		TerrainTypes: Shore
 	AttackFrontal:
 		Voice: Action
 		TargetLineColor: 0000FF
@@ -86,6 +102,22 @@ FIRETRUCK:
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 500
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	ReloadAmmoPool:
+		Delay: 10
+		Count: 10
+		RequiresCondition: refill-water
+	GrantConditionOnTerrain:
+		Condition: refill-water
+		TerrainTypes: Shore
 	AttackMove:
 		TargetLineColor: 0000FF
 	AutoTarget:
@@ -128,12 +160,25 @@ FIREFIGHTERPOD:
 		Name: actor-firefighterpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Armament@Primary:
+	Armament:
 		Weapon: WaterCannonSmall
 		LocalOffset: 250,0,50
-	Armament@Garrisoned:
-		Name: garrisoned
-		Weapon: WaterCannonSmall
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 200
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 2
+	ReloadAmmoPool:
+		Delay: 10
+		Count: 10
+		RequiresCondition: refill-water
+	GrantConditionOnTerrain:
+		Condition: refill-water
+		TerrainTypes: Shore
 	AttackFrontal:
 		FacingTolerance: 0
 		Voice: Action
@@ -155,11 +200,20 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, firewatch.lua
 	MissionData:
-		Briefing: The 1st Colonial Fire Brigade on the forest moon Andor is an need of assistance. The vast natural woodlands face total destruction after heavy fighting of rival mining companies ignited the woods. Contain the fire before it's too late.
+		Briefing: The 1st Colonial Fire Brigade on the forest moon Andor is an need of assistance. The vast natural woodlands face total destruction after heavy fighting of rival mining companies ignited the woods. Contain the fire before it's too late. Use the fire pond to refill your water tanks.
 	ForestLayer:
 		FlameOwner: Flames
 		Damage: 25
 		Interval: 5
+	Locomotor@Pod:
+		TerrainSpeeds:
+			Shore: 100
+	Locomotor@Wheeled:
+		TerrainSpeeds:
+			Shore: 100
+	Locomotor@Tracked:
+		TerrainSpeeds:
+			Shore: 100
 
 Player:
 	PlayerResources:
