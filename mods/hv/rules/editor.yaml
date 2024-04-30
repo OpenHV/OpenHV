@@ -73,11 +73,11 @@ EditorWorld:
 			gold:
 				Sequences: gold
 				Palette: effect
-				Name: Precious Metal Deposit
+				Name: resource-gold
 			iron:
 				Sequences: iron
 				Palette: effect
-				Name: Base Metal Deposit
+				Name: resource-iron
 	BridgeShadowRenderer:
 		BridgeShadowTypes:
 			bridge-shadow-left:

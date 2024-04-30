@@ -341,11 +341,11 @@ World:
 			gold:
 				Sequences: gold
 				Palette: effect
-				Name: Mineable Resource Deposit
+				Name: resource-generic
 			iron:
 				Sequences: iron
 				Palette: effect
-				Name: Mineable Resource Deposit
+				Name: resource-generic
 	BridgeShadowRenderer:
 		BridgeShadowTypes:
 			bridge-shadow-left:

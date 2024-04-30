@@ -722,3 +722,8 @@ actor-tank13 =
 ## Weapons
 actor-landmine-name = AI Mine
 actor-watermine-name = AI Water Mine
+
+## ResourceRenderer
+resource-generic = Mineable Resource Deposit
+resource-gold = Precious Metal Deposit
+resource-iron = Base Metal Deposit
