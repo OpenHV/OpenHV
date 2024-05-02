@@ -1,0 +1,20 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.65
+
+SWAMPLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 1.50
+		BlueTint: 0.01
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
