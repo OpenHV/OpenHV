@@ -1,6 +1,11 @@
 ^BaseWorld:
 	TerrainLighting:
 		Intensity: 0.65
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
 
 SWAMPLIGHT:
 	Inherits: LIGHT
