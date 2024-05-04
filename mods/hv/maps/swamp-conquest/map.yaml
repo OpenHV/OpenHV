@@ -690,9 +690,6 @@ Actors:
 	Actor217: prop1
 		Owner: Neutral
 		Location: 59,37
-	Actor218: mpspawn
-		Owner: Neutral
-		Location: 94,53
 	Actor219: mpspawn
 		Owner: Neutral
 		Location: 15,12
@@ -909,5 +906,8 @@ Actors:
 	Actor289: comlink
 		Owner: Neutral
 		Location: 20,69
+	Actor290: mpspawn
+		Owner: Neutral
+		Location: 93,67
 
 Rules: rules.yaml
