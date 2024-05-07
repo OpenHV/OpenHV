@@ -83,9 +83,6 @@ namespace OpenRA.Mods.HV.Graphics
 
 		Color GetHealthColor(IHealth health)
 		{
-			if (Game.Settings.Game.UsePlayerStanceColors)
-				return actor.Owner.PlayerRelationshipColor(actor);
-
 			return health.DamageState == DamageState.Critical ? Color.FromArgb(255, 128, 21, 21) :
 				health.DamageState == DamageState.Heavy ? Color.FromArgb(255, 250, 227, 59) : Color.FromArgb(255, 57, 171, 47);
 		}
