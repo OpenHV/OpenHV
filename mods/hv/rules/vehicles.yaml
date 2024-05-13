@@ -258,6 +258,7 @@ RADARTANK:
 		Range: 14c0
 		RequiresCondition: !ecm-disabled && !undeployed
 		DetectionTypes: Cloak, Underwater
+  	EnemyWatcher:
 
 TANK16:
 	Inherits: ^TrackedVehicle
