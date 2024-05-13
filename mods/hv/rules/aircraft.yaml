@@ -216,6 +216,7 @@ SAUCER:
 		IsDecoration: true
 		Sequence: shadow-overlay
 		Palette: shadow
+	EnemyWatcher:
 
 BANSHEE:
 	Inherits: ^Helicopter
@@ -402,6 +403,7 @@ BALLOON:
 		IsDecoration: true
 		Sequence: shadow-overlay
 		Palette: shadow
+	EnemyWatcher:
 
 DROPSHIP:
 	Inherits: ^Helicopter
