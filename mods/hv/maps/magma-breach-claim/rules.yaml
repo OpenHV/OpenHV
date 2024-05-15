@@ -50,13 +50,6 @@ Entry:
 	MapEditorData:
 		Categories: System
 
-TECHCENTER:
-	Buildable:
-		Prerequisites: ~disabled
-
-FIELD:
-	Buildable:
-		Prerequisites: ~disabled
 
 SILO:
 	Buildable:
@@ -67,14 +60,6 @@ UPLINK:
 		Prerequisites: ~disabled
 
 HOWITZER:
-	Buildable:
-		Prerequisites: ~disabled
-
-TELEVATR:
-	Buildable:
-		Prerequisites: ~disabled
-
-TELEVTR2:
 	Buildable:
 		Prerequisites: ~disabled
 
