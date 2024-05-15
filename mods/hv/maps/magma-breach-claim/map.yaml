@@ -186,27 +186,18 @@ Actors:
 	Actor43: base2
 		Owner: Synapol Corporation
 		Location: 34,4
-	Actor44: base2
-		Owner: Synapol Corporation
-		Location: 3,8
 	Actor45: generator
 		Owner: Synapol Corporation
 		Location: 9,5
 	Actor46: generator
 		Owner: Synapol Corporation
 		Location: 2,14
-	Actor47: generator
-		Owner: Synapol Corporation
-		Location: 12,15
 	Actor48: generator
 		Owner: Synapol Corporation
 		Location: 45,5
 	Actor49: generator
 		Owner: Synapol Corporation
 		Location: 28,2
-	Actor50: module2
-		Owner: Synapol Corporation
-		Location: 30,7
 	Actor51: factory4
 		Owner: Synapol Corporation
 		Location: 8,10
@@ -234,9 +225,6 @@ Actors:
 	Actor59: outpost2
 		Owner: Synapol Corporation
 		Location: 3,39
-	Actor61: flagpost
-		Owner: Synapol Corporation
-		Location: 12,11
 	Actor62: flagpost
 		Owner: Synapol Corporation
 		Location: 32,3
@@ -255,9 +243,6 @@ Actors:
 	Actor67: extractor
 		Owner: Synapol Corporation
 		Location: 26,7
-	Actor68: storage
-		Owner: Synapol Corporation
-		Location: 37,4
 	Actor69: storage
 		Owner: Synapol Corporation
 		Location: 1,1
@@ -276,15 +261,6 @@ Actors:
 	Actor74: turret2
 		Owner: Synapol Corporation
 		Location: 35,7
-	Actor75: turret2
-		Owner: Synapol Corporation
-		Location: 24,4
-	Actor76: turret2
-		Owner: Synapol Corporation
-		Location: 47,3
-	Actor77: turret2
-		Owner: Synapol Corporation
-		Location: 6,20
 	Actor78: turret2
 		Owner: Synapol Corporation
 		Location: 7,2
@@ -303,10 +279,6 @@ Actors:
 	Actor83: starport2
 		Owner: Synapol Corporation
 		Location: 51,2
-	Actor86: transprt
-		Owner: Synapol Corporation
-		Location: 5,24
-		Facing: 384
 	Actor87: artil
 		Owner: Synapol Corporation
 		Facing: 384
@@ -468,15 +440,6 @@ Actors:
 	Actor145: prop8
 		Owner: Synapol Corporation
 		Location: 58,29
-	Actor146: tanktrap
-		Owner: Synapol Corporation
-		Location: 54,31
-	Actor147: tanktrap
-		Owner: Synapol Corporation
-		Location: 56,34
-	Actor148: tanktrap
-		Owner: Synapol Corporation
-		Location: 62,33
 	Actor149: tanktrap
 		Owner: Synapol Corporation
 		Location: 57,32
@@ -955,9 +918,6 @@ Actors:
 	Actor259: generator
 		Owner: Synapol Corporation
 		Location: 5,11
-	Actor260: generator
-		Owner: Synapol Corporation
-		Location: 32,8
 	Actor261: generator
 		Owner: Synapol Corporation
 		Location: 33,1
@@ -967,9 +927,6 @@ Actors:
 	Actor263: generator
 		Owner: Synapol Corporation
 		Location: 46,1
-	Actor264: generator
-		Owner: Synapol Corporation
-		Location: 28,6
 	Actor265: generator
 		Owner: Synapol Corporation
 		Location: 22,6
@@ -980,12 +937,224 @@ Actors:
 		Owner: Yuruki Industries
 		Location: 31,61
 		FreeActor: False
-	DestinationWaypoint: entry
+	SpawningWaypoint1: entry
+		Owner: Neutral
+		Location: 14,1
+	SpawningWaypoint2: entry
+		Owner: Neutral
+		Location: 17,1
+	DestinationWaypoint2: entry
+		Owner: Neutral
+		Location: 39,48
+	DestinationWaypoint1: entry
 		Owner: Neutral
 		Location: 28,55
-	SpawningWaypoint: entry
+	Actor268: trees18
 		Owner: Neutral
-		Location: 15,1
+		Location: 58,19
+	Actor269: trees18
+		Owner: Neutral
+		Location: 55,16
+	Actor270: trees17
+		Owner: Neutral
+		Location: 58,17
+	Actor271: trees17
+		Owner: Neutral
+		Location: 56,18
+	Actor272: trees4
+		Owner: Neutral
+		Location: 58,15
+	Actor274: extractor
+		Owner: Synapol Corporation
+		Location: 57,15
+	Actor275: extractor
+		Owner: Synapol Corporation
+		Location: 56,18
+	Actor276: dropzone
+		Owner: Synapol Corporation
+		Location: 55,1
+	Actor278: sparklamp
+		Owner: Synapol Corporation
+		Location: 59,20
+	Actor273: sparklamp
+		Owner: Synapol Corporation
+		Location: 55,16
+	Actor279: streetlamp4
+		Owner: Synapol Corporation
+		Location: 54,18
+	Actor280: crane
+		Owner: Synapol Corporation
+		Location: 13,50
+	Actor281: goldball
+		Owner: Synapol Corporation
+		Location: 38,15
+	Actor282: watermine
+		Owner: Synapol Corporation
+		Location: 4,57
+	Actor283: watermine
+		Owner: Synapol Corporation
+		Location: 8,62
+	Actor284: watermine
+		Owner: Synapol Corporation
+		Location: 12,60
+	Actor285: watermine
+		Owner: Synapol Corporation
+		Location: 8,54
+	Actor286: watermine
+		Owner: Synapol Corporation
+		Location: 9,57
+	Actor287: watermine
+		Owner: Synapol Corporation
+		Location: 3,60
+	Actor288: landmine
+		Owner: Synapol Corporation
+		Location: 16,51
+	Actor289: landmine
+		Owner: Synapol Corporation
+		Location: 15,48
+	Actor290: landmine
+		Owner: Synapol Corporation
+		Location: 19,48
+	Actor291: landmine
+		Owner: Synapol Corporation
+		Location: 57,36
+	Actor292: landmine
+		Owner: Synapol Corporation
+		Location: 58,36
+	Actor293: landmine
+		Owner: Synapol Corporation
+		Location: 56,38
+	Actor294: crate20
+		Owner: Synapol Corporation
+		Location: 60,23
+	Actor296: crate22
+		Owner: Synapol Corporation
+		Location: 61,24
+	Actor297: crate22
+		Owner: Synapol Corporation
+		Location: 59,22
+	Actor298: turret2
+		Owner: Synapol Corporation
+		Location: 47,3
+	Actor299: bunker2
+		Owner: Synapol Corporation
+		Location: 3,16
+	Actor300: bunker2
+		Owner: Synapol Corporation
+		Location: 4,5
+	Actor301: bunker2
+		Owner: Synapol Corporation
+		Location: 30,10
+	Actor302: bunker2
+		Owner: Synapol Corporation
+		Location: 26,2
+	Actor303: bunker2
+		Owner: Synapol Corporation
+		Location: 46,8
+	Actor305: generator
+		Owner: Synapol Corporation
+		Location: 7,7
+	Actor306: generator
+		Owner: Synapol Corporation
+		Location: 13,10
+	Actor307: generator
+		Owner: Synapol Corporation
+		Location: 1,10
+	Actor44: base2
+		Owner: Synapol Corporation
+		Location: 3,10
+	Actor61: flagpost
+		Owner: Synapol Corporation
+		Location: 11,11
+	Actor47: generator
+		Owner: Synapol Corporation
+		Location: 13,15
+	Actor277: dropzone
+		Owner: Synapol Corporation
+		Location: 8,17
+	Actor77: turret2
+		Owner: Synapol Corporation
+		Location: 5,20
+	Actor295: crate21
+		Owner: Synapol Corporation
+		Location: 58,23
+	Actor146: tanktrap
+		Owner: Synapol Corporation
+		Location: 55,31
+	Actor147: tanktrap
+		Owner: Synapol Corporation
+		Location: 56,33
+	Actor148: tanktrap
+		Owner: Synapol Corporation
+		Location: 59,33
+	Actor308: icicle1
+		Owner: Neutral
+		Location: 39,38
+	Actor309: icicle1
+		Owner: Neutral
+		Location: 42,34
+	Actor310: icicle2
+		Owner: Neutral
+		Location: 42,38
+	Actor311: icicle2
+		Owner: Neutral
+		Location: 45,35
+	Actor312: icicle4
+		Owner: Neutral
+		Location: 40,37
+	Actor313: icicle4
+		Owner: Neutral
+		Location: 37,37
+	Actor314: icicle1
+		Owner: Neutral
+		Location: 38,11
+	Actor315: icicle1
+		Owner: Neutral
+		Location: 43,8
+	Actor316: icicle2
+		Owner: Neutral
+		Location: 43,11
+	Actor317: icicle2
+		Owner: Neutral
+		Location: 40,9
+	Actor318: icicle2
+		Owner: Neutral
+		Location: 36,10
+	Actor319: icicle4
+		Owner: Neutral
+		Location: 40,12
+	Actor320: icicle4
+		Owner: Neutral
+		Location: 42,8
+	Actor321: icicle4
+		Owner: Neutral
+		Location: 39,7
+	Actor260: generator
+		Owner: Synapol Corporation
+		Location: 31,9
+	Actor50: module2
+		Owner: Synapol Corporation
+		Location: 32,5
+	Actor304: generator
+		Owner: Synapol Corporation
+		Location: 30,4
+	Actor264: generator
+		Owner: Synapol Corporation
+		Location: 28,6
+	Actor68: storage
+		Owner: Synapol Corporation
+		Location: 41,2
+	Actor322: tanktrap
+		Faction: Random
+		Location: 57,30
+		Owner: Synapol Corporation
+	Actor323: comlink
+		Faction: Random
+		Location: 61,29
+		Owner: Synapol Corporation
+	Actor75: turret2
+		Owner: Synapol Corporation
+		Location: 26,4
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 

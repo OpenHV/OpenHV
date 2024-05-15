@@ -19,7 +19,8 @@ Tick = function()
 	end
 
     if DateTime.GameTime % DateTime.Seconds(150) == 0 and DateTime.GameTime > DateTime.Seconds(150) and not Human.IsObjectiveCompleted(EnemyEliminatedObjective) then  -- happens every 2.5 mins, starting at 2.5 game minutes, if the player hasn't killed all units
-        SynapolReinforcements = Reinforcements.Reinforce(Enemy, ReinforcementUnits, { SpawningWaypoint.Location, DestinationWaypoint.Location })
+        SynapolReinforcements1 = Reinforcements.Reinforce(Enemy, ReinforcementUnits, { SpawningWaypoint1.Location, DestinationWaypoint1.Location })
+        SynapolReinforcements2 = Reinforcements.Reinforce(Enemy, ReinforcementUnits, { SpawningWaypoint2.Location, DestinationWaypoint2.Location })
         Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
     end
 
