@@ -3,8 +3,6 @@
 Player:
 	PlayerResources:
 		DefaultCash: 8000
-	DeveloperMode:
-		CheckboxVisible: true
 
 World:
 	WeatherOverlay:
