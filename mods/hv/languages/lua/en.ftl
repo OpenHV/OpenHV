@@ -33,3 +33,9 @@ save-80-percent = Save 80 % of the forest.
 save-75-percent = Save 75 % of the forest
 save-70-percent = Save 70 % of the forest.
 forest-destroyed = { $percentage } % of the forests destroyed.
+
+## magma-breach-claim
+warning = Warning
+reinforcements-incoming = Synapol reinforcement units incoming
+claim-land = Eliminate all Synapol signs in the area
+build-all-towers = Place mining towers at all available resources
