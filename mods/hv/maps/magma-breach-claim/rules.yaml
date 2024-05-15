@@ -5,6 +5,7 @@ Player:
 		DefaultCash: 8000
 
 World:
+
 	WeatherOverlay:
 		ChangingWindLevel: true
 		WindLevels: -5, -3, -2, 0
@@ -24,6 +25,8 @@ World:
 		Green: 0.9
 		Blue: 1.0
 		Ambient: 1.2
+	TerrainLighting:
+		Intensity: 0.85
 	CloudSpawner:
 		Image: cloud
 		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
@@ -32,7 +35,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, magma-breach-claim.lua
 	MissionData:
-		Briefing: Greetings commander! A magma breach in Fillum's desert ice lands has been found by explorers 3 days ago. The breach's magma contains many rich materials, and a humongous gold vein has been found around it. The Synapol Corportions have headed there 19 hours ago, and established a basement. Claim these magma breach Yuruki by any way.\n  P.S. Be aware that as soon as the Synapol forces will detect you, they will send waves of reinforcements
+		Briefing: Greetings commander! A magma breach in Fillum's desert ice lands has been found by explorers 3 days ago. The breach's magma contains many rich materials, and a humongous gold vein has been found around it. The Synapol Corportions have headed there 19 hours ago, and established a basement. Claim this magma breach Yuruki by any way.\n  P.S. Be aware that as soon as the Synapol forces will detect you, they will send waves of reinforcement.
 
 Entry:
 	Interactable:
