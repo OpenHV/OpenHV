@@ -23,7 +23,7 @@ Tick = function()
         Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
     end
 
-    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and towers == 17 then -- if the player has built every mining tower
+    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == 17 then -- if the player has built every mining tower
         Human.MarkCompletedObjective(ResourcesClaimedObjective)
     end
 
@@ -36,7 +36,7 @@ WorldLoaded = function()
 	InitObjectives(Human)
 
 	EnemyEliminatedObjective = AddPrimaryObjective(Human, "claim-land")
-    ResourcesClaimedObjective = AddPrimaryObjective(Human, "build-all-towers")
+	ResourcesClaimedObjective = AddPrimaryObjective(Human, "build-all-towers")
 
 	Camera.Position = Base.CenterPosition
 end
