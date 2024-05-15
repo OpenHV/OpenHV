@@ -229,8 +229,8 @@ Player:
 					TargetMetric: None
 					CheckRadius: 8c0
 				Consideration@3:
-					Against: Ally
-					Types: Air, Ground, Water
+					Against: Enemy
+					Types: Air, Ground
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 8c0
@@ -244,8 +244,8 @@ Player:
 					TargetMetric: None
 					CheckRadius: 5c0
 				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Unit
+					Against: Enemy
+					Types: Ground
 					Attractiveness: 1
 					TargetMetric: None
 					CheckRadius: 5c0
