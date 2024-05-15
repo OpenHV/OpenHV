@@ -219,7 +219,7 @@ Player:
 				Consideration@1:
 					Against: Enemy
 					Types: Structure
-					Attractiveness: 1.5
+					Attractiveness: 2
 					TargetMetric: None
 					CheckRadius: 8c0
 				Consideration@2:
