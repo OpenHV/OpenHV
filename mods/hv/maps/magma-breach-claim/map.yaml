@@ -168,9 +168,6 @@ Actors:
 	Actor37: miner2
 		Owner: Synapol Corporation
 		Location: 40,2
-	Actor39: miner2
-		Owner: Synapol Corporation
-		Location: 61,3
 	Actor40: miner2
 		Owner: Synapol Corporation
 		Location: 23,1
@@ -1155,6 +1152,9 @@ Actors:
 	Actor38: miner2
 		Owner: Synapol Corporation
 		Location: 56,12
+	Actor324: miner2
+		Owner: Synapol Corporation
+		Location: 62,3
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
