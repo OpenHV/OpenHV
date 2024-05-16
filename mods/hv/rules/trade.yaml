@@ -96,6 +96,19 @@ ARTIL.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: artil
 
+ARTIL3.TRADE:
+	Inherits: ARTIL3
+	Buildable:
+		Queue: Trade
+		Prerequisites: tradplat, techcenter
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: artil3
+	UpdatesPlayerStatistics:
+		OverrideActor: artil3
+
 RADARTANK.TRADE:
 	Inherits: RADARTANK
 	Buildable:
