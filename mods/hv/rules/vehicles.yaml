@@ -579,7 +579,7 @@ ARTIL3:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1750
+		Cost: 1850
 	Tooltip:
 		Name: actor-artil3.name
 	UpdatesPlayerStatistics:
