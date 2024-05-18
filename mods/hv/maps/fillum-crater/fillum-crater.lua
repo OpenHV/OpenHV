@@ -10,7 +10,7 @@
 GroundReinforcementUnits = { "scout1", "scout1", "scout1", "scout2", "scout2", "scout2", "scout2", "scout2", "tank1", "tank1", "tank1", "tank1", "tank1", "tank2", "tank2", "tank7", "artil", "artil", "artil", "technician", "technician", "technician", "tank16", "tank15", "missiletank", "missiletank", "missiletank", "artil3" }
 AirReinforcementUnits = { "copter", "copter", "copter", "banshee", "banshee", "copter2"}
 NavalReinforcementUnits = { "submarine", "patrolboat", "patrolboat", "patrolboat", "submarine2", "boat4", "boat4", "boat4"}
-YurukiReinforcements = { "submarine", "submarine", "boat2", "boat3", "boat" }
+YurukiReinforcements = { "submarine2", "carrier", "boat2", "boat3", "boat" }
 
 Warning = UserInterface.Translate("warning")
 
