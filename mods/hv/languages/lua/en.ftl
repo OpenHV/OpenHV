@@ -49,4 +49,4 @@ destroy-enemy-communication = Destroy all Synapol communications.
 
 ## harbor-defense
 save-65-percent-buildings = Save 65 % of the buildings.
-65-percent-buildings-lost = More than 65 % of buildings lost
+buildings-lost-65-percent = More than 65 % of buildings lost
