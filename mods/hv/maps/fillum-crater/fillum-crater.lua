@@ -49,7 +49,7 @@ Tick = function()
         YurukiReinforcement = Reinforcements.Reinforce(Human, YurukiReinforcements, { SpawningWaypoint4.Location, DestinationWaypoint4.Location })
     end
 
-    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == 17 then -- if the player has built every mining tower
+    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == 18 then -- if the player has built every mining tower
         Human.MarkCompletedObjective(ResourcesClaimedObjective)
     end
 
