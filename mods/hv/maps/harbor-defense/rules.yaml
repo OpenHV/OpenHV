@@ -3,7 +3,7 @@
 Player:
 	-ConquestVictoryConditions:
 	PlayerResources:
-		DefaultCash: 1000
+		DefaultCash: 4500
 		DefaultCashDropdownLocked: true
 		DefaultCashDropdownVisible: false
 	DeveloperMode:
@@ -17,7 +17,7 @@ Player:
 		ExploredMapCheckboxVisible: false
 	-ModularBot@RogueAI:
 	ClassicProductionQueue@Defense:
-		BuildDurationModifier: 25
+		BuildDurationModifier: 15
 
 World:
 	LuaScript:
@@ -258,6 +258,35 @@ AMPLIFIER:
 		RequiresCondition: weapon-range-upgrade
 	ExternalCondition:
 		Condition: weapon-range-upgrade
+
+^Ship:
+	SpawnScrapOnDeath:
+		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
+		TerrainTypes: Water
+
+EXTRACTOR:
+	Health:
+		HP: 100000
+
+HARBOR2:
+	Health:
+		HP: 150000
+
+MODULE2:
+	Health:
+		HP: 101000
+
+FACTORY4:
+	Health:
+		HP: 110000
+
+RADAR2:
+	Health:
+		HP: 120000
+
+COMLINK:
+	Health:
+		HP: 125000
 
 AATURRET:
 	Buildable:
