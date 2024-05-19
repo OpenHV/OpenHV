@@ -5,7 +5,6 @@ Won = false
 Generic = { "boat3", "boat" }
 Lightning = { "boat2" }
 Submarine = { "carrier" }
-PlayerKills = 0
 
 Waves =
 {
@@ -94,12 +93,6 @@ Tick = function()
 		Media.DisplayMessage(UserInterface.Translate("buildings-lost-65-percent"))
 		HumanPlayer.MarkFailedObjective(TowerDefenseObjective)
 	end
-	
-	Trigger.AfterDelay(200, function()
-		HumanPlayer.Cash = HumanPlayer.Cash + HumanPlayer.KillsCost
-	end)
-	HumanPlayer.Cash = HumanPlayer.Cash + HumanPlayer.KillsCost
-	PlayerKills = HumanPlayer.UnitsKilled
 
 	if LastWave and not HumanPlayer.IsObjectiveCompleted(TowerDefenseObjective) then
 		Trigger.AfterDelay(200, function()
