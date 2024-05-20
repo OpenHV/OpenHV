@@ -1119,9 +1119,6 @@ Actors:
 		Facing: 384
 		SubCell: 1
 		Location: 65,30
-	Actor369: radar2
-		Owner: Yuruki Industries
-		Location: 28,69
 	Actor370: field
 		Owner: Yuruki Industries
 		Location: 32,69
@@ -1415,6 +1412,12 @@ Actors:
 	Outpost: outpost2
 		Owner: Synapol Corporation
 		Location: 34,8
+	HumanBaseDestination: entry
+		Owner: Neutral
+		Location: 35,12
+	Actor461: radar
+		Owner: Yuruki Industries
+		Location: 28,69
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
