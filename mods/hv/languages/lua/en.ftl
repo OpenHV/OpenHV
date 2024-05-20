@@ -53,3 +53,9 @@ buildings-lost-65-percent = More than 65 % of buildings lost
 harbors-destroyed = Harbors destroyed!
 extractors-destroyed = Extractors destroyed!
 midbuilds-destroyed = Radar and comlink destroyed!
+
+## asteroid-invasion
+destroy-colony = Annihilate the colony basement
+destroy-yuruki-military = Annihilate the military basement
+detected = Synapol forces have detected you
+reinforcements-near-colony = Reinforcements detected near colony basement
