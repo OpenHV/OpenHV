@@ -1,0 +1,1423 @@
+MapFormat: 12
+
+RequiresMod: hv
+
+Title: Asteroid Invasion
+
+Author: Cromha
+
+Tileset: PLANET
+
+MapSize: 77,77
+
+Bounds: 1,1,75,75
+
+Visibility: MissionSelector
+
+Categories: Campaign
+
+LockPreview: True
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Yuruki Industries, Synapol Corporation
+	PlayerReference@Synapol Corporation:
+		Name: Synapol Corporation
+		Playable: True
+		LockFaction: True
+		Faction: sc
+		LockColor: True
+		Color: 805040
+		Enemies: Yuruki Industries, Creeps
+	PlayerReference@Yuruki Industries:
+		Name: Yuruki Industries
+		NonCombatant: True
+		Faction: yi
+		Color: 003897
+		Enemies: Synapol Corporation, Creeps
+
+Actors:
+	Actor0: bigrock
+		Owner: Neutral
+		Location: 22,24
+	Actor1: bigrock
+		Owner: Neutral
+		Location: 69,49
+	Actor2: bigrock
+		Owner: Neutral
+		Location: 54,17
+	Actor3: bigrock
+		Owner: Neutral
+		Location: 7,43
+	Actor4: grssmisc7
+		Owner: Neutral
+		Location: 61,47
+	Actor5: grssmisc7
+		Owner: Neutral
+		Location: 68,38
+	Actor6: grssmisc7
+		Owner: Neutral
+		Location: 28,46
+	Actor7: grssmisc7
+		Owner: Neutral
+		Location: 10,32
+	Actor8: grssmisc7
+		Owner: Neutral
+		Location: 3,46
+	Actor9: grssmisc7
+		Owner: Neutral
+		Location: 26,18
+	Actor10: grssmisc7
+		Owner: Neutral
+		Location: 61,12
+	Actor11: grssmisc6
+		Owner: Neutral
+		Location: 58,21
+	Actor12: grssmisc6
+		Owner: Neutral
+		Location: 64,17
+	Actor13: grssmisc6
+		Owner: Neutral
+		Location: 49,10
+	Actor14: grssmisc6
+		Owner: Neutral
+		Location: 52,21
+	Actor15: grssmisc6
+		Owner: Neutral
+		Location: 65,42
+	Actor16: grssmisc6
+		Owner: Neutral
+		Location: 67,53
+	Actor17: grssmisc6
+		Owner: Neutral
+		Location: 74,45
+	Actor18: grssmisc6
+		Owner: Neutral
+		Location: 27,53
+	Actor19: grssmisc6
+		Owner: Neutral
+		Location: 16,44
+	Actor20: grssmisc6
+		Owner: Neutral
+		Location: 19,36
+	Actor21: grssmisc6
+		Owner: Neutral
+		Location: 6,36
+	Actor22: grssmisc6
+		Owner: Neutral
+		Location: 11,52
+	Actor23: grssmisc6
+		Owner: Neutral
+		Location: 23,42
+	Actor24: grssmisc6
+		Owner: Neutral
+		Location: 4,9
+	Actor25: grssmisc6
+		Owner: Neutral
+		Location: 11,10
+	Actor26: rock5
+		Owner: Neutral
+		Location: 5,13
+	Actor27: rock5
+		Owner: Neutral
+		Location: 58,11
+	Actor28: rock5
+		Owner: Neutral
+		Location: 55,24
+	Actor29: rock5
+		Owner: Neutral
+		Location: 69,46
+	Actor30: rock5
+		Owner: Neutral
+		Location: 15,49
+	Actor31: rock5
+		Owner: Neutral
+		Location: 9,40
+	Actor32: rock8
+		Owner: Neutral
+		Location: 65,50
+	Actor33: rock8
+		Owner: Neutral
+		Location: 70,43
+	Actor34: rock8
+		Owner: Neutral
+		Location: 62,20
+	Actor35: rock8
+		Owner: Neutral
+		Location: 49,14
+	Actor36: rock8
+		Owner: Neutral
+		Location: 10,15
+	Actor37: rock8
+		Owner: Neutral
+		Location: 10,6
+	Actor38: rock8
+		Owner: Neutral
+		Location: 4,16
+	Actor39: rock8
+		Owner: Neutral
+		Location: 16,41
+	Actor40: rock8
+		Owner: Neutral
+		Location: 9,48
+	Actor41: rock8
+		Owner: Neutral
+		Location: 24,51
+	Actor42: rock8
+		Owner: Neutral
+		Location: 4,38
+	Actor43: rock3
+		Owner: Neutral
+		Location: 58,42
+	Actor44: rock3
+		Owner: Neutral
+		Location: 66,46
+	Actor45: rock3
+		Owner: Neutral
+		Location: 62,23
+	Actor46: rock3
+		Owner: Neutral
+		Location: 55,14
+	Actor47: rock3
+		Owner: Neutral
+		Location: 47,23
+	Actor48: rock3
+		Owner: Neutral
+		Location: 8,7
+	Actor49: rock3
+		Owner: Neutral
+		Location: 14,45
+	Actor50: rock3
+		Owner: Neutral
+		Location: 7,52
+	Actor51: rock3
+		Owner: Neutral
+		Location: 24,47
+	Actor52: rock3
+		Owner: Neutral
+		Location: 14,33
+	Actor53: rock12
+		Owner: Neutral
+		Location: 62,52
+	Actor54: rock12
+		Owner: Neutral
+		Location: 74,48
+	Actor55: rock12
+		Owner: Neutral
+		Location: 58,16
+	Actor56: rock12
+		Owner: Neutral
+		Location: 59,25
+	Actor57: rock12
+		Owner: Neutral
+		Location: 9,38
+	Actor58: grssmisc9
+		Owner: Neutral
+		Location: 64,51
+	Actor59: grssmisc9
+		Owner: Neutral
+		Location: 73,42
+	Actor60: grssmisc9
+		Owner: Neutral
+		Location: 62,42
+	Actor61: grssmisc9
+		Owner: Neutral
+		Location: 59,16
+	Actor62: grssmisc9
+		Owner: Neutral
+		Location: 8,8
+	Actor63: grssmisc9
+		Owner: Neutral
+		Location: 20,41
+	Actor64: grssmisc9
+		Owner: Neutral
+		Location: 17,50
+	Actor65: grssmisc8
+		Owner: Neutral
+		Location: 67,48
+	Actor66: grssmisc8
+		Owner: Neutral
+		Location: 54,20
+	Actor67: grssmisc8
+		Owner: Neutral
+		Location: 55,9
+	Actor68: grssmisc8
+		Owner: Neutral
+		Location: 15,38
+	Actor69: grssmisc8
+		Owner: Neutral
+		Location: 20,52
+	Actor70: grssmisc8
+		Owner: Neutral
+		Location: 6,14
+	Actor71: grssmisc8
+		Owner: Neutral
+		Location: 6,6
+	Actor72: grssmisc8
+		Owner: Neutral
+		Location: 27,22
+	Actor73: grssmisc8
+		Owner: Neutral
+		Location: 24,15
+	Actor74: crane2
+		Owner: Neutral
+		Location: 44,42
+	Actor75: crane2
+		Owner: Neutral
+		Location: 24,37
+	Actor76: crane
+		Owner: Neutral
+		Location: 55,48
+	Actor77: crane
+		Owner: Neutral
+		Location: 37,44
+	Actor78: crane
+		Owner: Neutral
+		Location: 55,37
+	Actor79: crate1
+		Owner: Neutral
+		Location: 55,51
+	Actor80: crate4
+		Owner: Neutral
+		Location: 57,49
+	Actor81: crate19
+		Owner: Neutral
+		Location: 57,51
+	Actor82: crate17
+		Owner: Neutral
+		Location: 54,50
+	Actor83: crate13
+		Owner: Neutral
+		Location: 56,49
+	Actor84: crate13
+		Owner: Neutral
+		Location: 35,38
+	Actor85: crate21
+		Owner: Neutral
+		Location: 37,39
+	Actor86: crate14
+		Owner: Neutral
+		Location: 37,37
+	Actor87: crate6
+		Owner: Neutral
+		Location: 36,40
+	Actor88: crate3
+		Owner: Neutral
+		Location: 35,37
+	Actor89: crate9
+		Owner: Neutral
+		Location: 39,39
+	Actor90: prop9
+		Owner: Neutral
+		Location: 56,42
+	Actor91: prop9
+		Location: 44,47
+		Owner: Neutral
+	Actor92: prop9
+		Owner: Neutral
+		Location: 26,42
+	Actor110: flagpost
+		Location: 66,29
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor111: comlink
+		Location: 69,24
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor112: watchtower
+		Location: 62,24
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor113: extractor
+		Location: 47,50
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor114: extractor
+		Location: 51,35
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor115: extractor
+		Location: 31,34
+		Faction: Random
+		Owner: Yuruki Industries
+	Actor116: prop4
+		Owner: Neutral
+		Location: 72,60
+	Actor117: prop4
+		Owner: Neutral
+		Location: 51,61
+	Actor118: prop4
+		Owner: Neutral
+		Location: 31,61
+	Actor119: prop4
+		Owner: Neutral
+		Location: 8,61
+	Actor120: streetlamp9
+		Owner: Neutral
+		Location: 73,63
+	Actor121: streetlamp9
+		Owner: Neutral
+		Location: 73,73
+	Actor122: streetlamp9
+		Owner: Neutral
+		Location: 59,73
+	Actor123: streetlamp9
+		Owner: Neutral
+		Location: 59,62
+	Actor124: streetlamp9
+		Owner: Neutral
+		Location: 44,62
+	Actor125: streetlamp9
+		Owner: Neutral
+		Location: 43,74
+	Actor126: streetlamp9
+		Owner: Neutral
+		Location: 33,63
+	Actor127: streetlamp9
+		Owner: Neutral
+		Location: 33,74
+	Actor128: streetlamp9
+		Owner: Neutral
+		Location: 23,63
+	Actor129: streetlamp9
+		Owner: Neutral
+		Location: 23,73
+	Actor130: streetlamp9
+		Owner: Neutral
+		Location: 10,63
+	Actor131: streetlamp9
+		Owner: Neutral
+		Location: 10,73
+	Actor132: streetlamp9
+		Owner: Neutral
+		Location: 3,69
+	Actor105: prop3
+		Owner: Neutral
+		Location: 66,28
+	Actor104: prop2
+		Owner: Neutral
+		Location: 67,28
+	Actor133: prop5
+		Owner: Yuruki Industries
+		Location: 60,31
+	Actor134: prop5
+		Owner: Yuruki Industries
+		Location: 65,24
+	Actor135: prop5
+		Owner: Yuruki Industries
+		Location: 69,31
+	Actor136: prop6
+		Owner: Yuruki Industries
+		Location: 72,30
+	Actor137: prop6
+		Owner: Yuruki Industries
+		Location: 70,27
+	Actor138: prop6
+		Owner: Yuruki Industries
+		Location: 67,30
+	Actor139: prop6
+		Owner: Yuruki Industries
+		Location: 60,28
+	Actor140: prop6
+		Owner: Yuruki Industries
+		Location: 62,31
+	Actor141: prop7
+		Owner: Yuruki Industries
+		Location: 65,27
+	Actor142: prop8
+		Owner: Yuruki Industries
+		Location: 67,32
+	Actor143: sparklamp
+		Owner: Yuruki Industries
+		Location: 66,23
+	Actor144: sparklamp
+		Owner: Yuruki Industries
+		Location: 70,29
+	Actor145: sparklamp
+		Owner: Yuruki Industries
+		Location: 62,28
+	Actor146: sparklamp
+		Owner: Yuruki Industries
+		Location: 65,33
+	Actor148: seed
+		Facing: 384
+		Owner: Neutral
+		Location: 32,23
+	Actor149: seed
+		Facing: 384
+		Owner: Neutral
+		Location: 7,28
+	Actor150: seed
+		Facing: 384
+		Owner: Neutral
+		Location: 53,27
+	Actor151: seed
+		Facing: 384
+		Owner: Neutral
+		Location: 32,54
+	Actor153: techcenter
+		Owner: Synapol Corporation
+		Location: 32,3
+	Actor154: bunker2
+		Owner: Synapol Corporation
+		Location: 36,15
+	Actor155: bunker2
+		Owner: Synapol Corporation
+		Location: 30,12
+	Actor156: tank11
+		Owner: Synapol Corporation
+		Location: 37,6
+		Facing: 592
+	Actor157: tank11
+		Owner: Synapol Corporation
+		Location: 38,8
+		Facing: 253
+	Actor158: tank12
+		Owner: Synapol Corporation
+		Location: 40,6
+		Facing: 155
+	Actor159: tank12
+		Owner: Synapol Corporation
+		Location: 40,9
+		Facing: 536
+	Actor160: tank2
+		Owner: Synapol Corporation
+		Location: 41,7
+		Facing: 642
+	Actor161: miner
+		Owner: Synapol Corporation
+		Location: 37,10
+		Facing: 670
+	Actor152: balloon
+		Owner: Synapol Corporation
+		Facing: 384
+		Location: 30,4
+	Actor162: tradplat
+		Owner: Synapol Corporation
+		Location: 34,3
+	Actor163: generator
+		Owner: Synapol Corporation
+		Location: 32,13
+	Actor164: generator
+		Owner: Synapol Corporation
+		Location: 24,13
+	Actor165: miner2
+		Owner: Yuruki Industries
+		Location: 67,6
+	Actor166: miner2
+		Owner: Yuruki Industries
+		Location: 71,5
+	Actor167: miner2
+		Owner: Yuruki Industries
+		Location: 8,20
+	Actor168: miner2
+		Owner: Yuruki Industries
+		Location: 67,3
+	Actor169: mother
+		Owner: Yuruki Industries
+		Location: 49,66
+	Actor170: hgate
+		Owner: Yuruki Industries
+		Location: 38,62
+	Actor171: hgate
+		Owner: Yuruki Industries
+		Location: 64,60
+	Actor172: hgate
+		Owner: Yuruki Industries
+		Location: 12,61
+	Actor173: barrier
+		Owner: Yuruki Industries
+		Location: 37,62
+	Actor174: barrier
+		Owner: Yuruki Industries
+		Location: 36,62
+	Actor175: barrier
+		Owner: Yuruki Industries
+		Location: 35,62
+	Actor176: barrier
+		Owner: Yuruki Industries
+		Location: 35,61
+	Actor177: barrier
+		Owner: Yuruki Industries
+		Location: 35,60
+	Actor178: barrier
+		Owner: Yuruki Industries
+		Location: 34,60
+	Actor179: barrier
+		Owner: Yuruki Industries
+		Location: 32,60
+	Actor180: barrier
+		Owner: Yuruki Industries
+		Location: 33,60
+	Actor181: barrier
+		Owner: Yuruki Industries
+		Location: 31,60
+	Actor182: barrier
+		Owner: Yuruki Industries
+		Location: 30,60
+	Actor183: barrier
+		Owner: Yuruki Industries
+		Location: 29,60
+	Actor184: barrier
+		Owner: Yuruki Industries
+		Location: 28,60
+	Actor185: barrier
+		Owner: Yuruki Industries
+		Location: 27,60
+	Actor186: barrier
+		Owner: Yuruki Industries
+		Location: 26,60
+	Actor187: barrier
+		Owner: Yuruki Industries
+		Location: 26,61
+	Actor188: barrier
+		Owner: Yuruki Industries
+		Location: 25,61
+	Actor190: barrier
+		Owner: Yuruki Industries
+		Location: 24,61
+	Actor189: barrier
+		Owner: Yuruki Industries
+		Location: 23,61
+	Actor191: barrier
+		Owner: Yuruki Industries
+		Location: 22,61
+	Actor192: barrier
+		Owner: Yuruki Industries
+		Location: 21,61
+	Actor193: barrier
+		Owner: Yuruki Industries
+		Location: 20,61
+	Actor194: barrier
+		Owner: Yuruki Industries
+		Location: 19,61
+	Actor195: barrier
+		Owner: Yuruki Industries
+		Location: 18,61
+	Actor196: barrier
+		Owner: Yuruki Industries
+		Location: 17,61
+	Actor197: barrier
+		Owner: Yuruki Industries
+		Location: 16,61
+	Actor199: barrier
+		Owner: Yuruki Industries
+		Location: 11,61
+	Actor200: barrier
+		Owner: Yuruki Industries
+		Location: 15,61
+	Actor198: barrier
+		Owner: Yuruki Industries
+		Location: 10,61
+	Actor201: barrier
+		Owner: Yuruki Industries
+		Location: 10,60
+	Actor202: barrier
+		Owner: Yuruki Industries
+		Location: 9,60
+	Actor203: barrier
+		Owner: Yuruki Industries
+		Location: 7,60
+	Actor204: barrier
+		Owner: Yuruki Industries
+		Location: 8,60
+	Actor205: barrier
+		Owner: Yuruki Industries
+		Location: 6,60
+	Actor206: barrier
+		Owner: Yuruki Industries
+		Location: 5,60
+	Actor207: vgate
+		Owner: Yuruki Industries
+		Location: 5,61
+	Actor208: barrier
+		Owner: Yuruki Industries
+		Location: 5,64
+	Actor209: barrier
+		Owner: Yuruki Industries
+		Location: 5,65
+	Actor210: barrier
+		Owner: Yuruki Industries
+		Location: 4,65
+	Actor211: barrier
+		Owner: Yuruki Industries
+		Location: 3,65
+	Actor212: barrier
+		Owner: Yuruki Industries
+		Location: 2,65
+	Actor213: barrier
+		Owner: Yuruki Industries
+		Location: 1,65
+	Actor214: barrier
+		Owner: Yuruki Industries
+		Location: 41,62
+	Actor215: barrier
+		Owner: Yuruki Industries
+		Location: 42,62
+	Actor216: barrier
+		Owner: Yuruki Industries
+		Location: 43,62
+	Actor217: barrier
+		Owner: Yuruki Industries
+		Location: 44,62
+	Actor218: barrier
+		Owner: Yuruki Industries
+		Location: 44,61
+	Actor219: barrier
+		Owner: Yuruki Industries
+		Location: 45,61
+	Actor220: barrier
+		Owner: Yuruki Industries
+		Location: 46,61
+	Actor221: barrier
+		Owner: Yuruki Industries
+		Location: 48,61
+	Actor222: barrier
+		Owner: Yuruki Industries
+		Location: 47,61
+	Actor223: barrier
+		Owner: Yuruki Industries
+		Location: 48,60
+	Actor224: barrier
+		Owner: Yuruki Industries
+		Location: 49,60
+	Actor225: barrier
+		Owner: Yuruki Industries
+		Location: 50,60
+	Actor226: barrier
+		Owner: Yuruki Industries
+		Location: 51,60
+	Actor227: barrier
+		Owner: Yuruki Industries
+		Location: 52,60
+	Actor228: barrier
+		Owner: Yuruki Industries
+		Location: 53,60
+	Actor229: barrier
+		Owner: Yuruki Industries
+		Location: 54,60
+	Actor230: barrier
+		Owner: Yuruki Industries
+		Location: 55,60
+	Actor231: barrier
+		Owner: Yuruki Industries
+		Location: 56,60
+	Actor232: barrier
+		Owner: Yuruki Industries
+		Location: 58,60
+	Actor233: barrier
+		Owner: Yuruki Industries
+		Location: 57,60
+	Actor234: barrier
+		Owner: Yuruki Industries
+		Location: 59,60
+	Actor235: barrier
+		Owner: Yuruki Industries
+		Location: 60,60
+	Actor236: barrier
+		Owner: Yuruki Industries
+		Location: 61,60
+	Actor237: barrier
+		Owner: Yuruki Industries
+		Location: 62,60
+	Actor238: barrier
+		Owner: Yuruki Industries
+		Location: 63,60
+	Actor239: barrier
+		Owner: Yuruki Industries
+		Location: 67,60
+	Actor240: barrier
+		Owner: Yuruki Industries
+		Location: 68,60
+	Actor241: barrier
+		Owner: Yuruki Industries
+		Location: 69,60
+	Actor242: barrier
+		Owner: Yuruki Industries
+		Location: 70,60
+	Actor243: barrier
+		Owner: Yuruki Industries
+		Location: 70,59
+	Actor244: barrier
+		Owner: Yuruki Industries
+		Location: 71,59
+	Actor245: barrier
+		Owner: Yuruki Industries
+		Location: 73,59
+	Actor246: barrier
+		Owner: Yuruki Industries
+		Location: 72,59
+	Actor247: barrier
+		Owner: Yuruki Industries
+		Location: 74,59
+	Actor248: barrier
+		Owner: Yuruki Industries
+		Location: 75,59
+	Actor250: storage
+		Owner: Yuruki Industries
+		Location: 65,66
+	Actor249: storage
+		Owner: Yuruki Industries
+		Location: 69,69
+	Actor251: hgate
+		Owner: Yuruki Industries
+		Location: 65,64
+	Actor252: barrier
+		Owner: Yuruki Industries
+		Location: 68,64
+	Actor253: barrier
+		Owner: Yuruki Industries
+		Location: 69,64
+	Actor254: barrier
+		Owner: Yuruki Industries
+		Location: 70,64
+	Actor255: barrier
+		Owner: Yuruki Industries
+		Location: 71,64
+	Actor256: barrier
+		Owner: Yuruki Industries
+		Location: 71,65
+	Actor257: barrier
+		Owner: Yuruki Industries
+		Location: 71,66
+	Actor258: barrier
+		Owner: Yuruki Industries
+		Location: 71,67
+	Actor259: barrier
+		Owner: Yuruki Industries
+		Location: 72,67
+	Actor260: barrier
+		Owner: Yuruki Industries
+		Location: 73,67
+	Actor261: vgate
+		Owner: Yuruki Industries
+		Location: 73,68
+	Actor262: barrier
+		Owner: Yuruki Industries
+		Location: 73,71
+	Actor263: barrier
+		Owner: Yuruki Industries
+		Location: 73,72
+	Actor264: barrier
+		Owner: Yuruki Industries
+		Location: 73,73
+	Actor265: barrier
+		Owner: Yuruki Industries
+		Location: 72,73
+	Actor266: barrier
+		Owner: Yuruki Industries
+		Location: 71,73
+	Actor267: barrier
+		Owner: Yuruki Industries
+		Location: 70,73
+	Actor268: barrier
+		Owner: Yuruki Industries
+		Location: 69,73
+	Actor269: barrier
+		Owner: Yuruki Industries
+		Location: 68,73
+	Actor270: barrier
+		Owner: Yuruki Industries
+		Location: 66,73
+	Actor271: barrier
+		Owner: Yuruki Industries
+		Location: 67,73
+	Actor272: barrier
+		Owner: Yuruki Industries
+		Location: 65,73
+	Actor273: barrier
+		Owner: Yuruki Industries
+		Location: 64,73
+	Actor274: barrier
+		Owner: Yuruki Industries
+		Location: 64,72
+	Actor276: barrier
+		Owner: Yuruki Industries
+		Location: 64,71
+	Actor277: barrier
+		Owner: Yuruki Industries
+		Location: 64,64
+	Actor278: barrier
+		Owner: Yuruki Industries
+		Location: 64,65
+	Actor279: barrier
+		Owner: Yuruki Industries
+		Location: 64,66
+	Actor280: vgate
+		Owner: Yuruki Industries
+		Location: 64,67
+	Actor275: barrier
+		Owner: Yuruki Industries
+		Location: 64,70
+	Actor281: hgate
+		Owner: Yuruki Industries
+		Location: 50,65
+	Actor282: hgate
+		Owner: Yuruki Industries
+		Location: 50,64
+	Actor283: barrier
+		Owner: Yuruki Industries
+		Location: 53,65
+	Actor284: barrier
+		Owner: Yuruki Industries
+		Location: 53,64
+	Actor285: barrier
+		Owner: Yuruki Industries
+		Location: 54,64
+	Actor286: barrier
+		Owner: Yuruki Industries
+		Location: 54,65
+	Actor287: barrier
+		Owner: Yuruki Industries
+		Location: 55,64
+	Actor288: barrier
+		Owner: Yuruki Industries
+		Location: 55,65
+	Actor289: barrier
+		Owner: Yuruki Industries
+		Location: 56,64
+	Actor290: barrier
+		Owner: Yuruki Industries
+		Location: 56,65
+	Actor291: barrier
+		Owner: Yuruki Industries
+		Location: 56,66
+	Actor295: barrier
+		Owner: Yuruki Industries
+		Location: 56,70
+	Actor296: barrier
+		Owner: Yuruki Industries
+		Location: 56,71
+	Actor297: barrier
+		Owner: Yuruki Industries
+		Location: 56,72
+	Actor298: barrier
+		Owner: Yuruki Industries
+		Location: 56,73
+	Actor299: barrier
+		Owner: Yuruki Industries
+		Location: 56,74
+	Actor300: barrier
+		Owner: Yuruki Industries
+		Location: 55,74
+	Actor301: barrier
+		Owner: Yuruki Industries
+		Location: 54,74
+	Actor302: barrier
+		Owner: Yuruki Industries
+		Location: 53,74
+	Actor303: barrier
+		Owner: Yuruki Industries
+		Location: 51,74
+	Actor304: barrier
+		Owner: Yuruki Industries
+		Location: 52,74
+	Actor305: barrier
+		Owner: Yuruki Industries
+		Location: 50,74
+	Actor306: barrier
+		Owner: Yuruki Industries
+		Location: 49,74
+	Actor307: barrier
+		Owner: Yuruki Industries
+		Location: 48,74
+	Actor308: barrier
+		Owner: Yuruki Industries
+		Location: 48,73
+	Actor309: barrier
+		Owner: Yuruki Industries
+		Location: 48,71
+	Actor310: barrier
+		Owner: Yuruki Industries
+		Location: 48,72
+	Actor311: barrier
+		Owner: Yuruki Industries
+		Location: 48,70
+	Actor315: barrier
+		Owner: Yuruki Industries
+		Location: 48,66
+	Actor316: barrier
+		Owner: Yuruki Industries
+		Location: 48,65
+	Actor317: barrier
+		Owner: Yuruki Industries
+		Location: 48,64
+	Actor318: barrier
+		Owner: Yuruki Industries
+		Location: 49,64
+	Actor319: barrier
+		Owner: Yuruki Industries
+		Location: 49,65
+	Actor320: barrier
+		Owner: Yuruki Industries
+		Location: 57,64
+	Actor321: barrier
+		Owner: Yuruki Industries
+		Location: 57,65
+	Actor322: barrier
+		Owner: Yuruki Industries
+		Location: 57,66
+	Actor327: barrier
+		Owner: Yuruki Industries
+		Location: 57,71
+	Actor328: barrier
+		Owner: Yuruki Industries
+		Location: 57,72
+	Actor329: barrier
+		Owner: Yuruki Industries
+		Location: 57,73
+	Actor330: barrier
+		Owner: Yuruki Industries
+		Location: 57,74
+	Actor331: barrier
+		Owner: Yuruki Industries
+		Location: 57,75
+	Actor332: barrier
+		Owner: Yuruki Industries
+		Location: 56,75
+	Actor333: barrier
+		Owner: Yuruki Industries
+		Location: 55,75
+	Actor334: barrier
+		Owner: Yuruki Industries
+		Location: 54,75
+	Actor335: barrier
+		Owner: Yuruki Industries
+		Location: 53,75
+	Actor336: barrier
+		Owner: Yuruki Industries
+		Location: 52,75
+	Actor337: barrier
+		Owner: Yuruki Industries
+		Location: 51,75
+	Actor338: barrier
+		Owner: Yuruki Industries
+		Location: 50,75
+	Actor339: barrier
+		Owner: Yuruki Industries
+		Location: 49,75
+	Actor340: barrier
+		Owner: Yuruki Industries
+		Location: 48,75
+	Actor341: barrier
+		Owner: Yuruki Industries
+		Location: 47,75
+	Actor342: barrier
+		Owner: Yuruki Industries
+		Location: 47,74
+	Actor343: barrier
+		Owner: Yuruki Industries
+		Location: 47,73
+	Actor344: barrier
+		Owner: Yuruki Industries
+		Location: 47,71
+	Actor345: barrier
+		Owner: Yuruki Industries
+		Location: 47,72
+	Actor346: barrier
+		Owner: Yuruki Industries
+		Location: 47,70
+	Actor350: barrier
+		Owner: Yuruki Industries
+		Location: 47,66
+	Actor351: barrier
+		Owner: Yuruki Industries
+		Location: 47,65
+	Actor352: barrier
+		Owner: Yuruki Industries
+		Location: 47,64
+	Actor353: vgate
+		Owner: Yuruki Industries
+		Location: 57,67
+	Actor354: barrier
+		Owner: Yuruki Industries
+		Location: 57,70
+	Actor355: vgate
+		Owner: Yuruki Industries
+		Location: 56,67
+	Actor347: vgate
+		Owner: Yuruki Industries
+		Location: 48,67
+	Actor348: vgate
+		Owner: Yuruki Industries
+		Location: 47,67
+	Actor349: minipod3
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 53,72
+	Actor356: minipod3
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 55,70
+	Actor357: minipod4
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 55,72
+	Actor358: minipod6
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 54,66
+	Actor359: minipod6
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 49,72
+	Actor360: minipod6
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 52,71
+	Actor361: minipod6
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 63,28
+	Actor362: minipod6
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 65,32
+	Actor363: minipod3
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 72,28
+	Actor364: minipod3
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 68,27
+	Actor365: minipod4
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 69,30
+	Actor366: minipod4
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 68,25
+	Actor367: minipod5
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 64,27
+	Actor368: minipod5
+		Owner: Yuruki Industries
+		Facing: 384
+		SubCell: 1
+		Location: 65,30
+	Actor369: radar2
+		Owner: Yuruki Industries
+		Location: 28,69
+	Actor370: field
+		Owner: Yuruki Industries
+		Location: 32,69
+	Actor371: factory3
+		Owner: Yuruki Industries
+		Location: 10,67
+	Actor372: factory3
+		Owner: Yuruki Industries
+		Location: 12,67
+	Actor373: module
+		Owner: Yuruki Industries
+		Location: 16,67
+	Actor374: module
+		Owner: Yuruki Industries
+		Location: 18,67
+	Actor375: module
+		Owner: Yuruki Industries
+		Location: 20,67
+	Actor376: techcenter
+		Owner: Yuruki Industries
+		Location: 36,68
+	Actor377: orepurifier
+		Owner: Yuruki Industries
+		Location: 52,50
+	Actor378: orepurifier
+		Owner: Yuruki Industries
+		Location: 56,44
+	Actor379: orepurifier
+		Owner: Yuruki Industries
+		Location: 45,38
+	Actor380: orepurifier
+		Owner: Yuruki Industries
+		Location: 37,41
+	Actor381: orepurifier
+		Owner: Yuruki Industries
+		Location: 29,44
+	Actor382: orepurifier
+		Owner: Yuruki Industries
+		Location: 28,33
+	Actor383: starport
+		Owner: Yuruki Industries
+		Location: 42,66
+	Actor384: starport
+		Owner: Yuruki Industries
+		Location: 42,70
+	Actor385: uplink
+		Owner: Yuruki Industries
+		Location: 26,72
+	Actor386: hgate
+		Owner: Yuruki Industries
+		Location: 26,72
+	Actor387: barrier
+		Owner: Yuruki Industries
+		Location: 29,72
+	Actor388: barrier
+		Owner: Yuruki Industries
+		Location: 29,73
+	Actor389: barrier
+		Owner: Yuruki Industries
+		Location: 29,74
+	Actor390: barrier
+		Owner: Yuruki Industries
+		Location: 29,75
+	Actor391: barrier
+		Owner: Yuruki Industries
+		Location: 28,75
+	Actor392: barrier
+		Owner: Yuruki Industries
+		Location: 27,75
+	Actor393: barrier
+		Owner: Yuruki Industries
+		Location: 26,75
+	Actor394: barrier
+		Owner: Yuruki Industries
+		Location: 25,75
+	Actor395: barrier
+		Owner: Yuruki Industries
+		Location: 25,74
+	Actor396: barrier
+		Owner: Yuruki Industries
+		Location: 25,73
+	Actor397: barrier
+		Owner: Yuruki Industries
+		Location: 25,72
+	Actor398: tradplat
+		Owner: Yuruki Industries
+		Location: 39,66
+	Actor399: tradplat
+		Owner: Yuruki Industries
+		Location: 39,70
+	Actor400: turret
+		Owner: Yuruki Industries
+		Location: 41,60
+	Actor401: turret
+		Owner: Yuruki Industries
+		Location: 36,60
+	Actor402: turret
+		Owner: Yuruki Industries
+		Location: 15,59
+	Actor403: turret
+		Owner: Yuruki Industries
+		Location: 11,58
+	Actor404: turret
+		Owner: Yuruki Industries
+		Location: 67,58
+	Actor405: turret
+		Owner: Yuruki Industries
+		Location: 62,58
+	Actor406: bunker
+		Owner: Yuruki Industries
+		Location: 60,58
+	Actor407: bunker
+		Owner: Yuruki Industries
+		Location: 69,58
+	Actor408: bunker
+		Owner: Yuruki Industries
+		Location: 43,60
+	Actor409: bunker
+		Owner: Yuruki Industries
+		Location: 35,59
+	Actor410: bunker
+		Owner: Yuruki Industries
+		Location: 17,60
+	Actor411: bunker
+		Owner: Yuruki Industries
+		Location: 10,58
+	Actor412: aaturret
+		Owner: Yuruki Industries
+		Location: 27,61
+	Actor413: aaturret
+		Owner: Yuruki Industries
+		Location: 5,65
+	Actor414: aaturret
+		Owner: Yuruki Industries
+		Location: 47,61
+	Actor415: aaturret
+		Owner: Yuruki Industries
+		Location: 68,60
+	Actor416: generator
+		Owner: Yuruki Industries
+		Location: 60,66
+	Actor417: generator
+		Owner: Yuruki Industries
+		Location: 60,64
+	Actor418: generator
+		Owner: Yuruki Industries
+		Location: 60,68
+	Actor419: generator
+		Owner: Yuruki Industries
+		Location: 60,70
+	Actor420: generator
+		Owner: Yuruki Industries
+		Location: 60,72
+	Actor421: generator
+		Owner: Yuruki Industries
+		Location: 15,72
+	Actor422: generator
+		Owner: Yuruki Industries
+		Location: 15,74
+	Actor423: generator
+		Owner: Yuruki Industries
+		Location: 17,72
+	Actor424: generator
+		Owner: Yuruki Industries
+		Location: 17,74
+	Actor425: generator
+		Owner: Yuruki Industries
+		Location: 19,72
+	Actor426: generator
+		Owner: Yuruki Industries
+		Location: 19,74
+	Actor427: generator
+		Owner: Yuruki Industries
+		Location: 25,64
+	Actor428: generator
+		Owner: Yuruki Industries
+		Location: 27,64
+	Actor429: generator
+		Owner: Yuruki Industries
+		Location: 25,66
+	Actor430: generator
+		Owner: Yuruki Industries
+		Location: 27,66
+	Actor431: streetlamp4
+		Location: 36,58
+		Faction: yi
+		Owner: Neutral
+	Actor432: streetlamp3
+		Location: 41,58
+		Faction: yi
+		Owner: Neutral
+	Actor433: streetlamp3
+		Location: 16,57
+		Faction: yi
+		Owner: Neutral
+	Actor434: streetlamp4
+		Location: 11,57
+		Faction: yi
+		Owner: Neutral
+	Actor435: streetlamp4
+		Location: 62,57
+		Faction: yi
+		Owner: Neutral
+	Actor436: streetlamp3
+		Location: 68,56
+		Faction: yi
+		Owner: Neutral
+	ColonyDestination: entry
+		Owner: Neutral
+		Location: 63,27
+	FactoryExit: entry
+		Location: 13,70
+		Faction: yi
+		Owner: Neutral
+	ModuleExit: entry
+		Location: 19,69
+		Faction: yi
+		Owner: Neutral
+	Actor437: generator
+		Owner: Yuruki Industries
+		Location: 29,64
+	Actor438: generator
+		Owner: Yuruki Industries
+		Location: 29,66
+	Actor439: generator
+		Owner: Yuruki Industries
+		Location: 31,64
+	Actor440: generator
+		Owner: Yuruki Industries
+		Location: 31,66
+	Actor441: generator
+		Owner: Yuruki Industries
+		Location: 23,66
+	Actor442: generator
+		Owner: Yuruki Industries
+		Location: 33,66
+	Actor443: generator
+		Owner: Yuruki Industries
+		Location: 16,63
+	Actor444: generator
+		Owner: Yuruki Industries
+		Location: 18,63
+	Actor445: generator
+		Owner: Yuruki Industries
+		Location: 20,63
+	Actor446: generator
+		Owner: Yuruki Industries
+		Location: 5,73
+	Actor447: generator
+		Owner: Yuruki Industries
+		Location: 7,73
+	Actor448: generator
+		Owner: Yuruki Industries
+		Location: 7,71
+	Actor449: generator
+		Owner: Yuruki Industries
+		Location: 5,71
+	Actor450: generator
+		Owner: Yuruki Industries
+		Location: 5,69
+	Actor451: generator
+		Owner: Yuruki Industries
+		Location: 7,69
+	Actor452: generator
+		Owner: Yuruki Industries
+		Location: 38,74
+	Actor453: generator
+		Owner: Yuruki Industries
+		Location: 36,74
+	Actor454: generator
+		Owner: Yuruki Industries
+		Location: 34,74
+	Actor455: generator
+		Owner: Yuruki Industries
+		Location: 34,72
+	Actor456: generator
+		Owner: Yuruki Industries
+		Location: 36,72
+	Actor457: generator
+		Owner: Yuruki Industries
+		Location: 60,62
+	Actor458: generator
+		Owner: Yuruki Industries
+		Location: 60,74
+	Actor459: generator
+		Owner: Synapol Corporation
+		Location: 35,18
+	Actor460: generator
+		Owner: Synapol Corporation
+		Location: 40,13
+	Outpost: outpost2
+		Owner: Synapol Corporation
+		Location: 34,8
+
+Rules: hv|rules/campaign.yaml, rules.yaml
+
+Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl, en.ftl
+
+Sequences: sequences.yaml
