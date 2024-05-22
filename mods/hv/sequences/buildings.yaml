@@ -2242,7 +2242,7 @@ dropzone:
 		Filename: bits/flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: maps/asteroid-invasion/artwork/buildings-icons.png
+		Filename: bits/buildings-icons.png
 		Start: 38
 	make:
 		Filename: bits/build.png

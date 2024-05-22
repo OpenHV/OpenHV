@@ -488,8 +488,8 @@ TANK11:
 		GenericName: actor-tank11.generic-name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 90
+		Prerequisites: ~factory.gm
+		BuildPaletteOrder: 10
 		Description: actor-tank11.description
 	Armament:
 		Weapon: ^Cannon
@@ -519,7 +519,8 @@ TANK11:
 TANK12:
 	Inherits: TANK11
 	Buildable:
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 15
+		Prerequisites:  ~factory.gm, radar
 		Description: actor-tank12-description
 	Armament:
 		Weapon: doublecannon

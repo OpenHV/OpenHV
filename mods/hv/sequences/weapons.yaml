@@ -230,6 +230,13 @@ railgun:
 	idle:
 		Filename: bits/railgun-projectile.png
 
+clusterbomb:
+	up:
+		Filename: bits/blank.png
+	down:
+		Filename: bits/cluster_bomb.png
+		ZOffset: 2030
+
 smoke:
 	idle:
 		Filename: bits/smoke.png

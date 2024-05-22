@@ -902,7 +902,7 @@
 	WithFacingSpriteBody:
 	HitShape:
 	RepairableNear:
-		RepairActors: harbor, harbor2
+		RepairActors: harbor, harbor2, harbor3
 		CloseEnough: 2c0
 	LeavesTrails:
 		Image: watertrail

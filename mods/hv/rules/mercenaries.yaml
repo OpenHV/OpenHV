@@ -7,6 +7,8 @@ COPTER.MERCENARY:
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: copter
+	RenderSprites:
+		Image: copter
 
 BANSHEE.MERCENARY:
 	Inherits: BANSHEE
@@ -15,6 +17,8 @@ BANSHEE.MERCENARY:
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: banshee
+	RenderSprites:
+		Image: banshee
 
 COPTER2.MERCENARY:
 	Inherits: COPTER2
@@ -23,6 +27,8 @@ COPTER2.MERCENARY:
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: copter2
+	RenderSprites:
+		Image: copter2
 
 BALLOON.MERCENARY:
 	Inherits: BALLOON
@@ -31,6 +37,8 @@ BALLOON.MERCENARY:
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: balloon
+	RenderSprites:
+		Image: balloon
 
 ## buildings
 
@@ -127,7 +135,7 @@ TURRET3:
 AATURRET3:
 	Inherits: AATURRET2
 	Buildable:
-		Prerequisites: radar, ~structures.yi
+		Prerequisites: radar, ~structures.gm
 	-Encyclopedia:
 	RenderSprites:
 		Image: aaturret2
@@ -145,12 +153,203 @@ HARBOR3:
 	RenderSprites:
 		Image: harbor2
 
+UPLINKMERCENARY:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Selectable:
+		Bounds: 2048, 3072, 0, 0
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: actor-uplink-mercenary.name
+	Encyclopedia:
+		Description: actor-uplink-mercenary.encyclopedia
+		Order: 130
+		Category: Buildings
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter, ~structures.gm
+		BuildLimit: 1
+		Description: actor-uplink-mercenary.description
+	Building:
+		Footprint: == == xx
+		Dimensions: 2,3
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -1024,0,0
+		Type: Rectangle
+			TopLeft: -1048, 512
+			BottomRight: 1048, 1524
+	Health:
+		HP: 100000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 4c0
+	SupportPowerChargeBar:
+	Power:
+		Amount: -165
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	WithIdleOverlay@Lights:
+		Sequence: animation
+		RequiresCondition: !build-incomplete
+	NukePower:
+		PauseOnCondition: disabled
+		Cursor: nuke
+		Icon: nuke
+		ChargeInterval: 6500
+		Name: actor-uplink-mercenary.railgun-name
+		Description: actor-uplink-mercenary.railgun-description
+		MissileWeapon: clusterbomb
+		MissileImage: clusterbomb
+		MissileDelay: 1
+		SkipAscent: true
+		DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayRadarPing: true
+		CameraRange: 10c0
+		SupportPowerPaletteOrder: 10
+		DetectedSpeechNotification: NukeDetected
+		DetectedTextNotification: notification-nuke-detected
+		BeginChargeSpeechNotification: NukeCharging
+		BeginChargeTextNotification: notification-nuke-charging
+		EndChargeSpeechNotification: NukeReady
+		EndChargeTextNotification: notification-nuke-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: NukeIncoming
+		OrderName: Nukem
+	RenderSprites:
+		Image: uplink
+
 ## pods
 
 SCOUT2.MERCENARY:
 	Inherits: SCOUT2
 	Buildable:
-		Prerequisites: techcenter, ~starport.gm
+		Prerequisites: ~module.gm
 	-MapEditorData:
 	UpdatesPlayerStatistics:
 		OverrideActor: scout2
+	RenderSprites:
+		Image: scout2
+
+MORTARPOD.MERCENARY:
+	Inherits: MORTARPOD
+	Buildable:
+		Prerequisites: ~module.gm, factory
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: mortarpod
+	RenderSprites:
+		Image: mortarpod
+
+SNIPERPOD.MERCENARY:
+	Inherits: SNIPERPOD
+	Buildable:
+		Prerequisites: ~module.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: sniperpod
+	RenderSprites:
+		Image: sniperpod
+
+## ships
+
+PATROLBOAT.MERCENARY:
+	Inherits: PATROLBOAT
+	Buildable:
+		Prerequisites: ~harbor.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: patrolboat
+	RenderSprites:
+		Image: patrolboat
+
+SUBMARINE2.MERCENARY:
+	Inherits: SUBMARINE2
+	Buildable:
+		Prerequisites: ~harbor.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: submarine2
+	RenderSprites:
+		Image: submarine2
+
+BOAT2.MERCENARY:
+	Inherits: BOAT2
+	Buildable:
+		Prerequisites: ~harbor.gm, techcenter
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: boat2
+	RenderSprites:
+		Image: boat2
+
+SUBMARINE.MERCENARY:
+	Inherits: SUBMARINE
+	Buildable:
+		Prerequisites: ~harbor.gm, techcenter
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: submarine
+	RenderSprites:
+		Image: submarine
+
+WATERMINELAYER2.MERCENARY:
+	Inherits: WATERMINELAYER2
+	Buildable:
+		Prerequisites: ~harbor.gm, tradplat
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: waterminelayer2
+	RenderSprites:
+		Image: waterminelayer2
+
+## vehicles
+
+BUILDER3:
+	Inherits: BUILDER
+	Buildable:
+		Prerequisites: ~structures.gm
+	Transforms:
+		IntoActor: outpost3
+	RenderSprites:
+		Image: builder4
+
+TANK5.MERCENARY:
+	Inherits: TANK5
+	Buildable:
+		Prerequisites: ~factory.gm, techcenter
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: tank5
+	RenderSprites:
+		Image: tank5
+
+MISSILETANK.MERCENARY:
+	Inherits: MISSILETANK
+	Buildable:
+		Prerequisites: ~factory.gm, radar, techcenter
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: missiletank
+	RenderSprites:
+		Image: missiletank
+
+AATANK.MERCENARY:
+	Inherits: AATANK
+	Buildable:
+		Prerequisites: ~factory.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: aatank
+	RenderSprites:
+		Image: aatank

@@ -19,66 +19,88 @@ Player:
 		MaximumExcessPower: 200
 		ResourceDistance: 6
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
-		ConstructionYardTypes: base, base2
+		ConstructionYardTypes: base, base2, base3
 		PowerTypes: generator
-		BarracksTypes: module, module2
-		VehiclesFactoryTypes: factory3, factory4, base, base2
-		ProductionTypes: module, module2, factory3, factory4, starport, starport2, harbor, harbor2, base, base2
-		NavalProductionTypes: harbor, harbor2
+		BarracksTypes: module, module2, module3
+		VehiclesFactoryTypes: factory3, factory4, factory5, base, base2, base3
+		ProductionTypes: module, module2, factory3, factory4, factory5, starport, starport2, harbor, harbor2, base, base2
+		NavalProductionTypes: harbor, harbor2, harbor3
 		RefineryTypes: storage
-		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
+		DefenseTypes: turret, turret2, turret3, aaturret, aaturret2, aaturret3, bunker, bunker2, bunker3
 		BuildingLimits:
 			base: 1
 			storage: 1
 			module: 4
 			factory3: 4
 			factory4: 4
+			factory5: 4
 			radar: 1
 			radar2: 1
+			radar3: 1
 			starport: 4
 			starport2: 4
+			starport3: 1
 			oresmelt: 4
+			orepurifier: 4
+			orepurifier2: 4
 			tradplat: 1
 			techcenter: 1
 			harbor: 1
 			harbor2: 1
+			harbor3: 1
 			field: 1
+			dropzone: 4
 			howitzer: 1
 			uplink: 1
+			uplinkmercenary: 1
 			silo: 1
 		BuildingFractions:
 			base: 1
 			storage: 2
 			module: 1
 			module2: 1
+			module3: 1
 			radar: 1
 			radar2: 1
+			radar3: 1
 			factory3: 1
 			factory4: 1
+			factory5: 1
 			harbor: 1
 			harbor2: 1
+			harbor3: 1
 			tradplat: 1
 			starport: 1
 			starport2: 1
+			starport3: 1
 			techcenter: 1
 			oresmelt: 9
+			orepurifier: 9
+			orepurifier2: 9
 			bunker: 7
 			bunker2: 7
+			bunker3: 7
 			turret: 5
 			turret2: 5
+			turret3: 5
 			aaturret: 6
 			aaturret2: 6
+			aaturret3: 6
 			howitzer: 1
 			uplink: 1
+			dropzone: 1
+			uplinkmercenary: 1
 			field: 1
 			silo: 1
 		BuildingDelays:
 			radar: 4000
 			radar2: 4000
+			dropzne: 6000
 			howitzer: 8000
 			field: 8000
 			silo: 9000
 			uplink: 9000
+			uplinkmercenary: 9000
 	BuildingRepairBotModule:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
@@ -104,6 +126,8 @@ Player:
 			tank6: 1
 			tank7: 1
 			tank8: 1
+			tank11: 4
+			tank12: 4
 			aatank: 3
 			tank15: 1
 			tank16: 1

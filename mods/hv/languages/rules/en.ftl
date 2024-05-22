@@ -310,6 +310,17 @@ actor-uplink =
    .railgun-description = Initiate a surgical strike.
     Applies instant damage to a small area.
 
+actor-uplink-mercenary =
+   .name = Orbital Cluster Bomb Uplink Command
+   .encyclopedia = An orbital spaceship that can launch cluster bombs from the atmosphere. It is a more surgical strike than the nuclear bomb and it cannot be evaded. However it damages only the area surrounding the impact. It requires a long time to reload and consumes energy in that process.
+   .description = Orders an orbital cluster bomb strike.
+      Requires power to operate.
+      Maximum 1 can be built.
+      Special Ability: Cluster Bomb
+   .railgun-name = Cluster Bomb
+   .railgun-description = Initiate a surgical strike.
+    Applies instant damage to a small area.
+
 actor-storage =
    .description = Stores excess resources.
    .name = Storage
