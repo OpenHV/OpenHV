@@ -86,5 +86,6 @@ install_data() (
 	cp -r "${SRC_PATH}/mods/common" "${DEST_PATH}/mods/"
 
 	echo "Installing Hard Vacuum mod files to ${DEST_PATH}"
+ 	rm -r "${DEST_PATH}/mods/hv/"*
 	cp -r "${SRC_PATH}/../mods/hv" "${DEST_PATH}/mods/"
 )
