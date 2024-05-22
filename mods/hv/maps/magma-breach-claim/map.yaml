@@ -122,9 +122,6 @@ Actors:
 	Actor21: goldball
 		Owner: Neutral
 		Location: 20,26
-	Actor22: goldball
-		Owner: Neutral
-		Location: 22,31
 	Actor23: goldball
 		Owner: Neutral
 		Location: 16,33
@@ -134,9 +131,6 @@ Actors:
 	Actor25: goldball
 		Owner: Neutral
 		Location: 24,41
-	Actor26: goldball
-		Owner: Neutral
-		Location: 24,38
 	Actor28: miner
 		Owner: Yuruki Industries
 		Location: 36,63
@@ -407,38 +401,37 @@ Actors:
 		Owner: Neutral
 		Location: 61,55
 	Actor136: crane
-		Faction: Random
 		Location: 9,47
-		Owner: Synapol Corporation
+		Owner: Neutral
 	Actor138: prop5
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 55,28
 	Actor139: prop5
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 58,25
 	Actor140: prop6
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 60,29
 	Actor141: prop6
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 57,28
 	Actor142: prop6
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 56,26
 	Actor143: prop5
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 59,30
 	Actor144: prop7
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 61,27
 	Actor145: prop8
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 58,29
 	Actor149: tanktrap
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 57,32
 	Actor150: streetlamp7
-		Owner: Synapol Corporation
+		Owner: Neutral
 		Location: 58,27
 	Actor151: patrolboat
 		Owner: Synapol Corporation
@@ -1155,6 +1148,12 @@ Actors:
 	Actor324: miner2
 		Owner: Synapol Corporation
 		Location: 62,3
+	Actor26: goldball
+		Owner: Neutral
+		Location: 24,39
+	Actor22: goldball
+		Owner: Neutral
+		Location: 22,30
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
