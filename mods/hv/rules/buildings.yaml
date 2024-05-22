@@ -262,6 +262,7 @@ GENERATOR:
 		FactionImages:
 			sc: generator2
 			yi: generator
+			gm: generator2
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -452,6 +453,7 @@ TRADPLAT:
 		FactionImages:
 			sc: tradplat2
 			yi: tradplat
+			gm: tradplat
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -1027,6 +1029,7 @@ TECHCENTER:
 		FactionImages:
 			sc: techcenter2
 			yi: techcenter
+			gm: techcenter2
 	WithIdleOverlay@ANIMATION:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
@@ -1636,6 +1639,7 @@ STORAGE:
 		FactionImages:
 			sc: storage
 			yi: storage2
+			gm: storage
 	ExitsDebugOverlay:
 	Exit@Top:
 		ExitCell: 2, 0
@@ -2702,7 +2706,7 @@ WATCHTOWER:
 		Sticky: true
 
 DROPZONE:
-	Inherits: ^Building
+	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
@@ -2717,6 +2721,12 @@ DROPZONE:
 	Building:
 		Footprint: x+x +++ x+x
 		Dimensions: 3,3
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 130
+		Prerequisites: radar, structures.gm
+		BuildLimit: 4
+		Description: actor-dropzone.description-buildable
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
@@ -2725,6 +2735,8 @@ DROPZONE:
 	Power:
 		Amount: -40
 		RequiresCondition: !ownerless
+	Valued:
+		Cost: 1750
 	Health:
 		HP: 80000
 	WithIdleAnimation:

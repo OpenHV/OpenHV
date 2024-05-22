@@ -1,0 +1,156 @@
+## aircraft
+
+COPTER.MERCENARY:
+	Inherits: COPTER
+	Buildable:
+		Prerequisites: ~starport.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: copter
+
+BANSHEE.MERCENARY:
+	Inherits: BANSHEE
+	Buildable:
+		Prerequisites: techcenter, ~starport.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: banshee
+
+COPTER2.MERCENARY:
+	Inherits: COPTER2
+	Buildable:
+		Prerequisites: ~starport.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: copter2
+
+BALLOON.MERCENARY:
+	Inherits: BALLOON
+	Buildable:
+		Prerequisites: ~starport.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: balloon
+
+## buildings
+
+BASE3:
+	Inherits: BASE
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@Ginkua:
+		Prerequisite: structures.gm
+	Buildable:
+		Prerequisites: outpost, ~base.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: base
+
+OUTPOST3:
+	Inherits: OUTPOST
+	-Encyclopedia:
+	-ProvidesPrerequisite@Yuruki:
+	ProvidesPrerequisite@Ginkua:
+		Factions: gm
+		Prerequisite: base.gm
+	RenderSprites:
+		Image: outpost
+
+RADAR3:
+	Inherits: RADAR
+	-Encyclopedia:
+	Buildable:
+		Prerequisites: storage, ~structures.gm
+	AirstrikePower:
+		ChargeInterval: 4100
+		SquadSize: 5
+	RenderSprites:
+		Image: radar
+
+MODULE3:
+	Inherits: MODULE
+	Buildable:
+		Prerequisites: ~structures.gm
+	ProvidesPrerequisite@Faction:
+		Prerequisite: module.gm
+		RequiresCondition: !powerdown
+	-Encyclopedia:
+	RenderSprites:
+		Image: module
+
+STARPORT3:
+	Inherits: STARPORT
+	Buildable:
+		Prerequisites: radar, ~structures.gm
+	ProvidesPrerequisite@Faction:
+		Prerequisite: starport.gm
+		RequiresCondition: !powerdown
+	-WithProductionExitOverlay:
+	-Encyclopedia:
+	RenderSprites:
+		Image: starport
+
+FACTORY5:
+	Inherits: FACTORY3
+	Buildable:
+		Prerequisites: module, storage, ~structures.gm
+	ProvidesPrerequisite@Faction:
+		Prerequisite: factory.gm
+		RequiresCondition: !powerdown
+	-Encyclopedia:
+	RenderSprites:
+		Image: factory3
+
+OREPURIFIER2:
+	Inherits: OREPURIFIER
+	Buildable:
+		Prerequisites: ~structures.gm, techcenter
+	-Encyclopedia:
+	RenderSprites:
+		Image: orepurifier
+
+BUNKER3:
+	Inherits: BUNKER
+	Buildable:
+		Prerequisites: module, ~structures.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: bunker
+
+TURRET3:
+	Inherits: TURRET
+	Buildable:
+		Prerequisites: factory, ~structures.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: turret2
+
+AATURRET3:
+	Inherits: AATURRET2
+	Buildable:
+		Prerequisites: radar, ~structures.yi
+	-Encyclopedia:
+	RenderSprites:
+		Image: aaturret2
+
+HARBOR3:
+	Inherits: HARBOR
+	RenderSprites:
+		Image: harbor2
+	ProvidesPrerequisite@Faction:
+		Prerequisite: harbor.gm
+		RequiresCondition: !powerdown
+	Buildable:
+		Prerequisites: module, ~structures.gm
+	-Encyclopedia:
+	RenderSprites:
+		Image: harbor2
+
+## pods
+
+SCOUT2.MERCENARY:
+	Inherits: SCOUT2
+	Buildable:
+		Prerequisites: techcenter, ~starport.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: scout2

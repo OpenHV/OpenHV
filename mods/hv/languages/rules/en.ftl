@@ -368,6 +368,8 @@ actor-watchtower =
 actor-dropzone =
    .name = Drop Zone
    .description = Airborne reinforcement pad
+   .description-buildable = Airborne reinforcement pad
+     Maximum 4 can be built
    .encyclopedia = Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
 
 actor-flagpost =

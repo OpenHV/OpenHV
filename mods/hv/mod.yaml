@@ -47,6 +47,7 @@ Rules:
 	hv|rules/player.yaml
 	hv|rules/pods.yaml
 	hv|rules/vehicles.yaml
+	hv|rules/mercenaries.yaml
 	hv|rules/aircraft.yaml
 	hv|rules/ships.yaml
 	hv|rules/animals.yaml

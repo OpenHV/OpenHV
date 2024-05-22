@@ -161,12 +161,18 @@
 		Side: Corporations
 		Selectable: true
 		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Rocket Pod\n    - Flame Pod\n    - Mortar Pod\n    - Ramp Buggy\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
+	Faction@Ginkua:
+		Name: Ginkua
+		InternalName: gm
+		Side: Mercenaries
+		Selectable: true
+		Description: United Mercenaries Of Ginkua\nA large interplanatary company that trains\nmercenaries from all over the universe. They are known\nfor their fast and agile forces, who're often ordered by\nhuge coprorations. But they also often run missions\nfor their own reasons.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Rocket Pod\n    - Flame Pod\n    - Mortar Pod\n    - Mercenary Tank\n    - Double Barelled Mercenary Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Air Strike\n    - Airborne Reinforcement Pads\n    - Cluster Bomb
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: yi, sc
+		RandomFactionMembers: yi, sc, gm
 		Side: Random
-		Description: Random Corporation\nA random corporation will be chosen when the game starts.
+		Description: Random Corporation\nA random faction will be chosen when the game starts.
 	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
 		Filename: bits/colors.pal
@@ -473,6 +479,11 @@ World:
 		ClassName: options-starting-units.base-only
 		Factions: sc
 		BaseActor: base2
+	StartingUnits@BaseGM:
+		Class: none
+		ClassName: options-starting-units.base-only
+		Factions: gm
+		BaseActor: base3
 	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: options-starting-units.base-miner
@@ -485,6 +496,12 @@ World:
 		Factions: sc
 		BaseActor: base2
 		SupportActors: miner
+	StartingUnits@MinerGM:
+		Class: miner
+		ClassName: options-starting-units.base-miner
+		Factions: gm
+		BaseActor: base3
+		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
 		ClassName: options-starting-units.base-scout
@@ -496,6 +513,12 @@ World:
 		ClassName: options-starting-units.base-scout
 		Factions: sc
 		BaseActor: base2
+		SupportActors: balloon
+	StartingUnits@ScoutGM:
+		Class: scout
+		ClassName: options-starting-units.base-scout
+		Factions: gm
+		BaseActor: base3
 		SupportActors: balloon
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
