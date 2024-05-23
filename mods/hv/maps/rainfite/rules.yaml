@@ -4,7 +4,6 @@ World:
 		Green: 0.80
 		Blue: 1.1
 		Ambient: 1.05
-
 	WeatherOverlay:
 		ChangingWindLevel: true
 		WindTick: 150, 550

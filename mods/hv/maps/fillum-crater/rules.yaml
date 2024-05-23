@@ -2,7 +2,7 @@
 
 Player:
 	PlayerResources:
-		DefaultCash: 8000
+		DefaultCash: 10000
 
 World:
 	WeatherOverlay:
@@ -32,9 +32,9 @@ World:
 		Palette: cloud
 		Speed: 20, 30
 	LuaScript:
-		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, magma-breach-claim.lua
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, fillum-crater.lua
 	MissionData:
-		Briefing: Greetings commander! A magma breach in Fillum's desert ice lands has been found by explorers 3 days ago. The breach's magma contains many rich materials, and a humongous gold vein has been found around it. The Synapol Corportions have headed there 19 hours ago, and established a basement. Claim this magma breach Yuruki by any way.\n  P.S. Be aware that as soon as the Synapol forces will detect you, they will send waves of reinforcement.
+		Briefing: Greetings commander! We're soon arriving to the south-east coast of the great sea of Fillum. Some Yuruki military basements are waiting for you there. Develop the Yuruki forces by building basic structures, and by placing mining towers all over the crater's resource deposits.\n  P.S. Sypanol ground, air and naval reinforcement units will soon come from the forest, the snow plains and the sea. Yuruki naval reinforcement units will be sent to you as soon as possible. You will need to destroy all Synapol communication links to prevent any more enemy reinforcement waves.
 
 Entry:
 	Interactable:
@@ -49,32 +49,3 @@ Entry:
 		QuantizedFacings: 1
 	MapEditorData:
 		Categories: System
-
-
-SILO:
-	Buildable:
-		Prerequisites: ~disabled
-
-UPLINK:
-	Buildable:
-		Prerequisites: ~disabled
-
-HOWITZER:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled
-
-AATURRET:
-	Buildable:
-		Prerequisites: ~disabled
-
-AATURRET2:
-	Buildable:
-		Prerequisites: ~disabled
