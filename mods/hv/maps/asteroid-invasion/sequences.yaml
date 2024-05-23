@@ -1,6 +1,6 @@
 entry:
 	idle:
-		Filename: maps/crater-defense/artwork/arrow-down.png
+		Filename: bits/arrow-down.png
 
 dropzone:
 	Inherits@Flame: ^BuildingFlame2
