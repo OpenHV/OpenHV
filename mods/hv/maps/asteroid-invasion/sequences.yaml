@@ -29,8 +29,7 @@ dropzone:
 		Filename: bits/flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: maps/asteroid-invasion/artwork/buildings-icons.png
-		Start: 38
+		Filename: maps/asteroid-invasion/artwork/dropzone-icon.png
 	make:
 		Filename: bits/build.png
 		Length: 39
