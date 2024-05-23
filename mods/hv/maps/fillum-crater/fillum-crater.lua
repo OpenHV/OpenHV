@@ -1,5 +1,5 @@
 --[[
-   Copyright 2021-2023 The OpenHV Developers (see AUTHORS)
+   Copyright 2024 The OpenHV Developers (see AUTHORS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -17,23 +17,23 @@ Warning = UserInterface.Translate("warning")
 Tick = function()
     local towers = Human.GetActorsByType("miner2")
     local communications = Enemy.GetActorsByType("comlink")
-    
+
     if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildStorageObjective) and CheckForBase(Human, { "storage" }) then
 		Human.MarkCompletedObjective(BuildStorageObjective)
 	end
-	
+
 	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildTechcenterObjective) and CheckForBase(Human, { "techcenter" }) then
 		Human.MarkCompletedObjective(BuildTechcenterObjective)
 	end
-	
+
 	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildUplinkObjective) and CheckForBase(Human, { "uplink" }) then
 		Human.MarkCompletedObjective(BuildUplinkObjective)
 	end
-	
+
 	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildModuleObjective) and CheckForBase(Human, { "module" }) then
 		Human.MarkCompletedObjective(BuildModuleObjective)
 	end
-	
+
 	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildFactoryObjective) and CheckForBase(Human, { "factory3" }) then
 		Human.MarkCompletedObjective(BuildFactoryObjective)
 	end
@@ -44,7 +44,7 @@ Tick = function()
         SynapolReinforcementsNaval = Reinforcements.Reinforce(Enemy, NavalReinforcementUnits, { SpawningWaypoint3.Location, DestinationWaypoint3.Location })
         Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
     end
-    
+
     if DateTime.GameTime == DateTime.Seconds(120) or DateTime.GameTime % DateTime.Seconds(180) == 0 and DateTime.GameTime > DateTime.Seconds(120) then-- spawn Yuruki reinforcements at 2 mins, and starting from there, every 3 mins
         YurukiReinforcement = Reinforcements.Reinforce(Human, YurukiReinforcements, { SpawningWaypoint4.Location, DestinationWaypoint4.Location })
     end
