@@ -1,10 +1,10 @@
 entry:
 	idle:
-		Filename: maps/crater-defense/artwork/arrow-down.png
+		Filename: bits/arrow-down.png
 
 exit:
 	idle:
-		Filename: maps/crater-defense/artwork/arrow-left.png
+		Filename: bits/arrow-left.png
 
 clusterturret:
 	Inherits@Flame: ^BuildingFlame
@@ -12,22 +12,22 @@ clusterturret:
 		Filename: clusterturret
 		Offset: 0, -3
 	idle:
-		Filename: maps/crater-defense/artwork/clusterturret.png
+		Filename: bits/clusterturret.png
 		Start: 0
 	shadow-overlay:
-		Filename: maps/crater-defense/artwork/clusterturret-shadow.png
+		Filename: bits/clusterturret-shadow.png
 		ZOffset: -1768
 		Offset: 5, 5
 	damaged-idle:
-		Filename: maps/crater-defense/artwork/clusterturret.png
+		Filename: bits/clusterturret.png
 		Start: 9
 	shoot:
-		Filename: maps/crater-defense/artwork/clusterturret.png
+		Filename: bits/clusterturret.png
 		Start: 0
 		Length: 9
 		Reverses: True
 	shoot-damaged:
-		Filename: maps/crater-defense/artwork/clusterturret.png
+		Filename: bits/clusterturret.png
 		Start: 9
 		Length: 9
 		Reverses: True
@@ -45,7 +45,7 @@ clusterturret:
 		Filename: bits/flame2.png
 		Offset: 0, -2
 	icon:
-		Filename: maps/crater-defense/artwork/clusterturret-icon.png
+		Filename: bits/clusterturret-icon.png
 		Offset: 0, 1
 
 amplifier:
@@ -54,17 +54,17 @@ amplifier:
 		Filename: amplifier
 		Offset: 7, -8
 	idle:
-		Filename: maps/crater-defense/artwork/amplifier.png
+		Filename: bits/amplifier.png
 		Start: 0
 	shadow-overlay:
-		Filename: maps/crater-defense/artwork/amplifier-shadow.png
+		Filename: bits/amplifier-shadow.png
 		ZOffset: -1768
 		Offset: 3, 3
 	damaged-idle:
-		Filename: maps/crater-defense/artwork/amplifier.png
+		Filename: bits/amplifier.png
 		Start: 1
 	animation:
-		Filename: maps/crater-defense/artwork/amplifier.png
+		Filename: bits/amplifier.png
 		Start: 2
 		Length: 7
 		Tick: 100
@@ -82,5 +82,5 @@ amplifier:
 		Filename: bits/flame2.png
 		Offset: 0, -2
 	icon:
-		Filename: maps/crater-defense/artwork/amplifier-icon.png
+		Filename: bits/amplifier-icon.png
 		Offset: 0, 1
