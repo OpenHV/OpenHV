@@ -89,7 +89,7 @@ end
 Tick = function()
 	local buildingproportions = HumanPlayer.GetActorsByTypes({ "harbor2", "extractor", "radar2", "comlink", "module2", "factory4" })
 	local percentage = #buildingproportions * 100 / 22
-	if percentage < .65  and not HumanPlayer.IsObjectiveCompleted(TowerDefenseObjective) then
+	if percentage < .65  and not HumanPlayer.IsObjectiveFailed(TowerDefenseObjective) then
 		Media.DisplayMessage(UserInterface.Translate("buildings-lost-65-percent"))
 		HumanPlayer.MarkFailedObjective(TowerDefenseObjective)
 	end
