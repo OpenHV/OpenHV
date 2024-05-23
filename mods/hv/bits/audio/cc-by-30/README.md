@@ -25,3 +25,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [torpedo_murraysortz.wav](https://freesound.org/people/murraysortz/sounds/192501/) by murraysortz. Mixed with Dzierzan's voice.
 * [boatgun_johandeecke.wav](https://freesound.org/people/JohanDeecke/sounds/369528/) by JohanDeecke.
 * [flame_newlocknew.wav](https://freesound.org/people/newlocknew/sounds/614724/) by newlocknew.
+* [blaster_flyingsaucerinvasion.wav](https://freesound.org/people/flyingsaucerinvasion/sounds/615812/) by flyingsaucerinvasion

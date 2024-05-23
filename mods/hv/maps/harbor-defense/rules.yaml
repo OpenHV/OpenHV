@@ -1,0 +1,329 @@
+# License: CC-BY-SA-4.0
+
+Player:
+	-ConquestVictoryConditions:
+	PlayerResources:
+		DefaultCash: 4500
+		DefaultCashDropdownLocked: true
+		DefaultCashDropdownVisible: false
+	DeveloperMode:
+		CheckboxVisible: false
+	Shroud:
+		FogCheckboxLocked: true
+		FogCheckboxEnabled: false
+		FogCheckboxVisible: false
+		ExploredMapCheckboxLocked: true
+		ExploredMapCheckboxEnabled: true
+		ExploredMapCheckboxVisible: false
+	-ModularBot@RogueAI:
+	ClassicProductionQueue@Defense:
+		BuildDurationModifier: 15
+
+World:
+	LuaScript:
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, harbor-defense.lua
+	MissionData:
+		Briefing: Commander! The great Synapol harbor of the Crater Lake, who's responsible for the major Synapol vehicle production of the planet, will soon be attacked by a Yuruki naval covet. Use the power railway and all resources at your disposition to build the necessary defenses to resist to the attack. Try to save at least 65% of the buildings to accomplish your mission.
+	-MapStartingLocations:
+	-CubeSpawner:
+	StartingUnits@BaseYI:
+		Class: none
+		ClassName: options-starting-units.base-only
+		Factions: yi
+		BaseActor: towerbase
+	StartingUnits@BaseSC:
+		Class: none
+		ClassName: options-starting-units.base-only
+		Factions: sc
+		BaseActor: towerbase
+	SpawnStartingUnits:
+		DropdownLocked: true
+		DropdownVisible: false
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxVisible: false
+		AllyBuildRadiusCheckboxLocked: true
+		AllyBuildRadiusCheckboxEnabled: false
+		BuildRadiusCheckboxVisible: false
+		BuildRadiusCheckboxLocked: true
+		BuildRadiusCheckboxEnabled: false
+	MapOptions:
+		ShortGameCheckboxVisible: false
+		ShortGameCheckboxLocked: true
+		ShortGameCheckboxEnabled: false
+	TimeLimitManager:
+		TimeLimitDropdownVisible: false
+	ScrapOptions:
+		CheckboxEnabled: false
+		CheckboxLocked: true
+		CheckboxVisible: false
+
+EditorWorld:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Tech
+
+Entry:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: actor-entry-name
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: System
+
+Exit:
+	Inherits: Entry
+	EditorOnlyTooltip:
+		Name: actor-exit-name
+
+^Vehicle:
+	GivesBounty:
+		Percentage: 25
+	MustBeDestroyed:
+
+^TrackedVehicle:
+	GivesBounty:
+		Percentage: 50
+	MustBeDestroyed:
+	SpawnScrapOnDeath:
+		Probability: 0
+
+^DefenseBuilding:
+	Targetable:
+		TargetTypes: NoAutoTarget
+	Building:
+		RequiresBaseProvider: false
+		TerrainTypes: Tech
+	-RequiresBuildableArea:
+
+TOWERBASE:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	ProvidesPrerequisite@BuildingName:
+	ProvidesPrerequisite@Yuruki:
+		Factions: yi
+		Prerequisite: structures.yi
+	ProvidesPrerequisite@Synapol:
+		Factions: sc
+		Prerequisite: structures.sc
+	Production:
+		Produces: Defense
+	ProvidesRadar:
+
+BUNKER:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.yi
+	Power:
+		Amount: 0
+	Cargo:
+		UnloadTerrainTypes: None
+		EjectOnSell: False
+	ProvidesPrerequisite:
+		Prerequisite: bunker
+
+BUNKER2:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.sc
+	Power:
+		Amount: 0
+	Cargo:
+		UnloadTerrainTypes: None
+		EjectOnSell: False
+	ProvidesPrerequisite:
+		Prerequisite: bunker
+
+TURRET:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.yi
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x x
+		Dimensions: 2,1
+		LocalCenterOffset: 0,0,0
+	ProvidesPrerequisite:
+		Prerequisite: turret
+
+TURRET2:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		Prerequisites: ~towerbase, ~structures.sc
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x x
+		Dimensions: 2,1
+		LocalCenterOffset: 0,0,0
+	ProvidesPrerequisite:
+		Prerequisite: turret
+
+SCOUT1:
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+
+CLUSTERTURRET:
+	Inherits: ^DefenseBuilding
+	Inherits@AutoTarget: ^AutoTargetGround
+	Inherits@Amplifier: ^WeaponRangeUpgrade
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~towerbase, bunker, turret, ~structures.sc
+		Description: actor-clusterturret.description
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-clusterturret.name
+	Health:
+		HP: 55000
+	Armament:
+		Weapon: cluster
+		LocalOffset: 0,0,400
+		FireDelay: 6
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 8c0
+	RevealsShroud:
+		Range: 7c0
+	AttackTurreted:
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	WithAttackAnimation@Normal:
+		Sequence: shoot
+		RequiresCondition: !burning
+	WithAttackAnimation@Damaged:
+		Sequence: shoot-damaged
+		RequiresCondition: burning
+	Turreted:
+		TurnSpeed: 512
+		RealignDelay: -1
+		RequiresCondition: !build-incomplete
+
+AMPLIFIER:
+	Inherits: ^DefenseBuilding
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: ~towerbase, bunker, turret, clusterturret, ~structures.sc
+		Description: actor-amplifier.description
+	Selectable:
+		Bounds: 1256, 1480, 0, -256
+	Power:
+		Amount: 0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-amplifier.name
+	Health:
+		HP: 55000
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 4c0
+	RevealsShroud:
+		Range: 7c0
+	WithIdleOverlay:
+		Sequence: animation
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
+	ProximityExternalCondition:
+		Condition: weapon-range-upgrade
+		Range: 4c0
+	ProvidesPrerequisite:
+		Prerequisite: amplifier
+
+^WeaponRangeUpgrade:
+	RangeMultiplier:
+		Modifier: 175
+		RequiresCondition: weapon-range-upgrade
+	ExternalCondition:
+		Condition: weapon-range-upgrade
+
+^Ship:
+	SpawnScrapOnDeath:
+		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
+		TerrainTypes: Water
+
+EXTRACTOR:
+	Health:
+		HP: 100000
+
+HARBOR2:
+	Health:
+		HP: 150000
+
+MODULE2:
+	Health:
+		HP: 101000
+
+FACTORY4:
+	Health:
+		HP: 110000
+
+RADAR2:
+	Health:
+		HP: 120000
+
+COMLINK:
+	Health:
+		HP: 125000
+
+AATURRET:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATURRET2:
+	Buildable:
+		Prerequisites: ~disabled
+
+BARRIER:
+	Buildable:
+		Prerequisites: ~disabled
+
+^GATE:
+	Buildable:
+		Prerequisites: ~disabled
+
+FIELD:
+	Buildable:
+		Prerequisites: ~disabled
+
+SILO:
+	Buildable:
+		Prerequisites: ~disabled
+
+UPLINK:
+	Buildable:
+		Prerequisites: ~disabled
+
+HOWITZER:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVATR:
+	Buildable:
+		Prerequisites: ~disabled
+
+TELEVTR2:
+	Buildable:
+		Prerequisites: ~disabled
