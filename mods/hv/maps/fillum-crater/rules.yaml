@@ -1,0 +1,52 @@
+# License: CC-BY-SA-4.0
+
+Player:
+	PlayerResources:
+		DefaultCash: 10000
+
+World:
+
+	WeatherOverlay:
+		ChangingWindLevel: true
+		WindLevels: -5, -3, -2, 0
+		WindTick: 150, 550
+		InstantWindChanges: false
+		UseSquares: true
+		ParticleSize: 1, 3
+		ScatterDirection: -1, 1
+		Gravity: 1.00, 2.00
+		SwingOffset: 1.0, 1.5
+		SwingSpeed: 0.001, 0.025
+		SwingAmplitude: 1.0, 1.5
+		ParticleColors: ECECEC, E4E4E4, D0D0D0, BCBCBC
+		LineTailAlphaValue: 0
+	TintPostProcessEffect:
+		Red: 0.9
+		Green: 0.9
+		Blue: 1.0
+		Ambient: 1.2
+	TerrainLighting:
+		Intensity: 0.85
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+	LuaScript:
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, fillum-crater.lua
+	MissionData:
+		Briefing: Greetings commander! We're soon arriving to the south-east coast of the great sea of Fillum. Some Yuruki military basements are waiting for you there. Develop the Yuruki forces by building basic structures, and by placing mining towers all over the crater's resource deposits.\n  P.S. Sypanol ground, air and naval reinforcement units will soon come from the forest, the snow plains and the sea. Yuruki naval reinforcement units will be sent to you as soon as possible. You will need to destroy all Synapol communication links to prevent any more enemy reinforcement waves.
+
+Entry:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: actor-entry-name
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: System
