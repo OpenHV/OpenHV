@@ -39,3 +39,11 @@ warning = Warning
 reinforcements-incoming = Synapol reinforcement units incoming
 claim-land = Eliminate all Synapol signs in the area.
 build-all-towers = Place mining towers at all available resources.
+
+## asteroid-invasion
+destroy-colony = Annihilate the colony basement
+destroy-yuruki-military = Annihilate the military basement
+detected = Synapol forces have detected you
+reinforcements-near-colony = Reinforcements detected near colony basement
+enemy-production-started = Production movements detected at the Yuruki military basement
+enemy-uplink-activated = Yuruki uplink strike command activated
