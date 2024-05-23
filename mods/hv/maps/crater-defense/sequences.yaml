@@ -1,10 +1,10 @@
 entry:
 	idle:
-		Filename: maps/crater-defense/artwork/arrow-down.png
+		Filename: bits/arrow-down.png
 
 exit:
 	idle:
-		Filename: maps/crater-defense/artwork/arrow-left.png
+		Filename: bits/arrow-left.png
 
 clusterturret:
 	Inherits@Flame: ^BuildingFlame
