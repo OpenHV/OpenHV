@@ -40,6 +40,13 @@ reinforcements-incoming = Synapol reinforcement units incoming
 claim-land = Eliminate all Synapol signs in the area.
 build-all-towers = Place mining towers at all available resources.
 
+## fillum-crater
+ally-reinforcement-incoming = Yuruki naval reinforcement has arrived
+build-techcenter = Build a techcenter.
+build-uplink = Build an orbital strike uplink.
+build-factory = Build a vehicle factory.
+destroy-enemy-communication = Destroy all Synapol communications.
+
 ## harbor-defense
 save-65-percent-buildings = Save 65 % of the buildings.
 buildings-lost-65-percent = More than 65 % of buildings lost
