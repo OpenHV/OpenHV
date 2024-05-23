@@ -39,3 +39,10 @@ warning = Warning
 reinforcements-incoming = Synapol reinforcement units incoming
 claim-land = Eliminate all Synapol signs in the area.
 build-all-towers = Place mining towers at all available resources.
+
+## harbor-defense
+save-65-percent-buildings = Save 65 % of the buildings.
+buildings-lost-65-percent = More than 65 % of buildings lost
+harbors-destroyed = Harbors destroyed!
+extractors-destroyed = Extractors destroyed!
+midbuilds-destroyed = Radar and comlink destroyed!
