@@ -81,3 +81,39 @@ DROPZONE:
 		Prerequisites: techcenter, tradplat
 		Description: actor-dropzone-asteroid-invasion.description
 		BuildLimit: 3
+
+TANK1.TRADE:
+	Buildable:
+		Prerequisites: module, factory
+
+TANK2.TRADE:
+	Buildable:
+		Prerequisites: module, factory
+
+TANK3.TRADE:
+	Buildable:
+		Prerequisites: factory
+
+TYRIANTANK.TRADE:
+	Buildable:
+		Prerequisites: factory
+
+AATANK.TRADE:
+	Buildable:
+		Prerequisites: factory
+
+TANK5.TRADE:
+	Buildable:
+		Prerequisites: factory, techcenter
+
+TANK15.TRADE:
+	Buildable:
+		Prerequisites: factory, radar, tradplat
+
+MISSILETANK.TRADE:
+	Buildable:
+		Prerequisites: factory, radar, techcenter
+
+TANK8.TRADE:
+	Buildable:
+		Prerequisites: factory, techcenter, tradplat

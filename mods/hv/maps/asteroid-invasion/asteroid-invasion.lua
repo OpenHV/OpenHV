@@ -11,10 +11,14 @@ Warning = UserInterface.Translate("warning")
 ColonyReinforcementsSent = false
 MilitaryProductionStarted = false
 CooldownBeforeDetection = 180
-ColonyReinforcementUnitsPods = { "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "saucer" }
+ColonyReinforcementUnitsPods = { "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician" }
 ColonyReinforcementUnitsTanks = { "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1" }
-ColonyReinforcementUnitsPodsBig = { "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "saucer", "saucer" }
+ColonyReinforcementUnitsPodsBig = { "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician" }
 ColonyReinforcementUnitsTanksBig = { "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1", "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1", "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1" }
+ColonyDestinationPathFactory = { FactoryExit.Location, ColonyDestination.Location }
+ColonyDestinationPathModule = { ModuleExit.Location, ColonyDestination.Location }
+HumanDestinationPathFactory = { FactoryExit.Location, HumanBaseDestination.Location }
+HumanDestinationPathModule = { ModuleExit.Location, HumanBaseDestination.Location }
 
 Tick = function()
 	local colonybasements = Enemy.GetActorsByTypes({ "prop5", "prop8", "prop7", "flagpost", "watchtower", "comlink" })
@@ -24,49 +28,78 @@ Tick = function()
 	if Human.IsObjectiveCompleted(DestroyColonyObjective) and not Human.IsObjectiveCompleted(DestroyYurukiMilitary) and not MilitaryProductionStarted and #enemybarracks > 0 then -- if the player has anihilated the colony basements, enable yuruki production to create three waves. Also enables the AI to use the railgun
 		MilitaryProductionStarted = true
 		Trigger.AfterDelay(250, function()
-			Media.DisplayMessage(UserInterface.Translate("enemy-production-started"), Warning)
-			MilitaryReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, { FactoryExit.Location, HumanBaseDestination.Location })
-			Trigger.AfterDelay(200, function()
-				Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
-			end)
+			if #enemybarracks > 0 then
+				Media.DisplayMessage(UserInterface.Translate("enemy-production-started"), Warning)
+				MilitaryReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
+				MilitaryReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
+				Trigger.AfterDelay(200, function()
+					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+				end)
+			end
 		end)
 		Trigger.AfterDelay(950, function()
-			MilitaryReinforcementsPods2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsPods3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, { FactoryExit.Location, HumanBaseDestination.Location })
-			Trigger.AfterDelay(200, function()
-				Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
-			end)
+			if #enemybarracks > 0 then
+				MilitaryReinforcementsPods2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
+				MilitaryReinforcementsPods3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
+				MilitaryReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
+				Trigger.AfterDelay(200, function()
+					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+				end)
+			end
 		end)
 		Trigger.AfterDelay(1200, function()
-			MilitaryReinforcementsPods4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsPods5 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsPods6 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsTanks3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, { FactoryExit.Location, HumanBaseDestination.Location })
-			MilitaryReinforcementsTanks4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, { FactoryExit.Location, HumanBaseDestination.Location })
-			Trigger.AfterDelay(200, function()
-				Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
-			end)
+			if #enemybarracks > 0 then
+				MilitaryReinforcementsPods4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
+				MilitaryReinforcementsPods5 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
+				MilitaryReinforcementsPods6 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
+				MilitaryReinforcementsTanks3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
+				MilitaryReinforcementsTanks4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
+				Trigger.AfterDelay(200, function()
+					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+				end)
+			end
 		end)
 		Enemy.GrantCondition("railgun-enabled")
 	end
-	
-	if DateTime.GameTime > DateTime.Seconds(180) and not ColonyReinforcementsSent and #enemybarracks > 0 then  -- send reinforcements units at the colony basement at 2"30' mins
+
+	if DateTime.GameTime > DateTime.Seconds(1) and not ColonyReinforcementsSent and #enemybarracks > 0 then  -- send reinforcements units at the colony basement at 2"30' mins
 		ColonyReinforcementsSent = true
 		Media.DisplayMessage(UserInterface.Translate("detected"), Warning)
 		Trigger.AfterDelay(200, function()
-			ColonyReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPods, { ModuleExit.Location, ColonyDestination.Location })
-			ColonyReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanks, { FactoryExit.Location, ColonyDestination.Location })
-			Media.DisplayMessage(UserInterface.Translate("reinforcements-near-colony"), Warning)
+			ColonyReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPods, ColonyDestinationPathModule, 25, function(unit)
+				Trigger.AfterDelay(2150, function()
+					if not unit.IsDead then
+						unit.AttackMove(HumanBaseDestination.Location, 5)
+					end
+				end)
+			end)
+			ColonyReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanks, ColonyDestinationPathFactory, 25, function(unit)
+				Trigger.AfterDelay(2150, function()
+					if not unit.IsDead then
+						unit.AttackMove(HumanBaseDestination.Location, 5)
+					end
+				end)
+			end)
 		end)
 		Trigger.AfterDelay(950, function()
-			ColonyReinforcementsPods2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, { ModuleExit.Location, ColonyDestination.Location })
-			ColonyReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, { FactoryExit.Location, ColonyDestination.Location })
+			ColonyReinforcementsPods2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, ColonyDestinationPathModule, 25, function(unit)
+				Trigger.AfterDelay(1200, function()
+					if not unit.IsDead then
+						unit.AttackMove(HumanBaseDestination.Location, 5)
+					end
+				end)
+			end)
+			ColonyReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, ColonyDestinationPathFactory, 25 ,function(unit)
+				Trigger.AfterDelay(1200, function()
+					if not unit.IsDead then
+						unit.AttackMove(HumanBaseDestination.Location, 5)
+					end
+				end)
+			end)
 			Media.DisplayMessage(UserInterface.Translate("reinforcements-near-colony"), Warning)
 		end)
 	end
-	
+
 	if not Human.IsObjectiveCompleted(DestroyColonyObjective) and #colonybasements == 0 then -- if the colony has been eliminated
 		Human.MarkCompletedObjective(DestroyColonyObjective)
 	end
@@ -77,6 +110,11 @@ Tick = function()
 
 	if DateTime.GameTime % DateTime.Seconds(1) == 0 then
 		CooldownBeforeDetection = CooldownBeforeDetection - 1
+	end
+
+	if Human.HasNoRequiredUnits() then
+		Human.MarkFailedObjective(DestroyColonyObjective)
+		Human.MarkFailedObjective(DestroyYurukiMilitary)
 	end
 
 	UpdateGameStateText()
@@ -92,7 +130,7 @@ function UpdateGameStateText()
 	if time > 0 then
 		UserInterface.SetMissionText("\n\n\n" .. time .. minute .. " before detection")
 	end
-	if time < 0 then
+	if ColonyReinforcementsSent then
 		UserInterface.SetMissionText("")
 	end
 end
