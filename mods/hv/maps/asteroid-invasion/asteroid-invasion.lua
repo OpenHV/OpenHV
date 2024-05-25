@@ -62,7 +62,7 @@ Tick = function()
 		Enemy.GrantCondition("railgun-enabled")
 	end
 
-	if DateTime.GameTime > DateTime.Seconds(1) and not ColonyReinforcementsSent and #enemybarracks > 0 then  -- send reinforcements units at the colony basement at 2"30' mins
+	if DateTime.GameTime > DateTime.Seconds(180) and not ColonyReinforcementsSent and #enemybarracks > 0 then  -- send reinforcements units at the colony basement at 2"30' mins
 		ColonyReinforcementsSent = true
 		Media.DisplayMessage(UserInterface.Translate("detected"), Warning)
 		Trigger.AfterDelay(200, function()
