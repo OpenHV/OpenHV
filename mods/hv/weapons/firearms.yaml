@@ -1,11 +1,28 @@
 # License: CC-BY-SA-4.0
 
+^Tracers:
+	Projectile: InstantHitWithTracers
+		Blockable: true
+		TracerAmount: 2
+		TracerSpeed: 1536
+		TracerSpawnInterval: 3
+		TracerInaccuracy: 0c450
+		ContrailDelay: 0
+		ContrailStartColor: FFFF00
+		ContrailStartColorAlpha: 255
+		ContrailEndColor: FFAA00
+		ContrailEndColorAlpha: 255
+		ContrailLength: 2
+		ContrailStartWidth: 18
+		ContrailZOffset: 3000
+
 LightMachineGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
+	Inherits: ^Tracers
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Report: machinegunburst01.wav, machinegunburst02.wav
-	Projectile: InstantHit
+	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
 		Blockable: true
 	Warhead@Damage: SpreadDamage
@@ -171,6 +188,7 @@ ShellCasing:
 SniperRifle:
 	Inherits: LightMachineGun
 	Report: twisterman_silenced-gun-1.wav
+	Projectile: InstantHit
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Versus:
@@ -215,13 +233,14 @@ BoatMachineGunGround:
 			Concrete: 5
 
 BoatMachineGunAir:
+	Inherits: ^Tracers
 	ValidTargets: Air
 	Report: boatgun_johandeecke.wav
 	BurstDelays: 5
 	ReloadDelay: 20
 	Range: 9c0
 	Burst: 4
-	Projectile: InstantHit
+	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c512
 	Warhead@Damage: SpreadDamage
 		Spread: 126
@@ -286,7 +305,7 @@ HeavyMachineGun:
 	Range: 6c0
 	Burst: 4
 	BurstDelays: 2
-	Projectile: InstantHit
+	Projectile: InstantHitWithTracers
 		Blockable: false
 	Warhead@Damage: SpreadDamage
 		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
