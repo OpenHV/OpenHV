@@ -502,7 +502,7 @@ Actors:
 		Location: 30,4
 	Actor162: tradplat
 		Owner: Synapol Corporation
-		Location: 34,3
+		Location: 34,5
 	Actor163: generator
 		Owner: Synapol Corporation
 		Location: 32,13
