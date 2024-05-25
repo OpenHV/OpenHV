@@ -1,0 +1,33 @@
+World:
+	TintPostProcessEffect:
+		Red: 0.8
+		Green: 0.9
+		Blue: 0.8
+		Ambient: 1.1
+
+RESOURCE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 03c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.30
+		BlueTint: 0.30
+
+CENTRAL_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 19c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.70
+		BlueTint: 0.50
+
+BASE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.20
+		GreenTint: 0.40
+		BlueTint: 0.60
