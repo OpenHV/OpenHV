@@ -1,0 +1,42 @@
+entry:
+	idle:
+		Filename: bits/arrow-down.png
+
+dropzone:
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: dropzone
+		Offset: 0, 1
+	idle:
+		Filename: bits/dropzone.png
+		ZOffset: -1c511
+	active:
+		Filename: bits/dropzone.png
+		Length: 8
+		ZOffset: -1c511
+		Tick: 150
+	damaged-idle:
+		Filename: bits/dropzone.png
+		Start: 8
+		ZOffset: -1c511
+	shadow-overlay:
+		Filename: bits/dropzone-shadow.png
+		ZOffset: -1c768
+	flame:
+		Filename: bits/flame2.png
+		Offset: 3, -4
+	flame2:
+		Filename: bits/flame2.png
+		Offset: -13, -6
+	icon:
+		Filename: maps/asteroid-invasion/artwork/dropzone-icon.png
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
