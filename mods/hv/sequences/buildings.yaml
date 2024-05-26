@@ -174,6 +174,43 @@ base2:
 		Start: 27
 		Offset: 0, 0
 
+base3:
+	Inherits: base
+	build:
+		Filename: bits/base3.png
+	idle:
+		Filename: bits/base3.png
+	damaged-idle:
+		Filename: bits/base3.png
+	damaged-build:
+		Filename: bits/base3.png
+	production-inprogress:
+		Filename: bits/base3.png
+	idle-platform1:
+		Filename: bits/platform2.png
+	damaged-idle-platform1:
+		Filename: bits/platform2.png
+	make-platform1:
+		Filename: bits/platform2.png
+	active-platform1:
+		Filename: bits/creation-sc.png
+	damaged-active-platform1:
+		Filename: bits/creation2-damaged.png
+	idle-platform2:
+		Filename: bits/platform2.png
+	damaged-idle-platform2:
+		Filename: bits/platform2.png
+	make-platform2:
+		Filename: bits/platform2.png
+	active-platform2:
+		Filename: bits/creation-sc.png
+	damaged-active-platform2:
+		Filename: bits/creation2-damaged.png
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 27
+		Offset: 0, 0
+
 outpost:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
@@ -211,6 +248,14 @@ outpost2:
 		Filename: bits/outpost2.png
 	idle:
 		Filename: bits/outpost2.png
+
+outpost3:
+	Inherits: outpost
+	Inherits@Flame: ^BuildingFlame
+	damaged-idle:
+		Filename: bits/outpost3.png
+	idle:
+		Filename: bits/outpost3.png
 
 generator:
 	Inherits@Flame: ^BuildingFlame2

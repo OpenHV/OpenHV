@@ -82,6 +82,8 @@ icon:
 		Filename: bits/droppods-icon.png
 	airstrike:
 		Filename: bits/airstrike-icon.png
+	airlifterdrop:
+		Filename: bits/airlifterdrop-icon.png
 	radar:
 		Filename: bits/radar-icon.png
 	howitzer:

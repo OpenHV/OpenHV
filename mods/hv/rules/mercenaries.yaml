@@ -50,8 +50,6 @@ BASE3:
 	Buildable:
 		Prerequisites: outpost, ~base.gm
 	-Encyclopedia:
-	RenderSprites:
-		Image: base
 
 OUTPOST3:
 	Inherits: OUTPOST
@@ -60,8 +58,6 @@ OUTPOST3:
 	ProvidesPrerequisite@Ginkua:
 		Factions: gm
 		Prerequisite: base.gm
-	RenderSprites:
-		Image: outpost
 
 RADAR3:
 	Inherits: RADAR
@@ -81,10 +77,10 @@ RADAR3:
 		DropItems: tank11, tank11, tank11, tank11, tank12, tank12, tank12, tank12
 		CameraActor: camera
 		ChargeInterval: 4100
-		Icon: airstrike
+		Icon: airlifterdrop
 		Name: actor-radar3.paratrooperspower-name
 		Description: actor-radar3.paratrooperspower-description
-		Cursor: airstrike
+		Cursor: airlifterdrop
 		SupportPowerPaletteOrder: 35
 		BeginChargeSpeechNotification: AirStrikeCharging
 		EndChargeSpeechNotification: AirStrikeReady
