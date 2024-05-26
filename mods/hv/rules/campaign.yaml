@@ -52,3 +52,11 @@ Player:
 	ModularBot@CampaignAI:
 		Name: Campaign Player AI
 		Type: campaign
+
+FLAGPOST:
+	ProximityCapturable:
+		DrawDecoration: false
+
+WATCHTOWER:
+	ProximityCapturable:
+		DrawDecoration: false
