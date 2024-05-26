@@ -317,3 +317,35 @@ HeavyMachineGun:
 			Light: 55
 			Heavy: 20
 			Concrete: 5
+
+LightShotGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: machinegunburst01.wav, machinegunburst02.wav
+	ReloadDelay: 35
+	Burst: 6
+	BurstDelays: 1
+	Range: 5c0
+	Projectile: Bullet
+		Image: bullet5
+		TrailImage: bullet17-trace
+		TrailSequences: flame_trace_a, flame_trace_b
+		Speed: 800
+		Blockable: false
+		LaunchAngle: 50
+		Inaccuracy: 1c5
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Damage: 375
+		Versus:
+			None: 800
+			Steel: 108
+			Light: 365
+			Heavy: 65
+			Concrete: 63
+
+BunkerShotgun:
+	Inherits: LightShotGun
+	ReloadDelay: 25
+	Range: 8c0

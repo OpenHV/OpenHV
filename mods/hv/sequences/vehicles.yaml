@@ -707,6 +707,19 @@ electricpod:
 		Filename: bits/units-icons.png
 		Start: 59
 
+shotgunpod:
+	idle:
+		Filename: bits/shotgunpod.png
+		Facings: 8
+	die:
+		Filename: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon:
+		Filename: bits/units-icons.png
+		Start: 52
+
 tyriantank:
 	idle:
 		Filename: bits/tyriantank.png

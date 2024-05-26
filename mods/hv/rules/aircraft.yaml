@@ -665,7 +665,7 @@ AIRLIFTER:
 	Interactable:
 	Aircraft:
 		TurnSpeed: 25
-		Speed: 200
+		Speed: 255
 		VTOL: True
 		Repulsable: False
 		MaximumPitch: 36
@@ -683,3 +683,7 @@ AIRLIFTER:
 		Type: CenterPosition
 	DamageMultiplier@Invulnerable:
 		Modifier: 0
+	ParaDrop:
+	Cargo:
+		MaxWeight: 5
+		Types: Vehicles

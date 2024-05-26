@@ -135,6 +135,7 @@ Player:
 			artil: 5
 			scout1: 1
 			scout2: 1
+			shotgunpod: 1
 			mortarpod: 1
 			flamepod: 1
 			elitepod: 1
@@ -200,7 +201,7 @@ Player:
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2
+		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, shotgunpod
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod
@@ -237,6 +238,22 @@ Player:
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0
+			ClusterBomb:
+				OrderName: Bombem
+				MinimumAttractiveness: 1000
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
 			DropPods:
 				OrderName: EjectPods
 				MinimumAttractiveness: 5
@@ -247,6 +264,27 @@ Player:
 					TargetMetric: None
 					CheckRadius: 8c0
 				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			DropParatroopers:
+				OrderName: FlushParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 2
+					TargetMetric: None
+					Check Radius: 8c0
+				Consideration@3:
 					Against: Enemy
 					Types: Water
 					Attractiveness: -5

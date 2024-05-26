@@ -191,6 +191,8 @@ Cursors:
 			Start: 45
 		droppod:
 			Start: 44
+		clusterbomb:
+			Start: 47
 
 	bits/cursors2.png: cursor
 		nuke:

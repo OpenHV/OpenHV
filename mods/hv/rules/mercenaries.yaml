@@ -68,11 +68,29 @@ RADAR3:
 	-Encyclopedia:
 	Buildable:
 		Prerequisites: storage, ~structures.gm
-	AirstrikePower:
-		ChargeInterval: 4100
-		SquadSize: 5
 	RenderSprites:
 		Image: radar
+	-AirstrikePower:
+	ParatroopersPower:
+		PauseOnCondition: lowpower || disabled
+		UnitType: airlifter
+		SquadSize: 8
+		ReinforcementsArrivedSpeechNotification: ReinforcementsHaveArrived
+		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
+		QuantizedFacings: 8
+		DropItems: tank11, tank11, tank11, tank11, tank12, tank12, tank12, tank12
+		CameraActor: camera
+		ChargeInterval: 4100
+		Icon: airstrike
+		Name: actor-radar3.paratrooperspower-name
+		Description: actor-radar3.paratrooperspower-description
+		Cursor: airstrike
+		SupportPowerPaletteOrder: 35
+		BeginChargeSpeechNotification: AirStrikeCharging
+		EndChargeSpeechNotification: AirStrikeReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: AirStrikeIncoming
+		OrderName: FlushParatroopers
 
 MODULE3:
 	Inherits: MODULE
@@ -203,19 +221,18 @@ UPLINKMERCENARY:
 		RequiresCondition: !build-incomplete
 	NukePower:
 		PauseOnCondition: disabled
-		Cursor: nuke
-		Icon: nuke
+		Cursor: clusterbomb
+		Icon: clusterbomb
 		ChargeInterval: 6500
 		Name: actor-uplink-mercenary.railgun-name
 		Description: actor-uplink-mercenary.railgun-description
 		MissileWeapon: clusterbomb
 		MissileImage: clusterbomb
-		MissileDelay: 1
 		SkipAscent: true
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: true
-		CameraRange: 10c0
-		SupportPowerPaletteOrder: 10
+		CameraRange: 15c0
+		SupportPowerPaletteOrder: 15
 		DetectedSpeechNotification: NukeDetected
 		DetectedTextNotification: notification-nuke-detected
 		BeginChargeSpeechNotification: NukeCharging
@@ -225,41 +242,73 @@ UPLINKMERCENARY:
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: NukeIncoming
-		OrderName: Nukem
+		OrderName: Bombem
 	RenderSprites:
 		Image: uplink
 
 ## pods
 
-SCOUT2.MERCENARY:
-	Inherits: SCOUT2
+SHOTGUNPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
+		Queue: Pod
+		Description: actor-shotgunpod.description
 		Prerequisites: ~module.gm
-	-MapEditorData:
+		BuildPaletteOrder: 20
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: actor-shotgunpod.name
 	UpdatesPlayerStatistics:
-		OverrideActor: scout2
-	RenderSprites:
-		Image: scout2
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightShotGun
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: BunkerShotgun
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
 
-MORTARPOD.MERCENARY:
-	Inherits: MORTARPOD
+TESLAPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Prerequisites: ~module.gm, factory
-	-MapEditorData:
+		Queue: Pod
+		Description: actor-shotgunpod.description
+		Prerequisites: ~module.gm
+		BuildPaletteOrder: 30
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: actor-shotgunpod.name
 	UpdatesPlayerStatistics:
-		OverrideActor: mortarpod
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightShotGun
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: BunkerShotgun
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
 	RenderSprites:
-		Image: mortarpod
-
-SNIPERPOD.MERCENARY:
-	Inherits: SNIPERPOD
-	Buildable:
-		Prerequisites: ~module.gm, radar
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: sniperpod
-	RenderSprites:
-		Image: sniperpod
+		Image: electricpod
 
 ## ships
 

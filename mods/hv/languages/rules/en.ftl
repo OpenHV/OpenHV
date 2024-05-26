@@ -186,6 +186,11 @@ actor-radar2 =
    .droppodspower-description = Atmospheric assault reinforcements:
     Small team of pods drops onto target location from orbit.
 
+actor-radar3 =
+   .paratrooperspower-name = Paratroopers Reinforcement
+   .paratrooperspower-description = Atmospheric assault reinforcements:
+    Small team of airlifters drops onto target mercenary tanks.
+
 actor-tradplat =
    .description = Repairs vehicles and aircraft for credits.
     Allows buying units on the free market.
@@ -439,6 +444,13 @@ actor-scout2 =
       Strong vs Tanks and Aircraft
       Weak vs Pods
    .name = Rocket Pod
+
+actor-shotgunpod =
+   .description = Fast scout vehicle.
+    Armed with shotgun weapon.
+      Strong vs Pods
+      Weak vs Tanks and Buildings
+   .name = Shotgun Pod
 
 actor-mortarpod =
    .description = Fast support vehicle.
