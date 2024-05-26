@@ -87,15 +87,29 @@ RADAR3:
 		OrderName: FlushParatroopers
 
 MODULE3:
-	Inherits: MODULE
+	Inherits: MODULE2
 	Buildable:
 		Prerequisites: ~structures.gm
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.gm
 		RequiresCondition: !powerdown
-	-Encyclopedia:
+	Health:
+		HP: 65000
+	-Exit@South2:
+	-Exit@North1:
+	-Exit@North2:
+	Exit@South1:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,3
+		Facing: 740
+	WithProductionDoorAnimation:
+		ExitCells: 2,3
+	Power:
+		Amount: -25
+	RepairsUnits:
+		Interval: 5
 	RenderSprites:
-		Image: module
+		Image: module3
 
 STARPORT3:
 	Inherits: STARPORT
@@ -365,7 +379,7 @@ BUILDER3:
 	Transforms:
 		IntoActor: outpost3
 	RenderSprites:
-		Image: builder4
+		Image: builder3
 
 TANK5.MERCENARY:
 	Inherits: TANK5

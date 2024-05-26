@@ -514,6 +514,28 @@ module2:
 		Start: 30
 		Offset: 0, 0
 
+module3:
+	Inherits: module
+	door:
+		Filename: bits/module3.png
+	idle:
+		Filename: bits/module3.png
+	damaged-idle:
+		Filename: bits/module3.png
+	shadow-overlay:
+		Filename: bits/module3-shadow.png
+		Offset: 4, 6
+	damaged-shadow-overlay:
+		Filename: bits/module3-shadow.png
+		Offset: 4, 6
+	production-inprogress:
+		Filename: bits/module3.png
+		Reverses: True
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 40
+		Offset: 0, 0
+
 miner2:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:
