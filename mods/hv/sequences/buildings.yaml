@@ -367,6 +367,18 @@ radar2:
 		Start: 20
 		Offset: 0, 0
 
+radar3:
+	Inherits: radar
+	idle:
+		Filename: bits/radar3.png
+	damaged-idle:
+		Filename: bits/radar3.png
+		Start: 1
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 39
+		Offset: 0, 0
+
 tradplat:
 	Inherits@Flame: ^BuildingFlame2
 	Defaults:

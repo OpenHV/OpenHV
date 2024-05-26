@@ -323,8 +323,8 @@ actor-uplink-mercenary =
       Maximum 1 can be built.
       Special Ability: Cluster Bomb
    .railgun-name = Cluster Bomb
-   .railgun-description = Initiate a surgical strike.
-    Applies instant damage to a small area.
+   .railgun-description = Initiate a cluster bomb strike.
+    Applies damage to a medium area.
 
 actor-storage =
    .description = Stores excess resources.

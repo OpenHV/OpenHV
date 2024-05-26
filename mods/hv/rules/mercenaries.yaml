@@ -64,8 +64,6 @@ RADAR3:
 	-Encyclopedia:
 	Buildable:
 		Prerequisites: storage, ~structures.gm
-	RenderSprites:
-		Image: radar
 	-AirstrikePower:
 	ParatroopersPower:
 		PauseOnCondition: lowpower || disabled
