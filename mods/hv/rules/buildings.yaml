@@ -2724,7 +2724,7 @@ DROPZONE:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 130
-		Prerequisites: radar, structures.gm
+		Prerequisites: radar, ~structures.gm
 		BuildLimit: 4
 		Description: actor-dropzone.description-buildable
 	HitShape:
