@@ -205,7 +205,7 @@
 		Range: 1c0
 	-Repairable:
 	RepairableNear:
-		RepairActors: module, module2
+		RepairActors: module, module2, module3
 		CloseEnough: 2c0
 	Targetable@Repair:
 		RequiresCondition: damaged

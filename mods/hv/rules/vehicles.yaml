@@ -932,6 +932,7 @@ TANKER1:
 		Image: tanker1
 		FactionImages:
 			sc: tanker3
+			gm: tanker5
 
 TANKER2:
 	Inherits: TANKER1
@@ -944,6 +945,7 @@ TANKER2:
 		Image: tanker2
 		FactionImages:
 			sc: tanker4
+			gm: tanker6
 
 TANK13:
 	Inherits: ^Vehicle

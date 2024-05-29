@@ -125,22 +125,78 @@ STARPORT3:
 
 FACTORY5:
 	Inherits: FACTORY3
+	Inherits@Shape: ^3x3Shape
+	Building:
+		Footprint: +++ xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 90000
+	Armor:
+		Type: Concrete
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: 1000,-806,0,   1000,-50,0,   1000,706,0,   256,-806,0,   256,-50,0,   256,706,0
+	Selectable:
+		Bounds: 3072, 2348, 0, -560
+	-WithIdleOverlay@Platform1:
+	-WithMakeOverlay@Platform1:
+	-WithIdleOverlay@Platform2:
+	-WithMakeOverlay@Platform2:
+	-WithIdleOverlay@Platform3:
+	-WithMakeOverlay@Platform3:
+	-WithIdleOverlay@Platform4:
+	-WithMakeOverlay@Platform4:
+	WithIdleOverlay@Platform:
+		Sequence: idle-platform
+		RequiresCondition: !build-incomplete
+	Exit@North1:
+		ExitCell: 1,0
+		SpawnOffset: 0,0,0
+		Facing: 1023
+		ProductionTypes: Tank
+		ExitDelay: 5
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@North1:
+		ExitCell: 1,0
+		Sequence: production-done
+		RequiresCondition: !burning
+	-Exit@South1:
+	-WithProductionExitOverlay@South1:
+	-WithProductionExitOverlay@Done1:
+	-Exit@South2:
+	-WithProductionExitOverlay@South2:
+	-WithProductionExitOverlay@Done2:
+	-Exit@West1:
+	-WithProductionExitOverlay@West1:
+	-WithProductionExitOverlay@Done3:
+	-Exit@West2:
+	-WithProductionExitOverlay@West2:
+	-WithProductionExitOverlay@Done4:
+	-Exit@West3:
+	-WithProductionExitOverlay@West3:
+	-WithProductionExitOverlay@Done5:
+	-Exit@West4:
+	-WithProductionExitOverlay@West4:
+	-WithProductionExitOverlay@Done6:
+	-Exit@East1:
+	-WithProductionExitOverlay@East1:
+	-WithProductionExitOverlay@Done7:
+	-Exit@East2:
+	-WithProductionExitOverlay@East2:
+	-WithProductionExitOverlay@Done8:
+	-Exit@East3:
+	-WithProductionExitOverlay@East3:
+	-WithProductionExitOverlay@Done9:
+	-Exit@East4:
+	-WithProductionExitOverlay@East4:
+	-WithProductionExitOverlay@Done10:
 	Buildable:
 		Prerequisites: module, storage, ~structures.gm
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.gm
 		RequiresCondition: !powerdown
 	-Encyclopedia:
-	RenderSprites:
-		Image: factory3
-
-OREPURIFIER2:
-	Inherits: OREPURIFIER
-	Buildable:
-		Prerequisites: ~structures.gm, techcenter
-	-Encyclopedia:
-	RenderSprites:
-		Image: orepurifier
 
 BUNKER3:
 	Inherits: BUNKER
