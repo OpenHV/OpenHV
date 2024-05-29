@@ -136,6 +136,8 @@ Player:
 			scout1: 1
 			scout2: 1
 			shotgunpod: 1
+			teslapod: 1
+			clusterpod: 1
 			mortarpod: 1
 			flamepod: 1
 			elitepod: 1
@@ -201,7 +203,7 @@ Player:
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, shotgunpod
+		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, shotgunpod, teslapod, clusterpod
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod

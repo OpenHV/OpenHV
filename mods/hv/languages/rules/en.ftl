@@ -233,7 +233,13 @@ actor-orepurifier =
    .name = Ore Purifier
    .description = Ore Purifier.
     Processes resources for extra credits.
-   .encyclopedia = The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore however requires a lot of energy.
+   .encyclopedia = The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore requires a lot of energy.
+
+actor-oilfacility =
+   .name = Oil Facility
+   .description = Oil Extracting Facility.
+    Extracts and processes deep oil for extra credits.
+   .encyclopedia = The oil facility is an economy boosting building for long lasting conflicts. It extracts and processes the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing oil requires a lot of energy.
 
 actor-bunker =
    .description = Light base defense.
@@ -451,6 +457,12 @@ actor-shotgunpod =
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Shotgun Pod
+
+actor-clusterpod =
+   .description = Fast scout vehicle.
+    Armed with small cluster artillery.
+    Deals area damage.
+   .name = Cluster Pod
 
 actor-mortarpod =
    .description = Fast support vehicle.

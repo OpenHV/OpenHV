@@ -72,7 +72,7 @@ RADAR3:
 		ReinforcementsArrivedSpeechNotification: ReinforcementsHaveArrived
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
-		DropItems: tank11, tank11, tank11, tank11, tank12, tank12, tank12, tank12
+		DropItems: tank11, tank11, tank11, tank11, aatank, missiletank, tank12, tank12
 		CameraActor: camera
 		ChargeInterval: 4100
 		Icon: airlifterdrop
@@ -254,6 +254,37 @@ UPLINKMERCENARY:
 	RenderSprites:
 		Image: uplink
 
+OILFACILITY:
+	Inherits: ORESMELT
+	Inherits@Shape: ^2x4Shape
+	Valued:
+		Cost: 1350
+	Health:
+		HP: 53000
+	CashTrickler:
+		Interval: 70
+		Amount: 20
+		RequiresCondition: !build-incomplete && !disabled && !burning
+	GrantConditionOnDamageState:
+		Condition: burning
+		ValidDamageStates: Heavy, Critical
+	Power:
+		Amount: -95
+	Building:
+		Footprint: == == xx xx
+		Dimensions: 2,4
+	Buildable:
+		Prerequisites: ~structures.gm, techcenter
+	Selectable:
+		Bounds: 1024, 2048, 0, 0
+	Tooltip:
+		Name: actor-oilfacility.name
+	Buildable:
+		Description: actor-oilfacility.description
+	Encyclopedia:
+		Description: actor-oilfacility.encyclopedia
+		Order: 95
+
 ## pods
 
 SHOTGUNPOD:
@@ -317,6 +348,38 @@ TESLAPOD:
 	WithMuzzleOverlay:
 	RenderSprites:
 		Image: electricpod
+
+CLUSTERPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-clusterpod.description
+		Prerequisites: ~module.gm, factory
+		BuildPaletteOrder: 40
+	Valued:
+		Cost: 145
+	Tooltip:
+		Name: actor-clusterpod.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightCluster
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightClusterBunker
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	RenderSprites:
+		Image: mortarpod
 
 ## ships
 

@@ -2416,6 +2416,38 @@ orepurifier:
 		Start: 37
 		Offset: 0, 0
 
+oilfacility:
+	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		ZOffset: 512
+		Offset: 0, -2
+	idle:
+		Filename: bits/oilfacility.png
+		Length: 5
+		Reverses: True
+		Tick: 140
+	damaged-idle:
+		Filename: bits/oilfacility.png
+		Start: 5
+	shadow-overlay:
+		Filename: bits/oilfacility-shadow.png
+		ZOffset: -1768
+		Offset: 11,22
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 41
+		Offset: 0, 0
+
 flagpost:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
