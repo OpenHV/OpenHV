@@ -208,15 +208,20 @@ actor-miner2 =
 
 actor-starport =
    .name = Starport
-   .encyclopedia = The starport is the base of operations for the air force. Underground facilities construct new aircraft that are self-sufficient for the time of the battle requiring no refueling nor rearming.
+   .encyclopedia = The starport is the base of operations for the air force. Underground facilities construct new aircraft that are self-sufficient for the time of the battle requiring no refueling or rearming.
    .description = Produces aircraft.
+
+actor-starport3 =
+   .name = Starport Platform
+   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming.
+   .description = Orders pre-built aircraft from the U.M.O.G. company.
 
 actor-factory-name = Vehicle Factory
 
 actor-factory3 =
    .description = Builds tanks.
    .name = Vehicle Factory
-   .encyclopedia = The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Righ-click on the ground to set a rally point for new vehicles to gather around.
+   .encyclopedia = The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Right-click on the ground to set a rally point for new vehicles to gather around.
 
 actor-techcenter =
    .description = Grants access to advanced weaponry.
@@ -322,15 +327,15 @@ actor-uplink =
     Applies instant damage to a small area.
 
 actor-uplink-mercenary =
-   .name = Orbital Cluster Bomb Uplink Command
-   .encyclopedia = An orbital spaceship that can launch cluster bombs from the atmosphere. It is a more surgical strike than the nuclear bomb and it cannot be evaded. However it damages only the area surrounding the impact. It requires a long time to reload and consumes energy in that process.
+   .name = Cluster Bomb Dome Command
+   .encyclopedia = An orbital spaceship that can launch cluster bombs from the atmosphere. It is a faster and more agile strike than the nuclear bomb, but it still does significant damage of the battlefield. Upon impact, the bomb will explode and then release a series of small bombs all over the impact area. It requires a long time to reload and consumes energy in that process.
    .description = Orders an orbital cluster bomb strike.
       Requires power to operate.
       Maximum 1 can be built.
       Special Ability: Cluster Bomb
    .railgun-name = Cluster Bomb
    .railgun-description = Initiate a cluster bomb strike.
-    Applies damage to a medium area.
+    Applies damage to a large area.
 
 actor-storage =
    .description = Stores excess resources.

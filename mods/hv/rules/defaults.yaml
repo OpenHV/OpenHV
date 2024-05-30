@@ -291,12 +291,12 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: tradplat, starport3
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: tradplat, starport3
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Explodes:

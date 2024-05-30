@@ -112,16 +112,98 @@ MODULE3:
 		Image: module3
 
 STARPORT3:
-	Inherits: STARPORT
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^2x2Shape
+	Inherits@Flame: ^BuildingFlame3
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Tooltip:
+		Name: actor-starport3.name
+	Encyclopedia:
+		Description: actor-starport3.encyclopedia
+		Order: 61
+		Category: Buildings
 	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 120
 		Prerequisites: radar, ~structures.gm
+		Description: actor-starport3.description
+	Valued:
+		Cost: 700
+	Building:
+		Footprint: x+x x+x x+x
+		Dimensions: 3,3
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
+	Selectable:
+		Bounds: 2048, 2048
+	Health:
+		HP: 80000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	ProductionAirdrop:
+		Produces: Aircraft
+		ActorType: cargoship
+		ReadyAudio: ReinforcementsHaveArrived
+		ReadyTextNotification: notification-reinforcementa-arrived
+		PauseOnCondition: disabled
+		BaselineSpawn: True
+	Exit@North:
+		ExitCell: 1,0
+		ProductionTypes: Aircraft
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	Exit@South:
+		ExitCell: 1,2
+		ProductionTypes: Aircraft
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	ExitsDebugOverlay:
+	RepairsUnits:
+		HpPerStep: 800
+		Interval: 8
+		PlayerExperience: 15
+		StartRepairingNotification: Repairing
+		StartRepairingTextNotification: notifications-repairing
+		FinishRepairingNotification: UnitRepaired
+		FinishRepairingTextNotification: notification-unit-repaired
+		RequiresCondition: !disabled
+	Reservable:
+	ProvidesPrerequisite@Generic:
+		Prerequisite: starport
+		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
 		Prerequisite: starport.gm
 		RequiresCondition: !powerdown
-	-WithProductionExitOverlay:
-	-Encyclopedia:
+	ProductionBar:
+		ProductionType: Aircraft
+	PrimaryBuilding:
+		PrimaryCondition: primary
+		SelectionNotification: PrimaryBuildingSelected
+	Power:
+		Amount: -110
+	Targetable:
+		TargetTypes: Ground, Structure
+	WithTextDecoration@PRIMARY:
+		RequiresCondition: primary
+		Position: Top
+		Margin: 0, 5
+		RequiresSelection: true
+		Text: PRIMARY
+		Font: TinyPixel
 	RenderSprites:
-		Image: starport
+		Image: tradplat
 
 FACTORY5:
 	Inherits: FACTORY3
@@ -237,18 +319,18 @@ HARBOR3:
 
 UPLINKMERCENARY:
 	Inherits: ^BaseBuilding
-	Inherits@Shape: ^2x1Shape
+	Inherits@Shape: ^3x3Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Selectable:
-		Bounds: 2048, 3072, 0, 0
+		Bounds: 2048, 2457, 0, -204
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: actor-uplink-mercenary.name
 	Encyclopedia:
 		Description: actor-uplink-mercenary.encyclopedia
-		Order: 130
+		Order: 131
 		Category: Buildings
 	Buildable:
 		Queue: Defense
@@ -257,8 +339,8 @@ UPLINKMERCENARY:
 		BuildLimit: 1
 		Description: actor-uplink-mercenary.description
 	Building:
-		Footprint: == == xx
-		Dimensions: 2,3
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
 	HitShape:
 		UseTargetableCellsOffsets: true
 		TargetableOffsets: -1024,0,0
@@ -280,9 +362,6 @@ UPLINKMERCENARY:
 		Amount: -165
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	WithIdleOverlay@Lights:
-		Sequence: animation
-		RequiresCondition: !build-incomplete
 	NukePower:
 		PauseOnCondition: disabled
 		Cursor: clusterbomb
@@ -307,8 +386,6 @@ UPLINKMERCENARY:
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: NukeIncoming
 		OrderName: Bombem
-	RenderSprites:
-		Image: uplink
 
 OILFACILITY:
 	Inherits: ORESMELT
