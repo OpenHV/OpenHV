@@ -236,6 +236,9 @@ airlifter:
 	idle:
 		Filename: bits/airlifter.png
 		Facings: 8
+	icon:
+		Filename: units-icons.png
+		Start: 48
 
 landing:
 	idle:

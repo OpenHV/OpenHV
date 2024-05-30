@@ -126,6 +126,12 @@ actor-dropship =
       Can load pods
       and lift one vehicle.
 
+actor-airlifter =
+   .name = Heavy Transport Airlifter
+   .description = Vehicle Transport Plane.
+      Can load pods and vehicles.
+      Paradrop loaded units.
+
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
 actor-landedpod-name = Landed Pod

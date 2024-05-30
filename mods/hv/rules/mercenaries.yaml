@@ -20,15 +20,67 @@ BANSHEE.MERCENARY:
 	RenderSprites:
 		Image: banshee
 
-COPTER2.MERCENARY:
-	Inherits: COPTER2
+AIRLIFTERMERCENARY:
+	Inherits: ^Plane
+	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 50
 		Prerequisites: ~starport.gm
-	-MapEditorData:
+		Description: actor-airlifter.description
 	UpdatesPlayerStatistics:
-		OverrideActor: copter2
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	OwnerLostAction:
+		Action: Kill
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 155
+		Repulsable: False
+		MaximumPitch: 36
+		CruiseAltitude: 2560
+		InitialFacing: 512
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
+	Selectable:
+		DecorationBounds: 2048, 1848
+	Cargo:
+		Types: Pod, Vehicle
+		MaxWeight: 16
+		AfterUnloadDelay: 40
+		UnloadVoice: Unload
+		RequiresCondition: !carrying
+		LoadedCondition: loaded
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	Voiced:
+		VoiceSet: DropshipVoice
+	Tooltip:
+		Name: actor-airlifter.name
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	ParaDrop:
+		ChuteSound: Unload
 	RenderSprites:
-		Image: copter2
+		Image: airlifter
 
 BALLOON.MERCENARY:
 	Inherits: BALLOON
@@ -114,7 +166,7 @@ MODULE3:
 STARPORT3:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
-	Inherits@Flame: ^BuildingFlame3
+	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Tooltip:
 		Name: actor-starport3.name
