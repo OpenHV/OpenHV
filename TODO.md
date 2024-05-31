@@ -8,7 +8,7 @@
 - [ ] Make storage
 - [ ] Make Tesla Pod
 - [ ] Make Cluster Pod
-- [ ] Make Shotgun Pod
+- [x] Make Shotgun Pod
 - [x] Make Cluster Bomb Launch Command
 - [ ] Make Cluster Tank
 - [ ] Make Air Glider units

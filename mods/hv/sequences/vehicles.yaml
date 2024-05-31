@@ -718,7 +718,7 @@ shotgunpod:
 		Offset: 0,-2
 	icon:
 		Filename: bits/units-icons.png
-		Start: 52
+		Start: 60
 
 tyriantank:
 	idle:
