@@ -649,6 +649,11 @@ actor-transprt =
    .name = Transport Tank
    .description = Can transport pods.
 
+actor-tinyhawk =
+   .name = Tiny Hawk
+   .description = Pods transport.
+      Armed with a light chaingun.
+
 actor-artil =
    .name = Artillery
    .description = Mobile long range weapon.

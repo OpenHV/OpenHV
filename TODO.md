@@ -10,5 +10,7 @@
 - [x] Make Shotgun Pod
 - [x] Make Cluster Bomb Launch Command
 - [x] Make Cluster Tank
-- [ ] Make Air Glider units
+- [ ] Make atmospheric bomber
+- [x] Make Tiny Hawk
+- [ ] Make Air Glider
 - [ ] Make more differentiation with Ginkua faction

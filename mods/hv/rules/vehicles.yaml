@@ -133,7 +133,7 @@ TRANSPRT:
 		Range: 3c0
 	Cargo:
 		Types: Pod
-		MaxWeight: 5
+		MaxWeight: 8
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 2048, 1843

@@ -317,8 +317,8 @@ FACTORY5:
 	Inherits: FACTORY3
 	Inherits@Shape: ^3x3Shape
 	Building:
-		Footprint: +++ xxx xxx
-		Dimensions: 3,3
+		Footprint: +++ +++ xxx xxx
+		Dimensions: 3,4
 	Health:
 		HP: 90000
 	Armor:
@@ -627,6 +627,51 @@ CLUSTERTANK:
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
+
+TINYHAWK:
+	Inherits: ^TrackedVehicle
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-tinyhawk.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.gm, module
+		BuildPaletteOrder: 45
+		Description: actor-tinyhawk.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 20000
+	Armor:
+		Type: Steel
+	Mobile:
+		Speed: 120
+		PauseOnCondition: notmobile || ecm-disabled
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Cargo:
+		Types: Pod
+		MaxWeight: 5
+		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+	WithTeleportEnergyOverlay:
+		Image: energyball
+		Sequence: teleport-large
+	Armament:
+		Weapon: LightShotGun
+		LocalOffset: 400,100,0
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	-Passenger:
 
 ## ships
 
