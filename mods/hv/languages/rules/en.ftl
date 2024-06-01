@@ -132,6 +132,10 @@ actor-airlifter =
       Can load pods and vehicles.
       Paradrop loaded units.
 
+actor-bomber2 =
+   .name = Atmospheric Bomber
+   .description = Fast bombing glider.
+
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
 actor-landedpod-name = Landed Pod

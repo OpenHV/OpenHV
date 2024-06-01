@@ -1,24 +1,80 @@
 ## aircraft
 
-COPTER.MERCENARY:
-	Inherits: COPTER
+BOMBER2:
+	Inherits: ^Plane
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
 	Buildable:
-		Prerequisites: ~starport.gm
-	-MapEditorData:
+		Queue: Aircraft
+		BuildPaletteOrder: 40
+		Prerequisites: ~starport.gm, techcenter
+		Description: actor-bomber2.description
+	Tooltip:
+		Name: actor-bomber2.name
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Valued:
+		Cost: 2000
 	UpdatesPlayerStatistics:
-		OverrideActor: copter
+		AddToAssetsValue: true
+	AttackAircraft:
+		FacingTolerance: 92
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		TurnSpeed: 30
+		Speed: 185
+		VTOL: True
+		Voice: Move
+		CruiseAltitude: 4560
+	Armament:
+		Weapon: LightBomb
+		LocalOffset: 250,0,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 85
+		Count: 2
+	Voiced:
+		VoiceSet: SpeederVoice
+	Tooltip:
+		Name: actor-bomber2.name
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
 	RenderSprites:
-		Image: copter
-
-BANSHEE.MERCENARY:
-	Inherits: BANSHEE
-	Buildable:
-		Prerequisites: techcenter, ~starport.gm
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: banshee
-	RenderSprites:
-		Image: banshee
+		Image: bomber1
 
 AIRLIFTERMERCENARY:
 	Inherits: ^Plane

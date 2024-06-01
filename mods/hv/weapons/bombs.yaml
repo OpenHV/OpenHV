@@ -20,7 +20,6 @@ Bomb:
 		Falloff: 100, 50, 25, 12, 6, 3, 0
 		Damage: 10000
 		Versus:
-		Versus:
 			None: 90
 			Steel: 75
 			Light: 75
@@ -35,6 +34,16 @@ Bomb:
 		Explosions: medium
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
+
+LightBomb:
+	Inherits: Bomb
+	ReloadDelay: 85
+	Burst: 4
+	BurstDelay: 8
+	Warhead@Damage: SpreadDamage
+		Damage: 8000
+	Warhead@Incendiary: TreeDamage
+		Damage: 8000
 
 ClusterSubBomb:
 	Inherits: BigSplash

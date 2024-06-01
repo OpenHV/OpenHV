@@ -196,6 +196,9 @@ bomber1:
 		Filename: bits/bomber1.png
 		Facings: 8
 		ZOffset: 2048
+	icon:
+		Filename: units-icons.png
+		Start: 63
 
 cargoship:
 	liftoff:
