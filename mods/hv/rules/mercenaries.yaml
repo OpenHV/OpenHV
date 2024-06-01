@@ -670,7 +670,6 @@ TINYHAWK:
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
-	-WithMuzzleOverlay:
 	-Passenger:
 
 ## ships
