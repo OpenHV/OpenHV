@@ -1556,7 +1556,7 @@ uplinkmercenary:
 		Offset: 8, -24
 	icon:
 		Filename: bits/buildings-icons.png
-		Start: 24
+		Start: 43
 		Offset: 0, 0
 
 howitzer:

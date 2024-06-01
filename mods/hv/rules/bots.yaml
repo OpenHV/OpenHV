@@ -133,6 +133,7 @@ Player:
 			tank15: 1
 			tank16: 1
 			transprt: 1
+			tinyhawk: 3
 			artil: 5
 			scout1: 1
 			scout2: 1
@@ -178,6 +179,7 @@ Player:
 			bomberpod: 3
 			brokerpod: 9
 			transprt: 1
+			tinyhawk: 5
 		UnitDelays:
 			builder: 15000
 	PriorityCaptureManagerBotModule:
@@ -203,8 +205,8 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, shotgunpod, clusterpod
+		TransportTypes: transprt, tinyhawk
+		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2, shotgunpod, clusterpod, technician
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod

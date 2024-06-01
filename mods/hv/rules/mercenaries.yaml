@@ -176,10 +176,11 @@ RADAR3:
 	ParatroopersPower:
 		PauseOnCondition: lowpower || disabled
 		UnitType: airlifter
-		SquadSize: 8
+		SquadSize: 6
 		ReinforcementsArrivedSpeechNotification: ReinforcementsHaveArrived
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
+		Cordon: 10c0
 		DropItems: tank11, tank11, tank11, tank11, aatank, missiletank, tank12, tank12
 		CameraActor: camera
 		ChargeInterval: 4100
