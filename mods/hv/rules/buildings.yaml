@@ -1385,7 +1385,7 @@ FIELD:
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 130
+		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.yi
 		BuildLimit: 1
 		Description: actor-field.description
