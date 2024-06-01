@@ -502,38 +502,6 @@ SHOTGUNPOD:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
-TESLAPOD:
-	Inherits: ^Pod
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Buildable:
-		Queue: Pod
-		Description: actor-shotgunpod.description
-		Prerequisites: ~module.gm
-		BuildPaletteOrder: 30
-	Valued:
-		Cost: 120
-	Tooltip:
-		Name: actor-shotgunpod.name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	RevealsShroud:
-		Range: 6c0
-		MinRange: 3c0
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 3c0
-	Armament@Primary:
-		Weapon: LightShotGun
-	Armament@Garrisoned:
-		Name: garrisoned
-		Weapon: BunkerShotgun
-	AttackFrontal:
-		PauseOnCondition: ecm-disabled
-		FacingTolerance: 0
-	WithMuzzleOverlay:
-	RenderSprites:
-		Image: electricpod
-
 CLUSTERPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -565,6 +533,44 @@ CLUSTERPOD:
 	WithMuzzleOverlay:
 	RenderSprites:
 		Image: mortarpod
+
+CLUSTERTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: actor-clustertank.name
+	Buildable:
+		Queue: Tank
+		Prerequisites: ~factory.gm, radar
+		BuildPaletteOrder: 70
+		Description: actor-clustertank.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 25500
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 20
+		CanMoveBackward: true
+		Speed: 90
+		Locomotor: tracked
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Armament:
+		Weapon: HeavyCluster
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		Voice: Attack
+		FacingTolerance: 0
+	WithMuzzleOverlay:
 
 ## ships
 

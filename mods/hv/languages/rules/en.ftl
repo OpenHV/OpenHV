@@ -651,6 +651,11 @@ actor-artil =
       Strong vs Pods and Buildings
       Weak vs Tanks
 
+actor-clustertank =
+   .name = Cluster Tank
+   .description = Mobile medium range weapon.
+      Armed with a cluster bomb launcher.
+
 actor-radartank =
    .description = Can detect cloaked units.n
     Range extends when deployed.

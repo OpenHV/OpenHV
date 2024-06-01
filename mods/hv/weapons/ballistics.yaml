@@ -383,6 +383,7 @@ LightCluster:
 	Report: blaster_flyingsaucerinvasion.wav
 	ReloadDelay: 35
 	Range: 6c0
+	MinRange: 3c0
 	Projectile: Bullet
 		Speed: 400
 		Inaccuracy: 0c256
@@ -390,8 +391,8 @@ LightCluster:
 		Image: bullet12
 		Shadow: false
 	Warhead@Cluster: FireCluster
-		Weapon: cluster-projectile
-		RandomClusterCount: -1
+		Weapon: ClusterProjectile
+		RandomClusterCount: 5
 		Dimensions: 3,3
 		Footprint: xxx xXx xxx
 		AirThreshold: 0c0
@@ -400,12 +401,27 @@ LightCluster:
 		ImpactSounds: explosion06.wav
 		ImpactActors: false
 
+HeavyCluster:
+	Inherits: LightCluster
+	ReloadDelay: 50
+	Range: 7c512
+	MinRange: 5c0
+	Projectile: Bullet
+		Speed: 385
+		Inaccuracy: 0c512
+		LaunchAngle: 175
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileStronger
+		RandomClusterCount: 13
+		Dimensions: 5,5
+		Footprint: xxxxx xXxxx xxXxx xxxXx xxxxx
+
 LightClusterBunker:
 	Inherits: LightCluster
 	ReloadDelay: 25
 	Range: 8c0
 
-cluster-projectile:
+ClusterProjectile:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 25
@@ -417,13 +433,13 @@ cluster-projectile:
 		Shadow: false
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		Spread: 256
-		Damage: 850
+		Spread: 165
+		Damage: 865
 		Versus:
-			None: 75
-			Steel: 100
-			Light: 150
-			Heavy: 150
+			None: 100
+			Steel: 70
+			Light: 75
+			Heavy: 65
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
 		Damage: 450
@@ -434,3 +450,17 @@ cluster-projectile:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
+
+ClusterProjectileStronger:
+	Inherits: ClusterProjectile
+	Projectile: Bullet
+		Speed: 275
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 185
+		Damage: 1250
+		Versus:
+			None: 100
+			Steel: 75
+			Light: 80
+			Heavy: 70
