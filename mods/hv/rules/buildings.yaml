@@ -262,7 +262,7 @@ GENERATOR:
 		FactionImages:
 			sc: generator2
 			yi: generator
-			gm: generator2
+			gm: generator3
 
 RADAR:
 	Inherits: ^BaseBuilding

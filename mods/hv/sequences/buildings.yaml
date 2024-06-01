@@ -316,6 +316,23 @@ generator2:
 		Filename: bits/buildings-icons.png
 		Start: 31
 
+generator3:
+	Inherits: generator
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: generator3
+		Offset: 0, -8
+	idle:
+		Filename: bits/generator3.png
+		Length: 16
+		Tick: 75
+	damaged-idle:
+		Filename: bits/generator3.png
+		Start: 16
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 31
+
 radar:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:
