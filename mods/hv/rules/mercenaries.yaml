@@ -311,8 +311,6 @@ STARPORT3:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
-	RenderSprites:
-		Image: tradplat
 
 FACTORY5:
 	Inherits: FACTORY3
@@ -526,6 +524,8 @@ OILFACILITY:
 	Encyclopedia:
 		Description: actor-oilfacility.encyclopedia
 		Order: 95
+	WithIdleOverlay:
+		RequiresCondition: !build-incomplete && !disabled && !burning
 
 ## pods
 
