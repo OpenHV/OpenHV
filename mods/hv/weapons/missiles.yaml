@@ -83,6 +83,16 @@ AntiAirRocket:
 	Warhead@Incendiary: TreeDamage
 		Damage: 4000
 
+AircraftMissileAir:
+	Inherits: AntiAirRocket
+	MinRange: 3c512
+	ReloadDelay: 180
+	Burst: 1
+	Warhead@Damage: SpreadDamage
+		Damage: 15000
+	Warhead@Incendiary: TreeDamage
+		Damage: 15000
+
 MissileTankRocket:
 	Inherits: AntiGroundRocket
 	ReloadDelay: 60

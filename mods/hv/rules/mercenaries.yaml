@@ -28,7 +28,7 @@ BOMBER2:
 	Armor:
 		Type: Light
 	Valued:
-		Cost: 2000
+		Cost: 2100
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
@@ -78,6 +78,82 @@ BOMBER2:
 		ZOffset: -1000
 	RenderSprites:
 		Image: bomber1
+
+GLIDER:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	AppearsOnRadar:
+		UseLocation: true
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: ~starport.gm
+		Description: actor-glider.description
+	Tooltip:
+		Name: actor-glider.name
+	Health:
+		HP: 10000
+	Armor:
+		Type: Steel
+	Valued:
+		Cost: 1500
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: true
+	AttackAircraft:
+		FacingTolerance: 180
+		PersistentTargeting: false
+		OpportunityFire: true
+	Aircraft:
+		TurnSpeed: 20
+		InitialFacing: 768
+		Speed: 165
+		Voice: Move
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		CruiseAltitude: 4560
+	Armament@Air:
+		Weapon: AircraftMissileAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+		PauseOnCondition: !ammo
+	Rearmable:
+		RearmActors: starport3
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+		RearmSound: mine_reload_oneshotofficial.wav
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	Voiced:
+		VoiceSet: SpeederVoice
+	Tooltip:
+		Name: actor-glider.name
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
 
 AIRLIFTERMERCENARY:
 	Inherits: ^Plane

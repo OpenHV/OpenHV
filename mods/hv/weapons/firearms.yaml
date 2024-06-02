@@ -345,6 +345,13 @@ LightShotGun:
 			Heavy: 65
 			Concrete: 63
 
+HeavyShotGun:
+	Inherits: LightShotGun
+	ReloadDelay: 45
+	Burst: 10
+	Range: 7c512
+	MinRange: 4c0
+
 BunkerShotgun:
 	Inherits: LightShotGun
 	ReloadDelay: 25

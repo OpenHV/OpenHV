@@ -135,6 +135,13 @@ actor-airlifter =
 actor-bomber2 =
    .name = Atmospheric Bomber
    .description = Fast bombing glider.
+     Can only attack airborne units.
+
+actor-glider =
+   .name = Atmospheric Glider
+   .description = Fast air glider.
+     Armed with a missile launcher.
+     Needs to be rearmed at starport platforms.
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
@@ -223,7 +230,7 @@ actor-starport =
 
 actor-starport3 =
    .name = Starport Platform
-   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming.
+   .encyclopedia = The starport platform is the base of operations for the air force. Orders fresh new aircraft from the United Mercenaries Of Ginkua stock that are self-sufficient for the time of the battle requiring no refueling or rearming. The starport platform is also capable of producing its own auto-target missiles, allowing the Ginkua aircraft to be rearmed in airborne missiles.
    .description = Orders pre-built aircraft from the U.M.O.G. company.
 
 actor-factory-name = Vehicle Factory
