@@ -35,10 +35,10 @@ World:
 	TintPostProcessEffect:
 		Red: 0.6
 		Green: 0.6
-		Blue: 0.6
-		Ambient: 0.7
+		Blue: 0.8
+		Ambient: 0.9
 	TerrainLighting:
-		Intensity: 0.65
+		Intensity: 0.75
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, asteroid-invasion.lua
 	MissionData:
