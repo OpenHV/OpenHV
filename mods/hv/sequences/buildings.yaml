@@ -453,6 +453,18 @@ tradplat2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 28
+		
+tradplat3:
+	Inherits: tradplat
+	idle:
+		Filename: bits/tradplat3.png
+	damaged-idle:
+		Filename: bits/tradplat3.png
+	active:
+		Filename: bits/tradplat3.png
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 28
 
 module:
 	Inherits@Flame: ^BuildingFlame2

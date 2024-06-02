@@ -453,7 +453,7 @@ TRADPLAT:
 		FactionImages:
 			sc: tradplat2
 			yi: tradplat
-			gm: tradplat
+			gm: tradplat3
 
 MODULE:
 	Inherits: ^BaseBuilding

@@ -112,9 +112,9 @@ GLIDER:
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
-		FacingTolerance: 180
-		PersistentTargeting: false
-		OpportunityFire: true
+		FacingTolerance: 50
+		PersistentTargeting: true
+		OpportunityFire: false
 	Aircraft:
 		TurnSpeed: 20
 		InitialFacing: 768
