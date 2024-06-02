@@ -590,6 +590,79 @@ CLUSTERPOD:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
+SNIPERPOD.MERCENARY:
+	Inherits: SNIPERPOD
+	Buildable:
+		Prerequisites:  ~module.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: sniperpod
+	RenderSprites:
+		Image: sniperpod
+
+## ships
+
+PATROLBOAT.MERCENARY:
+	Inherits: PATROLBOAT
+	Buildable:
+		Prerequisites: ~harbor.gm
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: patrolboat
+	RenderSprites:
+		Image: patrolboat
+
+SUBMARINE2.MERCENARY:
+	Inherits: SUBMARINE2
+	Buildable:
+		Prerequisites: ~harbor.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: submarine2
+	RenderSprites:
+		Image: submarine2
+
+BOAT2.MERCENARY:
+	Inherits: BOAT2
+	Buildable:
+		Prerequisites: ~harbor.gm, techcenter
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: boat2
+	RenderSprites:
+		Image: boat2
+
+SUBMARINE.MERCENARY:
+	Inherits: SUBMARINE
+	Buildable:
+		Prerequisites: ~harbor.gm, techcenter
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: submarine
+	RenderSprites:
+		Image: submarine
+
+WATERMINELAYER2.MERCENARY:
+	Inherits: WATERMINELAYER2
+	Buildable:
+		Prerequisites: ~harbor.gm, tradplat
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: waterminelayer2
+	RenderSprites:
+		Image: waterminelayer2
+
+## vehicles
+
+BUILDER3:
+	Inherits: BUILDER
+	Buildable:
+		Prerequisites: ~structures.gm
+	Transforms:
+		IntoActor: outpost3
+	RenderSprites:
+		Image: builder3
+
 CLUSTERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -667,74 +740,11 @@ TINYHAWK:
 		Sequence: teleport-large
 	Armament:
 		Weapon: LightShotGun
-		LocalOffset: 400,100,0
+		LocalOffset: 400,-50,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	-Passenger:
-
-## ships
-
-PATROLBOAT.MERCENARY:
-	Inherits: PATROLBOAT
-	Buildable:
-		Prerequisites: ~harbor.gm
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: patrolboat
-	RenderSprites:
-		Image: patrolboat
-
-SUBMARINE2.MERCENARY:
-	Inherits: SUBMARINE2
-	Buildable:
-		Prerequisites: ~harbor.gm, radar
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: submarine2
-	RenderSprites:
-		Image: submarine2
-
-BOAT2.MERCENARY:
-	Inherits: BOAT2
-	Buildable:
-		Prerequisites: ~harbor.gm, techcenter
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: boat2
-	RenderSprites:
-		Image: boat2
-
-SUBMARINE.MERCENARY:
-	Inherits: SUBMARINE
-	Buildable:
-		Prerequisites: ~harbor.gm, techcenter
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: submarine
-	RenderSprites:
-		Image: submarine
-
-WATERMINELAYER2.MERCENARY:
-	Inherits: WATERMINELAYER2
-	Buildable:
-		Prerequisites: ~harbor.gm, tradplat
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: waterminelayer2
-	RenderSprites:
-		Image: waterminelayer2
-
-## vehicles
-
-BUILDER3:
-	Inherits: BUILDER
-	Buildable:
-		Prerequisites: ~structures.gm
-	Transforms:
-		IntoActor: outpost3
-	RenderSprites:
-		Image: builder3
 
 TANK5.MERCENARY:
 	Inherits: TANK5

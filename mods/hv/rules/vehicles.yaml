@@ -525,6 +525,8 @@ TANK12:
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
+	Valued:
+		Cost: 950
 	Health:
 		HP: 50000
 	Armor:

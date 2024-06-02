@@ -2723,7 +2723,7 @@ DROPZONE:
 		Dimensions: 3,3
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 130
+		BuildPaletteOrder: 90
 		Prerequisites: radar, ~structures.gm
 		BuildLimit: 4
 		Description: actor-dropzone.description-buildable
