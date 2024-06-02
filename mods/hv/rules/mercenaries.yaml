@@ -706,6 +706,7 @@ CLUSTERTANK:
 
 TINYHAWK:
 	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 650
 	Tooltip:
