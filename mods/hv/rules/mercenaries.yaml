@@ -525,6 +525,7 @@ OILFACILITY:
 		Description: actor-oilfacility.encyclopedia
 		Order: 95
 	WithIdleOverlay:
+		Sequence: idle-animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
 
 ## pods
