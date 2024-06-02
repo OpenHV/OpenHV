@@ -92,3 +92,7 @@ HARBOR:
 HARBOR2:
 	Buildable:
 		Prerequisites: ~disabled
+
+HARBOR3:
+	Buildable:
+		Prerequisites: ~disabled
