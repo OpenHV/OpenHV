@@ -41,9 +41,9 @@ LightBomb:
 	Burst: 4
 	BurstDelay: 8
 	Warhead@Damage: SpreadDamage
-		Damage: 8000
+		Damage: 1850
 	Warhead@Incendiary: TreeDamage
-		Damage: 8000
+		Damage: 1650
 
 ClusterSubBomb:
 	Inherits: BigSplash

@@ -37,9 +37,12 @@ BOMBER2:
 		OpportunityFire: false
 	Aircraft:
 		TurnSpeed: 30
+		InitialFacing: 768
 		Speed: 185
 		VTOL: True
 		Voice: Move
+		RepulsionSpeed: 40
+		MaximumPitch: 56
 		CruiseAltitude: 4560
 	Armament:
 		Weapon: LightBomb

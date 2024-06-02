@@ -64,6 +64,3 @@ HARBOR:
 	Buildable:
 		Prerequisites: ~disabled
 
-HARBOR3:
-	Buildable:
-		Prerequisites: ~disabled
