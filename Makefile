@@ -198,7 +198,7 @@ endif
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 
-version: check-variables
+version: engine check-variables
 	@sh -c '. $(ENGINE_DIRECTORY)/packaging/functions.sh; set_mod_version $(VERSION) $(MANIFEST_PATH)'
 	@printf "Version changed to $(VERSION).\n"
 
