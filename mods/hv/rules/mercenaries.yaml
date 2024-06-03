@@ -13,6 +13,8 @@ BOMBER2:
 		MinRange: 4c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
@@ -96,6 +98,8 @@ GLIDER:
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
