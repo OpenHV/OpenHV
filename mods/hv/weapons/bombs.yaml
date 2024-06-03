@@ -56,7 +56,7 @@ ClusterSubBomb:
 		Image: bullet13
 		Shadow: true
 		TrailImage: smoke
-		LaunchAngle: 175
+		LaunchAngle: 125
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
@@ -81,13 +81,27 @@ ClusterSubBomb:
 		ValidTargets: Ground, Tree
 		ImpactSounds: explosion06.wav
 
+ClusterSubProjectiles:
+	Inherits: SmallArtillery
+	Range: 55c0
+	-MinRange:
+	TargetActorCenter: false
+	Projectile: Bullet
+		Inaccuracy: 2c256
+		LaunchAngle: 105
+
 ClusterBomb:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp
 	Warhead@Cluster: FireCluster
 		Weapon: ClusterSubBomb
-		RandomClusterCount: 21
+		RandomClusterCount: 15
 		Dimensions: 12,12
-		Footprint: xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx xXxxXxxXxxXx
+		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
+	Warhead@Cluster1: FireCluster
+		Weapon: ClusterSubProjectiles
+		RandomClusterCount: 15
+		Dimensions: 12,12
+		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
 	Warhead@Shake: ShakeScreen
 		Duration: 7
 		Intensity: 5
