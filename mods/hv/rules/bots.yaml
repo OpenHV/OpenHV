@@ -149,6 +149,7 @@ Player:
 			bomberpod: 1
 			missiletank: 5
 			bomber2: 5
+			glider: 5
 			plane2: 5
 			plane1: 5
 			copter: 5
