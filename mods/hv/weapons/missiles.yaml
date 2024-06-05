@@ -88,6 +88,8 @@ AircraftMissileAir:
 	MinRange: 3c512
 	ReloadDelay: 180
 	Burst: 1
+	Projectile: Missile
+		Speed: 352
 	Warhead@Damage: SpreadDamage
 		Damage: 15000
 	Warhead@Incendiary: TreeDamage
