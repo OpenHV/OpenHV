@@ -134,12 +134,12 @@ actor-airlifter =
 
 actor-bomber2 =
    .name = Atmospheric Bomber
-   .description = Fast bombing glider.
+   .description = Fast bombing atmospheric glider.
      Can only attack ground units.
 
 actor-glider =
    .name = Atmospheric Glider
-   .description = Fast air glider.
+   .description = Fast atmospheric glider.
      Armed with a missile launcher.
      Needs to be rearmed at starport platforms.
      Can only attack airborne units.
