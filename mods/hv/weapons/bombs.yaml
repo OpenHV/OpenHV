@@ -94,12 +94,12 @@ ClusterBomb:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp
 	Warhead@Cluster: FireCluster
 		Weapon: ClusterSubBomb
-		RandomClusterCount: 15
+		RandomClusterCount: 18
 		Dimensions: 12,12
 		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
 	Warhead@Cluster1: FireCluster
 		Weapon: ClusterSubProjectiles
-		RandomClusterCount: 15
+		RandomClusterCount: 18
 		Dimensions: 12,12
 		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
 	Warhead@Shake: ShakeScreen
