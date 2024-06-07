@@ -237,9 +237,6 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 73,52
-	Actor74: streetlamp1
-		Owner: Neutral
-		Location: 65,18
 	Actor75: streetlamp1
 		Owner: Neutral
 		Location: 76,18
@@ -303,9 +300,6 @@ Actors:
 	Actor101: resource_light
 		Owner: Neutral
 		Location: 28,38
-	Actor102: resource_light
-		Owner: Neutral
-		Location: 28,32
 	Actor103: resource_light
 		Owner: Neutral
 		Location: 28,27
@@ -324,9 +318,6 @@ Actors:
 	Actor108: base_light
 		Owner: Neutral
 		Location: 105,32
-	Actor110: streetlamp1
-		Owner: Neutral
-		Location: 53,22
 	Actor111: streetlamp1
 		Owner: Neutral
 		Location: 76,22
@@ -336,63 +327,30 @@ Actors:
 	Actor117: sparklamp
 		Owner: Neutral
 		Location: 52,30
-	Actor118: sparklamp
-		Owner: Neutral
-		Location: 63,30
-	Actor119: sparklamp
-		Owner: Neutral
-		Location: 66,30
 	Actor120: sparklamp
 		Owner: Neutral
 		Location: 77,30
 	Actor122: sparklamp
 		Owner: Neutral
 		Location: 52,35
-	Actor123: sparklamp
-		Owner: Neutral
-		Location: 63,35
-	Actor124: sparklamp
-		Owner: Neutral
-		Location: 66,35
 	Actor125: sparklamp
 		Owner: Neutral
 		Location: 77,35
-	Actor11: prop4
-		Owner: Neutral
-		Location: 52,37
-	Actor10: prop4
-		Owner: Neutral
-		Location: 77,37
-	Actor109: central_light
-		Owner: Neutral
-		Location: 64,32
 	Actor121: streetlamp1
 		Owner: Neutral
 		Location: 54,45
 	Actor126: streetlamp1
 		Owner: Neutral
 		Location: 77,45
-	Actor113: streetlamp1
-		Owner: Neutral
-		Location: 66,45
 	Actor114: crane
 		Owner: Neutral
 		Location: 77,47
 	Actor115: crane2
 		Owner: Neutral
 		Location: 52,47
-	Actor12: extractor
-		Owner: Neutral
-		Location: 64,36
 	Actor13: extractor
 		Owner: Neutral
 		Location: 64,25
-	Actor127: comlink
-		Owner: Neutral
-		Location: 64,29
-	Actor116: flagpost
-		Owner: Neutral
-		Location: 65,34
 	Actor128: watchtower
 		Owner: Neutral
 		Location: 81,32
@@ -408,5 +366,212 @@ Actors:
 	Actor79: streetlamp1
 		Owner: Neutral
 		Location: 77,41
+	Actor124: sparklamp
+		Owner: Neutral
+		Location: 69,35
+	Actor118: sparklamp
+		Owner: Neutral
+		Location: 60,30
+	Actor119: sparklamp
+		Owner: Neutral
+		Location: 69,30
+	Actor116: extractor
+		Owner: Neutral
+		Location: 64,36
+	Actor123: sparklamp
+		Owner: Neutral
+		Location: 60,35
+	Actor113: streetlamp1
+		Owner: Neutral
+		Location: 66,45
+	Actor135: flagpost
+		Owner: Neutral
+		Location: 24,31
+	Actor136: flagpost
+		Owner: Neutral
+		Location: 105,31
+	Actor134: comlink
+		Owner: Neutral
+		Location: 64,16
+	Actor127: resource_light
+		Owner: Neutral
+		Location: 64,26
+	Actor130: resource_light
+		Owner: Neutral
+		Location: 65,27
+	Actor131: resource_light
+		Owner: Neutral
+		Location: 64,37
+	Actor132: resource_light
+		Owner: Neutral
+		Location: 65,38
+	Actor137: resource_light
+		Owner: Neutral
+		Location: 65,21
+	Actor138: resource_light
+		Owner: Neutral
+		Location: 53,21
+	Actor139: resource_light
+		Owner: Neutral
+		Location: 76,21
+	Actor140: resource_light
+		Owner: Neutral
+		Location: 66,44
+	Actor141: resource_light
+		Owner: Neutral
+		Location: 54,44
+	Actor142: resource_light
+		Owner: Neutral
+		Location: 77,44
+	Actor143: resource_light
+		Owner: Neutral
+		Location: 60,30
+	Actor144: resource_light
+		Owner: Neutral
+		Location: 69,30
+	Actor145: resource_light
+		Owner: Neutral
+		Location: 69,35
+	Actor146: resource_light
+		Owner: Neutral
+		Location: 60,35
+	Actor147: resource_light
+		Owner: Neutral
+		Location: 77,30
+	Actor148: resource_light
+		Owner: Neutral
+		Location: 77,35
+	Actor149: resource_light
+		Owner: Neutral
+		Location: 52,35
+	Actor150: resource_light
+		Owner: Neutral
+		Location: 52,30
+	Actor102: resource_light
+		Owner: Neutral
+		Location: 28,32
+	Actor151: mntmisc9
+		Owner: Neutral
+		Location: 103,7
+	Actor152: mntmisc9
+		Owner: Neutral
+		Location: 116,13
+	Actor153: mntmisc9
+		Owner: Neutral
+		Location: 119,17
+	Actor154: mntmisc9
+		Owner: Neutral
+		Location: 104,36
+	Actor155: mntmisc9
+		Owner: Neutral
+		Location: 84,39
+	Actor156: mntmisc9
+		Owner: Neutral
+		Location: 118,51
+	Actor157: mntmisc11
+		Owner: Neutral
+		Location: 115,53
+	Actor158: mntmisc11
+		Owner: Neutral
+		Location: 96,54
+	Actor159: mntmisc11
+		Owner: Neutral
+		Location: 93,52
+	Actor160: mntmisc11
+		Owner: Neutral
+		Location: 100,39
+	Actor161: mntmisc11
+		Owner: Neutral
+		Location: 106,35
+	Actor162: mntmisc11
+		Owner: Neutral
+		Location: 105,6
+	Actor163: mntmisc8
+		Owner: Neutral
+		Location: 116,19
+	Actor164: mntmisc8
+		Owner: Neutral
+		Location: 107,6
+	Actor165: mntmisc8
+		Owner: Neutral
+		Location: 104,29
+	Actor166: mntmisc8
+		Owner: Neutral
+		Location: 86,38
+	Actor167: mntmisc8
+		Owner: Neutral
+		Location: 92,50
+	Actor168: mntmisc8
+		Owner: Neutral
+		Location: 117,46
+	Actor169: mntmisc9
+		Owner: Neutral
+		Location: 36,52
+	Actor170: mntmisc9
+		Owner: Neutral
+		Location: 23,35
+	Actor171: mntmisc9
+		Owner: Neutral
+		Location: 43,38
+	Actor172: mntmisc9
+		Owner: Neutral
+		Location: 11,51
+	Actor173: mntmisc9
+		Owner: Neutral
+		Location: 13,13
+	Actor174: mntmisc9
+		Owner: Neutral
+		Location: 24,6
+	Actor175: mntmisc11
+		Owner: Neutral
+		Location: 22,6
+	Actor176: mntmisc11
+		Owner: Neutral
+		Location: 10,17
+	Actor177: mntmisc11
+		Owner: Neutral
+		Location: 25,29
+	Actor178: mntmisc11
+		Owner: Neutral
+		Location: 29,39
+	Actor179: mntmisc11
+		Owner: Neutral
+		Location: 45,39
+	Actor180: mntmisc11
+		Owner: Neutral
+		Location: 37,50
+	Actor181: mntmisc11
+		Owner: Neutral
+		Location: 12,46
+	Actor182: mntmisc8
+		Owner: Neutral
+		Location: 14,53
+	Actor183: mntmisc8
+		Owner: Neutral
+		Location: 33,54
+	Actor184: mntmisc8
+		Owner: Neutral
+		Location: 25,36
+	Actor185: mntmisc8
+		Owner: Neutral
+		Location: 13,19
+	Actor186: mntmisc8
+		Owner: Neutral
+		Location: 26,7
+	Actor10: prop4
+		Owner: Neutral
+		Location: 77,37
+	Actor187: prop4
+		Owner: Neutral
+		Location: 52,37
+	Actor110: streetlamp1
+		Owner: Neutral
+		Location: 53,22
+	Actor74: streetlamp1
+		Owner: Neutral
+		Location: 65,18
+	Actor188: reconstructor
+		Owner: Neutral
+		Location: 64,48
 
 Rules: rules.yaml
