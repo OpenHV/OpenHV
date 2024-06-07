@@ -610,6 +610,7 @@ OILFACILITY:
 	WithIdleOverlay:
 		Sequence: idle-animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
+	-WithAnimationOverlay:
 
 ## pods
 

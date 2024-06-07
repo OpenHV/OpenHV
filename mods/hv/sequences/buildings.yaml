@@ -2630,7 +2630,7 @@ oilfacility:
 	idle:
 		Filename: bits/oilfacility.png
 		Length: 1
-	active:
+	idle-overlay:
 		Filename: bits/oilfacility.png
 		Length: 5
 		Reverses: True
