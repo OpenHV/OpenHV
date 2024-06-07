@@ -88,14 +88,14 @@ Player:
 			aaturret3: 6
 			howitzer: 1
 			uplink: 1
-			dropzone: 1
+			dropzone: 3
 			uplinkmercenary: 1
 			field: 1
 			silo: 1
 		BuildingDelays:
 			radar: 4000
 			radar2: 4000
-			dropzne: 6000
+			dropzone: 6000
 			howitzer: 8000
 			field: 8000
 			silo: 9000
