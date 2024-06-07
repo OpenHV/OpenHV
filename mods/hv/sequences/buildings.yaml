@@ -2533,6 +2533,10 @@ oresmelt:
 	idle:
 		Filename: bits/oresmelt.png
 		Start: 1
+		Length: 1
+	active:
+		Filename: bits/oresmelt.png
+		Start: 1
 		Length: 10
 		Tick: 140
 	damaged-idle:
@@ -2564,6 +2568,18 @@ orepurifier:
 		ZOffset: 512
 		Offset: 0, -2
 	idle:
+		ShadowStart: 1
+		Length: 1
+		Combine:
+			0:
+				Filename: bits/orepurifier.png
+				Length: 1
+			1:
+				Filename: bits/orepurifier-shadow.png
+				Length: 1
+				ZOffset: 1768
+				Offset: 13,24
+	active:
 		ShadowStart: 7
 		Length: 7
 		Reverses: True
