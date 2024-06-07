@@ -83,42 +83,6 @@ Actors:
 	Actor9: prop9
 		Owner: Neutral
 		Location: 43,34
-	Actor22: bigrock
-		Owner: Neutral
-		Location: 93,22
-	Actor26: grssmisc7
-		Owner: Neutral
-		Location: 97,20
-	Actor27: rock11
-		Owner: Neutral
-		Location: 93,25
-	Actor28: rock11
-		Owner: Neutral
-		Location: 92,21
-	Actor29: rock9
-		Owner: Neutral
-		Location: 97,25
-	Actor30: rock7
-		Owner: Neutral
-		Location: 94,19
-	Actor31: rock7
-		Owner: Neutral
-		Location: 93,38
-	Actor32: rock11
-		Owner: Neutral
-		Location: 91,40
-	Actor33: grssmisc7
-		Owner: Neutral
-		Location: 96,39
-	Actor34: bigrock
-		Owner: Neutral
-		Location: 92,41
-	Actor35: rock11
-		Owner: Neutral
-		Location: 92,44
-	Actor36: rock9
-		Owner: Neutral
-		Location: 96,44
 	Actor37: rock7
 		Owner: Neutral
 		Location: 33,39
@@ -336,9 +300,6 @@ Actors:
 	Actor125: sparklamp
 		Owner: Neutral
 		Location: 77,35
-	Actor121: streetlamp1
-		Owner: Neutral
-		Location: 54,45
 	Actor126: streetlamp1
 		Owner: Neutral
 		Location: 77,45
@@ -357,12 +318,6 @@ Actors:
 	Actor129: watchtower
 		Owner: Neutral
 		Location: 47,32
-	Actor78: streetlamp1
-		Owner: Neutral
-		Location: 66,41
-	Actor77: streetlamp1
-		Owner: Neutral
-		Location: 54,41
 	Actor79: streetlamp1
 		Owner: Neutral
 		Location: 77,41
@@ -381,9 +336,6 @@ Actors:
 	Actor123: sparklamp
 		Owner: Neutral
 		Location: 60,35
-	Actor113: streetlamp1
-		Owner: Neutral
-		Location: 66,45
 	Actor135: flagpost
 		Owner: Neutral
 		Location: 24,31
@@ -573,5 +525,155 @@ Actors:
 	Actor188: reconstructor
 		Owner: Neutral
 		Location: 64,48
+	Actor189: dark_light
+		Owner: Neutral
+		Location: 3,58
+	Actor190: dark_light
+		Owner: Neutral
+		Location: 12,62
+	Actor191: dark_light
+		Owner: Neutral
+		Location: 22,61
+	Actor192: dark_light
+		Owner: Neutral
+		Location: 34,60
+	Actor193: dark_light
+		Owner: Neutral
+		Location: 42,61
+	Actor195: dark_light
+		Owner: Neutral
+		Location: 3,47
+	Actor196: dark_light
+		Owner: Neutral
+		Location: 2,64
+	Actor197: dark_light
+		Owner: Neutral
+		Location: 1,37
+	Actor198: dark_light
+		Owner: Neutral
+		Location: 2,26
+	Actor199: dark_light
+		Owner: Neutral
+		Location: 2,14
+	Actor200: dark_light
+		Owner: Neutral
+		Location: 7,6
+	Actor201: dark_light
+		Owner: Neutral
+		Location: 3,3
+	Actor202: dark_light
+		Owner: Neutral
+		Location: 16,4
+	Actor203: dark_light
+		Owner: Neutral
+		Location: 24,2
+	Actor204: dark_light
+		Owner: Neutral
+		Location: 40,2
+	Actor206: dark_light
+		Owner: Neutral
+		Location: 87,1
+	Actor207: dark_light
+		Owner: Neutral
+		Location: 97,1
+	Actor208: dark_light
+		Owner: Neutral
+		Location: 106,1
+	Actor209: dark_light
+		Owner: Neutral
+		Location: 114,2
+	Actor210: dark_light
+		Owner: Neutral
+		Location: 122,5
+	Actor211: dark_light
+		Owner: Neutral
+		Location: 127,3
+	Actor212: dark_light
+		Owner: Neutral
+		Location: 127,14
+	Actor213: dark_light
+		Owner: Neutral
+		Location: 128,21
+	Actor214: dark_light
+		Owner: Neutral
+		Location: 128,28
+	Actor215: dark_light
+		Owner: Neutral
+		Location: 128,36
+	Actor216: dark_light
+		Owner: Neutral
+		Location: 127,44
+	Actor217: dark_light
+		Owner: Neutral
+		Location: 123,50
+	Actor218: dark_light
+		Owner: Neutral
+		Location: 128,58
+	Actor219: dark_light
+		Owner: Neutral
+		Location: 125,64
+	Actor220: dark_light
+		Owner: Neutral
+		Location: 113,63
+	Actor221: dark_light
+		Owner: Neutral
+		Location: 106,63
+	Actor222: dark_light
+		Owner: Neutral
+		Location: 97,63
+	Actor223: dark_light
+		Owner: Neutral
+		Location: 89,63
+	Actor194: rock9
+		Owner: Neutral
+		Location: 93,25
+	Actor224: rock11
+		Owner: Neutral
+		Location: 97,25
+	Actor225: grssmisc7
+		Owner: Neutral
+		Location: 91,20
+	Actor226: rock7
+		Owner: Neutral
+		Location: 96,19
+	Actor227: rock11
+		Owner: Neutral
+		Location: 98,21
+	Actor228: bigrock
+		Owner: Neutral
+		Location: 94,22
+	Actor229: bigrock
+		Owner: Neutral
+		Location: 94,42
+	Actor230: grssmisc7
+		Owner: Neutral
+		Location: 91,40
+	Actor231: rock11
+		Owner: Neutral
+		Location: 98,41
+	Actor232: rock7
+		Owner: Neutral
+		Location: 96,39
+	Actor233: rock11
+		Owner: Neutral
+		Location: 97,45
+	Actor234: rock9
+		Owner: Neutral
+		Location: 93,45
+	Actor205: dark_light
+		Owner: Neutral
+		Location: 34,1
+	Actor77: streetlamp1
+		Owner: Neutral
+		Location: 53,41
+	Actor121: streetlamp1
+		Owner: Neutral
+		Location: 53,45
+	Actor113: streetlamp1
+		Owner: Neutral
+		Location: 65,45
+	Actor78: streetlamp1
+		Owner: Neutral
+		Location: 65,41
 
 Rules: rules.yaml
