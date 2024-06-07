@@ -31,3 +31,12 @@ BASE_LIGHT:
 		RedTint: 0.20
 		GreenTint: 0.40
 		BlueTint: 0.60
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.35
+		BlueTint: -0.35
