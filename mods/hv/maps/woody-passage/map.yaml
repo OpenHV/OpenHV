@@ -285,9 +285,6 @@ Actors:
 	Actor111: streetlamp1
 		Owner: Neutral
 		Location: 76,22
-	Actor112: streetlamp1
-		Owner: Neutral
-		Location: 65,22
 	Actor117: sparklamp
 		Owner: Neutral
 		Location: 52,30
@@ -519,9 +516,6 @@ Actors:
 	Actor110: streetlamp1
 		Owner: Neutral
 		Location: 53,22
-	Actor74: streetlamp1
-		Owner: Neutral
-		Location: 65,18
 	Actor188: reconstructor
 		Owner: Neutral
 		Location: 64,48
@@ -669,11 +663,29 @@ Actors:
 	Actor121: streetlamp1
 		Owner: Neutral
 		Location: 53,45
-	Actor113: streetlamp1
-		Owner: Neutral
-		Location: 65,45
 	Actor78: streetlamp1
 		Owner: Neutral
-		Location: 65,41
+		Location: 60,41
+	Actor113: streetlamp1
+		Owner: Neutral
+		Location: 60,45
+	Actor235: streetlamp1
+		Owner: Neutral
+		Location: 69,41
+	Actor236: streetlamp1
+		Owner: Neutral
+		Location: 69,45
+	Actor74: streetlamp1
+		Owner: Neutral
+		Location: 61,18
+	Actor112: streetlamp1
+		Owner: Neutral
+		Location: 61,22
+	Actor238: streetlamp1
+		Owner: Neutral
+		Location: 68,18
+	Actor237: streetlamp1
+		Owner: Neutral
+		Location: 68,22
 
 Rules: rules.yaml
