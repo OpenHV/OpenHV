@@ -159,6 +159,13 @@ slcm:
 		InterpolatedFacings: 16
 		ZOffset: 2030
 
+intercontinentalmissile:
+	idle:
+		Filename: bits/bullet11.png
+		Facings: 8
+		InterpolatedFacings: 16
+		ZOffset: 2030
+
 bullet12:
 	idle:
 		Filename: bits/bullet12.png

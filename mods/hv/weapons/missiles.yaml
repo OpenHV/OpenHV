@@ -389,3 +389,39 @@ Torpedo:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
+
+CruiseIntercontinentalMissileImpact:
+	Inherits: BigSplash
+	Warhead@DamageImpact: SpreadDamage
+		Spread: 1c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryImpact: TreeDamage
+		Spread: 1c0
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		AffectsParent: true
+	Warhead@DamageArea: SpreadDamage
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		Delay: 3
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		DamageTypes: Fire
+		AffectsParent: true
+	Warhead@IncendiaryArea: TreeDamage
+		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		AffectsParent: true
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+	Warhead@GroundEffect: CreateEffect
+		Explosions: medium
+		ValidTargets: Ground
+		ImpactSounds: explosion_juverisetila.wav

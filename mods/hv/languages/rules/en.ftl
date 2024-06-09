@@ -316,7 +316,7 @@ actor-field =
       Requires power to operate.
       Maximum 1 can be built.
    .name = Force Field Generator
-   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amout of energy.
+   .encyclopedia = Force fields are effective at shielding vehicles from all kind of damage. However the effect only last a short amount of time and the force field generator has to recharge which requires a significant amount of energy.
    .force-field-name = Force Field
    .force-field-description = Protective energy shield:
     Reduces damage taken by 75 %
@@ -332,6 +332,20 @@ actor-silo =
    .nukepower-name = Atom Bomb
    .nukepower-description = Drop an atomic bomb
     at a target location.
+
+actor-ballisticsilo =
+   .name = Intercontinental Missile Command
+   .encyclopedia = The intercontinental missile command silo is able to produce an intercontinental ballistic missile by its own, at the cost of high power and periodic taken cash. After the missile is built, it can be fired upon any target located in the same planet, if the planet is not too big. It is a one-shot weapon, meaning that once a ballistic missile was built, no other can be built.
+
+     The intercontinental ballistic missile fired is fast propelled into its cruise altitude by its reaction engines, to the pass over the target and crash down onto it. The missile is quite powerful enough but only to a small region. United Mercenaries of Ginkua captains often compare it to the Yuruki railgun.
+   .description = Orders a nuclear strike.
+      Requires power to operate.
+      Maximum 3 can be built.
+      Contains 1 missiles.
+      Special Ability: Intercontinental Ballistic Missile
+   .attackorderpower-name = Intercontinental Missile
+   .attackorderpower-description = Launch an intercontinental
+     ballistic missile to a desired location.
 
 actor-uplink =
    .name = Orbital Strike Uplink Command
@@ -414,7 +428,7 @@ actor-dropzone =
    .name = Drop Zone
    .description = Airborne reinforcement pad
    .description-buildable = Airborne reinforcement pad
-     Maximum 4 can be built
+     Maximum 2 can be built
    .encyclopedia = Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
 
 actor-flagpost =
@@ -614,6 +628,8 @@ actor-submarine =
       Strong vs Vehicles, Pods and Buildings
 
 actor-slcm-name = Submarine-launched cruise missile
+
+actor-intercontinental-name = Intercontinental Ballistic Missile
 
 actor-carrier =
    .description = Launches aerial autonomous attack vessels.

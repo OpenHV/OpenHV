@@ -15,3 +15,12 @@ MissileLauncher:
 	Projectile: InstantHit
 	Warhead@Damage: TargetDamage
 		ValidTargets: Ground, Water
+
+BallisticMissileLauncher:
+	ReloadDelay: 150
+	Range: 2048c0
+	MinRange: 25c0
+	ValidTargets: Ground, Water
+	Projectile: InstantHit
+	Warhead@Damage: TargetDamage
+		ValidTargets: Ground, Water

@@ -30,7 +30,7 @@ BOMBER2:
 	Armor:
 		Type: Light
 	Valued:
-		Cost: 2100
+		Cost: 1100
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
@@ -112,7 +112,7 @@ GLIDER:
 	Armor:
 		Type: Steel
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
@@ -223,6 +223,8 @@ AIRLIFTERMERCENARY:
 
 BALLOON.MERCENARY:
 	Inherits: BALLOON
+	Valued:
+		Cost: 250
 	Buildable:
 		Prerequisites: ~starport.gm
 	-MapEditorData:
@@ -422,7 +424,7 @@ FACTORY5:
 		Sequence: idle-platform
 		RequiresCondition: !build-incomplete
 	Exit@North1:
-		ExitCell: 1,0
+		ExitCell: 0,0
 		SpawnOffset: 0,0,0
 		Facing: 1023
 		ProductionTypes: Tank
@@ -430,7 +432,31 @@ FACTORY5:
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	WithProductionExitOverlay@North1:
+		ExitCell: 0,0
+		Sequence: production-done
+		RequiresCondition: !burning
+	Exit@North2:
 		ExitCell: 1,0
+		SpawnOffset: 0,0,0
+		Facing: 1023
+		ProductionTypes: Tank
+		ExitDelay: 5
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@North2:
+		ExitCell: 1,0
+		Sequence: production-done
+		RequiresCondition: !burning
+	Exit@North3:
+		ExitCell: 2,0
+		SpawnOffset: 0,0,0
+		Facing: 1023
+		ProductionTypes: Tank
+		ExitDelay: 5
+		Priority: 10
+		RequiresCondition: !being-captured && !build-incomplete
+	WithProductionExitOverlay@North3:
+		ExitCell: 2,0
 		Sequence: production-done
 		RequiresCondition: !burning
 	-Exit@South1:
@@ -576,6 +602,128 @@ UPLINKMERCENARY:
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: NukeIncoming
 		OrderName: Bombem
+
+BALLISTICSILO:
+	Inherits: ^DefenseBuilding
+	Inherits@Shape: ^2x1Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Selectable:
+		Bounds: 2048, 3072, 0, -1024
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: actor-ballisticsilo.name
+	Encyclopedia:
+		Description: actor-ballisticsilo.encyclopedia
+		Order: 90
+		Category: Buildings
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 140
+		Prerequisites: techcenter, radar, ~structures.gm
+		BuildLimit: 3
+		Description: actor-ballisticsilo.description
+	Building:
+		Footprint: == == xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,1024,0
+	Health:
+		HP: 125000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Armament:
+		Weapon: BallisticMissileLauncher
+	MissileSpawnerParent:
+		Actors: INTERCONTINENTALMISSILE
+		RespawnTicks: 120
+	AttackOrderPower:
+		PauseOnCondition: disabled
+		AttackingCondition: attacking
+		Cursor: attack
+		BlockedCursor: howitzer-blocked
+		Icon: howitzer
+		OrderName: IntercontinentalStrike
+		AllowMultiple: true
+		ChargeInterval: 5250
+		DisplayRadarPing: true
+		OneShot: true
+		Name: actor-ballisticsilo.attackorderpower-name
+		Description: actor-ballisticsilo.attackorderpower-description
+		DetectedSpeechNotification: HowitzerDetected
+		DetectedTextNotification: notification-howitzer-detected
+		BeginChargeSpeechNotification: HowitzerCharging
+		BeginChargeTextNotification: notification-howitzer-charging
+		EndChargeSpeechNotification: HowitzerReady
+		EndChargeTextNotification: notification-howitzer-ready
+		SelectTargetSpeechNotification: SelectTarget
+		SelectTargetTextNotification: notification-select-target
+		IncomingSpeechNotification: HowitzerIncoming
+		CircleBorderWidth: 5
+		SupportPowerPaletteOrder: 25
+	AttackTurreted:
+		RequiresCondition: !build-incomplete && !disabled
+		PauseOnCondition: !attacking
+	Turreted:
+		TurnSpeed: 60
+		RequiresCondition: !build-incomplete
+		RealignDelay: -1
+	SupportPowerChargeBar:
+	Power:
+		Amount: -150
+	CashTrickler:
+		Interval: 250
+		Amount: -150
+		RequiresCondition: !build-incomplete && !disabled
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	WithIdleOverlay@Lights:
+		Sequence: animation_lights
+		RequiresCondition: !build-incomplete
+	WithIdleOverlay@red_light:
+		Sequence: animation_red_light
+		RequiresCondition: !build-incomplete
+	RenderSprites:
+		Image: silo
+
+INTERCONTINENTALMISSILE:
+	Inherits: ^ShootableMissile
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: actor-intercontinental-name
+	Health:
+		HP: 15550
+	Armor:
+		Type: Steel
+	AppearsOnRadar:
+		UseLocation: true
+	BallisticMissile:
+		BeginCruiseAltitude: 28c0
+		CreateAngle: 255
+		LaunchAngle: 255
+		PrepareTick: 10
+		TurnSpeed: 86
+		Speed: 358
+		LaunchAcceleration: 8
+		HitAcceleration: 0
+		ExplosionRange: 2c0
+		LaunchSounds: missile_julien-nicolas.wav
+	LeavesTrails:
+		Image: smoke
+		MovingInterval: 2
+		Type: CenterPosition
+		SpawnAtLastPosition: false
+	MissileSpawnerChild:
+	SpawnedExplodes:
+		Weapon: CruiseIntercontinentalMissileImpact
+		EmptyWeapon: CruiseIntercontinentalMissileImpact
 
 OILFACILITY:
 	Inherits: ORESMELT

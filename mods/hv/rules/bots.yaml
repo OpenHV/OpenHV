@@ -51,6 +51,7 @@ Player:
 			field: 1
 			dropzone: 4
 			howitzer: 1
+			ballisticsilo: 3
 			uplink: 1
 			uplinkmercenary: 1
 			silo: 1
@@ -87,6 +88,7 @@ Player:
 			aaturret2: 6
 			aaturret3: 6
 			howitzer: 1
+			ballisticsilo: 2
 			uplink: 1
 			dropzone: 3
 			uplinkmercenary: 1
@@ -97,6 +99,7 @@ Player:
 			radar2: 4000
 			dropzone: 6000
 			howitzer: 8000
+			ballisticsilo: 8500
 			field: 8000
 			silo: 9000
 			uplink: 9000
@@ -110,7 +113,7 @@ Player:
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
 		AirUnitsTypes: plane1, plane2, bomber2, copter, banshee
 		ConstructionYardTypes: base, base2
-		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, ballisticsilo, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
@@ -316,6 +319,28 @@ Player:
 					CheckRadius: 5c0
 			Railgun:
 				OrderName: Blastem
+				MinimumAttractiveness: 1000
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Air, Tank, Vehicle, Infantry, Water
+					Attractiveness: 2
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 3c0
+			IntercontinentalStrike:
+				OrderName: IntercontinentalStrike
 				MinimumAttractiveness: 1000
 				FineScanRadius: 2
 				Consideration@1:
