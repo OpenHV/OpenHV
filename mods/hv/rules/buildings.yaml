@@ -1696,7 +1696,7 @@ TELEVATR:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 120
-		Prerequisites: radar, !~structures.gm
+		Prerequisites: radar, ~!structures.gm
 		Description: actor-televatr.description
 	Valued:
 		Cost: 1500

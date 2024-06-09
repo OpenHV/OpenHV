@@ -11,5 +11,6 @@
 - [x] Make Cluster Tank
 - [x] Make atmospheric bomber
 - [x] Make Tiny Hawk
-- [ ] Make atmospheric glider
+- [x] Make atmospheric glider
+- [ ] Make voices for cluster bomb, paratroopers and intercontinental missile powers
 - [ ] Make more differentiation with Ginkua faction

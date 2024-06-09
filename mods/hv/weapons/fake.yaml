@@ -17,9 +17,11 @@ MissileLauncher:
 		ValidTargets: Ground, Water
 
 BallisticMissileLauncher:
-	ReloadDelay: 150
+	ReloadDelay: 950
 	Range: 2048c0
 	MinRange: 25c0
+	Burst: 4
+	BurstDelays: 480
 	ValidTargets: Ground, Water
 	Projectile: InstantHit
 	Warhead@Damage: TargetDamage

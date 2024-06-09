@@ -76,6 +76,19 @@ notification-railgun-detected = Orbital Railgun detected.
 notification-railgun-charging = Orbital Railgun charging.
 notification-railgun-ready = Orbital Railgun ready.
 
+notification-paratroopers-incoming = Paratroopers reinforcement incoming.
+notification-paratroopers-ready = Paratroopers reinforcement ready.
+notification-paratroopers-charging = Paratroopers reinforcement charging.
+
+notification-clusterbomb-detected = Cluster Bomb detected.
+notification-clusterbomb-charging = Cluster Bomb charging.
+notification-clusterbomb-ready = Cluster Bomb ready.
+
+notification-ballisticmissile-detected = Intercontinental Missile Launcher detected.
+notification-ballisticmissile-charging = Intercontinental Missile Launcher charging.
+notification-ballisticmissile-ready = Intercontinental Missile Launcher ready.
+notification-ballisticmissile-sent = Intercontinental ballistic missile sent.
+
 ## Aircraft
 actor-plane1 =
    .description = Attack Ship armed with
@@ -335,13 +348,12 @@ actor-silo =
 
 actor-ballisticsilo =
    .name = Intercontinental Missile Command
-   .encyclopedia = The intercontinental missile command silo is able to produce an intercontinental ballistic missile by its own, at the cost of high power and periodic taken cash. After the missile is built, it can be fired upon any target located in the same planet, if the planet is not too big. It is a one-shot weapon, meaning that once a ballistic missile was built, no other can be built.
+   .encyclopedia = The intercontinental missile command silo is able to produce up to 8 intercontinental ballistic missiles at a time by its own, at the cost of high power and periodic taken cash. After at least a missile is built, it can be fired upon any target located in the same planet, if the planet is not too big. The more missiles are being reserved in the silo, the more will be launched at a time.
 
      The intercontinental ballistic missile fired is fast propelled into its cruise altitude by its reaction engines, to the pass over the target and crash down onto it. The missile is quite powerful enough but only to a small region. United Mercenaries of Ginkua captains often compare it to the Yuruki railgun.
    .description = Orders a nuclear strike.
       Requires power to operate.
-      Maximum 3 can be built.
-      Contains 1 missiles.
+      Maximum 1 can be built.
       Special Ability: Intercontinental Ballistic Missile
    .attackorderpower-name = Intercontinental Missile
    .attackorderpower-description = Launch an intercontinental

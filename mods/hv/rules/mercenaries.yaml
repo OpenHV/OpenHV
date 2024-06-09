@@ -57,7 +57,7 @@ BOMBER2:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 8
+		PipCount: 4
 	ReloadAmmoPool:
 		Delay: 85
 		Count: 2
@@ -274,10 +274,11 @@ RADAR3:
 		Description: actor-radar3.paratrooperspower-description
 		Cursor: airlifterdrop
 		SupportPowerPaletteOrder: 35
-		BeginChargeSpeechNotification: AirStrikeCharging
-		EndChargeSpeechNotification: AirStrikeReady
+		BeginChargeTextNotification: notification-paratroopers-charging
+		EndChargeTextNotification: notification-paratroopers-ready
 		SelectTargetSpeechNotification: SelectTarget
-		IncomingSpeechNotification: AirStrikeIncoming
+		SelectTargetTextNotification: notification-select-target
+		IncomingTextNotification: notification-paratroopers-incoming
 		OrderName: FlushParatroopers
 
 MODULE3:
@@ -593,11 +594,11 @@ UPLINKMERCENARY:
 		CameraRange: 15c0
 		SupportPowerPaletteOrder: 15
 		DetectedSpeechNotification: NukeDetected
-		DetectedTextNotification: notification-nuke-detected
+		DetectedTextNotification: notification-clusterbomb-detected
 		BeginChargeSpeechNotification: NukeCharging
-		BeginChargeTextNotification: notification-nuke-charging
+		BeginChargeTextNotification: notification-clusterbomb-charging
 		EndChargeSpeechNotification: NukeReady
-		EndChargeTextNotification: notification-nuke-ready
+		EndChargeTextNotification: notification-clusterbomb-ready
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: NukeIncoming
@@ -616,13 +617,13 @@ BALLISTICSILO:
 		Name: actor-ballisticsilo.name
 	Encyclopedia:
 		Description: actor-ballisticsilo.encyclopedia
-		Order: 90
+		Order: 132
 		Category: Buildings
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 91
 		Prerequisites: techcenter, radar, ~structures.gm
-		BuildLimit: 3
+		BuildLimit: 1
 		Description: actor-ballisticsilo.description
 	Building:
 		Footprint: == == xx
@@ -640,6 +641,20 @@ BALLISTICSILO:
 		Range: 4c0
 	Armament:
 		Weapon: BallisticMissileLauncher
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 8
+		InitialAmmo: 0
+		AmmoCondition: ammo
+		RearmSound: missile_julien-nicolas.wav
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: false
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 4750
+		Count: 1
 	MissileSpawnerParent:
 		Actors: INTERCONTINENTALMISSILE
 		RespawnTicks: 120
@@ -650,21 +665,20 @@ BALLISTICSILO:
 		BlockedCursor: howitzer-blocked
 		Icon: howitzer
 		OrderName: IntercontinentalStrike
-		AllowMultiple: true
-		ChargeInterval: 5250
+		ChargeInterval: 980
 		DisplayRadarPing: true
-		OneShot: true
 		Name: actor-ballisticsilo.attackorderpower-name
 		Description: actor-ballisticsilo.attackorderpower-description
 		DetectedSpeechNotification: HowitzerDetected
-		DetectedTextNotification: notification-howitzer-detected
+		DetectedTextNotification: notification-ballisticmissile-detected
 		BeginChargeSpeechNotification: HowitzerCharging
-		BeginChargeTextNotification: notification-howitzer-charging
+		BeginChargeTextNotification: notification-ballisticmissile-charging
 		EndChargeSpeechNotification: HowitzerReady
-		EndChargeTextNotification: notification-howitzer-ready
+		EndChargeTextNotification: notification-ballisticmissile-ready
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: HowitzerIncoming
+		LaunchTextNotification: notification-ballisticmissile-launched
 		CircleBorderWidth: 5
 		SupportPowerPaletteOrder: 25
 	AttackTurreted:
