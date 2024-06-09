@@ -161,8 +161,10 @@ slcm:
 
 intercontinentalmissile:
 	idle:
-		Filename: bits/bullet11.png
+		Filename: bits/ballistic_missile.png
 		Facings: 8
+		Length: 4
+		Tick: 75
 		InterpolatedFacings: 16
 		ZOffset: 2030
 

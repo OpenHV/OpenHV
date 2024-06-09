@@ -392,6 +392,16 @@ Torpedo:
 
 CruiseIntercontinentalMissileImpact:
 	Inherits: BigSplash
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterSubBomb
+		RandomClusterCount: 5
+		Dimensions: 5,5
+		Footprint: xxxxx xxxxx xxxxx xxxxx xxxxx
+	Warhead@Cluster1: FireCluster
+		Weapon: ClusterSubProjectiles
+		RandomClusterCount: 4
+		Dimensions: 5,5
+		Footprint: xxxxx xxxxx xxxxx xxxxx xxxxx
 	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 10000

@@ -644,7 +644,7 @@ BALLISTICSILO:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 8
-		InitialAmmo: 0
+		InitialAmmo: 8
 		AmmoCondition: ammo
 		RearmSound: missile_julien-nicolas.wav
 	WithAmmoPipsDecoration:
@@ -652,6 +652,7 @@ BALLISTICSILO:
 		Margin: 4, 3
 		RequiresSelection: false
 		PipCount: 8
+		ValidRelationships: Ally, Enemy, Neutral
 	ReloadAmmoPool:
 		Delay: 4750
 		Count: 1
