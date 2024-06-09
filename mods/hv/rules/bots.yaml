@@ -347,5 +347,5 @@ Player:
 					Against: Enemy
 					Types: Structure
 					Attractiveness: 1
-					TargetMetric: None
+					TargetMetric: Value
 					CheckRadius: 2c0

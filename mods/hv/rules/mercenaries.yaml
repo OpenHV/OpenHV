@@ -644,7 +644,7 @@ BALLISTICSILO:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 8
-		InitialAmmo: 8
+		InitialAmmo: 0
 		AmmoCondition: ammo
 		RearmSound: missile_julien-nicolas.wav
 	WithAmmoPipsDecoration:
