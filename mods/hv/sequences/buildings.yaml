@@ -329,9 +329,13 @@ generator3:
 	damaged-idle:
 		Filename: bits/generator3.png
 		Start: 16
+	shadow-overlay:
+		Filename: bits/generator-shadow.png
+		ZOffset: 1768
+		Offset: 11, 11
 	icon:
 		Filename: bits/buildings-icons.png
-		Start: 31
+		Start: 44
 
 radar:
 	Inherits@Flame: ^BuildingFlame
@@ -1393,6 +1397,43 @@ aaturret2:
 		Facings: 8
 	charge:
 		Filename: bits/aa-turret2.png
+		Start: 3
+		Length: 4
+		Tick: 25
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 22
+		Offset: 0, 0
+
+aaturret3:
+	Inherits: aaturret
+	Defaults:
+		Offset: 0, -9
+	idle:
+		Filename: bits/aa-turret3.png
+		Start: 0
+	shadow-overlay:
+		Filename: bits/aa-turret3-shadow.png
+		ZOffset: -1768
+		Offset: 1, -2
+	damaged-shadow-overlay:
+		Filename: bits/aa-turret3-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 1, -2
+	damaged-idle:
+		Filename: bits/aa-turret3.png
+		Start: 1
+	turret:
+		Filename: bits/aa-turret3.png
+		Start: 2
+		Facings: 8
+	shoot:
+		Filename: bits/aa-turret3.png
+		Start: 2
+		Facings: 8
+	charge:
+		Filename: bits/aa-turret3.png
 		Start: 3
 		Length: 4
 		Tick: 25

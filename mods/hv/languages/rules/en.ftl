@@ -76,9 +76,9 @@ notification-railgun-detected = Orbital Railgun detected.
 notification-railgun-charging = Orbital Railgun charging.
 notification-railgun-ready = Orbital Railgun ready.
 
-notification-paratroopers-incoming = Paratroopers reinforcement incoming.
-notification-paratroopers-ready = Paratroopers reinforcement ready.
-notification-paratroopers-charging = Paratroopers reinforcement charging.
+notification-paratroopers-incoming = Paratroopers Drop incoming.
+notification-paratroopers-ready = Paratroopers Drop ready.
+notification-paratroopers-charging = Paratroopers Drop charging.
 
 notification-clusterbomb-detected = Cluster Bomb detected.
 notification-clusterbomb-charging = Cluster Bomb charging.
@@ -348,7 +348,7 @@ actor-silo =
 
 actor-ballisticsilo =
    .name = Intercontinental Missile Command
-   .encyclopedia = The intercontinental missile command silo is able to produce up to 8 intercontinental ballistic missiles at a time by its own, at the cost of high power and periodic taken cash. After at least a missile is built, it can be fired upon any target located in the same planet, if the planet is not too big. The more missiles are being reserved in the silo, the more will be launched at a time.
+   .encyclopedia = The intercontinental missile command silo is able to produce up to 4 intercontinental ballistic missiles at a time by its own, at the cost of high power and periodic taken cash. After at least a missile is built, it can be fired upon any target located in the same planet, if the planet is not too big. The more missiles are being reserved in the silo, the more will be launched at a time.
 
      The intercontinental ballistic missile fired is fast propelled into its cruise altitude by its reaction engines, to the pass over the target and crash down onto it. The missile is quite powerful enough but only to a small region. United Mercenaries of Ginkua captains often compare it to the Yuruki railgun.
    .description = Orders a nuclear strike.
@@ -606,6 +606,13 @@ actor-patrolboat =
    .description = Versatile light boat.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
+
+actor-missileboat =
+   .name = Missileboat boat
+   .generic-name = Boat
+   .description = Turret missile launcher boat.
+      Strong vs Aircraft, Navy and Buildings
+      Weak vs Ground
 
 actor-boat =
    .name = Medium Boat

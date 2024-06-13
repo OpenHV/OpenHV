@@ -40,10 +40,15 @@ LightBomb:
 	ReloadDelay: 85
 	Burst: 4
 	BurstDelay: 8
+	Range: 0c512
 	Warhead@Damage: SpreadDamage
 		Damage: 1850
 	Warhead@Incendiary: TreeDamage
 		Damage: 1650
+	Projectile: GravityBomb
+		Velocity: 0, 0, -75
+		Acceleration: 0, 0, -3
+		Image: propelledbomb
 
 ClusterSubBomb:
 	Inherits: BigSplash

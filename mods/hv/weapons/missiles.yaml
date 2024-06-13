@@ -113,6 +113,15 @@ MissileTankRocket:
 	Warhead@Incendiary: TreeDamage
 		Damage: 6000
 
+MissileShipRocketGround:
+	Inherits: MissileTankRocket
+
+MissileShipRocketAir:
+	Inherits: MissileShipRocketGround
+	Inherits: ^AntiAirMissile
+	Projectile: Missile
+		Speed: 340
+
 LightPodRocket:
 	Inherits: SmallSplash
 	Inherits: ^AntiGroundMissile

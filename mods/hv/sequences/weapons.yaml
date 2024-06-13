@@ -228,6 +228,19 @@ bullet17-trace:
 		Tick: 40
 		ZOffset: 2000
 
+bullet18:
+	idle:
+		Filename: bits/bullet18.png
+		Facings: 8
+		InterpolatedFacings: 16
+		ZOffset: 2030
+	effect:
+		Filename: bits/bullet18.png
+		Start: 8
+		Facings: 8
+		InterpolatedFacings: 16
+		ZOffset: 2030
+
 nuclear:
 	up:
 		Filename: bits/blank.png
@@ -472,3 +485,10 @@ watermine:
 		Length: 8
 		Tick: 100
 		ZOffset: -1024
+
+propelledbomb:
+	idle:
+		Filename: bits/propelledbomb.png
+		Length: 8
+		Tick: 75
+		ZOffset: 2030

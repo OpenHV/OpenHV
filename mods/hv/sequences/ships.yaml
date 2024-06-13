@@ -206,3 +206,19 @@ waterminelayer2:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 58
+
+missileboat:
+	idle:
+		Filename: bits/missileboat.png
+		Facings: 8
+	turret:
+		Filename: bits/missileboat.png
+		Start: 8
+		Facings: 8
+	muzzle:
+		Filename: bits/muzzle5.png
+		Length: 3
+		Tick: 80
+	icon:
+		Filename: bits/units-icons.png
+		Start: 65

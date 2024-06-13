@@ -518,8 +518,22 @@ AATURRET3:
 	Buildable:
 		Prerequisites: radar, ~structures.gm
 	-Encyclopedia:
-	RenderSprites:
-		Image: aaturret2
+	Valued:
+		Cost: 1100
+	Health:
+		HP: 50500
+	Armament:
+		Weapon: TowerRailgun
+		LocalOffset: 256,375,760, 256,0,760, 256,-375,760
+	Turreted:
+		InitialFacing: 522
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 8c0
+	RevealsShroud:
+		Range: 9c0
 
 HARBOR3:
 	Inherits: HARBOR
@@ -643,7 +657,7 @@ BALLISTICSILO:
 		Weapon: BallisticMissileLauncher
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 8
+		Ammo: 4
 		InitialAmmo: 0
 		AmmoCondition: ammo
 		RearmSound: missile_julien-nicolas.wav
@@ -651,7 +665,7 @@ BALLISTICSILO:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: false
-		PipCount: 8
+		PipCount: 4
 		ValidRelationships: Ally, Enemy, Neutral
 	ReloadAmmoPool:
 		Delay: 4750
@@ -849,15 +863,52 @@ SNIPERPOD.MERCENARY:
 
 ## ships
 
-PATROLBOAT.MERCENARY:
-	Inherits: PATROLBOAT
+MISSILEBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: actor-missileboat.name
+		GenericName: actor-missileboat.generic-name
 	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.gm
-	-MapEditorData:
+		BuildPaletteOrder: 10
+		Description: actor-missileboat.description
 	UpdatesPlayerStatistics:
-		OverrideActor: patrolboat
-	RenderSprites:
-		Image: patrolboat
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 125
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 120
+		Offset: 150,0,50
+	Armament@Air:
+		Weapon: MissileShipRocketAir
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+	Armament@Ground:
+		Weapon: MissileShipRocketGround
+		MuzzleSequence: muzzle
+		Recoil: 100
+		RecoilRecovery: 38
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
+	WithMuzzleOverlay:
 
 SUBMARINE2.MERCENARY:
 	Inherits: SUBMARINE2
