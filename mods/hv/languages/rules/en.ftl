@@ -84,11 +84,6 @@ notification-clusterbomb-detected = Cluster Bomb detected.
 notification-clusterbomb-charging = Cluster Bomb charging.
 notification-clusterbomb-ready = Cluster Bomb ready.
 
-notification-ballisticmissile-detected = Intercontinental Missile Launcher detected.
-notification-ballisticmissile-charging = Intercontinental Missile Launcher charging.
-notification-ballisticmissile-ready = Intercontinental Missile Launcher ready.
-notification-ballisticmissile-sent = Intercontinental ballistic missile sent.
-
 ## Aircraft
 actor-plane1 =
    .description = Attack Ship armed with
@@ -345,19 +340,6 @@ actor-silo =
    .nukepower-name = Atom Bomb
    .nukepower-description = Drop an atomic bomb
     at a target location.
-
-actor-ballisticsilo =
-   .name = Intercontinental Missile Command
-   .encyclopedia = The intercontinental missile command silo is able to produce up to 4 intercontinental ballistic missiles at a time by its own, at the cost of high power and periodic taken cash. After at least a missile is built, it can be fired upon any target located in the same planet, if the planet is not too big. The more missiles are being reserved in the silo, the more will be launched at a time.
-
-     The intercontinental ballistic missile fired is fast propelled into its cruise altitude by its reaction engines, to the pass over the target and crash down onto it. The missile is quite powerful enough but only to a small region. United Mercenaries of Ginkua captains often compare it to the Yuruki railgun.
-   .description = Orders a nuclear strike.
-      Requires power to operate.
-      Maximum 1 can be built.
-      Special Ability: Intercontinental Ballistic Missile
-   .attackorderpower-name = Intercontinental Missile
-   .attackorderpower-description = Launch an intercontinental
-     ballistic missile to a desired location.
 
 actor-uplink =
    .name = Orbital Strike Uplink Command

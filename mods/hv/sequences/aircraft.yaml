@@ -301,4 +301,4 @@ glider:
 		Tick: 50
 	icon:
 		Filename: units-icons.png
-		Start: 48
+		Start: 66

@@ -12,17 +12,15 @@
 - [x] Make atmospheric bomber
 - [x] Make Tiny Hawk
 - [x] Make atmospheric glider
-- [ ] Make voices for cluster bomb, paratroopers and intercontinental missile powers
-- [ ] Make AA Turret fit the Hard Vacuum style
-- [ ] Maybe re-do the ballistic missile from scratch
-- [ ] Make the building icon for the AA Turret and the Intercontinental Ballistic Missile Launcher
-- [ ] Make a sprite for the Intercontinental Ballistic Missile Launcher
-- [ ] Polish the Intercontinental Ballistic Missile Launcher
-- [ ] Make the Cluster Bomb Dome damaged sprite craters look less odd
-- [ ] Polish the Paratroopers Drop cursor
+- [ ] Make voices for cluster bomb and paratroopers powers
+- [ ] Make the AA Turret fit the Hard Vacuum style
+- [ ] Make the building icon for the AA Turret
+- [x] Fix factory platform transparency
+- [x] Make the Cluster Bomb Dome damaged sprite craters look less odd
+- [x] Polish the Paratroopers Drop cursor
 - [ ] Do something with the Dreadnought (or not)
-- [ ] Redo the glider sprites
-- [ ] Make a different base, outpost and radar sprite
+- [x] Redo the Atmospheric Glider sprites
+- [ ] Make a different base, outpost and radar sprites
 - [ ] Replace every Ginkua units taken from other factions with new and unique ones
 - [ ] Make a sprite for the Starport Platform
 - [ ] Rework on the Starport Platform
