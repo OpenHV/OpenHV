@@ -148,6 +148,7 @@ Player:
 			technician: 1
 			bomberpod: 1
 			missiletank: 5
+			missiletank2: 3
 			bomber2: 5
 			glider: 5
 			plane2: 5

@@ -422,7 +422,7 @@ actor-dropzone =
    .name = Drop Zone
    .description = Airborne reinforcement pad
    .description-buildable = Airborne reinforcement pad
-     Maximum 2 can be built
+     Maximum 3 can be built
    .encyclopedia = Some planets have mercenary forces available. They have their own tank design and have been paid in advance by the company already so you only need to clear and capture their drop in zone which will fly them in one at a time.
 
 actor-flagpost =
@@ -769,6 +769,13 @@ actor-missiletank =
    .name = Missile Tank
    .generic-name = Tank
    .description = A tank which shoots missiles.
+      Strong vs Vehicles and Buildings
+      Weak vs Pods
+
+actor-missiletank2 =
+   .name = Missile Pad Tank
+   .generic-name = Tank
+   .description = A tank which shoots several missiles into the battlefield.
       Strong vs Vehicles and Buildings
       Weak vs Pods
 

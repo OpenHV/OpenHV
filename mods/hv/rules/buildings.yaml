@@ -2727,7 +2727,7 @@ DROPZONE:
 		Queue: Defense
 		BuildPaletteOrder: 120
 		Prerequisites: radar, techcenter, ~structures.gm
-		BuildLimit: 2
+		BuildLimit: 3
 		Description: actor-dropzone.description-buildable
 	HitShape:
 		UseTargetableCellsOffsets: False

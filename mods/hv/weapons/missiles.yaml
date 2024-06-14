@@ -398,3 +398,35 @@ Torpedo:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav
+
+MissilePad:
+	Inherits: SmallSplash
+	Inherits: ^AntiGroundMissile
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	Range: 9c512
+	MinRange: 5c0
+	ReloadDelay: 85
+	Burst: 5
+	BurstDelays: 5
+	Projectile: Bullet
+		Image: bullet7
+		Speed: 300
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		LaunchAngle: 180
+		Inaccuracy: 1c512
+		Blockable: false
+		Shadow: true
+		Acceleration: 96
+		AllowSnapping: true
+		TrailImage: small_smoke
+	Warhead@Damage: SpreadDamage
+		Damage: 4000
+		Versus:
+			None: 8
+			Steel: 75
+			Light: 75
+			Heavy: 75
+			Concrete: 75
+	Warhead@Incendiary: TreeDamage
+		Damage: 1500

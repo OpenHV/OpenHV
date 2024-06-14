@@ -263,15 +263,15 @@ MISSILETANK.TRADE:
 		OverrideActor: missiletank
 
 MISSILETANK2.TRADE:
-	Inherits: MISSILETANK.MERCENARY
+	Inherits: MISSILETANK2
 	Buildable:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
 	RenderSprites:
-		Image: missiletank
+		Image: missiletank2
 	UpdatesPlayerStatistics:
-		OverrideActor: missiletank
+		OverrideActor: missiletank2
 
 TANK8.TRADE:
 	Inherits: TANK8

@@ -862,6 +862,8 @@ CLUSTERTANK:
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
+	Selectable:
+		DecorationBounds: 1536, 1536
 
 TINYHAWK:
 	Inherits: ^TrackedVehicle
@@ -919,15 +921,44 @@ TANK5.MERCENARY:
 	RenderSprites:
 		Image: tank5
 
-MISSILETANK.MERCENARY:
-	Inherits: MISSILETANK
+MISSILETANK2:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-missiletank2.name
 	Buildable:
-		Prerequisites: ~factory.gm, radar, techcenter
-	-MapEditorData:
+		Queue: Tank
+		Prerequisites: ~factory.gm, radar
+		BuildPaletteOrder: 80
+		Description: actor-missiletank2.description
 	UpdatesPlayerStatistics:
-		OverrideActor: missiletank
-	RenderSprites:
-		Image: missiletank
+		AddToArmyValue: true
+	Health:
+		HP: 24000
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 24
+		CanMoveBackward: true
+		Speed: 94
+		Locomotor: tracked
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Armament:
+		Weapon: MissilePad
+		LocalOffset: 20,50,0
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		Voice: Attack
+		FacingTolerance: 0
+	Selectable:
+		DecorationBounds: 1536, 1536
 
 AATANK.MERCENARY:
 	Inherits: AATANK
