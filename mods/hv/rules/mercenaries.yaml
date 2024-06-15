@@ -952,7 +952,7 @@ MISSILETANK2:
 		Range: 4c0
 	Armament:
 		Weapon: MissilePad
-		LocalOffset: 20,50,0
+		LocalOffset: 30,85,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack

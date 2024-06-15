@@ -409,7 +409,7 @@ MissilePad:
 	Burst: 5
 	BurstDelays: 5
 	Projectile: Bullet
-		Image: bullet7
+		Image: bullet2
 		Speed: 300
 		MinimumLaunchSpeed: 75
 		MaximumLaunchSpeed: 96
