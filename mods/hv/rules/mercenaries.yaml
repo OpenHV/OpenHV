@@ -612,7 +612,7 @@ UPLINKMERCENARY:
 		DisplayRadarPing: true
 		CameraRange: 15c0
 		SupportPowerPaletteOrder: 15
-		DetectedSpeechNotification: ClusterBombDectected
+		DetectedSpeechNotification: ClusterBombDetected
 		DetectedTextNotification: notification-clusterbomb-detected
 		BeginChargeSpeechNotification: ClusterBombCharging
 		BeginChargeTextNotification: notification-clusterbomb-charging
