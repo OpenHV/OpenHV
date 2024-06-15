@@ -155,16 +155,16 @@ TANK5.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: tank5
 
-TANK5.MERCENARY.TRADE:
-	Inherits: TANK5.MERCENARY
+TANK9.TRADE:
+	Inherits: TANK9
 	Buildable:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
 	RenderSprites:
-		Image: tank5
+		Image: tank9
 	UpdatesPlayerStatistics:
-		OverrideActor: tank5
+		OverrideActor: tank9
 
 TANK10.TRADE:
 	Inherits: TANK10

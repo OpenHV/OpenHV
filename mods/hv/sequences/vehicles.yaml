@@ -209,6 +209,10 @@ tank9:
 	idle:
 		Filename: bits/tank9.png
 		Facings: 8
+	turret:
+		Filename: bits/tank9.png
+		Start: 8
+		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
 		Start: 27

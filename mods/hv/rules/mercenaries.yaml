@@ -41,7 +41,6 @@ BOMBER2:
 		TurnSpeed: 30
 		InitialFacing: 768
 		Speed: 185
-		VTOL: True
 		Voice: Move
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -715,15 +714,50 @@ CLUSTERPOD:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
-SNIPERPOD.MERCENARY:
-	Inherits: SNIPERPOD
+SABOTEUR:
+	Inherits: ^Pod
+	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
-		Prerequisites:  ~module.gm, radar
-	-MapEditorData:
+		Queue: Pod
+		Description: actor-saboteur.description
+		Prerequisites: ~module.gm, radar
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: actor-saboteur.name
 	UpdatesPlayerStatistics:
-		OverrideActor: sniperpod
+		AddToArmyValue: true
+	RevealsShroud:
+		Range: 3c512
+		MinRange: 2c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+	CaptureManager:
+	Captures:
+		CaptureTypes: building,
+		SabotageThreshold: 1
+		SabotageHPRemoval: 55
+		PlayerExperience: 25
+		CaptureDelay: 425
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+		RequiresCondition: !ecm-disabled
+		ValidRelationships: Enemy
+	Voiced:
+		VoiceSet: TechnicianVoice
+	-Guard:
+	Health:
+		HP: 9580
+	Mobile:
+		Speed: 75
+		Voice: Move
+	DetectCloaked:
+		Range: 2c0
 	RenderSprites:
-		Image: sniperpod
+		Image: technician
 
 ## ships
 
@@ -834,7 +868,7 @@ CLUSTERTANK:
 		Name: actor-clustertank.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, radar
+		Prerequisites: ~factory.gm, radar, techcenter
 		BuildPaletteOrder: 70
 		Description: actor-clustertank.description
 	UpdatesPlayerStatistics:
@@ -911,16 +945,6 @@ TINYHAWK:
 		FacingTolerance: 0
 	-Passenger:
 
-TANK5.MERCENARY:
-	Inherits: TANK5
-	Buildable:
-		Prerequisites: ~factory.gm, techcenter
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: tank5
-	RenderSprites:
-		Image: tank5
-
 MISSILETANK2:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -930,7 +954,7 @@ MISSILETANK2:
 		Name: actor-missiletank2.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, radar
+		Prerequisites: ~factory.gm, radar, techcenter
 		BuildPaletteOrder: 80
 		Description: actor-missiletank2.description
 	UpdatesPlayerStatistics:
@@ -959,6 +983,53 @@ MISSILETANK2:
 		FacingTolerance: 0
 	Selectable:
 		DecorationBounds: 1536, 1536
+
+TANK9:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: actor-tank9.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: ~factory.gm, techcenter, radar
+		Queue: Tank
+		Description: actor-tank9.description
+	Mobile:
+		TurnSpeed: 25
+		Speed: 85
+	Health:
+		HP: 44500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	Turreted:
+		TurnSpeed: 25
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	AutoTargetPriority@Default:
+		ValidTargets: DamagedVehicle
+	Armament:
+		Weapon: RepairBolt
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
+	AttackTurreted:
+		PauseOnCondition: ecm-disabled
+	Voiced:
+		VoiceSet: TechnicianVoice
+	WithSpriteTurret:
+	-Guard:
 
 AATANK.MERCENARY:
 	Inherits: AATANK

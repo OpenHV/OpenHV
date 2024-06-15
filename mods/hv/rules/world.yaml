@@ -166,7 +166,7 @@
 		InternalName: gm
 		Side: Mercenaries
 		Selectable: true
-		Description: United Mercenaries Of Ginkua\nA large interplanatary company that trains\nmercenaries from all over the universe. They are known\nfor their fast and agile forces, who're often ordered by\nhuge coprorations. But they also often run missions\nfor their own reasons.\nThey are known for their innovative technologies and\ntheir interplanetary mercenary reinforcements system.\n\nFaction Variations:\n    - Uses gliders as air units\n\nSpecial Units:\n    - Shotgun Pod\n    - Sniper Pod\n    - Cluster Pod\n    - Mercenary Tank\n    - Double Barelled Mercenary Tank\n    - Cluster Tank\n    - Missile Pad Tank\n    - Tiny Hawk\n\nSuperweapon:\n    - Paratroopers Drop\n    - Airborne Reinforcement Pads\n    - Cluster Bomb
+		Description: United Mercenaries Of Ginkua\nA large interplanatary company that trains\nmercenaries from all over the universe. They are known\nfor their fast and agile forces, who're often ordered by\nhuge coprorations. But they also often run missions\nfor their own reasons.\nThey are known for their innovative technologies and\ntheir interplanetary mercenary reinforcements system.\n\nFaction Variations:\n    - Uses gliders as air units\n\nSpecial Units:\n    - Shotgun Pod\n    - Sniper Pod\n    - Cluster Pod\n    - Mercenary Tank\n    - Double Barelled Mercenary Tank\n    - Cluster Tank\n    - Missile Pad Tank\n    - Engineer Tank\n    - Tiny Hawk\n\nSuperweapon:\n    - Paratroopers Drop\n    - Airborne Reinforcement Pads\n    - Cluster Bomb
 	Faction@Random:
 		Name: Any
 		InternalName: Random

@@ -521,6 +521,12 @@ actor-technician =
       Unarmed
    .name = Technician Pod
 
+actor-saboteur =
+   .description = Saboteur.
+    Infiltrates and enemy structures.
+      Unarmed
+   .name = Saboteur
+
 actor-brokerpod =
    .description = Financial analyst.
     Invests into stock market for dividents.
@@ -745,6 +751,13 @@ actor-tank8 =
    .description = Disrupts satellite video links
     and obscures the battlefield.
       Disables units for a brief moment.
+
+actor-tank9 =
+   .name = Engineer Tank
+   .generic-name = Engineer Tank
+   .description = Battlefield engineering tank.
+    Effectivly repairs main battle tanks.
+      Unamred
 
 actor-artil3 =
    .name = Dual Artillery
