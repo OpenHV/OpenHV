@@ -33,6 +33,13 @@ Speech:
 		NukeCharging: nuke_prepping
 		NukeReady: nuke_ready
 		NukeDetected: nuke_detected
+		ParatroopersIncoming: paratroopers_incoming
+		ParatroopersReady: paratroopers_ready
+		ParatroopersCharging: paratroopers_charging
+		ClusterBombIncoming: clusterbomb_incoming
+		ClusterBombReady: clusterbomb_ready
+		ClusterBombCharging: clusterbomb_charging
+		ClusterBombDetected: clusterbomb_detected
 		MinerReady: miner_mining_tower_ready
 		MissionAccomplished: mission_accomplished
 		MissionFailed: mission_failed

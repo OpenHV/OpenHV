@@ -12,7 +12,7 @@
 - [x] Make atmospheric bomber
 - [x] Make Tiny Hawk
 - [x] Make atmospheric glider
-- [ ] Make voices for cluster bomb and paratroopers powers
+- [x] Make voices for cluster bomb and paratroopers powers
 - [ ] Make the AA Turret fit the Hard Vacuum style
 - [ ] Make the building icon for the AA Turret
 - [x] Fix factory platform transparency

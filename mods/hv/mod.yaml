@@ -21,6 +21,8 @@ Packages:
 	hv|bits/audio/cc0
 	hv|bits/audio/cc-by-30
 	hv|bits/audio/cc-by-40
+	hv|bits/audio/cromha
+	hv|bits/audio/cromha/announcer
 	hv|bits/audio/graion
 	hv|bits/audio/dzierzan
 	hv|bits/audio/dzierzan/miner

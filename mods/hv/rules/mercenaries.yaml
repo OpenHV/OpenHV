@@ -274,10 +274,13 @@ RADAR3:
 		Cursor: airlifterdrop
 		SupportPowerPaletteOrder: 35
 		BeginChargeTextNotification: notification-paratroopers-charging
+		BeginChargeSpeechNotification: ParatroopersCharging
 		EndChargeTextNotification: notification-paratroopers-ready
+		EndChargeSpeechNotification: ParatroopersReady
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingTextNotification: notification-paratroopers-incoming
+		IncomingSpeechNotification: ParatroopersIncoming
 		OrderName: FlushParatroopers
 
 MODULE3:
@@ -609,15 +612,16 @@ UPLINKMERCENARY:
 		DisplayRadarPing: true
 		CameraRange: 15c0
 		SupportPowerPaletteOrder: 15
-		DetectedSpeechNotification: NukeDetected
+		DetectedSpeechNotification: ClusterBombDectected
 		DetectedTextNotification: notification-clusterbomb-detected
-		BeginChargeSpeechNotification: NukeCharging
+		BeginChargeSpeechNotification: ClusterBombCharging
 		BeginChargeTextNotification: notification-clusterbomb-charging
-		EndChargeSpeechNotification: NukeReady
+		EndChargeSpeechNotification: ClusterBombReady
 		EndChargeTextNotification: notification-clusterbomb-ready
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
-		IncomingSpeechNotification: NukeIncoming
+		IncomingSpeechNotification: ClusterBombIncoming
+		IncomingTextNotification: notification-clusterbomb-incoming
 		OrderName: Bombem
 
 OILFACILITY:

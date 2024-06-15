@@ -83,6 +83,7 @@ notification-paratroopers-charging = Paratroopers Drop charging.
 notification-clusterbomb-detected = Cluster Bomb detected.
 notification-clusterbomb-charging = Cluster Bomb charging.
 notification-clusterbomb-ready = Cluster Bomb ready.
+notification-clusterbomb-incoming = Cluster Bomb incoming.
 
 ## Aircraft
 actor-plane1 =
