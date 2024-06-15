@@ -825,15 +825,51 @@ SUBMARINE2.MERCENARY:
 	RenderSprites:
 		Image: submarine2
 
-BOAT2.MERCENARY:
-	Inherits: BOAT2
+SPIDERBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: actor-spiderboat.name
+		GenericName: actor-spiderboat.generic-name
 	Buildable:
-		Prerequisites: ~harbor.gm, techcenter
-	-MapEditorData:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.gm
+		BuildPaletteOrder: 50
+		Description: actor-spiderboat.description
 	UpdatesPlayerStatistics:
-		OverrideActor: boat2
-	RenderSprites:
-		Image: boat2
+		AddToArmyValue: true
+	Health:
+		HP: 28500
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 140
+		TurnSpeed: 65
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 135
+		Offset: 120,0,20
+	Armament@Air:
+		Weapon: BoatMissileAntiAir
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 250,0,50
+	Armament@Ground:
+		Weapon: BoatMissileAntiGround
+		Recoil: 100
+		RecoilRecovery: 38
+		LocalOffset: 250,0,50
+	AttackTurreted:
+		Armaments: primary, secondary
+	WithSpriteTurret:
 
 SUBMARINE.MERCENARY:
 	Inherits: SUBMARINE

@@ -599,9 +599,17 @@ actor-patrolboat =
 actor-missileboat =
    .name = Missileboat boat
    .generic-name = Boat
-   .description = Turret missile launcher boat.
+   .description = Turreted missile launcher boat.
       Strong vs Aircraft, Navy and Buildings
       Weak vs Ground
+
+actor-spiderboat =
+   .name = Spider Boat
+   .generic-name = Boat
+   .description = Fast boat.
+    Armed with a small missilelauncher.
+      Strong vs Aircrafts, Navy and Pods
+      Weak vs Vehicles and Buildings
 
 actor-boat =
    .name = Medium Boat
