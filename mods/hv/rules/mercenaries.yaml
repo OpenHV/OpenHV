@@ -289,7 +289,6 @@ MODULE3:
 		RequiresCondition: !powerdown
 	Health:
 		HP: 65000
-	-Exit@South2:
 	-Exit@North1:
 	-Exit@North2:
 	Exit@South1:
