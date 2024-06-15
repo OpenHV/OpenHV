@@ -296,6 +296,10 @@ MODULE3:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,3
 		Facing: 740
+	Exit@South2:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,3
+		Facing: 740
 	WithProductionDoorAnimation:
 		ExitCells: 2,3
 	Power:
