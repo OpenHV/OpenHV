@@ -20,7 +20,7 @@
 - [x] Polish the Paratroopers Drop cursor
 - [ ] Do something with the Dreadnought (or not)
 - [x] Redo the Atmospheric Glider sprites
-- [ ] Make a different base, outpost and radar sprites
+- [ ] Make a different base, outpost, radar and storage sprite
 - [ ] Replace every Ginkua units taken from other factions with new and unique ones
 - [ ] Make a sprite for the Starport Platform
 - [ ] Rework on the Starport Platform

@@ -780,7 +780,7 @@ MISSILEBOAT:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.gm
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 50
 		Description: actor-missileboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -839,7 +839,7 @@ SPIDERBOAT:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.gm
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 10
 		Description: actor-spiderboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
