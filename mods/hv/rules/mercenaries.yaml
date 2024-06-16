@@ -814,6 +814,8 @@ MISSILEBOAT:
 		Armaments: primary, secondary
 	WithSpriteTurret:
 	WithMuzzleOverlay:
+	Selectable:
+		DecorationBounds: 1536, 1536
 
 SUBMARINE2.MERCENARY:
 	Inherits: SUBMARINE2
