@@ -46,6 +46,8 @@ BunkerChaingun:
 	ReloadDelay: 10
 	BurstDelays: 3
 	Range: 8c0
+	-Report:
+	StartBurstReport: heavymgburst01.wav, heavymgburst02.wav
 
 ^AircraftChainGun:
 	Inherits: SmallSplash
