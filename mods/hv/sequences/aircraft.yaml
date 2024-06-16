@@ -243,3 +243,28 @@ landing:
 		Length: *
 		Tick: 50
 		ZOffset: -512
+
+mothership:
+	idle:
+		Filename: bits/mothership.png
+		Facings: 8
+	open:
+		Filename: bits/mothership.png
+		Start: 8
+		Facings: 8
+		Length: 2
+		Tick: 120	
+	icon:
+		Filename: units-icons.png
+		Start: 61
+
+drone2:
+	idle:
+		Filename: bits/drone2.png
+		Facings: 8
+		Length: 2
+	muzzle:
+		Filename: bits/muzzle3.png
+		Length: 3
+		Facings: 8
+		Tick: 50
