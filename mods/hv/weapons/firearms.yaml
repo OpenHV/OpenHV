@@ -16,6 +16,22 @@
 		ContrailStartWidth: 18
 		ContrailZOffset: 3000
 
+^BlueTracers:
+	Projectile: InstantHitWithTracers
+		Blockable: true
+		TracerAmount: 2
+		TracerSpeed: 1536
+		TracerSpawnInterval: 3
+		TracerInaccuracy: 0c450
+		ContrailDelay: 0
+		ContrailStartColor: c8e8ff
+		ContrailStartColorAlpha: 255
+		ContrailEndColor: 002064
+		ContrailEndColorAlpha: 255
+		ContrailLength: 2
+		ContrailStartWidth: 18
+		ContrailZOffset: 3000
+
 LightMachineGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
@@ -319,3 +335,29 @@ HeavyMachineGun:
 			Light: 55
 			Heavy: 20
 			Concrete: 5
+
+DronePulseGun:
+	Inherits: SmallSplash
+	Inherits: Ricochet
+	Inherits: ^BlueTracers
+	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
+	Report: pulsegun_silverillusionist.wav
+	Projectile: InstantHitWithTracers
+		Inaccuracy: 0c256
+		Blockable: true
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
+		Spread: 24
+		Damage: 5000
+		Versus:
+			None: 125
+			Steel: 15
+			Light: 30
+			Heavy: 15
+			Concrete: 10
+	Warhead@Incendiary: TreeDamage
+		Spread: 24
+		Damage: 1000
+	ReloadDelay: 10
+	Range: 6c0
+	Burst: 10

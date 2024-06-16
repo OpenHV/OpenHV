@@ -212,3 +212,11 @@ ElectricPodVoice:
 		Move: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_good_copy, electricpod_moving_out, electricpod_yes_sir, electricpod_moving, electricpod_alright, electricpod_orders_received
 		Action: electricpod_discharging, electricpod_extra_crispy, electricpod_its_fried, electricpod_lighting_ball, electricpod_maxium_power, electricpod_short_circuit, electricpod_surge_current, electricpod_attack, electricpod_high_voltage_on, electricpod_feel_the_thunder
 		Guard: guarding
+
+MotherShipVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: mothershipselect1, mothershipselect2, mothershipselect3
+		Move: mothershipaction1, mothershipaction2, mothershipaction3
+		Action: mothershipattack1, mothershipattack2, mothershipattack3
+		Guard: guarding	

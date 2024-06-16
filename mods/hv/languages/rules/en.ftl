@@ -721,6 +721,17 @@ actor-tank13 =
       Unarmed
    .name = Money Transport
 
+actor-mothership =
+   .name = Mothership
+   .description = Launches aerial autonomous attack vessels.
+      Strong vs Everything
+
+actor-mothership-husk =
+   .name = Mothership Husk
+
+actor-drone2 =
+   .name = Mothership Drone
+
 ## Weapons
 actor-landmine-name = AI Mine
 actor-watermine-name = AI Water Mine
