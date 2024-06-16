@@ -1066,6 +1066,7 @@ ORESMELT:
 		Amount: 10
 		RequiresCondition: !build-incomplete && !disabled
 	WithIdleAnimation:
+		Interval: 40
 		RequiresCondition: !build-incomplete && !disabled
 
 OREPURIFIER:
@@ -1081,6 +1082,8 @@ OREPURIFIER:
 	Encyclopedia:
 		Description: actor-orepurifier.encyclopedia
 	-WithIdleOverlay@Shadow:
+	WithIdleAnimation:
+		Interval: 35
 
 BUNKER:
 	Inherits: ^DefenseBuilding

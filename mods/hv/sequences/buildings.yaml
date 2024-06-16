@@ -2252,11 +2252,9 @@ oresmelt:
 		Offset: 0, -2
 	idle:
 		Filename: bits/oresmelt.png
-		Start: 1
 		Length: 1
 	active:
 		Filename: bits/oresmelt.png
-		Start: 1
 		Length: 10
 		Tick: 140
 	damaged-idle:
