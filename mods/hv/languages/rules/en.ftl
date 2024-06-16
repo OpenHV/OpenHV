@@ -536,15 +536,15 @@ actor-submarine2 =
       Can't attack Pods, Buildings, Vehicles or Air
 
 actor-boat2 =
-   .name = Lightning Boat
-   .generic-name = Boat
-   .description = A heavy boat with a lightning gun.
-      Strong vs Vehicles, Pods and Buildings
-
-actor-boat4 =
    .name = Railgun Boat
    .generic-name = Boat
    .description = A heavy boat with a rail gun.
+      Strong vs Vehicles, Pods and Buildings
+
+actor-lightningboat =
+   .name = Lightning Boat
+   .generic-name = Boat
+   .description = A heavy boat with a lightning gun.
       Strong vs Vehicles, Pods and Buildings
 
 actor-submarine =

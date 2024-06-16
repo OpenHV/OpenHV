@@ -212,29 +212,53 @@ BOAT2:
 	Turreted:
 		TurnSpeed: 40
 	Armament:
-		Weapon: VoltageArc
+		Weapon: Railgun
 		Recoil: 100
 		RecoilRecovery: 25
 		LocalOffset: 500,0,0
 	AttackTurreted:
 	WithSpriteTurret:
 
-BOAT4:
-	Inherits: BOAT2
+LIGHTNINGBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 2000
 	Tooltip:
-		Name: actor-boat4.name
-		GenericName: actor-boat4.generic-name
+		Name: actor-lightningboat.name
+		GenericName: actor-lightningboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 50
-		Description: actor-boat4.description
+		Description: actor-lightningboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 75
+		TurnSpeed: 40
+		CanMoveBackward: true
+	RevealsShroud:
+		Range: 9c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 40
 	Armament:
-		Weapon: Railgun
-		Recoil: 100
-		RecoilRecovery: 25
-		LocalOffset: 500,0,0
+		Weapon: VoltageArc
+		LocalOffset: 0,0,100
+	AttackTurreted:
+	WithAttackAnimation:
+		Sequence: shoot
+	WithAttackOverlay:
+		Sequence: charge
 
 SUBMARINE:
 	Inherits: ^Submarine
