@@ -110,7 +110,7 @@ RepairTorch:
 
 Plasma:
 	Inherits: BigSplash
-	ValidTargets: Structure, Wall
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 8c0
 	MinRange: 1c0
@@ -127,7 +127,10 @@ Plasma:
 	Warhead@Damage: SpreadDamage
 		Damage: 1750
 		Versus:
+			None: 15
 			Steel: 85
+			Light: 15
+			Heavy: 15
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
