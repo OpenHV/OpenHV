@@ -1696,7 +1696,7 @@ TELEVATR:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 120
-		Prerequisites: radar, ~!structures.gm
+		Prerequisites: radar
 		Description: actor-televatr.description
 	Valued:
 		Cost: 1500
@@ -2725,8 +2725,8 @@ DROPZONE:
 		Dimensions: 3,3
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 120
-		Prerequisites: radar, techcenter, ~structures.gm
+		BuildPaletteOrder: 90
+		Prerequisites: radar, ~structures.gm
 		BuildLimit: 3
 		Description: actor-dropzone.description-buildable
 	HitShape:

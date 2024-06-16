@@ -265,7 +265,7 @@ RADAR3:
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
 		Cordon: 10c0
-		DropItems: tank11, tank11, tank11, tank11, aatank, missiletank, tank12, tank12
+		DropItems: tank11, tank11, tank11, tank11, aatank, tank9, tank12, tinyhawk
 		CameraActor: camera
 		ChargeInterval: 4100
 		Icon: airlifterdrop
