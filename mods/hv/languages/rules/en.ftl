@@ -87,7 +87,8 @@ actor-plane1 =
 actor-plane2 =
    .description = Fast Attack Ship
       Strong vs Buildings
-      Can't attack Water, Ground or Air Units
+      Weak vs Tanks and Pods
+      Can't target Aircraft
    .name = Speeder
 
 actor-copter =
@@ -105,7 +106,8 @@ actor-banshee =
    .name = Banshee
    .description = Heavy Helicopter Gunship
       Strong vs Buildings
-      Can't attack Water, Ground or Air Units
+      Weak vs Tanks and Pods
+      Can't target Aircraft
 
 actor-copter2 =
    .name = Transport Helicopter

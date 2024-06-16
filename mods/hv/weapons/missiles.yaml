@@ -141,7 +141,7 @@ RapidPodRocket:
 ShipMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
-	ValidTargets: Structure, Wall
+	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	ReloadDelay: 25
 	Range: 8c0
 	MinRange: 1c0
@@ -152,7 +152,10 @@ ShipMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 2000
 		Versus:
+			None: 15
 			Steel: 90
+			Light: 15
+			Heavy: 15
 			Concrete: 90
 	Warhead@Incendiary: TreeDamage
 		Damage: 2000
