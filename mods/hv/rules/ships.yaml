@@ -32,8 +32,7 @@ BOAT3:
 	Turreted:
 		TurnSpeed: 120
 	Armament@Air:
-		Weapon: BoatMachineGunAir
-		MuzzleSequence: muzzle
+		Weapon: BoatMissileAntiAir
 		LocalOffset: 0,100,0
 	Armament@Ground:
 		Weapon: BoatMachineGunGround
@@ -78,7 +77,7 @@ PATROLBOAT:
 		TurnSpeed: 120
 		Offset: 150,0,50
 	Armament@Air:
-		Weapon: BoatMissileAntiAir
+		Weapon: BoatMachineGunAir
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
