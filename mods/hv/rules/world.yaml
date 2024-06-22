@@ -265,7 +265,7 @@
 		BaseName: cloak
 		BasePalette: green
 		Alpha: 0.55
-	FlashPostProcessEffect@Nuke:
+	FlashPaletteEffect@Nuke:
 		Type: Nuke
 	ShroudRenderer:
 		ShroudVariants: fow

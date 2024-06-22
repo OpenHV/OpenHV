@@ -1,5 +1,5 @@
 World:
-	TintPostProcessEffect:
+	GlobalLightingPaletteEffect:
 		Red: 1.0
 		Green: 1.0
 		Blue: 1.0

@@ -32,7 +32,7 @@ Player:
 					CheckRadius: 3c0
 
 World:
-	TintPostProcessEffect:
+	GlobalLightingPaletteEffect:
 		Red: 0.6
 		Green: 0.6
 		Blue: 0.8
