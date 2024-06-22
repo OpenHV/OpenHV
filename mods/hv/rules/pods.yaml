@@ -417,50 +417,19 @@ ELECTRICPOD:
 		Sequence: shoot
 
 MINIPOD1:
-	Inherits: ^Pod
-	Valued:
-		Cost: 100
-	Tooltip:
-		Name: actor-minipod1.name
-		GenericName: actor-minipod1.generic-name
-	Health:
-		HP: 10000
-	Mobile:
-		TurnSpeed: 100
-		Speed: 80
-		Voice: Move
-	RevealsShroud:
-		Range: 5c0
-	WithDeathAnimation:
-		FallbackSequence: die
-	Wanders:
-		WanderMoveRadius: 1
-		MinMoveDelay: 250
-		MaxMoveDelay: 1000
-	ScaredyCat:
-		PanicSpeedModifier: 150
-		PanicChance: 80
-		PanicSequencePrefix:
-	-Guard:
-	-MustBeDestroyed:
-	MapEditorData:
-		Categories: Civilians
-	Selectable:
-		Bounds: 512, 512
-	Voiced:
-		VoiceSet: CivilianPodVoice
+	Inherits: ^MINIPOD
 
 MINIPOD2:
-	Inherits: MINIPOD1
+	Inherits: ^MINIPOD
 
 MINIPOD3:
-	Inherits: MINIPOD1
+	Inherits: ^MINIPOD
 
 MINIPOD4:
-	Inherits: MINIPOD1
+	Inherits: ^MINIPOD
 
 MINIPOD5:
-	Inherits: MINIPOD1
+	Inherits: ^MINIPOD
 
 MINIPOD6:
-	Inherits: MINIPOD1
+	Inherits: ^MINIPOD
