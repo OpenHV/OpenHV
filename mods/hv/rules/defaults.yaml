@@ -112,6 +112,7 @@
 		Locomotor: wheeled
 		TurnSpeed: 20
 		Voice: Move
+	Teleportable:
 	TeleportNetworkTransportable:
 	WithTeleportEnergyOverlay:
 		Image: energyball

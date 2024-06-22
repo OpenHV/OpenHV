@@ -76,6 +76,10 @@ notification-railgun-detected = Orbital Railgun detected.
 notification-railgun-charging = Orbital Railgun charging.
 notification-railgun-ready = Orbital Railgun ready.
 
+notification-insufficient-power = Insufficient power.
+notification-televatr-charging = Televator charging.
+notification-televatr-ready = Televator ready.
+
 ## Aircraft
 actor-plane1 =
    .description = Attack Ship armed with
@@ -318,11 +322,14 @@ actor-storage =
    .encyclopedia = Storage buildings are the center of mining operations. Upon fabrication it spawns a miner that can be sent to a resource deposit and it also allows the construction of additional miners in the factory. Once a storage and a mining tower exists, tankers will automatically deliver resources from mining operations into the storage building where the compensation takes place. With no storage building to drop off available all mining operations will halt.
 
 actor-televatr =
-   .description = Teleports a unit to
-    another televator.
+   .description = Teleports units.
+   Needs to charge up for transports
+   outside the network.
       Requires power to operate.
    .name = Televator
-   .encyclopedia = Televators can instantly transport any vehicle onto a connected televator. To select the destination in a televator network with more than two endpoints, select and then right-click on the exit. All nodes require power to operate. Televators can be rotated as two building variants exist.
+   .encyclopedia = Televators can instantly transport any vehicle onto a connected televator. To select the destination in a televator network with more than two endpoints, select and then right-click on the exit. All nodes require power to operate. Televators can be rotated as two building variants exist. They can also charge up for a teleportation of a group of units at any point of the map.
+   .teleportpower-name = Teleportation
+   .teleportpower-description = Teleports a group of units across the map.
 
 actor-harbor =
    .description = Builds ships.
