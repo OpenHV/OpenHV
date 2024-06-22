@@ -7,6 +7,8 @@ MBT:
 		Cost: 850
 	Tooltip:
 		Name: actor-mbt.name
+	Selectable:
+		Class: mbt
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -64,6 +66,8 @@ AATANK:
 		Cost: 500
 	Tooltip:
 		Name: actor-aatank.name
+	Selectable:
+		Class: aatank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -137,6 +141,7 @@ APC:
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 2048, 1843
+		Class: apc
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -153,6 +158,8 @@ ARTILLERY:
 		Cost: 800
 	Tooltip:
 		Name: actor-artillery.name
+	Selectable:
+		Class: artillery
 	Buildable:
 		Queue: Tank
 		Prerequisites: factory, radar
@@ -208,6 +215,8 @@ RADARTANK:
 	Tooltip@DEPLOYED:
 		Name: actor-radartank.deployed--name
 		RequiresCondition: deployed
+	Selectable:
+		Class: radartank
 	Health:
 		HP: 50000
 	Armor:
@@ -267,6 +276,8 @@ REPAIRTANK:
 	Tooltip:
 		Name: actor-repairtank.name
 		GenericName: actor-repairtank.generic-name
+	Selectable:
+		Class: repairtank
 	Buildable:
 		Queue: Utility
 		Prerequisites: trader
@@ -314,6 +325,8 @@ MINELAYER:
 		Cost: 700
 	Tooltip:
 		Name: actor-minelayer.name
+	Selectable:
+		Class: minelayer
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -362,6 +375,8 @@ RAILGUNTANK:
 	Tooltip:
 		Name: actor-railguntank.name
 		GenericName: actor-railguntank.generic-name
+	Selectable:
+		Class: railguntank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter
@@ -403,6 +418,8 @@ LIGHTNINGTANK:
 	Tooltip:
 		Name: actor-lightningtank.name
 		GenericName: actor-lightningtank.generic-name
+	Selectable:
+		Class: lightningtank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -440,6 +457,8 @@ STEALTHTANK:
 		Cost: 1200
 	Tooltip:
 		Name: actor-stealthtank.name
+	Selectable:
+		Class: stealthtank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -486,6 +505,8 @@ MERCTANK:
 	Tooltip:
 		Name: actor-merctank.name
 		GenericName: actor-merctank.generic-name
+	Selectable:
+		Class: merctank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~disabled
@@ -521,6 +542,8 @@ DUALMERCTANK:
 	Buildable:
 		BuildPaletteOrder: 90
 		Description: actor-dualmerctank-description
+	Selectable:
+		Class: dualmerctank
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
@@ -540,6 +563,8 @@ ECMTANK:
 	Tooltip:
 		Name: actor-ecmtank.name
 		GenericName: actor-ecmtank.generic-name
+	Selectable:
+		Class: ecmtank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter, trader
@@ -582,6 +607,8 @@ DUALARTILLERY:
 		Cost: 1750
 	Tooltip:
 		Name: actor-dualartillery.name
+	Selectable:
+		Class: dualartillery
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
@@ -633,6 +660,8 @@ BUILDER:
 		Cost: 1000
 	Tooltip:
 		Name: actor-builder.name
+	Selectable:
+		Class: builder
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -674,11 +703,15 @@ BUILDER2:
 		Prerequisites: ~structures.sc
 	Transforms:
 		IntoActor: outpost2
+	Selectable:
+		Class: builder
 
 COLLECTOR:
 	Inherits: ^Vehicle
 	Tooltip:
 		Name: actor-collector-name
+	Selectable:
+		Class: collector
 	Health:
 		HP: 10000
 	Armor:
@@ -711,6 +744,8 @@ MINER:
 		Cost: 1100
 	Tooltip:
 		Name: actor-miner.name
+	Selectable:
+		Class: miner
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -757,6 +792,8 @@ MISSILETANK:
 	Tooltip:
 		Name: actor-missiletank.name
 		GenericName: actor-missiletank.generic-name
+	Selectable:
+		Class: missiletank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, radar, techcenter
@@ -800,6 +837,8 @@ HACKERTANK:
 		Cost: 1000
 	Tooltip:
 		Name: actor-hackertank.name
+	Selectable:
+		Class: hackertank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -829,6 +868,8 @@ BUGGY:
 	Tooltip:
 		Name: actor-buggy.name
 		GenericName: actor-buggy.generic-name
+	Selectable:
+		Class: buggy
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: module, ~factory.sc
@@ -870,6 +911,8 @@ BIKE:
 	Tooltip:
 		Name: actor-bike.name
 		GenericName: actor-bike.generic-name
+	Selectable:
+		Class: bike
 	Buildable:
 		Queue: Tank
 		Prerequisites: module, ~factory.yi
@@ -910,6 +953,8 @@ TANKER1:
 		Cost: 500
 	Tooltip:
 		Name: actor-tanker1.name
+	Selectable:
+		Class: tanker
 	Health:
 		HP: 15000
 	Armor:
@@ -956,6 +1001,8 @@ CVIT:
 		Cost: 500
 	Tooltip:
 		Name: actor-cvit.name
+	Selectable:
+		Class: cvit
 	Health:
 		HP: 11000
 	Armor:
