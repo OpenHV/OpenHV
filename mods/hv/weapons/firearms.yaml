@@ -154,7 +154,7 @@ HelicopterChainGunAir:
 		Damage: 250
 		Versus:
 			Light: 167
-			Heavy: 23
+			Heavy: 115
 
 AircraftChainGunGround:
 	Inherits: ^AircraftChainGun
@@ -184,7 +184,7 @@ AircraftChainGunAir:
 		Damage: 375
 		Versus:
 			Light: 207
-			Heavy: 37
+			Heavy: 185
 
 ShellCasing:
 	Inherits: SmallSplash
@@ -262,12 +262,12 @@ BoatMachineGunAir:
 		Inaccuracy: 0c512
 	Warhead@Damage: SpreadDamage
 		Spread: 126
-		Damage: 150
+		Damage: 190
 		ValidTargets: Air
 		Versus:
 			None: 30
 			Light: 90
-			Heavy: 180
+			Heavy: 360
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Air
@@ -340,15 +340,15 @@ DronePulseGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	Inherits: ^BlueTracers
-	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
+	ValidTargets: Air
 	Report: pulsegun_silverillusionist.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
 		Blockable: true
 	Warhead@Damage: SpreadDamage
-		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
+		ValidTargets: Air
 		Spread: 24
-		Damage: 5000
+		Damage: 2500
 		Versus:
 			None: 125
 			Steel: 15
@@ -357,7 +357,8 @@ DronePulseGun:
 			Concrete: 10
 	Warhead@Incendiary: TreeDamage
 		Spread: 24
-		Damage: 1000
+		Damage: 2500
 	ReloadDelay: 10
 	Range: 6c0
+	MinRange: 0c0
 	Burst: 10

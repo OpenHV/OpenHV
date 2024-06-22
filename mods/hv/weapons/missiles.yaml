@@ -223,7 +223,7 @@ BoatMissileAntiAir:
 		Versus:
 			None: 30
 			Light: 90
-			Heavy: 180
+			Heavy: 360
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.ogg
@@ -315,13 +315,13 @@ TowerMissile:
 		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 4000
+		Damage: 3000
 		ValidTargets: Air
 		Versus:
 			None: 30
 			Wood: 90
 			Light: 90
-			Heavy: 115
+			Heavy: 300
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
