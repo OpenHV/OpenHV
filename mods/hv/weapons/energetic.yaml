@@ -110,7 +110,7 @@ RepairTorch:
 
 Plasma:
 	Inherits: BigSplash
-	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 8c0
 	MinRange: 1c0
