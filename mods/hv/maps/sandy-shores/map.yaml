@@ -74,11 +74,11 @@ Actors:
 	Actor5: sandmisc6
 		Owner: Neutral
 		Location: 67,127
-	Actor6: seamnstr
+	Actor6: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 22,22
-	Actor7: seamnstr
+	Actor7: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 107,107

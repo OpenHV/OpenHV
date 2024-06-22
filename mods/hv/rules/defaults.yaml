@@ -132,7 +132,7 @@
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: trader
 		HpPerStep: 2000
 	AttackMove:
 	HiddenUnderFog:
@@ -292,12 +292,12 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: trader
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: trader
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Explodes:

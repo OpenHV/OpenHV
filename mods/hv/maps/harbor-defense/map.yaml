@@ -40,11 +40,11 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor24: seamnstr
+	Actor24: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 17,7
-	Actor25: seamnstr
+	Actor25: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 79,2
@@ -588,22 +588,22 @@ Actors:
 	Actor255: module2
 		Owner: Multi0
 		Location: 31,68
-	Actor256: factory4
+	Actor256: factory2
 		Owner: Multi0
 		Location: 19,68
-	Actor257: factory4
+	Actor257: factory2
 		Owner: Multi0
 		Location: 21,68
-	Actor258: factory4
+	Actor258: factory2
 		Owner: Multi0
 		Location: 23,68
-	Actor259: factory4
+	Actor259: factory2
 		Owner: Multi0
 		Location: 25,68
-	Actor260: factory4
+	Actor260: factory2
 		Owner: Multi0
 		Location: 27,68
-	Actor261: factory4
+	Actor261: factory2
 		Owner: Multi0
 		Location: 29,68
 	Actor262: generator

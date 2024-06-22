@@ -7,10 +7,10 @@
    information, see COPYING.
 ]]
 
-GroundReinforcementUnits = { "scout1", "scout1", "scout1", "scout2", "scout2", "scout2", "scout2", "scout2", "tank1", "tank1", "tank1", "tank1", "tank1", "tank2", "tank2", "tank7", "artil", "artil", "artil", "technician", "technician", "technician", "tank16", "tank15", "missiletank", "missiletank", "missiletank", "artil3" }
-AirReinforcementUnits = { "copter", "copter", "copter", "banshee", "banshee", "copter2"}
-NavalReinforcementUnits = { "submarine", "patrolboat", "patrolboat", "patrolboat", "submarine2", "boat4", "boat4", "boat4"}
-YurukiReinforcements = { "submarine2", "carrier", "boat2", "boat3", "boat" }
+GroundReinforcementUnits = { "mgpod", "mgpod", "mgpod", "rocketpod", "rocketpod", "rocketpod", "rocketpod", "rocketpod", "buggy", "buggy", "buggy", "buggy", "buggy", "bike", "bike", "stealthtank", "artillery", "artillery", "artillery", "technician", "technician", "technician", "repairtank", "hackertank", "missiletank", "missiletank", "missiletank", "dualartillery" }
+AirReinforcementUnits = { "copter", "copter", "copter", "banshee", "banshee", "chopper"}
+NavalReinforcementUnits = { "boomer", "patrolboat", "patrolboat", "patrolboat", "submarine", "boat4", "boat4", "boat4"}
+YurukiReinforcements = { "submarine", "carrier", "railgunboat", "lightboat", "boat" }
 
 Warning = UserInterface.Translate("warning")
 
@@ -34,7 +34,7 @@ Tick = function()
 		Human.MarkCompletedObjective(BuildModuleObjective)
 	end
 
-	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildFactoryObjective) and CheckForBase(Human, { "factory3" }) then
+	if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildFactoryObjective) and CheckForBase(Human, { "factory" }) then
 		Human.MarkCompletedObjective(BuildFactoryObjective)
 	end
 

@@ -64,7 +64,7 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 5,5
 		FreeActor: False
-	Actor11: factory4
+	Actor11: factory2
 		Owner: Synapol Corporation
 		Location: 16,37
 	Actor16: storage
@@ -102,15 +102,15 @@ Actors:
 	Actor28: generator
 		Owner: Synapol Corporation
 		Location: 11,2
-	Actor30: artil
+	Actor30: artillery
 		Owner: Synapol Corporation
 		Location: 22,9
 		Facing: 761
-	Actor31: tank11
+	Actor31: merctank
 		Owner: Synapol Corporation
 		Location: 32,19
 		Facing: 991
-	Actor34: tank11
+	Actor34: merctank
 		Owner: Synapol Corporation
 		Location: 25,20
 		Facing: 864
@@ -118,37 +118,37 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 27,14
-	Actor33: scout1
+	Actor33: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 36,10
 		Facing: 800
-	Actor36: scout2
+	Actor36: rocketpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 30,9
 		Facing: 800
-	Actor37: scout1
+	Actor37: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 35,25
 		Facing: 103
-	Actor38: scout1
+	Actor38: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 41,24
 		Facing: 206
-	Actor39: scout1
+	Actor39: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 39,29
 		Facing: 142
-	Actor40: scout1
+	Actor40: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 32,27
 		Facing: 39
-	Actor41: scout1
+	Actor41: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 31,23
@@ -156,18 +156,18 @@ Actors:
 	Actor42: radar2
 		Owner: Synapol Corporation
 		Location: 20,37
-	Actor43: tradplat
+	Actor43: trader
 		Owner: Synapol Corporation
 		Location: 17,43
-	Actor44: tyriantank
+	Actor44: mbt2
 		Owner: Synapol Corporation
 		Location: 24,8
 		Facing: 793
-	Actor45: tyriantank
+	Actor45: mbt2
 		Owner: Synapol Corporation
 		Location: 22,23
 		Facing: 919
-	Actor46: tyriantank
+	Actor46: mbt2
 		Owner: Synapol Corporation
 		Location: 28,28
 		Facing: 951

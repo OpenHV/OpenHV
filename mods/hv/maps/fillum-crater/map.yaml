@@ -180,11 +180,11 @@ Actors:
 	Actor44: sparklamp
 		Owner: Neutral
 		Location: 123,32
-	Actor45: seamnstr
+	Actor45: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 11,24
-	Actor46: seamnstr
+	Actor46: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 34,4
@@ -369,7 +369,7 @@ Actors:
 		Faction: Random
 		Facing: 384
 		Owner: Yuruki Industries
-	Actor105: submarine
+	Actor105: boomer
 		Faction: Random
 		Location: 51,22
 		Facing: 656
@@ -406,7 +406,7 @@ Actors:
 	DestinationWaypoint1: entry
 		Owner: Neutral
 		Location: 55,31
-	Actor115: tradplat
+	Actor115: trader
 		Faction: Random
 		Location: 63,22
 		Owner: Yuruki Industries
@@ -451,59 +451,59 @@ Actors:
 		Location: 120,24
 		Facing: 384
 		DeployState: Deployed
-	Actor127: tank5
+	Actor127: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 119,23
-	Actor128: tank5
+	Actor128: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 121,25
-	Actor129: tank10
+	Actor129: lightningtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 123,26
-	Actor130: tank10
+	Actor130: lightningtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 124,24
-	Actor131: tank8
+	Actor131: ecmtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 121,23
-	Actor132: tank8
+	Actor132: ecmtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 125,24
-	Actor133: artil3
+	Actor133: dualartillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 126,25
-	Actor134: tank1
+	Actor134: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 117,24
-	Actor135: tank1
+	Actor135: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 118,26
-	Actor136: tank1
+	Actor136: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 119,26
-	Actor137: tank2
+	Actor137: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 115,24
-	Actor138: tank2
+	Actor138: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 116,22
-	Actor139: tank2
+	Actor139: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 118,22
-	Actor140: tank2
+	Actor140: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 119,20
@@ -573,43 +573,43 @@ Actors:
 	Actor161: tanktrap
 		Owner: Synapol Corporation
 		Location: 93,116
-	Actor162: artil3
+	Actor162: dualartillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 100,116
-	Actor163: tank1
+	Actor163: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 98,113
-	Actor164: tank1
+	Actor164: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 100,114
-	Actor165: tank1
+	Actor165: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 99,111
-	Actor166: tank1
+	Actor166: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 101,110
-	Actor167: tank2
+	Actor167: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 94,112
-	Actor168: tank2
+	Actor168: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 91,110
-	Actor169: tank2
+	Actor169: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 95,108
-	Actor170: tank2
+	Actor170: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 97,108
-	Actor171: tank15
+	Actor171: hackertank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 102,110
@@ -621,19 +621,19 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 104,112
-	Actor174: tank10
+	Actor174: lightningtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 100,109
-	Actor175: tank5
+	Actor175: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 96,112
-	Actor176: artil
+	Actor176: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 97,114
-	Actor177: artil
+	Actor177: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 92,113

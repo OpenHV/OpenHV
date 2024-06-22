@@ -2,8 +2,8 @@ CurrentWave = 1
 LastWave = false
 Won = false
 
-Generic = { "boat3", "boat" }
-Lightning = { "boat2" }
+Generic = { "lightboat", "boat" }
+Lightning = { "railgunboat" }
 Submarine = { "carrier" }
 
 Waves =
@@ -87,7 +87,7 @@ SendNextWave = function()
 end
 
 Tick = function()
-	local buildingproportions = HumanPlayer.GetActorsByTypes({ "harbor2", "extractor", "radar2", "comlink", "module2", "factory4" })
+	local buildingproportions = HumanPlayer.GetActorsByTypes({ "harbor2", "extractor", "radar2", "comlink", "module2", "factory2" })
 	local percentage = #buildingproportions * 100 / 22
 	if percentage < .65  and not HumanPlayer.IsObjectiveFailed(TowerDefenseObjective) then
 		Media.DisplayMessage(UserInterface.Translate("buildings-lost-65-percent"))

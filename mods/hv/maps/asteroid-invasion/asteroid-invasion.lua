@@ -11,10 +11,10 @@ Warning = UserInterface.Translate("warning")
 ColonyReinforcementsSent = false
 MilitaryProductionStarted = false
 CooldownBeforeDetection = 180
-ColonyReinforcementUnitsPods = { "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician" }
-ColonyReinforcementUnitsTanks = { "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1" }
-ColonyReinforcementUnitsPodsBig = { "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "scout1", "scout1", "scout1", "scout1", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician" }
-ColonyReinforcementUnitsTanksBig = { "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1", "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1", "aatank2", "aatank2", "tank3", "tank3", "tank3", "artil", "artil", "tank16", "tank16", "tank2", "tank2", "tank2", "tank2", "tank1", "tank1", "tank1", "tank1" }
+ColonyReinforcementUnitsPods = { "mgpod", "mgpod", "mgpod", "mgpod", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician" }
+ColonyReinforcementUnitsTanks = { "aatank2", "aatank2", "mbt", "mbt", "mbt", "artillery", "artillery", "repairtank", "repairtank", "bike", "bike", "bike", "bike", "buggy", "buggy", "buggy", "buggy" }
+ColonyReinforcementUnitsPodsBig = { "mgpod", "mgpod", "mgpod", "mgpod", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "mgpod", "mgpod", "mgpod", "mgpod", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician", "mgpod", "mgpod", "mgpod", "mgpod", "electricpod", "electricpod", "electricpod", "mortarpod", "mortarpod", "sniperpod", "sniperpod", "technician", "technician" }
+ColonyReinforcementUnitsTanksBig = { "aatank2", "aatank2", "mbt", "mbt", "mbt", "artillery", "artillery", "repairtank", "repairtank", "bike", "bike", "bike", "bike", "buggy", "buggy", "buggy", "buggy", "aatank2", "aatank2", "mbt", "mbt", "mbt", "artillery", "artillery", "repairtank", "repairtank", "bike", "bike", "bike", "bike", "buggy", "buggy", "buggy", "buggy", "aatank2", "aatank2", "mbt", "mbt", "mbt", "artillery", "artillery", "repairtank", "repairtank", "bike", "bike", "bike", "bike", "buggy", "buggy", "buggy", "buggy" }
 ColonyDestinationPathFactory = { FactoryExit.Location, ColonyDestination.Location }
 ColonyDestinationPathModule = { ModuleExit.Location, ColonyDestination.Location }
 HumanDestinationPathFactory = { FactoryExit.Location, HumanBaseDestination.Location }
@@ -22,8 +22,8 @@ HumanDestinationPathModule = { ModuleExit.Location, HumanBaseDestination.Locatio
 
 Tick = function()
 	local colonybasements = Enemy.GetActorsByTypes({ "prop5", "prop8", "prop7", "flagpost", "watchtower", "comlink" })
-	local militarybasements = Enemy.GetActorsByTypes({ "generator", "aaturret", "bunker", "turret", "module", "factory3", "radar", "uplink", "field", "techcenter", "tradplat", "starport", "storage" })
-	local enemybarracks = Enemy.GetActorsByTypes({ "factory3", "module" })
+	local militarybasements = Enemy.GetActorsByTypes({ "generator", "aaturret", "bunker", "turret", "module", "factory", "radar", "uplink", "field", "techcenter", "trader", "starport", "storage" })
+	local enemybarracks = Enemy.GetActorsByTypes({ "factory", "module" })
 
 	if Human.IsObjectiveCompleted(DestroyColonyObjective) and not Human.IsObjectiveCompleted(DestroyYurukiMilitary) and not MilitaryProductionStarted and #enemybarracks > 0 then -- if the player has anihilated the colony basements, enable yuruki production to create three waves. Also enables the AI to use the railgun
 		MilitaryProductionStarted = true

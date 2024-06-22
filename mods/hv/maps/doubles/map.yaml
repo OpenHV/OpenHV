@@ -79,7 +79,7 @@ Actors:
 	Actor19: prop1
 		Owner: Neutral
 		Location: 107,49
-	Actor24: seamnstr
+	Actor24: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 72,7
@@ -458,7 +458,7 @@ Actors:
 	Actor159: dark_light
 		Owner: Neutral
 		Location: 105,49
-	Actor162: seamnstr
+	Actor162: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 42,9
