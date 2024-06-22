@@ -48,7 +48,7 @@ Actors:
 	Base: base
 		Owner: Yuruki Industries
 		Location: 34,60
-	Actor1: seamnstr
+	Actor1: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 5,59
@@ -186,7 +186,7 @@ Actors:
 	Actor49: generator
 		Owner: Synapol Corporation
 		Location: 28,2
-	Actor51: factory4
+	Actor51: factory2
 		Owner: Synapol Corporation
 		Location: 8,10
 	Actor52: oresmelt
@@ -267,35 +267,35 @@ Actors:
 	Actor83: starport2
 		Owner: Synapol Corporation
 		Location: 51,2
-	Actor87: artil
+	Actor87: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 3,23
-	Actor88: artil
+	Actor88: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 7,26
-	Actor89: artil3
+	Actor89: dualartillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 7,24
-	Actor90: tank10
+	Actor90: lightningtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 2,24
-	Actor94: tank2
+	Actor94: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 6,22
-	Actor95: tank2
+	Actor95: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 9,24
-	Actor99: tank10
+	Actor99: lightningtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 20,18
-	Actor100: tank15
+	Actor100: hackertank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 25,17
@@ -315,39 +315,39 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 57,8
-	Actor106: tank7
+	Actor106: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 21,18
-	Actor107: tank7
+	Actor107: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 4,22
-	Actor110: tank2
+	Actor110: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 55,6
-	Actor111: tank2
+	Actor111: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 58,8
-	Actor112: tank2
+	Actor112: bike
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 55,10
-	Actor113: artil3
+	Actor113: dualartillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 58,7
-	Actor114: tank8
+	Actor114: ecmtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 58,9
-	Actor115: tank15
+	Actor115: hackertank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 56,7
-	Actor116: copter2
+	Actor116: chopper
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 53,3
@@ -457,61 +457,61 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 7,23
-	Actor154: tank7
+	Actor154: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 54,8
-	Actor155: tank10
+	Actor155: lightningtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 53,7
-	Actor156: tank8
+	Actor156: ecmtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 56,9
-	Actor160: tank1
+	Actor160: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 52,8
-	Actor161: tank1
+	Actor161: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 55,8
-	Actor162: tank1
+	Actor162: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 57,6
-	Actor163: scout2
+	Actor163: rocketpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 58,10
-	Actor164: scout2
+	Actor164: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 60,8
-	Actor165: scout2
+	Actor165: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 54,5
-	Actor166: scout2
+	Actor166: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 54,7
-	Actor167: scout1
+	Actor167: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 53,9
-	Actor168: scout1
+	Actor168: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 55,9
-	Actor169: scout1
+	Actor169: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 58,11
@@ -586,110 +586,110 @@ Actors:
 		Facing: 384
 		SubCell: 1
 		Location: 22,20
-	Actor184: tank1
+	Actor184: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 23,20
-	Actor185: tank1
+	Actor185: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 26,20
-	Actor186: tank1
+	Actor186: buggy
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 24,16
-	Actor187: tank7
+	Actor187: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 20,19
-	Actor188: tank7
+	Actor188: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 26,18
-	Actor189: tank7
+	Actor189: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 4,26
-	Actor190: tank7
+	Actor190: stealthtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 9,23
-	Actor191: scout2
+	Actor191: rocketpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 24,20
-	Actor192: scout2
+	Actor192: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 26,19
-	Actor193: scout2
+	Actor193: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 22,16
-	Actor194: scout2
+	Actor194: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 21,19
-	Actor195: scout2
+	Actor195: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 2,25
-	Actor196: scout2
+	Actor196: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 6,28
-	Actor197: scout2
+	Actor197: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 8,22
-	Actor198: scout2
+	Actor198: rocketpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 4,24
-	Actor199: scout1
+	Actor199: mgpod
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 7,27
-	Actor200: scout1
+	Actor200: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 8,25
-	Actor201: scout1
+	Actor201: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 5,26
 		SubCell: 1
-	Actor202: scout1
+	Actor202: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 5,23
-	Actor203: scout1
+	Actor203: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 24,18
-	Actor204: scout1
+	Actor204: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 24,21
-	Actor205: scout1
+	Actor205: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 27,17
-	Actor206: scout1
+	Actor206: mgpod
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 21,20
@@ -759,23 +759,23 @@ Actors:
 		Facing: 384
 		Location: 54,6
 		SubCell: 1
-	Actor220: tank5
+	Actor220: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 57,9
-	Actor221: tank5
+	Actor221: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 54,7
-	Actor222: tank5
+	Actor222: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 22,18
-	Actor223: tank5
+	Actor223: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 4,21
-	Actor224: tank5
+	Actor224: railguntank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 10,25
@@ -794,55 +794,55 @@ Actors:
 		Location: 58,11
 		Facing: 384
 		DeployState: Deployed
-	Actor228: artil
+	Actor228: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 24,18
-	Actor229: artil
+	Actor229: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 27,17
-	Actor230: artil
+	Actor230: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 5,22
-	Actor231: artil
+	Actor231: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 58,6
-	Actor232: artil
+	Actor232: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 56,5
-	Actor233: artil
+	Actor233: artillery
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 55,9
-	Actor234: tank16
+	Actor234: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 59,8
-	Actor235: tank16
+	Actor235: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 56,8
-	Actor236: tank16
+	Actor236: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 51,8
-	Actor237: tank16
+	Actor237: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 25,21
-	Actor238: tank16
+	Actor238: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 25,15
-	Actor239: tank16
+	Actor239: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 6,26
-	Actor240: tank16
+	Actor240: repairtank
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 10,22

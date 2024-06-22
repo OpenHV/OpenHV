@@ -319,7 +319,7 @@ RADAR:
 		QuantizedFacings: 8
 		Name: actor-radar.airstrikepower-name
 		Description: actor-radar.airstrikepower-description
-		UnitType: bomber1
+		UnitType: bomber
 		DisplayRadarPing: true
 		CameraActor: camera
 		UseDirectionalTarget: true
@@ -361,7 +361,7 @@ RADAR2:
 		IncomingTextNotification: notifications-drop-pod-incoming
 	-Encyclopedia:
 
-TRADPLAT:
+TRADER:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x2Shape
 	Inherits@Flame: ^BuildingFlame2
@@ -370,15 +370,15 @@ TRADPLAT:
 		Queue: Building
 		Prerequisites: ~base, factory
 		BuildPaletteOrder: 100
-		Description: actor-tradplat.description
+		Description: actor-trader.description
 	Encyclopedia:
-		Description: actor-tradplat.encyclopedia
+		Description: actor-trader.encyclopedia
 		Order: 50
 		Category: Buildings
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: actor-tradplat.name
+		Name: actor-trader.name
 	Building:
 		Footprint: x+x x+x x+x
 		Dimensions: 3,3
@@ -448,10 +448,10 @@ TRADPLAT:
 	ProvidesPrerequisite@BuildingName:
 		RequiresCondition: !powerdown
 	RenderSprites:
-		Image: tradplat
+		Image: trader
 		FactionImages:
-			sc: tradplat2
-			yi: tradplat
+			sc: trader2
+			yi: trader
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -725,12 +725,6 @@ STARPORT2:
 	-Encyclopedia:
 
 FACTORY:
-	AlwaysVisible:
-	Interactable:
-	Tooltip:
-		Name: actor-factory-name
-
-FACTORY3:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x4Shape
 	Inherits@Flame: ^BuildingFlame2
@@ -741,13 +735,13 @@ FACTORY3:
 		Prerequisites: module, storage, ~structures.yi
 		Queue: Building
 		BuildPaletteOrder: 90
-		Description: actor-factory3.description
+		Description: actor-factory.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: actor-factory3.name
+		Name: actor-factory.name
 	Encyclopedia:
-		Description: actor-factory3.encyclopedia
+		Description: actor-factory.encyclopedia
 		Order: 70
 		Category: Buildings
 	Building:
@@ -970,15 +964,15 @@ FACTORY3:
 		RequiresCondition: !build-incomplete && !burning
 		Sequence: production-inprogress
 
-FACTORY4:
-	Inherits: FACTORY3
+FACTORY2:
+	Inherits: FACTORY
 	Buildable:
 		Prerequisites: module, storage, ~structures.sc
 	ProvidesPrerequisite@Faction:
 		Prerequisite: factory.sc
 		RequiresCondition: !powerdown
 	RenderSprites:
-		Image: factory4
+		Image: factory2
 	-Encyclopedia:
 
 TECHCENTER:
@@ -1123,7 +1117,7 @@ BUNKER:
 	Cargo:
 		Types: Pod
 		MaxWeight: 1
-		InitialUnits: scout1
+		InitialUnits: mgpod
 	AttackGarrisoned:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
@@ -1682,7 +1676,7 @@ STORAGE:
 	WithMakeOverlay@Platform4:
 		Sequence: make-platform4
 
-TELEVATR:
+TELEVATOR:
 	Inherits: ^BaseBuilding
 	Inherits@Shape: ^2x1Shape
 	Inherits@Flame: ^BuildingFlame
@@ -1696,13 +1690,13 @@ TELEVATR:
 		Queue: Defense
 		BuildPaletteOrder: 120
 		Prerequisites: radar
-		Description: actor-televatr.description
+		Description: actor-televator.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: actor-televatr.name
+		Name: actor-televator.name
 	Encyclopedia:
-		Description: actor-televatr.encyclopedia
+		Description: actor-televator.encyclopedia
 		Order: 200
 		Category: Buildings
 	Building:
@@ -1730,16 +1724,16 @@ TELEVATR:
 		ChargeInterval: 3000
 		OrderName: BeamUsUp
 		Icon: null
-		Name: actor-televatr.teleportpower-name
-		Description: actor-televatr.teleportpower-description
+		Name: actor-televator.teleportpower-name
+		Description: actor-televator.teleportpower-description
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification:
 		BeginChargeSpeechNotification:
 		EndChargeSpeechNotification:
 		SelectTargetTextNotification: notification-select-target
 		InsufficientPowerTextNotification: notification-insufficient-power
-		BeginChargeTextNotification: notification-televatr-charging
-		EndChargeTextNotification: notification-televatr-ready
+		BeginChargeTextNotification: notification-televator-charging
+		EndChargeTextNotification: notification-televator-ready
 	TeleportNetwork:
 		Type: subspace
 		RequiresCondition: !disabled
@@ -1760,10 +1754,10 @@ TELEVATR:
 		Text: EXIT
 		Font: TinyPixel
 	PlaceBuildingVariants:
-		Actors: televtr2
+		Actors: televator2
 
-TELEVTR2:
-	Inherits: TELEVATR
+TELEVATOR2:
+	Inherits: TELEVATOR
 	Inherits@Shape: ^1x2Shape
 	HitShape:
 		UseTargetableCellsOffsets: false
@@ -2679,7 +2673,7 @@ DROPZONE:
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
 	PeriodicProducer:
-		Actors: tank11, tank12
+		Actors: merctank, dualmerctank
 		Type: Reinforcements
 		ChargeDuration: 1500
 		ShowSelectionBar: true

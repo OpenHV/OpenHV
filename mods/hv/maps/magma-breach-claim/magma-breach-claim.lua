@@ -7,7 +7,7 @@
    information, see COPYING.
 ]]
 
-ReinforcementUnits = { "scout1", "scout1", "scout1", "scout2", "scout2", "tank1", "tank1", "tank2", "tank2", "tank7", "artil", "technician", "tank16", "tank15", "missiletank" }
+ReinforcementUnits = { "mgpod", "mgpod", "mgpod", "rocketpod", "rocketpod", "buggy", "buggy", "bike", "bike", "stealthtank", "artillery", "technician", "repairtank", "hackertank", "missiletank" }
 
 Warning = UserInterface.Translate("warning")
 

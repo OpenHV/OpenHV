@@ -406,11 +406,11 @@ Actors:
 	Actor146: prop1
 		Owner: Neutral
 		Location: 32,62
-	Actor147: seamnstr
+	Actor147: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 6,8
-	Actor148: seamnstr
+	Actor148: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 14,2
@@ -468,15 +468,15 @@ Actors:
 	Actor168: prop2
 		Owner: Neutral
 		Location: 17,64
-	Actor169: seamnstr
+	Actor169: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 3,71
-	Actor170: seamnstr
+	Actor170: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 4,63
-	Actor171: seamnstr
+	Actor171: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 3,44
@@ -843,7 +843,7 @@ Actors:
 	Actor291: rock7
 		Owner: Neutral
 		Location: 148,119
-	Actor292: seamnstr
+	Actor292: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 5,119

@@ -66,9 +66,9 @@ seed:
 	icon:
 		Filename: bits/icon.png
 
-seamnstr:
+seamonster:
 	idle:
-		Filename: bits/seamnstr-move.png
+		Filename: bits/seamonster-wake.png
 		Length: 6
 		Tick: 100
 		ZOffset: -500
@@ -77,7 +77,7 @@ seamnstr:
 	icon:
 		Filename: bits/icon.png
 	emerge:
-		Filename: bits/seamnstr.png
+		Filename: bits/seamonster.png
 		Length: 29
 		Facings: 8
 		Tick: 75

@@ -1,17 +1,17 @@
 # License: CC-BY-SA-4.0
 
-SCOUT1:
+MGPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-scout1.description
+		Description: actor-mgpod.description
 		Prerequisites: ~module
 		BuildPaletteOrder: 10
 	Valued:
 		Cost: 100
 	Tooltip:
-		Name: actor-scout1.name
+		Name: actor-mgpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -35,18 +35,18 @@ SCOUT1:
 	WithMuzzleOverlay:
 		IgnoreOffset: true
 
-SCOUT2:
+ROCKETPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-scout2.description
+		Description: actor-rocketpod.description
 		Prerequisites: ~module.sc
 		BuildPaletteOrder: 20
 	Valued:
 		Cost: 225
 	Tooltip:
-		Name: actor-scout2.name
+		Name: actor-rocketpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:

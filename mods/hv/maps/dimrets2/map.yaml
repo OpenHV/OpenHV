@@ -1878,15 +1878,15 @@ Actors:
 	Actor985: cleanlight-blue
 		Owner: Neutral
 		Location: 75,30
-	Actor1006: seamnstr
+	Actor1006: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 117,86
-	Actor1007: seamnstr
+	Actor1007: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 12,86
-	Actor1004: seamnstr
+	Actor1004: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 65,90

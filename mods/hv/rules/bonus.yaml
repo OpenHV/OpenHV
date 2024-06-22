@@ -35,19 +35,19 @@ SPAWNCUBE:
 	WithSpriteBody:
 		Sequence: blue
 	SpawnUnitCrateAction@AssaultTank:
-		Units: tank3
+		Units: mbt
 		ValidFactions: yi
 		SelectionShares: 10
-	SpawnUnitCrateAction@TyrianTank:
-		Units: tyriantank
+	SpawnUnitCrateAction@mbt2:
+		Units: mbt2
 		ValidFactions: sc
 		SelectionShares: 10
 	SpawnUnitCrateAction@RailgunTank:
-		Units: tank5
+		Units: railguntank
 		ValidFactions: sc
 		SelectionShares: 1
 	SpawnUnitCrateAction@LightningTank:
-		Units: tank10
+		Units: lightningtank
 		ValidFactions: yi
 		SelectionShares: 1
 

@@ -236,11 +236,11 @@ MINER:
 	Buildable:
 		Prerequisites: ~disabled
 
-TRANSPRT:
+APC:
 	Buildable:
 		Prerequisites: ~disabled
 
-ARTIL:
+ARTILLERY:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -248,22 +248,22 @@ RADARTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK1:
+BUGGY:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK2:
+BIKE:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK6:
+MINELAYER:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK13:
+CVIT:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK16:
+REPAIRTANK:
 	Buildable:
 		Prerequisites: ~disabled

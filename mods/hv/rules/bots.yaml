@@ -22,8 +22,8 @@ Player:
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
 		BarracksTypes: module, module2
-		VehiclesFactoryTypes: factory3, factory4, base, base2
-		ProductionTypes: module, module2, factory3, factory4, starport, starport2, harbor, harbor2, base, base2
+		VehiclesFactoryTypes: factory, factory2, base, base2
+		ProductionTypes: module, module2, factory, factory2, starport, starport2, harbor, harbor2, base, base2
 		NavalProductionTypes: harbor, harbor2
 		RefineryTypes: storage
 		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
@@ -31,14 +31,14 @@ Player:
 			base: 1
 			storage: 1
 			module: 4
-			factory3: 4
-			factory4: 4
+			factory: 4
+			factory2: 4
 			radar: 1
 			radar2: 1
 			starport: 4
 			starport2: 4
 			oresmelt: 4
-			tradplat: 1
+			trader: 1
 			techcenter: 1
 			harbor: 1
 			harbor2: 1
@@ -53,11 +53,11 @@ Player:
 			module2: 1
 			radar: 1
 			radar2: 1
-			factory3: 1
-			factory4: 1
+			factory: 1
+			factory2: 1
 			harbor: 1
 			harbor2: 1
-			tradplat: 1
+			trader: 1
 			starport: 1
 			starport2: 1
 			techcenter: 1
@@ -84,11 +84,11 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, tank6, tank8, technician, brokerpod, waterminelayer, waterminelayer2, bomberpod
-		NavalUnitsTypes: boat, boat2, boat3, patrolboat, submarine, submarine2, carrier
-		AirUnitsTypes: plane1, plane2, copter, banshee
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
-		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
@@ -97,20 +97,20 @@ Player:
 			miner: 3
 			builder: 1
 			radartank: 1
-			tank1: 3
-			tank2: 3
-			tank3: 5
-			tank5: 5
-			tank6: 1
-			tank7: 1
-			tank8: 1
+			buggy: 3
+			bike: 3
+			mbt: 5
+			railguntank: 5
+			minelayer: 1
+			stealthtank: 1
+			ecmtank: 1
 			aatank: 3
-			tank15: 1
-			tank16: 1
-			transprt: 1
-			artil: 5
-			scout1: 1
-			scout2: 1
+			hackertank: 1
+			repairtank: 1
+			apc: 1
+			artillery: 5
+			mgpod: 1
+			rocketpod: 1
 			mortarpod: 1
 			flamepod: 1
 			elitepod: 1
@@ -120,36 +120,36 @@ Player:
 			technician: 1
 			bomberpod: 1
 			missiletank: 5
-			plane2: 5
-			plane1: 5
+			jet: 5
+			gunship: 5
 			copter: 5
 			banshee: 5
 			balloon: 1
 			saucer: 1
-			boat: 1
-			boat2: 1
-			boat3: 1
-			submarine: 2
+			mediumboat: 1
+			railgunboat: 1
+			lightboat: 1
+			boomer: 2
 			carrier: 2
-			waterminelayer: 1
-			waterminelayer2: 1
+			navalminelayer: 1
+			navalminelayer2: 1
 		UnitLimits:
 			miner: 1
 			builder: 1
 			balloon: 2
 			saucer: 2
 			radartank: 1
-			tank6: 1
-			tank8: 1
-			boat3: 3
-			submarine: 4
+			minelayer: 1
+			ecmtank: 1
+			lightboat: 3
+			boomer: 4
 			carrier: 4
-			waterminelayer: 1
-			waterminelayer2: 1
+			navalminelayer: 1
+			navalminelayer2: 1
 			technician: 1
 			bomberpod: 3
 			brokerpod: 9
-			transprt: 1
+			apc: 1
 		UnitDelays:
 			builder: 15000
 	PriorityCaptureManagerBotModule:
@@ -165,7 +165,7 @@ Player:
 		VehiclesQueue: Utility
 	MinelayerBotModule:
 		RequiresCondition: enable-rogue-ai
-		MinelayingActorTypes: tank6, waterminelayer, waterminelayer2
+		MinelayingActorTypes: minelayer, navalminelayer, navalminelayer2
 		IgnoredEnemyTargetTypes: Structure, Defense, Air
 		UseEnemyLocationTargetTypes: Structure, Defense
 		AwayFromAlliedTargetTypes: Structure, Defense
@@ -175,8 +175,8 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
 	LoadCargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: transprt
-		PassengerTypes: mortarpod, flamepod, electricpod, scout1, scout2
+		TransportTypes: apc
+		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: radartank, brokerpod

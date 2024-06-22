@@ -1,6 +1,6 @@
 # License: CC-BY-SA-4.0
 
-PLANE1:
+GUNSHIP:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing
@@ -9,11 +9,11 @@ PLANE1:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.yi
-		Description: actor-plane1.description
+		Description: actor-gunship.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: actor-plane1.name
+		Name: actor-gunship.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -62,7 +62,7 @@ PLANE1:
 	Selectable:
 		Bounds: 1024, 1024
 
-PLANE2:
+JET:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
@@ -70,11 +70,11 @@ PLANE2:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: techcenter, ~starport.yi
-		Description: actor-plane2.description
+		Description: actor-jet.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: actor-plane2.name
+		Name: actor-jet.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -269,18 +269,18 @@ BANSHEE:
 		DecorationBounds: 1228, 1228
 	WithMuzzleOverlay:
 
-COPTER2:
+CHOPPER:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: actor-copter2.name
+		Name: actor-chopper.name
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
-		Description: actor-copter2.description
+		Description: actor-chopper.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -327,17 +327,17 @@ COPTER2:
 		Margin: 4, 3
 		RequiresSelection: true
 	SpawnActorOnDeath:
-		Actor: COPTER2.Husk
+		Actor: chopper.Husk
 		RequiresCondition: airborne
 	-Explodes@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
 
-COPTER2.Husk:
+CHOPPER.Husk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: actor-copter2-husk-name
+		Name: actor-chopper-husk-name
 	Aircraft:
 		TurnSpeed: 24
 		Speed: 86
@@ -360,7 +360,7 @@ COPTER2.Husk:
 		Range: 2c0
 		Type: GroundPosition
 	RenderSprites:
-		Image: copter2
+		Image: chopper
 
 BALLOON:
 	Inherits: ^Helicopter
@@ -583,13 +583,13 @@ DRONE2:
 DROPPOD1:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
-		Actor: scout1
+		Actor: mgpod
 	-MapEditorData:
 
 DROPPOD2:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
-		Actor: scout2
+		Actor: rocketpod
 	-MapEditorData:
 
 LANDEDPOD:
@@ -613,7 +613,7 @@ LANDEDPOD:
 	-MapEditorData:
 	-WithIdleOverlay@Shadow:
 
-BOMBER1:
+BOMBER:
 	Inherits: ^SpawnedPlane
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
@@ -629,7 +629,7 @@ BOMBER1:
 		Offset: 356, 256, 0
 		ZOffset: -256
 	Tooltip:
-		Name: actor-bomber1-name
+		Name: actor-bomber-name
 	Health:
 		HP: 2000
 	Armor:

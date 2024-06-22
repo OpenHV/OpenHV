@@ -137,11 +137,11 @@ Actors:
 	Actor54: mpspawn
 		Owner: Neutral
 		Location: 23,14
-	Actor55: seamnstr
+	Actor55: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 59,55
-	Actor56: seamnstr
+	Actor56: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 59,11

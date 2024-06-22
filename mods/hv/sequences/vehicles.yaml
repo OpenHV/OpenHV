@@ -1,11 +1,11 @@
 # License: CC-BY-SA-4.0
 
-tank1:
+buggy:
 	idle:
-		Filename: bits/tank1.png
+		Filename: bits/buggy.png
 		Facings: 8
 	turret:
-		Filename: bits/tank1.png
+		Filename: bits/buggy.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -57,12 +57,12 @@ tank1:
 		Filename: bits/units-icons.png
 		Start: 31
 
-tank2:
+bike:
 	idle:
-		Filename: bits/tank2.png
+		Filename: bits/bike.png
 		Facings: 8
 	shoot:
-		Filename: bits/tank2.png
+		Filename: bits/bike.png
 		Start: 8
 		Facings: 8
 		Length: 5
@@ -71,12 +71,12 @@ tank2:
 		Filename: bits/units-icons.png
 		Start: 8
 
-tank3:
+mbt:
 	idle:
-		Filename: bits/tank3.png
+		Filename: bits/mbt.png
 		Facings: 8
 	turret:
-		Filename: bits/tank3.png
+		Filename: bits/mbt.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -162,20 +162,20 @@ tank4:
 		Filename: bits/units-icons.png
 		Start: 38
 
-tank5:
+railguntank:
 	idle:
-		Filename: bits/tank5.png
+		Filename: bits/railguntank.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
 		Start: 6
 
-tank6:
+minelayer:
 	idle:
-		Filename: bits/tank6.png
+		Filename: bits/minelayer.png
 		Facings: 8
 	deploy:
-		Filename: bits/tank6.png
+		Filename: bits/minelayer.png
 		Start: 8
 		Length: 5
 		Facings: 8
@@ -184,12 +184,12 @@ tank6:
 		Filename: bits/units-icons.png
 		Start: 7
 
-tank7:
+stealthtank:
 	idle:
-		Filename: bits/tank7.png
+		Filename: bits/stealthtank.png
 		Facings: 8
 	shoot:
-		Filename: bits/tank7.png
+		Filename: bits/stealthtank.png
 		Start: 8
 		Facings: 8
 		Tick: 200
@@ -197,9 +197,9 @@ tank7:
 		Filename: bits/units-icons.png
 		Start: 10
 
-tank8:
+ecmtank:
 	idle:
-		Filename: bits/tank8.png
+		Filename: bits/ecmtank.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
@@ -213,12 +213,12 @@ tank9:
 		Filename: bits/units-icons.png
 		Start: 27
 
-tank10:
+lightningtank:
 	idle:
-		Filename: bits/tank10.png
+		Filename: bits/lightningtank.png
 		Facings: 8
 	shoot:
-		Filename: bits/tank10.png
+		Filename: bits/lightningtank.png
 		Start: 8
 		Facings: 8
 		Length: 3
@@ -227,9 +227,9 @@ tank10:
 		Filename: bits/units-icons.png
 		Start: 25
 
-tank11:
+merctank:
 	idle:
-		Filename: bits/tank11.png
+		Filename: bits/merctank.png
 		Facings: 8
 	muzzle: bits/muzzle.png
 		Combine:
@@ -279,9 +279,9 @@ tank11:
 		Filename: bits/units-icons.png
 		Start: 11
 
-tank12:
+dualmerctank:
 	idle:
-		Filename: bits/tank12.png
+		Filename: bits/dualmerctank.png
 		Facings: 8
 	muzzle: bits/muzzle.png
 		Combine:
@@ -331,9 +331,9 @@ tank12:
 		Filename: bits/units-icons.png
 		Start: 12
 
-tank13:
+cvit:
 	idle:
-		Filename: bits/tank13.png
+		Filename: bits/cvit.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
@@ -347,33 +347,33 @@ tank14:
 		Filename: bits/units-icons.png
 		Start: 29
 
-tank15:
+hackertank:
 	idle:
-		Filename: bits/tank15.png
+		Filename: bits/hackertank.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
 		Start: 9
 
-tank16:
+repairtank:
 	idle:
-		Filename: bits/tank16.png
+		Filename: bits/repairtank.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
 		Start: 30
 
-transprt:
+apc:
 	idle:
-		Filename: bits/transprt.png
+		Filename: bits/apc.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
 		Start: 13
 
-artil:
+artillery:
 	idle:
-		Filename: bits/artil.png
+		Filename: bits/artillery.png
 		Facings: 8
 	muzzle:
 		Filename: bits/artlflsh.png
@@ -384,12 +384,12 @@ artil:
 		Filename: bits/units-icons.png
 		Start: 2
 
-artil3:
+dualartillery:
 	idle:
-		Filename: bits/artil3.png
+		Filename: bits/dualartillery.png
 		Facings: 8
 	shoot:
-		Filename: bits/artil3.png
+		Filename: bits/dualartillery.png
 		Start: 8
 		Facings: 8
 		Tick: 100
@@ -442,9 +442,9 @@ artil3:
 		Filename: bits/units-icons.png
 		Start: 3
 
-scout1:
+mgpod:
 	idle:
-		Filename: bits/scout1.png
+		Filename: bits/mgpod.png
 		Facings: 8
 	muzzle:
 		Filename: bits/muzzle2.png
@@ -460,9 +460,9 @@ scout1:
 		Filename: bits/units-icons.png
 		Start: 0
 
-scout2:
+rocketpod:
 	idle:
-		Filename: bits/scout2.png
+		Filename: bits/rocketpod.png
 		Facings: 8
 	muzzle:
 		Filename: bits/muzzle2.png
@@ -707,13 +707,13 @@ electricpod:
 		Filename: bits/units-icons.png
 		Start: 59
 
-tyriantank:
+mbt2:
 	idle:
-		Filename: bits/tyriantank.png
+		Filename: bits/mbt2.png
 		Start: 0
 		Facings: 8
 	turret:
-		Filename: bits/tyriantank.png
+		Filename: bits/mbt2.png
 		Start: 8
 		Facings: 8
 	muzzle: bits/muzzle.png
