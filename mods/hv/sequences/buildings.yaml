@@ -457,7 +457,7 @@ tradplat2:
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 28
-		
+
 tradplat3:
 	Inherits: tradplat
 	idle:
@@ -2242,6 +2242,23 @@ techcenter2:
 	animation:
 		Filename: bits/techcenter2.png
 		Tick: 100
+	icon:
+		Filename: bits/buildings-icons.png
+		Start: 35
+
+techcenter3:
+	Inherits: techcenter
+	idle:
+		Filename: bits/techcenter3.png
+	shadow-overlay:
+		Filename: bits/techcenter3-shadow.png
+		Offset: 22, 30
+	damaged-shadow-overlay:
+		Filename: bits/techcenter3-shadow.png
+		Offset: 22, 30
+		Start: 1
+	damaged-idle:
+		Filename: bits/techcenter3.png
 	icon:
 		Filename: bits/buildings-icons.png
 		Start: 35

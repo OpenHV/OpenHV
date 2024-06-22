@@ -402,7 +402,7 @@ Torpedo:
 MissilePad:
 	Inherits: SmallSplash
 	Inherits: ^AntiGroundMissile
-	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	Range: 9c512
 	MinRange: 5c0
 	ReloadDelay: 85
@@ -430,3 +430,67 @@ MissilePad:
 			Concrete: 75
 	Warhead@Incendiary: TreeDamage
 		Damage: 1500
+
+Flak:
+	ReloadDelay: 60
+	Range: 9c0
+	Report: lightningbolt.wav
+	ValidTargets: Air
+	Burst: 3
+	BurstDelays: 5
+	Reload: 145
+	Projectile: Missile
+		Image: bullet7
+		VerticalRateOfTurn: 20
+		Speed: 600
+		MinimumLaunchSpeed: 75
+		MaximumLaunchSpeed: 96
+		Blockable: false
+		Shadow: true
+		HorizontalRateOfTurn: 100
+		Acceleration: 96
+		MinimumLaunchAngle: 128
+		MaximumLaunchAngle: 192
+		CruiseAltitude: 2c0
+		AllowSnapping: false
+		CloseEnough: 600
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 3000
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 3000
+		Percentage: 90
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Air
+
+FlakLight:
+	Inherits: Flak
+	Range: 8c0
+	Warhead@Damage: SpreadDamage
+		Spread: 128
+		Damage: 1500
+		ValidTargets: Air
+		Versus:
+			None: 30
+			Wood: 90
+			Light: 90
+			Heavy: 115
+			Concrete: 100
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 1500
+		Percentage: 90
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp

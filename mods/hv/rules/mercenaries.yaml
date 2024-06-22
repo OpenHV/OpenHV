@@ -61,7 +61,7 @@ BOMBER2:
 		Delay: 85
 		Count: 2
 	Voiced:
-		VoiceSet: SpeederVoice
+		VoiceSet: BomberVoice
 	Tooltip:
 		Name: actor-bomber2.name
 	AutoTarget:
@@ -143,7 +143,7 @@ GLIDER:
 		RequiresSelection: true
 		PipCount: 8
 	Voiced:
-		VoiceSet: SpeederVoice
+		VoiceSet: GliderVoice
 	Tooltip:
 		Name: actor-glider.name
 	AutoTarget:
@@ -282,6 +282,51 @@ RADAR3:
 		IncomingTextNotification: notification-paratroopers-incoming
 		IncomingSpeechNotification: ParatroopersIncoming
 		OrderName: FlushParatroopers
+
+TECHCENTER3:
+	Inherits: ^BaseBuilding
+	Inherits@Shape: ^3x3Shape
+	Inherits@Flame: ^BuildingFlame2
+	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 110
+		Prerequisites: ~base, radar, ~structures.gm
+		Description: actor-techcenter3.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: actor-techcenter3.name
+	Encyclopedia:
+		Description: actor-techcenter3.encyclopedia
+		Order: 81
+		Category: Buildings
+	ProvidesPrerequisite@BuildingName:
+		Prerequisite: techcenter
+		RequiresCondition: !powerdown
+	Health:
+		HP: 205000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	Power:
+		Amount: -220
+	Targetable:
+		TargetTypes: Ground, Structure
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: -1024,0,2048
+		Type: Rectangle
+			TopLeft: -1048, 512
+			BottomRight: 1048, 1524
 
 MODULE3:
 	Inherits: MODULE2
@@ -685,7 +730,7 @@ SHOTGUNPOD:
 		Weapon: LightShotGun
 	Armament@Garrisoned:
 		Name: garrisoned
-		Weapon: BunkerShotgun
+		Weapon: BunkerShotGun
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
@@ -721,50 +766,35 @@ CLUSTERPOD:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
-SABOTEUR:
+CLUSTERPOD:
 	Inherits: ^Pod
-	Inherits@Selection: ^SelectableSupportUnit
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-saboteur.description
-		Prerequisites: ~module.gm, radar
+		Description: actor-clusterpod.description
+		Prerequisites: ~module.gm, factory
 		BuildPaletteOrder: 50
 	Valued:
-		Cost: 450
+		Cost: 145
 	Tooltip:
-		Name: actor-saboteur.name
+		Name: actor-clusterpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
-		Range: 3c512
-		MinRange: 2c0
+		Range: 6c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 2c0
-	CaptureManager:
-	Captures:
-		CaptureTypes: building,
-		SabotageThreshold: 1
-		SabotageHPRemoval: 55
-		PlayerExperience: 25
-		CaptureDelay: 425
-		ConsumedByCapture: false
-		EnterCursor: ability
-		EnterBlockedCursor: move-blocked
-		RequiresCondition: !ecm-disabled
-		ValidRelationships: Enemy
-	Voiced:
-		VoiceSet: TechnicianVoice
-	-Guard:
-	Health:
-		HP: 9580
-	Mobile:
-		Speed: 75
-		Voice: Move
-	DetectCloaked:
-		Range: 2c0
-	RenderSprites:
-		Image: technician
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightCluster
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightClusterBunker
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
 
 ## ships
 
@@ -1059,16 +1089,17 @@ TANK9:
 	Turreted:
 		TurnSpeed: 25
 	AutoTarget:
-		ScanRadius: 8
+		ScanRadius: 10
 		InitialStance: AttackAnything
 	AutoTargetPriority@Default:
 		ValidTargets: DamagedVehicle
 	Armament:
-		Weapon: RepairBolt
+		Weapon: RepairRailgun
 		Cursor: repair
 		OutsideRangeCursor: repair
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
+		LocalOffset: 275,10,95
 	AttackTurreted:
 		PauseOnCondition: ecm-disabled
 	Voiced:
@@ -1076,12 +1107,13 @@ TANK9:
 	WithSpriteTurret:
 	-Guard:
 
-AATANK.MERCENARY:
+AATANK3:
 	Inherits: AATANK
+	Tooltip:
+		Name: actor-aatank3.name
 	Buildable:
 		Prerequisites: ~factory.gm
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: aatank
-	RenderSprites:
-		Image: aatank
+		Description: actor-aatank3-description
+	Armament:
+		Weapon: FlakLight
+		LocalOffset: 250,250,150, 250,-250,150

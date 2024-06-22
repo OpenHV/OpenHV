@@ -255,6 +255,13 @@ actor-techcenter =
    .name = Technology Download Center
    .encyclopedia = Company policy is that classified technology can not be transported with unguarded colony ships. It has be wired in from an encrypted interstellar connection and stored in a secure facility. Only then the production facilities get access to the blue prints for machinery designed to resolve conflicts fast and efficient. This facilities requires a lot of power to keep the servers running. Powering it down and access to restricted technology is temporarily lost.
 
+actor-techcenter3 =
+   .description = Grants access to advanced weaponry.
+   .name = Research Center
+   .encyclopedia = The base buildings of the U.M.O.G. company are very versatile and are easy to transport through airlifters from a planet to another. But the most advanced technologies that require research therefore can't be easily obtained through satellite connections with the U.M.O.G. company. The Research Center solves that issue.
+
+    The Research Center is a protected dome, filled with city buildings, that are the home of many science labs. Scientists and physicists can then study and look out for new technologies, allow the Ginkua buildings to unlock its more advanced weaponry.
+
 actor-oresmelt =
    .name = Ore Smelter
    .encyclopedia = The ore smelter is an economy boosting building for long lasting conflicts. It refines the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, heating up the ore requires a lot of energy.
@@ -684,6 +691,12 @@ actor-aatank =
 actor-aatank2-description = Mobile tank with lightning gun.
       Strong vs Aircraft
       Cannot attack grounds units.
+
+actor-aatank3 =
+   .description = Mobile tank with flak armament.
+      Strong vs Aircraft
+      Cannot attack grounds units.
+   .name = Mobile Flak
 
 actor-transprt =
    .name = Transport Tank

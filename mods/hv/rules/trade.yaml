@@ -73,15 +73,15 @@ AATANK2.TRADE:
 		OverrideActor: aatank2
 
 AATANK3.TRADE:
-	Inherits: AATANK.MERCENARY
+	Inherits: AATANK3
 	Buildable:
 		Queue: Trade
 	VariedCostMultiplier:
 		Queues: Trade
 	RenderSprites:
-		Image: aatank
+		Image: aatank3
 	UpdatesPlayerStatistics:
-		OverrideActor: aatank
+		OverrideActor: aatank3
 
 TRANSPRT.TRADE:
 	Inherits: TRANSPRT

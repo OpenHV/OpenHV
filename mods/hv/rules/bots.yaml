@@ -45,6 +45,7 @@ Player:
 			oilfacility: 4
 			tradplat: 1
 			techcenter: 1
+			techcenter3: 1
 			harbor: 1
 			harbor2: 1
 			harbor3: 1
@@ -74,6 +75,7 @@ Player:
 			starport2: 1
 			starport3: 1
 			techcenter: 1
+			techcenter3: 1
 			oresmelt: 9
 			orepurifier: 9
 			oilfacility: 9
@@ -110,7 +112,7 @@ Player:
 		NavalUnitsTypes: boat, boat2, boat3, patrolboat, missileboat, spiderboat, submarine, submarine2, carrier
 		AirUnitsTypes: plane1, plane2, bomber2, copter, banshee
 		ConstructionYardTypes: base, base2
-		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, field, silo
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory3, factory4, harbor, harbor2, tradplat, starport, starport2, techcenter, techcenter3, bunker, bunker2, turret, aaturret, howitzer, dropzone, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai

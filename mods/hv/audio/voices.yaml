@@ -125,6 +125,22 @@ SpeederVoice:
 		Action: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_fire_the_missiles, ship1_intercepting_hostiles
 		Guard: guarding
 
+GliderVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: ship2_acknowledged, ship2_aeronautics_operational, ship2_awaiting_orders, ship2_ready_for_action
+		Move: ship2_affirmative, ship2_closing_in, ship2_not_a_problem, ship2_roger_that
+		Action: ship2_affirmative, ship2_discharging_munitions, ship2_not_a_problem, ship2_roger_that, ship2_sweep_the_area
+		Guard: guarding
+
+BomberVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: bomber2_aeronautics_operational, bomber2_avionics_online, bomber2_awaiting_orders, bomber2_ready_for_action
+		Move: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_not_a_problem, bomber2_thrusters_engaged
+		Action: bomber2_acknowledged, bomber2_affirmative, bomber2_roger_that, bomber2_bombing_target, bomber2_dropping_bombs
+		Guard: guarding
+
 DroneVoice:
 	DefaultVariant: .wav
 	Voices:

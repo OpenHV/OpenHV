@@ -993,7 +993,7 @@ TECHCENTER:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 110
-		Prerequisites: ~base, radar
+		Prerequisites: ~base, radar, ~!structures.gm
 		Description: actor-techcenter.description
 	Valued:
 		Cost: 2000

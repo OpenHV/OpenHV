@@ -154,22 +154,17 @@ RepairTorch:
 		ValidTargets: DamagedPod
 		Spread: 1
 
-RepairBolt:
+RepairRailgun:
 	ReloadDelay: 5
 	Range: 5c0
-	MinRange: 1c512
+	MinRange: 1c0
 	ValidTargets: DamagedVehicle
 	TargetActorCenter: true
-	Projectile: EnergyBolt
-		Radius: 3
-		Duration: 5
-		InnerLightness: 255
-		OuterLightness: 80
-		Color: 9bc2eb
-		Distortion: 200
-		DistortionAnimation: 150
-		SegmentLength: 0c512
+	Projectile: LaserZap
+		Width: 0c100
+		Shape: Cylindrical
 		ZOffset: 2048
+		Color: DFEB00
 	Warhead@Repair: TargetDamage
 		DebugOverlayColor: 00FF00
 		Damage: -375

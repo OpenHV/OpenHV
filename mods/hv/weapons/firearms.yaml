@@ -352,7 +352,7 @@ HeavyShotGun:
 	Range: 7c512
 	MinRange: 4c0
 
-BunkerShotgun:
+BunkerShotGun:
 	Inherits: LightShotGun
 	ReloadDelay: 25
 	Range: 8c0
