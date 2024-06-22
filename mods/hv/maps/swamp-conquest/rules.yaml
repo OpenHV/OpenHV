@@ -1,11 +1,16 @@
 ^BaseWorld:
+	TintPostProcessEffect:
+		Red: 1
+		Green: 1.2
+		Blue: 0.95
+		Ambient: 1
 	TerrainLighting:
-		Intensity: 0.65
+		Intensity: 0.73
 	CloudSpawner:
 		Image: cloud
 		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
 		Palette: cloud
-		Speed: 20, 30
+		Speed: 10, 20
 
 SWAMPLIGHT:
 	Inherits: LIGHT
@@ -15,6 +20,79 @@ SWAMPLIGHT:
 		RedTint: 0.01
 		GreenTint: 1.50
 		BlueTint: 0.01
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 04c640
+		Intensity: 0.01
+		RedTint: 0.95
+		GreenTint: 0.45
+		BlueTint: 0.85
+
+RESOURCELIGHT_BASE:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 04c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.55
+		BlueTint: 0.75
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 25c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.780
+		BlueTint: 0.45
+
+HILL_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.75
+		GreenTint: 0.40
+		BlueTint: 0.30
+
+HILL_B:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.60
+
+HILL_P:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.65
+		GreenTint: 0.45
+		BlueTint: 0.65
+
+
+HILL_D:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.35
+		BlueTint: -0.35
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.35
+		BlueTint: -0.35
 
 HARBOR:
 	Buildable:

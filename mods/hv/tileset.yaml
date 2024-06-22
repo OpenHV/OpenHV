@@ -12625,3 +12625,99 @@ Templates:
 		Categories: Tech, Snow
 		Tiles:
 			0: Snow
+	Template@1664:
+		Id: 1664
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 0
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1665:
+		Id: 1665
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 1
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1666:
+		Id: 1666
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 2
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1667:
+		Id: 1667
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 3
+		Size: 1,1
+		Categories: Littoral, Road
+		Tiles:
+			0: Road
+	Template@1668:
+		Id: 1668
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 0
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1669:
+		Id: 1669
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 1
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1670:
+		Id: 1670
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 2
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1671:
+		Id: 1671
+		Images: bits/terrain/watrroad-extra.png
+		Frames: 3
+		Size: 1,1
+		Categories: Swamp, Road
+		Tiles:
+			0: Road
+	Template@1672:
+		Id: 1672
+		Images: bits/terrain/lavaroad-extra.png
+		Frames: 0
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@1673:
+		Id: 1673
+		Images: bits/terrain/lavaroad-extra.png
+		Frames: 1
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@1674:
+		Id: 1674
+		Images: bits/terrain/lavaroad-extra.png
+		Frames: 2
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road
+	Template@1675:
+		Id: 1675
+		Images: bits/terrain/lavaroad-extra.png
+		Frames: 3
+		Size: 1,1
+		Categories: Lava, Road
+		Tiles:
+			0: Road

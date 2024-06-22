@@ -539,6 +539,47 @@ DRONE:
 		RearmActors: carrier
 	-MapEditorData:
 
+DRONE2:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: actor-drone2.name
+	Health:
+		HP: 5000
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Armament:
+		Weapon: DronePulseGun
+		MuzzleSequence: muzzle
+		LocalOffset: -75,75,0, -75,-75,0
+		PauseOnCondition: !ammo
+	Aircraft:
+		Speed: 200
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+	AttackAircraft:
+		FacingTolerance: 92
+		Voice: Attack
+	AmmoPool:
+		Ammo: 50
+		AmmoCondition: ammo
+	CarrierChild:
+		LandingDistance: 8c0
+	Rearmable:
+		RearmActors: mothership
+	WithMuzzleOverlay:
+	-MapEditorData:
+
 DROPPOD1:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
@@ -687,3 +728,104 @@ AIRLIFTER:
 	Cargo:
 		MaxWeight: 5
 		Types: Vehicles
+
+MOTHERSHIP:
+	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: actor-mothership.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 100
+		Prerequisites: ~disabled
+		Description: actor-mothership.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 100000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 6c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 100
+		CruiseAltitude: 3c0
+		AltitudeVelocity: 0c56
+		InitialFacing: 512
+	HitShape:
+		Type: Circle
+			Radius: 1024
+	Voiced:
+		VoiceSet: DropshipVoice
+	Selectable:
+		DecorationBounds: 2048, 2048
+	SpawnActorOnDeath:
+		Actor: MOTHERSHIP.Husk
+		RequiresCondition: airborne
+	CarrierParent:
+		Actors: drone2, drone2, drone2, drone2, drone2
+		RespawnTicks: 100
+		SpawnAllAtOnce: true
+	WithCarrierParentPipsDecoration:
+	WithCarrierHatchAnimation:
+	Exit:
+		SpawnOffset: 0,0,0
+		Facing: 0
+	Turreted@DroneLauncher:
+		Turret: primary
+		Offset: 0,0,0
+		TurnSpeed: 240
+	Turreted@LaserTurret:
+		Turret: secondary
+		Offset: -200,0,-100
+		TurnSpeed: 120
+	AttackTurreted:
+	Armament@DroneLauncher:
+		Name: primary
+		Weapon: Drone2Launcher
+		LocalOffset: 0,0,-100
+	Armament@LaserTurret:
+		Name: secondary
+		Weapon: MothershipLaser
+		LocalOffset: 500,300,-100, 500,-300,-100
+	Voiced:
+		VoiceSet: MotherShipVoice
+	-GrantRandomCondition@SpawnPilot:
+	-Explodes@SpawnPilot:
+
+MOTHERSHIP.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-mothership-husk.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 43
+	LeavesTrails:
+		Offsets: -853,0,171
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: mothership

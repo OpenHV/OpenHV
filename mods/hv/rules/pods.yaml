@@ -23,14 +23,17 @@ SCOUT1:
 	Armament@Primary:
 		Weapon: LightMachineGun
 		MuzzleSequence: muzzle
+		LocalOffset: 200,0,0
 	Armament@Garrisoned:
 		Name: garrisoned
 		Weapon: BunkerChaingun
 		MuzzleSequence: muzzle
+		LocalOffset: 200,0,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
 	WithMuzzleOverlay:
+		IgnoreOffset: true
 
 SCOUT2:
 	Inherits: ^Pod

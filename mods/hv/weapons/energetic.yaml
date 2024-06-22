@@ -178,7 +178,7 @@ RepairRailgun:
 
 Plasma:
 	Inherits: BigSplash
-	ValidTargets: Structure, Wall
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 8c0
 	MinRange: 1c0
@@ -195,7 +195,10 @@ Plasma:
 	Warhead@Damage: SpreadDamage
 		Damage: 1750
 		Versus:
+			None: 15
 			Steel: 85
+			Light: 15
+			Heavy: 15
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -530,3 +533,40 @@ HackBack:
 		Duration: 375
 		InvalidTargets: Structure
 		ValidRelationships: Enemy, Neutral
+
+MothershipLaser:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 5
+	Range: 8c0
+	MinRange: 1c0
+	Report: laserblaster_newlocknew.wav
+	Projectile: Bullet
+		Speed: 550
+		Blockable: false
+		Inaccuracy: 0
+		Image: 
+		ContrailLength: 4
+		ContrailStartWidth: 0c100
+		ContrailEndWidth: 0c32
+		ContrailStartColor: d03000
+		ContrailEndColor: 400000
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+		InvalidTargets: Vehicle, Structure
+	Warhead@Damage: SpreadDamage
+		Damage: 1000
+		Versus:
+			None: 65
+			Steel: 75
+			Light: 70
+			Heavy: 110
+			Concrete: 50
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 1750
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.wav
+		ValidTargets: Ground, Air, Ship, Tree

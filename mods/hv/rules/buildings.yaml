@@ -1069,6 +1069,7 @@ ORESMELT:
 		Amount: 10
 		RequiresCondition: !build-incomplete && !disabled
 	WithIdleAnimation:
+		Interval: 40
 		RequiresCondition: !build-incomplete && !disabled
 
 OREPURIFIER:
@@ -1084,6 +1085,8 @@ OREPURIFIER:
 	Encyclopedia:
 		Description: actor-orepurifier.encyclopedia
 	-WithIdleOverlay@Shadow:
+	WithIdleAnimation:
+		Interval: 35
 
 BUNKER:
 	Inherits: ^DefenseBuilding
@@ -1724,10 +1727,27 @@ TELEVATR:
 		Amount: -50
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	TeleportNetworkPrimaryExit:
+	TeleportPower:
+		Dimensions: 3, 3
+		Footprint: xxx xxx xxx
+		DisplayRadarPing: True
+		ChargeInterval: 3000
+		OrderName: BeamUsUp
+		Icon: null
+		Name: actor-televatr.teleportpower-name
+		Description: actor-televatr.teleportpower-description
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification:
+		BeginChargeSpeechNotification:
+		EndChargeSpeechNotification:
+		SelectTargetTextNotification: notification-select-target
+		InsufficientPowerTextNotification: notification-insufficient-power
+		BeginChargeTextNotification: notification-televatr-charging
+		EndChargeTextNotification: notification-televatr-ready
 	TeleportNetwork:
 		Type: subspace
 		RequiresCondition: !disabled
+	TeleportNetworkPrimaryExit:
 	WithTeleportChargeAnimation:
 	RallyPoint:
 		CirclesSequence:
