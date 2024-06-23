@@ -729,16 +729,12 @@ SHOTGUNPOD:
 	AmmoPool:
 		Ammo: 25
 		AmmoCondition: ammo
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-		PipCount: 25
 	ReloadAmmoPool:
 		Delay: 55
 		Count: 4
 	Armament@Primary:
 		Weapon: LightShotGun
+		LocalOffset: 35,185,150, 35,-185,150
 		PauseOnCondition: !ammo
 	Armament@Garrisoned:
 		Name: garrisoned

@@ -347,8 +347,6 @@ LightShotGun:
 	Range: 5c0
 	Projectile: Bullet
 		Image: bullet5
-		TrailImage: bullet17-trace
-		TrailSequences: flame_trace_a, flame_trace_b
 		Speed: 800
 		Blockable: false
 		LaunchAngle: 50
