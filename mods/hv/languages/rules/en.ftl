@@ -266,7 +266,7 @@ actor-techcenter3 =
    .name = Research Center
    .encyclopedia = The base buildings of the U.M.O.G. company are very versatile and are easy to transport through airlifters from a planet to another. But the most advanced technologies that require research therefore can't be easily obtained through satellite connections with the U.M.O.G. company. The Research Center solves that issue.
 
-    The Research Center is a protected dome, filled with city buildings, that are the home of many science labs. Scientists and physicists can then study and look out for new technologies, allow the Ginkua buildings to unlock its more advanced weaponry.
+    The Research Center is a protected dome, filled with city buildings, that are the home of many science labs. Scientists and physicists can then study and look out for new technologies, allow the Ginkua buildings to unlock their more advanced weaponry.
 
 actor-oresmelt =
    .name = Ore Smelter
