@@ -78,7 +78,7 @@ BOMBER2:
 		TrailLength: 12
 		ZOffset: -1000
 	RenderSprites:
-		Image: bomber1
+		Image: bomber
 
 GLIDER:
 	Inherits: ^Plane
