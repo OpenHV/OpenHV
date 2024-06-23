@@ -30,7 +30,7 @@ BOMBER2:
 	Armor:
 		Type: Light
 	Valued:
-		Cost: 1100
+		Cost: 1500
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
@@ -44,7 +44,7 @@ BOMBER2:
 		Voice: Move
 		RepulsionSpeed: 40
 		MaximumPitch: 56
-		CruiseAltitude: 4560
+		CruiseAltitude: 5560
 	Armament:
 		Weapon: LightBomb
 		LocalOffset: 250,0,0
@@ -71,11 +71,11 @@ BOMBER2:
 		InvalidTargets: Structure
 	Contrail@Right:
 		Offset: -298,-164,0
-		TrailLength: 12
+		TrailLength: 7
 		ZOffset: -1000
 	Contrail@Left:
 		Offset: -298,164,0
-		TrailLength: 12
+		TrailLength: 7
 		ZOffset: -1000
 	RenderSprites:
 		Image: bomber
@@ -308,7 +308,7 @@ TECHCENTER3:
 		Prerequisite: techcenter
 		RequiresCondition: !powerdown
 	Health:
-		HP: 205000
+		HP: 105500
 	Armor:
 		Type: Steel
 	RevealsShroud:
