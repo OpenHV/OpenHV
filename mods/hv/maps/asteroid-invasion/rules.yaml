@@ -32,7 +32,7 @@ Player:
 					CheckRadius: 3c0
 
 World:
-	TintPostProcessEffect:
+	GlobalLightingPaletteEffect:
 		Red: 0.6
 		Green: 0.6
 		Blue: 0.8
@@ -58,18 +58,18 @@ Entry:
 	MapEditorData:
 		Categories: System
 
-ARTIL3.TRADE:
-	Inherits: ARTIL3
+DUALARTILLERY.TRADE:
+	Inherits: DUALARTILLERY
 	Buildable:
 		Queue: Trade
-		Prerequisites: tradplat, techcenter
+		Prerequisites: trader, techcenter
 	VariedCostMultiplier:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: artil3
+		Image: dualartillery
 	UpdatesPlayerStatistics:
-		OverrideActor: artil3
+		OverrideActor: dualartillery
 
 DROPZONE:
 	Inherits: ^BaseBuilding
@@ -78,23 +78,23 @@ DROPZONE:
 	Buildable:
 		BuildPaletteOrder: 150
 		Queue: Defense
-		Prerequisites: techcenter, tradplat
+		Prerequisites: techcenter, trader
 		Description: actor-dropzone-asteroid-invasion.description
 		BuildLimit: 3
 
-TANK1.TRADE:
+BUGGY.TRADE:
 	Buildable:
 		Prerequisites: module, factory
 
-TANK2.TRADE:
+BIKE.TRADE:
 	Buildable:
 		Prerequisites: module, factory
 
-TANK3.TRADE:
+MBT.TRADE:
 	Buildable:
 		Prerequisites: factory
 
-TYRIANTANK.TRADE:
+MBT2.TRADE:
 	Buildable:
 		Prerequisites: factory
 
@@ -102,18 +102,18 @@ AATANK.TRADE:
 	Buildable:
 		Prerequisites: factory
 
-TANK5.TRADE:
+RAILGUNTANK.TRADE:
 	Buildable:
 		Prerequisites: factory, techcenter
 
-TANK15.TRADE:
+HACKERTANK.TRADE:
 	Buildable:
-		Prerequisites: factory, radar, tradplat
+		Prerequisites: factory, radar, trader
 
 MISSILETANK.TRADE:
 	Buildable:
 		Prerequisites: factory, radar, techcenter
 
-TANK8.TRADE:
+ECMTANK.TRADE:
 	Buildable:
-		Prerequisites: factory, techcenter, tradplat
+		Prerequisites: factory, techcenter, trader

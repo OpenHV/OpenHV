@@ -39,11 +39,11 @@ Players:
 		Enemies: Creeps
 
 Actors:
-	Actor0: seamnstr
+	Actor0: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 36,17
-	Actor1: seamnstr
+	Actor1: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 77,17
@@ -291,11 +291,11 @@ Actors:
 	Actor105: sandmisc6
 		Owner: Neutral
 		Location: 88,86
-	Actor106: seamnstr
+	Actor106: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 52,90
-	Actor107: seamnstr
+	Actor107: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 61,90
@@ -353,11 +353,11 @@ Actors:
 	Actor133: stnrock15
 		Owner: Neutral
 		Location: 56,9
-	Actor134: seamnstr
+	Actor134: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 101,96
-	Actor135: seamnstr
+	Actor135: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 12,96

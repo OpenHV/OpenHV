@@ -64,9 +64,9 @@ ShipVoice:
 TransportHelicopterVoice:
 	DefaultVariant: .wav
 	Voices:
-		Select: copter2_aeronautics_operational, copter2_avionics_online, copter2_awaiting_orders
-		Move: copter2_acknowledged, copter2_affirmative, copter2_heading_to_new_lz, copter2_not_a_problem, copter2_roger_that, copter2_verify_new_coordinate
-		Action: copter2_acknowledged, copter2_affirmative, copter2_not_a_problem, copter2_ready_for_action, copter2_roger_that, copter2_special_delivery
+		Select: chopper_aeronautics_operational, chopper_avionics_online, chopper_awaiting_orders
+		Move: chopper_acknowledged, chopper_affirmative, chopper_heading_to_new_lz, chopper_not_a_problem, chopper_roger_that, chopper_verify_new_coordinate
+		Action: chopper_acknowledged, chopper_affirmative, chopper_not_a_problem, chopper_ready_for_action, chopper_roger_that, chopper_special_delivery
 		Guard: guarding
 
 AttackHelicopterVoice:
@@ -235,4 +235,4 @@ MotherShipVoice:
 		Select: mothershipselect1, mothershipselect2, mothershipselect3
 		Move: mothershipaction1, mothershipaction2, mothershipaction3
 		Action: mothershipattack1, mothershipattack2, mothershipattack3
-		Guard: guarding	
+		Guard: guarding

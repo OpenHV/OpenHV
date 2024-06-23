@@ -525,27 +525,27 @@ Actors:
 	Actor51: icicle1
 		Owner: Neutral
 		Location: 65,60
-	Actor205: seamnstr
+	Actor205: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 44,47
-	Actor206: seamnstr
+	Actor206: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 85,82
-	Actor212: seamnstr
+	Actor212: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 105,80
-	Actor213: seamnstr
+	Actor213: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 24,49
-	Actor208: seamnstr
+	Actor208: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 50,82
-	Actor211: seamnstr
+	Actor211: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 79,47
@@ -645,11 +645,11 @@ Actors:
 	Actor250: crate38
 		Owner: Neutral
 		Location: 91,107
-	Actor251: seamnstr
+	Actor251: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 21,123
-	Actor252: seamnstr
+	Actor252: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 108,5

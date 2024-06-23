@@ -93,7 +93,7 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 59,119
-	Actor31: seamnstr
+	Actor31: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 117,114
@@ -229,15 +229,15 @@ Actors:
 	Actor74: treegrs10
 		Owner: Neutral
 		Location: 69,103
-	Actor75: seamnstr
+	Actor75: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 14,14
-	Actor76: seamnstr
+	Actor76: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 18,114
-	Actor77: seamnstr
+	Actor77: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 115,17

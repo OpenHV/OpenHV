@@ -265,7 +265,7 @@ RADAR3:
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
 		Cordon: 10c0
-		DropItems: tank11, tank11, tank11, tank11, aatank, tank9, tank12, tank12
+		DropItems: merctank, merctank, merctank, merctank, aatank, engineertank, dualmerctank, dualmerctank
 		CameraActor: camera
 		ChargeInterval: 4100
 		Icon: airlifterdrop
@@ -448,8 +448,8 @@ STARPORT3:
 		Text: PRIMARY
 		Font: TinyPixel
 
-FACTORY5:
-	Inherits: FACTORY3
+FACTORY3:
+	Inherits: FACTORY
 	Inherits@Shape: ^3x3Shape
 	Building:
 		Footprint: +++ +++ xxx xxx
@@ -1059,20 +1059,20 @@ MISSILETANK2:
 	Selectable:
 		DecorationBounds: 1536, 1536
 
-TANK9:
+ENGINEERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1050
 	Tooltip:
-		Name: actor-tank9.name
+		Name: actor-engineertank.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: ~factory.gm, techcenter, radar
 		Queue: Tank
-		Description: actor-tank9.description
+		Description: actor-engineertank.description
 	Mobile:
 		TurnSpeed: 25
 		Speed: 85

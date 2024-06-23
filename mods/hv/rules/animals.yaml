@@ -109,12 +109,12 @@ SEED:
 	Voiced:
 		VoiceSet: SeedVoice
 
-SEAMNSTR:
+SEAMONSTER:
 	Inherits: ^Ship
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: actor-seamnstr-name
+		Name: actor-seamonster-name
 	Health:
 		HP: 70000
 	Armor:

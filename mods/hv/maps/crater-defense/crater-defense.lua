@@ -1,9 +1,9 @@
 CurrentWave = 1
 Breaches = 10
 
-Machine = { "scout1", "scout1", "scout1" }
-Rocket = { "scout2", "scout2" }
-Tank = { "tank3" }
+Machine = { "mgpod", "mgpod", "mgpod" }
+Rocket = { "rocketpod", "rocketpod" }
+Tank = { "mbt" }
 
 Waves =
 {

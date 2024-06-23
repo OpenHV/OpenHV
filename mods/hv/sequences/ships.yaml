@@ -1,11 +1,11 @@
 # License: CC-BY-SA-4.0
 
-boat:
+mediumboat:
 	idle:
-		Filename: bits/boat1.png
+		Filename: bits/mediumboat.png
 		Facings: 8
 	turret:
-		Filename: bits/boat1.png
+		Filename: bits/mediumboat.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -17,24 +17,24 @@ boat:
 		Filename: bits/units-icons.png
 		Start: 15
 
-boat2:
+railgunboat:
 	idle:
-		Filename: bits/boat2.png
+		Filename: bits/railgunboat.png
 		Facings: 8
 	turret:
-		Filename: bits/boat2.png
+		Filename: bits/railgunboat.png
 		Start: 8
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
 		Start: 16
 
-boat3:
+lightboat:
 	idle:
-		Filename: bits/boat3.png
+		Filename: bits/lightboat.png
 		Facings: 8
 	turret:
-		Filename: bits/boat3.png
+		Filename: bits/lightboat.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -86,12 +86,12 @@ boat3:
 		Filename: bits/units-icons.png
 		Start: 14
 
-submarine:
+boomer:
 	idle:
-		Filename: bits/submarine.png
+		Filename: bits/boomer.png
 		Facings: 8
 	shoot:
-		Filename: bits/submarine.png
+		Filename: bits/boomer.png
 		Start: 8
 		Length: 2
 		Facings: 8
@@ -113,9 +113,9 @@ carrier:
 		Filename: bits/units-icons.png
 		Start: 46
 
-submarine2:
+submarine:
 	idle:
-		Filename: bits/submarine2.png
+		Filename: bits/submarine.png
 		Facings: 8
 	icon:
 		Filename: bits/units-icons.png
@@ -165,7 +165,7 @@ navaltransport:
 		Start: 56
 		Offset: 2, 0
 
-waterminelayer:
+navalminelayer:
 	idle:
 		Filename: bits/water-minelayer.png
 		Facings: 8
@@ -182,7 +182,7 @@ waterminelayer:
 		Filename: bits/units-icons.png
 		Start: 57
 
-waterminelayer2:
+navalminelayer2:
 	idle:
 		Filename: bits/water-minelayer2.png
 	idle-empty:

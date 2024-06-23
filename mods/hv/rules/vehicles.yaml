@@ -1,19 +1,21 @@
 # License: CC-BY-SA-4.0
 
-TANK3:
+MBT:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: actor-tank3.name
+		Name: actor-mbt.name
+	Selectable:
+		Class: mbt
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: ~factory.yi
 		Queue: Tank
-		Description: actor-tank3.description
+		Description: actor-mbt.description
 	Mobile:
 		TurnSpeed: 25
 		Speed: 95
@@ -42,8 +44,8 @@ TANK3:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-TYRIANTANK:
-	Inherits: TANK3
+MBT2:
+	Inherits: MBT
 	Buildable:
 		Prerequisites: ~factory.sc
 	Turreted:
@@ -64,6 +66,8 @@ AATANK:
 		Cost: 500
 	Tooltip:
 		Name: actor-aatank.name
+	Selectable:
+		Class: aatank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -105,17 +109,17 @@ AATANK2:
 	WithTurretAttackAnimation:
 		Sequence: shoot
 
-TRANSPRT:
+APC:
 	Inherits: ^TrackedVehicle
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: actor-transprt.name
+		Name: actor-apc.name
 	Buildable:
 		Queue: Tank
 		Prerequisites: factory, module
 		BuildPaletteOrder: 40
-		Description: actor-transprt.description
+		Description: actor-apc.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -137,6 +141,7 @@ TRANSPRT:
 		LoadingCondition: notmobile
 	Selectable:
 		DecorationBounds: 2048, 1843
+		Class: apc
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -146,18 +151,20 @@ TRANSPRT:
 		Sequence: teleport-large
 	-Passenger:
 
-ARTIL:
+ARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-artil.name
+		Name: actor-artillery.name
+	Selectable:
+		Class: artillery
 	Buildable:
 		Queue: Tank
 		Prerequisites: factory, radar
 		BuildPaletteOrder: 50
-		Description: actor-artil.description
+		Description: actor-artillery.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -208,6 +215,8 @@ RADARTANK:
 	Tooltip@DEPLOYED:
 		Name: actor-radartank.deployed--name
 		RequiresCondition: deployed
+	Selectable:
+		Class: radartank
 	Health:
 		HP: 50000
 	Armor:
@@ -259,19 +268,21 @@ RADARTANK:
 		RequiresCondition: !ecm-disabled && !undeployed
 		DetectionTypes: Cloak, Underwater
 
-TANK16:
+REPAIRTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-tank16.name
-		GenericName: actor-tank16.generic-name
+		Name: actor-repairtank.name
+		GenericName: actor-repairtank.generic-name
+	Selectable:
+		Class: repairtank
 	Buildable:
 		Queue: Utility
-		Prerequisites: tradplat
+		Prerequisites: trader
 		BuildPaletteOrder: 50
-		Description: actor-tank16.description
+		Description: actor-repairtank.description
 	Armament:
 		Weapon: RepairBeam
 		Cursor: repair
@@ -302,18 +313,20 @@ TANK16:
 	AutoTargetPriority@Default:
 		ValidTargets: DamagedVehicle
 
-TANK6:
+MINELAYER:
 	Inherits: ^TrackedVehicle
 	Inherits@Selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Utility
 		BuildPaletteOrder: 60
-		Prerequisites: tradplat
-		Description: actor-tank6.description
+		Prerequisites: trader
+		Description: actor-minelayer.description
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: actor-tank6.name
+		Name: actor-minelayer.name
+	Selectable:
+		Class: minelayer
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -344,7 +357,7 @@ TANK6:
 	Explodes:
 		Weapon: AntiTankMine
 	Rearmable:
-		RearmActors: tradplat
+		RearmActors: trader
 	Targetable:
 		TargetTypes: Ground, Vehicle, Mine
 	WithAmmoPipsDecoration:
@@ -354,19 +367,21 @@ TANK6:
 	WithDeployMineAnimation:
 		Sequence: deploy
 
-TANK5:
+RAILGUNTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: actor-tank5.name
-		GenericName: actor-tank5.generic-name
+		Name: actor-railguntank.name
+		GenericName: actor-railguntank.generic-name
+	Selectable:
+		Class: railguntank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, techcenter
 		BuildPaletteOrder: 70
-		Description: actor-tank5.description
+		Description: actor-railguntank.description
 	Armament:
 		Weapon: railgun
 		LocalOffset: 325,400,0
@@ -390,19 +405,21 @@ TANK5:
 	RevealsShroud@Hacked:
 		Range: 4c0
 
-TANK10:
+LIGHTNINGTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 70
 		Prerequisites: ~factory.yi, techcenter
-		Description: actor-tank10.description
+		Description: actor-lightningtank.description
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: actor-tank10.name
-		GenericName: actor-tank10.generic-name
+		Name: actor-lightningtank.name
+		GenericName: actor-lightningtank.generic-name
+	Selectable:
+		Class: lightningtank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -428,18 +445,20 @@ TANK10:
 	WithAttackAnimation:
 		Sequence: shoot
 
-TANK7:
+STEALTHTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 80
 		Prerequisites: ~factory.yi, techcenter
-		Description: actor-tank7.description
+		Description: actor-stealthtank.description
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: actor-tank7.name
+		Name: actor-stealthtank.name
+	Selectable:
+		Class: stealthtank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -478,19 +497,21 @@ TANK7:
 	Voiced:
 		VoiceSet: StealthTankVoice
 
-TANK11:
+MERCTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 850
 	Tooltip:
-		Name: actor-tank11.name
-		GenericName: actor-tank11.generic-name
+		Name: actor-merctank.name
+		GenericName: actor-merctank.generic-name
+	Selectable:
+		Class: merctank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.gm
 		BuildPaletteOrder: 10
-		Description: actor-tank11.description
+		Description: actor-merctank.description
 	Armament:
 		Weapon: ^Cannon
 		MuzzleSequence: muzzle
@@ -516,12 +537,12 @@ TANK11:
 		Range: 3c0
 	WithMuzzleOverlay:
 
-TANK12:
-	Inherits: TANK11
+DUALMERCTANK:
+	Inherits: MERCTANK
 	Buildable:
 		BuildPaletteOrder: 15
 		Prerequisites:  ~factory.gm, radar
-		Description: actor-tank12-description
+		Description: actor-dualmerctank-description
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
@@ -535,19 +556,21 @@ TANK12:
 		TurnSpeed: 15
 		Speed: 80
 
-TANK8:
+ECMTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: actor-tank8.name
-		GenericName: actor-tank8.generic-name
+		Name: actor-ecmtank.name
+		GenericName: actor-ecmtank.generic-name
+	Selectable:
+		Class: ecmtank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, techcenter, tradplat
+		Prerequisites: ~factory.sc, techcenter, trader
 		BuildPaletteOrder: 60
-		Description: actor-tank8.description
+		Description: actor-ecmtank.description
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -578,20 +601,22 @@ TANK8:
 	DetectCloaked:
 		Range: 2c0
 
-ARTIL3:
+DUALARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1750
 	Tooltip:
-		Name: actor-artil3.name
+		Name: actor-dualartillery.name
+	Selectable:
+		Class: dualartillery
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 100
 		Prerequisites: ~disabled
-		Description: actor-artil3.description
+		Description: actor-dualartillery.description
 	Health:
 		HP: 35000
 	Armor:
@@ -636,6 +661,8 @@ BUILDER:
 		Cost: 1000
 	Tooltip:
 		Name: actor-builder.name
+	Selectable:
+		Class: builder
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -677,11 +704,15 @@ BUILDER2:
 		Prerequisites: ~structures.sc
 	Transforms:
 		IntoActor: outpost2
+	Selectable:
+		Class: builder
 
 COLLECTOR:
 	Inherits: ^Vehicle
 	Tooltip:
 		Name: actor-collector-name
+	Selectable:
+		Class: collector
 	Health:
 		HP: 10000
 	Armor:
@@ -714,6 +745,8 @@ MINER:
 		Cost: 1100
 	Tooltip:
 		Name: actor-miner.name
+	Selectable:
+		Class: miner
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -760,6 +793,8 @@ MISSILETANK:
 	Tooltip:
 		Name: actor-missiletank.name
 		GenericName: actor-missiletank.generic-name
+	Selectable:
+		Class: missiletank
 	Buildable:
 		Queue: Tank
 		Prerequisites: ~factory.sc, radar, techcenter
@@ -791,18 +826,20 @@ MISSILETANK:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-TANK15:
+HACKERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
-		Prerequisites: ~factory.yi, radar, tradplat
-		Description: actor-tank15.description
+		Prerequisites: ~factory.yi, radar, trader
+		Description: actor-hackertank.description
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: actor-tank15.name
+		Name: actor-hackertank.name
+	Selectable:
+		Class: hackertank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -824,19 +861,21 @@ TANK15:
 		Weapon: HackBack
 	AttackFrontal:
 
-TANK1:
+BUGGY:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: actor-tank1.name
-		GenericName: actor-tank1.generic-name
+		Name: actor-buggy.name
+		GenericName: actor-buggy.generic-name
+	Selectable:
+		Class: buggy
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: module, ~factory.sc
 		Queue: Tank
-		Description: actor-tank1.description
+		Description: actor-buggy.description
 	Turreted:
 		TurnSpeed: 40
 		Offset: 0,0,150
@@ -865,19 +904,21 @@ TANK1:
 	RevealsShroud@Hacked:
 		Range: 3c0
 
-TANK2:
+BIKE:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: actor-tank2.name
-		GenericName: actor-tank2.generic-name
+		Name: actor-bike.name
+		GenericName: actor-bike.generic-name
+	Selectable:
+		Class: bike
 	Buildable:
 		Queue: Tank
 		Prerequisites: module, ~factory.yi
 		BuildPaletteOrder: 30
-		Description: actor-tank2.description
+		Description: actor-bike.description
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
@@ -913,6 +954,8 @@ TANKER1:
 		Cost: 500
 	Tooltip:
 		Name: actor-tanker1.name
+	Selectable:
+		Class: tanker
 	Health:
 		HP: 15000
 	Armor:
@@ -949,18 +992,20 @@ TANKER2:
 			sc: tanker4
 			gm: tanker5
 
-TANK13:
+CVIT:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Utility
 		BuildPaletteOrder: 30
 		Prerequisites: storage
-		Description: actor-tank13.description
+		Description: actor-cvit.description
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: actor-tank13.name
+		Name: actor-cvit.name
+	Selectable:
+		Class: cvit
 	Health:
 		HP: 11000
 	Armor:

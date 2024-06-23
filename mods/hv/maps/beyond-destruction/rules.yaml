@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 World:
-	TintPostProcessEffect:
+	GlobalLightingPaletteEffect:
 		Red: 0.90
 		Green: 1.0
 		Blue: 1.1

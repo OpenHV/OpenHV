@@ -472,23 +472,23 @@ Actors:
 	Actor155: bunker2
 		Owner: Synapol Corporation
 		Location: 30,12
-	Actor156: tank11
+	Actor156: merctank
 		Owner: Synapol Corporation
 		Location: 37,6
 		Facing: 592
-	Actor157: tank11
+	Actor157: merctank
 		Owner: Synapol Corporation
 		Location: 38,8
 		Facing: 253
-	Actor158: tank12
+	Actor158: dualmerctank
 		Owner: Synapol Corporation
 		Location: 40,6
 		Facing: 155
-	Actor159: tank12
+	Actor159: dualmerctank
 		Owner: Synapol Corporation
 		Location: 40,9
 		Facing: 536
-	Actor160: tank2
+	Actor160: bike
 		Owner: Synapol Corporation
 		Location: 41,7
 		Facing: 642
@@ -500,7 +500,7 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 30,4
-	Actor162: tradplat
+	Actor162: trader
 		Owner: Synapol Corporation
 		Location: 34,5
 	Actor163: generator
@@ -1122,10 +1122,10 @@ Actors:
 	Actor370: field
 		Owner: Yuruki Industries
 		Location: 32,69
-	Actor371: factory3
+	Actor371: factory
 		Owner: Yuruki Industries
 		Location: 10,67
-	Actor372: factory3
+	Actor372: factory
 		Owner: Yuruki Industries
 		Location: 12,67
 	Actor373: module
@@ -1203,10 +1203,10 @@ Actors:
 	Actor397: barrier
 		Owner: Yuruki Industries
 		Location: 25,72
-	Actor398: tradplat
+	Actor398: trader
 		Owner: Yuruki Industries
 		Location: 39,66
-	Actor399: tradplat
+	Actor399: trader
 		Owner: Yuruki Industries
 		Location: 39,70
 	Actor400: turret

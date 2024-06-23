@@ -77,8 +77,8 @@ notification-railgun-charging = Orbital Railgun charging.
 notification-railgun-ready = Orbital Railgun ready.
 
 notification-insufficient-power = Insufficient power.
-notification-televatr-charging = Televator charging.
-notification-televatr-ready = Televator ready.
+notification-televator-charging = Televator charging.
+notification-televator-ready = Televator ready.
 
 notification-paratroopers-incoming = Paratroopers Drop incoming.
 notification-paratroopers-ready = Paratroopers Drop ready.
@@ -90,14 +90,14 @@ notification-clusterbomb-ready = Cluster Bomb ready.
 notification-clusterbomb-incoming = Cluster Bomb incoming.
 
 ## Aircraft
-actor-plane1 =
+actor-gunship =
    .description = Attack Ship armed with
     a large chain gun.
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
    .name = Gun Ship
 
-actor-plane2 =
+actor-jet =
    .description = Fast Attack Ship
       Strong vs Buildings
       Weak vs Tanks and Pods
@@ -122,13 +122,13 @@ actor-banshee =
       Weak vs Tanks and Pods
       Can't target Aircraft
 
-actor-copter2 =
+actor-chopper =
    .name = Transport Helicopter
    .description = Vehicle Transport Helicopter.
       Can load pods
       and lift one vehicle.
 
-actor-copter2-husk-name = Crashing Transport Helicopter
+actor-chopper-husk-name = Crashing Transport Helicopter
 
 actor-balloon =
    .name = Scout Balloon
@@ -162,7 +162,7 @@ actor-glider =
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
 actor-landedpod-name = Landed Pod
-actor-bomber1-name = Athmospheric Bomber
+actor-bomber-name = Athmospheric Bomber
 actor-cargoship-name = Supply Aircraft
 actor-airlifter-name = Transport Aircraft
 
@@ -175,7 +175,7 @@ actor-crow-name = Crows
 actor-crow2-name = Crow
 actor-gull-name = Seagulls
 actor-gull2-name = Seagull
-actor-seamnstr-name = Sea Monster
+actor-seamonster-name = Sea Monster
 actor-worm-generic-name = Worm
 actor-flyingmonster-name = Flying monster
 
@@ -224,7 +224,7 @@ actor-radar3 =
    .paratrooperspower-description = Atmospheric assault reinforcements:
     Small team of airlifters drops onto target mercenary tanks.
 
-actor-tradplat =
+actor-trader =
    .description = Repairs vehicles and aircraft for credits.
     Allows buying units on the free market.
    .encyclopedia = The trade platform provides access to the free market. For a certain amount of credits damaged vehicles can be ordered here and get repaired. Alternatively select the repair icon on the top right of the command interface and click a damaged vehicle which will then automatically head to the nearest trade platform for repairs. As a tech building the trade platform opens up the tank path. It also serves as an additional vehicle production queue by allowing orders from outside. These vary in price and are more expensive than local production.
@@ -251,7 +251,7 @@ actor-starport3 =
 
 actor-factory-name = Vehicle Factory
 
-actor-factory3 =
+actor-factory =
    .description = Builds tanks.
    .name = Vehicle Factory
    .encyclopedia = The vehicle factory is the source for all armored ground forces. Building multiple ones increases production speed. Right click on a factory to set a primary building whose teleportation pad shall be used for deployment. Right-click on the ground to set a rally point for new vehicles to gather around.
@@ -382,7 +382,7 @@ actor-storage =
    .name = Storage
    .encyclopedia = Storage buildings are the center of mining operations. Upon fabrication it spawns a miner that can be sent to a resource deposit and it also allows the construction of additional miners in the factory. Once a storage and a mining tower exists, tankers will automatically deliver resources from mining operations into the storage building where the compensation takes place. With no storage building to drop off available all mining operations will halt.
 
-actor-televatr =
+actor-televator =
    .description = Teleports units.
    Needs to charge up for transports
    outside the network.
@@ -485,14 +485,14 @@ actor-mother2c-name = Mothership
 actor-mother-name = Mothership Base
 
 ## Pods
-actor-scout1 =
+actor-mgpod =
    .description = Fast scout vehicle.
     Armed with machine gun.
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Machine Gun Pod
 
-actor-scout2 =
+actor-rocketpod =
    .description = Fast support vehicle.
     Shoots surface to air/ground rockets.
       Strong vs Tanks and Aircraft
@@ -569,7 +569,7 @@ actor-electricpod =
       Weak vs Pods
    .name = Electric Pod
 
-actor-minipod1 =
+meta-minipod =
    .name = Civilian
    .generic-name = Civilian
 
@@ -598,7 +598,7 @@ actor-rail-name = Rail
 actor-misc1-name = Misc
 
 ## Ships
-actor-boat3 =
+actor-lightboat =
    .name = Light Boat
    .generic-name = Boat
    .description = Versatile light boat.
@@ -627,21 +627,21 @@ actor-spiderboat =
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
 
-actor-boat =
+actor-mediumboat =
    .name = Medium Boat
    .generic-name = Boat
    .description = A boat with a turret.
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
 
-actor-submarine2 =
+actor-submarine =
    .name = Submarine
    .generic-name = Submarine
    .description = Submarine with powerful torpedos.
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
 
-actor-boat2 =
+actor-railgunboat =
    .name = Railgun Boat
    .generic-name = Boat
    .description = A heavy boat with a rail gun.
@@ -653,7 +653,7 @@ actor-lightningboat =
    .description = A heavy boat with a lightning gun.
       Strong vs Vehicles, Pods and Buildings
 
-actor-submarine =
+actor-boomer =
    .name = Missile Submarine
    .generic-name = Boat
    .description = A submarine with powerful long range missiles.
@@ -675,7 +675,7 @@ actor-navaltransport =
     Can carry pods.
       Unarmed
 
-actor-waterminelayer =
+actor-navalminelayer =
    .name = Naval Minelayer
    .generic-name = Boat
    .description = Lays smart mines
@@ -685,7 +685,7 @@ actor-waterminelayer =
       Unarmed
 
 ## Vehicles
-actor-tank3 =
+actor-mbt =
    .name = Assault Tank
    .description = Main Battle Tank.
       Strong vs Vehicles
@@ -707,16 +707,16 @@ actor-aatank3 =
       Cannot attack grounds units.
    .name = Mobile Flak
 
-actor-transprt =
-   .name = Transport Tank
-   .description = Can transport pods.
-
 actor-tinyhawk =
    .name = Tiny Hawk
    .description = Pods transport.
       Armed with a light chaingun.
 
-actor-artil =
+actor-apc =
+   .name = Transport Tank
+   .description = Can transport pods.
+
+actor-artillery =
    .name = Artillery
    .description = Mobile long range weapon.
       Strong vs Pods and Buildings
@@ -734,63 +734,63 @@ actor-radartank =
    .name = Reconnaissance Tank
    .deployed--name = Reconnaissance Tank (deployed)
 
-actor-tank16 =
+actor-repairtank =
    .name = Mobile Repair Vehicle
    .generic-name = Tank
    .description = Repairs nearby tanks.
       Unarmed
 
-actor-tank6 =
+actor-minelayer =
    .description = Lays smart mines
     that explode on enemy units
     while avoiding ally units.  Can detect enemy mines.
       Unarmed
    .name = Minelayer
 
-actor-tank5 =
+actor-railguntank =
    .name = Railgun Tank
    .generic-name = Tank
    .description = A powerful tank which shoots laser.
       Strong vs Pods, Vehicles and Buildings
 
-actor-tank10 =
+actor-lightningtank =
    .description = Fires electric discharges.
       Strong vs Pods, Vehicles and Buildings
    .name = Lightning Tank
    .generic-name = Tank
 
-actor-tank7 =
+actor-stealthtank =
    .description = Cloaked missile tank.
       Strong vs Vehicles and Buildings
       Weak vs Pods
    .name = Stealth Tank
 
-actor-tank11 =
+actor-merctank =
    .name = Mercenary Tank
    .generic-name = Tank
    .description = Main battle tank.
       Strong vs Vehicles
       Weak vs Pods
 
-actor-tank12-description = Double barreled tank.
+actor-dualmerctank-description = Double barreled tank.
       Strong vs Vehicles
       Weak vs Pods
 
-actor-tank8 =
+actor-ecmtank =
    .name = Countermeasure Tank
    .generic-name = ECM Tank
    .description = Disrupts satellite video links
     and obscures the battlefield.
       Disables units for a brief moment.
 
-actor-tank9 =
+actor-engineertank =
    .name = Engineer Tank
    .generic-name = Engineer Tank
    .description = Battlefield engineering tank.
     Effectivly repairs main battle tanks.
       Unamred
 
-actor-artil3 =
+actor-dualartillery =
    .name = Dual Artillery
    .description = Double barreled artillery tank.
       Strong vs Pods, Vehicles and Buildings
@@ -823,19 +823,19 @@ actor-missiletank2 =
       Strong vs Vehicles and Buildings
       Weak vs Pods
 
-actor-tank15 =
+actor-hackertank =
    .description = Jams incoming missiles.
       Temporarily changes allegiance of targeted units.
    .name = Hacker Tank
 
-actor-tank1 =
+actor-buggy =
    .name = Ramp Buggy
    .generic-name = Buggy
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
 
-actor-tank2 =
+actor-bike =
    .name = Gatling Bike
    .generic-name = Bike
    .description = Fires a machine gun.
@@ -852,7 +852,7 @@ actor-tanker2 =
       Unarmed
    .name = Empty Resource Transporter
 
-actor-tank13 =
+actor-cvit =
    .description = Moves cash to other players.
       Unarmed
    .name = Money Transport

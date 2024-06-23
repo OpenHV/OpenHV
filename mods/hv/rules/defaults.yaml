@@ -132,7 +132,7 @@
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
 	Repairable:
-		RepairActors: tradplat
+		RepairActors: trader
 		HpPerStep: 2000
 	AttackMove:
 	HiddenUnderFog:
@@ -292,12 +292,12 @@
 	MustBeDestroyed:
 	HitShape:
 	Repairable:
-		RepairActors: tradplat, starport3
+		RepairActors: trader, starport3
 		HpPerStep: 2000
 	MapEditorData:
 		Categories: Aircraft
 	Repairable:
-		RepairActors: tradplat, starport3
+		RepairActors: trader, starport3
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Explodes:
@@ -1144,3 +1144,124 @@
 	HitShape:
 	RejectsOrders:
 	Interactable:
+
+^GATE:
+	Inherits: ^Building
+	Inherits@Handicaps: ^PlayerHandicaps
+	Building:
+		RequiresBaseProvider: true
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
+		AllowInvalidPlacement: false
+		BuildSounds: Freqman_fx376-gate.wav
+	Buildable:
+		BuildPaletteOrder: 15
+		Queue: Defense
+		Prerequisites: module, ~no-bots
+		Description: meta-gate.description
+	Replacement:
+		ReplaceableTypes: wall
+	Valued:
+		Cost: 300
+	Health:
+		HP: 75000
+	Armor:
+		Type: Concrete
+	LineBuildNode:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-WithSpriteBody:
+	-WithIdleOverlay@Shadow:
+	GrantConditionOnLineBuildConnection:
+		Edges: 0,-1, 0,3
+		FirstCondition: top
+		LastCondition: bottom
+	WithGateSpriteBody@Connected:
+		Name: connected
+		OpenSequence: open
+		RequiresCondition: top && bottom
+	WithGateSpriteBody@Standalone:
+		Name: standalone
+		Sequence: idle-alone
+		OpenSequence: open-alone
+		RequiresCondition: !top && !bottom
+	WithGateSpriteBody@Top:
+		Name: top
+		Sequence: idle-top
+		OpenSequence: open-top
+		RequiresCondition: top && !bottom
+	WithGateSpriteBody@Bottom:
+		Name: bottom
+		Sequence: idle-bottom
+		OpenSequence: open-bottom
+		RequiresCondition: !top && bottom
+	Tooltip:
+		Name: meta-gate.name
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 6
+	Targetable:
+		TargetTypes: Ground, Wall, NoAutoTarget
+	MapEditorData:
+		Categories: Wall
+	RevealsShroud:
+		Range: 2c0
+	Gate:
+		OpeningSound: lowpolygon_gate-in.wav
+		ClosingSound: lowpolygon_gate-out.wav
+	BlocksProjectiles:
+	OwnerLostAction:
+		Action: ChangeOwner
+	ThrowsShrapnel:
+		Weapons: Debris
+		Pieces: 2, 3
+		Range: 1c512, 3c0
+	ThrowsShrapnel@Large:
+		Weapons: LargeDebris
+		Pieces: 0, 1
+		Range: 1c512, 3c0
+	Demolishable:
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	-ShakeOnDeath:
+	WithConstructionBeamOverlay:
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	Sellable:
+		SellSounds: Quedicemipez_teleportation-barrier-sell.wav
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
+
+^MINIPOD:
+	Inherits: ^Pod
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: meta-minipod.name
+		GenericName: meta-minipod.generic-name
+	Health:
+		HP: 10000
+	Mobile:
+		TurnSpeed: 100
+		Speed: 80
+		Voice: Move
+	RevealsShroud:
+		Range: 5c0
+	WithDeathAnimation:
+		FallbackSequence: die
+	Wanders:
+		WanderMoveRadius: 1
+		MinMoveDelay: 250
+		MaxMoveDelay: 1000
+	ScaredyCat:
+		PanicSpeedModifier: 150
+		PanicChance: 80
+		PanicSequencePrefix:
+	-Guard:
+	-MustBeDestroyed:
+	MapEditorData:
+		Categories: Civilians
+	Selectable:
+		Bounds: 512, 512
+	Voiced:
+		VoiceSet: CivilianPodVoice

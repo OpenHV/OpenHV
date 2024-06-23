@@ -19,7 +19,7 @@ World:
 		SwingAmplitude: 1.0, 1.5
 		ParticleColors: ECECEC, E4E4E4, D0D0D0, BCBCBC
 		LineTailAlphaValue: 0
-	TintPostProcessEffect:
+	GlobalLightingPaletteEffect:
 		Red: 0.9
 		Green: 0.9
 		Blue: 1.0
@@ -70,11 +70,11 @@ HOWITZER:
 	Buildable:
 		Prerequisites: ~disabled
 
-TELEVATR:
+TELEVATOR:
 	Buildable:
 		Prerequisites: ~disabled
 
-TELEVTR2:
+TELEVATOR2:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -102,31 +102,31 @@ RADARTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK5:
+RAILGUNTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK6:
+MINELAYER:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK7:
+STEALTHTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK8:
+ECMTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK10:
+LIGHTNINGTANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK13:
+CVIT:
 	Buildable:
 		Prerequisites: ~disabled
 
-TANK15:
+HACKERTANK:
 	Buildable:
 		Prerequisites: ~disabled
 

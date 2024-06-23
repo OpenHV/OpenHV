@@ -165,7 +165,7 @@ TURRET2:
 	ProvidesPrerequisite:
 		Prerequisite: turret
 
-SCOUT1:
+MGPOD:
 	Inherits@Amplifier: ^WeaponRangeUpgrade
 
 CLUSTERTURRET:
@@ -291,10 +291,10 @@ HOWITZER:
 	Buildable:
 		Prerequisites: ~disabled
 
-TELEVATR:
+TELEVATOR:
 	Buildable:
 		Prerequisites: ~disabled
 
-TELEVTR2:
+TELEVATOR2:
 	Buildable:
 		Prerequisites: ~disabled

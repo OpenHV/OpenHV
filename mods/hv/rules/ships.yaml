@@ -1,19 +1,19 @@
 # License: CC-BY-SA-4.0
 
-BOAT3:
+LIGHTBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 450
 	Tooltip:
-		Name: actor-boat3.name
-		GenericName: actor-boat3.generic-name
+		Name: actor-lightboat.name
+		GenericName: actor-lightboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 10
-		Description: actor-boat3.description
+		Description: actor-lightboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -93,20 +93,20 @@ PATROLBOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-BOAT:
+MEDIUMBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-boat.name
-		GenericName: actor-boat.generic-name
+		Name: actor-mediumboat.name
+		GenericName: actor-mediumboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
-		Description: actor-boat.description
+		Description: actor-mediumboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -139,20 +139,20 @@ BOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-SUBMARINE2:
+SUBMARINE:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-submarine2.name
-		GenericName: actor-submarine2.generic-name
+		Name: actor-submarine.name
+		GenericName: actor-submarine.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
-		Description: actor-submarine2.description
+		Description: actor-submarine.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -178,20 +178,20 @@ SUBMARINE2:
 	AttackFrontal:
 		FacingTolerance: 25
 
-BOAT2:
+RAILGUNBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: actor-boat2.name
-		GenericName: actor-boat2.generic-name
+		Name: actor-railgunboat.name
+		GenericName: actor-railgunboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
-		Description: actor-boat2.description
+		Description: actor-railgunboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -259,20 +259,20 @@ LIGHTNINGBOAT:
 	WithAttackOverlay:
 		Sequence: charge
 
-SUBMARINE:
+BOOMER:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: actor-submarine.name
-		GenericName: actor-submarine.generic-name
+		Name: actor-boomer.name
+		GenericName: actor-boomer.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 60
-		Description: actor-submarine.description
+		Description: actor-boomer.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -424,20 +424,20 @@ NAVALTRANSPORT:
 		Margin: 1, -1
 		RequiresSelection: true
 
-WATERMINELAYER:
+NAVALMINELAYER:
 	Inherits: ^Ship
 	Inherits@Selection: ^SelectableSupportUnit
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: actor-waterminelayer.name
-		GenericName: actor-waterminelayer.generic-name
+		Name: actor-navalminelayer.name
+		GenericName: actor-navalminelayer.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, tradplat
+		Prerequisites: ~harbor.sc, trader
 		BuildPaletteOrder: 40
-		Description: actor-waterminelayer.description
+		Description: actor-navalminelayer.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -486,7 +486,7 @@ WATERMINELAYER:
 		Sequence: idle-empty
 		RequiresCondition: !ammo
 
-WATERMINELAYER2:
-	Inherits: WATERMINELAYER
+NAVALMINELAYER2:
+	Inherits: NAVALMINELAYER
 	Buildable:
-		Prerequisites: ~harbor.yi, tradplat
+		Prerequisites: ~harbor.yi, trader

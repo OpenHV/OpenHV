@@ -42,7 +42,7 @@ Actors:
 		Location: 50,28
 		Faction: Random
 		Owner: Synapol Corporation
-	Actor18: factory4
+	Actor18: factory2
 		Location: 71,31
 		Faction: Random
 		Owner: Synapol Corporation
@@ -50,7 +50,7 @@ Actors:
 		Location: 67,23
 		Faction: Random
 		Owner: Synapol Corporation
-	Actor28: televtr2
+	Actor28: televator2
 		Location: 64,31
 		Faction: Random
 		Owner: Synapol Corporation
@@ -264,11 +264,11 @@ Actors:
 	Actor129: sandmisc7
 		Owner: Neutral
 		Location: 52,45
-	Actor130: seamnstr
+	Actor130: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 126,125
-	Actor132: seamnstr
+	Actor132: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 11,125
@@ -595,7 +595,7 @@ Actors:
 	Actor295: grssmisc7
 		Owner: Neutral
 		Location: 125,87
-	Actor308: tradplat
+	Actor308: trader
 		Owner: Synapol Corporation
 		Location: 70,27
 	Actor309: techcenter
@@ -1813,7 +1813,7 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 7,124
-	Actor839: seamnstr
+	Actor839: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 3,121
@@ -2463,10 +2463,10 @@ Actors:
 	Actor1100: radar
 		Owner: Yuruki Industries
 		Location: 92,104
-	Actor1109: factory3
+	Actor1109: factory
 		Owner: Yuruki Industries
 		Location: 45,90
-	Actor1110: factory3
+	Actor1110: factory
 		Owner: Yuruki Industries
 		Location: 40,90
 	Actor1071: turret
@@ -2687,7 +2687,7 @@ Actors:
 		Owner: Yuruki Industries
 		Location: 33,96
 		FreeActor: False
-	Actor1149: tradplat
+	Actor1149: trader
 		Owner: Yuruki Industries
 		Location: 46,85
 	Actor1160: storage
@@ -3889,11 +3889,11 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 38,5
-	Actor1559: seamnstr
+	Actor1559: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 113,114
-	Actor1560: seamnstr
+	Actor1560: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 21,125

@@ -45,12 +45,12 @@ Players:
 		Enemies: Synapol Corporation, Creeps
 
 Actors:
-	Scout1: scout1
+	mgpod: mgpod
 		Location: 22,32
 		Faction: yi
 		Facing: 182
 		Owner: Synapol Corporation
-	Scout2: scout2
+	rocketpod: rocketpod
 		Location: 29,37
 		Faction: yi
 		Owner: Synapol Corporation
@@ -126,43 +126,43 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 7,35
-	Scout8: scout1
+	Scout8: mgpod
 		SubCell: 1
 		Location: 31,36
 		Faction: yi
 		Facing: 618
 		Owner: Synapol Corporation
-	Scout9: scout2
+	Scout9: rocketpod
 		SubCell: 1
 		Location: 26,40
 		Faction: yi
 		Facing: 384
 		Owner: Synapol Corporation
-	Scout4: scout1
+	Scout4: mgpod
 		SubCell: 1
 		Location: 20,36
 		Faction: yi
 		Facing: 384
 		Owner: Synapol Corporation
-	Scout3: scout1
+	Scout3: mgpod
 		SubCell: 1
 		Location: 22,35
 		Faction: yi
 		Facing: 111
 		Owner: Synapol Corporation
-	Scout6: scout1
+	Scout6: mgpod
 		SubCell: 1
 		Location: 30,39
 		Faction: yi
 		Facing: 824
 		Owner: Synapol Corporation
-	Scout7: scout1
+	Scout7: mgpod
 		SubCell: 1
 		Location: 32,40
 		Faction: yi
 		Facing: 642
 		Owner: Synapol Corporation
-	Scout5: scout1
+	Scout5: mgpod
 		SubCell: 1
 		Location: 22,42
 		Faction: yi

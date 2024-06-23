@@ -470,19 +470,19 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 102,5
-	Actor173: seamnstr
+	Actor173: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 144,14
-	Actor174: seamnstr
+	Actor174: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 16,17
-	Actor175: seamnstr
+	Actor175: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 15,96
-	Actor176: seamnstr
+	Actor176: seamonster
 		Owner: Neutral
 		Facing: 384
 		Location: 150,94
