@@ -930,6 +930,9 @@ energyball:
 	teleport-large:
 		Filename: bits/teleprt2.png
 		Length: 9
+	teleport-enormous:
+		Filename: bits/teleprt3.png
+		Length: 9
 	appear:
 		Filename: bits/teleport.png
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1

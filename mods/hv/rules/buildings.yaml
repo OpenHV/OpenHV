@@ -1723,17 +1723,18 @@ TELEVATOR:
 		DisplayRadarPing: True
 		ChargeInterval: 3000
 		OrderName: BeamUsUp
-		Icon: null
+		Icon: televator
 		Name: actor-televator.teleportpower-name
 		Description: actor-televator.teleportpower-description
 		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification:
-		BeginChargeSpeechNotification:
-		EndChargeSpeechNotification:
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: TelevatorCharging
+		EndChargeSpeechNotification: TelevatorReady
 		SelectTargetTextNotification: notification-select-target
 		InsufficientPowerTextNotification: notification-insufficient-power
 		BeginChargeTextNotification: notification-televator-charging
 		EndChargeTextNotification: notification-televator-ready
+		LaunchSound: televator.wav
 	TeleportNetwork:
 		Type: subspace
 		RequiresCondition: !disabled
