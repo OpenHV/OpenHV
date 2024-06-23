@@ -51,6 +51,8 @@ namespace OpenRA.Mods.HV.UtilityCommands
 					Environment.Exit(1);
 				}
 
+				Console.WriteLine("Checking " + Path.GetFileName(pngPath));
+
 				using (var metadataStream = File.OpenRead(yamlPath))
 				{
 					var externalYaml = metadataStream.ReadAllText()
