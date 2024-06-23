@@ -281,6 +281,11 @@ ifneq ("$(BIT_FILES)","")
 	done
 endif
 
+check-pngs:
+ifneq ("$(BIT_FILES)","")
+	@pngcheck -c $(BIT_FILES)
+endif
+
 check-maps:
 ifneq ("$(MAP_FOLDERS)","")
 	@echo "Checking Resource Center...";
