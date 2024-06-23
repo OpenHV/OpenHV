@@ -810,7 +810,7 @@ MISSILEBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 450
+		Cost: 800
 	Tooltip:
 		Name: actor-missileboat.name
 		GenericName: actor-missileboat.generic-name
@@ -818,7 +818,7 @@ MISSILEBOAT:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.gm
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 30
 		Description: actor-missileboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -864,12 +864,22 @@ BOOMER.MERCENARY:
 		OverrideActor: boomer
 	RenderSprites:
 		Image: boomer
+		
+LIGHTNINGBOAT.MERCENARY:
+	Inherits: LIGHTNINGBOAT
+	Buildable:
+		Prerequisites: ~harbor.gm, radar
+	-MapEditorData:
+	UpdatesPlayerStatistics:
+		OverrideActor: lightningboat
+	RenderSprites:
+		Image: lightningboat
 
 SPIDERBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 650
+		Cost: 450
 	Tooltip:
 		Name: actor-spiderboat.name
 		GenericName: actor-spiderboat.generic-name
@@ -911,16 +921,6 @@ SPIDERBOAT:
 		Armaments: primary, secondary
 	WithSpriteTurret:
 
-SUBMARINE.MERCENARY:
-	Inherits: SUBMARINE
-	Buildable:
-		Prerequisites: ~harbor.gm, techcenter
-	-MapEditorData:
-	UpdatesPlayerStatistics:
-		OverrideActor: submarine
-	RenderSprites:
-		Image: submarine
-
 NAVALMINELAYER2.MERCENARY:
 	Inherits: NAVALMINELAYER2
 	Buildable:
@@ -929,7 +929,7 @@ NAVALMINELAYER2.MERCENARY:
 	UpdatesPlayerStatistics:
 		OverrideActor: navalminelayer2
 	RenderSprites:
-		Image: navaminelayer2
+		Image: navalminelayer2
 
 ## vehicles
 
