@@ -23,8 +23,8 @@
 - [ ] Make a different base, outpost, radar and storage sprite
 - [ ] Replace every Ginkua units taken from other factions with new and unique ones
 - [ ] Make a sprite for the Starport Platform
-- [ ] Rework on the Starport Platform
+- [x] Rework on the Starport Platform
 - [ ] Rework on every building not edited yet
 - [ ] Recheck every unit armament offset
 - [ ] Correct every wrong diagonal angle spritesheets
-- [ ] Fix the Cluster Bomb Dome sprite (roundings)
+- [x] Fix the Cluster Bomb Dome sprite (roundings)

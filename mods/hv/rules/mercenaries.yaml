@@ -289,7 +289,7 @@ TECHCENTER3:
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Building:
-		Footprint: xxxx xxxx xxxx xxxx
+		Footprint: _xx_ xxxx xxxx _xx_
 		Dimensions: 4,4
 	Buildable:
 		Queue: Building
@@ -327,6 +327,12 @@ TECHCENTER3:
 		Type: Rectangle
 			TopLeft: -1048, 512
 			BottomRight: 1048, 1524
+	WithIdleOverlay@Lights:
+		Sequence: animation
+		RequiresCondition: !disable-lights && !ownerless && !disabled && !build-incomplete
+	GrantConditionOnDamageState@BrokenLights:
+		Condition: disable-lights
+		ValidDamageStates: Heavy, Critical
 
 MODULE3:
 	Inherits: MODULE2

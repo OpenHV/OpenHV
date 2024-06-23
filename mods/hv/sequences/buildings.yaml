@@ -2216,9 +2216,15 @@ techcenter3:
 		Start: 1
 	damaged-idle:
 		Filename: bits/techcenter3.png
+	animation:
+		Filename: bits/techcenter3.png
+		Start: 2
+		Length: 6
+		Reverses: True
+		Tick: 200
 	icon:
 		Filename: bits/buildings-icons.png
-		Start: 35
+		Start: 45
 
 reconstructor:
 	Inherits@Flame: ^BuildingFlame2
