@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Activities
 
 			// Trigger screen desaturate effect
 			if (screenFlash)
-				foreach (var a in self.World.ActorsWithTrait<TeleportPaletteEffect>())
+				foreach (var a in self.World.ActorsWithTrait<DesaturationPaletteEffect>())
 					a.Trait.Enable();
 
 			if (teleporter != null && self != teleporter && !teleporter.Disposed)
