@@ -60,6 +60,9 @@ Speech:
 		NoRoom: not_enough_space
 		OrderPlaced: order_placed
 		OutpostEstablished: outpost_established
+		TelevatorCharging: televator_charging
+		TelevatorReady: televator_ready
+		InsufficientPower: insufficient_power
 
 Sounds:
 	DefaultVariant: .wav

@@ -85,6 +85,9 @@ icon:
 	howitzer:
 		Filename: bits/buildings-icons.png
 		Start: 15
+	televator:
+		Filename: bits/buildings-icons.png
+		Start: 12
 	null:
 		Filename: bits/null.png
 
