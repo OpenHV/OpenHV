@@ -847,15 +847,15 @@ MISSILEBOAT:
 	Selectable:
 		DecorationBounds: 1536, 1536
 
-SUBMARINE2.MERCENARY:
-	Inherits: SUBMARINE2
+BOOMER.MERCENARY:
+	Inherits: BOOMER
 	Buildable:
 		Prerequisites: ~harbor.gm, radar
 	-MapEditorData:
 	UpdatesPlayerStatistics:
-		OverrideActor: submarine2
+		OverrideActor: boomer
 	RenderSprites:
-		Image: submarine2
+		Image: boomer
 
 SPIDERBOAT:
 	Inherits: ^Ship
@@ -913,15 +913,15 @@ SUBMARINE.MERCENARY:
 	RenderSprites:
 		Image: submarine
 
-WATERMINELAYER2.MERCENARY:
-	Inherits: WATERMINELAYER2
+NAVALMINELAYER2.MERCENARY:
+	Inherits: NAVALMINELAYER2
 	Buildable:
 		Prerequisites: ~harbor.gm, tradplat
 	-MapEditorData:
 	UpdatesPlayerStatistics:
-		OverrideActor: waterminelayer2
+		OverrideActor: navalminelayer2
 	RenderSprites:
-		Image: waterminelayer2
+		Image: navaminelayer2
 
 ## vehicles
 

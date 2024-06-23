@@ -883,7 +883,7 @@ tanker4:
 		Start: 18
 
 tanker5:
-	Inherits: tank13
+	Inherits: cvit
 
 aatank:
 	idle:
