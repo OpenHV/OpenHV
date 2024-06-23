@@ -357,16 +357,16 @@ LightShotGun:
 		ValidTargets: Water, Ground, Tree, Lava, Swamp
 		Damage: 375
 		Versus:
-			None: 800
-			Steel: 108
-			Light: 365
+			None: 325
+			Steel: 75
+			Light: 85
 			Heavy: 65
-			Concrete: 63
+			Concrete: 40
 
 HeavyShotGun:
 	Inherits: LightShotGun
-	ReloadDelay: 45
-	Burst: 10
+	ReloadDelay: 75
+	Burst: 16
 	Range: 7c512
 	MinRange: 4c0
 

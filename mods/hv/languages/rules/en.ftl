@@ -510,6 +510,7 @@ actor-clusterpod =
    .description = Fast scout vehicle.
     Armed with small cluster artillery.
     Deals area damage.
+     Strong in groups.
    .name = Cluster Pod
 
 actor-mortarpod =

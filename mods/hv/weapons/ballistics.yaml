@@ -434,9 +434,9 @@ ClusterProjectile:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 165
-		Damage: 865
+		Damage: 915
 		Versus:
-			None: 100
+			None: 135
 			Steel: 70
 			Light: 75
 			Heavy: 65

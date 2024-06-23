@@ -726,15 +726,27 @@ SHOTGUNPOD:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
+	AmmoPool:
+		Ammo: 25
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 25
+	ReloadAmmoPool:
+		Delay: 55
+		Count: 4
 	Armament@Primary:
 		Weapon: LightShotGun
+		PauseOnCondition: !ammo
 	Armament@Garrisoned:
 		Name: garrisoned
 		Weapon: BunkerShotGun
+		PauseOnCondition: !ammo
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
-	WithMuzzleOverlay:
 
 CLUSTERPOD:
 	Inherits: ^Pod
