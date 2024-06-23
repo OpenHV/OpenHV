@@ -543,6 +543,8 @@ DUALMERCTANK:
 		BuildPaletteOrder: 15
 		Prerequisites:  ~factory.gm, radar
 		Description: actor-dualmerctank-description
+	Selectable:
+		Class: dualmerctank
 	Armament:
 		Weapon: doublecannon
 		LocalOffset: 500,85,50, 500,-85,50
