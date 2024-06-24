@@ -130,7 +130,7 @@ LightPodRocket:
 			None: 65
 			Steel: 75
 			Light: 70
-			Heavy: 110
+			Heavy: 150
 			Concrete: 50
 
 RapidPodRocket:
@@ -280,7 +280,7 @@ Patriot:
 			None: 30
 			Wood: 90
 			Light: 90
-			Heavy: 300
+			Heavy: 300 # 270
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -319,7 +319,7 @@ TowerMissile:
 			None: 30
 			Wood: 90
 			Light: 90
-			Heavy: 300
+			Heavy: 300 # 270
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128

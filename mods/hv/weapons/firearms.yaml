@@ -362,3 +362,14 @@ DronePulseGun:
 	Range: 6c0
 	MinRange: 0c0
 	Burst: 10
+
+DronePulseGun2:
+	Inherits: DronePulseGun
+	Burst: 10
+	Range: 8c0
+	BurstDelays: 1
+	ReloadDelay: 1
+	Warhead@Damage: SpreadDamage
+		Damage: 1000
+	Warhead@Incendiary: TreeDamage
+		Damage: 1000

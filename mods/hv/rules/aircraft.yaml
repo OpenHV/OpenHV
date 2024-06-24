@@ -773,28 +773,22 @@ MOTHERSHIP:
 	AutoTarget:
 		InitialStance: Defend
 		InitialStanceAI: AttackAnything
-	CarrierParent:
-		Actors: drone2, drone2, drone2, drone2, drone2
-		RespawnTicks: 100
-		SpawnAllAtOnce: true
-	WithCarrierParentPipsDecoration:
-	WithCarrierHatchAnimation:
 	Exit:
 		SpawnOffset: 0,0,0
 		Facing: 0
-	Turreted@DroneLauncher:
+	Turreted@PulseGun:
 		Turret: primary
-		Offset: 0,0,0
-		TurnSpeed: 240
+		Offset: 0,0,0 # -200,0,-100
+		TurnSpeed: 120
 	Turreted@LaserTurret:
 		Turret: secondary
 		Offset: -200,0,-100
 		TurnSpeed: 120
 	AttackTurreted:
-	Armament@DroneLauncher:
+	Armament@PulseGun:
 		Name: primary
-		Weapon: Drone2Launcher
-		LocalOffset: 0,0,-100
+		Weapon: DronePulseGun2
+		LocalOffset: 0,0,0 # 300,300,-100, 300,-300,-100, -300,300,-100, -300,-300,-100
 	Armament@LaserTurret:
 		Name: secondary
 		Weapon: MothershipLaser
