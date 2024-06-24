@@ -62,23 +62,13 @@ TowerRailgun:
 	Burst: 3
 	BurstDelays: 10
 	Range: 9c0
-	Report: Sonic1.wav, Sonic2.wav, Sonic3.wav
 	ValidTargets: Air
-	Projectile: Missile
-		VerticalRateOfTurn: 20
-		Speed: 600
-		MinimumLaunchSpeed: 75
-		MaximumLaunchSpeed: 96
-		Blockable: false
-		Shadow: true
-		HorizontalRateOfTurn: 100
-		Acceleration: 96
-		MinimumLaunchAngle: 128
-		MaximumLaunchAngle: 192
-		CruiseAltitude: 2c0
-		AllowSnapping: true
-		CloseEnough: 600
-		Image: bullet18
+	Report: raygun_newlocknew.wav
+	Projectile: LaserZap
+		Width: 0c110
+		Shape: Cylindrical
+		ZOffset: 2048
+		Color: FE0303
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 40
