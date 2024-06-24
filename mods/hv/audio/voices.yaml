@@ -220,3 +220,11 @@ MotherShipVoice:
 		Move: mothershipaction1, mothershipaction2, mothershipaction3
 		Action: mothershipattack1, mothershipattack2, mothershipattack3
 		Guard: guarding
+
+BattleShipVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: battleshipselect1, battleshipselect2, battleshipselect3
+		Move: battleshipaction1, battleshipaction2, battleshipaction3
+		Action: battleshipattack1, battleshipattack2, battleshipattack3
+		Guard: guarding

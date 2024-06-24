@@ -26,3 +26,7 @@ Content of this folder indicates assets made by various authors, under the defau
 * [boatgun_johandeecke.wav](https://freesound.org/people/JohanDeecke/sounds/369528/) by JohanDeecke.
 * [flame_newlocknew.wav](https://freesound.org/people/newlocknew/sounds/614724/) by newlocknew.
 * [blaster_flyingsaucerinvasion.wav](https://freesound.org/people/flyingsaucerinvasion/sounds/615812/) by flyingsaucerinvasion
+* [big_explosion_jobro.wav](https://freesound.org/people/jobro/sounds/35463/) by jobro
+* [cannon_sarge4267.wav](https://freesound.org/people/sarge4267/sounds/102720/) by sarge4267
+* [explosion1_smcameron.wav](https://freesound.org/people/smcameron/sounds/51467/) by smcameron. Mixed with explosion04.wav
+* [explosion2_smcameron.wav](https://freesound.org/people/smcameron/sounds/51467/) by smcameron. Mixed with explosion05.wav

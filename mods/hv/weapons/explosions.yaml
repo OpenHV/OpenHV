@@ -174,3 +174,11 @@ BomberPodExplosion:
 		Explosions: medium, medium_2
 		ImpactSounds: explosion02.wav, explosion03.wav
 		ValidTargets: Ground, Water, Ship, Air, Structure
+
+SuperUnitExplode:
+	Inherits: ^Explosion
+	Warhead@Effect: CreateEffect
+		Explosions: large_2
+		ImpactSounds: big_explosion_jobro.wav
+	Warhead@Damage: SpreadDamage
+		Damage: 10000
