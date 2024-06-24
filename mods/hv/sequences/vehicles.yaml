@@ -1049,3 +1049,20 @@ missiletank2:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 67
+
+elitepod2:
+	Inherits: elitepod
+	idle:
+		Filename: bits/elitepod2.png
+		Frames: 0, 2, 4, 6, 8, 10, 12, 14
+		Facings: 8
+		ZOffset: 1024
+	move:
+		Filename: bits/elitepod2.png
+		Length: 2
+		Tick: 60
+		Facings: 8
+		ZOffset: 1024
+	icon:
+		Filename: bits/units-icons.png
+		Start: 71

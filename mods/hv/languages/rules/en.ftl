@@ -558,6 +558,13 @@ actor-elitepod =
       Weak vs Tanks and Buildings.
    .name = Elite Pod
 
+actor-elitepod2 =
+   .description = Elite airborne pod.
+    Armed with a rocket launcher.
+      Strong vs Pods, Buildings and Aircraft.
+      Weak vs Tanks and Light Vehicles.
+   .name = Heli Pod
+
 actor-bomberpod =
    .description = Remote controlled mine.
     Explodes when reaches enemy.

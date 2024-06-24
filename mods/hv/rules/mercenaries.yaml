@@ -780,6 +780,48 @@ CLUSTERPOD:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
+ELITEPOD2:
+	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-elitepod2.description
+		Prerequisites: ~module.gm, techcenter
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: actor-elitepod2.name
+	Health:
+		HP: 7000
+	Aircraft:
+		TurnSpeed: 50
+		CruiseAltitude: 1c0
+		Speed: 100
+		IdealSeparation: 1c0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: RapidPodRocket
+		MuzzleSequence: muzzle
+		LocalOffset: 0,-300,0,   0,300,0
+	AttackFrontal:
+		FacingTolerance: 10
+	WithMuzzleOverlay:
+	WithMoveAnimation:
+	-Explodes@SpawnPilot:
+	-GrantRandomCondition@SpawnPilot:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Voiced:
+		VoiceSet: ElitePodVoice
+
 CLUSTERPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove

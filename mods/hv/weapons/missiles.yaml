@@ -85,11 +85,12 @@ AntiAirRocket:
 
 AircraftMissileAir:
 	Inherits: AntiAirRocket
-	MinRange: 3c512
+	MinRange: 5c512
 	ReloadDelay: 180
 	Burst: 1
+	Range: 9c0
 	Projectile: Missile
-		Speed: 352
+		Speed: 410
 	Warhead@Damage: SpreadDamage
 		Damage: 15000
 	Warhead@Incendiary: TreeDamage
