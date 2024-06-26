@@ -94,7 +94,7 @@ namespace OpenRA.Mods.HV.Traits
 
 				var targetCell = target.Location + targetDelta;
 
-				if (self.Owner.Shroud.IsExplored(targetCell) && teleportable.CanTeleportTo(target, targetCell))
+				if (self.Owner.Shroud.IsVisible(targetCell) && teleportable.CanTeleportTo(target, targetCell))
 					teleportable.Teleport(target, targetCell, self);
 			}
 		}
@@ -111,7 +111,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public bool SimilarTerrain(CPos xy, CPos sourceLocation)
 		{
-			if (!Self.Owner.Shroud.IsExplored(xy))
+			if (!Self.Owner.Shroud.IsVisible(xy))
 				return false;
 
 			var sourceTiles = CellsMatching(xy, footprint, dimensions);
@@ -127,7 +127,7 @@ namespace OpenRA.Mods.HV.Traits
 					var a = se.Current;
 					var b = de.Current;
 
-					if (!Self.Owner.Shroud.IsExplored(a) || !Self.Owner.Shroud.IsExplored(b))
+					if (!Self.Owner.Shroud.IsVisible(a) || !Self.Owner.Shroud.IsVisible(b))
 						return false;
 
 					if (Self.World.Map.GetTerrainIndex(a) != Self.World.Map.GetTerrainIndex(b))
@@ -302,7 +302,7 @@ namespace OpenRA.Mods.HV.Traits
 				var delta = xy - sourceLocation;
 				foreach (var t in power.CellsMatching(sourceLocation, footprint, dimensions))
 				{
-					var isValid = manager.Self.Owner.Shroud.IsExplored(t + delta);
+					var isValid = manager.Self.Owner.Shroud.IsVisible(t + delta);
 					var tile = isValid ? validTile : invalidTile;
 					var alpha = isValid ? validAlpha : invalidAlpha;
 					yield return new SpriteRenderable(tile, wr.World.Map.CenterOfCell(t + delta), WVec.Zero, -511, palette, 1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
@@ -314,7 +314,7 @@ namespace OpenRA.Mods.HV.Traits
 					if (unit.CanBeViewedByPlayer(manager.Self.Owner))
 					{
 						var targetCell = unit.Location + (xy - sourceLocation);
-						var canEnter = manager.Self.Owner.Shroud.IsExplored(targetCell) &&
+						var canEnter = manager.Self.Owner.Shroud.IsVisible(targetCell) &&
 							unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell);
 						var tile = canEnter ? validTile : invalidTile;
 						var alpha = canEnter ? validAlpha : invalidAlpha;
@@ -359,7 +359,7 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					anyUnitsInRange = true;
 					var targetCell = unit.Location + (xy - sourceLocation);
-					if (manager.Self.Owner.Shroud.IsExplored(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell))
+					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell))
 					{
 						canTeleport = true;
 						break;
