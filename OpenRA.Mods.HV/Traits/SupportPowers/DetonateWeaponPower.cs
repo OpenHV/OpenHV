@@ -56,10 +56,6 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly Color TargetCircleColor = Color.White;
 		public readonly bool TargetCircleUsePlayerColor = false;
 
-		[CursorReference]
-		[Desc("Cursor when unable to activate on this position. ")]
-		public readonly string BlockedCursor = "generic-blocked";
-
 		public WeaponInfo WeaponInfo { get; private set; }
 
 		public override object Create(ActorInitializer init) { return new DetonateWeaponPower(init.Self, this); }

@@ -44,10 +44,6 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Number of ticks to keep the camera alive")]
 		public readonly int CameraRemoveDelay = 25;
 
-		[CursorReference]
-		[Desc("Cursor when unable to activate on this position. ")]
-		public readonly string BlockedCursor = "droppod-blocked";
-
 		public override object Create(ActorInitializer init) { return new DropPodsPower(init.Self, this); }
 	}
 

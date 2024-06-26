@@ -34,10 +34,6 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Range circle border width.")]
 		public readonly float CircleBorderWidth = 3;
 
-		[CursorReference]
-		[Desc("Cursor to display when out of range.")]
-		public readonly string BlockedCursor = "attack-blocked";
-
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while attacking.")]
 		public readonly string AttackingCondition = null;
