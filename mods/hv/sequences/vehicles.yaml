@@ -937,13 +937,14 @@ energyball:
 		Length: 9
 	teleport-group-in:
 		Filename: bits/teleprt3.png
-		Length: 9
-		Tick: 20
+		Frames: 8, 7, 6, 5, 4, 3, 2, 1
+		Length: *
+		Tick: 40
 	teleport-group-out:
 		Filename: bits/teleprt3.png
 		Frames: 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
-		Tick: 120
+		Tick: 100
 		ZOffset: 2048
 
 minipod1:
