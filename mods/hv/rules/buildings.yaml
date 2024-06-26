@@ -1718,6 +1718,7 @@ TELEVATOR:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	TeleportPower:
+		PauseOnCondition: disabled
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		DisplayRadarPing: True
