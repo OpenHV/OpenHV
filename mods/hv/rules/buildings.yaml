@@ -1329,10 +1329,6 @@ HOWITZER:
 		Range: 8c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
 	Power:
