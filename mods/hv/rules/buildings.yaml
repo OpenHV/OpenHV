@@ -1705,7 +1705,6 @@ TELEVATOR:
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
-		RequiresCondition: !disabled
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
