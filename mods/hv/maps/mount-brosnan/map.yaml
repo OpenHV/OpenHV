@@ -380,12 +380,6 @@ Actors:
 	Actor127: dark_light
 		Owner: Neutral
 		Location: 5,95
-	Actor128: base_light
-		Owner: Neutral
-		Location: 2,2
-	Actor129: base_light
-		Owner: Neutral
-		Location: 1,3
 	Actor130: base_light
 		Owner: Neutral
 		Location: 89,95
@@ -471,26 +465,68 @@ Actors:
 	Actor155: lamppost
 		Owner: Neutral
 		Location: 37,57
-	Actor156: lavalight
-		Owner: Neutral
-		Location: 34,97
-	Actor157: lavalight
-		Owner: Neutral
-		Location: 62,97
-	Actor158: lavalight
-		Owner: Neutral
-		Location: 97,77
-	Actor159: lavalight
-		Owner: Neutral
-		Location: 97,60
-	Actor160: lavalight
-		Owner: Neutral
-		Location: 97,14
 	Actor161: lavalight
 		Owner: Neutral
 		Location: 41,1
 	Actor162: lavalight
 		Owner: Neutral
 		Location: 1,28
+	Actor158: lavalight
+		Owner: Neutral
+		Location: 96,77
+	Actor159: lavalight
+		Owner: Neutral
+		Location: 96,60
+	Actor160: lavalight
+		Owner: Neutral
+		Location: 96,14
+	Actor157: lavalight
+		Owner: Neutral
+		Location: 62,96
+	Actor156: lavalight
+		Owner: Neutral
+		Location: 34,96
+	Actor163: streetlamp9
+		Owner: Neutral
+		Location: 2,2
+	Actor164: crane
+		Owner: Neutral
+		Location: 39,60
+	Actor165: crane
+		Owner: Neutral
+		Location: 40,41
+	Actor166: crane2
+		Owner: Neutral
+		Location: 63,60
+	Actor167: crane2
+		Owner: Neutral
+		Location: 62,44
+	Actor168: streetlamp9
+		Owner: Neutral
+		Location: 54,54
+	Actor169: streetlamp9
+		Owner: Neutral
+		Location: 47,54
+	Actor170: streetlamp9
+		Owner: Neutral
+		Location: 46,44
+	Actor171: streetlamp9
+		Owner: Neutral
+		Location: 54,45
+	Actor172: dark_light
+		Owner: Neutral
+		Location: 2,94
+	Actor173: dark_light
+		Owner: Neutral
+		Location: 1,4
+	Actor174: dark_light
+		Owner: Neutral
+		Location: 2,2
+	Actor175: dark_light
+		Owner: Neutral
+		Location: 5,2
+	Actor176: dark_light
+		Owner: Neutral
+		Location: 1,7
 
 Rules: rules.yaml
