@@ -133,6 +133,7 @@ Player:
 			carrier: 2
 			navalminelayer: 1
 			navalminelayer2: 1
+			mothership: 1
 		UnitLimits:
 			miner: 1
 			builder: 1
