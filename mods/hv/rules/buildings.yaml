@@ -1735,6 +1735,10 @@ TELEVATOR:
 		BeginChargeTextNotification: notification-televator-charging
 		EndChargeTextNotification: notification-televator-ready
 		LaunchSound: televator.wav
+	WithTeleportGroupOverlay:
+		Image: energyball
+		LaunchSequence: teleport-group-in
+		AppearSequence: teleport-group-out
 	TeleportNetwork:
 		Type: subspace
 		RequiresCondition: !disabled

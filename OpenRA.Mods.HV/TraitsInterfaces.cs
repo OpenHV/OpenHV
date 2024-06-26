@@ -39,4 +39,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	[RequireExplicitImplementation]
 	public interface INotifyMissileSpawn { void Launching(Actor self, Target target); }
+
+	[RequireExplicitImplementation]
+	public interface INotifyTeleportation { void Teleporting(WPos from, WPos to); }
 }

@@ -80,6 +80,9 @@ namespace OpenRA.Mods.HV.Traits
 			base.Activate(self, order, manager);
 			PlayLaunchSounds();
 
+			foreach (var notify in self.TraitsImplementing<INotifyTeleportation>())
+				notify.Teleporting(self.World.Map.CenterOfCell(order.ExtraLocation), order.Target.CenterPosition);
+
 			var targetDelta = self.World.Map.CellContaining(order.Target.CenterPosition) - order.ExtraLocation;
 			foreach (var target in UnitsInRange(order.ExtraLocation))
 			{
