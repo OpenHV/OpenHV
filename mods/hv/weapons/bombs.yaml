@@ -40,14 +40,11 @@ LightBomb:
 	ReloadDelay: 85
 	Burst: 4
 	BurstDelay: 8
-	Range: 0c512
 	Warhead@Damage: SpreadDamage
 		Damage: 1850
 	Warhead@Incendiary: TreeDamage
 		Damage: 1650
 	Projectile: GravityBomb
-		Velocity: 0, 0, -75
-		Acceleration: 0, 0, -3
 		Image: propelledbomb
 
 ClusterSubBomb:
@@ -99,12 +96,12 @@ ClusterBomb:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp
 	Warhead@Cluster: FireCluster
 		Weapon: ClusterSubBomb
-		RandomClusterCount: 18
+		RandomClusterCount: 24
 		Dimensions: 12,12
 		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
 	Warhead@Cluster1: FireCluster
 		Weapon: ClusterSubProjectiles
-		RandomClusterCount: 18
+		RandomClusterCount: 24
 		Dimensions: 12,12
 		Footprint: xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxx
 	Warhead@Shake: ShakeScreen
@@ -112,76 +109,31 @@ ClusterBomb:
 		Intensity: 5
 		Multiplier: 1,1
 	Warhead@DamageImpact: SpreadDamage
-		DamageTypes: Fire
 		Spread: 1c0
-		Damage: 7300
+		Damage: 10000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		Versus:
-			Steel: 15
-			Concrete: 15
-	Warhead@Incendiary: TreeDamage
-		Spread: 1c0
-		Damage: 7300
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-	Warhead@DamageArea1: SpreadDamage
 		DamageTypes: Fire
-		Spread: 2c0
-		Damage: 1600
+		AffectsParent: true
+	Warhead@IncendiaryImpact: TreeDamage
+		Spread: 1c0
+		Damage: 10000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		AffectsParent: true
+	Warhead@DamageArea: SpreadDamage
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
 		Delay: 3
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		Versus:
-			Steel: 15
-			Concrete: 15
-	Warhead@Incendiary1: TreeDamage
-		Spread: 2c0
-		Damage: 3700
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-	Warhead@EffectArea1: CreateEffect
-		ImpactSounds: explosion07.wav
-		Delay: 3
-		ImpactActors: false
-	Warhead@DamageArea2: SpreadDamage
 		DamageTypes: Fire
-		Spread: 2c0
-		Damage: 3700
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 7
+		AffectsParent: true
+	Warhead@IncendiaryArea: TreeDamage
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		Versus:
-			Steel: 35
-			Concrete: 15
-	Warhead@Incendiary2: TreeDamage
-		Spread: 2c0
-		Damage: 4000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-	Warhead@DamageArea3: SpreadDamage
-		DamageTypes: Fire
-		Spread: 3c0
-		Damage: 3550
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 6
-		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		Versus:
-			Concrete: 15
-	Warhead@Incendiary3: TreeDamage
-		Spread: 4c0
-		Damage: 3600
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-	Warhead@DamageArea4: SpreadDamage
-		DamageTypes: Fire
-		Spread: 5c0
-		Damage: 4000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 7
-		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		Versus:
-			Concrete: 15
-	Warhead@Incendiary3: TreeDamage
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Spread: 5c0
-		Damage: 2600
+		Spread: 1c0
+		Damage: 25000
+		Falloff: 100, 50, 25, 0
+		AffectsParent: true
 	Warhead@Effect: CreateEffect
 		Image: nuclear_explosion
 		Explosions: idle

@@ -128,9 +128,9 @@ SpeederVoice:
 GliderVoice:
 	DefaultVariant: .wav
 	Voices:
-		Select: ship2_acknowledged, ship2_aeronautics_operational, ship2_awaiting_orders, ship2_ready_for_action
-		Move: ship2_affirmative, ship2_closing_in, ship2_not_a_problem, ship2_roger_that
-		Action: ship2_affirmative, ship2_discharging_munitions, ship2_not_a_problem, ship2_roger_that, ship2_sweep_the_area
+		Select: glider_acknowledged, glider_aeronautics_operational, glider_awaiting_orders, glider_avionics_online
+		Move: glider_closing_in, glider_not_a_problem, glider_roger_that
+		Action: glider_affirmative, glider_shooting_down, glider_firing_missiles, glider_not_a_problem, glider_dogfight_engaged, glider_sweep_the_area
 		Guard: guarding
 
 BomberVoice:

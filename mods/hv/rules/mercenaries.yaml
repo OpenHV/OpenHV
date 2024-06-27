@@ -1,6 +1,7 @@
 ## aircraft
 
 BOMBER2:
+	Inherits@Smoke: ^SmokeEmitter
 	Inherits: ^Plane
 	AppearsOnRadar:
 		UseLocation: true
@@ -38,13 +39,12 @@ BOMBER2:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		TurnSpeed: 30
-		InitialFacing: 768
-		Speed: 185
+		TurnSpeed: 20
+		Speed: 165
 		Voice: Move
+		MaximumPitch: 100
 		RepulsionSpeed: 40
-		MaximumPitch: 56
-		CruiseAltitude: 5560
+		CruiseAltitude: 4560
 	Armament:
 		Weapon: LightBomb
 		LocalOffset: 250,0,0
@@ -79,10 +79,42 @@ BOMBER2:
 		ZOffset: -1000
 	RenderSprites:
 		Image: bomber
+	SpawnActorOnDeath:
+		Actor: BOMBER2.Husk
+		RequiresCondition: airborne
+
+BOMBER2.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-bomber2.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails:
+		Offsets: 0,0,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: bomber
 
 GLIDER:
-	Inherits: ^Plane
+	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits: ^Plane
 	AppearsOnRadar:
 		UseLocation: true
 	WithShadow:
@@ -120,11 +152,10 @@ GLIDER:
 		OpportunityFire: false
 	Aircraft:
 		TurnSpeed: 20
-		InitialFacing: 768
 		Speed: 165
 		Voice: Move
+		MaximumPitch: 100
 		RepulsionSpeed: 40
-		MaximumPitch: 56
 		CruiseAltitude: 4560
 	Armament@Air:
 		Weapon: AircraftMissileAir
@@ -157,6 +188,37 @@ GLIDER:
 		Offset: -298,164,0
 		TrailLength: 12
 		ZOffset: -1000
+	SpawnActorOnDeath:
+		Actor: GLIDER.Husk
+		RequiresCondition: airborne
+
+GLIDER.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-glider.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails:
+		Offsets: 0,0,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: glider
 
 AIRLIFTERMERCENARY:
 	Inherits: ^Plane
@@ -217,6 +279,43 @@ AIRLIFTERMERCENARY:
 		Type: Heavy
 	ParaDrop:
 		ChuteSound: Unload
+	RenderSprites:
+		Image: airlifter
+	SpawnActorOnDeath:
+		Actor: AIRLIFTERMERCENARY.Husk
+		RequiresCondition: airborne
+
+AIRLIFTERMERCENARY.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-airlifter.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 200
+		MaximumPitch: 200
+	FallsToEarth:
+		Explosion: UnitExplodeLarge
+		Velocity: 100
+	LeavesTrails@Right:
+		Offsets: 0,150,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Left:
+		Offsets: 0,-150,0
+		MovingInterval: 2
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
 	RenderSprites:
 		Image: airlifter
 
@@ -364,7 +463,7 @@ MODULE3:
 
 STARPORT3:
 	Inherits: ^BaseBuilding
-	Inherits@Shape: ^2x2Shape
+	Inherits@Shape: ^3x3Shape
 	Inherits@Flame: ^BuildingFlame2
 	Inherits@Disable: ^DisableOnLowPowerOrPowerDown
 	Tooltip:
@@ -379,10 +478,10 @@ STARPORT3:
 		Prerequisites: radar, ~structures.gm
 		Description: actor-starport3.description
 	Valued:
-		Cost: 700
+		Cost: 1000
 	Building:
-		Footprint: x+x x+x x+x
-		Dimensions: 3,3
+		Footprint: _xx_ xxxx ==x= _xx_
+		Dimensions: 4,4
 	HitShape:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -512,-512,0,   512,-512,0,   -512,512,0,   512,512,0
@@ -404,20 +503,20 @@ STARPORT3:
 		Palette: green
 		LineWidth: 2
 	ProductionAirdrop:
-		Produces: Aircraft
+		Produces: Aircraft, Utility
 		ActorType: cargoship
 		ReadyAudio: ReinforcementsHaveArrived
 		ReadyTextNotification: notification-reinforcementa-arrived
 		PauseOnCondition: disabled
 		BaselineSpawn: True
 	Exit@North:
-		ExitCell: 1,0
+		ExitCell: 2,2
 		ProductionTypes: Aircraft
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	Exit@South:
-		ExitCell: 1,2
-		ProductionTypes: Aircraft
+		ExitCell: 0,2
+		ProductionTypes: Utility
 		Priority: 10
 		RequiresCondition: !being-captured && !build-incomplete
 	ExitsDebugOverlay:
@@ -443,7 +542,7 @@ STARPORT3:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
 	Power:
-		Amount: -110
+		Amount: -115
 	Targetable:
 		TargetTypes: Ground, Structure
 	WithTextDecoration@PRIMARY:
@@ -453,6 +552,11 @@ STARPORT3:
 		RequiresSelection: true
 		Text: PRIMARY
 		Font: TinyPixel
+	FreeActorWithDelivery:
+		Actor: repairtank
+		DeliveryOffset: 3,3
+		DeliveringActor: dropship.reinforce
+		Facing: 160
 
 FACTORY3:
 	Inherits: FACTORY
@@ -912,7 +1016,7 @@ BOOMER.MERCENARY:
 		OverrideActor: boomer
 	RenderSprites:
 		Image: boomer
-		
+
 LIGHTNINGBOAT.MERCENARY:
 	Inherits: LIGHTNINGBOAT
 	Buildable:
@@ -1169,7 +1273,7 @@ AATANK3:
 		Name: actor-aatank3.name
 	Buildable:
 		Prerequisites: ~factory.gm
-		Description: actor-aatank3-description
+		Description: actor-aatank3.description
 	Armament:
 		Weapon: FlakLight
 		LocalOffset: 250,250,150, 250,-250,150

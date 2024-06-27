@@ -2,6 +2,8 @@
 
 Speech:
 	DefaultVariant: .wav
+	Prefixes:
+		gm: ginkua_
 	Notifications:
 		StartGame:
 		GameLoaded: game_loaded

@@ -499,6 +499,26 @@ DROPSHIP.Husk:
 	RenderSprites:
 		Image: dropship
 
+DROPSHIP.REINFORCE:
+	Inherits: DROPSHIP
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	RejectsOrders:
+	Aircraft:
+		VTOL: True
+		Repulsable: False
+		MaximumPitch: 36
+		CruiseAltitude: 2560
+		#IdleBehavior: LeaveMap
+		TurnToLand: False
+	DamageMultiplier@Invulnerable:
+		Modifier: 0
+	RenderSprites:
+		Image: dropship
+
 DRONE:
 	Inherits: ^SpawnedPlane
 	Valued:
