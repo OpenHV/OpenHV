@@ -26,14 +26,26 @@ jobs:
           . mod.config;
           awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format. File must be saved using unix-style (LF, not CRLF or CR) line endings.\n"; exit 1);
 
+      - name: Retrieve Changes
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files_yaml: |
+            sprites:
+              - mods/hv/bits/**.png
+
       - name: Check Code
         run: |
           make check
           make check-packaging-scripts
 
       - name: Check Sprites
+        env:
+            ALL_CHANGED_SPRITES: ${{ steps.changed-files.outputs.sprites_all_changed_files }}
         run: |
-          make check-bits
+          make check-bits BIT_FILES=${ALL_CHANGED_SPRITES}
+          sudo apt-get install pngcheck
+          make check-pngs
 
       - name: Check Mod
         run: |

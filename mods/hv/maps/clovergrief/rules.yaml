@@ -72,12 +72,3 @@ DARK_LIGHT_S:
 		RedTint: -0.30
 		GreenTint: -0.30
 		BlueTint: -0.30
-
-WEIRD_ANCIENT_LIGHT:
-	Inherits: LIGHT
-	TerrainLightSource:
-		Range: 5c640
-		Intensity: 0.01
-		RedTint: 0.35
-		GreenTint: 0.60
-		BlueTint: 0.50

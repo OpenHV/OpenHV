@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -31,6 +31,12 @@ namespace OpenRA.Mods.HV.UtilityCommands
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			var pngPath = args[1];
+			if (!File.Exists(pngPath))
+			{
+				Console.WriteLine(pngPath + " does not exist.");
+				Environment.Exit(1);
+			}
+
 			using (var spriteStream = File.OpenRead(pngPath))
 			{
 				var png = new Png(spriteStream);
@@ -39,6 +45,14 @@ namespace OpenRA.Mods.HV.UtilityCommands
 					.WriteToString();
 
 				var yamlPath = Path.ChangeExtension(pngPath, "yaml");
+				if (!File.Exists(yamlPath))
+				{
+					Console.WriteLine(yamlPath + " does not exist.");
+					Environment.Exit(1);
+				}
+
+				Console.WriteLine("Checking " + Path.GetFileName(pngPath));
+
 				using (var metadataStream = File.OpenRead(yamlPath))
 				{
 					var externalYaml = metadataStream.ReadAllText()

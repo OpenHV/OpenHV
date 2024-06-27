@@ -960,14 +960,25 @@ energyball:
 	teleport:
 		Filename: bits/teleport.png
 		Length: 10
-	teleport-large:
-		Filename: bits/teleprt2.png
-		Length: 9
 	appear:
 		Filename: bits/teleport.png
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 50
+	teleport-large:
+		Filename: bits/teleprt2.png
+		Length: 9
+	teleport-group-in:
+		Filename: bits/teleprt3.png
+		Frames: 8, 7, 6, 5, 4, 3, 2, 1
+		Length: *
+		Tick: 40
+	teleport-group-out:
+		Filename: bits/teleprt3.png
+		Frames: 8, 7, 6, 5, 4, 3, 2, 1
+		Length: *
+		Tick: 100
+		ZOffset: 2048
 
 minipod1:
 	idle:

@@ -29,3 +29,5 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [water_mine_explosion.wav](https://freesound.org/people/qubodup/sounds/182429/) by qubodup
 * [mine_explosion.wav](https://freesound.org/people/qubodup/sounds/182429/) by qubodup
 * [mine_reload_oneshotofficial.wav](https://freesound.org/people/oneshotofficial/sounds/616757/) by oneshotofficial
+* [televator.wav](https://freesound.org/people/GameAudio/sounds/220161/) by GameAudio
+* [televator.wav](https://freesound.org/people/oganesson/sounds/555017/) by oganesson

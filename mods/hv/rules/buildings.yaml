@@ -1332,10 +1332,6 @@ HOWITZER:
 		Range: 8c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
-	RevealsShroud@Offline:
-		RequiresCondition: !disabled
-		Range: 5c0
-		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
 	Power:
@@ -1713,7 +1709,6 @@ TELEVATOR:
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
-		RequiresCondition: !disabled
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
@@ -1722,22 +1717,28 @@ TELEVATOR:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	TeleportPower:
+		PauseOnCondition: disabled
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		DisplayRadarPing: True
 		ChargeInterval: 3000
 		OrderName: BeamUsUp
-		Icon: null
+		Icon: televator
 		Name: actor-televator.teleportpower-name
 		Description: actor-televator.teleportpower-description
 		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification:
-		BeginChargeSpeechNotification:
-		EndChargeSpeechNotification:
+		InsufficientPowerSpeechNotification: InsufficientPower
+		BeginChargeSpeechNotification: TelevatorCharging
+		EndChargeSpeechNotification: TelevatorReady
 		SelectTargetTextNotification: notification-select-target
 		InsufficientPowerTextNotification: notification-insufficient-power
 		BeginChargeTextNotification: notification-televator-charging
 		EndChargeTextNotification: notification-televator-ready
+		LaunchSound: televator.wav
+	WithTeleportGroupOverlay:
+		Image: energyball
+		LaunchSequence: teleport-group-in
+		AppearSequence: teleport-group-out
 	TeleportNetwork:
 		Type: subspace
 		RequiresCondition: !disabled

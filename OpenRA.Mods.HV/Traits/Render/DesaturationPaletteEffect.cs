@@ -18,20 +18,20 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Apply palette full screen rotations during teleports. Add this to the world actor.")]
-	public class TeleportPaletteEffectInfo : TraitInfo
+	public class DesaturationPaletteEffectInfo : TraitInfo
 	{
 		[Desc("Measured in ticks.")]
 		public readonly int EffectLength = 60;
 
-		public override object Create(ActorInitializer init) { return new TeleportPaletteEffect(this); }
+		public override object Create(ActorInitializer init) { return new DesaturationPaletteEffect(this); }
 	}
 
-	public class TeleportPaletteEffect : IPaletteModifier, ITick
+	public class DesaturationPaletteEffect : IPaletteModifier, ITick
 	{
-		readonly TeleportPaletteEffectInfo info;
+		readonly DesaturationPaletteEffectInfo info;
 		int remainingFrames;
 
-		public TeleportPaletteEffect(TeleportPaletteEffectInfo info)
+		public DesaturationPaletteEffect(DesaturationPaletteEffectInfo info)
 		{
 			this.info = info;
 		}

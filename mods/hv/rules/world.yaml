@@ -273,6 +273,7 @@
 		Alpha: 0.55
 	FlashPaletteEffect@Nuke:
 		Type: Nuke
+	DesaturationPaletteEffect@Teleport:
 	ShroudRenderer:
 		ShroudVariants: fow
 		FogVariants: fow
