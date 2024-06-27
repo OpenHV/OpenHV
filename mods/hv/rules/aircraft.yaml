@@ -746,7 +746,7 @@ AIRLIFTER:
 		Modifier: 0
 	ParaDrop:
 	Cargo:
-		MaxWeight: 5
+		MaxWeight: 10
 		Types: Vehicles
 
 MOTHERSHIP:

@@ -359,7 +359,7 @@ RADAR3:
 	ParatroopersPower:
 		PauseOnCondition: lowpower || disabled
 		UnitType: airlifter
-		SquadSize: 6
+		SquadSize: 4
 		ReinforcementsArrivedSpeechNotification: ReinforcementsHaveArrived
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
