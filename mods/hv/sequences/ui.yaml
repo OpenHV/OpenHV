@@ -90,8 +90,8 @@ icon:
 		Filename: bits/buildings-icons.png
 		Start: 15
 	televator:
-		Filename: bits/buildings-icons.png
-		Start: 12
+		Filename: bits/televator-icon.png
+		Offset: 1,1
 	null:
 		Filename: bits/null.png
 
