@@ -150,7 +150,7 @@ actor-airlifter =
 actor-bomber2 =
    .name = Atmospheric Bomber
    .description = Fast bombing atmospheric glider.
-     Can only attack ground units.
+     Can't attack air units.
 
 actor-glider =
    .name = Atmospheric Glider

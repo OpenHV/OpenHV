@@ -22,7 +22,7 @@ BOMBER2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: ~starport.gm, techcenter
+		Prerequisites: ~starport.gm, radar, techcenter3
 		Description: actor-bomber2.description
 	Tooltip:
 		Name: actor-bomber2.name
@@ -31,7 +31,7 @@ BOMBER2:
 	Armor:
 		Type: Light
 	Valued:
-		Cost: 1500
+		Cost: 2500
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: true
 	AttackAircraft:
@@ -50,7 +50,7 @@ BOMBER2:
 		LocalOffset: 250,0,0
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 8
+		Ammo: 4
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -58,8 +58,8 @@ BOMBER2:
 		RequiresSelection: true
 		PipCount: 4
 	ReloadAmmoPool:
-		Delay: 85
-		Count: 2
+		Delay: 225
+		Count: 1
 	Voiced:
 		VoiceSet: BomberVoice
 	Tooltip:
@@ -362,8 +362,8 @@ RADAR3:
 		ReinforcementsArrivedSpeechNotification: ReinforcementsHaveArrived
 		ReinforcementsArrivedTextNotification: notification-reinforcementa-arrived
 		QuantizedFacings: 8
-		Cordon: 10c0
-		DropItems: merctank, merctank, merctank, merctank, aatank, engineertank, dualmerctank, dualmerctank
+		Cordon: 5c0
+		DropItems: merctank, merctank, merctank, merctank, aatank3, engineertank, dualmerctank, dualmerctank
 		CameraActor: camera
 		ChargeInterval: 4100
 		Icon: airlifterdrop
@@ -395,7 +395,7 @@ TECHCENTER3:
 		Prerequisites: ~base, radar, ~structures.gm
 		Description: actor-techcenter3.description
 	Valued:
-		Cost: 2000
+		Cost: 4000
 	Tooltip:
 		Name: actor-techcenter3.name
 	Encyclopedia:
@@ -403,7 +403,7 @@ TECHCENTER3:
 		Order: 81
 		Category: Buildings
 	ProvidesPrerequisite@BuildingName:
-		Prerequisite: techcenter
+		Prerequisite: techcenter3
 		RequiresCondition: !powerdown
 	Health:
 		HP: 105500
@@ -725,7 +725,7 @@ UPLINKMERCENARY:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~structures.gm
+		Prerequisites: techcenter3, ~structures.gm
 		BuildLimit: 1
 		Description: actor-uplink-mercenary.description
 	Building:
@@ -798,7 +798,7 @@ OILFACILITY:
 		Footprint: == == xx xx
 		Dimensions: 2,4
 	Buildable:
-		Prerequisites: ~structures.gm, techcenter
+		Prerequisites: ~structures.gm, techcenter3
 	Selectable:
 		Bounds: 1024, 2048, 0, 0
 	Tooltip:
@@ -889,7 +889,7 @@ ELITEPOD2:
 	Buildable:
 		Queue: Pod
 		Description: actor-elitepod2.description
-		Prerequisites: ~module.gm, techcenter
+		Prerequisites: ~module.gm, techcenter3
 		BuildPaletteOrder: 50
 	Valued:
 		Cost: 550
@@ -1134,7 +1134,7 @@ CLUSTERTANK:
 		Name: actor-clustertank.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, radar, techcenter
+		Prerequisites: ~factory.gm, radar, techcenter3
 		BuildPaletteOrder: 70
 		Description: actor-clustertank.description
 	UpdatesPlayerStatistics:
@@ -1220,7 +1220,7 @@ MISSILETANK2:
 		Name: actor-missiletank2.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.gm, radar, techcenter
+		Prerequisites: ~factory.gm, radar, techcenter3
 		BuildPaletteOrder: 80
 		Description: actor-missiletank2.description
 	UpdatesPlayerStatistics:
@@ -1261,7 +1261,7 @@ ENGINEERTANK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: ~factory.gm, techcenter, radar
+		Prerequisites: ~factory.gm, techcenter3, radar
 		Queue: Tank
 		Description: actor-engineertank.description
 	Mobile:

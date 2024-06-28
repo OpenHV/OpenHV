@@ -517,6 +517,8 @@ DROPSHIP.REINFORCE:
 		Modifier: 0
 	UpdatesPlayerStatistics:
 		OverrideActor: dropship
+	-RevealsShroud:
+	-RevealsShroud@Hacked:
 	RenderSprites:
 		Image: dropship
 

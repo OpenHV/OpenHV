@@ -37,15 +37,20 @@ Bomb:
 
 LightBomb:
 	Inherits: Bomb
-	ReloadDelay: 85
-	Burst: 4
-	BurstDelay: 8
+	ReloadDelay: 120
+	-Burst:
+	-BurstDelays:
 	Warhead@Damage: SpreadDamage
-		Damage: 1850
+		Damage: 1550
 	Warhead@Incendiary: TreeDamage
-		Damage: 1650
+		Damage: 1250
 	Projectile: GravityBomb
 		Image: propelledbomb
+	Warhead@Cluster1: FireCluster
+		Weapon: ClusterSubProjectiles
+		RandomClusterCount: 4
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
 
 ClusterSubBomb:
 	Inherits: BigSplash
@@ -91,6 +96,19 @@ ClusterSubProjectiles:
 	Projectile: Bullet
 		Inaccuracy: 2c256
 		LaunchAngle: 105
+
+ClusterSubProjectilesLight:
+	Inherits: SmallArtillery
+	Range: 55c0
+	-MinRange:
+	TargetActorCenter: false
+	Projectile: Bullet
+		Inaccuracy: 3c256
+		LaunchAngle: 105
+	Warhead@Damage: SpreadDamage
+		Damage: 1000
+	Warhead@Incendiary: TreeDamage
+		Damage: 1100
 
 ClusterBomb:
 	ValidTargets: Ground, Air, Tree, Lava, Swamp
