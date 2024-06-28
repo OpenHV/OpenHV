@@ -117,7 +117,7 @@ APC:
 		Name: actor-apc.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, module
+		Prerequisites: factory, module, ~!structures.gm
 		BuildPaletteOrder: 40
 		Description: actor-apc.description
 	UpdatesPlayerStatistics:

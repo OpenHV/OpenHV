@@ -1097,7 +1097,7 @@ CONSTRUCTOR:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
-		Prerequisites: outpost
+		Prerequisites: base.gm
 		Queue: Utility
 		BuildPaletteOrder: 70
 		Description: actor-constructor.description

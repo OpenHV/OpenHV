@@ -13,18 +13,24 @@
 - [x] Make Tiny Hawk
 - [x] Make atmospheric glider
 - [x] Make voices for cluster bomb and paratroopers powers
-- [ ] Make the AA Turret fit the Hard Vacuum style
+- [ ] Polish the colors of the AA Turret
 - [ ] Make the building icon for the AA Turret
+- [ ] Make a sprite for the AA Tank
 - [x] Fix factory platform transparency
 - [x] Make the Cluster Bomb Dome damaged sprite craters look less odd
 - [x] Polish the Paratroopers Drop cursor
-- [ ] Do something with the Dreadnought (or not)
 - [x] Redo the Atmospheric Glider sprites
-- [ ] Make a different base, outpost, radar and storage sprite
-- [ ] Replace every Ginkua units taken from other factions with new and unique ones
-- [ ] Make a sprite for the Starport Platform
+- [x] Make a sprite for the Starport Platform
 - [x] Rework on the Starport Platform
-- [ ] Rework on every building not edited yet
-- [ ] Recheck every unit armament offset
+- [ ] Recheck every unit's armament offset
 - [ ] Correct every wrong diagonal angle spritesheets
+- [ ] Add the Railgun Pod & delete the elitepod2
+- [ ] Make a variation for the artillery?
+- [ ] Remake the base
+- [ ] Remake the outpost
+- [ ] Remake the refinery
+- [ ] Remake the bunker
+- [ ] Remake the turret
 - [x] Fix the Cluster Bomb Dome sprite (roundings)
+- [ ] Start working on the navy units
+- [ ] Do something with the Dreadnought (or not)
