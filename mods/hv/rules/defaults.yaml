@@ -879,6 +879,7 @@
 	Mobile:
 		Locomotor: naval
 		Voice: Move
+	Teleportable:
 	Selectable:
 		Bounds: 1024, 1024
 	Targetable:
