@@ -23,13 +23,8 @@
 #
 # to check your mod yaml for errors, run:
 #   make [RUNTIME=net6] test
-#
-# the following are internal sdk helpers that are not intended to be run directly:
-#   make check-variables
-#   make check-sdk-scripts
-#   make check-packaging-scripts
 
-.PHONY: check-sdk-scripts check-packaging-scripts check-variables engine all clean version check-scripts check test install
+.PHONY: engine all clean version check-scripts check test install
 .DEFAULT_GOAL := all
 
 VERSION = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null || echo git-`git rev-parse --short HEAD`)
@@ -80,66 +75,7 @@ bindir = $(prefix)/bin
 libdir = $(prefix)/lib
 gamedir = $(libdir)/openhv
 
-check-sdk-scripts:
-	@awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format: file must be saved using unix-style (CR, not CRLF) line endings.\n"; exit 1)
-	@if [ ! -x "fetch-engine.sh" ] || [ ! -x "launch-dedicated.sh" ] || [ ! -x "launch-game.sh" ] || [ ! -x "utility.sh" ]; then \
-		echo "Required SDK scripts are not executable:"; \
-		if [ ! -x "fetch-engine.sh" ]; then \
-			echo "   fetch-engine.sh"; \
-		fi; \
-		if [ ! -x "launch-dedicated.sh" ]; then \
-			echo "   launch-dedicated.sh"; \
-		fi; \
-		if [ ! -x "launch-game.sh" ]; then \
-			echo "   launch-game.sh"; \
-		fi; \
-		if [ ! -x "utility.sh" ]; then \
-			echo "   utility.sh"; \
-		fi; \
-		echo "Repair their permissions and try again."; \
-		echo "If you are using git you can repair these permissions by running"; \
-		echo "   git update-index --chmod=+x *.sh"; \
-		echo "and commiting the changed files to your repository."; \
-		exit 1; \
-	fi
-
-check-packaging-scripts:
-	@if [ ! -x "packaging/package-all.sh" ] || [ ! -x "packaging/linux/buildpackage.sh" ] || [ ! -x "packaging/macos/buildpackage.sh" ] || [ ! -x "packaging/windows/buildpackage.sh" ]; then \
-		echo "Required SDK scripts are not executable:"; \
-		if [ ! -x "packaging/package-all.sh" ]; then \
-			echo "   packaging/package-all.sh"; \
-		fi; \
-		if [ ! -x "packaging/linux/buildpackage.sh" ]; then \
-			echo "   packaging/linux/buildpackage.sh"; \
-		fi; \
-		if [ ! -x "packaging/macos/buildpackage.sh" ]; then \
-			echo "   packaging/macos/buildpackage.sh"; \
-		fi; \
-		if [ ! -x "packaging/windows/buildpackage.sh" ]; then \
-			echo "   packaging/windows/buildpackage.sh"; \
-		fi; \
-		echo "Repair their permissions and try again."; \
-		echo "If you are using git you can repair these permissions by running"; \
-		echo "   git update-index --chmod=+x *.sh"; \
-		echo "in the directories containing the affected files"; \
-		echo "and commiting the changed files to your repository."; \
-		exit 1; \
-	fi
-
-check-variables:
-	@if [ -z "$(MOD_ID)" ] || [ -z "$(ENGINE_DIRECTORY)" ]; then \
-		echo "Required mod.config variables are missing:"; \
-		if [ -z "$(MOD_ID)" ]; then \
-			echo "   MOD_ID"; \
-		fi; \
-		if [ -z "$(ENGINE_DIRECTORY)" ]; then \
-			echo "   ENGINE_DIRECTORY"; \
-		fi; \
-		echo "Repair your mod.config (or user.config) and try again."; \
-		exit 1; \
-	fi
-
-engine: check-variables check-sdk-scripts
+engine:
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
 ifeq ("$(TARGETPLATFORM)","unix-generic")
@@ -196,11 +132,11 @@ endif
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 
-version: engine check-variables
+version: engine
 	@sh -c '. $(ENGINE_DIRECTORY)/packaging/functions.sh; set_mod_version $(VERSION) $(MANIFEST_PATH)'
 	@printf "Version changed to $(VERSION).\n"
 
-check-scripts: check-variables
+check-scripts:
 ifeq ("$(HAS_LUAC)","")
 	@printf "'luac' not found.\n" && exit 1
 endif
