@@ -811,6 +811,10 @@ actor-builder =
       Unarmed
    .name = Builder
 
+actor-constructor =
+   .name = Yard Constructor
+   .description = Deploys into base yards.
+
 actor-collector-name = Collector
 
 actor-miner =

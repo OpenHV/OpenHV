@@ -484,7 +484,7 @@ World:
 		Class: none
 		ClassName: options-starting-units.base-only
 		Factions: gm
-		BaseActor: base3
+		BaseActor: constructor
 	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: options-starting-units.base-miner
@@ -501,7 +501,7 @@ World:
 		Class: miner
 		ClassName: options-starting-units.base-miner
 		Factions: gm
-		BaseActor: base3
+		BaseActor: constructor
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
@@ -519,7 +519,7 @@ World:
 		Class: scout
 		ClassName: options-starting-units.base-scout
 		Factions: gm
-		BaseActor: base3
+		BaseActor: constructor
 		SupportActors: balloon
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6

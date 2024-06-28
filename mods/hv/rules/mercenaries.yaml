@@ -36,7 +36,7 @@ BOMBER2:
 		AddToAssetsValue: true
 	AttackAircraft:
 		FacingTolerance: 92
-		PersistentTargeting: false
+		PersistentTargeting: true
 		OpportunityFire: false
 	Aircraft:
 		TurnSpeed: 20
@@ -338,8 +338,7 @@ BASE3:
 	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Ginkua:
 		Prerequisite: structures.gm
-	Buildable:
-		Prerequisites: outpost, ~base.gm
+	-Buildable:
 	-Encyclopedia:
 
 OUTPOST3:
@@ -1093,6 +1092,38 @@ BUILDER3:
 		IntoActor: outpost3
 	RenderSprites:
 		Image: builder3
+
+CONSTRUCTOR:
+	Inherits: ^Vehicle
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Prerequisites: outpost
+		Queue: Utility
+		BuildPaletteOrder: 70
+		Description: actor-constructor.description
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: actor-constructor.name
+	Health:
+		HP: 45000
+	Armor:
+		Type: Steel
+	Mobile:
+		TurnSpeed: 30
+		Speed: 80
+	RevealsShroud:
+		Range: 2c768
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Explodes:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+	Transforms:
+		IntoActor: base3
+	RenderSprites:
+		Image: builder1
 
 CLUSTERTANK:
 	Inherits: ^TrackedVehicle

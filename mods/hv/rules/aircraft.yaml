@@ -508,14 +508,15 @@ DROPSHIP.REINFORCE:
 		AlwaysVisibleRelationships: None
 	RejectsOrders:
 	Aircraft:
-		VTOL: True
-		Repulsable: False
-		MaximumPitch: 36
-		CruiseAltitude: 2560
-		#IdleBehavior: LeaveMap
-		TurnToLand: False
+		IdleBehavior: LeaveMap
+		Repulsable: false
+	-Selectable:
+	Interactable:
+	-MapEditorData:
 	DamageMultiplier@Invulnerable:
 		Modifier: 0
+	UpdatesPlayerStatistics:
+		OverrideActor: dropship
 	RenderSprites:
 		Image: dropship
 
