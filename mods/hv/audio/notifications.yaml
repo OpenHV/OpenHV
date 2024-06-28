@@ -2,6 +2,9 @@
 
 Speech:
 	DefaultVariant: .wav
+	Prefixes:
+		yi: yi_
+		sc: sc_
 	Notifications:
 		StartGame:
 		GameLoaded: game_loaded

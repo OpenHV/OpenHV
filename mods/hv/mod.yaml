@@ -37,6 +37,7 @@ Packages:
 	hv|bits/audio/dzierzan/electricpod
 	hv|bits/audio/flamewh33l/
 	hv|bits/audio/timbeek/
+	hv|bits/audio/replica/announcer_yi
 
 MapFolders:
 	hv|maps: System
