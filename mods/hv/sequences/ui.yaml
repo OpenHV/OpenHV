@@ -83,8 +83,7 @@ icon:
 	radar:
 		Filename: bits/radar-icon.png
 	howitzer:
-		Filename: bits/buildings-icons.png
-		Start: 15
+		Filename: bits/howitzer-icon.png
 	televator:
 		Filename: bits/televator-icon.png
 		Offset: 1,1
