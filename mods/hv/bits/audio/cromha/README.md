@@ -1,1 +1,1 @@
-Content of this folder indicates assets made by various authors, under the default [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+ Contents of this folder were generated using third party text-to-speech tool (https://ttsmaker.com/) TTSMaker, without any copyrighting rights from them.
