@@ -189,7 +189,7 @@ RAILGUNBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, techcenter
+		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 50
 		Description: actor-railgunboat.description
 	UpdatesPlayerStatistics:
@@ -229,7 +229,7 @@ LIGHTNINGBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
 		Description: actor-lightningboat.description
 	UpdatesPlayerStatistics:
