@@ -252,8 +252,9 @@ BANSHEE:
 		RequiresCondition: airborne
 	Armament:
 		Weapon: ShipMissile
-		LocalOffset: 256,125,0, 256,-125,0
+		LocalOffset: 500,225,0, 500,-225,0
 		PauseOnCondition: !ammo
+		MuzzleSequence: muzzle
 	AmmoPool:
 		Ammo: 6
 		AmmoCondition: ammo
