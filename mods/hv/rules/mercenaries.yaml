@@ -883,47 +883,46 @@ CLUSTERPOD:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
-ELITEPOD2:
-	Inherits: ^Helicopter
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+RAILGUNPOD:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
-		Description: actor-elitepod2.description
-		Prerequisites: ~module.gm, techcenter3
+		Description: actor-railgunpod.description
+		Prerequisites: ~module.gm, factory, techcenter3
 		BuildPaletteOrder: 50
 	Valued:
-		Cost: 550
+		Cost: 250
 	Tooltip:
-		Name: actor-elitepod2.name
-	Health:
-		HP: 7000
-	Aircraft:
-		TurnSpeed: 50
-		CruiseAltitude: 1c0
-		Speed: 100
-		IdealSeparation: 1c0
+		Name: actor-railgunpod.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Armament:
-		Weapon: RapidPodRocket
-		MuzzleSequence: muzzle
-		LocalOffset: 0,-300,0,   0,300,0
-	AttackFrontal:
-		FacingTolerance: 10
-	WithMuzzleOverlay:
-	WithMoveAnimation:
-	-Explodes@SpawnPilot:
-	-GrantRandomCondition@SpawnPilot:
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
-		Type: GroundPosition
+		Range: 6c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
-		Type: GroundPosition
-	Voiced:
-		VoiceSet: ElitePodVoice
+		Range: 3c0
+	Armament@Primary:
+		Weapon: LightRailgun
+	Armament@Garrisoned:
+		Name: garrisoned
+		Weapon: LightRailgunBunker
+	AttackFrontal:
+		PauseOnCondition: ecm-disabled
+		FacingTolerance: 0
+	WithMuzzleOverlay:
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 120
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload, Move
+		IsPlayerPalette: true
+		CloakedPalette: cloak
+		CloakStyle: Palette
+	RenderSprites:
+		Image: shotgunpod
 
 CLUSTERPOD:
 	Inherits: ^Pod

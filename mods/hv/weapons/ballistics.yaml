@@ -412,9 +412,14 @@ HeavyCluster:
 		LaunchAngle: 175
 	Warhead@Cluster: FireCluster
 		Weapon: ClusterProjectileStronger
-		RandomClusterCount: 13
-		Dimensions: 5,5
-		Footprint: xxxxx xXxxx xxXxx xxxXx xxxxx
+		RandomClusterCount: 7
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileHeavy
+		RandomClusterCount: 3
+		Dimensions: 2,2
+		Footprint: xx xx
 
 LightClusterBunker:
 	Inherits: LightCluster
@@ -457,10 +462,23 @@ ClusterProjectileStronger:
 		Speed: 275
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		Spread: 185
-		Damage: 1250
+		Spread: 25
+		Damage: 1350
 		Versus:
 			None: 100
 			Steel: 75
 			Light: 80
 			Heavy: 70
+
+ClusterProjectileHeavy:
+	Inherits: SmallArtillery
+	Range: 55c0
+	-MinRange:
+	TargetActorCenter: false
+	Projectile: Bullet
+		Inaccuracy: 3c256
+		LaunchAngle: 105
+	Warhead@Damage: SpreadDamage
+		Damage: 2000
+	Warhead@Incendiary: TreeDamage
+		Damage: 2000

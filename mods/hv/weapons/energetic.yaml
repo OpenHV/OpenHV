@@ -33,6 +33,41 @@ Railgun:
 		ValidTargets: Ground
 		ImpactSounds: explosion06.wav
 
+LightRailgun:
+	Inherits: Railgun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	Range: 6c0
+	ReloadDelay: 50
+	Report: raygun_newlocknew.wav
+	Projectile: LaserZap
+		Width: 0c90
+		Shape: Cylindrical
+		ZOffset: 2048
+		Color: FE0303
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+		Damage: 1000
+		Spread: 24
+		Versus:
+			None: 1500
+			Steel: 35
+			Light: 75
+			Heavy: 25
+			Concrete: 15
+	Warhead@Incendiary: TreeDamage
+		Damage: 500
+		Spread: 24
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.wav
+
+LightRailgunBunker:
+	Range: 8c0
+	Inherits: LightRailgun
+
 ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 7c0

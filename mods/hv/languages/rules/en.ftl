@@ -514,6 +514,14 @@ actor-clusterpod =
      Strong in groups.
    .name = Cluster Pod
 
+actor-railgunpod =
+   .description = Fast scout vehicle.
+    Armed with a light railgun cannon.
+    Cloaked when idle.
+     Strong vs Pods and Aircraft
+     Weak vs Tanks and Buildings
+   .name = Railgun Pod
+
 actor-mortarpod =
    .description = Fast support vehicle.
     Armed with portable mortar gun.
