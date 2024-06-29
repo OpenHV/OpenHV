@@ -219,6 +219,13 @@ bullet17-trace:
 		Tick: 40
 		ZOffset: 2000
 
+bullet18:
+	idle:
+		Filename: bits/bullet18.png
+		Facings: 8
+		InterpolatedFacings: 16
+		ZOffset: 2030
+
 nuclear:
 	up:
 		Filename: bits/blank.png
@@ -240,6 +247,13 @@ smoke:
 small_smoke:
 	idle:
 		Filename: bits/small_smoke.png
+		Length: 6
+		Tick: 60
+		ZOffset: 2020
+
+smoke_blue:
+	idle:
+		Filename: bits/smoke_blue.png
 		Length: 6
 		Tick: 60
 		ZOffset: 2020

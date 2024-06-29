@@ -70,42 +70,42 @@ banshee:
 				Filename: muzzle4.png
 				Start: 0
 				Length: 2
-				Offset: 0,6
+				Offset: 0,3
 			1: #NW
 				Filename: muzzle4.png
 				Start: 2
 				Length: 2
-				Offset: 3,4
+				Offset: 1,1
 			2: #W
 				Filename: muzzle4.png
 				Start: 4
 				Length: 2
-				Offset: 4,2
+				Offset: 0,2
 			3: #SW
 				Filename: muzzle4.png
 				Start: 6
 				Length: 2
-				Offset: 2,-2
+				Offset: 0,0
 			4: #S
 				Filename: muzzle4.png
 				Start: 8
 				Length: 2
-				Offset: 0,-3
+				Offset: 0,0
 			5: #SE
 				Filename: muzzle4.png
 				Start: 10
 				Length: 2
-				Offset: -2,-2
+				Offset: 0,0
 			6: #E
 				Filename: muzzle4.png
 				Start: 12
 				Length: 2
-				Offset: -4,2
+				Offset: 0,2
 			7: #NE
 				Filename: muzzle4.png
 				Start: 14
 				Length: 2
-				Offset: -3,4
+				Offset: -1,2
 		Length: 2
 		Facings: 8
 		Tick: 100

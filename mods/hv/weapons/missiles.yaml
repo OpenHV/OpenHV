@@ -149,6 +149,8 @@ ShipMissile:
 		Speed: 256
 		Inaccuracy: 316
 		CruiseAltitude: 2c0
+		Image: bullet18
+		TrailImage: smoke_blue
 	Warhead@Damage: SpreadDamage
 		Damage: 2000
 		Versus:
