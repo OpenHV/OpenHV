@@ -16,7 +16,7 @@ Game rules are defined in text files using a dialect called `MiniYAML` which has
 
 Script missions or mini-games in Lua. See the [API](https://openhv.readthedocs.io/en/latest/release/lua/) for details and use the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=openra.vscode-openra-lua) for code completion.
 
-# Licensing ![GPL](https://img.shields.io/github/license/OpenHV/OpenHV)
+# Licensing [![GPL](https://img.shields.io/github/license/OpenHV/OpenHV)](https://www.gnu.org/licenses/gpl-3.0.html) [![License: CC BY US 3.0](https://img.shields.io/badge/License-CC%20BY%203.0%20US-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/us/) [![License: CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/) [![License: CC0](https://img.shields.io/badge/License-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 OpenHV just like the OpenRA engine and SDK scripts is made available under the [GPLv3](https://github.com/OpenHV/OpenHV/blob/main/COPYING) license.
 
