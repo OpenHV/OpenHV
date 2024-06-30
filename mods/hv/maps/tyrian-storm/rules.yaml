@@ -1,0 +1,80 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.85
+	TintPostProcessEffect:
+		Red: 1.3
+		Green: 1.3
+		Blue: 0.8
+		Ambient: 0.9
+	WeatherOverlay:
+		ChangingWindLevel: false
+		WindLevels: -20, -8, -4
+		WindTick: 150, 550
+		InstantWindChanges: true
+		UseSquares: true
+		ParticleSize: 1, 3
+		ScatterDirection: -2, 3
+		Gravity: 8, 9
+		SwingOffset: 1.0, 1.5
+		SwingSpeed: 0, 0.1
+		SwingAmplitude: 0, 0.1
+		ParticleColors: FFEFD5, FBCEB1, FED8B1
+		LineTailAlphaValue: 16
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+PURP_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.55
+		GreenTint: 0.35
+		BlueTint: 0.60
+
+BLUE_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.45
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.35
+		BlueTint: -0.35
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
