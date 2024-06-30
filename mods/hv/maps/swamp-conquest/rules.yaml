@@ -1,5 +1,5 @@
 ^BaseWorld:
-	TintPostProcessEffect:
+	GlobalLightingPaletteEffect:
 		Red: 1
 		Green: 1.2
 		Blue: 0.95
