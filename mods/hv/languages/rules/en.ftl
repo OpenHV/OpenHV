@@ -729,6 +729,7 @@ actor-cvit =
 actor-mothership =
    .name = Mothership
    .description = Launches aerial autonomous attack vessels.
+      Only one can be built.
       Strong vs Everything
 
 actor-mothership-husk =

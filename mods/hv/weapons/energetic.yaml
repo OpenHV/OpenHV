@@ -191,7 +191,7 @@ PodVoltageArc:
 			None: 65
 			Steel: 75
 			Light: 70
-			Heavy: 110
+			Heavy: 150
 			Concrete: 50
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Incendiary: TreeDamage
@@ -221,13 +221,13 @@ LightningBolt:
 		ZOffset: 2048
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 4000
+		Damage: 3000
 		ValidTargets: Air
 		Versus:
 			None: 30
 			Wood: 90
 			Light: 90
-			Heavy: 115
+			Heavy: 300 # 270
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -256,7 +256,7 @@ LightningBoltLight:
 			None: 30
 			Wood: 90
 			Light: 90
-			Heavy: 115
+			Heavy: 300 # 270
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -471,10 +471,10 @@ MothershipLaser:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 5
 	Range: 8c0
-	MinRange: 1c0
+	MinRange: 0c0
 	Report: laserblaster_newlocknew.wav
 	Projectile: Bullet
-		Speed: 550
+		Speed: 825 # 550 # 825 # 2200
 		Blockable: false
 		Inaccuracy: 0
 		Image: 
@@ -488,16 +488,17 @@ MothershipLaser:
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		Damage: 1000
+		Spread: 128
+		Damage: 2500
 		Versus:
-			None: 65
+			None: 300
 			Steel: 75
-			Light: 70
-			Heavy: 110
+			Light: 200
+			Heavy: 250
 			Concrete: 50
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 1750
+		Damage: 2500
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.wav

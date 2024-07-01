@@ -674,7 +674,7 @@ STARPORT:
 		RequiresCondition: !being-captured && !build-incomplete
 		SpawnOffset: 0,-256,0
 		ExitCell: 0,0
-		Facing: 896
+		Facing: 512
 	RallyPoint:
 		CirclesSequence:
 		IsPlayerPalette: true
