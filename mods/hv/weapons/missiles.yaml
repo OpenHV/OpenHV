@@ -154,12 +154,13 @@ ShipMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 2000
 		Versus:
-			None: 15
+			None: 45
 			Steel: 90
-			Light: 15
-			Heavy: 15
+			Light: 45
+			Heavy: 45
 			Concrete: 90
 	Warhead@Incendiary: TreeDamage
+		Spread: 128
 		Damage: 2000
 
 BoatMissileAntiGround:

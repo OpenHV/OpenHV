@@ -127,10 +127,10 @@ Plasma:
 	Warhead@Damage: SpreadDamage
 		Damage: 1750
 		Versus:
-			None: 15
+			None: 43
 			Steel: 85
-			Light: 15
-			Heavy: 15
+			Light: 43
+			Heavy: 43
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
