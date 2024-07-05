@@ -556,7 +556,7 @@ actor-lightningboat =
 
 actor-boomer =
    .name = Missile Submarine
-   .generic-name = Boat
+   .generic-name = Submarine
    .description = A submarine with powerful long range missiles.
       Strong vs Vehicles, Pods and Buildings
 
