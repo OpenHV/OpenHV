@@ -151,9 +151,9 @@ TechnicianVoice:
 StealthTankVoice:
 	DefaultVariant: .wav
 	Voices:
-		Select: stealthtank_copy, stealthtank_Im_waiting, stealthtank_orders, stealthtank_ready, stealthtank_ready_for_action, stealthtank_sir, stealthtank_stealthtank, stealthtank_receiving
-		Move: stealthtank_acknowledged, stealthtank_affirmative, stealthtank_at_once, stealthtank_good_copy, stealthtank_move_out, stealthtank_moving, stealthtank_they_wont_see_me, stealthtank_quickly
-		Action: stealthtank_consider_it_dead, stealthtank_engaging, stealthtank_leave_no_survivors, stealthtank_missile_barrage, stealthtank_shoot_to_kill, stealthtank_target, stealthtank_fire_the_missiles
+		Select: stealthtank_copy, stealthtank_im_waiting, stealthtank_orders, stealthtank_ready, stealthtank_ready_for_action, stealthtank_sir, stealthtank_stealthtank, stealthtank_receiving
+		Move: stealthtank_acknowledged, stealthtank_affirmative, stealthtank_at_once, stealthtank_good_copy, stealthtank_move_out, stealthtank_moving, stealthtank_they_unseen, stealthtank_quickly
+		Action: stealthtank_its_already_dead, stealthtank_engaging, stealthtank_leave_no_survivors, stealthtank_missile_barrage, stealthtank_shoot_to_kill, stealthtank_target, stealthtank_fire_the_missiles
 		Guard: guarding
 
 BuilderVoice:
