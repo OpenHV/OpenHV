@@ -219,7 +219,17 @@ endif
 
 check-pngs:
 ifneq ("$(BIT_FILES)","")
-	@pngcheck -c $(BIT_FILES)
+	@echo "Checking PNG consistency and palette...";
+	@status=0; \
+	for file in $(BIT_FILES); do \
+		result=$$(pngcheck -c $$file); \
+		echo "$$result" | grep -q "32-bit RGB"; \
+		if [ $$? -eq 0 ]; then \
+			echo "$$file is not an 8-bit indexed PNG."; \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
 endif
 
 check-maps:
