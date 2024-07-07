@@ -82,7 +82,7 @@ SaucerVoice:
 	Voices:
 		Select: saucer_aeronautics_operational, saucer_avionics_online, saucer_awaiting_orders
 		Move: saucer_acknowledged, saucer_affirmative, saucer_not_a_problem, saucer_roger_that
-		Action: saucer_quantum_deconstruction, saucer_vaporising_molecular_levels, sauer_atomising_photon_cannon
+		Action: saucer_quantum_deconstruction, saucer_vaporising_molecular_levels, saucer_atomising_photon_cannon
 		Guard: guarding
 
 BansheeVoice:
