@@ -3,7 +3,7 @@ LastWave = false
 Won = false
 
 Generic = { "lightboat", "mediumboat" }
-Lightning = { "railgunboat" }
+Lightning = { "lightningboat" }
 Submarine = { "carrier" }
 
 Waves =
