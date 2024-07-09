@@ -34,8 +34,8 @@ Players:
 		Name: Multi0
 		Playable: True
 		LockFaction: True
-		LockColor: True
 		Faction: sc
+		LockColor: True
 		Color: 805040
 		Enemies: Creeps
 
@@ -681,6 +681,42 @@ Actors:
 	SpawningWaypoint: entry
 		Owner: Neutral
 		Location: 19,1
+	Actor285: oresmelt
+		Owner: Multi0
+		Location: 74,27
+	Actor286: oresmelt
+		Owner: Multi0
+		Location: 72,27
+	Actor287: oresmelt
+		Owner: Multi0
+		Location: 70,27
+	Actor288: oresmelt
+		Owner: Multi0
+		Location: 68,27
+	Actor289: oresmelt
+		Owner: Multi0
+		Location: 68,25
+	Actor290: oresmelt
+		Owner: Multi0
+		Location: 68,23
+	Actor291: oresmelt
+		Owner: Multi0
+		Location: 70,23
+	Actor292: oresmelt
+		Owner: Multi0
+		Location: 70,25
+	Actor293: oresmelt
+		Owner: Multi0
+		Location: 72,23
+	Actor294: oresmelt
+		Owner: Multi0
+		Location: 72,25
+	Actor295: oresmelt
+		Owner: Multi0
+		Location: 74,23
+	Actor296: oresmelt
+		Owner: Multi0
+		Location: 74,25
 
 Rules: rules.yaml
 
