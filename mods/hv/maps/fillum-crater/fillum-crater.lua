@@ -7,10 +7,10 @@
    information, see COPYING.
 ]]
 
-GroundReinforcementUnits = { "mgpod", "mgpod", "mgpod", "rocketpod", "rocketpod", "rocketpod", "rocketpod", "rocketpod", "buggy", "buggy", "buggy", "buggy", "buggy", "bike", "bike", "stealthtank", "artillery", "artillery", "artillery", "technician", "technician", "technician", "repairtank", "hackertank", "missiletank", "missiletank", "missiletank", "dualartillery" }
+GroundReinforcementUnits = { "mgpod", "mgpod", "mgpod", "rocketpod", "rocketpod", "rocketpod", "rocketpod", "rocketpod", "buggy", "buggy", "buggy", "buggy", "buggy", "buggy", "buggy", "hackertank", "artillery", "artillery", "artillery", "technician", "technician", "technician", "repairtank", "hackertank", "missiletank", "missiletank", "missiletank", "dualartillery" }
 AirReinforcementUnits = { "copter", "copter", "copter", "banshee", "banshee", "chopper"}
-NavalReinforcementUnits = { "boomer", "patrolboat", "patrolboat", "patrolboat", "submarine", "boat4", "boat4", "boat4"}
-YurukiReinforcements = { "submarine", "carrier", "railgunboat", "lightboat", "boat" }
+NavalReinforcementUnits = { "boomer", "patrolboat", "patrolboat", "patrolboat", "submarine", "railgunboat", "railgunboat" }
+YurukiReinforcements = { "submarine", "carrier", "lightningboat", "lightboat", "mediumboat" }
 
 Warning = UserInterface.Translate("warning")
 
