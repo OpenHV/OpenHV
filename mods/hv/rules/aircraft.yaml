@@ -676,6 +676,8 @@ CARGOSHIP:
 		CruiseAltitude: 2560
 		IdleBehavior: LeaveMap
 		TurnToLand: False
+	MapEditorData:
+		Categories: Aircraft
 	Interactable:
 	Tooltip:
 		Name: actor-cargoship-name
@@ -714,6 +716,8 @@ AIRLIFTER:
 		CruiseAltitude: 2560
 		IdleBehavior: LeaveMap
 		TurnToLand: False
+	MapEditorData:
+		Categories: Aircraft
 	Tooltip:
 		Name: actor-airlifter-name
 	Valued:
