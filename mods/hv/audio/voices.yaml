@@ -15,14 +15,14 @@ GenericVoice2:
 		Guard: guarding
 
 BeastVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: beast_select
 		Action: beast_move
 		Die: beast_die
 
 SeedVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: seed_select
 		Action: seed_move
@@ -44,7 +44,7 @@ FlyingMonsterVoice:
 		Die: flyingmonster_death_robinhood76
 
 GenericVoice3:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: awaiting_orders, im_ready, receiving, yes_sir
 		Move: acknowledged, affirmative, as_you_wish, at_once, en_route, lets_go, move_out, on_my_way, orders_received, ten_four
@@ -53,7 +53,7 @@ GenericVoice3:
 		Guard: guarding
 
 ShipVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: shipselect1, shipselect2, shipselect3, shipselect4, shipselect5
 		Move: shipmove1, shipmove2, shipmove3, shipmove4, shipmove5
@@ -62,7 +62,7 @@ ShipVoice:
 		Guard: guarding
 
 TransportHelicopterVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: chopper_aeronautics_operational, chopper_avionics_online, chopper_awaiting_orders
 		Move: chopper_acknowledged, chopper_affirmative, chopper_heading_to_new_lz, chopper_not_a_problem, chopper_roger_that, chopper_verify_new_coordinate
@@ -70,7 +70,7 @@ TransportHelicopterVoice:
 		Guard: guarding
 
 AttackHelicopterVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: copter_aeronautics_operational, copter_avionics_online, copter_awaiting_orders
 		Move: copter_acknowledged, copter_affirmative, copter_not_a_problem, copter_right_away_sir, copter_roger_that, copter_solid_copy
@@ -78,7 +78,7 @@ AttackHelicopterVoice:
 		Guard: guarding
 
 SaucerVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: saucer_aeronautics_operational, saucer_avionics_online, saucer_awaiting_orders
 		Move: saucer_acknowledged, saucer_affirmative, saucer_not_a_problem, saucer_roger_that
@@ -86,7 +86,7 @@ SaucerVoice:
 		Guard: guarding
 
 BansheeVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: banshee_aeronautics_operational, banshee_avionics_online, banshee_awaiting_orders, banshee_ready_for_action, banshee_reporting_in
 		Move: banshee_acknowledged, banshee_affirmative, banshee_air_support_inbound, banshee_not_a_problem, banshee_roger_that
@@ -94,7 +94,7 @@ BansheeVoice:
 		Guard: guarding
 
 GunshipVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: ship2_acknowledged, ship2_aeronautics_operational, ship2_awaiting_orders, ship2_ready_for_action
 		Move: ship2_affirmative, ship2_closing_in, ship2_not_a_problem, ship2_roger_that
@@ -102,7 +102,7 @@ GunshipVoice:
 		Guard: guarding
 
 DropshipVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: dropship_aeronautics_operational, dropship_avionics_online, dropship_awaiting_orders, dropship_ready_for_action
 		Move: dropship_acknowledged, dropship_affirmative, dropship_destination_set, dropship_not_a_problem, dropship_roger_that
@@ -111,14 +111,14 @@ DropshipVoice:
 		Guard: guarding
 
 BalloonVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: balloon_aeronautics_operational, balloon_avionics_online, balloon_awaiting_orders, balloon_ready_for_action, balloon_sensors_aligned, balloon_surveillance_active
 		Move: balloon_acknowledged, balloon_affirmative, balloon_not_a_problem, balloon_optimising_updraft, balloon_roger_that
 		Guard: guarding
 
 SpeederVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: ship1_aeronautics_operational, ship1_avionics_online, ship1_awaiting_orders, ship1_ready_for_action
 		Move: ship1_acknowledged, ship1_affirmative, ship1_roger_that, ship1_not_a_problem, ship1_thrusters_engaged
@@ -126,7 +126,7 @@ SpeederVoice:
 		Guard: guarding
 
 DroneVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: droneselect1, droneselect2, droneselect3, droneselect4
 		Move: droneaction1, droneaction2, droneaction3, droneaction4
@@ -134,7 +134,7 @@ DroneVoice:
 		Guard: guarding
 
 MinerVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: miner_any_orders, miner_copy, miner_im_ready, miner_ready_and_waiting, miner_reporting_in, miner_sir
 		Move: miner_acknowledged, miner_affirmative, miner_at_once, miner_good_copy, miner_enroute, miner_move_orders_confirmed, miner_on_my_way, miner_roger_that, miner_ten_four, miner_yes_sir
@@ -149,7 +149,7 @@ TechnicianVoice:
 		Action: technician_capturing, technician_gotcha, technician_obtaining, technician_ok, technician_yes_sir
 
 StealthTankVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: stealthtank_copy, stealthtank_im_waiting, stealthtank_orders, stealthtank_ready, stealthtank_ready_for_action, stealthtank_sir, stealthtank_stealthtank, stealthtank_receiving
 		Move: stealthtank_acknowledged, stealthtank_affirmative, stealthtank_at_once, stealthtank_good_copy, stealthtank_move_out, stealthtank_moving, stealthtank_they_unseen, stealthtank_quickly
@@ -191,7 +191,7 @@ ElitePodVoice:
 		Guard: guarding
 
 BomberPodVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: bomberpod_select1, bomberpod_select2, bomberpod_select3, bomberpod_select4
 		Move: bomberpod_action1, bomberpod_action2, bomberpod_action3, bomberpod_action4
@@ -214,7 +214,7 @@ ElectricPodVoice:
 		Guard: guarding
 
 MotherShipVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: mothershipselect1, mothershipselect2, mothershipselect3
 		Move: mothershipaction1, mothershipaction2, mothershipaction3

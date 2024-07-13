@@ -63,7 +63,7 @@ BASE:
 	ProductionBar@Utility:
 		ProductionType: Utility
 	ProductionSound:
-		Files: Quedicemipez__teleportation.wav
+		Files: Quedicemipez__teleportation.ogg
 	RallyPoint:
 		CirclesSequence:
 		IsPlayerPalette: true
@@ -580,7 +580,7 @@ MINER2:
 	Tooltip:
 		Name: actor-miner2.name
 	Building:
-		UndeploySounds: miner_building_transform.wav
+		UndeploySounds: miner_building_transform.ogg
 	Encyclopedia:
 		Description: actor-miner2.encyclopedia
 		Order: 50
@@ -943,7 +943,7 @@ FACTORY:
 	ProductionBar:
 		ProductionType: Tank
 	ProductionSound:
-		Files: Quedicemipez__teleportation.wav
+		Files: Quedicemipez__teleportation.ogg
 	PrimaryBuilding:
 		PrimaryCondition: primary
 		SelectionNotification: PrimaryBuildingSelected
@@ -1258,7 +1258,7 @@ AATURRET:
 		ChargingCondition: charging
 	AmbientSound:
 		RequiresCondition: charging
-		SoundFiles: charging_plasterbrain.wav
+		SoundFiles: charging_plasterbrain.ogg
 		Interval: 30, 40
 
 AATURRET2:
@@ -1730,7 +1730,7 @@ TELEVATOR:
 		InsufficientPowerTextNotification: notification-insufficient-power
 		BeginChargeTextNotification: notification-televator-charging
 		EndChargeTextNotification: notification-televator-ready
-		LaunchSound: televator.wav
+		LaunchSound: televator.ogg
 	WithTeleportGroupOverlay:
 		Image: energyball
 		LaunchSequence: teleport-group-in
@@ -1896,7 +1896,7 @@ BARRIER:
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
 		AllowInvalidPlacement: false
-		BuildSounds: Quedicemipez_teleportation-barrier.wav
+		BuildSounds: Quedicemipez_teleportation-barrier.ogg
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Defense
@@ -1908,7 +1908,7 @@ BARRIER:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	Sellable:
-		SellSounds: Quedicemipez_teleportation-barrier-sell.wav
+		SellSounds: Quedicemipez_teleportation-barrier-sell.ogg
 	HitShape:
 		Type: Circle
 			Radius: 512
@@ -2527,7 +2527,7 @@ COMLINK:
 		EffectPalette: moveflash
 		SupportPowerPaletteOrder: 40
 		SelectTargetSpeechNotification: SelectTarget
-		LaunchSound: radar_reveal_avreference.wav
+		LaunchSound: radar_reveal_avreference.ogg
 		EndChargeSpeechNotification: SurveillanceReady
 	ProvidesPrerequisite@BuildingName:
 	Building:

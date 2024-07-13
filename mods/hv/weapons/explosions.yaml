@@ -3,7 +3,7 @@
 BuildingExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: medium, medium_2, large, large_f, large_2, large_3
-		ImpactSounds: explosion07.wav, explosion08.wav
+		ImpactSounds: explosion07.ogg, explosion08.ogg
 
 ^Explosion:
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
@@ -20,7 +20,7 @@ BuildingExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion02.wav, explosion03.wav
+		ImpactSounds: explosion02.ogg, explosion03.wav
 
 ArtilleryExplode:
 	Inherits: ^Explosion
@@ -28,7 +28,7 @@ ArtilleryExplode:
 		Damage: 15000
 	Warhead@Effect: CreateEffect
 		Explosions: medium
-		ImpactSounds: explosion04.wav, explosion05.wav
+		ImpactSounds: explosion04.ogg, explosion05.ogg
 
 UnitExplodeSmall:
 	Inherits: ^Explosion
@@ -62,7 +62,7 @@ AntiTankMine:
 		Damage: 40000
 	Warhead@Effect: CreateEffect
 		Explosions: large_2, large_3
-		ImpactSounds: mine_explosion.wav
+		ImpactSounds: mine_explosion.ogg
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 50
@@ -73,7 +73,7 @@ AntiTankWaterMine:
 	Warhead@Effect: CreateEffect
 		Image: water_splash_big
 		Explosions: water_splash_big_a, water_splash_big_b
-		ImpactSounds: water_mine_explosion.wav
+		ImpactSounds: water_mine_explosion.ogg
 
 PilotSpawn:
 	ValidTargets: Air
@@ -89,14 +89,14 @@ DropPodImpact:
 	Warhead@Effect: CreateEffect
 		Explosions: idle
 		Image: smoke
-		ImpactSounds: impact_sangnamsa.wav
+		ImpactSounds: impact_sangnamsa.ogg
 
 DropPodExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
 	Warhead@Effect: CreateEffect
 		Explosions: medium
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion02.wav, explosion03.wav
+		ImpactSounds: explosion02.ogg, explosion03.wav
 
 MortarPodExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
@@ -117,7 +117,7 @@ MortarPodExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion01.wav
+		ImpactSounds: explosion01.ogg
 
 FlamePodExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
@@ -138,7 +138,7 @@ FlamePodExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: flame_explode_magnuswaker.wav
+		ImpactSounds: flame_explode_magnuswaker.ogg
 
 BomberPodWeapon:
 	ValidTargets: Ground, Structure
@@ -172,5 +172,5 @@ BomberPodExplosion:
 	Warhead@Effect: CreateEffect
 		Image: explosion
 		Explosions: medium, medium_2
-		ImpactSounds: explosion02.wav, explosion03.wav
+		ImpactSounds: explosion02.ogg, explosion03.wav
 		ValidTargets: Ground, Water, Ship, Air, Structure

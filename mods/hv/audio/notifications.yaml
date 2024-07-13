@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 Speech:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Notifications:
 		StartGame:
 		GameLoaded: game_loaded
@@ -65,7 +65,7 @@ Speech:
 		InsufficientPower: insufficient_power
 
 Sounds:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Notifications:
 		ClickSound: klinkp75
 			AllowInterrupt: true

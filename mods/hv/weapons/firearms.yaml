@@ -37,7 +37,7 @@ LightMachineGun:
 	Inherits: Ricochet
 	Inherits: ^Tracers
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: machinegunburst01.wav, machinegunburst02.wav
+	Report: machinegunburst01.ogg, machinegunburst02.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
 		Blockable: true
@@ -63,7 +63,7 @@ BunkerChaingun:
 	BurstDelays: 3
 	Range: 8c0
 	-Report:
-	StartBurstReport: heavymgburst01.wav, heavymgburst02.wav
+	StartBurstReport: heavymgburst01.ogg, heavymgburst02.ogg
 
 ^AircraftChainGun:
 	Inherits: SmallSplash
@@ -92,7 +92,7 @@ BuggyChainGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	StartBurstReport: machinegun_SuperPhat.wav
+	StartBurstReport: machinegun_SuperPhat.ogg
 	BurstDelays: 1
 	ReloadDelay: 20
 	Range: 6c0
@@ -229,7 +229,7 @@ BoatMachineGunGround:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	StartBurstReport: machinegun_SuperPhat.wav
+	StartBurstReport: machinegun_SuperPhat.ogg
 	BurstDelays: 1
 	ReloadDelay: 20
 	Range: 6c0
@@ -271,7 +271,7 @@ BoatMachineGunAir:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Air
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 Flamethrower:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
@@ -308,7 +308,7 @@ Flamethrower:
 		Image: lava_splash_small
 		Explosions: lava_splash_small_a, lava_splash_small_b
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
-		ImpactSounds: fire_effect_1_GregorQuendel, fire_effect_2_GregorQuendel, fire_effect_3_GregorQuendel, fire_effect_4_GregorQuendel
+		ImpactSounds: fire_effect_1_GregorQuendel.ogg, fire_effect_2_GregorQuendel.ogg, fire_effect_3_GregorQuendel.ogg, fire_effect_4_GregorQuendel.ogg
 
 BunkerFlamethrower:
 	Inherits: Flamethrower
@@ -318,7 +318,7 @@ BunkerFlamethrower:
 HeavyMachineGun:
 	Inherits: LightMachineGun
 	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-	Report: machine_gun_pgi.wav
+	Report: machine_gun_pgi.ogg
 	ReloadDelay: 20
 	Range: 6c0
 	Burst: 4
@@ -341,7 +341,7 @@ DronePulseGun:
 	Inherits: Ricochet
 	Inherits: ^BlueTracers
 	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-	Report: pulsegun_silverillusionist.wav
+	Report: pulsegun_silverillusionist.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
 		Blockable: true

@@ -349,7 +349,7 @@ MINELAYER:
 	MineImmune:
 	AmmoPool:
 		Ammo: 5
-		RearmSound: mine_reload_oneshotofficial.wav
+		RearmSound: mine_reload_oneshotofficial.ogg
 	DetectCloaked:
 		Range: 5c0
 		DetectionTypes: Mine
@@ -483,8 +483,8 @@ STEALTHTANK:
 	Cloak:
 		InitialDelay: 90
 		CloakDelay: 90
-		CloakSound: stealth_on_humanoide9000.wav
-		UncloakSound: stealth_off_humanoide9000.wav
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
 		IsPlayerPalette: true
 		PauseOnCondition: cloak-force-disabled || ecm-disabled
 		CloakedPalette: cloak
@@ -690,7 +690,7 @@ BUILDER:
 		NoTransformTextNotification: notification-cant-place-building
 		TransformNotification: OutpostEstablished
 		TransformTextNotification: notification-outpost-established
-		TransformSounds: Freqman_fx376.wav
+		TransformSounds: Freqman_fx376.ogg
 		Voice: Deploying
 		Offset: 0,-1
 		Facing: 512
@@ -778,7 +778,7 @@ MINER:
 		NoTransformTextNotification: notification-cant-place-building
 		TransformNotification: MinerReady
 		TransformTextNotification: notification-miner-ready
-		TransformSounds: miner_transform.wav
+		TransformSounds: miner_transform.ogg
 		Voice: Deploying
 	Voiced:
 		VoiceSet: MinerVoice
