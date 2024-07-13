@@ -4,7 +4,7 @@
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
 	Range: 5c0
-	Report: rocketlaunch01.wav
+	Report: rocketlaunch01.ogg
 	Projectile: Missile
 		Speed: 213
 		Arm: 0
@@ -34,7 +34,7 @@
 		Damage: 5000
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
 ^AntiAirMissile:
@@ -189,11 +189,11 @@ BoatMissileAntiGround:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground, Tree
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 BoatMissileAntiAir:
 	ReloadDelay: 50
-	Report: rocketlaunch03.wav
+	Report: rocketlaunch03.ogg
 	Range: 9c0
 	ValidTargets: Air
 	Burst: 3
@@ -227,7 +227,7 @@ BoatMissileAntiAir:
 			Heavy: 180
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
 StealthTankMissile:
@@ -259,7 +259,7 @@ Patriot:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 45
 	Range: 8c0
-	Report: rocketlaunch03.wav
+	Report: rocketlaunch03.ogg
 	ValidTargets: Air
 	Projectile: Missile
 		VerticalRateOfTurn: 20
@@ -291,14 +291,14 @@ Patriot:
 		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion08.wav
+		ImpactSounds: explosion08.ogg
 		ImpactActors: false
 
 TowerMissile:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 45
 	Range: 9c0
-	Report: rocketlaunch03.wav
+	Report: rocketlaunch03.ogg
 	ValidTargets: Air
 	Projectile: Missile
 		VerticalRateOfTurn: 20
@@ -330,7 +330,7 @@ TowerMissile:
 		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion08.wav
+		ImpactSounds: explosion08.ogg
 		ImpactActors: false
 
 CruiseMissileImpact:
@@ -354,7 +354,7 @@ CruiseMissileImpact:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: medium
 		ValidTargets: Ground
-		ImpactSounds: explosion_juverisetila.wav
+		ImpactSounds: explosion_juverisetila.ogg
 
 Torpedo:
 	Inherits: BigSplash
@@ -382,4 +382,4 @@ Torpedo:
 		RangeLimit: -1
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg

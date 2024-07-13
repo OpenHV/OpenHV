@@ -34,4 +34,4 @@ Bomb:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: medium
 		ValidTargets: Ground, Tree
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg

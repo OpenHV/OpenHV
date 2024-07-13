@@ -523,7 +523,7 @@
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	CapturableProgressBeep:
-		Sound: beep_matrixxx.wav
+		Sound: beep_matrixxx.ogg
 	CaptureNotification:
 		TextNotification: notification-building-captured
 	AcceptsDeliveredCash:
@@ -544,7 +544,7 @@
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
 		AllowInvalidPlacement: false
-		BuildSounds: Freqman_fx376.wav
+		BuildSounds: Freqman_fx376.ogg
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 4
@@ -556,7 +556,7 @@
 		Condition: being-demolished
 	Sellable:
 		RequiresCondition: !being-captured && !build-incomplete && !beam-incomplete && !being-demolished
-		SellSounds: Freqman_fx376-reverse.wav
+		SellSounds: Freqman_fx376-reverse.ogg
 		Notification: BuildingSold
 	BotRepairOrSellCaptures:
 	ActorLostNotification:
@@ -1153,7 +1153,7 @@
 		RequiresBaseProvider: true
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
 		AllowInvalidPlacement: false
-		BuildSounds: Freqman_fx376-gate.wav
+		BuildSounds: Freqman_fx376-gate.ogg
 	Buildable:
 		BuildPaletteOrder: 15
 		Queue: Defense
@@ -1207,8 +1207,8 @@
 	RevealsShroud:
 		Range: 2c0
 	Gate:
-		OpeningSound: lowpolygon_gate-in.wav
-		ClosingSound: lowpolygon_gate-out.wav
+		OpeningSound: lowpolygon_gate-in.ogg
+		ClosingSound: lowpolygon_gate-out.ogg
 	BlocksProjectiles:
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -1229,7 +1229,7 @@
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: false
 	Sellable:
-		SellSounds: Quedicemipez_teleportation-barrier-sell.wav
+		SellSounds: Quedicemipez_teleportation-barrier-sell.ogg
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
 

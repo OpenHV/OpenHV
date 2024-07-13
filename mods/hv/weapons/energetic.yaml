@@ -31,12 +31,12 @@ Railgun:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 7c0
-	Report: Sonic1.wav, Sonic2.wav, Sonic3.wav
+	Report: Sonic1.ogg, Sonic2.ogg, Sonic3.ogg
 	ValidTargets: Vehicle
 	InvalidTargets: DisabledVehicle
 	Projectile: Bullet
@@ -137,13 +137,13 @@ Plasma:
 		Damage: 1750
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
 	ReloadDelay: 50
 	Range: 8c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
 		Radius: 3
 		Duration: 5
@@ -179,7 +179,7 @@ VoltageArc:
 PodVoltageArc:
 	Inherits: VoltageArc
 	Range: 5c512
-	Report: lighting_gun_freqman.wav
+	Report: lighting_gun_freqman.ogg
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	ReloadDelay: 60
 	Projectile: EnergyBolt
@@ -207,7 +207,7 @@ RapidPodVoltageArc:
 LightningBolt:
 	ReloadDelay: 60
 	Range: 9c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	ValidTargets: Air
 	Projectile: EnergyBolt
 		Radius: 3
@@ -235,7 +235,7 @@ LightningBolt:
 		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Air
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
@@ -247,7 +247,7 @@ LightningBoltLight:
 	Inherits: LightningBolt
 	ReloadDelay: 60
 	Range: 8c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2000
@@ -264,7 +264,7 @@ LightningBoltLight:
 		Percentage: 90
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree, Lava, Swamp
 
 ^PixelSpark:
@@ -316,7 +316,7 @@ RailgunVisualStage2:
 		Acceleration: 0,0,-45 # needs to be synced with RailgunStrike
 	Warhead@Effect: CreateEffect
 		Explosions: railgun
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
 RailgunStrike:
@@ -439,13 +439,13 @@ DroneBlaster:
 		Percentage: 50
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree
 
 HackBack:
 	ReloadDelay: 160
 	Range: 6c0
-	Report: lightningbolt.wav
+	Report: lightningbolt.ogg
 	ValidTargets: Vehicle
 	Projectile: EnergyBolt
 		Radius: 3
@@ -472,7 +472,7 @@ MothershipLaser:
 	ReloadDelay: 5
 	Range: 8c0
 	MinRange: 1c0
-	Report: laserblaster_newlocknew.wav
+	Report: laserblaster_newlocknew.ogg
 	Projectile: Bullet
 		Speed: 550
 		Blockable: false
@@ -500,5 +500,5 @@ MothershipLaser:
 		Damage: 1750
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree

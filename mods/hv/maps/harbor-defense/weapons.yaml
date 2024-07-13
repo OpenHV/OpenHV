@@ -20,7 +20,7 @@ cluster:
 		AirThreshold: 0c0
 	Warhead@Effect: CreateEffect
 		Explosions: small
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 		ImpactActors: false
 
 cluster-projectile:
@@ -51,4 +51,4 @@ cluster-projectile:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg

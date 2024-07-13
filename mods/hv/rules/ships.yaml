@@ -471,7 +471,7 @@ NAVALMINELAYER:
 	AmmoPool:
 		Ammo: 5
 		AmmoCondition: ammo
-		RearmSound: mine_reload_oneshotofficial.wav
+		RearmSound: mine_reload_oneshotofficial.ogg
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3

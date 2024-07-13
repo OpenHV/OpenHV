@@ -3,7 +3,7 @@
 ^Cannon:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: tankfire01.wav
+	Report: tankfire01.ogg
 	ReloadDelay: 70
 	Range: 6c0
 	Projectile: Bullet
@@ -31,7 +31,7 @@
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 CannonSynapol:
 	Inherits: ^Cannon
@@ -45,7 +45,7 @@ CannonYuruki:
 
 ^Artillery:
 	Inherits: ^Cannon
-	Report: howitzerfire01.wav
+	Report: howitzerfire01.ogg
 	ReloadDelay: 85
 	Range: 12c0
 	Projectile: Bullet
@@ -71,12 +71,12 @@ CannonYuruki:
 		Percentage: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
-		ImpactSounds: explosion04.wav, explosion05.wav
+		ImpactSounds: explosion04.ogg, explosion05.ogg
 		ValidTargets: Ground, Tree
 
 SmallArtillery:
 	Inherits: ^Artillery
-	Report: howitzerfire02.wav
+	Report: howitzerfire02.ogg
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
@@ -116,7 +116,7 @@ DoubleBarrelledArtillery:
 TurretCannon:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: tankfire03.wav
+	Report: tankfire03.ogg
 	ReloadDelay: 25
 	Range: 8c0
 	Projectile: Bullet
@@ -141,7 +141,7 @@ TurretCannon:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion02.wav
+		ImpactSounds: explosion02.ogg
 
 Turret2Cannon:
 	Inherits: TurretCannon
@@ -183,7 +183,7 @@ Nuclear:
 		Damage: 6000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 	Warhead@EffectArea1: CreateEffect
-		ImpactSounds: explosion07.wav
+		ImpactSounds: explosion07.ogg
 		Delay: 5
 		ImpactActors: false
 	Warhead@DamageArea2: SpreadDamage
@@ -238,7 +238,7 @@ Nuclear:
 TurretArtillery:
 	Inherits: ^Artillery
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: heavycannonfire01.wav
+	Report: heavycannonfire01.ogg
 	ReloadDelay: 150
 	Range: 1024c0
 	MinRange: 12c0
@@ -265,14 +265,14 @@ TurretArtillery:
 		Percentage: 40
 	Warhead@Effect: CreateEffect
 		Explosions: large
-		ImpactSounds: explosion07.wav, explosion08.wav
+		ImpactSounds: explosion07.ogg, explosion08.ogg
 
 30mm:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 30
 	Range: 4c0
-	Report: 30mmsingle.wav
+	Report: 30mmsingle.ogg
 	Projectile: Bullet
 		Image: bullet1
 		Speed: 853
@@ -294,7 +294,7 @@ TurretArtillery:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 doublecannon:
 	Inherits: ^Cannon
@@ -305,7 +305,7 @@ mortargun:
 	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
-	Report: grenade-launcher_lemudcrab.wav
+	Report: grenade-launcher_lemudcrab.ogg
 	Range: 6c0
 	MinRange: 1c0
 	Projectile: Bullet
@@ -337,7 +337,7 @@ mortargun:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground, Tree
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
 
 BunkerMortarGun:
 	Inherits: mortargun
@@ -348,7 +348,7 @@ BunkerMortarGun:
 MediumBoatCannon:
 	Inherits: ^Cannon
 	ValidTargets: Ship, WaterBuilding, Water
-	Report: tankfire01.wav
+	Report: tankfire01.ogg
 	ReloadDelay: 25
 	Range: 6c0
 	Projectile: Bullet
@@ -375,4 +375,4 @@ MediumBoatCannon:
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
-		ImpactSounds: explosion06.wav
+		ImpactSounds: explosion06.ogg
