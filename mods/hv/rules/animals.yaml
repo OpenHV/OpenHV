@@ -45,6 +45,7 @@ BEAST:
 	-ChangesHealth@Reconstructor:
 	-WithDecoration@Reconstructor:
 	-GrantConditionOnPrerequisite@Reconstructor:
+	-ProximityCaptor:
 
 CROW:
 	Inherits: ^Plane
@@ -75,6 +76,7 @@ CROW:
 	-ChangesHealth@Reconstructor:
 	-WithDecoration@Reconstructor:
 	-GrantConditionOnPrerequisite@Reconstructor:
+	-ProximityCaptor:
 
 CROW2:
 	Inherits: CROW
@@ -141,6 +143,7 @@ SEAMONSTER:
 	-GrantConditionOnPrerequisite@Reconstructor:
 	-SpawnsShrapnel@DamageSparks:
 	-LeavesTrails:
+	-ProximityCaptor:
 
 WORM:
 	Inherits: BEAST
@@ -193,3 +196,4 @@ FLYINGMONSTER:
 	-GrantConditionOnPrerequisite@Reconstructor:
 	-Selectable:
 	Interactable:
+	-ProximityCaptor:
