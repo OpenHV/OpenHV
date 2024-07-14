@@ -93,7 +93,7 @@ DoubleBarrelledArtillery:
 	MinRange: 5c0
 	Burst: 2
 	BurstDelays: 8
-	Report: ccbygrenadelaunch01.wav
+	Report: ccbygrenadelaunch01.ogg
 	TargetActorCenter: true
 	Projectile: Bullet
 		LaunchAngle: 165
@@ -145,7 +145,7 @@ TurretCannon:
 
 Turret2Cannon:
 	Inherits: TurretCannon
-	Report: blaster-newlocknew.wav
+	Report: blaster-newlocknew.ogg
 	Projectile: Bullet
 		Image: bullet9
 
@@ -230,7 +230,7 @@ Nuclear:
 		Image: nuclear_explosion
 		Explosions: idle
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		ImpactSounds: nuke_explosion_cgeffex.wav
+		ImpactSounds: nuke_explosion_cgeffex.ogg
 	Warhead@FlashEffect: FlashPaletteEffect
 		Duration: 20
 		FlashType: Nuke

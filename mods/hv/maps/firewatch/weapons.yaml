@@ -26,7 +26,7 @@ WaterCannon:
 		Image: water_splash_small
 		Explosions: water_splash_small_a, water_splash_small_b
 		ValidTargets: Water, Ground
-		ImpactSounds: small-water-splash1_siliconesound.wav, small-water-splash2_siliconesound.wav, small-water-splash3_siliconesound.wav, small-water-splash4_siliconesound.wav, small-water-splash5_siliconesound.wav
+		ImpactSounds: small-water-splash1_siliconesound.ogg, small-water-splash2_siliconesound.ogg, small-water-splash3_siliconesound.ogg, small-water-splash4_siliconesound.ogg, small-water-splash5_siliconesound.ogg
 
 WaterCannonSmall:
 	Inherits: WaterCannon

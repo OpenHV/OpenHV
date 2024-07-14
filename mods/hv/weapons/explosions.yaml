@@ -20,7 +20,7 @@ BuildingExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion02.ogg, explosion03.wav
+		ImpactSounds: explosion02.ogg, explosion03.ogg
 
 ArtilleryExplode:
 	Inherits: ^Explosion
@@ -96,7 +96,7 @@ DropPodExplode:
 	Warhead@Effect: CreateEffect
 		Explosions: medium
 		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion02.ogg, explosion03.wav
+		ImpactSounds: explosion02.ogg, explosion03.ogg
 
 MortarPodExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
@@ -172,5 +172,5 @@ BomberPodExplosion:
 	Warhead@Effect: CreateEffect
 		Image: explosion
 		Explosions: medium, medium_2
-		ImpactSounds: explosion02.ogg, explosion03.wav
+		ImpactSounds: explosion02.ogg, explosion03.ogg
 		ValidTargets: Ground, Water, Ship, Air, Structure

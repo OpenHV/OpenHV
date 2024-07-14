@@ -166,7 +166,7 @@ ShipMissile:
 BoatMissileAntiGround:
 	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: boatgun_johandeecke.wav
+	Report: boatgun_johandeecke.ogg
 	ReloadDelay: 58
 	Range: 6c0
 	Projectile: Bullet
@@ -235,7 +235,7 @@ StealthTankMissile:
 	Inherits: BigSplash
 	ReloadDelay: 70
 	Range: 7c0
-	Report: newlocknew_missile.wav
+	Report: newlocknew_missile.ogg
 	Burst: 2
 	BurstDelays: 10
 	Projectile: Missile
@@ -361,7 +361,7 @@ Torpedo:
 	ValidTargets: Ship, WaterBuilding, Water
 	ReloadDelay: 50
 	Range: 6c0
-	Report: torpedo_murraysortz.wav
+	Report: torpedo_murraysortz.ogg
 	Warhead@Damage: SpreadDamage
 		Spread: 256
 		Damage: 10000
