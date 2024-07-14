@@ -1,0 +1,72 @@
+# License: CC-BY-SA-4.0
+
+Player:
+	PlayerResources:
+		DefaultCash: 0
+
+World:
+	GlobalLightingPaletteEffect:
+		Red: 0.9
+		Green: 0.9
+		Blue: 1.2
+		Ambient: 1.2
+	TerrainLighting:
+		Intensity: 0.45
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+	LuaScript:
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, scientist-rescue.lua
+	MissionData:
+		Briefing: A Yuruki scientist working a new technology of sub-spatial televator transportation was kidnapped by the military forces of Synapol. The Yuruki information services were able to retrace the scientist, and you and your crews are now heading to the Synapol research center located in the surroundings of New Boston's shores. Break into the center, find the scientist and protect him until the rescue dropship comes to get you.
+
+Entry:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: actor-entry-name
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	MapEditorData:
+		Categories: System
+
+CARRIER.AIRSTRIKE:
+	Inherits: CARRIER
+	AirstrikePower:
+		Icon: airstrike
+		Cursor: airstrike
+		ChargeInterval: 1250
+		SquadSize: 3
+		QuantizedFacings: 8
+		Name: actor-radar.airstrikepower-name
+		Description: actor-radar.airstrikepower-description
+		UnitType: bomber
+		DisplayRadarPing: true
+		CameraActor: camera
+		UseDirectionalTarget: true
+		DirectionArrowAnimation: direction
+		SupportPowerPaletteOrder: 30
+		OrderName: FlushBombers
+		BeginChargeSpeechNotification: AirStrikeCharging
+		EndChargeSpeechNotification: AirStrikeReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: AirStrikeIncoming
+		OneShot: true
+	ProvidesRadar:
+	RenderSprites:
+		Image: carrier
+	Selectable:
+		Class: carrier
+
+TECHNICIAN:
+	-CaptureManager:
+	-Captures:
+
+DROPSHIP:
+	RejectsOrders:

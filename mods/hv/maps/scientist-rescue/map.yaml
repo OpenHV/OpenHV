@@ -1,0 +1,407 @@
+MapFormat: 12
+
+RequiresMod: hv
+
+Title: Scientist Rescue
+
+Author: Cromha
+
+Tileset: PLANET
+
+MapSize: 62,42
+
+Bounds: 1,1,60,40
+
+Visibility: MissionSelector
+
+Categories: Campaign
+
+LockPreview: True
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+		Enemies: Yuruki Industries, Synapol Corporation
+	PlayerReference@Synapol Corporation:
+		Name: Synapol Corporation
+		NonCombatant: True
+		Faction: sc
+		Color: 805040
+		Enemies: Yuruki Industries, Creeps
+	PlayerReference@Yuruki Industries:
+		Name: Yuruki Industries
+		Playable: True
+		LockFaction: True
+		Faction: yi
+		LockColor: True
+		Color: 003897
+		Enemies: Synapol Corporation, Creeps
+
+Actors:
+	Actor0: tanktrap
+		Owner: Neutral
+		Location: 58,27
+	Actor1: tanktrap
+		Owner: Neutral
+		Location: 46,23
+	Actor2: tanktrap
+		Owner: Neutral
+		Location: 40,25
+	Actor3: tanktrap
+		Owner: Neutral
+		Location: 34,24
+	Actor4: tanktrap
+		Owner: Neutral
+		Location: 29,27
+	Actor5: tanktrap
+		Owner: Neutral
+		Location: 19,27
+	Actor6: tanktrap
+		Owner: Neutral
+		Location: 15,24
+	Actor7: tanktrap
+		Owner: Neutral
+		Location: 9,25
+	Actor8: tanktrap
+		Owner: Neutral
+		Location: 3,24
+	Actor9: tanktrap
+		Owner: Neutral
+		Location: 14,22
+	Actor10: tanktrap
+		Owner: Neutral
+		Location: 37,21
+	Actor11: tanktrap
+		Owner: Neutral
+		Location: 25,25
+	Actor12: tanktrap
+		Owner: Neutral
+		Location: 51,24
+	Actor13: aaturret2
+		Location: 58,24
+		Faction: Random
+		TurretFacing: 423
+		Owner: Synapol Corporation
+	Actor14: aaturret2
+		Location: 40,20
+		Faction: Random
+		TurretFacing: 564
+		Owner: Synapol Corporation
+	Actor15: aaturret2
+		Location: 17,22
+		Faction: Random
+		TurretFacing: 472
+		Owner: Synapol Corporation
+	Actor16: aaturret2
+		Location: 7,19
+		Faction: Random
+		TurretFacing: 366
+		Owner: Synapol Corporation
+	Actor17: turret2
+		Location: 31,28
+		Faction: Random
+		TurretFacing: 670
+		Owner: Synapol Corporation
+	Actor18: turret2
+		Location: 22,27
+		Faction: Random
+		TurretFacing: 557
+		Owner: Synapol Corporation
+	Actor19: turret2
+		Location: 7,26
+		Faction: Random
+		TurretFacing: 437
+		Owner: Synapol Corporation
+	Actor20: bunker2
+		Location: 49,20
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor21: bunker2
+		Location: 39,18
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor22: bunker2
+		Location: 31,20
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor23: bunker2
+		Location: 19,19
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor24: bunker2
+		Location: 59,22
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor25: lamppost
+		Owner: Neutral
+		Location: 57,29
+	Actor26: lamppost
+		Owner: Neutral
+		Location: 33,29
+	Actor27: lamppost
+		Owner: Neutral
+		Location: 47,26
+	Actor28: lamppost
+		Owner: Neutral
+		Location: 42,26
+	Actor29: icicle1
+		Owner: Neutral
+		Location: 8,38
+	Actor30: icicle1
+		Owner: Neutral
+		Location: 3,35
+	Actor31: icicle2
+		Owner: Neutral
+		Location: 4,39
+	Actor32: icicle4
+		Owner: Neutral
+		Location: 7,36
+	Actor33: icicle1
+		Owner: Neutral
+		Location: 54,38
+	Actor34: icicle1
+		Owner: Neutral
+		Location: 59,35
+	Actor35: icicle2
+		Owner: Neutral
+		Location: 58,38
+	Actor36: icicle4
+		Owner: Neutral
+		Location: 60,39
+	Actor37: flyingmonster
+		Owner: Neutral
+		Facing: 384
+		Location: 57,39
+	Actor38: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 53,26
+	Actor39: seed
+		Owner: Neutral
+		Facing: 384
+		Location: 24,17
+	Actor42: gull
+		Owner: Neutral
+		Facing: 384
+		Location: 48,38
+	Actor43: gull2
+		Owner: Neutral
+		Facing: 384
+		Location: 25,35
+	Actor44: crow
+		Owner: Neutral
+		Facing: 384
+		Location: 13,34
+	Actor45: seamonster
+		Owner: Neutral
+		Facing: 384
+		Location: 17,34
+	Actor46: base2
+		Location: 19,2
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor50: radar2
+		Location: 26,6
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor51: module2
+		Location: 14,9
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor52: storage
+		Location: 22,2
+		Faction: Random
+		Owner: Synapol Corporation
+		FreeActor: False
+	Actor53: miner2
+		Location: 47,8
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor54: miner2
+		Location: 41,3
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor55: miner2
+		Location: 54,11
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor57: extractor
+		Location: 40,7
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor58: extractor
+		Location: 25,8
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor59: extractor
+		Location: 9,10
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor60: watchtower
+		Owner: Neutral
+		Location: 23,18
+	Actor61: watchtower
+		Owner: Neutral
+		Location: 55,19
+	Actor62: watchtower
+		Owner: Neutral
+		Location: 3,17
+	Actor63: comlink
+		Location: 10,5
+		Faction: Random
+		Owner: Synapol Corporation
+	Actor64: streetlamp1
+		Owner: Neutral
+		Location: 52,13
+	Actor65: streetlamp1
+		Owner: Neutral
+		Location: 46,11
+	Actor66: streetlamp1
+		Owner: Neutral
+		Location: 39,5
+	Actor67: streetlamp1
+		Owner: Neutral
+		Location: 29,9
+	Actor68: streetlamp1
+		Owner: Neutral
+		Location: 21,11
+	Actor69: streetlamp1
+		Owner: Neutral
+		Location: 14,13
+	Actor70: streetlamp1
+		Owner: Neutral
+		Location: 5,12
+	Actor71: streetlamp1
+		Owner: Neutral
+		Location: 9,3
+	Actor72: streetlamp1
+		Owner: Neutral
+		Location: 19,6
+	Actor73: streetlamp1
+		Owner: Neutral
+		Location: 26,1
+	Actor97: generator
+		Owner: Synapol Corporation
+		Location: 20,9
+	Actor98: generator
+		Owner: Synapol Corporation
+		Location: 22,9
+	Actor99: generator
+		Owner: Synapol Corporation
+		Location: 22,7
+	Actor100: generator
+		Owner: Synapol Corporation
+		Location: 20,7
+	Actor101: generator
+		Owner: Synapol Corporation
+		Location: 29,3
+	Actor102: generator
+		Owner: Synapol Corporation
+		Location: 29,5
+	Actor103: generator
+		Owner: Synapol Corporation
+		Location: 29,7
+	Actor89: mbt2
+		Owner: Synapol Corporation
+		Facing: 384
+		Location: 42,11
+	Actor91: mbt2
+		Owner: Synapol Corporation
+		Location: 47,7
+		Facing: 649
+		TurretFacing: 126
+	Actor93: mbt2
+		Owner: Synapol Corporation
+		Location: 44,2
+		Facing: 783
+		TurretFacing: 670
+	LabGuard1: rocketpod
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 16,3
+		Facing: 705
+	LabGuard2: rocketpod
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 11,8
+		Facing: 134
+	LabGuard3: mgpod
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 17,11
+		Facing: 384
+	LabGuard4: rocketpod
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 27,5
+		Facing: 663
+	LabGuard5: mgpod
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 28,3
+		Facing: 384
+	LabGuard6: mgpod
+		Owner: Synapol Corporation
+		SubCell: 1
+		Location: 37,9
+		Facing: 564
+	DropshipSpawnPoint: entry
+		Owner: Neutral
+		Location: 61,0
+	Ship1: mediumboat
+		Faction: Random
+		Location: 30,37
+		Facing: 896
+		Owner: Yuruki Industries
+	Ship2: lightningboat
+		Faction: Random
+		Location: 35,37
+		Facing: 384
+		Owner: Yuruki Industries
+	Ship3: carrier
+		Faction: Random
+		Location: 38,38
+		Owner: Yuruki Industries
+		Facing: 384
+	Ship4: carrier.airstrike
+		Faction: Random
+		Location: 32,39
+		Facing: 384
+		Owner: Yuruki Industries
+	ShorePoint: entry
+		Owner: Neutral
+		Location: 46,27
+	PatrolPoint1: entry
+		Owner: Neutral
+		Location: 11,18
+	PatrolPoint2: entry
+		Owner: Neutral
+		Location: 31,12
+	EntryPoint: entry
+		Owner: Neutral
+		Location: 46,38
+	Actor96: generator
+		Owner: Synapol Corporation
+		Location: 5,4
+	ScientistSpawnPoint: entry
+		Owner: Neutral
+		Location: 11,3
+	PatrolPoint3: entry
+		Owner: Neutral
+		Location: 58,18
+	RescuePoint: entry
+		Owner: Neutral
+		Location: 33,11
+
+Rules: hv|rules/campaign.yaml, rules.yaml
+
+Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl, en.ftl
+
+Sequences: sequences.yaml
