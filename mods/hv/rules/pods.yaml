@@ -270,8 +270,8 @@ BROKERPOD:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Facing: 512
-		DeploySounds: brokerpod_deploy_mincedbeats.wav
-		UndeploySounds: brokerpod_undeploy_mincedbeats.wav
+		DeploySounds: brokerpod_deploy_mincedbeats.ogg
+		UndeploySounds: brokerpod_undeploy_mincedbeats.ogg
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
 		Voice: Deploying
 	WithMakeAnimation:

@@ -323,7 +323,7 @@ SLCM:
 		Speed: 256
 		LaunchAcceleration: 8
 		HitAcceleration: 0
-		LaunchSounds: missile_julien-nicolas.wav
+		LaunchSounds: missile_julien-nicolas.ogg
 	LeavesTrails:
 		Image: smoke
 		MovingInterval: 2

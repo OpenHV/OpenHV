@@ -386,7 +386,7 @@
 	RenderSprites:
 		PlayerPalette: green
 	AmbientSound:
-		SoundFiles: droppodlanding_dudeawesome.wav
+		SoundFiles: droppodlanding_dudeawesome.ogg
 
 ^Helicopter:
 	Inherits: ^Plane
@@ -923,8 +923,8 @@
 		InitialDelay: 0
 		CloakDelay: 100
 		CloakedCondition: underwater
-		CloakSound: submarine_out_szegvari.wav
-		UncloakSound: submarine_in_szegvari.wav
+		CloakSound: submarine_out_szegvari.ogg
+		UncloakSound: submarine_in_szegvari.ogg
 		CloakedPalette: shadow
 		PauseOnCondition: cloak-force-disabled
 		CloakStyle: Palette

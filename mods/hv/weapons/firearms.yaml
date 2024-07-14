@@ -69,7 +69,7 @@ BunkerChaingun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
 	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
-	Report: ccbysmgfire01.wav
+	Report: ccbysmgfire01.ogg
 	Projectile: Bullet
 		Inaccuracy: 0c256
 		Speed: 2000
@@ -115,7 +115,7 @@ BuggyChainGun:
 
 BikeChainGun:
 	Inherits: BuggyChainGun
-	StartBurstReport: ccbysmgfire02.wav
+	StartBurstReport: ccbysmgfire02.ogg
 	BurstDelays: 2
 	Range: 7c0
 	Warhead@Damage: SpreadDamage
@@ -205,7 +205,7 @@ ShellCasing:
 
 SniperRifle:
 	Inherits: LightMachineGun
-	Report: twisterman_silenced-gun-1.wav
+	Report: twisterman_silenced-gun-1.ogg
 	Projectile: InstantHit
 	Warhead@Damage: SpreadDamage
 		Spread: 24
@@ -253,7 +253,7 @@ BoatMachineGunGround:
 BoatMachineGunAir:
 	Inherits: ^Tracers
 	ValidTargets: Air
-	Report: boatgun_johandeecke.wav
+	Report: boatgun_johandeecke.ogg
 	BurstDelays: 5
 	ReloadDelay: 20
 	Range: 9c0
@@ -275,7 +275,7 @@ BoatMachineGunAir:
 
 Flamethrower:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	StartBurstReport: flame_newlocknew.wav
+	StartBurstReport: flame_newlocknew.ogg
 	ReloadDelay: 50
 	Burst: 6
 	BurstDelays: 1

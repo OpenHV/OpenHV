@@ -5,7 +5,7 @@ Railgun:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	Range: 8c0
 	ReloadDelay: 50
-	Report: raygun_newlocknew.wav
+	Report: raygun_newlocknew.ogg
 	Projectile: LaserZap
 		Width: 0c100
 		Shape: Cylindrical
@@ -114,7 +114,7 @@ Plasma:
 	ReloadDelay: 10
 	Range: 8c0
 	MinRange: 1c0
-	Report: lasercannon_newlocknew.wav
+	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
 		Speed: 350
 		Blockable: false
@@ -324,7 +324,7 @@ RailgunStrike:
 		Velocity: 0,0,-60 # needs to be synced with RailgunVisualStage2
 		Acceleration: 0,0,-45 # needs to be synced with RailgunVisualStage2
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-	Report: raygun_newlocknew.wav
+	Report: raygun_newlocknew.ogg
 	Warhead@DamageImpact: SpreadDamage
 		Spread: 1c0
 		Damage: 10000
@@ -412,7 +412,7 @@ DroneBlaster:
 	ReloadDelay: 50
 	Range: 5c0
 	MinRange: 3c0
-	Report: blaster1-tutarap.wav, blaster2-tutarap.wav, blaster3-tutarap.wav
+	Report: blaster1-tutarap.ogg, blaster2-tutarap.ogg, blaster3-tutarap.ogg
 	Projectile: Bullet
 		Speed: 350
 		Blockable: false

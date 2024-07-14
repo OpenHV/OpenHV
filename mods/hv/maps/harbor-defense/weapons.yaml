@@ -3,7 +3,7 @@
 cluster:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: blaster_flyingsaucerinvasion.wav
+	Report: blaster_flyingsaucerinvasion.ogg
 	ReloadDelay: 35
 	Range: 8c0
 	Projectile: Bullet

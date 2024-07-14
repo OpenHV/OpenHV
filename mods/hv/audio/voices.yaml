@@ -29,14 +29,14 @@ SeedVoice:
 		Die: seed_die
 
 WormVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select:
 		Action:
 		Die: worm_death_inspectorj
 
 FlyingMonsterVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select:
 		Action:
