@@ -236,6 +236,7 @@ TECHNICIAN:
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		FacingTolerance: 0
+		Voice: Repair
 	DetectCloaked:
 		Range: 2c0
 
