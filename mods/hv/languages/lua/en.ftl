@@ -61,3 +61,9 @@ detected = Synapol forces have detected you
 reinforcements-near-colony = Reinforcements detected near colony basement
 enemy-production-started = Production movements detected at the Yuruki military basement
 enemy-uplink-activated = Yuruki uplink strike command activated
+
+## scientist-rescue
+rescue-scientist = Rescue the scientist.
+kill-guards = Kill the lab guards.
+find-scientist = Find the scientist.
+scientist-escaped = The scientist is out of the lab! Rescue him!
