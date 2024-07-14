@@ -142,11 +142,12 @@ MinerVoice:
 		Deploying: miner_deploying
 
 TechnicianVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: technician_copy, technician_ready, technician_roger, technician_sir, technician_technician
 		Move: technician_acknowledged, technician_affirmitive, technician_going, technician_good_copy, technician_got_it, technician_lets_go, technician_ok, technician_yeap, technician_yes_sir
 		Action: technician_capturing, technician_gotcha, technician_obtaining, technician_ok, technician_yes_sir
+		Repair: technician_repairing, technician_fixing, technician_ok, technician_yes_sir, technician_gotcha
 
 StealthTankVoice:
 	DefaultVariant: .ogg
