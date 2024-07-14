@@ -36,9 +36,10 @@ MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
-BIT_FILES ?= $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
+SPRITE_FILES ?= $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname 'map.png' 2> /dev/null)
 MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
+OGG_FILES := $(shell find mods/*/bits/audio/* -maxdepth 2 -iname '*.ogg' 2> /dev/null | sed 's/ /\\ /g')
 
 MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
@@ -181,15 +182,15 @@ docs: engine
 	@./utility.sh --lua-docs $(VERSION) > lua.md
 
 bits: engine
-ifneq ("$(BIT_FILES)","")
+ifneq ("$(SPRITE_FILES)","")
 	@echo "Adding metadata to PNG sheets..."
-	@for SPRITE in $(BIT_FILES); do \
+	@for SPRITE in $(SPRITE_FILES); do \
 		echo $${SPRITE}; \
 		./utility.sh --png-sheet-import ../$${SPRITE}; \
 	done
 
 	@echo "Recompressing sprite PNGs"
-	@for SPRITE in $(BIT_FILES); do \
+	@for SPRITE in $(SPRITE_FILES); do \
 		zopflipng --keepcolortype --keepchunks=tEXt -y -m $${SPRITE} $${SPRITE}; \
 	done
 endif
@@ -202,26 +203,26 @@ ifneq ("$(PREVIEW_FILES)","")
 	done
 endif
 
-check-bits: engine
-ifneq ("$(BIT_FILES)","")
+check-sprites: engine
+ifneq ("$(SPRITE_FILES)","")
 	@echo "Checking PNG sheet metadata..."
-	@for BIT in $(BIT_FILES); do \
+	@for SPRITE in $(SPRITE_FILES); do \
 		CURRENT_DIR=$(shell pwd)/; \
-		case "$${BIT}" in \
+		case "$${SPRITE}" in \
 			"$${CURRENT_DIR}"*) \
-				SPRITE="$${BIT}" ;; \
+				SPRITE="$${SPRITE}" ;; \
 			*) \
-				SPRITE="$${CURRENT_DIR}$${BIT}" ;; \
+				SPRITE="$${CURRENT_DIR}$${SPRITE}" ;; \
 		esac; \
 		./utility.sh --check-sprite-metadata $${SPRITE} || exit 1; \
 	done
 endif
 
 check-pngs:
-ifneq ("$(BIT_FILES)","")
+ifneq ("$(SPRITE_FILES)","")
 	@echo "Checking PNG consistency and palette...";
 	@status=0; \
-	for file in $(BIT_FILES); do \
+	for file in $(SPRITE_FILES); do \
 		result=$$(pngcheck -c $$file); \
 		echo "$$result" | grep -q "32-bit RGB"; \
 		if [ $$? -eq 0 ]; then \
@@ -240,4 +241,16 @@ ifneq ("$(MAP_FOLDERS)","")
 		curl -s -o /dev/null -I -w "%{http_code}" "https://resource.openra.net/map/$$HASH" | \
 		grep -q "404" && echo "$$MAP is missing!"; \
 	done
+endif
+
+check-ogg:
+ifneq ("$(OGG_FILES)","")
+	@echo "Checking Sounds...";
+	@VALIDATION_FAILED=0; \
+	for OGG in $(OGG_FILES); do \
+		oggz validate "$${OGG}" || VALIDATION_FAILED=1; \
+	done; \
+	if [ $$VALIDATION_FAILED -eq 1 ]; then \
+		exit 1; \
+	fi
 endif
