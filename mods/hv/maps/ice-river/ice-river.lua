@@ -39,6 +39,10 @@ Tick = function()
 		Human.MarkCompletedObjective(EnemyEliminatedObjective)
 	end
 
+	if Human.HasNoRequiredUnits() then
+		Human.MarkFailedObjective(EnemyEliminatedObjective)
+	end
+
 end
 
 WorldLoaded = function()
