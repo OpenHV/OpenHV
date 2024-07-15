@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: hv
 
@@ -29,13 +29,14 @@ Players:
 		NonCombatant: True
 		Faction: yi
 		Enemies: Yuruki Industries, Synapol Corporation
-	PlayerReference@Synapol:
+	PlayerReference@Synapol Corporation:
 		Name: Synapol Corporation
+		Bot: campaign
 		NonCombatant: True
 		Faction: sc
 		Color: 805040
 		Enemies: Yuruki Industries, Creeps
-	PlayerReference@Yuruki:
+	PlayerReference@Yuruki Industries:
 		Name: Yuruki Industries
 		Playable: True
 		LockFaction: True
@@ -102,75 +103,16 @@ Actors:
 	Actor28: generator
 		Owner: Synapol Corporation
 		Location: 11,2
-	Actor30: artillery
-		Owner: Synapol Corporation
-		Location: 22,9
-		Facing: 761
-	Actor31: merctank
-		Owner: Synapol Corporation
-		Location: 32,19
-		Facing: 991
-	Actor34: merctank
-		Owner: Synapol Corporation
-		Location: 25,20
-		Facing: 864
 	Actor32: balloon
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 27,14
-	Actor33: mgpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 36,10
-		Facing: 800
-	Actor36: rocketpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 30,9
-		Facing: 800
-	Actor37: mgpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 35,25
-		Facing: 103
-	Actor38: mgpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 41,24
-		Facing: 206
-	Actor39: mgpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 39,29
-		Facing: 142
-	Actor40: mgpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 32,27
-		Facing: 39
-	Actor41: mgpod
-		Owner: Synapol Corporation
-		SubCell: 1
-		Location: 31,23
-		Facing: 15
 	Actor42: radar2
 		Owner: Synapol Corporation
 		Location: 20,37
 	Actor43: trader
 		Owner: Synapol Corporation
 		Location: 17,43
-	Actor44: mbt2
-		Owner: Synapol Corporation
-		Location: 24,8
-		Facing: 793
-	Actor45: mbt2
-		Owner: Synapol Corporation
-		Location: 22,23
-		Facing: 919
-	Actor46: mbt2
-		Owner: Synapol Corporation
-		Location: 28,28
-		Facing: 951
 	Actor47: turret2
 		Owner: Synapol Corporation
 		Location: 25,30
@@ -211,6 +153,37 @@ Actors:
 		Faction: Random
 		Location: 24,38
 		Owner: Synapol Corporation
+	PatrolPoint: light
+		Owner: Neutral
+		Location: 28,11
+	Actor33: mgpod
+		Owner: Yuruki Industries
+		SubCell: 1
+		Location: 46,46
+		Facing: 70
+	Actor34: mgpod
+		Owner: Yuruki Industries
+		SubCell: 1
+		Location: 50,48
+		Facing: 811
+	Actor35: mgpod
+		Owner: Yuruki Industries
+		SubCell: 1
+		Location: 44,49
+		Facing: 493
+	Actor36: electricpod
+		Owner: Yuruki Industries
+		SubCell: 1
+		Facing: 384
+		Location: 50,52
+	Actor37: saucer
+		Owner: Yuruki Industries
+		Facing: 384
+		Location: 42,55
+	Actor38: flyingmonster
+		Owner: Neutral
+		Facing: 384
+		Location: 46,21
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 

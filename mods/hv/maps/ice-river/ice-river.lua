@@ -7,6 +7,28 @@
    information, see COPYING.
 ]]
 
+PodsUnits = { "mgpodpatrol", "mgpodpatrol", "mgpodpatrol", "mgpodpatrol", "technicianpatrol", "rocketpodpatrol", "rocketpodpatrol" }
+TanksUnits = { "mbt2patrol", "mbt2patrol", "mbt2patrol", "buggypatrol", "artillerypatrol" }
+
+ProducePatrol = function()
+	-- produce pods
+	Enemy.Build(PodsUnits, function(actors)
+		Utils.Do(actors, function(a)
+			if not a.Type == "apc" then
+				a.AttackMove(PatrolPoint.Location)
+			end
+		end)
+	end)
+	-- produce tanks
+	Enemy.Build(TanksUnits, function(actors)
+		Utils.Do(actors, function(a)
+			if not a.Type == "apc" then
+				a.AttackMove(PatrolPoint.Location)
+			end
+		end)
+	end)
+end
+
 Tick = function()
 	if Enemy.Resources >= Enemy.ResourceCapacity * 0.75 then
 		Enemy.Cash = Enemy.Cash + Enemy.Resources - Enemy.ResourceCapacity * 0.25
@@ -24,6 +46,7 @@ WorldLoaded = function()
 	Enemy = Player.GetPlayer("Synapol Corporation")
 
 	InitObjectives(Human)
+	ProducePatrol()
 
 	EnemyEliminatedObjective = AddPrimaryObjective(Human, "eliminate-all-competitors")
 

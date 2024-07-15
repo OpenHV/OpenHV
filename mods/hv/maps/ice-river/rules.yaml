@@ -3,6 +3,108 @@
 Player:
 	PlayerResources:
 		DefaultCash: 8000
+	GrantConditionOnBotOwner@CampaignAI:
+		Condition: gentle-ai-enabled
+		Bots: campaign
+	BaseBotModule@CampaignAI:
+		RequiresCondition: gentle-ai-enabled
+	BuildingRepairBotModule:
+		RequiresCondition: gentle-ai-enabled
+	SquadManagerBotModule@CampaignAI:
+		RequiresCondition: gentle-ai-enabled
+		SquadSize: 20
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship, jet, copter, banshee
+		ConstructionYardTypes: base, base2
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+	UnitBuilderBotModule@CampaignAI:
+		IdleBaseUnitsMaximum: 30
+		RequiresCondition: gentle-ai-enabled
+		UnitQueues: Pod, Utility, Tank
+		UnitsToBuild:
+			miner: 1
+			builder: 1
+			radartank: 1
+			buggy: 3
+			bike: 3
+			mbt: 5
+			railguntank: 5
+			minelayer: 1
+			stealthtank: 1
+			ecmtank: 1
+			aatank: 3
+			hackertank: 1
+			repairtank: 1
+			apc: 1
+			artillery: 5
+			mgpod: 1
+			rocketpod: 1
+			mortarpod: 1
+			flamepod: 1
+			elitepod: 1
+			sniperpod: 1
+			electricpod: 1
+			brokerpod: 9
+			technician: 1
+			bomberpod: 1
+			missiletank: 5
+		UnitLimits:
+			miner: 1
+			builder: 1
+			balloon: 2
+			saucer: 2
+			radartank: 1
+			minelayer: 1
+			ecmtank: 1
+			lightboat: 3
+			boomer: 4
+			carrier: 4
+			navalminelayer: 1
+			navalminelayer2: 1
+			technician: 1
+			bomberpod: 3
+			brokerpod: 9
+			apc: 1
+		UnitDelays:
+			mgpod: 9000
+			rocketpod: 9000
+			mortarpod: 9000
+			flamepod: 9000
+			technician: 9000
+			mbt2: 9000
+			apc: 9000
+			buggy: 9000
+			artillery: 9000
+			repairtank: 9000
+			builder: 25000
+			miner: 14400
+	MinerBotModule:
+		RequiresCondition: gentle-ai-enabled
+		DeployableActorTypes: miner
+		DeployableTerrainTypes: Ore
+		DeployedActorTypes: miner2
+		VehiclesQueue: Utility
+	LoadCargoBotModule:
+		RequiresCondition: gentle-ai-enabled
+		TransportTypes: apc
+		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
+	DeployActorBotModule:
+		RequiresCondition: gentle-ai-enabled
+		DeployableActorTypes: radartank, brokerpod
+	PowerDownBotModule:
+		RequiresCondition: gentle-ai-enabled
+	SendUnitToAttackBotModule:
+		RequiresCondition: gentle-ai-enabled
+		ActorTypesAndAttackDesire:
+			bomberpod: 30
+		ValidTargets: Structure, Vehicle
+		InvalidTargets: Air, Water
+		ScanTick: 780
+	ScoutBotModule:
+		ScoutActorTypes: balloon, saucer
+		MoveRadius: 20
+		RequiresCondition: gentle-ai-enabled
 
 World:
 	WeatherOverlay:
@@ -137,3 +239,51 @@ MISSILETANK:
 SNIPERPOD:
 	Buildable:
 		Prerequisites: ~disabled
+
+MGPODPATROL:
+	Inherits: MGPOD
+	RejectsOrders:
+	Buildable:
+		Prerequisites: ~disabled
+	RenderSprites:
+		Image: mgpod
+
+TECHNICIANPATROL:
+	Inherits: TECHNICIAN
+	RejectsOrders:
+	Buildable:
+		Prerequisites: ~disabled
+	RenderSprites:
+		Image: technician
+
+ROCKETPODPATROL:
+	Inherits: ROCKETPOD
+	RejectsOrders:
+	Buildable:
+		Prerequisites: ~disabled
+	RenderSprites:
+		Image: rocketpod
+
+MBT2PATROL:
+	Inherits: MBT2
+	RejectsOrders:
+	Buildable:
+		Prerequisites: ~disabled
+	RenderSprites:
+		Image: mbt2
+
+BUGGYPATROL:
+	Inherits: BUGGY
+	RejectsOrders:
+	Buildable:
+		Prerequisites: ~disabled
+	RenderSprites:
+		Image: buggy
+
+ARTILLERYPATROL:
+	Inherits: ARTILLERY
+	RejectsOrders:
+	Buildable:
+		Prerequisites: ~disabled
+	RenderSprites:
+		Image: artillery
