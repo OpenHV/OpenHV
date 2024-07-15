@@ -1065,14 +1065,13 @@ ORESMELT:
 
 OREPURIFIER:
 	Inherits: ORESMELT
-	Buildable:
-		Prerequisites: ~structures.yi, techcenter
 	Selectable:
 		Bounds: 1024, 2048, 0, 0
 	Tooltip:
 		Name: actor-orepurifier.name
 	Buildable:
 		Description: actor-orepurifier.description
+		Prerequisites: ~structures.yi, techcenter
 	Encyclopedia:
 		Description: actor-orepurifier.encyclopedia
 	-WithIdleOverlay@Shadow:
