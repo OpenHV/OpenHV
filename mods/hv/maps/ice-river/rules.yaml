@@ -196,6 +196,20 @@ AATURRET2:
 	Buildable:
 		Prerequisites: ~disabled
 
+OREPURIFIER:
+	Buildable:
+		Prerequisites: ~disabled
+
+ORESMELT:
+	Buildable:
+		Prerequisites: ~disabled
+
+RADAR:
+	-AirstrikePower:
+
+RADAR2:
+	-DropPodsPower:
+
 AATANK:
 	Buildable:
 		Prerequisites: ~disabled
@@ -237,6 +251,10 @@ MISSILETANK:
 		Prerequisites: ~disabled
 
 SNIPERPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+ELITEPOD:
 	Buildable:
 		Prerequisites: ~disabled
 
