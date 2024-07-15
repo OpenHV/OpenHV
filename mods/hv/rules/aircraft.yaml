@@ -651,84 +651,33 @@ BOMBER:
 		Weapon: Bomb
 
 CARGOSHIP:
-	Inherits@Exists: ^ExistsInWorld
-	Inherits@Sprite: ^SpriteActor
-	OwnerLostAction:
-		Action: Kill
-	AppearsOnRadar:
-		UseLocation: true
-	HiddenUnderFog:
-		Type: GroundPosition
-		AlwaysVisibleRelationships: None
-	WithShadow:
-		Offset: 356, 256, 0
-		ZOffset: -256
-	WithFacingSpriteBody:
-	WithLandingUnloadAnimation:
-	RejectsOrders:
-	Interactable:
+	Inherits: ^CargoPlane
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
 		VTOL: True
-		Repulsable: False
 		MaximumPitch: 36
 		CruiseAltitude: 2560
-		IdleBehavior: LeaveMap
 		TurnToLand: False
-	MapEditorData:
-		Categories: Aircraft
-	Interactable:
 	Tooltip:
 		Name: actor-cargoship-name
 	Valued:
 		Cost: 2000
-	UpdatesPlayerStatistics:
-		AddToAssetsValue: false
-	HiddenUnderFog:
-		AlwaysVisibleRelationships: None
-		Type: CenterPosition
-	DamageMultiplier@Invulnerable:
-		Modifier: 0
+	WithLandingUnloadAnimation:
 
 AIRLIFTER:
-	Inherits@Exists: ^ExistsInWorld
-	Inherits@Sprite: ^SpriteActor
-	OwnerLostAction:
-		Action: Kill
-	AppearsOnRadar:
-		UseLocation: true
-	HiddenUnderFog:
-		Type: GroundPosition
-		AlwaysVisibleRelationships: None
-	WithShadow:
-		Offset: 356, 256, 0
-		ZOffset: -256
-	WithFacingSpriteBody:
-	RejectsOrders:
-	Interactable:
+	Inherits: ^CargoPlane
 	Aircraft:
 		TurnSpeed: 25
 		Speed: 200
 		VTOL: True
-		Repulsable: False
 		MaximumPitch: 36
 		CruiseAltitude: 2560
-		IdleBehavior: LeaveMap
 		TurnToLand: False
-	MapEditorData:
-		Categories: Aircraft
 	Tooltip:
 		Name: actor-airlifter-name
 	Valued:
 		Cost: 2000
-	UpdatesPlayerStatistics:
-		AddToAssetsValue: false
-	HiddenUnderFog:
-		AlwaysVisibleRelationships: None
-		Type: CenterPosition
-	DamageMultiplier@Invulnerable:
-		Modifier: 0
 
 MOTHERSHIP:
 	Inherits: ^Helicopter

@@ -343,6 +343,35 @@
 		IdleBehavior: None
 		Repulsable: False
 
+^CargoPlane:
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	OwnerLostAction:
+		Action: Kill
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	WithFacingSpriteBody:
+	RejectsOrders:
+	Interactable:
+	Aircraft:
+		Repulsable: False
+		IdleBehavior: LeaveMap
+	MapEditorData:
+		Categories: Aircraft
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	HiddenUnderFog:
+		AlwaysVisibleRelationships: None
+		Type: CenterPosition
+	DamageMultiplier@Invulnerable:
+		Modifier: 0
+
 ^DropPod:
 	Inherits: ^Plane
 	Valued:
