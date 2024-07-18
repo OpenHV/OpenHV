@@ -51,12 +51,11 @@ PropExplode:
 
 AntiTankMine:
 	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
 		Spread: 256
 		Damage: 40000
 		AffectsParent: true
 		InvalidTargets: Mine
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, Fire
 	Warhead@Incendiary: TreeDamage
 		Spread: 256
 		Damage: 40000

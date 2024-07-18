@@ -150,23 +150,23 @@
 			Shore: 75
 			IceCliff: 75
 	Faction@Yuruki:
-		Name: Yuruki
+		Name: faction-yuruki.name
 		InternalName: yi
 		Side: Corporations
 		Selectable: true
-		Description: Yuruki Industries\nA corporation that grew by colonizing new planets.\nTheir colonial defense forces helped paved the way for\nan aggressive expansion throughout the solar system.\n\nFaction Variations:\n    - Uses fighter jets as air units\n\nSpecial Units:\n    - Electric Pod\n    - Bomber Pod\n    - Sniper Pod\n    - Gatling Bike\n    - Hacker Tank\n    - Lightning Tank\n    - Stealth Tank\n\nSuperweapon:\n    - Air Strike\n    - Field Generator\n    - Orbital Railgun Strike
+		Description: faction-yuruki.description
 	Faction@Synapol:
-		Name: Synapol
+		Name: faction-synapol.name
 		InternalName: sc
 		Side: Corporations
 		Selectable: true
-		Description: Synapol Corporation\nA large interplanatary company that manufactures,\neverything from common household appliances to armaments.\nTheir security department became a large paramilitary force.\n\nFaction Variations:\n    - Uses helicopters as air units\n\nSpecial Units:\n    - Rocket Pod\n    - Flame Pod\n    - Mortar Pod\n    - Ramp Buggy\n    - Countermeasure Tank\n    - Railgun Tank\n    - Missile Tank\n\nSuperweapon:\n    - Drop Pods\n    - Grand Howitzer\n    - Thermonuclear Bomb
+		Description: faction-synapol.description
 	Faction@Random:
-		Name: Any
+		Name: faction-random.name
 		InternalName: Random
 		RandomFactionMembers: yi, sc
 		Side: Random
-		Description: Random Corporation\nA random corporation will be chosen when the game starts.
+		Description: faction-random.description
 	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
 		Filename: bits/colors.pal

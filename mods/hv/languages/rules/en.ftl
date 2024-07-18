@@ -15,6 +15,60 @@ checkbox-build-radius =
     .label = Limit Build Area
     .description = Limits structure placement to areas around base and outposts.
 
+### Faction
+faction-yuruki =
+   .name = Yuruki
+   .description = Yuruki Industries
+    A corporation that grew by colonizing new planets.
+    Their colonial defense forces helped paved the way for
+    an aggressive expansion throughout the solar system.
+
+    Faction Variations:
+        - Uses fighter jets as air units
+
+    Special Units:
+        - Electric Pod
+        - Bomber Pod
+        - Sniper Pod
+        - Gatling Bike
+        - Hacker Tank
+        - Lightning Tank
+        - Stealth Tank
+
+    Superweapon:
+        - Air Strike
+        - Field Generator
+        - Orbital Railgun Strike
+
+faction-synapol =
+   .name = Synapol
+   .description = Synapol Corporation
+    A large interplanatary company that manufactures,
+    everything from common household appliances to armaments.
+    Their security department became a large paramilitary force.
+
+    Faction Variations:
+        - Uses helicopters as air units
+
+    Special Units:
+        - Rocket Pod
+        - Flame Pod
+        - Mortar Pod
+        - Ramp Buggy
+        - Countermeasure Tank
+        - Railgun Tank
+        - Missile Tank
+
+    Superweapon:
+        - Drop Pods
+        - Grand Howitzer
+        - Thermonuclear Bomb
+
+faction-random =
+   .name = Any
+   .description = Random Corporation
+    A random corporation will be chosen when the game starts.
+
 ## CubeSpawner
 checkbox-crates =
     .label = Cubes

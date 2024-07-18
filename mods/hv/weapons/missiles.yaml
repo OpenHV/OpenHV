@@ -204,7 +204,6 @@ BoatMissileAntiAir:
 		Inaccuracy: 128
 		Image: bullet7
 		Shadow: true
-		HorizontalRateOfTurn: 60
 		TrailImage: small_smoke
 		CruiseAltitude: 2c0
 		RangeLimit: -1

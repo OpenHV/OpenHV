@@ -20,7 +20,6 @@ Bomb:
 		Falloff: 100, 50, 25, 12, 6, 3, 0
 		Damage: 10000
 		Versus:
-		Versus:
 			None: 90
 			Steel: 75
 			Light: 75
