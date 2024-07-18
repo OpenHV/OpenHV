@@ -94,6 +94,14 @@ AATURRET2:
 	Buildable:
 		Prerequisites: ~disabled
 
+ORESMELT:
+	Buildable:
+		Prerequisites: ~disabled
+
+OREPURIFIER:
+	Buildable:
+		Prerequisites: ~disabled
+
 AATANK:
 	Buildable:
 		Prerequisites: ~disabled
@@ -135,5 +143,9 @@ MISSILETANK:
 		Prerequisites: ~disabled
 
 SNIPERPOD:
+	Buildable:
+		Prerequisites: ~disabled
+
+ELITEPOD:
 	Buildable:
 		Prerequisites: ~disabled
