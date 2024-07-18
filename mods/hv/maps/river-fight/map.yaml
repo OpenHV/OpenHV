@@ -29,16 +29,16 @@ Players:
 		Enemies: Multi0, Multi1
 	PlayerReference@Multi0:
 		Name: Multi0
+		AllowBots: False
 		Playable: True
 		Faction: Random
 		Enemies: Creeps
-		AllowBots: false
 	PlayerReference@Multi1:
 		Name: Multi1
+		AllowBots: False
 		Playable: True
 		Faction: Random
 		Enemies: Creeps
-		AllowBots: false
 
 Actors:
 	Actor0: watchtower
@@ -548,12 +548,6 @@ Actors:
 	Actor168: mntmisc8
 		Owner: Neutral
 		Location: 119,79
-	Actor169: mpspawn
-		Owner: Neutral
-		Location: 96,91
-	Actor170: mpspawn
-		Owner: Neutral
-		Location: 52,18
 	Actor171: extractor
 		Owner: Neutral
 		Location: 51,96
@@ -656,12 +650,6 @@ Actors:
 	Actor204: resourcelight
 		Owner: Neutral
 		Location: 133,43
-	Actor205: baselight
-		Owner: Neutral
-		Location: 96,91
-	Actor206: baselight
-		Owner: Neutral
-		Location: 52,18
 	Actor207: purp_l
 		Owner: Neutral
 		Location: 69,41
@@ -989,5 +977,101 @@ Actors:
 	Actor316: sandmisc8
 		Owner: Neutral
 		Location: 86,50
+	Actor317: sandmisc7
+		Owner: Neutral
+		Location: 77,60
+	Actor318: sandmisc7
+		Owner: Neutral
+		Location: 71,50
+	Actor319: stnrock2
+		Owner: Neutral
+		Location: 81,55
+	Actor320: stnrock2
+		Owner: Neutral
+		Location: 77,48
+	Actor321: stnrock2
+		Owner: Neutral
+		Location: 68,52
+	Actor322: stnrock2
+		Owner: Neutral
+		Location: 72,59
+	Actor323: sandmisc6
+		Owner: Neutral
+		Location: 71,55
+	Actor324: sandmisc6
+		Owner: Neutral
+		Location: 78,54
+	Actor325: stnrock12
+		Owner: Neutral
+		Location: 75,53
+	Actor326: stnrock12
+		Owner: Neutral
+		Location: 74,60
+	Actor327: stnrock4
+		Owner: Neutral
+		Location: 72,54
+	Actor328: stnrock4
+		Owner: Neutral
+		Location: 80,58
+	Actor329: stnrock15
+		Owner: Neutral
+		Location: 75,57
+	Actor330: stnrock14
+		Owner: Neutral
+		Location: 78,64
+	Actor331: stnrock12
+		Owner: Neutral
+		Location: 69,48
+	Actor332: stnrock15
+		Owner: Neutral
+		Location: 75,49
+	Actor333: mntmisc9
+		Owner: Neutral
+		Location: 101,69
+	Actor334: mntmisc8
+		Owner: Neutral
+		Location: 102,66
+	Actor335: mntmisc11
+		Owner: Neutral
+		Location: 104,67
+	Actor336: mntmisc11
+		Owner: Neutral
+		Location: 45,45
+	Actor337: mntmisc11
+		Owner: Neutral
+		Location: 48,41
+	Actor338: mntmisc9
+		Owner: Neutral
+		Location: 47,44
+	Actor339: prop5
+		Owner: Neutral
+		Location: 95,35
+	Actor340: flagpost
+		Owner: Neutral
+		Location: 94,34
+	Actor341: flagpost
+		Owner: Neutral
+		Location: 55,75
+	Actor342: prop5
+		Owner: Neutral
+		Location: 53,74
+	Actor343: watchtower
+		Owner: Neutral
+		Location: 76,58
+	Actor344: watchtower
+		Owner: Neutral
+		Location: 72,51
+	Actor345: mpspawn
+		Owner: Neutral
+		Location: 97,86
+	Actor346: baselight
+		Owner: Neutral
+		Location: 97,86
+	Actor347: mpspawn
+		Owner: Neutral
+		Location: 51,23
+	Actor348: baselight
+		Owner: Neutral
+		Location: 51,23
 
 Rules: rules.yaml
