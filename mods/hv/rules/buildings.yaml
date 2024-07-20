@@ -2518,12 +2518,12 @@ COMLINK:
 		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: radarsweep
-		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Plant, Stone, Swamp, Tech, Dirt
+		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Plant, Stone, Swamp, Tech, Dirt, Shore
 		AllowUnderShroud: true
 		LifeTime: 250
-		EffectImage: moveflsh
+		EffectImage: surveillance_effect
 		EffectSequence: idle
-		EffectPalette: moveflash
+		EffectPalette: effect
 		SupportPowerPaletteOrder: 40
 		SelectTargetSpeechNotification: SelectTarget
 		LaunchSound: radar_reveal_avreference.ogg
