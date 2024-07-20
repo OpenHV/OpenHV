@@ -199,3 +199,10 @@ camera:
 	idle:
 		Filename: bits/camera.png
 		Length: 1
+
+surveillance_effect:
+	idle:
+		Filename: bits/surveillance_effect.png
+		Length: 25
+		Tick: 40
+		ZOffset: 2047
