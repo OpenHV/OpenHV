@@ -589,6 +589,13 @@ actor-mediumboat =
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
 
+actor-torpedoboat =
+   .name = Torpedo Boat
+   .generic-name = Boat
+   .description = A boat with torpedo launchers.
+      Strong vs Water
+      Can't attack Ground or Air
+
 actor-submarine =
    .name = Submarine
    .generic-name = Submarine

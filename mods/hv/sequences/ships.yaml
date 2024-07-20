@@ -209,3 +209,11 @@ lightningboat:
 	icon:
 		Filename: bits/units-icons.png
 		Start: 60
+
+torpedoboat:
+	idle:
+		Filename: bits/torpedo_boat.png
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 62

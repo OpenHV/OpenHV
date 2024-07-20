@@ -104,7 +104,7 @@ MEDIUMBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, radar
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 30
 		Description: actor-mediumboat.description
 	UpdatesPlayerStatistics:
@@ -138,6 +138,45 @@ MEDIUMBOAT:
 	AttackTurreted:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
+
+TORPEDOBOAT:
+	Inherits: ^Ship
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: actor-torpedoboat.name
+		GenericName: actor-torpedoboat.generic-name
+	Buildable:
+		Queue: Ship
+		BuildAtProductionType: Ship
+		Prerequisites: ~harbor.yi, radar
+		BuildPaletteOrder: 30
+		Description: actor-torpedoboat.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 100
+		TurnSpeed: 60
+	RevealsShroud:
+		Range: 7c0
+		MinRange: 3c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 3c0
+	DetectCloaked:
+		Range: 5c0
+		DetectionTypes: Underwater
+	RenderDetectionCircle:
+	Armament:
+		Weapon: Torpedo
+		LocalOffset: 200,300,0, 200,-300,0
+	AttackFrontal:
+		FacingTolerance: 25
 
 SUBMARINE:
 	Inherits: ^Submarine
