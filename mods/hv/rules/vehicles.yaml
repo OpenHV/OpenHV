@@ -437,7 +437,7 @@ LIGHTNINGTANK:
 		Range: 4c0
 	Armament:
 		Weapon: VoltageArc
-		LocalOffset: 300,0,0
+		LocalOffset: 400,0,0
 	AttackFrontal:
 		PauseOnCondition: ecm-disabled
 		Voice: Attack
