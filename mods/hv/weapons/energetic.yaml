@@ -88,6 +88,11 @@ RepairBeam:
 		Damage: -250
 		ValidTargets: DamagedVehicle
 		Spread: 1
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 1
+		AffectsParent: true
+		ValidTargets: Ground, Vehicle
 
 RepairTorch:
 	ReloadDelay: 3
@@ -109,6 +114,11 @@ RepairTorch:
 		Damage: -50
 		ValidTargets: DamagedPod
 		Spread: 1
+	Warhead@Sparks: FireShrapnel
+		Weapon: ElectricSpark
+		Amount: 1
+		AffectsParent: true
+		ValidTargets: Ground, Vehicle
 
 Plasma:
 	Inherits: BigSplash
