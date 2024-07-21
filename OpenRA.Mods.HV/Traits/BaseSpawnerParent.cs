@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -70,10 +70,13 @@ namespace OpenRA.Mods.HV.Traits
 			base.RulesetLoaded(rules, ai);
 
 			if (InitialActorCount > Actors.Length)
-				throw new YamlException($"{nameof(InitialActorCount)} can't be larger than the actors defined! (Actor type: {ai.Name})");
+				throw new YamlException($"{nameof(InitialActorCount)} can't be larger than the actors defined!");
 
 			if (InitialActorCount < -1)
-				throw new YamlException($"{nameof(InitialActorCount)} must be -1 or non-negative. Actor type: {ai.Name}");
+				throw new YamlException($"{nameof(InitialActorCount)} must be -1 or non-negative.");
+
+			if (ai.HasTraitInfo<AircraftInfo>())
+				throw new YamlException("Spawner cannot be aircraft."); // https://github.com/OpenRA/OpenRA/issues/20459
 		}
 
 		public override object Create(ActorInitializer init) { return new BaseSpawnerParent(init, this); }

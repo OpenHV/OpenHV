@@ -722,30 +722,16 @@ MOTHERSHIP:
 	SpawnActorOnDeath:
 		Actor: MOTHERSHIP.Husk
 		RequiresCondition: airborne
-	CarrierParent:
-		Actors: drone2, drone2, drone2, drone2, drone2
-		RespawnTicks: 100
-		SpawnAllAtOnce: true
-	WithCarrierParentPipsDecoration:
-	WithCarrierHatchAnimation:
 	Exit:
 		SpawnOffset: 0,0,0
 		Facing: 0
-	Turreted@DroneLauncher:
-		Turret: primary
-		Offset: 0,0,0
-		TurnSpeed: 240
 	Turreted@LaserTurret:
-		Turret: secondary
+		Turret: primary
 		Offset: -200,0,-100
 		TurnSpeed: 120
 	AttackTurreted:
-	Armament@DroneLauncher:
-		Name: primary
-		Weapon: Drone2Launcher
-		LocalOffset: 0,0,-100
 	Armament@LaserTurret:
-		Name: secondary
+		Name: primary
 		Weapon: MothershipLaser
 		LocalOffset: 500,300,-100, 500,-300,-100
 	Voiced:
