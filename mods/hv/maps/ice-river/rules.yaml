@@ -3,6 +3,44 @@
 Player:
 	PlayerResources:
 		DefaultCash: 8000
+	GrantConditionOnBotOwner@CampaignAI:
+		Condition: gentle-ai-enabled
+		Bots: campaign
+	BaseBotModule@CampaignAI:
+		RequiresCondition: gentle-ai-enabled
+	BuildingRepairBotModule:
+		RequiresCondition: gentle-ai-enabled
+	SquadManagerBotModule@CampaignAI:
+		RequiresCondition: gentle-ai-enabled
+		SquadSize: 20
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship, jet, copter, banshee
+		ConstructionYardTypes: base, base2
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+	MinerBotModule:
+		RequiresCondition: gentle-ai-enabled
+		DeployableActorTypes: miner
+		DeployableTerrainTypes: Ore
+		DeployedActorTypes: miner2
+		VehiclesQueue: Utility
+	LoadCargoBotModule:
+		RequiresCondition: gentle-ai-enabled
+		TransportTypes: apc
+		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
+	PowerDownBotModule:
+		RequiresCondition: gentle-ai-enabled
+	SendUnitToAttackBotModule:
+		RequiresCondition: gentle-ai-enabled
+		ActorTypesAndAttackDesire:
+			bomberpod: 30
+		ValidTargets: Structure, Vehicle
+		InvalidTargets: Air, Water
+		ScanTick: 780
+	ScoutBotModule:
+		ScoutActorTypes: balloon, saucer
+		MoveRadius: 20
+		RequiresCondition: gentle-ai-enabled
 
 World:
 	WeatherOverlay:
@@ -19,6 +57,9 @@ World:
 		SwingAmplitude: 1.0, 1.5
 		ParticleColors: ECECEC, E4E4E4, D0D0D0, BCBCBC
 		LineTailAlphaValue: 0
+	ScriptLobbyDropdown@Difficulty:
+		Locked: false
+		Visible: true
 	GlobalLightingPaletteEffect:
 		Red: 0.9
 		Green: 0.9
@@ -149,3 +190,43 @@ SNIPERPOD:
 ELITEPOD:
 	Buildable:
 		Prerequisites: ~disabled
+
+AATANK:
+	Buildable:
+		Prerequisites: ~disabled
+
+AATANK2:
+	Buildable:
+		Prerequisites: ~disabled
+
+MGPODPATROL:
+	Inherits: MGPOD
+	Buildable:
+		Prerequisites: ~disabled
+	RejectsOrders:
+	RenderSprites:
+		Image: mgpod
+
+ROCKETPODPATROL:
+	Inherits: ROCKETPOD
+	Buildable:
+		Prerequisites: ~disabled
+	RejectsOrders:
+	RenderSprites:
+		Image: rocketpod
+
+FLAMEPODPATROL:
+	Inherits: FLAMEPOD
+	Buildable:
+		Prerequisites: ~disabled
+	RejectsOrders:
+	RenderSprites:
+		Image: flamepod
+
+MBT2PATROL:
+	Inherits: MBT2
+	Buildable:
+		Prerequisites: ~disabled
+	RejectsOrders:
+	RenderSprites:
+		Image: mbt2
