@@ -28,3 +28,4 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [mine_reload_oneshotofficial.ogg](https://freesound.org/people/oneshotofficial/sounds/616757/) by oneshotofficial
 * [televator.ogg](https://freesound.org/people/GameAudio/sounds/220161/) by GameAudio
 * [televator.ogg](https://freesound.org/people/oganesson/sounds/555017/) by oganesson
+* [weld1-4.ogg](https://freesound.org/people/unfa/sounds/264827/) by unfa

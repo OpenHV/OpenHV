@@ -71,6 +71,7 @@ ElectronicCounterMeasureEffect:
 RepairBeam:
 	ReloadDelay: 5
 	Range: 2c0
+	Report: weld1.ogg, weld2.ogg, weld3.ogg, weld4.ogg
 	Projectile: LaserZap
 		ZOffset: 2047
 		Color: fffff2
@@ -91,6 +92,7 @@ RepairBeam:
 RepairTorch:
 	ReloadDelay: 3
 	Range: 1c0
+	Report: weld1.ogg, weld2.ogg, weld3.ogg, weld4.ogg
 	Projectile: LaserZap
 		ZOffset: 2047
 		Color: fffff2
