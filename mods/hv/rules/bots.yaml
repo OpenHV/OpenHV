@@ -11,7 +11,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	BuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		BuilderTypes: builder
+		BuilderTypes: builder, builder2
 		MinimumBaseRadius: 15
 	CustomBaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
@@ -84,7 +84,7 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
 		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
 		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
@@ -96,6 +96,7 @@ Player:
 		UnitsToBuild:
 			miner: 3
 			builder: 1
+   			builder2: 1
 			radartank: 1
 			buggy: 3
 			bike: 3
@@ -136,6 +137,7 @@ Player:
 		UnitLimits:
 			miner: 1
 			builder: 1
+   			builder2: 1
 			balloon: 2
 			saucer: 2
 			radartank: 1
@@ -152,6 +154,7 @@ Player:
 			apc: 1
 		UnitDelays:
 			builder: 15000
+   			builder2: 15000
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
