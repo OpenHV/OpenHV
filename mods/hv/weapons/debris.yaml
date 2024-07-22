@@ -43,7 +43,7 @@ ForestFire:
 		Falloff: 100, 36, 12
 		Spread: 0c768
 
-Spaceman:
+SpaceMan:
 	Inherits: BigSplash
 	ReloadDelay: 60
 	Range: 2c768

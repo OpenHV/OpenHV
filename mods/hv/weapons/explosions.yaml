@@ -77,7 +77,7 @@ AntiTankWaterMine:
 PilotSpawn:
 	ValidTargets: Air
 	Warhead@SpawnPilot: FireRadius
-		Weapon: Spaceman
+		Weapon: SpaceMan
 		ValidTargets: Air
 
 DropPodImpact:

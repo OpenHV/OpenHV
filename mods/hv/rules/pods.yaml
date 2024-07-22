@@ -89,7 +89,7 @@ MORTARPOD:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	Armament@Primary:
-		Weapon: mortargun
+		Weapon: MortarGun
 		MuzzleSequence: muzzle
 		LocalOffset: 0,0,200
 	Armament@GARRISONED:

@@ -299,12 +299,12 @@ TurretArtillery:
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
 
-doublecannon:
+DoubleCannon:
 	Inherits: ^Cannon
 	ReloadDelay: 70
 	Burst: 2
 
-mortargun:
+MortarGun:
 	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 50
@@ -343,7 +343,7 @@ mortargun:
 		ImpactSounds: explosion06.ogg
 
 BunkerMortarGun:
-	Inherits: mortargun
+	Inherits: MortarGun
 	Range: 9c0
 	ReloadDelay: 25
 	MinRange: 0
