@@ -27,34 +27,34 @@ Tick = function()
 
 	if Human.IsObjectiveCompleted(DestroyColonyObjective) and not Human.IsObjectiveCompleted(DestroyYurukiMilitary) and not MilitaryProductionStarted and #enemybarracks > 0 then -- if the player has anihilated the colony basements, enable yuruki production to create three waves. Also enables the AI to use the railgun
 		MilitaryProductionStarted = true
-		Trigger.AfterDelay(250, function()
+		Trigger.AfterDelay(DateTime.Seconds(10), function()
 			if #enemybarracks > 0 then
 				Media.DisplayMessage(UserInterface.Translate("enemy-production-started"), Warning)
 				MilitaryReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
-				Trigger.AfterDelay(200, function()
+				Trigger.AfterDelay(DateTime.Seconds(8), function()
 					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
 				end)
 			end
 		end)
-		Trigger.AfterDelay(950, function()
+		Trigger.AfterDelay(DateTime.Seconds(38), function()
 			if #enemybarracks > 0 then
 				MilitaryReinforcementsPods2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsPods3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
-				Trigger.AfterDelay(200, function()
+				Trigger.AfterDelay(DateTime.Seconds(8), function()
 					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
 				end)
 			end
 		end)
-		Trigger.AfterDelay(1200, function()
+		Trigger.AfterDelay(DateTime.Seconds(48), function()
 			if #enemybarracks > 0 then
 				MilitaryReinforcementsPods4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsPods5 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsPods6 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsTanks3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
 				MilitaryReinforcementsTanks4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
-				Trigger.AfterDelay(200, function()
+				Trigger.AfterDelay(DateTime.Seconds(8), function()
 					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
 				end)
 			end
@@ -65,32 +65,32 @@ Tick = function()
 	if DateTime.GameTime > DateTime.Seconds(180) and not ColonyReinforcementsSent and #enemybarracks > 0 then  -- send reinforcements units at the colony basement at 2"30' mins
 		ColonyReinforcementsSent = true
 		Media.DisplayMessage(UserInterface.Translate("detected"), Warning)
-		Trigger.AfterDelay(200, function()
+		Trigger.AfterDelay(DateTime.Seconds(8), function()
 			ColonyReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPods, ColonyDestinationPathModule, 25, function(unit)
-				Trigger.AfterDelay(2150, function()
+				Trigger.AfterDelay(DateTime.Minutes(1) + DateTime.Seconds(26), function()
 					if not unit.IsDead then
 						unit.AttackMove(HumanBaseDestination.Location, 5)
 					end
 				end)
 			end)
 			ColonyReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanks, ColonyDestinationPathFactory, 25, function(unit)
-				Trigger.AfterDelay(2150, function()
+				Trigger.AfterDelay(DateTime.Minutes(1) + DateTime.Seconds(26), function()
 					if not unit.IsDead then
 						unit.AttackMove(HumanBaseDestination.Location, 5)
 					end
 				end)
 			end)
 		end)
-		Trigger.AfterDelay(950, function()
+		Trigger.AfterDelay(DateTime.Seconds(38), function()
 			ColonyReinforcementsPods2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, ColonyDestinationPathModule, 25, function(unit)
-				Trigger.AfterDelay(1200, function()
+				Trigger.AfterDelay(DateTime.Seconds(48), function()
 					if not unit.IsDead then
 						unit.AttackMove(HumanBaseDestination.Location, 5)
 					end
 				end)
 			end)
 			ColonyReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, ColonyDestinationPathFactory, 25 ,function(unit)
-				Trigger.AfterDelay(1200, function()
+				Trigger.AfterDelay(DateTime.Seconds(48), function()
 					if not unit.IsDead then
 						unit.AttackMove(HumanBaseDestination.Location, 5)
 					end
