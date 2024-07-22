@@ -85,7 +85,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
 		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
-		NavalUnitsTypes: mediumboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
 		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
 		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
@@ -126,7 +126,7 @@ Player:
 			banshee: 5
 			balloon: 1
 			saucer: 1
-			mediumboat: 1
+			torpedoboat: 1
 			railgunboat: 1
 			lightboat: 1
 			boomer: 2
