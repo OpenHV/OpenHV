@@ -33,6 +33,9 @@
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
 
+TankCannon:
+	Inherits: ^Cannon
+
 CannonSynapol:
 	Inherits: ^Cannon
 	Projectile: Bullet

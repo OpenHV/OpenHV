@@ -513,7 +513,7 @@ MERCTANK:
 		BuildPaletteOrder: 90
 		Description: actor-merctank.description
 	Armament:
-		Weapon: ^Cannon
+		Weapon: TankCannon
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,50
 	AttackFrontal:
