@@ -93,20 +93,20 @@ PATROLBOAT:
 	WithSpriteTurret:
 	WithMuzzleOverlay:
 
-MEDIUMBOAT:
+MERCBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: actor-mediumboat.name
-		GenericName: actor-mediumboat.generic-name
+		Name: actor-mercboat.name
+		GenericName: actor-mercboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~disabled
-		BuildPaletteOrder: 30
-		Description: actor-mediumboat.description
+		BuildPaletteOrder: 90
+		Description: actor-mercboat.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -122,15 +122,11 @@ MEDIUMBOAT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	DetectCloaked:
-		Range: 5c0
-		DetectionTypes: Underwater
-	RenderDetectionCircle:
 	Turreted:
 		TurnSpeed: 60
 		Offset: 150,0,100
 	Armament:
-		Weapon: MediumBoatCannon
+		Weapon: TankCannon
 		Recoil: 125
 		RecoilRecovery: 38
 		MuzzleSequence: muzzle

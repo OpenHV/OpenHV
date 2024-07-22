@@ -355,7 +355,7 @@ Actors:
 	DropshipSpawnPoint: entry
 		Owner: Neutral
 		Location: 61,0
-	Ship1: mediumboat
+	Ship1: lightboat
 		Faction: Random
 		Location: 30,37
 		Facing: 896

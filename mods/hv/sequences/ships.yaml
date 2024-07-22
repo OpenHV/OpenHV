@@ -1,11 +1,11 @@
 # License: CC-BY-SA-4.0
 
-mediumboat:
+mercboat:
 	idle:
-		Filename: bits/mediumboat.png
+		Filename: bits/mercboat.png
 		Facings: 8
 	turret:
-		Filename: bits/mediumboat.png
+		Filename: bits/mercboat.png
 		Start: 8
 		Facings: 8
 	muzzle:

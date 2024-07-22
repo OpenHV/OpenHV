@@ -347,35 +347,3 @@ BunkerMortarGun:
 	Range: 9c0
 	ReloadDelay: 25
 	MinRange: 0
-
-MediumBoatCannon:
-	Inherits: ^Cannon
-	ValidTargets: Ship, WaterBuilding, Water
-	Report: tankfire01.ogg
-	ReloadDelay: 25
-	Range: 6c0
-	Projectile: Bullet
-		Speed: 850
-		Image: bullet1
-		Shadow: true
-	Warhead@Smudge: LeaveSmudge
-		SmudgeType: Crater
-		Chance: 25
-	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
-		Spread: 256
-		Damage: 5000
-		Versus:
-			None: 100
-			Steel: 50
-			Light: 75
-			Heavy: 100
-			Concrete: 100
-	Warhead@Incendiary: TreeDamage
-		Damage: 4000
-		Spread: 128
-		Percentage: 75
-	Warhead@GroundEffect: CreateEffect
-		Explosions: small
-		ValidTargets: Ground
-		ImpactSounds: explosion06.ogg
