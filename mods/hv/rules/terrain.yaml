@@ -398,3 +398,16 @@ TREEFLAME:
 		Image: fire
 		Sequence: flame
 		Palette: effect
+
+PALMTREE:
+	Inherits: ^Tree
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	SpawnActorOnDeath@Crush:
+		Actor: CACTIMUD
+	SpawnActorOnDeath@Ash:
+		Actor: CACTIASH
+
+PALMTREE2:
+	Inherits: PALMTREE
