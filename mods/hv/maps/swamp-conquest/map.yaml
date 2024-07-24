@@ -711,9 +711,6 @@ Actors:
 	Actor237: mntmisc9
 		Owner: Neutral
 		Location: 89,34
-	Actor238: mntmisc9
-		Owner: Neutral
-		Location: 96,31
 	Actor239: mntmisc9
 		Owner: Neutral
 		Location: 87,26
@@ -1240,5 +1237,8 @@ Actors:
 	Actor408: hill_b
 		Owner: Neutral
 		Location: 31,23
+	Actor238: mntmisc9
+		Owner: Neutral
+		Location: 97,30
 
 Rules: rules.yaml
