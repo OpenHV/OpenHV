@@ -705,6 +705,8 @@ BUILDER2:
 		IntoActor: outpost2
 	Selectable:
 		Class: builder
+	RenderSprites:
+		Image: builder5
 
 COLLECTOR:
 	Inherits: ^Vehicle
