@@ -188,7 +188,7 @@ BUILDER.TRADE:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: builder4
+		Image: builder3
 	UpdatesPlayerStatistics:
 		OverrideActor: builder
 
@@ -200,7 +200,7 @@ BUILDER2.TRADE:
 		Queues: Trade
 	-MapEditorData:
 	RenderSprites:
-		Image: builder5
+		Image: builder4
 	UpdatesPlayerStatistics:
 		OverrideActor: builder2
 

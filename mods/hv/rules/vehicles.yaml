@@ -679,7 +679,7 @@ BUILDER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	RenderSprites:
-		Image: builder4
+		Image: builder3
 	GrantConditionOnTerrain:
 		Condition: validterrain
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
@@ -706,7 +706,7 @@ BUILDER2:
 	Selectable:
 		Class: builder
 	RenderSprites:
-		Image: builder5
+		Image: builder4
 
 COLLECTOR:
 	Inherits: ^Vehicle
