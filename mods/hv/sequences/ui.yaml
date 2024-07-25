@@ -206,3 +206,10 @@ surveillance_effect:
 		Length: 25
 		Tick: 40
 		ZOffset: 2047
+
+forcefield_effect:
+	idle:
+		Filename: bits/forcefieldeffect.png
+		Length: 12
+		Tick: 40
+		ZOffset: 2047
