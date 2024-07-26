@@ -971,9 +971,8 @@ TANKER1:
 		Range: 2c0
 	ResourceTransporter:
 		Capacity: 8
-	SpawnActorOnDeath:
-		Actor: goldball
-	-SpawnScrapOnDeath:
+	SpawnScrapOnDeath:
+		Actors: goldball
 	RenderSprites:
 		Image: tanker1
 		FactionImages:
@@ -985,7 +984,7 @@ TANKER2:
 		Description: actor-tanker2.description
 	Tooltip:
 		Name: actor-tanker2.name
-	-SpawnActorOnDeath:
+	-SpawnScrapOnDeath:
 	RenderSprites:
 		Image: tanker2
 		FactionImages:
