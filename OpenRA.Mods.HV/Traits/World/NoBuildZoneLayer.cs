@@ -60,6 +60,12 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
+		public IEnumerable<CPos> GetMinerFootprintAround(CPos cell)
+		{
+			var location = cell - new CVec(0, buildingInfo.Dimensions.Y - 1);
+			return buildingInfo.Tiles(location);
+		}
+
 		void CellChanged(CPos cell)
 		{
 			if (ResourceAt(cell))
@@ -96,12 +102,6 @@ namespace OpenRA.Mods.HV.Traits
 				return info.ResourceTypes.Contains(resource.Type);
 
 			return true;
-		}
-
-		IEnumerable<CPos> GetMinerFootprintAround(CPos cell)
-		{
-			var location = cell - new CVec(0, buildingInfo.Dimensions.Y - 1);
-			return buildingInfo.Tiles(location);
 		}
 	}
 }

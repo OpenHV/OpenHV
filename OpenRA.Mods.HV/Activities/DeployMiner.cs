@@ -10,8 +10,11 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Activities;
+using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.HV.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -23,6 +26,8 @@ namespace OpenRA.Mods.HV.Activities
 		CPos? location;
 		readonly HashSet<string> terrainTypes;
 		readonly Color targetLineColor;
+		readonly NoBuildZone noBuildZone;
+		readonly BuildingInfluence buildingInfluence;
 
 		public DeployMiner(Actor self, CPos? location, HashSet<string> terrainTypes, Color targetLineColor)
 		{
@@ -30,6 +35,9 @@ namespace OpenRA.Mods.HV.Activities
 			this.location = location;
 			this.terrainTypes = terrainTypes;
 			this.targetLineColor = targetLineColor;
+
+			noBuildZone = self.World.WorldActor.Trait<NoBuildZone>();
+			buildingInfluence = self.World.WorldActor.Trait<BuildingInfluence>();
 		}
 
 		protected override void OnFirstRun(Actor self)
@@ -45,6 +53,10 @@ namespace OpenRA.Mods.HV.Activities
 
 			if (CanDeploy(self, location.Value))
 			{
+				var footprint = noBuildZone.GetMinerFootprintAround(location.Value).ToList();
+				foreach (var order in AIUtils.ClearBlockersOrders(footprint, self.Owner))
+					self.World.IssueOrder(order);
+
 				QueueChild(movement.MoveTo(location.Value));
 				self.Trait<Transforms>().DeployTransform(true);
 			}
@@ -60,8 +72,7 @@ namespace OpenRA.Mods.HV.Activities
 
 		bool CanDeploy(Actor self, CPos cell)
 		{
-			return terrainTypes.Contains(self.World.Map.GetTerrainInfo(cell).Type) &&
-				!self.World.WorldActor.Trait<BuildingInfluence>().AnyBuildingAt(cell);
+			return terrainTypes.Contains(self.World.Map.GetTerrainInfo(cell).Type) && !buildingInfluence.AnyBuildingAt(cell);
 		}
 	}
 }
