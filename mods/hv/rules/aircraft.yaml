@@ -285,7 +285,7 @@ CHOPPER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -419,7 +419,7 @@ DROPSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
