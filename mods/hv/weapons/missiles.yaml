@@ -382,3 +382,11 @@ Torpedo:
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.ogg
+
+Torpedo2:
+	Inherits: Torpedo
+	ReloadDelay: 42
+	Burst: 2
+	BurstDelays: 8
+	Warhead@Damage: SpreadDamage
+		Damage: 5000

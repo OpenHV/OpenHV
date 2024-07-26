@@ -156,8 +156,8 @@ TORPEDOBOAT:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 100
-		TurnSpeed: 60
+		Speed: 110
+		TurnSpeed: 66
 	RevealsShroud:
 		Range: 7c0
 		MinRange: 3c0
@@ -169,7 +169,7 @@ TORPEDOBOAT:
 		DetectionTypes: Underwater
 	RenderDetectionCircle:
 	Armament:
-		Weapon: Torpedo
+		Weapon: Torpedo2
 		LocalOffset: 200,300,0, 200,-300,0
 	AttackFrontal:
 		FacingTolerance: 25
