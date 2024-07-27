@@ -96,7 +96,7 @@ Player:
 		UnitsToBuild:
 			miner: 3
 			builder: 1
-   			builder2: 1
+			builder2: 1
 			radartank: 1
 			buggy: 3
 			bike: 3
@@ -137,7 +137,7 @@ Player:
 		UnitLimits:
 			miner: 1
 			builder: 1
-   			builder2: 1
+			builder2: 1
 			balloon: 2
 			saucer: 2
 			radartank: 1
@@ -154,7 +154,7 @@ Player:
 			apc: 1
 		UnitDelays:
 			builder: 15000
-   			builder2: 15000
+			builder2: 15000
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
