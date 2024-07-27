@@ -566,7 +566,7 @@ ECMTANK:
 	Selectable:
 		Class: ecmtank
 	Buildable:
-		Queue: Tank
+		Queue: Utility
 		Prerequisites: ~factory.sc, techcenter, trader
 		BuildPaletteOrder: 60
 		Description: actor-ecmtank.description
@@ -831,7 +831,7 @@ HACKERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
-		Queue: Tank
+		Queue: Utility
 		BuildPaletteOrder: 60
 		Prerequisites: ~factory.yi, radar, trader
 		Description: actor-hackertank.description
