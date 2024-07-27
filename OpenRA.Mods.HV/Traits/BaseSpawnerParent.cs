@@ -70,13 +70,10 @@ namespace OpenRA.Mods.HV.Traits
 			base.RulesetLoaded(rules, ai);
 
 			if (InitialActorCount > Actors.Length)
-				throw new YamlException($"{nameof(InitialActorCount)} can't be larger than the actors defined!");
+				throw new YamlException($"{nameof(InitialActorCount)} can't be larger than the actors defined! (Actor type: {ai.Name})");
 
 			if (InitialActorCount < -1)
-				throw new YamlException($"{nameof(InitialActorCount)} must be -1 or non-negative.");
-
-			if (ai.HasTraitInfo<AircraftInfo>())
-				throw new YamlException("Spawner cannot be aircraft."); // https://github.com/OpenRA/OpenRA/issues/20459
+				throw new YamlException($"{nameof(InitialActorCount)} must be -1 or non-negative. Actor type: {ai.Name}");
 		}
 
 		public override object Create(ActorInitializer init) { return new BaseSpawnerParent(init, this); }
