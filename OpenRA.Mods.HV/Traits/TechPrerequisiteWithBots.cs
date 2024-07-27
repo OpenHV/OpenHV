@@ -17,7 +17,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Grants a prerequisite for human only games.")]
-	public class GrantPrerequisiteWithoutBotsInfo : TraitInfo, ITechTreePrerequisiteInfo
+	public class TechPrerequisiteWithBotsInfo : TraitInfo, ITechTreePrerequisiteInfo
 	{
 		[FieldLoader.Require]
 		[Desc("The prerequisite type that this provides.")]
@@ -28,16 +28,16 @@ namespace OpenRA.Mods.HV.Traits
 			yield return Prerequisite;
 		}
 
-		public override object Create(ActorInitializer init) { return new GrantPrerequisiteWithoutBots(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new TechPrerequisiteWithBots(init.Self, this); }
 	}
 
-	public class GrantPrerequisiteWithoutBots : ITechTreePrerequisite, INotifyCreated
+	public class TechPrerequisiteWithBots : ITechTreePrerequisite, INotifyCreated
 	{
 		readonly string[] prerequisites;
 
 		bool botGame;
 
-		public GrantPrerequisiteWithoutBots(Actor self, GrantPrerequisiteWithoutBotsInfo info)
+		public TechPrerequisiteWithBots(Actor self, TechPrerequisiteWithBotsInfo info)
 		{
 			prerequisites = new[] { info.Prerequisite };
 		}
@@ -47,6 +47,6 @@ namespace OpenRA.Mods.HV.Traits
 			botGame = self.World.Players.Any(p => p.IsBot);
 		}
 
-		IEnumerable<string> ITechTreePrerequisite.ProvidesPrerequisites => botGame ? Enumerable.Empty<string>() : prerequisites;
+		IEnumerable<string> ITechTreePrerequisite.ProvidesPrerequisites => botGame ? prerequisites : Enumerable.Empty<string>();
 	}
 }

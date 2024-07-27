@@ -40,8 +40,8 @@ BASE:
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
 		Prerequisite: structures.yi
-	GrantPrerequisiteWithoutBots:
-		Prerequisite: no-bots
+	TechPrerequisiteWithBots:
+		Prerequisite: bots
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 900
@@ -1899,7 +1899,7 @@ BARRIER:
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Defense
-		Prerequisites: module, ~no-bots
+		Prerequisites: module, !bots
 		Description: actor-barrier.description
 	RequiresBuildableArea:
 		AreaTypes: building

@@ -1186,7 +1186,7 @@
 	Buildable:
 		BuildPaletteOrder: 15
 		Queue: Defense
-		Prerequisites: module, ~no-bots
+		Prerequisites: module, !bots
 		Description: meta-gate.description
 	Replacement:
 		ReplaceableTypes: wall
