@@ -198,7 +198,7 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, broker
 	CargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: apc
+		TransportTypes: apc, apc2
 		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
