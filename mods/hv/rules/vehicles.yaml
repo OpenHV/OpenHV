@@ -111,6 +111,7 @@ AATANK2:
 
 APC:
 	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -128,7 +129,7 @@ APC:
 		Type: Heavy
 	Mobile:
 		Speed: 110
-		PauseOnCondition: notmobile || ecm-disabled
+		PauseOnCondition: immobile || ecm-disabled
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -138,7 +139,19 @@ APC:
 	Cargo:
 		Types: Pod
 		MaxWeight: 5
-		LoadingCondition: notmobile
+		LoadingCondition: immobile
+		PassengerConditions:
+			mgpod: loaded
+			rocketpod: loaded
+			mortarpod: loaded
+			flamepod: loaded
+			sniperpod: loaded
+			electricpod: loaded
+	AttackOpenTopped:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PauseOnCondition: ecm-disabled
+		RequiresCondition: loaded
+		Armaments: primary
 	Selectable:
 		DecorationBounds: 2048, 1843
 		Class: apc

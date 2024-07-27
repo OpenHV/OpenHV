@@ -664,6 +664,7 @@ actor-aatank2-description = Mobile tank with lightning gun.
 actor-apc =
    .name = Transport Tank
    .description = Can transport pods.
+      Has fireports for garrisoned units.
 
 actor-artillery =
    .name = Artillery
