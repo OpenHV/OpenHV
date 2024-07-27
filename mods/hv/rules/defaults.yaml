@@ -125,7 +125,7 @@
 		RequiresCondition: damaged
 		TargetTypes: DamagedVehicle
 	Targetable@Disabled:
-		RequiresCondition: ecm-disabled
+		RequiresCondition: jammed
 		TargetTypes: DisabledVehicle
 	TemporaryOwnerManager:
 	GrantConditionOnDamageState@Damaged:
@@ -1052,15 +1052,15 @@
 
 ^DisabledByECM:
 	WithColoredOverlay@ECMdisabled:
-		RequiresCondition: ecm-disabled
+		RequiresCondition: jammed
 		Color: 000000B4
 	TimedConditionBar@ECMdisabled:
-		Condition: ecm-disabled
+		Condition: jammed
 		Color: 00FF00
 	ExternalCondition@ECMdisabled:
-		Condition: ecm-disabled
+		Condition: jammed
 	Mobile:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 
 ^BuildingFlame:
 	GrantConditionOnDamageState:

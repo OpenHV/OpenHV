@@ -45,7 +45,7 @@ ElectronicCountermeasure:
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 40
-		Condition: ecm-disabled
+		Condition: jammed
 		ValidTargets: Vehicle
 	Warhead@Damage: SpreadDamage
 		Spread: 1
@@ -489,7 +489,7 @@ MothershipLaser:
 		Speed: 550
 		Blockable: false
 		Inaccuracy: 0
-		Image: 
+		Image:
 		ContrailLength: 4
 		ContrailStartWidth: 0c100
 		ContrailEndWidth: 0c32

@@ -30,7 +30,7 @@ MGPOD:
 		MuzzleSequence: muzzle
 		LocalOffset: 200,0,0
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 		IgnoreOffset: true
@@ -64,7 +64,7 @@ ROCKETPOD:
 		Weapon: RapidPodRocket
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
@@ -97,7 +97,7 @@ MORTARPOD:
 		Weapon: BunkerMortarGun
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 
@@ -134,7 +134,7 @@ SNIPERPOD:
 		Weapon: BunkerSniperRifle
 		MuzzleSequence: muzzle
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 	Cloak:
@@ -180,7 +180,7 @@ FLAMEPOD:
 		Name: garrisoned
 		Weapon: BunkerFlamethrower
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 10
 	Voiced:
 		VoiceSet: FlamePodVoice
@@ -213,7 +213,7 @@ TECHNICIAN:
 		ConsumedByCapture: false
 		EnterCursor: ability
 		EnterBlockedCursor: move-blocked
-		RequiresCondition: !ecm-disabled
+		RequiresCondition: !jammed
 	Voiced:
 		VoiceSet: TechnicianVoice
 	-Guard:
@@ -234,7 +234,7 @@ TECHNICIAN:
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 		Voice: Repair
 	DetectCloaked:
@@ -265,7 +265,7 @@ BROKERPOD:
 	Mobile:
 		Voice: Move
 	GrantConditionOnDeploy:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
@@ -412,7 +412,7 @@ ELECTRICPOD:
 		Name: garrisoned
 		Weapon: RapidPodVoltageArc
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	WithAttackAnimation:
 		Sequence: shoot

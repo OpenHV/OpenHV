@@ -39,7 +39,7 @@ MBT:
 		MuzzleSequence: muzzle
 		LocalOffset: 500,-50,-50
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
@@ -92,7 +92,7 @@ AATANK:
 		RecoilRecovery: 38
 		LocalOffset: 250,250,150, 250,-250,150
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 
@@ -129,7 +129,7 @@ APC:
 		Type: Heavy
 	Mobile:
 		Speed: 110
-		PauseOnCondition: immobile || ecm-disabled
+		PauseOnCondition: immobile || jammed
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -149,7 +149,7 @@ APC:
 			electricpod: loaded
 	AttackOpenTopped:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		RequiresCondition: loaded
 		Armaments: primary
 	Selectable:
@@ -202,7 +202,7 @@ ARTILLERY:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
@@ -254,7 +254,7 @@ RADARTANK:
 		Sequence: extend
 		BodyNames: deployed
 	GrantConditionOnDeploy:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
@@ -274,11 +274,11 @@ RADARTANK:
 		RequiresCondition: undeployed
 	DetectCloaked:
 		Range: 8c0
-		RequiresCondition: !ecm-disabled && undeployed
+		RequiresCondition: !jammed && undeployed
 		DetectionTypes: Cloak, Underwater
 	DetectCloaked@Deployed:
 		Range: 14c0
-		RequiresCondition: !ecm-disabled && !undeployed
+		RequiresCondition: !jammed && !undeployed
 		DetectionTypes: Cloak, Underwater
 
 REPAIRTANK:
@@ -303,7 +303,7 @@ REPAIRTANK:
 		TargetRelationships: Ally
 		ForceTargetRelationships: None
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -399,7 +399,7 @@ RAILGUNTANK:
 		Weapon: railgun
 		LocalOffset: 325,400,0
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -452,7 +452,7 @@ LIGHTNINGTANK:
 		Weapon: VoltageArc
 		LocalOffset: 400,0,0
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	WithAttackAnimation:
@@ -479,7 +479,7 @@ STEALTHTANK:
 	Armor:
 		Type: Heavy
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Action
 		FacingTolerance: 0
 	Armament:
@@ -499,7 +499,7 @@ STEALTHTANK:
 		CloakSound: stealth_on_humanoide9000.ogg
 		UncloakSound: stealth_off_humanoide9000.ogg
 		IsPlayerPalette: true
-		PauseOnCondition: cloak-force-disabled || ecm-disabled
+		PauseOnCondition: cloak-force-disabled || jammed
 		CloakedPalette: cloak
 		CloakStyle: Palette
 	GrantConditionOnDamageState@UNCLOAK:
@@ -530,7 +530,7 @@ MERCTANK:
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,50
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -586,7 +586,7 @@ ECMTANK:
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	UpdatesPlayerStatistics:
@@ -651,7 +651,7 @@ DUALARTILLERY:
 		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	WithAttackAnimation:
@@ -835,7 +835,7 @@ MISSILETANK:
 		Weapon: MissileTankRocket
 		LocalOffset: 500,0,0
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
@@ -894,7 +894,7 @@ BUGGY:
 		TurnSpeed: 40
 		Offset: 0,0,150
 	AttackTurreted:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 	WithSpriteTurret:
 	Armament:
@@ -934,7 +934,7 @@ BIKE:
 		BuildPaletteOrder: 30
 		Description: actor-bike.description
 	AttackFrontal:
-		PauseOnCondition: ecm-disabled
+		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
 	Armament:
