@@ -58,6 +58,9 @@ namespace OpenRA.Mods.HV.Activities
 				if (ammoPools != null)
 					foreach (var pool in ammoPools)
 						pool.GiveAmmo(self, pool.Info.Ammo);
+
+				var aircraft = self.TraitOrDefault<Aircraft>();
+				aircraft?.RemoveInfluence();
 			});
 		}
 	}
