@@ -1,0 +1,97 @@
+World:
+	TintPostProcessEffect:
+		Red: 0.90
+		Green: 1.00
+		Blue: 1.10
+		Ambient: 1.05
+	TerrainLighting:
+		Intensity: 0.90
+
+WATER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 18c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+MEDIUM_WATER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.50
+		BlueTint: 1.00
+
+SMALL_WATER_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+RESOURCE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 03c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.25
+		BlueTint: 0.40
+
+BASE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 18c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.40
+		BlueTint: 0.35
+
+RED_SPECIAL_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.70
+		GreenTint: 0.25
+		BlueTint: 0.25
+
+RED_TERRAIN_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 10c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.20
+		BlueTint: 0.10
+
+FOREST_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: -0.10
+		GreenTint: 0.00
+		BlueTint: -0.20
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: -0.15
+		GreenTint: -0.10
+		BlueTint: -0.10
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
