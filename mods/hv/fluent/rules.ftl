@@ -247,10 +247,10 @@ actor-turtle =
 
 actor-chopper =
    .name = Transport Helicopter
-   .description = Vehicle Transport Helicopter.
+   .description = Transport Helicopter.
       Can load pods
       and lift one vehicle.
-   .encyclopedia = The chopper is a heavy transport aircraft that can load a group of pods. It can also lift one vehicle.
+   .encyclopedia = The chopper is a heavy transport aircraft that can load a group of pods or vehicles.
 
      {actor-chopper.description}
 
@@ -269,11 +269,11 @@ actor-balloon =
      Availability: Yuruki
 
 actor-dropship =
-   .name = Heavy Transport Dropship
-   .description = Vehicle Transport Shuttle.
+   .name = Transport Dropship
+   .description = Transport Shuttle.
       Can load pods
       and lift one vehicle.
-   .encyclopedia = The dropship is a heavy transport aircraft, than can load up a group of pods. It can also lift one vehicle.
+   .encyclopedia = The dropship is a fast transport aircraft, than can load up a group of pods or vehicles.
 
      {actor-dropship.description}
 
@@ -924,8 +924,8 @@ actor-carrier =
      Availability: Yuruki
 
 actor-ferry =
-   .name = Ferry
-   .generic-name = Naval Transporter
+   .name = Light Naval transporter
+   .generic-name = Ferry
    .description = General-purpose naval transport.
     Can carry pods.
       Unarmed
@@ -933,7 +933,19 @@ actor-ferry =
 
      {actor-ferry.description}
 
-     Availability: Universal
+     Availability: Yuruki
+
+actor-ferry2 =
+   .name = Heavy Naval Transporter
+   .generic-name = Ferry
+   .description = General-purpose naval transport.
+    Can carry pods.
+      Unarmed
+   .encyclopedia = The ferry is a heavy naval transporter based on liquid leviation technology that only works on water. It is quite slow but very durable. It can land on shores to load or unload its cargo.
+
+     {actor-ferry2.description}
+
+     Availability: Synapol
 
 actor-mineship =
    .name = Naval Minelayer
@@ -982,12 +994,20 @@ actor-aatank2 =
      Availability: Yuruki
 
 actor-apc =
-   .name = APC
+   .name = Light APC
    .description = Can transport pods.
       Has fireports for garrisoned units.
    .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
 
-     Availability: Universal
+     Availability: Yuruki
+
+actor-apc2 =
+   .name = Heavy APC
+   .description = Can transport pods.
+      Has fireports for garrisoned units.
+   .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
+
+     Availability: Synapol
 
 actor-artillery =
    .name = Artillery
