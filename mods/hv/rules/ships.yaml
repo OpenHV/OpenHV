@@ -476,7 +476,7 @@ FERRY:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor
+		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 20
 		Description: actor-ferry.description
 	Encyclopedia:
@@ -487,13 +487,13 @@ FERRY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 49500
 	Armor:
 		Type: Heavy
 	Mobile:
 		Locomotor: ferry
-		Speed: 80
-		TurnSpeed: 50
+		Speed: 88
+		TurnSpeed: 55
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 4c0
@@ -505,12 +505,28 @@ FERRY:
 	Cargo:
 		Types: Pod, Vehicle
 		MaxWeight: 10
-		AfterUnloadDelay: 40
+		AfterUnloadDelay: 0
 	WithCargoPipsDecoration:
 		PipCount: 5
 		Position: BottomLeft
 		Margin: 1, -1
 		RequiresSelection: true
+
+FERRY2:
+	Inherits: FERRY
+	Tooltip:
+		Name: actor-ferry2.name
+		GenericName: actor-ferry2.generic-name
+	Buildable:
+		Prerequisites: ~harbor.sc
+		Description: actor-ferry2.description
+	Encyclopedia:
+		Description: actor-ferry2.encyclopedia
+	Health:
+		HP: 60500
+	Mobile:
+		Speed: 72
+		TurnSpeed: 45
 
 MINESHIP:
 	Inherits: ^Ship
