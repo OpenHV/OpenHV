@@ -132,14 +132,14 @@ AATANK2:
 
 APC:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: actor-apc.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, module
+		Prerequisites: ~factory.yi, module
 		BuildPaletteOrder: 40
 		Description: actor-apc.description
 	Encyclopedia:
@@ -150,11 +150,12 @@ APC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 31500
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 110
+		TurnSpeed: 28
+		Speed: 121
 		PauseOnCondition: loading || jammed
 	RevealsShroud:
 		Range: 6c0
@@ -166,6 +167,7 @@ APC:
 		Types: Pod
 		MaxWeight: 5
 		LoadingCondition: loading
+		AfterUnloadDelay: 0
 		PassengerConditions:
 			rifleman: loaded
 			rocketeer: loaded
@@ -192,6 +194,21 @@ APC:
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeLarge
 		EmptyWeapon: UnitExplodeLarge
+
+APC2:
+	Inherits: APC
+	Tooltip:
+		Name: actor-apc2.name
+	Buildable:
+		Prerequisites: ~factory.sc, module
+		Description: actor-apc2.description
+	Encyclopedia:
+		Description: actor-apc2.encyclopedia
+	Health:
+		HP: 38500
+	Mobile:
+		TurnSpeed: 23
+		Speed: 99
 
 ARTILLERY:
 	Inherits: ^TrackedVehicle
