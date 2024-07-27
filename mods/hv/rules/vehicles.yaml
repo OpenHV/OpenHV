@@ -133,7 +133,7 @@ APC:
 		Name: actor-apc.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, module
+		Prerequisites: ~factory.yi, module
 		BuildPaletteOrder: 40
 		Description: actor-apc.description
 	Encyclopedia:
@@ -143,11 +143,12 @@ APC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 22500 # 23750
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 110
+		TurnSpeed: 22 # 21
+		Speed: 121 # 115
 		PauseOnCondition: loading || jammed
 	RevealsShroud:
 		Range: 6c0
@@ -182,6 +183,16 @@ APC:
 		Image: energyball
 		Sequence: teleport-large
 	-Passenger:
+
+APC2:
+	Inherits: APC
+	Buildable:
+		Prerequisites: ~factory.sc, module
+	Health:
+		HP: 27500 # 26250
+	Mobile:
+		TurnSpeed: 18
+		Speed: 99
 
 ARTILLERY:
 	Inherits: ^TrackedVehicle
