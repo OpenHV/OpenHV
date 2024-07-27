@@ -346,12 +346,21 @@ repairtank:
 	icon:
 		Filename: bits/repairtank-icon.png
 
+# TODO: Change one of them both below later
 apc:
 	idle:
 		Filename: bits/apc.png
 		Facings: 8
 	icon:
 		Filename: bits/apc-icon.png
+
+apc2:
+	idle:
+		Filename: bits/apc.png
+		Facings: 8
+	icon:
+		Filename: bits/units-icons.png
+		Start: 13
 
 artillery:
 	idle:
