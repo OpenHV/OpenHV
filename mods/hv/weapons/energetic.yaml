@@ -458,7 +458,7 @@ HackBack:
 	ReloadDelay: 160
 	Range: 6c0
 	Report: lightningbolt.ogg
-	ValidTargets: Vehicle
+	ValidTargets: Vulnerability
 	Projectile: EnergyBolt
 		Radius: 3
 		Duration: 7
@@ -472,11 +472,6 @@ HackBack:
 	Warhead@Damage: SpreadDamage
 		Damage: 1000
 		Spread: 480
-	Warhead@Hack: ChangeOwner
-		Range: 512
-		Duration: 375
-		InvalidTargets: Structure
-		ValidRelationships: Enemy, Neutral
 
 MothershipLaser:
 	Inherits: BigSplash

@@ -842,7 +842,6 @@ MISSILETANK:
 
 HACKERTANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
@@ -871,9 +870,20 @@ HACKERTANK:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
+	Hacker:
+		ControllingCondition: controlling
+	WithHackerPipsDecoration:
+		Position: BottomLeft
+	WithHackedConnectionArc:
+		UsePlayerColor: true
+		Offset: 0,512,960
 	Armament:
 		Weapon: HackBack
 	AttackFrontal:
+	AutoTarget:
+	AutoTargetPriority@Default:
+		ValidTargets: Vulnerability
+		RequiresCondition: !controlling
 
 BUGGY:
 	Inherits: ^Vehicle

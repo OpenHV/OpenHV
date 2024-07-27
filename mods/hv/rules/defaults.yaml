@@ -92,6 +92,16 @@
 	MapEditorData:
 		Categories: Husk
 
+^Hackable:
+	Hackable:
+		Condition: hacked
+	WithHackedConnectionArc:
+		UsePlayerColor: true
+		Offset: 0,512,960
+	Targetable@SecurityVulnerability:
+		TargetTypes: Vulnerability
+		RequiresCondition: !hacked
+
 ^Vehicle:
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
@@ -104,6 +114,7 @@
 	Inherits@DamageSparks: ^PixelDamageSparks
 	Inherits@Reconstructor: ^ReconstructorHeal
 	Inherits@Handicaps: ^PlayerHandicaps
+	Inherits@Vulnerabilities: ^Hackable
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
