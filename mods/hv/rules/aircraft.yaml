@@ -603,7 +603,7 @@ CHOPPER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 49500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -615,8 +615,8 @@ CHOPPER:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
+		TurnSpeed: 18
+		Speed: 122
 		AltitudeVelocity: 0c58
 		LandAltitude: 0c0
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
@@ -631,17 +631,11 @@ CHOPPER:
 	Selectable:
 		DecorationBounds: 2048, 1843
 	Cargo:
-		Types: Pod
+		Types: Pod, Vehicle
 		MaxWeight: 8
-		AfterUnloadDelay: 40
+		AfterUnloadDelay: 0
 		RequiresCondition: !carrying
 		LoadedCondition: loaded
-	Carryall:
-		BeforeLoadDelay: 10
-		BeforeUnloadDelay: 10
-		LocalOffset: 0,0,-200
-		CarryCondition: carrying
-		RequiresCondition: !loaded
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -769,7 +763,7 @@ DROPSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 40500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -781,10 +775,10 @@ DROPSHIP:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
-		LandAltitude: 0c0
+		TurnSpeed: 22
+		Speed: 149
 		AltitudeVelocity: 0c58
+		LandAltitude: 0c0
 		InitialFacing: 512
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
@@ -798,20 +792,9 @@ DROPSHIP:
 	Selectable:
 		DecorationBounds: 2048, 1848
 	Cargo:
-		Types: Pod
+		Types: Pod, Vehicle
 		MaxWeight: 8
-		AfterUnloadDelay: 40
-		UnloadVoice: Unload
-		RequiresCondition: !carrying
-		LoadedCondition: loaded
-	Carryall:
-		BeforeLoadDelay: 10
-		BeforeUnloadDelay: 10
-		LocalOffset: 0,0,-200
-		Voice: Unload
-		PickUpCursor: enter
-		CarryCondition: carrying
-		RequiresCondition: !loaded
+		AfterUnloadDelay: 0
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
