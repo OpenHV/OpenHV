@@ -870,6 +870,8 @@ HACKERTANK:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
+	-Targetable@SecurityVulnerability:
+	-Hackable:
 	Hacker:
 		ControllingCondition: controlling
 	WithHackerPipsDecoration:
