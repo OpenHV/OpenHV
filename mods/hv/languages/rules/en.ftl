@@ -724,9 +724,8 @@ actor-dualmerctank-description = Double barreled tank.
 actor-ecmtank =
    .name = Countermeasure Tank
    .generic-name = ECM Tank
-   .description = Disrupts satellite video links
-    and obscures the battlefield.
-      Disables units for a brief moment.
+   .description = Disables units for a brief moment.
+      Jams incoming missiles.
 
 actor-dualartillery =
    .name = Dual Artillery
@@ -755,8 +754,9 @@ actor-missiletank =
       Weak vs Pods
 
 actor-hackertank =
-   .description = Jams incoming missiles.
-      Temporarily changes allegiance of targeted units.
+   .description = Temporarily changes allegiance of targeted units.
+      Disrupts satellite video links
+      and obscures the battlefield when deployed.
    .name = Hacker Tank
 
 actor-buggy =

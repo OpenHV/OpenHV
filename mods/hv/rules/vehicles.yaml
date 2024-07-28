@@ -606,13 +606,9 @@ ECMTANK:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-	CreatesShroud:
-		Range: 9c0
-		RequiresCondition: deployed
-	RenderShroudCircle:
-		RequiresCondition: deployed
+	JamsMissiles:
+		Range: 5c0
+		DeflectionRelationships: Neutral, Enemy
 	DetectCloaked:
 		Range: 2c0
 
@@ -870,9 +866,6 @@ HACKERTANK:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	JamsMissiles:
-		Range: 5c0
-		DeflectionRelationships: Neutral, Enemy
 	-Targetable@SecurityVulnerability:
 	-Hackable:
 	Hacker:
@@ -889,6 +882,13 @@ HACKERTANK:
 	AutoTargetPriority@Default:
 		ValidTargets: Vulnerability
 		RequiresCondition: !controlling
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	CreatesShroud:
+		Range: 9c0
+		RequiresCondition: deployed
+	RenderShroudCircle:
+		RequiresCondition: deployed
 
 BUGGY:
 	Inherits: ^Vehicle
