@@ -49,6 +49,7 @@ faction-synapol =
 
     Faction Variations:
         - Uses helicopters as air units
+        - Uses submarines as advanced naval units
 
     Special Units:
         - Rocket Pod
