@@ -62,3 +62,7 @@ FLAGPOST:
 WATCHTOWER:
 	ProximityCapturable:
 		DrawDecoration: false
+
+CVIT:
+	Buildable:
+		Prerequisites: ~disabled
