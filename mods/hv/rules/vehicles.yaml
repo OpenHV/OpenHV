@@ -591,6 +591,7 @@ ECMTANK:
 	AutoTarget:
 	AutoTargetPriority@Default:
 		ValidTargets: Jammable
+	-Targetable@ECM:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
