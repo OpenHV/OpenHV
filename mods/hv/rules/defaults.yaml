@@ -187,7 +187,7 @@
 		TurnSpeed: 100
 		Speed: 80
 		Locomotor: pod
-		Voice: Action
+		Voice: Move
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
