@@ -108,7 +108,7 @@
 	Inherits@Selection: ^SelectableCombatUnit
 	Inherits@Decoration: ^SelectionDecorations
 	Inherits@Shield: ^ForceFieldCompatible
-	Inherits@ECM: ^DisabledByECM
+	Inherits@ECM: ^Jammable
 	Inherits@Cloak: ^Cloakable
 	Inherits@Parachute: ^Parachutable
 	Inherits@DamageSparks: ^PixelDamageSparks
@@ -1061,17 +1061,20 @@
 	GrantConditionOnDeploy:
 		DeployedCondition: triggered
 
-^DisabledByECM:
-	WithColoredOverlay@ECMdisabled:
+^Jammable:
+	WithColoredOverlay@Jammed:
 		RequiresCondition: jammed
 		Color: 000000B4
-	TimedConditionBar@ECMdisabled:
+	TimedConditionBar@Jammed:
 		Condition: jammed
 		Color: 00FF00
-	ExternalCondition@ECMdisabled:
+	ExternalCondition@Jammed:
 		Condition: jammed
 	Mobile:
 		PauseOnCondition: jammed
+	Targetable@ECM:
+		TargetTypes: Jammable
+		RequiresCondition: !jammed
 
 ^BuildingFlame:
 	GrantConditionOnDamageState:

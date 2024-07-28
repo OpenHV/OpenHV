@@ -570,7 +570,6 @@ DUALMERCTANK:
 
 ECMTANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -589,6 +588,9 @@ ECMTANK:
 		PauseOnCondition: jammed
 		Voice: Attack
 		FacingTolerance: 0
+	AutoTarget:
+	AutoTargetPriority@Default:
+		ValidTargets: Jammable
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
