@@ -32,6 +32,7 @@ MGPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
 		IgnoreOffset: true
 
@@ -66,6 +67,7 @@ ROCKETPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
 
 MORTARPOD:
@@ -99,7 +101,10 @@ MORTARPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
+	Voiced:
+		VoiceSet: GenericVoice1
 
 SNIPERPOD:
 	Inherits: ^Pod
@@ -136,6 +141,7 @@ SNIPERPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithMuzzleOverlay:
 	Cloak:
 		InitialDelay: 250
@@ -165,8 +171,6 @@ FLAMEPOD:
 		HP: 15000
 	Mobile:
 		Speed: 70
-		Locomotor: pod
-		Voice: Move
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -182,6 +186,7 @@ FLAMEPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 10
+		Voice: Attack
 	Voiced:
 		VoiceSet: FlamePodVoice
 
@@ -221,7 +226,6 @@ TECHNICIAN:
 		HP: 12500
 	Mobile:
 		Speed: 70
-		Voice: Move
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
@@ -262,8 +266,6 @@ BROKERPOD:
 		Range: 2c0
 	Health:
 		HP: 17500
-	Mobile:
-		Voice: Move
 	GrantConditionOnDeploy:
 		PauseOnCondition: jammed
 		DeployedCondition: deployed
@@ -318,6 +320,7 @@ ELITEPOD:
 		LocalOffset: 0,-300,0,   0,300,0
 	AttackFrontal:
 		FacingTolerance: 10
+		Voice: Attack
 	WithMuzzleOverlay:
 	WithMoveAnimation:
 	-Explodes@SpawnPilot:
@@ -361,7 +364,6 @@ BOMBERPOD:
 		Sequences: animation
 	Mobile:
 		Speed: 110
-		Voice: Move
 	Voiced:
 		VoiceSet: BomberPodVoice
 	Explodes:
@@ -393,8 +395,6 @@ ELECTRICPOD:
 		Cost: 225
 	Tooltip:
 		Name: actor-electricpod.name
-	Mobile:
-		Voice: Move
 	Voiced:
 		VoiceSet: ElectricPodVoice
 	UpdatesPlayerStatistics:
@@ -414,6 +414,7 @@ ELECTRICPOD:
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
+		Voice: Attack
 	WithAttackAnimation:
 		Sequence: shoot
 

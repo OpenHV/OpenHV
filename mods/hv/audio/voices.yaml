@@ -1,17 +1,21 @@
 # License: CC-BY-SA-4.0
 
 GenericVoice1:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
-		Select: generic1select1, generic1select2
-		Action: generic1action1, generic1action2
+		Select: generic1_any_instructions_sir, generic1_awaiting_new_orders, generic1_ready, generic1_standing_by, generic1_what_is_your_command, generic1_yes_sir
+		Move: generic1_acknowledged, generic1_affirmative, generic1_approching_position, generic1_command_received, generic1_following_orders, generic1_heading_out, generic1_moving_out, generic1_on_my_way, generic1_order_understood, generic1_right_away, generic1_sir_yes_sir
+		Action: generic1_acknowledged, generic1_affirmative, generic1_order_understood, generic1_sir_yes_sir
+		Attack: generic1_acknowledged, generic1_affirmative, generic1_initiating_assault, generic1_order_understood, generic1_sir_yes_sir, generic1_target_confirmed, generic1_target_in_sight
 		Guard: guarding
 
 GenericVoice2:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
-		Select: generic2select1, generic2select2
-		Action: generic2action1, generic2action2
+		Select: generic2_any_instructions_sir, generic2_awaiting_new_orders, generic2_ready, generic2_standing_by, generic2_what_is_your_command, generic2_yes_sir
+		Move: generic2_acknowledged, generic2_affirmative, generic2_approching_position, generic2_command_received, generic2_following_orders, generic2_heading_out, generic2_moving_out, generic2_on_my_way, generic2_order_understood, generic2_right_away, generic2_sir_yes_sir
+		Action: generic2_acknowledged, generic2_affirmative, generic2_order_understood, generic2_sir_yes_sir
+		Attack: generic2_acknowledged, generic2_affirmative, generic2_initiating_assault, generic2_order_understood, generic2_sir_yes_sir, generic2_target_confirmed, generic2_target_in_sight
 		Guard: guarding
 
 BeastVoice:
@@ -171,7 +175,8 @@ FlamePodVoice:
 	Voices:
 		Select: flamepod_copy, flamepod_I_need_orders, flamepod_im_listening, flamepod_need_a_light, flamepod_ready_to_burn, flamepod_receiving, flamepod_tanks_full, flamepod_ready_to_ignite
 		Move: flamepod_affirmative, flamepod_as_you_wish, flamepod_going, flamepod_good_copy, flamepod_on_my_way, flamepod_roger_that, flamepod_yes_sir, flamepod_ten_four, flamepod_right_away
-		Action: flamepod_burn_alive, flamepod_cleansing_fire, flamepod_purge_them, flamepod_with_pleasure, flamepod_set_them_on_fire, flamepod_eradicate, flamepod_hahaha, flamepod_I_love_that_smell
+		Action: flamepod_affirmative, flamepod_as_you_wish, flamepod_roger_that, flamepod_yes_sir
+		Attack: flamepod_burn_alive, flamepod_cleansing_fire, flamepod_purge_them, flamepod_with_pleasure, flamepod_set_them_on_fire, flamepod_eradicate, flamepod_hahaha, flamepod_I_love_that_smell
 		Guard: guarding
 
 BrokerPodVoice:
@@ -188,7 +193,8 @@ ElitePodVoice:
 	Voices:
 		Select: elitepod_all_systems_ready, elitepod_avionics_online, elitepod_awaiting_your_orders, elitepod_copy, elitepod_optimal_height, elitepod_ready, elitepod_receiving, elitepod_systems_checked
 		Move: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_changing_location, elitepod_flying_high, elitepod_good_copy, elitepod_new_destination_set, elitepod_on_my_way, elitepod_orders_recieved, elitepod_right_away_sir, elitepod_yes_sir, elitepod_ten_four
-		Action: elitepod_engaging, elitepod_lethal_force_engaged, elitepod_target_locked, elitepod_weapons_hot, elitepod_yes_sir, elitepod_destroy, elitepod_waste_them, elitepod_death_from_above
+		Action: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_orders_recieved, elitepod_yes_sir
+		Attack: elitepod_engaging, elitepod_lethal_force_engaged, elitepod_target_locked, elitepod_weapons_hot, elitepod_yes_sir, elitepod_destroy, elitepod_waste_them, elitepod_death_from_above
 		Guard: guarding
 
 BomberPodVoice:
@@ -211,7 +217,8 @@ ElectricPodVoice:
 	Voices:
 		Select: electricpod_battery_cells_charged, electricpod_capacitors_ready, electricpod_copy, electricpod_fully_charged, electricpod_listening, electricpod_ready, electricpod_receiving, electricpod_sir, electricpod_waiting
 		Move: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_good_copy, electricpod_moving_out, electricpod_yes_sir, electricpod_moving, electricpod_alright, electricpod_orders_received
-		Action: electricpod_discharging, electricpod_extra_crispy, electricpod_its_fried, electricpod_lighting_ball, electricpod_maxium_power, electricpod_short_circuit, electricpod_surge_current, electricpod_attack, electricpod_high_voltage_on, electricpod_feel_the_thunder
+		Action: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_yes_sir, electricpod_alright, electricpod_orders_received
+		Attack: electricpod_discharging, electricpod_extra_crispy, electricpod_its_fried, electricpod_lighting_ball, electricpod_maxium_power, electricpod_short_circuit, electricpod_surge_current, electricpod_attack, electricpod_high_voltage_on, electricpod_feel_the_thunder
 		Guard: guarding
 
 MotherShipVoice:
