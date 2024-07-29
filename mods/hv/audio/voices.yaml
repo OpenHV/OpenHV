@@ -228,3 +228,12 @@ MotherShipVoice:
 		Move: mothershipaction1, mothershipaction2, mothershipaction3
 		Action: mothershipattack1, mothershipattack2, mothershipattack3
 		Guard: guarding
+
+AssaultTankVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: assault_tank_copy, assault_tank_ready, assault_tank_receiving, assault_tank_standing_by, assault_tank_tank_ready, assault_tank_vehicle_ready, assault_tank_awaiting_orders
+		Move: assault_tank_acknowledged, assault_tank_affirmative, assault_tank_at_once, assault_tank_changing_location, assault_tank_command_received, assault_tank_confirmed, assault_tank_good_copy, assault_tank_heading_out, assault_tank_location_confirmed, assault_tank_moving_out, assault_tank_right_away, assault_tank_sir_yes_sir
+		Action: assault_tank_acknowledged, assault_tank_affirmative, assault_tank_at_once, assault_tank_command_received, assault_tank_confirmed, assault_tank_good_copy, assault_tank_sir_yes_sir
+		Attack: assault_tank_destroy, assault_tank_engaging, assault_tank_sir_yes_sir, assault_tank_target_confirmed, assault_tank_target_locked, assault_tank_enemy_in_sight
+		Guard: guarding

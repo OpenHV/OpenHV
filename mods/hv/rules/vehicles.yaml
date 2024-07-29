@@ -43,6 +43,8 @@ MBT:
 		Voice: Attack
 	WithSpriteTurret:
 	WithMuzzleOverlay:
+	Voiced:
+		VoiceSet: AssaultTankVoice
 
 MBT2:
 	Inherits: MBT
@@ -549,6 +551,8 @@ MERCTANK:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	WithMuzzleOverlay:
+	Voiced:
+		VoiceSet: AssaultTankVoice
 
 DUALMERCTANK:
 	Inherits: MERCTANK
