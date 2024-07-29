@@ -2040,7 +2040,7 @@ WALLT:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: =
+		Footprint: x
 	Interactable:
 		Bounds: 1228, 1228
 	WithSpriteBody:
@@ -2051,7 +2051,7 @@ WALLTL:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: =
+		Footprint: x
 	Interactable:
 		Bounds: 1228, 1228
 	WithSpriteBody:
@@ -2176,7 +2176,7 @@ WALLTR:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: =
+		Footprint: X
 	Interactable:
 		Bounds: 1228, 1228
 	WithSpriteBody:
@@ -2340,7 +2340,7 @@ DWALLTL:
 	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
-		Footprint: =
+		Footprint: x
 	Interactable:
 		Bounds: 1024, 1024
 	WithSpriteBody:
