@@ -800,6 +800,15 @@ actor-mothership-husk =
 actor-drone2 =
    .name = Mothership Drone
 
+actor-battleship =
+   .name = Battleship
+   .description = Aerial artillery bombardment.
+      Strong vs Ground units
+      Can't target Aircraft
+
+actor-battleship-husk =
+   .name = Battleship Husk
+
 ## Weapons
 actor-landmine-name = AI Mine
 actor-watermine-name = AI Water Mine

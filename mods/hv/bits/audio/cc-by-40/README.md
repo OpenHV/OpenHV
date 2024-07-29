@@ -21,3 +21,4 @@ Content of this folder indicates assets made by various authors, under the defau
 * [small-water-splash1-5_siliconesound.ogg](https://freesound.org/people/SiliconeSound/sounds/609428/) by SiliconeSound
 * [small-lava-splash1-5_dheming_oneirophile.ogg](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
 * [big-lava-splash1-5_dheming_oneirophile.ogg](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
+* [battleshipaction/select/attack.ogg](https://freesound.org/people/Robinhood76/sounds/505303/) by Robinhood76. Edited by Dzierzan using Vocoder.
