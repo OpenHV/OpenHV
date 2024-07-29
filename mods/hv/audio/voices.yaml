@@ -162,12 +162,12 @@ StealthTankVoice:
 		Guard: guarding
 
 BuilderVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
-		Select: builder_awaiting_orders, builder_builder_ready, builder_copy, builder_im_ready, builder_ready_to_expand, builder_receiving, builder_sir, builder_orders
-		Move: builder_acknowledged, builder_affirmative, builder_as_you_wish, builder_at_once, builder_enroute, builder_good_copy, builder_lets_go, builder_move_out, builder_on_my_way, builder_yes_sir
+		Select: builder_awaiting_orders, builder_builder_ready, builder_copy, builder_im_ready, builder_ready_to_expand, builder_receiving, builder_sir, builder_orders, builder_ready, builder_standing_by
+		Move: builder_acknowledged, builder_affirmative, builder_as_you_wish, builder_at_once, builder_enroute, builder_good_copy, builder_lets_go, builder_move_out, builder_on_my_way, builder_yes_sir, builder_right_away, builder_heading_out
 		Action: builder_acknowledged, builder_affirmative, builder_as_you_wish, builder_at_once, builder_good_copy, builder_yes_sir
-		Deploying: builder_deploying, builder_expanding, builder_setting_up, builder_taking_position
+		Deploying: builder_deploying, builder_expanding, builder_setting_up, builder_taking_position, builder_establishing_outpost
 		Guard: guarding
 
 FlamePodVoice:
