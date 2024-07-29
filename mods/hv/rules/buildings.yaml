@@ -2036,7 +2036,6 @@ VGATE:
 
 WALLT:
 	Inherits: ^Wall
-	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: =
@@ -2047,7 +2046,6 @@ WALLT:
 
 WALLTL:
 	Inherits: ^Wall
-	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: =
@@ -2172,7 +2170,6 @@ WALLR4:
 
 WALLTR:
 	Inherits: ^Wall
-	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: =
@@ -2336,7 +2333,6 @@ DWALLB3:
 
 DWALLTL:
 	Inherits: ^Wall
-	Inherits@Shape: ^1x1Shape
 	Building:
 		Dimensions: 1,1
 		Footprint: =
