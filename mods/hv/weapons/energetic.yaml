@@ -35,18 +35,26 @@ Railgun:
 
 ElectronicCountermeasure:
 	ReloadDelay: 20
-	Range: 7c0
+	Range: 8c0
 	Report: Sonic1.ogg, Sonic2.ogg, Sonic3.ogg
 	ValidTargets: Vehicle
 	InvalidTargets: DisabledVehicle
-	Projectile: Bullet
-		Speed: 150
+	Projectile: Missile
 		Image: bullet4
+		Speed: 150
+		Blockable: False
+		HorizontalRateOfTurn: 100
+		Acceleration: 96
+		AllowSnapping: true
+		CloseEnough: 150
+		RangeLimit: 21c0
+		Jammable: False
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
-		Duration: 40
+		Duration: 90
 		Condition: jammed
 		ValidTargets: Vehicle
+		ValidRelationships: Enemy
 	Warhead@Damage: SpreadDamage
 		Spread: 1
 		Damage: 0
@@ -456,7 +464,7 @@ DroneBlaster:
 
 HackBack:
 	ReloadDelay: 160
-	Range: 6c0
+	Range: 5c0
 	Report: lightningbolt.ogg
 	ValidTargets: Vulnerability
 	Projectile: EnergyBolt
@@ -470,8 +478,10 @@ HackBack:
 		SegmentLength: 0c256
 		ZOffset: 2048
 	Warhead@Damage: SpreadDamage
-		Damage: 1000
-		Spread: 480
+		ValidTargets: Vulnerability
+		Damage: 0
+		Spread: 1
+		Falloff: 0, 0
 
 MothershipLaser:
 	Inherits: BigSplash

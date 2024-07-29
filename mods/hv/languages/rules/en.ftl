@@ -969,7 +969,7 @@ actor-ecmtank =
 
      Unarmed
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-dualartillery =
    .name = Dual Artillery
@@ -1022,11 +1022,11 @@ actor-hackertank =
       Disrupts satellite video links
       and obscures the battlefield when deployed.
    .name = Hacker Tank
-   .encyclopedia = The hacker tank contains equipment to penetrate firewalls of individual units and interfer with their command and control software so they will accept orders from the enemy and engage in friendly fire. The effective change of allegiance is permanent, until the hacker tank gets destroyed or changes the target. It can only have one controlled unit at a time. Its other ability is to obscure the opponent's battlefield on its surroundings when deployed.
+   .encyclopedia = The hacker tank contains equipment to penetrate firewalls of individual units and interfer with their command and control software so they will accept orders from the enemy and engage in friendly fire. The effective change of allegiance is permanent, until the hacker tank gets destroyed or changes the target. It can only have one controlled unit at a time. Its other ability is to disrupt satellite video links, blocking field detection in the radar.
 
      Unarmed
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-buggy =
    .name = Ramp Buggy
