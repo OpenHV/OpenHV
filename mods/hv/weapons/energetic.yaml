@@ -44,9 +44,10 @@ ElectronicCountermeasure:
 		Image: bullet4
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
-		Duration: 40
+		Duration: 60 #80 #40
 		Condition: jammed
 		ValidTargets: Vehicle
+		ValidRelationships: Enemy
 	Warhead@Damage: SpreadDamage
 		Spread: 1
 		Damage: 0
@@ -470,8 +471,10 @@ HackBack:
 		SegmentLength: 0c256
 		ZOffset: 2048
 	Warhead@Damage: SpreadDamage
-		Damage: 1000
-		Spread: 480
+		ValidTargets: Vulnerability
+		Damage: 0
+		Spread: 1
+		Falloff: 0, 0
 
 MothershipLaser:
 	Inherits: BigSplash

@@ -738,7 +738,8 @@ actor-ecmtank =
    .name = Countermeasure Tank
    .generic-name = ECM Tank
    .description = Disables units for a brief moment.
-      Jams incoming missiles.
+      Disrupts satellite video links
+      and obscures the battlefield.
 
 actor-dualartillery =
    .name = Dual Artillery
@@ -768,8 +769,7 @@ actor-missiletank =
 
 actor-hackertank =
    .description = Temporarily changes allegiance of targeted units.
-      Disrupts satellite video links
-      and obscures the battlefield when deployed.
+      Deflects incoming missiles.
    .name = Hacker Tank
 
 actor-buggy =
