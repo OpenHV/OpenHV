@@ -268,3 +268,25 @@ drone2:
 		Length: 3
 		Facings: 8
 		Tick: 50
+
+battleship:
+	idle:
+		Filename: bits/battleship.png
+		Facings: 8
+	turret:
+		Filename: bits/battleship_turret.png
+		Facings: 8
+		ZOffset: 512
+	shadow-overlay:
+		Filename: bits/battleship-shadow.png
+		Facings: 8
+		Offset: 10,10
+		ZOffset: -64
+	muzzle:
+		Filename: bits/muzzle5.png
+		Length: 3
+		Tick: 80
+	icon:
+		Filename: units-icons.png
+		Start: 63
+

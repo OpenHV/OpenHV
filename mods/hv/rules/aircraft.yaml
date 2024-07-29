@@ -690,7 +690,7 @@ MOTHERSHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 100
-		Prerequisites: ~disabled
+		Prerequisites: ~starport.sc, techcenter, ~disabled
 		Description: actor-mothership.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -715,8 +715,6 @@ MOTHERSHIP:
 	HitShape:
 		Type: Circle
 			Radius: 1024
-	Voiced:
-		VoiceSet: DropshipVoice
 	Selectable:
 		DecorationBounds: 2048, 2048
 	SpawnActorOnDeath:
@@ -761,14 +759,36 @@ MOTHERSHIP.Husk:
 		TurnSpeed: 24
 		Speed: 86
 	FallsToEarth:
-		Explosion: UnitExplodeLarge
+		Explosion: SuperUnitExplode
 		Velocity: 43
-	LeavesTrails:
-		Offsets: -853,0,171
-		MovingInterval: 2
+	LeavesTrails@Smoke1:
+		Offsets: -700,-300,170
+		MovingInterval: 4
 		Image: smoke
 		SpawnAtLastPosition: false
 		Type: CenterPosition
+	LeavesTrails@Smoke2:
+		Offsets: -800,300,170
+		MovingInterval: 3
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Smoke3:
+		Offsets: 500,0,170
+		MovingInterval: 3
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Explosion:
+		Offsets: 0,0,171
+		MovingInterval: 10
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	AmbientSound:
+		SoundFiles: explosion02.ogg, explosion03.ogg
+		Interval: 5
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
@@ -779,3 +799,156 @@ MOTHERSHIP.Husk:
 		Type: GroundPosition
 	RenderSprites:
 		Image: mothership
+
+BATTLESHIP:
+	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: actor-battleship.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 100
+		Prerequisites: ~starport.yi, techcenter, ~disabled
+		Description: actor-battleship.description
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 100000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 6c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 100
+		CruiseAltitude: 3c0
+		AltitudeVelocity: 0c56
+		InitialFacing: 512
+	HitShape:
+		Type: Circle
+			Radius: 1024
+	Selectable:
+		DecorationBounds: 2048, 2048
+	SpawnActorOnDeath:
+		Actor: BATTLESHIP.Husk
+		RequiresCondition: airborne
+	Exit:
+		SpawnOffset: 0,0,0
+		Facing: 0
+	Turreted@Primary:
+		Turret: primary
+		Offset: -300,-700,200
+		TurnSpeed: 80
+	Turreted@Secondary:
+		Turret: secondary
+		Offset: -300,700,200
+		TurnSpeed: 80
+	AttackTurreted:
+		Turrets: primary, secondary
+	WithSpriteTurret@Primary:
+		Turret: primary
+	WithSpriteTurret@Secondary:
+		Turret: secondary
+	Armament@Primary:
+		Turret: primary
+		Name: primary
+		Weapon: BattleShipGun
+		Recoil: 125
+		RecoilRecovery: 38
+		MuzzleSequence: muzzle
+		LocalOffset: 600,-200,0, 600,200,0
+	Armament@Secondary:
+		Turret: secondary
+		Name: secondary
+		Weapon: BattleShipGun
+		Recoil: 125
+		RecoilRecovery: 38
+		MuzzleSequence: muzzle
+		LocalOffset: 600,-200,0, 600,200,0
+	Voiced:
+		VoiceSet: BattleShipVoice
+	WithMuzzleOverlay:
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+	-GrantRandomCondition@SpawnPilot:
+	-Explodes@SpawnPilot:
+
+BATTLESHIP.Husk:
+	Inherits: ^PlaneHusk
+	Tooltip:
+		Name: actor-battleship-husk.name
+	Aircraft:
+		TurnSpeed: 24
+		Speed: 86
+	FallsToEarth:
+		Explosion: SuperUnitExplode
+		Velocity: 43
+	LeavesTrails@Smoke1:
+		Offsets: -700,-300,170
+		MovingInterval: 4
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Smoke2:
+		Offsets: -800,300,170
+		MovingInterval: 3
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Smoke3:
+		Offsets: 500,0,170
+		MovingInterval: 3
+		Image: smoke
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@Explosion:
+		Offsets: 0,0,171
+		MovingInterval: 10
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	AmbientSound:
+		SoundFiles: explosion02.ogg, explosion03.ogg
+		Interval: 5
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: false
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	RenderSprites:
+		Image: battleship
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+	ThrowsParticle@PrimaryTurret:
+		Anim: turret
+		Offset: -700,300,200
+		MinThrowRange: 0c0
+		MaxThrowRange: 0c0
+		MinThrowAngle: 85
+		MaxThrowAngle: 170
+	ThrowsParticle@SecondaryTurret:
+		Anim: turret
+		Offset: 700,300,200
+		MinThrowRange: 0c0
+		MaxThrowRange: 0c0
+		MinThrowAngle: 0
+		MaxThrowAngle: 0

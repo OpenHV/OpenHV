@@ -12,6 +12,12 @@ explosion:
 		Filename: bits/explosn.png
 	medium_2:
 		Filename: bits/explosn2.png
+	medium_3:
+		Filename: bits/explosn3.png
+		Tick: 40
+	medium_4:
+		Filename: bits/explosn4.png
+		Tick: 30
 	large:
 		Filename: bits/explobig.png
 	large_f:
@@ -431,6 +437,12 @@ stealthtank-trail:
 		Filename: bits/stealthtank-trail.png
 		Length: *
 		Tick: 60
+
+battleship-trail:
+	idle:
+		Filename: bits/battleship-trail.png
+		Length: *
+		Tick: 40
 
 shells:
 	shell_flying:

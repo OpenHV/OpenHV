@@ -237,3 +237,11 @@ AssaultTankVoice:
 		Action: assault_tank_acknowledged, assault_tank_affirmative, assault_tank_at_once, assault_tank_command_received, assault_tank_confirmed, assault_tank_good_copy, assault_tank_sir_yes_sir
 		Attack: assault_tank_destroy, assault_tank_engaging, assault_tank_sir_yes_sir, assault_tank_target_confirmed, assault_tank_target_locked, assault_tank_enemy_in_sight
 		Guard: guarding
+
+BattleShipVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: battleshipselect1, battleshipselect2, battleshipselect3
+		Move: battleshipaction1, battleshipaction2, battleshipaction3
+		Action: battleshipattack1, battleshipattack2, battleshipattack3
+		Guard: guarding
