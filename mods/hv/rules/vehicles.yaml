@@ -589,6 +589,8 @@ ECMTANK:
 		Voice: Attack
 		FacingTolerance: 0
 	AutoTarget:
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		ValidTargets: Jammable
 	-Targetable@ECM:
@@ -879,6 +881,8 @@ HACKERTANK:
 		Weapon: HackBack
 	AttackFrontal:
 	AutoTarget:
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		ValidTargets: Vulnerability
 		RequiresCondition: !controlling

@@ -229,6 +229,8 @@ TECHNICIAN:
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		ValidTargets: DamagedPod
 	Armament:
