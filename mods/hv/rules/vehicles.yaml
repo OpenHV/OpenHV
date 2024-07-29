@@ -629,12 +629,12 @@ ECMTANK:
 		Class: ecmtank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, techcenter, trader
+		Prerequisites: ~factory.yi, radar, trader
 		BuildPaletteOrder: 60
 		Description: actor-ecmtank.description
 	Encyclopedia:
 		Description: actor-ecmtank.encyclopedia
-		Order: 45
+		Order: 40
 		Category: Tanks
 	Armament:
 		Weapon: ElectronicCountermeasure
@@ -651,11 +651,12 @@ ECMTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 7500
+		HP: 15000
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
-		Speed: 110
+		Speed: 135
+		TurnSpeed: 25
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -665,8 +666,6 @@ ECMTANK:
 	JamsMissiles:
 		Range: 5c0
 		DeflectionRelationships: Neutral, Enemy
-	DetectCloaked:
-		Range: 2c0
 
 DUALARTILLERY:
 	Inherits: ^TrackedVehicle
@@ -917,14 +916,14 @@ HACKERTANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
-		Prerequisites: ~factory.yi, radar, trader
+		Prerequisites: ~factory.sc, radar, trader
 		Description: actor-hackertank.description
 	Encyclopedia:
 		Description: actor-hackertank.encyclopedia
-		Order: 40
+		Order: 45
 		Category: Tanks
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: actor-hackertank.name
 	Selectable:
@@ -932,17 +931,17 @@ HACKERTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 17500
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
-		Speed: 150
+		Speed: 120
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 6c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	-Targetable@SecurityVulnerability:
 	-Hackable:
 	Hacker:
@@ -964,7 +963,7 @@ HACKERTANK:
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 	CreatesShroud:
-		Range: 9c0
+		Range: 7c0
 		RequiresCondition: deployed
 	RenderShroudCircle:
 		RequiresCondition: deployed
