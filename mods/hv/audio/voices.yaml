@@ -213,12 +213,12 @@ CivilianPodVoice:
 		Action: civilianpod_aha, civilianpod_cool, civilianpod_good, civilianpod_sure, civilianpod_yep
 
 ElectricPodVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
 		Select: electricpod_battery_cells_charged, electricpod_capacitors_ready, electricpod_copy, electricpod_fully_charged, electricpod_listening, electricpod_ready, electricpod_receiving, electricpod_sir, electricpod_waiting
-		Move: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_good_copy, electricpod_moving_out, electricpod_yes_sir, electricpod_moving, electricpod_alright, electricpod_orders_received
+		Move: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_good_copy, electricpod_moving_out, electricpod_yes_sir, electricpod_heading_out, electricpod_alright, electricpod_orders_received
 		Action: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_yes_sir, electricpod_alright, electricpod_orders_received
-		Attack: electricpod_discharging, electricpod_extra_crispy, electricpod_its_fried, electricpod_lighting_ball, electricpod_maxium_power, electricpod_short_circuit, electricpod_surge_current, electricpod_attack, electricpod_high_voltage_on, electricpod_feel_the_thunder
+		Attack: electricpod_discharging, electricpod_extra_crispy, electricpod_its_fried, electricpod_lightning_ball, electricpod_maxium_power, electricpod_short_circuit, electricpod_surge_current, electricpod_attack, electricpod_high_voltage_on, electricpod_feel_the_thunder
 		Guard: guarding
 
 MotherShipVoice:
