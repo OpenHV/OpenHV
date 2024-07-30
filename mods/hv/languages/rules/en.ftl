@@ -629,8 +629,8 @@ actor-carrier =
       Strong vs Vehicles, Pods and Buildings
    .name = Drone Ship
 
-actor-navaltransport =
-   .name = Naval Transporter
+actor-ferry =
+   .name = Ferry
    .generic-name = Naval Transporter
    .description = General-purpose naval transport.
     Can carry pods.

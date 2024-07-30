@@ -419,19 +419,19 @@ CARRIER:
 	Voiced:
 		VoiceSet: DroneVoice
 
-NAVALTRANSPORT:
+FERRY:
 	Inherits: ^Ship
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: actor-navaltransport.name
-		GenericName: actor-navaltransport.generic-name
+		Name: actor-ferry.name
+		GenericName: actor-ferry.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor
 		BuildPaletteOrder: 20
-		Description: actor-navaltransport.description
+		Description: actor-ferry.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -439,7 +439,7 @@ NAVALTRANSPORT:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Locomotor: navaltransport
+		Locomotor: ferry
 		Speed: 80
 		TurnSpeed: 50
 	RevealsShroud:

@@ -139,8 +139,8 @@
 			Grass: 100
 			Mountain: 100
 			Red Snow: 100
-	Locomotor@NavalTransport:
-		Name: navaltransport
+	Locomotor@Ferry:
+		Name: ferry
 		Crushes: Cube, Mine
 		TerrainSpeeds:
 			Littoral: 100

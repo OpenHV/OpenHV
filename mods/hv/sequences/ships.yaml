@@ -144,20 +144,20 @@ watertrail:
 		Tick: 80
 		ZOffset: -2048
 
-navaltransport:
+ferry:
 	idle:
-		Filename: bits/navaltransport.png
+		Filename: bits/ferry.png
 	open:
-		Filename: bits/navaltransport.png
+		Filename: bits/ferry.png
 		Length: 4
 		Tick: 150
 	close:
-		Filename: bits/navaltransport.png
+		Filename: bits/ferry.png
 		Frames: 3, 2, 1, 0
 		Length: 4
 		Tick: 150
 	unload:
-		Filename: bits/navaltransport.png
+		Filename: bits/ferry.png
 		Start: 3
 		ZOffset: -511
 	icon:
