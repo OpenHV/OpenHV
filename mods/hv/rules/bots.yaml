@@ -176,7 +176,7 @@ Player:
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
 		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
-	LoadCargoBotModule:
+	CargoBotModule:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: apc
 		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod

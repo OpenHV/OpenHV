@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.Player)]
 	[Desc("Manages AI load unit related with " + nameof(Cargo) + " and " + nameof(Passenger) + " traits.")]
-	public class LoadCargoBotModuleInfo : ConditionalTraitInfo
+	public class CargoBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that can be targeted for load, must have " + nameof(Cargo) + ".")]
 		public readonly HashSet<string> TransportTypes = default;
@@ -43,10 +43,10 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Don't load passengers that are further than this distance to this actor.")]
 		public readonly WDist MaxDistance = WDist.FromCells(20);
 
-		public override object Create(ActorInitializer init) { return new LoadCargoBotModule(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new CargoBotModule(init.Self, this); }
 	}
 
-	public class LoadCargoBotModule : ConditionalTrait<LoadCargoBotModuleInfo>, IBotTick, IBotRespondToAttack
+	public class CargoBotModule : ConditionalTrait<CargoBotModuleInfo>, IBotTick, IBotRespondToAttack
 	{
 		readonly World world;
 		readonly Player player;
@@ -56,7 +56,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		int minAssignRoleDelayTicks;
 
-		public LoadCargoBotModule(Actor self, LoadCargoBotModuleInfo info)
+		public CargoBotModule(Actor self, CargoBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;

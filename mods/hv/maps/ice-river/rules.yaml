@@ -24,7 +24,7 @@ Player:
 		DeployableTerrainTypes: Ore
 		DeployedActorTypes: miner2
 		VehiclesQueue: Utility
-	LoadCargoBotModule:
+	CargoBotModule:
 		RequiresCondition: gentle-ai-enabled
 		TransportTypes: apc
 		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
