@@ -66,34 +66,24 @@ namespace OpenRA.Mods.HV.Traits
 			return () => armaments;
 		}
 
-		void OnActorEntered(Actor enterer)
-		{
-			actors.Add(enterer);
-			passengerFacings.Add(enterer, enterer.Trait<IFacing>());
-			passengerPositions.Add(enterer, enterer.Trait<IPositionable>());
-			passengerRenders.Add(enterer, enterer.Trait<RenderSprites>());
-			armaments.AddRange(
-				enterer.TraitsImplementing<Armament>()
-				.Where(a => info.Armaments.Contains(a.Info.Name)));
-		}
-
-		void OnActorExited(Actor exiter)
-		{
-			actors.Remove(exiter);
-			passengerFacings.Remove(exiter);
-			passengerPositions.Remove(exiter);
-			passengerRenders.Remove(exiter);
-			armaments.RemoveAll(a => a.Actor == exiter);
-		}
-
 		void INotifyPassengerEntered.OnPassengerEntered(Actor self, Actor passenger)
 		{
-			OnActorEntered(passenger);
+			actors.Add(passenger);
+			passengerFacings.Add(passenger, passenger.Trait<IFacing>());
+			passengerPositions.Add(passenger, passenger.Trait<IPositionable>());
+			passengerRenders.Add(passenger, passenger.Trait<RenderSprites>());
+			armaments.AddRange(
+				passenger.TraitsImplementing<Armament>()
+				.Where(a => info.Armaments.Contains(a.Info.Name)));
 		}
 
 		void INotifyPassengerExited.OnPassengerExited(Actor self, Actor passenger)
 		{
-			OnActorExited(passenger);
+			actors.Remove(passenger);
+			passengerFacings.Remove(passenger);
+			passengerPositions.Remove(passenger);
+			passengerRenders.Remove(passenger);
+			armaments.RemoveAll(a => a.Actor == passenger);
 		}
 
 		WVec SelectFirePort(Actor firer)
