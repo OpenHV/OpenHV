@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2023-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -87,7 +87,7 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					var health = at.Actor.TraitOrDefault<IHealth>()?.DamageState;
 					return Info.TransportTypes.Contains(at.Actor.Info.Name) && !invalidTransport(at.Actor)
-					&& at.Trait.HasSpace(1) && (health == null || health < Info.ValidDamageState);
+						&& at.Trait.HasSpace(1) && (health == null || health < Info.ValidDamageState);
 				}).ToArray();
 
 				if (transporters.Length == 0)
@@ -103,16 +103,16 @@ namespace OpenRA.Mods.HV.Traits
 
 				var orderedActors = new List<Actor>();
 
-				foreach (var p in passengers)
+				foreach (var passenger in passengers)
 				{
-					var mobile = p.Actor.TraitOrDefault<Mobile>();
-					if (mobile == null || !mobile.PathFinder.PathExistsForLocomotor(mobile.Locomotor, p.Actor.Location, transport.Location))
+					var mobile = passenger.Actor.TraitOrDefault<Mobile>();
+					if (mobile == null || !mobile.PathFinder.PathExistsForLocomotor(mobile.Locomotor, passenger.Actor.Location, transport.Location))
 						continue;
 
-					if (cargo.HasSpace(spaceTaken + p.Trait.Info.Weight))
+					if (cargo.HasSpace(spaceTaken + passenger.Trait.Info.Weight))
 					{
-						spaceTaken += p.Trait.Info.Weight;
-						orderedActors.Add(p.Actor);
+						spaceTaken += passenger.Trait.Info.Weight;
+						orderedActors.Add(passenger.Actor);
 					}
 
 					if (!cargo.HasSpace(spaceTaken + 1))
@@ -129,11 +129,16 @@ namespace OpenRA.Mods.HV.Traits
 			if (!Info.TransportTypes.Contains(self.Info.Name))
 				return;
 
-			var health = self.TraitOrDefault<IHealth>()?.DamageState;
-			var cargo = self.TraitOrDefault<Cargo>();
+			if (unitCannotBeOrdered(self))
+				return;
 
-			if ((health == null || health >= Info.UnloadDamageState) && cargo != null && !cargo.IsEmpty())
-				bot.QueueOrder(new Order("Unload", self, false));
+			var damageState = self.TraitOrDefault<IHealth>()?.DamageState;
+			if (damageState == null || damageState >= Info.UnloadDamageState)
+			{
+				var cargo = self.TraitOrDefault<Cargo>();
+				if (cargo != null && !cargo.IsEmpty())
+					bot.QueueOrder(new Order("Unload", self, false));
+			}
 		}
 	}
 }
