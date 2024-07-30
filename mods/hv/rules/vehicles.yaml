@@ -129,7 +129,7 @@ APC:
 		Type: Heavy
 	Mobile:
 		Speed: 110
-		PauseOnCondition: immobile || jammed
+		PauseOnCondition: loading || jammed
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
@@ -139,7 +139,7 @@ APC:
 	Cargo:
 		Types: Pod
 		MaxWeight: 5
-		LoadingCondition: immobile
+		LoadingCondition: loading
 		PassengerConditions:
 			mgpod: loaded
 			rocketpod: loaded
