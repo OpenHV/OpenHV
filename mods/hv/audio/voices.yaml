@@ -206,11 +206,11 @@ BomberPodVoice:
 		Guard: guarding
 
 CivilianPodVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
-		Select: civilianpod_yes, civilianpod_hmmm, civilianpod_im_here, civilianpod_what_do_you_want
-		Move: civilianpod_going, civilianpod_ok, civilianpod_sure, civilianpod_yep, civilianpod_aha, civilianpod_good
-		Action: civilianpod_aha, civilianpod_cool, civilianpod_good, civilianpod_sure, civilianpod_yep
+		Select: civilianpod_yes, civilianpod_hmmm, civilianpod_im_here, civilianpod_whats_up
+		Move: civilianpod_going, civilianpod_ok, civilianpod_sure, civilianpod_yep, civilianpod_aha, civilianpod_good, civilianpod_right
+		Action: civilianpod_aha, civilianpod_cool, civilianpod_good, civilianpod_sure, civilianpod_yep, civilianpod_right
 
 ElectricPodVoice:
 	DefaultVariant: .ogg
