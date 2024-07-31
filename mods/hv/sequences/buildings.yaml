@@ -2319,3 +2319,26 @@ flagpost:
 		Offset: 3,14
 	icon:
 		Filename: bits/null.png
+
+oilfacility:
+	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		ZOffset: 512
+		Offset: 0, -2
+	idle:
+		Filename: bits/oilfacility.png
+		Length: 1
+	active:
+		Filename: bits/oilfacility.png
+		Length: 5
+		Reverses: True
+		Tick: 140
+	damaged-idle:
+		Filename: bits/oilfacility.png
+		Start: 5
+	shadow-overlay:
+		Filename: bits/oilfacility-shadow.png
+		ZOffset: -1768
+		Offset: 11,27
+	icon:
+		Filename: bits/null.png

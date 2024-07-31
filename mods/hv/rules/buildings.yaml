@@ -2730,3 +2730,28 @@ FLAGPOST:
 	WithIdleOverlay@Flag:
 		Sequence: flag
 		RequiresCondition: !ownerless
+
+OILFACILITY:
+	Inherits: ^Building
+	Inherits@Shape: ^2x4Shape
+	Inherits@Flame: ^BuildingFlame
+	Valued:
+		Cost: 1200
+	Health:
+		HP: 50000
+	WithIdleAnimation:
+		Interval: 40
+		RequiresCondition: !burning
+	GrantConditionOnDamageState:
+		Condition: burning
+		ValidDamageStates: Heavy, Critical
+	Building:
+		Footprint: == == xx xx
+		Dimensions: 2,4
+	Tooltip:
+		Name: actor-prop13-name
+	-Capturable:
+	-CapturableProgressBar:
+	-CapturableProgressBlink:
+	-CapturableProgressBeep:
+	-CaptureManager:
