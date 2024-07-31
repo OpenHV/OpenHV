@@ -2730,3 +2730,17 @@ FLAGPOST:
 	WithIdleOverlay@Flag:
 		Sequence: flag
 		RequiresCondition: !ownerless
+
+OILFACILITY:
+	Inherits: ^Prop
+	Inherits@Shape: ^2x4Shape
+	Inherits@Flame: ^BuildingFlame
+	Valued:
+		Cost: 1200
+	Health:
+		HP: 50000
+	Building:
+		Footprint: == == xx xx
+		Dimensions: 2,4
+	Tooltip:
+		Name: actor-prop13-name

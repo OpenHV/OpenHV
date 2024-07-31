@@ -689,3 +689,21 @@ cube:
 		Length: 3
 		Reverses: True
 		Tick: 100
+
+oilfacility:
+	Inherits@Flame: ^BuildingFlame
+	Defaults:
+		ZOffset: 512
+		Offset: 0, -2
+	idle:
+		Filename: bits/oilfacility.png
+		Length: 5
+		Reverses: True
+		Tick: 140
+	damaged-idle:
+		Filename: bits/oilfacility.png
+		Start: 5
+	shadow-overlay:
+		Filename: bits/oilfacility-shadow.png
+		ZOffset: 1768
+		Offset: 11,26
