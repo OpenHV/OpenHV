@@ -815,6 +815,7 @@ actor-drone2 =
 actor-battleship =
    .name = Battleship
    .description = Aerial artillery bombardment.
+      Only one can be built.
       Strong vs Ground units
       Can't target Aircraft
 
