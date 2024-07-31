@@ -811,21 +811,22 @@ BATTLESHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 100
-		Prerequisites: ~starport.yi, techcenter, ~disabled
+		BuildLimit: 1
+		Prerequisites: radar, trader, techcenter, ~starport.yi
 		Description: actor-battleship.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 100000
+		HP: 250000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 12c0
-		MinRange: 4c0
+		Range: 16c0
+		MinRange: 8c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 6c0
+		Range: 8c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20

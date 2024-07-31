@@ -138,6 +138,7 @@ Player:
 			carrier: 2
 			mineship: 1
 			mineship2: 1
+			battleship: 1
 		UnitLimits:
 			miner: 1
 			builder: 1

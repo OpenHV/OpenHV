@@ -351,11 +351,11 @@ BunkerMortarGun:
 BattleShipGun:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 125
+	ReloadDelay: 110
 	Range: 16c0
 	MinRange: 8c0
 	Burst: 2
-	BurstDelays: 8
+	BurstDelays: 0
 	Report: cannon_sarge4267.ogg
 	TargetActorCenter: true
 	Projectile: Bullet
@@ -367,18 +367,19 @@ BattleShipGun:
 		TrailInterval: 2
 		TrailDelay: 1
 	Warhead@Damage: SpreadDamage
-		Spread: 500
-		Damage: 23000
+		Spread: 250
+		Damage: 15000
 		Falloff: 100, 80, 60, 40, 20, 10, 5
 		Versus:
-			None: 150
-			Steel: 60
-			Light: 60
-			Heavy: 50
-			Wood: 40
+			None: 100
+			Steel: 50
+			Light: 75
+			Heavy: 75
+			Wood: 125
+			Concrete: 50
 	Warhead@Incendiary: TreeDamage
-		Damage: 23000
-		Spread: 500
+		Damage: 15000
+		Spread: 250
 		Percentage: 40
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
