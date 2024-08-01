@@ -204,7 +204,7 @@ SAUCER:
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16
-		Speed: 70
+		Speed: 80
 		CanForceLand: false
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
@@ -379,12 +379,12 @@ BALLOON:
 	Health:
 		HP: 8000
 	RevealsShroud:
-		Range: 18c0
-		MinRange: 6c0
+		Range: 24c0
+		MinRange: 12c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 6c0
+		Range: 12c0
 		Type: GroundPosition
 	Aircraft:
 		Speed: 70
