@@ -180,10 +180,10 @@ FlamePodVoice:
 		Guard: guarding
 
 BrokerPodVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
-		Select: brokerpod_copy, brokerpod_hacker_ready, brokerpod_im_ready, brokerpod_receiving, brokerpod_waiting, brokerpod_sir
-		Move: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_lets_go, brokerpod_move_out, brokerpod_moving, brokerpod_yes_sir, brokerpod_as_you_wish
+		Select: brokerpod_copy, brokerpod_broker_ready, brokerpod_im_ready, brokerpod_receiving, brokerpod_waiting, brokerpod_sir, brokerpod_ready
+		Move: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_lets_go, brokerpod_move_out, brokerpod_moving, brokerpod_yes_sir, brokerpod_as_you_wish, brokerpod_right_away
 		Action: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_yes_sir, brokerpod_as_you_wish
 		Deploying: brokerpod_deploying, brokerpod_setting_up, brokerpod_stealing_money, brokerpod_taking_position
 		Guard: guarding
