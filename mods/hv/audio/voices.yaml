@@ -189,12 +189,12 @@ BrokerPodVoice:
 		Guard: guarding
 
 ElitePodVoice:
-	DefaultVariant: .wav
+	DefaultVariant: .ogg
 	Voices:
-		Select: elitepod_all_systems_ready, elitepod_avionics_online, elitepod_awaiting_your_orders, elitepod_copy, elitepod_optimal_height, elitepod_ready, elitepod_receiving, elitepod_systems_checked
+		Select: elitepod_all_systems_ready, elitepod_avionics_online, elitepod_awaiting_your_orders, elitepod_copy, elitepod_optimal_height, elitepod_ready, elitepod_receiving, elitepod_system_online
 		Move: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_changing_location, elitepod_flying_high, elitepod_good_copy, elitepod_new_destination_set, elitepod_on_my_way, elitepod_orders_recieved, elitepod_right_away_sir, elitepod_yes_sir, elitepod_ten_four
 		Action: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_orders_recieved, elitepod_yes_sir
-		Attack: elitepod_engaging, elitepod_lethal_force_engaged, elitepod_target_locked, elitepod_weapons_hot, elitepod_yes_sir, elitepod_destroy, elitepod_waste_them, elitepod_death_from_above
+		Attack: elitepod_engaging, elitepod_lethal_force_engaged, elitepod_target_locked, elitepod_weapons_hot, elitepod_yes_sir, elitepod_destroy, elitepod_target_confirmed, elitepod_death_from_above, elitepod_enemy_in_sight
 		Guard: guarding
 
 BomberPodVoice:
