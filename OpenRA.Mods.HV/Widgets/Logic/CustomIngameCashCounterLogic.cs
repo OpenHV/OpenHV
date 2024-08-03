@@ -13,6 +13,7 @@ using System;
 using System.Globalization;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
+using OpenRA.Primitives;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
