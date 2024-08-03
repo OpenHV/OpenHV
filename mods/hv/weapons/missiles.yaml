@@ -383,7 +383,7 @@ Torpedo:
 		Explosions: small
 		ImpactSounds: explosion06.ogg
 
-Torpedo2:
+BoatTorpedo:
 	Inherits: Torpedo
 	ReloadDelay: 42
 	Burst: 2
