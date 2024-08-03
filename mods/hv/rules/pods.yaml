@@ -252,8 +252,8 @@ BROKERPOD:
 	Buildable:
 		Queue: Pod
 		Description: actor-brokerpod.description
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 6
+		Prerequisites: trader
+		BuildPaletteOrder: 40
 	Valued:
 		Cost: 700
 	Tooltip:
