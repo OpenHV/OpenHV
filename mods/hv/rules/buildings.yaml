@@ -1061,7 +1061,7 @@ ORESMELT:
 		RequiresCondition: !build-incomplete && !disabled
 	WithIdleAnimation:
 		Interval: 40
-		RequiresCondition: !build-incomplete && !disabled
+		RequiresCondition: !build-incomplete && !disabled && !burning
 
 OREPURIFIER:
 	Inherits: ORESMELT
