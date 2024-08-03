@@ -169,7 +169,7 @@ TORPEDOBOAT:
 		DetectionTypes: Underwater
 	RenderDetectionCircle:
 	Armament:
-		Weapon: Torpedo2
+		Weapon: BoatTorpedo
 		LocalOffset: 200,300,0, 200,-300,0
 	AttackFrontal:
 		FacingTolerance: 25
