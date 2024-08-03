@@ -63,6 +63,14 @@ namespace OpenRA.Mods.HV.Activities
 				var value = Util.ApplyPercentageModifiers(resourceValue * payload, multipliers);
 				resources.GiveCash(value);
 
+				foreach (var notify in self.World.ActorsWithTrait<INotifyResourceAccepted>())
+				{
+					if (notify.Actor.Owner != self.Owner)
+						continue;
+
+					notify.Trait.OnResourceAccepted(notify.Actor, self, resourceType, payload, value);
+				}
+
 				if (self.Owner.IsAlliedWith(self.World.RenderPlayer) && value > 0)
 					self.World.AddFrameEndTask(w => w.Add(new FloatingText(targetActor.CenterPosition, targetOwner.Color, FloatingText.FormatCashTick(value), 30)));
 

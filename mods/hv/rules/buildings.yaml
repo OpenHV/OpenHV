@@ -1055,9 +1055,8 @@ ORESMELT:
 		Dimensions: 1,2
 	RevealsShroud:
 		Range: 4c0
-	CashTrickler:
-		Interval: 50
-		Amount: 10
+	ResourceYieldMultiplier:
+		Modifier: 10
 		RequiresCondition: !build-incomplete && !disabled
 	WithIdleAnimation:
 		Interval: 40
