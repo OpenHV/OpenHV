@@ -67,6 +67,7 @@ Sequences:
 	hv|sequences/animals.yaml
 	hv|sequences/world.yaml
 	hv|sequences/ui.yaml
+	hv|sequences/pods.yaml
 	hv|sequences/vehicles.yaml
 	hv|sequences/aircraft.yaml
 	hv|sequences/buildings.yaml
