@@ -44,7 +44,7 @@ BASE:
 		Prerequisite: bots
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 900
+		BuildPaletteOrder: 160
 		BuildLimit: 1
 		Description: actor-base.description
 		Prerequisites: outpost, ~base.yi
@@ -1040,6 +1040,7 @@ ORESMELT:
 		Category: Buildings
 	Buildable:
 		Queue: Building
+		BuildPaletteOrder: 130
 		Description: actor-oresmelt.description
 		Prerequisites: ~structures.sc, techcenter
 	HitShape:
