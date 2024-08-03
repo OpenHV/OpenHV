@@ -480,3 +480,53 @@ bridge-shadows:
 		Start: 5
 	corner:
 		Start: 6
+
+palmtreemud:
+	idle:
+		Filename: bits/terrain/palmtreemud.png
+		ZOffset: -1024
+	shadow-overlay:
+		Filename: bits/terrain/palmtreemud-shadow.png
+		ZOffset: -2048
+
+palmtree1:
+	idle:
+		Filename: bits/terrain/palmtree1.png
+	shadow-overlay:
+		Filename: bits/terrain/palmtree1-shadow.png
+		ZOffset: -2048
+
+palmtree2:
+	idle:
+		Filename: bits/terrain/palmtree2.png
+	shadow-overlay:
+		Filename: bits/terrain/palmtree2-shadow.png
+		ZOffset: -2048
+
+palmtree3:
+	idle:
+		Filename: bits/terrain/palmtree3.png
+	shadow-overlay:
+		Filename: bits/terrain/palmtree3-shadow.png
+		ZOffset: -2048
+
+palmtree4:
+	idle:
+		Filename: bits/terrain/palmtree4.png
+	shadow-overlay:
+		Filename: bits/terrain/palmtree4-shadow.png
+		ZOffset: -2048
+
+palmtree5:
+	idle:
+		Filename: bits/terrain/palmtree5.png
+	shadow-overlay:
+		Filename: bits/terrain/palmtree5-shadow.png
+		ZOffset: -2048
+
+palmtree6:
+	idle:
+		Filename: bits/terrain/palmtree6.png
+	shadow-overlay:
+		Filename: bits/terrain/palmtree6-shadow.png
+		ZOffset: -2048

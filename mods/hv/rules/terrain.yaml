@@ -398,3 +398,37 @@ TREEFLAME:
 		Image: fire
 		Sequence: flame
 		Palette: effect
+
+PALMTREEMUD:
+	Inherits: ^Rock
+	-Building:
+	-HiddenUnderShroud:
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	-MapEditorData:
+
+PALMTREE1:
+	Inherits: ^Tree
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	SpawnActorOnDeath@Crush:
+		Actor: PALMTREEMUD
+	SpawnActorOnDeath@Ash:
+		Actor: TREEASH
+
+PALMTREE2:
+	Inherits: PALMTREE1
+
+PALMTREE3:
+	Inherits: PALMTREE1
+
+PALMTREE4:
+	Inherits: PALMTREE1
+
+PALMTREE5:
+	Inherits: PALMTREE1
+
+PALMTREE6:
+	Inherits: PALMTREE1
