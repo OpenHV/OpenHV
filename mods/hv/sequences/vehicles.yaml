@@ -442,9 +442,9 @@ dualartillery:
 		Filename: bits/units-icons.png
 		Start: 3
 
-mgpod:
+rifleman:
 	idle:
-		Filename: bits/mgpod.png
+		Filename: bits/rifleman.png
 		Facings: 8
 	muzzle:
 		Filename: bits/muzzle2.png
@@ -460,9 +460,9 @@ mgpod:
 		Filename: bits/units-icons.png
 		Start: 0
 
-rocketpod:
+rocketeer:
 	idle:
-		Filename: bits/rocketpod.png
+		Filename: bits/rocketeer.png
 		Facings: 8
 	muzzle:
 		Filename: bits/muzzle2.png
@@ -478,9 +478,9 @@ rocketpod:
 		Filename: bits/units-icons.png
 		Start: 1
 
-mortarpod:
+mortar:
 	idle:
-		Filename: bits/mortarpod.png
+		Filename: bits/mortar.png
 		Facings: 8
 	muzzle:
 		Combine:
@@ -536,9 +536,9 @@ mortarpod:
 		Filename: bits/units-icons.png
 		Start: 41
 
-sniperpod:
+sniper:
 	idle:
-		Filename: bits/sniperpod.png
+		Filename: bits/sniper.png
 		Facings: 8
 	muzzle:
 		Filename: bits/muzzle3.png
@@ -567,7 +567,7 @@ technician:
 		Filename: bits/units-icons.png
 		Start: 42
 
-flamepod:
+flamer:
 	idle:
 		Filename: bits/flamethrowerpod.png
 		Facings: 8
@@ -582,9 +582,9 @@ flamepod:
 		Filename: bits/units-icons.png
 		Start: 52
 
-brokerpod:
+broker:
 	idle:
-		Filename: bits/brokerpod.png
+		Filename: bits/broker.png
 		Facings: 8
 	die:
 		Filename: bits/poddeath.png
@@ -592,12 +592,12 @@ brokerpod:
 		Tick: 80
 		Offset: 0,-2
 	extend:
-		Filename: bits/brokerpod.png
+		Filename: bits/broker.png
 		Start: 8
 		Length: 7
 		Tick: 60
 	extended:
-		Filename: bits/brokerpod.png
+		Filename: bits/broker.png
 		Start: 14
 		Length: 4
 		Reverses: true
@@ -606,14 +606,14 @@ brokerpod:
 		Filename: bits/units-icons.png
 		Start: 53
 
-elitepod:
+jetpacker:
 	idle:
-		Filename: bits/elitepod.png
+		Filename: bits/jetpacker.png
 		Frames: 0, 2, 4, 6, 8, 10, 12, 14
 		Facings: 8
 		ZOffset: 1024
 	move:
-		Filename: bits/elitepod.png
+		Filename: bits/jetpacker.png
 		Length: 2
 		Tick: 60
 		Facings: 8
@@ -668,7 +668,7 @@ elitepod:
 		Filename: bits/units-icons.png
 		Start: 54
 
-bomberpod:
+blaster:
 	idle:
 		Filename: bits/pod.png
 		Facings: 8
@@ -688,12 +688,12 @@ bomberpod:
 		Filename: bits/units-icons.png
 		Start: 55
 
-electricpod:
+shocker:
 	idle:
-		Filename: bits/electricpod.png
+		Filename: bits/shocker.png
 		Facings: 8
 	shoot:
-		Filename: bits/electricpod.png
+		Filename: bits/shocker.png
 		Start: 8
 		Facings: 8
 		Length: 3

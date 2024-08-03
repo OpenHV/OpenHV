@@ -30,11 +30,11 @@ Packages:
 	hv|bits/audio/dzierzan/beast
 	hv|bits/audio/dzierzan/seed
 	hv|bits/audio/dzierzan/builder
-	hv|bits/audio/dzierzan/flamepod
-	hv|bits/audio/dzierzan/brokerpod
-	hv|bits/audio/dzierzan/elitepod
-	hv|bits/audio/dzierzan/civilianpod
-	hv|bits/audio/dzierzan/electricpod
+	hv|bits/audio/dzierzan/flamer
+	hv|bits/audio/dzierzan/broker
+	hv|bits/audio/dzierzan/jetpacker
+	hv|bits/audio/dzierzan/civilian
+	hv|bits/audio/dzierzan/shocker
 	hv|bits/audio/dzierzan/common
 	hv|bits/audio/dzierzan/assaulttank
 	hv|bits/audio/flamewh33l/

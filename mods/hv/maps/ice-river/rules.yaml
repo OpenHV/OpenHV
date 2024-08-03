@@ -13,7 +13,7 @@ Player:
 	SquadManagerBotModule@CampaignAI:
 		RequiresCondition: gentle-ai-enabled
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, builder, tanker1, tanker2, minelayer, ecmtank, technician, broker, navalminelayer, navalminelayer2, blaster
 		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
 		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
@@ -27,13 +27,13 @@ Player:
 	CargoBotModule:
 		RequiresCondition: gentle-ai-enabled
 		TransportTypes: apc
-		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
+		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	PowerDownBotModule:
 		RequiresCondition: gentle-ai-enabled
 	SendUnitToAttackBotModule:
 		RequiresCondition: gentle-ai-enabled
 		ActorTypesAndAttackDesire:
-			bomberpod: 30
+			blaster: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water
 		ScanTick: 780
@@ -183,11 +183,11 @@ MISSILETANK:
 	Buildable:
 		Prerequisites: ~disabled
 
-SNIPERPOD:
+SNIPER:
 	Buildable:
 		Prerequisites: ~disabled
 
-ELITEPOD:
+JETPACKER:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -199,29 +199,29 @@ AATANK2:
 	Buildable:
 		Prerequisites: ~disabled
 
-MGPODPATROL:
-	Inherits: MGPOD
+RIFLEMANPATROL:
+	Inherits: RIFLEMAN
 	Buildable:
 		Prerequisites: ~disabled
 	RejectsOrders:
 	RenderSprites:
-		Image: mgpod
+		Image: rifleman
 
-ROCKETPODPATROL:
-	Inherits: ROCKETPOD
+ROCKETEERPATROL:
+	Inherits: ROCKETEER
 	Buildable:
 		Prerequisites: ~disabled
 	RejectsOrders:
 	RenderSprites:
-		Image: rocketpod
+		Image: rocketeer
 
-FLAMEPODPATROL:
-	Inherits: FLAMEPOD
+FLAMERPATROL:
+	Inherits: FLAMER
 	Buildable:
 		Prerequisites: ~disabled
 	RejectsOrders:
 	RenderSprites:
-		Image: flamepod
+		Image: flamer
 
 MBT2PATROL:
 	Inherits: MBT2

@@ -17,7 +17,7 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [flame_explode_magnuswaker.ogg](https://freesound.org/people/magnuswaker/sounds/592572/) by magnuswaker
 * [hackerpod_deploy/undeploy_mincedbeats.ogg](https://freesound.org/people/mincedbeats/sounds/630563/) by mincedbeats
 * [machine_gun_pgi.ogg](https://freesound.org/people/pgi/sounds/212607/) by pgi
-* [bomberpod_action/attack/select.ogg](https://freesound.org/people/audioorange123/sounds/218742/) by audioorange123
+* [blaster_action/attack/select.ogg](https://freesound.org/people/audioorange123/sounds/218742/) by audioorange123
 * [miner_transform/miner_building_transform.ogg](https://freesound.org/people/GrayEpic/sounds/696291/) by GrayEpic
 * [miner_transform/miner_building_transform.ogg](https://freesound.org/people/chainsaw_dinner_party/sounds/403075/) by chainsaw_dinner_party
 * [miner_transform/miner_building_transform.ogg](https://freesound.org/people/behutchi/sounds/442259/) by behutchi

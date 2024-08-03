@@ -322,32 +322,32 @@ Actors:
 		Location: 44,2
 		Facing: 783
 		TurretFacing: 670
-	LabGuard1: rocketpod
+	LabGuard1: rocketeer
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 16,3
 		Facing: 705
-	LabGuard2: rocketpod
+	LabGuard2: rocketeer
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 11,8
 		Facing: 134
-	LabGuard3: mgpod
+	LabGuard3: rifleman
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 17,11
 		Facing: 384
-	LabGuard4: rocketpod
+	LabGuard4: rocketeer
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 27,5
 		Facing: 663
-	LabGuard5: mgpod
+	LabGuard5: rifleman
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 28,3
 		Facing: 384
-	LabGuard6: mgpod
+	LabGuard6: rifleman
 		Owner: Synapol Corporation
 		SubCell: 1
 		Location: 37,9

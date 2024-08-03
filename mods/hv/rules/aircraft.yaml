@@ -584,13 +584,13 @@ DRONE2:
 DROPPOD1:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
-		Actor: mgpod
+		Actor: rifleman
 	-MapEditorData:
 
 DROPPOD2:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
-		Actor: rocketpod
+		Actor: rocketeer
 	-MapEditorData:
 
 LANDEDPOD:

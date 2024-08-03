@@ -97,7 +97,7 @@ DropPodExplode:
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: explosion02.ogg, explosion03.ogg
 
-MortarPodExplode:
+MortarExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -118,7 +118,7 @@ MortarPodExplode:
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: explosion01.ogg
 
-FlamePodExplode:
+FlameExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -139,7 +139,7 @@ FlamePodExplode:
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: flame_explode_magnuswaker.ogg
 
-BomberPodWeapon:
+BlasterWeapon:
 	ValidTargets: Ground, Structure
 	Range: 1c125
 	Projectile: InstantHit
@@ -155,7 +155,7 @@ BomberPodWeapon:
 			Wood: 350
 			Concrete: 350
 
-BomberPodExplosion:
+BlasterExplosion:
 	ValidTargets: Ground, Structure
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire

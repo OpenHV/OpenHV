@@ -481,107 +481,107 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 57,6
-	Actor163: rocketpod
+	Actor163: rocketeer
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 58,10
-	Actor164: rocketpod
+	Actor164: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 60,8
-	Actor165: rocketpod
+	Actor165: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 54,5
-	Actor166: rocketpod
+	Actor166: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 54,7
-	Actor167: mgpod
+	Actor167: rifleman
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 53,9
-	Actor168: mgpod
+	Actor168: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 55,9
-	Actor169: mgpod
+	Actor169: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 58,11
 		SubCell: 1
-	Actor170: mortarpod
+	Actor170: mortar
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 60,7
-	Actor171: mortarpod
+	Actor171: mortar
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 54,11
-	Actor172: mortarpod
+	Actor172: mortar
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 52,7
-	Actor173: sniperpod
+	Actor173: sniper
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 51,9
-	Actor174: sniperpod
+	Actor174: sniper
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 54,9
-	Actor175: sniperpod
+	Actor175: sniper
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 55,11
-	Actor176: sniperpod
+	Actor176: sniper
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 60,11
-	Actor177: flamepod
+	Actor177: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 55,12
 		SubCell: 1
-	Actor178: flamepod
+	Actor178: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 57,10
-	Actor179: flamepod
+	Actor179: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 56,6
-	Actor180: flamepod
+	Actor180: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 52,9
 		SubCell: 1
-	Actor181: flamepod
+	Actor181: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 23,18
-	Actor182: flamepod
+	Actor182: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 25,19
-	Actor183: flamepod
+	Actor183: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
@@ -614,102 +614,102 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 9,23
-	Actor191: rocketpod
+	Actor191: rocketeer
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 24,20
-	Actor192: rocketpod
+	Actor192: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 26,19
-	Actor193: rocketpod
+	Actor193: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 22,16
-	Actor194: rocketpod
+	Actor194: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 21,19
-	Actor195: rocketpod
+	Actor195: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 2,25
-	Actor196: rocketpod
+	Actor196: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 6,28
-	Actor197: rocketpod
+	Actor197: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 8,22
-	Actor198: rocketpod
+	Actor198: rocketeer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 4,24
-	Actor199: mgpod
+	Actor199: rifleman
 		Owner: Synapol Corporation
 		SubCell: 1
 		Facing: 384
 		Location: 7,27
-	Actor200: mgpod
+	Actor200: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 8,25
-	Actor201: mgpod
+	Actor201: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 5,26
 		SubCell: 1
-	Actor202: mgpod
+	Actor202: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 5,23
-	Actor203: mgpod
+	Actor203: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 24,18
-	Actor204: mgpod
+	Actor204: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 24,21
-	Actor205: mgpod
+	Actor205: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 27,17
-	Actor206: mgpod
+	Actor206: rifleman
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 21,20
 		SubCell: 1
-	Actor207: flamepod
+	Actor207: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 9,22
 		SubCell: 1
-	Actor208: flamepod
+	Actor208: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 3,21
-	Actor209: flamepod
+	Actor209: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1
 		Location: 3,25
-	Actor210: flamepod
+	Actor210: flamer
 		Owner: Synapol Corporation
 		Facing: 384
 		SubCell: 1

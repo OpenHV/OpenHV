@@ -27,8 +27,8 @@ faction-yuruki =
         - Uses fighter jets as air units
 
     Special Units:
-        - Electric Pod
-        - Bomber Pod
+        - Shocker Pod
+        - Blaster Pod
         - Sniper Pod
         - Gatling Bike
         - Hacker Tank
@@ -52,8 +52,8 @@ faction-synapol =
         - Uses submarines as advanced naval units
 
     Special Units:
-        - Rocket Pod
-        - Flame Pod
+        - Rocketeer Pod
+        - Flamer Pod
         - Mortar Pod
         - Ramp Buggy
         - Countermeasure Tank
@@ -475,70 +475,70 @@ actor-mother2c-name = Mothership
 actor-mother-name = Mothership Base
 
 ## Pods
-actor-mgpod =
+actor-rifleman =
    .description = Fast scout vehicle.
     Armed with machine gun.
       Strong vs Pods
       Weak vs Tanks and Buildings
-   .name = Machine Gun Pod
+   .name = Rifleman
 
-actor-rocketpod =
+actor-rocketeer =
    .description = Fast support vehicle.
     Shoots surface to air/ground rockets.
       Strong vs Tanks and Aircraft
       Weak vs Pods
-   .name = Rocket Pod
+   .name = Rocketeer
 
-actor-mortarpod =
+actor-mortar =
    .description = Fast support vehicle.
     Armed with portable mortar gun.
       Strong vs Pods and Buildings
       Weak vs Tanks
-   .name = Mortar Pod
+   .name = Mortar
 
-actor-sniperpod =
+actor-sniper =
    .description = Long range sniper vehicle.
     Cloaked when idle.
       Strong vs Pods
       Weak vs Tanks and Buildings
-   .name = Sniper Pod
+   .name = Sniper
 
-actor-flamepod =
+actor-flamer =
    .description = Short range flame thrower.
       Strong vs Pods and Buildings
       Weak vs Tanks
-   .name = Flame Pod
+   .name = Flame
 
 actor-technician =
-   .description = Field technician.
+   .description = Field engineer.
     Infiltrates and captures enemy structures.\Repairs pods.
       Unarmed
-   .name = Technician Pod
+   .name = Technician
 
-actor-brokerpod =
+actor-broker =
    .description = Financial analyst.
     Invests into stock market for dividents.
       Unarmed
-   .name = Broker pod
+   .name = Broker
 
-actor-elitepod =
+actor-jetpacker =
    .description = Elite airborn vehicle.
     Armed with heavy machine gun.
       Strong vs Pods, Light Vehicles and Aircraft.
       Weak vs Tanks and Buildings.
-   .name = Elite Pod
+   .name = Jetpacker
 
-actor-bomberpod =
+actor-blaster =
    .description = Remote controlled mine.
     Explodes when reaches enemy.
-   .name = Bomber Pod
+   .name = Blaster
 
-actor-electricpod =
+actor-shocker =
    .description = Fast support vehicle.
     Shoots surface to air/ground electricity.
       Strong vs Tanks and Aircraft
       Weak vs Pods
-   .name = Electric Pod
+   .name = Shocker
 
 meta-minipod =
    .name = Civilian

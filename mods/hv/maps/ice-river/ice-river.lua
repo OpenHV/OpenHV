@@ -7,9 +7,9 @@
    information, see COPYING.
 ]]
 
-PatrolTroopEasy = { "mgpodpatrol", "rocketpodpatrol", "mbt2patrol" }
-PatrolTroopNormal = { "mgpodpatrol", "mgpodpatrol", "rocketpodpatrol", "rocketpodpatrol", "mbt2patrol" }
-PatrolTroopHard = { "mgpodpatrol", "mgpodpatrol", "rocketpodpatrol", "flamepodpatrol", "rocketpodpatrol", "mbt2patrol", "mbt2patrol" }
+PatrolTroopEasy = { "riflemanpatrol", "rocketeerpatrol", "mbt2patrol" }
+PatrolTroopNormal = { "riflemanpatrol", "riflemanpatrol", "rocketeerpatrol", "rocketeerpatrol", "mbt2patrol" }
+PatrolTroopHard = { "riflemanpatrol", "riflemanpatrol", "rocketeerpatrol", "flamerpatrol", "rocketeerpatrol", "mbt2patrol", "mbt2patrol" }
 PatrolPoints = { PatrolPoint1.Location, PatrolPoint2.Location, PatrolPoint3.Location, PatrolPoint4.Location }
 
 SynapolPatrolInit = function()
@@ -40,13 +40,13 @@ end
 
 ProduceUnits = function()
 	if Difficulty == "easy" then
-		Enemy.Build({ "mgpod", "mgpod", "mgpod", "rocketpod", "mbt2", "mbt2" })
+		Enemy.Build({ "rifleman", "rifleman", "rifleman", "rocketeer", "mbt2", "mbt2" })
 	end
 	if Difficulty == "normal" then
-		Enemy.Build({ "mgpod", "mgpod", "mgpod", "rocketpod", "mortarpod", "mbt2", "mbt2", "artillery" })
+		Enemy.Build({ "rifleman", "rifleman", "rifleman", "rocketeer", "mortar", "mbt2", "mbt2", "artillery" })
 	end
 	if Difficulty == "hard" then
-		Enemy.Build({ "mgpod", "mgpod", "mgpod", "rocketpod", "rocketpod", "mortarpod", "flamepod", "mbt2", "mbt2", "missiletank", "artillery" })
+		Enemy.Build({ "rifleman", "rifleman", "rifleman", "rocketeer", "rocketeer", "mortar", "flamer", "mbt2", "mbt2", "missiletank", "artillery" })
 	end
 
 	if not Difficulty == "easy" and #Enemy.GetActorsByType("miner") == 0 then

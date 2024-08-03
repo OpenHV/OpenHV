@@ -10,8 +10,8 @@
 LabGuardsTeam = { LabGuard1, LabGuard2, LabGuard3, LabGuard4, LabGuard5, LabGuard6 }
 ExtractionPath = { DropshipSpawnPoint.Location, RescuePoint.Location }
 InsertionPath = { EntryPoint.Location, EntryPoint.Location }
-PassengerReinforcements = { "mgpod", "mgpod", "electricpod", "electricpod", "electricpod", "mgpod", "mgpod", "technician" }
-PatrolTroop = { "mgpod", "rocketpod" }
+PassengerReinforcements = { "rifleman", "rifleman", "shocker", "shocker", "shocker", "rifleman", "rifleman", "technician" }
+PatrolTroop = { "rifleman", "rocketeer" }
 PatrolPoints = { PatrolPoint1.Location, PatrolPoint2.Location, PatrolPoint3.Location }
 OpeningAttack = { Ship1, Ship2, Ship3, Ship4 }
 

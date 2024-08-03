@@ -165,7 +165,7 @@ TURRET2:
 	ProvidesPrerequisite:
 		Prerequisite: turret
 
-MGPOD:
+RIFLEMAN:
 	Inherits@Amplifier: ^WeaponRangeUpgrade
 
 CLUSTERTURRET:

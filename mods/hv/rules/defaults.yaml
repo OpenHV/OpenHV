@@ -1314,4 +1314,4 @@
 	Selectable:
 		Bounds: 512, 512
 	Voiced:
-		VoiceSet: CivilianPodVoice
+		VoiceSet: CivilianVoice

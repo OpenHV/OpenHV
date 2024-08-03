@@ -153,22 +153,22 @@ Actors:
 		Faction: Random
 		Location: 24,38
 		Owner: Synapol Corporation
-	Actor33: mgpod
+	Actor33: rifleman
 		Owner: Yuruki Industries
 		SubCell: 1
 		Location: 46,46
 		Facing: 70
-	Actor34: mgpod
+	Actor34: rifleman
 		Owner: Yuruki Industries
 		SubCell: 1
 		Location: 50,48
 		Facing: 811
-	Actor35: mgpod
+	Actor35: rifleman
 		Owner: Yuruki Industries
 		SubCell: 1
 		Location: 44,49
 		Facing: 493
-	Actor36: electricpod
+	Actor36: shocker
 		Owner: Yuruki Industries
 		SubCell: 1
 		Facing: 384

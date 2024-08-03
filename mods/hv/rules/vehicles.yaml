@@ -143,12 +143,12 @@ APC:
 		MaxWeight: 5
 		LoadingCondition: loading
 		PassengerConditions:
-			mgpod: loaded
-			rocketpod: loaded
-			mortarpod: loaded
-			flamepod: loaded
-			sniperpod: loaded
-			electricpod: loaded
+			rifleman: loaded
+			rocketeer: loaded
+			mortar: loaded
+			flamer: loaded
+			sniper: loaded
+			shocker: loaded
 	AttackOpenTopped:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PauseOnCondition: jammed

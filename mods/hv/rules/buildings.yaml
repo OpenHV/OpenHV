@@ -1116,7 +1116,7 @@ BUNKER:
 	Cargo:
 		Types: Pod
 		MaxWeight: 1
-		InitialUnits: mgpod
+		InitialUnits: rifleman
 	AttackGarrisoned:
 		PauseOnCondition: disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete

@@ -170,55 +170,55 @@ BuilderVoice:
 		Deploying: builder_deploying, builder_expanding, builder_setting_up, builder_taking_position, builder_establishing_outpost
 		Guard: guarding
 
-FlamePodVoice:
+FlameVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: flamepod_copy, flamepod_I_need_orders, flamepod_im_listening, flamepod_need_a_light, flamepod_ready_to_burn, flamepod_receiving, flamepod_tanks_full, flamepod_ready_to_ignite
-		Move: flamepod_affirmative, flamepod_as_you_wish, flamepod_going, flamepod_good_copy, flamepod_on_my_way, flamepod_roger_that, flamepod_yes_sir, flamepod_ten_four, flamepod_right_away
-		Action: flamepod_affirmative, flamepod_as_you_wish, flamepod_roger_that, flamepod_yes_sir
-		Attack: flamepod_burn_alive, flamepod_cleansing_fire, flamepod_purge_them, flamepod_with_pleasure, flamepod_set_them_on_fire, flamepod_eradicate, flamepod_hahaha, flamepod_I_love_that_smell
+		Select: flamer_copy, flamer_I_need_orders, flamer_im_listening, flamer_need_a_light, flamer_ready_to_burn, flamer_receiving, flamer_tanks_full, flamer_ready_to_ignite
+		Move: flamer_affirmative, flamer_as_you_wish, flamer_going, flamer_good_copy, flamer_on_my_way, flamer_roger_that, flamer_yes_sir, flamer_ten_four, flamer_right_away
+		Action: flamer_affirmative, flamer_as_you_wish, flamer_roger_that, flamer_yes_sir
+		Attack: flamer_burn_alive, flamer_cleansing_fire, flamer_purge_them, flamer_with_pleasure, flamer_set_them_on_fire, flamer_eradicate, flamer_hahaha, flamer_I_love_that_smell
 		Guard: guarding
 
-BrokerPodVoice:
+BrokerVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: brokerpod_copy, brokerpod_broker_ready, brokerpod_im_ready, brokerpod_receiving, brokerpod_waiting, brokerpod_sir, brokerpod_ready
-		Move: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_lets_go, brokerpod_move_out, brokerpod_moving, brokerpod_yes_sir, brokerpod_as_you_wish, brokerpod_right_away
-		Action: brokerpod_acknowledged, brokerpod_at_once, brokerpod_good_copy, brokerpod_gotcha, brokerpod_yes_sir, brokerpod_as_you_wish
-		Deploying: brokerpod_deploying, brokerpod_setting_up, brokerpod_stealing_money, brokerpod_taking_position
+		Select: broker_copy, broker_broker_ready, broker_im_ready, broker_receiving, broker_waiting, broker_sir, broker_ready
+		Move: broker_acknowledged, broker_at_once, broker_good_copy, broker_gotcha, broker_lets_go, broker_move_out, broker_moving, broker_yes_sir, broker_as_you_wish, broker_right_away
+		Action: broker_acknowledged, broker_at_once, broker_good_copy, broker_gotcha, broker_yes_sir, broker_as_you_wish
+		Deploying: broker_deploying, broker_setting_up, broker_stealing_money, broker_taking_position
 		Guard: guarding
 
-ElitePodVoice:
+JetpackerVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: elitepod_all_systems_ready, elitepod_avionics_online, elitepod_awaiting_your_orders, elitepod_copy, elitepod_optimal_height, elitepod_ready, elitepod_receiving, elitepod_system_online
-		Move: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_changing_location, elitepod_flying_high, elitepod_good_copy, elitepod_new_destination_set, elitepod_on_my_way, elitepod_orders_recieved, elitepod_right_away_sir, elitepod_yes_sir, elitepod_ten_four
-		Action: elitepod_acknowledged, elitepod_as_you_wish, elitepod_at_once, elitepod_orders_recieved, elitepod_yes_sir
-		Attack: elitepod_engaging, elitepod_lethal_force_engaged, elitepod_target_locked, elitepod_weapons_hot, elitepod_yes_sir, elitepod_destroy, elitepod_target_confirmed, elitepod_death_from_above, elitepod_enemy_in_sight
+		Select: jetpacker_all_systems_ready, jetpacker_avionics_online, jetpacker_awaiting_your_orders, jetpacker_copy, jetpacker_optimal_height, jetpacker_ready, jetpacker_receiving, jetpacker_system_online
+		Move: jetpacker_acknowledged, jetpacker_as_you_wish, jetpacker_at_once, jetpacker_changing_location, jetpacker_flying_high, jetpacker_good_copy, jetpacker_new_destination_set, jetpacker_on_my_way, jetpacker_orders_recieved, jetpacker_right_away_sir, jetpacker_yes_sir, jetpacker_ten_four
+		Action: jetpacker_acknowledged, jetpacker_as_you_wish, jetpacker_at_once, jetpacker_orders_recieved, jetpacker_yes_sir
+		Attack: jetpacker_engaging, jetpacker_lethal_force_engaged, jetpacker_target_locked, jetpacker_weapons_hot, jetpacker_yes_sir, jetpacker_destroy, jetpacker_target_confirmed, jetpacker_death_from_above, jetpacker_enemy_in_sight
 		Guard: guarding
 
-BomberPodVoice:
+BlasterVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: bomberpod_select1, bomberpod_select2, bomberpod_select3, bomberpod_select4
-		Move: bomberpod_action1, bomberpod_action2, bomberpod_action3, bomberpod_action4
-		Action: bomberpod_attack1, bomberpod_attack2, bomberpod_attack3, bomberpod_attack4
+		Select: blaster_select1, blaster_select2, blaster_select3, blaster_select4
+		Move: blaster_action1, blaster_action2, blaster_action3, blaster_action4
+		Action: blaster_attack1, blaster_attack2, blaster_attack3, blaster_attack4
 		Guard: guarding
 
-CivilianPodVoice:
+CivilianVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: civilianpod_yes, civilianpod_hmmm, civilianpod_im_here, civilianpod_whats_up
-		Move: civilianpod_going, civilianpod_ok, civilianpod_sure, civilianpod_yep, civilianpod_aha, civilianpod_good, civilianpod_right
-		Action: civilianpod_aha, civilianpod_cool, civilianpod_good, civilianpod_sure, civilianpod_yep, civilianpod_right
+		Select: civilian_yes, civilian_hmmm, civilian_im_here, civilian_whats_up
+		Move: civilian_going, civilian_ok, civilian_sure, civilian_yep, civilian_aha, civilian_good, civilian_right
+		Action: civilian_aha, civilian_cool, civilian_good, civilian_sure, civilian_yep, civilian_right
 
-ElectricPodVoice:
+ShockerVoice:
 	DefaultVariant: .ogg
 	Voices:
-		Select: electricpod_battery_cells_charged, electricpod_capacitors_ready, electricpod_copy, electricpod_fully_charged, electricpod_listening, electricpod_ready, electricpod_receiving, electricpod_sir, electricpod_waiting
-		Move: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_good_copy, electricpod_moving_out, electricpod_yes_sir, electricpod_heading_out, electricpod_alright, electricpod_orders_received
-		Action: electricpod_acknowledged, electricpod_affirmative, electricpod_at_once, electricpod_yes_sir, electricpod_alright, electricpod_orders_received
-		Attack: electricpod_discharging, electricpod_extra_crispy, electricpod_its_fried, electricpod_lightning_ball, electricpod_maxium_power, electricpod_short_circuit, electricpod_surge_current, electricpod_attack, electricpod_high_voltage_on, electricpod_feel_the_thunder
+		Select: shocker_battery_cells_charged, shocker_capacitors_ready, shocker_copy, shocker_fully_charged, shocker_listening, shocker_ready, shocker_receiving, shocker_sir, shocker_waiting
+		Move: shocker_acknowledged, shocker_affirmative, shocker_at_once, shocker_good_copy, shocker_moving_out, shocker_yes_sir, shocker_heading_out, shocker_alright, shocker_orders_received
+		Action: shocker_acknowledged, shocker_affirmative, shocker_at_once, shocker_yes_sir, shocker_alright, shocker_orders_received
+		Attack: shocker_discharging, shocker_extra_crispy, shocker_its_fried, shocker_lightning_ball, shocker_maxium_power, shocker_short_circuit, shocker_surge_current, shocker_attack, shocker_high_voltage_on, shocker_feel_the_thunder
 		Guard: guarding
 
 MotherShipVoice:

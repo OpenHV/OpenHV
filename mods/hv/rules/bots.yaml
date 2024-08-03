@@ -84,7 +84,7 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, brokerpod, navalminelayer, navalminelayer2, bomberpod
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, broker, navalminelayer, navalminelayer2, blaster
 		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
 		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
@@ -110,16 +110,16 @@ Player:
 			repairtank: 1
 			apc: 1
 			artillery: 5
-			mgpod: 1
-			rocketpod: 1
-			mortarpod: 1
-			flamepod: 1
-			elitepod: 1
-			sniperpod: 1
-			electricpod: 1
-			brokerpod: 9
+			rifleman: 1
+			rocketeer: 1
+			mortar: 1
+			flamer: 1
+			jetpacker: 1
+			sniper: 1
+			shocker: 1
+			broker: 9
 			technician: 1
-			bomberpod: 1
+			blaster: 1
 			missiletank: 5
 			jet: 5
 			gunship: 5
@@ -149,8 +149,8 @@ Player:
 			navalminelayer: 1
 			navalminelayer2: 1
 			technician: 1
-			bomberpod: 3
-			brokerpod: 9
+			blaster: 3
+			broker: 9
 			apc: 1
 		UnitDelays:
 			builder: 15000
@@ -175,14 +175,14 @@ Player:
 		AwayFromEnemyTargetTypes: Structure, Defense
 	CubePickupBotModule:
 		RequiresCondition: enable-rogue-ai
-		ExcludedUnitTypes: miner, tanker1, tanker2, brokerpod
+		ExcludedUnitTypes: miner, tanker1, tanker2, broker
 	CargoBotModule:
 		RequiresCondition: enable-rogue-ai
 		TransportTypes: apc
-		PassengerTypes: mortarpod, flamepod, electricpod, mgpod, rocketpod
+		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank, brokerpod
+		DeployableActorTypes: radartank, broker
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
@@ -192,7 +192,7 @@ Player:
 	SendUnitToAttackBotModule:
 		RequiresCondition: enable-rogue-ai
 		ActorTypesAndAttackDesire:
-			bomberpod: 30
+			blaster: 30
 		ValidTargets: Structure, Vehicle
 		InvalidTargets: Air, Water
 	ExternalConditionPowerBotModule:

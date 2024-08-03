@@ -22,7 +22,7 @@ BARRIER:
 	Buildable:
 		Prerequisites: ~disabled
 
-SNIPERPOD:
+SNIPER:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -30,23 +30,23 @@ TECHNICIAN:
 	Buildable:
 		Prerequisites: ~disabled
 
-MORTARPOD:
+MORTAR:
 	Buildable:
 		Prerequisites: ~disabled
 
-FLAMEPOD:
+FLAMER:
 	Buildable:
 		Prerequisites: ~disabled
 
-BROKERPOD:
+BROKER:
 	Buildable:
 		Prerequisites: ~disabled
 
-ELITEPOD:
+JETPACKER:
 	Buildable:
 		Prerequisites: ~disabled
 
-BOMBERPOD:
+BLASTER:
 	Buildable:
 		Prerequisites: ~disabled
 
