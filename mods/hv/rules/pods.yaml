@@ -253,7 +253,7 @@ BROKER:
 		Queue: Pod
 		Description: actor-broker.description
 		Prerequisites: trader
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 70
 	Valued:
 		Cost: 700
 	Tooltip:
