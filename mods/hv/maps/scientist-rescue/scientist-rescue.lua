@@ -41,7 +41,7 @@ SummonPatrolTroops = function()
 end
 
 SendInsertionNavalTransport = function()
-	local passengers = Reinforcements.ReinforceWithTransport(Human, "navaltransport", PassengerReinforcements, InsertionPath)[2]
+	local passengers = Reinforcements.ReinforceWithTransport(Human, "ferry", PassengerReinforcements, InsertionPath)[2]
 	Trigger.OnAllKilled(passengers, function()
 		if not Human.IsObjectiveCompleted(KillGuardsObjective) then
 			RescueFailed()
