@@ -2,3 +2,4 @@
 os = "windows"
 name = "OpenHV"
 path = "OpenHV.exe"
+scope = "profile:me"
