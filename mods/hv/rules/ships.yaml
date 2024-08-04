@@ -459,20 +459,20 @@ FERRY:
 		Margin: 1, -1
 		RequiresSelection: true
 
-NAVALMINELAYER:
+MINESHIP:
 	Inherits: ^Ship
 	Inherits@Selection: ^SelectableSupportUnit
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: actor-navalminelayer.name
-		GenericName: actor-navalminelayer.generic-name
+		Name: actor-mineship.name
+		GenericName: actor-mineship.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
 		Prerequisites: ~harbor.sc, trader
 		BuildPaletteOrder: 40
-		Description: actor-navalminelayer.description
+		Description: actor-mineship.description
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -521,7 +521,7 @@ NAVALMINELAYER:
 		Sequence: idle-empty
 		RequiresCondition: !ammo
 
-NAVALMINELAYER2:
-	Inherits: NAVALMINELAYER
+MINESHIP2:
+	Inherits: MINESHIP
 	Buildable:
 		Prerequisites: ~harbor.yi, trader

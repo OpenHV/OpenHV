@@ -636,7 +636,7 @@ actor-ferry =
     Can carry pods.
       Unarmed
 
-actor-navalminelayer =
+actor-mineship =
    .name = Naval Minelayer
    .generic-name = Boat
    .description = Lays smart mines

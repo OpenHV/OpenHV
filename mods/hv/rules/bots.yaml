@@ -88,7 +88,7 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, broker, navalminelayer, navalminelayer2, blaster
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, broker, mineship, mineship2, blaster
 		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
 		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
@@ -136,8 +136,8 @@ Player:
 			lightboat: 1
 			boomer: 2
 			carrier: 2
-			navalminelayer: 1
-			navalminelayer2: 1
+			mineship: 1
+			mineship2: 1
 		UnitLimits:
 			miner: 1
 			builder: 1
@@ -150,8 +150,8 @@ Player:
 			lightboat: 3
 			boomer: 4
 			carrier: 4
-			navalminelayer: 1
-			navalminelayer2: 1
+			mineship: 1
+			mineship2: 1
 			technician: 1
 			blaster: 3
 			broker: 9
@@ -172,7 +172,7 @@ Player:
 		VehiclesQueue: Utility
 	MinelayerBotModule:
 		RequiresCondition: enable-rogue-ai
-		MinelayingActorTypes: minelayer, navalminelayer, navalminelayer2
+		MinelayingActorTypes: minelayer, mineship, mineship2
 		IgnoredEnemyTargetTypes: Structure, Defense, Air
 		UseEnemyLocationTargetTypes: Structure, Defense
 		AwayFromAlliedTargetTypes: Structure, Defense

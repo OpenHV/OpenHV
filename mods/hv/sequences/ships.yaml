@@ -165,7 +165,7 @@ ferry:
 		Start: 56
 		Offset: 2, 0
 
-navalminelayer:
+mineship:
 	idle:
 		Filename: bits/water-minelayer.png
 		Facings: 8
@@ -182,7 +182,7 @@ navalminelayer:
 		Filename: bits/units-icons.png
 		Start: 57
 
-navalminelayer2:
+mineship2:
 	idle:
 		Filename: bits/water-minelayer2.png
 	idle-empty:
