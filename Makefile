@@ -236,11 +236,19 @@ endif
 check-maps:
 ifneq ("$(MAP_FOLDERS)","")
 	@echo "Checking Resource Center...";
-	@for MAP in $(MAP_FOLDERS); do \
-		HASH=$$(./utility.sh --map-hash ../$$MAP); \
-		curl -s -o /dev/null -I -w "%{http_code}" "https://resource.openra.net/map/$$HASH" | \
-		grep -q "404" && echo "$$MAP is missing!"; \
-	done
+	@status=0; \
+	for MAP in $(MAP_FOLDERS); do \
+		if ! grep -q "Categories: Conquest" $${MAP}/map.yaml; then \
+			continue; \
+		fi; \
+		HASH=$$(./utility.sh --map-hash ../$${MAP}); \
+		HTTP_CODE=$$(curl -s -o /dev/null -I -w "%{http_code}" "https://resource.openra.net/map/$$HASH"); \
+		if [ "$$HTTP_CODE" = "404" ]; then \
+			echo "$$MAP is missing!"; \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
 endif
 
 check-ogg:
