@@ -50,10 +50,11 @@ namespace OpenRA.Mods.HV.Warheads
 			var firedBy = args.SourceActor;
 			var world = firedBy.World;
 			var map = world.Map;
+			var targetPosition = target.CenterPosition;
 
 			var epicenter = AroundTarget && args.WeaponTarget.Type != TargetType.Invalid
 				? args.WeaponTarget.CenterPosition
-				: target.CenterPosition;
+				: targetPosition;
 
 			var amount = Amount.Length == 2
 					? world.SharedRandom.Next(Amount[0], Amount[1])
@@ -63,25 +64,18 @@ namespace OpenRA.Mods.HV.Warheads
 
 			for (var i = 0; i < amount; i++)
 			{
-				var radiusTarget = Target.Invalid;
-
 				var rotation = WRot.FromFacing(i * offset);
-				var targetpos = epicenter + new WVec(weapon.Range.Length, 0, 0).Rotate(rotation);
-				var tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, map.CenterOfCell(map.CellContaining(targetpos)).Z));
+				var radiusTargetPosition = epicenter + new WVec(weapon.Range.Length, 0, 0).Rotate(rotation);
 
-				if (TransferAltitude)
-				{
-					var altitude = map.DistanceAboveTerrain(pos);
-					tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, map.CenterOfCell(map.CellContaining(targetpos)).Z + altitude.Length));
-				}
+				// Allow maintaining Z offset in chained-airburst/rangelimit situations.
+				var radiusTargetAltitude = TransferAltitude
+					? map.CenterOfCell(map.CellContaining(radiusTargetPosition)).Z + map.DistanceAboveTerrain(targetPosition).Length
+					: map.CenterOfCell(map.CellContaining(radiusTargetPosition)).Z;
 
-				if (weapon.IsValidAgainst(tpos, firedBy.World, firedBy))
-					radiusTarget = tpos;
+				var radiusTarget = Target.FromPos(new WPos(radiusTargetPosition.X, radiusTargetPosition.Y, radiusTargetAltitude));
 
-				if (radiusTarget.Type == TargetType.Invalid)
+				if (!weapon.IsValidAgainst(radiusTarget, firedBy.World, firedBy))
 					continue;
-
-				var targetPosition = target.CenterPosition;
 
 				var projectileArgs = new ProjectileArgs
 				{
