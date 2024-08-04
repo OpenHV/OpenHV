@@ -1,0 +1,1 @@
+Contents of this folder are part of the [military sounds pack](https://freesound.org/people/qubodup/packs/4366/) recorded by a soldier or employee of the United States and are therefore in the [public domain](https://creativecommons.org/publicdomain/mark/1.0/).

@@ -39,6 +39,7 @@ Packages:
 	hv|bits/audio/dzierzan/assaulttank
 	hv|bits/audio/flamewh33l/
 	hv|bits/audio/timbeek/
+	hv|bits/audio/pd/
 
 MapFolders:
 	hv|maps: System
