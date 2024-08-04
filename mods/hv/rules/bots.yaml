@@ -18,6 +18,7 @@ Player:
 		MinimumExcessPower: 40
 		MaximumExcessPower: 200
 		AdditionalMinimumRefineryCount: 0
+		NewProductionCashThreshold: 10000
 		WaterTerrainTypes: Littoral, Pelagic, Oceanic
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
