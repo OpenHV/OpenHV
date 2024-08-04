@@ -13,13 +13,12 @@ using System;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Warheads;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Warheads
 {
 	[Desc("Fires a defined amount of weapons with their maximum range in a wave pattern.")]
-	public class FireRadiusWarhead : ImpactAirWarhead, IRulesetLoaded<WeaponInfo>
+	public class FireRadiusWarhead : ValidateTriggerWarhead, IRulesetLoaded<WeaponInfo>
 	{
 		[WeaponReference]
 		[FieldLoader.Require]
@@ -45,24 +44,12 @@ namespace OpenRA.Mods.HV.Warheads
 
 		public override void DoImpact(in Target target, WarheadArgs args)
 		{
-			var firedBy = args.SourceActor;
-			if (!target.IsValidFor(firedBy))
+			if (!ValidateTrigger(target, args))
 				return;
 
+			var firedBy = args.SourceActor;
 			var world = firedBy.World;
 			var map = world.Map;
-
-			if (target.Type == TargetType.Invalid)
-				return;
-
-			var pos = target.CenterPosition;
-			var actorAtImpact = ImpactActors ? ActorTypeAtImpact(world, pos, firedBy) : ImpactActorType.None;
-
-			// If there's either a) an invalid actor, or b) no actor and invalid terrain, we don't trigger the effect(s).
-			if (actorAtImpact == ImpactActorType.Invalid)
-				return;
-			else if (actorAtImpact == ImpactActorType.None && !IsValidAgainstTerrain(world, pos))
-				return;
 
 			var epicenter = AroundTarget && args.WeaponTarget.Type != TargetType.Invalid
 				? args.WeaponTarget.CenterPosition

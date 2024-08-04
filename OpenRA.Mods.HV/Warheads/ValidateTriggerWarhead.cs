@@ -10,6 +10,7 @@
 #endregion
 
 using System.Linq;
+using OpenRA.GameRules;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Warheads;
@@ -18,22 +19,22 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Warheads
 {
-	[Desc("Warhead extension class that adds functions from " + nameof(CreateEffectWarhead) + ".")]
-	public abstract class ImpactAirWarhead : Warhead
+	[Desc("Warhead extension class using `ValidTargets`/`InvalidTargets` to specify trigger conditions during an explosion,",
+		"compared against the \"always trigger, filtering applies to actors in range\" logic followed by most OpenRA warheads.",
+		"Model is abstracted from " + nameof(CreateEffectWarhead) + ".",
+		"Checks against the `Air` TargetType when the explosion was outside of an actor's hitbox",
+		"and happened above `Warhead.AirThreshold`.")]
+	public abstract class ValidateTriggerWarhead : Warhead
 	{
-		[Desc("Whether to consider actors in determining whether the explosion should happen. If false, only terrain will be considered.")]
-		public readonly bool ImpactActors = true;
-
 		static readonly BitSet<TargetableType> TargetTypeAir = new("Air");
 
 		/// <summary>Checks if there are any actors at impact position and if the warhead is valid against any of them.</summary>
-		protected ImpactActorType ActorTypeAtImpact(World world, WPos pos, Actor firedBy)
+		ImpactActorType ActorTypeAtImpact(World world, WPos pos, Actor firedBy)
 		{
 			var anyInvalidActor = false;
 
 			// Check whether the impact position overlaps with an actor's hitshape
-			var potentialVictims = world.FindActorsOnCircle(pos, WDist.Zero);
-			foreach (var victim in potentialVictims)
+			foreach (var victim in world.FindActorsOnCircle(pos, WDist.Zero))
 			{
 				if (!AffectsParent && victim == firedBy)
 					continue;
@@ -52,7 +53,7 @@ namespace OpenRA.Mods.HV.Warheads
 		}
 
 		/// <summary>Checks if the warhead is valid against the terrain at impact position.</summary>
-		protected bool IsValidAgainstTerrain(World world, WPos pos)
+		bool IsValidAgainstTerrain(World world, WPos pos)
 		{
 			var cell = world.Map.CellContaining(pos);
 			if (!world.Map.Contains(cell))
@@ -60,6 +61,28 @@ namespace OpenRA.Mods.HV.Warheads
 
 			var dat = world.Map.DistanceAboveTerrain(pos);
 			return IsValidTarget(dat > AirThreshold ? TargetTypeAir : world.Map.GetTerrainInfo(cell).TargetTypes);
+		}
+
+		protected bool ValidateTrigger(in Target target, WarheadArgs args)
+		{
+			if (target.Type == TargetType.Invalid)
+				return false;
+
+			var firedBy = args.SourceActor;
+			if (!target.IsValidFor(firedBy))
+				return false;
+
+			var world = firedBy.World;
+			var pos = target.CenterPosition;
+			var actorAtImpact = ActorTypeAtImpact(world, pos, firedBy);
+
+			// If there's either a) an invalid actor, or b) no actor and invalid terrain, we don't trigger the effect(s).
+			if (actorAtImpact == ImpactActorType.Invalid)
+				return false;
+			else if (actorAtImpact == ImpactActorType.None && !IsValidAgainstTerrain(world, pos))
+				return false;
+
+			return true;
 		}
 	}
 }
