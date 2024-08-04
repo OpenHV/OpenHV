@@ -126,7 +126,7 @@ Terrain:
 	TerrainType@Swamp:
 		Type: Swamp
 		TargetTypes: Swamp
-		Color: 2B7D38
+		Color: 004D12
 	TerrainType@Shore:
 		Type: Shore
 		TargetTypes: Ground
