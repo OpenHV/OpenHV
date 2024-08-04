@@ -32,6 +32,7 @@ Player:
 			base: 1
 			storage: 1
 			module: 4
+			module2: 4
 			factory: 4
 			factory2: 4
 			radar: 1
