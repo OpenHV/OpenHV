@@ -75,6 +75,14 @@ checkbox-crates =
     .label = Cubes
     .description = Collect cubes with units to receive random bonuses
 
+## ResourceRenderer
+resource-generic = Mineable Resource Deposit
+resource-gold = Precious Metal Deposit
+resource-iron = Base Metal Deposit
+
+## Player
+bot-rogue-ai-name = Rogue AI
+
 ## Notifications
 notification-game-loaded = Game loaded.
 notification-game-saved = Game saved.
@@ -812,11 +820,3 @@ actor-battleship-husk =
 ## Weapons
 actor-landmine-name = AI Mine
 actor-watermine-name = AI Water Mine
-
-## ResourceRenderer
-resource-generic = Mineable Resource Deposit
-resource-gold = Precious Metal Deposit
-resource-iron = Base Metal Deposit
-
-## bots.yaml
-bot-rogue-ai-name = Rogue AI
