@@ -52,7 +52,7 @@ Player:
 	DeveloperMode:
 		CheckboxVisible: false
 	ModularBot@CampaignAI:
-		Name: Campaign Player AI
+		Name: bot-campaign-ai-name
 		Type: campaign
 
 FLAGPOST:

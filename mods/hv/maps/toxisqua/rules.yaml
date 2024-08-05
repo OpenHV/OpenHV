@@ -91,7 +91,7 @@ Player:
 		DefaultCash: 0
 	-ModularBot@RogueAI:
 	ModularBot@CubeHunter:
-		Name: Cube Hunter AI
+		Name: bot-cube-hunter-name
 		Type: hunter
 	GrantConditionOnBotOwner@CubeHunter:
 		Condition: enable-cube-hunter-ai

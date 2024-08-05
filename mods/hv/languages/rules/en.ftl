@@ -817,3 +817,6 @@ actor-watermine-name = AI Water Mine
 resource-generic = Mineable Resource Deposit
 resource-gold = Precious Metal Deposit
 resource-iron = Base Metal Deposit
+
+## bots.yaml
+bot-rogue-ai-name = Rogue AI

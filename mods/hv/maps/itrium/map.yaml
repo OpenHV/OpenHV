@@ -361,4 +361,4 @@ Actors:
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
-Translations: hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl
+Translations: hv|languages/campaign/en.ftl, hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl
