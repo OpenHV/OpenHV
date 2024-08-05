@@ -313,6 +313,7 @@ lobby-bits:
 		admin-anonymous: 34, 51, 16, 16
 		player-registered: 17, 51, 16, 16
 		player-anonymous: 51, 51, 16, 16
+		bot: 68, 51, 16, 16
 
 reload-icon:
 	Inherits: ^Chrome
@@ -348,6 +349,7 @@ lobby-bits:
 		admin-anonymous: 34, 51, 16, 16
 		player-registered: 17, 51, 16, 16
 		player-anonymous: 51, 51, 16, 16
+		bot: 68, 51, 16, 16
 
 reload-icon:
 	Inherits: ^Glyphs
