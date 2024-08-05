@@ -294,6 +294,31 @@ BROKER:
 		RequiresCondition: deployed
 	Voiced:
 		VoiceSet: BrokerVoice
+	GrantConditionOnAttack:
+		Condition: chargeup-wiretransfer
+		RevokeDelay: 220
+		MaximumInstances: 11
+		RevokeOnNewTarget: true
+		RevokeAll: true
+		IsCyclic: true
+	Armament@PrepareStage1:
+		Weapon: BrokerPrepareWireTransferStage1
+		RequiresCondition: chargeup-wiretransfer < 6
+	Armament@PrepareStage2:
+		Weapon: BrokerPrepareWireTransferStage2
+		RequiresCondition: chargeup-wiretransfer > 5 && chargeup-wiretransfer < 11
+	Armament@Steal:
+		Weapon: BrokerWireTransfer
+		RequiresCondition: chargeup-wiretransfer == 11
+	AttackFrontal:
+		FacingTolerance: 10
+		Voice: Attack
+	AutoTarget:
+		MinimumScanTimeInterval: 5
+		MaximumScanTimeInterval: 15
+	AutoTargetPriority@Default:
+		ValidTargets: Defraudable
+		InvalidTargets: NoAutoTarget
 
 JETPACKER:
 	Inherits: ^Helicopter

@@ -186,6 +186,7 @@ BrokerVoice:
 		Move: broker_acknowledged, broker_at_once, broker_good_copy, broker_gotcha, broker_lets_go, broker_move_out, broker_moving, broker_yes_sir, broker_as_you_wish, broker_right_away
 		Action: broker_acknowledged, broker_at_once, broker_good_copy, broker_gotcha, broker_yes_sir, broker_as_you_wish
 		Deploying: broker_deploying, broker_setting_up, broker_stealing_money, broker_taking_position
+		Attack: broker_setting_up, broker_stealing_money, broker_taking_position, broker_good_copy
 		Guard: guarding
 
 JetpackerVoice:

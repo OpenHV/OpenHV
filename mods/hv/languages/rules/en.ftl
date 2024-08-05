@@ -519,13 +519,16 @@ actor-flamer =
 
 actor-technician =
    .description = Field engineer.
-    Infiltrates and captures enemy structures.\Repairs pods.
+    Infiltrates and captures enemy structures.
+    Repairs pods.
       Unarmed
    .name = Technician
 
 actor-broker =
    .description = Financial analyst.
     Invests into stock market for dividents.
+    Capable of remotely stealing money
+    from bases and storages.
       Unarmed
    .name = Broker
 
@@ -820,3 +823,6 @@ actor-battleship-husk =
 ## Weapons
 actor-landmine-name = AI Mine
 actor-watermine-name = AI Water Mine
+
+robbed-notification = Money stolen.
+rob-notification = Awarded stolen money.

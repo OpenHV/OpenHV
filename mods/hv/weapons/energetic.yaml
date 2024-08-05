@@ -509,3 +509,32 @@ MothershipLaser:
 		Explosions: small
 		ImpactSounds: explosion06.ogg
 		ValidTargets: Ground, Air, Ship, Tree
+
+^BrokerWireTransfer:
+	Range: 12c0
+	ValidTargets: Defraudable
+	Report: coinflick.ogg
+	Projectile: ArcLaserZap
+		Duration: 4
+		UsePlayerColor: true
+	Warhead@Damage: SpreadDamage
+		Spread: 1
+		Damage: 0
+		ValidTargets: Defraudable
+
+BrokerPrepareWireTransferStage1:
+	Inherits: ^BrokerWireTransfer
+	ReloadDelay: 25
+
+BrokerPrepareWireTransferStage2:
+	Inherits: ^BrokerWireTransfer
+	ReloadDelay: 12
+
+BrokerWireTransfer:
+	Inherits: ^BrokerWireTransfer
+	ReloadDelay: 5
+	Report: klink.ogg
+	Warhead@Leech: RobMoney
+		Amount: 500
+		RobbedTextNotification: robbed-notification
+		RobTextNotification: rob-notification
