@@ -81,7 +81,8 @@ resource-gold = Precious Metal Deposit
 resource-iron = Base Metal Deposit
 
 ## Player
-bot-rogue-ai-name = Rogue AI
+bot-rogue-ai =
+   .name = Rogue AI
 
 ## Notifications
 notification-game-loaded = Game loaded.

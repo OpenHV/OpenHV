@@ -2,7 +2,7 @@
 
 Player:
 	ModularBot@RogueAI:
-		Name: bot-rogue-ai-name
+		Name: bot-rogue-ai.name
 		Type: rogue
 	GrantConditionOnBotOwner@RogueAI:
 		Condition: enable-rogue-ai
