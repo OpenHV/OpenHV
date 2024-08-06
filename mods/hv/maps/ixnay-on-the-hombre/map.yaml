@@ -4764,5 +4764,41 @@ Actors:
 	Actor1577: palmtree4
 		Owner: Neutral
 		Location: 157,95
+	Actor1578: resourcelight
+		Owner: Neutral
+		Location: 25,21
+	Actor1579: resourcelight
+		Owner: Neutral
+		Location: 41,5
+	Actor1580: resourcelight
+		Owner: Neutral
+		Location: 217,5
+	Actor1581: resourcelight
+		Owner: Neutral
+		Location: 233,21
+	Actor1582: resourcelight
+		Owner: Neutral
+		Location: 233,236
+	Actor1583: resourcelight
+		Owner: Neutral
+		Location: 217,252
+	Actor1584: resourcelight
+		Owner: Neutral
+		Location: 25,236
+	Actor1585: resourcelight
+		Owner: Neutral
+		Location: 41,252
+	Actor1586: resourcelight_rare
+		Owner: Neutral
+		Location: 6,95
+	Actor1587: resourcelight_rare
+		Owner: Neutral
+		Location: 6,162
+	Actor1588: resourcelight_rare
+		Owner: Neutral
+		Location: 252,162
+	Actor1589: resourcelight_rare
+		Owner: Neutral
+		Location: 252,95
 
 Rules: rules.yaml
