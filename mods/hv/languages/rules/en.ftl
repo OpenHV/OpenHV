@@ -612,7 +612,7 @@ actor-torpedoboat =
 actor-submarine =
    .name = Submarine
    .generic-name = Submarine
-   .description = Submarine with powerful torpedos.
+   .description = Submarine with powerful torpedoes.
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
 
