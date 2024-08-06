@@ -121,7 +121,6 @@ Player:
 			jetpacker: 1
 			sniper: 1
 			shocker: 1
-			broker: 9
 			technician: 1
 			blaster: 1
 			missiletank: 5
@@ -156,7 +155,6 @@ Player:
 			mineship2: 1
 			technician: 1
 			blaster: 3
-			broker: 9
 			apc: 1
 		UnitDelays:
 			builder: 15000
@@ -188,7 +186,7 @@ Player:
 		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank, broker
+		DeployableActorTypes: radartank
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
