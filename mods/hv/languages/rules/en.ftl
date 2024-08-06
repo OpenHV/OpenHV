@@ -151,6 +151,12 @@ actor-gunship =
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
    .name = Gun Ship
+   .encyclopedia = The gun ship is a fast plane, armed with a heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   
+     Strong vs Pods, Buildings and Aircraft
+     Weak vs Tanks
+     
+     Availability: Yuruki
 
 actor-jet =
    .description = Fast Attack Ship
@@ -158,17 +164,35 @@ actor-jet =
       Weak vs Tanks and Pods
       Can't target Aircraft
    .name = Speeder
+   .encyclopedia = The speeder is an air-to-ground plane, armed with a plasma canon that can destroy buildings easily. It is slower but more durable than the attack aircraft.
+   
+     Strong vs Buildings
+     Weak vs Tanks and Pods
+     Can't target Aircraft
+      
+     Availability: Yuruki
 
 actor-copter =
    .name = Attack Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
+   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   
+     Strong vs Pods, Buildings and Aircraft
+     Weak vs Tanks
+     
+     Availability: Synapol
 
 actor-saucer =
    .name = Scout Saucer
    .description = Reconnaissance air unit.
       Unarmed
+   .encyclopedia = A disc shaped aircraft with good maneuverability. It's not suited for combat, but for reconnaissance missions. Due to its unusual shape and low radar reflectance, oftentimes civilians will report this sighting to the authorities first.
+   
+     {actor-saucer.description}
+      
+     Availability: Yuruki
 
 actor-banshee =
    .name = Banshee
@@ -176,12 +200,24 @@ actor-banshee =
       Strong vs Buildings
       Weak vs Tanks and Pods
       Can't target Aircraft
+   .encyclopedia = The banshee is a more durable and slow helicopter, that launches powerful missiles onto the ground. It is particularly strong against buildings.
+   
+     Strong vs Buildings
+     Weak vs Tanks and Pods
+     Can't target Aircraft
+      
+     Availability: Synapol
 
 actor-chopper =
    .name = Transport Helicopter
    .description = Vehicle Transport Helicopter.
       Can load pods
       and lift one vehicle.
+   .encyclopedia = The chopper is an heavy transport aircraft, than can load up to 11,000 lbs of cargo, the equivalent of 8 pods. It can also lift one vehicle.
+   
+     Unarmed
+      
+     Availability: Synapol
 
 actor-chopper-husk-name = Crashing Transport Helicopter
 
@@ -189,19 +225,45 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
+   .encyclopedia = A reconnaissance air unit. It's slower than Yuruki's saucer, but it grants more visibility range.
+   
+     Unarmed
+      
+     Availability: Synapol
 
 actor-dropship =
    .name = Heavy Transport Dropship
    .description = Vehicle Transport Shuttle.
       Can load pods
       and lift one vehicle.
+   .encyclopedia = The dropship is an heavy transport aircraft, than can load up to 11,000 lbs of cargo, the equivalent of 8 pods. It can also lift one vehicle.
+   
+     Unarmed
+      
+     Availability: Yuruki
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
 actor-landedpod-name = Landed Pod
 actor-bomber-name = Athmospheric Bomber
+actor-bomber-encyclopedia = The bomber is a fast plane that drops salves of bombs onto the target. They can be launched from the Yuruki radar.
+
+  Strong vs Buildings
+  Weak vs Pods and Tanks
+
+  Availability: Non-trainable
 actor-cargoship-name = Supply Aircraft
+actor-cargoship-encyclopedia = The cargoship is an universal cargo unit that transports units for trading. It's used to deliver units onto the Trade Platform.
+
+  Unarmed
+
+  Availability: Non-trainable
 actor-airlifter-name = Transport Aircraft
+actor-airlifter-encyclopedia = The airlifter paradrops loaded units onto the ground. It is used in drop zone buildings to deliver mercenary tanks.
+
+  Unarmed
+
+  Availability: Non-trainable
 
 ## Animals
 actor-beast =
@@ -972,6 +1034,11 @@ actor-mothership =
    .name = Mothership
    .description = Launches aerial autonomous attack vessels.
       Strong vs Everything
+   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with two powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
+   
+     Strong vs Everything
+      
+     Availability: Synapol
 
 actor-mothership-husk =
    .name = Mothership Husk
@@ -984,6 +1051,12 @@ actor-battleship =
    .description = Aerial artillery bombardment.
       Strong vs Ground units
       Can't target Aircraft
+   .encyclopedia = The battleship is a massive air unit, regrouping a crew of 1,200 men. Its design was launched by the Yuruki colony on Mars a few 15 years ago, and took 10 years to design, test and create. It is no more a prototype and is now used by the Yuruki paramilitary forces. It is armed with 2 synchronized artillery turrets, that launches aerial bombardment, destroying in a few seconds a whole outpost.
+   
+     Strong vs Ground units
+     Can't target Aircraft
+      
+     Availability: Yuruki
 
 actor-battleship-husk =
    .name = Battleship Husk
