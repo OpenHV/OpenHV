@@ -686,7 +686,7 @@ actor-artillery =
       Weak vs Tanks
 
 actor-radartank =
-   .description = Can detect cloaked units.n
+   .description = Can detect cloaked units
     Range extends when deployed.
       Unarmed
    .name = Reconnaissance Tank
