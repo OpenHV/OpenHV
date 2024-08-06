@@ -534,10 +534,10 @@ actor-broker =
    .name = Broker
 
 actor-jetpacker =
-   .description = Elite airborn vehicle.
+   .description = Elite airborne vehicle.
     Armed with heavy machine gun.
-      Strong vs Pods, Light Vehicles and Aircraft.
-      Weak vs Tanks and Buildings.
+      Strong vs Pods, Light Vehicles and Aircraft
+      Weak vs Tanks and Buildings
    .name = Jetpacker
 
 actor-blaster =
