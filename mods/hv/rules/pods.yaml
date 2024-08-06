@@ -296,30 +296,6 @@ BROKER:
 		Range: 2c0
 	Health:
 		HP: 17500
-	GrantConditionOnDeploy:
-		PauseOnCondition: jammed
-		DeployedCondition: deployed
-		UndeployedCondition: undeployed
-		UndeployOnMove: true
-		UndeployOnPickup: true
-		Facing: 512
-		DeploySounds: broker_deploy_mincedbeats.ogg
-		UndeploySounds: broker_undeploy_mincedbeats.ogg
-		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
-		Voice: Deploying
-	WithMakeAnimation:
-		Sequence: extend
-		BodyNames: deployed
-	WithFacingSpriteBody:
-		RequiresCondition: undeployed
-	WithSpriteBody@DEPLOYED:
-		RequiresCondition: !undeployed
-		Sequence: extended
-		Name: deployed
-	CashTrickler:
-		Interval: 50
-		Amount: 5
-		RequiresCondition: deployed
 	Voiced:
 		VoiceSet: BrokerVoice
 	GrantConditionOnAttack:

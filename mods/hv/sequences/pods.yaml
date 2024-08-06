@@ -149,17 +149,6 @@ broker:
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
-	extend:
-		Filename: bits/broker.png
-		Start: 8
-		Length: 7
-		Tick: 60
-	extended:
-		Filename: bits/broker.png
-		Start: 14
-		Length: 4
-		Reverses: true
-		Tick: 60
 	icon:
 		Filename: bits/units-icons.png
 		Start: 53
