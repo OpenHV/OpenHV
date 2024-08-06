@@ -706,6 +706,12 @@ actor-lightboat =
    .description = Versatile light boat.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
+   .encyclopedia = The light boat is designed for patrol and fast assaults. It's the fastest boat but also the less durable. It has a heavy turreted chaingun install, as well as a flak turret.
+     
+     Strong vs Aircrafts, Navy and Pods
+     Weak vs Vehicles and Buildings
+     
+     Availability: Yuruki
 
 actor-patrolboat =
    .name = Patrol boat
@@ -713,6 +719,12 @@ actor-patrolboat =
    .description = Versatile light boat.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
+   .encyclopedia = The patrol boat is designed for patrol and fast assaults. It's the fastest boat but also the less durable. It has a heavy turreted chaingun install, as well as a flak turret.
+     
+     Strong vs Aircrafts, Navy and Pods
+     Weak vs Vehicles and Buildings
+     
+     Availability: Synapol
 
 actor-mercboat =
    .name = Mercenary Boat
@@ -720,6 +732,12 @@ actor-mercboat =
    .description = A boat with a turret.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = The mercenary boat is a fast boat, armed with a turret. Its turret is powerful against other ships.
+     
+     Strong vs Vehicles
+     Weak vs Pods
+     
+     Availability: Non-trainable
 
 actor-torpedoboat =
    .name = Torpedo Boat
@@ -727,6 +745,12 @@ actor-torpedoboat =
    .description = A boat with torpedo launchers.
       Strong vs Water
       Can't attack Ground or Air
+   .encyclopedia = The torpedo boat is designed to counter fast ship assaults. It has two torpedo launchers onboard that can take down multiple boats on its own.
+     
+     Strong vs Water
+     Can't attack Ground or Air
+     
+     Availability: Yuruki
 
 actor-submarine =
    .name = Submarine
@@ -734,24 +758,45 @@ actor-submarine =
    .description = Submarine with powerful torpedoes.
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
+   .encyclopedia = The submarine is a stealth ship, capable of going underwater. It has a torpedo launcher onboard than can take down a large ship in a few strike. It's slower than Yuruki's torpedo boat though.
+     
+     Strong vs Water
+     Can't attack Ground or Air
+     
+     Availability: Synapol
 
 actor-railgunboat =
    .name = Railgun Boat
    .generic-name = Boat
    .description = A heavy boat with a rail gun.
       Strong vs Vehicles, Pods and Buildings
+   .encyclopedia = The railgun boat is a heavy ship capable of handling every situation possible. It's armed with a turreted railgun canon, that's particularly powerful against buildings.
+     
+     Strong vs Vehicles, Pods and Buildings
+     
+     Availability: Synapol
 
 actor-lightningboat =
    .name = Lightning Boat
    .generic-name = Boat
    .description = A heavy boat with a lightning gun.
       Strong vs Vehicles, Pods and Buildings
+   .encyclopedia = The lightning boat is a heavy ship capable of handling every situation possible. It's armed with a 360 degrees laser zap, that's particularly powerful against buildings.
+     
+     Strong vs Vehicles, Pods and Buildings
+     
+     Availability: Yuruki
 
 actor-boomer =
    .name = Missile Submarine
    .generic-name = Submarine
    .description = A submarine with powerful long range missiles.
       Strong vs Vehicles, Pods and Buildings
+   .encyclopedia = This heavy submarine is capable of launching ballistic missiles to a high range. As a submarine, it has the capability of going underwater.
+     
+     Strong vs Vehicles, Pods and Buildings
+     
+     Availability: Synapol
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -759,6 +804,11 @@ actor-carrier =
    .description = Launches aerial autonomous attack vessels.
       Strong vs Vehicles, Pods and Buildings
    .name = Drone Ship
+   .encyclopedia = This heavy ship has a drone launch bay, containing three aerial autonomous drones, that can attack any target at a certain range. When a drone is shot down, it's reproduced. The drones have to reload themselves in the launch bay.
+     
+     Strong vs Vehicles, Pods and Buildings
+     
+     Availability: Yuruki
 
 actor-ferry =
    .name = Ferry
@@ -766,6 +816,11 @@ actor-ferry =
    .description = General-purpose naval transport.
     Can carry pods.
       Unarmed
+   .encyclopedia = The ferry is a heavy naval transporter. It can load up to 12,000 lbs of cargo, the equivalent of 10 pods. It is quite slow but very durable. It can land on shores to load or unload its cargo.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-mineship =
    .name = Naval Minelayer
@@ -775,6 +830,11 @@ actor-mineship =
     while avoiding ally units.
       Can detect enemy mines.
       Unarmed
+   .encyclopedia = The naval minelayer is able to lay smart mines than explode on enemy units, while avoiding ally units. It can also detect enemy units at a certain range. It has to reload at an harbor.
+     
+     Unarmed
+     
+     Availability: Universal/Faction design can vary
 
 ## Vehicles
 actor-mbt =

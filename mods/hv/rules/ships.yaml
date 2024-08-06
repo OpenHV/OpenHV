@@ -14,6 +14,10 @@ LIGHTBOAT:
 		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 10
 		Description: actor-lightboat.description
+	Encyclopedia:
+		Description: actor-lightboat.encyclopedia
+		Order: 0
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -58,6 +62,10 @@ PATROLBOAT:
 		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 10
 		Description: actor-patrolboat.description
+	Encyclopedia:
+		Description: actor-patrolboat.encyclopedia
+		Order: 5
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -107,6 +115,10 @@ MERCBOAT:
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 90
 		Description: actor-mercboat.description
+	Encyclopedia:
+		Description: actor-mercboat.encyclopedia
+		Order: 60
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -149,6 +161,10 @@ TORPEDOBOAT:
 		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
 		Description: actor-torpedoboat.description
+	Encyclopedia:
+		Description: actor-torpedoboat.encyclopedia
+		Order: 10
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -188,6 +204,10 @@ SUBMARINE:
 		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
 		Description: actor-submarine.description
+	Encyclopedia:
+		Description: actor-submarine.encyclopedia
+		Order: 15
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -227,6 +247,10 @@ RAILGUNBOAT:
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 50
 		Description: actor-railgunboat.description
+	Encyclopedia:
+		Description: actor-railgunboat.encyclopedia
+		Order: 25
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -267,6 +291,10 @@ LIGHTNINGBOAT:
 		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
 		Description: actor-lightningboat.description
+	Encyclopedia:
+		Description: actor-lightningboat.encyclopedia
+		Order: 20
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -308,6 +336,10 @@ BOOMER:
 		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-boomer.description
+	Encyclopedia:
+		Description: actor-boomer.encyclopedia
+		Order: 40
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -377,6 +409,10 @@ CARRIER:
 		BuildPaletteOrder: 60
 		Prerequisites: ~harbor.yi, techcenter
 		Description: actor-carrier.description
+	Encyclopedia:
+		Description: actor-carrier.encyclopedia
+		Order: 30
+		Category: Ships
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -432,6 +468,10 @@ FERRY:
 		Prerequisites: ~harbor
 		BuildPaletteOrder: 20
 		Description: actor-ferry.description
+	Encyclopedia:
+		Description: actor-ferry.encyclopedia
+		Order: 45
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -473,6 +513,10 @@ MINESHIP:
 		Prerequisites: ~harbor.sc, trader
 		BuildPaletteOrder: 40
 		Description: actor-mineship.description
+	Encyclopedia:
+		Description: actor-mineship.encyclopedia
+		Order: 50
+		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -525,3 +569,4 @@ MINESHIP2:
 	Inherits: MINESHIP
 	Buildable:
 		Prerequisites: ~harbor.yi, trader
+	-Encyclopedia:
