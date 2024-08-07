@@ -583,7 +583,7 @@ ECMTANK:
 		Class: ecmtank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, techcenter, trader
+		Prerequisites: ~factory.sc, radar, trader
 		BuildPaletteOrder: 60
 		Description: actor-ecmtank.description
 	Armament:
@@ -601,22 +601,24 @@ ECMTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 7500
+		HP: 12500
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
-		Speed: 110
+		Speed: 120
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
-		RevealGeneratedShroud: False
+		RevealGeneratedShroud: True
 	RevealsShroud@Hacked:
 		Range: 4c0
-	JamsMissiles:
-		Range: 5c0
-		DeflectionRelationships: Neutral, Enemy
-	DetectCloaked:
-		Range: 2c0
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	CreatesShroud:
+		Range: 9c0
+		RequiresCondition: deployed
+	RenderShroudCircle:
+		RequiresCondition: deployed
 
 DUALARTILLERY:
 	Inherits: ^TrackedVehicle
@@ -863,7 +865,7 @@ HACKERTANK:
 	Health:
 		HP: 10000
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
 		Speed: 150
 	RevealsShroud:
@@ -890,13 +892,9 @@ HACKERTANK:
 	AutoTargetPriority@Default:
 		ValidTargets: Vulnerability
 		RequiresCondition: !controlling
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-	CreatesShroud:
-		Range: 9c0
-		RequiresCondition: deployed
-	RenderShroudCircle:
-		RequiresCondition: deployed
+	JamsMissiles:
+		Range: 5c0
+		DeflectionRelationships: Neutral, Enemy
 
 BUGGY:
 	Inherits: ^Vehicle
