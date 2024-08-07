@@ -67,3 +67,23 @@ rescue-scientist = Rescue the scientist.
 kill-guards = Kill the lab guards.
 find-scientist = Find the scientist.
 scientist-escaped = The scientist is out of the lab! Rescue him!
+
+## infiltration-commando
+satellite-reconaissance = Satellite Reconaissance
+yuruki-harbor-production-detected = Detected Yuruki naval production
+power-plants-positions-revealed = Power plant outpost localized
+percent-still-alive = % of colony still online
+save-colony-easy = Save at least 55% of the colony.
+save-colony-normal = Save at least 70% of the colony.
+save-colony-hard = Save at least 80% of the colony.
+infiltrate-radar = Capture Yuruki radar outpost.
+annihilate-harbor-facilities = Neutralize Yuruki harbor facilities.
+build-radar = Build a Radar.
+build-howitzer = Build a Howitzer.
+build-harbor = Build a Harbor.
+airstrike-waves-started = Airstrike waves incoming.
+airstrike-waves-player = Airstrike waves incoming to the island.
+alternative-break-in = Alternatively break into the headquarters.
+com-quarters-revealed = Communication quarters localized.
+reminder-low-percentage = Low online percentage! Capture the enemy radar dome!
+capture-radar-reminder = Capture the enemy radar dome!
