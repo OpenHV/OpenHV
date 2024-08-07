@@ -527,7 +527,7 @@ actor-technician =
 
 actor-broker =
    .description = Financial analyst.
-    Invests into stock market for dividents.
+    Invests into stock market for dividends.
     Capable of remotely stealing money
     from bases and storages.
       Unarmed
