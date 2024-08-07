@@ -68,6 +68,10 @@ beacon:
 		Length: 7
 		Reverses: true
 		ZOffset: 2047
+	arrow:
+		Filename: bits/beacon-arrow.png
+		Offset: 0,-5
+		ZOffset: 2048
 
 icon:
 	shield:

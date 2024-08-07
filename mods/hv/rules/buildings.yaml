@@ -323,6 +323,11 @@ RADAR:
 		Description: actor-radar.airstrikepower-description
 		UnitType: bomber
 		DisplayRadarPing: true
+		DisplayBeacon: true
+		BeaconSequence: idle
+		ArrowSequence: arrow
+		BeaconPaletteIsPlayerPalette: true
+		BeaconPalette: green
 		CameraActor: camera
 		UseDirectionalTarget: true
 		DirectionArrowAnimation: direction
@@ -1494,6 +1499,11 @@ SILO:
 		SkipAscent: true
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: true
+		DisplayBeacon: true
+		BeaconSequence: idle
+		ArrowSequence: arrow
+		BeaconPaletteIsPlayerPalette: true
+		BeaconPalette: green
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 10
 		DetectedSpeechNotification: NukeDetected
@@ -1587,7 +1597,6 @@ UPLINK:
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
-		ActivationDelay: 0
 		AirburstAltitude: 40c0
 		Weapon: RailgunSetup
 
