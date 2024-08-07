@@ -17,15 +17,15 @@
   <launchable type="desktop-id">openhv.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <image>https://img.itch.zone/aW1hZ2UvNjg5NjY5Lzc2NjI2MjMucG5n/original/sT6U6%2F.png</image>
+      <image>https://www.openhv.net/images/appstream/arctic-base.png</image>
       <caption>fortified base</caption>
     </screenshot>
     <screenshot>
-      <image>https://media.moddb.com/images/members/1/927/926352/profile/Screenshot_20240401_184914.png</image>
+      <image>https://www.openhv.net/images/appstream/editor-mirror-tool.png</image>
       <caption>in-game map editor</caption>
     </screenshot>
     <screenshot>
-      <image>https://media.moddb.com/images/articles/1/302/301662/unknown.png</image>
+      <image>https://www.openhv.net/images/appstream/uneven-remuneration.png</image>
       <caption>spectator mode</caption>
     </screenshot>
   </screenshots>
