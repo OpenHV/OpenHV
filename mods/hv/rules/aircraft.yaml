@@ -285,7 +285,7 @@ CHOPPER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 52500  # 49875
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -297,8 +297,8 @@ CHOPPER:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
+		TurnSpeed: 19
+		Speed: 128
 		AltitudeVelocity: 0c58
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
@@ -419,7 +419,7 @@ DROPSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 47500  # 45125
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -431,8 +431,8 @@ DROPSHIP:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
+		TurnSpeed: 21
+		Speed: 142
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
