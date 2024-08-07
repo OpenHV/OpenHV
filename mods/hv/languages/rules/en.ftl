@@ -490,6 +490,12 @@ actor-rifleman =
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Rifleman
+   .encyclopedia = The most generic pod. It is a small land vehicle controlled by a human. They are the modern solution for infantry, and offer a fast and cheap production. Pods come in different variants, with different armaments and abilities, but the Rifleman one has a simple machine gun equipped. As it is universal, both Yuruki and Synapol use it.
+   
+     Strong vs Pods
+     Weak vs Tanks and Buildings
+     
+     Availability: Universal
 
 actor-rocketeer =
    .description = Fast support vehicle.
@@ -497,6 +503,12 @@ actor-rocketeer =
       Strong vs Tanks and Aircraft
       Weak vs Pods
    .name = Rocketeer
+   .encyclopedia = The rocketeer is equipped with a rocket launcher, and is designed to handle pretty much everything, except pods. It's its versatility that makes it a common pod used in every situation.
+   
+     Strong vs Tanks, Aircraft and Buildings
+     Weak vs Pods
+     
+     Availability: Synapol
 
 actor-mortar =
    .description = Fast support vehicle.
@@ -504,6 +516,12 @@ actor-mortar =
       Strong vs Pods and Buildings
       Weak vs Tanks
    .name = Mortar
+   .encyclopedia = The mortar pod is a fast support vehicle, armed with a mortar gun, particularly powerful against both pods and buildings. It was designed by the Synapol Corporations to handle small outpost, often defend with pods only.
+   
+      Strong vs Pods and Buildings
+      Weak vs Tanks
+     
+     Availability: Synapol
 
 actor-sniper =
    .description = Long range sniper vehicle.
@@ -511,12 +529,24 @@ actor-sniper =
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Sniper
+   .encyclopedia = The sniper pod is an advanced unit, capable of generating an invisibility cloak on itself. It's armed with a long range sniper, than can take down pods in one shot, with speed and agility.
+   
+     Strong vs Pods
+     Weak vs Tanks and Buildings
+     
+     Availability: Yuruki
 
 actor-flamer =
    .description = Short range flame thrower.
       Strong vs Pods and Buildings
       Weak vs Tanks
    .name = Flame
+   .encyclopedia = The flamer pod is armed with a powerful short range flame thrower, designed to annihilate pods and buildings. While it is powerful against buildings, it has a lower health than other pods.
+   
+     Strong vs Pods and Buildings
+     Weak vs Tanks
+     
+     Availability: Synapol
 
 actor-technician =
    .description = Field engineer.
@@ -524,6 +554,11 @@ actor-technician =
     Repairs pods.
       Unarmed
    .name = Technician
+   .encyclopedia = The universal field engineer. Its first ability is to infiltrate and capture enemy structures, changing their allegiance: it is often used to capture enemy mining towers. Its second ability is to repair allied pods, on the battle field.
+   
+     Unarmed
+     
+     Availability: Universal
 
 actor-broker =
    .description = Financial analyst.
@@ -539,11 +574,22 @@ actor-jetpacker =
       Strong vs Pods, Light Vehicles and Aircraft
       Weak vs Tanks and Buildings
    .name = Jetpacker
+   .encyclopedia = The ultimate pod: the jetpacker. It was designed by an independent lab, allowing its universal availability. It can handle pods, light vehicles and aircraft well. The fact that it's an airborne pod makes it less vulnerable to other pods.
+   
+     Strong vs Pods, Light Vehicles and Aircraft
+     Weak vs Tanks and Buildings
+     
+     Availability: Universal
 
 actor-blaster =
    .description = Remote controlled mine.
     Explodes when reaches enemy.
    .name = Blaster
+   .encyclopedia = The only pod that isn't controlled by a human: this pod is controlled from the base, and sent to self destruct at enemy positions. It is mainly used to raid against enemy structures, inflicting important damages. It is thought less durable than other pods.
+   
+     Strong vs Buildings
+     
+     Availability: Yuruki
 
 actor-shocker =
    .description = Fast support vehicle.
@@ -551,10 +597,21 @@ actor-shocker =
       Strong vs Tanks and Aircraft
       Weak vs Pods
    .name = Shocker
+   .encyclopedia = The shocker pod is equipped with a small but yet powerful laser zap, and is designed to handle pretty much everything, except pods. It's its versatility that makes it a common pod used in every situation.
+   
+     Strong vs Tanks, Aircraft and Buildings
+     Weak vs Pods
+     
+     Availability: Yuruki
 
 meta-minipod =
    .name = Civilian
    .generic-name = Civilian
+   .encyclopedia = Pods are not only for combat, but also for civilian transport.
+   
+     Unarmed
+     
+     Availability: Universal/Non-trainable
 
 ## Props
 actor-lamppost-name = Lamp Post
