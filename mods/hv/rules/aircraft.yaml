@@ -29,11 +29,11 @@ GUNSHIP:
 	Armament@Ground:
 		Weapon: AircraftChainGunGround
 		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
+		LocalOffset: 300,0,0
 	Armament@Air:
 		Weapon: AircraftChainGunAir
 		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
+		LocalOffset: 300,0,0
 	AttackAircraft:
 		FacingTolerance: 92
 		PersistentTargeting: false
@@ -54,10 +54,10 @@ GUNSHIP:
 		InvalidTargets: Structure
 	WithMuzzleOverlay:
 	Contrail@Right:
-		Offset: -298,-264,0
+		Offset: -420,-264,0
 		TrailLength: 12
 	Contrail@Left:
-		Offset: -298,264,0
+		Offset: -420,264,0
 		TrailLength: 12
 	Selectable:
 		Bounds: 1024, 1024
