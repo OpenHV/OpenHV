@@ -720,12 +720,24 @@ actor-mbt =
    .description = Main Battle Tank.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = Assault tanks are a great solution to deal against any other tank. Their turreted canon allow them to move at a decent speed, while still shooting down enemies. They also are decent against buildings, in groups.
+   
+     Strong vs Vehicles
+     Weak vs Pods
+     
+     Availability: Universal/Faction design can vary
 
 actor-aatank =
    .description = Mobile tank with AA missiles.
       Strong vs Aircraft
       Cannot attack grounds units.
    .name = Mobile AA
+   .encyclopedia = Mobile AA turrets are yet, less powerful than stationary AA turrets, but they can sue the enemy when it gets out of range. While they are a universal unit, factions use different AA armaments.
+   
+     Strong vs Aircraft
+     Cannot attack grounds units.
+     
+     Availability: Universal/Faction design can vary
 
 actor-aatank2-description = Mobile tank with lightning gun.
       Strong vs Aircraft
@@ -735,12 +747,21 @@ actor-apc =
    .name = Transport Tank
    .description = Can transport pods.
       Has fireports for garrisoned units.
+   .encyclopedia = Transport tanks - commonly known as "APC" (Armored Personal Carrier) - are durable transport units, that can load up to 8,000 lbs of cargo, the equivalent of 5 pods. It is used to transport pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
+     
+     Availability: Universal
 
 actor-artillery =
    .name = Artillery
    .description = Mobile long range weapon.
       Strong vs Pods and Buildings
       Weak vs Tanks
+   .encyclopedia = Armed with a long range artillery canon, this mobile artillery vehicle is extremely powerful against pods and buildings, while still being decently strong against other units. It was designed to power down enemies defenses while other units were assaulting a base.
+     
+     Strong vs Pods and Buildings
+     Weak vs Tanks
+     
+     Availability: Universal
 
 actor-radartank =
    .description = Can detect cloaked units
@@ -758,6 +779,11 @@ actor-repairtank =
    .generic-name = Tank
    .description = Repairs nearby tanks.
       Unarmed
+   .encyclopedia = The repair tank is a fast field engineer vehicle, that can repair tanks using a special beam.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-minelayer =
    .description = Lays smart mines
@@ -765,24 +791,45 @@ actor-minelayer =
     while avoiding ally units.  Can detect enemy mines.
       Unarmed
    .name = Minelayer
+   .encyclopedia = The minelayer is a fast and agile support unit, that can lay smart mines, that explode on enemy units; while avoiding ally units. It also has the ability to detect enemy mines at a certain range. It has to reload on trade platforms.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-railguntank =
    .name = Railgun Tank
    .generic-name = Tank
    .description = A powerful tank which shoots laser.
       Strong vs Pods, Vehicles and Buildings
+   .encyclopedia = The railgun tank is the ultimate tank, able of handling every type of unit. It's armed with a powerful laser canon, and has an heavy armor.
+     
+     Strong vs Pods, Vehicles and Buildings
+     
+     Availability: Synapol
 
 actor-lightningtank =
    .description = Fires electric discharges.
       Strong vs Pods, Vehicles and Buildings
    .name = Lightning Tank
    .generic-name = Tank
+   .encyclopedia = The lightning tank is the ultimate tank, able of handling every type of unit. It's armed with a powerful laser zap, and has an heavy armor.
+     
+     Strong vs Pods, Vehicles and Buildings
+     
+     Availability: Yuruki
 
 actor-stealthtank =
    .description = Cloaked missile tank.
       Strong vs Vehicles and Buildings
       Weak vs Pods
    .name = Stealth Tank
+   .encyclopedia = The stealth tank is a modern tank, able of deploying a cloak on itself. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the lightning tank, it is stronger against buildings.
+     
+     Strong vs Vehicles and Buildings
+     Weak vs Pods
+     
+     Availability: Yuruki
 
 actor-merctank =
    .name = Mercenary Tank
@@ -790,6 +837,12 @@ actor-merctank =
    .description = Main battle tank.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = The mercenary tank is a generic tank, that can be only obtained through the drop zone buildings. It has though no turret, like other main battle tanks.
+     
+     Strong vs Vehicles
+     Weak vs Pods
+     
+     Availability: Non-trainable
 
 actor-dualmerctank-description = Double barreled tank.
       Strong vs Vehicles
@@ -800,11 +853,21 @@ actor-ecmtank =
    .generic-name = ECM Tank
    .description = Disables units for a brief moment.
       Jams incoming missiles.
+   .encyclopedia = The countermeasure tank is the most modern tank of all: it has the ability to beam, that disables units for a brief moment. It also deflects incoming missiles.
+     
+     Unarmed
+     
+     Availability: Synapol
 
 actor-dualartillery =
    .name = Dual Artillery
    .description = Double barreled artillery tank.
       Strong vs Pods, Vehicles and Buildings
+   .encyclopedia = This vehicle is an upgrade of the artillery tank. It is twice bigger, has more range, and fires two bombshells at once. Its range is extremely higher, and it is damaging against any type of armor. Due to technical issues, it requires a lot of technology to produce that unit, it you'll rarely see it, and if you do, it will be in special missions.
+     
+     Strong vs Pods, Vehicles and Buildings
+     
+     Availability: Non-trainable
 
 actor-builder =
    .description = Deploys into outpost which
@@ -812,6 +875,11 @@ actor-builder =
     and allows base reconstruction.
       Unarmed
    .name = Builder
+   .encyclopedia = The builder is an important support unit, allowing the deployment of outpost which grants additional build radius, and allow base reconstruction.
+     
+     Unarmed
+     
+     Availability: Universal/Faction design can vary
 
 actor-collector-name = Collector
 
@@ -819,6 +887,11 @@ actor-miner =
    .description = Builds mining facilities.
       Unarmed
    .name = Miner
+   .encyclopedia = The role of this vehicle is to deploy mining facilities, allowing the production of resources, that are then transformed into cash at the storage building.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-missiletank =
    .name = Missile Tank
@@ -826,12 +899,23 @@ actor-missiletank =
    .description = A tank which shoots missiles.
       Strong vs Vehicles and Buildings
       Weak vs Pods
+   .encyclopedia = The missile tank is a agile tank, able to fire from a turret, while still moving decently fast. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the railgun tank, it is stronger against buildings.
+     
+     Strong vs Vehicles and Buildings
+     Weak vs Pods
+     
+     Availability: Synapol
 
 actor-hackertank =
    .description = Temporarily changes allegiance of targeted units.
       Disrupts satellite video links
       and obscures the battlefield when deployed.
    .name = Hacker Tank
+   .encyclopedia = The hacker is the most modern tank of all: it has the ability to fire a laser zap, that changes allegiance of the target unit. The allegiance is permanent, unless it gets out of range. It can only have one controlled unit at a time. It can also obscure the opponent's battlefield on a small region when deployed.
+     
+     Unarmed
+     
+     Availability: Yuruki
 
 actor-buggy =
    .name = Ramp Buggy
@@ -839,6 +923,12 @@ actor-buggy =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+   .encyclopedia = The ramp buggy is a fast anti-pod vehicle, that has a turret heavy machine gun, capable of destroying a group of pods by itself. It is Synapol's solution to the Yuruki gatling bike: while it is slower, its machine gun is turreted, giving it an advantage.
+     
+     Strong vs Pods
+     Weak vs Tanks, Buildings
+     
+     Availability: Synapol
 
 actor-bike =
    .name = Gatling Bike
@@ -846,6 +936,12 @@ actor-bike =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+   .encyclopedia = The gatling bike is a fast anti-pod vehicle, that has a powerful heavy machine gun, capable of destroying a group of pods by itself.
+     
+     Strong vs Pods
+     Weak vs Tanks, Buildings
+     
+     Availability: Yuruki
 
 actor-tanker1 =
    .description = Transports resources to the headquarter.
@@ -856,11 +952,21 @@ actor-tanker2 =
    .description = Collects resources at mining towers.
       Unarmed
    .name = Empty Resource Transporter
+   .encyclopedia = The tanker is a resource transporter, that moves from mining towers to storage building to collect and depose resources.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-cvit =
    .description = Moves cash to other players.
       Unarmed
    .name = Money Transport
+   .encyclopedia = The money transport moves cash to other players, in order to help them.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-mothership =
    .name = Mothership
