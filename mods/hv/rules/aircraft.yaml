@@ -825,7 +825,7 @@ BATTLESHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 250000
+		HP: 375000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
