@@ -226,10 +226,6 @@ RADARTANK:
 		Cost: 400
 	Tooltip:
 		Name: actor-radartank.name
-		RequiresCondition: !deployed
-	Tooltip@DEPLOYED:
-		Name: actor-radartank.deployed--name
-		RequiresCondition: deployed
 	Selectable:
 		Class: radartank
 	Health:
