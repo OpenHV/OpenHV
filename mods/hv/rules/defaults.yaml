@@ -281,6 +281,7 @@
 		CruiseAltitude: 2c0
 		InitialFacing: 768
 		Voice: Move
+		TakeOffOnResupply: true
 	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -436,7 +437,6 @@
 		CanHover: true
 		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
-		TakeOffOnResupply: true
 		VTOL: true
 		InitialFacing: 896
 		CanSlide: True
