@@ -643,7 +643,7 @@ BOMBER:
 	Aircraft:
 		TurnSpeed: 360
 		Speed: 450
-		Repulsable: True
+		Repulsable: false
 		Voice: Move
 	RejectsOrders:
 	AttackBomber:
