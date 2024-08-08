@@ -67,3 +67,12 @@ rescue-scientist = Rescue the scientist.
 kill-guards = Kill the lab guards.
 find-scientist = Find the scientist.
 scientist-escaped = The scientist is out of the lab! Rescue him!
+
+## tech-disruption
+power-down-grid = Take down the power grid.
+annihilate-outpost = Annihilate Synapol outpost.
+no-submarine-escape = Allow no submarine to escape.
+submarine-detection =  before submarine production
+power-grid-revealed = defenses power grid localized.
+annihilate-outpost-reminder = annihilate the outpost!
+submarine-production-started = submarine production started!
