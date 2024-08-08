@@ -319,10 +319,12 @@ BOOMER:
 		TurnSpeed: 40
 	RevealsShroud:
 		Range: 7c0
-		MinRange: 1c0
-		RevealGeneratedShroud: false
+		MinRange: 3c0
+		Type: CenterPosition
+		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 1c0
+		Range: 4c0
+		Type: GroundPosition
 	AttackFrontal:
 		FacingTolerance: 25
 		TargetFrozenActors: true
