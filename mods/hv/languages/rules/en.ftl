@@ -690,7 +690,11 @@ actor-radartank =
     Range extends when deployed.
       Unarmed
    .name = Reconnaissance Tank
-   .deployed--name = Reconnaissance Tank (deployed)
+   .encyclopedia = The radar tank is an universal utility and support unit, that provides reconnaissance. It can also detect cloaked units in a certain range. Its range can be extended by deploying it, though it won't be able to move when deployed.
+     
+     Unarmed
+     
+     Availability: Universal
 
 actor-repairtank =
    .name = Mobile Repair Vehicle
