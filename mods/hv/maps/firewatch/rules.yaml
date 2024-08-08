@@ -23,6 +23,26 @@ BASE2:
 		ProductionTypes: Utility
 	-BaseProvider:
 	ProvidesRadar:
+	AirstrikePower:
+		Icon: airstrike
+		Cursor: airstrike
+		ChargeInterval: 1250
+		SquadSize: 3
+		QuantizedFacings: 8
+		Name: watertanker-power-name
+		Description: watertanker-power-description
+		UnitType: airtanker
+		DisplayRadarPing: true
+		CameraActor: camera
+		UseDirectionalTarget: true
+		DirectionArrowAnimation: direction
+		SupportPowerPaletteOrder: 30
+		OrderName: FlushBombers
+		BeginChargeSpeechNotification: AirStrikeCharging
+		EndChargeSpeechNotification: AirStrikeReady
+		SelectTargetSpeechNotification: SelectTarget
+		IncomingSpeechNotification: AirStrikeIncoming
+	SupportPowerChargeBar:
 
 WATERTANK:
 	Inherits: ^TrackedVehicle
@@ -200,7 +220,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, firewatch.lua
 	MissionData:
-		Briefing: The 1st Colonial Fire Brigade on the forest moon Andor is an need of assistance. The vast natural woodlands face total destruction after heavy fighting of rival mining companies ignited the woods. Contain the fire before it's too late. Use the fire pond to refill your water tanks.
+		Briefing: The 1st Colonial Fire Brigade on the forest moon Andor is an need of assistance. The vast natural woodlands face total destruction after heavy fighting of rival mining companies ignited the woods. Contain the fire before it's too late. Use the fire pond to refill your water tanks. You will be able to periodically send air tankers to flood highly or unreachable incendiary zones.
 	ForestLayer:
 		FlameOwner: Flames
 		Damage: 25
@@ -267,3 +287,40 @@ CVIT:
 REPAIRTANK:
 	Buildable:
 		Prerequisites: ~disabled
+
+AIRTANKER:
+	Inherits: ^SpawnedPlane
+	Inherits@Exists: ^ExistsInWorld
+	Inherits@Sprite: ^SpriteActor
+	Inherits@Handicaps: ^PlayerHandicaps
+	Interactable:
+	AppearsOnRadar:
+		UseLocation: true
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleRelationships: None
+	WithFacingSpriteBody:
+	WithShadow:
+		Offset: 356, 256, 0
+		ZOffset: -256
+	Tooltip:
+		Name: actor-airtanker-name
+	Health:
+		HP: 2000
+	Armor:
+		Type: Light
+	Valued:
+		Cost: 2000
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	Aircraft:
+		TurnSpeed: 360
+		Speed: 300
+		Repulsable: false
+		Voice: Move
+	RejectsOrders:
+	AttackBomber:
+		FacingTolerance: 512
+	Armament:
+		Weapon: WaterBomb
+		LocalOffset: -250,-256,0, -250,256,0
