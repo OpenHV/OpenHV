@@ -254,6 +254,9 @@ World:
 	Locomotor@Tracked:
 		TerrainSpeeds:
 			Shore: 100
+	ScriptLobbyDropdown@Difficulty:
+		Locked: false
+		Visible: true
 
 Player:
 	PlayerResources:
