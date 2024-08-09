@@ -8,6 +8,45 @@
 ]]
 
 LightTrees = function ()
+	if Difficulty ~= "easy" then  -- only when the difficulty is higher than easy
+		Forest.Hit(CPos.New(52, 12), 30000)
+		Forest.Hit(CPos.New(54, 11), 30000)
+		Forest.Hit(CPos.New(54, 15), 30000)
+
+		Forest.Hit(CPos.New(12, 44), 30000)
+		Forest.Hit(CPos.New(13, 44), 30000)
+		Forest.Hit(CPos.New(14, 44), 30000)
+		Forest.Hit(CPos.New(12, 45), 30000)
+		Forest.Hit(CPos.New(13, 45), 30000)
+		Forest.Hit(CPos.New(14, 45), 30000)
+		Forest.Hit(CPos.New(12, 46), 30000)
+		Forest.Hit(CPos.New(13, 46), 30000)
+		Forest.Hit(CPos.New(14, 46), 30000)
+
+		Forest.Hit(CPos.New(26, 54), 30000)
+		Forest.Hit(CPos.New(26, 55), 30000)
+		Forest.Hit(CPos.New(27, 54), 30000)
+		Forest.Hit(CPos.New(27, 55), 30000)
+	end
+
+	if Difficulty == "hard" then  -- only if the difficulty is set to hard
+		Forest.Hit(CPos.New(56, 18), 30000)
+		Forest.Hit(CPos.New(56, 17), 30000)
+		Forest.Hit(CPos.New(55, 18), 30000)
+
+		Forest.Hit(CPos.New(17, 51), 30000)
+		Forest.Hit(CPos.New(17, 52), 30000)
+		Forest.Hit(CPos.New(18, 51), 30000)
+		Forest.Hit(CPos.New(18, 53), 30000)
+		Forest.Hit(CPos.New(7, 46), 30000)
+		Forest.Hit(CPos.New(8, 45), 30000)
+		Forest.Hit(CPos.New(8, 44), 30000)
+
+		Forest.Hit(CPos.New(45, 42), 30000)
+		Forest.Hit(CPos.New(45, 44), 30000)
+		Forest.Hit(CPos.New(51, 51), 30000)
+	end
+
 	Forest.Hit(CPos.New(18, 15), 30000)
 	Forest.Hit(CPos.New(19, 15), 30000)
 	Forest.Hit(CPos.New(20, 13), 30000)
@@ -17,9 +56,6 @@ LightTrees = function ()
 	Forest.Hit(CPos.New(48, 11), 30000)
 	Forest.Hit(CPos.New(48, 12), 30000)
 	Forest.Hit(CPos.New(50, 14), 30000)
-	Forest.Hit(CPos.New(52, 12), 30000)
-	Forest.Hit(CPos.New(54, 11), 30000)
-	Forest.Hit(CPos.New(54, 15), 30000)
 
 	Forest.Hit(CPos.New(54, 35), 30000)
 	Forest.Hit(CPos.New(56, 34), 30000)
@@ -36,24 +72,9 @@ LightTrees = function ()
 	Forest.Hit(CPos.New(13, 40), 30000)
 	Forest.Hit(CPos.New(16, 41), 30000)
 
-	Forest.Hit(CPos.New(12, 44), 30000)
-	Forest.Hit(CPos.New(13, 44), 30000)
-	Forest.Hit(CPos.New(14, 44), 30000)
-	Forest.Hit(CPos.New(12, 45), 30000)
-	Forest.Hit(CPos.New(13, 45), 30000)
-	Forest.Hit(CPos.New(14, 45), 30000)
-	Forest.Hit(CPos.New(12, 46), 30000)
-	Forest.Hit(CPos.New(13, 46), 30000)
-	Forest.Hit(CPos.New(14, 46), 30000)
-
 	Forest.Hit(CPos.New(45, 53), 30000)
 	Forest.Hit(CPos.New(46, 53), 30000)
 	Forest.Hit(CPos.New(47, 53), 30000)
-
-	Forest.Hit(CPos.New(26, 54), 30000)
-	Forest.Hit(CPos.New(26, 55), 30000)
-	Forest.Hit(CPos.New(27, 54), 30000)
-	Forest.Hit(CPos.New(27, 55), 30000)
 
 	Forest.Hit(CPos.New(30, 20), 30000)
 	Forest.Hit(CPos.New(30, 21), 30000)
