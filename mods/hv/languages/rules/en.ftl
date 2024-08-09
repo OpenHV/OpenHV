@@ -592,7 +592,7 @@ actor-flamer =
    .description = Short range flame thrower.
       Strong vs Pods and Buildings
       Weak vs Tanks
-   .name = Flame
+   .name = Flamer
    .encyclopedia = The flamer pod is armed with a powerful short range flame thrower, designed to annihilate pods and buildings. While it is powerful against buildings, it has a lower health than other pods.
 
      {actor-flamer.description}
