@@ -323,6 +323,11 @@ RADAR:
 		Description: actor-radar.airstrikepower-description
 		UnitType: bomber
 		DisplayRadarPing: true
+		DisplayBeacon: true
+		BeaconSequence: idle
+		ArrowSequence: arrow
+		BeaconPaletteIsPlayerPalette: true
+		BeaconPalette: green
 		CameraActor: camera
 		UseDirectionalTarget: true
 		DirectionArrowAnimation: direction
@@ -346,6 +351,11 @@ RADAR2:
 		Name: actor-radar2.droppodspower-name
 		Description: actor-radar2.droppodspower-description
 		DisplayRadarPing: true
+		DisplayBeacon: true
+		BeaconSequence: idle
+		ArrowSequence: arrow
+		BeaconPaletteIsPlayerPalette: true
+		BeaconPalette: green
 		ChargeInterval: 3750
 		UnitTypes: droppod1, droppod2
 		CameraActor: camera
@@ -1494,6 +1504,11 @@ SILO:
 		SkipAscent: true
 		DisplayTimerRelationships: Ally, Neutral, Enemy
 		DisplayRadarPing: true
+		DisplayBeacon: true
+		BeaconSequence: idle
+		ArrowSequence: arrow
+		BeaconPaletteIsPlayerPalette: true
+		BeaconPalette: green
 		CameraRange: 10c0
 		SupportPowerPaletteOrder: 10
 		DetectedSpeechNotification: NukeDetected
@@ -1587,7 +1602,6 @@ UPLINK:
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
-		ActivationDelay: 0
 		AirburstAltitude: 40c0
 		Weapon: RailgunSetup
 
@@ -1718,6 +1732,11 @@ TELEVATOR:
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		DisplayRadarPing: True
+		DisplayBeacon: true
+		BeaconSequence: idle
+		ArrowSequence: arrow
+		BeaconPaletteIsPlayerPalette: true
+		BeaconPalette: green
 		ChargeInterval: 3000
 		OrderName: BeamUsUp
 		Icon: televator
