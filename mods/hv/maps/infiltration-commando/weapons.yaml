@@ -1,0 +1,33 @@
+# License: CC-BY-SA-4.0
+
+HowitzerOvercharged:
+	Inherits: ^Artillery
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: heavycannonfire01.ogg
+	ReloadDelay: 150
+	Range: 1024c0
+	MinRange: 12c0
+	Burst: 5
+	BurstDelays: 20
+	Projectile: Bullet
+		Speed: 360
+		LaunchAngle: 125
+		Inaccuracy: 6c0
+		Image: bullet2
+		Shadow: true
+	Warhead@Damage: SpreadDamage
+		Damage: 35000
+		Spread: 1575
+		Versus:
+			None: 150
+			Steel: 75
+			Light: 60
+			Heavy: 60
+			Wood: 40
+	Warhead@Incendiary: TreeDamage
+		Damage: 25000
+		Spread: 850
+		Percentage: 40
+	Warhead@Effect: CreateEffect
+		Explosions: large
+		ImpactSounds: explosion07.ogg, explosion08.ogg
