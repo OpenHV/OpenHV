@@ -16,6 +16,10 @@ MBT:
 		Prerequisites: ~factory.yi
 		Queue: Tank
 		Description: actor-mbt.description
+	Encyclopedia:
+		Description: actor-mbt.encyclopedia
+		Order: 0
+		Category: Tanks
 	Mobile:
 		TurnSpeed: 25
 		Speed: 95
@@ -50,6 +54,7 @@ MBT2:
 	Inherits: MBT
 	Buildable:
 		Prerequisites: ~factory.sc
+	-Encyclopedia:
 	Turreted:
 		Offset: 0,0,0
 	Armament:
@@ -64,6 +69,10 @@ AATANK:
 		BuildPaletteOrder: 20
 		Prerequisites: ~factory.sc
 		Description: actor-aatank.description
+	Encyclopedia:
+		Description: actor-aatank.encyclopedia
+		Order: 6
+		Category: Tanks
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -102,7 +111,11 @@ AATANK2:
 	Inherits: AATANK
 	Buildable:
 		Prerequisites: ~factory.yi
-		Description: actor-aatank2-description
+		Description: actor-aatank2.description
+	Encyclopedia:
+		Description: actor-aatank2.encyclopedia
+		Order: 5
+		Category: Tanks
 	Armament:
 		Weapon: LightningBoltLight
 		Recoil: 125
@@ -123,6 +136,10 @@ APC:
 		Prerequisites: factory, module
 		BuildPaletteOrder: 40
 		Description: actor-apc.description
+	Encyclopedia:
+		Description: actor-apc.encyclopedia
+		Order: 10
+		Category: Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -180,6 +197,10 @@ ARTILLERY:
 		Prerequisites: factory, radar
 		BuildPaletteOrder: 50
 		Description: actor-artillery.description
+	Encyclopedia:
+		Description: actor-artillery.encyclopedia
+		Order: 15
+		Category: Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -222,6 +243,10 @@ RADARTANK:
 		BuildPaletteOrder: 40
 		Prerequisites: radar
 		Description: actor-radartank.description
+	Encyclopedia:
+		Description: actor-radartank.encyclopedia
+		Order: 0
+		Category: Utilities
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -294,6 +319,10 @@ REPAIRTANK:
 		Prerequisites: trader
 		BuildPaletteOrder: 50
 		Description: actor-repairtank.description
+	Encyclopedia:
+		Description: actor-repairtank.encyclopedia
+		Order: 5
+		Category: Utilities
 	Armament:
 		Weapon: RepairBeam
 		Cursor: repair
@@ -332,6 +361,10 @@ MINELAYER:
 		BuildPaletteOrder: 60
 		Prerequisites: trader
 		Description: actor-minelayer.description
+	Encyclopedia:
+		Description: actor-minelayer.encyclopedia
+		Order: 10
+		Category: Utilities
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -386,6 +419,10 @@ RAILGUNTANK:
 	Tooltip:
 		Name: actor-railguntank.name
 		GenericName: actor-railguntank.generic-name
+	Encyclopedia:
+		Description: actor-railguntank.encyclopedia
+		Order: 25
+		Category: Tanks
 	Selectable:
 		Class: railguntank
 	Buildable:
@@ -424,6 +461,10 @@ LIGHTNINGTANK:
 		BuildPaletteOrder: 70
 		Prerequisites: ~factory.yi, techcenter
 		Description: actor-lightningtank.description
+	Encyclopedia:
+		Description: actor-lightningtank.encyclopedia
+		Order: 20
+		Category: Tanks
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -464,6 +505,10 @@ STEALTHTANK:
 		BuildPaletteOrder: 80
 		Prerequisites: ~factory.yi, techcenter
 		Description: actor-stealthtank.description
+	Encyclopedia:
+		Description: actor-stealthtank.encyclopedia
+		Order: 30
+		Category: Tanks
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -523,6 +568,10 @@ MERCTANK:
 		Prerequisites: ~disabled
 		BuildPaletteOrder: 90
 		Description: actor-merctank.description
+	Encyclopedia:
+		Description: actor-merctank.encyclopedia
+		Order: 50
+		Category: Tanks
 	Armament:
 		Weapon: TankCannon
 		MuzzleSequence: muzzle
@@ -555,6 +604,7 @@ DUALMERCTANK:
 	Buildable:
 		BuildPaletteOrder: 90
 		Description: actor-dualmerctank-description
+	-Encyclopedia:
 	Selectable:
 		Class: dualmerctank
 	Armament:
@@ -582,6 +632,10 @@ ECMTANK:
 		Prerequisites: ~factory.sc, techcenter, trader
 		BuildPaletteOrder: 60
 		Description: actor-ecmtank.description
+	Encyclopedia:
+		Description: actor-ecmtank.encyclopedia
+		Order: 45
+		Category: Tanks
 	Armament:
 		Weapon: ElectronicCountermeasure
 	AttackFrontal:
@@ -630,6 +684,10 @@ DUALARTILLERY:
 		BuildPaletteOrder: 100
 		Prerequisites: ~disabled
 		Description: actor-dualartillery.description
+	Encyclopedia:
+		Description: actor-dualartillery.encyclopedia
+		Order: 55
+		Category: Tanks
 	Health:
 		HP: 35000
 	Armor:
@@ -670,6 +728,10 @@ BUILDER:
 		BuildPaletteOrder: 10
 		Description: actor-builder.description
 		Prerequisites: ~structures.yi
+	Encyclopedia:
+		Description: actor-builder.encyclopedia
+		Order: 15
+		Category: Utilities
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -715,6 +777,7 @@ BUILDER2:
 	Inherits: BUILDER
 	Buildable:
 		Prerequisites: ~structures.sc
+	-Encyclopedia:
 	Transforms:
 		IntoActor: outpost2
 	Selectable:
@@ -756,6 +819,10 @@ MINER:
 		BuildPaletteOrder: 20
 		Description: actor-miner.description
 		Prerequisites: storage
+	Encyclopedia:
+		Description: actor-miner.encyclopedia
+		Order: 20
+		Category: Utilities
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -815,6 +882,10 @@ MISSILETANK:
 		Prerequisites: ~factory.sc, radar, techcenter
 		BuildPaletteOrder: 80
 		Description: actor-missiletank.description
+	Encyclopedia:
+		Description: actor-missiletank.encyclopedia
+		Order: 35
+		Category: Tanks
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -848,6 +919,10 @@ HACKERTANK:
 		BuildPaletteOrder: 60
 		Prerequisites: ~factory.yi, radar, trader
 		Description: actor-hackertank.description
+	Encyclopedia:
+		Description: actor-hackertank.encyclopedia
+		Order: 40
+		Category: Tanks
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -909,6 +984,10 @@ BUGGY:
 		Prerequisites: module, ~factory.sc
 		Queue: Tank
 		Description: actor-buggy.description
+	Encyclopedia:
+		Description: actor-buggy.encyclopedia
+		Order: 7
+		Category: Tanks
 	Turreted:
 		TurnSpeed: 40
 		Offset: 0,0,150
@@ -952,6 +1031,10 @@ BIKE:
 		Prerequisites: module, ~factory.yi
 		BuildPaletteOrder: 30
 		Description: actor-bike.description
+	Encyclopedia:
+		Description: actor-bike.encyclopedia
+		Order: 6
+		Category: Tanks
 	AttackFrontal:
 		PauseOnCondition: jammed
 		Voice: Attack
@@ -1014,6 +1097,10 @@ TANKER2:
 	Inherits: TANKER1
 	Buildable:
 		Description: actor-tanker2.description
+	Encyclopedia:
+		Description: actor-tanker2.encyclopedia
+		Order: 30
+		Category: Utilities
 	Tooltip:
 		Name: actor-tanker2.name
 	-SpawnScrapOnDeath:
@@ -1030,6 +1117,10 @@ CVIT:
 		BuildPaletteOrder: 30
 		Prerequisites: storage
 		Description: actor-cvit.description
+	Encyclopedia:
+		Description: actor-cvit.encyclopedia
+		Order: 25
+		Category: Utilities
 	Valued:
 		Cost: 500
 	Tooltip:
