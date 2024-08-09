@@ -8,6 +8,10 @@ RIFLEMAN:
 		Description: actor-rifleman.description
 		Prerequisites: ~module
 		BuildPaletteOrder: 10
+	Encyclopedia:
+		Description: actor-rifleman.encyclopedia
+		Order: 0
+		Category: Pods
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -44,6 +48,10 @@ ROCKETEER:
 		Description: actor-rocketeer.description
 		Prerequisites: ~module.sc
 		BuildPaletteOrder: 20
+	Encyclopedia:
+		Description: actor-rocketeer.encyclopedia
+		Order: 10
+		Category: Pods
 	Valued:
 		Cost: 225
 	Tooltip:
@@ -78,6 +86,10 @@ MORTAR:
 		Description: actor-mortar.description
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 50
+	Encyclopedia:
+		Description: actor-mortar.encyclopedia
+		Order: 35
+		Category: Pods
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -114,6 +126,10 @@ SNIPER:
 		Description: actor-sniper.description
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 50
+	Encyclopedia:
+		Description: actor-sniper.encyclopedia
+		Order: 30
+		Category: Pods
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -161,6 +177,10 @@ FLAMER:
 		Description: actor-flamer.description
 		Prerequisites: ~module.sc, factory
 		BuildPaletteOrder: 40
+	Encyclopedia:
+		Description: actor-flamer.encyclopedia
+		Order: 25
+		Category: Pods
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -198,6 +218,10 @@ TECHNICIAN:
 		Description: actor-technician.description
 		Prerequisites: ~module
 		BuildPaletteOrder: 30
+	Encyclopedia:
+		Description: actor-technician.encyclopedia
+		Order: 15
+		Category: Pods
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -254,6 +278,10 @@ BROKER:
 		Description: actor-broker.description
 		Prerequisites: trader
 		BuildPaletteOrder: 70
+	Encyclopedia:
+		Description: actor-broker.encyclopedia
+		Order: 16
+		Category: Pods
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -328,6 +356,10 @@ JETPACKER:
 		Description: actor-jetpacker.description
 		Prerequisites: ~module, techcenter
 		BuildPaletteOrder: 60
+	Encyclopedia:
+		Description: actor-jetpacker.encyclopedia
+		Order: 40
+		Category: Pods
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -371,6 +403,10 @@ BLASTER:
 		Description: actor-blaster.description
 		Prerequisites: ~module.yi, radar
 		BuildPaletteOrder: 40
+	Encyclopedia:
+		Description: actor-blaster.encyclopedia
+		Order: 20
+		Category: Pods
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -418,6 +454,10 @@ SHOCKER:
 		Description: actor-shocker.description
 		Prerequisites: ~module.yi
 		BuildPaletteOrder: 20
+	Encyclopedia:
+		Description: actor-shocker.encyclopedia
+		Order: 5
+		Category: Pods
 	Valued:
 		Cost: 225
 	Tooltip:
@@ -447,6 +487,10 @@ SHOCKER:
 
 MINIPOD1:
 	Inherits: ^MINIPOD
+	Encyclopedia:
+		Description: meta-minipod.encyclopedia
+		Order: 45
+		Category: Pods
 
 MINIPOD2:
 	Inherits: ^MINIPOD

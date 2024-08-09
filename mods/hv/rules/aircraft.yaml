@@ -10,6 +10,10 @@ GUNSHIP:
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.yi
 		Description: actor-gunship.description
+	Encyclopedia:
+		Description: actor-gunship.encyclopedia
+		Order: 2
+		Category: Aircraft
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -71,6 +75,10 @@ JET:
 		BuildPaletteOrder: 50
 		Prerequisites: techcenter, ~starport.yi
 		Description: actor-jet.description
+	Encyclopedia:
+		Description: actor-jet.encyclopedia
+		Order: 10
+		Category: Aircraft
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -145,6 +153,10 @@ COPTER:
 		BuildPaletteOrder: 30
 		Prerequisites: ~starport.sc
 		Description: actor-copter.description
+	Encyclopedia:
+		Description: actor-copter.encyclopedia
+		Order: 5
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -190,6 +202,10 @@ SAUCER:
 		BuildPaletteOrder: 20
 		Prerequisites: ~starport.yi
 		Description: actor-saucer.description
+	Encyclopedia:
+		Description: actor-saucer.encyclopedia
+		Order: 0
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -230,6 +246,10 @@ BANSHEE:
 		BuildPaletteOrder: 40
 		Prerequisites: techcenter, ~starport.sc
 		Description: actor-banshee.description
+	Encyclopedia:
+		Description: actor-banshee.encyclopedia
+		Order: 15
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -282,6 +302,10 @@ CHOPPER:
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.sc
 		Description: actor-chopper.description
+	Encyclopedia:
+		Description: actor-chopper.encyclopedia
+		Order: 25
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -374,6 +398,10 @@ BALLOON:
 		BuildPaletteOrder: 20
 		Prerequisites: ~starport.sc
 		Description: actor-balloon.description
+	Encyclopedia:
+		Description: actor-balloon.encyclopedia
+		Order: 1
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -416,6 +444,10 @@ DROPSHIP:
 		BuildPaletteOrder: 50
 		Prerequisites: ~starport.yi
 		Description: actor-dropship.description
+	Encyclopedia:
+		Description: actor-dropship.encyclopedia
+		Order: 20
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -626,6 +658,10 @@ BOMBER:
 	HiddenUnderFog:
 		Type: GroundPosition
 		AlwaysVisibleRelationships: None
+	Encyclopedia:
+		Description: actor-bomber-encyclopedia
+		Order: 30
+		Category: Aircraft
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 356, 256, 0
@@ -653,6 +689,10 @@ BOMBER:
 
 CARGOSHIP:
 	Inherits: ^CargoPlane
+	Encyclopedia:
+		Description: actor-cargoship-encyclopedia
+		Order: 35
+		Category: Aircraft
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 150
@@ -668,6 +708,10 @@ CARGOSHIP:
 
 AIRLIFTER:
 	Inherits: ^CargoPlane
+	Encyclopedia:
+		Description: actor-airlifter-encyclopedia
+		Order: 40
+		Category: Aircraft
 	Aircraft:
 		TurnSpeed: 25
 		Speed: 200
@@ -694,6 +738,10 @@ MOTHERSHIP:
 		BuildLimit: 1
 		Prerequisites: radar, trader, techcenter, ~starport.sc
 		Description: actor-mothership.description
+	Encyclopedia:
+		Description: actor-mothership.encyclopedia
+		Order: 50
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -822,6 +870,10 @@ BATTLESHIP:
 		BuildLimit: 1
 		Prerequisites: radar, trader, techcenter, ~starport.yi
 		Description: actor-battleship.description
+	Encyclopedia:
+		Description: actor-battleship.encyclopedia
+		Order: 45
+		Category: Aircraft
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
