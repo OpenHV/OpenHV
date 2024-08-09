@@ -40,3 +40,9 @@ firefighterpod:
 		Offset: 0,-2
 	icon:
 		Filename: maps/firewatch/firefighterpod-icon.png
+
+airtanker:
+	idle:
+		Filename: maps/firewatch/airtanker.png
+		Facings: 8
+		ZOffset: 2048
