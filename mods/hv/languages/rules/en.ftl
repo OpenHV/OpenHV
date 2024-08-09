@@ -151,6 +151,11 @@ actor-gunship =
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
    .name = Gun Ship
+   .encyclopedia = The gun ship is a fast plane, armed with a heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+
+     {actor-gunship.description}
+
+     Availability: Yuruki
 
 actor-jet =
    .description = Fast Attack Ship
@@ -158,17 +163,32 @@ actor-jet =
       Weak vs Tanks and Pods
       Can't target Aircraft
    .name = Speeder
+   .encyclopedia = The speeder is an air-to-ground plane, armed with a plasma canon that can destroy buildings easily. It is slower but more durable than the attack aircraft.
+
+     {actor-jet.description}
+
+     Availability: Yuruki
 
 actor-copter =
    .name = Attack Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
+   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+
+     {actor-copter.description}
+
+     Availability: Synapol
 
 actor-saucer =
    .name = Scout Saucer
    .description = Reconnaissance air unit.
       Unarmed
+   .encyclopedia = A disc shaped aircraft with good maneuverability. It's not suited for combat, but for reconnaissance missions. Due to its unusual shape and low radar reflectance, oftentimes civilians will report this sighting to the authorities first.
+
+     {actor-saucer.description}
+
+     Availability: Yuruki
 
 actor-banshee =
    .name = Banshee
@@ -176,12 +196,22 @@ actor-banshee =
       Strong vs Buildings
       Weak vs Tanks and Pods
       Can't target Aircraft
+   .encyclopedia = The banshee is a more durable and slow helicopter, that launches powerful missiles onto the ground. It is particularly strong against buildings.
+
+     {actor-banshee.description}
+
+     Availability: Synapol
 
 actor-chopper =
    .name = Transport Helicopter
    .description = Vehicle Transport Helicopter.
       Can load pods
       and lift one vehicle.
+   .encyclopedia = The chopper is a heavy transport aircraft, than can load up to 5 tons of cargo, the equivalent of 8 pods. It can also lift one vehicle.
+
+     {actor-chopper.description}
+
+     Availability: Synapol
 
 actor-chopper-husk-name = Crashing Transport Helicopter
 
@@ -189,19 +219,45 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
+   .encyclopedia = A reconnaissance air unit. It's slower than Yuruki's saucer, but it grants more visibility range.
+
+     Unarmed
+
+     Availability: Synapol
 
 actor-dropship =
    .name = Heavy Transport Dropship
    .description = Vehicle Transport Shuttle.
       Can load pods
       and lift one vehicle.
+   .encyclopedia = The dropship is a heavy transport aircraft, than can load up to 5 tons of cargo, the equivalent of 8 pods. It can also lift one vehicle.
+
+     {actor-dropship.description}
+
+     Availability: Yuruki
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
 actor-landedpod-name = Landed Pod
 actor-bomber-name = Athmospheric Bomber
+actor-bomber-encyclopedia = The bomber is a fast plane that drops salves of bombs onto the target. They can be launched from the Yuruki radar.
+
+  Strong vs Buildings
+  Weak vs Pods and Tanks
+
+  Availability: Non-trainable
 actor-cargoship-name = Supply Aircraft
+actor-cargoship-encyclopedia = The cargoship is an universal cargo unit that transports units for trading. It's used to deliver units onto the Trade Platform.
+
+  Unarmed
+
+  Availability: Non-trainable
 actor-airlifter-name = Transport Aircraft
+actor-airlifter-encyclopedia = The airlifter paradrops loaded units onto the ground. It is used in drop zone buildings to deliver mercenary tanks.
+
+  Unarmed
+
+  Availability: Non-trainable
 
 ## Animals
 actor-beast =
@@ -490,6 +546,11 @@ actor-rifleman =
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Rifleman
+   .encyclopedia = The most generic pod. It is a small land vehicle controlled by a human. They are the modern solution for infantry, and offer a fast and cheap production. Pods come in different variants, with different armaments and abilities, but the Rifleman one has a simple machine gun equipped. As it is universal, both Yuruki and Synapol use it.
+
+     {actor-rifleman.description}
+
+     Availability: Universal
 
 actor-rocketeer =
    .description = Fast support vehicle.
@@ -497,6 +558,11 @@ actor-rocketeer =
       Strong vs Tanks and Aircraft
       Weak vs Pods
    .name = Rocketeer
+   .encyclopedia = The rocketeer is equipped with a rocket launcher, and is designed to handle pretty much everything, except pods. It's its versatility that makes it a common pod used in every situation.
+
+     {actor-rocketeer.description}
+
+     Availability: Synapol
 
 actor-mortar =
    .description = Fast support vehicle.
@@ -504,6 +570,11 @@ actor-mortar =
       Strong vs Pods and Buildings
       Weak vs Tanks
    .name = Mortar
+   .encyclopedia = The mortar pod is a fast support vehicle, armed with a mortar gun, particularly powerful against both pods and buildings. It was designed by the Synapol Corporations to handle small outpost, often defended with pods only.
+
+      {actor-mortar.description}
+
+     Availability: Synapol
 
 actor-sniper =
    .description = Long range sniper vehicle.
@@ -511,12 +582,22 @@ actor-sniper =
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Sniper
+   .encyclopedia = The sniper pod is an advanced unit, capable of generating an invisibility cloak on itself. It's armed with a long range sniper, than can take down pods in one shot, with speed and agility.
+
+     {actor-sniper.description}
+
+     Availability: Yuruki
 
 actor-flamer =
    .description = Short range flame thrower.
       Strong vs Pods and Buildings
       Weak vs Tanks
    .name = Flame
+   .encyclopedia = The flamer pod is armed with a powerful short range flame thrower, designed to annihilate pods and buildings. While it is powerful against buildings, it has a lower health than other pods.
+
+     {actor-flamer.description}
+
+     Availability: Synapol
 
 actor-technician =
    .description = Field engineer.
@@ -524,6 +605,11 @@ actor-technician =
     Repairs pods.
       Unarmed
    .name = Technician
+   .encyclopedia = The universal field engineer. Its first ability is to infiltrate and capture enemy structures, changing their allegiance: it is often used to capture enemy mining towers. Its second ability is to repair allied pods, on the battle field.
+
+     {actor-technician.description}
+
+     Availability: Universal
 
 actor-broker =
    .description = Financial analyst.
@@ -532,6 +618,11 @@ actor-broker =
     from bases and storages.
       Unarmed
    .name = Broker
+   .encyclopedia = The broker pod is an advanced pod that can invest in the stock market for a constant stream of revenue. It can also tap into an opponent's base or storage and initiate forged wire transfers to remotely steal that enemy's cash.
+
+     {actor-broker.description}
+
+     Availability: Universal
 
 actor-jetpacker =
    .description = Elite airborne vehicle.
@@ -539,11 +630,21 @@ actor-jetpacker =
       Strong vs Pods, Light Vehicles and Aircraft
       Weak vs Tanks and Buildings
    .name = Jetpacker
+   .encyclopedia = The ultimate pod: the jetpacker. It was designed by an independent lab, allowing its universal availability. It can handle pods, light vehicles and aircraft well. The fact that it's an airborne pod makes it less vulnerable to other pods.
+
+     {actor-jetpacker.description}
+
+     Availability: Universal
 
 actor-blaster =
    .description = Remote controlled mine.
     Explodes when reaches enemy.
    .name = Blaster
+   .encyclopedia = The only pod that isn't controlled by a human: this pod is controlled from the base, and sent to self destruct at enemy positions. It is mainly used to raid against enemy structures, inflicting important damages. It is thought less durable than other pods.
+
+     {actor-blaster.description}
+
+     Availability: Yuruki
 
 actor-shocker =
    .description = Fast support vehicle.
@@ -551,10 +652,20 @@ actor-shocker =
       Strong vs Tanks and Aircraft
       Weak vs Pods
    .name = Shocker
+   .encyclopedia = The shocker pod is equipped with a small but yet powerful laser zap, and is designed to handle pretty much everything, except pods. It's its versatility that makes it a common pod used in every situation.
+
+     {actor-shocker.description}
+
+     Availability: Yuruki
 
 meta-minipod =
    .name = Civilian
    .generic-name = Civilian
+   .encyclopedia = Pods are not only for combat, but also for civilian transport.
+
+     Unarmed
+
+     Availability: Universal/Non-trainable
 
 ## Props
 actor-lamppost-name = Lamp Post
@@ -587,6 +698,11 @@ actor-lightboat =
    .description = Versatile light boat.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
+   .encyclopedia = The light boat is designed for patrol and fast assaults. It's the fastest boat but also the less durable. It has a heavy turreted chaingun install, as well as a flak turret.
+
+     {actor-lightboat.description}
+
+     Availability: Yuruki
 
 actor-patrolboat =
    .name = Patrol boat
@@ -594,6 +710,11 @@ actor-patrolboat =
    .description = Versatile light boat.
       Strong vs Aircrafts, Navy and Pods
       Weak vs Vehicles and Buildings
+   .encyclopedia = The patrol boat is designed for patrol and fast assaults. It's the fastest boat but also the less durable. It has a heavy turreted chaingun install, as well as a flak turret.
+
+     {actor-patrolboat.description}
+
+     Availability: Synapol
 
 actor-mercboat =
    .name = Mercenary Boat
@@ -601,6 +722,11 @@ actor-mercboat =
    .description = A boat with a turret.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = The mercenary boat is a fast boat, armed with a turret. Its turret is powerful against other ships.
+
+     {actor-mercboat.description}
+
+     Availability: Non-trainable
 
 actor-torpedoboat =
    .name = Torpedo Boat
@@ -608,6 +734,11 @@ actor-torpedoboat =
    .description = A boat with torpedo launchers.
       Strong vs Water
       Can't attack Ground or Air
+   .encyclopedia = The torpedo boat is designed to counter fast ship assaults. It has two torpedo launchers onboard that can take down multiple boats on its own.
+
+     {actor-torpedoboat.description}
+
+     Availability: Yuruki
 
 actor-submarine =
    .name = Submarine
@@ -615,24 +746,44 @@ actor-submarine =
    .description = Submarine with powerful torpedoes.
       Strong vs Water
       Can't attack Pods, Buildings, Vehicles or Air
+   .encyclopedia = The submarine is a stealth ship, capable of going underwater. It has a torpedo launcher onboard than can take down a large ship in a few strike. It's slower than Yuruki's torpedo boat though.
+
+     {actor-submarine.description}
+
+     Availability: Synapol
 
 actor-railgunboat =
    .name = Railgun Boat
    .generic-name = Boat
    .description = A heavy boat with a rail gun.
       Strong vs Vehicles, Pods and Buildings
+   .encyclopedia = The railgun boat is a heavy ship capable of handling every situation possible. It's armed with a turreted railgun canon, that's particularly powerful against buildings.
+
+     {actor-railgunpod.description}
+
+     Availability: Synapol
 
 actor-lightningboat =
    .name = Lightning Boat
    .generic-name = Boat
    .description = A heavy boat with a lightning gun.
       Strong vs Vehicles, Pods and Buildings
+   .encyclopedia = The lightning boat is a heavy ship capable of handling every situation possible. It's armed with a 360 degrees laser zap, that's particularly powerful against buildings.
+
+     {actor-lightningboat.description}
+
+     Availability: Yuruki
 
 actor-boomer =
    .name = Missile Submarine
    .generic-name = Submarine
    .description = A submarine with powerful long range missiles.
       Strong vs Vehicles, Pods and Buildings
+   .encyclopedia = This heavy submarine is capable of launching ballistic missiles to a high range. As a submarine, it has the capability of going underwater.
+
+     {actor-boomer.description}
+
+     Availability: Synapol
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -640,6 +791,11 @@ actor-carrier =
    .description = Launches aerial autonomous attack vessels.
       Strong vs Vehicles, Pods and Buildings
    .name = Drone Ship
+   .encyclopedia = This heavy ship has a drone launch bay, containing three aerial autonomous drones, that can attack any target at a certain range. When a drone is shot down, it's reproduced. The drones have to reload themselves in the launch bay.
+
+     {actor-carrier.description}
+
+     Availability: Yuruki
 
 actor-ferry =
    .name = Ferry
@@ -647,6 +803,11 @@ actor-ferry =
    .description = General-purpose naval transport.
     Can carry pods.
       Unarmed
+   .encyclopedia = The ferry is a heavy naval transporter. It can load up to 6 tons of cargo, the equivalent of 10 pods. It is quite slow but very durable. It can land on shores to load or unload its cargo.
+
+     {actor-ferry.description}
+
+     Availability: Universal
 
 actor-mineship =
    .name = Naval Minelayer
@@ -656,6 +817,10 @@ actor-mineship =
     while avoiding ally units.
       Can detect enemy mines.
       Unarmed
+   .encyclopedia = The naval minelayer is able to lay smart mines that explode on enemy units, while avoiding ally units. The mines can also be triggered manually. Minelayers can also detect enemy mines at a certain range. It has to reload at an harbor.
+     Unarmed
+
+     Availability: Universal/Faction design can vary
 
 ## Vehicles
 actor-mbt =
@@ -663,27 +828,51 @@ actor-mbt =
    .description = Main Battle Tank.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = Assault tanks are a great solution to deal against any other tank. Their turreted canon allow them to move at a decent speed, while still shooting down enemies. They also are decent against buildings, in groups.
+
+     {actor-mbt.description}
+
+     Availability: Universal/Faction design can vary
 
 actor-aatank =
    .description = Mobile tank with AA missiles.
       Strong vs Aircraft
       Cannot attack grounds units.
    .name = Mobile AA
+   .encyclopedia = Mobile AA turrets are yet, less powerful than stationary AA turrets, but they can pursue the enemy when it gets out of range. While they are a universal unit, factions use different AA armaments.
 
-actor-aatank2-description = Mobile tank with lightning gun.
+     {actor-aatank.description}
+
+     Availability: Synapol
+
+actor-aatank2 =
+   .description = Mobile tank with lightning gun.
       Strong vs Aircraft
       Cannot attack grounds units.
+   .encyclopedia = Mobile AA turrets are yet, less powerful than stationary AA turrets, but they can pursue the enemy when it gets out of range. While they are a universal unit, factions use different AA armaments.
+
+     {actor-aatank2.description}
+
+     Availability: Yuruki
 
 actor-apc =
    .name = Transport Tank
    .description = Can transport pods.
       Has fireports for garrisoned units.
+   .encyclopedia = Armored Personal Carriers (APC) are durable transport tanks, that can load up to 8 tons of cargo, the equivalent of 5 pods. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
+
+     Availability: Universal
 
 actor-artillery =
    .name = Artillery
    .description = Mobile long range weapon.
       Strong vs Pods and Buildings
       Weak vs Tanks
+   .encyclopedia = Armed with a long range artillery canon, this mobile artillery vehicle is extremely powerful against pods and buildings, while still being decently strong against other units. It was designed to power down enemies defenses while other units were assaulting a base.
+
+     {actor-artillery.description}
+
+     Availability: Universal
 
 actor-radartank =
    .description = Can detect cloaked units
@@ -691,9 +880,9 @@ actor-radartank =
       Unarmed
    .name = Reconnaissance Tank
    .encyclopedia = The radar tank is an universal utility and support unit, that provides reconnaissance. It can also detect cloaked units in a certain range. Its range can be extended by deploying it, though it won't be able to move when deployed.
-     
+
      Unarmed
-     
+
      Availability: Universal
 
 actor-repairtank =
@@ -701,6 +890,11 @@ actor-repairtank =
    .generic-name = Tank
    .description = Repairs nearby tanks.
       Unarmed
+   .encyclopedia = The repair tank is a fast field engineer vehicle, that can repair tanks using a special beam.
+
+     Unarmed
+
+     Availability: Universal
 
 actor-minelayer =
    .description = Lays smart mines
@@ -708,24 +902,44 @@ actor-minelayer =
     while avoiding ally units.  Can detect enemy mines.
       Unarmed
    .name = Minelayer
+   .encyclopedia = The minelayer is a fast and agile support unit, that can lay smart mines, that explode on enemy units; while avoiding ally units. They can also be triggered manually. It also has the ability to detect enemy mines at a certain range. It has to reload on trade platforms.
+
+     Unarmed
+
+     Availability: Universal
 
 actor-railguntank =
    .name = Railgun Tank
    .generic-name = Tank
    .description = A powerful tank which shoots laser.
       Strong vs Pods, Vehicles and Buildings
+   .encyclopedia = The railgun tank is the ultimate tank, able of handling every type of unit. It's armed with a powerful laser canon, and has a heavy armor.
+
+     {actor-railguntank.description}
+
+     Availability: Synapol
 
 actor-lightningtank =
    .description = Fires electric discharges.
       Strong vs Pods, Vehicles and Buildings
    .name = Lightning Tank
    .generic-name = Tank
+   .encyclopedia = The lightning tank is the ultimate tank, able of handling every type of unit. It's armed with a powerful laser zap, and has a heavy armor.
+
+     {actor-lightningtank.description}
+
+     Availability: Yuruki
 
 actor-stealthtank =
    .description = Cloaked missile tank.
       Strong vs Vehicles and Buildings
       Weak vs Pods
    .name = Stealth Tank
+   .encyclopedia = The stealth tank is a modern tank, able of deploying a cloak on itself. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the lightning tank, it is stronger against buildings.
+
+     {actor-stealthtank.description}
+
+     Availability: Yuruki
 
 actor-merctank =
    .name = Mercenary Tank
@@ -733,6 +947,11 @@ actor-merctank =
    .description = Main battle tank.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = The mercenary tank is a generic tank, that can be only obtained through the drop zone buildings. Its canon cannot rotate like other battles tanks though.
+
+     {actor-merctank.description}
+
+     Availability: Non-trainable
 
 actor-dualmerctank-description = Double barreled tank.
       Strong vs Vehicles
@@ -743,11 +962,21 @@ actor-ecmtank =
    .generic-name = ECM Tank
    .description = Disables units for a brief moment.
       Jams incoming missiles.
+   .encyclopedia = The electronic countermeasure (ECM) tank can overload enemy weaponry systems with a controlled beam that disables all electronic system units for a brief moment, disabling them completely. The effect only lasts a few seconds. Its other ability is to deflect incoming enemy missiles.
+
+     Unarmed
+
+     Availability: Synapol
 
 actor-dualartillery =
    .name = Dual Artillery
    .description = Double barreled artillery tank.
       Strong vs Pods, Vehicles and Buildings
+   .encyclopedia = This vehicle is an upgrade of the artillery tank. It's twice bigger, has more range, and fires two bombshells at once. Its range is extremely higher, and it's damaging against any type of armor. Due to intellectual property disputes, this design is rarely seen on the battlefield.
+
+     {actor-dualartillery.description}
+
+     Availability: Non-trainable
 
 actor-builder =
    .description = Deploys into outpost which
@@ -755,6 +984,11 @@ actor-builder =
     and allows base reconstruction.
       Unarmed
    .name = Builder
+   .encyclopedia = The builder is an important support unit, allowing the deployment of outpost which grants additional build radius, and allow base reconstruction.
+
+     Unarmed
+
+     Availability: Universal/Faction design can vary
 
 actor-collector-name = Collector
 
@@ -762,6 +996,11 @@ actor-miner =
    .description = Builds mining facilities.
       Unarmed
    .name = Miner
+   .encyclopedia = The role of this vehicle is to deploy mining facilities, allowing the production of resources, that are then transformed into cash at the storage building.
+
+     Unarmed
+
+     Availability: Universal
 
 actor-missiletank =
    .name = Missile Tank
@@ -769,12 +1008,22 @@ actor-missiletank =
    .description = A tank which shoots missiles.
       Strong vs Vehicles and Buildings
       Weak vs Pods
+   .encyclopedia = The missile tank is an agile tank, able to fire from a turret, while still moving decently fast. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the railgun tank, it is stronger against buildings.
+
+     {actor-missiletank.description}
+
+     Availability: Synapol
 
 actor-hackertank =
    .description = Temporarily changes allegiance of targeted units.
       Disrupts satellite video links
       and obscures the battlefield when deployed.
    .name = Hacker Tank
+   .encyclopedia = The hacker tank contains equipment to penetrate firewalls of individual units and interfer with their command and control software so they will accept orders from the enemy and engage in friendly fire. The effective change of allegiance is permanent, until the hacker tank gets destroyed or changes the target. It can only have one controlled unit at a time. Its other ability is to obscure the opponent's battlefield on its surroundings when deployed.
+
+     Unarmed
+
+     Availability: Yuruki
 
 actor-buggy =
    .name = Ramp Buggy
@@ -782,6 +1031,11 @@ actor-buggy =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+   .encyclopedia = The ramp buggy is a fast anti-pod vehicle, that has a turret heavy machine gun, capable of destroying a group of pods by itself. It is Synapol's solution to the Yuruki gatling bike: while it is slower, its machine gun is turreted, giving it an advantage.
+
+     {actor-buggy.description}
+
+     Availability: Synapol
 
 actor-bike =
    .name = Gatling Bike
@@ -789,6 +1043,11 @@ actor-bike =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+   .encyclopedia = The gatling bike is a fast anti-pod vehicle, that has a powerful heavy machine gun, capable of destroying a group of pods by itself.
+
+     {actor-bike.description}
+
+     Availability: Yuruki
 
 actor-tanker1 =
    .description = Transports resources to the headquarter.
@@ -799,16 +1058,31 @@ actor-tanker2 =
    .description = Collects resources at mining towers.
       Unarmed
    .name = Empty Resource Transporter
+   .encyclopedia = The tanker is a resource transporter, that moves from mining towers to storage building to collect and depose resources.
+
+     Unarmed
+
+     Availability: Universal
 
 actor-cvit =
    .description = Moves cash to other players.
       Unarmed
    .name = Money Transport
+   .encyclopedia = The money transport moves cash to other players, in order to help them financially.
+
+     Unarmed
+
+     Availability: Universal
 
 actor-mothership =
    .name = Mothership
    .description = Launches aerial autonomous attack vessels.
       Strong vs Everything
+   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with two powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
+
+     {actor-mothership.description}
+
+     Availability: Synapol
 
 actor-mothership-husk =
    .name = Mothership Husk
@@ -821,6 +1095,11 @@ actor-battleship =
    .description = Aerial artillery bombardment.
       Strong vs Ground units
       Can't target Aircraft
+   .encyclopedia = The battleship is a massive air unit, regrouping a crew of 1,200 men. Its design was launched by the Yuruki colony on Mars a few 15 years ago, and took 10 years to design, test and create. It is no more a prototype and is now used by the Yuruki paramilitary forces. It is armed with 2 synchronized artillery turrets, that launches aerial bombardment, destroying in a few seconds a whole outpost.
+
+     {actor-battleship.description}
+
+     Availability: Yuruki
 
 actor-battleship-husk =
    .name = Battleship Husk

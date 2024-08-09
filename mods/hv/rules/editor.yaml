@@ -119,6 +119,7 @@ DROPSHIP.colorpicker:
 	-MapEditorData:
 	-GrantConditionOnDamageState:
 	-FloatingSpriteEmitter@Smoke:
+	-Encyclopedia:
 	RenderSprites:
 		Image: dropship
 		Palette: colorpicker
