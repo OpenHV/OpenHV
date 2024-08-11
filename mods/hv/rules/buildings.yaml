@@ -1587,7 +1587,6 @@ UPLINK:
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
-		ActivationDelay: 0
 		AirburstAltitude: 40c0
 		Weapon: RailgunSetup
 

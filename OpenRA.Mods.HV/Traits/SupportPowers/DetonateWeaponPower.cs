@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Weapon = "";
 
 		[Desc("Delay between activation and explosion")]
-		public readonly int ActivationDelay = 10;
+		public readonly int ActivationDelay = 0;
 
 		[Desc("Amount of time before detonation to remove the beacon")]
 		public readonly int BeaconRemoveAdvance = 5;
