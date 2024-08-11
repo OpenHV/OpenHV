@@ -859,7 +859,7 @@ actor-apc =
    .name = APC
    .description = Can transport pods.
       Has fireports for garrisoned units.
-   .encyclopedia = Armored Personal Carriers (APC) are durable transport tanks, that can load up to 8 tons of cargo, the equivalent of 5 pods. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
+   .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank, that can load up to 8 tons of cargo, the equivalent of 5 pods. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
 
      Availability: Universal
 
