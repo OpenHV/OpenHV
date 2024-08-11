@@ -84,11 +84,3 @@ PITLIGHT:
 		RedTint: -0.1
 		GreenTint: -0.2
 		BlueTint: -0.2
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled

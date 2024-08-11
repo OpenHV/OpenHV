@@ -58,11 +58,3 @@ SMALL_FIRELIGHT:
 		RedTint: 1.35
 		GreenTint: 0.55
 		BlueTint: 0.65
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled

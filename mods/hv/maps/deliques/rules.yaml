@@ -45,11 +45,3 @@ HILL_LIGHT:
 		RedTint: 0.25
 		GreenTint: 0.25
 		BlueTint: 0.25
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled

@@ -62,11 +62,3 @@ BASELIGHT:
 		RedTint: 0.40
 		GreenTint: 0.40
 		BlueTint: 0.60
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled

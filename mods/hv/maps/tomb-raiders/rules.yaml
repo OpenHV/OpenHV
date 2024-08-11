@@ -54,11 +54,3 @@ LAVA_LIGHT:
 		RedTint: 1.10
 		GreenTint: 0.40
 		BlueTint: 0.40
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled

@@ -4,14 +4,6 @@
 	TerrainLighting:
 		Intensity: 0.90
 
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled
-
 RESOURCELIGHT:
 	Inherits: LIGHT
 	TerrainLightSource:

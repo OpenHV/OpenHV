@@ -40,11 +40,3 @@ TOPLIGHT:
 		RedTint: 0.10
 		GreenTint: 0.35
 		BlueTint: 0.20
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled

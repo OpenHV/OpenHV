@@ -87,11 +87,3 @@ DARK_LIGHT:
 		RedTint: -0.15
 		GreenTint: -0.10
 		BlueTint: -0.10
-
-HARBOR:
-	Buildable:
-		Prerequisites: ~disabled
-
-HARBOR2:
-	Buildable:
-		Prerequisites: ~disabled
