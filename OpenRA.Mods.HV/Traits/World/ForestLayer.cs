@@ -27,7 +27,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
 		[Desc("Who should be allowed to crush a tree.")]
-		public readonly BitSet<CrushClass> CrushClasses = new("Tree");
+		public readonly BitSet<CrushClass> MunchClasses = new("Tree");
+
+		[Desc("Who should be allowed to crush a tree.")]
+		public readonly BitSet<CrushClass> TraverseClasses = new("Shrubbery");
 
 		[Desc("Initial max amount per tile.")]
 		public readonly int Hitpoints = 100000;
@@ -141,12 +144,12 @@ namespace OpenRA.Mods.HV.Traits
 
 		bool ICrushable.CrushableBy(Actor self, Actor crusher, BitSet<CrushClass> crushClasses)
 		{
-			return info.CrushClasses.Overlaps(crushClasses);
+			return info.MunchClasses.Overlaps(crushClasses) || info.TraverseClasses.Overlaps(crushClasses);
 		}
 
 		LongBitSet<PlayerBitMask> ICrushable.CrushableBy(Actor self, BitSet<CrushClass> crushClasses)
 		{
-			if (!info.CrushClasses.Overlaps(crushClasses))
+			if (!info.MunchClasses.Overlaps(crushClasses) || info.TraverseClasses.Overlaps(crushClasses))
 				return self.World.NoPlayersMask;
 
 			return self.World.AllPlayersMask;
@@ -155,6 +158,9 @@ namespace OpenRA.Mods.HV.Traits
 		void INotifyCrushed.WarnCrush(Actor self, Actor crusher, BitSet<CrushClass> crushClasses) { }
 		void INotifyCrushed.OnCrush(Actor self, Actor crusher, BitSet<CrushClass> crushClasses)
 		{
+			if (info.TraverseClasses.Overlaps(crushClasses))
+				return;
+
 			var cell = crusher.Location;
 			var uv = cell.ToMPos(world.Map);
 			if (hitpoints[uv] == 0)

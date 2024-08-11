@@ -227,6 +227,11 @@
 	HitShape:
 		Type: Circle
 			Radius: 256
+	GrantConditionOnTerrain@Forest:
+		TerrainTypes: Plant
+		Condition: concealed
+	Cloak@Foliage:
+		RequiresCondition: concealed
 
 ^Scrap:
 	Interactable:
@@ -907,7 +912,6 @@
 		Sequence: shadow-overlay
 		Palette: shadow-decoration
 		IsDecoration: true
-
 
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld

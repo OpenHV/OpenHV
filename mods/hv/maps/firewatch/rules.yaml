@@ -176,7 +176,7 @@ FIREFIGHTERPOD:
 		Delay: 10
 		Count: 10
 		RequiresCondition: refill-water
-	GrantConditionOnTerrain:
+	GrantConditionOnTerrain@Lakeside:
 		Condition: refill-water
 		TerrainTypes: Shore
 	AttackFrontal:
