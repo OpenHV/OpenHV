@@ -19,7 +19,7 @@ Player:
 		MaximumExcessPower: 200
 		AdditionalMinimumRefineryCount: 0
 		NewProductionCashThreshold: 10000
-		WaterTerrainTypes: Littoral, Pelagic, Oceanic
+		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
 		BarracksTypes: module, module2
