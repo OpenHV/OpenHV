@@ -1,0 +1,77 @@
+# License: CC-BY-SA-4.0
+
+Player:
+	PlayerResources:
+		DefaultCash: 4500
+
+World:
+	GlobalLightingPaletteEffect:
+		Red: 1.25
+		Green: 0.9
+		Blue: 0.9
+		Ambient: 1.25
+	TerrainLighting:
+		Intensity: 1.10
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+	LuaScript:
+		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, tech-disruption.lua
+	MissionData:
+		Briefing: The Synapol Corporations have started a tech program, to develop a new submarine able to launch continental nuke missiles while being totally self-sufficient.\n\nTake a small squad and infiltrate their power grid. Disabling their power grid will allow our naval transports to send you reinforcement. When ready, head north to take down the Synapol outpost, preventing further construction of these submarines.\n\n  P.S. None must escape!
+	ScriptLobbyDropdown@Difficulty:
+		Locked: false
+		Visible: true
+
+AIRLIFTER2:
+	Inherits: AIRLIFTER
+	Cargo:
+		Types: Pod, Vehicle
+		MaxWeight: 25
+		AfterUnloadDelay: 20
+		UnloadVoice: Unload
+	ParaDrop:
+		ChuteSound: Unload
+	RenderSprites:
+		Image: airlifter
+
+BOOMER:
+	Valued:
+		Cost: 680 # so it gets produced faster
+	Mobile:
+		Speed: 25
+	Buildable:
+		Prerequisites: harbor.sc
+	-Cloak:
+	-GrantConditionOnDamageState@Uncloak:
+	LeavesTrails:
+		-RequiresCondition:
+	SpeedMultiplier@Surfaced:
+		Modifier: 75
+		-RequiresCondition:
+
+GENERATOR:
+	Health:
+		HP: 5000
+
+RADAR2:
+	Health:
+		HP: 7000
+
+STORAGE:
+	Health:
+		HP: 6000
+
+ORESMELT:
+	Health:
+		HP: 4000
+
+HARBOR:
+	Health:
+		HP: 8500
+
+OUTPOST2:
+	Health:
+		HP: 8500
