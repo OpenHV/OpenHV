@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -104,8 +104,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		void InitializeResources(Actor self)
 		{
-			var cells = building.Info.Tiles(self.Location);
-			foreach (var cell in cells)
+			foreach (var cell in building.Info.Tiles(self.Location))
 			{
 				var resource = resourceLayer.GetResource(cell);
 				if (resource.Density > 0)
@@ -164,8 +163,7 @@ namespace OpenRA.Mods.HV.Traits
 					Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.DepletionNotification, self.Owner.Faction.InternalName);
 				}
 
-				var cells = building.Info.Tiles(self.Location);
-				foreach (var cell in cells)
+				foreach (var cell in building.Info.Tiles(self.Location))
 				{
 					var resource = resourceLayer.GetResource(cell);
 					if (resource.Density > density)
