@@ -839,7 +839,7 @@ actor-aatank =
       Strong vs Aircraft
       Cannot attack grounds units.
    .name = Mobile AA
-   .encyclopedia = Mobile AA turrets are yet, less powerful than stationary AA turrets, but they can pursue the enemy when it gets out of range. While they are a universal unit, factions use different AA armaments.
+   .encyclopedia = Mobile anti-air rocket-launcher tank. While less powerful than stationary anti-air turrets they can pursue the enemy when it gets out of range.
 
      {actor-aatank.description}
 
@@ -849,7 +849,7 @@ actor-aatank2 =
    .description = Mobile tank with lightning gun.
       Strong vs Aircraft
       Cannot attack grounds units.
-   .encyclopedia = Mobile AA turrets are yet, less powerful than stationary AA turrets, but they can pursue the enemy when it gets out of range. While they are a universal unit, factions use different AA armaments.
+   .encyclopedia = Tank that bursts electrical arcs at air units. While less powerful than its stationary couterpart, it can pursue the enemy when it gets out of range.
 
      {actor-aatank2.description}
 
