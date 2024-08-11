@@ -139,7 +139,7 @@ FlameExplode:
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: flame_explode_magnuswaker.ogg
 
-BlasterWeapon:
+ExplosiveCharge:
 	ValidTargets: Ground, Structure
 	Range: 1c125
 	Projectile: InstantHit
