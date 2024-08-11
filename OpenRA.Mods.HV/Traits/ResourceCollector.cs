@@ -104,6 +104,9 @@ namespace OpenRA.Mods.HV.Traits
 
 		void InitializeResources(Actor self)
 		{
+			if (self.IsDead || !self.IsInWorld)
+				return;
+
 			foreach (var cell in building.Info.Tiles(self.Location))
 			{
 				var resource = resourceLayer.GetResource(cell);
