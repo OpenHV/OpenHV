@@ -475,6 +475,56 @@ prop17:
 		Offset: 4, 4
 		ZOffset: -1768
 
+prop18:
+	Defaults:
+		Offset: 0,-2
+	idle:
+		ShadowStart: 1
+		Combine:
+			0:
+				Filename: bits/prop18.png
+			1:
+				Filename: bits/prop18-shadow.png
+				Offset: 8,28
+				ZOffset: 1768
+	active:
+		Length: 13
+		Tick: 60
+		ShadowStart: 13
+		Combine:
+			0:
+				Filename: bits/prop18.png
+				Length: 13
+				Tick: 60
+			1:
+				Filename: bits/prop18-shadow.png
+				Offset: 8,28
+				Length: 13
+				Tick: 60
+				ZOffset: 1768
+	damaged-idle:
+		ShadowStart: 1
+		Combine:
+			0:
+				Filename: bits/prop18.png
+				Start: 13
+			1:
+				Filename: bits/prop18-shadow.png
+				Start: 13
+				Offset: 8,28
+				ZOffset: 1768
+	shadow-overlay:
+		Filename: bits/prop18-shadow.png
+		Length: 13
+		Offset: 8,26
+		Tick: 70
+		ZOffset: 1768
+	damaged-shadow-overlay:
+		Filename: bits/prop18-shadow.png
+		Start: 13
+		Offset: 8,26
+		ZOffset: 1768
+
 crane:
 	Defaults:
 		ZOffset: 1768

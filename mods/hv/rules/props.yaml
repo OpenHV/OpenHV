@@ -354,6 +354,30 @@ PROP16:
 PROP17:
 	Inherits: PROP16
 
+PROP18:
+	Inherits: ^Prop
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: == xx xx
+		Dimensions: 2,3
+	Tooltip:
+		Name: actor-prop16-name
+	Health:
+		HP: 60000
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: 0,0,0, -600,0,0, -512,-850,0, -512,850,0, -1250,-480,0, -1250,480,0
+		Type: Rectangle
+			TopLeft: -1024, -424
+			BottomRight: 1024, 1524
+	GrantConditionOnDamageState:
+		Condition: damaged
+	WithIdleAnimation:
+		Interval: 30, 50
+		RequiresCondition: !damaged
+	-WithIdleOverlay@Shadow:
+
 CRANE:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
