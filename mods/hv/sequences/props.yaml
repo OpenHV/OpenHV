@@ -513,17 +513,6 @@ prop18:
 				Start: 13
 				Offset: 8,28
 				ZOffset: 1768
-	shadow-overlay:
-		Filename: bits/prop18-shadow.png
-		Length: 13
-		Offset: 8,26
-		Tick: 70
-		ZOffset: 1768
-	damaged-shadow-overlay:
-		Filename: bits/prop18-shadow.png
-		Start: 13
-		Offset: 8,26
-		ZOffset: 1768
 
 crane:
 	Defaults:
