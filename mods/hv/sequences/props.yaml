@@ -514,6 +514,38 @@ prop18:
 				Offset: 8,28
 				ZOffset: 1768
 
+prop19:
+	Defaults:
+		Offset: 0,4
+	idle:
+		Filename: bits/prop19.png
+	animation:
+		Filename: bits/prop19.png
+		Start: 2
+		Length: 9
+		Tick: 100
+	light1:
+		Filename: bits/prop19.png
+		Start: 11
+		Tick: 200
+	light2:
+		Filename: bits/prop19.png
+		Start: 12
+		Tick: 200
+	light3:
+		Filename: bits/prop19.png
+		Start: 13
+		Tick: 200
+	damaged-idle:
+		Filename: bits/prop19.png
+		Start: 1
+	shadow-overlay:
+		Filename: bits/prop19-shadow.png
+		Offset: 2, 14
+		ZOffset: -1768
+	null:
+		Filename: bits/null.png
+
 crane:
 	Defaults:
 		ZOffset: 1768
