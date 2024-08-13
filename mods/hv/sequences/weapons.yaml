@@ -250,6 +250,12 @@ smoke:
 		Tick: 60
 		ZOffset: 2020
 
+smoke_chimney:
+	Inherits: smoke
+	idle:
+		BlendMode: Translucent
+		Tick: 100
+
 small_smoke:
 	idle:
 		Filename: bits/small_smoke.png

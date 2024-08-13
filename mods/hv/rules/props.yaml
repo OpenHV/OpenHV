@@ -378,6 +378,53 @@ PROP18:
 		RequiresCondition: !damaged
 	-WithIdleOverlay@Shadow:
 
+PROP19:
+	Inherits: ^Prop
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: == xx xx
+		Dimensions: 2,3
+	Tooltip:
+		Name: actor-prop16-name
+	Health:
+		HP: 60000
+	HitShape:
+		UseTargetableCellsOffsets: False
+		TargetableOffsets: -100,-412,0, -100,412,0, -800,-412,0, -800,412,0
+		Type: Rectangle
+			TopLeft: -1024, -424
+			BottomRight: 1024, 1524
+	WithSpriteBody@Animation:
+		Sequence: null
+		Name: animation
+	WithSpriteBody@Lights:
+		Sequence: null
+		Name: lights
+	GrantConditionOnDamageState:
+		Condition: damaged
+	WithIdleAnimation@Animation:
+		Body: animation
+		Interval: 30, 40
+		Sequences: animation
+		RequiresCondition: !damaged
+	WithIdleAnimation@Lights:
+		Body: lights
+		Interval: 5, 10
+		Sequences: light1, light2, light3
+		RequiresCondition: !damaged
+	FloatingSpriteEmitter:
+		Duration: -1
+		Lifetime: 26
+		SpawnFrequency: 10
+		Speed: 8
+		Gravity: 42
+		RandomRate: 0
+		Palette: effect
+		Offset: -450,-1250,0
+		Image: smoke_chimney
+		Sequences: idle
+
 CRANE:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
