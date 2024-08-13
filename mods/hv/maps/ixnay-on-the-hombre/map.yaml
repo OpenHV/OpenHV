@@ -788,10 +788,6 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 153,146
-	Actor235: worm
-		Owner: Neutral
-		Facing: 384
-		Location: 161,72
 	Actor236: worm
 		Owner: Neutral
 		Facing: 384
@@ -2503,9 +2499,6 @@ Actors:
 	Actor829: sandmisc7
 		Owner: Neutral
 		Location: 176,229
-	Actor830: sandmisc7
-		Owner: Neutral
-		Location: 116,230
 	Actor831: sandmisc7
 		Owner: Neutral
 		Location: 91,247
@@ -2548,9 +2541,6 @@ Actors:
 	Actor844: sandmisc8
 		Owner: Neutral
 		Location: 103,250
-	Actor845: sandmisc8
-		Owner: Neutral
-		Location: 121,238
 	Actor846: stnrock3
 		Owner: Neutral
 		Location: 134,246
@@ -2569,9 +2559,6 @@ Actors:
 	Actor851: stnrock14
 		Owner: Neutral
 		Location: 122,248
-	Actor852: stnrock11
-		Owner: Neutral
-		Location: 140,231
 	Actor853: stnrock12
 		Owner: Neutral
 		Location: 89,250
@@ -2596,9 +2583,6 @@ Actors:
 	Actor860: sandmisc7
 		Owner: Neutral
 		Location: 145,26
-	Actor861: sandmisc7
-		Owner: Neutral
-		Location: 133,16
 	Actor862: sandmisc7
 		Owner: Neutral
 		Location: 169,11
@@ -3420,15 +3404,9 @@ Actors:
 	Actor1127: resourcelight_rare
 		Owner: Neutral
 		Location: 92,192
-	Actor1128: resourcelight_rare
-		Owner: Neutral
-		Location: 97,189
 	Actor1129: resourcelight_rare
 		Owner: Neutral
 		Location: 92,186
-	Actor1130: resourcelight_rare
-		Owner: Neutral
-		Location: 161,189
 	Actor1131: resourcelight_rare
 		Owner: Neutral
 		Location: 166,192
@@ -3438,18 +3416,12 @@ Actors:
 	Actor1133: resourcelight_rare
 		Owner: Neutral
 		Location: 166,71
-	Actor1134: resourcelight_rare
-		Owner: Neutral
-		Location: 161,68
 	Actor1135: resourcelight_rare
 		Owner: Neutral
 		Location: 166,65
 	Actor1136: resourcelight_rare
 		Owner: Neutral
 		Location: 92,65
-	Actor1137: resourcelight_rare
-		Owner: Neutral
-		Location: 97,68
 	Actor1138: resourcelight_rare
 		Owner: Neutral
 		Location: 92,71
@@ -3696,9 +3668,6 @@ Actors:
 	Actor1219: dark_light
 		Owner: Neutral
 		Location: 128,231
-	Actor1220: dark_light
-		Owner: Neutral
-		Location: 136,229
 	Actor1221: dark_light
 		Owner: Neutral
 		Location: 148,232
@@ -4800,5 +4769,120 @@ Actors:
 	Actor1589: resourcelight_rare
 		Owner: Neutral
 		Location: 252,95
+	Actor830: sandmisc7
+		Owner: Neutral
+		Location: 115,232
+	Actor845: sandmisc8
+		Owner: Neutral
+		Location: 120,238
+	Actor852: stnrock11
+		Owner: Neutral
+		Location: 142,232
+	Actor1220: dark_light
+		Owner: Neutral
+		Location: 136,230
+	Actor1590: resourcelight
+		Owner: Neutral
+		Location: 138,228
+	Actor1591: resourcelight
+		Owner: Neutral
+		Location: 134,225
+	Actor1592: resourcelight
+		Owner: Neutral
+		Location: 124,225
+	Actor1593: resourcelight
+		Owner: Neutral
+		Location: 120,228
+	Actor1594: resourcelight
+		Owner: Neutral
+		Location: 138,29
+	Actor1595: resourcelight
+		Owner: Neutral
+		Location: 120,29
+	Actor1596: resourcelight
+		Owner: Neutral
+		Location: 134,32
+	Actor1597: resourcelight
+		Owner: Neutral
+		Location: 124,32
+	Actor861: sandmisc7
+		Owner: Neutral
+		Location: 134,15
+	Actor1598: prop18
+		Owner: Neutral
+		Location: 26,160
+	Actor1599: prop18
+		Owner: Neutral
+		Location: 16,138
+	Actor1600: prop18
+		Owner: Neutral
+		Location: 36,136
+	Actor1601: prop18
+		Owner: Neutral
+		Location: 18,149
+	Actor1603: prop18
+		Owner: Neutral
+		Location: 18,106
+	Actor1606: prop18
+		Owner: Neutral
+		Location: 230,160
+	Actor1607: prop18
+		Owner: Neutral
+		Location: 238,149
+	Actor1609: prop18
+		Owner: Neutral
+		Location: 220,136
+	Actor1611: prop18
+		Owner: Neutral
+		Location: 240,117
+	Actor1612: prop18
+		Owner: Neutral
+		Location: 238,106
+	Actor1608: prop18
+		Owner: Neutral
+		Location: 240,137
+	Actor1610: prop18
+		Owner: Neutral
+		Location: 220,118
+	Actor1613: prop18
+		Owner: Neutral
+		Location: 230,94
+	Actor1604: prop18
+		Owner: Neutral
+		Location: 36,118
+	Actor1605: prop18
+		Owner: Neutral
+		Location: 26,94
+	Actor1602: prop18
+		Owner: Neutral
+		Location: 16,116
+	Actor235: worm
+		Owner: Neutral
+		Facing: 384
+		Location: 159,70
+	Actor1614: resourcelight_rare
+		Owner: Neutral
+		Location: 96,187
+	Actor1615: resourcelight_rare
+		Owner: Neutral
+		Location: 96,191
+	Actor1616: resourcelight_rare
+		Owner: Neutral
+		Location: 162,187
+	Actor1617: resourcelight_rare
+		Owner: Neutral
+		Location: 162,191
+	Actor1618: resourcelight_rare
+		Owner: Neutral
+		Location: 162,70
+	Actor1619: resourcelight_rare
+		Owner: Neutral
+		Location: 162,66
+	Actor1620: resourcelight_rare
+		Owner: Neutral
+		Location: 96,70
+	Actor1621: resourcelight_rare
+		Owner: Neutral
+		Location: 96,66
 
 Rules: rules.yaml
