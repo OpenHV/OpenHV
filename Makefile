@@ -76,8 +76,11 @@ bindir = $(prefix)/bin
 libdir = $(prefix)/lib
 gamedir = $(libdir)/openhv
 
-engine:
+fetch-engine:
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
+
+engine: fetch-engine
+	@echo "Compiling engine..."
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
 ifeq ("$(TARGETPLATFORM)","unix-generic")
 ifeq ("$(RUNTIME)","net6")
@@ -133,7 +136,7 @@ endif
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 
-version: engine
+version: fetch-engine
 	@sh -c '. $(ENGINE_DIRECTORY)/packaging/functions.sh; set_mod_version $(VERSION) $(MANIFEST_PATH)'
 	@printf "Version changed to $(VERSION).\n"
 

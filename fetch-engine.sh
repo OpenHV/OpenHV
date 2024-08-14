@@ -68,7 +68,6 @@ if [ "${AUTOMATIC_ENGINE_MANAGEMENT}" = "True" ]; then
 	rmdir "${AUTOMATIC_ENGINE_EXTRACT_DIRECTORY}"
 	rm "${AUTOMATIC_ENGINE_TEMP_ARCHIVE_NAME}"
 
-	echo "Compiling engine..."
 	cd "${ENGINE_DIRECTORY}" || exit 1
 	make version VERSION="${ENGINE_VERSION}"
 	exit 0
