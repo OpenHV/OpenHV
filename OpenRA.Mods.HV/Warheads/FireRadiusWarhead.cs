@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -56,9 +56,7 @@ namespace OpenRA.Mods.HV.Warheads
 				? args.WeaponTarget.CenterPosition
 				: targetPosition;
 
-			var amount = Amount.Length == 2
-					? world.SharedRandom.Next(Amount[0], Amount[1])
-					: Amount[0];
+			var amount = Common.Util.RandomInRange(world.SharedRandom, Amount);
 
 			var offset = 256 / amount;
 

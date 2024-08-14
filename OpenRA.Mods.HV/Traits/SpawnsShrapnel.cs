@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -83,9 +83,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (IsTraitDisabled || IsTraitPaused || !self.IsInWorld || --ticks > 0)
 				return;
 
-			ticks = Info.Delay.Length == 2
-					? world.SharedRandom.Next(Info.Delay[0], Info.Delay[1])
-					: Info.Delay[0];
+			ticks = Util.RandomInRange(world.SharedRandom, Info.Delay);
 
 			var localoffset = body != null
 					? body.LocalToWorld(Info.LocalOffset.Rotate(body.QuantizeOrientation(self.Orientation)))
@@ -114,9 +112,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			var targetActor = availableTargetActors.GetEnumerator();
 
-			var amount = Info.Amount.Length == 2
-					? world.SharedRandom.Next(Info.Amount[0], Info.Amount[1])
-					: Info.Amount[0];
+			var amount = Util.RandomInRange(world.SharedRandom, Info.Amount);
 
 			for (var i = 0; i < amount; i++)
 			{
