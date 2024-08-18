@@ -4457,9 +4457,9 @@ Templates:
 		Images: bits/terrain/sand.png
 		Frames: 12
 		Size: 1,1
-		Categories: Sand
+		Categories: Sand, Ramp
 		Tiles:
-			0: Sand
+			0: Sand Ramp
 				MinColor: 9D796C
 				MaxColor: 9D796C
 	Template@576:
