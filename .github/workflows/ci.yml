@@ -21,11 +21,6 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
-      - name: Prepare Environment
-        run: |
-          . mod.config;
-          awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format. File must be saved using unix-style (LF, not CRLF or CR) line endings.\n"; exit 1);
-
       - name: Retrieve Changes
         id: changed-files
         uses: tj-actions/changed-files@v44
@@ -64,11 +59,6 @@ jobs:
     steps:
       - name: Clone Repository
         uses: actions/checkout@v4
-
-      - name: Prepare Environment
-        run: |
-          . mod.config;
-          awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format. File must be saved using unix-style (LF, not CRLF or CR) line endings.\n"; exit 1);
 
       - name: Check Code
         run: |
