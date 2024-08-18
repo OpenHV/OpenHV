@@ -37,7 +37,7 @@ jobs:
         env:
             ALL_CHANGED_SPRITES: ${{ steps.changed-files.outputs.sprites_all_changed_files }}
         run: |
-          make check-sprites SPRITE_FILES=${ALL_CHANGED_SPRITES}
+          make check-sprites SPRITE_FILES="${ALL_CHANGED_SPRITES}"
           sudo apt-get install pngcheck
           make check-pngs
 
