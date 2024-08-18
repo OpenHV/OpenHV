@@ -546,6 +546,35 @@ prop19:
 	null:
 		Filename: bits/null.png
 
+prop20:
+	Defaults:
+		Offset: 0,0
+	idle:
+		Filename: bits/prop20.png
+		Reverses: True
+		Length: 16
+		Tick: 60
+	animation:
+		Filename: bits/prop20.png
+		Start: 17
+		Length: 10
+		Tick: 100
+	lights:
+		Filename: bits/prop20.png
+		Start: 27
+		Length: 5
+		Tick: 80
+	damaged-idle:
+		Filename: bits/prop20.png
+		Start: 16
+	shadow-overlay:
+		Filename: bits/prop20-shadow.png
+		Offset: 3,5
+		ZOffset: -1768
+	null:
+		Filename: bits/null.png
+
+
 crane:
 	Defaults:
 		ZOffset: 1768

@@ -425,6 +425,37 @@ PROP19:
 		Image: smoke_chimney
 		Sequences: idle
 
+PROP20:
+	Inherits: ^Prop
+	Inherits@Shape: ^2x2Shape
+	Interactable:
+		Bounds: 1024, 1024
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: actor-prop16-name
+	Health:
+		HP: 60000
+	WithSpriteBody@Animation:
+		Sequence: null
+		Name: animation
+	WithSpriteBody@Lights:
+		Sequence: null
+		Name: lights
+	GrantConditionOnDamageState:
+		Condition: damaged
+	WithIdleAnimation@Animation:
+		Body: animation
+		Interval: 40, 60
+		Sequences: animation
+		RequiresCondition: !damaged
+	WithIdleAnimation@Lights:
+		Body: lights
+		Interval: 10, 40
+		Sequences: lights
+		RequiresCondition: !damaged
+
 CRANE:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape
