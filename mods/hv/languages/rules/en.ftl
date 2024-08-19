@@ -546,7 +546,7 @@ actor-rifleman =
       Strong vs Pods
       Weak vs Tanks and Buildings
    .name = Rifleman
-   .encyclopedia = The most generic pod. It is a small land vehicle controlled by a human. They are the modern solution for infantry, and offer a fast and cheap production. Pods come in different variants, with different armaments and abilities, but the Rifleman one has a simple machine gun equipped. As it is universal, both Yuruki and Synapol use it.
+   .encyclopedia = The most generic pod. It is a small land vehicle controlled by a human. They are the modern solution for infantry, and offer a fast and cheap production. Pods come in different variants, with different armaments and abilities, but the Rifleman one has a simple machine gun equipped. As pods are small vehicles, they can easily hide themselves in woods and dense forests. As it is universal, both Yuruki and Synapol use it.
 
      {actor-rifleman.description}
 
