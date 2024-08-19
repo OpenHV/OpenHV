@@ -486,9 +486,6 @@ Actors:
 	Actor141: prop12
 		Owner: Neutral
 		Location: 95,142
-	Actor142: comlink
-		Owner: Neutral
-		Location: 96,139
 	Actor143: prop3
 		Owner: Neutral
 		Location: 92,141
@@ -507,15 +504,6 @@ Actors:
 	Actor148: prop3
 		Owner: Neutral
 		Location: 92,116
-	Actor149: comlink
-		Owner: Neutral
-		Location: 96,116
-	Actor150: comlink
-		Owner: Neutral
-		Location: 160,116
-	Actor151: comlink
-		Owner: Neutral
-		Location: 160,139
 	Actor152: prop3
 		Owner: Neutral
 		Location: 156,116
@@ -4884,5 +4872,29 @@ Actors:
 	Actor1621: resourcelight_rare
 		Owner: Neutral
 		Location: 96,66
+	Actor1622: prop19
+		Owner: Neutral
+		Location: 241,144
+	Actor1625: prop19
+		Owner: Neutral
+		Location: 241,110
+	Actor1626: prop19
+		Owner: Neutral
+		Location: 15,110
+	Actor1629: prop19
+		Owner: Neutral
+		Location: 15,144
+	Actor1623: prop20
+		Owner: Neutral
+		Location: 160,140
+	Actor1624: prop20
+		Owner: Neutral
+		Location: 160,116
+	Actor1627: prop20
+		Owner: Neutral
+		Location: 96,116
+	Actor1628: prop20
+		Owner: Neutral
+		Location: 96,140
 
 Rules: rules.yaml
