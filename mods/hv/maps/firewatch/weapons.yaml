@@ -74,3 +74,34 @@ WaterDrops:
 		Speed: 200
 		LaunchAngle: 50,125
 		Inaccuracy: 0c256
+
+WaterBomb:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 60
+	Burst: 25
+	BurstDelays: 1
+	Range: 6c512
+	TargetActorCenter: true
+	Projectile: GravityBomb
+		Velocity: 72, 0, -90
+		Acceleration: 0, 0, -8
+		Image: waterball
+		Shadow: true
+		Palette: effect
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Fire, Ground
+		Spread: 625
+		Damage: -18750
+		Versus:
+			Wood: 100
+		DamageTypes: Incendiary
+	Warhead@Incendiary: TreeDamage
+		ValidTargets: Fire, Ground
+		Spread: 625
+		Damage: -18750
+	Warhead@Effect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water, Ground
+		ImpactSounds: small-water-splash1_siliconesound.ogg, small-water-splash2_siliconesound.ogg, small-water-splash3_siliconesound.ogg, small-water-splash4_siliconesound.ogg, small-water-splash5_siliconesound.ogg
