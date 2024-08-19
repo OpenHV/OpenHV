@@ -6,12 +6,12 @@ watertanker-power-name = Air Water Drop
 watertanker-power-description = Deploys an aerial water flood drop run.
 
 actor-watertank =
-   .name = Fire Fighting Tank
+   .name = Firefighting Tank
    .generic-name = Tank
    .description = Armored Fire Fighting Vehicle
 
 actor-firetruck =
-   .name = Fire Fighting Truck
+   .name = Firefighting Truck
    .generic-name = Truck
    .description = Civilian Fire Engine
 
