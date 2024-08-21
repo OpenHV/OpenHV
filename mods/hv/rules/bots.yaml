@@ -16,9 +16,11 @@ Player:
 	BaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		MinimumExcessPower: 40
-		MaximumExcessPower: 200
-		AdditionalMinimumRefineryCount: 0
-		NewProductionCashThreshold: 10000
+		MaximumExcessPower: 500
+		InititalMinimumRefineryCount: 1
+		AdditionalMinimumRefineryCount: 1
+		PlaceDefenseTowardsEnemyChance: 0
+		NewProductionCashThreshold: 7000
 		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
@@ -30,7 +32,7 @@ Player:
 		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
 		BuildingLimits:
 			base: 1
-			storage: 1
+			storage: 3
 			module: 4
 			module2: 4
 			factory: 4
@@ -39,8 +41,8 @@ Player:
 			radar2: 1
 			starport: 4
 			starport2: 4
-			oresmelt: 4
-			orepurifier: 4
+			oresmelt: 2
+			orepurifier: 2
 			trader: 1
 			techcenter: 1
 			harbor: 1
@@ -49,9 +51,11 @@ Player:
 			howitzer: 1
 			uplink: 1
 			silo: 1
+			outpost: 2
+			outpost2: 2
 		BuildingFractions:
 			base: 1
-			storage: 2
+			storage: 1
 			module: 1
 			module2: 1
 			radar: 1
@@ -64,31 +68,39 @@ Player:
 			starport: 1
 			starport2: 1
 			techcenter: 1
-			oresmelt: 9
-			orepurifier: 9
-			bunker: 7
-			bunker2: 7
-			turret: 5
-			turret2: 5
-			aaturret: 6
-			aaturret2: 6
+			oresmelt: 20
+			orepurifier: 20
+			bunker: 12
+			bunker2: 12
+			turret: 12
+			turret2: 12
+			aaturret: 12
+			aaturret2: 12
 			howitzer: 1
 			uplink: 1
 			field: 1
 			silo: 1
 		BuildingDelays:
-			radar: 4000
-			radar2: 4000
-			howitzer: 8000
-			field: 8000
-			silo: 9000
-			uplink: 9000
+			bunker: 150
+			bunker2: 150
+			aaturret: 150
+			aaturret2: 150
+			turret: 150
+			turret2: 150
+			radar: 10000
+			radar2: 10000
+			factory: 11000
+			factory2: 11000
+			howitzer: 12000
+			field: 12000
+			silo: 13000
+			uplink: 13000
 	BuildingRepairBotModule:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, ecmtank, technician, broker, mineship, mineship2, blaster
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster
 		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
 		AirUnitsTypes: gunship, jet, copter, banshee
 		ConstructionYardTypes: base, base2
@@ -96,7 +108,7 @@ Player:
 	UnitBuilderBotModule@RogueAI:
 		IdleBaseUnitsMaximum: 30
 		RequiresCondition: enable-rogue-ai
-		UnitQueues: Pod, Utility, Tank, Aircraft, Ship
+		UnitQueues: Pod, Utility, Tank, Aircraft, Ship, Trade
 		UnitsToBuild:
 			miner: 3
 			builder: 1
@@ -105,23 +117,27 @@ Player:
 			buggy: 3
 			bike: 3
 			mbt: 5
+			mbt2: 5
 			railguntank: 5
+			lightningtank: 5
 			minelayer: 1
-			stealthtank: 1
+			stealthtank: 5
+			aatank: 4
+			aatank2: 4
 			ecmtank: 1
-			aatank: 3
 			hackertank: 1
 			repairtank: 1
 			apc: 1
+			apc2: 1
 			artillery: 5
 			rifleman: 1
 			rocketeer: 1
 			mortar: 1
-			flamer: 1
 			jetpacker: 1
 			sniper: 1
 			shocker: 1
 			technician: 1
+			flamer: 1
 			blaster: 1
 			missiletank: 5
 			jet: 5
@@ -130,9 +146,10 @@ Player:
 			banshee: 5
 			balloon: 1
 			saucer: 1
-			torpedoboat: 1
-			railgunboat: 1
-			lightboat: 1
+			torpedoboat: 2
+			lightboat: 2
+			railgunboat: 2
+			lightningboat: 2
 			boomer: 2
 			carrier: 2
 			mineship: 1
@@ -140,15 +157,14 @@ Player:
 			battleship: 1
 			mothership: 1
 		UnitLimits:
-			miner: 1
+			miner: 2
 			builder: 1
 			builder2: 1
 			balloon: 2
 			saucer: 2
-			radartank: 1
+			radartank: 2
 			minelayer: 1
-			ecmtank: 1
-			lightboat: 3
+			flamer: 3
 			boomer: 4
 			carrier: 4
 			mineship: 1
@@ -156,9 +172,10 @@ Player:
 			technician: 1
 			blaster: 3
 			apc: 1
+			apc2: 1
 		UnitDelays:
-			builder: 15000
-			builder2: 15000
+			builder: 7500
+			builder2: 7500
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
