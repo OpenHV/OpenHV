@@ -521,6 +521,7 @@ meta-crate =
 
 meta-rock-name = Rock
 meta-tree-name = Tree
+meta-cactus-name = Cactus
 meta-ship-generic-name = Ship
 
 meta-cube =
