@@ -4,7 +4,7 @@ LIGHTBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 450
+		Cost: 900
 	Tooltip:
 		Name: actor-lightboat.name
 		GenericName: actor-lightboat.generic-name
@@ -52,7 +52,7 @@ PATROLBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 450
+		Cost: 900
 	Tooltip:
 		Name: actor-patrolboat.name
 		GenericName: actor-patrolboat.generic-name
@@ -105,7 +105,7 @@ MERCBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1600
 	Tooltip:
 		Name: actor-mercboat.name
 		GenericName: actor-mercboat.generic-name
@@ -151,7 +151,7 @@ TORPEDOBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1600
 	Tooltip:
 		Name: actor-torpedoboat.name
 		GenericName: actor-torpedoboat.generic-name
@@ -194,7 +194,7 @@ SUBMARINE:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1600
 	Tooltip:
 		Name: actor-submarine.name
 		GenericName: actor-submarine.generic-name
@@ -237,7 +237,7 @@ RAILGUNBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 2000
+		Cost: 4000
 	Tooltip:
 		Name: actor-railgunboat.name
 		GenericName: actor-railgunboat.generic-name
@@ -281,7 +281,7 @@ LIGHTNINGBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 2000
+		Cost: 4000
 	Tooltip:
 		Name: actor-lightningboat.name
 		GenericName: actor-lightningboat.generic-name
@@ -326,7 +326,7 @@ BOOMER:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 2500
+		Cost: 5000
 	Tooltip:
 		Name: actor-boomer.name
 		GenericName: actor-boomer.generic-name
@@ -377,7 +377,7 @@ BOOMER:
 SLCM:
 	Inherits: ^ShootableMissile
 	Valued:
-		Cost: 50
+		Cost: 100
 	Tooltip:
 		Name: actor-slcm-name
 	Health:
@@ -416,7 +416,7 @@ CARRIER:
 		Order: 30
 		Category: Ships
 	Valued:
-		Cost: 2500
+		Cost: 5000
 	Tooltip:
 		Name: actor-carrier.name
 	Health:
@@ -460,7 +460,7 @@ CARRIER:
 FERRY:
 	Inherits: ^Ship
 	Valued:
-		Cost: 700
+		Cost: 1400
 	Tooltip:
 		Name: actor-ferry.name
 		GenericName: actor-ferry.generic-name
@@ -505,7 +505,7 @@ MINESHIP:
 	Inherits: ^Ship
 	Inherits@Selection: ^SelectableSupportUnit
 	Valued:
-		Cost: 700
+		Cost: 1400
 	Tooltip:
 		Name: actor-mineship.name
 		GenericName: actor-mineship.generic-name

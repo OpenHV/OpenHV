@@ -13,7 +13,7 @@ RIFLEMAN:
 		Order: 0
 		Category: Pods
 	Valued:
-		Cost: 100
+		Cost: 200
 	Tooltip:
 		Name: actor-rifleman.name
 	UpdatesPlayerStatistics:
@@ -53,7 +53,7 @@ ROCKETEER:
 		Order: 10
 		Category: Pods
 	Valued:
-		Cost: 225
+		Cost: 450
 	Tooltip:
 		Name: actor-rocketeer.name
 	UpdatesPlayerStatistics:
@@ -91,7 +91,7 @@ MORTAR:
 		Order: 35
 		Category: Pods
 	Valued:
-		Cost: 150
+		Cost: 300
 	Tooltip:
 		Name: actor-mortar.name
 	UpdatesPlayerStatistics:
@@ -131,7 +131,7 @@ SNIPER:
 		Order: 30
 		Category: Pods
 	Valued:
-		Cost: 500
+		Cost: 1000
 	Tooltip:
 		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
@@ -182,7 +182,7 @@ FLAMER:
 		Order: 25
 		Category: Pods
 	Valued:
-		Cost: 350
+		Cost: 700
 	Tooltip:
 		Name: actor-flamer.name
 	UpdatesPlayerStatistics:
@@ -223,7 +223,7 @@ TECHNICIAN:
 		Order: 15
 		Category: Pods
 	Valued:
-		Cost: 500
+		Cost: 1000
 	Tooltip:
 		Name: actor-technician.name
 	UpdatesPlayerStatistics:
@@ -283,7 +283,7 @@ BROKER:
 		Order: 16
 		Category: Pods
 	Valued:
-		Cost: 700
+		Cost: 1400
 	Tooltip:
 		Name: actor-broker.name
 	UpdatesPlayerStatistics:
@@ -337,7 +337,7 @@ JETPACKER:
 		Order: 40
 		Category: Pods
 	Valued:
-		Cost: 650
+		Cost: 1300
 	Tooltip:
 		Name: actor-jetpacker.name
 	Health:
@@ -384,7 +384,7 @@ BLASTER:
 		Order: 20
 		Category: Pods
 	Valued:
-		Cost: 600
+		Cost: 1200
 	Tooltip:
 		Name: actor-blaster.name
 	Health:
@@ -440,7 +440,7 @@ SHOCKER:
 		Order: 5
 		Category: Pods
 	Valued:
-		Cost: 225
+		Cost: 450
 	Tooltip:
 		Name: actor-shocker.name
 	Voiced:
