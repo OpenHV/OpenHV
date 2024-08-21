@@ -135,40 +135,13 @@ ICICLE4:
 		Dimensions: 1,1
 
 MNTMISC8:
-	Inherits: ^Tree
-	Tooltip:
-		Name: meta-cactus-name
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	SpawnActorOnDeath@Crush:
-		Actor: CACTIMUD
-	SpawnActorOnDeath@Ash:
-		Actor: CACTIASH
+	Inherits: ^Cactus
 
 MNTMISC9:
-	Inherits: ^Tree
-	Tooltip:
-		Name: meta-cactus-name
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	SpawnActorOnDeath@Crush:
-		Actor: CACTIMUD
-	SpawnActorOnDeath@Ash:
-		Actor: CACTIASH
+	Inherits: ^Cactus
 
 MNTMISC11:
-	Inherits: ^Tree
-	Tooltip:
-		Name: meta-cactus-name
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	SpawnActorOnDeath@Crush:
-		Actor: CACTIMUD
-	SpawnActorOnDeath@Ash:
-		Actor: CACTIASH
+	Inherits: ^Cactus
 
 SANDMISC6:
 	Inherits: ^Rock

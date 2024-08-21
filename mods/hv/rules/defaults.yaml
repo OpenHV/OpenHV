@@ -913,6 +913,18 @@
 		Palette: shadow-decoration
 		IsDecoration: true
 
+^Cactus:
+	Inherits: ^Tree
+	Tooltip:
+		Name: meta-cactus-name
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	SpawnActorOnDeath@Crush:
+		Actor: CACTIMUD
+	SpawnActorOnDeath@Ash:
+		Actor: CACTIASH
+
 ^Ship:
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
