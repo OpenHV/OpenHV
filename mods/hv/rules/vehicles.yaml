@@ -4,7 +4,7 @@ MBT:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 850
+		Cost: 1700
 	Tooltip:
 		Name: actor-mbt.name
 	Selectable:
@@ -74,7 +74,7 @@ AATANK:
 		Order: 6
 		Category: Tanks
 	Valued:
-		Cost: 500
+		Cost: 1000
 	Tooltip:
 		Name: actor-aatank.name
 	Selectable:
@@ -128,7 +128,7 @@ APC:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 600
+		Cost: 1200
 	Tooltip:
 		Name: actor-apc.name
 	Buildable:
@@ -187,7 +187,7 @@ ARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1600
 	Tooltip:
 		Name: actor-artillery.name
 	Selectable:
@@ -248,7 +248,7 @@ RADARTANK:
 		Order: 0
 		Category: Utilities
 	Valued:
-		Cost: 400
+		Cost: 800
 	Tooltip:
 		Name: actor-radartank.name
 	Selectable:
@@ -308,7 +308,7 @@ REPAIRTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1600
 	Tooltip:
 		Name: actor-repairtank.name
 		GenericName: actor-repairtank.generic-name
@@ -366,7 +366,7 @@ MINELAYER:
 		Order: 10
 		Category: Utilities
 	Valued:
-		Cost: 700
+		Cost: 1400
 	Tooltip:
 		Name: actor-minelayer.name
 	Selectable:
@@ -415,7 +415,7 @@ RAILGUNTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1500
+		Cost: 3000
 	Tooltip:
 		Name: actor-railguntank.name
 		GenericName: actor-railguntank.generic-name
@@ -466,7 +466,7 @@ LIGHTNINGTANK:
 		Order: 20
 		Category: Tanks
 	Valued:
-		Cost: 1500
+		Cost: 3000
 	Tooltip:
 		Name: actor-lightningtank.name
 		GenericName: actor-lightningtank.generic-name
@@ -510,7 +510,7 @@ STEALTHTANK:
 		Order: 30
 		Category: Tanks
 	Valued:
-		Cost: 1200
+		Cost: 2400
 	Tooltip:
 		Name: actor-stealthtank.name
 	Selectable:
@@ -557,7 +557,7 @@ MERCTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 850
+		Cost: 1700
 	Tooltip:
 		Name: actor-merctank.name
 		GenericName: actor-merctank.generic-name
@@ -621,7 +621,7 @@ DUALMERCTANK:
 ECMTANK:
 	Inherits: ^TrackedVehicle
 	Valued:
-		Cost: 1000
+		Cost: 2000
 	Tooltip:
 		Name: actor-ecmtank.name
 		GenericName: actor-ecmtank.generic-name
@@ -672,7 +672,7 @@ DUALARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1750
+		Cost: 3500
 	Tooltip:
 		Name: actor-dualartillery.name
 	Selectable:
@@ -871,7 +871,7 @@ MISSILETANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1200
+		Cost: 2400
 	Tooltip:
 		Name: actor-missiletank.name
 		GenericName: actor-missiletank.generic-name
@@ -924,7 +924,7 @@ HACKERTANK:
 		Order: 40
 		Category: Tanks
 	Valued:
-		Cost: 1000
+		Cost: 2000
 	Tooltip:
 		Name: actor-hackertank.name
 	Selectable:
@@ -973,7 +973,7 @@ BUGGY:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 400
+		Cost: 800
 	Tooltip:
 		Name: actor-buggy.name
 		GenericName: actor-buggy.generic-name
@@ -1020,7 +1020,7 @@ BIKE:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 400
+		Cost: 800
 	Tooltip:
 		Name: actor-bike.name
 		GenericName: actor-bike.generic-name
@@ -1067,7 +1067,7 @@ TANKER1:
 		Prerequisites: ~disabled
 		Description: actor-tanker1.description
 	Valued:
-		Cost: 500
+		Cost: 1000
 	Tooltip:
 		Name: actor-tanker1.name
 	Selectable:

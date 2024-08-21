@@ -15,7 +15,7 @@ GUNSHIP:
 		Order: 2
 		Category: Aircraft
 	Valued:
-		Cost: 1000
+		Cost: 2000
 	Tooltip:
 		Name: actor-gunship.name
 	UpdatesPlayerStatistics:
@@ -80,7 +80,7 @@ JET:
 		Order: 10
 		Category: Aircraft
 	Valued:
-		Cost: 1500
+		Cost: 3000
 	Tooltip:
 		Name: actor-jet.name
 	UpdatesPlayerStatistics:
@@ -145,7 +145,7 @@ COPTER:
 	Inherits@MagazineCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
-		Cost: 1000
+		Cost: 2000
 	Tooltip:
 		Name: actor-copter.name
 	Buildable:
@@ -194,7 +194,7 @@ COPTER:
 SAUCER:
 	Inherits: ^Helicopter
 	Valued:
-		Cost: 400
+		Cost: 800
 	Tooltip:
 		Name: actor-saucer.name
 	Buildable:
@@ -238,7 +238,7 @@ BANSHEE:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1500
+		Cost: 3000
 	Tooltip:
 		Name: actor-banshee.name
 	Buildable:
@@ -294,7 +294,7 @@ CHOPPER:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
-		Cost: 900
+		Cost: 1800
 	Tooltip:
 		Name: actor-chopper.name
 	Buildable:
@@ -390,7 +390,7 @@ CHOPPER.Husk:
 BALLOON:
 	Inherits: ^Helicopter
 	Valued:
-		Cost: 400
+		Cost: 800
 	Tooltip:
 		Name: actor-balloon.name
 	Buildable:
@@ -436,7 +436,7 @@ DROPSHIP:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
-		Cost: 900
+		Cost: 1800
 	Tooltip:
 		Name: actor-dropship.name
 	Buildable:
@@ -535,7 +535,7 @@ DROPSHIP.Husk:
 DRONE:
 	Inherits: ^SpawnedPlane
 	Valued:
-		Cost: 50
+		Cost: 100
 	Tooltip:
 		Name: actor-drone-name
 	Health:
@@ -575,7 +575,7 @@ DRONE:
 DRONE2:
 	Inherits: ^SpawnedPlane
 	Valued:
-		Cost: 50
+		Cost: 100
 	Tooltip:
 		Name: actor-drone2.name
 	Health:
@@ -673,7 +673,7 @@ BOMBER:
 	Armor:
 		Type: Light
 	Valued:
-		Cost: 2000
+		Cost: 4000
 	UpdatesPlayerStatistics:
 		AddToAssetsValue: false
 	Aircraft:
@@ -703,7 +703,7 @@ CARGOSHIP:
 	Tooltip:
 		Name: actor-cargoship-name
 	Valued:
-		Cost: 2000
+		Cost: 4000
 	WithLandingUnloadAnimation:
 
 AIRLIFTER:
@@ -722,14 +722,14 @@ AIRLIFTER:
 	Tooltip:
 		Name: actor-airlifter-name
 	Valued:
-		Cost: 2000
+		Cost: 4000
 
 MOTHERSHIP:
 	Inherits: ^Helicopter
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 6000
+		Cost: 12000
 	Tooltip:
 		Name: actor-mothership.name
 	Buildable:
@@ -861,7 +861,7 @@ BATTLESHIP:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 6000
+		Cost: 12000
 	Tooltip:
 		Name: actor-battleship.name
 	Buildable:
