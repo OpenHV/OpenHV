@@ -136,6 +136,8 @@ ICICLE4:
 
 MNTMISC8:
 	Inherits: ^Tree
+	Tooltip:
+		Name: meta-cactus-name
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -146,6 +148,8 @@ MNTMISC8:
 
 MNTMISC9:
 	Inherits: ^Tree
+	Tooltip:
+		Name: meta-cactus-name
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -156,6 +160,8 @@ MNTMISC9:
 
 MNTMISC11:
 	Inherits: ^Tree
+	Tooltip:
+		Name: meta-cactus-name
 	Building:
 		Footprint: x
 		Dimensions: 1,1
