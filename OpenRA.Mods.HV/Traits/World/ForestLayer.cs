@@ -149,10 +149,9 @@ namespace OpenRA.Mods.HV.Traits
 
 		LongBitSet<PlayerBitMask> ICrushable.CrushableBy(Actor self, BitSet<CrushClass> crushClasses)
 		{
-			if (!info.MunchClasses.Overlaps(crushClasses) || info.TraverseClasses.Overlaps(crushClasses))
-				return self.World.NoPlayersMask;
-
-			return self.World.AllPlayersMask;
+			return info.MunchClasses.Overlaps(crushClasses) || info.TraverseClasses.Overlaps(crushClasses)
+				? self.World.AllPlayersMask
+				: self.World.NoPlayersMask;
 		}
 
 		void INotifyCrushed.WarnCrush(Actor self, Actor crusher, BitSet<CrushClass> crushClasses) { }
