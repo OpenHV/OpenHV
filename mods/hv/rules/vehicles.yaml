@@ -260,8 +260,8 @@ RADARTANK:
 	Mobile:
 		Speed: 90
 		TurnSpeed: 20
-		ImmovableCondition: deployed
-		RequireForceMoveCondition: deployed
+		ImmovableCondition: !undeployed
+		RequireForceMoveCondition: !undeployed
 	RevealsShroud:
 		RequiresCondition: undeployed
 		Range: 8c0
@@ -271,7 +271,7 @@ RADARTANK:
 		Range: 4c0
 		RequiresCondition: undeployed
 	RevealsShroud@DEPLOYED:
-		RequiresCondition: deployed
+		RequiresCondition: !undeployed
 		Range: 14c0
 	WithMakeAnimation:
 		Sequence: extend
@@ -286,9 +286,9 @@ RADARTANK:
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
 		Voice: Move
 	Repairable:
-		RequireForceMoveCondition: deployed
+		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
-		RequiresCondition: deployed
+		RequiresCondition: !undeployed
 		Sequence: extended
 		Name: deployed
 	RenderDetectionCircle:
@@ -301,7 +301,7 @@ RADARTANK:
 		DetectionTypes: Cloak, Underwater
 	DetectCloaked@Deployed:
 		Range: 14c0
-		RequiresCondition: !jammed && deployed
+		RequiresCondition: !jammed && !undeployed
 		DetectionTypes: Cloak, Underwater
 
 REPAIRTANK:
