@@ -297,11 +297,11 @@ RADARTANK:
 		RequiresCondition: undeployed
 	DetectCloaked:
 		Range: 8c0
-		RequiresCondition: !jammed && undeployed
+		RequiresCondition: !jammed && !deployed
 		DetectionTypes: Cloak, Underwater
 	DetectCloaked@Deployed:
 		Range: 14c0
-		RequiresCondition: !jammed && !undeployed
+		RequiresCondition: !jammed && deployed
 		DetectionTypes: Cloak, Underwater
 
 REPAIRTANK:
