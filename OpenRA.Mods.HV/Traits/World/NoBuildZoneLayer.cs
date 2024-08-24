@@ -78,6 +78,10 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			foreach (var blockedCell in GetMinerFootprintAround(resourceLocation))
 			{
+				// Don't overwrite invalid terrain with valid custom terrain.
+				if (!buildingInfo.TerrainTypes.Contains(map.GetTerrainInfo(blockedCell).Type))
+					continue;
+
 				if (!ResourceAt(blockedCell))
 					map.CustomTerrain[blockedCell] = map.Rules.TerrainInfo.GetTerrainIndex(info.BlockedTerrainType);
 			}
