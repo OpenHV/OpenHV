@@ -52,9 +52,20 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Altitude above terrain below which to explode. Zero effectively deactivates airburst.")]
 		public readonly WDist AirburstAltitude = WDist.Zero;
 
-		public readonly WDist TargetCircleRange = WDist.Zero;
-		public readonly Color TargetCircleColor = Color.White;
-		public readonly bool TargetCircleUsePlayerColor = false;
+		[Desc("Range circle color.")]
+		public readonly Color CircleColor = Color.FromArgb(128, Color.Red);
+
+		[Desc("Range circle width in pixel.")]
+		public readonly float CircleWidth = 1;
+
+		[Desc("Range circle border color.")]
+		public readonly Color CircleBorderColor = Color.FromArgb(64, Color.Red);
+
+		[Desc("Range circle border width in pixel.")]
+		public readonly float CircleBorderWidth = 3;
+
+		[Desc("Render circles based on these distance ranges while targeting.")]
+		public readonly WDist[] CircleRanges = null;
 
 		public WeaponInfo WeaponInfo { get; private set; }
 
@@ -184,21 +195,19 @@ namespace OpenRA.Mods.HV.Traits
 
 		protected override IEnumerable<IRenderable> RenderAnnotations(WorldRenderer wr, World world)
 		{
-			var xy = wr.Viewport.ViewToWorld(Viewport.LastMousePos);
-
-			if (power.Info.TargetCircleRange == WDist.Zero)
-			{
+			if (power.Info.CircleRanges == null)
 				yield break;
-			}
-			else
-			{
+
+			var centerPosition = wr.World.Map.CenterOfCell(wr.Viewport.ViewToWorld(Viewport.LastMousePos));
+			foreach (var range in power.Info.CircleRanges)
 				yield return new RangeCircleAnnotationRenderable(
-					world.Map.CenterOfCell(xy),
-					power.Info.TargetCircleRange,
+					centerPosition,
+					range,
 					0,
-					power.Info.TargetCircleUsePlayerColor ? power.Self.Owner.Color : power.Info.TargetCircleColor, 1,
-					Color.FromArgb(96, Color.Black), 3);
-			}
+					power.Info.CircleColor,
+					power.Info.CircleWidth,
+					power.Info.CircleBorderColor,
+					power.Info.CircleBorderWidth);
 		}
 
 		protected override string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)

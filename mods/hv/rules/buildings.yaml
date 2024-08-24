@@ -1506,8 +1506,9 @@ SILO:
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: NukeIncoming
 		OrderName: Nukem
-		CircleRanges: 9c0
-		CircleColor: FFFFFF
+		CircleRanges: 9c0, 8c0, 7c0, 6c0, 5c0, 4c0, 3c0, 2c0, 1c0
+		CircleColor: FF0000
+		CircleWidth: 2
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150
@@ -1590,7 +1591,9 @@ UPLINK:
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
 		AirburstAltitude: 40c0
-		TargetCircleRange: 3c0
+		CircleRanges: 3c0, 2c0, 1c0
+		CircleColor: 0000FF
+		CircleWidth: 2
 		Weapon: RailgunSetup
 
 STORAGE:
