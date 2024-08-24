@@ -757,10 +757,10 @@ BUILDER:
 	RenderSprites:
 		Image: builder3
 	GrantConditionOnTerrain:
-		Condition: validterrain
+		Condition: buildable
 		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt
 	Transforms:
-		PauseOnCondition: !validterrain
+		PauseOnCondition: !buildable
 		IntoActor: outpost
 		NoTransformNotification: BuildingCannotPlaceAudio
 		NoTransformTextNotification: notification-cant-place-building
@@ -845,7 +845,7 @@ MINER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	GrantConditionOnTerrain:
-		Condition: validterrain
+		Condition: deposits
 		TerrainTypes: Ore
 	Miner:
 		TerrainTypes: Ore
@@ -853,7 +853,7 @@ MINER:
 			iron: 878787
 			gold: F07000
 	Transforms:
-		PauseOnCondition: !validterrain
+		PauseOnCondition: !deposits
 		IntoActor: miner2
 		Facing: 750
 		Offset: 0,-2
