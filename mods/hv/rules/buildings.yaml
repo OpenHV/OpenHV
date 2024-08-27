@@ -2671,6 +2671,8 @@ DROPZONE:
 		MinRange: 3c0
 		RevealGeneratedShroud: False
 		RequiresCondition: !disabled && !ownerless
+    RevealsShroud@Hacked:
+		Range: 3c0
 	RevealsShroud@Offline:
 		Range: 3c0
 		RevealGeneratedShroud: False
