@@ -57,9 +57,6 @@ Actors:
 	Actor5: treegrs10
 		Owner: Neutral
 		Location: 99,40
-	Actor6: treegrs10
-		Owner: Neutral
-		Location: 61,55
 	Actor7: treegrs12
 		Owner: Neutral
 		Location: 63,54
@@ -72,9 +69,6 @@ Actors:
 	Actor10: treegrs11
 		Owner: Neutral
 		Location: 182,106
-	Actor11: treegrs10
-		Owner: Neutral
-		Location: 180,104
 	Actor12: bigrock
 		Owner: Neutral
 		Location: 97,48
@@ -282,9 +276,6 @@ Actors:
 	Actor80: watchtower
 		Owner: Neutral
 		Location: 98,33
-	Actor81: watchtower
-		Owner: Neutral
-		Location: 61,54
 	Actor82: watchtower
 		Owner: Neutral
 		Location: 134,54
@@ -975,9 +966,6 @@ Actors:
 	Actor311: resourcelight
 		Owner: Neutral
 		Location: 98,59
-	Actor312: resourcelight
-		Owner: Neutral
-		Location: 61,55
 	Actor313: resourcelight
 		Owner: Neutral
 		Location: 84,27
@@ -1299,5 +1287,20 @@ Actors:
 	Actor419: dark_light
 		Owner: Neutral
 		Location: 79,17
+	Actor81: watchtower
+		Owner: Neutral
+		Location: 62,54
+	Actor312: resourcelight
+		Owner: Neutral
+		Location: 62,55
+	Actor6: treegrs10
+		Owner: Neutral
+		Location: 61,55
+	Actor420: flagpost
+		Owner: Neutral
+		Location: 183,105
+	Actor11: treegrs10
+		Owner: Neutral
+		Location: 181,105
 
 Rules: rules.yaml
