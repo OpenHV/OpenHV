@@ -34,6 +34,7 @@ faction-yuruki =
         - Hacker Tank
         - Lightning Tank
         - Stealth Tank
+        - Battleship
 
     Superweapon:
         - Air Strike
@@ -59,6 +60,7 @@ faction-synapol =
         - Countermeasure Tank
         - Railgun Tank
         - Missile Tank
+        - Mothership
 
     Superweapon:
         - Drop Pods
