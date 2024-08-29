@@ -96,7 +96,7 @@ MissileTankRocket:
 			None: 8
 			Steel: 75
 			Light: 75
-			Heavy: 75
+			Heavy: 79
 			Concrete: 75
 	Warhead@Incendiary: TreeDamage
 		Damage: 6000
@@ -249,7 +249,7 @@ StealthTankMissile:
 			None: 10
 			Steel: 100
 			Light: 100
-			Heavy: 100
+			Heavy: 105
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Damage: 7250
