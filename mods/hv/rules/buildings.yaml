@@ -2636,6 +2636,7 @@ WATCHTOWER:
 	-CaptureNotification:
 	ProximityCapturable:
 		Sticky: true
+  		CaptorTypes: Vehicle, Ship
 
 DROPZONE:
 	Inherits: ^Building
@@ -2731,6 +2732,7 @@ FLAGPOST:
 	-CapturableProgressBeep:
 	-CaptureManager:
 	ProximityCapturable:
+  		CaptorTypes: Vehicle, Ship, Plane
 	StrategicPoint:
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
