@@ -46,6 +46,7 @@
 			Tech: 100
 			Rail: 90
 			Blocked: 100
+				PathingCost: 300
 	Locomotor@Pod:
 		Name: pod
 		Crushes: Cube, Scrap, Mine, Shrubbery
