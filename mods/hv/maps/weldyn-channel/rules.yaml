@@ -1,0 +1,152 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.75
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 30
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+TOWERLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 03c640
+		Intensity: 0.01
+		RedTint: 0.95
+		GreenTint: 0.40
+		BlueTint: 0.40
+
+FIRELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 19c640
+		Intensity: 0.003
+		RedTint: 0.60
+		GreenTint: -0.10
+		BlueTint: 0.10
+
+MEDIUMFIRELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: 1.40
+		GreenTint: 0.50
+		BlueTint: 0.50
+
+SMALLFIRELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.005
+		RedTint: 0.60
+		GreenTint: 0.10
+		BlueTint: 0.10
+
+SMALL_RED_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 8c640
+		Intensity: 0.20
+		RedTint: 1.00
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+SWAMP_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 10c640
+		Intensity: 0.01
+		RedTint: 0.25
+		GreenTint: 1.10
+		BlueTint: 0.35
+
+PURP_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.55
+		GreenTint: 0.35
+		BlueTint: 0.60
+
+BLUE_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.45
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+DARKLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: -0.15
+		GreenTint: -0.15
+		BlueTint: -0.10
+
+PITLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.1
+		GreenTint: -0.2
+		BlueTint: -0.2
+
+WATERLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 13c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.70
+		BlueTint: 0.80
+
+WATERLIGHTSMALL:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 8c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.60
+		BlueTint: 0.70
+
+SMALL_BLUE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 8c640
+		Intensity: 0.20
+		RedTint: 0.35
+		GreenTint: 0.50
+		BlueTint: 1.00
+
+GREENLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 11c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.85
+		BlueTint: 0.45
