@@ -19,7 +19,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[Desc("Manages AI miner deployment logic.")]
-	public class MinerBotModuleInfo : ConditionalTraitInfo
+	public class MinerBotModuleInfo : ConditionalTraitInfo, NotBefore<IResourceLayerInfo>
 	{
 		[ActorReference]
 		[FieldLoader.Require]

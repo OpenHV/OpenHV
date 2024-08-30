@@ -37,7 +37,6 @@ button-select-categories-buttons-none = None
 
 ## encyclopedia.yaml
 label-encyclopedia-content-title = Encyclopedia
-button-encyclopedia-panel-back = Back
 
 ## gamesave-loading.yaml
 label-gamesave-loading-screen-title = Loading Saved Game
