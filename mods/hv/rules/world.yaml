@@ -42,6 +42,8 @@
 			Red Snow: 100
 			Sand: 100
 			Sand Ramp: 100
+			Black Sand: 100
+			Black Sand Ramp: 100
 			Stone: 100
 			Tech: 100
 			Rail: 90
@@ -68,6 +70,8 @@
 			Red Snow: 90
 			Sand: 90
 			Sand Ramp: 80
+			Black Sand: 90
+			Black Sand Ramp: 80
 			Stone: 100
 			Plant: 50
 			Tech: 100
@@ -93,6 +97,8 @@
 			Red Snow: 90
 			Sand: 90
 			Sand Ramp: 80
+			Black Sand: 90
+			Black Sand Ramp: 80
 			Stone: 100
 			Tech: 100
 			Rail: 80
@@ -118,6 +124,8 @@
 			Red Snow: 100
 			Sand: 100
 			Sand Ramp: 100
+			Black Sand: 100
+			Black Sand Ramp: 100
 			Stone: 100
 			Plant: 50
 			Tech: 100

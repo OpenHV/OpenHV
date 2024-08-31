@@ -4,7 +4,7 @@ General:
 	Name: Planet
 	Id: PLANET
 	Extensions: .png
-	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Plant, Stone, Swamp, Tech, Dirt
+	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Swamp, Tech, Dirt
 
 Terrain:
 	TerrainType@Clear:
@@ -115,6 +115,15 @@ Terrain:
 		Type: Sand Ramp
 		TargetTypes: Ground
 		Color: D0A090
+	TerrainType@BlackSand:
+		Type: Black Sand
+		TargetTypes: Ground
+		Color: 616161
+		AcceptsSmudgeType: Crater
+	TerrainType@BlackSandRamp:
+		Type: Black Sand Ramp
+		TargetTypes: Ground
+		Color: 616161
 	TerrainType@Plant:
 		Type: Plant
 		TargetTypes: Ground
@@ -1083,6 +1092,11 @@ Templates:
 			BorderTypes: Grass
 			BorderTransitions: 1512, 1517, 1513, 1510, 1515, 1514, 1519, 1520
 			Corners: 1516, 1518, 1511, 1509
+		AutoConnect@BlackSand:
+			Type: Black Sand
+			BorderTypes: Grass
+			BorderTransitions: 1767, 1772, 1768, 1765, 1770, 1769, 1774, 1775
+			Corners: 1771, 1773, 1766, 1764
 		AutoConnect@Tech:
 			Type: Tech
 			BorderTypes: Grass
@@ -12721,3 +12735,1237 @@ Templates:
 		Categories: Lava, Road
 		Tiles:
 			0: Road
+	Template@1676:
+		Id: 1676
+		Images: bits/terrain/sandb.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1677:
+		Id: 1677
+		Images: bits/terrain/sandb.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1678:
+		Id: 1678
+		Images: bits/terrain/sandb.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1679:
+		Id: 1679
+		Images: bits/terrain/sandb.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1680:
+		Id: 1680
+		Images: bits/terrain/sandb.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand, Terrain
+		ClearTile: true
+		AutoConnect@Lava:
+			Type: Lava
+			BorderTypes: Black Sand, Cliff
+			BorderTransitions: 1692, 1697, 1693, 1690, 1695, 1694, 1699, 1700
+			Corners: 1696, 1698, 1691, 1689
+		AutoConnect@Littoral:
+			Type: Littoral
+			BorderTypes: Black Sand, Cliff
+			BorderTransitions: 1803, 1808, 1804, 1801, 1806, 1805, 1810, 1811
+			Corners: 1807, 1809, 1802, 1800
+		AutoConnect@Dirt:
+			Type: Dirt
+			BorderTypes: Black Sand
+			BorderTransitions: 1779, 1784, 1780, 1777, 1782, 1781, 1786, 1787
+			Corners: 1783, 1785, 1778, 1776
+		AutoConnect@Tech:
+			Type: Tech
+			BorderTypes: Black Sand
+			BorderTransitions: 1792, 1789, 1791, 1796, 1795, 1797, 1790, 1788
+			Corners: 1794, 1793, 1798, 1799
+		AutoConnect@Sand:
+			Type: Sand
+			BorderTypes: Black Sand
+			BorderTransitions: 1816, 1813, 1815, 1820, 1819, 1821, 1814, 1812
+			Corners: 1818, 1817, 1822, 1823
+		Tiles:
+			0: Black Sand
+	Template@1681:
+		Id: 1681
+		Images: bits/terrain/sandb.png
+		Frames: 5
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1682:
+		Id: 1682
+		Images: bits/terrain/sandb.png
+		Frames: 6
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1683:
+		Id: 1683
+		Images: bits/terrain/sandb.png
+		Frames: 7
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1684:
+		Id: 1684
+		Images: bits/terrain/sandb.png
+		Frames: 8
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1685:
+		Id: 1685
+		Images: bits/terrain/sandb.png
+		Frames: 9
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1686:
+		Id: 1686
+		Images: bits/terrain/sandb.png
+		Frames: 10
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1687:
+		Id: 1687
+		Images: bits/terrain/sandb.png
+		Frames: 11
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1688:
+		Id: 1688
+		Images: bits/terrain/sandb.png
+		Frames: 12
+		Size: 1,1
+		Categories: Black Sand, Ramp
+		Tiles:
+			0: Black Sand Ramp
+				MinColor: 454444
+				MaxColor: 454444
+	Template@1689:
+		Id: 1689
+		Images: bits/terrain/sandb2lav.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1690:
+		Id: 1690
+		Images: bits/terrain/sandb2lav.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1691:
+		Id: 1691
+		Images: bits/terrain/sandb2lav.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1692:
+		Id: 1692
+		Images: bits/terrain/sandb2lav.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1693:
+		Id: 1693
+		Images: bits/terrain/sandb2lav.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1694:
+		Id: 1694
+		Images: bits/terrain/sandb2lav.png
+		Frames: 5
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1695:
+		Id: 1695
+		Images: bits/terrain/sandb2lav.png
+		Frames: 6
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1696:
+		Id: 1696
+		Images: bits/terrain/sandb2lav.png
+		Frames: 7
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1697:
+		Id: 1697
+		Images: bits/terrain/sandb2lav.png
+		Frames: 8
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1698:
+		Id: 1698
+		Images: bits/terrain/sandb2lav.png
+		Frames: 9
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1699:
+		Id: 1699
+		Images: bits/terrain/sandb2lav.png
+		Frames: 10
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1700:
+		Id: 1700
+		Images: bits/terrain/sandb2lav.png
+		Frames: 11
+		Size: 1,1
+		Categories: Black Sand, Lava
+		Tiles:
+			0: Cliff
+	Template@1701:
+		Id: 1701
+		Images: bits/terrain/sandbcrtr.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1702:
+		Id: 1702
+		Images: bits/terrain/sandbcrtr.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1703:
+		Id: 1703
+		Images: bits/terrain/sandbcrtr.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1704:
+		Id: 1704
+		Images: bits/terrain/sandbmisc.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1705:
+		Id: 1705
+		Images: bits/terrain/sandbmisc.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1706:
+		Id: 1706
+		Images: bits/terrain/sandbmisc.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1707:
+		Id: 1707
+		Images: bits/terrain/sandbmisc.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1708:
+		Id: 1708
+		Images: bits/terrain/sandbmisc.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1709:
+		Id: 1709
+		Images: bits/terrain/sandbrdst.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1710:
+		Id: 1710
+		Images: bits/terrain/sandbrdst.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1711:
+		Id: 1711
+		Images: bits/terrain/sandbrdst.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1712:
+		Id: 1712
+		Images: bits/terrain/sandbrdst.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1713:
+		Id: 1713
+		Images: bits/terrain/sandbrdst.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1714:
+		Id: 1714
+		Images: bits/terrain/sandbrdst.png
+		Frames: 5
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1715:
+		Id: 1715
+		Images: bits/terrain/sandbrdst.png
+		Frames: 6
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1716:
+		Id: 1716
+		Images: bits/terrain/sandbrdst.png
+		Frames: 7
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1717:
+		Id: 1717
+		Images: bits/terrain/sandbroad.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1718:
+		Id: 1718
+		Images: bits/terrain/sandbroad.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1719:
+		Id: 1719
+		Images: bits/terrain/sandbroad.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1720:
+		Id: 1720
+		Images: bits/terrain/sandbroad.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1721:
+		Id: 1721
+		Images: bits/terrain/sandbroad.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1722:
+		Id: 1722
+		Images: bits/terrain/sandbroad.png
+		Frames: 5
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1723:
+		Id: 1723
+		Images: bits/terrain/sandbroad.png
+		Frames: 6
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1724:
+		Id: 1724
+		Images: bits/terrain/sandbroad.png
+		Frames: 7
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1725:
+		Id: 1725
+		Images: bits/terrain/sandbroad.png
+		Frames: 8
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1726:
+		Id: 1726
+		Images: bits/terrain/sandbroad.png
+		Frames: 9
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1727:
+		Id: 1727
+		Images: bits/terrain/sandbroad.png
+		Frames: 10
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1728:
+		Id: 1728
+		Images: bits/terrain/sandbroad.png
+		Frames: 11
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1729:
+		Id: 1729
+		Images: bits/terrain/sandbroad.png
+		Frames: 12
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1730:
+		Id: 1730
+		Images: bits/terrain/sandbroad.png
+		Frames: 13
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1731:
+		Id: 1731
+		Images: bits/terrain/sandbroad.png
+		Frames: 14
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1732:
+		Id: 1732
+		Images: bits/terrain/sandbroad.png
+		Frames: 15
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1733:
+		Id: 1733
+		Images: bits/terrain/sandbroad.png
+		Frames: 16
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1734:
+		Id: 1734
+		Images: bits/terrain/sandbroad.png
+		Frames: 17
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1735:
+		Id: 1735
+		Images: bits/terrain/sandbroad.png
+		Frames: 18
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1736:
+		Id: 1736
+		Images: bits/terrain/sandbroad.png
+		Frames: 19
+		Size: 1,1
+		Categories: Black Sand, Road
+		Tiles:
+			0: Road
+	Template@1737:
+		Id: 1737
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 0
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1738:
+		Id: 1738
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 1
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1739:
+		Id: 1739
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 2
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1740:
+		Id: 1740
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 3
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1741:
+		Id: 1741
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 4
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1742:
+		Id: 1742
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 5
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1743:
+		Id: 1743
+		Images: bits/terrain/sndbcliffend.png
+		Size: 1,1
+		Frames: 6
+		Categories: Black Sand, Cliff
+		Tiles:
+			0: Cliff
+	Template@1744:
+		Id: 1744
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1745:
+		Id: 1745
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1746:
+		Id: 1746
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1747:
+		Id: 1747
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1748:
+		Id: 1748
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1749:
+		Id: 1749
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 5
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1750:
+		Id: 1750
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 6
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1751:
+		Id: 1751
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 7
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1752:
+		Id: 1752
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 8
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1753:
+		Id: 1753
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 9
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1754:
+		Id: 1754
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 10
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1755:
+		Id: 1755
+		Images: bits/terrain/sndb2watrshore.png
+		Frames: 11
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore
+		Tiles:
+			0: Shore
+	Template@1756:
+		Id: 1756
+		Images: bits/terrain/sndb2wtr_shore2cliff1.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1757:
+		Id: 1757
+		Images: bits/terrain/sndb2wtr_shore2cliff1.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1758:
+		Id: 1758
+		Images: bits/terrain/sndb2wtr_shore2cliff1.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1759:
+		Id: 1759
+		Images: bits/terrain/sndb2wtr_shore2cliff1.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1760:
+		Id: 1760
+		Images: bits/terrain/sndb2wtr_shore2cliff2.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1761:
+		Id: 1761
+		Images: bits/terrain/sndb2wtr_shore2cliff2.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1762:
+		Id: 1762
+		Images: bits/terrain/sndb2wtr_shore2cliff2.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1763:
+		Id: 1763
+		Images: bits/terrain/sndb2wtr_shore2cliff2.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Littoral, Shore, Cliff
+		Tiles:
+			0: Cliff
+	Template@1764:
+		Id: 1764
+		Images: bits/terrain/grs2sandb.png
+		Frames: 0
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1765:
+		Id: 1765
+		Images: bits/terrain/grs2sandb.png
+		Frames: 1
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1766:
+		Id: 1766
+		Images: bits/terrain/grs2sandb.png
+		Frames: 2
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1767:
+		Id: 1767
+		Images: bits/terrain/grs2sandb.png
+		Frames: 3
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1768:
+		Id: 1768
+		Images: bits/terrain/grs2sandb.png
+		Frames: 4
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1769:
+		Id: 1769
+		Images: bits/terrain/grs2sandb.png
+		Frames: 5
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1770:
+		Id: 1770
+		Images: bits/terrain/grs2sandb.png
+		Frames: 6
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1771:
+		Id: 1771
+		Images: bits/terrain/grs2sandb.png
+		Frames: 7
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1772:
+		Id: 1772
+		Images: bits/terrain/grs2sandb.png
+		Frames: 8
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1773:
+		Id: 1773
+		Images: bits/terrain/grs2sandb.png
+		Frames: 9
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1774:
+		Id: 1774
+		Images: bits/terrain/grs2sandb.png
+		Frames: 10
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1775:
+		Id: 1775
+		Images: bits/terrain/grs2sandb.png
+		Frames: 11
+		Size: 1,1
+		Categories: Grass, Black Sand
+		Tiles:
+			0: Grass
+	Template@1776:
+		Id: 1776
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 0
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1777:
+		Id: 1777
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 1
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1778:
+		Id: 1778
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 2
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1779:
+		Id: 1779
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 3
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1780:
+		Id: 1780
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 4
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1781:
+		Id: 1781
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 5
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1782:
+		Id: 1782
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 6
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1783:
+		Id: 1783
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 7
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1784:
+		Id: 1784
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 8
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1785:
+		Id: 1785
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 9
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1786:
+		Id: 1786
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 10
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1787:
+		Id: 1787
+		Images: bits/terrain/dirt-sandb.png
+		Frames: 11
+		Size: 1,1
+		Categories: Dirt, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1788:
+		Id: 1788
+		Images: bits/terrain/tch2sandb.png
+		Frames: 0
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1789:
+		Id: 1789
+		Images: bits/terrain/tch2sandb.png
+		Frames: 1
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1790:
+		Id: 1790
+		Images: bits/terrain/tch2sandb.png
+		Frames: 2
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1791:
+		Id: 1791
+		Images: bits/terrain/tch2sandb.png
+		Frames: 3
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1792:
+		Id: 1792
+		Images: bits/terrain/tch2sandb.png
+		Frames: 4
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1793:
+		Id: 1793
+		Images: bits/terrain/tch2sandb.png
+		Frames: 5
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1794:
+		Id: 1794
+		Images: bits/terrain/tch2sandb.png
+		Frames: 6
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1795:
+		Id: 1795
+		Images: bits/terrain/tch2sandb.png
+		Frames: 7
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1796:
+		Id: 1796
+		Images: bits/terrain/tch2sandb.png
+		Frames: 8
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1797:
+		Id: 1797
+		Images: bits/terrain/tch2sandb.png
+		Frames: 9
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1798:
+		Id: 1798
+		Images: bits/terrain/tch2sandb.png
+		Frames: 10
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1799:
+		Id: 1799
+		Images: bits/terrain/tch2sandb.png
+		Frames: 11
+		Size: 1,1
+		Categories: Tech, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1800:
+		Id: 1800
+		Images: bits/terrain/sndb2watr.png
+		Frames: 0
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1801:
+		Id: 1801
+		Images: bits/terrain/sndb2watr.png
+		Frames: 1
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1802:
+		Id: 1802
+		Images: bits/terrain/sndb2watr.png
+		Frames: 2
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1803:
+		Id: 1803
+		Images: bits/terrain/sndb2watr.png
+		Frames: 3
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1804:
+		Id: 1804
+		Images: bits/terrain/sndb2watr.png
+		Frames: 4
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1805:
+		Id: 1805
+		Images: bits/terrain/sndb2watr.png
+		Frames: 5
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1806:
+		Id: 1806
+		Images: bits/terrain/sndb2watr.png
+		Frames: 6
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1807:
+		Id: 1807
+		Images: bits/terrain/sndb2watr.png
+		Frames: 7
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1808:
+		Id: 1808
+		Images: bits/terrain/sndb2watr.png
+		Frames: 8
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1809:
+		Id: 1809
+		Images: bits/terrain/sndb2watr.png
+		Frames: 9
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1810:
+		Id: 1810
+		Images: bits/terrain/sndb2watr.png
+		Frames: 10
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1811:
+		Id: 1811
+		Images: bits/terrain/sndb2watr.png
+		Frames: 11
+		Size: 1,1
+		Categories: Black Sand, Cliff, Littoral
+		Tiles:
+			0: Cliff
+	Template@1812:
+		Id: 1812
+		Images: bits/terrain/sand2sandb.png
+		Frames: 0
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1813:
+		Id: 1813
+		Images: bits/terrain/sand2sandb.png
+		Frames: 1
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1814:
+		Id: 1814
+		Images: bits/terrain/sand2sandb.png
+		Frames: 2
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1815:
+		Id: 1815
+		Images: bits/terrain/sand2sandb.png
+		Frames: 3
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1816:
+		Id: 1816
+		Images: bits/terrain/sand2sandb.png
+		Frames: 4
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1817:
+		Id: 1817
+		Images: bits/terrain/sand2sandb.png
+		Frames: 5
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1818:
+		Id: 1818
+		Images: bits/terrain/sand2sandb.png
+		Frames: 6
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1819:
+		Id: 1819
+		Images: bits/terrain/sand2sandb.png
+		Frames: 7
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1820:
+		Id: 1820
+		Images: bits/terrain/sand2sandb.png
+		Frames: 8
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1821:
+		Id: 1821
+		Images: bits/terrain/sand2sandb.png
+		Frames: 9
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1822:
+		Id: 1822
+		Images: bits/terrain/sand2sandb.png
+		Frames: 10
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand
+	Template@1823:
+		Id: 1823
+		Images: bits/terrain/sand2sandb.png
+		Frames: 11
+		Size: 1,1
+		Categories: Sand, Black Sand
+		Tiles:
+			0: Black Sand

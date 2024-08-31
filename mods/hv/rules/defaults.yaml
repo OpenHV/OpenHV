@@ -167,7 +167,7 @@
 		EmptyWeapon: UnitExplodeSmall
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
-		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
 	Carryable:
@@ -242,7 +242,7 @@
 		ShowOwnerRow: false
 	Collectible:
 		Duration: 6000
-		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
+		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Dirt
 		CrushClass: Scrap
 	RenderSprites:
 		Palette: terrain
@@ -404,7 +404,7 @@
 		Speed: 300
 		CruiseAltitude: 16c0
 		MaximumPitch: 110
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Ice, Snow, Red Snow, Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	HiddenUnderFog:
 		Type: CenterPosition
 	BodyOrientation:
@@ -587,7 +587,7 @@
 		RequiresCondition: !build-incomplete && !beam-incomplete
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Rail, Dirt
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Dirt
 		AllowInvalidPlacement: false
 		BuildSounds: Freqman_fx376.ogg
 	RequiresBuildableArea:
@@ -1216,7 +1216,7 @@
 	Inherits@Handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Dirt
 		AllowInvalidPlacement: false
 		BuildSounds: Freqman_fx376-gate.ogg
 	Buildable:

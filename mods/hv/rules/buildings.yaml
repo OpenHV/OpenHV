@@ -618,7 +618,7 @@ MINER2:
 		Footprint: ++ ++ xx
 		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Stone, Tech, Dirt, Blocked
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Black Sand, Stone, Tech, Dirt, Blocked
 		AllowPlacementOnResources: true
 	RevealsShroud:
 		Range: 5c0
@@ -1900,7 +1900,7 @@ BARRIER:
 	Inherits@Handicaps: ^PlayerHandicaps
 	Building:
 		RequiresBaseProvider: true
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Stone, Tech, Dirt
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Dirt
 		AllowInvalidPlacement: false
 		BuildSounds: Quedicemipez_teleportation-barrier.ogg
 	Buildable:
@@ -2525,7 +2525,7 @@ COMLINK:
 		ChargeInterval: 1500
 		PauseOnCondition: lowpower
 		Actor: radarsweep
-		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Plant, Stone, Swamp, Tech, Dirt, Shore
+		Terrain: Crater, Cliff, Grass, Grass Pit, Grass Ramp, Road, Littoral, Pelagic, Oceanic, Rapids, Lava, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Red Snow, Sand, Sand Ramp, Black Sand, Black Sand Ramp, Plant, Stone, Swamp, Tech, Dirt, Shore
 		AllowUnderShroud: true
 		LifeTime: 250
 		EffectImage: surveillance_effect
