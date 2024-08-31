@@ -1063,6 +1063,9 @@ BUGGY:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
+	Passenger:
+		CargoType: Vehicle
+		Weight: 2
 
 BIKE:
 	Inherits: ^Vehicle
@@ -1108,6 +1111,9 @@ BIKE:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
+	Passenger:
+		CargoType: Vehicle
+		Weight: 2
 
 TANKER1:
 	Inherits: ^Vehicle
@@ -1194,6 +1200,8 @@ CVIT:
 		PlayerExperience: 5
 	SpawnActorOnDeath:
 		Actor: moneycube
+	Passenger:
+		Weight: 2
 
 FIRETRUCK:
 	Inherits: ^Vehicle
