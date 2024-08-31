@@ -178,7 +178,7 @@
 		Range: 1c0
 	Passenger:
 		CargoType: Vehicle
-		Weight: 5
+		Weight: 4
 
 ^Pod:
 	Inherits: ^Vehicle
