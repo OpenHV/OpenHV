@@ -176,7 +176,7 @@
 		TextNotification: notification-enemy-units-detected
 	Passenger:
 		CargoType: Vehicle
-		Weight: 5
+		Weight: 4
 
 ^Pod:
 	Inherits: ^Vehicle
