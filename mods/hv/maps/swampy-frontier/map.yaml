@@ -106,9 +106,6 @@ Actors:
 	Actor20: dwalll
 		Owner: Neutral
 		Location: 46,65
-	Actor21: dwallbr
-		Owner: Neutral
-		Location: 53,68
 	Actor22: dwalltc
 		Owner: Neutral
 		Location: 41,67
@@ -181,9 +178,6 @@ Actors:
 	Actor51: wallr
 		Owner: Neutral
 		Location: 53,65
-	Actor52: wallr
-		Owner: Neutral
-		Location: 53,64
 	Actor53: dwalltr2
 		Owner: Neutral
 		Location: 53,63
@@ -214,9 +208,6 @@ Actors:
 	Actor62: dwallt
 		Owner: Neutral
 		Location: 51,63
-	Actor64: walllextra
-		Owner: Neutral
-		Location: 50,64
 	Actor65: wallcornerbr
 		Owner: Neutral
 		Location: 50,65
@@ -250,9 +241,6 @@ Actors:
 	Actor80: dwallb2
 		Owner: Neutral
 		Location: 65,62
-	Actor81: dwallb2
-		Owner: Neutral
-		Location: 64,62
 	Actor83: dwallt
 		Owner: Neutral
 		Location: 70,59
@@ -352,24 +340,6 @@ Actors:
 	Actor117: dwallt
 		Owner: Neutral
 		Location: 65,59
-	Actor118: walllextra
-		Owner: Neutral
-		Location: 60,60
-	Actor119: walllextra
-		Owner: Neutral
-		Location: 60,61
-	Actor120: walllextra
-		Owner: Neutral
-		Location: 60,62
-	Actor121: walllextra
-		Owner: Neutral
-		Location: 60,63
-	Actor122: walllextra
-		Owner: Neutral
-		Location: 60,64
-	Actor123: walllextra
-		Owner: Neutral
-		Location: 60,65
 	Actor124: dwallbl
 		Owner: Neutral
 		Location: 60,66
@@ -385,18 +355,9 @@ Actors:
 	Actor128: wallr
 		Owner: Neutral
 		Location: 63,65
-	Actor129: wallr
-		Owner: Neutral
-		Location: 63,64
-	Actor131: wallr4
-		Owner: Neutral
-		Location: 63,63
 	Actor132: dwalltl
 		Owner: Neutral
 		Location: 50,63
-	Actor133: wallcornertl
-		Owner: Neutral
-		Location: 63,62
 	Actor130: dwallr
 		Owner: Neutral
 		Location: 67,59
@@ -1581,24 +1542,24 @@ Actors:
 		Location: 35,127
 	Actor535: worm
 		Owner: Neutral
-		Facing: 384
 		Location: 57,122
+		Facing: 169
 	Actor536: worm
 		Owner: Neutral
-		Facing: 384
 		Location: 33,127
+		Facing: 740
 	Actor537: worm
 		Owner: Neutral
-		Facing: 384
 		Location: 56,9
+		Facing: 571
 	Actor539: flyingmonster
 		Owner: Neutral
-		Facing: 384
 		Location: 104,122
+		Facing: 119
 	Actor540: flyingmonster
 		Owner: Neutral
-		Facing: 384
 		Location: 9,11
+		Facing: 649
 	Actor541: gull2
 		Owner: Neutral
 		Facing: 384
@@ -1625,8 +1586,8 @@ Actors:
 		Location: 108,113
 	Actor547: flyingmonster
 		Owner: Neutral
-		Facing: 384
 		Location: 55,67
+		Facing: 486
 	Actor548: seed
 		Owner: Neutral
 		Facing: 384
@@ -1640,8 +1601,8 @@ Actors:
 		Location: 77,4
 	Actor538: beast
 		Owner: Neutral
-		Facing: 384
 		Location: 4,125
+		Facing: 867
 	Actor549: beast
 		Owner: Neutral
 		Facing: 384
@@ -1652,8 +1613,8 @@ Actors:
 		Location: 108,5
 	Actor552: beast
 		Owner: Neutral
-		Facing: 384
 		Location: 108,15
+		Facing: 289
 	Actor553: streetlamp8
 		Owner: Neutral
 		Location: 41,6
@@ -1666,5 +1627,44 @@ Actors:
 	Actor556: streetlamp8
 		Owner: Neutral
 		Location: 72,121
+	Actor557: wallr2
+		Owner: Neutral
+		Location: 53,64
+	Actor558: dwallb3
+		Owner: Neutral
+		Location: 64,62
+	Actor559: wallcornertl
+		Owner: Neutral
+		Location: 63,62
+	Actor560: wallr3
+		Owner: Neutral
+		Location: 63,63
+	Actor561: wallr3
+		Owner: Neutral
+		Location: 63,64
+	Actor562: dwallbr
+		Owner: Neutral
+		Location: 53,68
+	Actor563: walll
+		Owner: Neutral
+		Location: 50,64
+	Actor564: walll
+		Owner: Neutral
+		Location: 60,60
+	Actor565: walll
+		Owner: Neutral
+		Location: 60,61
+	Actor566: walll
+		Owner: Neutral
+		Location: 60,62
+	Actor567: walll
+		Owner: Neutral
+		Location: 60,63
+	Actor568: walll
+		Owner: Neutral
+		Location: 60,64
+	Actor569: walll
+		Owner: Neutral
+		Location: 60,65
 
 Rules: rules.yaml
