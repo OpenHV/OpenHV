@@ -140,10 +140,12 @@ Player:
 			flamer: 1
 			blaster: 1
 			missiletank: 5
-			jet: 5
 			gunship: 5
 			copter: 5
 			banshee: 5
+			jet2: 5
+			turtle: 5
+			jet: 5
 			balloon: 1
 			observer: 1
 			torpedoboat: 2

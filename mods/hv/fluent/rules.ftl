@@ -183,11 +183,11 @@ actor-jet2 =
      Availability: Yuruki
 
 actor-copter =
-   .name = Attack Helicopter
+   .name = Assault Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
-   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   .encyclopedia = The assault helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
 
      {actor-copter.description}
 
@@ -207,7 +207,7 @@ actor-observer =
    .name = Observer
    .description = Reconnaissance air unit.
       Unarmed
-   .encyclopedia = An orb shaped helicopter with good maneuverability. It's not suited for combat, but for reconnaissance missions.
+   .encyclopedia = An orb shaped helicopter with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      {actor-observer.description}
 
@@ -253,7 +253,7 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
-   .encyclopedia = A reconnaissance air unit. It's slower than Synapol's observer, but it grants more visibility range.
+   .encyclopedia = A reconnaissance air unit with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      Unarmed
 
@@ -1148,7 +1148,7 @@ actor-mothership =
    .description = Launches aerial autonomous attack vessels.
       Only one can be built.
       Strong vs Everything
-   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with two powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
+   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with four powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
 
      {actor-mothership.description}
 
