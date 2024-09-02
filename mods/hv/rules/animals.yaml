@@ -48,7 +48,7 @@ BEAST:
 	-ProximityCaptor:
 
 CROW:
-	Inherits: ^Plane
+	Inherits: ^AirCreature
 	Valued:
 		Cost: 10
 	Health:
@@ -68,15 +68,6 @@ CROW:
 	WithShadow:
 		Offset: 200, 128, 0
 		ZOffset: -129
-	-Repairable:
-	-AppearsOnRadar:
-	-Selectable:
-	Interactable:
-	-Targetable@Airborne:
-	-ChangesHealth@Reconstructor:
-	-WithDecoration@Reconstructor:
-	-GrantConditionOnPrerequisite@Reconstructor:
-	-ProximityCaptor:
 
 CROW2:
 	Inherits: CROW
@@ -160,7 +151,7 @@ WORM:
 	DeathSounds:
 
 FLYINGMONSTER:
-	Inherits: ^Plane
+	Inherits: ^AirCreature
 	Valued:
 		Cost: 10
 	Health:
@@ -184,16 +175,3 @@ FLYINGMONSTER:
 		DeathPaletteIsPlayerPalette: false
 	Voiced:
 		VoiceSet: FlyingMonsterVoice
-	DeathSounds:
-	-Guard:
-	-Repairable:
-	-MustBeDestroyed:
-	-FireWarheadsOnDeath:
-	-FireWarheadsOnDeath@SpawnPilot:
-	-GrantRandomCondition@SpawnPilot:
-	-ChangesHealth@Reconstructor:
-	-WithDecoration@Reconstructor:
-	-GrantConditionOnPrerequisite@Reconstructor:
-	-Selectable:
-	Interactable:
-	-ProximityCaptor:
