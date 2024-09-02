@@ -212,11 +212,11 @@ SAUCER:
 		HP: 8000
 	RevealsShroud:
 		Range: 18c0
-		MinRange: 6c0
+		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 6c0
+		Range: 9c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 16

@@ -265,14 +265,14 @@ RADARTANK:
 	RevealsShroud:
 		RequiresCondition: undeployed
 		Range: 8c0
-		MinRange: 4c0
+		MinRange: 8c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 8c0
 		RequiresCondition: undeployed
 	RevealsShroud@DEPLOYED:
 		RequiresCondition: !undeployed
-		Range: 14c0
+		Range: 16c0
 	WithMakeAnimation:
 		Sequence: extend
 		BodyNames: deployed
@@ -300,7 +300,7 @@ RADARTANK:
 		RequiresCondition: !jammed && !deployed
 		DetectionTypes: Cloak, Underwater
 	DetectCloaked@Deployed:
-		Range: 14c0
+		Range: 16c0
 		RequiresCondition: !jammed && deployed
 		DetectionTypes: Cloak, Underwater
 
