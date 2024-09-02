@@ -281,12 +281,21 @@
 	Selectable:
 		Bounds: 1024, 1024
 	Aircraft:
+		CruisingCondition: cruising
 		AirborneCondition: airborne
 		CruiseAltitude: 2c0
 		InitialFacing: 768
 		Voice: Move
 		TakeOffOnResupply: true
 		LandAltitude: 0c64
+		CanHover: True
+		WaitDistanceFromResupplyBase: 4c0
+	Hovers@Cruising:
+		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+		FallTicks: 8
+		RiseTicks: 8
 	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -330,6 +339,22 @@
 		Weapon: UnitExplodeMedium
 		EmptyWeapon: UnitExplodeMedium
 
+^AirCreature:
+	Inherits: ^Plane
+	DeathSounds:
+	-AppearsOnRadar:
+	-Guard:
+	-Repairable:
+	-MustBeDestroyed:
+	-GrantRandomCondition@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
+	-Selectable:
+	Interactable:
+	-ProximityCaptor:
+
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
 	Inherits@Sprite: ^SpriteActor
@@ -363,6 +388,30 @@
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
+
+^BaseDrone:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 60
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+		AirborneCondition: airborne
+		CanHover: False
+		LandAltitude: 0c0
+	-MapEditorData:
 
 ^CargoPlane:
 	Inherits@Exists: ^ExistsInWorld
@@ -443,18 +492,10 @@
 	Tooltip:
 		GenericName: meta-helicopter-generic-name
 	Aircraft:
-		CanHover: true
-		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
 		VTOL: true
 		InitialFacing: 896
 		CanSlide: True
-	Hovers@Cruising:
-		RequiresCondition: cruising
-		BobDistance: -64
-		InitialHeight: 64
-		FallTicks: 8
-		RiseTicks: 8
 	BodyOrientation:
 
 ^1x1Shape:
