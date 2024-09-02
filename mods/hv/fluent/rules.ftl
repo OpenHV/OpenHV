@@ -192,11 +192,11 @@ actor-jet2 =
      Availability: Yuruki
 
 actor-copter =
-   .name = Attack Helicopter
+   .name = Assault Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
-   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   .encyclopedia = The assault helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
 
      {actor-copter.description}
 
@@ -216,7 +216,7 @@ actor-observer =
    .name = Observer
    .description = Reconnaissance air unit.
       Unarmed
-   .encyclopedia = An orb shaped helicopter with good maneuverability. It's not suited for combat, but for reconnaissance missions.
+   .encyclopedia = An orb shaped helicopter with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      {actor-observer.description}
 
@@ -262,7 +262,7 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
-   .encyclopedia = A reconnaissance air unit. It's slower than Synapol's observer, but it grants more visibility range.
+   .encyclopedia = A reconnaissance air unit with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      Unarmed
 
@@ -730,36 +730,52 @@ actor-technician =
     Repairs pods.
       Unarmed
    .name = Technician
-   .encyclopedia = The universal field engineer. Its first ability is to infiltrate and capture enemy structures, changing their allegiance: it is often used to capture enemy mining towers. Its second ability is to repair allied pods, on the battle field.
+   .encyclopedia = The Synapol's field engineer. Its first ability is to infiltrate and capture enemy structures, changing their allegiance. Its second ability is to repair allied pods, on the battle field.
 
      {actor-technician.description}
 
-     Availability: Universal
+     Availability: Synapol
 
 actor-broker =
    .description = Financial analyst.
+    Infiltrates and captures enemy structures.
     Invests into stock market for dividends.
     Capable of remotely stealing money
-    from bases and storages.
+    from bases, storages, mining towers, ore
+    smelters or ore purifiers, once deployed
       Unarmed
    .name = Broker
-   .encyclopedia = The broker pod is an advanced pod that can invest in the stock market for a constant stream of revenue. It can also tap into an opponent's base or storage and initiate forged wire transfers to remotely steal that enemy's cash.
+   .encyclopedia = The broker pod is an advanced pod that can tap into an opponent's base, storage, mining tower, ore smelter or ore purifier and initiate forged wire transfers to remotely steal that enemy's cash, when deployed. It can also infiltrate and capture enemy structures, when undeployed.
 
      {actor-broker.description}
 
-     Availability: Universal
+     Availability: Yuruki
 
 actor-jetpacker =
    .description = Elite airborne vehicle.
-    Armed with heavy machine gun.
-      Strong vs Pods, Light Vehicles and Aircraft
-      Weak vs Tanks and Buildings
+    Armed with heavy missiles.
+      Strong vs Pods
+      Weak vs Vehicles, Navy and Buildings
+      Can't attack Aircraft
    .name = Jetpacker
-   .encyclopedia = The ultimate pod: the jetpacker. It was designed by an independent lab, allowing its universal availability. It can handle pods, light vehicles and aircraft well. The fact that it's an airborne pod makes it less vulnerable to other pods.
+   .encyclopedia = The ultimate Synapol pod: the jetpacker. It was designed to weaken Yuruki pod masses. The fact that it's an airborne pod makes it less vulnerable to other pods.
 
      {actor-jetpacker.description}
 
-     Availability: Universal
+     Availability: Synapol
+
+actor-jetpacker2 =
+   .description = Elite airborne vehicle.
+    Armed with scatter gun.
+      Strong vs Vehicles, Navy
+      Weak vs Pods and Buildings
+      Can't attack Aircraft
+   .name = Jetpacker2
+   .encyclopedia = The ultimate Yuruki pod: the jetpacker. It was designed for quick maneuverability and hit-and-run tactics to weaken Synapol's vehicle and navy forces. The fact that it's an airborne pod makes it less vulnerable to other pods.
+
+     {actor-jetpacker2.description}
+
+     Availability: Yuruki
 
 actor-blaster =
    .description = Remote controlled mine.
@@ -828,7 +844,7 @@ actor-lightboat =
 
      {actor-lightboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-patrolboat =
    .name = Patrol boat
@@ -840,31 +856,32 @@ actor-patrolboat =
 
      {actor-patrolboat.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mercboat =
    .name = Mercenary Boat
    .generic-name = Boat
    .description = A boat with a turret.
-      Strong vs Vehicles
+      Strong vs Vehicles, Navy and Buildings
       Weak vs Pods
-   .encyclopedia = The mercenary boat is a fast boat, armed with a turret. Its turret is powerful against other ships.
+      Can't attack Aircraft
+   .encyclopedia = The mercenary boat is a fast boat, armed with a turret, making it a flexible medium unit.
 
      {actor-mercboat.description}
 
-     Availability: Non-trainable
+     Availability: Synapol
 
 actor-torpedoboat =
    .name = Torpedo Boat
    .generic-name = Boat
    .description = A boat with torpedo launchers.
       Strong vs Water
-      Can't attack Ground or Air
+      Can't attack Ground or Aircraft
    .encyclopedia = The torpedo boat is designed to counter fast ship assaults. It has two torpedo launchers onboard that can take down multiple boats on its own.
 
      {actor-torpedoboat.description}
 
-     Availability: Yuruki
+     Availability: Non-trainable
 
 actor-submarine =
    .name = Submarine
@@ -876,7 +893,7 @@ actor-submarine =
 
      {actor-submarine.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-railgunboat =
    .name = Railgun Boat
@@ -892,9 +909,13 @@ actor-railgunboat =
 actor-lightningboat =
    .name = Lightning Boat
    .generic-name = Boat
-   .description = A heavy boat with a lightning gun.
-      Strong vs Vehicles, Pods and Buildings
-   .encyclopedia = The lightning boat is a heavy ship capable of handling every situation possible. It's armed with a 360 degrees laser zap, that's particularly powerful against buildings.
+   .description = A heavy boat with a lightning
+   aura that increases the rate of fire of most
+   friendly navy units nearby.
+      Unarmed
+   .encyclopedia = The lightning boat is a heavy ship that aids nearby navy units. It eletrifies the waters nearby and that makes all friendly navy unit weapon mechanisms electrified (except for Missile Submarine and Drone Ship), increasing their rate of fire slightly.
+
+   Unarmed
 
      {actor-lightningboat.description}
 
@@ -909,7 +930,7 @@ actor-boomer =
 
      {actor-boomer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -921,7 +942,7 @@ actor-carrier =
 
      {actor-carrier.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-ferry =
    .name = Light Naval transporter
@@ -1160,9 +1181,9 @@ actor-missiletank =
    .name = Missile Tank
    .generic-name = Tank
    .description = A tank which shoots missiles.
-      Strong vs Vehicles and Buildings
+      Strong vs Vehicles, Aircraft, Navy and Buildings
       Weak vs Pods
-   .encyclopedia = The missile tank is an agile tank, able to fire from a turret, while still moving decently fast. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the railgun tank, it is stronger against buildings.
+   .encyclopedia = The missile tank is slow but powerful, able to fire from a turret. It is armed with a powerful missile launcher, good against buildings, vehicles and air units.
 
      {actor-missiletank.description}
 
@@ -1233,7 +1254,7 @@ actor-mothership =
    .description = Launches aerial autonomous attack vessels.
       Only one can be built.
       Strong vs Everything
-   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with two powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
+   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with four powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
 
      {actor-mothership.description}
 

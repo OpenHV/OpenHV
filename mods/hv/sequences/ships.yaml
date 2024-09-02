@@ -160,23 +160,22 @@ ferry:
 
 ferry2:
 	idle:
-		Filename: bits/ferry.png
+		Filename: ferry.png
 	open:
-		Filename: bits/ferry.png
+		Filename: ferry.png
 		Length: 4
 		Tick: 150
 	close:
-		Filename: bits/ferry.png
+		Filename: ferry.png
 		Frames: 3, 2, 1, 0
 		Length: 4
 		Tick: 150
 	unload:
-		Filename: bits/ferry.png
+		Filename: ferry.png
 		Start: 3
 		ZOffset: -511
 	icon:
-		Filename: bits/units-icons.png
-		Start: 56
+		Filename: ferry-icon.png
 		Offset: 2, 0
 
 mineship:
@@ -210,6 +209,7 @@ mineship2:
 lightningboat:
 	idle:
 		Filename: lightningboat.png
+	# TODO: Maybe unify idle, shoot and charge animations?
 	shoot:
 		Filename: lightningboat.png
 		Start: 1

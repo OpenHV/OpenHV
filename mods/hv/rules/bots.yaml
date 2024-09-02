@@ -15,11 +15,11 @@ Player:
 		MinimumBaseRadius: 15
 	BaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		MinimumExcessPower: 40
-		MaximumExcessPower: 500
+		MinimumExcessPower: 60
+		MaximumExcessPower: 1000
 		InititalMinimumRefineryCount: 1
 		AdditionalMinimumRefineryCount: 1
-		PlaceDefenseTowardsEnemyChance: 0
+		PlaceDefenseTowardsEnemyChance: 20
 		NewProductionCashThreshold: 7000
 		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
@@ -43,8 +43,8 @@ Player:
 			orepurifier: 2
 			trader: 1
 			techcenter: 1
-			harbor: 1
-			harbor2: 1
+			harbor: 4
+			harbor2: 4
 			field: 1
 			howitzer: 1
 			uplink: 1
@@ -83,10 +83,8 @@ Player:
 			aaturret2: 150
 			turret: 150
 			turret2: 150
-			radar: 10000
-			radar2: 10000
-			factory: 11000
-			factory2: 11000
+			radar: 7500
+			radar2: 7500
 			howitzer: 12000
 			field: 12000
 			silo: 13000
@@ -97,8 +95,8 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 20
 		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster
-		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
-		AirUnitsTypes: gunship, jet, copter, banshee
+		NavalUnitsTypes: mercboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship2, gunship3, jet, copter, turtle, banshee
 		ConstructionYardTypes: base, base2
 		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
 	UnitBuilderBotModule@RogueAI:
@@ -130,19 +128,23 @@ Player:
 			rocketeer: 1
 			mortar: 1
 			jetpacker: 1
+			jetfoiler: 1
 			sniper: 1
-			shocker: 1
+			shocker: 3
 			technician: 1
+			broker: 1
 			flamer: 1
 			blaster: 1
 			missiletank: 5
-			jet: 5
-			gunship: 5
+			gunship2: 5
+			gunship3: 5
 			copter: 5
 			banshee: 5
+			turtle: 5
+			jet: 5
 			balloon: 1
 			observer: 1
-			torpedoboat: 2
+			mercboat: 2
 			submarine: 2
 			lightboat: 2
 			patrolboat: 2
@@ -155,6 +157,7 @@ Player:
 			battleship: 1
 			mothership: 1
 		UnitLimits:
+			sniper: 6
 			miner: 2
 			builder: 1
 			builder2: 1
@@ -167,6 +170,7 @@ Player:
 			mineship: 1
 			mineship2: 1
 			technician: 1
+			broker: 1
 			blaster: 3
 			apc: 1
 			apc2: 1
@@ -175,7 +179,7 @@ Player:
 			builder2: 7500
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
-		CapturingActorTypes: technician
+		CapturingActorTypes: technician, broker
 		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
 		MinimumCaptureDelay: 0
 		MaximumCaptureTargetOptions: 25
@@ -202,7 +206,7 @@ Player:
 		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
-		DeployableActorTypes: radartank
+		DeployableActorTypes: radartank, hackertank, railgunboat
 	PowerDownBotModule:
 		RequiresCondition: enable-rogue-ai
 	ScoutBotModule:
