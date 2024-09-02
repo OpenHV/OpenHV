@@ -13,7 +13,7 @@ MBT:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~factory.yi
+		Prerequisites: ~disabled
 		Queue: Tank
 		Description: actor-mbt.description
 	Encyclopedia:
@@ -25,7 +25,7 @@ MBT:
 		TurnSpeed: 25
 		Speed: 95
 	Health:
-		HP: 46000
+		HP: 69000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -54,7 +54,7 @@ MBT:
 MBT2:
 	Inherits: MBT
 	Buildable:
-		Prerequisites: ~factory.sc
+		Prerequisites: ~disabled
 	-Encyclopedia:
 	Turreted:
 		Offset: 0,0,0
@@ -68,7 +68,7 @@ AATANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 20
-		Prerequisites: ~factory.sc
+		Prerequisites: ~disabled
 		Description: actor-aatank.description
 	Encyclopedia:
 		Description: actor-aatank.encyclopedia
@@ -84,7 +84,7 @@ AATANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -150,7 +150,7 @@ APC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 31500
+		HP: 47250
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -205,7 +205,7 @@ APC2:
 	Encyclopedia:
 		Description: actor-apc2.encyclopedia
 	Health:
-		HP: 38500
+		HP: 57750
 	Mobile:
 		TurnSpeed: 23
 		Speed: 99
@@ -221,8 +221,8 @@ ARTILLERY:
 		Class: artillery
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, radar
-		BuildPaletteOrder: 50
+		Prerequisites: ~factory.sc, radar
+		BuildPaletteOrder: 20
 		Description: actor-artillery.description
 	Encyclopedia:
 		Description: actor-artillery.encyclopedia
@@ -232,7 +232,7 @@ ARTILLERY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -282,7 +282,7 @@ RADARTANK:
 	Selectable:
 		Class: radartank
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Light
 	Mobile:
@@ -367,7 +367,7 @@ REPAIRTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -407,7 +407,7 @@ MINELAYER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 21000
+		HP: 31500
 	Armor:
 		Type: Light
 	Mobile:
@@ -448,7 +448,7 @@ RAILGUNTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 3000
+		Cost: 3750
 	Tooltip:
 		Name: actor-railguntank.name
 		GenericName: actor-railguntank.generic-name
@@ -465,7 +465,7 @@ RAILGUNTANK:
 		BuildPaletteOrder: 70
 		Description: actor-railguntank.description
 	Armament:
-		Weapon: railgun
+		Weapon: Railgun
 		LocalOffset: 325,450,0
 	AttackFrontal:
 		PauseOnCondition: jammed
@@ -474,7 +474,7 @@ RAILGUNTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -492,8 +492,8 @@ LIGHTNINGTANK:
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Tank
-		BuildPaletteOrder: 70
-		Prerequisites: ~factory.yi, techcenter
+		BuildPaletteOrder: 10
+		Prerequisites: ~factory.yi
 		Description: actor-lightningtank.description
 	Encyclopedia:
 		Description: actor-lightningtank.encyclopedia
@@ -501,7 +501,7 @@ LIGHTNINGTANK:
 		Scale: 3
 		Category: Tanks
 	Valued:
-		Cost: 3000
+		Cost: 1700
 	Tooltip:
 		Name: actor-lightningtank.name
 		GenericName: actor-lightningtank.generic-name
@@ -509,28 +509,29 @@ LIGHTNINGTANK:
 		Class: lightningtank
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
+	Mobile:
+		TurnSpeed: 25
+		Speed: 95
 	Health:
-		HP: 50000
+		HP: 69000
 	Armor:
 		Type: Heavy
-	Mobile:
-		Speed: 80
-		TurnSpeed: 25
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 7c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	Armament:
-		Weapon: VoltageArc
+		Weapon: TankVoltageArc
 		LocalOffset: 500,0,0
 	AttackFrontal:
 		PauseOnCondition: jammed
 		Voice: Attack
-		FacingTolerance: 0
+		FacingTolerance: 120
 	WithAttackAnimation:
 		Sequence: shoot
+	WithMuzzleOverlay:
 
 STEALTHTANK:
 	Inherits: ^TrackedVehicle
@@ -546,7 +547,7 @@ STEALTHTANK:
 		Scale: 3
 		Category: Tanks
 	Valued:
-		Cost: 2400
+		Cost: 3000
 	Tooltip:
 		Name: actor-stealthtank.name
 	Selectable:
@@ -554,7 +555,7 @@ STEALTHTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	AttackFrontal:
@@ -620,7 +621,7 @@ MERCTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -652,7 +653,7 @@ DUALMERCTANK:
 		Weapon: DoubleCannon
 		LocalOffset: 500,85,50, 500,-85,50
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -693,7 +694,7 @@ ECMTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -731,7 +732,7 @@ DUALARTILLERY:
 		Scale: 3
 		Category: Tanks
 	Health:
-		HP: 35000
+		HP: 52500
 	Armor:
 		Type: Light
 	Mobile:
@@ -784,7 +785,7 @@ BUILDER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 18000
 	Armor:
 		Type: Light
 	Mobile:
@@ -835,7 +836,7 @@ COLLECTOR:
 	Selectable:
 		Class: collector
 	Health:
-		HP: 10000
+		HP: 15000
 	Armor:
 		Type: Light
 	Mobile:
@@ -876,7 +877,7 @@ MINER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -913,9 +914,9 @@ MINER:
 
 MISSILETANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 2400
+		Cost: 2125
 	Tooltip:
 		Name: actor-missiletank.name
 		GenericName: actor-missiletank.generic-name
@@ -923,8 +924,8 @@ MISSILETANK:
 		Class: missiletank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, radar, techcenter
-		BuildPaletteOrder: 80
+		Prerequisites: ~factory.sc
+		BuildPaletteOrder: 10
 		Description: actor-missiletank.description
 	Encyclopedia:
 		Description: actor-missiletank.encyclopedia
@@ -934,23 +935,27 @@ MISSILETANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 91500
 	Armor:
 		Type: Heavy
 	Mobile:
+		TurnSpeed: 30
 		Speed: 80
 	RevealsShroud:
-		Range: 7c0
-		MinRange: 3c0
+		Range: 9c0
+		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 3c0
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: -200,-50,100
-	Armament:
+	Armament@Primary:
 		Weapon: MissileTankRocket
-		LocalOffset: 500,200,0, 500,-200,0, 500,0,0
+		LocalOffset: 500,0,0, 500,-200,0, 500,200,0
+	Armament@Secondary:
+		Weapon: Patriot
+		LocalOffset: 500,0,0
 	AttackTurreted:
 		PauseOnCondition: jammed
 		Voice: Attack
@@ -978,7 +983,7 @@ HACKERTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 17500
+		HP: 26250
 	Armor:
 		Type: Light
 	Mobile:
@@ -1020,7 +1025,7 @@ BUGGY:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: actor-buggy.name
 		GenericName: actor-buggy.generic-name
@@ -1051,7 +1056,7 @@ BUGGY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	Armor:
 		Type: Light
 	Mobile:
@@ -1071,7 +1076,7 @@ BIKE:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: actor-bike.name
 		GenericName: actor-bike.generic-name
@@ -1099,7 +1104,7 @@ BIKE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9500
+		HP: 14250
 	Armor:
 		Type: Light
 	Mobile:
@@ -1128,7 +1133,7 @@ TANKER1:
 	Selectable:
 		Class: tanker
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -1188,7 +1193,7 @@ CVIT:
 	Selectable:
 		Class: cvit
 	Health:
-		HP: 11000
+		HP: 16500
 	Armor:
 		Type: Light
 	Mobile:
@@ -1241,7 +1246,7 @@ FIRETRUCK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1291,7 +1296,7 @@ WATERTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
