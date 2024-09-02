@@ -356,11 +356,10 @@ apc:
 
 apc2:
 	idle:
-		Filename: bits/apc.png
+		Filename: apc.png
 		Facings: 8
 	icon:
-		Filename: bits/units-icons.png
-		Start: 13
+		Filename: apc-icon.png
 
 artillery:
 	idle:
