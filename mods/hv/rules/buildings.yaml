@@ -714,6 +714,8 @@ MINER2:
 		RequiresCondition: !build-incomplete && !critical
 	CaptureManager:
 		-BeingCapturedCondition: being-captured
+	Targetable:
+		TargetTypes: Ground, Structure, Defraudable
 
 STARPORT:
 	Inherits: ^BaseBuilding
@@ -1145,6 +1147,8 @@ ORESMELT:
 	WithIdleAnimation:
 		Interval: 40
 		RequiresCondition: !build-incomplete && !disabled && !burning && !selling
+	Targetable:
+		TargetTypes: Ground, Structure, Defraudable
 
 OREPURIFIER:
 	Inherits: ORESMELT
