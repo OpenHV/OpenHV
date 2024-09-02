@@ -130,7 +130,7 @@ BikeChainGun:
 
 HelicopterChainGunGround:
 	Inherits: ^AircraftChainGun
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
 	ReloadDelay: 10
 	Range: 6c0
 	MinRange: 0c768
@@ -158,15 +158,15 @@ HelicopterChainGunAir:
 
 AircraftChainGunGround:
 	Inherits: ^AircraftChainGun
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 3
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	ReloadDelay: 6
 	Range: 6c0
 	MinRange: 1c0
 	Burst: 16
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
-		Damage: 375
+		Damage: 120
 		Versus:
 			None: 800
 			Steel: 108
