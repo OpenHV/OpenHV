@@ -120,7 +120,7 @@ ShipMissile:
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 25
-	Range: 8c0
+	Range: 9c0
 	MinRange: 1c0
 	Projectile: Missile
 		Speed: 256
@@ -132,8 +132,8 @@ ShipMissile:
 		Versus:
 			None: 45
 			Steel: 90
-			Light: 45
-			Heavy: 45
+			Light: 135
+			Heavy: 135
 			Concrete: 90
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -334,13 +334,12 @@ DiscThrower:
 		-TrailImage:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		Spread: 512
+		Spread: 288
 		Damage: 8000
 		ValidTargets: Air
 		Versus:
-			Steel: 74
-			Light: 34
-			Heavy: 100
+			Light: 35
+			Heavy: 35
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.ogg

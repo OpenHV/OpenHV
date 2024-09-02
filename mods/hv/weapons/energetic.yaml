@@ -135,7 +135,7 @@ Plasma:
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
-	Range: 8c0
+	Range: 9c0
 	MinRange: 1c0
 	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
@@ -149,12 +149,12 @@ Plasma:
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		Damage: 1750
+		Damage: 800
 		Versus:
 			None: 43
 			Steel: 85
-			Light: 43
-			Heavy: 43
+			Light: 129
+			Heavy: 129
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -573,9 +573,8 @@ PlasmaMachineGun:
 		DamageTypes: Fire
 		ValidTargets: Air
 		Spread: 256
-		Damage: 2500
+		Damage: 725
 		Versus:
-			Steel: 50
 			Light: 50
 			Heavy: 50
 	Warhead@GroundEffect: CreateEffect
