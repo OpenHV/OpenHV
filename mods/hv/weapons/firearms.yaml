@@ -140,51 +140,41 @@ HelicopterChainGunGround:
 		Versus:
 			None: 540
 			Steel: 60
-			Light: 295
+			Light: 290
 			Heavy: 40
 			Concrete: 20
-	Warhead@Incendiary: TreeDamage
-		Spread: 64
-		Damage: 250
 
 HelicopterChainGunAir:
 	Inherits: HelicopterChainGunGround
 	ValidTargets: Air
 	Warhead@Damage: SpreadDamage
-		Damage: 250
 		Versus:
-			Light: 167
-			Heavy: 115
+			Steel: 0
+			Concrete: 0
 
 AircraftChainGunGround:
 	Inherits: ^AircraftChainGun
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 3
+	ReloadDelay: 6
 	Range: 6c0
 	MinRange: 1c0
 	Burst: 16
-	Projectile: InstantHit
-		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Damage: 375
 		Versus:
-			None: 800
-			Steel: 108
-			Light: 365
-			Heavy: 65
-			Concrete: 63
-	Warhead@Incendiary: TreeDamage
-		Spread: 64
-		Damage: 375
+			None: 270
+			Steel: 30
+			Light: 145
+			Heavy: 20
+			Concrete: 10
 
 AircraftChainGunAir:
 	Inherits: AircraftChainGunGround
 	ValidTargets: Air
 	Warhead@Damage: SpreadDamage
-		Damage: 375
 		Versus:
-			Light: 207
-			Heavy: 185
+			Steel: 0
+			Concrete: 0
 
 ShellCasing:
 	Inherits: SmallSplash
