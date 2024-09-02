@@ -1103,6 +1103,9 @@ TANKER2:
 	Tooltip:
 		Name: actor-tanker2.name
 	-SpawnScrapOnDeath:
+	-Targetable@SecurityVulnerability:
+	-Hackable:
+	-Targetable@ECM:
 	RenderSprites:
 		Image: tanker2
 		FactionImages:
