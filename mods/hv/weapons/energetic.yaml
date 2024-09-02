@@ -137,7 +137,7 @@ Plasma:
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		Damage: 1750
+		Damage: 1325
 		Versus:
 			None: 43
 			Steel: 85

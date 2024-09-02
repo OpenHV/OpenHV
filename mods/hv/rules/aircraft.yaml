@@ -30,16 +30,12 @@ GUNSHIP:
 	RevealsShroud@Hacked:
 		Range: 4c0
 		Type: GroundPosition
-	Armament@Ground:
+	Armament:
 		Weapon: AircraftChainGunGround
 		MuzzleSequence: muzzle
 		LocalOffset: 300,0,0
-	Armament@Air:
-		Weapon: AircraftChainGunAir
-		MuzzleSequence: muzzle
-		LocalOffset: 300,0,0
 	AttackAircraft:
-		FacingTolerance: 92
+		FacingTolerance: 32
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
@@ -138,6 +134,15 @@ JET:
 		Offset: -298,164,0
 		TrailLength: 12
 		ZOffset: -1000
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 120
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload
+		IsPlayerPalette: true
+		CloakedPalette: cloak
+		CloakStyle: Palette
 
 COPTER:
 	Inherits: ^Helicopter
@@ -179,12 +184,8 @@ COPTER:
 		Offset: 200,0,-100
 	AttackTurreted:
 		RequiresCondition: airborne
-	Armament@Ground:
+	Armament:
 		Weapon: HelicopterChainGunGround
-		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
-	Armament@Air:
-		Weapon: HelicopterChainGunAir
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	Selectable:
@@ -533,23 +534,11 @@ DROPSHIP.Husk:
 		Image: dropship
 
 DRONE:
-	Inherits: ^SpawnedPlane
-	Valued:
-		Cost: 100
+	Inherits: ^BaseDrone
 	Tooltip:
 		Name: actor-drone-name
 	Health:
 		HP: 5000
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 4c0
-		MinRange: 2c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 2c0
-		Type: GroundPosition
 	Armament:
 		Weapon: DroneBlaster
 		PauseOnCondition: !ammo
@@ -557,39 +546,22 @@ DRONE:
 		Sequence: shoot
 	Aircraft:
 		Speed: 250
-		AltitudeVelocity: 240
-		VTOL: true
-		Repulsable: false
 	AttackAircraft:
 		FacingTolerance: 92
 		Voice: Attack
 	AmmoPool:
 		Ammo: 5
-		AmmoCondition: ammo
 	CarrierChild:
 		LandingDistance: 8c0
 	Rearmable:
 		RearmActors: carrier
-	-MapEditorData:
 
 DRONE2:
-	Inherits: ^SpawnedPlane
-	Valued:
-		Cost: 100
+	Inherits: ^BaseDrone
 	Tooltip:
 		Name: actor-drone2.name
 	Health:
 		HP: 7500
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 4c0
-		MinRange: 2c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 2c0
-		Type: GroundPosition
 	Armament:
 		Weapon: DronePulseGun
 		MuzzleSequence: muzzle
@@ -597,22 +569,17 @@ DRONE2:
 		PauseOnCondition: !ammo
 	Aircraft:
 		Speed: 200
-		AltitudeVelocity: 240
-		VTOL: true
-		Repulsable: false
 	AttackAircraft:
 		FacingTolerance: 256
 		Voice: Attack
 	AmmoPool:
 		Ammo: 250
 		ReloadCount: 15
-		AmmoCondition: ammo
 	CarrierChild:
 		LandingDistance: 16c0
 	Rearmable:
 		RearmActors: mothership
 	WithMuzzleOverlay:
-	-MapEditorData:
 
 DROPPOD1:
 	Inherits: ^DropPod
