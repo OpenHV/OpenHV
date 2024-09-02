@@ -188,7 +188,7 @@
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: None
 	Passenger:
@@ -204,7 +204,7 @@
 	Crushable:
 		RequiresCondition: !shield
 		CrushClasses: Pods
-		WarnProbability: 15
+		WarnProbability: 50
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
@@ -330,6 +330,22 @@
 		Weapon: UnitExplodeMedium
 		EmptyWeapon: UnitExplodeMedium
 
+^AirCreature:
+	Inherits: ^Plane
+	DeathSounds:
+	-AppearsOnRadar:
+	-Guard:
+	-Repairable:
+	-MustBeDestroyed:
+	-GrantRandomCondition@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
+	-Selectable:
+	Interactable:
+	-ProximityCaptor:
+
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
 	Inherits@Sprite: ^SpriteActor
@@ -363,6 +379,30 @@
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
+
+^BaseDrone:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 60
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+		AirborneCondition: airborne
+		CanHover: False
+		LandAltitude: 0c0
+	-MapEditorData:
 
 ^CargoPlane:
 	Inherits@Exists: ^ExistsInWorld
@@ -456,6 +496,19 @@
 		FallTicks: 8
 		RiseTicks: 8
 	BodyOrientation:
+
+^Hovercraft:
+	Inherits: ^Plane
+	Aircraft:
+		CanHover: True
+		CruisingCondition: cruising
+		WaitDistanceFromResupplyBase: 4c0
+	Hovers@Cruising:
+		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+		FallTicks: 8
+		RiseTicks: 8
 
 ^1x1Shape:
 	HitShape:
@@ -1345,3 +1398,10 @@
 		Bounds: 512, 512
 	Voiced:
 		VoiceSet: CivilianVoice
+
+^WeaponReloadDelayUpgrade:
+	ReloadDelayMultiplier:
+		Modifier: 75
+		RequiresCondition: lightningboat-reloaddelay-increase
+	ExternalCondition:
+		Condition: lightningboat-reloaddelay-increase
