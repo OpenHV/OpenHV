@@ -6,7 +6,7 @@ RIFLEMAN:
 	Buildable:
 		Queue: Pod
 		Description: actor-rifleman.description
-		Prerequisites: ~module
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-rifleman.encyclopedia
@@ -86,8 +86,8 @@ MORTAR:
 	Buildable:
 		Queue: Pod
 		Description: actor-mortar.description
-		Prerequisites: ~module.sc, factory
-		BuildPaletteOrder: 50
+		Prerequisites: ~module.sc
+		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-mortar.encyclopedia
 		Order: 35
@@ -127,24 +127,21 @@ SNIPER:
 	Buildable:
 		Queue: Pod
 		Description: actor-sniper.description
-		Prerequisites: ~module.yi, radar
-		BuildPaletteOrder: 50
+		Prerequisites: ~module.yi
+		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-sniper.encyclopedia
 		Order: 30
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1000
+		Cost: 1000 # 600 # 1000
 	Tooltip:
 		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
 		HP: 15000
-	Mobile:
-		Speed: 70
-		Locomotor: pod
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 5c0
@@ -179,7 +176,7 @@ FLAMER:
 	Buildable:
 		Queue: Pod
 		Description: actor-flamer.description
-		Prerequisites: ~module.sc, factory
+		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 40
 	Encyclopedia:
 		Description: actor-flamer.encyclopedia
@@ -193,9 +190,7 @@ FLAMER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
-	Mobile:
-		Speed: 70
+		HP: 20000 # 17500 # 15000
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -331,14 +326,28 @@ BROKER:
 	AutoTargetPriority@Default:
 		ValidTargets: Defraudable
 		InvalidTargets: NoAutoTarget
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 120
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Unload
+		IsPlayerPalette: true
+		CloakedPalette: cloak
+		CloakStyle: Palette
+	# SpeedMultiplier@Cloaked:
+	# 	Modifier: 200
+	# 	RequiresCondition: cloaked
 
 JETPACKER:
+	# TODO: This requires PlaneChanges! Replace below inheritance with ^Plane maybe when it's merged!
+	# Inherits: ^Plane
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Buildable:
 		Queue: Pod
 		Description: actor-jetpacker.description
-		Prerequisites: ~module, techcenter
+		Prerequisites: ~module.sc, techcenter
 		BuildPaletteOrder: 60
 	Encyclopedia:
 		Description: actor-jetpacker.encyclopedia
@@ -350,17 +359,17 @@ JETPACKER:
 	Tooltip:
 		Name: actor-jetpacker.name
 	Health:
-		HP: 9000
+		HP: 9000 # 8100
 	Aircraft:
-		TurnSpeed: 50
+		TurnSpeed: 50 # 55
 		CruiseAltitude: 1c0
-		Speed: 100
+		Speed: 100 # 110
 		IdealSeparation: 1c0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Armament:
-		Weapon: HeavyMachineGun
-		MuzzleSequence: muzzle
+		Weapon: PodRailgun # HeavyMachineGun
+		# MuzzleSequence: muzzle
 		LocalOffset: 0,-300,0,   0,300,0
 	AttackFrontal:
 		FacingTolerance: 10
@@ -369,6 +378,55 @@ JETPACKER:
 	WithMoveAnimation:
 	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Voiced:
+		VoiceSet: JetpackerVoice
+
+#TODO: Change its name!
+JETPACKER2:
+	# Inherits: JETPACKER
+	# TODO: This requires PlaneChanges! Add this when it's merged!
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-jetpacker.description
+		Prerequisites: ~module.yi, techcenter
+		BuildPaletteOrder: 60
+	Encyclopedia:
+		Description: actor-jetpacker.encyclopedia
+		Order: 40
+		Category: Pods
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: actor-jetpacker.name
+	Health:
+		HP: 7200 # 8100
+	Aircraft:
+		TurnSpeed: 60 # 20 # 60 # 55
+		CruiseAltitude: 1c0
+		Speed: 180 # 120 # 110
+		IdealSeparation: 1c0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: HeavyMortarGun
+		# MuzzleSequence: muzzle
+		# LocalOffset: -20,0,-100
+		# -MuzzleSequence:
+	AttackFrontal:
+		FacingTolerance: 10
+		Voice: Attack
+	WithMuzzleOverlay:
+	WithMoveAnimation:
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -398,7 +456,7 @@ BLASTER:
 	Tooltip:
 		Name: actor-blaster.name
 	Health:
-		HP: 10000
+		HP: 10000 # 11500 # 10000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
