@@ -508,6 +508,7 @@
 	Inherits@Exists: ^ExistsInWorld
 	Inherits@Sprite: ^SpriteActor
 	Inherits@Decoration: ^SelectionDecorations
+	Inherits@Shield: ^ForceFieldCompatible
 	Huntable:
 	OwnerLostAction:
 		Action: Kill
