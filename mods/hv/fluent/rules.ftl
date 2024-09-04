@@ -743,6 +743,7 @@ actor-broker =
     Capable of remotely stealing money
     from bases and storages.
       Unarmed
+      Only 5 can be built.
    .name = Broker
    .encyclopedia = The broker pod is an advanced pod that can invest in the stock market for a constant stream of revenue. It can also tap into an opponent's base or storage and initiate forged wire transfers to remotely steal that enemy's cash.
 
@@ -752,15 +753,29 @@ actor-broker =
 
 actor-jetpacker =
    .description = Elite airborne vehicle.
-    Armed with heavy machine gun.
-      Strong vs Pods, Light Vehicles and Aircraft
-      Weak vs Tanks and Buildings
+    Armed with heavy missiles.
+      Strong vs Pods
+      Weak vs Vehicles, Navy and Buildings
+      Can't attack Aircraft
    .name = Jetpacker
-   .encyclopedia = The ultimate pod: the jetpacker. It was designed by an independent lab, allowing its universal availability. It can handle pods, light vehicles and aircraft well. The fact that it's an airborne pod makes it less vulnerable to other pods.
+   .encyclopedia = The ultimate Synapol pod: the jetpacker. It was designed to weaken Yuruki pod masses. The fact that it's an airborne pod makes it less vulnerable to other pods.
 
      {actor-jetpacker.description}
 
-     Availability: Universal
+     Availability: Synapol
+
+actor-jetpacker2 =
+   .description = Elite airborne vehicle.
+    Armed with scatter gun.
+      Strong vs Vehicles, Navy
+      Weak vs Pods and Buildings
+      Can't attack Aircraft
+   .name = Jetpacker2
+   .encyclopedia = The ultimate Yuruki pod: the jetpacker. It was designed for quick maneuverability and hit-and-run tactics to weaken Synapol's vehicle and navy forces. The fact that it's an airborne pod makes it less vulnerable to other pods.
+
+     {actor-jetpacker2.description}
+
+     Availability: Yuruki
 
 actor-blaster =
    .description = Remote controlled mine.

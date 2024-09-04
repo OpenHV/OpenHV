@@ -200,11 +200,11 @@ VoltageArc:
 		AffectsParent: true
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 
-PodVoltageArc:
+PodVoltageArcGround:
 	Inherits: VoltageArc
 	Range: 5c512
 	Report: lighting_gun_freqman.ogg
-	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 60
 	Projectile: EnergyBolt
 		Radius: 2
@@ -218,13 +218,22 @@ PodVoltageArc:
 			Heavy: 110
 			Concrete: 50
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-	Warhead@Incendiary: TreeDamage
-		Spread: 128
-		Damage: 2500
-		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
-RapidPodVoltageArc:
-	Inherits: PodVoltageArc
+PodVoltageArcAir:
+	Inherits: PodVoltageArcGround
+	ValidTargets: Air
+	Warhead@Damage: SpreadDamage
+		Versus:
+			Steel: 0
+			Concrete: 0
+
+RapidPodVoltageArcGround:
+	Inherits: PodVoltageArcGround
+	Range: 8c0
+	ReloadDelay: 30
+
+RapidPodVoltageArcAir:
+	Inherits: PodVoltageArcAir
 	Range: 8c0
 	ReloadDelay: 30
 
@@ -526,7 +535,7 @@ MothershipLaser:
 		ValidTargets: Ground, Air, Ship, Tree
 
 ^BrokerWireTransfer:
-	Range: 12c0
+	Range: 8c0
 	ValidTargets: Defraudable
 	Report: coinflick.ogg
 	Projectile: ArcLaserZap
@@ -551,7 +560,7 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 500
+		Amount: 200
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 

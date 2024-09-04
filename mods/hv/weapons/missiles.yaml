@@ -90,10 +90,10 @@ MissileTankRocket:
 	Warhead@Incendiary: TreeDamage
 		Damage: 6000
 
-LightPodRocket:
+LightPodRocketGround:
 	Inherits: SmallSplash
 	Inherits: ^AntiGroundMissile
-	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	Range: 5c512
 	ReloadDelay: 45
 	Projectile: Missile
@@ -110,10 +110,48 @@ LightPodRocket:
 			Heavy: 110
 			Concrete: 50
 
-RapidPodRocket:
-	Inherits: LightPodRocket
+LightPodRocketAir:
+	Inherits: LightPodRocketGround
+	ValidTargets: Air
+	Warhead@Damage: SpreadDamage
+		Versus:
+			Steel: 0
+			Concrete: 0
+
+RapidPodRocketGround:
+	Inherits: LightPodRocketGround
 	ReloadDelay: 23
 	Range: 8c0
+
+RapidPodRocketAir:
+	Inherits: LightPodRocketAir
+	ReloadDelay: 23
+	Range: 8c0
+
+PodDrunkMissiles:
+	Inherits: LightPodRocketGround
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
+	ReloadDelay: 60
+	Range: 7c0
+	Burst: 4
+	BurstDelays: 2
+	MinRange: 1c0
+	Projectile: Bullet
+		Inaccuracy: 1024
+		Speed: 300
+		Image: bullet6
+		TrailImage: small_smoke
+		TrailInterval: 3
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		Spread: 128
+		Damage: 1500
+		Versus:
+			None: 800
+			Light: 2
+			Heavy: 7
+			Steel: 3
+			Concrete: 3
 
 ShipMissile:
 	Inherits: ^AntiGroundMissile
