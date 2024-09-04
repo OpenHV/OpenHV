@@ -17,16 +17,16 @@ Railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Versus:
-			None: 200
+			None: 150
 			Steel: 75
 			Light: 125
 			Heavy: 155
 			Wood: 10
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Percentage: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
@@ -199,6 +199,26 @@ VoltageArc:
 		Amount: 4
 		AffectsParent: true
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
+
+TankVoltageArc:
+	Inherits: VoltageArc
+	ReloadDelay: 70
+	Range: 7c0
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		Spread: 128
+		Damage: 4000
+		Versus:
+			None: 20
+			Steel: 75
+			Light: 100
+			Heavy: 155
+			Wood: 75
+	Warhead@Incendiary: TreeDamage
+		Damage: 4000
+		Spread: 128
+		Percentage: 75
 
 PodVoltageArc:
 	Inherits: VoltageArc
