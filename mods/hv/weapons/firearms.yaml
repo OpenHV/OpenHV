@@ -108,10 +108,10 @@ BuggyChainGun:
 		Damage: 1100
 		Versus:
 			None: 270
-			Steel: 10
+			Steel: 8
 			Light: 30
 			Heavy: 10
-			Concrete: 5
+			Concrete: 4
 
 BikeChainGun:
 	Inherits: BuggyChainGun
@@ -120,13 +120,13 @@ BikeChainGun:
 	Range: 7c0
 	Warhead@Damage: SpreadDamage
 		Spread: 24
-		Damage: 1000
+		Damage: 1350
 		Versus:
 			None: 270
-			Steel: 10
+			Steel: 8
 			Light: 30
 			Heavy: 10
-			Concrete: 5
+			Concrete: 4
 
 HelicopterChainGunGround:
 	Inherits: ^AircraftChainGun
