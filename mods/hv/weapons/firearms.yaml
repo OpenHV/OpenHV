@@ -111,7 +111,7 @@ BuggyChainGun:
 	StartBurstReport: machinegun_SuperPhat.ogg
 	BurstDelays: 1
 	ReloadDelay: 20
-	Range: 6c0
+	Range: 7c0
 	Burst: 4
 	Projectile: Bullet
 		Inaccuracy: 0c256
@@ -133,7 +133,7 @@ BikeChainGun:
 	Inherits: BuggyChainGun
 	StartBurstReport: ccbysmgfire02.ogg
 	BurstDelays: 2
-	Range: 7c0
+	Range: 8c0
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000

@@ -22,7 +22,7 @@
 			None: 20
 			Steel: 75
 			Light: 100
-			Heavy: 130
+			Heavy: 150
 			Wood: 75
 	Warhead@Incendiary: TreeDamage
 		Damage: 4000
@@ -39,12 +39,12 @@ TankCannon:
 CannonSynapol:
 	Inherits: ^Cannon
 	Projectile: Bullet
-		Image: bullet1
+		Image: bullet5
 
 CannonYuruki:
 	Inherits: ^Cannon
 	Projectile: Bullet
-		Image: bullet5
+		Image: bullet1
 
 ^Artillery:
 	Inherits: ^Cannon
@@ -83,6 +83,7 @@ SmallArtillery:
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
+		Image: bullet5
 		Inaccuracy: 1c138
 	Warhead@Damage: SpreadDamage
 		Falloff: 100, 55, 20, 5
@@ -97,6 +98,37 @@ SmallArtilleryLongDistance:
 	Projectile: Bullet
 		Image: bullet3
 		Inaccuracy: 3c138
+
+ArtilleryCluster:
+	Inherits: SmallArtillery
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: blaster_flyingsaucerinvasion.ogg
+	ReloadDelay: 170
+	Burst: 6
+	BurstDelays: 5
+	MinRange: 4c0
+	Range: 12c0
+	Projectile: Bullet
+		Inaccuracy: 0c256
+		Image: bullet12
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 426
+		Damage: 2300
+		Versus:
+			Steel: 30
+			Concrete: 30
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileArtillery
+		RandomClusterCount: -1
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+		AirThreshold: 0c0
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.ogg
+		ImpactActors: false
 
 ClusterProjectileArtillery:
 	Inherits: BigSplash
