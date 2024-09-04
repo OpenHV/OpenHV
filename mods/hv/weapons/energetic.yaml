@@ -17,16 +17,16 @@ Railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Versus:
-			None: 200
+			None: 150
 			Steel: 75
 			Light: 125
 			Heavy: 155
 			Wood: 10
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Percentage: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
