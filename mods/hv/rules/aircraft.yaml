@@ -768,7 +768,7 @@ DRONE2:
 DROPPOD1:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
-		Actor: rifleman
+		Actor: mortar
 	-MapEditorData:
 
 DROPPOD2:
