@@ -115,6 +115,30 @@ RapidPodRocket:
 	ReloadDelay: 23
 	Range: 8c0
 
+PodDrunkMissiles:
+	Inherits: LightPodRocket
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
+	ReloadDelay: 60
+	Range: 7c0
+	Burst: 4
+	BurstDelays: 2
+	Projectile: Bullet
+		Inaccuracy: 1024
+		Speed: 300
+		Image: bullet6
+		TrailImage: small_smoke
+		TrailInterval: 3
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		Spread: 128
+		Damage: 1500
+		Versus:
+			None: 800
+			Light: 2
+			Heavy: 7
+			Steel: 3
+			Concrete: 3
+
 ShipMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
