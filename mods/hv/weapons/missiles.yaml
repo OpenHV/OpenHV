@@ -91,7 +91,7 @@ MissileTankRocket:
 	Range: 6c0
 	MinRange: 0
 	Warhead@Damage: SpreadDamage
-		Damage: 6000
+		Damage: 2750 # 3000 # 3750 # 4500 # 6000 # 3000 # 6000
 		Versus:
 			None: 8
 			Steel: 75
@@ -280,7 +280,7 @@ StealthTankMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 7250
 		Versus:
-			None: 10
+			None: 100
 			Steel: 100
 			Light: 100
 			Heavy: 105
