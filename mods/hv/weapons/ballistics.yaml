@@ -39,12 +39,12 @@ TankCannon:
 CannonSynapol:
 	Inherits: ^Cannon
 	Projectile: Bullet
-		Image: bullet1
+		Image: bullet5
 
 CannonYuruki:
 	Inherits: ^Cannon
 	Projectile: Bullet
-		Image: bullet5
+		Image: bullet1
 
 ^Artillery:
 	Inherits: ^Cannon
@@ -83,11 +83,87 @@ SmallArtillery:
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
+		Image: bullet5
 		Inaccuracy: 1c138
 	Warhead@Damage: SpreadDamage
 		Falloff: 100, 55, 20, 5
 		Versus:
 			None: 60
+
+SmallArtilleryLongDistance:
+	Inherits: SmallArtillery
+	MinRange: 6c0
+	Range: 18c0
+	ReloadDelay: 170
+	Projectile: Bullet
+		Image: bullet3
+		Inaccuracy: 3c138 # 2c138
+
+ArtilleryCluster:
+	Inherits: SmallArtillery # BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: blaster_flyingsaucerinvasion.ogg
+	ReloadDelay: 170
+	Burst: 6
+	BurstDelays: 5
+	MinRange: 4c0
+	Range: 12c0
+	Projectile: Bullet
+		# Speed: 400
+		Inaccuracy: 0c256
+		# LaunchAngle: 175
+		Image: bullet12
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 426
+		Damage: 2300
+		Versus:
+			Steel: 30
+			Concrete: 30
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileArtillery
+		RandomClusterCount: -1
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+		AirThreshold: 0c0
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.ogg
+		ImpactActors: false
+
+ClusterProjectileArtillery:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	# Burst: 10
+	# BurstDelays: 30
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 250
+		Inaccuracy: 0c512
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128 # 256
+		Damage: 2500 # 500 # 1250 # 2500 # 5000
+		Versus:
+			None: 50
+			Steel: 25
+			Light: 50
+			Heavy: 50
+			Concrete: 25
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2500 # 500 # 1250 # 2500 # 5000
+	# Warhead@Smudge: LeaveSmudge
+	# 	SmudgeType: Crater
+	# 	Chance: 25
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.ogg
 
 DoubleBarrelledArtillery:
 	Inherits: ^Artillery
