@@ -32,6 +32,22 @@
 		ContrailStartWidth: 18
 		ContrailZOffset: 3000
 
+^RedTracers:
+	Projectile: InstantHitWithTracers
+		Blockable: true
+		TracerAmount: 2
+		TracerSpeed: 1536
+		TracerSpawnInterval: 3
+		TracerInaccuracy: 0c450
+		ContrailDelay: 0
+		ContrailStartColor: FF6666
+		ContrailStartColorAlpha: 255
+		ContrailEndColor: 990000
+		ContrailEndColorAlpha: 255
+		ContrailLength: 2
+		ContrailStartWidth: 18
+		ContrailZOffset: 3000
+
 LightMachineGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
@@ -209,6 +225,7 @@ SniperRifle:
 	Projectile: InstantHit
 	Warhead@Damage: SpreadDamage
 		Spread: 24
+		Damage: 750
 		Versus:
 			None: 1500
 			Steel: 40
@@ -216,6 +233,7 @@ SniperRifle:
 			Heavy: 25
 			Concrete: 15
 	Warhead@Incendiary: TreeDamage
+		Damage: 750
 		Spread: 24
 	ReloadDelay: 50
 	Range: 10c0
@@ -276,10 +294,10 @@ BoatMachineGunAir:
 Flamethrower:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	StartBurstReport: flame_newlocknew.ogg
-	ReloadDelay: 50
-	Burst: 6
-	BurstDelays: 1
-	Range: 3c0
+	ReloadDelay: 2
+	Burst: 2
+	BurstDelays: 0
+	Range: 4c0
 	Projectile: Bullet
 		Image: bullet17
 		TrailImage: bullet17-trace
@@ -293,15 +311,15 @@ Flamethrower:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 2000
+		Damage: 200
 		Versus:
 			None: 90
 			Steel: 45
-			Light: 8
-			Heavy: 5
+			Light: 45
+			Heavy: 45
 			Wood: 100
 	Warhead@Incendiary: TreeDamage
-		Damage: 2000
+		Damage: 200
 		Spread: 128
 		Percentage: 75
 	Warhead@FireEffect: CreateEffect
@@ -312,29 +330,8 @@ Flamethrower:
 
 BunkerFlamethrower:
 	Inherits: Flamethrower
-	ReloadDelay: 25
-	Range: 5c0
-
-HeavyMachineGun:
-	Inherits: LightMachineGun
-	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-	Report: machine_gun_pgi.ogg
-	ReloadDelay: 20
+	ReloadDelay: 1
 	Range: 6c0
-	Burst: 4
-	BurstDelays: 2
-	Projectile: InstantHitWithTracers
-		Blockable: false
-	Warhead@Damage: SpreadDamage
-		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-		Spread: 24
-		Damage: 300
-		Versus:
-			None: 300
-			Steel: 25
-			Light: 55
-			Heavy: 20
-			Concrete: 5
 
 DronePulseGun:
 	Inherits: SmallSplash

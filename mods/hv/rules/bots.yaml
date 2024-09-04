@@ -134,8 +134,9 @@ Player:
 			rocketeer: 1
 			mortar: 1
 			jetpacker: 1
+			jetpacker2: 1
 			sniper: 1
-			shocker: 1
+			shocker: 3
 			technician: 1
 			flamer: 1
 			blaster: 1
@@ -159,6 +160,7 @@ Player:
 			battleship: 1
 			mothership: 1
 		UnitLimits:
+			sniper: 6
 			miner: 2
 			builder: 1
 			builder2: 1
