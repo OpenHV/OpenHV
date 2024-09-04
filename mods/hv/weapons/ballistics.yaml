@@ -89,6 +89,43 @@ SmallArtillery:
 		Versus:
 			None: 60
 
+SmallArtilleryLongDistance:
+	Inherits: SmallArtillery
+	MinRange: 6c0
+	Range: 18c0
+	ReloadDelay: 170
+	Projectile: Bullet
+		Image: bullet3
+		Inaccuracy: 3c138
+
+ClusterProjectileArtillery:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 250
+		Inaccuracy: 0c512
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 2500
+		Versus:
+			None: 50
+			Steel: 25
+			Light: 50
+			Heavy: 50
+			Concrete: 25
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2500
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.ogg
+
 DoubleBarrelledArtillery:
 	Inherits: ^Artillery
 	ReloadDelay: 200
@@ -310,28 +347,26 @@ MortarGun:
 	ReloadDelay: 50
 	Report: grenade-launcher_lemudcrab.ogg
 	Range: 6c0
-	MinRange: 1c0
 	Projectile: Bullet
 		Image: bullet1
 		Speed: 360
 		Blockable: false
 		LaunchAngle: 80
-		Inaccuracy: 0c512
 		ContrailLength: 10
 		ContrailStartColor: 811000
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
-		Spread: 256
+		Spread: 128
 		Damage: 6000
 		Versus:
 			None: 70
-			Steel: 40
+			Steel: 15
 			Light: 25
 			Heavy: 25
 			Wood: 75
 	Warhead@Incendiary: TreeDamage
-		Spread: 256
+		Spread: 128
 		Damage: 6000
 		Percentage: 75
 	Warhead@Smudge: LeaveSmudge
@@ -347,6 +382,74 @@ BunkerMortarGun:
 	Range: 9c0
 	ReloadDelay: 25
 	MinRange: 0
+
+HeavyMortarGun:
+	Inherits: SmallArtillery
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: ccbygrenadelaunch01.ogg
+	Range: 6c0
+	MinRange: 0
+	Projectile: Bullet
+		Image: bullet12
+		LaunchAngle: 40
+		Inaccuracy: 512
+		ContrailStartColor: 9bc2eb
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Spread: 256
+		Damage: 300
+		Versus:
+			None: 35
+			Steel: 5
+			Light: 1100
+			Heavy: 1000
+			Concrete: 3
+	Warhead@Cluster: FireCluster
+		Weapon: PodClusterProjectileArtillery
+		RandomClusterCount: -1
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+		AirThreshold: 0c0
+	Warhead@Incendiary: TreeDamage
+		Spread: 256
+		Damage: 300
+		Percentage: 75
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.ogg
+		ImpactActors: false
+
+PodClusterProjectileArtillery:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 250
+		Inaccuracy: 0c512
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 2500
+		Versus:
+			None: 10
+			Steel: 2
+			Light: 100
+			Heavy: 200
+			Concrete: 1
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2500
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.ogg
 
 BattleShipGun:
 	Inherits: BigSplash

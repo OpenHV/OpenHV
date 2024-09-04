@@ -526,7 +526,7 @@ MothershipLaser:
 		ValidTargets: Ground, Air, Ship, Tree
 
 ^BrokerWireTransfer:
-	Range: 12c0
+	Range: 24c0
 	ValidTargets: Defraudable
 	Report: coinflick.ogg
 	Projectile: ArcLaserZap
@@ -551,7 +551,7 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 500
+		Amount: 250
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 
