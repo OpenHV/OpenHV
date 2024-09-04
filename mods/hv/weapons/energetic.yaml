@@ -33,6 +33,26 @@ Railgun:
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
 
+PodRailgun:
+	Inherits: Railgun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 6c0
+	Burst: 2
+	BurstDelays: 0
+	Projectile: LaserZap
+		Width: 0c50
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Spread: 24
+		Damage: 600
+		Versus:
+			None: 200
+			Steel: 20
+			Light: 100
+			Heavy: 100
+			Concrete: 5
+
 ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 8c0
@@ -548,7 +568,7 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 500
+		Amount: 250
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 
