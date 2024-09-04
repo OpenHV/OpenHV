@@ -1130,9 +1130,9 @@ actor-missiletank =
    .name = Missile Tank
    .generic-name = Tank
    .description = A tank which shoots missiles.
-      Strong vs Vehicles and Buildings
+      Strong vs Vehicles, Aircraft, Navy and Buildings
       Weak vs Pods
-   .encyclopedia = The missile tank is an agile tank, able to fire from a turret, while still moving decently fast. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the railgun tank, it is stronger against buildings.
+   .encyclopedia = The missile tank is slow but powerful, able to fire from a turret. It is armed with a powerful missile launcher, good against buildings, vehicles and air units.
 
      {actor-missiletank.description}
 
