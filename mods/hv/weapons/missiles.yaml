@@ -80,15 +80,15 @@ MissileTankRocket:
 		Speed: 256
 		CloseEnough: 256
 	Warhead@Damage: SpreadDamage
-		Damage: 6000
+		Damage: 2750
 		Versus:
 			None: 8
-			Steel: 75
+			Steel: 50
 			Light: 75
-			Heavy: 75
-			Concrete: 75
+			Heavy: 95
+			Concrete: 50
 	Warhead@Incendiary: TreeDamage
-		Damage: 6000
+		Damage: 2750
 
 LightPodRocketGround:
 	Inherits: SmallSplash
@@ -242,11 +242,11 @@ StealthTankMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 7250
 		Versus:
-			None: 10
-			Steel: 100
+			None: 105
+			Steel: 70
 			Light: 100
-			Heavy: 100
-			Concrete: 100
+			Heavy: 105
+			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Damage: 7250
 
