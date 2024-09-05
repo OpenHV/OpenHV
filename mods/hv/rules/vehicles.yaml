@@ -236,7 +236,7 @@ ARTILLERY:
 
 RADARTANK:
 	Inherits: ^TrackedVehicle
-	Inherits@Selection: ^SelectableSupportUnit
+	Inherits@Selection: ^SelectableCombatUnit
 	-AppearsOnRadar:
 	Buildable:
 		Queue: Utility
