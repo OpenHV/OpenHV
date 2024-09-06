@@ -690,6 +690,7 @@ actor-prop13-name = Civilian building
 actor-prop14-name = Civilian structure
 actor-prop16-name = Civilian structure
 actor-crane-name = Crane
+actor-windturbine-name = Wind turbine
 actor-electricpad-name = Electric pad
 actor-rail-name = Rail
 actor-misc1-name = Misc
