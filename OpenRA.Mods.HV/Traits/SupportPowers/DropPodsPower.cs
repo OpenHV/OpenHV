@@ -44,6 +44,8 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Number of ticks to keep the camera alive")]
 		public readonly int CameraRemoveDelay = 25;
 
+		public readonly HashSet<string> AllowedTerrainTypes = new();
+
 		public override object Create(ActorInitializer init) { return new DropPodsPower(init.Self, this); }
 	}
 
@@ -73,7 +75,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (!world.Map.Contains(cell))
 				return false;
 
-			if (!aircraftInfo.LandableTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type))
+			if (!info.AllowedTerrainTypes.Contains(world.Map.GetTerrainInfo(cell).Type))
 				return false;
 
 			return true;

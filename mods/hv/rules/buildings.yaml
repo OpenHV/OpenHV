@@ -361,6 +361,7 @@ RADAR2:
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: DroppodIncoming
 		IncomingTextNotification: notifications-drop-pod-incoming
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Black Sand, Black Sand Ramp, Stone, Tech, Dirt
 	-Encyclopedia:
 
 TRADER:
