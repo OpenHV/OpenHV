@@ -12,7 +12,6 @@ World:
 
 BASE:
 	-Sellable:
-	-Demolishable:
 
 BARRIER:
 	Buildable:

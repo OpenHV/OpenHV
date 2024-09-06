@@ -420,11 +420,6 @@ BLASTER:
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: HoldFire
-	Demolition:
-		DetonationDelay: 0
-		Flashes: 0
-		EnterBehaviour: Suicide
-		Cursor: ability
 	-WithDeathAnimation:
 
 SHOCKER:
