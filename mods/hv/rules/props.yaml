@@ -474,6 +474,28 @@ CRANE:
 CRANE2:
 	Inherits: CRANE
 
+WINDTURBINE1:
+	Inherits: ^Prop
+	Inherits@Shape: ^1x1Shape
+	Interactable:
+	Tooltip:
+		Name: actor-windturbine-name
+	Building:
+		Footprint: = x
+		Dimensions: 1,2
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: -512,0,0
+		Type: Rectangle
+			TopLeft: -512, 0
+			BottomRight: 512, 1024
+
+WINDTURBINE2:
+	Inherits: WINDTURBINE1
+
+WINDTURBINE3:
+	Inherits: WINDTURBINE1
+
 ELECTRICPAD:
 	Inherits: ^Prop
 	Inherits@Shape: ^1x1Shape

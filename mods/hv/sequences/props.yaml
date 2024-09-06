@@ -613,6 +613,72 @@ crane2:
 		Start: 3
 		Offset: 19,27
 
+windturbine1:
+	Defaults:
+		Offset: 0,-5
+	idle:
+		Filename: bits/windturbine1.png
+		Length: 4
+		Tick: 80
+	damaged-idle:
+		Filename: bits/windturbine1.png
+		Start: 4
+	shadow-overlay:
+		Filename: bits/windturbine1-shadow.png
+		Length: 4
+		Tick: 80
+		Offset: 20,27
+		ZOffset: 1768
+	damaged-shadow-overlay:
+		Filename: bits/windturbine1-shadow.png
+		Start: 4
+		Offset: 20,27
+		ZOffset: 1768
+
+windturbine2:
+	Defaults:
+		Offset: 0,-3
+	idle:
+		Filename: bits/windturbine2.png
+		Length: 8
+		Tick: 70
+	damaged-idle:
+		Filename: bits/windturbine2.png
+		Start: 8
+	shadow-overlay:
+		Filename: bits/windturbine2-shadow.png
+		Length: 8
+		Tick: 70
+		Offset: 17,23
+		ZOffset: 1768
+	damaged-shadow-overlay:
+		Filename: bits/windturbine2-shadow.png
+		Start: 8
+		Offset: 17,23
+		ZOffset: 1768
+
+windturbine3:
+	Defaults:
+		Offset: 0,-5
+	idle:
+		Filename: bits/windturbine3.png
+		Length: 4
+		Tick: 90
+	damaged-idle:
+		Filename: bits/windturbine3.png
+		Start: 4
+	shadow-overlay:
+		Filename: bits/windturbine3-shadow.png
+		Length: 4
+		Tick: 90
+		Offset: 15,23
+		ZOffset: 1768
+	damaged-shadow-overlay:
+		Filename: bits/windturbine3-shadow.png
+		Start: 4
+		Offset: 15,23
+		ZOffset: 1768
+
 tanktrap:
 	idle:
 		Filename: bits/tanktrap.png
