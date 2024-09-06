@@ -141,7 +141,7 @@ FlameExplode:
 
 ExplosiveCharge:
 	ValidTargets: Ground, Structure
-	Range: 1c125
+	Range: 2c0
 	Projectile: InstantHit
 	Warhead@Damage: TargetDamage
 		DamageTypes: Fire
