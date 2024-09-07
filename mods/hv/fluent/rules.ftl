@@ -738,7 +738,7 @@ actor-lightboat =
 
      {actor-lightboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-patrolboat =
    .name = Patrol boat
@@ -750,7 +750,7 @@ actor-patrolboat =
 
      {actor-patrolboat.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mercboat =
    .name = Mercenary Boat
@@ -774,7 +774,7 @@ actor-torpedoboat =
 
      {actor-torpedoboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-submarine =
    .name = Submarine
@@ -786,7 +786,7 @@ actor-submarine =
 
      {actor-submarine.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-railgunboat =
    .name = Railgun Boat
@@ -819,7 +819,7 @@ actor-boomer =
 
      {actor-boomer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -831,7 +831,7 @@ actor-carrier =
 
      {actor-carrier.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-ferry =
    .name = Ferry

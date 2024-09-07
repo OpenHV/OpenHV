@@ -189,17 +189,17 @@ ShipMissile:
 BoatMissileAntiGround:
 	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: boatgun_johandeecke.ogg
+	Report: lasercannon_newlocknew.ogg
 	ReloadDelay: 58
 	Range: 6c0
 	Projectile: Bullet
-		Image: bullet6
+		Image: bullet8
 		Speed: 1000
 		Blockable: false
 		Inaccuracy: 0c256
 		ContrailLength: 4
 		ContrailStartWidth: 0c32
-		ContrailStartColor: F29100
+		ContrailStartColor: FFFFFF
 	Warhead@Damage: SpreadDamage
 		Spread: 126
 		Damage: 1000
