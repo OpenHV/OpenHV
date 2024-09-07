@@ -17,7 +17,7 @@ Railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 8000
+		Damage: 8100 # 8000
 		Versus:
 			None: 200
 			Steel: 75
@@ -206,7 +206,7 @@ Plasma:
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
-	ReloadDelay: 50
+	ReloadDelay: 40 # 50
 	Range: 8c0
 	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
@@ -222,7 +222,7 @@ VoltageArc:
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6480 # 6400 # 8000
 		Versus:
 			None: 200
 			Steel: 75
@@ -233,7 +233,7 @@ VoltageArc:
 		DamageTypes: Electricity
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6480 # 6400 # 8000
 		Percentage: 10
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
