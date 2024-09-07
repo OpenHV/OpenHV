@@ -165,7 +165,7 @@ Plasma:
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Range: 8c0
 	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
@@ -181,7 +181,7 @@ VoltageArc:
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Versus:
 			None: 200
 			Steel: 75
@@ -192,7 +192,7 @@ VoltageArc:
 		DamageTypes: Electricity
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Percentage: 10
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
