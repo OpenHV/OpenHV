@@ -175,8 +175,7 @@ ferry2:
 		Start: 3
 		ZOffset: -511
 	icon:
-		Filename: bits/units-icons.png
-		Start: 56
+		Filename: bits/ferry-icon.png
 		Offset: 2, 0
 
 mineship:

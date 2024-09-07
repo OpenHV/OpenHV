@@ -499,7 +499,7 @@ BattleShipGun:
 		Image: bullet12
 		Shadow: true
 		TrailImage: battleship-trail
-		TrailInterval: 2
+		TrailInterval: 0
 		TrailDelay: 1
 	Warhead@Damage: SpreadDamage
 		Spread: 250

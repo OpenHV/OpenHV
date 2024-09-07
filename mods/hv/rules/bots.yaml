@@ -45,8 +45,8 @@ Player:
 			orepurifier: 2
 			trader: 1
 			techcenter: 1
-			harbor: 1
-			harbor2: 1
+			harbor: 4
+			harbor2: 4
 			field: 1
 			howitzer: 1
 			uplink: 1

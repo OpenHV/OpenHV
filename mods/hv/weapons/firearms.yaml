@@ -254,7 +254,7 @@ BoatMachineGunGround:
 	Burst: 4
 	Projectile: Bullet
 		Inaccuracy: 0c256
-		Speed: 1000
+		Speed: 1750
 		ContrailLength: 3
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
