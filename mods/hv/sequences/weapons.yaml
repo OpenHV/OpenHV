@@ -173,7 +173,7 @@ bullet10:
 
 slcm:
 	idle:
-		Filename: bits/bullet11.png
+		Filename: bits/bullet8.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030
