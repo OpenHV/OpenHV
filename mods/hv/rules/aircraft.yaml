@@ -686,7 +686,6 @@ DRONE:
 		HP: 5000
 	Armament:
 		Weapon: DroneBlaster
-		PauseOnCondition: !ammo
 	WithAttackAnimation:
 		Sequence: shoot
 	Aircraft:
@@ -694,8 +693,6 @@ DRONE:
 	AttackAircraft:
 		FacingTolerance: 92
 		Voice: Attack
-	AmmoPool:
-		Ammo: 5
 	CarrierChild:
 		LandingDistance: 8c0
 	Rearmable:

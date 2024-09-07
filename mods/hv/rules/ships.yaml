@@ -11,7 +11,7 @@ LIGHTBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi
+		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 10
 		Description: actor-lightboat.description
 	Encyclopedia:
@@ -60,7 +60,7 @@ PATROLBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc
+		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 10
 		Description: actor-patrolboat.description
 	Encyclopedia:
@@ -94,7 +94,6 @@ PATROLBOAT:
 		LocalOffset: 250,-25,50, 250,25,50
 	Armament@Ground:
 		Weapon: BoatMissileAntiGround
-		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
 		LocalOffset: 250,-25,50, 250,25,50
@@ -161,7 +160,7 @@ TORPEDOBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, radar
+		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
 		Description: actor-torpedoboat.description
 	Encyclopedia:
@@ -205,7 +204,7 @@ SUBMARINE:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, radar
+		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
 		Description: actor-submarine.description
 	Encyclopedia:
@@ -340,7 +339,7 @@ BOOMER:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-boomer.description
 	Encyclopedia:
@@ -402,7 +401,7 @@ SLCM:
 		HitAcceleration: 0
 		LaunchSounds: missile_julien-nicolas.ogg
 	LeavesTrails:
-		Image: smoke
+		Image: stealthtank-trail
 		MovingInterval: 2
 		Type: CenterPosition
 		SpawnAtLastPosition: false
@@ -417,7 +416,7 @@ CARRIER:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 60
-		Prerequisites: ~harbor.yi, techcenter
+		Prerequisites: ~harbor.sc, techcenter
 		Description: actor-carrier.description
 	Encyclopedia:
 		Description: actor-carrier.encyclopedia
