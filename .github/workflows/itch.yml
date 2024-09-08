@@ -45,6 +45,6 @@ jobs:
       - name: AppImage
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
-        run:
+        run: |
           wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage"
           ./butler push "OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage" "openhv/openhv:linux" --userversion ${{ github.event.inputs.tag }}
