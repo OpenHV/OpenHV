@@ -11,44 +11,34 @@ permissions: {}
 
 jobs:
   itch:
-    name: Deploy to itch.io
+    name: Push to itch.io
     runs-on: ubuntu-22.04
     if: github.repository == 'openhv/openhv'
     steps:
-      - name: Download Packages
+      - name: Download Butler
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
+        run: |
+          wget -cq -O butler-linux-amd64.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          unzip butler-linux-amd64.zip
+          rm butler-linux-amd64.zip
+          chmod +x butler
+          ./butler -V
+          ./butler login
+
+      - name: Windows
         run: |
           wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}-x64-winportable.zip" -O "OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip"
-          wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}.dmg"
-          wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage"
           wget -q "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.inputs.tag }}/packaging/windows/.itch.toml"
           zip -u "OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip" .itch.toml
+          ./butler push "OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip" "openhv/openhv:win" --userversion ${{ github.event.inputs.tag }}
 
-      - name: Publish Windows Itch Bundle
-        uses: josephbmanley/butler-publish-itchio-action@master
-        env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: win
-          ITCH_GAME: openhv
-          ITCH_USER: openhv
-          VERSION: ${{ github.event.inputs.tag }}
-          PACKAGE: OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip
+      - name: macOS
+        run: |
+          wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}.dmg"
+          ./butler push "OpenHV-${{ github.event.inputs.tag }}.dmg" "openhv/openhv:osx" --userversion ${{ github.event.inputs.tag }}
 
-      - name: Publish macOS Package
-        uses: josephbmanley/butler-publish-itchio-action@master
-        env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: osx
-          ITCH_GAME: openhv
-          ITCH_USER: openhv
-          VERSION: ${{ github.event.inputs.tag }}
-          PACKAGE: OpenHV-${{ github.event.inputs.tag }}.dmg
-
-      - name: Publish AppImage
-        uses: josephbmanley/butler-publish-itchio-action@master
-        env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: linux
-          ITCH_GAME: openhv
-          ITCH_USER: openhv
-          VERSION: ${{ github.event.inputs.tag }}
-          PACKAGE: OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage
+      - name: AppImage
+        run:
+          wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage"
+          ./butler push "OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage" "openhv/openhv:linux" --userversion ${{ github.event.inputs.tag }}
