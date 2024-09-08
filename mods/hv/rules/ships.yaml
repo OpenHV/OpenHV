@@ -83,19 +83,19 @@ PATROLBOAT:
 		Range: 4c0
 	Turreted:
 		TurnSpeed: 120
-		Offset: 150,0,50
+		Offset: 300,0,0
 	Armament@Air:
 		Weapon: BoatMachineGunAir
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
-		LocalOffset: 250,0,50
+		LocalOffset: 250,-25,50, 250,25,50
 	Armament@Ground:
 		Weapon: BoatMissileAntiGround
 		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
-		LocalOffset: 250,0,50
+		LocalOffset: 250,-25,50, 250,25,50
 	AttackTurreted:
 		Armaments: primary, secondary
 	WithSpriteTurret:
