@@ -27,6 +27,8 @@ jobs:
           ./butler login
 
       - name: Windows
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
         run: |
           wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}-x64-winportable.zip" -O "OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip"
           wget -q "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.inputs.tag }}/packaging/windows/.itch.toml"
@@ -34,11 +36,15 @@ jobs:
           ./butler push "OpenHV-${{ github.event.inputs.tag }}-x64-win-itch.zip" "openhv/openhv:win" --userversion ${{ github.event.inputs.tag }}
 
       - name: macOS
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
         run: |
           wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}.dmg"
           ./butler push "OpenHV-${{ github.event.inputs.tag }}.dmg" "openhv/openhv:osx" --userversion ${{ github.event.inputs.tag }}
 
       - name: AppImage
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
         run:
           wget -q "https://github.com/${{ github.repository }}/releases/download/${{ github.event.inputs.tag }}/OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage"
           ./butler push "OpenHV-${{ github.event.inputs.tag }}-x86_64.AppImage" "openhv/openhv:linux" --userversion ${{ github.event.inputs.tag }}
