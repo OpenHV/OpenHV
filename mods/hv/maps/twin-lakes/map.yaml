@@ -948,9 +948,6 @@ Actors:
 	Actor344: resourcelight
 		Owner: Neutral
 		Location: 29,77
-	Actor345: resourcelight
-		Owner: Neutral
-		Location: 52,97
 	Actor346: resourcelight
 		Owner: Neutral
 		Location: 52,92
@@ -978,9 +975,6 @@ Actors:
 	Actor355: resourcelight
 		Owner: Neutral
 		Location: 129,87
-	Actor356: resourcelight
-		Owner: Neutral
-		Location: 129,82
 	Actor357: resourcelight
 		Owner: Neutral
 		Location: 151,71
@@ -1543,5 +1537,14 @@ Actors:
 	Actor533: mpspawn
 		Owner: Neutral
 		Location: 139,31
+	Actor536: resourcelight
+		Owner: Neutral
+		Location: 128,82
+	Actor537: resourcelight
+		Owner: Neutral
+		Location: 53,97
+	Actor538: mntmisc11
+		Owner: Neutral
+		Location: 49,95
 
 Rules: rules.yaml
