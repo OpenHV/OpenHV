@@ -550,3 +550,29 @@ BrokerWireTransfer:
 		Amount: 500
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
+
+PlasmaMachineGun:
+	ValidTargets: Air
+	Range: 10c0
+	MinRange: 1c0
+	ReloadDelay: 3
+	BurstDelays: 1
+	Report: plasma_machine_gun.ogg
+	Projectile: Bullet
+		Speed: 1000
+		Image: bullet21
+		Inaccuracy: 0c512
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		ValidTargets: Air
+		Spread: 256
+		Damage: 2500
+		Versus:
+			Steel: 50
+			Light: 50
+			Heavy: 50
+	Warhead@GroundEffect: CreateEffect
+		Image: explosion_plasma
+		Explosions: hit1, hit2, hit3
+		ValidTargets: Air, Ground
+		ImpactSounds: plasma_explosion_1.ogg, plasma_explosion_2.ogg, plasma_explosion_3.ogg

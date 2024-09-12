@@ -30,3 +30,5 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [televator.ogg](https://freesound.org/people/oganesson/sounds/555017/) by oganesson
 * [weld1-4.ogg](https://freesound.org/people/unfa/sounds/264827/) by unfa
 * [radaron/off.ogg](https://freesound.org/people/zehmx/sounds/322866/) by zehmx
+* [plasma_machine_gun.ogg](https://freesound.org/people/Theogobbo/sounds/316976/) by Theogobbo
+* [plasma_explosion_1/2/3.ogg](https://freesound.org/people/dpren/sounds/440146/) by dpren
