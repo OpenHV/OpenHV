@@ -22,3 +22,5 @@ Content of this folder indicates assets made by various authors, under the defau
 * [small-lava-splash1-5_dheming_oneirophile.ogg](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
 * [big-lava-splash1-5_dheming_oneirophile.ogg](https://freesound.org/people/dheming/sounds/198300/) by dheming & oneirophile
 * [battleshipaction/select/attack.ogg](https://freesound.org/people/Robinhood76/sounds/505303/) by Robinhood76. Edited by Dzierzan using Vocoder.
+* [throw_heltonyan.ogg](https://freesound.org/people/heltonyan/sounds/723440/) by heltonyan
+* [open_klankbeeld.ogg](https://freesound.org/people/klankbeeld/sounds/541015/) by klankbeeld

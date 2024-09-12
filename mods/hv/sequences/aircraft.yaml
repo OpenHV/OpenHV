@@ -42,6 +42,14 @@ jet:
 		Filename: units-icons.png
 		Start: 49
 
+jet2:
+	idle:
+		Filename: bits/jet2.png
+		Facings: 8
+	icon:
+		Filename: units-icons.png
+		Start: 65
+
 copter:
 	idle:
 		Filename: bits/copter.png
@@ -291,3 +299,24 @@ battleship:
 		Filename: units-icons.png
 		Start: 63
 
+turtle:
+	idle:
+		Filename: bits/turtle.png
+	move:
+		Filename: bits/turtle.png
+		Start: 1
+		Length: 4
+		Facings: 16
+		Tick: 60
+	shoot:
+		Filename: bits/turtle.png
+		Start: 65
+		Length: 4
+		Reverses: true
+		Tick: 40
+	shadow-overlay:
+		Filename: bits/turtle-shadow.png
+		Offset: 8, 2
+	icon:
+		Filename: units-icons.png
+		Start: 64

@@ -38,6 +38,19 @@ explosion:
 	railgun:
 		Filename: bits/railgun-explosion.png
 
+explosion_plasma:
+	Defaults:
+		Length: 3
+		ZOffset: 2047
+	hit1:
+		Filename: bits/exploplasma.png
+	hit2:
+		Filename: bits/exploplasma.png
+		Start: 2
+	hit3:
+		Filename: bits/exploplasma.png
+		Start: 5
+
 nuclear_explosion:
 	idle:
 		Filename: bits/nuclear_cloud.png
@@ -228,6 +241,25 @@ bullet17-trace:
 bullet18:
 	idle:
 		Filename: bits/bullet18.png
+		Facings: 8
+		InterpolatedFacings: 16
+		ZOffset: 2030
+
+bullet19:
+	idle:
+		Filename: bits/bullet19.png
+		Length: 3
+		ZOffset: 2030
+
+bullet20:
+	idle:
+		Filename: bits/bullet20.png
+		Length: 5
+		ZOffset: 2030
+
+bullet21:
+	idle:
+		Filename: bits/bullet21.png
 		Facings: 8
 		InterpolatedFacings: 16
 		ZOffset: 2030

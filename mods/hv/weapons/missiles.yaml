@@ -390,3 +390,31 @@ BoatTorpedo:
 	BurstDelays: 8
 	Warhead@Damage: SpreadDamage
 		Damage: 5000
+
+DiscThrower:
+	ValidTargets: Air
+	ReloadDelay: 25
+	Range: 10c0
+	Report: throw_heltonyan.ogg
+	AfterFireSound: open_klankbeeld.ogg
+	Projectile: Missile
+		Speed: 450
+		Arm: 0
+		Blockable: false
+		Image: bullet20
+		Shadow: true
+		HorizontalRateOfTurn: 20
+		RangeLimit: -1
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 512
+		Damage: 8000
+		ValidTargets: Air
+		Versus:
+			Steel: 74
+			Light: 34
+			Heavy: 100
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.ogg
+		ValidTargets: Air

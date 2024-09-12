@@ -246,3 +246,19 @@ BattleShipVoice:
 		Move: battleshipaction1, battleshipaction2, battleshipaction3
 		Action: battleshipattack1, battleshipattack2, battleshipattack3
 		Guard: guarding
+
+Jet2Voice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: jet2_aeronautics_operational, jet2_avionics_online, jet2_awaiting_orders, jet2_ready_for_action
+		Move: jet2_acknowledged, jet2_affirmative, jet2_roger_that, jet2_not_a_problem, jet2_thrusters_engaged
+		Action: jet2_acknowledged, jet2_affirmative, jet2_roger_that, jet2_intercepting_hostiles, jet2_not_a_problem
+		Guard: guarding
+
+TurtleVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: turtle_aeronautics_operational, turtle_avionics_online, turtle_awaiting_orders
+		Move: turtle_acknowledged, turtle_affirmative, turtle_not_a_problem, turtle_right_away_sir, turtle_roger_that, turtle_solid_copy
+		Action: turtle_acknowledged, turtle_affirmative, turtle_not_a_problem, turtle_ready_for_action, turtle_roger_that, turtle_solid_copy, turtle_target_acquired
+		Guard: guarding

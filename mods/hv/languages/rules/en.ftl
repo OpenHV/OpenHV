@@ -160,14 +160,25 @@ actor-gunship =
      Availability: Yuruki
 
 actor-jet =
-   .description = Fast Attack Ship
+   .description = Super Fast Interceptor
+      Strong vs Aircraft
+      Can't target ground units.
+   .name = Speeder
+   .encyclopedia = TO BE DONE
+
+     {actor-jet.description}
+
+     Availability: Yuruki
+
+actor-jet2 =
+   .description = Attack Bomber
       Strong vs Buildings
       Weak vs Tanks and Pods
       Can't target Aircraft
-   .name = Speeder
-   .encyclopedia = The speeder is an air-to-ground plane, armed with a plasma canon that can destroy buildings easily. It is slower but more durable than the attack aircraft.
+   .name = Bomber
+   .encyclopedia = The bomber is an air-to-ground plane, armed with a plasma canon that can destroy buildings easily. It is slower but more durable than the attack aircraft.
 
-     {actor-jet.description}
+     {actor-jet2.description}
 
      Availability: Yuruki
 
@@ -201,6 +212,17 @@ actor-banshee =
    .encyclopedia = The banshee is a more durable and slow helicopter, that launches powerful missiles onto the ground. It is particularly strong against buildings.
 
      {actor-banshee.description}
+
+     Availability: Synapol
+
+actor-turtle =
+   .name = Turtle
+   .description = Heavy Flying Bunker
+      Strong vs Aircraft
+      Can't target ground units.
+   .encyclopedia = TO BE DONE
+
+     {actor-turtle.description}
 
      Availability: Synapol
 

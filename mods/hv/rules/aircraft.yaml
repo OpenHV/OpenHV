@@ -68,7 +68,7 @@ GUNSHIP:
 
 JET:
 	Inherits: ^Plane
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAir
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
@@ -80,7 +80,7 @@ JET:
 		Order: 10
 		Category: Aircraft
 	Valued:
-		Cost: 3000
+		Cost: 1500
 	Tooltip:
 		Name: actor-jet.name
 	UpdatesPlayerStatistics:
@@ -96,8 +96,67 @@ JET:
 		Range: 4c0
 		Type: GroundPosition
 	Armament:
+		Weapon: PlasmaMachineGun
+		LocalOffset: 500,-200,0, 500,200,0
+	AttackAircraft:
+		FacingTolerance: 100
+		PersistentTargeting: false
+		OpportunityFire: false
+	Aircraft:
+		CruiseAltitude: 2560
+		InitialFacing: 768
+		TurnSpeed: 40
+		Speed: 220
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	Voiced:
+		VoiceSet: Jet2Voice
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	Selectable:
+		Bounds: 1024, 1024
+	Contrail@Right:
+		Offset: -298,-164,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Left:
+		Offset: -298,164,0
+		TrailLength: 12
+		ZOffset: -1000
+
+JET2:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Smoke: ^SmokeEmitter
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 55
+		Prerequisites: techcenter, ~starport.yi
+		Description: actor-jet2.description
+	Encyclopedia:
+		Description: actor-jet2.encyclopedia
+		Order: 10
+		Category: Aircraft
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: actor-jet2.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	RevealsShroud:
+		Range: 11c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Armament:
 		Weapon: Plasma
-		LocalOffset: 250,0,0
+		LocalOffset: 250,-400,0, 250,400,0
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 8
@@ -129,13 +188,19 @@ JET:
 	AutoTargetPriority:
 		InvalidTargets: Structure
 	Selectable:
-		Bounds: 1024, 1024
+		Bounds: 1524, 1524
 	Contrail@Right:
-		Offset: -298,-164,0
+		Offset: -298,-350,0
+		TrailLength: 12
+		ZOffset: -1000
+	Contrail@Center:
+		Offset: -298,0,0
+		StartWidth: 0c100
+		EndWidth: 0c30
 		TrailLength: 12
 		ZOffset: -1000
 	Contrail@Left:
-		Offset: -298,164,0
+		Offset: -298,350,0
 		TrailLength: 12
 		ZOffset: -1000
 
@@ -289,6 +354,60 @@ BANSHEE:
 	Selectable:
 		DecorationBounds: 1228, 1228
 	WithMuzzleOverlay:
+
+TURTLE:
+	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetAir
+	Inherits@Smoke: ^SmokeEmitter
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-turtle.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 55
+		Prerequisites: techcenter, ~starport.sc
+		Description: actor-turtle.description
+	Encyclopedia:
+		Description: actor-turtle.encyclopedia
+		Order: 10
+		Category: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 40
+		Speed: 100
+	Voiced:
+		VoiceSet: TurtleVoice
+	Turreted:
+		TurnSpeed: 80
+		Offset: 0,0,100
+	AttackTurreted:
+		RequiresCondition: airborne
+	Armament:
+		Weapon: DiscThrower
+		LocalOffset: 0,0,0
+		FireDelay: 2
+	Selectable:
+		Bounds: 1400, 1400
+	WithMoveAnimation:
+	WithAttackOverlay:
+		Sequence: shoot
+	-WithShadow:
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
 
 CHOPPER:
 	Inherits: ^Helicopter
