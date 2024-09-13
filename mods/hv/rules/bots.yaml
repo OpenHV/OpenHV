@@ -134,6 +134,7 @@ Player:
 			rocketeer: 1
 			mortar: 1
 			jetpacker: 1
+			jetpacker2: 1
 			sniper: 1
 			shocker: 1
 			technician: 1
