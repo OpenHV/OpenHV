@@ -786,11 +786,26 @@
 
 ^AutoTargetAir:
 	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
 		MinimumScanTimeInterval: 5
 		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
+		RequiresCondition: !stance-attackanything
 		ValidTargets: Air
 		InvalidTargets: NoAutoTarget
+	AutoTargetPriority@AttackAnything:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Air
+		InvalidTargets: NoAutoTarget
+
+^AutoTargetAirAssaultMove:
+	Inherits: ^AutoTargetAir
+	AutoTargetPriority@Default:
+		RequiresCondition: !stance-attackanything && !assault-move
+	AutoTargetPriority@AttackAnything:
+		RequiresCondition: stance-attackanything || assault-move
+	AttackMove:
+		AssaultMoveCondition: assault-move
 
 ^AutoTargetAll:
 	AutoTarget:

@@ -63,7 +63,7 @@ MBT2:
 
 AATANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetAir
+	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 20
