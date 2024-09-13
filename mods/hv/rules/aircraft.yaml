@@ -68,7 +68,7 @@ GUNSHIP:
 
 JET:
 	Inherits: ^Plane
-	Inherits@AutoTarget: ^AutoTargetAir
+	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
@@ -357,7 +357,7 @@ BANSHEE:
 
 TURTLE:
 	Inherits: ^Helicopter
-	Inherits@AutoTarget: ^AutoTargetAir
+	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
 		Cost: 1500
