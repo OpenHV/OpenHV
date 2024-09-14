@@ -48,10 +48,10 @@ PodRailgun:
 		# Inaccuracy: 1c256
 		Damage: 600 # 300
 		Versus:
-			None: 300 # 300
+			None: 200 # 300
 			Steel: 20 # 25
-			Light: 125 # 75 # 55
-			Heavy: 125 # 75 # 20
+			Light: 100 # 125 # 75 # 55
+			Heavy: 100 # 125 # 75 # 20
 			Concrete: 5
 
 # HeavyMachineGun:
