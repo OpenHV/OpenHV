@@ -163,12 +163,16 @@ SNIPER:
 	Cloak:
 		InitialDelay: 250
 		CloakDelay: 120
-		CloakSound:
-		UncloakSound:
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
 		UncloakOn: Attack, Unload, Move
+		PauseOnCondition: cloak-force-disabled || jammed
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 
 FLAMER:
 	Inherits: ^Pod
@@ -326,14 +330,18 @@ BROKER:
 		ValidTargets: Defraudable
 		InvalidTargets: NoAutoTarget
 	Cloak:
-		InitialDelay: 250
-		CloakDelay: 120
-		CloakSound:
-		UncloakSound:
+		InitialDelay: 300
+		CloakDelay: 150
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
 		UncloakOn: Attack, Unload
+		PauseOnCondition: cloak-force-disabled || jammed
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 	# SpeedMultiplier@Cloaked:
 	# 	Modifier: 200
 	# 	RequiresCondition: cloaked
@@ -367,8 +375,8 @@ JETPACKER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Armament:
-		Weapon: PodRailgun # HeavyMachineGun
-		# MuzzleSequence: muzzle
+		Weapon: PodDrunkMissiles # PodRailgun # HeavyMachineGun
+		MuzzleSequence: muzzle
 		LocalOffset: 0,-300,0,   0,300,0
 	AttackFrontal:
 		FacingTolerance: 10
