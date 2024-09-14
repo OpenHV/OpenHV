@@ -262,3 +262,11 @@ TurtleVoice:
 		Move: turtle_acknowledged, turtle_affirmative, turtle_not_a_problem, turtle_right_away_sir, turtle_roger_that, turtle_solid_copy
 		Action: turtle_acknowledged, turtle_affirmative, turtle_not_a_problem, turtle_ready_for_action, turtle_roger_that, turtle_solid_copy, turtle_target_acquired
 		Guard: guarding
+
+ObserverVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: observer_aeronautics_operational, observer_avionics_online, observer_awaiting_orders, observer_ready_for_action, observer_sensors_aligned, observer_surveillance_active
+		Move: observer_acknowledged, observer_affirmative, observer_not_a_problem, observer_optimising_updraft, observer_roger_that
+		Action: observer_acknowledged, observer_affirmative, observer_not_a_problem, observer_optimising_updraft, observer_roger_that
+		Guard: guarding

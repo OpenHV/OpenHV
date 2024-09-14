@@ -58,7 +58,7 @@ Actors:
 	Base: base
 		Owner: Yuruki Industries
 		Location: 11,6
-	Ballon: balloon
+	Ballon: observer
 		Facing: 384
 		Location: 26,34
 		Owner: Synapol Corporation

@@ -38,7 +38,7 @@ Player:
 		InvalidTargets: Air, Water
 		ScanTick: 780
 	ScoutBotModule:
-		ScoutActorTypes: balloon, saucer
+		ScoutActorTypes: balloon, observer
 		MoveRadius: 20
 		RequiresCondition: gentle-ai-enabled
 

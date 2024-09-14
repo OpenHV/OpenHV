@@ -103,7 +103,7 @@ Actors:
 	Actor28: generator
 		Owner: Synapol Corporation
 		Location: 11,2
-	Actor32: balloon
+	Actor32: observer
 		Owner: Synapol Corporation
 		Location: 27,14
 		Facing: 384
