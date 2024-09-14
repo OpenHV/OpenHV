@@ -201,7 +201,17 @@ actor-saucer =
 
      {actor-saucer.description}
 
-     Availability: Yuruki
+     Availability: None
+
+actor-observer =
+   .name = Observer
+   .description = Reconnaissance air unit.
+      Unarmed
+   .encyclopedia = An orb shaped helicopter with good maneuverability. It's not suited for combat, but for reconnaissance missions.
+
+     {actor-observer.description}
+
+     Availability: Synapol
 
 actor-banshee =
    .name = Banshee
@@ -243,11 +253,11 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
-   .encyclopedia = A reconnaissance air unit. It's slower than Yuruki's saucer, but it grants more visibility range.
+   .encyclopedia = A reconnaissance air unit. It's slower than Synapol's observer, but it grants more visibility range.
 
      Unarmed
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-dropship =
    .name = Heavy Transport Dropship

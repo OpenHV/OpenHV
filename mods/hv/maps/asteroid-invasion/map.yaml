@@ -496,7 +496,7 @@ Actors:
 		Owner: Synapol Corporation
 		Location: 37,10
 		Facing: 670
-	Actor152: balloon
+	Actor152: observer
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 30,4

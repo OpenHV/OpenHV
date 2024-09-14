@@ -320,3 +320,23 @@ turtle:
 	icon:
 		Filename: units-icons.png
 		Start: 64
+
+observer:
+	idle:
+		Filename: bits/observer.png
+		Facings: 8
+		ZOffset: 2050
+	idle-overlay:
+		Filename: bits/observer.png
+		Start: 8
+		Tick: 50
+		Length: 4
+		ZOffset: 2050
+	shadow-overlay:
+		Filename: bits/observer-shadow.png
+		Tick: 50
+		Length: 4
+		Offset: 15, -1
+	icon:
+		Filename: bits/units-icons.png
+		Start: 66

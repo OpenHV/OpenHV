@@ -265,7 +265,7 @@ SAUCER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~starport.yi
+		Prerequisites: ~disabled
 		Description: actor-saucer.description
 	Encyclopedia:
 		Description: actor-saucer.encyclopedia
@@ -293,6 +293,49 @@ SAUCER:
 	-WithShadow:
 	Selectable:
 		Bounds: 1228, 1228
+	WithIdleOverlayOnGround:
+		IsDecoration: true
+		Sequence: shadow-overlay
+		Palette: shadow
+
+OBSERVER:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: actor-observer.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 20
+		Prerequisites: ~starport.sc
+		Description: actor-observer.description
+	Encyclopedia:
+		Description: actor-observer.encyclopedia
+		Order: 0
+		Category: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 8000
+	RevealsShroud:
+		Range: 18c0
+		MinRange: 9c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 9c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 50
+		Speed: 80
+		CanForceLand: false
+		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+	Voiced:
+		VoiceSet: ObserverVoice
+	-WithShadow:
+	Selectable:
+		Bounds: 1228, 1228
+	WithIdleOverlay:
 	WithIdleOverlayOnGround:
 		IsDecoration: true
 		Sequence: shadow-overlay
@@ -515,7 +558,7 @@ BALLOON:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~starport.sc
+		Prerequisites: ~starport.yi
 		Description: actor-balloon.description
 	Encyclopedia:
 		Description: actor-balloon.encyclopedia

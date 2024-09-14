@@ -351,7 +351,7 @@ Actors:
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 53,3
-	Actor120: balloon
+	Actor120: observer
 		Owner: Synapol Corporation
 		Facing: 384
 		Location: 6,43

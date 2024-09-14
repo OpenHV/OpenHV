@@ -364,7 +364,7 @@ Actors:
 	Actor103: light
 		Owner: Neutral
 		Location: 63,58
-	Actor104: saucer
+	Actor104: balloon
 		Location: 58,21
 		Faction: Random
 		Facing: 384

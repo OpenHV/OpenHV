@@ -501,13 +501,13 @@ World:
 		ClassName: options-starting-units.base-scout
 		Factions: yi
 		BaseActor: base
-		SupportActors: saucer
+		SupportActors: balloon
 	StartingUnits@ScoutSC:
 		Class: scout
 		ClassName: options-starting-units.base-scout
 		Factions: sc
 		BaseActor: base2
-		SupportActors: balloon
+		SupportActors: observer
 	MapStartingLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnStartingUnits:
