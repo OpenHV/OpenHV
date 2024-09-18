@@ -147,7 +147,7 @@ PodDrunkMissiles:
 	BurstDelays: 2 # 2
 	Projectile: Missile
 		# Image: bullet7
-		Inaccuracy: 3c0
+		Inaccuracy: 2c0 # 3c0
 		Speed: 300
 		CloseEnough: 300
 		TrailInterval: 3
