@@ -127,7 +127,7 @@ FIRETRUCK:
 		TargetLineColor: 0000FF
 	Turreted:
 		TurnSpeed: 25
-		Offset: 150,0,150
+		Offset: 200,0,150
 	WithSpriteTurret:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
