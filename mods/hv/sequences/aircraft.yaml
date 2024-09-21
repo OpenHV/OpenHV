@@ -186,6 +186,7 @@ drone:
 		Filename: bits/drone.png
 		Facings: 8
 		Start: 8
+		Tick: 100
 
 droppod:
 	idle:
