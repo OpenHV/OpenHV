@@ -24,15 +24,28 @@ BASE2:
 	-BaseProvider:
 	ProvidesRadar:
 
+^RefillWater:
+	WithDecoration@RefillWater:
+		Image: refill
+		Sequence: idle
+		Palette: effect
+		Position: Top
+		Margin: 0,-11
+		RequiresCondition: refill-water
+	GrantConditionOnTerrain:
+		Condition: refill-water
+		TerrainTypes: Shore
+
 WATERTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@RefillWater: ^RefillWater
 	AutoTargetPriority@Default:
 		ValidTargets: Fire
 	AutoTargetPriority@AttackAnything:
 		ValidTargets: Fire
 	Valued:
-		Cost: 1000
+		Cost: 1250
 	Tooltip:
 		Name: actor-watertank.name
 		GenericName: actor-watertank.generic-name
@@ -42,33 +55,34 @@ WATERTANK:
 		BuildPaletteOrder: 200
 		Description: actor-watertank.description
 	Armament:
-		Weapon: WaterCannon
-		LocalOffset: 400,-50,0
+		Weapon: WaterSuperCannon
+		Recoil: 125
+		RecoilRecovery: 38
+		LocalOffset: 400,-100,0, 400,100,0
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 800
+		Ammo: 100
 		AmmoCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
 		RequiresSelection: true
-		PipCount: 4
+		PipCount: 5
 	ReloadAmmoPool:
-		Delay: 10
+		Delay: 40
 		Count: 10
 		RequiresCondition: refill-water
-	GrantConditionOnTerrain:
-		Condition: refill-water
-		TerrainTypes: Shore
-	AttackFrontal:
+	AttackTurreted:
 		Voice: Action
 		TargetLineColor: 0000FF
+	Turreted:
+		TurnSpeed: 25
+		Offset: 200,0,180
+	WithSpriteTurret:
 	AttackMove:
 		TargetLineColor: 0000FF
 	AutoTarget:
 		ScanRadius: 10
-	WithAttackAnimation:
-		Sequence: shoot
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
@@ -79,12 +93,13 @@ WATERTANK:
 		Speed: 71
 	RevealsShroud:
 		Range: 6c0
-	RenderSprites:
-		PlayerPalette: green
+	Voiced:
+		VoiceSet: CarVoice
 
 FIRETRUCK:
 	Inherits: ^Vehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@RefillWater: ^RefillWater
 	AutoTargetPriority@Default:
 		ValidTargets: Fire
 	AutoTargetPriority@AttackAnything:
@@ -115,9 +130,6 @@ FIRETRUCK:
 		Delay: 10
 		Count: 10
 		RequiresCondition: refill-water
-	GrantConditionOnTerrain:
-		Condition: refill-water
-		TerrainTypes: Shore
 	AttackMove:
 		TargetLineColor: 0000FF
 	AutoTarget:
@@ -139,12 +151,13 @@ FIRETRUCK:
 		Speed: 90
 	RevealsShroud:
 		Range: 6c0
-	RenderSprites:
-		PlayerPalette: green
+	Voiced:
+		VoiceSet: CarVoice
 
 FIREFIGHTERPOD:
 	Inherits: ^Pod
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@RefillWater: ^RefillWater
 	AutoTargetPriority@Default:
 		ValidTargets: Fire
 	AutoTargetPriority@AttackAnything:
@@ -176,9 +189,6 @@ FIREFIGHTERPOD:
 		Delay: 10
 		Count: 10
 		RequiresCondition: refill-water
-	GrantConditionOnTerrain@Lakeside:
-		Condition: refill-water
-		TerrainTypes: Shore
 	AttackFrontal:
 		FacingTolerance: 0
 		Voice: Action

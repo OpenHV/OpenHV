@@ -51,3 +51,5 @@ Translations: hv|languages/campaign/en.ftl, hv|languages/difficulty/en.ftl, hv|l
 Sequences: sequences.yaml
 
 Weapons: weapons.yaml
+
+Voices: voices.yaml
