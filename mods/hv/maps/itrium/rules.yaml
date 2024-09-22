@@ -172,3 +172,7 @@ CVIT:
 REPAIRTANK:
 	Buildable:
 		Prerequisites: ~disabled
+
+OREPURIFIER:
+	Buildable:
+		Prerequisites: ~disabled
