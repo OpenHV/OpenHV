@@ -33,3 +33,44 @@ WaterCannonSmall:
 	ReloadDelay: 20
 	Burst: 7
 	BurstDelays: 1
+
+WaterSuperCannon:
+	ValidTargets: Fire, Ground, Water
+	Report: watergun.ogg
+	ReloadDelay: 8
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 300
+		Image: waterball
+		Inaccuracy: 0c512
+		Shadow: true
+		TrailImage: waterball-trail
+		TrailSequences: idle
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Fire, Ground
+		Spread: 0c512
+		Damage: -500
+		Versus:
+			Wood: 100
+		DamageTypes: Incendiary
+	Warhead@Incendiary: TreeDamage
+		ValidTargets: Fire, Ground
+		Spread: 0c512
+		Damage: -500
+	Warhead@Effect: CreateEffect
+		Image: water_splash_small
+		Explosions: water_splash_small_a, water_splash_small_b
+		ValidTargets: Water, Ground
+		ImpactSounds: small-water-splash1_siliconesound.ogg, small-water-splash2_siliconesound.ogg, small-water-splash3_siliconesound.ogg, small-water-splash4_siliconesound.ogg, small-water-splash5_siliconesound.ogg
+	Warhead@Debris: FireShrapnel
+		Weapon: WaterDrops
+		Amount: 10
+		ValidTargets: Fire, Ground, Water
+
+WaterDrops:
+	Inherits: WaterCannon
+	Range: 1c512
+	Projectile: Bullet
+		Speed: 200
+		LaunchAngle: 50,125
+		Inaccuracy: 0c256
