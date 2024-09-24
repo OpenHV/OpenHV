@@ -647,7 +647,6 @@ ECMTANK:
 		MaximumScanTimeInterval: 15
 	AutoTargetPriority@Default:
 		ValidTargets: Jammable
-	-Targetable@ECM:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
