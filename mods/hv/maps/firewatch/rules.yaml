@@ -235,6 +235,12 @@ TREEFLAME:
 		Bounds: 1024, 1024
 	Targetable:
 		TargetTypes: Fire, Ground
+	TerrainLightSource:
+		Range: 1c512
+		Intensity: 0.03
+		RedTint: 1.40
+		GreenTint: 0.50
+		BlueTint: 0.50
 
 World:
 	LuaScript:
