@@ -249,6 +249,7 @@ ifneq ("$(MAP_FOLDERS)","")
 		if [ "$$HTTP_CODE" = "404" ]; then \
 			echo "$$MAP is missing!"; \
 			status=1; \
+			(cd "$${MAP}" && zip -rq "upload.oramap" .); \
 		fi; \
 	done; \
 	exit $$status
