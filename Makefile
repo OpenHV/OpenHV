@@ -236,7 +236,7 @@ ifneq ("$(SPRITE_FILES)","")
 	exit $$status
 endif
 
-check-maps:
+check-maps: all
 ifneq ("$(MAP_FOLDERS)","")
 	@echo "Checking Resource Center...";
 	@status=0; \
