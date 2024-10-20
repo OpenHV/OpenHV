@@ -1,0 +1,74 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.55
+	GlobalLightingPaletteEffect:
+		Red: 0.9
+		Green: 0.9
+		Blue: 1.2
+		Ambient: 1.1
+
+World:
+	TerrainTileAnimation@LavaBubble:
+		Interval: 1
+
+LAVALIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 17c640
+		Intensity: 0.01
+		RedTint: 1.50
+		GreenTint: 0.10
+		BlueTint: 0.10
+
+LAVALIGHT_M:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 11c640
+		Intensity: 0.01
+		RedTint: 1.50
+		GreenTint: 0.10
+		BlueTint: 0.10
+
+FORESTLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 13c640
+		Intensity: 0.01
+		RedTint: 0.35
+		GreenTint: 0.65
+		BlueTint: 0.35
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.35
+		GreenTint: 0.55
+		BlueTint: 0.45
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.45
+		GreenTint: 0.45
+		BlueTint: 0.70
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: -0.25
+		GreenTint: -0.20
+		BlueTint: -0.20
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
