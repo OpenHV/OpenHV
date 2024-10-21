@@ -241,7 +241,7 @@ actor-chopper =
    .description = Vehicle Transport Helicopter.
       Can load pods
       and lift one vehicle.
-   .encyclopedia = The chopper is a heavy transport aircraft, than can load up to 5 tons of cargo, the equivalent of 8 pods. It can also lift one vehicle.
+   .encyclopedia = The chopper is a heavy transport aircraft that can load a group of pods. It can also lift one vehicle.
 
      {actor-chopper.description}
 
@@ -264,7 +264,7 @@ actor-dropship =
    .description = Vehicle Transport Shuttle.
       Can load pods
       and lift one vehicle.
-   .encyclopedia = The dropship is a heavy transport aircraft, than can load up to 5 tons of cargo, the equivalent of 8 pods. It can also lift one vehicle.
+   .encyclopedia = The dropship is a heavy transport aircraft, than can load up a group of pods. It can also lift one vehicle.
 
      {actor-dropship.description}
 
@@ -839,7 +839,7 @@ actor-ferry =
    .description = General-purpose naval transport.
     Can carry pods.
       Unarmed
-   .encyclopedia = The ferry is a heavy naval transporter. It can load up to 6 tons of cargo, the equivalent of 10 pods. It is quite slow but very durable. It can land on shores to load or unload its cargo.
+   .encyclopedia = The ferry is a heavy naval transporter based on liquid leviation technology that only works on water. It is quite slow but very durable. It can land on shores to load or unload its cargo.
 
      {actor-ferry.description}
 
@@ -895,7 +895,7 @@ actor-apc =
    .name = APC
    .description = Can transport pods.
       Has fireports for garrisoned units.
-   .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank, that can load up to 8 tons of cargo, the equivalent of 5 pods. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
+   .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
 
      Availability: Universal
 
