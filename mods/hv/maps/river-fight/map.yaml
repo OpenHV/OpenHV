@@ -29,13 +29,11 @@ Players:
 		Enemies: Multi0, Multi1
 	PlayerReference@Multi0:
 		Name: Multi0
-		AllowBots: False
 		Playable: True
 		Faction: Random
 		Enemies: Creeps
 	PlayerReference@Multi1:
 		Name: Multi1
-		AllowBots: False
 		Playable: True
 		Faction: Random
 		Enemies: Creeps
@@ -994,3 +992,5 @@ Actors:
 		Location: 39,83
 
 Rules: rules.yaml
+
+Translations: en.ftl
