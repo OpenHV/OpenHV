@@ -67,6 +67,8 @@ rescue-scientist = Rescue the scientist.
 kill-guards = Kill the lab guards.
 find-scientist = Find the scientist.
 scientist-escaped = The scientist is out of the lab! Rescue him!
+radar = Radar Trigger
+dropzone-revealed = Dropzone localized: watch out for beacons!
 
 ## infiltration-commando
 satellite-reconaissance = Satellite Reconaissance
