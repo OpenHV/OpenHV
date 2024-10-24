@@ -20,7 +20,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, scientist-rescue.lua
 	MissionData:
-		Briefing: A Yuruki scientist working a new technology of sub-spatial televator transportation was kidnapped by the military forces of Synapol. The Yuruki information services were able to retrace the scientist, and you and your crews are now heading to the Synapol research center located in the surroundings of New Boston's shores. Break into the center, find the scientist and protect him until the rescue dropship comes to get you.
+		Briefing: A Yuruki scientist Lucy Chen, working on a new technology of sub-spatial televator transportation was kidnapped by Synapol's military forces. The Yuruki information services were able to retrace the scientist, and you and your crews are now heading to the Synapol research center located in the surroundings of New Boston's shores. Break into the center, find the scientist and protect her until the rescue dropship comes to get you.
 
 Entry:
 	Interactable:
@@ -70,3 +70,11 @@ TECHNICIAN:
 
 DROPSHIP:
 	RejectsOrders:
+
+MINIPOD4.SCIENTIST:
+	Inherits: MINIPOD4
+	Tooltip:
+		Name: scientist.name
+		GenericName: scientist.generic-name
+	RenderSprites:
+		Image: minipod4
