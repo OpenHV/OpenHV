@@ -1,0 +1,387 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.85
+	GlobalLightingPaletteEffect:
+		Red: 1
+		Green: 0.9
+		Blue: 1.3
+		Ambient: 1.1
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud1, cloud1f, cloud2, cloud2f, cloud3, cloud3f
+		Palette: cloud
+		Speed: 20, 25
+
+Player:
+	GrantConditionOnBotOwner@WaterConquestBot:
+		Condition: enable-waterconquest-ai
+		Bots: waterconquest
+	-ModularBot@RogueAI:
+	ModularBot@WaterConquestBot:
+		Name: bot-waterconquest-ai.name
+		Type: waterconquest
+	BaseBotModule@WaterConquestBot:
+		RequiresCondition: enable-waterconquest-ai
+	BuilderBotModule@WaterConquestBot:
+		RequiresCondition: enable-waterconquest-ai
+		BuilderTypes: builder, builder2
+		MinimumBaseRadius: 15
+	BaseBuilderBotModule@WaterConquestBot:
+		RequiresCondition: enable-waterconquest-ai
+		MinimumExcessPower: 40
+		MaximumExcessPower: 500
+		InititalMinimumRefineryCount: 1
+		AdditionalMinimumRefineryCount: 1
+		PlaceDefenseTowardsEnemyChance: 0
+		NewProductionCashThreshold: 7000
+		WaterTerrainTypes: Littoral
+		ConstructionYardTypes: base, base2
+		PowerTypes: generator
+		BarracksTypes: module, module2
+		VehiclesFactoryTypes: factory, factory2, base, base2
+		ProductionTypes: module, module2, factory, factory2, starport, starport2, harbor, harbor2, base, base2
+		NavalProductionTypes: harbor, harbor2
+		RefineryTypes: storage
+		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
+		BuildingLimits:
+			base: 1
+			storage: 3
+			module: 1
+			module2: 1
+			factory: 1
+			factory2: 1
+			harbor: 4
+			harbor2: 4
+			radar: 1
+			radar2: 1
+			starport: 4
+			starport2: 4
+			oresmelt: 2
+			orepurifier: 2
+			trader: 1
+			techcenter: 1
+			field: 1
+			howitzer: 1
+			uplink: 1
+			silo: 1
+			outpost: 2
+			outpost2: 2
+		BuildingFractions:
+			base: 1
+			storage: 1
+			module: 1
+			module2: 1
+			radar: 1
+			radar2: 1
+			factory: 1
+			factory2: 1
+			harbor: 4
+			harbor2: 4
+			trader: 1
+			starport: 4
+			starport2: 4
+			techcenter: 1
+			oresmelt: 20
+			orepurifier: 20
+			bunker: 12
+			bunker2: 12
+			turret: 12
+			turret2: 12
+			aaturret: 12
+			aaturret2: 12
+			howitzer: 1
+			uplink: 1
+			field: 1
+			silo: 1
+		BuildingDelays:
+			bunker: 150
+			bunker2: 150
+			aaturret: 150
+			aaturret2: 150
+			turret: 150
+			turret2: 150
+			radar: 3000
+			radar2: 3000
+			factory: 11000
+			factory2: 11000
+			howitzer: 12000
+			field: 12000
+			silo: 13000
+			uplink: 13000
+	BuildingRepairBotModule:
+		RequiresCondition: enable-waterconquest-ai
+	SquadManagerBotModule@WaterConquestBot:
+		RequiresCondition: enable-waterconquest-ai
+		SquadSize: 20
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster
+		NavalUnitsTypes: torpedoboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier
+		AirUnitsTypes: gunship, jet, copter, banshee
+		ConstructionYardTypes: base, base2
+		ProtectionTypes: base, base2, outpost, outpost2, generator, miner2, storage, module, module2, radar, radar2, factory, factory2, harbor, harbor2, trader, starport, starport2, techcenter, bunker, bunker2, turret, aaturret, howitzer, uplink, field, silo
+	UnitBuilderBotModule@WaterConquestBot:
+		IdleBaseUnitsMaximum: 30
+		RequiresCondition: enable-waterconquest-ai
+		UnitQueues: Pod, Utility, Tank, Aircraft, Ship, Trade
+		UnitsToBuild:
+			miner: 3
+			builder: 1
+			builder2: 1
+			radartank: 1
+			minelayer: 1
+			aatank: 4
+			aatank2: 4
+			jetpacker: 1
+			technician: 1
+			jet: 15
+			gunship: 15
+			copter: 15
+			banshee: 15
+			balloon: 3
+			observer: 3
+			torpedoboat: 10
+			submarine: 10
+			lightboat: 15
+			patrolboat: 15
+			railgunboat: 5
+			lightningboat: 5
+			boomer: 5
+			carrier: 5
+			mineship: 1
+			mineship2: 1
+			battleship: 1
+			mothership: 1
+		UnitLimits:
+			miner: 2
+			builder: 1
+			builder2: 1
+			balloon: 2
+			observer: 2
+			radartank: 2
+			minelayer: 1
+			boomer: 4
+			carrier: 4
+			mineship: 1
+			mineship2: 1
+			technician: 1
+		UnitDelays:
+			builder: 7500
+			builder2: 7500
+	PriorityCaptureManagerBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		CapturingActorTypes: technician
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
+		MaximumCaptureTargetOptions: 15
+	MinerBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		DeployableActorTypes: miner
+		DeployableTerrainTypes: Ore
+		DeployedActorTypes: miner2
+		VehiclesQueue: Utility
+	MinelayerBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		MinelayingActorTypes: minelayer, mineship, mineship2
+		IgnoredEnemyTargetTypes: Structure, Defense, Air
+		UseEnemyLocationTargetTypes: Structure, Defense
+		AwayFromAlliedTargetTypes: Structure, Defense
+		AwayFromEnemyTargetTypes: Structure, Defense
+	CubePickupBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		ExcludedUnitTypes: miner, tanker1, tanker2, broker
+	CargoBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		TransportTypes: apc
+		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
+	DeployActorBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		DeployableActorTypes: radartank
+	PowerDownBotModule:
+		RequiresCondition: enable-waterconquest-ai
+	ScoutBotModule:
+		ScoutActorTypes: balloon, observer
+		MoveRadius: 20
+		RequiresCondition: enable-waterconquest-ai
+	SendUnitToAttackBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		ActorTypesAndAttackDesire:
+			blaster: 30
+		ValidTargets: Structure, Vehicle
+		InvalidTargets: Air, Water
+	ExternalConditionPowerBotModule@Field:
+		RequiresCondition: enable-waterconquest-ai
+		OrderName: ShieldsUp
+	ExternalConditionPowerBotModule@CloakDevice:
+		RequiresCondition: enable-waterconquest-ai
+		OrderName: CloakDevice
+	SupportPowerBotModule:
+		RequiresCondition: enable-waterconquest-ai
+		Decisions:
+			Nuke:
+				OrderName: Nukem
+				MinimumAttractiveness: 3000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
+			DropPods:
+				OrderName: EjectPods
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+			AirStrike:
+				OrderName: FlushBombers
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			Howitzer:
+				OrderName: FireMission
+				MinimumAttractiveness: 1
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+			Railgun:
+				OrderName: Blastem
+				MinimumAttractiveness: 1000
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Air, Tank, Vehicle, Infantry, Water
+					Attractiveness: 2
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 3c0
+			ClusterBomb:
+				OrderName: Bombem
+				MinimumAttractiveness: 1000
+				FineScanRadius: 2
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 7c0
+			DropParatroopers:
+				OrderName: FlushParatroopers
+				MinimumAttractiveness: 5
+				Consideration@1:
+					Against: Enemy
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 1
+					TargetMetric: None
+					CheckRadius: 5c0
+				Consideration@2:
+					Against: Ally
+					Types: Tank, Vehicle, Infantry
+					Attractiveness: 2
+					TargetMetric: None
+					Check Radius: 8c0
+				Consideration@3:
+					Against: Enemy
+					Types: Water
+					Attractiveness: -5
+					TargetMetric: None
+					CheckRadius: 8c0
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+PURP_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.55
+		GreenTint: 0.35
+		BlueTint: 0.60
+
+BLUE_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.45
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.35
+		BlueTint: -0.35
+
+TOWERLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 03c640
+		Intensity: 0.01
+		RedTint: 0.95
+		GreenTint: 0.40
+		BlueTint: 0.40
+
+PITLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.1
+		GreenTint: -0.2
+		BlueTint: -0.2
