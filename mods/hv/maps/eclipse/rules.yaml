@@ -1,0 +1,86 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 1.15
+	GlobalLightingPaletteEffect:
+		Red: 0.9
+		Green: 1.2
+		Blue: 1.35
+		Ambient: 1
+	CloudSpawner:
+		Image: cloud
+		Sequences: cloud3, cloud3f
+		Palette: cloud
+		Speed: 15, 20
+		SpawnInterval: 900
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.30
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+RESOURCELIGHT_RARE:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.5
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.40
+		BlueTint: 0.60
+
+PURP_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 15c640
+		Intensity: 0.01
+		RedTint: 0.55
+		GreenTint: 0.35
+		BlueTint: 0.60
+
+BLUE_L:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.01
+		RedTint: 0.45
+		GreenTint: 0.50
+		BlueTint: 0.90
+
+LAVALIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 07c640
+		Intensity: 0.15
+		RedTint: 0.90
+		GreenTint: 0.45
+		BlueTint: 0.35
+
+DARKLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: -0.15
+		GreenTint: -0.15
+		BlueTint: -0.10
+
+PITLIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.1
+		GreenTint: -0.2
+		BlueTint: -0.2
