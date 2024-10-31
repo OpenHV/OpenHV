@@ -20,7 +20,7 @@ faction-yuruki =
    .name = Yuruki
    .description = Yuruki Industries
     A corporation that grew by colonizing new planets.
-    Their colonial defense forces helped paved the way for
+    Their colonial defense forces helped pave the way for
     an aggressive expansion throughout the solar system.
 
     Faction Variations:
@@ -44,7 +44,7 @@ faction-yuruki =
 faction-synapol =
    .name = Synapol
    .description = Synapol Corporation
-    A large interplanatary company that manufactures,
+    A large interplanetary company that manufactures
     everything from common household appliances to armaments.
     Their security department became a large paramilitary force.
 
@@ -176,7 +176,7 @@ actor-jet2 =
       Weak vs Tanks and Pods
       Can't target Aircraft
    .name = Bomber
-   .encyclopedia = The bomber is an air-to-ground plane, armed with a plasma canon that can destroy buildings easily. It is slower but more durable than the attack aircraft.
+   .encyclopedia = The bomber is an air-to-ground plane, armed with a plasma cannon that can destroy buildings easily. It is slower but more durable than the attack aircraft.
 
      {actor-jet2.description}
 
