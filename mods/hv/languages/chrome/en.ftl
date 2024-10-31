@@ -119,7 +119,6 @@ button-command-bar-force-move =
      - Default activity for the target is suppressed
      - Vehicles will attempt to crush enemies at the target location
      - Helicopters will land at the target location
-     - Chrono Tanks will teleport towards the target location
 
     Left-click icon then right-click on target.
     Hold <(Alt)> to activate temporarily while commanding units.
