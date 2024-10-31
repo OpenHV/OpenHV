@@ -13,7 +13,7 @@ MBT:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: ~factory.yi
+		Prerequisites: ~factory.sc
 		Queue: Tank
 		Description: actor-mbt.description
 	Encyclopedia:
@@ -53,7 +53,7 @@ MBT:
 MBT2:
 	Inherits: MBT
 	Buildable:
-		Prerequisites: ~factory.sc
+		Prerequisites: ~factory.yi
 	-Encyclopedia:
 	Turreted:
 		Offset: 0,0,0
@@ -67,7 +67,7 @@ AATANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 20
-		Prerequisites: ~factory.sc
+		Prerequisites: ~factory.yi
 		Description: actor-aatank.description
 	Encyclopedia:
 		Description: actor-aatank.encyclopedia
@@ -110,7 +110,7 @@ AATANK:
 AATANK2:
 	Inherits: AATANK
 	Buildable:
-		Prerequisites: ~factory.yi
+		Prerequisites: ~factory.sc
 		Description: actor-aatank2.description
 	Encyclopedia:
 		Description: actor-aatank2.encyclopedia
@@ -427,7 +427,7 @@ RAILGUNTANK:
 		Class: railguntank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, techcenter
+		Prerequisites: ~factory.yi, techcenter
 		BuildPaletteOrder: 70
 		Description: actor-railguntank.description
 	Armament:
@@ -459,7 +459,7 @@ LIGHTNINGTANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 70
-		Prerequisites: ~factory.yi, techcenter
+		Prerequisites: ~factory.sc, techcenter
 		Description: actor-lightningtank.description
 	Encyclopedia:
 		Description: actor-lightningtank.encyclopedia
@@ -503,7 +503,7 @@ STEALTHTANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 80
-		Prerequisites: ~factory.yi, techcenter
+		Prerequisites: ~factory.sc, techcenter
 		Description: actor-stealthtank.description
 	Encyclopedia:
 		Description: actor-stealthtank.encyclopedia
@@ -629,7 +629,7 @@ ECMTANK:
 		Class: ecmtank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.yi, radar, trader
+		Prerequisites: ~factory.sc, radar, trader
 		BuildPaletteOrder: 60
 		Description: actor-ecmtank.description
 	Encyclopedia:
@@ -726,7 +726,7 @@ BUILDER:
 		Queue: Utility
 		BuildPaletteOrder: 10
 		Description: actor-builder.description
-		Prerequisites: ~structures.yi
+		Prerequisites: ~structures.sc
 	Encyclopedia:
 		Description: actor-builder.encyclopedia
 		Order: 15
@@ -775,7 +775,7 @@ BUILDER:
 BUILDER2:
 	Inherits: BUILDER
 	Buildable:
-		Prerequisites: ~structures.sc
+		Prerequisites: ~structures.yi
 	-Encyclopedia:
 	Transforms:
 		IntoActor: outpost2
@@ -878,7 +878,7 @@ MISSILETANK:
 		Class: missiletank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, radar, techcenter
+		Prerequisites: ~factory.yi, radar, techcenter
 		BuildPaletteOrder: 80
 		Description: actor-missiletank.description
 	Encyclopedia:
@@ -916,7 +916,7 @@ HACKERTANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
-		Prerequisites: ~factory.sc, radar, trader
+		Prerequisites: ~factory.yi, radar, trader
 		Description: actor-hackertank.description
 	Encyclopedia:
 		Description: actor-hackertank.encyclopedia
@@ -980,7 +980,7 @@ BUGGY:
 		Class: buggy
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: module, ~factory.sc
+		Prerequisites: module, ~factory.yi
 		Queue: Tank
 		Description: actor-buggy.description
 	Encyclopedia:
@@ -1027,7 +1027,7 @@ BIKE:
 		Class: bike
 	Buildable:
 		Queue: Tank
-		Prerequisites: module, ~factory.yi
+		Prerequisites: module, ~factory.sc
 		BuildPaletteOrder: 30
 		Description: actor-bike.description
 	Encyclopedia:
@@ -1090,7 +1090,7 @@ TANKER1:
 	RenderSprites:
 		Image: tanker1
 		FactionImages:
-			sc: tanker3
+			yi: tanker3
 
 TANKER2:
 	Inherits: TANKER1
@@ -1109,7 +1109,7 @@ TANKER2:
 	RenderSprites:
 		Image: tanker2
 		FactionImages:
-			sc: tanker4
+			yi: tanker4
 
 CVIT:
 	Inherits: ^Vehicle

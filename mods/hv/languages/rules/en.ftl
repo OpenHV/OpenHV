@@ -24,31 +24,6 @@ faction-yuruki =
     an aggressive expansion throughout the solar system.
 
     Faction Variations:
-        - Uses fighter jets as air units
-
-    Special Units:
-        - Shocker Pod
-        - Blaster Pod
-        - Sniper Pod
-        - Gatling Bike
-        - Hacker Tank
-        - Lightning Tank
-        - Stealth Tank
-        - Battleship
-
-    Superweapon:
-        - Air Strike
-        - Field Generator
-        - Orbital Railgun Strike
-
-faction-synapol =
-   .name = Synapol
-   .description = Synapol Corporation
-    A large interplanetary company that manufactures
-    everything from common household appliances to armaments.
-    Their security department became a large paramilitary force.
-
-    Faction Variations:
         - Uses helicopters as air units
         - Uses submarines as advanced naval units
 
@@ -66,6 +41,31 @@ faction-synapol =
         - Drop Pods
         - Grand Howitzer
         - Thermonuclear Bomb
+
+faction-synapol =
+   .name = Synapol
+   .description = Synapol Corporation
+    A large interplanetary company that manufactures
+    everything from common household appliances to armaments.
+    Their security department became a large paramilitary force.
+
+    Faction Variations:
+        - Uses fighter jets as air units
+
+    Special Units:
+        - Shocker Pod
+        - Blaster Pod
+        - Sniper Pod
+        - Gatling Bike
+        - Hacker Tank
+        - Lightning Tank
+        - Stealth Tank
+        - Battleship
+
+    Superweapon:
+        - Air Strike
+        - Field Generator
+        - Orbital Railgun Strike
 
 faction-random =
    .name = Any
@@ -157,7 +157,7 @@ actor-gunship =
 
      {actor-gunship.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-jet =
    .description = Super Fast Interceptor
@@ -168,7 +168,7 @@ actor-jet =
 
      {actor-jet.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-jet2 =
    .description = Attack Bomber
@@ -180,7 +180,7 @@ actor-jet2 =
 
      {actor-jet2.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-copter =
    .name = Attack Helicopter
@@ -191,7 +191,7 @@ actor-copter =
 
      {actor-copter.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-saucer =
    .name = Scout Saucer
@@ -211,7 +211,7 @@ actor-observer =
 
      {actor-observer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-banshee =
    .name = Banshee
@@ -223,7 +223,7 @@ actor-banshee =
 
      {actor-banshee.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-turtle =
    .name = Turtle
@@ -234,7 +234,7 @@ actor-turtle =
 
      {actor-turtle.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-chopper =
    .name = Transport Helicopter
@@ -245,7 +245,7 @@ actor-chopper =
 
      {actor-chopper.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-chopper-husk-name = Crashing Transport Helicopter
 
@@ -257,7 +257,7 @@ actor-balloon =
 
      Unarmed
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-dropship =
    .name = Heavy Transport Dropship
@@ -268,7 +268,7 @@ actor-dropship =
 
      {actor-dropship.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-dropship-husk-name = Crashing Transport Dropship
 actor-drone-name = Drone
@@ -597,7 +597,7 @@ actor-rocketeer =
 
      {actor-rocketeer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mortar =
    .description = Fast support vehicle.
@@ -609,7 +609,7 @@ actor-mortar =
 
       {actor-mortar.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-sniper =
    .description = Long range sniper vehicle.
@@ -621,7 +621,7 @@ actor-sniper =
 
      {actor-sniper.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-flamer =
    .description = Short range flame thrower.
@@ -632,7 +632,7 @@ actor-flamer =
 
      {actor-flamer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-technician =
    .description = Field engineer.
@@ -679,7 +679,7 @@ actor-blaster =
 
      {actor-blaster.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-shocker =
    .description = Fast support vehicle.
@@ -691,7 +691,7 @@ actor-shocker =
 
      {actor-shocker.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 meta-minipod =
    .name = Civilian
@@ -738,7 +738,7 @@ actor-lightboat =
 
      {actor-lightboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-patrolboat =
    .name = Patrol boat
@@ -750,7 +750,7 @@ actor-patrolboat =
 
      {actor-patrolboat.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mercboat =
    .name = Mercenary Boat
@@ -774,7 +774,7 @@ actor-torpedoboat =
 
      {actor-torpedoboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-submarine =
    .name = Submarine
@@ -786,7 +786,7 @@ actor-submarine =
 
      {actor-submarine.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-railgunboat =
    .name = Railgun Boat
@@ -797,7 +797,7 @@ actor-railgunboat =
 
      {actor-railgunpod.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-lightningboat =
    .name = Lightning Boat
@@ -808,7 +808,7 @@ actor-lightningboat =
 
      {actor-lightningboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-boomer =
    .name = Missile Submarine
@@ -819,7 +819,7 @@ actor-boomer =
 
      {actor-boomer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -831,7 +831,7 @@ actor-carrier =
 
      {actor-carrier.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-ferry =
    .name = Ferry
@@ -879,7 +879,7 @@ actor-aatank =
 
      {actor-aatank.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-aatank2 =
    .description = Mobile tank with lightning gun.
@@ -889,7 +889,7 @@ actor-aatank2 =
 
      {actor-aatank2.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-apc =
    .name = APC
@@ -953,7 +953,7 @@ actor-railguntank =
 
      {actor-railguntank.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-lightningtank =
    .description = Fires electric discharges.
@@ -964,7 +964,7 @@ actor-lightningtank =
 
      {actor-lightningtank.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-stealthtank =
    .description = Cloaked missile tank.
@@ -975,7 +975,7 @@ actor-stealthtank =
 
      {actor-stealthtank.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-merctank =
    .name = Mercenary Tank
@@ -1002,7 +1002,7 @@ actor-ecmtank =
 
      Unarmed
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-dualartillery =
    .name = Dual Artillery
@@ -1048,7 +1048,7 @@ actor-missiletank =
 
      {actor-missiletank.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-hackertank =
    .description = Temporarily changes allegiance of targeted units.
@@ -1059,7 +1059,7 @@ actor-hackertank =
 
      Unarmed
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-buggy =
    .name = Ramp Buggy
@@ -1071,7 +1071,7 @@ actor-buggy =
 
      {actor-buggy.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-bike =
    .name = Gatling Bike
@@ -1083,7 +1083,7 @@ actor-bike =
 
      {actor-bike.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-tanker1 =
    .description = Transports resources to the headquarter.
@@ -1119,7 +1119,7 @@ actor-mothership =
 
      {actor-mothership.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mothership-husk =
    .name = Mothership Husk
@@ -1137,7 +1137,7 @@ actor-battleship =
 
      {actor-battleship.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-battleship-husk =
    .name = Battleship Husk

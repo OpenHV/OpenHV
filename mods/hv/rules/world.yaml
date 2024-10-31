@@ -174,7 +174,7 @@
 	Faction@Random:
 		Name: faction-random.name
 		InternalName: Random
-		RandomFactionMembers: yi, sc
+		RandomFactionMembers: sc, yi
 		Side: Random
 		Description: faction-random.description
 	PaletteFromGimpOrJascFile@Terrain:
@@ -477,35 +477,35 @@ World:
 	StartingUnits@BaseYI:
 		Class: none
 		ClassName: options-starting-units.base-only
-		Factions: yi
+		Factions: sc
 		BaseActor: base
 	StartingUnits@BaseSC:
 		Class: none
 		ClassName: options-starting-units.base-only
-		Factions: sc
+		Factions: yi
 		BaseActor: base2
 	StartingUnits@MinerYI:
 		Class: miner
 		ClassName: options-starting-units.base-miner
-		Factions: yi
+		Factions: sc
 		BaseActor: base
 		SupportActors: miner
 	StartingUnits@MinerSC:
 		Class: miner
 		ClassName: options-starting-units.base-miner
-		Factions: sc
+		Factions: yi
 		BaseActor: base2
 		SupportActors: miner
 	StartingUnits@ScoutYI:
 		Class: scout
 		ClassName: options-starting-units.base-scout
-		Factions: yi
+		Factions: sc
 		BaseActor: base
 		SupportActors: balloon
 	StartingUnits@ScoutSC:
 		Class: scout
 		ClassName: options-starting-units.base-scout
-		Factions: sc
+		Factions: yi
 		BaseActor: base2
 		SupportActors: observer
 	MapStartingLocations:

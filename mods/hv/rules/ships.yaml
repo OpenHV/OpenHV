@@ -11,7 +11,7 @@ LIGHTBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi
+		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 10
 		Description: actor-lightboat.description
 	Encyclopedia:
@@ -59,7 +59,7 @@ PATROLBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc
+		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 10
 		Description: actor-patrolboat.description
 	Encyclopedia:
@@ -158,7 +158,7 @@ TORPEDOBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, radar
+		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
 		Description: actor-torpedoboat.description
 	Encyclopedia:
@@ -201,7 +201,7 @@ SUBMARINE:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, radar
+		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
 		Description: actor-submarine.description
 	Encyclopedia:
@@ -244,7 +244,7 @@ RAILGUNBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 50
 		Description: actor-railgunboat.description
 	Encyclopedia:
@@ -288,7 +288,7 @@ LIGHTNINGBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, techcenter
+		Prerequisites: ~harbor.sc, techcenter
 		BuildPaletteOrder: 50
 		Description: actor-lightningboat.description
 	Encyclopedia:
@@ -333,7 +333,7 @@ BOOMER:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-boomer.description
 	Encyclopedia:
@@ -409,7 +409,7 @@ CARRIER:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 60
-		Prerequisites: ~harbor.yi, techcenter
+		Prerequisites: ~harbor.sc, techcenter
 		Description: actor-carrier.description
 	Encyclopedia:
 		Description: actor-carrier.encyclopedia
@@ -512,7 +512,7 @@ MINESHIP:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, trader
+		Prerequisites: ~harbor.yi, trader
 		BuildPaletteOrder: 40
 		Description: actor-mineship.description
 	Encyclopedia:
@@ -570,5 +570,5 @@ MINESHIP:
 MINESHIP2:
 	Inherits: MINESHIP
 	Buildable:
-		Prerequisites: ~harbor.yi, trader
+		Prerequisites: ~harbor.sc, trader
 	-Encyclopedia:

@@ -39,7 +39,7 @@ BASE:
 		Amount: 120
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
-		Prerequisite: structures.yi
+		Prerequisite: structures.sc
 	TechPrerequisiteWithBots:
 		Prerequisite: bots
 	Buildable:
@@ -47,7 +47,7 @@ BASE:
 		BuildPaletteOrder: 160
 		BuildLimit: 1
 		Description: actor-base.description
-		Prerequisites: outpost, ~base.yi
+		Prerequisites: outpost, ~base.sc
 	Encyclopedia:
 		Description: actor-base.encyclopedia
 		Order: 10
@@ -174,9 +174,9 @@ BASE2:
 		Image: base2
 	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Synapol:
-		Prerequisite: structures.sc
+		Prerequisite: structures.yi
 	Buildable:
-		Prerequisites: outpost2, ~base.sc
+		Prerequisites: outpost2, ~base.yi
 	-Encyclopedia:
 
 OUTPOST:
@@ -211,14 +211,14 @@ OUTPOST:
 		RequiresCondition: !base
 	ProvidesPrerequisite@BuildingName:
 	ProvidesPrerequisite@Yuruki:
-		Prerequisite: base.yi
+		Prerequisite: base.sc
 
 OUTPOST2:
 	Inherits: OUTPOST
 	-ProvidesPrerequisite@Yuruki:
 	ProvidesPrerequisite@Synapol:
-		Factions: sc
-		Prerequisite: base.sc
+		Factions: yi
+		Prerequisite: base.yi
 	-Encyclopedia:
 
 GENERATOR:
@@ -262,8 +262,8 @@ GENERATOR:
 	RenderSprites:
 		Image: generator
 		FactionImages:
-			sc: generator2
-			yi: generator
+			yi: generator2
+			sc: generator
 
 RADAR:
 	Inherits: ^BaseBuilding
@@ -275,7 +275,7 @@ RADAR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
-		Prerequisites: storage, ~structures.yi
+		Prerequisites: storage, ~structures.sc
 		Description: actor-radar.description
 	Encyclopedia:
 		Description: actor-radar.encyclopedia
@@ -337,7 +337,7 @@ RADAR:
 RADAR2:
 	Inherits: RADAR
 	Buildable:
-		Prerequisites: storage, ~structures.sc
+		Prerequisites: storage, ~structures.yi
 	-AirstrikePower:
 	DropPodsPower:
 		Cursor: droppod
@@ -453,8 +453,8 @@ TRADER:
 	RenderSprites:
 		Image: trader
 		FactionImages:
-			sc: trader2
-			yi: trader
+			yi: trader2
+			sc: trader
 
 MODULE:
 	Inherits: ^BaseBuilding
@@ -466,14 +466,14 @@ MODULE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
-		Prerequisites: ~structures.yi
+		Prerequisites: ~structures.sc
 		Description: actor-module.description
 	Encyclopedia:
 		Description: actor-module.encyclopedia
 		Order: 50
 		Category: Buildings
 	ProvidesPrerequisite@Faction:
-		Prerequisite: module.yi
+		Prerequisite: module.sc
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Generic:
 		Prerequisite: module
@@ -566,9 +566,9 @@ MODULE:
 MODULE2:
 	Inherits: MODULE
 	Buildable:
-		Prerequisites: ~structures.sc
+		Prerequisites: ~structures.yi
 	ProvidesPrerequisite@Faction:
-		Prerequisite: module.sc
+		Prerequisite: module.yi
 		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: module2
@@ -656,7 +656,7 @@ STARPORT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 120
-		Prerequisites: radar, ~structures.yi
+		Prerequisites: radar, ~structures.sc
 		Description: actor-starport.description
 	Valued:
 		Cost: 700
@@ -691,7 +691,7 @@ STARPORT:
 		Prerequisite: starport
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
-		Prerequisite: starport.yi
+		Prerequisite: starport.sc
 		RequiresCondition: !powerdown
 	ProductionBar:
 		ProductionType: Aircraft
@@ -720,9 +720,9 @@ STARPORT:
 STARPORT2:
 	Inherits: STARPORT
 	Buildable:
-		Prerequisites: radar, ~structures.sc
+		Prerequisites: radar, ~structures.yi
 	ProvidesPrerequisite@Faction:
-		Prerequisite: starport.sc
+		Prerequisite: starport.yi
 		RequiresCondition: !powerdown
 	-WithProductionExitOverlay:
 	-Encyclopedia:
@@ -735,7 +735,7 @@ FACTORY:
 	Selectable:
 		Bounds: 2048, 4096
 	Buildable:
-		Prerequisites: module, storage, ~structures.yi
+		Prerequisites: module, storage, ~structures.sc
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: actor-factory.description
@@ -770,7 +770,7 @@ FACTORY:
 		Prerequisite: factory
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
-		Prerequisite: factory.yi
+		Prerequisite: factory.sc
 		RequiresCondition: !powerdown
 	WithIdleOverlay@Platform1:
 		Sequence: idle-platform1
@@ -970,9 +970,9 @@ FACTORY:
 FACTORY2:
 	Inherits: FACTORY
 	Buildable:
-		Prerequisites: module, storage, ~structures.sc
+		Prerequisites: module, storage, ~structures.yi
 	ProvidesPrerequisite@Faction:
-		Prerequisite: factory.sc
+		Prerequisite: factory.yi
 		RequiresCondition: !powerdown
 	RenderSprites:
 		Image: factory2
@@ -1022,8 +1022,8 @@ TECHCENTER:
 	RenderSprites:
 		Image: techcenter
 		FactionImages:
-			sc: techcenter2
-			yi: techcenter
+			yi: techcenter2
+			sc: techcenter
 	WithIdleOverlay@ANIMATION:
 		Sequence: animation
 		RequiresCondition: !build-incomplete && !disabled && !burning
@@ -1045,7 +1045,7 @@ ORESMELT:
 		Queue: Building
 		BuildPaletteOrder: 130
 		Description: actor-oresmelt.description
-		Prerequisites: ~structures.sc, techcenter
+		Prerequisites: ~structures.yi, techcenter
 	HitShape:
 		Type: Rectangle
 			TopLeft: -512, -512
@@ -1074,7 +1074,7 @@ OREPURIFIER:
 		Name: actor-orepurifier.name
 	Buildable:
 		Description: actor-orepurifier.description
-		Prerequisites: ~structures.yi, techcenter
+		Prerequisites: ~structures.sc, techcenter
 	Encyclopedia:
 		Description: actor-orepurifier.encyclopedia
 	-WithIdleOverlay@Shadow:
@@ -1086,7 +1086,7 @@ BUNKER:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: module, ~structures.yi
+		Prerequisites: module, ~structures.sc
 		Description: actor-bunker.description
 	Selectable:
 		Bounds: 1256, 1480, 0, -256
@@ -1133,7 +1133,7 @@ BUNKER:
 BUNKER2:
 	Inherits: BUNKER
 	Buildable:
-		Prerequisites: module, ~structures.sc
+		Prerequisites: module, ~structures.yi
 	AttackGarrisoned:
 		PortOffsets: 175,0,350, 125,-280,175, -125,-280,175, -225,0,200, -125,280,175, 125,280,175
 	-Encyclopedia:
@@ -1143,7 +1143,7 @@ TURRET:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, ~structures.yi
+		Prerequisites: factory, ~structures.sc
 		Description: actor-turret.description
 	Valued:
 		Cost: 1000
@@ -1182,7 +1182,7 @@ TURRET2:
 	Inherits@AutoTarget: ^AutoTargetGround
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: factory, ~structures.sc
+		Prerequisites: factory, ~structures.yi
 		Description: actor-turret2.description
 	Valued:
 		Cost: 1000
@@ -1221,7 +1221,7 @@ AATURRET:
 		Bounds: 2048, 1536, 0, -256
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: radar, ~structures.yi
+		Prerequisites: radar, ~structures.sc
 		Description: actor-aaturret.description
 	Valued:
 		Cost: 1000
@@ -1268,7 +1268,7 @@ AATURRET2:
 	Inherits@AutoTarget: ^AutoTargetAir
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: radar, ~structures.sc
+		Prerequisites: radar, ~structures.yi
 		Description: actor-aaturret2.description
 	Valued:
 		Cost: 1000
@@ -1308,7 +1308,7 @@ HOWITZER:
 		Bounds: 2048, 2048
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: radar, ~structures.sc
+		Prerequisites: radar, ~structures.yi
 		Description: actor-howitzer.description
 		BuildLimit: 1
 	Valued:
@@ -1380,7 +1380,7 @@ FIELD:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: radar, ~structures.yi
+		Prerequisites: radar, ~structures.sc
 		BuildLimit: 1
 		Description: actor-field.description
 	Valued:
@@ -1444,8 +1444,8 @@ FIELD:
 	RenderSprites:
 		Image: field
 		FactionImages:
-			sc: field2
-			yi: field
+			yi: field2
+			sc: field
 
 SILO:
 	Inherits: ^BaseBuilding
@@ -1465,7 +1465,7 @@ SILO:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~structures.sc
+		Prerequisites: techcenter, ~structures.yi
 		BuildLimit: 1
 		Description: actor-silo.description
 	Building:
@@ -1540,7 +1540,7 @@ UPLINK:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 140
-		Prerequisites: techcenter, ~structures.yi
+		Prerequisites: techcenter, ~structures.sc
 		BuildLimit: 1
 		Description: actor-uplink.description
 	Building:
@@ -1636,8 +1636,8 @@ STORAGE:
 	RenderSprites:
 		Image: storage2
 		FactionImages:
-			sc: storage
-			yi: storage2
+			yi: storage
+			sc: storage2
 	ExitsDebugOverlay:
 	Exit@Top:
 		ExitCell: 2, 0
@@ -1787,7 +1787,7 @@ HARBOR:
 	Selectable:
 		Bounds: 3072, 2348, 0, -560
 	Buildable:
-		Prerequisites: module, ~structures.yi
+		Prerequisites: module, ~structures.sc
 		Queue: Building
 		BuildPaletteOrder: 90
 		Description: actor-harbor.description
@@ -1860,7 +1860,7 @@ HARBOR:
 		Prerequisite: harbor
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Faction:
-		Prerequisite: harbor.yi
+		Prerequisite: harbor.sc
 		RequiresCondition: !powerdown
 	WithTextDecoration@PRIMARY:
 		RequiresCondition: primary
@@ -1890,10 +1890,10 @@ HARBOR2:
 	RenderSprites:
 		Image: harbor2
 	ProvidesPrerequisite@Faction:
-		Prerequisite: harbor.sc
+		Prerequisite: harbor.yi
 		RequiresCondition: !powerdown
 	Buildable:
-		Prerequisites: module, ~structures.sc
+		Prerequisites: module, ~structures.yi
 	-Encyclopedia:
 
 BARRIER:

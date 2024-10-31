@@ -8,7 +8,7 @@ GUNSHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: ~starport.yi
+		Prerequisites: ~starport.sc
 		Description: actor-gunship.description
 	Encyclopedia:
 		Description: actor-gunship.encyclopedia
@@ -73,7 +73,7 @@ JET:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: techcenter, ~starport.yi
+		Prerequisites: techcenter, ~starport.sc
 		Description: actor-jet.description
 	Encyclopedia:
 		Description: actor-jet.encyclopedia
@@ -132,7 +132,7 @@ JET2:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 55
-		Prerequisites: techcenter, ~starport.yi
+		Prerequisites: techcenter, ~starport.sc
 		Description: actor-jet2.description
 	Encyclopedia:
 		Description: actor-jet2.encyclopedia
@@ -216,7 +216,7 @@ COPTER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: ~starport.sc
+		Prerequisites: ~starport.yi
 		Description: actor-copter.description
 	Encyclopedia:
 		Description: actor-copter.encyclopedia
@@ -307,7 +307,7 @@ OBSERVER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~starport.sc
+		Prerequisites: ~starport.yi
 		Description: actor-observer.description
 	Encyclopedia:
 		Description: actor-observer.encyclopedia
@@ -352,7 +352,7 @@ BANSHEE:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 40
-		Prerequisites: techcenter, ~starport.sc
+		Prerequisites: techcenter, ~starport.yi
 		Description: actor-banshee.description
 	Encyclopedia:
 		Description: actor-banshee.encyclopedia
@@ -409,7 +409,7 @@ TURTLE:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 55
-		Prerequisites: techcenter, ~starport.sc
+		Prerequisites: techcenter, ~starport.yi
 		Description: actor-turtle.description
 	Encyclopedia:
 		Description: actor-turtle.encyclopedia
@@ -462,7 +462,7 @@ CHOPPER:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: ~starport.sc
+		Prerequisites: ~starport.yi
 		Description: actor-chopper.description
 	Encyclopedia:
 		Description: actor-chopper.encyclopedia
@@ -558,7 +558,7 @@ BALLOON:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 20
-		Prerequisites: ~starport.yi
+		Prerequisites: ~starport.sc
 		Description: actor-balloon.description
 	Encyclopedia:
 		Description: actor-balloon.encyclopedia
@@ -604,7 +604,7 @@ DROPSHIP:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: ~starport.yi
+		Prerequisites: ~starport.sc
 		Description: actor-dropship.description
 	Encyclopedia:
 		Description: actor-dropship.encyclopedia
@@ -898,7 +898,7 @@ MOTHERSHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 100
 		BuildLimit: 1
-		Prerequisites: radar, trader, techcenter, ~starport.sc
+		Prerequisites: radar, trader, techcenter, ~starport.yi
 		Description: actor-mothership.description
 	Encyclopedia:
 		Description: actor-mothership.encyclopedia
@@ -1030,7 +1030,7 @@ BATTLESHIP:
 		Queue: Aircraft
 		BuildPaletteOrder: 100
 		BuildLimit: 1
-		Prerequisites: radar, trader, techcenter, ~starport.yi
+		Prerequisites: radar, trader, techcenter, ~starport.sc
 		Description: actor-battleship.description
 	Encyclopedia:
 		Description: actor-battleship.encyclopedia

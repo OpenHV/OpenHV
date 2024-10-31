@@ -46,7 +46,7 @@ ROCKETEER:
 	Buildable:
 		Queue: Pod
 		Description: actor-rocketeer.description
-		Prerequisites: ~module.sc
+		Prerequisites: ~module.yi
 		BuildPaletteOrder: 20
 	Encyclopedia:
 		Description: actor-rocketeer.encyclopedia
@@ -84,7 +84,7 @@ MORTAR:
 	Buildable:
 		Queue: Pod
 		Description: actor-mortar.description
-		Prerequisites: ~module.sc, factory
+		Prerequisites: ~module.yi, factory
 		BuildPaletteOrder: 50
 	Encyclopedia:
 		Description: actor-mortar.encyclopedia
@@ -124,7 +124,7 @@ SNIPER:
 	Buildable:
 		Queue: Pod
 		Description: actor-sniper.description
-		Prerequisites: ~module.yi, radar
+		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 50
 	Encyclopedia:
 		Description: actor-sniper.encyclopedia
@@ -175,7 +175,7 @@ FLAMER:
 	Buildable:
 		Queue: Pod
 		Description: actor-flamer.description
-		Prerequisites: ~module.sc, factory
+		Prerequisites: ~module.yi, factory
 		BuildPaletteOrder: 40
 	Encyclopedia:
 		Description: actor-flamer.encyclopedia
@@ -377,7 +377,7 @@ BLASTER:
 	Buildable:
 		Queue: Pod
 		Description: actor-blaster.description
-		Prerequisites: ~module.yi, radar
+		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 40
 	Encyclopedia:
 		Description: actor-blaster.encyclopedia
@@ -428,7 +428,7 @@ SHOCKER:
 	Buildable:
 		Queue: Pod
 		Description: actor-shocker.description
-		Prerequisites: ~module.yi
+		Prerequisites: ~module.sc
 		BuildPaletteOrder: 20
 	Encyclopedia:
 		Description: actor-shocker.encyclopedia

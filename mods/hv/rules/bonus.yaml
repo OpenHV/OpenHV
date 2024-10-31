@@ -36,19 +36,19 @@ SPAWNCUBE:
 		Sequence: blue
 	SpawnUnitCrateAction@AssaultTank:
 		Units: mbt
-		ValidFactions: yi
+		ValidFactions: sc
 		SelectionShares: 10
 	SpawnUnitCrateAction@mbt2:
 		Units: mbt2
-		ValidFactions: sc
+		ValidFactions: yi
 		SelectionShares: 10
 	SpawnUnitCrateAction@RailgunTank:
 		Units: railguntank
-		ValidFactions: sc
+		ValidFactions: yi
 		SelectionShares: 1
 	SpawnUnitCrateAction@LightningTank:
 		Units: lightningtank
-		ValidFactions: yi
+		ValidFactions: sc
 		SelectionShares: 1
 
 DUPLICATECUBE:
