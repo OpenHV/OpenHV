@@ -31,6 +31,10 @@
       <caption>spectator mode</caption>
     </screenshot>
   </screenshots>
+  <branding>
+    <color type="primary" scheme_preference="light">#5a5a5a</color>
+    <color type="primary" scheme_preference="dark">#333333</color>
+  </branding>
   <url type="homepage">https://www.openhv.net/</url>
   <url type="bugtracker">https://github.com/OpenHV/OpenHV/issues</url>
   <url type="help">https://github.com/OpenHV/OpenHV/wiki</url>
