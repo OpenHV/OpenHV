@@ -4,7 +4,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <name>OpenHV</name>
-  <developer_name>OpenHV developers</developer_name>
+  <developer id="net.openhv">
+    <name>OpenHV developers</name>
+  </developer>
   <summary>Sci-Fi RTS game</summary>
   <description>
     <p>
