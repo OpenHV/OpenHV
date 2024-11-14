@@ -7,13 +7,10 @@
   <developer id="net.openhv">
     <name>OpenHV developers</name>
   </developer>
-  <summary>Sci-Fi RTS game</summary>
+  <summary>Futuristic strategy game</summary>
   <description>
     <p>
-      In 1993 a game called Hard Vacuum was in development. Heavily inspired by Dune 2, the father of the modern RTS, it had ambitious goals, but it was never released to the public. Decades later the pixel art was released under a free license. The starting point for this project.
-    </p>
-    <p>
-      OpenHV is an Open Source Pixelart Science-Fiction Real Time Strategy game from the golden era of RTS. It comes with Multiplayer (LAN and internet) support, competent skirmish AI as well as an integrated map editor. All the assets are licensed under Open Source compliant terms. It is easy to mod.
+      OpenHV is an open source pixel art, science fiction strategy game using art and ideas from the golden era of RTS, but adding modern technology and usability to the mix. It comes with multiplayer (LAN and internet) support, competent skirmish AI as well as an integrated map editor. All the assets are licensed under Open Source compliant terms. It is easy to add custom content.
     </p>
   </description>
   <launchable type="desktop-id">openhv.desktop</launchable>
