@@ -82,12 +82,6 @@ fetch-engine:
 engine: fetch-engine
 	@echo "Compiling engine..."
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
-ifeq ("$(TARGETPLATFORM)","unix-generic")
-ifeq ("$(RUNTIME)","net6")
-	@rm $(ENGINE_DIRECTORY)/bin/*.so
-endif
-	@cd $(ENGINE_DIRECTORY) && ./configure-system-libraries.sh
-endif
 
 all: engine
 ifeq ($(RUNTIME), mono)
