@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -10,11 +10,11 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Widgets;
 
-namespace OpenRA.Mods.HV.Widgets
+namespace OpenRA.Mods.Common.Widgets
 {
 	public sealed class StackedEditorResourceBrush : IEditorBrush
 	{
@@ -24,12 +24,14 @@ namespace OpenRA.Mods.HV.Widgets
 		readonly World world;
 		readonly EditorViewportControllerWidget editorWidget;
 		readonly EditorActionManager editorActionManager;
-		readonly EditorCursorLayer editorCursor;
 		readonly IResourceLayer resourceLayer;
-		readonly int cursorToken;
 
 		AddResourcesEditorAction action;
 		bool resourceAdded;
+
+		CPos cell;
+		readonly List<IRenderable> preview = new();
+		readonly IResourceRenderer[] resourceRenderers;
 
 		public StackedEditorResourceBrush(EditorViewportControllerWidget editorWidget, string resourceType, WorldRenderer wr)
 		{
@@ -38,11 +40,13 @@ namespace OpenRA.Mods.HV.Widgets
 			worldRenderer = wr;
 			world = wr.World;
 			editorActionManager = world.WorldActor.Trait<EditorActionManager>();
-			editorCursor = world.WorldActor.Trait<EditorCursorLayer>();
 			resourceLayer = world.WorldActor.Trait<IResourceLayer>();
-			action = new AddResourcesEditorAction(resourceType, resourceLayer);
 
-			cursorToken = editorCursor.SetResource(wr, resourceType);
+			resourceRenderers = world.WorldActor.TraitsImplementing<IResourceRenderer>().ToArray();
+			cell = wr.Viewport.ViewToWorld(wr.Viewport.WorldToViewPx(Viewport.LastMousePos));
+			UpdatePreview();
+
+			action = new AddResourcesEditorAction(resourceType, resourceLayer);
 		}
 
 		public bool HandleMouseInput(MouseInput mi)
@@ -62,9 +66,6 @@ namespace OpenRA.Mods.HV.Widgets
 				return false;
 			}
 
-			if (editorCursor.CurrentToken != cursorToken)
-				return false;
-
 			var cell = worldRenderer.Viewport.ViewToWorld(mi.Location);
 
 			if (mi.Button == MouseButton.Left && mi.Event != MouseInputEvent.Up && resourceLayer.CanAddResource(ResourceType, cell))
@@ -82,12 +83,30 @@ namespace OpenRA.Mods.HV.Widgets
 			return true;
 		}
 
+		void UpdatePreview()
+		{
+			var pos = world.Map.CenterOfCell(cell);
+
+			preview.Clear();
+			preview.AddRange(resourceRenderers.SelectMany(r => r.RenderPreview(worldRenderer, ResourceType, pos)));
+		}
+
+		void IEditorBrush.TickRender(WorldRenderer wr, Actor self)
+		{
+			var currentCell = wr.Viewport.ViewToWorld(Viewport.LastMousePos);
+			if (cell != currentCell)
+			{
+				cell = currentCell;
+				UpdatePreview();
+			}
+		}
+
+		IEnumerable<IRenderable> IEditorBrush.RenderAboveShroud(Actor self, WorldRenderer wr) { return preview; }
+		IEnumerable<IRenderable> IEditorBrush.RenderAnnotations(Actor self, WorldRenderer wr) { yield break; }
+
 		public void Tick() { }
 
-		public void Dispose()
-		{
-			editorCursor.Clear(cursorToken);
-		}
+		public void Dispose() { }
 	}
 
 	readonly struct CellResource
@@ -106,6 +125,9 @@ namespace OpenRA.Mods.HV.Widgets
 
 	sealed class AddResourcesEditorAction : IEditorAction
 	{
+		[TranslationReference("amount", "type")]
+		const string AddedResource = "notification-added-resource";
+
 		public string Text { get; private set; }
 
 		readonly IResourceLayer resourceLayer;
@@ -148,9 +170,8 @@ namespace OpenRA.Mods.HV.Widgets
 			resourceLayer.ClearResources(resourceCell.Cell);
 			resourceLayer.AddResource(resourceCell.NewResourceType, resourceCell.Cell, density);
 			cellResources.Add(resourceCell);
-
-			var cellText = cellResources.Count != 1 ? "cells" : "cell";
-			Text = $"Added {cellResources.Count} {cellText} of {resourceType}";
+			Text = TranslationProvider.GetString(AddedResource,
+				Translation.Arguments("amount", cellResources.Count, "type", resourceType));
 		}
 	}
 }

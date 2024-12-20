@@ -101,7 +101,6 @@ EditorWorld:
 			bridge-shadow-corner:
 				Sequence: corner
 				Palette: shadow-decoration
-	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	EditorCursorLayer:
