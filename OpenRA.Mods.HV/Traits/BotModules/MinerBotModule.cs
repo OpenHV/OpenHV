@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -60,8 +60,8 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Func<Actor, bool> unitCannotBeOrdered;
 
-		readonly ActorIndex.OwnerAndNamesAndTrait<Mobile> mobileMiners;
-		readonly ActorIndex.OwnerAndNamesAndTrait<Building> towerBuildings;
+		readonly ActorIndex.OwnerAndNamesAndTrait<MobileInfo> mobileMiners;
+		readonly ActorIndex.OwnerAndNamesAndTrait<BuildingInfo> towerBuildings;
 
 		int scanForIdleMinersTicks;
 
@@ -93,8 +93,8 @@ namespace OpenRA.Mods.HV.Traits
 
 			unitCannotBeOrdered = a => a.Owner != self.Owner || a.IsDead || !a.IsInWorld;
 
-			mobileMiners = new ActorIndex.OwnerAndNamesAndTrait<Mobile>(world, info.DeployableActorTypes, player);
-			towerBuildings = new ActorIndex.OwnerAndNamesAndTrait<Building>(world, info.DeployedActorTypes, player);
+			mobileMiners = new ActorIndex.OwnerAndNamesAndTrait<MobileInfo>(world, info.DeployableActorTypes, player);
+			towerBuildings = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, info.DeployedActorTypes, player);
 		}
 
 		protected override void Created(Actor self)
