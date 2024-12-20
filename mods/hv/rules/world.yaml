@@ -20,9 +20,6 @@
 	DebugOffsetOverlayManager:
 	TerrainLighting:
 	CustomTerrainRenderer:
-	Locomotor@Immobile:
-		Name: immobile
-		TerrainSpeeds:
 	Locomotor@Foot:
 		Name: foot
 		TerrainSpeeds:
