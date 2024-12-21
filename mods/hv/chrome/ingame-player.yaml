@@ -44,7 +44,7 @@ Container@PLAYER_WIDGETS:
 		Image@COMMAND_BAR_BACKGROUND:
 			X: 5
 			Y: WINDOW_BOTTOM - HEIGHT - 5
-			Width: 416
+			Width: 434
 			Height: 44
 			ImageCollection: commandbar
 			ImageName: background
@@ -472,12 +472,16 @@ Container@PLAYER_WIDGETS:
 			Children:
 				Container@PALETTE_BACKGROUND:
 					Children:
-						Image@ROW_TEMPLATE:
+						Container@ROW_TEMPLATE:
 							Width: 245
 							Height: 51
 							ClickThrough: false
-							ImageCollection: sidebar
-							ImageName: background-iconrow
+							Children:
+								Image@ROW_BACKGROUND:
+									Width: 245
+									Height: 51
+									ImageCollection: sidebar
+									ImageName: background-iconrow
 						Image@BOTTOM_CAP:
 							Width: 245
 							Height: 7
