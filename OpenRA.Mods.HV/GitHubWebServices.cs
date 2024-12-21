@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -59,9 +59,10 @@ namespace OpenRA.Mods.HV
 
 					if (File.Exists(cacheFile))
 					{
-						var oldNews = File.ReadAllText(cacheFile);
-						var oldJson = JArray.Parse(oldNews).First();
-						oldPublishingDate = oldJson["published_at"].Value<DateTime>();
+						var oldNews = await File.ReadAllTextAsync(cacheFile);
+						oldPublishingDate = JToken.Parse(oldNews)
+							.Where(p => p["published_at"] != null)
+							.Max(d => d["published_at"].Value<DateTime>());
 					}
 
 					await File.WriteAllTextAsync(cacheFile, response);
@@ -69,7 +70,14 @@ namespace OpenRA.Mods.HV
 					Game.RunAfterTick(() => // run on the main thread
 					{
 						var data = File.ReadAllText(cacheFile);
-						var json = JArray.Parse(data).First();
+
+						var json = JToken.Parse(data)
+							.Where(j => j["published_at"] != null)
+							.OrderByDescending(n => n["published_at"].Value<DateTime>())
+							.FirstOrDefault();
+
+						if (json == null)
+							return;
 
 						var tagname = json["tag_name"].Value<string>();
 						var digits = string.Concat(tagname.TakeWhile(c => char.IsDigit(c)));
@@ -114,7 +122,7 @@ namespace OpenRA.Mods.HV
 				}
 				catch (Exception e)
 				{
-					Log.Write("debug", e.StackTrace);
+					Log.Write("debug", e);
 				}
 			});
 		}
