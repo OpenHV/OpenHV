@@ -169,6 +169,8 @@ Translations:
 	hv|languages/rules/en.ftl
 	common|languages/chrome/en.ftl
 	hv|languages/chrome/en.ftl
+	common|languages/hotkeys/en.ftl
+	hv|languages/hotkeys/en.ftl
 
 Music:
 	hv|audio/music.yaml

@@ -549,7 +549,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: button-production-types-pod-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Pod
-							Key: ProductionTypePod
+							Key: ProductionTypeInfantry
 							Children:
 								Image@ICON:
 									X: 0
@@ -579,7 +579,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: button-production-types-heavy-vehicle-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Tank
-							Key: ProductionTypeTank
+							Key: ProductionTypeVehicle
 							Children:
 								Image@ICON:
 									X: 0

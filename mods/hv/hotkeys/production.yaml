@@ -1,49 +1,44 @@
 ProductionTypeBuilding: E
-	Description: Building Tab
+	Description: hotkey-description-production-type-building
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
 ProductionTypeDefense: R
-	Description: Defense Tab
+	Description: hotkey-description-production-type-defense
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
-ProductionTypePod: T
-	Description: Pod Tab
+ProductionTypeInfantry: T
+	Description: hotkey-description-production-type-infantry
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
 ProductionTypeUtility: K
-	Description: Utility Tab
+	Description: hotkey-description-production-type-utility
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
-ProductionTypeTank: Y
-	Description: Tank Tab
+ProductionTypeVehicle: Y
+	Description: hotkey-description-production-type-vehicle
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
 ProductionTypeAircraft: U
-	Description: Aircraft Tab
+	Description: hotkey-description-production-type-aircraft
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
 ProductionTypeNaval: I
-	Description: Naval Tab
+	Description: hotkey-description-production-type-naval
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
 ProductionTypeTrade: O
-	Description: Trade Tab
+	Description: hotkey-description-production-type-trade
 	Types: Production
-	Contexts: Player
+	Contexts: player
 
 ToggleVariant: V
-	Description: Rotate Building
+	Description: hotkey-description-rotate
 	Types: Production
-	Contexts: Player
-
-PowerDown: X
-	Description: Power-down mode
-	Types: OrderGenerator
-	Contexts: Player
+	Contexts: player

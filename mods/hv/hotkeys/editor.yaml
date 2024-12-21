@@ -1,4 +1,4 @@
-EditorToggleTerrainTypeOverlayKey: F3
-	Description: Terrain Type Overlay
+EditorToggleTerrainTypeOverlayKey: F4
+	Description: hotkey-group-editor-terrain-type-overlay
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
