@@ -29,7 +29,7 @@ jobs:
         run: |
           make engine
           mkdir -p build/linux
-          sudo apt install desktop-file-utils libfuse2
+          sudo apt install desktop-file-utils
           ./packaging/linux/buildpackage.sh "${GIT_TAG}" "${PWD}/build/linux"
 
       - name: Upload Packages
