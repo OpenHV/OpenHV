@@ -528,7 +528,7 @@ MothershipLaser:
 	Projectile: ArcLaserZap
 		Duration: 4
 		UsePlayerColor: true
- 		ZOffset: 2048
+		ZOffset: 2048
 	Warhead@Damage: SpreadDamage
 		Spread: 1
 		Damage: 0

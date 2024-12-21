@@ -19,6 +19,6 @@ WATERMINE:
 	Cloak:
 		DetectionTypes: WaterMine
 	WithSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: AntiTankWaterMine
 		EmptyWeapon: UnitExplodeSmall

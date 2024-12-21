@@ -516,7 +516,7 @@ CHOPPER:
 	SpawnActorOnDeath:
 		Actor: chopper.Husk
 		RequiresCondition: airborne
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
@@ -663,7 +663,7 @@ DROPSHIP:
 		Actor: DROPSHIP.Husk
 		RequiresCondition: airborne
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
 
@@ -790,7 +790,7 @@ DROPPOD2:
 
 LANDEDPOD:
 	Inherits: ^Prop
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: DropPodExplode
 		EmptyWeapon: DropPodExplode
 	ChangesHealth:
@@ -805,7 +805,7 @@ LANDEDPOD:
 	Armor:
 		Type: Heavy
 	-ShakeOnDeath:
-	-ThrowsShrapnel:
+	-FireProjectilesOnDeath:
 	-MapEditorData:
 	-WithIdleOverlay@Shadow:
 
@@ -967,7 +967,7 @@ MOTHERSHIP:
 	Voiced:
 		VoiceSet: MotherShipVoice
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 
 MOTHERSHIP.Husk:
 	Inherits: ^PlaneHusk
@@ -1106,7 +1106,7 @@ BATTLESHIP:
 		Sequence: shadow-overlay
 		Palette: shadow
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 
 BATTLESHIP.Husk:
 	Inherits: ^PlaneHusk

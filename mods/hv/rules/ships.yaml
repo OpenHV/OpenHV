@@ -399,7 +399,7 @@ SLCM:
 		Type: CenterPosition
 		SpawnAtLastPosition: false
 	MissileSpawnerChild:
-	SpawnedExplodes:
+	SpawnedFireWarheadsOnDeath:
 		Weapon: CruiseMissileImpact
 		EmptyWeapon: CruiseMissileImpact
 
@@ -543,7 +543,7 @@ MINESHIP:
 		Range: 5c0
 		DetectionTypes: WaterMine
 	RenderDetectionCircle:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: AntiTankMine
 	Rearmable:
 		RearmActors: harbor, harbor2

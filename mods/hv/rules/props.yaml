@@ -16,9 +16,9 @@ LAMPPOST:
 		BlueTint: 0.01
 	Health:
 		HP: 120000
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Pieces: 1, 2
-	-ThrowsShrapnel@Large:
+	-FireProjectilesOnDeath@Large:
 	-ShakeOnDeath:
 
 SPARKLAMP:
@@ -36,7 +36,7 @@ STREETLAMP1:
 		Dimensions: 1,2
 	Tooltip:
 		Name: actor-streetlamp1-name
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Pieces: 2, 3
 	TerrainLightSource:
 		Range: 4c512
@@ -44,7 +44,7 @@ STREETLAMP1:
 		RedTint: 0.05
 		GreenTint: 0.05
 		BlueTint: 0.01
-	-ThrowsShrapnel@Large:
+	-FireProjectilesOnDeath@Large:
 	-ShakeOnDeath:
 
 STREETLAMP2:
@@ -240,8 +240,8 @@ PROP6:
 		HP: 60000
 	RenderSprites:
 		Palette: terrain
-	-ThrowsShrapnel:
-	Explodes:
+	-FireProjectilesOnDeath:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: PropExplode
 		EmptyWeapon: PropExplode
@@ -264,8 +264,8 @@ TANKTRAP:
 		HP: 40000
 	Tooltip:
 		Name: actor-tanktrap-name
-	-ThrowsShrapnel:
-	Explodes:
+	-FireProjectilesOnDeath:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -516,7 +516,7 @@ ELECTRICPAD:
 		ValidDamageStates: Heavy, Critical
 	-WithIdleOverlay@Shadow:
 	-ShakeOnDeath:
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: CenterPosition
 
 ELECTRICPAD2:
@@ -536,9 +536,9 @@ RAIL:
 		Dimensions: 1,1
 	Tooltip:
 		Name: actor-rail-name
-	-ThrowsShrapnel:
-	-ThrowsShrapnel@Large:
-	-Explodes:
+	-FireProjectilesOnDeath:
+	-FireProjectilesOnDeath@Large:
+	-FireWarheadsOnDeath:
 	HitShape:
 		Type: Circle
 			Radius: 512

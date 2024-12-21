@@ -38,7 +38,7 @@ BEAST:
 	-Guard:
 	-Repairable:
 	-MustBeDestroyed:
-	-Explodes:
+	-FireWarheadsOnDeath:
 	-TeleportNetworkTransportable:
 	-WithTeleportEnergyOverlay:
 	-SpawnScrapOnDeath:
@@ -131,7 +131,7 @@ SEAMONSTER:
 		MinMoveDelay: 0
 		MaxMoveDelay: 0
 	RejectsOrders:
-	-Explodes:
+	-FireWarheadsOnDeath:
 	WithDeathAnimation:
 		FallbackSequence: die
 	WithIdleAnimation:
@@ -188,8 +188,8 @@ FLYINGMONSTER:
 	-Guard:
 	-Repairable:
 	-MustBeDestroyed:
-	-Explodes:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath:
+	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
 	-ChangesHealth@Reconstructor:
 	-WithDecoration@Reconstructor:

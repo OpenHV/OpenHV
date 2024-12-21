@@ -358,7 +358,7 @@ JETPACKER:
 		Voice: Attack
 	WithMuzzleOverlay:
 	WithMoveAnimation:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
 	RevealsShroud:
 		Range: 8c0
@@ -405,7 +405,7 @@ BLASTER:
 		Speed: 110
 	Voiced:
 		VoiceSet: BlasterVoice
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: BlasterExplosion
 		EmptyWeapon: BlasterExplosion
 		DamageSource: Killer

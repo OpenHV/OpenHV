@@ -1940,16 +1940,16 @@ BARRIER:
 	BlocksProjectiles:
 	OwnerLostAction:
 		Action: ChangeOwner
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris
 		Pieces: 2, 3
 		Range: 1c512, 3c0
-	ThrowsShrapnel@Large:
+	FireProjectilesOnDeath@Large:
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 3c0
 	Demolishable:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeLarge
 		EmptyWeapon: UnitExplodeLarge
 	MapEditorData:
@@ -2637,7 +2637,7 @@ WATCHTOWER:
 	-CaptureNotification:
 	ProximityCapturable:
 		Sticky: true
-  		CaptorTypes: Vehicle, Ship
+		CaptorTypes: Vehicle, Ship
 
 DROPZONE:
 	Inherits: ^Building
@@ -2673,7 +2673,7 @@ DROPZONE:
 		MinRange: 3c0
 		RevealGeneratedShroud: False
 		RequiresCondition: !disabled && !ownerless
-    RevealsShroud@Hacked:
+	RevealsShroud@Hacked:
 		Range: 3c0
 	RevealsShroud@Offline:
 		Range: 3c0
@@ -2735,7 +2735,7 @@ FLAGPOST:
 	-CapturableProgressBeep:
 	-CaptureManager:
 	ProximityCapturable:
-  		CaptorTypes: Vehicle, Ship, Plane
+		CaptorTypes: Vehicle, Ship, Plane
 	StrategicPoint:
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless

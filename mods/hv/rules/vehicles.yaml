@@ -229,7 +229,7 @@ ARTILLERY:
 		Voice: Attack
 		FacingTolerance: 0
 	WithMuzzleOverlay:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ArtilleryExplode
 		EmptyWeapon: UnitExplodeSmall
 		LoadedChance: 75
@@ -398,7 +398,7 @@ MINELAYER:
 		Range: 5c0
 		DetectionTypes: Mine
 	RenderDetectionCircle:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: AntiTankMine
 	Rearmable:
 		RearmActors: trader

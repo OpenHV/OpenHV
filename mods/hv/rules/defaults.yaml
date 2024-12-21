@@ -162,7 +162,7 @@
 		Categories: Vehicle
 	Voiced:
 		VoiceSet: GenericVoice3
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	SpawnScrapOnDeath:
@@ -198,7 +198,7 @@
 		Weight: 1
 	-Carryable:
 	-SpawnScrapOnDeath:
-	-Explodes:
+	-FireWarheadsOnDeath:
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 		DeathSequencePalette: green
@@ -316,12 +316,12 @@
 		RepairActors: trader
 	ActorLostNotification:
 		TextNotification: notification-unit-lost
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	GrantRandomCondition@SpawnPilot:
 		Conditions: spawn-pilot, dont-spawn-pilot
-	Explodes@SpawnPilot:
+	FireWarheadsOnDeath@SpawnPilot:
 		Weapon: PilotSpawn
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
@@ -354,7 +354,7 @@
 	-ActorLostNotification:
 	RejectsOrders:
 	-GrantRandomCondition@SpawnPilot:
-	-Explodes@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
 	Aircraft:
 		IdleBehavior: None
 		Repulsable: False
@@ -425,7 +425,7 @@
 		MaximumSpinSpeed: 0
 	SpawnActorOnDeath@Pod:
 		Actor: landedpod
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: DropPodImpact
 		EmptyWeapon: DropPodImpact
 	RenderSprites:
@@ -536,16 +536,16 @@
 	MapEditorData:
 		Categories: Building
 	CommandBarBlacklist:
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris
 		Pieces: 5, 10
 		Range: 1c512, 4c0
-	ThrowsShrapnel@Large:
+	FireProjectilesOnDeath@Large:
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 4c0
 	UpdatesPlayerStatistics:
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
@@ -667,15 +667,15 @@
 	MapEditorData:
 		Categories: Decoration
 	CommandBarBlacklist:
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris
 		Pieces: 5, 10
 		Range: 1c512, 4c0
-	ThrowsShrapnel@Large:
+	FireProjectilesOnDeath@Large:
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 4c0
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
@@ -707,7 +707,7 @@
 	MapEditorData:
 		Categories: Crates
 	CommandBarBlacklist:
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
@@ -960,7 +960,7 @@
 	AttackMove:
 	ProximityCaptor:
 		Types: Ship
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	Guard:
@@ -1073,7 +1073,7 @@
 		NotifyAppliedDamage: false
 	Armor:
 		Type: Light
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: AntiTankMine
 		EmptyWeapon: UnitExplodeSmall
 	Cloak:
@@ -1287,15 +1287,15 @@
 	BlocksProjectiles:
 	OwnerLostAction:
 		Action: ChangeOwner
-	ThrowsShrapnel:
+	FireProjectilesOnDeath:
 		Weapons: Debris
 		Pieces: 2, 3
 		Range: 1c512, 3c0
-	ThrowsShrapnel@Large:
+	FireProjectilesOnDeath@Large:
 		Weapons: LargeDebris
 		Pieces: 0, 1
 		Range: 1c512, 3c0
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeLarge
 		EmptyWeapon: UnitExplodeLarge
 	-ShakeOnDeath:
