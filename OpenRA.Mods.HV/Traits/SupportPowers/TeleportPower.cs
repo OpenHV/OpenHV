@@ -19,6 +19,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[Desc("Changes the location of a group of units.")]
 	sealed class TeleportPowerInfo : SupportPowerInfo
 	{
 		[FieldLoader.Require]
@@ -44,11 +45,11 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string SourceFootprintSequence = "target-select";
 
 		[CursorReference]
-		[Desc("Cursor to display when selecting targets for the Teleport.")]
+		[Desc("Cursor to display when selecting targets for the teleport.")]
 		public readonly string SelectionCursor = "select";
 
 		[CursorReference]
-		[Desc("Cursor to display when targeting an area for the Teleport.")]
+		[Desc("Cursor to display when targeting an area for the teleport.")]
 		public readonly string TargetCursor = "move";
 
 		[CursorReference]

@@ -22,7 +22,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Support power for detonating a weapon at the target position.")]
+	[Desc("Detonates a weapon at the target position.")]
 	public class DetonateWeaponPowerInfo : SupportPowerInfo, IRulesetLoaded
 	{
 		[WeaponReference]

@@ -21,6 +21,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[Desc("Spawns aerial units at the target location.")]
 	public class DropPodsPowerInfo : SupportPowerInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2024 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -20,6 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[Desc("Launches an attack with the actors weapons.")]
 	public class AttackOrderPowerInfo : SupportPowerInfo, Requires<AttackBaseInfo>
 	{
 		[Desc("Range circle color.")]
