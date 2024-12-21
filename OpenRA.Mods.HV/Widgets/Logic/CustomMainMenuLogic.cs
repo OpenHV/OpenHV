@@ -55,7 +55,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		public CustomMainMenuLogic(Widget widget, World world, ModData modData)
 		{
 			rootMenu = widget;
-			rootMenu.Get<LabelWidget>("VERSION_LABEL").Text = modData.Manifest.Metadata.Version;
 
 			// Menu buttons
 			var mainMenu = widget.Get("MAIN_MENU");
