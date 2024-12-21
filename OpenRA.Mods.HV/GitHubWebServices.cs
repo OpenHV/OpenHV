@@ -47,8 +47,7 @@ namespace OpenRA.Mods.HV
 				try
 				{
 					var httpClient = HttpClientFactory.Create();
-					var metadata = Game.ModData.Manifest.Metadata;
-					var header = new ProductHeaderValue(metadata.Title);
+					var header = new ProductHeaderValue("OpenHV");
 					var userAgent = new ProductInfoHeaderValue(header);
 					httpClient.DefaultRequestHeaders.UserAgent.Add(userAgent);
 

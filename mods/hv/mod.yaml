@@ -1,11 +1,11 @@
 # License: CC-BY-SA-4.0
 
 Metadata:
-	Title: OpenHV
+	Title: mod-title
 	Version: {DEV_VERSION}
 	Website: https://www.openhv.net
 	WebIcon32: https://www.openhv.net/images/web/icon.png
-	WindowTitle: OpenHV
+	WindowTitle: mod-windowtitle
 
 ModCredits:
 	ModTabTitle: OpenHV
