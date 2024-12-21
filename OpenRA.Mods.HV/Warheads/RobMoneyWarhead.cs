@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Warheads
 		[Desc("Sound the victim will hear when they get robbed.")]
 		public readonly string RobbedNotification = null;
 
-		[TranslationReference(optional: true)]
+		[FluentReference(optional: true)]
 		[Desc("Text notification the victim will see when they get robbed.")]
 		public readonly string RobbedTextNotification = null;
 
@@ -43,7 +43,7 @@ namespace OpenRA.Mods.HV.Warheads
 		[Desc("Sound the perpetrator will hear after successful leeching.")]
 		public readonly string RobNotification = null;
 
-		[TranslationReference(optional: true)]
+		[FluentReference(optional: true)]
 		[Desc("Text notification the perpetrator will see after successful leeching.")]
 		public readonly string RobTextNotification = null;
 

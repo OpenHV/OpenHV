@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 {
 	public class CustomIngameCashCounterLogic : ChromeLogic
 	{
-		[TranslationReference("revenue")]
+		[FluentReference("revenue")]
 		const string Income = "label-income";
 
 		const float DisplayFracPerFrame = .07f;
@@ -45,7 +45,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			var stats = player.PlayerActor.Trait<PlayerStatistics>();
 			incomeTooltipCache = new CachedTransform<int, string>(x =>
-				TranslationProvider.GetString(Income, Translation.Arguments("revenue", x)));
+				FluentProvider.GetString(Income, "revenue", x));
 			cashLabel = widget.Get<LabelWithTooltipWidget>("CASH");
 			cashLabel.GetTooltipText = () => incomeTooltipCache.Update(stats.DisplayIncome);
 		}
