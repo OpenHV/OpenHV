@@ -1,12 +1,12 @@
 Container@LOBBY_GLOBALCHAT_PANEL:
 	Logic: GlobalChatLogic
 		AutoConnect: false
-	Width: PARENT_RIGHT
-	Height: PARENT_BOTTOM
+	Width: PARENT_WIDTH
+	Height: PARENT_HEIGHT
 	Children:
 		Container@GLOBALCHAT_MAIN_PANEL:
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM - 30
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT - 30
 			Children:
 				Background@TOPIC:
 					Width: 675
@@ -16,20 +16,20 @@ Container@LOBBY_GLOBALCHAT_PANEL:
 						Label@CHANNEL_TOPIC:
 							X: 10
 							Y: 0 - 1
-							Width: PARENT_RIGHT - 20
-							Height: PARENT_BOTTOM
+							Width: PARENT_WIDTH - 20
+							Height: PARENT_HEIGHT
 							Font: TinyBold
 							Align: Center
 				ScrollPanel@HISTORY_PANEL:
 					Y: 20
 					Width: 675
-					Height: PARENT_BOTTOM - 50
+					Height: PARENT_HEIGHT - 50
 					TopBottomSpacing: 4
 					ItemSpacing: 4
 					Children:
 						Container@CHAT_TEMPLATE:
 							X: 2
-							Width: PARENT_RIGHT - 27
+							Width: PARENT_WIDTH - 27
 							Height: 16
 							Children:
 								Label@TIME:
@@ -46,23 +46,23 @@ Container@LOBBY_GLOBALCHAT_PANEL:
 									Shadow: True
 								Label@TEXT:
 									X: 5
-									Width: PARENT_RIGHT - 60
+									Width: PARENT_WIDTH - 60
 									Height: 15
 									WordWrap: true
 									VAlign: Top
 									Shadow: True
 				TextField@CHAT_TEXTFIELD:
 					X: 205
-					Y: PARENT_BOTTOM - 25
+					Y: PARENT_HEIGHT - 25
 					Width: 470
 					Height: 25
 				ScrollPanel@NICKNAME_PANEL:
-					X: PARENT_RIGHT - WIDTH
+					X: PARENT_WIDTH - WIDTH
 					Width: 174
-					Height: PARENT_BOTTOM - 30
+					Height: PARENT_HEIGHT - 30
 					Children:
 						Container@NICKNAME_TEMPLATE:
-							Width: PARENT_RIGHT - 25
+							Width: PARENT_WIDTH - 25
 							Height: 20
 							Children:
 								Image@INDICATOR:
@@ -72,50 +72,50 @@ Container@LOBBY_GLOBALCHAT_PANEL:
 									Y: 9
 								Label@NICK:
 									X: 15
-									Width: PARENT_RIGHT - 15
+									Width: PARENT_WIDTH - 15
 									Height: 20
 				Button@DISCONNECT_BUTTON:
-					X: PARENT_RIGHT - WIDTH
-					Y: PARENT_BOTTOM - 25
+					X: PARENT_WIDTH - WIDTH
+					Y: PARENT_HEIGHT - 25
 					Width: 174
 					Height: 25
 					Text: button-globalchat-main-panel-disconnect
 					Font: Bold
 		Container@GLOBALCHAT_CONNECT_PANEL:
-			Width: PARENT_RIGHT
-			Height: PARENT_BOTTOM - 30
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT - 30
 			Children:
 				Background:
-					Width: PARENT_RIGHT
-					Height: PARENT_BOTTOM - 30
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT - 30
 					Background: scrollpanel-bg
 					Children:
 						Label@GLOBAL_CHAT_LABEL:
-							Y: PARENT_BOTTOM / 4
-							Width: PARENT_RIGHT
+							Y: PARENT_HEIGHT / 4
+							Width: PARENT_WIDTH
 							Align: Center
 							Text: label-globalchat-connect-panel-global-chat
 							Font: Bold
 						Label@NICKNAME_LABEL:
 							X: 200
-							Y: PARENT_BOTTOM / 4 + 35
+							Y: PARENT_HEIGHT / 4 + 35
 							Text: label-globalchat-connect-panel-nickname
 						TextField@NICKNAME_TEXTFIELD:
 							X: 270
-							Y: PARENT_BOTTOM / 4 + 25
+							Y: PARENT_HEIGHT / 4 + 25
 							Width: 150
 							Height: 25
 						Button@CONNECT_BUTTON:
 							X: 430
-							Y: PARENT_BOTTOM / 4 + 25
+							Y: PARENT_HEIGHT / 4 + 25
 							Width: 100
 							Height: 25
 							Text: button-globalchat-connect-panel
 							Font: Bold
 				TextField@FAKE_CHAT:
 					X: 205
-					Y: PARENT_BOTTOM - 25
-					Width: PARENT_RIGHT - 205
+					Y: PARENT_HEIGHT - 25
+					Width: PARENT_WIDTH - 205
 					Height: 25
 					LeftMargin: 60
 					Disabled: true

@@ -1,18 +1,18 @@
 Background@ENCYCLOPEDIA_PANEL:
 	Logic: EncyclopediaLogic
-	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
 	Width: 680
 	Height: 400
 	Children:
 		Container@ENCYCLOPEDIA_CONTENT:
-			Width: PARENT_RIGHT - 40
-			Height: PARENT_BOTTOM - 80
+			Width: PARENT_WIDTH - 40
+			Height: PARENT_HEIGHT - 80
 			X: 20
 			Y: 20
 			Children:
 				Label@ENCYCLOPEDIA_TITLE:
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Height: 25
 					Text: label-encyclopedia-content-title
 					Align: Center
@@ -20,48 +20,48 @@ Background@ENCYCLOPEDIA_PANEL:
 				ScrollPanel@ACTOR_LIST:
 					Y: 30
 					Width: 190
-					Height: PARENT_BOTTOM - 25
+					Height: PARENT_HEIGHT - 25
 					Children:
 						ScrollItem@HEADER:
 							Background: scrollheader
-							Width: PARENT_RIGHT - 27
+							Width: PARENT_WIDTH - 27
 							Height: 13
 							X: 2
 							Visible: false
 							Children:
 								Label@LABEL:
 									Font: TinyBold
-									Width: PARENT_RIGHT
+									Width: PARENT_WIDTH
 									Height: 13
 									Align: Center
 						ScrollItem@TEMPLATE:
-							Width: PARENT_RIGHT - 27
+							Width: PARENT_WIDTH - 27
 							Height: 25
 							X: 2
 							EnableChildMouseOver: True
 							Children:
 								LabelWithTooltip@TITLE:
 									X: 10
-									Width: PARENT_RIGHT - 20
+									Width: PARENT_WIDTH - 20
 									Height: 25
 									TooltipContainer: TOOLTIP_CONTAINER
 									TooltipTemplate: SIMPLE_TOOLTIP
 				Container@ACTOR_INFO:
-					X: PARENT_RIGHT - WIDTH
+					X: PARENT_WIDTH - WIDTH
 					Y: 30
-					Width: PARENT_RIGHT - 190
-					Height: PARENT_BOTTOM - 25
+					Width: PARENT_WIDTH - 190
+					Height: PARENT_HEIGHT - 25
 					Children:
 						ScrollPanel@ACTOR_DESCRIPTION_PANEL:
 							X: 10
-							Width: PARENT_RIGHT - 10
-							Height: PARENT_BOTTOM
+							Width: PARENT_WIDTH - 10
+							Height: PARENT_HEIGHT
 							TopBottomSpacing: 8
 							Children:
 								Label@ACTOR_TITLE:
 									X: 8
 									Y: 8
-									Width: PARENT_RIGHT - 40
+									Width: PARENT_WIDTH - 40
 									Height: 25
 									VAlign: Top
 									Align: Center
@@ -69,7 +69,7 @@ Background@ENCYCLOPEDIA_PANEL:
 								Label@ACTOR_DESCRIPTION:
 									X: 148
 									Y: 20
-									Width: PARENT_RIGHT - 180
+									Width: PARENT_WIDTH - 180
 									VAlign: Top
 									Font: Regular
 						ActorPreview@ACTOR_PREVIEW:
@@ -79,8 +79,8 @@ Background@ENCYCLOPEDIA_PANEL:
 							Height: 140
 							Animate: true
 		Button@BACK_BUTTON:
-			X: PARENT_RIGHT - 180
-			Y: PARENT_BOTTOM - 45
+			X: PARENT_WIDTH - 180
+			Y: PARENT_HEIGHT - 45
 			Width: 160
 			Height: 25
 			Text: button-back
