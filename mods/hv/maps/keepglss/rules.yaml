@@ -1,0 +1,53 @@
+^BaseWorld:
+	TerrainLighting:
+		Intensity: 0.80
+	GlobalLightingPaletteEffect:
+		Red: 0.90
+		Green: 0.80
+		Blue: 1.10
+		Ambient: 1.00
+
+RESOURCELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 05c640
+		Intensity: 0.01
+		RedTint: 0.40
+		GreenTint: 0.55
+		BlueTint: 0.45
+
+BASELIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 20c640
+		Intensity: 0.01
+		RedTint: 0.50
+		GreenTint: 0.55
+		BlueTint: 0.85
+
+DARK_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 09c640
+		Intensity: 0.01
+		RedTint: -0.20
+		GreenTint: -0.30
+		BlueTint: -0.30
+
+SMALL_BLUE_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 7c640
+		Intensity: 0.01
+		RedTint: 0.35
+		GreenTint: 0.45
+		BlueTint: 0.85
+
+SMALL_RED_LIGHT:
+	Inherits: LIGHT
+	TerrainLightSource:
+		Range: 7c640
+		Intensity: 0.01
+		RedTint: 0.85
+		GreenTint: 0.45
+		BlueTint: 0.35
