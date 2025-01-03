@@ -467,7 +467,7 @@ FERRY:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor
+		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 20
 		Description: actor-ferry.description
 	Encyclopedia:
@@ -477,13 +477,13 @@ FERRY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 49500  # 52250  # 47500
 	Armor:
 		Type: Heavy
 	Mobile:
 		Locomotor: ferry
-		Speed: 80
-		TurnSpeed: 50
+		Speed: 88
+		TurnSpeed: 55
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 4c0
@@ -500,6 +500,16 @@ FERRY:
 		Position: BottomLeft
 		Margin: 1, -1
 		RequiresSelection: true
+
+FERRY2:
+	Inherits: FERRY
+	Buildable:
+		Prerequisites: ~harbor.sc
+	Health:
+		HP: 60500  # 57750  # 52500
+	Mobile:
+		Speed: 72
+		TurnSpeed: 45
 
 MINESHIP:
 	Inherits: ^Ship
