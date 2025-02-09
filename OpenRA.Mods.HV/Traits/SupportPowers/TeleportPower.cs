@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -205,7 +205,8 @@ namespace OpenRA.Mods.HV.Traits
 				var tiles = power.CellsMatching(xy, footprint, dimensions);
 				var palette = wr.Palette(((TeleportPowerInfo)power.Info).TargetOverlayPalette);
 				foreach (var t in tiles)
-					yield return new SpriteRenderable(tile, wr.World.Map.CenterOfCell(t), WVec.Zero, -511, palette, 1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
+					yield return new SpriteRenderable(tile, wr.World.Map.CenterOfCell(t), WVec.Zero, -511, palette,
+						1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
 			}
 
 			protected override string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)
@@ -306,7 +307,9 @@ namespace OpenRA.Mods.HV.Traits
 					var isValid = manager.Self.Owner.Shroud.IsVisible(t + delta);
 					var tile = isValid ? validTile : invalidTile;
 					var alpha = isValid ? validAlpha : invalidAlpha;
-					yield return new SpriteRenderable(tile, wr.World.Map.CenterOfCell(t + delta), WVec.Zero, -511, palette, 1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
+					yield return new SpriteRenderable(
+						tile, wr.World.Map.CenterOfCell(t + delta), WVec.Zero, -511, palette,
+						1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
 				}
 
 				// Unit previews
@@ -319,7 +322,9 @@ namespace OpenRA.Mods.HV.Traits
 							unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell);
 						var tile = canEnter ? validTile : invalidTile;
 						var alpha = canEnter ? validAlpha : invalidAlpha;
-						yield return new SpriteRenderable(tile, wr.World.Map.CenterOfCell(targetCell), WVec.Zero, -511, palette, 1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
+						yield return new SpriteRenderable(
+							tile, wr.World.Map.CenterOfCell(targetCell), WVec.Zero, -511, palette,
+							1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
 					}
 
 					var offset = world.Map.CenterOfCell(xy) - world.Map.CenterOfCell(sourceLocation);
@@ -349,7 +354,9 @@ namespace OpenRA.Mods.HV.Traits
 
 				// Source tiles
 				foreach (var t in power.CellsMatching(sourceLocation, footprint, dimensions))
-					yield return new SpriteRenderable(sourceTile, wr.World.Map.CenterOfCell(t), WVec.Zero, -511, palette, 1f, sourceAlpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
+					yield return new SpriteRenderable(
+						sourceTile, wr.World.Map.CenterOfCell(t), WVec.Zero, -511, palette, 1f,
+						sourceAlpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
 			}
 
 			bool IsValidTarget(CPos xy)

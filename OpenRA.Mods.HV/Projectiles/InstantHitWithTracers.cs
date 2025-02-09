@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -29,7 +29,9 @@ namespace OpenRA.Mods.HV.Projectiles
 		[Desc("The maximum/constant/incremental inaccuracy used in conjunction with the InaccuracyType property.")]
 		public readonly WDist Inaccuracy = WDist.Zero;
 
-		[Desc("Controls the way inaccuracy is calculated. Possible values are 'Maximum' - scale from 0 to max with range, 'PerCellIncrement' - scale from 0 with range and 'Absolute' - use set value regardless of range.")]
+		[Desc("Controls the way inaccuracy is calculated. ",
+			"Possible values are 'Maximum' - scale from 0 to max with range, ",
+			"'PerCellIncrement' - scale from 0 with range and 'Absolute' - use set value regardless of range.")]
 		public readonly InaccuracyType InaccuracyType = InaccuracyType.Maximum;
 
 		[Desc("Projectile can be blocked.")]
@@ -169,7 +171,11 @@ namespace OpenRA.Mods.HV.Projectiles
 				var endColor = Color.FromArgb(info.ContrailEndColorAlpha, info.ContrailEndColor ?? startColor);
 				for (var i = 0; i < tracers.Length; i++)
 				{
-					var contrail = info.ContrailLength <= 0 ? null : new ContrailRenderable(world, owner.PlayerActor, startColor, info.ContrailStartColorUsePlayerColor, endColor, info.ContrailEndColorUsePlayerColor, info.ContrailStartWidth, info.ContrailEndWidth ?? info.ContrailStartWidth, info.ContrailLength, info.ContrailDelay, info.ContrailZOffset);
+					var contrail = info.ContrailLength <= 0 ? null
+						: new ContrailRenderable(world, owner.PlayerActor,
+							startColor, info.ContrailStartColorUsePlayerColor, endColor, info.ContrailEndColorUsePlayerColor,
+							info.ContrailStartWidth, info.ContrailEndWidth
+						?? info.ContrailStartWidth, info.ContrailLength, info.ContrailDelay, info.ContrailZOffset);
 
 					tracers[i] = new TracerWrapper
 					{
@@ -207,7 +213,9 @@ namespace OpenRA.Mods.HV.Projectiles
 					target = Target.FromPos(args.PassiveTarget);
 
 				// Check for blocking actors
-				if (info.Blockable && BlocksProjectiles.AnyBlockingActorsBetween(world, args.SourceActor.Owner, args.Source, target.CenterPosition, info.Width, out var blockedPos))
+				if (info.Blockable &&
+					BlocksProjectiles.AnyBlockingActorsBetween(world, args.SourceActor.Owner, args.Source,
+					target.CenterPosition, info.Width, out var blockedPos))
 					target = Target.FromPos(blockedPos);
 
 				tracerEndBasePosition = target.CenterPosition;

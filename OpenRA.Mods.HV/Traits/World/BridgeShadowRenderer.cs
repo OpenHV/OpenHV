@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -304,7 +304,9 @@ namespace OpenRA.Mods.Common.Traits
 
 			public static readonly RendererCellContents Empty = default;
 
-			public RendererCellContents(string resourceType, int density, BridgeShadowRendererInfo.BridgeShadowTypeInfo info, ISpriteSequence sequence, PaletteReference palette)
+			public RendererCellContents(string resourceType, int density,
+				BridgeShadowRendererInfo.BridgeShadowTypeInfo info,
+				ISpriteSequence sequence, PaletteReference palette)
 			{
 				Type = resourceType;
 				Density = density;

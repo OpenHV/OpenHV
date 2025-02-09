@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023-2024 The OpenHV Developers (see AUTHORS)
+ * Copyright 2023-2025 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -230,7 +230,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			colorManager = modRules.Actors[SystemActors.World].TraitInfo<IColorPickerManagerInfo>();
 
 			foreach (var f in modRules.Actors[SystemActors.World].TraitInfos<FactionInfo>())
-				factions.Add(f.InternalName, new LobbyFaction { Selectable = f.Selectable, Name = f.Name, Side = f.Side, Description = f.Description?.Replace(@"\n", "\n") });
+				factions.Add(f.InternalName, new LobbyFaction
+				{
+					Selectable = f.Selectable,
+					Name = f.Name,
+					Side = f.Side,
+					Description = f.Description?.Replace(@"\n", "\n")
+				});
 
 			var gameStarting = false;
 			Func<bool> configurationDisabled = () => !Game.IsHost || gameStarting ||
@@ -653,7 +659,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				globalChatUnreadMessages = 0;
 
 			var chatWasEnabled = chatEnabled;
-			chatEnabled = worldRenderer.World.IsReplay || (Game.RunTime >= TextNotificationsManager.ChatDisabledUntil && TextNotificationsManager.ChatDisabledUntil != uint.MaxValue);
+			chatEnabled = worldRenderer.World.IsReplay ||
+				(Game.RunTime >= TextNotificationsManager.ChatDisabledUntil && TextNotificationsManager.ChatDisabledUntil != uint.MaxValue);
 
 			if (chatEnabled && !chatWasEnabled)
 			{
