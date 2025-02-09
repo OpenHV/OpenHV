@@ -12,7 +12,7 @@ ModCredits:
 	ModCreditsFile: hv|CREDITS
 
 FileSystem: DefaultFileSystem
-    Packages:
+	Packages:
 		^EngineDir
 		$hv: hv
 		^EngineDir|mods/common: common
