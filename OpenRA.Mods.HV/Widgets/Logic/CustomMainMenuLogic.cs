@@ -192,7 +192,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				newsPanel.RemoveChild(newsTemplate);
 
 				newsStatus = newsPanel.Get<LabelWidget>("NEWS_STATUS");
-				SetNewsStatus(FluentProvider.GetString(LoadingNews));
+				SetNewsStatus(FluentProvider.GetMessage(LoadingNews));
 			}
 
 			Game.OnRemoteDirectConnect += OnRemoteDirectConnect;
@@ -275,7 +275,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			titleLabel.GetText = () => newsItem.Title;
 
 			var authorDateTimeLabel = newsWidget.Get<LabelWidget>("AUTHOR_DATETIME");
-			var authorDateTime = FluentProvider.GetString(AuthorDateTime,
+			var authorDateTime = FluentProvider.GetMessage(AuthorDateTime,
 					"author", newsItem.Author,
 					"datetime", newsItem.DateTime.ToLocalTime());
 

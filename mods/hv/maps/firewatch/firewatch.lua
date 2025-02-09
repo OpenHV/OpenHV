@@ -132,7 +132,7 @@ UpdateForestStatus = function()
 		Human.MarkFailedObjective(FivePercentObjective)
 	end
 
-	local text = UserInterface.Translate("forest-destroyed", { ["percentage"] = math.floor(burnedPercentage) })
+	local text = UserInterface.GetFluentMessage("forest-destroyed", { ["percentage"] = math.floor(burnedPercentage) })
 	UserInterface.SetMissionText(text, currentColor)
 
 	if Forest.TreesLeft < 1 then

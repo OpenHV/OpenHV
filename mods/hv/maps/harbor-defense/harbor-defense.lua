@@ -50,7 +50,7 @@ function UpdateGameStateText()
 	end
 	CachedWave = CurrentWave
 
-	local waveInfo = UserInterface.Translate("current-wave", { ["wave"] = CurrentWave, ["waves"] = #Waves })
+	local waveInfo = UserInterface.GetFluentMessage("current-wave", { ["wave"] = CurrentWave, ["waves"] = #Waves })
 	UserInterface.SetMissionText("\n\n\n" .. waveInfo)
 end
 
@@ -90,14 +90,14 @@ Tick = function()
 	local buildingproportions = HumanPlayer.GetActorsByTypes({ "harbor2", "extractor", "radar2", "comlink", "module2", "factory2" })
 	local percentage = #buildingproportions * 100 / 22
 	if percentage < .65  and not HumanPlayer.IsObjectiveFailed(TowerDefenseObjective) then
-		Media.DisplayMessage(UserInterface.Translate("buildings-lost-65-percent"))
+		Media.DisplayMessage(UserInterface.GetFluentMessage("buildings-lost-65-percent"))
 		HumanPlayer.MarkFailedObjective(TowerDefenseObjective)
 	end
 
 	if LastWave and not HumanPlayer.IsObjectiveCompleted(TowerDefenseObjective) then
 		Trigger.AfterDelay(DateTime.Seconds(8), function()
 			if not Won and #EnemyPlayer.GetGroundAttackers() == 0 then
-				Media.DisplayMessage(UserInterface.Translate("no-more-enemies"))
+				Media.DisplayMessage(UserInterface.GetFluentMessage("no-more-enemies"))
 				HumanPlayer.MarkCompletedObjective(TowerDefenseObjective)
 				Won = true
 			end

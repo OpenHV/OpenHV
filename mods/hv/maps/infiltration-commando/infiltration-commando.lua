@@ -25,9 +25,9 @@ SentReminder = false
 AirstrikeDelayCoefficient = 1
 
 -- Define message headers
-Satellite = UserInterface.Translate("satellite-reconaissance")
-Warning = UserInterface.Translate("warning")
-Reminder = UserInterface.Translate("reminder")
+Satellite = UserInterface.GetFluentMessage("satellite-reconaissance")
+Warning = UserInterface.GetFluentMessage("warning")
+Reminder = UserInterface.GetFluentMessage("reminder")
 
 SendPatroopers = function()
 	-- Create 2 airlifter units, at a difference of 1sec, and send them to paradrop their cargo onto the player's base.
@@ -55,7 +55,7 @@ SendAirstrikeWaves = function()
 	Trigger.AfterDelay((DateTime.Minutes(2) + DateTime.Seconds(20)) * AirstrikeDelayCoefficient, function()
 		if not Human.IsObjectiveCompleted(InfiltrateRadarObjective) then
 			Actor1024.TargetAirstrike(AirstrikePoint1.CenterPosition)
-			Media.DisplayMessage(UserInterface.Translate("airstrike-waves-started"), Warning)  -- Warn the player when the airstrike waves start
+			Media.DisplayMessage(UserInterface.GetFluentMessage("airstrike-waves-started"), Warning)  -- Warn the player when the airstrike waves start
 		end
 	end)
 	Trigger.AfterDelay((DateTime.Minutes(3) + DateTime.Seconds(55)) * AirstrikeDelayCoefficient, function()
@@ -96,7 +96,7 @@ SendAirstrikeWaves = function()
 	Trigger.AfterDelay((DateTime.Minutes(16)) * AirstrikeDelayCoefficient, function()  -- Special wave onto the player's base
 		if not Human.IsObjectiveCompleted(InfiltrateRadarObjective) then
 			Actor1024.TargetAirstrike(SynapolReinforcementPoint.CenterPosition)
-			Media.DisplayMessage(UserInterface.Translate("airstrike-waves-player"), Warning)  -- Warn the player
+			Media.DisplayMessage(UserInterface.GetFluentMessage("airstrike-waves-player"), Warning)  -- Warn the player
 		end
 	end)
 	Trigger.AfterDelay((DateTime.Minutes(17) + DateTime.Seconds(35)) * AirstrikeDelayCoefficient, function()  -- Special wave onto the player's base
@@ -145,7 +145,7 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(1) + DateTime.Seconds(40), function()
 		Beacon.New(Human, Actor1024.CenterPosition)
@@ -153,19 +153,19 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("com-quarters-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("com-quarters-revealed"), Satellite)
 		Trigger.AfterDelay(300, function()  -- wait for 5 secs to send a reminder
-			Media.DisplayMessage(UserInterface.Translate("capture-radar-reminder"), Reminder)
+			Media.DisplayMessage(UserInterface.GetFluentMessage("capture-radar-reminder"), Reminder)
 		end)
 	end)
-	
+
 	Trigger.AfterDelay(DateTime.Minutes(2) + DateTime.Seconds(20), function()
 		Beacon.New(Human, PowerPlants3.CenterPosition)
 		RadarSweep = Actor.Create("radarsweep", true, { Location = PowerPlants3.Location, Owner = Human })
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(3), function()
 		Beacon.New(Human, PowerPlants4.CenterPosition)
@@ -173,7 +173,7 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(3) + DateTime.Seconds(40), function()
 		Beacon.New(Human, PowerPlants5.CenterPosition)
@@ -181,7 +181,7 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(5), function()
 		Beacon.New(Human, PowerPlants6.CenterPosition)
@@ -189,7 +189,7 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(5) + DateTime.Seconds(40), function()
 		Beacon.New(Human, PowerPlants6.CenterPosition)
@@ -197,7 +197,7 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(6) + DateTime.Seconds(20), function()
 		Beacon.New(Human, PowerPlants6.CenterPosition)
@@ -205,7 +205,7 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
 	Trigger.AfterDelay(DateTime.Minutes(7), function()
 		Beacon.New(Human, PowerPlants6.CenterPosition)
@@ -213,9 +213,9 @@ RevealPowerPlants = function()
 		Trigger.AfterDelay(750, function()
 			RadarSweep.Destroy()
 		end)
-		Media.DisplayMessage(UserInterface.Translate("power-plants-positions-revealed"), Satellite)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("power-plants-positions-revealed"), Satellite)
 	end)
-	
+
 end
 
 Tick = function()
@@ -338,7 +338,7 @@ function UpdateGameStateText()
 
 	local buildings = #colonybuildings1 + #colonybuildings2 + #colonybuildings3 + #colonybuildings4
 	local percentage = math.ceil(buildings / 12 * 100)  -- Find out the percentage of colony buildings still alive
-	
+
 	if Difficulty == "easy" then
 		DifficultyPercentage = 55
 	end
@@ -348,7 +348,7 @@ function UpdateGameStateText()
 	if Difficulty == "hard" then
 		DifficultyPercentage = 80
 	end
-	
+
 	if percentage < DifficultyPercentage then  -- Fails if it is lower than the difficulty's percentage
 		Human.MarkFailedObjective(SaveColonyObjective)
 	end
@@ -356,10 +356,10 @@ function UpdateGameStateText()
 	-- send a reminder if the percentage is lower to the difficulty's percentage times 110%
 	if percentage < DifficultyPercentage * 1.1 and not SentReminder then
 		SentReminder = true
-		Media.DisplayMessage(UserInterface.Translate("reminder-low-percentage"), Warning)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("reminder-low-percentage"), Warning)
 	end
 
-	UserInterface.SetMissionText("\n\n\n" .. percentage .. UserInterface.Translate("percent-still-alive"))
+	UserInterface.SetMissionText("\n\n\n" .. percentage .. UserInterface.GetFluentMessage("percent-still-alive"))
 end
 
 WorldLoaded = function()

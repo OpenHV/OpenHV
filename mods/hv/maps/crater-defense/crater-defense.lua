@@ -58,8 +58,8 @@ function UpdateGameStateText()
 	CachedWave = CurrentWave
 	CachedBreaches = Breaches
 
-	local waveInfo = UserInterface.Translate("current-wave", { ["wave"] = CurrentWave, ["waves"] = #Waves })
-	local tolerableBreaches = UserInterface.Translate("tolerable-breaches", { [ "breaches"] = Breaches })
+	local waveInfo = UserInterface.GetFluentMessage("current-wave", { ["wave"] = CurrentWave, ["waves"] = #Waves })
+	local tolerableBreaches = UserInterface.GetFluentMessage("tolerable-breaches", { [ "breaches"] = Breaches })
 	UserInterface.SetMissionText("\n\n\n" .. waveInfo .. "\n\n" .. tolerableBreaches)
 end
 
@@ -84,7 +84,7 @@ Tick = function()
 	if LastWave and not HumanPlayer.IsObjectiveCompleted(TowerDefenseObjective) then
 		Trigger.AfterDelay(DateTime.Seconds(8), function()
 			if not Won and #EnemyPlayer.GetGroundAttackers() == 0 then
-				Media.DisplayMessage(UserInterface.Translate("no-more-enemies"))
+				Media.DisplayMessage(UserInterface.GetFluentMessage("no-more-enemies"))
 				HumanPlayer.MarkCompletedObjective(TowerDefenseObjective)
 				Won = true
 			end

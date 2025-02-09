@@ -11,10 +11,10 @@ Difficulty = Map.LobbyOption("difficulty")
 
 InitObjectives = function(player)
 	Trigger.OnObjectiveCompleted(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), UserInterface.Translate("objective-completed"))
+		Media.DisplayMessage(p.GetObjectiveDescription(id), UserInterface.GetFluentMessage("objective-completed"))
 	end)
 	Trigger.OnObjectiveFailed(player, function(p, id)
-		Media.DisplayMessage(p.GetObjectiveDescription(id), UserInterface.Translate("objective-failed"))
+		Media.DisplayMessage(p.GetObjectiveDescription(id), UserInterface.GetFluentMessage("objective-failed"))
 	end)
 
 	Trigger.OnPlayerWon(player, function()

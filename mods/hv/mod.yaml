@@ -162,15 +162,15 @@ ChromeLayout:
 	hv|chrome/gamesave-loading.yaml
 	hv|chrome/unused.yaml
 
-Translations:
-	common|languages/en.ftl
-	hv|languages/en.ftl
-	common|languages/rules/en.ftl
-	hv|languages/rules/en.ftl
-	common|languages/chrome/en.ftl
-	hv|languages/chrome/en.ftl
-	common|languages/hotkeys/en.ftl
-	hv|languages/hotkeys/en.ftl
+FluentMessages:
+	common|fluent/common.ftl
+	hv|fluent/common.ftl
+	common|fluent/chrome.ftl
+	hv|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	hv|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	hv|fluent/rules.ftl
 
 Music:
 	hv|audio/music.yaml

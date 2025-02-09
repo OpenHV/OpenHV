@@ -993,4 +993,4 @@ Actors:
 
 Rules: rules.yaml
 
-Translations: en.ftl
+FluentMessages: en.ftl

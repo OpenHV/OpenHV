@@ -45,7 +45,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			var stats = player.PlayerActor.Trait<PlayerStatistics>();
 			incomeTooltipCache = new CachedTransform<int, string>(x =>
-				FluentProvider.GetString(Income, "revenue", x));
+				FluentProvider.GetMessage(Income, "revenue", x));
 			cashLabel = widget.Get<LabelWithTooltipWidget>("CASH");
 			cashLabel.GetTooltipText = () => incomeTooltipCache.Update(stats.DisplayIncome);
 		}

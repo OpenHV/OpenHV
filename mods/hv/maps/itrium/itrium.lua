@@ -11,11 +11,11 @@ BaseBuildings = { "base", "generator", "miner2", "module" }
 
 Colonists = { rifleman, rocketeer, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Generator4, Storage}
 
-Reminder = UserInterface.Translate("reminder")
+Reminder = UserInterface.GetFluentMessage("reminder")
 Tick = function()
 	if (Human.PowerProvided <= 20 or Human.PowerState ~= "Normal") and DateTime.GameTime % DateTime.Seconds(10) == 0 then
 		HasPower = false
-		Media.DisplayMessage(UserInterface.Translate("build-power-plant"), Reminder)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("build-power-plant"), Reminder)
 	else
 		HasPower = true
 	end
@@ -23,7 +23,7 @@ Tick = function()
 	if not HasMiner and not Mining and HasPower and DateTime.GameTime % DateTime.Seconds(20) == 0 then
 		local miners = Utils.Where(Map.ActorsInWorld, function(actor) return (actor.Type == "storage") and actor.Owner == Human end)
 		if #miners == 0 then
-			Media.DisplayMessage(UserInterface.Translate("build-storage"), Reminder)
+			Media.DisplayMessage(UserInterface.GetFluentMessage("build-storage"), Reminder)
 			HasMiner = false
 		else
 			HasMiner = true
@@ -33,7 +33,7 @@ Tick = function()
 	if HasPower and HasMiner and DateTime.GameTime % DateTime.Seconds(30) == 0 then
 		local deployedMiners = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "miner2" and actor.Owner == Human end)
 		if #deployedMiners == 0 then
-			Media.DisplayMessage(UserInterface.Translate("deploy-miner"), Reminder)
+			Media.DisplayMessage(UserInterface.GetFluentMessage("deploy-miner"), Reminder)
 			Mining = false
 		else
 			Mining = true
@@ -43,7 +43,7 @@ Tick = function()
 	if HasPower and Mining and DateTime.GameTime % DateTime.Seconds(20) == 0 then
 		local modules = Utils.Where(Map.ActorsInWorld, function(actor) return actor.Type == "module" and actor.Owner == Human end)
 		if #modules == 0 then
-			Media.DisplayMessage(UserInterface.Translate("build-module"), Reminder)
+			Media.DisplayMessage(UserInterface.GetFluentMessage("build-module"), Reminder)
 		end
 	end
 

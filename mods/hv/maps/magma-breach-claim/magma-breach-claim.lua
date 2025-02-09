@@ -9,7 +9,7 @@
 
 ReinforcementUnits = { "rifleman", "rifleman", "rifleman", "rocketeer", "rocketeer", "buggy", "buggy", "bike", "bike", "stealthtank", "artillery", "technician", "repairtank", "hackertank", "missiletank" }
 
-Warning = UserInterface.Translate("warning")
+Warning = UserInterface.GetFluentMessage("warning")
 
 Tick = function()
     local towers = Human.GetActorsByType("miner2")
@@ -21,7 +21,7 @@ Tick = function()
     if DateTime.GameTime % DateTime.Seconds(150) == 0 and DateTime.GameTime > DateTime.Seconds(150) and not Human.IsObjectiveCompleted(EnemyEliminatedObjective) then  -- happens every 2.5 mins, starting at 2.5 game minutes, if the player hasn't killed all units
         SynapolReinforcements1 = Reinforcements.Reinforce(Enemy, ReinforcementUnits, { SpawningWaypoint1.Location, DestinationWaypoint1.Location })
         SynapolReinforcements2 = Reinforcements.Reinforce(Enemy, ReinforcementUnits, { SpawningWaypoint2.Location, DestinationWaypoint2.Location })
-        Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+        Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
     end
 
     if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == 17 then -- if the player has built every mining tower

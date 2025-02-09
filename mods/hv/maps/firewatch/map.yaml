@@ -46,7 +46,7 @@ Actors:
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
-Translations: hv|languages/campaign/en.ftl, hv|languages/difficulty/en.ftl, hv|languages/lua/en.ftl, en.ftl
+FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl, en.ftl
 
 Sequences: sequences.yaml
 

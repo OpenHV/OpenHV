@@ -7,7 +7,7 @@
    information, see COPYING.
 ]]
 
-Warning = UserInterface.Translate("warning")
+Warning = UserInterface.GetFluentMessage("warning")
 ColonyReinforcementsSent = false
 MilitaryProductionStarted = false
 CooldownBeforeDetection = 180
@@ -29,11 +29,11 @@ Tick = function()
 		MilitaryProductionStarted = true
 		Trigger.AfterDelay(DateTime.Seconds(10), function()
 			if #enemybarracks > 0 then
-				Media.DisplayMessage(UserInterface.Translate("enemy-production-started"), Warning)
+				Media.DisplayMessage(UserInterface.GetFluentMessage("enemy-production-started"), Warning)
 				MilitaryReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsTanks1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
 				Trigger.AfterDelay(DateTime.Seconds(8), function()
-					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+					Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
 				end)
 			end
 		end)
@@ -43,7 +43,7 @@ Tick = function()
 				MilitaryReinforcementsPods3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPodsBig, HumanDestinationPathModule)
 				MilitaryReinforcementsTanks2 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
 				Trigger.AfterDelay(DateTime.Seconds(8), function()
-					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+					Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
 				end)
 			end
 		end)
@@ -55,7 +55,7 @@ Tick = function()
 				MilitaryReinforcementsTanks3 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
 				MilitaryReinforcementsTanks4 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsTanksBig, HumanDestinationPathFactory)
 				Trigger.AfterDelay(DateTime.Seconds(8), function()
-					Media.DisplayMessage(UserInterface.Translate("reinforcements-incoming"), Warning)
+					Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
 				end)
 			end
 		end)
@@ -64,7 +64,7 @@ Tick = function()
 
 	if DateTime.GameTime > DateTime.Seconds(180) and not ColonyReinforcementsSent and #enemybarracks > 0 then  -- send reinforcements units at the colony basement at 2"30' mins
 		ColonyReinforcementsSent = true
-		Media.DisplayMessage(UserInterface.Translate("detected"), Warning)
+		Media.DisplayMessage(UserInterface.GetFluentMessage("detected"), Warning)
 		Trigger.AfterDelay(DateTime.Seconds(8), function()
 			ColonyReinforcementsPods1 = Reinforcements.Reinforce(Enemy, ColonyReinforcementUnitsPods, ColonyDestinationPathModule, 25, function(unit)
 				Trigger.AfterDelay(DateTime.Minutes(1) + DateTime.Seconds(26), function()
@@ -96,7 +96,7 @@ Tick = function()
 					end
 				end)
 			end)
-			Media.DisplayMessage(UserInterface.Translate("reinforcements-near-colony"), Warning)
+			Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-near-colony"), Warning)
 		end)
 	end
 
