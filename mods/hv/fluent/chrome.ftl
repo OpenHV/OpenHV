@@ -12,7 +12,6 @@ label-save-map-panel-directory = Directory:
 label-save-map-panel-filename = Filename:
 button-save-map-panel = Save
 label-actor-edit-panel-id = ID
-button-container-delete = Delete
 button-container-ok = OK
 label-tiles-bg-search = Search:
 label-actors-bg-search = Search:
