@@ -66,6 +66,43 @@ Background@ENCYCLOPEDIA_PANEL:
 									VAlign: Top
 									Align: Center
 									Font: Bold
+								Container@ACTOR_PRODUCTION:
+									X: 188
+									Width: PARENT_WIDTH - 80
+									Height: 24
+									Children:
+										Image@COST_ICON:
+											Y: 1
+											Width: 16
+											Height: 16
+											ImageCollection: sidebar-bits
+											ImageName: production-tooltip-cost
+										Label@COST:
+											X: 17
+											Height: 16
+											Font: Bold
+										Image@TIME_ICON:
+											X: 75
+											Y: 1
+											Width: 16
+											Height: 16
+											ImageCollection: sidebar-bits
+											ImageName: production-tooltip-time
+										Label@TIME:
+											X: 95
+											Height: 16
+											Font: Bold
+										Image@POWER_ICON:
+											X: 150
+											Y: 1
+											Width: 16
+											Height: 16
+											ImageCollection: sidebar-bits
+											ImageName: production-tooltip-power
+										Label@POWER:
+											X: 167
+											Height: 16
+											Font: Bold
 								Label@ACTOR_DESCRIPTION:
 									X: 148
 									Y: 20
