@@ -17,6 +17,7 @@ LIGHTBOAT:
 	Encyclopedia:
 		Description: actor-lightboat.encyclopedia
 		Order: 0
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -65,6 +66,7 @@ PATROLBOAT:
 	Encyclopedia:
 		Description: actor-patrolboat.encyclopedia
 		Order: 5
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -118,6 +120,7 @@ MERCBOAT:
 	Encyclopedia:
 		Description: actor-mercboat.encyclopedia
 		Order: 60
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -164,6 +167,7 @@ TORPEDOBOAT:
 	Encyclopedia:
 		Description: actor-torpedoboat.encyclopedia
 		Order: 10
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -207,6 +211,7 @@ SUBMARINE:
 	Encyclopedia:
 		Description: actor-submarine.encyclopedia
 		Order: 15
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -250,6 +255,7 @@ RAILGUNBOAT:
 	Encyclopedia:
 		Description: actor-railgunboat.encyclopedia
 		Order: 25
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -294,6 +300,7 @@ LIGHTNINGBOAT:
 	Encyclopedia:
 		Description: actor-lightningboat.encyclopedia
 		Order: 20
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -339,6 +346,7 @@ BOOMER:
 	Encyclopedia:
 		Description: actor-boomer.encyclopedia
 		Order: 40
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -414,6 +422,7 @@ CARRIER:
 	Encyclopedia:
 		Description: actor-carrier.encyclopedia
 		Order: 30
+		Scale: 3
 		Category: Ships
 	Valued:
 		Cost: 5000
@@ -473,6 +482,7 @@ FERRY:
 	Encyclopedia:
 		Description: actor-ferry.encyclopedia
 		Order: 45
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
@@ -518,6 +528,7 @@ MINESHIP:
 	Encyclopedia:
 		Description: actor-mineship.encyclopedia
 		Order: 50
+		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true

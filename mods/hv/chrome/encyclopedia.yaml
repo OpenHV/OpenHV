@@ -2,8 +2,8 @@ Background@ENCYCLOPEDIA_PANEL:
 	Logic: EncyclopediaLogic
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2
-	Width: 680
-	Height: 400
+	Width: 700
+	Height: 420
 	Children:
 		Container@ENCYCLOPEDIA_CONTENT:
 			Width: PARENT_WIDTH - 40
@@ -104,14 +104,14 @@ Background@ENCYCLOPEDIA_PANEL:
 											Height: 16
 											Font: Bold
 								Label@ACTOR_DESCRIPTION:
-									X: 148
+									X: 188
 									Y: 20
-									Width: PARENT_WIDTH - 180
+									Width: PARENT_WIDTH - 220
 									VAlign: Top
 									Font: Regular
 						ActorPreview@ACTOR_PREVIEW:
-							X: 14
-							Y: 16
+							X: 24
+							Y: 40
 							Width: 140
 							Height: 140
 							Animate: true

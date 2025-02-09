@@ -11,6 +11,7 @@ RIFLEMAN:
 	Encyclopedia:
 		Description: actor-rifleman.encyclopedia
 		Order: 0
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 200
@@ -51,6 +52,7 @@ ROCKETEER:
 	Encyclopedia:
 		Description: actor-rocketeer.encyclopedia
 		Order: 10
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 450
@@ -89,6 +91,7 @@ MORTAR:
 	Encyclopedia:
 		Description: actor-mortar.encyclopedia
 		Order: 35
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 300
@@ -129,6 +132,7 @@ SNIPER:
 	Encyclopedia:
 		Description: actor-sniper.encyclopedia
 		Order: 30
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 1000
@@ -180,6 +184,7 @@ FLAMER:
 	Encyclopedia:
 		Description: actor-flamer.encyclopedia
 		Order: 25
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 700
@@ -221,6 +226,7 @@ TECHNICIAN:
 	Encyclopedia:
 		Description: actor-technician.encyclopedia
 		Order: 15
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 1000
@@ -281,6 +287,7 @@ BROKER:
 	Encyclopedia:
 		Description: actor-broker.encyclopedia
 		Order: 16
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 1400
@@ -335,6 +342,7 @@ JETPACKER:
 	Encyclopedia:
 		Description: actor-jetpacker.encyclopedia
 		Order: 40
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 1300
@@ -382,6 +390,7 @@ BLASTER:
 	Encyclopedia:
 		Description: actor-blaster.encyclopedia
 		Order: 20
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 1200
@@ -433,6 +442,7 @@ SHOCKER:
 	Encyclopedia:
 		Description: actor-shocker.encyclopedia
 		Order: 5
+		Scale: 3
 		Category: Pods
 	Valued:
 		Cost: 450
@@ -466,6 +476,7 @@ MINIPOD1:
 	Encyclopedia:
 		Description: meta-minipod.encyclopedia
 		Order: 45
+		Scale: 3
 		Category: Pods
 
 MINIPOD2:

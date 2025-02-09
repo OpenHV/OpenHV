@@ -51,6 +51,7 @@ BASE:
 	Encyclopedia:
 		Description: actor-base.encyclopedia
 		Order: 10
+		Scale: 2
 		Category: Buildings
 	GrantExternalConditionToOwner@Base:
 		Condition: base
@@ -188,6 +189,7 @@ OUTPOST:
 	Encyclopedia:
 		Description: actor-outpost.encyclopedia
 		Order: 30
+		Scale: 2
 		Category: Buildings
 	Health:
 		HP: 50000
@@ -235,6 +237,7 @@ GENERATOR:
 	Encyclopedia:
 		Description: actor-generator.encyclopedia
 		Order: 10
+		Scale: 2
 		Category: Buildings
 	Valued:
 		Cost: 300
@@ -280,6 +283,7 @@ RADAR:
 	Encyclopedia:
 		Description: actor-radar.encyclopedia
 		Order: 40
+		Scale: 2
 		Category: Buildings
 	Valued:
 		Cost: 1800
@@ -377,6 +381,7 @@ TRADER:
 	Encyclopedia:
 		Description: actor-trader.encyclopedia
 		Order: 50
+		Scale: 2
 		Category: Buildings
 	Valued:
 		Cost: 1200
@@ -471,6 +476,7 @@ MODULE:
 	Encyclopedia:
 		Description: actor-module.encyclopedia
 		Order: 50
+		Scale: 2
 		Category: Buildings
 	ProvidesPrerequisite@Faction:
 		Prerequisite: module.yi
@@ -587,6 +593,7 @@ MINER2:
 	Encyclopedia:
 		Description: actor-miner2.encyclopedia
 		Order: 50
+		Scale: 2
 		Category: Buildings
 	Valued:
 		Cost: 1000
@@ -652,6 +659,7 @@ STARPORT:
 	Encyclopedia:
 		Description: actor-starport.encyclopedia
 		Order: 60
+		Scale: 2
 		Category: Buildings
 	Buildable:
 		Queue: Building
@@ -746,6 +754,7 @@ FACTORY:
 	Encyclopedia:
 		Description: actor-factory.encyclopedia
 		Order: 70
+		Scale: 2
 		Category: Buildings
 	Building:
 		Footprint: xx xx ++ ++
@@ -997,6 +1006,7 @@ TECHCENTER:
 	Encyclopedia:
 		Description: actor-techcenter.encyclopedia
 		Order: 80
+		Scale: 2
 		Category: Buildings
 	ProvidesPrerequisite@BuildingName:
 		Prerequisite: techcenter
@@ -1040,6 +1050,7 @@ ORESMELT:
 	Encyclopedia:
 		Description: actor-oresmelt.encyclopedia
 		Order: 90
+		Scale: 2
 		Category: Buildings
 	Buildable:
 		Queue: Building
@@ -1097,6 +1108,7 @@ BUNKER:
 	Encyclopedia:
 		Description: actor-bunker.encyclopedia
 		Order: 100
+		Scale: 2
 		Category: Buildings
 	Health:
 		HP: 40000
@@ -1152,6 +1164,7 @@ TURRET:
 	Encyclopedia:
 		Description: actor-turret.encyclopedia
 		Order: 110
+		Scale: 2
 		Category: Buildings
 	Health:
 		HP: 55000
@@ -1277,6 +1290,7 @@ AATURRET2:
 	Encyclopedia:
 		Description: actor-aaturret2.encyclopedia
 		Order: 110
+		Scale: 2
 		Category: Buildings
 	Health:
 		HP: 55000
@@ -1318,6 +1332,7 @@ HOWITZER:
 	Encyclopedia:
 		Description: actor-howitzer.encyclopedia
 		Order: 110
+		Scale: 2
 		Category: Buildings
 	Building:
 		Footprint: xx xx
@@ -1390,6 +1405,7 @@ FIELD:
 	Encyclopedia:
 		Description: actor-field.encyclopedia
 		Order: 120
+		Scale: 2
 		Category: Buildings
 	Building:
 		Footprint: xx xx
@@ -1461,6 +1477,7 @@ SILO:
 	Encyclopedia:
 		Description: actor-silo.encyclopedia
 		Order: 120
+		Scale: 2
 		Category: Buildings
 	Buildable:
 		Queue: Defense
@@ -1536,6 +1553,7 @@ UPLINK:
 	Encyclopedia:
 		Description: actor-uplink.encyclopedia
 		Order: 130
+		Scale: 2
 		Category: Buildings
 	Buildable:
 		Queue: Defense
@@ -1620,6 +1638,7 @@ STORAGE:
 	Encyclopedia:
 		Description: actor-storage.encyclopedia
 		Order: 10
+		Scale: 2
 		Category: Buildings
 	Health:
 		HP: 100000
@@ -1701,6 +1720,7 @@ TELEVATOR:
 	Encyclopedia:
 		Description: actor-televator.encyclopedia
 		Order: 200
+		Scale: 2
 		Category: Buildings
 	Building:
 		Footprint: ++
@@ -1801,6 +1821,7 @@ HARBOR:
 	Encyclopedia:
 		Description: actor-harbor.encyclopedia
 		Order: 250
+		Scale: 2
 		Category: Buildings
 	Building:
 		Footprint: xxx x=x ___
@@ -1926,6 +1947,7 @@ BARRIER:
 	Encyclopedia:
 		Description: actor-barrier.encyclopedia
 		Order: 220
+		Scale: 2
 		Category: Buildings
 	Valued:
 		Cost: 200
@@ -2019,6 +2041,7 @@ HGATE:
 	Encyclopedia:
 		Description: actor-hgate-encyclopedia
 		Order: 230
+		Scale: 2
 		Category: Buildings
 
 VGATE:
@@ -2393,6 +2416,7 @@ RECONSTRUCTOR:
 	Encyclopedia:
 		Description: actor-reconstructor.encyclopedia
 		Order: 300
+		Scale: 2
 		Category: Buildings
 	Building:
 		Footprint: == xx
@@ -2459,6 +2483,7 @@ EXTRACTOR:
 	Encyclopedia:
 		Description: actor-extractor.encyclopedia
 		Order: 320
+		Scale: 2
 		Category: Buildings
 	TooltipDescription@Allies:
 		Description: actor-extractor.captured-desc
@@ -2512,6 +2537,7 @@ COMLINK:
 	Encyclopedia:
 		Description: actor-comlink.encyclopedia
 		Order: 330
+		Scale: 2
 		Category: Buildings
 	TooltipDescription@Allies:
 		Description: actor-comlink.captured-desc
@@ -2585,6 +2611,7 @@ WATCHTOWER:
 	Encyclopedia:
 		Description: actor-watchtower.encyclopedia
 		Order: 340
+		Scale: 2
 		Category: Buildings
 	TooltipDescription@Allies:
 		Description: actor-watchtower.captured-desc
@@ -2649,6 +2676,7 @@ DROPZONE:
 	Encyclopedia:
 		Description: actor-dropzone.encyclopedia
 		Order: 350
+		Scale: 2
 		Category: Buildings
 	TooltipDescription:
 		Description: actor-dropzone.description
@@ -2715,6 +2743,7 @@ FLAGPOST:
 	Encyclopedia:
 		Description: actor-flagpost.encyclopedia
 		Order: 400
+		Scale: 2
 		Category: Buildings
 	Health:
 		HP: 50000
