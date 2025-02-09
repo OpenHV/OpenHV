@@ -1,4 +1,4 @@
-name: Deploy Documentation
+name: Update Wiki
 
 on:
   workflow_dispatch:
@@ -11,8 +11,8 @@ permissions:
   contents: read
 
 jobs:
-  wiki:
-    name: Update Wiki
+  settings:
+    name: Update Settings
     if: github.repository == 'openhv/openhv'
     runs-on: ubuntu-22.04
     steps:
