@@ -21,13 +21,13 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
-      - name: Retrieve Changes
-        id: changed-files
-        uses: tj-actions/changed-files@v44
-        with:
-          files_yaml: |
-            sprites:
-              - mods/hv/bits/**.png
+      - name: Retrieve Changed Files
+        id: changes
+        run: |
+          git fetch origin ${{ github.event.before }} --depth=1
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          grep -E 'mods/hv/bits/.*\.png' changed_files.txt > sprites_changed_files.txt || true
+          echo "sprites=$(cat sprites_changed_files.txt | tr '\n' ' ')" >> $GITHUB_OUTPUT
 
       - name: Check Code
         run: |
@@ -35,7 +35,7 @@ jobs:
 
       - name: Check Sprites
         env:
-            ALL_CHANGED_SPRITES: ${{ steps.changed-files.outputs.sprites_all_changed_files }}
+            ALL_CHANGED_SPRITES: ${{ steps.changes.outputs.sprites }}
         run: |
           make check-sprites SPRITE_FILES="${ALL_CHANGED_SPRITES}"
           sudo apt-get install pngcheck
