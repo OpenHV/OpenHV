@@ -51,3 +51,11 @@ SMALL_RED_LIGHT:
 		RedTint: 0.85
 		GreenTint: 0.45
 		BlueTint: 0.35
+
+HARBOR:
+	Buildable:
+		Prerequisites: ~disabled
+
+HARBOR2:
+	Buildable:
+		Prerequisites: ~disabled
