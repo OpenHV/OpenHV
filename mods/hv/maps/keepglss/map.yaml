@@ -1180,9 +1180,6 @@ Actors:
 	Actor434: prop1
 		Owner: Neutral
 		Location: 91,43
-	Actor438: rock9
-		Owner: Neutral
-		Location: 87,39
 	Actor439: rock4
 		Owner: Neutral
 		Location: 82,42
@@ -1261,9 +1258,6 @@ Actors:
 	Actor463: prop1
 		Owner: Neutral
 		Location: 38,70
-	Actor464: rock9
-		Owner: Neutral
-		Location: 42,74
 	Actor465: rock4
 		Owner: Neutral
 		Location: 47,71
@@ -1388,5 +1382,11 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 35,76
+	Actor438: rock9
+		Owner: Neutral
+		Location: 87,38
+	Actor464: rock9
+		Owner: Neutral
+		Location: 42,75
 
 Rules: rules.yaml
