@@ -626,7 +626,7 @@ MINER2:
 		Footprint: ++ ++ xx
 		Dimensions: 2,3
 		RequiresBaseProvider: false
-		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Sand, Black Sand, Stone, Tech, Dirt, Blocked
+		TerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Ore, Mountain, Rock, Ice, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Dirt, Blocked
 		AllowPlacementOnResources: true
 	RevealsShroud:
 		Range: 5c0
