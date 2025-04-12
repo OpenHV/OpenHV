@@ -23,4 +23,5 @@ end
 
 WorldLoaded = function()
 	ViewportOrigin = Camera.Position
+	Tick()
 end
