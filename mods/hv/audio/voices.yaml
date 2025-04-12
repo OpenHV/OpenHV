@@ -270,3 +270,11 @@ ObserverVoice:
 		Move: observer_acknowledged, observer_affirmative, observer_not_a_problem, observer_optimising_updraft, observer_roger_that
 		Action: observer_acknowledged, observer_affirmative, observer_not_a_problem, observer_optimising_updraft, observer_roger_that
 		Guard: guarding
+
+CarVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: car_action1, car_action2, car_action3
+		Move: car_action1, car_action2, car_action3
+		Action: car_attack1, car_attack2, car_attack3
+		Guard: guarding

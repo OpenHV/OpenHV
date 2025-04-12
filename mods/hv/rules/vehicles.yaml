@@ -1164,3 +1164,117 @@ CVIT:
 		PlayerExperience: 5
 	SpawnActorOnDeath:
 		Actor: moneycube
+
+FIRETRUCK:
+	Inherits: ^Vehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: actor-firetruck.name
+		GenericName: actor-firetruck.generic-name
+	Buildable:
+		Queue: Utility
+		Prerequisites: ~base
+		BuildPaletteOrder: 100
+		Description: actor-firetruck.description
+	Armament:
+		Weapon: WaterCannon
+		LocalOffset: 400,-50,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 500
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 4
+	ReloadAmmoPool:
+		Delay: 10
+		Count: 10
+	AttackMove:
+		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
+	AttackTurreted:
+		Voice: Action
+		TargetLineColor: 0000FF
+	Turreted:
+		TurnSpeed: 25
+		Offset: 200,0,150
+	WithSpriteTurret:
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 6c0
+	Voiced:
+		VoiceSet: CarVoice
+
+WATERTANK:
+	Inherits: ^TrackedVehicle
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Valued:
+		Cost: 1250
+	Tooltip:
+		Name: actor-watertank.name
+		GenericName: actor-watertank.generic-name
+	Buildable:
+		Queue: Utility
+		Prerequisites: ~base
+		BuildPaletteOrder: 200
+		Description: actor-watertank.description
+	Armament:
+		Weapon: WaterSuperCannon
+		Recoil: 125
+		RecoilRecovery: 38
+		LocalOffset: 400,-100,0, 400,100,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 100
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 5
+	ReloadAmmoPool:
+		Delay: 40
+		Count: 10
+	AttackTurreted:
+		Voice: Action
+		TargetLineColor: 0000FF
+	Turreted:
+		TurnSpeed: 25
+		Offset: 200,0,180
+	WithSpriteTurret:
+	AttackMove:
+		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 60000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Voiced:
+		VoiceSet: CarVoice

@@ -1,51 +1,5 @@
 # License: CC-BY-SA-4.0
 
-waterball:
-	idle:
-		Filename: bits/waterball.png
-		Length: *
-		Facings: 1
-		ZOffset: 2030
-
-waterball-trail:
-	Inherits: waterball
-	idle:
-		Tick: 5
-
-watertank:
-	idle:
-		Filename: maps/firewatch/watertank.png
-		Facings: 8
-	turret:
-		Filename: maps/firewatch/watertank.png
-		Start: 8
-		Facings: 8
-	icon:
-		Filename: maps/firewatch/watertank-icon.png
-
-firetruck:
-	idle:
-		Filename: maps/firewatch/firetruck.png
-		Facings: 8
-	turret:
-		Filename: maps/firewatch/firetruck.png
-		Start: 8
-		Facings: 8
-	icon:
-		Filename: maps/firewatch/firetruck-icon.png
-
-firefighterpod:
-	idle:
-		Filename: maps/firewatch/firefighterpod.png
-		Facings: 8
-	die:
-		Filename: bits/poddeath.png
-		Length: 7
-		Tick: 80
-		Offset: 0,-2
-	icon:
-		Filename: maps/firewatch/firefighterpod-icon.png
-
 refill:
 	idle:
 		Filename: maps/firewatch/refill.png

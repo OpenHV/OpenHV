@@ -493,3 +493,45 @@ MINIPOD5:
 
 MINIPOD6:
 	Inherits: ^MINIPOD
+
+FIREFIGHTER:
+	Inherits: ^Pod
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	AutoTargetPriority@Default:
+		ValidTargets: Fire
+	AutoTargetPriority@AttackAnything:
+		ValidTargets: Fire
+	Buildable:
+		Queue: Utility
+		Prerequisites: ~base
+		Description: actor-firefighter.description
+		BuildPaletteOrder: 50
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: actor-firefighter.name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: WaterCannonSmall
+		LocalOffset: 250,0,50
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 200
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 2
+	ReloadAmmoPool:
+		Delay: 10
+		Count: 10
+	AttackFrontal:
+		FacingTolerance: 0
+		Voice: Action
+		TargetLineColor: 0000FF
+	AttackMove:
+		TargetLineColor: 0000FF
+	AutoTarget:
+		ScanRadius: 10

@@ -300,3 +300,15 @@ minipod6:
 		Filename: bits/minipod6.png
 	die:
 		Filename: bits/minipod6-death.png
+
+firefighter:
+	idle:
+		Filename: bits/firefighter.png
+		Facings: 8
+	die:
+		Filename: bits/poddeath.png
+		Length: 7
+		Tick: 80
+		Offset: 0,-2
+	icon:
+		Filename: bits/firefighter-icon.png

@@ -49,7 +49,3 @@ Rules: hv|rules/campaign.yaml, rules.yaml
 FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl, en.ftl
 
 Sequences: sequences.yaml
-
-Weapons: weapons.yaml
-
-Voices: voices.yaml

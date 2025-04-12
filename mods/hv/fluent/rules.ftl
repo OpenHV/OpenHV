@@ -1142,6 +1142,20 @@ actor-battleship =
 actor-battleship-husk =
    .name = Battleship Husk
 
+actor-watertank =
+   .name = Firefighting Tank
+   .generic-name = Tank
+   .description = Armored Fire Fighting Vehicle
+
+actor-firetruck =
+   .name = Firefighting Truck
+   .generic-name = Truck
+   .description = Civilian Fire Engine
+
+actor-firefighter =
+   .description = Volunteer firefighter pod on duty.
+   .name = Firefighter Pod
+
 ## Weapons
 actor-landmine-name = AI Mine
 actor-watermine-name = AI Water Mine

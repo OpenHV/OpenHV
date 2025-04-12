@@ -32,3 +32,7 @@ Contents of this folder indicate assets licensed under the [CC0 Public Domain De
 * [radaron/off.ogg](https://freesound.org/people/zehmx/sounds/322866/) by zehmx
 * [plasma_machine_gun.ogg](https://freesound.org/people/Theogobbo/sounds/316976/) by Theogobbo
 * [plasma_explosion_1/2/3.ogg](https://freesound.org/people/dpren/sounds/440146/) by dpren
+* [car_action1/2/3.ogg](https://freesound.org/people/boedie/sounds/457425/)) by boedie
+* [car_attack1.ogg](https://freesound.org/people/guitarguy1985/sounds/70938/) by guitarguy1985
+* [car_attack2/3.ogg](https://freesound.org/people/guitarguy1985/sounds/58018/) by guitarguy1985
+* [watergun.ogg](https://freesound.org/people/bxyorna/sounds/410335/) by bxyorna
