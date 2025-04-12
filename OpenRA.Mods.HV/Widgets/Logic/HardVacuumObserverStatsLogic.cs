@@ -549,7 +549,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		string Vision(int revealedCells)
 		{
-			return Math.Ceiling(revealedCells / (float)world.Map.ProjectedCells.Length * 100).ToString("P0", NumberFormatInfo.CurrentInfo);
+			return (Math.Ceiling(revealedCells * 100d / world.Map.ProjectedCells.Length) / 100).ToString("P0", NumberFormatInfo.CurrentInfo);
 		}
 
 		static Color GetPowerColor(PowerState state)
