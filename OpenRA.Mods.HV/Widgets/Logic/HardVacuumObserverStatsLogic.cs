@@ -64,6 +64,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly string clickSound = ChromeMetrics.Get<string>("ClickSound");
 		ObserverStatsPanel activePanel;
 
+		readonly CultureInfo englishDollar = new("en-US");
+
 		[ObjectCreator.UseCtor]
 		public HardVacuumObserverStatsLogic(World world, ModData modData, WorldRenderer worldRenderer, Widget widget, Dictionary<string, MiniYaml> logicArgs)
 		{
@@ -294,10 +296,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			if (stats == null)
 				return template;
 
-			var destroyedText = new CachedTransform<int, string>(i => "$" + i);
+			var destroyedText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("ASSETS_DESTROYED").GetText = () => destroyedText.Update(stats.KillsCost);
 
-			var lostText = new CachedTransform<int, string>(i => "$" + i);
+			var lostText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("ASSETS_LOST").GetText = () => lostText.Update(stats.DeathsCost);
 
 			var unitsKilledText = new CachedTransform<int, string>(i => i.ToString(NumberFormatInfo.CurrentInfo));
@@ -312,7 +314,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var buildingsDeadText = new CachedTransform<int, string>(i => i.ToString(NumberFormatInfo.CurrentInfo));
 			template.Get<LabelWidget>("BUILDINGS_DEAD").GetText = () => buildingsDeadText.Update(stats.BuildingsDead);
 
-			var armyText = new CachedTransform<int, string>(i => "$" + i.ToString(NumberFormatInfo.CurrentInfo));
+			var armyText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("ARMY_VALUE").GetText = () => armyText.Update(stats.ArmyValue);
 
 			var visionText = new CachedTransform<int, string>(i => Vision(i));
@@ -404,19 +406,19 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			if (stats == null)
 				return template;
 
-			var cashText = new CachedTransform<int, string>(i => "$" + i);
+			var cashText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("CASH").GetText = () => cashText.Update(res.Cash + res.Resources);
 
-			var incomeText = new CachedTransform<int, string>(i => "$" + i);
+			var incomeText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("INCOME").GetText = () => incomeText.Update(stats.DisplayIncome);
 
-			var earnedText = new CachedTransform<int, string>(i => "$" + i);
+			var earnedText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("EARNED").GetText = () => earnedText.Update(res.Earned);
 
-			var spentText = new CachedTransform<int, string>(i => "$" + i);
+			var spentText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("SPENT").GetText = () => spentText.Update(res.Spent);
 
-			var assetsText = new CachedTransform<int, string>(i => "$" + i);
+			var assetsText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			var assets = template.Get<LabelWidget>("ASSETS");
 			assets.GetText = () => assetsText.Update(world.ActorsHavingTrait<Valued>()
 				.Where(a => a.Owner == player && !a.IsDead)
@@ -444,7 +446,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			SetupPlayerColor(player, template, playerColor, playerGradient);
 
 			var res = player.PlayerActor.Trait<PlayerResources>();
-			var cashText = new CachedTransform<int, string>(i => "$" + i);
+			var cashText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("CASH").GetText = () => cashText.Update(res.Cash + res.Resources);
 
 			var powerRes = player.PlayerActor.TraitOrDefault<PowerManager>();
@@ -466,10 +468,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var deathsText = new CachedTransform<int, string>(i => i.ToString(NumberFormatInfo.CurrentInfo));
 			template.Get<LabelWidget>("DEATHS").GetText = () => deathsText.Update(stats.UnitsDead + stats.BuildingsDead);
 
-			var destroyedText = new CachedTransform<int, string>(i => "$" + i.ToString(NumberFormatInfo.CurrentInfo));
+			var destroyedText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("ASSETS_DESTROYED").GetText = () => destroyedText.Update(stats.KillsCost);
 
-			var lostText = new CachedTransform<int, string>(i => "$" + i.ToString(NumberFormatInfo.CurrentInfo));
+			var lostText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("ASSETS_LOST").GetText = () => lostText.Update(stats.DeathsCost);
 
 			var experienceText = new CachedTransform<int, string>(i => i.ToString(NumberFormatInfo.CurrentInfo));
