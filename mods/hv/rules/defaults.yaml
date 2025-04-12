@@ -769,23 +769,17 @@
 	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Vehicle, Defense, Ship, Mine
-		InvalidTargets: NoAutoTarget, Barrier
+		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@AttackAnything:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Vehicle, Defense, Ship, Mine, Structure
-		InvalidTargets: NoAutoTarget, Barrier
-	AutoTargetPriority@Barrier:
-		ValidTargets: Barrier
 		InvalidTargets: NoAutoTarget
-		Priority: 10
 
 ^AutoTargetGroundAssaultMove:
 	Inherits: ^AutoTargetGround
 	AutoTargetPriority@Default:
 		RequiresCondition: !stance-attackanything && !assault-move
 	AutoTargetPriority@AttackAnything:
-		RequiresCondition: stance-attackanything || assault-move
-	AutoTargetPriority@Barrier:
 		RequiresCondition: stance-attackanything || assault-move
 	AttackMove:
 		AssaultMoveCondition: assault-move
@@ -1062,7 +1056,7 @@
 	OwnerLostAction:
 		Action: ChangeOwner
 	Targetable:
-		TargetTypes: Wall
+		TargetTypes: NoAutoTarget
 
 ^Mine:
 	Inherits: ^SpriteActor
@@ -1282,7 +1276,7 @@
 		AreaTypes: building
 		Adjacent: 6
 	Targetable:
-		TargetTypes: Barrier, Ground
+		TargetTypes: Ground, Wall, NoAutoTarget
 	MapEditorData:
 		Categories: Wall
 	RevealsShroud:

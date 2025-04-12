@@ -1954,7 +1954,7 @@ BARRIER:
 	CustomSellValue:
 		Value: 0
 	Targetable:
-		TargetTypes: Barrier, Ground
+		TargetTypes: Ground, Wall, NoAutoTarget
 	Health:
 		HP: 100000
 	Armor:

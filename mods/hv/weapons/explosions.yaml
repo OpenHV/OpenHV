@@ -65,7 +65,7 @@ AntiTankMine:
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 50
-		InvalidTargets: Structure, Barrier, Wall, Trees
+		InvalidTargets: Structure, Wall, Trees
 
 AntiTankWaterMine:
 	Inherits: AntiTankMine
