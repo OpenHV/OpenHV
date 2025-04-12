@@ -16,6 +16,9 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v4
 
+      - name: Remove System .NET
+        run: sudo apt-get remove -y dotnet*
+
       - name: Install .NET 6
         uses: actions/setup-dotnet@v4
         with:
