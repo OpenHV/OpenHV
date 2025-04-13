@@ -91,7 +91,9 @@ namespace OpenRA.Mods.HV
 
 		public InternetRelayChat()
 		{
-			client.Encoding = System.Text.Encoding.ASCII;
+			client.Encoding = System.Text.Encoding.UTF8;
+			client.EnableUTF8Recode = true;
+
 			client.SendDelay = 100;
 			client.ActiveChannelSyncing = true;
 
