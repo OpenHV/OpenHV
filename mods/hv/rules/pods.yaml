@@ -519,9 +519,6 @@ FIREFIGHTER:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 2
-	ReloadAmmoPool:
-		Delay: 10
-		Count: 10
 	AttackFrontal:
 		FacingTolerance: 0
 		Voice: Action
