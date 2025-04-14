@@ -1239,9 +1239,6 @@ WATERTANK:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 5
-	ReloadAmmoPool:
-		Delay: 40
-		Count: 10
 	AttackTurreted:
 		Voice: Action
 		TargetLineColor: 0000FF
