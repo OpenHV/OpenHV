@@ -501,11 +501,6 @@ FIREFIGHTER:
 		ValidTargets: Fire
 	AutoTargetPriority@AttackAnything:
 		ValidTargets: Fire
-	Buildable:
-		Queue: Utility
-		Prerequisites: ~base
-		Description: actor-firefighter.description
-		BuildPaletteOrder: 50
 	Valued:
 		Cost: 100
 	Tooltip:

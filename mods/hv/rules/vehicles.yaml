@@ -1177,11 +1177,6 @@ FIRETRUCK:
 	Tooltip:
 		Name: actor-firetruck.name
 		GenericName: actor-firetruck.generic-name
-	Buildable:
-		Queue: Utility
-		Prerequisites: ~base
-		BuildPaletteOrder: 100
-		Description: actor-firetruck.description
 	Armament:
 		Weapon: WaterCannon
 		LocalOffset: 400,-50,0
@@ -1194,9 +1189,6 @@ FIRETRUCK:
 		Margin: 4, 3
 		RequiresSelection: true
 		PipCount: 4
-	ReloadAmmoPool:
-		Delay: 10
-		Count: 10
 	AttackMove:
 		TargetLineColor: 0000FF
 	AutoTarget:
@@ -1233,11 +1225,6 @@ WATERTANK:
 	Tooltip:
 		Name: actor-watertank.name
 		GenericName: actor-watertank.generic-name
-	Buildable:
-		Queue: Utility
-		Prerequisites: ~base
-		BuildPaletteOrder: 200
-		Description: actor-watertank.description
 	Armament:
 		Weapon: WaterSuperCannon
 		Recoil: 125

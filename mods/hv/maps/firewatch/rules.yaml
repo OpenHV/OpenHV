@@ -60,16 +60,31 @@ WATERTANK:
 	Inherits@RefillWater: ^RefillWater
 	ReloadAmmoPool:
 		RequiresCondition: refill-water
+	Buildable:
+		Queue: Utility
+		Prerequisites: ~base
+		BuildPaletteOrder: 200
+		Description: actor-watertank.description
 
 FIRETRUCK:
 	Inherits@RefillWater: ^RefillWater
 	ReloadAmmoPool:
 		RequiresCondition: refill-water
+	Buildable:
+		Queue: Utility
+		Prerequisites: ~base
+		BuildPaletteOrder: 100
+		Description: actor-firetruck.description
 
 FIREFIGHTER:
 	Inherits@RefillWater: ^RefillWater
 	ReloadAmmoPool:
 		RequiresCondition: refill-water
+	Buildable:
+		Queue: Utility
+		Prerequisites: ~base
+		Description: actor-firefighter.description
+		BuildPaletteOrder: 50
 
 AIRTANKER:
 	Inherits: BOMBER
