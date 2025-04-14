@@ -114,7 +114,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var template = (ContainerWidget)chatTemplate.Clone();
 			var notification = new TextNotification(TextNotificationPool.Chat, -1, from, message.Message, prefixColor, messageColor);
 			var timestamp = message.Type != ChatMessageType.PrivateMessage;
-			WidgetUtils.SetupTextNotification(template, notification, 100, timestamp);
+			WidgetUtils.SetupTextNotification(template, notification, historyPanel.Bounds.Width - historyPanel.ScrollbarWidth, timestamp);
 
 			template.Id = message.UID;
 			return template;
