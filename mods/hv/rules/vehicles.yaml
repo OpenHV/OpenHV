@@ -119,9 +119,6 @@ AATANK2:
 		Order: 5
 		Scale: 3
 		Category: Tanks
-	Mobile:
-		ImmovableCondition: !undeployed
-		RequireForceMoveCondition: !undeployed
 	Armament:
 		Weapon: LightningBoltLight
 		Recoil: 125
@@ -129,26 +126,6 @@ AATANK2:
 		LocalOffset: 200,0,200
 	WithTurretAttackAnimation:
 		Sequence: shoot
-	GrantConditionOnDeploy:
-		PauseOnCondition: jammed
-		DeployedCondition: deployed
-		UndeployedCondition: undeployed
-		UndeployOnMove: true
-		UndeployOnPickup: true
-		Facing: 512
-		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Black Sand, Black Sand Ramp, Stone, Tech, Dirt
-		Voice: Move
-	RangeMultiplier@DEPLOYED:
-		RequiresCondition: !undeployed
-		Modifier: 150
-	WithRangeCircle:
-		RequiresCondition: !undeployed
-		Type: Turret
-		Width: 2
-		BorderWidth: 3
-		Range: 12c0
-	# WithFacingSpriteBody:
-	# 	RequiresCondition: undeployed
 
 APC:
 	Inherits: ^TrackedVehicle
@@ -250,38 +227,23 @@ ARTILLERY:
 		TurnSpeed: 15
 		Speed: 95
 		Locomotor: wheeled
-		ImmovableCondition: !undeployed
-		RequireForceMoveCondition: !undeployed
-	GrantConditionOnDeploy:
-		PauseOnCondition: jammed
-		DeployedCondition: deployed
-		UndeployedCondition: undeployed
-		UndeployOnMove: true
-		UndeployOnPickup: true
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
-	Armament@Primary:
-		RequiresCondition: undeployed
+	Armament:
 		Weapon: SmallArtillery
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,100
-	Armament@Secondary:
-		RequiresCondition: !undeployed
-		Weapon: ArtilleryCluster
-		MuzzleSequence: muzzle
-		LocalOffset: 500,0,100
 	WithRangeCircle:
-		RequiresCondition: !undeployed
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
 		Range: 12c0 # 18c0
 	AttackFrontal:
-		Armaments: primary, secondary
+		Armaments: primary
 		TargetFrozenActors: true
 		ForceFireIgnoresActors: true
 		PauseOnCondition: jammed
