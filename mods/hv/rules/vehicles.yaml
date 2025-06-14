@@ -36,13 +36,13 @@ MBT:
 		Range: 3c0
 	Turreted:
 		TurnSpeed: 25
-		Offset: -125,0,50
+		Offset: 0,0,0
 	Armament:
 		Weapon: CannonYuruki
 		Recoil: 125
 		RecoilRecovery: 38
 		MuzzleSequence: muzzle
-		LocalOffset: 500,-50,-50
+		LocalOffset: 500,-50,0
 	AttackTurreted:
 		PauseOnCondition: jammed
 		Voice: Attack
@@ -54,13 +54,13 @@ MBT:
 MBT2:
 	Inherits: MBT
 	Buildable:
-		Prerequisites: ~factory.sc
+		Prerequisites: ~disabled
 	-Encyclopedia:
 	Turreted:
-		Offset: 0,0,0
+		Offset: -125,0,50
 	Armament:
 		Weapon: CannonSynapol
-		LocalOffset: 550,-50,0
+		LocalOffset: 550,-50,-50
 
 AATANK:
 	Inherits: ^TrackedVehicle
@@ -68,7 +68,7 @@ AATANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 20
-		Prerequisites: ~factory.sc
+		Prerequisites: ~disabled
 		Description: actor-aatank.description
 	Encyclopedia:
 		Description: actor-aatank.encyclopedia
@@ -136,7 +136,7 @@ APC:
 		Name: actor-apc.name
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, module
+		Prerequisites: ~factory.yi, module
 		BuildPaletteOrder: 40
 		Description: actor-apc.description
 	Encyclopedia:
@@ -147,11 +147,12 @@ APC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 25000
+		HP: 22500 # 23750
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 110
+		TurnSpeed: 22 # 21
+		Speed: 121 # 115
 		PauseOnCondition: loading || jammed
 	RevealsShroud:
 		Range: 6c0
@@ -187,6 +188,16 @@ APC:
 		Sequence: teleport-large
 	-Passenger:
 
+APC2:
+	Inherits: APC
+	Buildable:
+		Prerequisites: ~factory.sc, module
+	Health:
+		HP: 27500 # 26250
+	Mobile:
+		TurnSpeed: 18
+		Speed: 99
+
 ARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
@@ -198,8 +209,8 @@ ARTILLERY:
 		Class: artillery
 	Buildable:
 		Queue: Tank
-		Prerequisites: factory, radar
-		BuildPaletteOrder: 50
+		Prerequisites: ~factory.sc, radar
+		BuildPaletteOrder: 20 # 50
 		Description: actor-artillery.description
 	Encyclopedia:
 		Description: actor-artillery.encyclopedia
@@ -226,6 +237,11 @@ ARTILLERY:
 		Weapon: SmallArtillery
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,100
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 12c0 # 18c0
 	AttackFrontal:
 		Armaments: primary
 		TargetFrozenActors: true
@@ -468,7 +484,7 @@ LIGHTNINGTANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 70
-		Prerequisites: ~factory.yi, techcenter
+		Prerequisites: ~disabled
 		Description: actor-lightningtank.description
 	Encyclopedia:
 		Description: actor-lightningtank.encyclopedia
@@ -884,9 +900,9 @@ MINER:
 
 MISSILETANK:
 	Inherits: ^TrackedVehicle
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 2400
+		Cost: 2125 # 2025 # 2700 # 2400
 	Tooltip:
 		Name: actor-missiletank.name
 		GenericName: actor-missiletank.generic-name
@@ -894,8 +910,8 @@ MISSILETANK:
 		Class: missiletank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, radar, techcenter
-		BuildPaletteOrder: 80
+		Prerequisites: ~factory.sc
+		BuildPaletteOrder: 10 # 80
 		Description: actor-missiletank.description
 	Encyclopedia:
 		Description: actor-missiletank.encyclopedia
@@ -905,22 +921,26 @@ MISSILETANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 61000
 	Armor:
 		Type: Heavy
 	Mobile:
+		TurnSpeed: 30
 		Speed: 80
 	RevealsShroud:
-		Range: 7c0
-		MinRange: 3c0
+		Range: 9c0
+		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 3c0
+		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: -250,-50,100
-	Armament:
+	Armament@Primary:
 		Weapon: MissileTankRocket
+		LocalOffset: 500,0,0, 500,-100,0, 500,100,0
+	Armament@Secondary:
+		Weapon: Patriot
 		LocalOffset: 500,0,0
 	AttackTurreted:
 		PauseOnCondition: jammed
@@ -1028,11 +1048,14 @@ BUGGY:
 		TurnSpeed: 50
 		Speed: 140
 	RevealsShroud:
-		Range: 7c0
-		MinRange: 3c0
+		Range: 8c0
+		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 3c0
+		Range: 4c0
+	Passenger:
+		CargoType: Vehicle
+		Weight: 2
 
 BIKE:
 	Inherits: ^Vehicle
@@ -1073,11 +1096,14 @@ BIKE:
 		TurnSpeed: 100
 		Speed: 170
 	RevealsShroud:
-		Range: 8c0
+		Range: 9c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
+	Passenger:
+		CargoType: Vehicle
+		Weight: 2
 
 TANKER1:
 	Inherits: ^Vehicle

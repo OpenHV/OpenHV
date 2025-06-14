@@ -32,6 +32,22 @@
 		ContrailStartWidth: 18
 		ContrailZOffset: 3000
 
+^RedTracers:
+	Projectile: InstantHitWithTracers
+		Blockable: true
+		TracerAmount: 2
+		TracerSpeed: 1536
+		TracerSpawnInterval: 3
+		TracerInaccuracy: 0c450
+		ContrailDelay: 0
+		ContrailStartColor: FF6666
+		ContrailStartColorAlpha: 255
+		ContrailEndColor: 990000
+		ContrailEndColorAlpha: 255
+		ContrailLength: 2
+		ContrailStartWidth: 18
+		ContrailZOffset: 3000
+
 LightMachineGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
@@ -95,7 +111,7 @@ BuggyChainGun:
 	StartBurstReport: machinegun_SuperPhat.ogg
 	BurstDelays: 1
 	ReloadDelay: 20
-	Range: 6c0
+	Range: 7c0
 	Burst: 4
 	Projectile: Bullet
 		Inaccuracy: 0c256
@@ -117,7 +133,7 @@ BikeChainGun:
 	Inherits: BuggyChainGun
 	StartBurstReport: ccbysmgfire02.ogg
 	BurstDelays: 2
-	Range: 7c0
+	Range: 8c0
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000
@@ -130,7 +146,7 @@ BikeChainGun:
 
 HelicopterChainGunGround:
 	Inherits: ^AircraftChainGun
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
 	ReloadDelay: 10
 	Range: 6c0
 	MinRange: 0c768
@@ -158,15 +174,16 @@ HelicopterChainGunAir:
 
 AircraftChainGunGround:
 	Inherits: ^AircraftChainGun
-	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 3
+	ValidTargets: Water, Ground, Tree, Lava, Swamp, Air
+	ReloadDelay: 6
 	Range: 6c0
 	MinRange: 1c0
 	Burst: 16
 	Projectile: InstantHit
 		Blockable: false
 	Warhead@Damage: SpreadDamage
-		Damage: 375
+		# ALMOST: Damage: 124
+		Damage: 120 # 124 # 125 # 124 # 132 # 113 # 124 # 141 # 150 # 188  # 125 # 188 # 375
 		Versus:
 			None: 800
 			Steel: 108
@@ -209,6 +226,7 @@ SniperRifle:
 	Projectile: InstantHit
 	Warhead@Damage: SpreadDamage
 		Spread: 24
+		# Damage: 500
 		Versus:
 			None: 1500
 			Steel: 40
@@ -216,6 +234,7 @@ SniperRifle:
 			Heavy: 25
 			Concrete: 15
 	Warhead@Incendiary: TreeDamage
+		# Damage: 500
 		Spread: 24
 	ReloadDelay: 50
 	Range: 10c0
@@ -276,10 +295,10 @@ BoatMachineGunAir:
 Flamethrower:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	StartBurstReport: flame_newlocknew.ogg
-	ReloadDelay: 50
-	Burst: 6
-	BurstDelays: 1
-	Range: 3c0
+	ReloadDelay: 2 # 1
+	Burst: 2 # 6
+	BurstDelays: 0 # 1
+	Range: 4c0
 	Projectile: Bullet
 		Image: bullet17
 		TrailImage: bullet17-trace
@@ -293,15 +312,15 @@ Flamethrower:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 2000
+		Damage: 200 # 500 # 2000
 		Versus:
 			None: 90
 			Steel: 45
-			Light: 8
-			Heavy: 5
+			Light: 45 # 8
+			Heavy: 45 # 5
 			Wood: 100
 	Warhead@Incendiary: TreeDamage
-		Damage: 2000
+		Damage: 200 # 2000
 		Spread: 128
 		Percentage: 75
 	Warhead@FireEffect: CreateEffect
@@ -312,29 +331,31 @@ Flamethrower:
 
 BunkerFlamethrower:
 	Inherits: Flamethrower
-	ReloadDelay: 25
-	Range: 5c0
-
-HeavyMachineGun:
-	Inherits: LightMachineGun
-	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-	Report: machine_gun_pgi.ogg
-	ReloadDelay: 20
+	ReloadDelay: 1
 	Range: 6c0
-	Burst: 4
-	BurstDelays: 2
-	Projectile: InstantHitWithTracers
-		Blockable: false
-	Warhead@Damage: SpreadDamage
-		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
-		Spread: 24
-		Damage: 300
-		Versus:
-			None: 300
-			Steel: 25
-			Light: 55
-			Heavy: 20
-			Concrete: 5
+
+# HeavyMachineGun:
+# 	Inherits: LightMachineGun
+# 	# Inherits: ^RedTracers
+# 	ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
+# 	Report: machine_gun_pgi.ogg
+# 	ReloadDelay: 20 # 40 # 20
+# 	Range: 6c0
+# 	Burst: 4 # 8 # 4
+# 	BurstDelays: 2
+# 	Projectile: InstantHitWithTracers
+# 		Blockable: false
+# 	Warhead@Damage: SpreadDamage
+# 		ValidTargets: Water, Air, Ground, Tree, Lava, Swamp
+# 		Spread: 24
+# 		# Inaccuracy: 1c256
+# 		Damage: 300
+# 		Versus:
+# 			None: 300
+# 			Steel: 25
+# 			Light: 55
+# 			Heavy: 20
+# 			Concrete: 5
 
 DronePulseGun:
 	Inherits: SmallSplash
