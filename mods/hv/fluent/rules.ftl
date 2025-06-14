@@ -207,7 +207,7 @@ actor-observer =
    .name = Observer
    .description = Reconnaissance air unit.
       Unarmed
-   .encyclopedia = An orb shaped helicopter with good maneuverability. It's not suited for combat, but for reconnaissance missions.
+   .encyclopedia = An orb shaped helicopter with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      {actor-observer.description}
 
@@ -253,7 +253,7 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
-   .encyclopedia = A reconnaissance air unit. It's slower than Synapol's observer, but it grants more visibility range.
+   .encyclopedia = A reconnaissance air unit with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      Unarmed
 
