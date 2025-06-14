@@ -183,11 +183,11 @@ actor-jet2 =
      Availability: Yuruki
 
 actor-copter =
-   .name = Attack Helicopter
+   .name = Assault Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
-   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   .encyclopedia = The assault helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
 
      {actor-copter.description}
 
