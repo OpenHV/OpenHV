@@ -68,11 +68,12 @@ Sounds:
 	DefaultVariant: .ogg
 	Notifications:
 		ClickSound: klinkp75
-			AllowInterrupt: true
+			InterruptType: Interrupt
 		ClickDisabledSound: klinkp90
+			InterruptType: Overlap
 		Beacon: placebeacon
-			AllowInterrupt: true
+			InterruptType: Interrupt
 		RadarDown: radaroff
 		RadarUp: radaron
 		ChatLine: radiobeep
-			AllowInterrupt: true
+			InterruptType: Interrupt
