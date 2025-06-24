@@ -251,7 +251,8 @@ TECHNICIAN:
 		RequiresCondition: !jammed
 	Voiced:
 		VoiceSet: TechnicianVoice
-	-Guard:
+	Guard:
+		Voice: Action
 	Health:
 		HP: 12500
 	Mobile:
