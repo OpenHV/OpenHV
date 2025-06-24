@@ -615,8 +615,12 @@ DUALMERCTANK:
 	Inherits: MERCTANK
 	Buildable:
 		BuildPaletteOrder: 90
-		Description: actor-dualmerctank-description
-	-Encyclopedia:
+		Description: actor-dualmerctank.description
+	Tooltip:
+		Name: actor-dualmerctank.name
+		GenericName: actor-dualmerctank.generic-name
+	Encyclopedia:
+		Description: actor-dualmerctank.encyclopedia
 	Selectable:
 		Class: dualmerctank
 	Armament:

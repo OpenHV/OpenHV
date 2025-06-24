@@ -989,9 +989,17 @@ actor-merctank =
 
      Availability: Non-trainable
 
-actor-dualmerctank-description = Double barreled tank.
+actor-dualmerctank =
+   .name = Dual Mercenary Tank
+   .generic-name = Tank
+   .description = Double barreled tank.
       Strong vs Vehicles
       Weak vs Pods
+   .encyclopedia = Another variant of mercenary tank that can be only obtained through the drop zone buildings. Like the single barrelled variant its canon cannot rotate.
+
+     {actor-dualmerctank.description}
+
+     Availability: Non-trainable
 
 actor-ecmtank =
    .name = Countermeasure Tank
