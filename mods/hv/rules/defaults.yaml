@@ -975,9 +975,8 @@
 		VoiceSet: ShipVoice
 	WithFacingSpriteBody:
 	HitShape:
-	RepairableNear:
+	Repairable:
 		RepairActors: harbor, harbor2
-		CloseEnough: 2c0
 	LeavesTrails:
 		Image: watertrail
 		MovingInterval: 4

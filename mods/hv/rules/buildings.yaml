@@ -1824,7 +1824,7 @@ HARBOR:
 		Scale: 2
 		Category: Buildings
 	Building:
-		Footprint: xxx x=x ___
+		Footprint: x+x x+x ___
 		Dimensions: 3,3
 		TerrainTypes: Littoral
 	Targetable:
