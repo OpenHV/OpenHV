@@ -153,7 +153,7 @@ ChromeLayout:
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
 	common|chrome/assetbrowser.yaml
-	common|chrome/missionbrowser.yaml
+	hv|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	hv|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
