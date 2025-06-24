@@ -224,7 +224,7 @@ generator:
 	shadow-overlay:
 		Filename: bits/generator-shadow.png
 		ZOffset: 1768
-		Offset: 12, 11
+		Offset: 11, 11
 	damaged-idle:
 		Filename: bits/generator.png
 		Start: 15
@@ -232,7 +232,7 @@ generator:
 		Filename: bits/generator-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 12, 11
+		Offset: 11, 11
 	make:
 		Filename: build.png
 		Length: 39
@@ -281,7 +281,7 @@ radar:
 	shadow-overlay:
 		Filename: bits/radar-shadow.png
 		ZOffset: 1768
-		Offset: 7, 0
+		Offset: 6, 0
 	damaged-idle:
 		Filename: bits/radar.png
 		Start: 1
@@ -289,7 +289,7 @@ radar:
 		Filename: bits/radar-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 7, 0
+		Offset: 6, 0
 	make:
 		Filename: bits/build.png
 		Length: 39
@@ -397,7 +397,7 @@ module:
 		Filename: bits/module-shadow.png
 		Start: 0
 		ZOffset: 1768
-		Offset: 7, 14
+		Offset: 6, 14
 	damaged-idle:
 		Filename: bits/module.png
 		Start: 9
@@ -405,7 +405,7 @@ module:
 		Filename: bits/module-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 7, 14
+		Offset: 6, 14
 	production-inprogress:
 		Filename: bits/module.png
 		Start: 10
@@ -939,7 +939,7 @@ bunker:
 	shadow-overlay:
 		Filename: bits/bunker-shadow.png
 		ZOffset: -1768
-		Offset: 2, 6
+		Offset: 2, 5
 	damaged-idle:
 		Filename: bits/bunker.png
 		Start: 1
@@ -985,7 +985,7 @@ turret:
 	shadow-overlay:
 		Filename: bits/turret-shadow.png
 		ZOffset: -1768
-		Offset: 5, 3
+		Offset: 4, 3
 	damaged-idle:
 		Filename: bits/turret.png
 		Start: 1
@@ -1233,12 +1233,12 @@ silo:
 	shadow-overlay:
 		Filename: bits/silo-shadow.png
 		ZOffset: 1768
-		Offset: 12,12
+		Offset: 12,11
 	damaged-shadow-overlay:
 		Filename: bits/silo-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 12,12
+		Offset: 12,11
 	make:
 		Filename: bits/build.png
 		Length: 39
@@ -1316,7 +1316,7 @@ howitzer:
 	shadow-overlay:
 		Filename: bits/howitzer-shadow.png
 		ZOffset: -1768
-		Offset: 2, 4
+		Offset: 1, 4
 	damaged-idle:
 		Filename: bits/howitzer.png
 		Start: 1
@@ -2316,6 +2316,6 @@ flagpost:
 	shadow-overlay:
 		Filename: bits/flagpost-shadow.png
 		ZOffset: -1768
-		Offset: 3,14
+		Offset: 3,13
 	icon:
 		Filename: bits/null.png
