@@ -786,7 +786,7 @@ BUILDER:
 		TransformTextNotification: notification-outpost-established
 		TransformSounds: Freqman_fx376.ogg
 		Voice: Deploying
-		Offset: 0,-1
+		Offset: -1,-1
 		Facing: 512
 	Voiced:
 		VoiceSet: BuilderVoice

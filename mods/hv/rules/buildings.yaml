@@ -194,8 +194,8 @@ OUTPOST:
 	Health:
 		HP: 50000
 	Building:
-		Footprint: = x
-		Dimensions: 1,2
+		Footprint: === =x=
+		Dimensions: 3,2
 	HitShape:
 		Type: Circle
 			Radius: 512
