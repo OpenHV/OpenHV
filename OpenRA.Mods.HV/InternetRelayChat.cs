@@ -384,6 +384,7 @@ namespace OpenRA.Mods.HV
 			client.RfcQuit(QuitMessage);
 
 			AddNotification($"Disconnecting from {client.Address}...");
+			client.Disconnect();
 		}
 	}
 }
