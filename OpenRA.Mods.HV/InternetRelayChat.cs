@@ -75,7 +75,8 @@ namespace OpenRA.Mods.HV
 		public readonly string QuitMessage = "Battle control terminated!";
 		public readonly string TimeStampFormat = "HH:mm";
 
-		readonly IrcClient client = new();
+		IrcClient client;
+		string nickname;
 		volatile Channel channel;
 
 		public readonly ObservableSortedDictionary<string, ChatUser> Users = new(StringComparer.InvariantCultureIgnoreCase);
@@ -87,15 +88,20 @@ namespace OpenRA.Mods.HV
 		volatile ChatConnectionStatus connectionStatus = ChatConnectionStatus.Disconnected;
 		public ChatConnectionStatus ConnectionStatus { get { return connectionStatus; } }
 
-		string nickname;
-
 		public InternetRelayChat()
 		{
-			client.Encoding = System.Text.Encoding.UTF8;
-			client.EnableUTF8Recode = true;
+			Log.AddChannel("irc", "irc.log");
+		}
 
-			client.SendDelay = 100;
-			client.ActiveChannelSyncing = true;
+		void Initialize()
+		{
+			client = new()
+			{
+				Encoding = System.Text.Encoding.UTF8,
+				EnableUTF8Recode = true,
+				SendDelay = 100,
+				ActiveChannelSyncing = true
+			};
 
 			client.OnConnecting += OnConnecting;
 			client.OnConnected += OnConnected;
@@ -104,7 +110,6 @@ namespace OpenRA.Mods.HV
 			client.OnError += OnError;
 			client.OnKick += OnKick;
 
-			Log.AddChannel("irc", "irc.log");
 			client.OnRawMessage += (_, e) => Game.RunAfterTick(() => Log.Write("irc", e.Data.RawMessage));
 			client.OnJoin += OnJoin;
 			client.OnChannelActiveSynced += OnChannelActiveSynced;
@@ -142,6 +147,8 @@ namespace OpenRA.Mods.HV
 
 		public void Connect(string nickname)
 		{
+			Initialize();
+
 			if (client.IsConnected || !IsValidNickname(nickname))
 				return;
 
