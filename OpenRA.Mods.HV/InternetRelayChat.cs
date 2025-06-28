@@ -280,6 +280,7 @@ namespace OpenRA.Mods.HV
 			AddNotification($"{channel.Users.Count} users online");
 			connectionStatus = ChatConnectionStatus.Joined;
 
+			Users.Clear();
 			foreach (var user in channel.Users.Values)
 				Game.RunAfterTick(() =>
 					Users.Add(user.Nick, new ChatUser(user.Nick, user.IsOp, user.IsVoice)));
