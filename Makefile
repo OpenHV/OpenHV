@@ -234,16 +234,20 @@ check-maps: all
 ifneq ("$(MAP_FOLDERS)","")
 	@echo "Checking Resource Center...";
 	@status=0; \
-	for MAP in $(MAP_FOLDERS); do \
-		if ! grep -q "Categories: Conquest" $${MAP}/map.yaml; then \
+	for MAP_FOLDER in $(MAP_FOLDERS); do \
+		if ! grep -q "Categories: Conquest" $${MAP_FOLDER}/map.yaml; then \
 			continue; \
 		fi; \
-		HASH=$$(./utility.sh --map-hash ../$${MAP}); \
+		HASH=$$(./utility.sh --map-hash ../$${MAP_FOLDER}); \
 		HTTP_CODE=$$(curl -s -o /dev/null -I -w "%{http_code}" "https://resource.openra.net/map/$$HASH"); \
 		if [ "$$HTTP_CODE" = "404" ]; then \
+			MAP=$$(basename "$$MAP_FOLDER"); \
 			echo "$$MAP is missing!"; \
 			status=1; \
-			(cd "$${MAP}" && zip -rq "upload.oramap" .); \
+			pushd $$MAP_FOLDER; \
+				7z a -tzip "$${MAP}.oramap" .; \
+				mv $${MAP}.oramap ..; \
+			popd; \
 		fi; \
 	done; \
 	exit $$status
