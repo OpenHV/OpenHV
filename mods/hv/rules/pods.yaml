@@ -352,7 +352,7 @@ JETPACKER:
 		HP: 9000
 	Aircraft:
 		TurnSpeed: 50
-		CruiseAltitude: 1c0
+		CruiseAltitude: 2000
 		Speed: 100
 		IdealSeparation: 1c0
 	UpdatesPlayerStatistics:
@@ -400,7 +400,7 @@ JETPACKER2:
 		HP: 7200
 	Aircraft:
 		TurnSpeed: 60
-		CruiseAltitude: 1c0
+		CruiseAltitude: 2001
 		Speed: 180
 		IdealSeparation: 1c0
 	UpdatesPlayerStatistics:
