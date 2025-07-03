@@ -105,7 +105,7 @@ JET:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2559
 		InitialFacing: 768
 		TurnSpeed: 40
 		Speed: 220
@@ -177,7 +177,7 @@ JET2:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2558
 		InitialFacing: 768
 		TurnSpeed: 20
 		Speed: 155
@@ -241,6 +241,7 @@ COPTER:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 115
+		CruiseAltitude: 2561
 	Voiced:
 		VoiceSet: AttackHelicopterVoice
 	Turreted:
@@ -292,6 +293,7 @@ SAUCER:
 		TurnSpeed: 16
 		Speed: 80
 		CanForceLand: false
+		CruiseAltitude: 2557
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: SaucerVoice
@@ -335,6 +337,7 @@ OBSERVER:
 		TurnSpeed: 50
 		Speed: 80
 		CanForceLand: false
+		CruiseAltitude: 2554
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: ObserverVoice
@@ -380,6 +383,7 @@ BANSHEE:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 112
+		CruiseAltitude: 2556
 	Voiced:
 		VoiceSet: BansheeVoice
 	AttackFrontal:
@@ -438,6 +442,7 @@ TURTLE:
 	Aircraft:
 		TurnSpeed: 40
 		Speed: 100
+		CruiseAltitude: 2553
 	Voiced:
 		VoiceSet: TurtleVoice
 	Turreted:
@@ -494,6 +499,7 @@ CHOPPER:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 135
+		CruiseAltitude: 2551
 		AltitudeVelocity: 0c58
 		LandAltitude: 0c0
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
@@ -590,6 +596,7 @@ BALLOON:
 	Aircraft:
 		Speed: 70
 		CanForceLand: false
+		CruiseAltitude: 2555
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: BalloonVoice
@@ -641,6 +648,7 @@ DROPSHIP:
 		Speed: 135
 		LandAltitude: 0c0
 		AltitudeVelocity: 0c58
+		CruiseAltitude: 2552
 		InitialFacing: 512
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
@@ -736,6 +744,7 @@ DRONE:
 		VTOL: true
 		Repulsable: false
 		LandAltitude: 0c0
+		CruiseAltitude: 2570
 	AttackAircraft:
 		FacingTolerance: 92
 		Voice: Attack
@@ -777,6 +786,7 @@ DRONE2:
 		VTOL: true
 		Repulsable: false
 		LandAltitude: 0c0
+		CruiseAltitude: 2571
 	AttackAircraft:
 		FacingTolerance: 256
 		Voice: Attack
@@ -873,6 +883,7 @@ BOMBER:
 		Speed: 450
 		Repulsable: false
 		Voice: Move
+		CruiseAltitude: 2550
 	RejectsOrders:
 	AttackBomber:
 		FacingTolerance: 512
@@ -891,7 +902,7 @@ CARGOSHIP:
 		Speed: 150
 		VTOL: True
 		MaximumPitch: 36
-		CruiseAltitude: 2560
+		CruiseAltitude: 2564
 		TurnToLand: False
 	Tooltip:
 		Name: actor-cargoship-name
@@ -911,7 +922,7 @@ AIRLIFTER:
 		Speed: 200
 		VTOL: True
 		MaximumPitch: 36
-		CruiseAltitude: 2560
+		CruiseAltitude: 2565
 		TurnToLand: False
 	Tooltip:
 		Name: actor-airlifter-name
@@ -954,7 +965,7 @@ MOTHERSHIP:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 100
-		CruiseAltitude: 3c0
+		CruiseAltitude: 2525
 		AltitudeVelocity: 0c56
 		InitialFacing: 512
 	HitShape:
@@ -1087,7 +1098,7 @@ BATTLESHIP:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 100
-		CruiseAltitude: 3c0
+		CruiseAltitude: 2525
 		AltitudeVelocity: 0c56
 		InitialFacing: 512
 	HitShape:
