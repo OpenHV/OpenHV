@@ -90,13 +90,6 @@ DropPodImpact:
 		Image: smoke
 		ImpactSounds: impact_sangnamsa.ogg
 
-DropPodExplode:
-	ValidTargets: Ground, Air, Water, Lava, Swamp
-	Warhead@Effect: CreateEffect
-		Explosions: medium
-		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion02.ogg, explosion03.ogg
-
 MortarExplode:
 	ValidTargets: Ground, Air, Water, Lava, Swamp
 	Warhead@Damage: SpreadDamage

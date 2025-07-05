@@ -801,20 +801,16 @@ DROPPOD2:
 
 LANDEDPOD:
 	Inherits: ^Prop
-	FireWarheadsOnDeath:
-		Weapon: DropPodExplode
-		EmptyWeapon: DropPodExplode
+	-FireWarheadsOnDeath:
 	ChangesHealth:
-		Step: -250
+		Step: -5000
 		StartIfBelow: 101
-		Delay: 6
+		Delay: 30
 	Health:
 		HP: 10000
 	Tooltip:
 		Name: actor-landedpod-name
 	HitShape:
-	Armor:
-		Type: Heavy
 	-ShakeOnDeath:
 	-FireProjectilesOnDeath:
 	-MapEditorData:
