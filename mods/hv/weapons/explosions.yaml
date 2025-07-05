@@ -180,4 +180,6 @@ SuperUnitExplode:
 		Explosions: large_2
 		ImpactSounds: big_explosion_jobro.ogg
 	Warhead@Damage: SpreadDamage
-		Damage: 10000
+		Damage: 100000
+	Warhead@Incendiary: TreeDamage
+		Damage: 100000
