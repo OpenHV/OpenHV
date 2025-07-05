@@ -91,12 +91,12 @@ MissileTankRocket:
 	Range: 6c0
 	MinRange: 0
 	Warhead@Damage: SpreadDamage
-		Damage: 6000
+		Damage: 2750
 		Versus:
 			None: 8
 			Steel: 75
 			Light: 75
-			Heavy: 75
+			Heavy: 79
 			Concrete: 75
 	Warhead@Incendiary: TreeDamage
 		Damage: 6000
@@ -138,12 +138,35 @@ RapidPodRocket:
 	ReloadDelay: 23
 	Range: 8c0
 
+PodDrunkMissiles:
+	Inherits: LightPodRocket
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
+	ReloadDelay: 50
+	Range: 6c0
+	Burst: 8
+	BurstDelays: 2
+	Projectile: Bullet
+		Inaccuracy: 2c0
+		Speed: 300
+		CloseEnough: 300
+		TrailInterval: 3
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		Spread: 24
+		Damage: 2000
+		Versus:
+			None: 75
+			Light: 15
+			Heavy: 25
+			Steel: 5
+			Concrete: 3
+
 ShipMissile:
 	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 25
-	Range: 8c0
+	Range: 9c0
 	MinRange: 1c0
 	Projectile: Missile
 		Speed: 256
@@ -156,8 +179,8 @@ ShipMissile:
 		Versus:
 			None: 45
 			Steel: 90
-			Light: 45
-			Heavy: 45
+			Light: 135
+			Heavy: 135
 			Concrete: 90
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -166,17 +189,17 @@ ShipMissile:
 BoatMissileAntiGround:
 	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	Report: boatgun_johandeecke.ogg
+	Report: lasercannon_newlocknew.ogg
 	ReloadDelay: 58
 	Range: 6c0
 	Projectile: Bullet
-		Image: bullet6
+		Image: bullet8
 		Speed: 1000
 		Blockable: false
 		Inaccuracy: 0c256
 		ContrailLength: 4
 		ContrailStartWidth: 0c32
-		ContrailStartColor: F29100
+		ContrailStartColor: FFFFFF
 	Warhead@Damage: SpreadDamage
 		Spread: 126
 		Damage: 1000
@@ -246,10 +269,10 @@ StealthTankMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 7250
 		Versus:
-			None: 10
+			None: 100
 			Steel: 100
 			Light: 100
-			Heavy: 100
+			Heavy: 105
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Damage: 7250
@@ -403,17 +426,17 @@ DiscThrower:
 		Blockable: false
 		Image: bullet20
 		Shadow: true
-		HorizontalRateOfTurn: 20
+		HorizontalRateOfTurn: 60
+		AllowSnapping: true
 		RangeLimit: -1
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		Spread: 512
+		Spread: 288
 		Damage: 8000
 		ValidTargets: Air
 		Versus:
-			Steel: 74
-			Light: 34
-			Heavy: 100
+			Light: 35
+			Heavy: 35
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.ogg

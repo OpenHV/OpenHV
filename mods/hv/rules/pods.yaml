@@ -6,7 +6,7 @@ RIFLEMAN:
 	Buildable:
 		Queue: Pod
 		Description: actor-rifleman.description
-		Prerequisites: ~module
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-rifleman.encyclopedia
@@ -86,8 +86,8 @@ MORTAR:
 	Buildable:
 		Queue: Pod
 		Description: actor-mortar.description
-		Prerequisites: ~module.sc, factory
-		BuildPaletteOrder: 50
+		Prerequisites: ~module.sc
+		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-mortar.encyclopedia
 		Order: 35
@@ -127,24 +127,21 @@ SNIPER:
 	Buildable:
 		Queue: Pod
 		Description: actor-sniper.description
-		Prerequisites: ~module.yi, radar
-		BuildPaletteOrder: 50
+		Prerequisites: ~module.yi
+		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-sniper.encyclopedia
 		Order: 30
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
 		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
-	Mobile:
-		Speed: 70
-		Locomotor: pod
+		HP: 13500
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 5c0
@@ -166,12 +163,16 @@ SNIPER:
 	Cloak:
 		InitialDelay: 250
 		CloakDelay: 120
-		CloakSound:
-		UncloakSound:
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
 		UncloakOn: Attack, Unload, Move
+		PauseOnCondition: cloak-force-disabled || jammed
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 
 FLAMER:
 	Inherits: ^Pod
@@ -179,7 +180,7 @@ FLAMER:
 	Buildable:
 		Queue: Pod
 		Description: actor-flamer.description
-		Prerequisites: ~module.sc, factory
+		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 40
 	Encyclopedia:
 		Description: actor-flamer.encyclopedia
@@ -193,9 +194,7 @@ FLAMER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
-	Mobile:
-		Speed: 70
+		HP: 20000
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -338,7 +337,7 @@ JETPACKER:
 	Buildable:
 		Queue: Pod
 		Description: actor-jetpacker.description
-		Prerequisites: ~module, techcenter
+		Prerequisites: ~module.sc, techcenter
 		BuildPaletteOrder: 60
 	Encyclopedia:
 		Description: actor-jetpacker.encyclopedia
@@ -353,13 +352,13 @@ JETPACKER:
 		HP: 9000
 	Aircraft:
 		TurnSpeed: 50
-		CruiseAltitude: 1c0
+		CruiseAltitude: 2000
 		Speed: 100
 		IdealSeparation: 1c0
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Armament:
-		Weapon: HeavyMachineGun
+		Weapon: PodDrunkMissiles
 		MuzzleSequence: muzzle
 		LocalOffset: 0,-300,0,   0,300,0
 	AttackFrontal:
@@ -369,6 +368,50 @@ JETPACKER:
 	WithMoveAnimation:
 	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Voiced:
+		VoiceSet: JetpackerVoice
+
+#TODO: Change its name!
+JETPACKER2:
+	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-jetpacker.description
+		Prerequisites: ~module.yi, techcenter
+		BuildPaletteOrder: 60
+	Encyclopedia:
+		Description: actor-jetpacker.encyclopedia
+		Order: 40
+		Category: Pods
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: actor-jetpacker.name
+	Health:
+		HP: 7200
+	Aircraft:
+		TurnSpeed: 60
+		CruiseAltitude: 2001
+		Speed: 180
+		IdealSeparation: 1c0
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: HeavyMortarGun
+	AttackFrontal:
+		FacingTolerance: 10
+		Voice: Attack
+	WithMuzzleOverlay:
+	WithMoveAnimation:
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
