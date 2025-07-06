@@ -801,11 +801,21 @@ DROPPOD2:
 
 LANDEDPOD:
 	Inherits: ^Prop
-	FireWarheadsOnDeath:
-		Weapon: DropPodExplode
-		EmptyWeapon: DropPodExplode
+	FloatingSpriteEmitter:
+		Offset: 0,450,0
+		Palette: effect
+		Image: smoke
+		Sequences: idle
+		Lifetime: 8
+		Speed: 10
+		Gravity: 40
+		SpawnFrequency: 4, 8
+		RandomFacing: true
+		RandomRate: 4
+		TurnRate: 3
+		Duration: -1
 	ChangesHealth:
-		Step: -250
+		Step: -500
 		StartIfBelow: 101
 		Delay: 6
 	Health:
@@ -815,10 +825,14 @@ LANDEDPOD:
 	HitShape:
 	Armor:
 		Type: Heavy
+	WithDeathAnimation:
+		DeathSequencePalette: green
+		FallbackSequence: die
 	-ShakeOnDeath:
 	-FireProjectilesOnDeath:
 	-MapEditorData:
 	-WithIdleOverlay@Shadow:
+	-FireWarheadsOnDeath:
 
 BOMBER:
 	Inherits: ^SpawnedPlane
