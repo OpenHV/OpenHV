@@ -199,6 +199,11 @@ landedpod:
 		Filename: bits/droppod.png
 		Start: 5
 		Offset: 0,2
+	die:
+		Filename: bits/droppod-fadeout.png
+		Length: 6
+		Tick: 60
+		Offset: -1,5
 
 bomber:
 	idle:
