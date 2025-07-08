@@ -258,8 +258,6 @@ namespace OpenRA.Mods.HV
 
 		void OnDisconnected(object sender, EventArgs e)
 		{
-			Game.RunAfterTick(Users.Clear);
-
 			// Keep the chat window open if there is an error
 			// It will be cleared by the Disconnect button
 			if (connectionStatus != ChatConnectionStatus.Error)
@@ -310,7 +308,6 @@ namespace OpenRA.Mods.HV
 			AddNotification($"{channel.Users.Count} users online");
 			connectionStatus = ChatConnectionStatus.Joined;
 
-			Users.Clear();
 			foreach (var user in channel.Users.Values)
 				Game.RunAfterTick(() =>
 					Users.Add(user.Nick, new ChatUser(user.Nick, user.IsOp, user.IsVoice)));
@@ -438,6 +435,7 @@ namespace OpenRA.Mods.HV
 
 			AddNotification($"Disconnecting from {client.Address}...");
 			client.Disconnect();
+			Dispose();
 		}
 
 		void Unsubsribe()
@@ -464,6 +462,12 @@ namespace OpenRA.Mods.HV
 			client.OnDevoice -= OnDevoice;
 			client.OnPart -= OnPart;
 			client.OnQuit -= OnQuit;
+		}
+
+		public void Dispose()
+		{
+			Users.Clear();
+			Unsubsribe();
 		}
 	}
 }
