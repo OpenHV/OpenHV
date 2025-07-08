@@ -110,21 +110,41 @@ namespace OpenRA.Mods.HV
 			client.OnError += OnError;
 			client.OnKick += OnKick;
 
-			client.OnRawMessage += (_, e) => Game.RunAfterTick(() => Log.Write("irc", e.Data.RawMessage));
+			client.OnRawMessage += OnRawMessage;
 			client.OnJoin += OnJoin;
 			client.OnChannelActiveSynced += OnChannelActiveSynced;
-			client.OnTopic += (_, e) => topic = e.Topic;
-			client.OnTopicChange += (_, e) => topic = e.NewTopic;
+			client.OnTopic += OnTopic;
+			client.OnTopicChange += OnTopicChange;
 			client.OnNickChange += OnNickChange;
 
-			client.OnChannelMessage += (_, e) => AddMessage(e.Data.Nick, e.Data.Message, e.Data.RawMessageArray[1]);
-			client.OnChannelNotice += (_, e) => AddNotification(e.Data.Message);
-			client.OnOp += (_, e) => SetUserOp(e.Whom, true);
-			client.OnDeop += (_, e) => SetUserOp(e.Whom, false);
-			client.OnVoice += (_, e) => SetUserVoiced(e.Whom, true);
-			client.OnDevoice += (_, e) => SetUserVoiced(e.Whom, false);
+			client.OnChannelMessage += OnChannelMessage;
+			client.OnChannelNotice += OnChannelNotice;
+			client.OnOp += OnOp;
+			client.OnDeop += OnDeop;
+			client.OnVoice += OnVoice;
+			client.OnDevoice += OnDevoice;
 			client.OnPart += OnPart;
 			client.OnQuit += OnQuit;
+		}
+
+		void OnChannelMessage(object sender, IrcEventArgs e)
+		{
+			AddMessage(e.Data.Nick, e.Data.Message, e.Data.RawMessageArray[1]);
+		}
+
+		void OnChannelNotice(object sender, IrcEventArgs e)
+		{
+			AddNotification(e.Data.Message);
+		}
+
+		void OnOp(object sender, OpEventArgs e)
+		{
+			SetUserOp(e.Whom, true);
+		}
+
+		void OnDeop(object sender, DeopEventArgs e)
+		{
+			SetUserOp(e.Whom, false);
 		}
 
 		void SetUserOp(string whom, bool isOp)
@@ -134,6 +154,16 @@ namespace OpenRA.Mods.HV
 				if (Users.TryGetValue(whom, out var user))
 					user.IsOp = isOp;
 			});
+		}
+
+		void OnVoice(object sender, VoiceEventArgs e)
+		{
+			SetUserVoiced(e.Whom, true);
+		}
+
+		void OnDevoice(object sender, DevoiceEventArgs e)
+		{
+			SetUserVoiced(e.Whom, false);
 		}
 
 		void SetUserVoiced(string whom, bool isVoiced)
@@ -288,6 +318,16 @@ namespace OpenRA.Mods.HV
 			client.WriteLine($"history {channel.Name} 24h");
 		}
 
+		void OnTopic(object sender, TopicEventArgs e)
+		{
+			topic = e.Topic;
+		}
+
+		void OnTopicChange(object sender, TopicChangeEventArgs e)
+		{
+			topic = e.NewTopic;
+		}
+
 		void OnNickChange(object sender, NickChangeEventArgs e)
 		{
 			AddNotification($"{e.OldNickname} is now known as {e.NewNickname}.");
@@ -300,6 +340,11 @@ namespace OpenRA.Mods.HV
 				Users.Remove(e.OldNickname);
 				Users.Add(e.NewNickname, new ChatUser(e.NewNickname, user.IsOp, user.IsVoiced));
 			});
+		}
+
+		void OnRawMessage(object sender, IrcEventArgs e)
+		{
+			Game.RunAfterTick(() => Log.Write("irc", e.Data.RawMessage));
 		}
 
 		void OnQuit(object sender, QuitEventArgs e)
@@ -393,6 +438,32 @@ namespace OpenRA.Mods.HV
 
 			AddNotification($"Disconnecting from {client.Address}...");
 			client.Disconnect();
+		}
+
+		void Unsubsribe()
+		{
+			client.OnConnecting -= OnConnecting;
+			client.OnConnected -= OnConnected;
+			client.OnDisconnecting -= OnDisconnecting;
+			client.OnDisconnected -= OnDisconnected;
+			client.OnError -= OnError;
+			client.OnKick -= OnKick;
+
+			client.OnRawMessage -= OnRawMessage;
+			client.OnJoin -= OnJoin;
+			client.OnChannelActiveSynced -= OnChannelActiveSynced;
+			client.OnTopic -= OnTopic;
+			client.OnTopicChange -= OnTopicChange;
+			client.OnNickChange -= OnNickChange;
+
+			client.OnChannelMessage -= OnChannelMessage;
+			client.OnChannelNotice -= OnChannelNotice;
+			client.OnOp -= OnOp;
+			client.OnDeop -= OnDeop;
+			client.OnVoice -= OnVoice;
+			client.OnDevoice -= OnDevoice;
+			client.OnPart -= OnPart;
+			client.OnQuit -= OnQuit;
 		}
 	}
 }
