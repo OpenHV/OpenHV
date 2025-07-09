@@ -440,6 +440,9 @@ namespace OpenRA.Mods.HV
 
 		void Unsubsribe()
 		{
+			if (client == null)
+				return;
+
 			client.OnConnecting -= OnConnecting;
 			client.OnConnected -= OnConnected;
 			client.OnDisconnecting -= OnDisconnecting;
