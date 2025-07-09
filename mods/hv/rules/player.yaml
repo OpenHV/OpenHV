@@ -71,6 +71,7 @@ Player:
 		SpeedUp: false
 		BuildTimeSpeedReduction: 100
 		BuildDurationModifier: 70
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		DisplayOrder: 1
@@ -85,6 +86,7 @@ Player:
 		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Pod:
 		Type: Pod
 		DisplayOrder: 2
@@ -99,6 +101,7 @@ Player:
 		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Utility:
 		Type: Utility
 		DisplayOrder: 5
@@ -113,6 +116,7 @@ Player:
 		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Tank:
 		Type: Tank
 		DisplayOrder: 3
@@ -127,6 +131,7 @@ Player:
 		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Trade:
 		Type: Trade
 		DisplayOrder: 4
@@ -139,6 +144,7 @@ Player:
 		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
 		CancelledTextNotification: notification-cancelled
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Aircraft:
 		Type: Aircraft
 		DisplayOrder: 4
@@ -153,6 +159,7 @@ Player:
 		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
+		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Naval:
 		Type: Ship
 		DisplayOrder: 5
@@ -167,7 +174,7 @@ Player:
 		CancelledTextNotification: notification-cancelled
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 75, 50, 25
-
+		InfiniteBuildLimit: 10
 	PlayerRadarTerrain:
 	TeleportNetworkManager:
 		Type: subspace

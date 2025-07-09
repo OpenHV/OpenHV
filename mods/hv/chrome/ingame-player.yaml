@@ -496,7 +496,7 @@ Container@PLAYER_WIDGETS:
 					ReadyText: productionpalette-sidebar-production-palette.ready
 					HoldText: productionpalette-sidebar-production-palette.hold
 					OverlayFont: TinyPixel
-					SymbolsFont: TinyPixel
+					SymbolsFont: Regular
 					IconSize: 63, 47
 					IconMargin: 1, 4
 					MinimumRows: 5
