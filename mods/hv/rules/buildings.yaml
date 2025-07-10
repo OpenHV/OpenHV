@@ -1606,7 +1606,7 @@ UPLINK:
 		SelectTargetSpeechNotification: SelectTarget
 		SelectTargetTextNotification: notification-select-target
 		IncomingSpeechNotification: OrbitalRailgunFired
-		AirburstAltitude: 40c0
+		AirburstAltitude: 400c0
 		CircleRanges: 3c0, 2c0, 1c0
 		CircleColor: 0000FF
 		CircleWidth: 2
