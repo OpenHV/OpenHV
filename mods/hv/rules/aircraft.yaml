@@ -22,7 +22,7 @@ GUNSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 5c0
@@ -84,7 +84,7 @@ JET:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 24000
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 5c0
@@ -144,7 +144,7 @@ JET2:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	RevealsShroud:
 		Range: 11c0
 		MinRange: 5c0
@@ -226,7 +226,7 @@ COPTER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 6c0
@@ -272,7 +272,7 @@ SAUCER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 12000
 	RevealsShroud:
 		Range: 18c0
 		MinRange: 9c0
@@ -315,7 +315,7 @@ OBSERVER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 12000
 	RevealsShroud:
 		Range: 20c0
 		MinRange: 10c0
@@ -361,7 +361,7 @@ BANSHEE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 18000
+		HP: 27000
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 6c0
@@ -407,7 +407,7 @@ TURTLE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 25000
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 5c0
@@ -460,7 +460,7 @@ CHOPPER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 49500
+		HP: 74250
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -550,7 +550,7 @@ BALLOON:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 7200
+		HP: 10800
 	RevealsShroud:
 		Range: 18c0
 		MinRange: 9c0
@@ -598,7 +598,7 @@ DROPSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40500
+		HP: 60750
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -674,7 +674,7 @@ DRONE:
 	Tooltip:
 		Name: actor-drone-name
 	Health:
-		HP: 5000
+		HP: 7500
 	Armament:
 		Weapon: DroneBlaster
 	WithAttackAnimation:
@@ -694,7 +694,7 @@ DRONE2:
 	Tooltip:
 		Name: actor-drone2.name
 	Health:
-		HP: 7500
+		HP: 11250
 	Armament:
 		Weapon: DronePulseGun
 		MuzzleSequence: muzzle
@@ -742,7 +742,7 @@ LANDEDPOD:
 		StartIfBelow: 101
 		Delay: 6
 	Health:
-		HP: 10000
+		HP: 15000
 	Tooltip:
 		Name: actor-landedpod-name
 	HitShape:
@@ -859,7 +859,7 @@ MOTHERSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 250000
+		HP: 375000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -992,7 +992,7 @@ BATTLESHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 250000
+		HP: 375000
 	Armor:
 		Type: Heavy
 	RevealsShroud:

@@ -22,7 +22,7 @@ LIGHTBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Light
 	Mobile:
@@ -71,7 +71,7 @@ PATROLBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Light
 	Mobile:
@@ -124,7 +124,7 @@ MERCBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -171,7 +171,7 @@ TORPEDOBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -215,7 +215,7 @@ SUBMARINE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -259,7 +259,7 @@ RAILGUNBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -304,7 +304,7 @@ LIGHTNINGBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -350,7 +350,7 @@ BOOMER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -388,7 +388,7 @@ SLCM:
 	Tooltip:
 		Name: actor-slcm-name
 	Health:
-		HP: 5000
+		HP: 7500
 	Armor:
 		Type: Light
 	BallisticMissile:
@@ -428,7 +428,7 @@ CARRIER:
 	Tooltip:
 		Name: actor-carrier.name
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -486,7 +486,7 @@ FERRY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 49500
+		HP: 74250
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -521,7 +521,7 @@ FERRY2:
 	Encyclopedia:
 		Description: actor-ferry2.encyclopedia
 	Health:
-		HP: 60500
+		HP: 90750
 	Mobile:
 		Speed: 72
 		TurnSpeed: 45
@@ -548,7 +548,7 @@ MINESHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 21000
+		HP: 31500
 	Armor:
 		Type: Light
 	Mobile:
