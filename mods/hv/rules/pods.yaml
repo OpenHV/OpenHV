@@ -151,7 +151,7 @@ SNIPER:
 	Mobile:
 		Speed: 70
 	Health:
-		HP: 13500
+		HP: 20250
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 5c0
@@ -204,7 +204,7 @@ FLAMER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 30000
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -263,7 +263,7 @@ TECHNICIAN:
 	Guard:
 		Voice: Action
 	Health:
-		HP: 12500
+		HP: 18750
 	Mobile:
 		Speed: 70
 	AutoTarget:
@@ -311,7 +311,7 @@ BROKER:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	Health:
-		HP: 17500
+		HP: 26250
 	Voiced:
 		VoiceSet: BrokerVoice
 	GrantConditionOnAttack:
@@ -358,7 +358,7 @@ JETPACKER:
 	Tooltip:
 		Name: actor-jetpacker.name
 	Health:
-		HP: 9000
+		HP: 13500
 	Aircraft:
 		TurnSpeed: 50
 		CruiseAltitude: 1c0
@@ -406,7 +406,7 @@ JETFOILER:
 	Tooltip:
 		Name: actor-jetfoiler.name
 	Health:
-		HP: 7200
+		HP: 10800
 	Aircraft:
 		TurnSpeed: 60
 		CruiseAltitude: 1c0
@@ -451,7 +451,7 @@ BLASTER:
 	Tooltip:
 		Name: actor-blaster.name
 	Health:
-		HP: 10000
+		HP: 15000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
