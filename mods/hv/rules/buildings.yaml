@@ -641,11 +641,8 @@ MINER2:
 		Palette: green
 		IsPlayerPalette: true
 		RequiresCondition: !build-incomplete && !critical
-	Transforms:
-		PauseOnCondition: build-incomplete || being-captured
-		IntoActor: miner
-		Offset: 0,2
-		Facing: 750
+	CaptureManager:
+		-BeingCapturedCondition: being-captured
 
 STARPORT:
 	Inherits: ^BaseBuilding
