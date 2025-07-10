@@ -20,7 +20,7 @@ BASE:
 			TopLeft: -1024, -2048
 			BottomRight: 1024, 1024
 	Health:
-		HP: 250000
+		HP: 375000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -252,7 +252,7 @@ OUTPOST:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 50000
+		HP: 75000
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
@@ -308,7 +308,7 @@ GENERATOR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 40000
+		HP: 60000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -355,7 +355,7 @@ RADAR:
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -458,7 +458,7 @@ TRADER:
 	Selectable:
 		Bounds: 2048, 2048
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -555,7 +555,7 @@ MODULE:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -660,7 +660,7 @@ MINER2:
 	Valued:
 		Cost: 1000
 	Health:
-		HP: 45000
+		HP: 67500
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		InitialDelay: 100
@@ -730,7 +730,7 @@ STARPORT:
 		Footprint: xx xx xx
 		Dimensions: 2,3
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -820,7 +820,7 @@ FACTORY:
 	HitShape:
 		TargetableOffsets: 0,0,0, -512,-512,0, -512,512,0, -1536,-512,0, -1536,512,0
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1074,7 +1074,7 @@ TECHCENTER:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,512,0
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1121,7 +1121,7 @@ ORESMELT:
 			TopLeft: -512, -512
 			BottomRight: 512, 1024
 	Health:
-		HP: 40000
+		HP: 60000
 	Power:
 		Amount: -80
 	Building:
@@ -1170,7 +1170,7 @@ BUNKER:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 40000
+		HP: 60000
 	Turreted:
 		TurnSpeed: 512
 	Building:
@@ -1226,7 +1226,7 @@ TURRET:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 55000
+		HP: 82500
 	Armament:
 		Weapon: TurretCannon
 		LocalOffset: 1200,50,0
@@ -1261,7 +1261,7 @@ TURRET2:
 	Tooltip:
 		Name: actor-turret2.name
 	Health:
-		HP: 55000
+		HP: 82500
 	Armament:
 		Weapon: Turret2Cannon
 		LocalOffset: 800,0,300
@@ -1300,7 +1300,7 @@ AATURRET:
 	Tooltip:
 		Name: actor-aaturret.name
 	Health:
-		HP: 55000
+		HP: 82500
 	Armor:
 		Type: Steel
 	Armament:
@@ -1352,7 +1352,7 @@ AATURRET2:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 55000
+		HP: 82500
 	Armament:
 		Weapon: TowerMissile
 		LocalOffset: 256,375,760, 256,-375,760
@@ -1400,7 +1400,7 @@ HOWITZER:
 		UseTargetableCellsOffsets: False
 		TargetableOffsets: -256,-256,0,   256,-256,0,   -256,256,0,   256,256,0
 	Health:
-		HP: 100000
+		HP: 150000
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -1473,7 +1473,7 @@ FIELD:
 	Selectable:
 		Bounds: 2048, 2048
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1550,7 +1550,7 @@ SILO:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,1024,0
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1632,7 +1632,7 @@ UPLINK:
 			TopLeft: -1048, 512
 			BottomRight: 1048, 1524
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1703,7 +1703,7 @@ STORAGE:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1788,7 +1788,7 @@ TELEVATOR:
 		Footprint: ++
 		Dimensions: 2,1
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -1894,7 +1894,7 @@ HARBOR:
 	Targetable:
 		TargetTypes: Ground, Structure, WaterBuilding
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -2020,7 +2020,7 @@ BARRIER:
 	Targetable:
 		TargetTypes: Ground, Wall, NoAutoTarget
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Concrete
 	BlocksProjectiles:
@@ -2494,7 +2494,7 @@ RECONSTRUCTOR:
 	Targetable:
 		TargetTypes: Ground, Structure
 	Health:
-		HP: 100000
+		HP: 150000
 	Armor:
 		Type: Steel
 	RevealsShroud:
@@ -2756,7 +2756,7 @@ DROPZONE:
 		Amount: -40
 		RequiresCondition: !ownerless
 	Health:
-		HP: 80000
+		HP: 120000
 	WithIdleAnimation:
 		Interval: 80
 		RequiresCondition: !disabled && !ownerless && !burning
@@ -2810,7 +2810,7 @@ FLAGPOST:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 50000
+		HP: 75000
 	Building:
 		Footprint: = x
 		Dimensions: 1,2
