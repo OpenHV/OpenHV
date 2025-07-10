@@ -177,7 +177,8 @@ namespace OpenRA.Mods.HV
 
 		public void Connect(string nickname)
 		{
-			Initialize();
+			if (client == null)
+				Initialize();
 
 			if (client.IsConnected || !IsValidNickname(nickname))
 				return;
@@ -471,6 +472,7 @@ namespace OpenRA.Mods.HV
 		{
 			Users.Clear();
 			Unsubsribe();
+			client = null;
 		}
 	}
 }

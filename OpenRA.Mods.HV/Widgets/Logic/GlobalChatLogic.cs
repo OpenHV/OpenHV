@@ -162,8 +162,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			historyPanel.Unbind();
 			nicknamePanel.Unbind();
 
-			internetRelayChat.Dispose();
-
 			disposed = true;
 		}
 	}
