@@ -332,8 +332,8 @@ RailgunVisualStage2:
 	Projectile: GravityBomb
 		Image: railgun
 		Sequences: idle
-		Velocity: 0,0,-60 # needs to be synced with RailgunStrike
-		Acceleration: 0,0,-45 # needs to be synced with RailgunStrike
+		Velocity: 0,0,-30 # needs to be synced with RailgunStrike
+		Acceleration: 0,0,-23 # needs to be synced with RailgunStrike
 	Warhead@Effect: CreateEffect
 		Explosions: railgun
 		ImpactSounds: explosion06.ogg
@@ -341,8 +341,8 @@ RailgunVisualStage2:
 
 RailgunStrike:
 	Projectile: GravityBomb
-		Velocity: 0,0,-60 # needs to be synced with RailgunVisualStage2
-		Acceleration: 0,0,-45 # needs to be synced with RailgunVisualStage2
+		Velocity: 0,0,-30 # needs to be synced with RailgunVisualStage2
+		Acceleration: 0,0,-23 # needs to be synced with RailgunVisualStage2
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Report: raygun_newlocknew.ogg
 	Warhead@DamageImpact: SpreadDamage
