@@ -23,20 +23,33 @@ faction-yuruki =
     Their colonial defense forces helped pave the way for
     an aggressive expansion throughout the solar system.
 
-    Faction Variations:
-        - Uses fighter jets as air units
+    Strategy:
+        - Focuses on stealth and specialized combat units
+        - Transport and aerial scout units are faster but
+          less resistant
 
-    Special Units:
-        - Shocker Pod
-        - Blaster Pod
-        - Sniper Pod
-        - Gatling Bike
-        - Hacker Tank
-        - Lightning Tank
-        - Stealth Tank
-        - Battleship
+    Specific Units:
+        - Sniper Pod (anti-pod)
+        - Shocker Pod (anti-vehicle and anti-air)
+        - Bomber Pod (anti-building)
+        - Jetpacker2 Pod (anti-vehicle)
+        - Assault Tank (anti-vehicle and anti-building)
+        - Mobile AA Tank (anti-air)
+        - Gatling Bike (anti-pod)
+        - Countermeasure Tank (specialist)
+        - Stealth Tank (anti-ground)
+        - Gun Ship (anti-ground and anti-air)
+        - Speeder (anti-air)
+        - Athmospheric Bomber (anti-ground)
+        - Patrol Boat (anti-ground and anti-air)
+        - Submarine (anti-navy)
+        - Lightning Boat (anti-ground)
+        - Missile Submarine (anti-ground)
 
-    Superweapon:
+    Superunit:
+        - Battleship (anti-ground)
+
+    Superweapons:
         - Air Strike
         - Field Generator
         - Orbital Railgun Strike
@@ -48,21 +61,33 @@ faction-synapol =
     everything from common household appliances to armaments.
     Their security department became a large paramilitary force.
 
-    Faction Variations:
-        - Uses helicopters as air units
-        - Uses submarines as advanced naval units
+    Strategy:
+        - Focuses on brute force and flexible combat units
+        - Transport and aerial scout units are slower but
+          more resistant
 
-    Special Units:
-        - Rocketeer Pod
-        - Flamer Pod
-        - Mortar Pod
-        - Ramp Buggy
-        - Countermeasure Tank
-        - Railgun Tank
-        - Missile Tank
-        - Mothership
+    Specific Units:
+        - Mortar Pod (anti-ground)
+        - Rocketeer Pod (anti-vehicle and anti-air)
+        - Flamer Pod (anti-ground)
+        - Jetpacker Pod (anti-pod)
+        - Missile Tank (anti-ground and anti-air)
+        - Artillery Tank (anti-ground)
+        - Ramp Buggy (anti-pod)
+        - Hacker Tank (specialist)
+        - Railgun Tank (anti-ground)
+        - Assault Helicopter (anti-ground and anti-air)
+        - Turtle (anti-air)
+        - Banshee (anti-ground)
+        - Light Boat (anti-ground and anti-air)
+        - Torpedo Boat (anti-navy)
+        - Laser Boat (anti-ground)
+        - Drone Ship (anti-ground)
 
-    Superweapon:
+    Superunit:
+        - Mothership (anti-ground and anti-air)
+
+    Superweapons:
         - Drop Pods
         - Grand Howitzer
         - Thermonuclear Bomb
