@@ -598,7 +598,7 @@ MINER2:
 	Valued:
 		Cost: 1000
 	Health:
-		HP: 45000
+		HP: 67500
 	ProvidesPrerequisite@BuildingName:
 	ResourceCollector:
 		InitialDelay: 100
@@ -1108,7 +1108,7 @@ BUNKER:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 40000
+		HP: 60000
 	Turreted:
 		TurnSpeed: 512
 	Building:
@@ -1164,7 +1164,7 @@ TURRET:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 55000
+		HP: 82500
 	Armament:
 		Weapon: TurretCannon
 		LocalOffset: 1200,50,0
@@ -1199,7 +1199,7 @@ TURRET2:
 	Tooltip:
 		Name: actor-turret2.name
 	Health:
-		HP: 55000
+		HP: 82500
 	Armament:
 		Weapon: Turret2Cannon
 		LocalOffset: 800,0,300
@@ -1238,7 +1238,7 @@ AATURRET:
 	Tooltip:
 		Name: actor-aaturret.name
 	Health:
-		HP: 55000
+		HP: 82500
 	Armor:
 		Type: Steel
 	Armament:
@@ -1290,7 +1290,7 @@ AATURRET2:
 		Scale: 2
 		Category: Buildings
 	Health:
-		HP: 55000
+		HP: 82500
 	Armament:
 		Weapon: TowerMissile
 		LocalOffset: 256,375,760, 256,-375,760
