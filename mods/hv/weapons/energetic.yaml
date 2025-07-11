@@ -17,7 +17,7 @@ Railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Versus:
 			None: 200
 			Steel: 75
@@ -26,12 +26,32 @@ Railgun:
 			Wood: 10
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Percentage: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
+
+PodRailgun:
+	Inherits: Railgun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 6c0
+	Burst: 2
+	BurstDelays: 0
+	Projectile: LaserZap
+		Width: 0c50
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Spread: 24
+		Damage: 600
+		Versus:
+			None: 200
+			Steel: 20
+			Light: 100
+			Heavy: 100
+			Concrete: 5
 
 ElectronicCountermeasure:
 	ReloadDelay: 20
@@ -132,7 +152,7 @@ Plasma:
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
-	Range: 8c0
+	Range: 9c0
 	MinRange: 1c0
 	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
@@ -140,17 +160,18 @@ Plasma:
 		Blockable: false
 		Inaccuracy: 0
 		Image: bullet8
+		RangeLimit: -1
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		Damage: 1750
+		Damage: 800
 		Versus:
 			None: 43
 			Steel: 85
-			Light: 43
-			Heavy: 43
+			Light: 129
+			Heavy: 129
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -161,7 +182,7 @@ Plasma:
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Range: 8c0
 	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
@@ -177,7 +198,7 @@ VoltageArc:
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Versus:
 			None: 200
 			Steel: 75
@@ -188,7 +209,7 @@ VoltageArc:
 		DamageTypes: Electricity
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Percentage: 10
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
@@ -332,8 +353,8 @@ RailgunVisualStage2:
 	Projectile: GravityBomb
 		Image: railgun
 		Sequences: idle
-		Velocity: 0,0,-60 # needs to be synced with RailgunStrike
-		Acceleration: 0,0,-45 # needs to be synced with RailgunStrike
+		Velocity: 0,0,-30 # needs to be synced with RailgunStrike
+		Acceleration: 0,0,-23 # needs to be synced with RailgunStrike
 	Warhead@Effect: CreateEffect
 		Explosions: railgun
 		ImpactSounds: explosion06.ogg
@@ -341,25 +362,25 @@ RailgunVisualStage2:
 
 RailgunStrike:
 	Projectile: GravityBomb
-		Velocity: 0,0,-60 # needs to be synced with RailgunVisualStage2
-		Acceleration: 0,0,-45 # needs to be synced with RailgunVisualStage2
+		Velocity: 0,0,-30 # needs to be synced with RailgunVisualStage2
+		Acceleration: 0,0,-23 # needs to be synced with RailgunVisualStage2
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Report: raygun_newlocknew.ogg
 	Warhead@DamageImpact: SpreadDamage
-		Spread: 1c0
-		Damage: 10000
+		Spread: 2c0
+		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 		DamageTypes: Fire
 		AffectsParent: true
 	Warhead@IncendiaryImpact: TreeDamage
-		Spread: 1c0
-		Damage: 10000
+		Spread: 2c0
+		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		AffectsParent: true
 	Warhead@DamageArea: SpreadDamage
-		Spread: 1c0
-		Damage: 25000
+		Spread: 2c0
+		Damage: 5000
 		Falloff: 100, 50, 25, 0
 		Delay: 3
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
@@ -367,8 +388,8 @@ RailgunStrike:
 		AffectsParent: true
 	Warhead@IncendiaryArea: TreeDamage
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-		Spread: 1c0
-		Damage: 25000
+		Spread: 2c0
+		Damage: 5000
 		Falloff: 100, 50, 25, 0
 		AffectsParent: true
 	Warhead@Visual: FireRadius
@@ -547,7 +568,7 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 500
+		Amount: 250
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 
@@ -558,17 +579,21 @@ PlasmaMachineGun:
 	ReloadDelay: 3
 	BurstDelays: 1
 	Report: plasma_machine_gun.ogg
-	Projectile: Bullet
-		Speed: 1000
+	Projectile: Missile
+		Speed: 750
+		Blockable: false
+		Jammable: False
+		Inaccuracy: 0
 		Image: bullet21
-		Inaccuracy: 0c512
+		RangeLimit: -1
+		AllowSnapping: true
+		HorizontalRateOfTurn: 300
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Air
 		Spread: 256
-		Damage: 2500
+		Damage: 725
 		Versus:
-			Steel: 50
 			Light: 50
 			Heavy: 50
 	Warhead@GroundEffect: CreateEffect
