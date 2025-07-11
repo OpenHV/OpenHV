@@ -19,22 +19,43 @@ faction-yuruki =
     Their colonial defense forces helped pave the way for
     an aggressive expansion throughout the solar system.
 
-    Faction Variations:
-        - Uses fighter jets as air units
+    Strategy:
+        - Focuses on stealth and specialized combat units
+        - Transport and aerial scout units are faster but
+          less resistant
 
-    Special Units:
-        - Shocker Pod
-        - Blaster Pod
-        - Sniper Pod
-        - Gatling Bike
-        - Hacker Tank
-        - Lightning Tank
-        - Stealth Tank
-        - Battleship
+    Specific Combat Units:
 
-    Superweapon:
+        Pods:
+        - Sniper (cloaked anti-pod)
+        - Shocker (anti-vehicle, anti-building and anti-air)
+        - Bomber (suicidal anti-ground)
+        - Jetfoiler (floating anti-vehicle)
+
+        Vehicles:
+        - Lightning Tank (anti-vehicle and anti-building)
+        - Mobile AA Tank (anti-air)
+        - Gatling Bike (anti-pod)
+        - Countermeasure Tank (specialist)
+        - Stealth Tank (cloaked anti-ground)
+
+        Aircraft:
+        - Gun Ship (anti-ground and anti-air)
+        - Speeder (anti-air)
+        - Athmospheric Bomber (cloaked anti-ground)
+
+        Navy:
+        - Patrol Boat (anti-ground and anti-air)
+        - Submarine (underwater anti-water)
+        - Lightning Boat (anti-ground)
+        - Missile Submarine (underwater anti-ground)
+
+    Superunit:
+        - Battleship (anti-ground)
+
+    Superweapons:
         - Air Strike
-        - Field Generator
+        - Force Field Generator
         - Orbital Railgun Strike
 
 faction-synapol =
@@ -44,21 +65,41 @@ faction-synapol =
     everything from common household appliances to armaments.
     Their security department became a large paramilitary force.
 
-    Faction Variations:
-        - Uses helicopters as air units
-        - Uses submarines as advanced naval units
+    Strategy:
+        - Focuses on brute force and flexible combat units
+        - Transport and aerial scout units are slower but
+          more resistant
 
-    Special Units:
-        - Rocketeer Pod
-        - Flamer Pod
-        - Mortar Pod
-        - Ramp Buggy
-        - Countermeasure Tank
-        - Railgun Tank
-        - Missile Tank
-        - Mothership
+    Specific Combat Units:
 
-    Superweapon:
+        Pods:
+        - Mortar Pod (anti-ground)
+        - Rocketeer Pod (anti-vehicle, anti-building and anti-air)
+        - Flamer Pod (anti-ground)
+        - Jetpacker Pod (floating anti-pod)
+
+        Vehicles:
+        - Missile Tank (anti-vehicle, anti-building and anti-air)
+        - Artillery Tank (anti-ground)
+        - Ramp Buggy (anti-pod)
+        - Hacker Tank (specialist)
+        - Railgun Tank (anti-ground)
+
+        Aircraft:
+        - Assault Helicopter (anti-ground and anti-air)
+        - Turtle (anti-air)
+        - Banshee (anti-ground)
+
+        Navy:
+        - Light Boat (anti-ground and anti-air)
+        - Mercenary Boat (anti-ground)
+        - Laser Boat (anti-ground)
+        - Drone Ship (anti-ground)
+
+    Superunit:
+        - Mothership (anti-ground and anti-air)
+
+    Superweapons:
         - Drop Pods
         - Grand Howitzer
         - Thermonuclear Bomb
@@ -781,16 +822,16 @@ actor-jetpacker =
 
      Availability: Synapol
 
-actor-jetpacker2 =
+actor-jetfoiler =
    .description = Elite airborne vehicle.
     Armed with scatter gun.
       Strong vs Vehicles, Navy
       Weak vs Pods and Buildings
       Can't attack Aircraft
-   .name = Jetpacker2
+   .name = Jetfoiler
    .encyclopedia = The ultimate Yuruki pod: the jetpacker. It was designed for quick maneuverability and hit-and-run tactics to weaken Synapol's vehicle and navy forces. The fact that it's an airborne pod makes it less vulnerable to other pods.
 
-     {actor-jetpacker2.description}
+     {actor-jetfoiler.description}
 
      Availability: Yuruki
 
@@ -905,7 +946,7 @@ actor-submarine =
    .generic-name = Submarine
    .description = Submarine with powerful torpedoes.
       Strong vs Water
-      Can't attack Pods, Buildings, Vehicles or Air
+      Can't attack Pods, Buildings, Vehicles or Aircraft
    .encyclopedia = The submarine is a stealth ship, capable of going underwater. It has a torpedo launcher onboard than can take down a large ship in a few strike. It's slower than Yuruki's torpedo boat though.
 
      {actor-submarine.description}
@@ -942,7 +983,9 @@ actor-boomer =
    .name = Missile Submarine
    .generic-name = Submarine
    .description = A submarine with powerful long range missiles.
+   It excels destroying buildings.
       Strong vs Vehicles, Pods and Buildings
+      Can't attack Aircraft
    .encyclopedia = This heavy submarine is capable of launching ballistic missiles to a high range. As a submarine, it has the capability of going underwater.
 
      {actor-boomer.description}
@@ -953,7 +996,9 @@ actor-slcm-name = Submarine-launched cruise missile
 
 actor-carrier =
    .description = Launches aerial autonomous attack vessels.
+   It excels destroying buildings.
       Strong vs Vehicles, Pods and Buildings
+      Can't attack Aircraft
    .name = Drone Ship
    .encyclopedia = This heavy ship has a drone launch bay, containing three aerial autonomous drones, that can attack any target at a certain range. When a drone is shot down, it's reproduced. The drones have to reload themselves in the launch bay.
 
@@ -1002,8 +1047,9 @@ actor-mineship =
 actor-mbt =
    .name = Assault Tank
    .description = Main Battle Tank.
-      Strong vs Vehicles
+      Strong vs Vehicles and Buildings
       Weak vs Pods
+      Can't attack Aircraft
    .encyclopedia = Assault tanks are a great solution to deal against any other tank. Their turreted canon allow them to move at a decent speed, while still shooting down enemies. They also are decent against buildings, in groups.
 
      {actor-mbt.description}
@@ -1052,6 +1098,7 @@ actor-artillery =
    .description = Mobile long range weapon.
       Strong vs Pods and Buildings
       Weak vs Tanks
+      Can't attack Aircraft
    .encyclopedia = Armed with a long range artillery canon, this mobile artillery vehicle is extremely powerful against pods and buildings, while still being decently strong against other units. It was designed to power down enemies defenses while other units were assaulting a base.
 
      {actor-artillery.description}
@@ -1097,6 +1144,7 @@ actor-railguntank =
    .generic-name = Tank
    .description = A powerful tank which shoots laser.
       Strong vs Pods, Vehicles and Buildings
+      Can't attack Aircraft
    .encyclopedia = The railgun tank is the ultimate tank, able of handling every type of unit. It's armed with a powerful laser canon, and has a heavy armor.
 
      {actor-railguntank.description}
@@ -1105,7 +1153,9 @@ actor-railguntank =
 
 actor-lightningtank =
    .description = Fires electric discharges.
-      Strong vs Pods, Vehicles and Buildings
+      Strong Vehicles and Buildings
+      Weak vs Pods
+      Can't attack Aircraft
    .name = Lightning Tank
    .generic-name = Tank
    .encyclopedia = The lightning tank is the ultimate tank, able of handling every type of unit. It's armed with a powerful laser zap, and has a heavy armor.
@@ -1118,6 +1168,7 @@ actor-stealthtank =
    .description = Cloaked missile tank.
       Strong vs Vehicles and Buildings
       Weak vs Pods
+      Can't attack Aircraft
    .name = Stealth Tank
    .encyclopedia = The stealth tank is a modern tank, able of deploying a cloak on itself. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the lightning tank, it is stronger against buildings.
 
@@ -1131,6 +1182,7 @@ actor-merctank =
    .description = Main battle tank.
       Strong vs Vehicles
       Weak vs Pods
+      Can't attack Aircraft
    .encyclopedia = The mercenary tank is a generic tank, that can be only obtained through the drop zone buildings. Its canon cannot rotate like other battles tanks though.
 
      {actor-merctank.description}
@@ -1143,6 +1195,7 @@ actor-dualmerctank =
    .description = Double barreled tank.
       Strong vs Vehicles
       Weak vs Pods
+      Can't attack Aircraft
    .encyclopedia = Another variant of mercenary tank that can be only obtained through the drop zone buildings. Like the single barrelled variant its canon cannot rotate.
 
      {actor-dualmerctank.description}
@@ -1154,9 +1207,10 @@ actor-ecmtank =
    .generic-name = ECM Tank
    .description = Disables units for a brief moment.
       Jams incoming missiles.
+      Unarmed
    .encyclopedia = The electronic countermeasure (ECM) tank can overload enemy weaponry systems with a controlled beam that disables all electronic system units for a brief moment, disabling them completely. The effect only lasts a few seconds. Its other ability is to deflect incoming enemy missiles.
 
-     Unarmed
+     {actor-ecmtank.description}
 
      Availability: Yuruki
 
@@ -1164,6 +1218,7 @@ actor-dualartillery =
    .name = Dual Artillery
    .description = Double barreled artillery tank.
       Strong vs Pods, Vehicles and Buildings
+      Can't attack Aircraft
    .encyclopedia = This vehicle is an upgrade of the artillery tank. It's twice bigger, has more range, and fires two bombshells at once. Its range is extremely higher, and it's damaging against any type of armor. Due to intellectual property disputes, this design is rarely seen on the battlefield.
 
      {actor-dualartillery.description}
@@ -1178,7 +1233,7 @@ actor-builder =
    .name = Builder
    .encyclopedia = The builder is an important support unit, allowing the deployment of outpost which grants additional build radius, and allow base reconstruction.
 
-     Unarmed
+     {actor-builder.description}
 
      Availability: Universal/Faction design can vary
 
@@ -1190,7 +1245,7 @@ actor-miner =
    .name = Miner
    .encyclopedia = The role of this vehicle is to deploy mining facilities, allowing the production of resources, that are then transformed into cash at the storage building.
 
-     Unarmed
+     {actor-miner.description}
 
      Availability: Universal
 
@@ -1208,12 +1263,13 @@ actor-missiletank =
 
 actor-hackertank =
    .description = Temporarily changes allegiance of targeted units.
-      Disrupts satellite video links
-      and obscures the battlefield when deployed.
+    Disrupts satellite video links
+    and obscures the battlefield when deployed.
+      Unarmed
    .name = Hacker Tank
    .encyclopedia = The hacker tank contains equipment to penetrate firewalls of individual units and interfer with their command and control software so they will accept orders from the enemy and engage in friendly fire. The effective change of allegiance is permanent, until the hacker tank gets destroyed or changes the target. It can only have one controlled unit at a time. Its other ability is to disrupt satellite video links, blocking field detection in the radar.
 
-     Unarmed
+     {actor-ecmtank.description}
 
      Availability: Synapol
 
@@ -1223,6 +1279,7 @@ actor-buggy =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+      Can't attack Aircraft
    .encyclopedia = The ramp buggy is a fast anti-pod vehicle, that has a turret heavy machine gun, capable of destroying a group of pods by itself. It is Synapol's solution to the Yuruki gatling bike: while it is slower, its machine gun is turreted, giving it an advantage.
 
      {actor-buggy.description}
@@ -1235,6 +1292,7 @@ actor-bike =
    .description = Fires a machine gun.
       Strong vs Pods
       Weak vs Tanks, Buildings
+      Can't attack Aircraft
    .encyclopedia = The gatling bike is a fast anti-pod vehicle, that has a powerful heavy machine gun, capable of destroying a group of pods by itself.
 
      {actor-bike.description}
@@ -1268,7 +1326,8 @@ actor-cvit =
 
 actor-mothership =
    .name = Mothership
-   .description = Launches aerial autonomous attack vessels.
+   .description = Launches anti-air aerial autonomous
+    attack vessels and has powerful anti-ground lasers.
       Only one can be built.
       Strong vs Everything
    .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with four powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
