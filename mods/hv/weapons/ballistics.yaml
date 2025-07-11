@@ -123,7 +123,7 @@ TurretCannon:
 	ReloadDelay: 25
 	Range: 8c0
 	Projectile: Bullet
-		Speed: 682
+		Speed: 1750
 		Image: bullet3
 		Shadow: false
 	Warhead@Damage: SpreadDamage
