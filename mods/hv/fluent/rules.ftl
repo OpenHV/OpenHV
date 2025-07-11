@@ -19,22 +19,43 @@ faction-yuruki =
     Their colonial defense forces helped pave the way for
     an aggressive expansion throughout the solar system.
 
-    Faction Variations:
-        - Uses fighter jets as air units
+    Strategy:
+        - Focuses on stealth and specialized combat units
+        - Transport and aerial scout units are faster but
+          less resistant
 
-    Special Units:
-        - Shocker Pod
-        - Blaster Pod
-        - Sniper Pod
-        - Gatling Bike
-        - Hacker Tank
-        - Lightning Tank
-        - Stealth Tank
-        - Battleship
+    Specific Combat Units:
 
-    Superweapon:
+        Pods:
+        - Sniper (cloaked anti-pod)
+        - Shocker (anti-vehicle, anti-building and anti-air)
+        - Bomber (suicidal anti-ground)
+        - Jetfoiler (floating anti-vehicle)
+
+        Vehicles:
+        - Lightning Tank (anti-vehicle and anti-building)
+        - Mobile AA Tank (anti-air)
+        - Gatling Bike (anti-pod)
+        - Countermeasure Tank (specialist)
+        - Stealth Tank (cloaked anti-ground)
+
+        Aircraft:
+        - Gun Ship (anti-ground and anti-air)
+        - Speeder (anti-air)
+        - Athmospheric Bomber (cloaked anti-ground)
+
+        Navy:
+        - Patrol Boat (anti-ground and anti-air)
+        - Submarine (underwater anti-water)
+        - Lightning Boat (anti-ground)
+        - Missile Submarine (underwater anti-ground)
+
+    Superunit:
+        - Battleship (anti-ground)
+
+    Superweapons:
         - Air Strike
-        - Field Generator
+        - Force Field Generator
         - Orbital Railgun Strike
 
 faction-synapol =
@@ -44,21 +65,41 @@ faction-synapol =
     everything from common household appliances to armaments.
     Their security department became a large paramilitary force.
 
-    Faction Variations:
-        - Uses helicopters as air units
-        - Uses submarines as advanced naval units
+    Strategy:
+        - Focuses on brute force and flexible combat units
+        - Transport and aerial scout units are slower but
+          more resistant
 
-    Special Units:
-        - Rocketeer Pod
-        - Flamer Pod
-        - Mortar Pod
-        - Ramp Buggy
-        - Countermeasure Tank
-        - Railgun Tank
-        - Missile Tank
-        - Mothership
+    Specific Combat Units:
 
-    Superweapon:
+        Pods:
+        - Mortar Pod (anti-ground)
+        - Rocketeer Pod (anti-vehicle, anti-building and anti-air)
+        - Flamer Pod (anti-ground)
+        - Jetpacker Pod (floating anti-pod)
+
+        Vehicles:
+        - Missile Tank (anti-vehicle, anti-building and anti-air)
+        - Artillery Tank (anti-ground)
+        - Ramp Buggy (anti-pod)
+        - Hacker Tank (specialist)
+        - Railgun Tank (anti-ground)
+
+        Aircraft:
+        - Assault Helicopter (anti-ground and anti-air)
+        - Turtle (anti-air)
+        - Banshee (anti-ground)
+
+        Navy:
+        - Light Boat (anti-ground and anti-air)
+        - Mercenary Boat (anti-ground)
+        - Laser Boat (anti-ground)
+        - Drone Ship (anti-ground)
+
+    Superunit:
+        - Mothership (anti-ground and anti-air)
+
+    Superweapons:
         - Drop Pods
         - Grand Howitzer
         - Thermonuclear Bomb
@@ -764,16 +805,16 @@ actor-jetpacker =
 
      Availability: Synapol
 
-actor-jetpacker2 =
+actor-jetfoiler =
    .description = Elite airborne vehicle.
     Armed with scatter gun.
       Strong vs Vehicles, Navy
       Weak vs Pods and Buildings
       Can't attack Aircraft
-   .name = Jetpacker2
+   .name = Jetfoiler
    .encyclopedia = The ultimate Yuruki pod: the jetpacker. It was designed for quick maneuverability and hit-and-run tactics to weaken Synapol's vehicle and navy forces. The fact that it's an airborne pod makes it less vulnerable to other pods.
 
-     {actor-jetpacker2.description}
+     {actor-jetfoiler.description}
 
      Availability: Yuruki
 
