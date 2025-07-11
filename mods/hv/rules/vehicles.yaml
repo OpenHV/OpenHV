@@ -25,7 +25,7 @@ MBT:
 		TurnSpeed: 25
 		Speed: 95
 	Health:
-		HP: 46000
+		HP: 69000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -84,7 +84,7 @@ AATANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -147,7 +147,7 @@ APC:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 31500
+		HP: 47250
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -193,7 +193,7 @@ APC2:
 	Buildable:
 		Prerequisites: ~factory.sc, module
 	Health:
-		HP: 38500
+		HP: 57750
 	Mobile:
 		TurnSpeed: 23
 		Speed: 99
@@ -220,7 +220,7 @@ ARTILLERY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -276,7 +276,7 @@ RADARTANK:
 	Selectable:
 		Class: radartank
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Light
 	Mobile:
@@ -358,7 +358,7 @@ REPAIRTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 20000
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -398,7 +398,7 @@ MINELAYER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 21000
+		HP: 31500
 	Armor:
 		Type: Light
 	Mobile:
@@ -465,7 +465,7 @@ RAILGUNTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -501,7 +501,7 @@ LIGHTNINGTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -545,7 +545,7 @@ STEALTHTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 40000
+		HP: 60000
 	Armor:
 		Type: Heavy
 	AttackFrontal:
@@ -611,7 +611,7 @@ MERCTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -643,7 +643,7 @@ DUALMERCTANK:
 		Weapon: DoubleCannon
 		LocalOffset: 500,85,50, 500,-85,50
 	Health:
-		HP: 50000
+		HP: 75000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -684,7 +684,7 @@ ECMTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -722,7 +722,7 @@ DUALARTILLERY:
 		Scale: 3
 		Category: Tanks
 	Health:
-		HP: 35000
+		HP: 52500
 	Armor:
 		Type: Light
 	Mobile:
@@ -775,7 +775,7 @@ BUILDER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 12000
+		HP: 18000
 	Armor:
 		Type: Light
 	Mobile:
@@ -826,7 +826,7 @@ COLLECTOR:
 	Selectable:
 		Class: collector
 	Health:
-		HP: 10000
+		HP: 15000
 	Armor:
 		Type: Light
 	Mobile:
@@ -867,7 +867,7 @@ MINER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -925,7 +925,7 @@ MISSILETANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 61000
+		HP: 91500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -973,7 +973,7 @@ HACKERTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 17500
+		HP: 26250
 	Armor:
 		Type: Light
 	Mobile:
@@ -1045,7 +1045,7 @@ BUGGY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	Armor:
 		Type: Light
 	Mobile:
@@ -1093,7 +1093,7 @@ BIKE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 9500
+		HP: 14250
 	Armor:
 		Type: Light
 	Mobile:
@@ -1122,7 +1122,7 @@ TANKER1:
 	Selectable:
 		Class: tanker
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
@@ -1182,7 +1182,7 @@ CVIT:
 	Selectable:
 		Class: cvit
 	Health:
-		HP: 11000
+		HP: 16500
 	Armor:
 		Type: Light
 	Mobile:
@@ -1233,7 +1233,7 @@ FIRETRUCK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1283,7 +1283,7 @@ WATERTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:

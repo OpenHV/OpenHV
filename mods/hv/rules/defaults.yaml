@@ -190,7 +190,7 @@
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: None
 	Passenger:
