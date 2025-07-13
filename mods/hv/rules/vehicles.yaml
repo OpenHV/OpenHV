@@ -99,6 +99,7 @@ AATANK:
 		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
+		Offset: 0,0,200
 	Armament:
 		Weapon: Patriot
 		Recoil: 125
@@ -126,6 +127,8 @@ AATANK2:
 		LocalOffset: 200,0,200
 	WithTurretAttackAnimation:
 		Sequence: shoot
+	Turreted:
+		Offset: 0,0,150
 
 APC:
 	Inherits: ^TrackedVehicle
