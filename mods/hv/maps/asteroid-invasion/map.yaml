@@ -35,13 +35,13 @@ Players:
 		LockFaction: True
 		Faction: sc
 		LockColor: True
-		Color: 805040
+		Color: FF4000
 		Enemies: Yuruki Industries, Creeps
 	PlayerReference@Yuruki Industries:
 		Name: Yuruki Industries
 		NonCombatant: True
 		Faction: yi
-		Color: 003897
+		Color: 005EFF
 		Enemies: Synapol Corporation, Creeps
 
 Actors:
