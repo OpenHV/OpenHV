@@ -129,7 +129,6 @@ namespace OpenRA.Mods.HV
 
 		static string StripMarkdown(string content)
 		{
-			content = content.Replace("https://github.com/OpenRA/OpenRA/wiki/Changelog-(bleed)/", "");
 			content = Regex.Replace(content, "\\[(.*?)\\][\\[\\(].*?[\\]\\)]", "$1"); // remove links
 			return Regex.Replace(content, @":\w+:", string.Empty); // remove Emojis
 		}
