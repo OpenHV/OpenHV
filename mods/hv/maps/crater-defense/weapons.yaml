@@ -13,7 +13,7 @@ cluster:
 		Image: bullet12
 		Shadow: false
 	Warhead@Cluster: FireCluster
-		Weapon: cluster-projectile
+		Weapon: ClusterProjectile
 		RandomClusterCount: -1
 		Dimensions: 3,3
 		Footprint: xxx xXx xxx
@@ -23,7 +23,7 @@ cluster:
 		ImpactSounds: explosion06.ogg
 		ImpactActors: false
 
-cluster-projectile:
+ClusterProjectile:
 	Inherits: BigSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 25
