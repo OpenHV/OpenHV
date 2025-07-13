@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -10,13 +10,14 @@
 #endregion
 
 using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 using OpenRA.Support;
 
 namespace OpenRA.Mods.HV
@@ -60,9 +61,11 @@ namespace OpenRA.Mods.HV
 					if (File.Exists(cacheFile))
 					{
 						var oldNews = await File.ReadAllTextAsync(cacheFile);
-						oldPublishingDate = JToken.Parse(oldNews)
-							.Where(p => p["published_at"] != null)
-							.Max(d => d["published_at"].Value<DateTime>());
+						using (var jsonDocument = JsonDocument.Parse(oldNews))
+						{
+							oldPublishingDate = jsonDocument.RootElement.EnumerateArray()
+								.Max(d => GetPublishedAt(d));
+						}
 					}
 
 					await File.WriteAllTextAsync(cacheFile, response);
@@ -71,53 +74,65 @@ namespace OpenRA.Mods.HV
 					{
 						var data = File.ReadAllText(cacheFile);
 
-						var json = JToken.Parse(data)
-							.Where(j => j["published_at"] != null)
-							.OrderByDescending(n => n["published_at"].Value<DateTime>())
-							.FirstOrDefault();
-
-						if (json == null)
-							return;
-
-						var tagname = json["tag_name"].Value<string>();
-						var digits = string.Concat(tagname.TakeWhile(c => char.IsDigit(c)));
-						if (!int.TryParse(digits, out var parsedVersion))
-							Log.Write("debug", "Error parsing tag name.");
-
-						var prerelease = json["prerelease"].Value<bool>();
-
-						if (!int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version))
-							Log.Write("debug", "Error parsing version number.");
-
-						var status = ModVersionStatus.Unknown;
-						if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
-							status = ModVersionStatus.Unknown;
-						else if (parsedVersion > version)
-							status = prerelease ? ModVersionStatus.PrereleaseAvailable : ModVersionStatus.Outdated;
-						else if (parsedVersion == version)
-							status = ModVersionStatus.Latest;
-
-						ModVersionStatus = status;
-
-						var publishingDate = json["published_at"].Value<DateTime>();
-						if (publishingDate > oldPublishingDate)
-							NewsAlert = true;
-
-						var body = json["body"].Value<string>();
-						body = StripSpecialCharacters(body);
-						body = StripMarkdown(body);
-						body = body.Replace("* ", "• ");
-
-						var newsItem = new NewsItem
+						using (var jsonDocument = JsonDocument.Parse(data))
 						{
-							Title = prerelease ? $"Pre-Release {tagname}" : $"Release {tagname}",
-							Author = "OpenHV Team",
-							DateTime = publishingDate,
-							Content = body
-						};
+							var jsonElement = jsonDocument.RootElement.EnumerateArray()
+								.OrderByDescending(d => GetPublishedAt(d))
+								.FirstOrDefault();
 
-						NewsItem = newsItem;
-						onParsed();
+							if (jsonElement.ValueKind == JsonValueKind.Undefined)
+								return;
+
+							var tagName = "";
+							if (jsonElement.TryGetProperty("tag_name", out var tagJsonElement) &&
+								tagJsonElement.ValueKind == JsonValueKind.String)
+								tagName = jsonElement.GetProperty("tag_name").GetString();
+
+							var digits = string.Concat(tagName.TakeWhile(c => char.IsDigit(c)));
+							if (!int.TryParse(digits, out var parsedVersion))
+								Log.Write("debug", "Error parsing tag name.");
+
+							var prerelease = false;
+							if (jsonElement.TryGetProperty("prerelease", out var prereleaseJsonElement))
+								prerelease = jsonElement.GetProperty("prerelease").GetBoolean();
+
+							if (!int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version))
+								Log.Write("debug", "Error parsing version number.");
+
+							var status = ModVersionStatus.Unknown;
+							if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
+								status = ModVersionStatus.Unknown;
+							else if (parsedVersion > version)
+								status = prerelease ? ModVersionStatus.PrereleaseAvailable : ModVersionStatus.Outdated;
+							else if (parsedVersion == version)
+								status = ModVersionStatus.Latest;
+
+							ModVersionStatus = status;
+
+							var publishingDate = GetPublishedAt(jsonElement);
+							if (publishingDate > oldPublishingDate)
+								NewsAlert = true;
+
+							var body = string.Empty;
+							if (jsonElement.TryGetProperty("body", out var bodyJsonElement) &&
+								bodyJsonElement.ValueKind == JsonValueKind.String)
+							{
+								body = bodyJsonElement.GetString();
+								body = StripSpecialCharacters(body);
+								body = StripMarkdown(body);
+								body = body.Replace("* ", "• ");
+							}
+
+							NewsItem = new NewsItem
+							{
+								Title = prerelease ? $"Pre-Release {tagName}" : $"Release {tagName}",
+								Author = "OpenHV Team",
+								DateTime = publishingDate,
+								Content = body
+							};
+
+							onParsed();
+						}
 					});
 				}
 				catch (Exception e)
@@ -125,6 +140,15 @@ namespace OpenRA.Mods.HV
 					Log.Write("debug", e);
 				}
 			});
+		}
+
+		static DateTime GetPublishedAt(JsonElement jsonElement)
+		{
+			if (jsonElement.TryGetProperty("published_at", out var publishedAt) &&
+				DateTime.TryParse(publishedAt.GetString(), DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out var date))
+				return date;
+
+			return DateTime.MinValue;
 		}
 
 		static string StripMarkdown(string content)
