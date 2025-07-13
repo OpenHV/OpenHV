@@ -7,15 +7,6 @@ DroneLauncher:
 	Warhead@Damage: TargetDamage
 		ValidTargets: Ground, Water
 
-Drone2Launcher:
-	ReloadDelay: 15
-	Range: 12c0
-	MinRange: 1c0
-	ValidTargets: Air
-	Projectile: InstantHit
-	Warhead@Damage: TargetDamage
-		ValidTargets: Air
-
 MissileLauncher:
 	ReloadDelay: 150
 	Range: 20c0
