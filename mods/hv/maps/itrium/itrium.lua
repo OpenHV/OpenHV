@@ -1,5 +1,5 @@
 --[[
-   Copyright 2023 The OpenHV Developers (see AUTHORS)
+   Copyright 2023-2025 The OpenHV Developers (see AUTHORS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,8 @@
 
 BaseBuildings = { "base", "generator", "miner2", "module" }
 
-Colonists = { rifleman, rocketeer, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon, Miner1, Miner2, Generator1, Generator2, Generator3, Generator4, Storage}
+ColonistsBuildings = { Miner1, Miner2, Generator1, Generator2, Generator3, Generator4, Storage }
+Colonists = { rifleman, rocketeer, Scout3, Scout4, Scout5, Scout6, Scout7, Scout8, Scout9, Ballon }
 
 Reminder = UserInterface.GetFluentMessage("reminder")
 Tick = function()
@@ -64,10 +65,15 @@ WorldLoaded = function()
 	InitObjectives(Human)
 
 	KillColonists = AddPrimaryObjective(Human, "eliminate-all-colonist")
-	Trigger.OnAllKilledOrCaptured(Colonists, function() Human.MarkCompletedObjective(KillColonists) end)
+	Trigger.OnAllKilledOrCaptured(Utils.Concat(Colonists, ColonistsBuildings),
+		function() Human.MarkCompletedObjective(KillColonists) end)
 
 	Bridgehead = AddPrimaryObjective(Human, "build-all-structures")
 	Trigger.OnKilled(Base, function() Human.MarkFailedObjective(Bridgehead) end)
+
+	Trigger.OnAllRemovedFromWorld(ColonistsBuildings, function()
+		Utils.Do(Enemy.GetGroundAttackers(), IdleHunt)
+	end)
 
 	Camera.Position = Base.CenterPosition
 end
