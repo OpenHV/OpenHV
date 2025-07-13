@@ -39,7 +39,7 @@ ClusterProjectile:
 		Damage: 5000
 		Versus:
 			None: 50
-			Steel: 100
+			Steel: 0
 			Light: 150
 			Heavy: 150
 	Warhead@Incendiary: TreeDamage
@@ -52,3 +52,13 @@ ClusterProjectile:
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
+
+TurretCannon:
+	Warhead@Damage: SpreadDamage
+		Versus:
+			Steel: 0
+
+BunkerChaingun:
+	Warhead@Damage: SpreadDamage
+		Versus:
+			Steel: 0
