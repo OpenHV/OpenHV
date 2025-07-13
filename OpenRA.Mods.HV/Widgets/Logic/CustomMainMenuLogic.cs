@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -187,11 +187,11 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			{
 				newsBG.IsVisible = () => Game.Settings.Game.FetchNews && menuType != MenuType.None && menuType != MenuType.StartupPrompts;
 
-				newsPanel = Ui.LoadWidget<ScrollPanelWidget>("NEWS_PANEL", null, new WidgetArgs());
-				newsTemplate = newsPanel.Get("NEWS_ITEM_TEMPLATE");
+				newsPanel = Ui.LoadWidget<ScrollPanelWidget>("GITHUB_NEWS_PANEL", null, new WidgetArgs());
+				newsTemplate = newsPanel.Get("GITHUB_NEWS_ITEM_TEMPLATE");
 				newsPanel.RemoveChild(newsTemplate);
 
-				newsStatus = newsPanel.Get<LabelWidget>("NEWS_STATUS");
+				newsStatus = newsPanel.Get<LabelWidget>("GITHUB_NEWS_STATUS");
 				SetNewsStatus(FluentProvider.GetMessage(LoadingNews));
 			}
 

@@ -229,16 +229,16 @@ Container@MAINMENU:
 							Width: 200
 							Height: 200
 		Background@NEWS_BG:
-			X: (WINDOW_WIDTH - WIDTH) / 2
+			X: 360
 			Y: 35
-			Width: 430
+			Width: 630
 			Height: 55
 			Children:
 				DropDownButton@NEWS_BUTTON:
 					Background: newsbutton
 					X: 15
 					Y: 15
-					Width: 400
+					Width: 600
 					Height: 25
 					Text: dropdownbutton-news-bg-button
 					Font: Bold
@@ -264,3 +264,35 @@ Container@MAINMENU:
 			Logic: LoadLocalPlayerProfileLogic
 			X: 25
 			Y: 25
+
+ScrollPanel@GITHUB_NEWS_PANEL:
+	Width: 600
+	Height: 465
+	TopBottomSpacing: 15
+	ItemSpacing: 5
+	Children:
+		Container@GITHUB_NEWS_ITEM_TEMPLATE:
+			X: 10
+			Width: PARENT_WIDTH - 40
+			Height: 40
+			Children:
+				Label@TITLE:
+					Width: PARENT_WIDTH
+					Height: 15
+					Align: Center
+					Font: Bold
+				Label@AUTHOR_DATETIME:
+					Y: 20
+					Width: PARENT_WIDTH
+					Height: 15
+					Align: Center
+					Font: TinyBold
+				Label@CONTENT:
+					Y: 40
+					Width: PARENT_WIDTH
+		Label@GITHUB_NEWS_STATUS:
+			X: 80
+			Width: PARENT_WIDTH - 80 - 80 - 24
+			Height: PARENT_HEIGHT
+			Align: Center
+			VAlign: Middle
