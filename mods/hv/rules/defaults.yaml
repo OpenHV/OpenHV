@@ -286,6 +286,7 @@
 		InitialFacing: 768
 		Voice: Move
 		TakeOffOnResupply: true
+		LandAltitude: 0c64
 	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle

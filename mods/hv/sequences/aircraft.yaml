@@ -141,6 +141,7 @@ balloon:
 	shadow-overlay:
 		Filename: bits/balloon-shadow.png
 		Offset: 15, -1
+		ZOffset: -64
 	icon:
 		Filename: bits/units-icons.png
 		Start: 22
@@ -174,6 +175,7 @@ saucer:
 	shadow-overlay:
 		Filename: bits/saucer-shadow.png
 		Offset: 15, -1
+		ZOffset: -64
 	icon:
 		Filename: bits/units-icons.png
 		Start: 40
@@ -323,6 +325,7 @@ turtle:
 	shadow-overlay:
 		Filename: bits/turtle-shadow.png
 		Offset: 8, 2
+		ZOffset: -64
 	icon:
 		Filename: units-icons.png
 		Start: 64
@@ -343,6 +346,7 @@ observer:
 		Tick: 50
 		Length: 4
 		Offset: 15, -1
+		ZOffset: -64
 	icon:
 		Filename: bits/units-icons.png
 		Start: 66
