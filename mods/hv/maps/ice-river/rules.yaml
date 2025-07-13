@@ -187,6 +187,14 @@ SNIPER:
 	Buildable:
 		Prerequisites: ~disabled
 
+BLASTER:
+	Buildable:
+		Prerequisites: ~disabled
+
+BROKER:
+	Buildable:
+		Prerequisites: ~disabled
+
 JETPACKER:
 	Buildable:
 		Prerequisites: ~disabled
