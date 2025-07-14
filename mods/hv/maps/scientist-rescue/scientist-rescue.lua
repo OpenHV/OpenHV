@@ -1,5 +1,5 @@
 --[[
-   Copyright 2024 The OpenHV Developers (see AUTHORS)
+   Copyright 2024-2025 The OpenHV Developers (see AUTHORS)
    This file is part of OpenHV, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
@@ -24,20 +24,16 @@ SummonPatrolTroops = function()
 	TroopSecond = Reinforcements.Reinforce(Enemy, PatrolTroop, PatrolPoints)
 	TroopThird = Reinforcements.Reinforce(Enemy, PatrolTroop, PatrolPoints)
 
-	Utils.Do(TroopFirst, function(a)
-		if not a.IsDead then
-			a.Patrol(PatrolPoints, true, 180)
-		end
-	end)
-	Utils.Do(TroopSecond, function(a)
-		if not a.IsDead then
-			a.Patrol(PatrolPoints, true, 180)
-		end
-	end)
-	Utils.Do(TroopThird, function(a)
-		if not a.IsDead then
-			a.Patrol(PatrolPoints, true, 180)
-		end
+	Utils.Do({ TroopFirst, TroopSecond, TroopThird }, function(Troop)
+		Utils.Do(Troop, function(trooper)
+			if not trooper.IsDead then
+				trooper.Patrol(PatrolPoints, true, 180)
+				Trigger.OnDamaged(trooper, function()
+					trooper.Stop()
+					IdleHunt(trooper)
+				end)
+			end
+		end)
 	end)
 end
 
@@ -55,7 +51,6 @@ RunInitialActivities = function()
 	SendInsertionNavalTransport()
 
 	Utils.Do(OpeningAttack, IdleHunt)
-
 end
 
 LabGuardsKilled = function()
@@ -64,7 +59,6 @@ LabGuardsKilled = function()
 	Human.MarkCompletedObjective(KillGuardsObjective)
 
 	Trigger.AfterDelay(DateTime.Seconds(2), SendExtractionDropship)
-
 end
 
 SendExtractionDropship = function()
