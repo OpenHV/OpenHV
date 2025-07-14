@@ -1,23 +1,23 @@
 CurrentWave = 1
 Breaches = 10
 
-Machine = { "rifleman", "rifleman", "rifleman" }
+Rifle = { "rifleman", "rifleman", "rifleman" }
 Rocket = { "rocketeer", "rocketeer" }
 Tank = { "mbt" }
 
 Waves =
 {
-	{ delay = DateTime.Seconds(20), units = { Machine, Machine, Machine, Machine } },
-	{ delay = DateTime.Seconds(20), units = { Rocket, Rocket, Rocket, Machine, Machine, Machine, Machine, Machine } },
-	{ delay = DateTime.Seconds(22), units = { Rocket, Rocket, Rocket, Rocket, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine } },
-	{ delay = DateTime.Seconds(24), units = { Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine } },
-	{ delay = DateTime.Seconds(26), units = { Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Rocket,Rocket, Rocket, Rocket, Rocket } },
-	{ delay = DateTime.Seconds(26), units = { Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine, Machine, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Machine,Machine,Tank, Machine,Machine, Machine, Machine, Machine , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Rocket,Rocket, Rocket, Rocket, Rocket, Tank } },
-	{ delay = DateTime.Seconds(28), units = { Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Rocket,Rocket, Rocket, Rocket, Rocket } },
-	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Rocket,Rocket, Rocket, Rocket, Rocket , Tank, Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Rocket,Rocket, Rocket, Rocket, Rocket } },
+	{ delay = DateTime.Seconds(20), units = { Rifle, Rifle, Rifle, Rifle } },
+	{ delay = DateTime.Seconds(20), units = { Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle } },
+	{ delay = DateTime.Seconds(22), units = { Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle } },
+	{ delay = DateTime.Seconds(24), units = { Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle } },
+	{ delay = DateTime.Seconds(26), units = { Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket } },
+	{ delay = DateTime.Seconds(26), units = { Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Tank, Rifle, Rifle, Rifle, Rifle, Rifle , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Tank } },
+	{ delay = DateTime.Seconds(28), units = { Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket } },
+	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Tank, Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle , Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket } },
 	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank } },
-	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Machine, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine , Rocket, Rocket, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Tank, Tank, Rocket,Rocket, Rocket, Tank, Tank,Rocket, Rocket , Tank, Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Machine, Tank, Tank,Machine, Machine, Machine,Machine,Machine,Machine, Machine, Machine, Machine , Tank, Tank,Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Rocket,Rocket,Tank, Tank,Rocket, Rocket, Rocket, Rocket, Tank, Tank, Tank, Tank } },
-	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank , Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank , Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank , Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank } },
+	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rocket, Rocket, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket,Tank, Tank, Rocket, Rocket, Rocket, Tank, Tank,Rocket, Rocket , Tank, Tank, Tank, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rifle, Tank, Tank,Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Rifle, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Rocket, Tank, Tank, Rocket, Rocket, Rocket, Rocket, Tank, Tank, Tank, Tank } },
+	{ delay = DateTime.Seconds(32), units = { Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank , Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank , Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank, Tank } },
 }
 
 LastWave = false
