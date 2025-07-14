@@ -733,6 +733,7 @@ DRONE:
 		AltitudeVelocity: 240
 		VTOL: true
 		Repulsable: false
+		LandAltitude: 0c0
 	AttackAircraft:
 		FacingTolerance: 92
 		Voice: Attack
@@ -773,6 +774,7 @@ DRONE2:
 		AltitudeVelocity: 240
 		VTOL: true
 		Repulsable: false
+		LandAltitude: 0c0
 	AttackAircraft:
 		FacingTolerance: 256
 		Voice: Attack
