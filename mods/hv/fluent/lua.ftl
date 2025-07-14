@@ -89,3 +89,7 @@ alternative-break-in = Alternatively break into the headquarters.
 com-quarters-revealed = Communication quarters localized.
 reminder-low-percentage = Low online percentage! Capture the enemy radar dome!
 capture-radar-reminder = Capture the enemy radar dome!
+
+## magma-breach-claim
+##
+towers-deposits = { $towers } / { $deposits } resource towers

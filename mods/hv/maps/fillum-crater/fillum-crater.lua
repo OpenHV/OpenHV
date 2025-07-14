@@ -15,9 +15,6 @@ YurukiReinforcements = { "submarine", "carrier", "lightningboat", "lightboat", "
 Warning = UserInterface.GetFluentMessage("warning")
 
 Tick = function()
-    local towers = Human.GetActorsByType("miner2")
-    local communications = Enemy.GetActorsByType("comlink")
-
     if DateTime.GameTime % DateTime.Seconds(1) == 0 and not Human.IsObjectiveCompleted(BuildStorageObjective) and CheckForBase(Human, { "storage" }) then
 		Human.MarkCompletedObjective(BuildStorageObjective)
 	end
@@ -49,14 +46,17 @@ Tick = function()
         YurukiReinforcement = Reinforcements.Reinforce(Human, YurukiReinforcements, { SpawningWaypoint4.Location, DestinationWaypoint4.Location })
     end
 
-    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == 18 then -- if the player has built every mining tower
+	local towers = Human.GetActorsByType("miner2")
+	local towerDeposits = UserInterface.GetFluentMessage("towers-deposits", { ["towers"] = #towers, ["deposits"] = Resource.TotalResourceCells })
+	UserInterface.SetMissionText("\n\n\n" .. towerDeposits)
+    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == Resource.TotalResourceCells then -- if the player has built every mining tower
         Human.MarkCompletedObjective(ResourcesClaimedObjective)
     end
 
+	local communications = Enemy.GetActorsByType("comlink")
     if not Human.IsObjectiveCompleted(DestroyCommunicationsObjective) and #communications == 0 then -- if the player has destroyed every synpapol comlinks
         Human.MarkCompletedObjective(DestroyCommunicationsObjective)
     end
-
 end
 
 WorldLoaded = function()

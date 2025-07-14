@@ -12,8 +12,6 @@ ReinforcementUnits = { "rifleman", "rifleman", "rifleman", "rocketeer", "rockete
 Warning = UserInterface.GetFluentMessage("warning")
 
 Tick = function()
-    local towers = Human.GetActorsByType("miner2")
-
 	if Enemy.HasNoRequiredUnits() then
 		Human.MarkCompletedObjective(EnemyEliminatedObjective)
 	end
@@ -34,7 +32,10 @@ Tick = function()
         Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
     end
 
-    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == 17 then -- if the player has built every mining tower
+ 	local towers = Human.GetActorsByType("miner2")
+	local towerDeposits = UserInterface.GetFluentMessage("towers-deposits", { ["towers"] = #towers, ["deposits"] = Resource.TotalResourceCells })
+	UserInterface.SetMissionText("\n\n\n" .. towerDeposits)
+    if not Human.IsObjectiveCompleted(ResourcesClaimedObjective) and #towers == Resource.TotalResourceCells then -- if the player has built every mining tower
         Human.MarkCompletedObjective(ResourcesClaimedObjective)
     end
 end
