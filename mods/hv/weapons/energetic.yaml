@@ -41,14 +41,16 @@ ElectronicCountermeasure:
 	InvalidTargets: DisabledVehicle
 	Projectile: Missile
 		Image: bullet4
-		Speed: 150
+		Speed: 175
+		CloseEnough: 175
 		Blockable: False
 		HorizontalRateOfTurn: 100
 		Acceleration: 96
+		CruiseAltitude: 0c0
 		AllowSnapping: true
-		CloseEnough: 150
-		RangeLimit: 21c0
 		Jammable: False
+		Arm: 0
+		RangeLimit: -1
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 90
@@ -129,6 +131,7 @@ RepairTorch:
 		ValidTargets: Ground, Vehicle
 
 Plasma:
+	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
@@ -137,9 +140,10 @@ Plasma:
 	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
 		Speed: 350
-		Blockable: false
-		Inaccuracy: 0
+		CloseEnough: 350
+		Jammable: false
 		Image: bullet8
+		-TrailImage:
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
@@ -552,16 +556,19 @@ BrokerWireTransfer:
 		RobTextNotification: rob-notification
 
 PlasmaMachineGun:
+	Inherits: ^AntiAirMissile
 	ValidTargets: Air
 	Range: 10c0
 	MinRange: 1c0
 	ReloadDelay: 3
 	BurstDelays: 1
 	Report: plasma_machine_gun.ogg
-	Projectile: Bullet
-		Speed: 1000
+	Projectile: Missile
+		Speed: 750
+		Blockable: false
+		Jammable: false
 		Image: bullet21
-		Inaccuracy: 0c512
+		-TrailImage:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Air

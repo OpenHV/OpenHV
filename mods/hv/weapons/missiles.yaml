@@ -6,14 +6,18 @@
 	Range: 5c0
 	Report: rocketlaunch01.ogg
 	Projectile: Missile
-		Speed: 213
-		Arm: 0
+		VerticalRateOfTurn: 50
+		HorizontalRateOfTurn: 200
+		Speed: 600
+		CloseEnough: 600
 		Blockable: false
-		Image: bullet6
 		Shadow: true
-		HorizontalRateOfTurn: 20
-		TrailImage: smoke
+		CruiseAltitude: 128
+		AllowSnapping: true
+		Arm: 0
 		RangeLimit: -1
+		Image: bullet6
+		TrailImage: smoke
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
@@ -40,28 +44,10 @@
 ^AntiAirMissile:
 	Inherits: ^AntiGroundMissile
 	ValidTargets: Air
+	Projectile: Missile
+		VerticalRateOfTurn: 25
 	Warhead@Effect: CreateEffect
 		ImpactActors: false
-
-AntiGroundRocket:
-	Inherits: BigSplash
-	Inherits: ^AntiGroundMissile
-	ReloadDelay: 60
-	MinRange: 1c256
-	Burst: 4
-	BurstDelays: 14
-	Projectile: Missile
-		Speed: 256
-		HorizontalRateOfTurn: 40
-	Warhead@Damage: SpreadDamage
-		Damage: 6000
-		Versus:
-			None: 30
-			Steel: 90
-			Light: 90
-			Concrete: 100
-	Warhead@Incendiary: TreeDamage
-		Damage: 6000
 
 AntiAirRocket:
 	Inherits: ^AntiAirMissile
@@ -71,8 +57,7 @@ AntiAirRocket:
 	BurstDelays: 10
 	Projectile: Missile
 		Speed: 384
-		Inaccuracy: 128
-		HorizontalRateOfTurn: 40
+		CloseEnough: 384
 		TrailImage: smoke
 	Warhead@Damage: SpreadDamage
 		Damage: 4000
@@ -84,12 +69,16 @@ AntiAirRocket:
 		Damage: 4000
 
 MissileTankRocket:
-	Inherits: AntiGroundRocket
+	Inherits: BigSplash
+	Inherits: ^AntiGroundMissile
 	ReloadDelay: 60
 	Burst: 3
 	BurstDelays: 5
 	Range: 6c0
 	MinRange: 0
+	Projectile: Missile
+		Speed: 256
+		CloseEnough: 256
 	Warhead@Damage: SpreadDamage
 		Damage: 6000
 		Versus:
@@ -108,19 +97,7 @@ LightPodRocket:
 	Range: 5c512
 	ReloadDelay: 45
 	Projectile: Missile
-		Image: bullet7
-		VerticalRateOfTurn: 40
-		Speed: 600
-		MinimumLaunchSpeed: 75
-		MaximumLaunchSpeed: 96
-		Blockable: false
-		Shadow: true
-		HorizontalRateOfTurn: 100
-		Acceleration: 96
-		MinimumLaunchAngle: 128
-		MaximumLaunchAngle: 192
-		AllowSnapping: true
-		CloseEnough: 600
+		CruiseAltitude: 512
 		TrailImage: small_smoke
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
@@ -147,8 +124,7 @@ ShipMissile:
 	MinRange: 1c0
 	Projectile: Missile
 		Speed: 256
-		Inaccuracy: 316
-		CruiseAltitude: 2c0
+		CloseEnough: 256
 		Image: bullet18
 		TrailImage: smoke_blue
 	Warhead@Damage: SpreadDamage
@@ -173,7 +149,6 @@ BoatMissileAntiGround:
 		Image: bullet6
 		Speed: 1000
 		Blockable: false
-		Inaccuracy: 0c256
 		ContrailLength: 4
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F29100
@@ -192,6 +167,7 @@ BoatMissileAntiGround:
 		ImpactSounds: explosion06.ogg
 
 BoatMissileAntiAir:
+	Inherits: ^AntiAirMissile
 	ReloadDelay: 50
 	Report: rocketlaunch03.ogg
 	Range: 9c0
@@ -199,23 +175,7 @@ BoatMissileAntiAir:
 	Burst: 3
 	BurstDelays: 8
 	Projectile: Missile
-		Speed: 600
-		Blockable: false
-		Inaccuracy: 128
-		Image: bullet7
-		Shadow: true
 		TrailImage: small_smoke
-		CruiseAltitude: 2c0
-		RangeLimit: -1
-		VerticalRateOfTurn: 20
-		MinimumLaunchSpeed: 75
-		MaximumLaunchSpeed: 96
-		HorizontalRateOfTurn: 100
-		Acceleration: 96
-		MinimumLaunchAngle: 128
-		MaximumLaunchAngle: 192
-		AllowSnapping: true
-		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 500
@@ -238,9 +198,8 @@ StealthTankMissile:
 	Burst: 2
 	BurstDelays: 10
 	Projectile: Missile
-		Inaccuracy: 213
-		HorizontalRateOfTurn: 40
 		Speed: 213
+		CloseEnough: 213
 		Image: bullet14
 		TrailImage: stealthtank-trail
 	Warhead@Damage: SpreadDamage
@@ -261,19 +220,6 @@ Patriot:
 	Report: rocketlaunch03.ogg
 	ValidTargets: Air
 	Projectile: Missile
-		VerticalRateOfTurn: 20
-		Speed: 600
-		MinimumLaunchSpeed: 75
-		MaximumLaunchSpeed: 96
-		Blockable: false
-		Shadow: true
-		HorizontalRateOfTurn: 100
-		Acceleration: 96
-		MinimumLaunchAngle: 128
-		MaximumLaunchAngle: 192
-		CruiseAltitude: 2c0
-		AllowSnapping: true
-		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 2000
@@ -299,20 +245,6 @@ TowerMissile:
 	Range: 9c0
 	Report: rocketlaunch03.ogg
 	ValidTargets: Air
-	Projectile: Missile
-		VerticalRateOfTurn: 20
-		Speed: 600
-		MinimumLaunchSpeed: 75
-		MaximumLaunchSpeed: 96
-		Blockable: false
-		Shadow: true
-		HorizontalRateOfTurn: 100
-		Acceleration: 96
-		MinimumLaunchAngle: 128
-		MaximumLaunchAngle: 192
-		CruiseAltitude: 2c0
-		AllowSnapping: true
-		CloseEnough: 600
 	Warhead@Damage: SpreadDamage
 		Spread: 128
 		Damage: 3000
@@ -356,6 +288,7 @@ CruiseMissileImpact:
 		ImpactSounds: explosion_juverisetila.ogg
 
 Torpedo:
+	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
 	ValidTargets: Ship, WaterBuilding, Water
 	ReloadDelay: 50
@@ -372,13 +305,11 @@ Torpedo:
 			Concrete: 100
 	Projectile: Missile
 		Speed: 180
+		CloseEnough: 180
+		Jammable: false
 		Image: bullet1
 		Palette: shadow
 		TrailImage: bubble
-		HorizontalRateOfTurn: 60
-		VerticalRateOfTurn: 60
-		CruiseAltitude: 0
-		RangeLimit: -1
 	Warhead@Effect: CreateEffect
 		Explosions: small
 		ImpactSounds: explosion06.ogg
@@ -392,19 +323,15 @@ BoatTorpedo:
 		Damage: 5000
 
 DiscThrower:
+	Inherits: ^AntiAirMissile
 	ValidTargets: Air
 	ReloadDelay: 25
 	Range: 10c0
 	Report: throw_heltonyan.ogg
 	AfterFireSound: open_klankbeeld.ogg
 	Projectile: Missile
-		Speed: 450
-		Arm: 0
-		Blockable: false
 		Image: bullet20
-		Shadow: true
-		HorizontalRateOfTurn: 20
-		RangeLimit: -1
+		-TrailImage:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		Spread: 512
