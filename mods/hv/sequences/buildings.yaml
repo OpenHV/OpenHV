@@ -397,7 +397,7 @@ module:
 		Filename: bits/module-shadow.png
 		Start: 0
 		ZOffset: 1768
-		Offset: 6, 14
+		Offset: 7, 14
 	damaged-idle:
 		Filename: bits/module.png
 		Start: 9
@@ -405,7 +405,7 @@ module:
 		Filename: bits/module-shadow.png
 		Start: 1
 		ZOffset: 1768
-		Offset: 6, 14
+		Offset: 7, 14
 	production-inprogress:
 		Filename: bits/module.png
 		Start: 10
