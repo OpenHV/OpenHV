@@ -24,6 +24,12 @@ LastWave = false
 
 ExitTriggerArea = { ExitWaypoint1.Location, ExitWaypoint2.Location }
 
+EntryWaypoints =
+{
+	{ EntryWaypoint1.Location, ExitWaypoint1.Location },
+	{ EntryWaypoint2.Location, ExitWaypoint2.Location }
+}
+
 WorldLoaded = function()
 	Camera.Position = CenterCamera.CenterPosition
 
@@ -67,7 +73,7 @@ SendNextWave = function()
 	local wave = Waves[CurrentWave]
 	Trigger.AfterDelay(wave.delay, function()
 		Utils.Do(wave.units, function(units)
-			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, { EntryWaypoint1.Location, ExitWaypoint1.Location })
+			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, Utils.Random(EntryWaypoints))
 		end)
 		UpdateGameStateText()
 		if CurrentWave < #Waves then
