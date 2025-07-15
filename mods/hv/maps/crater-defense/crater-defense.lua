@@ -74,6 +74,7 @@ SendNextWave = function()
 	Trigger.AfterDelay(wave.delay, function()
 		Utils.Do(wave.units, function(units)
 			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, Utils.Random(EntryWaypoints))
+			Unstuck(Attackers)
 		end)
 		UpdateGameStateText()
 		if CurrentWave < #Waves then
@@ -81,6 +82,17 @@ SendNextWave = function()
 			SendNextWave()
 		else
 			LastWave = true
+		end
+	end)
+end
+
+Unstuck = function(actors)
+	Utils.Do(actors, function(actor)
+		if not actor.IsDead then
+			Trigger.OnIdle(actor, function()
+				actor.MoveIntoWorld(EntryWaypoint1.Location)
+				actor.Move(ExitWaypoint1.Location)
+			end)
 		end
 	end)
 end
