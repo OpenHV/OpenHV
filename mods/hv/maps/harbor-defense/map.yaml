@@ -681,42 +681,74 @@ Actors:
 	SpawningWaypoint: entry
 		Owner: Neutral
 		Location: 19,1
-	Actor285: oresmelt
+	Actor282: oresmelt
 		Owner: Multi0
-		Location: 74,27
-	Actor286: oresmelt
+		Location: 61,40
+	Actor283: oresmelt
 		Owner: Multi0
-		Location: 72,27
-	Actor287: oresmelt
+		Location: 63,40
+	Actor284: oresmelt
 		Owner: Multi0
-		Location: 70,27
-	Actor288: oresmelt
+		Location: 65,40
+	Actor297: oresmelt
 		Owner: Multi0
-		Location: 68,27
-	Actor289: oresmelt
+		Location: 67,40
+	Actor298: oresmelt
 		Owner: Multi0
-		Location: 68,25
-	Actor290: oresmelt
+		Location: 67,44
+	Actor299: oresmelt
 		Owner: Multi0
-		Location: 68,23
-	Actor291: oresmelt
+		Location: 65,44
+	Actor300: oresmelt
 		Owner: Multi0
-		Location: 70,23
-	Actor292: oresmelt
+		Location: 63,44
+	Actor301: oresmelt
 		Owner: Multi0
-		Location: 70,25
-	Actor293: oresmelt
+		Location: 61,44
+	Actor302: oresmelt
 		Owner: Multi0
-		Location: 72,23
-	Actor294: oresmelt
+		Location: 61,42
+	Actor303: oresmelt
 		Owner: Multi0
-		Location: 72,25
-	Actor295: oresmelt
+		Location: 63,42
+	Actor304: oresmelt
 		Owner: Multi0
-		Location: 74,23
-	Actor296: oresmelt
+		Location: 65,42
+	Actor305: oresmelt
 		Owner: Multi0
+		Location: 67,42
+	Actor285: miner2
+		Location: 77,21
+		Faction: yi
+		Owner: Multi0
+	Actor286: miner2
+		Location: 77,25
+		Faction: yi
+		Owner: Multi0
+	Actor287: miner2
 		Location: 74,25
+		Faction: yi
+		Owner: Multi0
+	Actor288: miner2
+		Location: 74,21
+		Faction: yi
+		Owner: Multi0
+	Actor289: miner2
+		Location: 71,21
+		Faction: yi
+		Owner: Multi0
+	Actor291: miner2
+		Location: 68,25
+		Faction: yi
+		Owner: Multi0
+	Actor292: miner2
+		Location: 71,25
+		Faction: yi
+		Owner: Multi0
+	Actor290: miner2
+		Location: 68,21
+		Faction: yi
+		Owner: Multi0
 
 Rules: rules.yaml
 
