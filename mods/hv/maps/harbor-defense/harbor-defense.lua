@@ -59,22 +59,24 @@ SendNextWave = function()
 	local harbors = HumanPlayer.GetActorsByType("harbor2")
 	local extractors = HumanPlayer.GetActorsByType("extractor")
 	local midbuilds = HumanPlayer.GetActorsByTypes({ "radar2", "comlink" })
-	local entrylocation = SpawningWaypoint.Location
-	local extitlocation = DestinationWaypoint1.Location
+	local exitLocation = DestinationWaypoint1.Location
 
 	if #harbors == 0 then
-		extitlocation = DestinationWaypoint2.Location
+		exitLocation = DestinationWaypoint2.Location
 	end
 	if #extractors == 0 then
-		extitlocation = DestinationWaypoint3.Location
+		exitLocation = DestinationWaypoint3.Location
 	end
 	if #midbuilds == 0 then
-		extitlocation = DestinationWaypoint4.Location
+		exitLocation = DestinationWaypoint4.Location
 	end
+
+	local path = { SpawningWaypoint.Location, exitLocation }
 
 	Trigger.AfterDelay(wave.delay, function()
 		Utils.Do(wave.units, function(units)
-			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, { entrylocation , extitlocation })
+			Attackers = Reinforcements.Reinforce(EnemyPlayer, units, path)
+			Unstuck(Attackers, exitLocation)
 		end)
 		UpdateGameStateText()
 		if CurrentWave < #Waves then
@@ -86,9 +88,19 @@ SendNextWave = function()
 	end)
 end
 
+Unstuck = function(actors, exitLocation)
+	Utils.Do(actors, function(actor)
+		if not actor.IsDead then
+			Trigger.OnIdle(actor, function()
+				actor.Move(exitLocation)
+			end)
+		end
+	end)
+end
+
 Tick = function()
-	local buildingproportions = HumanPlayer.GetActorsByTypes({ "harbor2", "extractor", "radar2", "comlink", "module2", "factory2" })
-	local percentage = #buildingproportions * 100 / 22
+	local buildingProportions = HumanPlayer.GetActorsByTypes({ "harbor2", "extractor", "radar2", "comlink", "module2", "factory2" })
+	local percentage = #buildingProportions * 100 / 22
 	if percentage < .65  and not HumanPlayer.IsObjectiveFailed(TowerDefenseObjective) then
 		Media.DisplayMessage(UserInterface.GetFluentMessage("buildings-lost-65-percent"))
 		HumanPlayer.MarkFailedObjective(TowerDefenseObjective)
