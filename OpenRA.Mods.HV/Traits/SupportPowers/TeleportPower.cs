@@ -12,6 +12,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -55,6 +56,23 @@ namespace OpenRA.Mods.HV.Traits
 		[CursorReference]
 		[Desc("Cursor to display when the targeted area is blocked.")]
 		public readonly string TargetBlockedCursor = "move-blocked";
+
+		[Desc("Maximum range from televator to be able to teleport.")]
+		public readonly int RangeFromTelevatorsSquared = 100;
+
+		public readonly int CellRangeFromTelevators = 10;
+
+		[Desc("Range circle color.")]
+		public readonly Color CircleColor = Color.FromArgb(128, Color.Red);
+
+		[Desc("Range circle width in pixel.")]
+		public readonly float CircleWidth = 1;
+
+		[Desc("Range circle border color.")]
+		public readonly Color CircleBorderColor = Color.FromArgb(64, Color.Red);
+
+		[Desc("Range circle border width in pixel.")]
+		public readonly float CircleBorderWidth = 3;
 
 		public override object Create(ActorInitializer init) { return new TeleportPower(init.Self, this); }
 	}
@@ -305,8 +323,9 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var t in power.CellsMatching(sourceLocation, footprint, dimensions))
 				{
 					var isValid = manager.Self.Owner.Shroud.IsVisible(t + delta);
-					var tile = isValid ? validTile : invalidTile;
-					var alpha = isValid ? validAlpha : invalidAlpha;
+					var isCloseToTeleporter = IsInRangeOfTelevators(t + delta);
+					var tile = isCloseToTeleporter && isValid ? validTile : invalidTile;
+					var alpha = isCloseToTeleporter && isValid ? validAlpha : invalidAlpha;
 					yield return new SpriteRenderable(
 						tile, wr.World.Map.CenterOfCell(t + delta), WVec.Zero, -511, palette,
 						1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
@@ -320,8 +339,9 @@ namespace OpenRA.Mods.HV.Traits
 						var targetCell = unit.Location + (xy - sourceLocation);
 						var canEnter = manager.Self.Owner.Shroud.IsVisible(targetCell) &&
 							unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell);
-						var tile = canEnter ? validTile : invalidTile;
-						var alpha = canEnter ? validAlpha : invalidAlpha;
+						var isCloseToTeleporter = IsInRangeOfTelevators(targetCell);
+						var tile = isCloseToTeleporter && canEnter ? validTile : invalidTile;
+						var alpha = isCloseToTeleporter && canEnter ? validAlpha : invalidAlpha;
 						yield return new SpriteRenderable(
 							tile, wr.World.Map.CenterOfCell(targetCell), WVec.Zero, -511, palette,
 							1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
@@ -346,6 +366,19 @@ namespace OpenRA.Mods.HV.Traits
 								yield return d;
 					}
 				}
+
+				var info = (TeleportPowerInfo)power.Info;
+				foreach (var televator in manager.Powers[order].Instances)
+				{
+					yield return new RangeCircleAnnotationRenderable(
+					world.Map.CenterOfCell(world.Map.CellContaining(televator.Self.CenterPosition)),
+					WDist.FromCells(info.CellRangeFromTelevators),
+					0,
+					info.CircleColor,
+					info.CircleWidth,
+					info.CircleBorderColor,
+					info.CircleBorderWidth);
+				}
 			}
 
 			protected override IEnumerable<IRenderable> Render(WorldRenderer wr, World world)
@@ -367,7 +400,8 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					anyUnitsInRange = true;
 					var targetCell = unit.Location + (xy - sourceLocation);
-					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell))
+					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell)
+						&& IsInRangeOfTelevators(targetCell))
 					{
 						canTeleport = true;
 						break;
@@ -387,6 +421,20 @@ namespace OpenRA.Mods.HV.Traits
 				}
 
 				return canTeleport;
+			}
+
+			bool IsInRangeOfTelevators(CPos targetCell)
+			{
+				var map = manager.Self.World.Map;
+				foreach (var televator in manager.Powers[order].Instances)
+				{
+					var isInRange = (map.CellContaining(televator.Self.CenterPosition) - targetCell).LengthSquared
+										<= ((TeleportPowerInfo)power.Info).RangeFromTelevatorsSquared;
+					if (isInRange)
+						return true;
+				}
+
+				return false;
 			}
 
 			protected override string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)
