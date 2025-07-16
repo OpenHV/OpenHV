@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string TargetBlockedCursor = "move-blocked";
 
 		[Desc("Maximum range from televator to be able to teleport.")]
-		public readonly int RangeFromTelevatorsSquared = 100;
+		public readonly WDist RangeFromTelevators = 100;
 
 		public readonly int CellRangeFromTelevators = 10;
 
