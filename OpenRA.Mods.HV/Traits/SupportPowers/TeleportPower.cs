@@ -162,7 +162,7 @@ namespace OpenRA.Mods.HV.Traits
 			var map = Self.World.Map;
 			foreach (var televator in teleportPower.Instances)
 			{
-				var isInRange = WDist.FromCells((map.CellContaining(televator.Self.CenterPosition) - targetCell).Length).LengthSquared
+				var isInRange = (televator.Self.CenterPosition - map.CenterOfCell(targetCell)).LengthSquared
 											<= rangeFromTelevatorsSquared;
 				if (isInRange)
 					return true;
@@ -386,7 +386,7 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var televator in manager.Powers[order].Instances)
 				{
 					yield return new RangeCircleAnnotationRenderable(
-					world.Map.CenterOfCell(world.Map.CellContaining(televator.Self.CenterPosition)),
+					televator.Self.CenterPosition,
 					info.RangeFromTelevators,
 					0,
 					info.CircleColor,
