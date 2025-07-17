@@ -1058,7 +1058,7 @@ TECHCENTER:
 		Prerequisites: ~base, radar
 		Description: actor-techcenter.description
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: actor-techcenter.name
 	Encyclopedia:
@@ -1084,7 +1084,7 @@ TECHCENTER:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: -200
+		Amount: -250
 	Targetable:
 		TargetTypes: Ground, Structure
 	RenderSprites:
