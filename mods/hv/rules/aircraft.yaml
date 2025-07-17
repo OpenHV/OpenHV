@@ -138,7 +138,7 @@ JET2:
 		Scale: 3
 		Category: Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: actor-jet2.name
 	UpdatesPlayerStatistics:
@@ -348,7 +348,7 @@ BANSHEE:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: actor-banshee.name
 	Buildable:
@@ -862,7 +862,7 @@ MOTHERSHIP:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 12000
+		Cost: 15000
 	Tooltip:
 		Name: actor-mothership.name
 	Buildable:
@@ -995,7 +995,7 @@ BATTLESHIP:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 12000
+		Cost: 15000
 	Tooltip:
 		Name: actor-battleship.name
 	Buildable:
