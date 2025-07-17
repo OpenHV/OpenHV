@@ -114,7 +114,7 @@ namespace OpenRA.Mods.HV.Traits
 				var targetCell = target.Location + targetDelta;
 
 				if (self.Owner.Shroud.IsVisible(targetCell) && teleportable.CanTeleportTo(target, targetCell)
-						&& IsInRangeOfTelevators(manager, order.OrderString, targetCell))
+						&& IsInRangeOfTelevators(manager.Powers[order.OrderString], targetCell))
 					teleportable.Teleport(target, targetCell, self);
 			}
 		}
@@ -157,10 +157,10 @@ namespace OpenRA.Mods.HV.Traits
 			return true;
 		}
 
-		public bool IsInRangeOfTelevators(SupportPowerManager manager, string order, CPos targetCell)
+		public bool IsInRangeOfTelevators(SupportPowerInstance teleportPower, CPos targetCell)
 		{
 			var map = Self.World.Map;
-			foreach (var televator in manager.Powers[order].Instances)
+			foreach (var televator in teleportPower.Instances)
 			{
 				var isInRange = WDist.FromCells((map.CellContaining(televator.Self.CenterPosition) - targetCell).Length).LengthSquared
 											<= rangeFromTelevatorsSquared;
@@ -338,7 +338,7 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var t in power.CellsMatching(sourceLocation, footprint, dimensions))
 				{
 					var isValid = manager.Self.Owner.Shroud.IsVisible(t + delta);
-					var isCloseToTeleporter = power.IsInRangeOfTelevators(manager, order, t + delta);
+					var isCloseToTeleporter = power.IsInRangeOfTelevators(manager.Powers[order], t + delta);
 					var tile = isCloseToTeleporter && isValid ? validTile : invalidTile;
 					var alpha = isCloseToTeleporter && isValid ? validAlpha : invalidAlpha;
 					yield return new SpriteRenderable(
@@ -354,7 +354,7 @@ namespace OpenRA.Mods.HV.Traits
 						var targetCell = unit.Location + (xy - sourceLocation);
 						var canEnter = manager.Self.Owner.Shroud.IsVisible(targetCell) &&
 							unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell);
-						var isCloseToTeleporter = power.IsInRangeOfTelevators(manager, order, targetCell);
+						var isCloseToTeleporter = power.IsInRangeOfTelevators(manager.Powers[order], targetCell);
 						var tile = isCloseToTeleporter && canEnter ? validTile : invalidTile;
 						var alpha = isCloseToTeleporter && canEnter ? validAlpha : invalidAlpha;
 						yield return new SpriteRenderable(
@@ -416,7 +416,7 @@ namespace OpenRA.Mods.HV.Traits
 					anyUnitsInRange = true;
 					var targetCell = unit.Location + (xy - sourceLocation);
 					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell)
-						&& power.IsInRangeOfTelevators(manager, order, targetCell))
+						&& power.IsInRangeOfTelevators(manager.Powers[order], targetCell))
 					{
 						canTeleport = true;
 						break;
@@ -432,7 +432,7 @@ namespace OpenRA.Mods.HV.Traits
 					// Check the terrain types. This will allow Teleports to occur on empty terrain to terrain of
 					// a similar type. This also keeps the cursor from changing in non-visible property, alerting the
 					// Teleporter of enemy unit presence
-					canTeleport = power.SimilarTerrain(sourceLocation, xy) && power.IsInRangeOfTelevators(manager, order, xy);
+					canTeleport = power.SimilarTerrain(sourceLocation, xy) && power.IsInRangeOfTelevators(manager.Powers[order], xy);
 				}
 
 				return canTeleport;
