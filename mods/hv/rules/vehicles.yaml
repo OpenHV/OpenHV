@@ -448,7 +448,7 @@ RAILGUNTANK:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 3000
+		Cost: 3750
 	Tooltip:
 		Name: actor-railguntank.name
 		GenericName: actor-railguntank.generic-name
@@ -547,7 +547,7 @@ STEALTHTANK:
 		Scale: 3
 		Category: Tanks
 	Valued:
-		Cost: 2400
+		Cost: 3000
 	Tooltip:
 		Name: actor-stealthtank.name
 	Selectable:

@@ -352,7 +352,7 @@ JETPACKER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 900
+		Cost: 1125
 	Tooltip:
 		Name: actor-jetpacker.name
 	Health:
@@ -400,7 +400,7 @@ JETFOILER:
 		Order: 40
 		Category: Pods
 	Valued:
-		Cost: 900
+		Cost: 1125
 	Tooltip:
 		Name: actor-jetfoiler.name
 	Health:
