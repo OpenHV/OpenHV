@@ -58,9 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string TargetBlockedCursor = "move-blocked";
 
 		[Desc("Maximum range from televator to be able to teleport.")]
-		public readonly WDist RangeFromTelevators = 100;
-
-		public readonly int CellRangeFromTelevators = 10;
+		public readonly WDist RangeFromTelevators = WDist.FromCells(10);
 
 		[Desc("Range circle color.")]
 		public readonly Color CircleColor = Color.FromArgb(128, Color.Red);
@@ -69,7 +67,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly float CircleWidth = 1;
 
 		[Desc("Range circle border color.")]
-		public readonly Color CircleBorderColor = Color.FromArgb(64, Color.Red);
+		public readonly Color CircleBorderColor = Color.FromArgb(64, Color.MediumSlateBlue);
 
 		[Desc("Range circle border width in pixel.")]
 		public readonly float CircleBorderWidth = 3;
@@ -372,7 +370,7 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					yield return new RangeCircleAnnotationRenderable(
 					world.Map.CenterOfCell(world.Map.CellContaining(televator.Self.CenterPosition)),
-					WDist.FromCells(info.CellRangeFromTelevators),
+					info.RangeFromTelevators,
 					0,
 					info.CircleColor,
 					info.CircleWidth,
@@ -417,7 +415,7 @@ namespace OpenRA.Mods.HV.Traits
 					// Check the terrain types. This will allow Teleports to occur on empty terrain to terrain of
 					// a similar type. This also keeps the cursor from changing in non-visible property, alerting the
 					// Teleporter of enemy unit presence
-					canTeleport = power.SimilarTerrain(sourceLocation, xy);
+					canTeleport = power.SimilarTerrain(sourceLocation, xy) && IsInRangeOfTelevators(xy);
 				}
 
 				return canTeleport;
@@ -428,8 +426,8 @@ namespace OpenRA.Mods.HV.Traits
 				var map = manager.Self.World.Map;
 				foreach (var televator in manager.Powers[order].Instances)
 				{
-					var isInRange = (map.CellContaining(televator.Self.CenterPosition) - targetCell).LengthSquared
-										<= ((TeleportPowerInfo)power.Info).RangeFromTelevatorsSquared;
+					var isInRange = WDist.FromCells((map.CellContaining(televator.Self.CenterPosition) - targetCell).Length).LengthSquared
+												<= ((TeleportPowerInfo)power.Info).RangeFromTelevators.LengthSquared;
 					if (isInRange)
 						return true;
 				}
