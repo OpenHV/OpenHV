@@ -79,12 +79,14 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly char[] footprint;
 		readonly CVec dimensions;
+		readonly long rangeFromTelevatorsSquared;
 
 		public TeleportPower(Actor self, TeleportPowerInfo info)
 			: base(self, info)
 		{
 			footprint = info.Footprint.Where(c => !char.IsWhiteSpace(c)).ToArray();
 			dimensions = info.Dimensions;
+			rangeFromTelevatorsSquared = info.RangeFromTelevators.LengthSquared;
 		}
 
 		public override void SelectTarget(Actor self, string order, SupportPowerManager manager)
@@ -111,7 +113,8 @@ namespace OpenRA.Mods.HV.Traits
 
 				var targetCell = target.Location + targetDelta;
 
-				if (self.Owner.Shroud.IsVisible(targetCell) && teleportable.CanTeleportTo(target, targetCell))
+				if (self.Owner.Shroud.IsVisible(targetCell) && teleportable.CanTeleportTo(target, targetCell)
+						&& IsInRangeOfTelevators(manager, order.OrderString, targetCell))
 					teleportable.Teleport(target, targetCell, self);
 			}
 		}
@@ -152,6 +155,20 @@ namespace OpenRA.Mods.HV.Traits
 				}
 
 			return true;
+		}
+
+		public bool IsInRangeOfTelevators(SupportPowerManager manager, string order, CPos targetCell)
+		{
+			var map = Self.World.Map;
+			foreach (var televator in manager.Powers[order].Instances)
+			{
+				var isInRange = WDist.FromCells((map.CellContaining(televator.Self.CenterPosition) - targetCell).Length).LengthSquared
+											<= rangeFromTelevatorsSquared;
+				if (isInRange)
+					return true;
+			}
+
+			return false;
 		}
 
 		sealed class SelectTeleportTarget : OrderGenerator
@@ -321,7 +338,7 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var t in power.CellsMatching(sourceLocation, footprint, dimensions))
 				{
 					var isValid = manager.Self.Owner.Shroud.IsVisible(t + delta);
-					var isCloseToTeleporter = IsInRangeOfTelevators(t + delta);
+					var isCloseToTeleporter = power.IsInRangeOfTelevators(manager, order, t + delta);
 					var tile = isCloseToTeleporter && isValid ? validTile : invalidTile;
 					var alpha = isCloseToTeleporter && isValid ? validAlpha : invalidAlpha;
 					yield return new SpriteRenderable(
@@ -337,7 +354,7 @@ namespace OpenRA.Mods.HV.Traits
 						var targetCell = unit.Location + (xy - sourceLocation);
 						var canEnter = manager.Self.Owner.Shroud.IsVisible(targetCell) &&
 							unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell);
-						var isCloseToTeleporter = IsInRangeOfTelevators(targetCell);
+						var isCloseToTeleporter = power.IsInRangeOfTelevators(manager, order, targetCell);
 						var tile = isCloseToTeleporter && canEnter ? validTile : invalidTile;
 						var alpha = isCloseToTeleporter && canEnter ? validAlpha : invalidAlpha;
 						yield return new SpriteRenderable(
@@ -399,7 +416,7 @@ namespace OpenRA.Mods.HV.Traits
 					anyUnitsInRange = true;
 					var targetCell = unit.Location + (xy - sourceLocation);
 					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell)
-						&& IsInRangeOfTelevators(targetCell))
+						&& power.IsInRangeOfTelevators(manager, order, targetCell))
 					{
 						canTeleport = true;
 						break;
@@ -415,24 +432,10 @@ namespace OpenRA.Mods.HV.Traits
 					// Check the terrain types. This will allow Teleports to occur on empty terrain to terrain of
 					// a similar type. This also keeps the cursor from changing in non-visible property, alerting the
 					// Teleporter of enemy unit presence
-					canTeleport = power.SimilarTerrain(sourceLocation, xy) && IsInRangeOfTelevators(xy);
+					canTeleport = power.SimilarTerrain(sourceLocation, xy) && power.IsInRangeOfTelevators(manager, order, xy);
 				}
 
 				return canTeleport;
-			}
-
-			bool IsInRangeOfTelevators(CPos targetCell)
-			{
-				var map = manager.Self.World.Map;
-				foreach (var televator in manager.Powers[order].Instances)
-				{
-					var isInRange = WDist.FromCells((map.CellContaining(televator.Self.CenterPosition) - targetCell).Length).LengthSquared
-												<= ((TeleportPowerInfo)power.Info).RangeFromTelevators.LengthSquared;
-					if (isInRange)
-						return true;
-				}
-
-				return false;
 			}
 
 			protected override string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)
