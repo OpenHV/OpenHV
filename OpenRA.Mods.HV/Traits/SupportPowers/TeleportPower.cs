@@ -162,9 +162,7 @@ namespace OpenRA.Mods.HV.Traits
 			var map = Self.World.Map;
 			foreach (var televator in teleportPower.Instances)
 			{
-				var isInRange = (televator.Self.CenterPosition - map.CenterOfCell(targetCell)).LengthSquared
-											<= rangeFromTelevatorsSquared;
-				if (isInRange)
+				if ((televator.Self.CenterPosition - map.CenterOfCell(targetCell)).LengthSquared <= rangeFromTelevatorsSquared)
 					return true;
 			}
 
