@@ -241,7 +241,7 @@ RAILGUNBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 4000
+		Cost: 5000
 	Tooltip:
 		Name: actor-railgunboat.name
 		GenericName: actor-railgunboat.generic-name
@@ -286,7 +286,7 @@ LIGHTNINGBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 4000
+		Cost: 5000
 	Tooltip:
 		Name: actor-lightningboat.name
 		GenericName: actor-lightningboat.generic-name
@@ -332,7 +332,7 @@ BOOMER:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 5000
+		Cost: 6250
 	Tooltip:
 		Name: actor-boomer.name
 		GenericName: actor-boomer.generic-name
@@ -424,7 +424,7 @@ CARRIER:
 		Scale: 3
 		Category: Ships
 	Valued:
-		Cost: 5000
+		Cost: 6250
 	Tooltip:
 		Name: actor-carrier.name
 	Health:
