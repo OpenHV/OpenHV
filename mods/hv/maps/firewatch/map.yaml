@@ -40,9 +40,27 @@ Players:
 		Enemies: Flames
 
 Actors:
-	Actor0: base2
+	Actor0: firedept
 		Owner: FireBrigade
 		Location: 35,34
+	Actor1: crate10
+		Owner: Neutral
+		Location: 34,36
+	Actor2: crate4
+		Owner: Neutral
+		Location: 34,35
+	Actor3: crate6
+		Owner: Neutral
+		Location: 37,36
+	Actor4: crate5
+		Owner: Neutral
+		Location: 38,37
+	Actor5: crate2
+		Owner: Neutral
+		Location: 38,36
+	Actor6: crate8
+		Owner: Neutral
+		Location: 40,35
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 

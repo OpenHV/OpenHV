@@ -1,5 +1,4 @@
 ## rules.yaml
-actor-base2-name = Fire Department
 actor-airtanker-name = Air Tanker
 
 watertanker-power-name = Air Water Drop

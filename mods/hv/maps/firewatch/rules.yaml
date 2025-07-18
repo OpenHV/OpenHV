@@ -1,28 +1,6 @@
 # License: CC-BY-SA-4.0
 
-BASE2:
-	Tooltip:
-		Name: actor-base2-name
-	Production:
-		Produces: Utility
-	Exit@South1:
-		ProductionTypes: Utility
-	Exit@South2:
-		ProductionTypes: Utility
-	Exit@West1:
-		ProductionTypes: Utility
-	Exit@West2:
-		ProductionTypes: Utility
-	Exit@West3:
-		ProductionTypes: Utility
-	Exit@East1:
-		ProductionTypes: Utility
-	Exit@East2:
-		ProductionTypes: Utility
-	Exit@East3:
-		ProductionTypes: Utility
-	-BaseProvider:
-	ProvidesRadar:
+FIREDEPT:
 	AirstrikePower:
 		Icon: airstrike
 		Cursor: airstrike
@@ -64,7 +42,7 @@ WATERTANK:
 		RequiresCondition: refill-water
 	Buildable:
 		Queue: Utility
-		Prerequisites: ~base
+		Prerequisites: ~firedept
 		BuildPaletteOrder: 200
 		Description: actor-watertank.description
 
@@ -76,7 +54,7 @@ FIRETRUCK:
 		RequiresCondition: refill-water
 	Buildable:
 		Queue: Utility
-		Prerequisites: ~base
+		Prerequisites: ~firedept
 		BuildPaletteOrder: 100
 		Description: actor-firetruck.description
 
@@ -88,7 +66,7 @@ FIREFIGHTER:
 		RequiresCondition: refill-water
 	Buildable:
 		Queue: Utility
-		Prerequisites: ~base
+		Prerequisites: ~firedept
 		Description: actor-firefighter.description
 		BuildPaletteOrder: 50
 

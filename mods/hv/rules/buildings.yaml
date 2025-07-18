@@ -180,6 +180,66 @@ BASE2:
 		Prerequisites: outpost2, ~base.sc
 	-Encyclopedia:
 
+FIREDEPT:
+	Inherits: ^BaseBuilding
+	Inherits@Flame: ^BuildingFlame3
+	Selectable:
+		Bounds: 2048, 3072, 0, -512
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: actor-basefiredeparment.name
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,512,0
+	HitShape:
+		UseTargetableCellsOffsets: true
+		TargetableOffsets: 1024,0,0, -512,-512,0, -512,512,0
+		Type: Rectangle
+			TopLeft: -1024, -2048
+			BottomRight: 1024, 1024
+	Health:
+		HP: 250000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+	BaseBuilding:
+	Power:
+		Amount: 120
+	ProvidesPrerequisite@BuildingName:
+	Production:
+		Produces: Utility
+	ProductionBar@Utility:
+		ProductionType: Utility
+	RallyPoint:
+		CirclesSequence:
+		IsPlayerPalette: true
+		Palette: green
+		LineWidth: 2
+	Targetable:
+		TargetTypes: Ground, Structure, Defraudable
+	ProvidesRadar:
+	WithProductionDoorOverlay:
+		RequiresCondition: !being-captured && !build-incomplete
+		Sequence: production-door
+	WithProductionOverlay:
+		Sequence: production-inprogress
+		RequiresCondition: !burning
+	ExitsDebugOverlay:
+	Exit:
+		SpawnOffset: -500,-500,0
+		ExitCell: 0,3
+		RequiresCondition: !being-captured && !build-incomplete
+	WithIdleOverlay@Radar:
+		Sequence: idle-radar
+	-Sellable:
+
 OUTPOST:
 	Inherits: ^BaseBuilding
 	Valued:

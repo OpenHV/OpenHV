@@ -2319,3 +2319,52 @@ flagpost:
 		Offset: 3,13
 	icon:
 		Filename: bits/null.png
+
+firedept:
+	Inherits@Flame: ^BuildingFlame3
+	Defaults:
+		Filename: firedept
+		Offset: 0,-11
+	idle:
+		Filename: bits/firedept.png
+	idle-radar:
+		Filename: bits/firedept.png
+		Start: 15
+		Length: 8
+		Tick: 120
+		ZOffset: 2048
+	shadow-overlay:
+		Filename: bits/firedept-shadow.png
+		ZOffset: 1768
+		Offset: 8, 3
+	production-inprogress:
+		Filename: bits/firedept.png
+		Start: 7
+		Length: 8
+		Tick: 100
+		ZOffset: 2048
+	production-door:
+		Filename: bits/firedept.png
+		Start: 1
+		Length: 6
+	make:
+		Filename: bits/build.png
+		Length: 39
+		Tick: 30
+		ZOffset: 2048
+	make-overlay:
+		Filename: bits/build-vanish.png
+		Length: 26
+		Tick: 30
+		ZOffset: 2048
+	flame:
+		Filename: bits/flame2.png
+		Offset: -10, -35
+	flame2:
+		Filename: bits/flame2.png
+		Offset: 9, -16
+	flame3:
+		Filename: bits/flame2.png
+		Offset: 6, -43
+	icon:
+		Filename: bits/blank.png
