@@ -61,7 +61,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly WDist RangeFromTelevators = WDist.FromCells(10);
 
 		[Desc("Range circle color.")]
-		public readonly Color CircleColor = Color.FromArgb(128, Color.Red);
+		public readonly Color CircleColor = Color.FromArgb(128, Color.MediumSlateBlue);
 
 		[Desc("Range circle width in pixel.")]
 		public readonly float CircleWidth = 1;
