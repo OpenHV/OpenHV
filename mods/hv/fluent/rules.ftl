@@ -318,6 +318,9 @@ actor-base =
     Only one can be built.
    .encyclopedia = This base of operations is able to summon new buildings as well as utility vehicles such as miners or builders. New buildings are only allowed within a base radius. You can also spawn buildings into an allied base radius. To extend the build radius you need to train builders which can deploy into outposts. Protect the base building at all costs. If your base ever gets destroyed, select an outpost and request a new main base for a possible comeback.
 
+actor-basefiredeparment =
+   .name = Fire Department Base
+
 actor-outpost =
    .name = Outpost
    .encyclopedia = This structure cannot be summoned on the main base like the others. It is created by deploying a builder. Thus it can be used to extend the base radius or even create bridge heads far away from the main base. Another important feature is that it is the only building that can build another base, but only in the event of the initial main base getting destroyed.
