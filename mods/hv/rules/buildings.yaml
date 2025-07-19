@@ -1421,7 +1421,6 @@ FIELD:
 		Range: 4c0
 	GrantExternalConditionPower@ForceField:
 		PauseOnCondition: disabled
-		RequiresCondition: !build-incomplete && !beam-incomplete
 		ChargeInterval: 4500
 		Name: actor-field.force-field-name
 		Description: actor-field.force-field-description
@@ -1448,8 +1447,6 @@ FIELD:
 		OrderName: ShieldsUp
 		LaunchSound: force_field_autistic-lucario.ogg
 	SupportPowerChargeBar:
-	WithSupportPowerChargedAnimation:
-		RequiresCondition: !build-incomplete && !beam-incomplete
 	Power:
 		Amount: -200
 	MustBeDestroyed:
