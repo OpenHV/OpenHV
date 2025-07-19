@@ -444,7 +444,7 @@ RAILGUNTANK:
 		Description: actor-railguntank.description
 	Armament:
 		Weapon: railgun
-		LocalOffset: 325,400,0
+		LocalOffset: 325,450,0
 	AttackFrontal:
 		PauseOnCondition: jammed
 		Voice: Attack
