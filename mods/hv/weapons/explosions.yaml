@@ -146,12 +146,12 @@ ExplosiveCharge:
 	Warhead@Damage: TargetDamage
 		DamageTypes: Fire
 		Spread: 512
-		Damage: 10000
+		Damage: 7500
 		Versus:
-			None: 150
-			Steel: 320
+			None: 300
+			Steel: 425
 			Light: 350
-			Heavy: 350
+			Heavy: 700
 			Wood: 350
 			Concrete: 350
 
@@ -159,15 +159,15 @@ BlasterExplosion:
 	ValidTargets: Ground, Structure
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		Spread: 512
-		Damage: 7500
+		Spread: 256
+		Damage: 2500
 		Versus:
-			None: 125
-			Steel: 50
-			Light: 50
-			Heavy: 50
-			Wood: 100
-			Concrete: 50
+			None: 300
+			Steel: 425
+			Light: 350
+			Heavy: 700
+			Wood: 350
+			Concrete: 350
 	Warhead@Effect: CreateEffect
 		Image: explosion
 		Explosions: medium, medium_2

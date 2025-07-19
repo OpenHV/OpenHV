@@ -17,21 +17,41 @@ Railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Versus:
-			None: 200
+			None: 150
 			Steel: 75
 			Light: 125
 			Heavy: 155
 			Wood: 10
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Percentage: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
+
+PodRailgun:
+	Inherits: Railgun
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 6c0
+	Burst: 2
+	BurstDelays: 0
+	Projectile: LaserZap
+		Width: 0c50
+	Warhead@Damage: SpreadDamage
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Spread: 24
+		Damage: 600
+		Versus:
+			None: 200
+			Steel: 20
+			Light: 100
+			Heavy: 100
+			Concrete: 5
 
 ElectronicCountermeasure:
 	ReloadDelay: 20
@@ -41,14 +61,16 @@ ElectronicCountermeasure:
 	InvalidTargets: DisabledVehicle
 	Projectile: Missile
 		Image: bullet4
-		Speed: 150
+		Speed: 175
+		CloseEnough: 175
 		Blockable: False
 		HorizontalRateOfTurn: 100
 		Acceleration: 96
+		CruiseAltitude: 0c0
 		AllowSnapping: true
-		CloseEnough: 150
-		RangeLimit: 21c0
 		Jammable: False
+		Arm: 0
+		RangeLimit: -1
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 90
@@ -129,28 +151,30 @@ RepairTorch:
 		ValidTargets: Ground, Vehicle
 
 Plasma:
+	Inherits: ^AntiGroundMissile
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
-	Range: 8c0
+	Range: 9c0
 	MinRange: 1c0
 	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
 		Speed: 350
-		Blockable: false
-		Inaccuracy: 0
+		CloseEnough: 350
+		Jammable: false
 		Image: bullet8
+		-TrailImage:
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		Damage: 1750
+		Damage: 800
 		Versus:
 			None: 43
 			Steel: 85
-			Light: 43
-			Heavy: 43
+			Light: 129
+			Heavy: 129
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -161,7 +185,7 @@ Plasma:
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Range: 8c0
 	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
@@ -177,7 +201,7 @@ VoltageArc:
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Versus:
 			None: 200
 			Steel: 75
@@ -188,7 +212,7 @@ VoltageArc:
 		DamageTypes: Electricity
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Percentage: 10
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
@@ -547,28 +571,30 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 500
+		Amount: 250
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 
 PlasmaMachineGun:
+	Inherits: ^AntiAirMissile
 	ValidTargets: Air
 	Range: 10c0
 	MinRange: 1c0
 	ReloadDelay: 3
 	BurstDelays: 1
 	Report: plasma_machine_gun.ogg
-	Projectile: Bullet
-		Speed: 1000
+	Projectile: Missile
+		Speed: 750
+		Blockable: false
+		Jammable: false
 		Image: bullet21
-		Inaccuracy: 0c512
+		-TrailImage:
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Air
 		Spread: 256
-		Damage: 2500
+		Damage: 725
 		Versus:
-			Steel: 50
 			Light: 50
 			Heavy: 50
 	Warhead@GroundEffect: CreateEffect

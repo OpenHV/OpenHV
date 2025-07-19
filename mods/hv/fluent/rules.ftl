@@ -23,20 +23,33 @@ faction-yuruki =
     Their colonial defense forces helped pave the way for
     an aggressive expansion throughout the solar system.
 
-    Faction Variations:
-        - Uses fighter jets as air units
+    Strategy:
+        - Focuses on stealth and specialized combat units
+        - Transport and aerial scout units are faster but
+          less resistant
 
-    Special Units:
-        - Shocker Pod
-        - Blaster Pod
-        - Sniper Pod
-        - Gatling Bike
-        - Hacker Tank
-        - Lightning Tank
-        - Stealth Tank
-        - Battleship
+    Specific Units:
+        - Sniper Pod (anti-pod)
+        - Shocker Pod (anti-vehicle and anti-air)
+        - Bomber Pod (anti-building)
+        - Jetpacker2 Pod (anti-vehicle)
+        - Assault Tank (anti-vehicle and anti-building)
+        - Mobile AA Tank (anti-air)
+        - Gatling Bike (anti-pod)
+        - Countermeasure Tank (specialist)
+        - Stealth Tank (anti-ground)
+        - Gun Ship (anti-ground and anti-air)
+        - Speeder (anti-air)
+        - Athmospheric Bomber (anti-ground)
+        - Patrol Boat (anti-ground and anti-air)
+        - Submarine (anti-navy)
+        - Lightning Boat (anti-ground)
+        - Missile Submarine (anti-ground)
 
-    Superweapon:
+    Superunit:
+        - Battleship (anti-ground)
+
+    Superweapons:
         - Air Strike
         - Field Generator
         - Orbital Railgun Strike
@@ -48,21 +61,33 @@ faction-synapol =
     everything from common household appliances to armaments.
     Their security department became a large paramilitary force.
 
-    Faction Variations:
-        - Uses helicopters as air units
-        - Uses submarines as advanced naval units
+    Strategy:
+        - Focuses on brute force and flexible combat units
+        - Transport and aerial scout units are slower but
+          more resistant
 
-    Special Units:
-        - Rocketeer Pod
-        - Flamer Pod
-        - Mortar Pod
-        - Ramp Buggy
-        - Countermeasure Tank
-        - Railgun Tank
-        - Missile Tank
-        - Mothership
+    Specific Units:
+        - Mortar Pod (anti-ground)
+        - Rocketeer Pod (anti-vehicle and anti-air)
+        - Flamer Pod (anti-ground)
+        - Jetpacker Pod (anti-pod)
+        - Missile Tank (anti-ground and anti-air)
+        - Artillery Tank (anti-ground)
+        - Ramp Buggy (anti-pod)
+        - Hacker Tank (specialist)
+        - Railgun Tank (anti-ground)
+        - Assault Helicopter (anti-ground and anti-air)
+        - Turtle (anti-air)
+        - Banshee (anti-ground)
+        - Light Boat (anti-ground and anti-air)
+        - Torpedo Boat (anti-navy)
+        - Laser Boat (anti-ground)
+        - Drone Ship (anti-ground)
 
-    Superweapon:
+    Superunit:
+        - Mothership (anti-ground and anti-air)
+
+    Superweapons:
         - Drop Pods
         - Grand Howitzer
         - Thermonuclear Bomb
@@ -183,11 +208,11 @@ actor-jet2 =
      Availability: Yuruki
 
 actor-copter =
-   .name = Attack Helicopter
+   .name = Assault Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
-   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   .encyclopedia = The assault helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
 
      {actor-copter.description}
 
@@ -207,7 +232,7 @@ actor-observer =
    .name = Observer
    .description = Reconnaissance air unit.
       Unarmed
-   .encyclopedia = An orb shaped helicopter with good maneuverability. It's not suited for combat, but for reconnaissance missions.
+   .encyclopedia = An orb shaped helicopter with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      {actor-observer.description}
 
@@ -253,7 +278,7 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
-   .encyclopedia = A reconnaissance air unit. It's slower than Synapol's observer, but it grants more visibility range.
+   .encyclopedia = A reconnaissance air unit with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      Unarmed
 
@@ -661,15 +686,29 @@ actor-broker =
 
 actor-jetpacker =
    .description = Elite airborne vehicle.
-    Armed with heavy machine gun.
-      Strong vs Pods, Light Vehicles and Aircraft
-      Weak vs Tanks and Buildings
+    Armed with heavy missiles.
+      Strong vs Pods
+      Weak vs Vehicles, Navy and Buildings
+      Can't attack Aircraft
    .name = Jetpacker
-   .encyclopedia = The ultimate pod: the jetpacker. It was designed by an independent lab, allowing its universal availability. It can handle pods, light vehicles and aircraft well. The fact that it's an airborne pod makes it less vulnerable to other pods.
+   .encyclopedia = The ultimate Synapol pod: the jetpacker. It was designed to weaken Yuruki pod masses. The fact that it's an airborne pod makes it less vulnerable to other pods.
 
      {actor-jetpacker.description}
 
-     Availability: Universal
+     Availability: Synapol
+
+actor-jetpacker2 =
+   .description = Elite airborne vehicle.
+    Armed with scatter gun.
+      Strong vs Vehicles, Navy
+      Weak vs Pods and Buildings
+      Can't attack Aircraft
+   .name = Jetpacker2
+   .encyclopedia = The ultimate Yuruki pod: the jetpacker. It was designed for quick maneuverability and hit-and-run tactics to weaken Synapol's vehicle and navy forces. The fact that it's an airborne pod makes it less vulnerable to other pods.
+
+     {actor-jetpacker2.description}
+
+     Availability: Yuruki
 
 actor-blaster =
    .description = Remote controlled mine.
@@ -738,7 +777,7 @@ actor-lightboat =
 
      {actor-lightboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-patrolboat =
    .name = Patrol boat
@@ -750,7 +789,7 @@ actor-patrolboat =
 
      {actor-patrolboat.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mercboat =
    .name = Mercenary Boat
@@ -774,7 +813,7 @@ actor-torpedoboat =
 
      {actor-torpedoboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-submarine =
    .name = Submarine
@@ -786,7 +825,7 @@ actor-submarine =
 
      {actor-submarine.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-railgunboat =
    .name = Railgun Boat
@@ -819,7 +858,7 @@ actor-boomer =
 
      {actor-boomer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -831,7 +870,7 @@ actor-carrier =
 
      {actor-carrier.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-ferry =
    .name = Ferry
@@ -1050,9 +1089,9 @@ actor-missiletank =
    .name = Missile Tank
    .generic-name = Tank
    .description = A tank which shoots missiles.
-      Strong vs Vehicles and Buildings
+      Strong vs Vehicles, Aircraft, Navy and Buildings
       Weak vs Pods
-   .encyclopedia = The missile tank is an agile tank, able to fire from a turret, while still moving decently fast. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the railgun tank, it is stronger against buildings.
+   .encyclopedia = The missile tank is slow but powerful, able to fire from a turret. It is armed with a powerful missile launcher, good against buildings, vehicles and air units.
 
      {actor-missiletank.description}
 

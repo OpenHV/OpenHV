@@ -178,7 +178,7 @@
 		Range: 1c0
 	Passenger:
 		CargoType: Vehicle
-		Weight: 5
+		Weight: 4
 
 ^Pod:
 	Inherits: ^Vehicle
@@ -190,7 +190,7 @@
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: None
 	Passenger:
@@ -287,6 +287,8 @@
 		Voice: Move
 		TakeOffOnResupply: true
 		LandAltitude: 0c64
+		CanHover: True
+		WaitDistanceFromResupplyBase: 4c0
 	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -327,6 +329,22 @@
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
 
+^AirCreature:
+	Inherits: ^Plane
+	DeathSounds:
+	-AppearsOnRadar:
+	-Guard:
+	-Repairable:
+	-MustBeDestroyed:
+	-GrantRandomCondition@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
+	-Selectable:
+	Interactable:
+	-ProximityCaptor:
+
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
 	Inherits@Sprite: ^SpriteActor
@@ -359,6 +377,30 @@
 	Aircraft:
 		IdleBehavior: None
 		Repulsable: False
+
+^BaseDrone:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 60
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+		AirborneCondition: airborne
+		CanHover: False
+		LandAltitude: 0c0
+	-MapEditorData:
 
 ^CargoPlane:
 	Inherits@Exists: ^ExistsInWorld
@@ -440,6 +482,7 @@
 		GenericName: meta-helicopter-generic-name
 	Aircraft:
 		CanHover: true
+		AirborneCondition: airborne
 		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
 		VTOL: true
@@ -519,7 +562,7 @@
 	Armor:
 		Type: Steel
 	Health:
-		HP: 40000
+		HP: 60000
 	Building:
 		Footprint: x
 	ActorPreviewPlaceBuildingPreview:
@@ -1239,7 +1282,7 @@
 	Valued:
 		Cost: 300
 	Health:
-		HP: 75000
+		HP: 112500
 	Armor:
 		Type: Concrete
 	LineBuildNode:
