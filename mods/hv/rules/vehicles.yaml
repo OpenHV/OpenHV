@@ -502,7 +502,7 @@ LIGHTNINGTANK:
 		Range: 4c0
 	Armament:
 		Weapon: VoltageArc
-		LocalOffset: 400,0,0
+		LocalOffset: 500,0,0
 	AttackFrontal:
 		PauseOnCondition: jammed
 		Voice: Attack
