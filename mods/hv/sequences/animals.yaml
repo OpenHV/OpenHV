@@ -15,8 +15,7 @@ beast:
 		Length: 12
 		Tick: 120
 	icon:
-		Filename: bits/units-icons.png
-		Start: 35
+		Filename: bits/icon.png
 
 crow:
 	idle:

@@ -14,8 +14,7 @@ mercboat:
 		Facings: 8
 		Tick: 50
 	icon:
-		Filename: bits/units-icons.png
-		Start: 15
+		Filename: bits/mercboat-icon.png
 
 railgunboat:
 	idle:
@@ -26,8 +25,7 @@ railgunboat:
 		Start: 8
 		Facings: 8
 	icon:
-		Filename: bits/units-icons.png
-		Start: 16
+		Filename: bits/railgunboat-icon.png
 
 lightboat:
 	idle:
@@ -83,8 +81,7 @@ lightboat:
 		Facings: 8
 		Tick: 50
 	icon:
-		Filename: bits/units-icons.png
-		Start: 14
+		Filename: bits/lightboat-icon.png
 
 boomer:
 	idle:
@@ -97,8 +94,7 @@ boomer:
 		Facings: 8
 		Tick: 200
 	icon:
-		Filename: bits/units-icons.png
-		Start: 45
+		Filename: bits/boomer-icon.png
 
 carrier:
 	idle:
@@ -110,16 +106,14 @@ carrier:
 		Length: 3
 		Tick: 100
 	icon:
-		Filename: bits/units-icons.png
-		Start: 46
+		Filename: bits/carrier-icon.png
 
 submarine:
 	idle:
 		Filename: bits/submarine.png
 		Facings: 8
 	icon:
-		Filename: bits/units-icons.png
-		Start: 50
+		Filename: bits/submarine-icon.png
 
 patrolboat:
 	idle:
@@ -134,8 +128,7 @@ patrolboat:
 		Length: 3
 		Tick: 80
 	icon:
-		Filename: bits/units-icons.png
-		Start: 51
+		Filename: bits/patrolboat-icon.png
 
 watertrail:
 	idle:
@@ -161,8 +154,7 @@ ferry:
 		Start: 3
 		ZOffset: -511
 	icon:
-		Filename: bits/units-icons.png
-		Start: 56
+		Filename: bits/ferry-icon.png
 		Offset: 2, 0
 
 mineship:
@@ -179,8 +171,7 @@ mineship:
 		Length: 16
 		Facings: 8
 	icon:
-		Filename: bits/units-icons.png
-		Start: 57
+		Filename: bits/water-minelayer-icon.png
 
 mineship2:
 	idle:
@@ -192,8 +183,7 @@ mineship2:
 		Filename: bits/water-minelayer2.png
 		Length: 16
 	icon:
-		Filename: bits/units-icons.png
-		Start: 58
+		Filename: bits/water-minelayer2-icon.png
 
 lightningboat:
 	idle:
@@ -207,13 +197,11 @@ lightningboat:
 		Start: 2
 		Length: 4
 	icon:
-		Filename: bits/units-icons.png
-		Start: 60
+		Filename: bits/lightningboat-icon.png
 
 torpedoboat:
 	idle:
 		Filename: bits/torpedo_boat.png
 		Facings: 8
 	icon:
-		Filename: bits/units-icons.png
-		Start: 62
+		Filename: bits/torpedo_boat-icon.png
