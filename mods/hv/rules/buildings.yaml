@@ -318,6 +318,7 @@ RADAR:
 		RequiresCondition: !powerdown
 	AirstrikePower:
 		PauseOnCondition: lowpower || disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		Icon: airstrike
 		Cursor: airstrike
 		ChargeInterval: 3750
@@ -344,9 +345,10 @@ RADAR2:
 		Prerequisites: storage, ~structures.sc
 	-AirstrikePower:
 	DropPodsPower:
-		Cursor: droppod
-		PauseOnCondition: disabled || disabled
+		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		Icon: droppods
+		Cursor: droppod
 		Name: actor-radar2.droppodspower-name
 		Description: actor-radar2.droppodspower-description
 		DisplayRadarPing: true
@@ -1352,6 +1354,7 @@ HOWITZER:
 		LocalOffset: 1500,50,1400
 	AttackOrderPower:
 		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		AttackingCondition: attacking
 		Cursor: attack
 		BlockedCursor: howitzer-blocked
@@ -1498,6 +1501,7 @@ SILO:
 		Range: 4c0
 	NukePower:
 		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		Cursor: nuke
 		Icon: nuke
 		ChargeInterval: 13500
@@ -1588,6 +1592,7 @@ UPLINK:
 	DetonateWeaponPower:
 		OrderName: Blastem
 		PauseOnCondition: lowpower
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		Icon: railgun
 		Cursor: railgun
 		ChargeInterval: 6750
@@ -1738,6 +1743,7 @@ TELEVATOR:
 		RequiredForShortGame: false
 	TeleportPower:
 		PauseOnCondition: disabled
+		RequiresCondition: !build-incomplete && !beam-incomplete
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
 		DisplayRadarPing: True
