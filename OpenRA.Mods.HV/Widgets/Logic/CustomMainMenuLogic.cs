@@ -260,6 +260,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		void DisplayNews(GitHubWebServices webServices)
 		{
 			newsPanel.RemoveChildren();
+			var maxNewsHeight = newsPanel.Bounds.Height;
 			SetNewsStatus("");
 
 			var newsWidget = newsTemplate.Clone();
@@ -291,6 +292,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			newsPanel.AddChild(newsWidget);
 			newsPanel.Layout.AdjustChildren();
+			newsPanel.Bounds.Height = Math.Min(newsPanel.ContentHeight, maxNewsHeight);
 		}
 
 		void OpenNewsPanel(DropDownButtonWidget button)
