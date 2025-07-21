@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class MinerInfo : TraitInfo
 	{
 		[CursorReference]
-		[Desc("Cursor to display when able to lay a mine.")]
+		[Desc("Cursor to display when able to deploy a tower.")]
 		public readonly string DeployCursor = "deploy";
 
 		[FieldLoader.Require]
@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly HashSet<string> TerrainTypes = new();
 
 		[VoiceReference]
-		[Desc("Voice to use when ordered to lay a minefield.")]
+		[Desc("Voice to use when deploying into a tower.")]
 		public readonly string Voice = "Action";
 
 		[Desc("Defines to which players the target lines are shown.")]
