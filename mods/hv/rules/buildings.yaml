@@ -345,7 +345,7 @@ RADAR2:
 		Prerequisites: storage, ~structures.sc
 	-AirstrikePower:
 	DropPodsPower:
-		PauseOnCondition: disabled
+		PauseOnCondition: lowpower || disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		Icon: droppods
 		Cursor: droppod
@@ -1353,7 +1353,7 @@ HOWITZER:
 		Weapon: TurretArtillery
 		LocalOffset: 1500,50,1400
 	AttackOrderPower:
-		PauseOnCondition: disabled
+		PauseOnCondition: lowpower || disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		AttackingCondition: attacking
 		Cursor: attack
@@ -1500,7 +1500,7 @@ SILO:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	NukePower:
-		PauseOnCondition: disabled
+		PauseOnCondition: lowpower || disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		Cursor: nuke
 		Icon: nuke
@@ -1591,7 +1591,7 @@ UPLINK:
 		RequiresCondition: !build-incomplete
 	DetonateWeaponPower:
 		OrderName: Blastem
-		PauseOnCondition: lowpower
+		PauseOnCondition: lowpower || disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		Icon: railgun
 		Cursor: railgun
@@ -1742,7 +1742,7 @@ TELEVATOR:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	TeleportPower:
-		PauseOnCondition: disabled
+		PauseOnCondition: lowpower || disabled
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
