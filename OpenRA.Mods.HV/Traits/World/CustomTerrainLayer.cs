@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -29,7 +29,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class CustomTerrainLayer : IRenderOverlay, IWorldLoaded, ITickRender, INotifyActorDisposing
 	{
 		readonly CustomTerrainLayerInfo info;
-		readonly Dictionary<CPos, TerrainTile?> dirty = new();
+		readonly Dictionary<CPos, TerrainTile?> dirty = [];
 		readonly ITiledTerrainRenderer terrainRenderer;
 		readonly Map map;
 

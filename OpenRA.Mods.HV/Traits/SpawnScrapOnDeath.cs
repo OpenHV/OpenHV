@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -30,7 +30,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Probability = 100;
 
 		[Desc("Allowed to spawn on.")]
-		public readonly HashSet<string> TerrainTypes = new();
+		public readonly HashSet<string> TerrainTypes = [];
 
 		[Desc("Map player to use when 'InternalName' is defined on 'OwnerType'.")]
 		public readonly string InternalOwner = "Neutral";

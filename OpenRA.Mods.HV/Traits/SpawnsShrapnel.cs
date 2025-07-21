@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common;
@@ -27,10 +26,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Weapon = null;
 
 		[Desc("Amount of shrapnels thrown. Two values indicate a range.")]
-		public readonly int[] Amount = { 1 };
+		public readonly int[] Amount = [1];
 
 		[Desc("Delay between two spawns. Two values indicate a range.")]
-		public readonly int[] Delay = { 50 };
+		public readonly int[] Delay = [50];
 
 		[Desc("The percentage of aiming this shrapnel to a suitable target actor.")]
 		public readonly int AimChance = 0;
@@ -140,13 +139,13 @@ namespace OpenRA.Mods.HV.Traits
 					Facing = (shrapnelTarget.CenterPosition - position).Yaw,
 
 					DamageModifiers = !self.IsDead ? self.TraitsImplementing<IFirepowerModifier>()
-						.Select(a => a.GetFirepowerModifier()).ToArray() : Array.Empty<int>(),
+						.Select(a => a.GetFirepowerModifier()).ToArray() : [],
 
 					InaccuracyModifiers = !self.IsDead ? self.TraitsImplementing<IInaccuracyModifier>()
-						.Select(a => a.GetInaccuracyModifier()).ToArray() : Array.Empty<int>(),
+						.Select(a => a.GetInaccuracyModifier()).ToArray() : [],
 
 					RangeModifiers = !self.IsDead ? self.TraitsImplementing<IRangeModifier>()
-						.Select(a => a.GetRangeModifier()).ToArray() : Array.Empty<int>(),
+						.Select(a => a.GetRangeModifier()).ToArray() : [],
 
 					Source = position,
 					CurrentSource = () => position,

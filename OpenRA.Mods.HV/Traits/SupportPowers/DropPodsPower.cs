@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -16,7 +16,6 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -26,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Drop pod unit")]
-		[ActorReference(new[] { typeof(AircraftInfo), typeof(FallsToEarthInfo) })]
+		[ActorReference([typeof(AircraftInfo), typeof(FallsToEarthInfo)])]
 		public readonly string[] UnitTypes = null;
 
 		[Desc("Number of drop pods spawned.")]
@@ -45,7 +44,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Number of ticks to keep the camera alive")]
 		public readonly int CameraRemoveDelay = 25;
 
-		public readonly HashSet<string> AllowedTerrainTypes = new();
+		public readonly HashSet<string> AllowedTerrainTypes = [];
 
 		public override object Create(ActorInitializer init) { return new DropPodsPower(init.Self, this); }
 	}
@@ -109,11 +108,11 @@ namespace OpenRA.Mods.HV.Traits
 
 				if (info.CameraActor != null)
 				{
-					var camera = w.CreateActor(info.CameraActor, new TypeDictionary
-					{
+					var camera = w.CreateActor(info.CameraActor,
+					[
 						new LocationInit(targetCell),
 						new OwnerInit(self.Owner),
-					});
+					]);
 
 					camera.QueueActivity(new Wait(info.CameraRemoveDelay));
 					camera.QueueActivity(new RemoveSelf());
@@ -129,12 +128,12 @@ namespace OpenRA.Mods.HV.Traits
 					var podTarget = Target.FromCell(w, podLocation);
 					var location = self.World.Map.CenterOfCell(podLocation) - delta + new WVec(0, 0, altitude);
 
-					var pod = w.CreateActor(false, unitType, new TypeDictionary
-					{
+					var pod = w.CreateActor(false, unitType,
+					[
 						new CenterPositionInit(location),
 						new OwnerInit(self.Owner),
 						new FacingInit(facing)
-					});
+					]);
 
 					var aircraft = pod.Trait<Aircraft>();
 					if (!aircraft.CanLand(podLocation))

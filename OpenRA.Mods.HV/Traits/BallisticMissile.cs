@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
@@ -65,7 +64,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string AirborneCondition = null;
 
 		[Desc("Sounds to play when the actor is taking off.")]
-		public readonly string[] LaunchSounds = Array.Empty<string>();
+		public readonly string[] LaunchSounds = [];
 
 		public override object Create(ActorInitializer init) { return new BallisticMissile(init, this); }
 
@@ -167,7 +166,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		(CPos Cell, SubCell SubCell)[] IOccupySpace.OccupiedCells()
 		{
-			return Array.Empty<(CPos, SubCell)>();
+			return [];
 		}
 
 		public int MovementSpeed

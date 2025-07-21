@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2021 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2025 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,12 +9,10 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -25,10 +23,10 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("The list of units to spawn.")]
-		public readonly string[] Units = Array.Empty<string>();
+		public readonly string[] Units = [];
 
 		[Desc("Factions that are allowed to trigger this action.")]
-		public readonly HashSet<string> ValidFactions = new();
+		public readonly HashSet<string> ValidFactions = [];
 
 		[Desc("Override the owner of the newly spawned unit: e.g. Creeps or Neutral")]
 		public readonly string Owner = null;
@@ -47,7 +45,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly Actor self;
 		readonly SpawnUnitCrateActionInfo info;
-		readonly List<CPos> usedCells = new();
+		readonly List<CPos> usedCells = [];
 
 		public SpawnUnitCrateAction(Actor self, SpawnUnitCrateActionInfo info)
 			: base(self, info)
@@ -99,11 +97,10 @@ namespace OpenRA.Mods.HV.Traits
 
 					world.AddFrameEndTask(w =>
 					{
-						var spawnedActor = w.CreateActor(unit, new TypeDictionary
-						{
+						var spawnedActor = w.CreateActor(unit, [
 							new LocationInit(cell),
 							new OwnerInit(info.Owner ?? collector.Owner.InternalName)
-						});
+						]);
 					});
 				}
 			}

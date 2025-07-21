@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2023-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -110,14 +110,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		Widget CreateOverlaysPanel()
 		{
-			var categoriesPanel = Ui.LoadWidget("OVERLAY_PANEL", null, new WidgetArgs());
+			var categoriesPanel = Ui.LoadWidget("OVERLAY_PANEL", null, []);
 			var categoryTemplate = categoriesPanel.Get<CheckboxWidget>("CATEGORY_TEMPLATE");
 
-			MapOverlays[] allCategories = { MapOverlays.Grid, MapOverlays.Buildable, MapOverlays.Marker, MapOverlays.Type };
+			MapOverlays[] allCategories = [MapOverlays.Grid, MapOverlays.Buildable, MapOverlays.Marker, MapOverlays.Type];
 			foreach (var cat in allCategories)
 			{
-				var category = (CheckboxWidget)categoryTemplate.Clone();
-				category.GetText = () => cat.ToString();
+				var category = categoryTemplate.Clone();
+				category.GetText = cat.ToString;
 				category.IsVisible = () => true;
 
 				if (cat.HasFlag(MapOverlays.Grid))

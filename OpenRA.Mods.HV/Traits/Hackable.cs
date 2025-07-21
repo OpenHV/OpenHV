@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
@@ -24,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Condition = null;
 
 		[Desc("The sound played when the influence is revoked.")]
-		public readonly string[] RevokeControlSounds = Array.Empty<string>();
+		public readonly string[] RevokeControlSounds = [];
 
 		[Desc("Map player to transfer this actor to if the owner lost the game.")]
 		public readonly string FallbackOwner = "Creeps";

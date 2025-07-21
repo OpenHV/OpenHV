@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2020-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2020-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
@@ -21,10 +20,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class VariedCostMultiplierInfo : TraitInfo<VariedCostMultiplier>, IProductionCostModifierInfo, IRulesetLoaded
 	{
 		[Desc("Only apply this cost change if the owner has these prerequisites.")]
-		public readonly string[] Prerequisites = Array.Empty<string>();
+		public readonly string[] Prerequisites = [];
 
 		[Desc("Production queues that this cost will apply to.")]
-		public readonly HashSet<string> Queues = new();
+		public readonly HashSet<string> Queues = [];
 
 		[Desc("Set this if items should get the same random pricing.")]
 		public readonly string Group = null;

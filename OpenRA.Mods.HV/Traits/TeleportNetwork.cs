@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -19,10 +19,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class TeleportNetworkInfo : ConditionalTraitInfo, IRulesetLoaded
 	{
 		[FieldLoader.Require]
-		[Desc("Type of TeleportNetwork that pairs up, in order for it to work.")]
+		[Desc($"Type of {nameof(TeleportNetwork)} that pairs up, in order for it to work.")]
 		public string Type;
 
-		[Desc("Stances requirement that targeted TeleportNetwork has to meet in order to teleport units.")]
+		[Desc($"Stances requirement that targeted {nameof(TeleportNetwork)} has to meet in order to teleport units.")]
 		public PlayerRelationship ValidStances = PlayerRelationship.Ally;
 
 		[Desc("Time in ticks to wait for the teleporter to charge up.")]
@@ -31,7 +31,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override void RulesetLoaded(Ruleset rules, ActorInfo ai)
 		{
 			if (!rules.Actors["player"].TraitInfos<TeleportNetworkManagerInfo>().Any(q => Type == q.Type))
-				throw new YamlException($"Can't find a TeleportNetworkManager with Type '{Type}'");
+				throw new YamlException($"Can't find a {nameof(TeleportNetworkManager)} with Type '{Type}'");
 
 			base.RulesetLoaded(rules, ai);
 		}
@@ -69,13 +69,13 @@ namespace OpenRA.Mods.HV.Traits
 			if (self.IsPrimaryTeleportNetworkExit())
 			{
 				var actors = self.World.ActorsWithTrait<TeleportNetworkPrimaryExit>()
-				.Where(a => a.Actor.Owner == self.Owner && a.Actor != self);
+				.Where(a => a.Actor.Owner == self.Owner && a.Actor != self).ToList();
 
-				if (!actors.Any())
+				if (actors.Count == 0)
 					teleportNetworkManager.PrimaryActor = null;
 				else
 				{
-					var primary = actors.First().Actor;
+					var primary = actors[0].Actor;
 					primary.Trait<TeleportNetworkPrimaryExit>().SetPrimary(primary);
 				}
 			}

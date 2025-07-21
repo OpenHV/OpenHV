@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2022-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -54,7 +54,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic.Ingame
 
 			next ??= miners[0];
 
-			selection.Combine(world, new Actor[] { next }, false, true);
+			selection.Combine(world, [next], false, true);
 			viewport.Center(selection.Actors);
 
 			return true;

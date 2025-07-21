@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -33,8 +33,8 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Palette used for rendering the resource sprites.")]
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
-		public readonly string[] BlockTerrainTypes = Array.Empty<string>();
-		public readonly string[] CoveredTerrainTypes = Array.Empty<string>();
+		public readonly string[] BlockTerrainTypes = [];
+		public readonly string[] CoveredTerrainTypes = [];
 
 		public override object Create(ActorInitializer init) { return new LiquidEdgeRenderer(init.Self, this); }
 	}
@@ -80,8 +80,8 @@ namespace OpenRA.Mods.HV.Traits
 		readonly ISpriteSequence spriteSequence;
 		readonly Map map;
 
-		readonly Queue<CPos> cleanDirty = new();
-		readonly HashSet<CPos> dirty = new();
+		readonly Queue<CPos> cleanDirty = [];
+		readonly HashSet<CPos> dirty = [];
 
 		TerrainSpriteLayer spriteLayer;
 		PaletteReference paletteReference;

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class HackerInfo : PausableConditionalTraitInfo, Requires<ArmamentInfo>, Requires<HealthInfo>
 	{
 		[Desc("Name of the armaments that grant this condition.")]
-		public readonly HashSet<string> ArmamentNames = new() { "primary" };
+		public readonly HashSet<string> ArmamentNames = ["primary"];
 
 		[Desc("Up to how many units can this unit control?",
 			"Use 0 or negative numbers for infinite.")]
@@ -36,15 +36,15 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string ControllingCondition = null;
 
 		[Desc("The sound played when the unit is hacked.")]
-		public readonly string[] Sounds = Array.Empty<string>();
+		public readonly string[] Sounds = [];
 
 		public override object Create(ActorInitializer init) { return new Hacker(this); }
 	}
 
 	public class Hacker : PausableConditionalTrait<HackerInfo>, INotifyAttack, INotifyKilled, INotifyActorDisposing
 	{
-		readonly List<Actor> victims = new();
-		readonly Stack<int> controllingTokens = new();
+		readonly List<Actor> victims = [];
+		readonly Stack<int> controllingTokens = [];
 
 		public IEnumerable<Actor> Victims => victims;
 
@@ -69,11 +69,8 @@ namespace OpenRA.Mods.HV.Traits
 
 		public void DisconnectVictim(Actor self, Actor victim)
 		{
-			if (victims.Contains(victim))
-			{
-				victims.Remove(victim);
+			if (victims.Remove(victim))
 				UnstackControllingCondition(self, Info.ControllingCondition);
-			}
 		}
 
 		void INotifyAttack.PreparingAttack(Actor self, in Target target, Armament a, Barrel barrel) { }

@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -54,14 +53,14 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int InitialSpawnDelay = 0;
 
 		[Desc("Which terrain types can we drop on?")]
-		public readonly HashSet<string> ValidGround = new() { "Clear" };
+		public readonly HashSet<string> ValidGround = ["Clear"];
 
 		[ActorReference]
 		[Desc("Cube actors to drop.")]
-		public readonly string[] CubeActors = { "cube" };
+		public readonly string[] CubeActors = ["cube"];
 
 		[Desc("Chance of each cube actor spawning.")]
-		public readonly int[] CubeActorShares = { 10 };
+		public readonly int[] CubeActorShares = [10];
 
 		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(MapPreview map)
 		{
@@ -124,7 +123,7 @@ namespace OpenRA.Mods.HV.Traits
 			var cubeActor = ChooseCubeActor();
 
 			self.World.AddFrameEndTask(w => w.CreateActor(cubeActor,
-				new TypeDictionary { new OwnerInit(w.WorldActor.Owner), new LocationInit(location) }));
+				[new OwnerInit(w.WorldActor.Owner), new LocationInit(location)]));
 		}
 
 		CPos? ChooseDropCell(Actor self, int maxTries)

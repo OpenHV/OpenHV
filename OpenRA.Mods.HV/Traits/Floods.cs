@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -30,10 +30,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int MaxTiles = 10000;
 
 		[Desc("Which tile ID to replace with which flooded variant")]
-		public readonly Dictionary<ushort, ushort> ReplacementTiles = new();
+		public readonly Dictionary<ushort, ushort> ReplacementTiles = [];
 
 		[Desc("Terrain type that should be converted albeit unpathable.")]
-		public readonly string[] StopTerrainTypes = Array.Empty<string>();
+		public readonly string[] StopTerrainTypes = [];
 
 		[FieldLoader.Require]
 		[Desc("Locomotor to test pathability of barriers against.")]
@@ -46,8 +46,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly FloodsInfo info;
 		readonly LiquidTerrainLayer liquidTerrainLayer;
-		readonly List<CPos> floodedCells = new();
-		readonly ITemplatedTerrainInfo terrainInfo;
+		readonly List<CPos> floodedCells = [];
 		readonly Map map;
 		readonly IPathFinder pathFinder;
 		readonly CPos origin;
@@ -66,8 +65,6 @@ namespace OpenRA.Mods.HV.Traits
 
 			if (self.World.Map.Rules.TerrainInfo is not ITemplatedTerrainInfo terrainInfo)
 				throw new InvalidDataException($"{nameof(Floods)} requires a template-based tileset.");
-
-			this.terrainInfo = terrainInfo;
 		}
 
 		int ticks;

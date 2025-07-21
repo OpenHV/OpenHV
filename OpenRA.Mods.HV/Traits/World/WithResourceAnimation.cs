@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -29,10 +29,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly HashSet<string> Types = null;
 
 		[Desc("The percentage of resource cells to play the animation on.", "Use two values to randomize between them.")]
-		public readonly int[] Ratio = { 1, 10 };
+		public readonly int[] Ratio = [1, 10];
 
 		[Desc("Tick interval between two animation spawning.", "Use two values to randomize between them.")]
-		public readonly int[] Interval = { 200, 500 };
+		public readonly int[] Interval = [200, 500];
 
 		[FieldLoader.Require]
 		[Desc("Animation image.")]
@@ -40,7 +40,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[SequenceReference(nameof(Image))]
 		[Desc("Randomly select one of these sequences to render.")]
-		public readonly string[] Sequences = new string[] { "idle" };
+		public readonly string[] Sequences = ["idle"];
 
 		[PaletteReference]
 		[Desc("Animation palette.")]
@@ -95,7 +95,7 @@ namespace OpenRA.Mods.HV.Traits
 			var ratio = Common.Util.RandomInRange(world.LocalRandom, info.Ratio);
 			var positions = cells.Shuffle(world.LocalRandom)
 				.Take(Math.Max(1, cells.Count * ratio / 100))
-				.Select(x => world.Map.CenterOfCell(x));
+				.Select(world.Map.CenterOfCell);
 
 			foreach (var position in positions)
 				world.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequences.Random(w.LocalRandom), info.Palette)));

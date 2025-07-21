@@ -511,7 +511,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			if (skirmishMode)
 				disconnectButton.Text = FluentProvider.GetMessage(Back);
 
-			var globalChat = Game.LoadWidget(null, "LOBBY_GLOBALCHAT_PANEL", lobby.Get("GLOBALCHAT_ROOT"), new WidgetArgs());
+			var globalChat = Game.LoadWidget(null, "LOBBY_GLOBALCHAT_PANEL", lobby.Get("GLOBALCHAT_ROOT"), []);
 			var globalChatInput = globalChat.Get<TextFieldWidget>("CHAT_TEXTFIELD");
 
 			globalChat.IsVisible = () => chatPanel == ChatPanelType.Global;

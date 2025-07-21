@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2015-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2015-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -24,10 +24,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Condition = null;
 
 		[Desc("The range of time (in ticks) with the condition being disabled. Two values imply a range.")]
-		public readonly int[] CooldownDuration = { 1000 };
+		public readonly int[] CooldownDuration = [1000];
 
 		[Desc("The range of time (in ticks) with the condition being enabled. Two values imply a range.")]
-		public readonly int[] ActiveDuration = { 100 };
+		public readonly int[] ActiveDuration = [100];
 
 		public readonly bool StartsGranted = false;
 

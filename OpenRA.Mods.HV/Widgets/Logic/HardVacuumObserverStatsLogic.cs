@@ -106,7 +106,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			this.worldRenderer = worldRenderer;
 
 			MiniYaml yaml;
-			var keyNames = Enum.GetNames(typeof(ObserverStatsPanel));
+			var keyNames = Enum.GetNames<ObserverStatsPanel>();
 			var statsHotkeys = new HotkeyReference[keyNames.Length];
 			for (var i = 0; i < keyNames.Length; i++)
 				statsHotkeys[i] = logicArgs.TryGetValue("Statistics" + keyNames[i] + "Key", out yaml) ? modData.Hotkeys[yaml.Value] : new HotkeyReference();
@@ -200,8 +200,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				CreateStatsOption(SupportPowers, ObserverStatsPanel.SupportPowers, supportPowersPlayerTemplate, () => DisplayStats(SupportPowerStats)),
 				CreateStatsOption(Combat, ObserverStatsPanel.Combat, combatPlayerTemplate, () => DisplayStats(CombatStats)),
 				CreateStatsOption(Army, ObserverStatsPanel.Army, armyPlayerTemplate, () => DisplayStats(ArmyStats)),
-				CreateStatsOption(EarningsGraph, ObserverStatsPanel.Graph, null, () => IncomeGraph()),
-				CreateStatsOption(ArmyGraph, ObserverStatsPanel.ArmyGraph, null, () => ArmyValueGraph()),
+				CreateStatsOption(EarningsGraph, ObserverStatsPanel.Graph, null, IncomeGraph),
+				CreateStatsOption(ArmyGraph, ObserverStatsPanel.ArmyGraph, null, ArmyValueGraph),
 			};
 
 			ScrollItemWidget SetupItem(StatsDropDownOption option, ScrollItemWidget template)
@@ -356,7 +356,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var armyText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("ARMY_VALUE").GetText = () => armyText.Update(stats.ArmyValue);
 
-			var visionText = new CachedTransform<int, string>(i => Vision(i));
+			var visionText = new CachedTransform<int, string>(Vision);
 			template.Get<LabelWidget>("VISION").GetText = () => player.Shroud.Disabled ? "100%" : visionText.Update(player.Shroud.RevealedCells);
 
 			return template;
@@ -516,7 +516,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var experienceText = new CachedTransform<int, string>(i => i.ToString(NumberFormatInfo.CurrentInfo));
 			template.Get<LabelWidget>("EXPERIENCE").GetText = () => experienceText.Update(stats.Experience);
 
-			var actionsText = new CachedTransform<double, string>(d => AverageOrdersPerMinute(d));
+			var actionsText = new CachedTransform<double, string>(AverageOrdersPerMinute);
 			template.Get<LabelWidget>("ACTIONS_MIN").GetText = () => actionsText.Update(stats.OrderCount);
 
 			return template;
