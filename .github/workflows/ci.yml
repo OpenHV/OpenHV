@@ -24,6 +24,10 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Check Code
+        run: |
+          make check
+
       - name: Retrieve Changed Files
         if: github.event_name == 'pull_request'
         id: changes
@@ -33,11 +37,8 @@ jobs:
           grep -E 'mods/hv/bits/.*\.png' changed_files.txt > sprites_changed_files.txt || true
           echo "sprites=$(cat sprites_changed_files.txt | tr '\n' ' ')" >> $GITHUB_OUTPUT
 
-      - name: Check Code
-        run: |
-          make check
-
       - name: Check Sprites
+        if: github.event_name == 'pull_request'
         env:
             ALL_CHANGED_SPRITES: ${{ steps.changes.outputs.sprites }}
         run: |
