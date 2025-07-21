@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -33,14 +33,14 @@ namespace OpenRA.Mods.HV.Terrain
 		}
 	}
 
-	public sealed class CustomTileCache : IDisposable
+	public sealed class CustomTileCache : ITileCache, IDisposable
 	{
 		// 1x1px transparent tile
 		const int MissingDataLength = 1;
 		const SpriteFrameType MissingFrameType = SpriteFrameType.Indexed8;
 		const SheetType MissingSheetType = SheetType.Indexed;
 
-		readonly Dictionary<ushort, TheaterTemplate> templates = new();
+		readonly Dictionary<ushort, TheaterTemplate> templates = [];
 		readonly Cache<SheetType, SheetBuilder> sheetBuilders;
 		readonly MersenneTwister random;
 
@@ -131,6 +131,11 @@ namespace OpenRA.Mods.HV.Terrain
 
 			var start = template.Variants > 1 ? variant ?? random.Next(template.Variants) : 0;
 			return template.Sprites[start * template.Stride + r.Index];
+		}
+
+		public SheetBuilder GetSheetBuilder(SheetType sheetType)
+		{
+			return sheetBuilders[sheetType];
 		}
 
 		public Sprite MissingTile { get; }

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Terrain
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	public class CustomTerrainRendererInfo : TraitInfo, ITiledTerrainRendererInfo
 	{
-		bool ITiledTerrainRendererInfo.ValidateTileSprites(ITemplatedTerrainInfo terrainInfo, Action<string> onError)
+		bool ITiledTerrainRendererInfo.ValidateTileSprites(ITemplatedTerrainInfo terrainInfo, Action<string> onError, out ITileCache tileCache)
 		{
 			var missingImages = new HashSet<string>();
 			var failed = false;
@@ -34,7 +34,7 @@ namespace OpenRA.Mods.HV.Terrain
 				failed = true;
 			}
 
-			var tileCache = new CustomTileCache((CustomTerrain)terrainInfo, OnMissingImage);
+			tileCache = new CustomTileCache((CustomTerrain)terrainInfo, OnMissingImage);
 			foreach (var t in terrainInfo.Templates)
 			{
 				var templateInfo = (CustomTerrainTemplateInfo)t.Value;
@@ -74,7 +74,7 @@ namespace OpenRA.Mods.HV.Terrain
 			map = world.Map;
 			terrainInfo = map.Rules.TerrainInfo as CustomTerrain;
 			if (terrainInfo == null)
-				throw new InvalidDataException("CustomTerrainRenderer can only be used with the CustomTerrain parser");
+				throw new InvalidDataException($"{nameof(CustomTerrainRenderer)} can only be used with the {nameof(CustomTerrain)} parser");
 
 			tileCache = new CustomTileCache(terrainInfo);
 		}
@@ -93,7 +93,7 @@ namespace OpenRA.Mods.HV.Terrain
 		public void UpdateCell(CPos cell)
 		{
 			var tile = map.Tiles[cell];
-			var palette = TileSet.TerrainPaletteInternalName;
+			var palette = terrainInfo.Palette;
 			if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
 				palette = ((CustomTerrainTemplateInfo)template).Palette ?? palette;
 
@@ -134,7 +134,7 @@ namespace OpenRA.Mods.HV.Terrain
 		Rectangle ITiledTerrainRenderer.TemplateBounds(TerrainTemplateInfo template)
 		{
 			Rectangle? templateRect = null;
-			var tileSize = map.Grid.TileSize;
+			var tileSize = map.Rules.TerrainInfo.TileSize;
 
 			var i = 0;
 			for (var y = 0; y < template.Size.Y; y++)
@@ -163,7 +163,7 @@ namespace OpenRA.Mods.HV.Terrain
 			if (t is not CustomTerrainTemplateInfo template)
 				yield break;
 
-			var ts = map.Grid.TileSize;
+			var ts = map.Rules.TerrainInfo.TileSize;
 			var gridType = map.Grid.Type;
 
 			var i = 0;
@@ -178,10 +178,10 @@ namespace OpenRA.Mods.HV.Terrain
 					var sprite = tileCache.TileSprite(tile, 0);
 					var u = gridType == MapGridType.Rectangular ? x : (x - y) / 2f;
 					var v = gridType == MapGridType.Rectangular ? y : (x + y) / 2f;
-					var offset = (new float2(u * ts.Width, (v - 0.5f * tileInfo.Height) * ts.Height) - 0.5f * sprite.Size.XY).ToInt2();
-					var palette = template.Palette ?? TileSet.TerrainPaletteInternalName;
+					var offset = scale * (new float2(u * ts.Width, (v - 0.5f * tileInfo.Height) * ts.Height) - 0.5f * sprite.Size.XY);
+					var palette = template.Palette ?? terrainInfo.Palette;
 
-					yield return new UISpriteRenderable(sprite, WPos.Zero, origin + offset, 0, wr.Palette(palette), scale);
+					yield return new UISpriteRenderable(sprite, WPos.Zero, origin + offset.ToInt2(), 0, wr.Palette(palette), scale);
 				}
 			}
 		}
@@ -202,11 +202,22 @@ namespace OpenRA.Mods.HV.Terrain
 
 					var sprite = tileCache.TileSprite(tile, 0);
 					var offset = map.Offset(new CVec(x, y), tileInfo.Height);
-					var palette = wr.Palette(template.Palette ?? TileSet.TerrainPaletteInternalName);
+					var palette = wr.Palette(template.Palette ?? terrainInfo.Palette);
 
 					yield return new SpriteRenderable(sprite, origin, offset, 0, palette, 1f, 1f, float3.Ones, TintModifiers.None, false);
 				}
 			}
+		}
+
+		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderPreview(WorldRenderer wr, TerrainTile tile, WPos origin)
+		{
+			if (!terrainInfo.TryGetTileInfo(tile, out var tileInfo))
+				yield break;
+			var sprite = tileCache.TileSprite(tile, 0);
+			var offset = map.Offset(new CVec(0, 0), tileInfo.Height);
+			var palette = wr.Palette(terrainInfo.Palette);
+
+			yield return new SpriteRenderable(sprite, origin, offset, 0, palette, 1f, 1f, float3.Ones, TintModifiers.None, false);
 		}
 	}
 }

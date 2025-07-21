@@ -15,7 +15,7 @@ label-actor-edit-panel-id = ID
 button-container-ok = OK
 label-tiles-bg-search = Search:
 label-actors-bg-search = Search:
-label-actors-bg-owners = Owner:
+label-actor-bg-owner = Owner:
 
 button-editor-world-root-undo =
    .label = Undo

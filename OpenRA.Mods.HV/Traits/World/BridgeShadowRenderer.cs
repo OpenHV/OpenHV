@@ -73,9 +73,9 @@ namespace OpenRA.Mods.Common.Traits
 				colors.Add(resourceIndex, info.Color);
 			}
 
-			for (var i = 0; i < map.MapSize.X; i++)
+			for (var i = 0; i < map.MapSize.Width; i++)
 			{
-				for (var j = 0; j < map.MapSize.Y; j++)
+				for (var j = 0; j < map.MapSize.Height; j++)
 				{
 					var cell = new MPos(i, j);
 					if (colors.TryGetValue(map.Resources[cell].Type, out var color))

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -132,7 +132,7 @@ namespace OpenRA.Mods.HV.Traits
 			 * neither too little nor too big compared with the clouds per map-cell later
 			 * spawned by `SpawnCloud`.
 			 */
-			var middlePoint = new MPos(world.Map.MapSize.X / 2, world.Map.MapSize.Y / 2);
+			var middlePoint = new MPos(world.Map.MapSize.Width / 2, world.Map.MapSize.Height / 2);
 			var middlePointTarget = world.Map.CenterOfCell(middlePoint.ToCPos(world.Map));
 
 			// lDistance and averageSpeed used are for loop condition below.

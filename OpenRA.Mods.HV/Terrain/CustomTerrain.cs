@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -11,11 +11,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using OpenRA.FileSystem;
+using OpenRA.Mods.Common.MapGenerator;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Primitives;
+using OpenRA.Support;
 
 namespace OpenRA.Mods.HV.Terrain
 {
@@ -70,15 +73,15 @@ namespace OpenRA.Mods.HV.Terrain
 			FieldLoader.Load(tile, my);
 
 			// Terrain type must be converted from a string to an index
-			tile.GetType().GetField("TerrainType").SetValue(tile, terrainInfo.GetTerrainIndex(my.Value));
+			tile.GetType().GetField(nameof(tile.TerrainType)).SetValue(tile, terrainInfo.GetTerrainIndex(my.Value));
 
 			// Fall back to the terrain-type color if necessary
 			var overrideColor = terrainInfo.TerrainTypes[tile.TerrainType].Color;
 			if (tile.MinColor == default)
-				tile.GetType().GetField("MinColor").SetValue(tile, overrideColor);
+				tile.GetType().GetField(nameof(tile.MinColor)).SetValue(tile, overrideColor);
 
 			if (tile.MaxColor == default)
-				tile.GetType().GetField("MaxColor").SetValue(tile, overrideColor);
+				tile.GetType().GetField(nameof(tile.MaxColor)).SetValue(tile, overrideColor);
 
 			return tile;
 		}
@@ -86,18 +89,27 @@ namespace OpenRA.Mods.HV.Terrain
 
 	public class CustomTerrain : ITemplatedTerrainInfo, ITerrainInfoNotifyMapCreated
 	{
+		[FluentReference]
 		public readonly string Name;
 		public readonly string Id;
+		public readonly Size TileSize = new(20, 20);
 		public readonly int SheetSize = 512;
-		public readonly Color[] HeightDebugColors = { Color.Red };
+		public readonly Color[] HeightDebugColors = [Color.Red];
 		public readonly string[] EditorTemplateOrder;
+		public readonly bool IgnoreTileSpriteOffsets;
+		public readonly bool EnableDepth = false;
+		public readonly float MinHeightColorBrightness = 1.0f;
+		public readonly float MaxHeightColorBrightness = 1.0f;
+		public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
 		[FieldLoader.Ignore]
 		public readonly IReadOnlyDictionary<ushort, TerrainTemplateInfo> Templates;
+		[FieldLoader.Ignore]
+		public readonly IReadOnlyDictionary<string, IEnumerable<MultiBrushInfo>> MultiBrushCollections;
 
 		[FieldLoader.Ignore]
 		public readonly TerrainTypeInfo[] TerrainInfo;
-		readonly Dictionary<string, byte> terrainIndexByType = new();
+		readonly Dictionary<string, byte> terrainIndexByType = [];
 		readonly byte defaultWalkableTerrainIndex;
 
 		public CustomTerrain(IReadOnlyFileSystem fileSystem, string filepath)
@@ -132,12 +144,18 @@ namespace OpenRA.Mods.HV.Terrain
 			// Templates
 			Templates = yaml["Templates"].ToDictionary().Values
 				.Select(y => (TerrainTemplateInfo)new CustomTerrainTemplateInfo(this, y)).ToDictionary(t => t.Id);
+
+			MultiBrushCollections =
+				yaml.TryGetValue("MultiBrushCollections", out var collectionDefinitions)
+					? collectionDefinitions.ToDictionary()
+						.Select(kv => new KeyValuePair<string, IEnumerable<MultiBrushInfo>>(
+							kv.Key,
+							MultiBrushInfo.ParseCollection(kv.Value)))
+						.ToImmutableDictionary()
+					: ImmutableDictionary<string, IEnumerable<MultiBrushInfo>>.Empty;
 		}
 
-		public TerrainTypeInfo this[byte index]
-		{
-			get { return TerrainInfo[index]; }
-		}
+		public TerrainTypeInfo this[byte index] => TerrainInfo[index];
 
 		public byte GetTerrainIndex(string type)
 		{
@@ -149,25 +167,16 @@ namespace OpenRA.Mods.HV.Terrain
 
 		public byte GetTerrainIndex(TerrainTile r)
 		{
-			if (!Templates.TryGetValue(r.Type, out var tpl))
-				return defaultWalkableTerrainIndex;
-
-			if (tpl.Contains(r.Index))
-			{
-				var tile = tpl[r.Index];
-				if (tile != null && tile.TerrainType != byte.MaxValue)
-					return tile.TerrainType;
-			}
+			var tile = Templates[r.Type][r.Index];
+			if (tile.TerrainType != byte.MaxValue)
+				return tile.TerrainType;
 
 			return defaultWalkableTerrainIndex;
 		}
 
 		public TerrainTileInfo GetTileInfo(TerrainTile r)
 		{
-			if (!Templates.TryGetValue(r.Type, out var tpl))
-				return null;
-
-			return tpl.Contains(r.Index) ? tpl[r.Index] : null;
+			return Templates[r.Type][r.Index];
 		}
 
 		public bool TryGetTileInfo(TerrainTile r, out TerrainTileInfo info)
@@ -182,18 +191,21 @@ namespace OpenRA.Mods.HV.Terrain
 			return info != null;
 		}
 
-		string ITerrainInfo.Id { get { return Id; } }
-		TerrainTypeInfo[] ITerrainInfo.TerrainTypes { get { return TerrainInfo; } }
+		string ITerrainInfo.Id => Id;
+		string ITerrainInfo.Name => Name;
+		Size ITerrainInfo.TileSize => TileSize;
+		TerrainTypeInfo[] ITerrainInfo.TerrainTypes => TerrainInfo;
 		TerrainTileInfo ITerrainInfo.GetTerrainInfo(TerrainTile r) { return GetTileInfo(r); }
 		bool ITerrainInfo.TryGetTerrainInfo(TerrainTile r, out TerrainTileInfo info) { return TryGetTileInfo(r, out info); }
-		Color[] ITerrainInfo.HeightDebugColors { get { return HeightDebugColors; } }
+		Color[] ITerrainInfo.HeightDebugColors => HeightDebugColors;
 		IEnumerable<Color> ITerrainInfo.RestrictedPlayerColors { get { return TerrainInfo.Where(ti => ti.RestrictPlayerColor).Select(ti => ti.Color); } }
-		float ITerrainInfo.MinHeightColorBrightness { get { return 1.0f; } }
-		float ITerrainInfo.MaxHeightColorBrightness { get { return 1.0f; } }
-		TerrainTile ITerrainInfo.DefaultTerrainTile { get { return new TerrainTile(Templates.First().Key, 0); } }
+		float ITerrainInfo.MinHeightColorBrightness => MinHeightColorBrightness;
+		float ITerrainInfo.MaxHeightColorBrightness => MaxHeightColorBrightness;
+		TerrainTile ITerrainInfo.DefaultTerrainTile => new(Templates.First().Key, 0);
 
-		string[] ITemplatedTerrainInfo.EditorTemplateOrder { get { return EditorTemplateOrder; } }
-		IReadOnlyDictionary<ushort, TerrainTemplateInfo> ITemplatedTerrainInfo.Templates { get { return Templates; } }
+		string[] ITemplatedTerrainInfo.EditorTemplateOrder => EditorTemplateOrder;
+		IReadOnlyDictionary<ushort, TerrainTemplateInfo> ITemplatedTerrainInfo.Templates => Templates;
+		IReadOnlyDictionary<string, IEnumerable<MultiBrushInfo>> ITemplatedTerrainInfo.MultiBrushCollections => MultiBrushCollections;
 
 		void ITerrainInfoNotifyMapCreated.MapCreated(Map map) { }
 	}

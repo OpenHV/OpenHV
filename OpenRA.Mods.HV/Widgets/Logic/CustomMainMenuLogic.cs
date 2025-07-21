@@ -24,6 +24,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		[FluentReference]
 		const string LoadingNews = "label-loading-news";
 
+		[FluentReference("message")]
+		const string NewsRetrivalFailed = "label-news-retrieval-failed";
+
+		[FluentReference("message")]
+		const string NewsParsingFailed = "label-news-parsing-failed";
+
 		[FluentReference("author", "datetime")]
 		const string AuthorDateTime = "label-author-datetime";
 
@@ -34,8 +40,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		protected MenuType menuType = MenuType.Main;
 		readonly Widget rootMenu;
 		readonly ScrollPanelWidget newsPanel;
+		readonly int maxNewsHeight;
 		readonly Widget newsTemplate;
 		readonly LabelWidget newsStatus;
+		readonly ModData modData;
 
 		protected static MenuPanel lastGameState = MenuPanel.None;
 
@@ -54,6 +62,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		[ObjectCreator.UseCtor]
 		public CustomMainMenuLogic(Widget widget, World world, ModData modData)
 		{
+			this.modData = modData;
+
 			rootMenu = widget;
 
 			// Menu buttons
@@ -150,7 +160,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			// Loading into the map editor
 			Game.BeforeGameStart += RemoveShellmapUI;
 
-			var onSelect = new Action<string>(uid => LoadMapIntoEditor(modData.MapCache[uid].Uid));
+			var onSelect = new Action<string>(uid =>
+			{
+				if (modData.MapCache[uid].Status != MapStatus.Available)
+					SwitchMenu(MenuType.Extras);
+				else
+					LoadMapIntoEditor(modData.MapCache[uid].Uid);
+			});
 
 			var newMapButton = widget.Get<ButtonWidget>("NEW_MAP_BUTTON");
 			newMapButton.OnClick = () =>
@@ -170,10 +186,12 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				Game.OpenWindow("MAPCHOOSER_PANEL", new WidgetArgs()
 				{
 					{ "initialMap", null },
+					{ "initialGeneratedMap", (MapGenerationArgs)null },
 					{ "remoteMapPool", null },
 					{ "initialTab", MapClassification.User },
 					{ "onExit", () => SwitchMenu(MenuType.MapEditor) },
 					{ "onSelect", onSelect },
+					{ "onSelectGenerated", null },
 					{ "filter", MapVisibility.Lobby | MapVisibility.Shellmap | MapVisibility.MissionSelector },
 				});
 			};
@@ -190,6 +208,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				newsPanel = Ui.LoadWidget<ScrollPanelWidget>("GITHUB_NEWS_PANEL", null, new WidgetArgs());
 				newsTemplate = newsPanel.Get("GITHUB_NEWS_ITEM_TEMPLATE");
 				newsPanel.RemoveChild(newsTemplate);
+				maxNewsHeight = newsPanel.Bounds.Height;
 
 				newsStatus = newsPanel.Get<LabelWidget>("GITHUB_NEWS_STATUS");
 				SetNewsStatus(FluentProvider.GetMessage(LoadingNews));
@@ -207,16 +226,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				updateLabel.IsVisible = () => !newsOpen && menuType != MenuType.None &&
 					menuType != MenuType.StartupPrompts &&
 					webServices.ModVersionStatus == ModVersionStatus.Outdated;
-
-			var playerProfile = widget.GetOrNull("PLAYER_PROFILE_CONTAINER");
-			if (playerProfile != null)
-			{
-				Func<bool> minimalProfile = () => Ui.CurrentWindow() != null;
-				Game.LoadWidget(world, "LOCAL_PROFILE_PANEL", playerProfile, new WidgetArgs()
-				{
-					{ "minimalProfile", minimalProfile }
-				});
-			}
 
 			menuType = MenuType.StartupPrompts;
 
@@ -260,7 +269,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		void DisplayNews(GitHubWebServices webServices)
 		{
 			newsPanel.RemoveChildren();
-			var maxNewsHeight = newsPanel.Bounds.Height;
 			SetNewsStatus("");
 
 			var newsWidget = newsTemplate.Clone();
@@ -314,9 +322,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		static void LoadMapIntoEditor(string uid)
 		{
-			// HACK: Work around a synced-code change check.
-			// It's not clear why this is needed here, but not in the other places that load maps.
-			Game.RunAfterTick(() => Game.LoadEditor(uid));
+			Game.LoadEditor(uid);
 
 			DiscordService.UpdateStatus(DiscordState.InMapEditor);
 
@@ -336,11 +342,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		void StartSkirmishGame()
 		{
-			var map = Game.ModData.MapCache.ChooseInitialMap(Game.Settings.Server.Map, Game.CosmeticRandom);
+			SwitchMenu(MenuType.None);
+
+			var map = modData.MapCache.ChooseInitialMap(modData.MapCache.PickLastModifiedMap(MapVisibility.Lobby) ?? Game.Settings.Server.Map, Game.CosmeticRandom);
 			Game.Settings.Server.Map = map;
 			Game.Settings.Save();
 
-			ConnectionLogic.Connect(Game.CreateLocalServer(map),
+			ConnectionLogic.Connect(Game.CreateLocalServer(map, isSkirmish: true),
 				"",
 				OpenSkirmishLobbyPanel,
 				() => { Game.CloseServer(); SwitchMenu(MenuType.Main); });
@@ -351,7 +359,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			SwitchMenu(MenuType.None);
 			Game.OpenWindow("MISSIONBROWSER_PANEL", new WidgetArgs
 			{
-				{ "onExit", () => SwitchMenu(MenuType.Singleplayer) },
+				{ "onExit", () => { Game.Disconnect(); SwitchMenu(MenuType.Singleplayer); } },
 				{ "onStart", () => { RemoveShellmapUI(); lastGameState = MenuPanel.Missions; } },
 				{ "initialMap", map }
 			});

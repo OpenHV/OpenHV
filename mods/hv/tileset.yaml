@@ -1,8 +1,9 @@
 # License: CC-BY-SA-4.0
 
 General:
-	Name: Planet
+	Name: tileset-planet
 	Id: PLANET
+	TileSize: 20, 20
 	Extensions: .png
 	EditorTemplateOrder: Terrain, Crater, Cliff, Grass, Road, Littoral, Pelagic, Oceanic, Lava, Mountain, Rock, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Swamp, Tech, Dirt
 

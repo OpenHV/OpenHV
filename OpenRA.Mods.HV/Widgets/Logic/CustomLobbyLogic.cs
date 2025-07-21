@@ -24,6 +24,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
 {
+	[IncludeStaticFluentReferences(typeof(LobbyUtils))]
 	public class CustomLobbyLogic : ChromeLogic, INotificationHandler<TextNotification>
 	{
 		[FluentReference]
@@ -88,14 +89,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly Widget newSpectatorTemplate;
 
 		readonly ScrollPanelWidget lobbyChatPanel;
-		readonly Dictionary<TextNotificationPool, Widget> chatTemplates = new();
+		readonly Dictionary<TextNotificationPool, Widget> chatTemplates = [];
 		readonly TextFieldWidget chatTextField;
 		readonly CachedTransform<int, string> chatAvailableIn;
 		readonly string chatDisabled;
 
 		readonly ScrollPanelWidget players;
 
-		readonly Dictionary<string, LobbyFaction> factions = new();
+		readonly Dictionary<string, LobbyFaction> factions = [];
 
 		readonly IColorPickerManagerInfo colorManager;
 
@@ -103,6 +104,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		MapPreview map;
 		Session.MapStatus mapStatus;
+		MapGenerationArgs lastGeneratedMap;
 
 		bool chatEnabled;
 		bool disableTeamChat;
@@ -113,7 +115,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		int globalChatUnreadMessages;
 		bool updateDiscordStatus = true;
 		bool resetOptionsButtonEnabled;
-		Dictionary<int, SpawnOccupant> spawnOccupants = new();
+		bool mapAvailable;
+		Dictionary<int, SpawnOccupant> spawnOccupants = [];
 
 		readonly string chatLineSound;
 		readonly string playerJoinedSound;
@@ -199,8 +202,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					"onMouseDown", (Action<MapPreviewWidget, MapPreview, MouseInput>)((preview, mapPreview, mi) =>
 						LobbyUtils.SelectSpawnPoint(orderManager, preview, mapPreview, mi))
 				},
-				{ "getSpawnOccupants", (Func<Dictionary<int, SpawnOccupant>>)(() => spawnOccupants) },
-				{ "getDisabledSpawnPoints", (Func<HashSet<int>>)(() => orderManager.LobbyInfo.DisabledSpawnPoints) },
+				{ "getSpawnOccupants", () => spawnOccupants },
+				{ "getDisabledSpawnPoints", () => orderManager.LobbyInfo.DisabledSpawnPoints },
 				{ "showUnoccupiedSpawnpoints", true },
 				{ "mapUpdatesEnabled", true },
 				{
@@ -217,7 +220,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			UpdateCurrentMap();
 
-			var playerBin = Ui.LoadWidget("LOBBY_PLAYER_BIN", lobby.Get("TOP_PANELS_ROOT"), new WidgetArgs());
+			var playerBin = Ui.LoadWidget("LOBBY_PLAYER_BIN", lobby.Get("TOP_PANELS_ROOT"), []);
 			playerBin.IsVisible = () => panel == PanelType.Players;
 
 			players = playerBin.Get<ScrollPanelWidget>("LOBBY_PLAYERS");
@@ -230,13 +233,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			colorManager = modRules.Actors[SystemActors.World].TraitInfo<IColorPickerManagerInfo>();
 
 			foreach (var f in modRules.Actors[SystemActors.World].TraitInfos<FactionInfo>())
-				factions.Add(f.InternalName, new LobbyFaction
-				{
-					Selectable = f.Selectable,
-					Name = f.Name,
-					Side = f.Side,
-					Description = f.Description?.Replace(@"\n", "\n")
-				});
+				factions.Add(f.InternalName, new LobbyFaction { Selectable = f.Selectable, Name = f.Name, Side = f.Side, Description = f.Description });
 
 			var gameStarting = false;
 			Func<bool> configurationDisabled = () => !Game.IsHost || gameStarting ||
@@ -263,16 +260,30 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						Game.Settings.Save();
 					});
 
+					var onSelectGenerated = new Action<MapGenerationArgs>(args =>
+					{
+						if (args.Uid == map.Uid)
+							return;
+
+						lastGeneratedMap = args;
+						orderManager.IssueOrder(Order.FromTargetString("GenerateMap", args.Serialize(), true));
+						orderManager.IssueOrder(Order.Command("map " + args.Uid));
+						Game.Settings.Server.Map = args.Uid;
+						Game.Settings.Save();
+					});
+
 					// Check for updated maps, if the user has edited a map we'll preselect it for them
 					modData.MapCache.UpdateMaps();
 
 					Ui.OpenWindow("MAPCHOOSER_PANEL", new WidgetArgs()
 					{
 						{ "initialMap", modData.MapCache.PickLastModifiedMap(MapVisibility.Lobby) ?? map.Uid },
+						{ "initialGeneratedMap", lastGeneratedMap },
 						{ "remoteMapPool", orderManager.ServerMapPool },
 						{ "initialTab", MapClassification.System },
 						{ "onExit", modData.MapCache.UpdateMaps },
 						{ "onSelect", Game.IsHost ? onSelect : null },
+						{ "onSelectGenerated", Game.IsHost ? onSelectGenerated : null },
 						{ "filter", MapVisibility.Lobby },
 					});
 				};
@@ -386,7 +397,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var optionsBin = Ui.LoadWidget("LOBBY_OPTIONS_BIN", lobby.Get("TOP_PANELS_ROOT"), new WidgetArgs()
 			{
 				{ "orderManager", orderManager },
-				{ "getMap", (Func<MapPreview>)(() => map) },
+				{ "getMap", () => map },
 				{ "configurationDisabled", configurationDisabled }
 			});
 
@@ -480,7 +491,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				};
 			}
 
-			var forceStartBin = Ui.LoadWidget("FORCE_START_DIALOG", lobby.Get("TOP_PANELS_ROOT"), new WidgetArgs());
+			var forceStartBin = Ui.LoadWidget("FORCE_START_DIALOG", lobby.Get("TOP_PANELS_ROOT"), []);
 			forceStartBin.IsVisible = () => panel == PanelType.ForceStart;
 			forceStartBin.Get("KICK_WARNING").IsVisible = () => orderManager.LobbyInfo.Clients.Any(c => c.IsInvalid);
 			var forceStartButton = forceStartBin.Get<ButtonWidget>("OK_BUTTON");
@@ -531,7 +542,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				foreach (var item in templateIds.Nodes)
 				{
 					var key = FieldLoader.GetValue<TextNotificationPool>("key", item.Key);
-					chatTemplates[key] = Ui.LoadWidget(item.Value.Value, null, new WidgetArgs());
+					chatTemplates[key] = Ui.LoadWidget(item.Value.Value, null, []);
 				}
 			}
 
@@ -645,6 +656,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 		public override void Tick()
 		{
+			// Map may have been installed or generated in the background
+			if (!mapAvailable && map.Status == MapStatus.Available)
+			{
+				mapAvailable = true;
+				orderManager.IssueOrder(Order.Command($"state {Session.ClientState.NotReady}"));
+			}
+
 			if (panel == PanelType.Options && OptionsTabDisabled())
 				panel = PanelType.Players;
 
@@ -716,12 +734,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			map = modData.MapCache[uid];
 
 			// Tell the server that we have the map
-			if (map.Status == MapStatus.Available)
+			mapAvailable = map.Status == MapStatus.Available;
+			if (mapAvailable)
 				orderManager.IssueOrder(Order.Command($"state {Session.ClientState.NotReady}"));
 
 			// We don't have the map
 			else if (map.Status != MapStatus.DownloadAvailable && Game.Settings.Game.AllowDownloading)
-				modData.MapCache.QueryRemoteMapDetails(services.MapRepository, new[] { uid });
+				modData.MapCache.QueryRemoteMapDetails(services.MapRepository, [uid]);
 		}
 
 		void UpdatePlayerList()
@@ -919,7 +938,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			while (players.Children.Count > idx)
 				players.RemoveChild(players.Children[idx]);
 
-			tabCompletion.Names = orderManager.LobbyInfo.Clients.Select(c => c.Name).Distinct().ToList();
+			tabCompletion.Names = orderManager.LobbyInfo.Clients.Where(c => !c.IsBot).Select(c => c.Name).Distinct().ToList();
 		}
 
 		void UpdateDiscordStatus()
@@ -953,7 +972,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				if (orderManager.LobbyInfo.GlobalSettings.Dedicated)
 				{
 					var endpoint = CurrentServerSettings.Target.GetConnectEndPoints().First();
-					secret = string.Concat(endpoint.Address, "|", endpoint.Port);
+					secret = $"{endpoint.Address}|{endpoint.Port}";
 				}
 
 				var state = skirmishMode ? DiscordState.InSkirmishLobby : DiscordState.InMultiplayerLobby;

@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   linux:
-    name: Linux (.NET 6)
+    name: Linux (.NET 8)
     runs-on: ubuntu-22.04
 
     steps:
@@ -19,10 +19,10 @@ jobs:
       - name: Remove System .NET
         run: sudo apt-get remove -y dotnet*
 
-      - name: Install .NET 6
+      - name: Install .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Retrieve Changed Files
         id: changes
@@ -60,35 +60,18 @@ jobs:
           make check-scripts -j2
           make TREAT_WARNINGS_AS_ERRORS=true test
 
-  linux-mono:
-    name: Linux (mono)
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Clone Repository
-        uses: actions/checkout@v4
-
-      - name: Check Code
-        run: |
-          mono --version
-          make RUNTIME=mono check
-
-      - name: Check Mod
-        run: |
-          make RUNTIME=mono test
-
   windows:
-    name: Windows (.NET 6.0)
+    name: Windows (.NET 8.0)
     runs-on: windows-2022
 
     steps:
       - name: Clone Repository
         uses: actions/checkout@v4
 
-      - name: Install .NET 6
+      - name: Install .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Check Code
         shell: powershell
