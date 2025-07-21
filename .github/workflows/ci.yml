@@ -25,15 +25,11 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Retrieve Changed Files
+        if: github.event_name == 'pull_request'
         id: changes
         run: |
-          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-            git fetch origin main --depth=1
-            git diff --name-only --diff-filter=AM origin/main ${{ github.sha }} > changed_files.txt
-          else
-            git fetch origin ${{ github.event.before }} --depth=1
-            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
-          fi
+          git fetch origin main --depth=1
+          git diff --name-only --diff-filter=AM origin/main ${{ github.sha }} > changed_files.txt
           grep -E 'mods/hv/bits/.*\.png' changed_files.txt > sprites_changed_files.txt || true
           echo "sprites=$(cat sprites_changed_files.txt | tr '\n' ' ')" >> $GITHUB_OUTPUT
 
