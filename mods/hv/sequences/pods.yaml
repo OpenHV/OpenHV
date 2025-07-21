@@ -10,7 +10,7 @@ rifleman:
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -27,7 +27,7 @@ rocketeer:
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -84,7 +84,7 @@ mortar:
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -101,7 +101,7 @@ sniper:
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -113,7 +113,7 @@ technician:
 		Filename: bits/technician.png
 		Facings: 8
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -122,24 +122,24 @@ technician:
 
 flamer:
 	idle:
-		Filename: bits/flamethrowerpod.png
+		Filename: bits/flamer.png
 		Facings: 8
 		Length: 2
 		Tick: 60
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/flamethrowerpod-icon.png
+		Filename: bits/flamer-icon.png
 
 broker:
 	idle:
 		Filename: bits/broker.png
 		Facings: 8
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -209,22 +209,22 @@ jetpacker:
 
 blaster:
 	idle:
-		Filename: bits/pod.png
+		Filename: bits/blaster.png
 		Facings: 8
 		Offset: 0,-3
 	animation:
-		Filename: bits/pod.png
+		Filename: bits/blaster.png
 		Start: 8
 		Facings: 8
 		Tick: 30
 		Offset: 0,-3
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/pod-icon.png
+		Filename: bits/blaster-icon.png
 
 shocker:
 	idle:
@@ -237,7 +237,7 @@ shocker:
 		Length: 3
 		Tick: 60
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
@@ -296,7 +296,7 @@ firefighter:
 		Filename: bits/firefighter.png
 		Facings: 8
 	die:
-		Filename: bits/poddeath.png
+		Filename: bits/pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
