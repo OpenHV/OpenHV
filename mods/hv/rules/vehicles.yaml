@@ -845,6 +845,9 @@ MINER:
 		Order: 20
 		Scale: 3
 		Category: Utilities
+	AutoDeploy:
+		TerrainTypes: Ore
+		TargetLineColor: 0000FF
 	Valued:
 		Cost: 1100
 	Tooltip:
