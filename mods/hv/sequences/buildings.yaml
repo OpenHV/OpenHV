@@ -133,8 +133,7 @@ base:
 		Offset: 9, 7
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 0
+		Filename: bits/base-icon.png
 		Offset: 0, 0
 
 base2:
@@ -170,8 +169,7 @@ base2:
 	damaged-active-platform2:
 		Filename: bits/creation2-damaged.png
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 27
+		Filename: bits/base2-icon.png
 		Offset: 0, 0
 
 outpost:
@@ -250,8 +248,7 @@ generator:
 		Filename: bits/flame2.png
 		Offset: 3, -17
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 4
+		Filename: bits/generator-icon.png
 		Offset: 0, 0
 
 generator2:
@@ -268,8 +265,7 @@ generator2:
 		Filename: bits/generator2.png
 		Start: 16
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 31
+		Filename: bits/generator2-icon.png
 
 radar:
 	Inherits@Flame: ^BuildingFlame
@@ -301,8 +297,7 @@ radar:
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 7
+		Filename: bits/radar-icon.png
 		Offset: 0, 0
 
 radar2:
@@ -318,8 +313,7 @@ radar2:
 	damaged-idle:
 		Filename: bits/radar2.png
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 20
+		Filename: bits/radar2-icon.png
 		Offset: 0, 0
 
 trader:
@@ -364,8 +358,7 @@ trader:
 		Filename: bits/flame2.png
 		Offset: 12, -17
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 11
+		Filename: bits/trader-icon.png
 		Offset: 0, 0
 
 trader2:
@@ -377,8 +370,7 @@ trader2:
 	active:
 		Filename: bits/trader2.png
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 28
+		Filename: bits/trader2-icon.png
 
 module:
 	Inherits@Flame: ^BuildingFlame2
@@ -431,8 +423,7 @@ module:
 		Offset: -7, -11
 		ZOffset: 1769
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 6
+		Filename: bits/module-icon.png
 		Offset: 0, 0
 
 module2:
@@ -453,8 +444,7 @@ module2:
 		Filename: bits/module2.png
 		Reverses: True
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 30
+		Filename: bits/module2-icon.png
 		Offset: 0, 0
 
 miner2:
@@ -564,8 +554,7 @@ miner2:
 		Offset: -13, 14
 		ZOffset: 3072
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 16
+		Filename: bits/miner2-icon.png
 		Offset: 0, 0
 
 starport:
@@ -616,8 +605,7 @@ starport:
 		Filename: bits/flame2.png
 		Offset: -3, 17
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 9
+		Filename: bits/starport-icon.png
 		Offset: 0, 0
 
 starport2:
@@ -660,8 +648,7 @@ starport2:
 		Filename: bits/flame2.png
 		Offset: -3, 17
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 17
+		Filename: bits/starport2-icon.png
 		Offset: 0, 0
 
 factory:
@@ -792,8 +779,7 @@ factory:
 		Filename: bits/flame2.png
 		Offset: 15, -26
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 2
+		Filename: bits/factory-icon.png
 		Offset: 0, 0
 
 factory2:
@@ -924,8 +910,7 @@ factory2:
 		Filename: bits/flame2.png
 		Offset: 9, -8
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 1
+		Filename: bits/factory2-icon.png
 		Offset: 0, 0
 
 bunker:
@@ -957,8 +942,7 @@ bunker:
 		Filename: bits/flame2.png
 		Offset: 2, -12
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 25
+		Filename: bits/bunker-icon.png
 		Offset: 0, 0
 
 bunker2:
@@ -971,8 +955,7 @@ bunker2:
 	damaged-idle:
 		Filename: bits/bunker2.png
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 26
+		Filename: bits/bunker2-icon.png
 
 turret:
 	Inherits@Flame: ^BuildingFlame
@@ -1012,8 +995,7 @@ turret:
 		Filename: bits/flame2.png
 		Offset: 10, -12
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 14
+		Filename: bits/turret-icon.png
 		Offset: 0, 0
 
 turret2:
@@ -1037,8 +1019,7 @@ turret2:
 		Facings: 8
 		Offset: 0, -7
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 21
+		Filename: bits/turret2-icon.png
 
 aaturret:
 	Inherits@Flame: ^BuildingFlame
@@ -1086,8 +1067,7 @@ aaturret:
 		Filename: bits/flame2.png
 		Offset: 10, -12
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 19
+		Filename: bits/aa-turret-icon.png
 		Offset: 0, 0
 
 aaturret2:
@@ -1123,8 +1103,7 @@ aaturret2:
 		Length: 4
 		Tick: 25
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 22
+		Filename: bits/aa-turret2-icon.png
 		Offset: 0, 0
 
 field:
@@ -1183,8 +1162,7 @@ field:
 		Filename: bits/flame2.png
 		Offset: 10, 0
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 3
+		Filename: bits/field2-icon.png
 		Offset: 0, 0
 
 field2:
@@ -1256,8 +1234,7 @@ silo:
 		Filename: bits/flame2.png
 		Offset: 8, -24
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 8
+		Filename: bits/silo-icon.png
 		Offset: 0, 0
 
 uplink:
@@ -1301,8 +1278,7 @@ uplink:
 		Filename: bits/flame2.png
 		Offset: 8, -24
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 24
+		Filename: bits/uplink-icon.png
 		Offset: 0, 0
 
 howitzer:
@@ -1345,8 +1321,7 @@ howitzer:
 		Filename: bits/flame2.png
 		Offset: 10, -10
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 15
+		Filename: bits/howitzer-icon.png
 		Offset: 0, 0
 
 televator:
@@ -1379,8 +1354,7 @@ televator:
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 12
+		Filename: bits/televator-icon.png
 
 televator2:
 	Inherits@Flame: ^BuildingFlame
@@ -1412,8 +1386,7 @@ televator2:
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 13
+		Filename: bits/televator2-icon.png
 
 harbor:
 	Inherits@Flame: ^BuildingFlame2
@@ -1461,8 +1434,7 @@ harbor:
 		Offset: 10, -15
 		ZOffset: 1001
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 5
+		Filename: bits/harbor-icon.png
 		Offset: 0, 0
 
 harbor2:
@@ -1479,8 +1451,7 @@ harbor2:
 	damaged-idle:
 		Filename: bits/harbor2.png
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 29
+		Filename: bits/harbor2-icon.png
 		Offset: 0, 0
 
 mother:
@@ -1647,8 +1618,7 @@ barrier:
 		Offset: 0,-5
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 32
+		Filename: bits/barrier-icon.png
 		Offset: 0, 0
 
 gate-horizontal:
@@ -1752,8 +1722,7 @@ gate-horizontal:
 		Tick: 30
 		ZOffset: 3096
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 33
+		Filename: bits/gate-horizontal-icon.png
 		Offset: 0, 0
 
 gate-vertical:
@@ -1827,8 +1796,7 @@ gate-vertical:
 		ZOffset: -3036
 		ShadowStart: 80
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 34
+		Filename: bits/gate-vertical-icon.png
 		Offset: 0, 0
 
 techcenter:
@@ -1872,8 +1840,7 @@ techcenter:
 		Filename: bits/flame2.png
 		Offset: 8, 4
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 18
+		Filename: bits/techcenter-icon.png
 		Offset: 0, 0
 
 techcenter2:
@@ -1890,8 +1857,7 @@ techcenter2:
 		Filename: bits/techcenter2.png
 		Tick: 100
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 35
+		Filename: bits/techcenter2-icon.png
 
 reconstructor:
 	Inherits@Flame: ^BuildingFlame2
@@ -2025,8 +1991,7 @@ storage2:
 		Filename: bits/flame2.png
 		Offset: 15, 8
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 23
+		Filename: bits/storage2-icon.png
 		Offset: 0, 0
 
 storage:
@@ -2069,8 +2034,7 @@ storage:
 	make-platform4:
 		Filename: bits/platform2.png
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 10
+		Filename: bits/storage-icon.png
 		Offset: 0, 0
 
 extractor:
@@ -2233,8 +2197,7 @@ oresmelt:
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 36
+		Filename: bits/oresmelt-icon.png
 		Offset: 0, 0
 
 orepurifier:
@@ -2293,8 +2256,7 @@ orepurifier:
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/buildings-icons.png
-		Start: 37
+		Filename: bits/orepurifier-icon.png
 		Offset: 0, 0
 
 flagpost:

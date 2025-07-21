@@ -81,11 +81,11 @@ icon:
 	airstrike:
 		Filename: bits/airstrike-icon.png
 	radar:
-		Filename: bits/radar-icon.png
+		Filename: bits/satellite-icon.png
 	howitzer:
-		Filename: bits/howitzer-icon.png
+		Filename: bits/barrage-icon.png
 	televator:
-		Filename: bits/televator-icon.png
+		Filename: bits/teleport-icon.png
 		Offset: 1,1
 	null:
 		Filename: bits/null.png
