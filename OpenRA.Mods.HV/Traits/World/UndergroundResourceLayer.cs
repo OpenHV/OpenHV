@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -68,9 +68,9 @@ namespace OpenRA.Mods.HV.Traits
 				r => r.ResourceIndex,
 				r => terrainInfo.TerrainTypes[terrainInfo.GetTerrainIndex(r.TerrainType)].Color);
 
-			for (var i = 0; i < map.MapSize.X; i++)
+			for (var i = 0; i < map.MapSize.Width; i++)
 			{
-				for (var j = 0; j < map.MapSize.Y; j++)
+				for (var j = 0; j < map.MapSize.Height; j++)
 				{
 					var cell = new MPos(i, j);
 					if (colors.TryGetValue(map.Resources[cell].Type, out var color))

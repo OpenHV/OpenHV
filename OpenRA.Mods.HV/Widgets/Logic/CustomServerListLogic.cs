@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2023-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -402,14 +402,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			clientContainer = widget.GetOrNull("CLIENT_LIST_CONTAINER");
 			if (clientContainer != null)
 			{
-				clientList = Ui.LoadWidget("MULTIPLAYER_CLIENT_LIST", clientContainer, new WidgetArgs()) as ScrollPanelWidget;
+				clientList = Ui.LoadWidget("MULTIPLAYER_CLIENT_LIST", clientContainer, []) as ScrollPanelWidget;
 				clientList.IsVisible = () => currentServer != null && currentServer.Clients.Length > 0;
 				clientHeader = clientList.Get<ScrollItemWidget>("HEADER");
 				clientTemplate = clientList.Get<ScrollItemWidget>("TEMPLATE");
 				clientList.RemoveChildren();
 			}
 
-			lanGameLocations = new List<BeaconLocation>();
+			lanGameLocations = [];
 			try
 			{
 				lanGameProbe = new Probe("OpenRALANGame");
@@ -465,13 +465,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					var result = await httpResponseMessage.Content.ReadAsStreamAsync();
 
 					var yaml = MiniYaml.FromStream(result, queryURL);
-					games = new List<GameServer>();
+					games = [];
 					foreach (var node in yaml)
 					{
 						try
 						{
 							var gs = new GameServer(node.Value);
-							if (gs.Address != null && gs.Mod == Game.ModData.Manifest.Id)
+							if (gs.Address != null)
 								games.Add(gs);
 						}
 						catch
@@ -496,7 +496,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 							continue;
 
 						var game = new MiniYamlBuilder(MiniYaml.FromString(
-							bl.Data, $"BeaconLocation_{bl.Address}_{bl.LastAdvertised:s}", stringPool: stringPool)[0].Value);
+							bl.Data, $"BeaconLocation_{bl.Address}_{bl.LastAdvertised:s}", stringPool: stringPool).First().Value);
 						var idNode = game.NodeWithKeyOrDefault("Id");
 
 						// Skip beacons created by this instance and replace Id by expected int value
@@ -617,6 +617,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						var name = o.IsBot
 							? currentMap.TryGetMessage(o.Name, out var msg) ? msg : FluentProvider.GetMessage(BotPlayer)
 							: o.Name;
+
 						return WidgetUtils.TruncateText(name, s.Item2, s.Item3);
 					});
 
@@ -764,7 +765,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						var players = item.GetOrNull<LabelWithTooltipWidget>("PLAYERS");
 						if (players != null)
 						{
-							var label = $"{game.Players + game.Bots} / {game.MaxPlayers + game.Bots}"
+							var label =
+								$"{game.Players + game.Bots} / {game.MaxPlayers + game.Bots}"
 								+ (game.Spectators > 0 ? $" + {game.Spectators}" : "");
 
 							var color = canJoin ? players.TextColor : incompatibleGameColor;
@@ -778,14 +780,16 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 								{
 									var displayClients = game.Clients.Select(c => c.IsBot
 										? preview.TryGetMessage(c.Name, out var msg) ? msg : FluentProvider.GetMessage(BotPlayer)
- 										: c.Name);
+										: c.Name);
 
 									if (game.Clients.Length > 10)
 										displayClients = displayClients
 											.Take(9)
 											.Append(FluentProvider.GetMessage(OtherPlayers, "players", game.Clients.Length - 9));
+
 									return displayClients.JoinWith("\n");
 								});
+
 								players.GetTooltipText = () => tooltip.Update(preview.Status);
 							}
 							else
@@ -862,7 +866,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			if (game.State == (int)ServerState.GameStarted && !filters.HasFlag(MPGameFilters.Started))
 				return true;
 
-			if (game.State == (int)ServerState.WaitingPlayers && !filters.HasFlag(MPGameFilters.Waiting) && game.Players != 0)
+			if (game.State == (int)ServerState.WaitingPlayers && !filters.HasFlag(MPGameFilters.Waiting) && game.Players + game.Spectators != 0)
 				return true;
 
 			if (game.Players + game.Spectators == 0 && !filters.HasFlag(MPGameFilters.Empty))

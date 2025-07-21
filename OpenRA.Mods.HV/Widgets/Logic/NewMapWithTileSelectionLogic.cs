@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -11,8 +11,10 @@
 
 using System;
 using System.Linq;
+using OpenRA.FileSystem;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.HV.Terrain;
+using OpenRA.Primitives;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Common.Widgets.Logic
@@ -66,7 +68,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				height = Math.Max(2, height);
 
 				var maxTerrainHeight = world.Map.Grid.MaximumTerrainHeight;
-				var map = new Map(Game.ModData, tileset, width + 2, height + maxTerrainHeight + 2);
+				var map = new Map(Game.ModData, tileset, new Size(width + 2, height + maxTerrainHeight + 2));
 
 				var tl = new PPos(1, 1 + maxTerrainHeight);
 				var br = new PPos(width, height + maxTerrainHeight);
@@ -83,28 +85,16 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				}
 
 				map.PlayerDefinitions = new MapPlayers(map.Rules, 0).ToMiniYaml();
+
 				if (map.Rules.TerrainInfo is ITerrainInfoNotifyMapCreated notifyMapCreated)
 					notifyMapCreated.MapCreated(map);
 
-				Action<string> afterSave = uid =>
-				{
-					// HACK: Work around a synced-code change check.
-					// It's not clear why this is needed here, but not in the other places that load maps.
-					Game.RunAfterTick(() => Game.LoadEditor(uid));
-
-					Ui.CloseWindow();
-					onSelect(uid);
-				};
-
-				Ui.OpenWindow("SAVE_MAP_PANEL", new WidgetArgs()
-				{
-					{ "onSave", afterSave },
-					{ "onExit", () => { Ui.CloseWindow(); onExit(); } },
-					{ "map", map },
-					{ "world", world },
-					{ "playerDefinitions", map.PlayerDefinitions },
-					{ "actorDefinitions", map.ActorDefinitions }
-				});
+				var package = new ZipFileLoader.ReadWriteZipFile();
+				map.Save(package);
+				map = new Map(modData, package);
+				Game.LoadEditor(map);
+				Ui.CloseWindow();
+				onSelect(map.Uid);
 			};
 		}
 	}

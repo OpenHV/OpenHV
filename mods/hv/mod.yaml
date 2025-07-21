@@ -126,6 +126,7 @@ ChromeLayout:
 	hv|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/settings-display.yaml
+	common|chrome/settings-gameplay.yaml
 	common|chrome/settings-audio.yaml
 	common|chrome/settings-input.yaml
 	common|chrome/settings-hotkeys.yaml
@@ -246,7 +247,6 @@ Fonts:
 		Ascender: 14
 
 MapGrid:
-	TileSize: 20, 20
 	Type: Rectangular
 	SubCellOffsets: 0,0,0, -256,-256,0, 256,-256,0, 0,256,0
 	DefaultSubCell: 1

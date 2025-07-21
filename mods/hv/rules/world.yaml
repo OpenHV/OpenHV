@@ -291,6 +291,7 @@ World:
 	HierarchicalPathFinderOverlay:
 	PlayerCommands:
 	HelpCommand:
+	AutoSave:
 	ScreenShaker:
 	BuildingInfluence:
 	ProductionQueueFromSelection:

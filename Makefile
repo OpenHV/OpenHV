@@ -3,11 +3,8 @@
 # to compile, run:
 #   make
 #
-# to compile using Mono (version 6.12 or greater) instead of .NET 6, run:
-#   make RUNTIME=mono
-#
 # to compile using system libraries for native dependencies, run:
-#   make [RUNTIME=net6] TARGETPLATFORM=unix-generic
+#   make TARGETPLATFORM=unix-generic
 #
 # to remove the files created by compiling, run:
 #   make clean
@@ -18,11 +15,11 @@
 # to check lua scripts for syntax errors, run:
 #   make check-scripts
 #
-# to check the engine and your mod dlls for StyleCop violations, run:
-#   make [RUNTIME=net6] check
+# to check the engine and the mod dlls for StyleCop violations, run:
+#   make check
 #
-# to check your mod yaml for errors, run:
-#   make [RUNTIME=net6] test
+# to check the mod yaml for errors, run:
+#   make test
 
 .PHONY: engine all clean version check-scripts check test install
 .DEFAULT_GOAL := all
@@ -84,14 +81,7 @@ engine: fetch-engine
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
 
 all: engine
-ifeq ($(RUNTIME), mono)
-	@command -v $(MSBUILD) >/dev/null || (echo "OpenHV requires the '$(MSBUILD)' tool provided by Mono >= 6.12."; exit 1)
-ifneq ("$(MOD_SOLUTION_FILES)","")
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:Build -restore -p:Configuration=Release -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true \;
-endif
-else
 	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
-endif
 
 install: install-assemblies install-executables install-metadata install-data install-man
 
@@ -122,11 +112,7 @@ install-man:
 
 clean: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
-ifeq ($(RUNTIME), mono)
-	@find . -maxdepth 1 -name '*.sln' -exec $(MSBUILD) -t:clean \;
-else
 	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) clean \;
-endif
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 
@@ -147,12 +133,8 @@ endif
 check: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
 	@echo "Compiling in debug mode..."
-ifeq ($(RUNTIME), mono)
-	@$(MSBUILD) -t:clean\;build -restore -p:Configuration=Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:Mono=true -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
-else
 	@$(DOTNET) clean -c Debug --nologo --verbosity minimal
 	@$(DOTNET) build -c Debug -p:TargetPlatform=$(TARGETPLATFORM) -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
-endif
 endif
 	@echo "Checking for explicit interface violations..."
 	@./utility.sh --check-explicit-interfaces
