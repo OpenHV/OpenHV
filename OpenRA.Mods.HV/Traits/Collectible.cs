@@ -25,9 +25,9 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Duration = 0;
 
 		[Desc("Allowed to emerge on.")]
-		public readonly HashSet<string> TerrainTypes = new();
+		public readonly HashSet<string> TerrainTypes = [];
 
-		[Desc("Define actors that can collect crates by setting this into the Crushes field from the Mobile trait.")]
+		[Desc($"Define actors that can collect crates by setting this into the {nameof(LocomotorInfo.Crushes)} field from the {nameof(Locomotor)} trait.")]
 		public readonly string CrushClass = "crate";
 
 		public override object Create(ActorInitializer init) { return new Collectible(init, this); }
@@ -117,12 +117,12 @@ namespace OpenRA.Mods.HV.Traits
 			if (collected)
 				return;
 
-			var crateActions = self.TraitsImplementing<CrateAction>();
+			var crateActions = self.TraitsImplementing<CrateAction>().ToList();
 
 			self.Dispose();
 			collected = true;
 
-			if (crateActions.Any())
+			if (crateActions.Count > 0)
 			{
 				var shares = crateActions.Select(a => (Action: a, Shares: a.GetSelectionSharesOuter(crusher)));
 
@@ -149,7 +149,7 @@ namespace OpenRA.Mods.HV.Traits
 		}
 
 		public CPos TopLeft => Location;
-		public (CPos, SubCell)[] OccupiedCells() { return new[] { (Location, SubCell.FullCell) }; }
+		public (CPos, SubCell)[] OccupiedCells() { return [(Location, SubCell.FullCell)]; }
 
 		public WPos CenterPosition { get; private set; }
 

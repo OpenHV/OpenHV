@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -52,13 +52,13 @@ namespace OpenRA.Mods.HV.Traits
 			: base(self, info)
 		{
 			this.info = info;
-			coords = Exts.Lazy(() => self.Trait<BodyOrientation>());
-			actors = new List<Actor>();
-			armaments = new List<Armament>();
-			muzzles = new HashSet<(AnimationWithOffset Animation, string Sequence)>();
-			passengerFacings = new Dictionary<Actor, IFacing>();
-			passengerPositions = new Dictionary<Actor, IPositionable>();
-			passengerRenders = new Dictionary<Actor, RenderSprites>();
+			coords = Exts.Lazy(self.Trait<BodyOrientation>);
+			actors = [];
+			armaments = [];
+			muzzles = [];
+			passengerFacings = [];
+			passengerPositions = [];
+			passengerRenders = [];
 		}
 
 		protected override Func<IEnumerable<Armament>> InitializeGetArmaments(Actor self)

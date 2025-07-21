@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -10,7 +10,6 @@
 #endregion
 
 using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -38,7 +37,7 @@ namespace OpenRA.Mods.HV.Traits
 	sealed class GrantConditionOnLineBuildConnection : INotifyAddedToWorld, INotifyRemovedFromWorld
 	{
 		readonly GrantConditionOnLineBuildConnectionInfo info;
-		readonly List<CPos> possibleConnections = new();
+		readonly List<CPos> possibleConnections = [];
 
 		int firstToken = Actor.InvalidConditionToken;
 		int lastToken = Actor.InvalidConditionToken;
@@ -84,7 +83,7 @@ namespace OpenRA.Mods.HV.Traits
 					lastToken = self.RevokeCondition(lastToken);
 			}
 
-			var last = new CPos[] { possibleConnections.Last() };
+			var last = new CPos[] { possibleConnections[^1] };
 			lastTriggerId = self.World.ActorMap.AddCellTrigger(last, OnEntryLast, OnExitLast);
 		}
 

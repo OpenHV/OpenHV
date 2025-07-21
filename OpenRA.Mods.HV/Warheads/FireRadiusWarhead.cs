@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common.Traits;
@@ -26,7 +25,7 @@ namespace OpenRA.Mods.HV.Warheads
 		public readonly string Weapon = null;
 
 		[Desc("Amount of weapons fired.")]
-		public readonly int[] Amount = { 1 };
+		public readonly int[] Amount = [1];
 
 		[Desc("Should the weapons be fired around the intended target or at the explosion's epicenter.")]
 		public readonly bool AroundTarget = false;
@@ -84,10 +83,10 @@ namespace OpenRA.Mods.HV.Warheads
 					DamageModifiers = args.DamageModifiers,
 
 					InaccuracyModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IInaccuracyModifier>()
-						.Select(a => a.GetInaccuracyModifier()).ToArray() : Array.Empty<int>(),
+						.Select(a => a.GetInaccuracyModifier()).ToArray() : [],
 
 					RangeModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IRangeModifier>()
-						.Select(a => a.GetRangeModifier()).ToArray() : Array.Empty<int>(),
+						.Select(a => a.GetRangeModifier()).ToArray() : [],
 
 					Source = targetPosition,
 					CurrentSource = () => targetPosition,

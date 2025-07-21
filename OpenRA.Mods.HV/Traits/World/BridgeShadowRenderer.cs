@@ -92,11 +92,11 @@ namespace OpenRA.Mods.Common.Traits
 		protected readonly BridgeShadowRendererInfo Info;
 		protected readonly IResourceLayer ResourceLayer;
 		protected readonly CellLayer<RendererCellContents> RenderContents;
-		protected readonly Dictionary<string, ISpriteSequence> Variants = new();
+		protected readonly Dictionary<string, ISpriteSequence> Variants = [];
 		protected readonly World World;
 
-		readonly HashSet<CPos> dirty = new();
-		readonly Queue<CPos> cleanDirty = new();
+		readonly HashSet<CPos> dirty = [];
+		readonly Queue<CPos> cleanDirty = [];
 		TerrainSpriteLayer spriteLayer;
 		bool disposed;
 

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022 The OpenHV Developers (see AUTHORS)
+ * Copyright 2022-2025 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -69,11 +69,11 @@ namespace OpenRA.Mods.HV.Traits
 					continue;
 
 				var externalConditionPower = sp.Instances[0] as GrantExternalConditionPower;
-				var possibleTargets = externalConditionPower.UnitsInRange(self.Location);
+				var possibleTargets = externalConditionPower.UnitsInRange(self.Location).ToList();
 				if (possibleTargets.Any(p => !p.Owner.IsAlliedWith(player)))
 					continue;
 
-				if (possibleTargets.Count() < info.MinimumTargets)
+				if (possibleTargets.Count < info.MinimumTargets)
 					continue;
 
 				bot.QueueOrder(new Order(sp.Key, supportPowerManager.Self, Target.FromCell(world, self.Location), false) { SuppressVisualFeedback = true });

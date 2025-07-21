@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021-2022 The OpenHV Developers (see AUTHORS)
+ * Copyright 2021-2025 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -23,10 +23,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class CubePickupBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that should not start hunting for cubes.")]
-		public readonly HashSet<string> ExcludedUnitTypes = new();
+		public readonly HashSet<string> ExcludedUnitTypes = [];
 
 		[Desc("Only these actor types should start hunting for cubes.")]
-		public readonly HashSet<string> IncludedUnitTypes = new();
+		public readonly HashSet<string> IncludedUnitTypes = [];
 
 		[Desc("Interval (in ticks) between giving out orders to idle units.")]
 		public readonly int ScanForCubesInterval = 50;
@@ -53,7 +53,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		int scanForcubesTicks;
 
-		readonly List<Actor> alreadyPursuitcubes = new();
+		readonly List<Actor> alreadyPursuitcubes = [];
 
 		public CubePickupBotModule(Actor self, CubePickupBotModuleInfo info)
 			: base(info)
@@ -129,7 +129,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			var mobile = collector.Trait<Mobile>();
 			var path = mobile.PathFinder.FindPathToTargetCell(
-				collector, new[] { collector.Location }, cube.Location, BlockedByActor.Stationary,
+				collector, [collector.Location], cube.Location, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && collector.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy)
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));

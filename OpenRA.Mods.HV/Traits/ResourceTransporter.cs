@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 {
 	public class ResourceTransporterInfo : TraitInfo, Requires<MobileInfo>
 	{
-		public readonly HashSet<string> DeliveryBuildings = new();
+		public readonly HashSet<string> DeliveryBuildings = [];
 
 		[Desc("How much resources it can carry.")]
 		public readonly int Capacity = 10;
@@ -86,8 +86,8 @@ namespace OpenRA.Mods.HV.Traits
 		public Actor ClosestDestination(Actor self)
 		{
 			var actors = string.IsNullOrEmpty(ResourceType)
-			 ? self.World.ActorsHavingTrait<ResourceCollector>().Where(r => r.Owner == self.Owner)
-			 : self.World.ActorsHavingTrait<AcceptsDeliveredResources>().Where(r => r.Owner == self.Owner);
+			 ? self.World.ActorsHavingTrait<ResourceCollector>().Where(r => r.Owner == self.Owner).ToList()
+			 : self.World.ActorsHavingTrait<AcceptsDeliveredResources>().Where(r => r.Owner == self.Owner).ToList();
 
 			var path = mobile.PathFinder.FindPathToTargetCell(self, actors.Select(a => a.Location), mobile.ToCell, BlockedByActor.None,
 				location => self.World.FindActorsInCircle(self.World.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
@@ -95,7 +95,7 @@ namespace OpenRA.Mods.HV.Traits
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (self.World.Map.CenterOfCell(location) - u.CenterPosition).Length)));
 
 			if (path.Count > 0)
-				return actors.First(r => r.Location == path.Last());
+				return actors.First(r => r.Location == path[^1]);
 
 			return null;
 		}

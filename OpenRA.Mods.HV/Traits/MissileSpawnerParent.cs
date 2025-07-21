@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -34,7 +34,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Conditions to grant when specified actors are contained inside the transport.",
 			"A dictionary of [actor id]: [condition].")]
-		public readonly Dictionary<string, string> SpawnContainConditions = new();
+		public readonly Dictionary<string, string> SpawnContainConditions = [];
 
 		[GrantedConditionReference]
 		public IEnumerable<string> LinterSpawnContainConditions { get { return SpawnContainConditions.Values; } }
@@ -44,10 +44,10 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class MissileSpawnerParent : BaseSpawnerParent, ITick, INotifyAttack
 	{
-		readonly Dictionary<string, Stack<int>> spawnContainTokens = new();
+		readonly Dictionary<string, Stack<int>> spawnContainTokens = [];
 		readonly MissileSpawnerParentInfo info;
 
-		readonly Stack<int> loadedTokens = new();
+		readonly Stack<int> loadedTokens = [];
 
 		int respawnTicks = 0;
 

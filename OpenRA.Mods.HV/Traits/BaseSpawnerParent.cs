@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -48,7 +47,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Name of the armaments that grants the LaunchingCondition.",
 		"The rate of fire of the dummy weapon determines the launch cycle as each shot.")]
-		public readonly HashSet<string> ArmamentNames = new() { "primary" };
+		public readonly HashSet<string> ArmamentNames = ["primary"];
 
 		[Desc("What happens to the children when the parent is killed?")]
 		public readonly SpawnerChildDisposal ChildDisposalOnKill = SpawnerChildDisposal.KillChildren;
@@ -155,7 +154,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			// Some members are missing. Create a new one.
 			var child = self.World.CreateActor(false, entry.ActorName,
-				new TypeDictionary { new OwnerInit(self.Owner) });
+				[new OwnerInit(self.Owner)]);
 
 			InitializeChildEntry(child, entry);
 			entry.SpawnerChild.LinkParent(entry.Actor, self, this);
@@ -174,8 +173,8 @@ namespace OpenRA.Mods.HV.Traits
 		protected BaseSpawnerChildEntry SelectEntryToSpawn(BaseSpawnerChildEntry[] childEntries)
 		{
 			// If any thing is marked dead or null, that's a candidate.
-			var candidates = childEntries.Where(m => !m.IsValid);
-			if (!candidates.Any())
+			var candidates = childEntries.Where(m => !m.IsValid).ToList();
+			if (candidates.Count == 0)
 				return null;
 
 			return candidates.Random(self.World.SharedRandom);

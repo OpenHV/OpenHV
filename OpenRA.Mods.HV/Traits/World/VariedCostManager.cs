@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2020-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2020-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -41,11 +41,11 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class VariedCostManager : ITick
 	{
-		public readonly Dictionary<string, int> CachedCostPercentage = new();
+		public readonly Dictionary<string, int> CachedCostPercentage = [];
 
 		readonly VariedCostManagerInfo info;
 
-		readonly Dictionary<ActorInfo, VariedCostTraitInfoWrapper> variedCostTraitInfo = new();
+		readonly Dictionary<ActorInfo, VariedCostTraitInfoWrapper> variedCostTraitInfo = [];
 
 		int tick;
 

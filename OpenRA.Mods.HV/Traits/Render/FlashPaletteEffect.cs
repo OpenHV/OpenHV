@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Used for bursted one-colored whole screen effects. Add this to the world actor.")]
 	public class FlashPaletteEffectInfo : TraitInfo
 	{
-		public readonly HashSet<string> ExcludePalettes = new() { "cursor", "chrome", "colorpicker", "fog", "shroud" };
+		public readonly HashSet<string> ExcludePalettes = ["cursor", "chrome", "colorpicker", "fog", "shroud"];
 
 		[Desc("Measured in ticks.")]
 		public readonly int Length = 20;

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -79,8 +79,8 @@ namespace OpenRA.Mods.HV.Traits
 			Do();
 		}
 
-		static readonly BitMask[] BorderTileMap = new BitMask[]
-		{
+		static readonly BitMask[] BorderTileMap =
+		[
 			BitMask.Top | BitMask.Left | BitMask.Right,
 			BitMask.Top | BitMask.Right | BitMask.Bottom,
 			BitMask.Left | BitMask.Bottom | BitMask.Right,
@@ -89,7 +89,7 @@ namespace OpenRA.Mods.HV.Traits
 			BitMask.Top | BitMask.Left,
 			BitMask.Top | BitMask.Right,
 			BitMask.Bottom | BitMask.Right,
-		};
+		];
 
 		static readonly Dictionary<BitMask, CVec[]> MatchingBorderCells = new()
 		{
@@ -107,13 +107,13 @@ namespace OpenRA.Mods.HV.Traits
 			{ BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft, new[] { new CVec(1, 1) } },
 		};
 
-		static readonly BitMask[] CornerTileMap = new BitMask[]
-		{
+		static readonly BitMask[] CornerTileMap =
+		[
 			BitMask.BottomRight | BitMask.TopRight | BitMask.TopLeft,
 			BitMask.TopRight | BitMask.BottomLeft | BitMask.BottomRight,
 			BitMask.TopLeft | BitMask.BottomLeft | BitMask.BottomRight,
 			BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft,
-		};
+		];
 
 		static bool CellContains(Map map, CPos cell, string[] terrainTypes)
 		{

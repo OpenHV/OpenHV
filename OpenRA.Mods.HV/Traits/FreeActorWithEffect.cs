@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -12,7 +12,6 @@
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -75,13 +74,13 @@ namespace OpenRA.Mods.HV.Traits
 			self.World.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
 			self.World.AddFrameEndTask(w =>
 			{
-				w.CreateActor(Info.Actor, new TypeDictionary
-				{
+				w.CreateActor(Info.Actor,
+				[
 					new ParentActorInit(self),
 					new LocationInit(location),
 					new OwnerInit(self.Owner),
 					new FacingInit(Info.Facing),
-				});
+				]);
 			});
 		}
 	}

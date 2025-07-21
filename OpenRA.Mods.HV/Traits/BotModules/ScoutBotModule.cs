@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that are sent around the map.")]
-		public readonly HashSet<string> ScoutActorTypes = new();
+		public readonly HashSet<string> ScoutActorTypes = [];
 
 		[Desc("Minimum delay (in ticks) between searching for ScoutActorTypes.")]
 		public readonly int MinimumScanDelay = 200;
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 
 	public class ScoutBotModule : ConditionalTrait<ScoutBotModuleInfo>, IBotTick
 	{
-		readonly List<Actor> scouts = new();
+		readonly List<Actor> scouts = [];
 
 		readonly World world;
 		readonly Player player;

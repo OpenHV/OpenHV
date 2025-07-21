@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 		[FieldLoader.Require]
 		[ActorReference]
 		[Desc("Actor types that can deploy.")]
-		public readonly HashSet<string> DeployableActorTypes = new();
+		public readonly HashSet<string> DeployableActorTypes = [];
 
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
 		public readonly int MinimumScanDelay = 100;
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		readonly Dictionary<Actor, ActorTraitWrapper> actors = new();
+		readonly Dictionary<Actor, ActorTraitWrapper> actors = [];
 
 		public DeployActorBotModule(Actor self, DeployActorBotModuleInfo info)
 			: base(info)

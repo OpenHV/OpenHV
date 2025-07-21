@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2022-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,8 +21,8 @@ namespace OpenRA.Mods.HV.Lint
 	{
 		public void Run(Action<string> emitError, Action<string> emitWarning, ModData modData, Map map)
 		{
-			var miners = map.Rules.Actors.Where(a => a.Value.TraitInfoOrDefault<MinerInfo>() != null);
-			if (!miners.Any())
+			var miners = map.Rules.Actors.Where(a => a.Value.TraitInfoOrDefault<MinerInfo>() != null).ToList();
+			if (miners.Count == 0)
 				return;
 
 			foreach (var miner in miners)

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2022 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -23,18 +23,18 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that can capture other actors (via `Captures`).")]
-		public readonly HashSet<string> CapturingActorTypes = new();
+		public readonly HashSet<string> CapturingActorTypes = [];
 
 		[Desc("Percentage chance of trying a priority capture.")]
 		public readonly int PriorityCaptureChance = 75;
 
 		[Desc("Actor types that should be priorizited to be captured.",
 			"Leave this empty to include all actors.")]
-		public readonly HashSet<string> PriorityCapturableActorTypes = new();
+		public readonly HashSet<string> PriorityCapturableActorTypes = [];
 
 		[Desc("Actor types that can be targeted for capturing.",
 			"Leave this empty to include all actors.")]
-		public readonly HashSet<string> CapturableActorTypes = new();
+		public readonly HashSet<string> CapturableActorTypes = [];
 
 		[Desc("Avoid enemy actors nearby when searching for capture opportunities. Should be somewhere near the max weapon range.")]
 		public readonly WDist EnemyAvoidanceRadius = WDist.FromCells(8);
@@ -118,17 +118,17 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var newUnits = world.ActorsHavingTrait<Captures>()
-				.Where(a => a.Owner == player && !a.IsDead && a.IsInWorld);
+				.Where(a => a.Owner == player && !a.IsDead && a.IsInWorld).ToList();
 
-			if (!newUnits.Any())
+			if (newUnits.Count == 0)
 				return;
 
 			var capturers = newUnits
 				.Where(a => a.IsIdle && Info.CapturingActorTypes.Contains(a.Info.Name))
 				.Select(a => new TraitPair<CaptureManager>(a, a.TraitOrDefault<CaptureManager>()))
-				.Where(tp => tp.Trait != null);
+				.Where(tp => tp.Trait != null).ToList();
 
-			if (!capturers.Any())
+			if (capturers.Count == 0)
 				return;
 
 			var baseCenter = world.Map.CenterOfCell(initialBaseCenter);
@@ -137,22 +137,22 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				var priorityTargets = world.Actors.Where(a =>
 					!a.IsDead && a.IsInWorld && Info.CapturableStances.HasRelationship(player.RelationshipWith(a.Owner))
-					&& Info.PriorityCapturableActorTypes.Contains(a.Info.Name.ToLowerInvariant()));
+					&& Info.PriorityCapturableActorTypes.Contains(a.Info.Name.ToLowerInvariant())).ToList();
 
 				if (Info.CheckCaptureTargetsForVisibility)
-					priorityTargets = priorityTargets.Where(a => a.CanBeViewedByPlayer(player));
+					priorityTargets = priorityTargets.Where(a => a.CanBeViewedByPlayer(player)).ToList();
 
-				if (priorityTargets.Any())
+				if (priorityTargets.Count > 0)
 				{
-					priorityTargets = priorityTargets.OrderBy(a => (a.CenterPosition - baseCenter).LengthSquared);
+					priorityTargets = priorityTargets.OrderBy(a => (a.CenterPosition - baseCenter).LengthSquared).ToList();
 
-					var priorityCaptures = Math.Min(capturers.Count(), priorityTargets.Count());
+					var priorityCaptures = Math.Min(capturers.Count, priorityTargets.Count);
 
 					for (var i = 0; i < priorityCaptures; i++)
 					{
-						var capturer = capturers.First();
+						var capturer = capturers[0];
 
-						var priorityTarget = priorityTargets.First();
+						var priorityTarget = priorityTargets[0];
 
 						var captureManager = priorityTarget.TraitOrDefault<CaptureManager>();
 						if (captureManager != null && capturer.Trait.CanTarget(captureManager))
@@ -160,8 +160,8 @@ namespace OpenRA.Mods.HV.Traits
 							var safeTarget = SafePath(capturer.Actor, priorityTarget);
 							if (safeTarget.Type == TargetType.Invalid)
 							{
-								priorityTargets = priorityTargets.Skip(1);
-								capturers = capturers.Skip(1);
+								priorityTargets = priorityTargets.Skip(1).ToList();
+								capturers = capturers.Skip(1).ToList();
 								continue;
 							}
 
@@ -169,11 +169,11 @@ namespace OpenRA.Mods.HV.Traits
 							AIUtils.BotDebug($"{player}: Ordered {capturer.Actor} {capturer.Actor.ActorID} to capture {priorityTarget} {priorityTarget.ActorID} in priority mode.");
 						}
 
-						priorityTargets = priorityTargets.Skip(1);
-						capturers = capturers.Skip(1);
+						priorityTargets = priorityTargets.Skip(1).ToList();
+						capturers = capturers.Skip(1).ToList();
 					}
 
-					if (!capturers.Any())
+					if (capturers.Count == 0)
 						return;
 				}
 			}
@@ -195,12 +195,12 @@ namespace OpenRA.Mods.HV.Traits
 					return capturers.Any(tp => tp.Trait.CanTarget(captureManager));
 				})
 				.OrderBy(target => (target.CenterPosition - baseCenter).LengthSquared)
-				.Take(maximumCaptureTargetOptions);
+				.Take(maximumCaptureTargetOptions).ToList();
 
 			if (Info.CapturableActorTypes.Count > 0)
-				capturableTargetOptions = capturableTargetOptions.Where(target => Info.CapturableActorTypes.Contains(target.Info.Name.ToLowerInvariant()));
+				capturableTargetOptions = capturableTargetOptions.Where(target => Info.CapturableActorTypes.Contains(target.Info.Name.ToLowerInvariant())).ToList();
 
-			if (!capturableTargetOptions.Any())
+			if (capturableTargetOptions.Count == 0)
 				return;
 
 			foreach (var capturer in capturers)
@@ -226,7 +226,7 @@ namespace OpenRA.Mods.HV.Traits
 		Target SafePath(Actor capturer, Actor target)
 		{
 			var mobile = capturer.Trait<Mobile>();
-			var path = mobile.PathFinder.FindPathToTargetCell(capturer, new[] { mobile.ToCell }, target.Location, BlockedByActor.Stationary,
+			var path = mobile.PathFinder.FindPathToTargetCell(capturer, [mobile.ToCell], target.Location, BlockedByActor.Stationary,
 				location => world.FindActorsInCircle(world.Map.CenterOfCell(location), Info.EnemyAvoidanceRadius)
 					.Where(u => !u.IsDead && capturer.Owner.RelationshipWith(u.Owner) == PlayerRelationship.Enemy && capturer.IsTargetableBy(u))
 					.Sum(u => Math.Max(WDist.Zero.Length, Info.EnemyAvoidanceRadius.Length - (world.Map.CenterOfCell(location) - u.CenterPosition).Length)));
@@ -242,10 +242,9 @@ namespace OpenRA.Mods.HV.Traits
 			if (IsTraitDisabled)
 				return null;
 
-			return new List<MiniYamlNode>()
-			{
+			return [
 				new("InitialBaseCenter", FieldSaver.FormatValue(initialBaseCenter))
-			};
+			];
 		}
 
 		void IGameSaveTraitData.ResolveTraitData(Actor self, MiniYaml data)

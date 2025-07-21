@@ -63,7 +63,7 @@ dotnet_diagnostic.IDE0161.severity = warning
 
 # IDE0200 Remove unnecessary lambda expression
 #csharp_style_prefer_method_group_conversion = true
-dotnet_diagnostic.IDE0200.severity = silent # Requires C# 11
+dotnet_diagnostic.IDE0200.severity = warning
 
 # IDE0210 Convert to top-level statements/IDE0211 Convert to 'Program.Main' style program
 csharp_style_prefer_top_level_statements = false
@@ -72,7 +72,7 @@ dotnet_diagnostic.IDE0211.severity = warning
 
 # IDE0290 Use primary constructor
 #csharp_style_prefer_primary_constructors = true
-dotnet_diagnostic.IDE0200.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0290.severity = silent
 
 # IDE0330 Prefer 'System.Threading.Lock'
 #csharp_prefer_system_threading_lock = true
@@ -292,7 +292,7 @@ dotnet_diagnostic.IDE0220.severity = warning
 
 # IDE0230 Use UTF-8 string literal
 #csharp_style_prefer_utf8_string_literals = true
-dotnet_diagnostic.IDE0230.severity = silent # Requires C# 11
+dotnet_diagnostic.IDE0230.severity = warning
 
 # IDE0240 Nullable directive is redundant
 # No options
@@ -308,27 +308,27 @@ dotnet_diagnostic.IDE0241.severity = warning
 
 # IDE0300 Use collection expression for array
 # From above, uses dotnet_style_prefer_collection_expression
-dotnet_diagnostic.IDE0300.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0300.severity = warning
 
 # IDE0301 Use collection expression for empty
 # From above, uses dotnet_style_prefer_collection_expression
-dotnet_diagnostic.IDE0301.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0301.severity = warning
 
 # IDE0302 Use collection expression for stackalloc
 # From above, uses dotnet_style_prefer_collection_expression
-dotnet_diagnostic.IDE0302.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0302.severity = warning
 
 # IDE0303 Use collection expression for 'Create()'
 # From above, uses dotnet_style_prefer_collection_expression
-dotnet_diagnostic.IDE0303.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0303.severity = warning
 
 # IDE0304 Use collection expression for builder
 # From above, uses dotnet_style_prefer_collection_expression
-dotnet_diagnostic.IDE0304.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0304.severity = warning
 
 # IDE0305 Use collection expression for fluent
 # From above, uses dotnet_style_prefer_collection_expression
-dotnet_diagnostic.IDE0305.severity = silent # Requires C# 12
+dotnet_diagnostic.IDE0305.severity = silent
 
 ## Field preferences
 
@@ -336,7 +336,7 @@ dotnet_diagnostic.IDE0305.severity = silent # Requires C# 12
 #dotnet_style_readonly_field = true
 dotnet_diagnostic.IDE0044.severity = warning
 
-## Language keyword vs. framework types preferences
+## Language keyword vs framework types preferences
 
 # IDE0049 Use language keywords instead of framework type names for type references
 #dotnet_style_predefined_type_for_locals_parameters_members = true
@@ -387,7 +387,7 @@ dotnet_diagnostic.IDE0060.severity = warning
 
 # IDE0280 Use 'nameof'
 # No options
-dotnet_diagnostic.IDE0280.severity = silent # Requires C# 11
+dotnet_diagnostic.IDE0280.severity = warning
 
 ## Parentheses preferences
 
@@ -426,7 +426,7 @@ dotnet_diagnostic.IDE0083.severity = warning
 
 # IDE0170 Simplify property pattern
 #csharp_style_prefer_extended_property_pattern = true
-dotnet_diagnostic.IDE0170.severity = silent # Requires C# 10
+dotnet_diagnostic.IDE0170.severity = warning
 
 ## Suppression preferences
 
@@ -748,7 +748,7 @@ dotnet_diagnostic.CA1305.severity = warning
 dotnet_diagnostic.CA1310.severity = warning
 
 # Specify a culture or use an invariant version.
-dotnet_diagnostic.CA1311.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1311.severity = warning
 
 ### Portability and Interoperability Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/interoperability-warnings
@@ -763,19 +763,19 @@ dotnet_diagnostic.CA1417.severity = warning
 dotnet_diagnostic.CA1507.severity = warning
 
 # Use ArgumentNullException throw helper.
-dotnet_diagnostic.CA1510.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1510.severity = warning
 
 # Use ArgumentException throw helper.
-dotnet_diagnostic.CA1511.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1511.severity = warning
 
 # Use ArgumentOutOfRangeException throw helper.
-dotnet_diagnostic.CA1512.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1512.severity = warning
 
 # Use ObjectDisposedException throw helper.
-dotnet_diagnostic.CA1513.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1513.severity = warning
 
 # Avoid redundant length argument.
-dotnet_diagnostic.CA1514.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1514.severity = warning
 
 ### Naming Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/naming-warnings
@@ -868,8 +868,8 @@ dotnet_diagnostic.CA1843.severity = warning
 # Provide memory-based overrides of async methods when subclassing 'Stream'.
 dotnet_diagnostic.CA1844.severity = warning
 
-# Use span-based 'string.Concat'. (Not available on mono)
-dotnet_diagnostic.CA1845.severity = none
+# Use span-based 'string.Concat'.
+dotnet_diagnostic.CA1845.severity = warning
 
 # Prefer AsSpan over Substring.
 dotnet_diagnostic.CA1846.severity = warning
@@ -878,34 +878,34 @@ dotnet_diagnostic.CA1846.severity = warning
 dotnet_diagnostic.CA1847.severity = warning
 
 # Call async methods when in an async method.
-dotnet_diagnostic.CA1849.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1849.severity = warning
 
-# Prefer static HashData method over ComputeHash. (Not available on mono)
-dotnet_diagnostic.CA1850.severity = none # TODO: Change to warning once using .NET 7 or later AND once supported by mono.
+# Prefer static HashData method over ComputeHash.
+dotnet_diagnostic.CA1850.severity = warning
 
 # Possible multiple enumerations of IEnumerable collection.
 #dotnet_code_quality.CA1851.enumeration_methods =
 dotnet_code_quality.CA1851.linq_chain_methods = M:OpenRA.Traits.IRenderModifier.Modify*
 dotnet_code_quality.CA1851.assume_method_enumerates_parameters = true
-dotnet_diagnostic.CA1851.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1851.severity = warning
 
 # Seal internal types.
-dotnet_diagnostic.CA1852.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1852.severity = warning
 
 # Unnecessary call to 'Dictionary.ContainsKey(key)'.
-dotnet_diagnostic.CA1853.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1853.severity = warning
 
 # Prefer the IDictionary.TryGetValue(TKey, out TValue) method.
-dotnet_diagnostic.CA1854.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1854.severity = warning
 
 # Use Span<T>.Clear() instead of Span<T>.Fill().
-dotnet_diagnostic.CA1855.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1855.severity = warning
 
 # Incorrect usage of ConstantExpected attribute.
-dotnet_diagnostic.CA1856.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1856.severity = warning
 
 # The parameter expects a constant for optimal performance.
-dotnet_diagnostic.CA1857.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1857.severity = warning
 
 # Use StartsWith instead of IndexOf.
 dotnet_diagnostic.CA1858.severity = warning
@@ -917,24 +917,24 @@ dotnet_diagnostic.CA1860.severity = warning
 dotnet_diagnostic.CA1862.severity = warning
 
 # Use 'CompositeFormat'.
-dotnet_diagnostic.CA1863.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA1863.severity = warning
 
 # Prefer the 'IDictionary.TryAdd(TKey, TValue)' method.
-dotnet_diagnostic.CA1864.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1864.severity = warning
 
 # Use 'string.Method(char)' instead of 'string.Method(string)' for string with single char.
-dotnet_diagnostic.CA1865.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
-dotnet_diagnostic.CA1866.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
-dotnet_diagnostic.CA1867.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1865.severity = warning
+dotnet_diagnostic.CA1866.severity = warning
+dotnet_diagnostic.CA1867.severity = warning
 
 # Unnecessary call to 'Contains' for sets.
-dotnet_diagnostic.CA1868.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1868.severity = warning
 
 # Cache and reuse 'JsonSerializerOptions' instances.
-dotnet_diagnostic.CA1869.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1869.severity = warning
 
 # Use a cached 'SearchValues' instance.
-dotnet_diagnostic.CA1870.severity = suggestion # TODO: Change to warning once using .NET 8 or later.
+dotnet_diagnostic.CA1870.severity = warning
 
 # Do not pass a nullable struct to 'ArgumentNullException.ThrowIfNull'.
 dotnet_diagnostic.CA1871.severity = warning
@@ -964,13 +964,16 @@ dotnet_diagnostic.CA2016.severity = warning
 dotnet_diagnostic.CA2018.severity = warning
 
 # ThreadStatic fields should not use inline initialization.
-dotnet_diagnostic.CA2019.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA2019.severity = warning
 
 # Don't call Enumerable.Cast<T> or Enumerable.OfType<T> with incompatible types.
 dotnet_diagnostic.CA2021.severity = warning
 
 # Avoid inexact read with Stream.Read.
 dotnet_diagnostic.CA2022.severity = warning
+
+# Do not use StreamReader.EndOfStream in async methods.
+dotnet_diagnostic.CA2024.severity = warning
 
 ### Security Rules
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/security-warnings
@@ -1041,10 +1044,10 @@ dotnet_diagnostic.CA2250.severity = warning
 dotnet_diagnostic.CA2251.severity = warning
 
 # Ensure ThreadStatic is only used with static fields.
-dotnet_diagnostic.CA2259.severity = suggestion # TODO: Change to warning once using .NET 7 or later.
+dotnet_diagnostic.CA2259.severity = warning
 
 # Prefer generic overload when type is known.
-dotnet_diagnostic.CA2263.severity = none # TODO: Change to warning once mono is dropped.
+dotnet_diagnostic.CA2263.severity = warning
 
 # Do not pass a non-nullable value to 'ArgumentNullException.ThrowIfNull'.
 dotnet_diagnostic.CA2264.severity = warning
@@ -1260,3 +1263,24 @@ dotnet_diagnostic.RCS1239.severity = warning
 
 # Use element access.
 dotnet_diagnostic.RCS1246.severity = warning
+
+# Use enum field explicitly.
+dotnet_diagnostic.RCS1257.severity = warning
+
+# Unnecessary enum flag.
+dotnet_diagnostic.RCS1258.severity = warning
+
+# Resource can be disposed asynchronously.
+dotnet_diagnostic.RCS1261.severity = warning
+
+# Unnecessary raw string literal.
+dotnet_diagnostic.RCS1262.severity = warning
+
+# Remove redundant catch block.
+dotnet_diagnostic.RCS1265.severity = warning
+
+# Use raw string literal.
+dotnet_diagnostic.RCS1266.severity = warning
+
+# Use string interpolation instead of 'string.Concat'.
+dotnet_diagnostic.RCS1267.severity = warning

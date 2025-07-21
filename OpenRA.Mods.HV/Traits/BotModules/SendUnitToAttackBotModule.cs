@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2025 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -92,12 +92,12 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				minAssignRoleDelayTicks = Info.ScanTick;
 
-				var attackdesire = 0;
+				var attackDesire = 0;
 				var actors = world.ActorsWithTrait<IPositionable>().Select(at => at.Actor).Where(a =>
 				{
-					if (Info.ActorTypesAndAttackDesire.ContainsKey(a.Info.Name) && !unitCannotBeOrderedOrIsBusy(a))
+					if (Info.ActorTypesAndAttackDesire.TryGetValue(a.Info.Name, out var desire) && !unitCannotBeOrderedOrIsBusy(a))
 					{
-						attackdesire += Info.ActorTypesAndAttackDesire[a.Info.Name];
+						attackDesire += desire;
 						return true;
 					}
 
@@ -109,7 +109,7 @@ namespace OpenRA.Mods.HV.Traits
 				else
 					desireIncreased += Info.AttackDesireIncreasedPerScan;
 
-				if (desireIncreased + attackdesire < 100)
+				if (desireIncreased + attackDesire < 100)
 					return;
 
 				// Randomly choose enemy player to attack
@@ -171,7 +171,7 @@ namespace OpenRA.Mods.HV.Traits
 						orderedActors.Add(a);
 					}
 
-					actors.RemoveAll(a => orderedActors.Contains(a));
+					actors.RemoveAll(orderedActors.Contains);
 
 					if (orderedActors.Count > 0)
 						bot.QueueOrder(new Order(Info.AttackOrderName, null, Target.FromActor(t), false, groupedActors: orderedActors.ToArray()));

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Warheads
 		public readonly WDist Spread = new(43);
 
 		[Desc("Damage percentage at each range step")]
-		public readonly int[] Falloff = { 100, 37, 14, 5, 0 };
+		public readonly int[] Falloff = [100, 37, 14, 5, 0];
 
 		[Desc("Ranges at which each Falloff step is defined. Overrides Spread.")]
 		public WDist[] Range = null;

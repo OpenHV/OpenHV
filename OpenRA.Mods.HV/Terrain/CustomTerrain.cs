@@ -18,7 +18,6 @@ using OpenRA.FileSystem;
 using OpenRA.Mods.Common.MapGenerator;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Primitives;
-using OpenRA.Support;
 
 namespace OpenRA.Mods.HV.Terrain
 {

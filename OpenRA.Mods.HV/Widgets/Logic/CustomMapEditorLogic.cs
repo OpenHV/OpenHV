@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -51,9 +51,9 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			{
 				var actionManager = world.WorldActor.Trait<EditorActionManager>();
 				undoButton.IsDisabled = () => !actionManager.HasUndos();
-				undoButton.OnClick = () => actionManager.Undo();
+				undoButton.OnClick = actionManager.Undo;
 				redoButton.IsDisabled = () => !actionManager.HasRedos();
-				redoButton.OnClick = () => actionManager.Redo();
+				redoButton.OnClick = actionManager.Redo;
 			}
 		}
 	}

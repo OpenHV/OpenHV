@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -39,7 +39,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string[] DeliveryVehicleType = null;
 
 		[Desc("How much can be mined in total before depletion.")]
-		public readonly Dictionary<string, int> Deposits = new();
+		public readonly Dictionary<string, int> Deposits = [];
 
 		[Desc("Reduce payout by this percentage when resources are depleted.")]
 		public readonly int DepletionModifier = 10;
@@ -54,7 +54,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly PlayerRelationship DisplayRelationships = PlayerRelationship.Ally;
 
 		[Desc("Defines to which players the bar is to be shown.")]
-		public readonly Dictionary<string, Color> Colors = new();
+		public readonly Dictionary<string, Color> Colors = [];
 
 		[NotificationReference("Speech")]
 		[Desc("The audio notification type to play when the resources are exhausted.")]
@@ -179,7 +179,7 @@ namespace OpenRA.Mods.HV.Traits
 					var vehicle = Info.DeliveryVehicleType.Random(self.World.SharedRandom).ToLowerInvariant();
 					var actorInfo = self.World.Map.Rules.Actors[vehicle];
 
-					var multipliers = depleted ? new int[1] { Info.DepletionModifier } : new int[1] { 100 };
+					var multipliers = depleted ? new int[1] { Info.DepletionModifier } : [100];
 					SpawnDeliveryVehicle(self, actorInfo, exit?.Info, resourceType, multipliers);
 
 					Truckload = 0;
@@ -221,7 +221,7 @@ namespace OpenRA.Mods.HV.Traits
 				else
 					initialFacing = exitInfo.Facing.Value;
 
-				exitLocations = rallyPoint.Value != null && rallyPoint.Value.Path.Count > 0 ? rallyPoint.Value.Path : new List<CPos> { exit };
+				exitLocations = rallyPoint.Value != null && rallyPoint.Value.Path.Count > 0 ? rallyPoint.Value.Path : [exit];
 
 				typeDictionary.Add(new LocationInit(exit));
 				typeDictionary.Add(new CenterPositionInit(spawn));

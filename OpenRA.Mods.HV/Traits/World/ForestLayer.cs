@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2023 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -54,15 +54,15 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Terrain types a tree can change into.")]
-		public readonly string[] TransformedTerrain = Array.Empty<string>();
+		public readonly string[] TransformedTerrain = [];
 
 		[FieldLoader.Require]
 		[Desc("Which tile ID to replace with which munched variant")]
-		public readonly Dictionary<ushort, ushort> CrushedTiles = new();
+		public readonly Dictionary<ushort, ushort> CrushedTiles = [];
 
 		[FieldLoader.Require]
 		[Desc("Which tile ID to replace with which scorched variant")]
-		public readonly Dictionary<ushort, ushort> BurnedTiles = new();
+		public readonly Dictionary<ushort, ushort> BurnedTiles = [];
 
 		public void RulesetLoaded(Ruleset rules, ActorInfo actorInfo)
 		{
@@ -112,13 +112,13 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 			world = self.World;
 
-			TopLeft = world.Map.AllCells.First(c => world.Map.Contains(c));
+			TopLeft = world.Map.AllCells.First(world.Map.Contains);
 			hitpoints = new CellLayer<int>(world.Map);
 			terrainRenderer = self.Trait<ITiledTerrainRenderer>();
 			radarColor = new CellLayer<(Color, Color)>(world.Map);
 			world.UpdateMaps(self, this);
-			occupied = new List<(CPos, SubCell)>();
-			dirty = new Dictionary<CPos, TerrainTile?>();
+			occupied = [];
+			dirty = [];
 			ticks = info.Interval;
 		}
 

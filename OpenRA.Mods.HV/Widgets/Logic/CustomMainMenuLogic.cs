@@ -24,12 +24,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		[FluentReference]
 		const string LoadingNews = "label-loading-news";
 
-		[FluentReference("message")]
-		const string NewsRetrivalFailed = "label-news-retrieval-failed";
-
-		[FluentReference("message")]
-		const string NewsParsingFailed = "label-news-parsing-failed";
-
 		[FluentReference("author", "datetime")]
 		const string AuthorDateTime = "label-author-datetime";
 
@@ -205,7 +199,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			{
 				newsBG.IsVisible = () => Game.Settings.Game.FetchNews && menuType != MenuType.None && menuType != MenuType.StartupPrompts;
 
-				newsPanel = Ui.LoadWidget<ScrollPanelWidget>("GITHUB_NEWS_PANEL", null, new WidgetArgs());
+				newsPanel = Ui.LoadWidget<ScrollPanelWidget>("GITHUB_NEWS_PANEL", null, []);
 				newsTemplate = newsPanel.Get("GITHUB_NEWS_ITEM_TEMPLATE");
 				newsPanel.RemoveChild(newsTemplate);
 				maxNewsHeight = newsPanel.Bounds.Height;

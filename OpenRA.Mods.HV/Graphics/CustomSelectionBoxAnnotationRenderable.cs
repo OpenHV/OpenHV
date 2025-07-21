@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2020 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -49,10 +49,10 @@ namespace OpenRA.Mods.HV.Graphics
 			var v = new float2(0, 3);
 
 			var cr = Game.Renderer.RgbaColorRenderer;
-			cr.DrawLine(new float3[] { tl + u, tl, tl + v }, 1, color, true);
-			cr.DrawLine(new float3[] { tr - u, tr, tr + v }, 1, color, true);
-			cr.DrawLine(new float3[] { br - u, br, br - v }, 1, color, true);
-			cr.DrawLine(new float3[] { bl + u, bl, bl - v }, 1, color, true);
+			cr.DrawLine([tl + u, tl, tl + v], 1, color, true);
+			cr.DrawLine([tr - u, tr, tr + v], 1, color, true);
+			cr.DrawLine([br - u, br, br - v], 1, color, true);
+			cr.DrawLine([bl + u, bl, bl - v], 1, color, true);
 		}
 
 		public void RenderDebugGeometry(WorldRenderer wr) { }

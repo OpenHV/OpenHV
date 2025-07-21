@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2022-2023 The OpenHV Developers (see AUTHORS)
+ * Copyright 2022-2025 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class BuilderBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that can deploy into outposts.")]
-		public readonly HashSet<string> BuilderTypes = new();
+		public readonly HashSet<string> BuilderTypes = [];
 
 		[Desc("Delay (in ticks) between looking for and giving out orders to new builders.")]
 		public readonly int ScanForNewBuilderInterval = 20;
@@ -148,10 +148,10 @@ namespace OpenRA.Mods.HV.Traits
 			if (IsTraitDisabled)
 				return null;
 
-			return new List<MiniYamlNode>()
-			{
+			return
+			[
 				new("InitialBaseCenter", FieldSaver.FormatValue(initialBaseCenter))
-			};
+			];
 		}
 
 		void IGameSaveTraitData.ResolveTraitData(Actor self, MiniYaml data)
