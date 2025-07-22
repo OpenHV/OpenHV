@@ -1010,14 +1010,14 @@ turret2:
 		Filename: bits/turret2.png
 		Start: 0
 		Facings: 8
-		Offset: 0, -7
+		Offset: 0, -9
 	shoot:
 		Filename: bits/turret2.png
 		Start: 8
 		Length: 2
 		Tick: 50
 		Facings: 8
-		Offset: 0, -7
+		Offset: 0, -9
 	icon:
 		Filename: bits/turret2-icon.png
 
