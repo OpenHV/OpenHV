@@ -41,8 +41,8 @@ Cursors:
 	bits/cursors2.png: cursor
 		default:
 			Start: 0
-			X: 0
-			Y: -4
+			X: -3
+			Y: -8
 		default-minimap:
 			Start: 0
 			X: 0
