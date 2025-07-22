@@ -12,6 +12,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -56,6 +57,21 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Cursor to display when the targeted area is blocked.")]
 		public readonly string TargetBlockedCursor = "move-blocked";
 
+		[Desc("Maximum range from televator to be able to teleport.")]
+		public readonly WDist RangeFromTelevators = WDist.FromCells(10);
+
+		[Desc("Range circle color.")]
+		public readonly Color CircleColor = Color.FromArgb(128, Color.MediumSlateBlue);
+
+		[Desc("Range circle width in pixel.")]
+		public readonly float CircleWidth = 1;
+
+		[Desc("Range circle border color.")]
+		public readonly Color CircleBorderColor = Color.FromArgb(64, Color.MediumSlateBlue);
+
+		[Desc("Range circle border width in pixel.")]
+		public readonly float CircleBorderWidth = 3;
+
 		public override object Create(ActorInitializer init) { return new TeleportPower(init.Self, this); }
 	}
 
@@ -63,12 +79,14 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly char[] footprint;
 		readonly CVec dimensions;
+		readonly long rangeFromTelevatorsSquared;
 
 		public TeleportPower(Actor self, TeleportPowerInfo info)
 			: base(self, info)
 		{
 			footprint = info.Footprint.Where(c => !char.IsWhiteSpace(c)).ToArray();
 			dimensions = info.Dimensions;
+			rangeFromTelevatorsSquared = info.RangeFromTelevators.LengthSquared;
 		}
 
 		public override void SelectTarget(Actor self, string order, SupportPowerManager manager)
@@ -95,7 +113,8 @@ namespace OpenRA.Mods.HV.Traits
 
 				var targetCell = target.Location + targetDelta;
 
-				if (self.Owner.Shroud.IsVisible(targetCell) && teleportable.CanTeleportTo(target, targetCell))
+				if (self.Owner.Shroud.IsVisible(targetCell) && teleportable.CanTeleportTo(target, targetCell)
+						&& IsInRangeOfTelevators(manager.Powers[order.OrderString], targetCell))
 					teleportable.Teleport(target, targetCell, self);
 			}
 		}
@@ -136,6 +155,18 @@ namespace OpenRA.Mods.HV.Traits
 				}
 
 			return true;
+		}
+
+		public bool IsInRangeOfTelevators(SupportPowerInstance teleportPower, CPos targetCell)
+		{
+			var map = Self.World.Map;
+			foreach (var televator in teleportPower.Instances)
+			{
+				if ((televator.Self.CenterPosition - map.CenterOfCell(targetCell)).LengthSquared <= rangeFromTelevatorsSquared)
+					return true;
+			}
+
+			return false;
 		}
 
 		sealed class SelectTeleportTarget : OrderGenerator
@@ -305,8 +336,9 @@ namespace OpenRA.Mods.HV.Traits
 				foreach (var t in power.CellsMatching(sourceLocation, footprint, dimensions))
 				{
 					var isValid = manager.Self.Owner.Shroud.IsVisible(t + delta);
-					var tile = isValid ? validTile : invalidTile;
-					var alpha = isValid ? validAlpha : invalidAlpha;
+					var isCloseToTeleporter = power.IsInRangeOfTelevators(manager.Powers[order], t + delta);
+					var tile = isCloseToTeleporter && isValid ? validTile : invalidTile;
+					var alpha = isCloseToTeleporter && isValid ? validAlpha : invalidAlpha;
 					yield return new SpriteRenderable(
 						tile, wr.World.Map.CenterOfCell(t + delta), WVec.Zero, -511, palette,
 						1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
@@ -320,8 +352,9 @@ namespace OpenRA.Mods.HV.Traits
 						var targetCell = unit.Location + (xy - sourceLocation);
 						var canEnter = manager.Self.Owner.Shroud.IsVisible(targetCell) &&
 							unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell);
-						var tile = canEnter ? validTile : invalidTile;
-						var alpha = canEnter ? validAlpha : invalidAlpha;
+						var isCloseToTeleporter = power.IsInRangeOfTelevators(manager.Powers[order], targetCell);
+						var tile = isCloseToTeleporter && canEnter ? validTile : invalidTile;
+						var alpha = isCloseToTeleporter && canEnter ? validAlpha : invalidAlpha;
 						yield return new SpriteRenderable(
 							tile, wr.World.Map.CenterOfCell(targetCell), WVec.Zero, -511, palette,
 							1f, alpha, float3.Ones, TintModifiers.IgnoreWorldTint, true);
@@ -346,6 +379,19 @@ namespace OpenRA.Mods.HV.Traits
 								yield return d;
 					}
 				}
+
+				var info = (TeleportPowerInfo)power.Info;
+				foreach (var televator in manager.Powers[order].Instances)
+				{
+					yield return new RangeCircleAnnotationRenderable(
+					televator.Self.CenterPosition,
+					info.RangeFromTelevators,
+					0,
+					info.CircleColor,
+					info.CircleWidth,
+					info.CircleBorderColor,
+					info.CircleBorderWidth);
+				}
 			}
 
 			protected override IEnumerable<IRenderable> Render(WorldRenderer wr, World world)
@@ -367,7 +413,8 @@ namespace OpenRA.Mods.HV.Traits
 				{
 					anyUnitsInRange = true;
 					var targetCell = unit.Location + (xy - sourceLocation);
-					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell))
+					if (manager.Self.Owner.Shroud.IsVisible(targetCell) && unit.Trait<Teleportable>().CanTeleportTo(unit, targetCell)
+						&& power.IsInRangeOfTelevators(manager.Powers[order], targetCell))
 					{
 						canTeleport = true;
 						break;
@@ -383,7 +430,7 @@ namespace OpenRA.Mods.HV.Traits
 					// Check the terrain types. This will allow Teleports to occur on empty terrain to terrain of
 					// a similar type. This also keeps the cursor from changing in non-visible property, alerting the
 					// Teleporter of enemy unit presence
-					canTeleport = power.SimilarTerrain(sourceLocation, xy);
+					canTeleport = power.SimilarTerrain(sourceLocation, xy) && power.IsInRangeOfTelevators(manager.Powers[order], xy);
 				}
 
 				return canTeleport;
