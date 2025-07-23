@@ -38,7 +38,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}
 
-	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice
+	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated
 	{
 		public readonly MinerInfo Info;
 		readonly IResourceLayer resourceLayer;
@@ -47,6 +47,29 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			Info = info;
 			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
+		}
+
+		void INotifyCreated.Created(Actor self)
+		{
+			var mobile = self.Trait<Mobile>();
+			if (mobile.CreationRallypoints == null)
+				return;
+			var activity = self.CurrentActivity;
+			foreach (var rallypoint in mobile.CreationRallypoints)
+			{
+				if (activity != null)
+				{
+					var resourceType = resourceLayer.GetResource(rallypoint).Type;
+					if (resourceType != null && Info.Colors.TryGetValue(resourceType, out var color))
+					{
+						activity.QueueChild(new DeployMiner(self, rallypoint, Info.TerrainTypes, color));
+					}
+
+					activity = activity.NextActivity;
+				}
+			}
+
+			self.ShowTargetLines();
 		}
 
 		IEnumerable<IOrderTargeter> IIssueOrder.Orders
