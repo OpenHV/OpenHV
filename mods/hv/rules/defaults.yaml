@@ -174,8 +174,6 @@
 	AnnounceOnSeen:
 		Notification: EnemyUnitsDetected
 		TextNotification: notification-enemy-units-detected
-	DetectCloaked:
-		Range: 1c0
 	Passenger:
 		CargoType: Vehicle
 		Weight: 5
@@ -212,8 +210,6 @@
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
-	DetectCloaked:
-		Range: 1c0
 	-Repairable:
 	RepairableNear:
 		RepairActors: module, module2
@@ -984,9 +980,6 @@
 		StartDelay: 4
 		Type: CenterPosition
 		TerrainTypes: Littoral, Pelagic, Oceanic, Rapids
-	DetectCloaked:
-		DetectionTypes: Underwater
-		Range: 1c0
 
 ^Submarine:
 	Inherits: ^Ship

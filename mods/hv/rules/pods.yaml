@@ -274,8 +274,6 @@ TECHNICIAN:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
 		Voice: Repair
-	DetectCloaked:
-		Range: 2c0
 
 BROKER:
 	Inherits: ^Pod
