@@ -495,6 +495,7 @@ CHOPPER:
 		TurnSpeed: 20
 		Speed: 135
 		AltitudeVelocity: 0c58
+		LandAltitude: 0c0
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: TransportHelicopterVoice
@@ -638,6 +639,7 @@ DROPSHIP:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 135
+		LandAltitude: 0c0
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
