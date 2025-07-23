@@ -13970,3 +13970,150 @@ Templates:
 		Categories: Sand, Black Sand
 		Tiles:
 			0: Black Sand
+
+# Multi Brush Definitions
+MultiBrushCollections:
+
+	# Cliff Grass
+
+	Segmented:
+		MultiBrush@78:
+			Template: 78
+			Segment:
+				Start: CliffGrass.U
+				Inner: CliffGrass
+				End: CliffGrass.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@79:
+			Template: 79
+			Segment:
+				Start: CliffGrass.U
+				Inner: CliffGrass
+				End: CliffGrass.U
+				Points: 0,1, 0,0
+		MultiBrush@80:
+			Template: 80
+			Segment:
+				Start: CliffGrass.L
+				Inner: CliffGrass
+				End: CliffGrass.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@81:
+			Template: 81
+			Segment:
+				Start: CliffGrass.R
+				Inner: CliffGrass
+				End: CliffGrass.R
+				Points: 0,0, 1,0
+		MultiBrush@83:
+			Template: 83
+			Segment:
+				Start: CliffGrass.L
+				Inner: CliffGrass
+				End: CliffGrass.L
+				Points: 1,1, 0,1
+		MultiBrush@84:
+			Template: 84
+			Segment:
+				Start: CliffGrass.R
+				Inner: CliffGrass
+				End: CliffGrass.U
+				Points: 0,0
+		MultiBrush@85:
+			Template: 85
+			Segment:
+				Start: CliffGrass.U
+				Inner: CliffGrass
+				End: CliffGrass.L
+				Points: 0,1
+		MultiBrush@86:
+			Template: 86
+			Segment:
+				Start: CliffGrass.R
+				Inner: CliffGrass
+				End: CliffGrass.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@87:
+			Template: 87
+			Segment:
+				Start: CliffGrass.D
+				Inner: CliffGrass
+				End: CliffGrass.D
+				Points: 1,0, 1,1	
+		MultiBrush@88:
+			Template: 88
+			Segment:
+				Start: CliffGrass.D
+				Inner: CliffGrass
+				End: CliffGrass.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@89:
+			Template: 89
+			Segment:
+				Start: CliffGrass.D
+				Inner: CliffGrass
+				End: CliffGrass.R
+				Points: 1,0
+		MultiBrush@90:
+			Template: 90
+			Segment:
+				Start: CliffGrass.L
+				Inner: CliffGrass
+				End: CliffGrass.D
+				Points: 1,1
+		MultiBrush@1306:
+			Template: 1306
+			Segment:
+				Start: Grass.R
+				Inner: CliffGrass
+				End: CliffGrass.R
+				Points: 0,0, 1,0
+		MultiBrush@1307:
+			Template: 1307
+			Segment:
+				Start: CliffGrass.R
+				Inner: CliffGrass
+				End: Grass.R
+				Points: 0,0, 1,0
+		MultiBrush@1308:
+			Template: 1308
+			Segment:
+				Start: Grass.D
+				Inner: CliffGrass
+				End: CliffGrass.D
+				Points: 1,0, 1,1	
+		MultiBrush@1309:
+			Template: 1309
+			Segment:
+				Start: CliffGrass.D
+				Inner: CliffGrass
+				End: Grass.D
+				Points: 1,0, 1,1	
+		MultiBrush@1310:
+			Template: 1310
+			Segment:
+				Start: CliffGrass.L
+				Inner: CliffGrass
+				End: Grass.L
+				Points: 1,1, 0,1
+		MultiBrush@1311:
+			Template: 1311
+			Segment:
+				Start: Grass.L
+				Inner: CliffGrass
+				End: CliffGrass.L
+				Points: 1,1, 0,1
+		MultiBrush@1312:
+			Template: 1312
+			Segment:
+				Start: CliffGrass.U
+				Inner: CliffGrass
+				End: Grass.U
+				Points: 0,1, 0,0
+		MultiBrush@1313:
+			Template: 1313
+			Segment:
+				Start: Grass.U
+				Inner: CliffGrass
+				End: CliffGrass.U
+				Points: 0,1, 0,0

@@ -108,6 +108,10 @@ EditorWorld:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Pit, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Dirt
 	MarkerLayerOverlay:
+	TilingPathTool:
+		DefaultStart: CliffGrass
+		DefaultInner: CliffGrass
+		DefaultEnd: CliffGrass
 
 EditorPlayer:
 	Inherits: ^BasePlayer
