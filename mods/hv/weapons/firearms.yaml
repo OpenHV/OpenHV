@@ -274,7 +274,7 @@ BoatMachineGunAir:
 	Report: boatgun_johandeecke.ogg
 	BurstDelays: 5
 	ReloadDelay: 20
-	Range: 9c0
+	Range: 10c0
 	Burst: 4
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c512
