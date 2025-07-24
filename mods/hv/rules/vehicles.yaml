@@ -92,11 +92,11 @@ AATANK:
 		Speed: 115
 		Locomotor: wheeled
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 10c0
+		MinRange: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: 0,0,200
@@ -942,11 +942,11 @@ MISSILETANK:
 		TurnSpeed: 30
 		Speed: 80
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 10c0
+		MinRange: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 40
 		Offset: -200,-50,100
