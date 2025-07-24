@@ -29,11 +29,11 @@ LIGHTBOAT:
 		Speed: 125
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 10c0
+		MinRange: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 120
 	Armament@Air:
@@ -78,11 +78,11 @@ PATROLBOAT:
 		Speed: 125
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 10c0
+		MinRange: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 120
 		Offset: 300,0,0
