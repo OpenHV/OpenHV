@@ -33,7 +33,7 @@ namespace OpenRA.Mods.HV.Terrain
 		}
 	}
 
-	public sealed class CustomTileCache : ITileCache, IDisposable
+	public sealed class CustomTileCache : IDisposable
 	{
 		// 1x1px transparent tile
 		const int MissingDataLength = 1;
