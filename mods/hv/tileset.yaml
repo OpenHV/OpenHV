@@ -13980,140 +13980,855 @@ MultiBrushCollections:
 		MultiBrush@78:
 			Template: 78
 			Segment:
-				Start: CliffGrass.U
-				Inner: CliffGrass
-				End: CliffGrass.R
+				Start: Cliff Grass.U
+				Inner: Cliff Grass
+				End: Cliff Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@79:
 			Template: 79
 			Segment:
-				Start: CliffGrass.U
-				Inner: CliffGrass
-				End: CliffGrass.U
+				Start: Cliff Grass.U
+				Inner: Cliff Grass
+				End: Cliff Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@80:
 			Template: 80
 			Segment:
-				Start: CliffGrass.L
-				Inner: CliffGrass
-				End: CliffGrass.U
+				Start: Cliff Grass.L
+				Inner: Cliff Grass
+				End: Cliff Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@81:
 			Template: 81
 			Segment:
-				Start: CliffGrass.R
-				Inner: CliffGrass
-				End: CliffGrass.R
+				Start: Cliff Grass.R
+				Inner: Cliff Grass
+				End: Cliff Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@83:
 			Template: 83
 			Segment:
-				Start: CliffGrass.L
-				Inner: CliffGrass
-				End: CliffGrass.L
+				Start: Cliff Grass.L
+				Inner: Cliff Grass
+				End: Cliff Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@84:
 			Template: 84
 			Segment:
-				Start: CliffGrass.R
-				Inner: CliffGrass
-				End: CliffGrass.U
+				Start: Cliff Grass.R
+				Inner: Cliff Grass
+				End: Cliff Grass.U
 				Points: 0,0
 		MultiBrush@85:
 			Template: 85
 			Segment:
-				Start: CliffGrass.U
-				Inner: CliffGrass
-				End: CliffGrass.L
+				Start: Cliff Grass.U
+				Inner: Cliff Grass
+				End: Cliff Grass.L
 				Points: 0,1
 		MultiBrush@86:
 			Template: 86
 			Segment:
-				Start: CliffGrass.R
-				Inner: CliffGrass
-				End: CliffGrass.D
+				Start: Cliff Grass.R
+				Inner: Cliff Grass
+				End: Cliff Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@87:
 			Template: 87
 			Segment:
-				Start: CliffGrass.D
-				Inner: CliffGrass
-				End: CliffGrass.D
-				Points: 1,0, 1,1	
+				Start: Cliff Grass.D
+				Inner: Cliff Grass
+				End: Cliff Grass.D
+				Points: 1,0, 1,1
 		MultiBrush@88:
 			Template: 88
 			Segment:
-				Start: CliffGrass.D
-				Inner: CliffGrass
-				End: CliffGrass.L
+				Start: Cliff Grass.D
+				Inner: Cliff Grass
+				End: Cliff Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@89:
 			Template: 89
 			Segment:
-				Start: CliffGrass.D
-				Inner: CliffGrass
-				End: CliffGrass.R
+				Start: Cliff Grass.D
+				Inner: Cliff Grass
+				End: Cliff Grass.R
 				Points: 1,0
 		MultiBrush@90:
 			Template: 90
 			Segment:
-				Start: CliffGrass.L
-				Inner: CliffGrass
-				End: CliffGrass.D
+				Start: Cliff Grass.L
+				Inner: Cliff Grass
+				End: Cliff Grass.D
 				Points: 1,1
 		MultiBrush@1306:
 			Template: 1306
 			Segment:
 				Start: Grass.R
-				Inner: CliffGrass
-				End: CliffGrass.R
+				Inner: Cliff Grass
+				End: Cliff Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1307:
 			Template: 1307
 			Segment:
-				Start: CliffGrass.R
-				Inner: CliffGrass
+				Start: Cliff Grass.R
+				Inner: Cliff Grass
 				End: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1308:
 			Template: 1308
 			Segment:
 				Start: Grass.D
-				Inner: CliffGrass
-				End: CliffGrass.D
-				Points: 1,0, 1,1	
+				Inner: Cliff Grass
+				End: Cliff Grass.D
+				Points: 1,0, 1,1
 		MultiBrush@1309:
 			Template: 1309
 			Segment:
-				Start: CliffGrass.D
-				Inner: CliffGrass
+				Start: Cliff Grass.D
+				Inner: Cliff Grass
 				End: Grass.D
 				Points: 1,0, 1,1	
 		MultiBrush@1310:
 			Template: 1310
 			Segment:
-				Start: CliffGrass.L
-				Inner: CliffGrass
+				Start: Cliff Grass.L
+				Inner: Cliff Grass
 				End: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1311:
 			Template: 1311
 			Segment:
 				Start: Grass.L
-				Inner: CliffGrass
-				End: CliffGrass.L
+				Inner: Cliff Grass
+				End: Cliff Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1312:
 			Template: 1312
 			Segment:
-				Start: CliffGrass.U
-				Inner: CliffGrass
+				Start: Cliff Grass.U
+				Inner: Cliff Grass
 				End: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1313:
 			Template: 1313
 			Segment:
 				Start: Grass.U
-				Inner: CliffGrass
-				End: CliffGrass.U
+				Inner: Cliff Grass
+				End: Cliff Grass.U
+				Points: 0,1, 0,0
+
+	# Cliff Crater
+
+		MultiBrush@1:
+			Template: 1
+			Segment:
+				Start: Cliff Crater.U
+				Inner: Cliff Crater
+				End: Cliff Crater.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@2:
+			Template: 2
+			Segment:
+				Start: Cliff Crater.R
+				Inner: Cliff Crater
+				End: Cliff Crater.R
+				Points: 0,0, 1,0
+		MultiBrush@3:
+			Template: 3
+			Segment:
+				Start: Cliff Crater.R
+				Inner: Cliff Crater
+				End: Cliff Crater.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@4:
+			Template: 4
+			Segment:
+				Start: Cliff Crater.U
+				Inner: Cliff Crater
+				End: Cliff Crater.U
+				Points: 0,1, 0,0
+		MultiBrush@6:
+			Template: 6
+			Segment:
+				Start: Cliff Crater.D
+				Inner: Cliff Crater
+				End: Cliff Crater.D
+				Points: 1,0, 1,1
+		MultiBrush@7:
+			Template: 7
+			Segment:
+				Start: Cliff Crater.L
+				Inner: Cliff Crater
+				End: Cliff Crater.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@8:
+			Template: 8
+			Segment:
+				Start: Cliff Crater.L
+				Inner: Cliff Crater
+				End: Cliff Crater.L
+				Points: 1,1, 0,1
+		MultiBrush@9:
+			Template: 9
+			Segment:
+				Start: Cliff Crater.D
+				Inner: Cliff Crater
+				End: Cliff Crater.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@10:
+			Template: 10
+			Segment:
+				Start: Cliff Crater.R
+				Inner: Cliff Crater
+				End: Cliff Crater.U
+				Points: 0,0
+		MultiBrush@11:
+			Template: 11
+			Segment:
+				Start: Cliff Crater.D
+				Inner: Cliff Crater
+				End: Cliff Crater.R
+				Points: 1,0
+		MultiBrush@12:
+			Template: 12
+			Segment:
+				Start: Cliff Crater.U
+				Inner: Cliff Crater
+				End: Cliff Crater.L
+				Points: 0,1
+		MultiBrush@13:
+			Template: 13
+			Segment:
+				Start: Cliff Crater.L
+				Inner: Cliff Crater
+				End: Cliff Crater.D
+				Points: 1,1
+		MultiBrush@1314:
+			Template: 1314
+			Segment:
+				Start: Crater.R
+				Inner: Cliff Crater
+				End: Cliff Crater.R
+				Points: 0,0, 1,0
+		MultiBrush@1315:
+			Template: 1315
+			Segment:
+				Start: Cliff Crater.R
+				Inner: Cliff Crater
+				End: Crater.R
+				Points: 0,0, 1,0
+		MultiBrush@1316:
+			Template: 1316
+			Segment:
+				Start: Crater.D
+				Inner: Cliff Crater
+				End: Cliff Crater.D
+				Points: 1,0, 1,1	
+		MultiBrush@1317:
+			Template: 1317
+			Segment:
+				Start: Cliff Crater.D
+				Inner: Cliff Crater
+				End: Crater.D
+				Points: 1,0, 1,1	
+		MultiBrush@1318:
+			Template: 1318
+			Segment:
+				Start: Cliff Crater.L
+				Inner: Cliff Crater
+				End: Crater.L
+				Points: 1,1, 0,1
+		MultiBrush@1319:
+			Template: 1319
+			Segment:
+				Start: Crater.L
+				Inner: Cliff Crater
+				End: Cliff Crater.L
+				Points: 1,1, 0,1
+		MultiBrush@1320:
+			Template: 1320
+			Segment:
+				Start: Cliff Crater.U
+				Inner: Cliff Crater
+				End: Crater.U
+				Points: 0,1, 0,0
+		MultiBrush@1321:
+			Template: 1321
+			Segment:
+				Start: Crater.U
+				Inner: Cliff Crater
+				End: Cliff Crater.U
+				Points: 0,1, 0,0
+
+	# Cliff Red Snow
+
+		MultiBrush@668:
+			Template: 668
+			Segment:
+				Start: Cliff Red Snow.U
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@669:
+			Template: 669
+			Segment:
+				Start: Cliff Red Snow.U
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.U
+				Points: 0,1, 0,0
+		MultiBrush@670:
+			Template: 670
+			Segment:
+				Start: Cliff Red Snow.L
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@671:
+			Template: 671
+			Segment:
+				Start: Cliff Red Snow.R
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.R
+				Points: 0,0, 1,0
+		MultiBrush@673:
+			Template: 673
+			Segment:
+				Start: Cliff Red Snow.L
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.L
+				Points: 1,1, 0,1
+		MultiBrush@674:
+			Template: 674
+			Segment:
+				Start: Cliff Red Snow.R
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.U
+				Points: 0,0
+		MultiBrush@675:
+			Template: 675
+			Segment:
+				Start: Cliff Red Snow.U
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.L
+				Points: 0,1
+		MultiBrush@676:
+			Template: 676
+			Segment:
+				Start: Cliff Red Snow.R
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@677:
+			Template: 677
+			Segment:
+				Start: Cliff Red Snow.D
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.D
+				Points: 1,0, 1,1
+		MultiBrush@678:
+			Template: 678
+			Segment:
+				Start: Cliff Red Snow.D
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@679:
+			Template: 679
+			Segment:
+				Start: Cliff Red Snow.D
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.R
+				Points: 1,0
+		MultiBrush@680:
+			Template: 680
+			Segment:
+				Start: Cliff Red Snow.L
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.D
+				Points: 1,1
+		MultiBrush@1322:
+			Template: 1322
+			Segment:
+				Start: Red Snow.R
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.R
+				Points: 0,0, 1,0
+		MultiBrush@1323:
+			Template: 1323
+			Segment:
+				Start: Cliff Red Snow.R
+				Inner: Cliff Red Snow
+				End: Red Snow.R
+				Points: 0,0, 1,0
+		MultiBrush@1324:
+			Template: 1324
+			Segment:
+				Start: Red Snow.D
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.D
+				Points: 1,0, 1,1
+		MultiBrush@1325:
+			Template: 1325
+			Segment:
+				Start: Cliff Red Snow.D
+				Inner: Cliff Red Snow
+				End: Red Snow.D
+				Points: 1,0, 1,1	
+		MultiBrush@1326:
+			Template: 1326
+			Segment:
+				Start: Cliff Red Snow.L
+				Inner: Cliff Red Snow
+				End: Red Snow.L
+				Points: 1,1, 0,1
+		MultiBrush@1327:
+			Template: 1327
+			Segment:
+				Start: Red Snow.L
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.L
+				Points: 1,1, 0,1
+		MultiBrush@1328:
+			Template: 1328
+			Segment:
+				Start: Cliff Red Snow.U
+				Inner: Cliff Red Snow
+				End: Red Snow.U
+				Points: 0,1, 0,0
+		MultiBrush@1329:
+			Template: 1329
+			Segment:
+				Start: Red Snow.U
+				Inner: Cliff Red Snow
+				End: Cliff Red Snow.U
+				Points: 0,1, 0,0
+
+	# Cliff Sand
+
+		MultiBrush@752:
+			Template: 752
+			Segment:
+				Start: Cliff Sand.U
+				Inner: Cliff Sand
+				End: Cliff Sand.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@753:
+			Template: 753
+			Segment:
+				Start: Cliff Sand.U
+				Inner: Cliff Sand
+				End: Cliff Sand.U
+				Points: 0,1, 0,0
+		MultiBrush@754:
+			Template: 754
+			Segment:
+				Start: Cliff Sand.L
+				Inner: Cliff Sand
+				End: Cliff Sand.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@755:
+			Template: 755
+			Segment:
+				Start: Cliff Sand.R
+				Inner: Cliff Sand
+				End: Cliff Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@757:
+			Template: 757
+			Segment:
+				Start: Cliff Sand.L
+				Inner: Cliff Sand
+				End: Cliff Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@758:
+			Template: 758
+			Segment:
+				Start: Cliff Sand.R
+				Inner: Cliff Sand
+				End: Cliff Sand.U
+				Points: 0,0
+		MultiBrush@759:
+			Template: 759
+			Segment:
+				Start: Cliff Sand.U
+				Inner: Cliff Sand
+				End: Cliff Sand.L
+				Points: 0,1
+		MultiBrush@760:
+			Template: 760
+			Segment:
+				Start: Cliff Sand.R
+				Inner: Cliff Sand
+				End: Cliff Sand.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@761:
+			Template: 761
+			Segment:
+				Start: Cliff Sand.D
+				Inner: Cliff Sand
+				End: Cliff Sand.D
+				Points: 1,0, 1,1
+		MultiBrush@762:
+			Template: 762
+			Segment:
+				Start: Cliff Sand.D
+				Inner: Cliff Sand
+				End: Cliff Sand.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@763:
+			Template: 763
+			Segment:
+				Start: Cliff Sand.D
+				Inner: Cliff Sand
+				End: Cliff Sand.R
+				Points: 1,0
+		MultiBrush@764:
+			Template: 764
+			Segment:
+				Start: Cliff Sand.L
+				Inner: Cliff Sand
+				End: Cliff Sand.D
+				Points: 1,1
+		MultiBrush@1330:
+			Template: 1330
+			Segment:
+				Start: Sand.R
+				Inner: Cliff Sand
+				End: Cliff Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@1331:
+			Template: 1331
+			Segment:
+				Start: Cliff Sand.R
+				Inner: Cliff Sand
+				End: Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@1332:
+			Template: 1332
+			Segment:
+				Start: Sand.D
+				Inner: Cliff Sand
+				End: Cliff Sand.D
+				Points: 1,0, 1,1
+		MultiBrush@1333:
+			Template: 1333
+			Segment:
+				Start: Cliff Sand.D
+				Inner: Cliff Sand
+				End: Sand.D
+				Points: 1,0, 1,1	
+		MultiBrush@1334:
+			Template: 1334
+			Segment:
+				Start: Cliff Sand.L
+				Inner: Cliff Sand
+				End: Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@1335:
+			Template: 1335
+			Segment:
+				Start: Sand.L
+				Inner: Cliff Sand
+				End: Cliff Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@1336:
+			Template: 1336
+			Segment:
+				Start: Cliff Sand.U
+				Inner: Cliff Sand
+				End: Sand.U
+				Points: 0,1, 0,0
+		MultiBrush@1337:
+			Template: 1337
+			Segment:
+				Start: Sand.U
+				Inner: Cliff Sand
+				End: Cliff Sand.U
+				Points: 0,1, 0,0
+
+	# Cliff Snow
+
+		MultiBrush@885:
+			Template: 885
+			Segment:
+				Start: Cliff Snow.U
+				Inner: Cliff Snow
+				End: Cliff Snow.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@886:
+			Template: 886
+			Segment:
+				Start: Cliff Snow.U
+				Inner: Cliff Snow
+				End: Cliff Snow.U
+				Points: 0,1, 0,0
+		MultiBrush@887:
+			Template: 887
+			Segment:
+				Start: Cliff Snow.L
+				Inner: Cliff Snow
+				End: Cliff Snow.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@888:
+			Template: 888
+			Segment:
+				Start: Cliff Snow.R
+				Inner: Cliff Snow
+				End: Cliff Snow.R
+				Points: 0,0, 1,0
+		MultiBrush@890:
+			Template: 890
+			Segment:
+				Start: Cliff Snow.L
+				Inner: Cliff Snow
+				End: Cliff Snow.L
+				Points: 1,1, 0,1
+		MultiBrush@891:
+			Template: 891
+			Segment:
+				Start: Cliff Snow.R
+				Inner: Cliff Snow
+				End: Cliff Snow.U
+				Points: 0,0
+		MultiBrush@892:
+			Template: 892
+			Segment:
+				Start: Cliff Snow.U
+				Inner: Cliff Snow
+				End: Cliff Snow.L
+				Points: 0,1
+		MultiBrush@893:
+			Template: 893
+			Segment:
+				Start: Cliff Snow.R
+				Inner: Cliff Snow
+				End: Cliff Snow.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@894:
+			Template: 894
+			Segment:
+				Start: Cliff Snow.D
+				Inner: Cliff Snow
+				End: Cliff Snow.D
+				Points: 1,0, 1,1
+		MultiBrush@895:
+			Template: 895
+			Segment:
+				Start: Cliff Snow.D
+				Inner: Cliff Snow
+				End: Cliff Snow.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@896:
+			Template: 896
+			Segment:
+				Start: Cliff Snow.D
+				Inner: Cliff Snow
+				End: Cliff Snow.R
+				Points: 1,0
+		MultiBrush@897:
+			Template: 897
+			Segment:
+				Start: Cliff Snow.L
+				Inner: Cliff Snow
+				End: Cliff Snow.D
+				Points: 1,1
+		MultiBrush@1338:
+			Template: 1338
+			Segment:
+				Start: Snow.R
+				Inner: Cliff Snow
+				End: Cliff Snow.R
+				Points: 0,0, 1,0
+		MultiBrush@1339:
+			Template: 1339
+			Segment:
+				Start: Cliff Snow.R
+				Inner: Cliff Snow
+				End: Snow.R
+				Points: 0,0, 1,0
+		MultiBrush@1340:
+			Template: 1340
+			Segment:
+				Start: Snow.D
+				Inner: Cliff Snow
+				End: Cliff Snow.D
+				Points: 1,0, 1,1
+		MultiBrush@1341:
+			Template: 1341
+			Segment:
+				Start: Cliff Snow.D
+				Inner: Cliff Snow
+				End: Snow.D
+				Points: 1,0, 1,1	
+		MultiBrush@1342:
+			Template: 1342
+			Segment:
+				Start: Cliff Snow.L
+				Inner: Cliff Snow
+				End: Snow.L
+				Points: 1,1, 0,1
+		MultiBrush@1343:
+			Template: 1343
+			Segment:
+				Start: Snow.L
+				Inner: Cliff Snow
+				End: Cliff Snow.L
+				Points: 1,1, 0,1
+		MultiBrush@1344:
+			Template: 1344
+			Segment:
+				Start: Cliff Snow.U
+				Inner: Cliff Snow
+				End: Snow.U
+				Points: 0,1, 0,0
+		MultiBrush@1345:
+			Template: 1345
+			Segment:
+				Start: Snow.U
+				Inner: Cliff Snow
+				End: Cliff Snow.U
+				Points: 0,1, 0,0
+
+	# Cliff Stone
+
+		MultiBrush@979:
+			Template: 979
+			Segment:
+				Start: Cliff Stone.U
+				Inner: Cliff Stone
+				End: Cliff Stone.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@980:
+			Template: 980
+			Segment:
+				Start: Cliff Stone.U
+				Inner: Cliff Stone
+				End: Cliff Stone.U
+				Points: 0,1, 0,0
+		MultiBrush@981:
+			Template: 981
+			Segment:
+				Start: Cliff Stone.L
+				Inner: Cliff Stone
+				End: Cliff Stone.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@984:
+			Template: 984
+			Segment:
+				Start: Cliff Stone.R
+				Inner: Cliff Stone
+				End: Cliff Stone.R
+				Points: 0,0, 1,0
+		MultiBrush@986:
+			Template: 986
+			Segment:
+				Start: Cliff Stone.L
+				Inner: Cliff Stone
+				End: Cliff Stone.L
+				Points: 1,1, 0,1
+		MultiBrush@987:
+			Template: 987
+			Segment:
+				Start: Cliff Stone.R
+				Inner: Cliff Stone
+				End: Cliff Stone.U
+				Points: 0,0
+		MultiBrush@988:
+			Template: 988
+			Segment:
+				Start: Cliff Stone.U
+				Inner: Cliff Stone
+				End: Cliff Stone.L
+				Points: 0,1
+		MultiBrush@989:
+			Template: 989
+			Segment:
+				Start: Cliff Stone.R
+				Inner: Cliff Stone
+				End: Cliff Stone.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@990:
+			Template: 990
+			Segment:
+				Start: Cliff Stone.D
+				Inner: Cliff Stone
+				End: Cliff Stone.D
+				Points: 1,0, 1,1
+		MultiBrush@991:
+			Template: 991
+			Segment:
+				Start: Cliff Stone.D
+				Inner: Cliff Stone
+				End: Cliff Stone.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@992:
+			Template: 992
+			Segment:
+				Start: Cliff Stone.D
+				Inner: Cliff Stone
+				End: Cliff Stone.R
+				Points: 1,0
+		MultiBrush@993:
+			Template: 993
+			Segment:
+				Start: Cliff Stone.L
+				Inner: Cliff Stone
+				End: Cliff Stone.D
+				Points: 1,1
+		MultiBrush@1346:
+			Template: 1346
+			Segment:
+				Start: Stone.R
+				Inner: Cliff Stone
+				End: Cliff Stone.R
+				Points: 0,0, 1,0
+		MultiBrush@1346:
+			Template: 1346
+			Segment:
+				Start: Cliff Stone.R
+				Inner: Cliff Stone
+				End: Stone.R
+				Points: 0,0, 1,0
+		MultiBrush@1346:
+			Template: 1346
+			Segment:
+				Start: Stone.D
+				Inner: Cliff Stone
+				End: Cliff Stone.D
+				Points: 1,0, 1,1
+		MultiBrush@1346:
+			Template: 1346
+			Segment:
+				Start: Cliff Stone.D
+				Inner: Cliff Stone
+				End: Stone.D
+				Points: 1,0, 1,1	
+		MultiBrush@1346:
+			Template: 1346
+			Segment:
+				Start: Cliff Stone.L
+				Inner: Cliff Stone
+				End: Stone.L
+				Points: 1,1, 0,1
+		MultiBrush@1346:
+			Template: 1346
+			Segment:
+				Start: Stone.L
+				Inner: Cliff Stone
+				End: Cliff Stone.L
+				Points: 1,1, 0,1
+		MultiBrush@1347:
+			Template: 1347
+			Segment:
+				Start: Cliff Stone.U
+				Inner: Cliff Stone
+				End: Stone.U
+				Points: 0,1, 0,0
+		MultiBrush@1348:
+			Template: 1348
+			Segment:
+				Start: Stone.U
+				Inner: Cliff Stone
+				End: Cliff Stone.U
 				Points: 0,1, 0,0
