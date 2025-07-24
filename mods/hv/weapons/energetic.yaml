@@ -266,7 +266,7 @@ RapidPodVoltageArcAir:
 
 LightningBolt:
 	ReloadDelay: 60
-	Range: 9c0
+	Range: 10c0
 	Report: lightningbolt.ogg
 	ValidTargets: Air
 	Projectile: EnergyBolt
@@ -286,8 +286,8 @@ LightningBolt:
 		Versus:
 			None: 30
 			Wood: 90
-			Light: 90
-			Heavy: 300
+			Light: 117
+			Heavy: 390
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -306,7 +306,7 @@ LightningBolt:
 LightningBoltLight:
 	Inherits: LightningBolt
 	ReloadDelay: 60
-	Range: 8c0
+	Range: 10c0
 	Report: lightningbolt.ogg
 	Warhead@Damage: SpreadDamage
 		Spread: 128
@@ -315,8 +315,8 @@ LightningBoltLight:
 		Versus:
 			None: 30
 			Wood: 90
-			Light: 90
-			Heavy: 300
+			Light: 117
+			Heavy: 390
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
