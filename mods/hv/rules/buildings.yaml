@@ -1324,7 +1324,7 @@ AATURRET:
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
-		Range: 9c0
+		Range: 10c0
 	RevealsShroud:
 		Range: 10c0
 	WithSpriteTurret:
@@ -1374,7 +1374,7 @@ AATURRET2:
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
-		Range: 9c0
+		Range: 10c0
 	RevealsShroud:
 		Range: 10c0
 	WithSpriteTurret:
