@@ -209,7 +209,7 @@ BoatMissileAntiAir:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 50
 	Report: rocketlaunch03.ogg
-	Range: 9c0
+	Range: 10c0
 	ValidTargets: Air
 	Burst: 3
 	BurstDelays: 8
@@ -255,7 +255,7 @@ StealthTankMissile:
 Patriot:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 45
-	Range: 8c0
+	Range: 10c0
 	Report: rocketlaunch03.ogg
 	ValidTargets: Air
 	Projectile: Missile
@@ -266,8 +266,8 @@ Patriot:
 		Versus:
 			None: 30
 			Wood: 90
-			Light: 90
-			Heavy: 300
+			Light: 117
+			Heavy: 390
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -281,7 +281,7 @@ Patriot:
 TowerMissile:
 	Inherits: ^AntiAirMissile
 	ReloadDelay: 45
-	Range: 9c0
+	Range: 10c0
 	Report: rocketlaunch03.ogg
 	ValidTargets: Air
 	Warhead@Damage: SpreadDamage
@@ -291,8 +291,8 @@ TowerMissile:
 		Versus:
 			None: 30
 			Wood: 90
-			Light: 90
-			Heavy: 300
+			Light: 117
+			Heavy: 390
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128

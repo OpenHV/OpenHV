@@ -1324,9 +1324,9 @@ AATURRET:
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
-		Range: 9c0
-	RevealsShroud:
 		Range: 10c0
+	RevealsShroud:
+		Range: 11c0
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
@@ -1374,9 +1374,9 @@ AATURRET2:
 		Type: Turret
 		Width: 2
 		BorderWidth: 3
-		Range: 9c0
-	RevealsShroud:
 		Range: 10c0
+	RevealsShroud:
+		Range: 11c0
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation:
