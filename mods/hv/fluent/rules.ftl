@@ -383,11 +383,13 @@ actor-oresmelt =
    .name = Ore Smelter
    .encyclopedia = The ore smelter is an economy boosting building for long lasting conflicts. It refines the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, heating up the ore requires a lot of energy.
    .description = Ore Smelter.
+      Only 10 can be built.
     Processes resources for extra credits.
 
 actor-orepurifier =
    .name = Ore Purifier
    .description = Ore Purifier.
+      Only 10 can be built.
     Processes resources for extra credits.
    .encyclopedia = The ore purifier is an economy boosting building for long lasting conflicts. It purifiers the harvested resource on site, which yields higher profits than raw materials and creates an independent stream of income. However, cleansing the ore however requires a lot of energy.
 
