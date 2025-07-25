@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "OpenRA.Mods.HV": {
+      "commandName": "Project"
+    },
+    "OpenHV": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\IvanP\\Downloads\\OpenHV-BugFixes\\engine\\bin\\OpenRA.exe",
+      "commandLineArgs": "Game.Mod=hv Engine.EngineDir=\"..\" Engine.ModSearchPaths=\"../../mods\"",
+      "workingDirectory": "C:\\Users\\IvanP\\Downloads\\OpenHV-BugFixes\\engine\\bin\\"
+    }
+  }
+}

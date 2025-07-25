@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Reflection;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
@@ -41,7 +42,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}
 
-	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice, INotifyActivityFirstRunCompleted
+	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice, INotifyAddedToWorld
 	{
 		public readonly MinerInfo Info;
 		readonly IResourceLayer resourceLayer;
@@ -52,26 +53,34 @@ namespace OpenRA.Mods.HV.Traits
 			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 		}
 
-		void INotifyActivityFirstRunCompleted.OnCompleted(Actor self, Activity activity)
+		void INotifyAddedToWorld.AddedToWorld(Actor self)
 		{
+			var activity = self.CurrentActivity;
 			if (activity is not LeaveProductionActivity)
 				return;
 
 			var mobile = self.Trait<Mobile>();
-			if (mobile.CreationRallypoints == null)
+			var fieldInfo = mobile.GetType().GetField("creationRallypoint", BindingFlags.NonPublic | BindingFlags.Instance);
+			var creationRallypoints = (CPos[])fieldInfo?.GetValue(mobile);
+
+			if (creationRallypoints == null)
 				return;
 
+			activity.TickOuter(self);
+
 			Activity prevActivity = null;
-			var currentActivity = activity.ChildActivity;
+			var propInfo = activity.GetType().GetProperty("ChildActivity", BindingFlags.NonPublic | BindingFlags.Instance);
+			var currentActivity = (Activity)propInfo?.GetValue(activity);
+
 			var currentRallypointIndex = 0;
 			while (currentActivity != null)
 			{
 				if (currentActivity is AttackMoveActivity)
 				{
-					var rallypoint = mobile.CreationRallypoints[currentRallypointIndex];
+					var rallypoint = creationRallypoints[currentRallypointIndex];
 					var resourceType = resourceLayer.GetResource(rallypoint).Type;
 					if (resourceType != null && Info.Colors.TryGetValue(resourceType, out var color))
-						UtilityCommands.Extensions.InsertActivityInQueue(self, prevActivity, new DeployMiner(self, rallypoint, Info.TerrainTypes, color));
+						Extensions.InsertActivityInQueue(self, prevActivity, new DeployMiner(self, rallypoint, Info.TerrainTypes, color));
 
 					currentRallypointIndex++;
 				}
