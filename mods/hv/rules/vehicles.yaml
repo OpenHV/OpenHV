@@ -229,6 +229,11 @@ ARTILLERY:
 		Weapon: SmallArtillery
 		MuzzleSequence: muzzle
 		LocalOffset: 500,0,100
+	WithRangeCircle:
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 12c0
 	AttackFrontal:
 		Armaments: primary
 		TargetFrozenActors: true
