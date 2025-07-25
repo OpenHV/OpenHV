@@ -1115,6 +1115,7 @@ ORESMELT:
 		BuildPaletteOrder: 130
 		Description: actor-oresmelt.description
 		Prerequisites: ~structures.sc, techcenter
+		BuildLimit: 10
 	HitShape:
 		Type: Rectangle
 			TopLeft: -512, -512
