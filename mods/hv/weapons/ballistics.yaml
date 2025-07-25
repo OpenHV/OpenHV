@@ -7,7 +7,7 @@
 	ReloadDelay: 70
 	Range: 6c0
 	Projectile: Bullet
-		Speed: 682
+		Speed: 1750
 		Image: bullet1
 		Shadow: true
 	Warhead@Smudge: LeaveSmudge
