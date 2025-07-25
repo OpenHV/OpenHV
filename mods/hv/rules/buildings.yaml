@@ -1820,6 +1820,7 @@ TELEVATOR:
 		BeginChargeTextNotification: notification-televator-charging
 		EndChargeTextNotification: notification-televator-ready
 		LaunchSound: televator.ogg
+		CircleColor: 3131FF
 	WithTeleportGroupOverlay:
 		Image: energyball
 		LaunchSequence: teleport-group-in
