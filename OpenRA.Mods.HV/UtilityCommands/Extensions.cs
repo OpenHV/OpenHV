@@ -11,6 +11,7 @@
 
 using System.Data;
 using System.Text;
+using OpenRA.Activities;
 
 namespace OpenRA.Mods.HV.UtilityCommands
 {
@@ -49,6 +50,20 @@ namespace OpenRA.Mods.HV.UtilityCommands
 			result.AppendLine();
 
 			return result.ToString();
+		}
+
+		public static void InsertActivityInQueue(Actor actor, Activity insertAfterThisActivity, Activity activityToInsert)
+		{
+			if (insertAfterThisActivity == null)
+				actor.QueueActivity(activityToInsert);
+			if (insertAfterThisActivity.NextActivity == null)
+				insertAfterThisActivity.Queue(activityToInsert);
+
+			var activityToReplace = insertAfterThisActivity.NextActivity;
+			var followingActivities = activityToReplace.NextActivity;
+			activityToReplace.Cancel(actor);
+			insertAfterThisActivity.Queue(activityToInsert);
+			insertAfterThisActivity.Queue(followingActivities);
 		}
 	}
 }

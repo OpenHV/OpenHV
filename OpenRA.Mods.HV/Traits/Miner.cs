@@ -10,10 +10,13 @@
 #endregion
 
 using System.Collections.Generic;
+using OpenRA.Activities;
+using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Activities;
 using OpenRA.Primitives;
 using OpenRA.Traits;
+using static OpenRA.Mods.Common.Traits.Mobile;
 
 namespace OpenRA.Mods.HV.Traits
 {
@@ -38,7 +41,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}
 
-	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated
+	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice, INotifyActivityFirstRunCompleted
 	{
 		public readonly MinerInfo Info;
 		readonly IResourceLayer resourceLayer;
@@ -49,27 +52,33 @@ namespace OpenRA.Mods.HV.Traits
 			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
 		}
 
-		void INotifyCreated.Created(Actor self)
+		void INotifyActivityFirstRunCompleted.OnCompleted(Actor self, Activity activity)
 		{
+			if (activity is not LeaveProductionActivity)
+				return;
+
 			var mobile = self.Trait<Mobile>();
 			if (mobile.CreationRallypoints == null)
 				return;
-			var activity = self.CurrentActivity;
-			foreach (var rallypoint in mobile.CreationRallypoints)
+
+			Activity prevActivity = null;
+			var currentActivity = activity.ChildActivity;
+			var currentRallypointIndex = 0;
+			while (currentActivity != null)
 			{
-				if (activity != null)
+				if (currentActivity is AttackMoveActivity)
 				{
+					var rallypoint = mobile.CreationRallypoints[currentRallypointIndex];
 					var resourceType = resourceLayer.GetResource(rallypoint).Type;
 					if (resourceType != null && Info.Colors.TryGetValue(resourceType, out var color))
-					{
-						activity.QueueChild(new DeployMiner(self, rallypoint, Info.TerrainTypes, color));
-					}
+						UtilityCommands.Extensions.InsertActivityInQueue(self, prevActivity, new DeployMiner(self, rallypoint, Info.TerrainTypes, color));
 
-					activity = activity.NextActivity;
+					currentRallypointIndex++;
 				}
-			}
 
-			self.ShowTargetLines();
+				prevActivity = currentActivity;
+				currentActivity = currentActivity.NextActivity;
+			}
 		}
 
 		IEnumerable<IOrderTargeter> IIssueOrder.Orders
