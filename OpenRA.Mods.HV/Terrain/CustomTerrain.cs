@@ -15,8 +15,10 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using OpenRA.FileSystem;
+using OpenRA.Graphics;
 using OpenRA.Mods.Common.MapGenerator;
 using OpenRA.Mods.Common.Terrain;
+using OpenRA.Mods.Common.UtilityCommands;
 using OpenRA.Primitives;
 
 namespace OpenRA.Mods.HV.Terrain
@@ -86,7 +88,7 @@ namespace OpenRA.Mods.HV.Terrain
 		}
 	}
 
-	public class CustomTerrain : ITemplatedTerrainInfo, ITerrainInfoNotifyMapCreated
+	public class CustomTerrain : ITemplatedTerrainInfo, IDumpSheetsTerrainInfo, ITerrainInfoNotifyMapCreated
 	{
 		[FluentReference]
 		public readonly string Name;
@@ -205,6 +207,17 @@ namespace OpenRA.Mods.HV.Terrain
 		string[] ITemplatedTerrainInfo.EditorTemplateOrder => EditorTemplateOrder;
 		IReadOnlyDictionary<ushort, TerrainTemplateInfo> ITemplatedTerrainInfo.Templates => Templates;
 		IReadOnlyDictionary<string, IEnumerable<MultiBrushInfo>> ITemplatedTerrainInfo.MultiBrushCollections => MultiBrushCollections;
+
+		void IDumpSheetsTerrainInfo.DumpSheets(string terrainName, ImmutablePalette palette, ref int sheetCount)
+		{
+			var tileCache = new CustomTileCache(this);
+			var sb = tileCache.GetSheetBuilder(SheetType.Indexed);
+			foreach (var s in sb.AllSheets)
+				DumpSequenceSheetsCommand.CommitSheet(sb, s, terrainName, palette, ref sheetCount);
+
+			foreach (var s in tileCache.GetSheetBuilder(SheetType.BGRA).AllSheets)
+				DumpSequenceSheetsCommand.CommitSheet(null, s, terrainName, palette, ref sheetCount);
+		}
 
 		void ITerrainInfoNotifyMapCreated.MapCreated(Map map) { }
 	}

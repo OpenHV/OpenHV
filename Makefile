@@ -38,9 +38,7 @@ PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname 'map.png' 2> /dev/
 MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
 OGG_FILES := $(shell find mods/*/bits/audio/* -maxdepth 2 -iname '*.ogg' 2> /dev/null | sed 's/ /\\ /g')
 
-MSBUILD = msbuild -verbosity:m -nologo
 DOTNET = dotnet
-
 RUNTIME ?= net6
 DOTNET_RID = $(shell ${DOTNET} --info | grep RID: | cut -w -f3)
 
