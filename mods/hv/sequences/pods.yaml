@@ -207,6 +207,66 @@ jetpacker:
 	icon:
 		Filename: bits/jetpacker-icon.png
 
+jetpacker2:
+	idle:
+		Filename: bits/ship2.png
+		Facings: 8
+	move:
+		Filename: bits/ship2.png
+		Facings: 8
+	# muzzle:
+	# 	Filename: bits/muzzle2.png
+	# 	Length: 3
+	# 	Facings: 8
+	# 	Tick: 50
+	muzzle:
+		Combine:
+			0: #N
+				Filename: artlflsh.png
+				Start: 0
+				Length: 3
+				Offset: -1,3
+			1: #NW
+				Filename: artlflsh.png
+				Start: 3
+				Length: 3
+				Offset: -2,4
+			2: #W
+				Filename: artlflsh.png
+				Start: 6
+				Length: 3
+				Offset: 0,3
+			3: #SW
+				Filename: artlflsh.png
+				Start: 9
+				Length: 3
+				Offset: 0,-2
+			4: #S
+				Filename: artlflsh.png
+				Start: 12
+				Length: 3
+				Offset: -1,-2
+			5: #SE
+				Filename: artlflsh.png
+				Start: 15
+				Length: 3
+				Offset: 0,-2
+			6: #E
+				Filename: artlflsh.png
+				Start: 18
+				Length: 3
+				Offset: 0,3
+			7: #NE
+				Filename: artlflsh.png
+				Start: 21
+				Length: 3
+				Offset: 2,4
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon:
+		Filename: bits/ship2-icon.png
+
 blaster:
 	idle:
 		Filename: bits/blaster.png

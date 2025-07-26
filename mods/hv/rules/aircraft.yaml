@@ -16,31 +16,27 @@ GUNSHIP:
 		Scale: 3
 		Category: Aircraft
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: actor-gunship.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	RevealsShroud:
 		Range: 10c0
-		MinRange: 4c0
+		MinRange: 5c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 		Type: GroundPosition
-	Armament@Ground:
+	Armament:
 		Weapon: AircraftChainGunGround
 		MuzzleSequence: muzzle
 		LocalOffset: 300,0,0
-	Armament@Air:
-		Weapon: AircraftChainGunAir
-		MuzzleSequence: muzzle
-		LocalOffset: 300,0,0
 	AttackAircraft:
-		FacingTolerance: 92
+		FacingTolerance: 32
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
@@ -74,7 +70,7 @@ JET:
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 50
-		Prerequisites: techcenter, ~starport.yi
+		Prerequisites: ~starport.yi
 		Description: actor-jet.description
 	Encyclopedia:
 		Description: actor-jet.encyclopedia
@@ -82,32 +78,32 @@ JET:
 		Scale: 3
 		Category: Aircraft
 	Valued:
-		Cost: 1500
+		Cost: 2000
 	Tooltip:
 		Name: actor-jet.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 24000
 	RevealsShroud:
 		Range: 11c0
-		MinRange: 4c0
+		MinRange: 5c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 		Type: GroundPosition
 	Armament:
 		Weapon: PlasmaMachineGun
 		LocalOffset: 500,-200,0, 500,200,0
 	AttackAircraft:
-		FacingTolerance: 100
+		FacingTolerance: 32
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2559
 		InitialFacing: 768
-		TurnSpeed: 40
+		TurnSpeed: 22
 		Speed: 220
 		RepulsionSpeed: 40
 		MaximumPitch: 56
@@ -142,42 +138,30 @@ JET2:
 		Scale: 3
 		Category: Aircraft
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: actor-jet2.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 22500
 	RevealsShroud:
 		Range: 11c0
-		MinRange: 4c0
+		MinRange: 5c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 		Type: GroundPosition
 	Armament:
 		Weapon: Plasma
 		LocalOffset: 250,-400,0, 250,400,0
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 8
-		AmmoCondition: ammo
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-		PipCount: 8
-	ReloadAmmoPool:
-		Delay: 100
-		Count: 1
 	AttackAircraft:
 		FacingTolerance: 92
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2558
 		InitialFacing: 768
 		TurnSpeed: 20
 		Speed: 155
@@ -206,6 +190,19 @@ JET2:
 		Offset: -298,350,0
 		TrailLength: 12
 		ZOffset: -1000
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 250
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
+		UncloakOn: Attack, Unload
+		IsPlayerPalette: true
+		PauseOnCondition: cloak-force-disabled
+		CloakedPalette: cloak
+		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 
 COPTER:
 	Inherits: ^Helicopter
@@ -213,7 +210,7 @@ COPTER:
 	Inherits@MagazineCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: actor-copter.name
 	Buildable:
@@ -229,18 +226,19 @@ COPTER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 10000
+		HP: 15000
 	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
+		Range: 12c0
+		MinRange: 6c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 6c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 115
+		CruiseAltitude: 2561
 	Voiced:
 		VoiceSet: AttackHelicopterVoice
 	Turreted:
@@ -248,12 +246,8 @@ COPTER:
 		Offset: 200,0,-100
 	AttackTurreted:
 		RequiresCondition: airborne
-	Armament@Ground:
+	Armament:
 		Weapon: HelicopterChainGunGround
-		MuzzleSequence: muzzle
-		LocalOffset: 50,0,0
-	Armament@Air:
-		Weapon: HelicopterChainGunAir
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
 	Selectable:
@@ -279,7 +273,7 @@ SAUCER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 12000
 	RevealsShroud:
 		Range: 18c0
 		MinRange: 9c0
@@ -292,6 +286,7 @@ SAUCER:
 		TurnSpeed: 16
 		Speed: 80
 		CanForceLand: false
+		CruiseAltitude: 2557
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: SaucerVoice
@@ -322,19 +317,20 @@ OBSERVER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 12000
 	RevealsShroud:
-		Range: 18c0
-		MinRange: 9c0
+		Range: 20c0
+		MinRange: 10c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 9c0
+		Range: 10c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 50
-		Speed: 80
+		TurnSpeed: 45
+		Speed: 70
 		CanForceLand: false
+		CruiseAltitude: 2554
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: ObserverVoice
@@ -352,12 +348,12 @@ BANSHEE:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: actor-banshee.name
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 55
 		Prerequisites: techcenter, ~starport.sc
 		Description: actor-banshee.description
 	Encyclopedia:
@@ -368,18 +364,19 @@ BANSHEE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
+		HP: 27000
 	RevealsShroud:
-		Range: 11c0
-		MinRange: 4c0
+		Range: 12c0
+		MinRange: 6c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 6c0
 		Type: GroundPosition
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 112
+		CruiseAltitude: 2556
 	Voiced:
 		VoiceSet: BansheeVoice
 	AttackFrontal:
@@ -388,19 +385,7 @@ BANSHEE:
 	Armament:
 		Weapon: ShipMissile
 		LocalOffset: 500,225,0, 500,-225,0
-		PauseOnCondition: !ammo
 		MuzzleSequence: muzzle
-	AmmoPool:
-		Ammo: 6
-		AmmoCondition: ammo
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		Margin: 4, 3
-		RequiresSelection: true
-		PipCount: 6
-	ReloadAmmoPool:
-		Delay: 100
-		Count: 1
 	Selectable:
 		DecorationBounds: 1228, 1228
 	WithMuzzleOverlay:
@@ -410,13 +395,13 @@ TURTLE:
 	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
-		Cost: 1500
+		Cost: 2000
 	Tooltip:
 		Name: actor-turtle.name
 	Buildable:
 		Queue: Aircraft
-		BuildPaletteOrder: 55
-		Prerequisites: techcenter, ~starport.sc
+		BuildPaletteOrder: 50
+		Prerequisites: ~starport.sc
 		Description: actor-turtle.description
 	Encyclopedia:
 		Description: actor-turtle.encyclopedia
@@ -426,18 +411,19 @@ TURTLE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 25000
 	RevealsShroud:
 		Range: 10c0
-		MinRange: 4c0
+		MinRange: 5c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 40
-		Speed: 100
+		TurnSpeed: 22
+		Speed: 127
+		CruiseAltitude: 2553
 	Voiced:
 		VoiceSet: TurtleVoice
 	Turreted:
@@ -448,7 +434,6 @@ TURTLE:
 	Armament:
 		Weapon: DiscThrower
 		LocalOffset: 0,0,0
-		FireDelay: 2
 	Selectable:
 		Bounds: 1400, 1400
 	WithMoveAnimation:
@@ -480,7 +465,7 @@ CHOPPER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 74250
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -492,8 +477,9 @@ CHOPPER:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
+		TurnSpeed: 18
+		Speed: 122
+		CruiseAltitude: 2551
 		AltitudeVelocity: 0c58
 		LandAltitude: 0c0
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
@@ -508,17 +494,9 @@ CHOPPER:
 	Selectable:
 		DecorationBounds: 2048, 1843
 	Cargo:
-		Types: Pod
+		Types: Pod, Vehicle
 		MaxWeight: 8
-		AfterUnloadDelay: 40
-		RequiresCondition: !carrying
-		LoadedCondition: loaded
-	Carryall:
-		BeforeLoadDelay: 10
-		BeforeUnloadDelay: 10
-		LocalOffset: 0,0,-200
-		CarryCondition: carrying
-		RequiresCondition: !loaded
+		AfterUnloadDelay: 0
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 4, 3
@@ -578,18 +556,20 @@ BALLOON:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 8000
+		HP: 10800
 	RevealsShroud:
-		Range: 20c0
-		MinRange: 10c0
+		Range: 18c0
+		MinRange: 9c0
 		Type: GroundPosition
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 10c0
+		Range: 9c0
 		Type: GroundPosition
 	Aircraft:
-		Speed: 70
+		TurnSpeed: 50
+		Speed: 80
 		CanForceLand: false
+		CruiseAltitude: 2555
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: BalloonVoice
@@ -625,7 +605,7 @@ DROPSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 60750
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -637,10 +617,11 @@ DROPSHIP:
 		Range: 4c0
 		Type: GroundPosition
 	Aircraft:
-		TurnSpeed: 20
-		Speed: 135
-		LandAltitude: 0c0
+		TurnSpeed: 22
+		Speed: 149
 		AltitudeVelocity: 0c58
+		LandAltitude: 0c0
+		CruiseAltitude: 2552
 		InitialFacing: 512
 		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
@@ -654,9 +635,9 @@ DROPSHIP:
 	Selectable:
 		DecorationBounds: 2048, 1848
 	Cargo:
-		Types: Pod
+		Types: Pod, Vehicle
 		MaxWeight: 8
-		AfterUnloadDelay: 40
+		AfterUnloadDelay: 0
 		UnloadVoice: Unload
 		RequiresCondition: !carrying
 		LoadedCondition: loaded
@@ -708,93 +689,52 @@ DROPSHIP.Husk:
 		Image: dropship
 
 DRONE:
-	Inherits: ^SpawnedPlane
-	Valued:
-		Cost: 100
+	Inherits: ^BaseDrone
 	Tooltip:
 		Name: actor-drone-name
 	Health:
-		HP: 5000
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 4c0
-		MinRange: 2c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 2c0
-		Type: GroundPosition
+		HP: 7500
 	Armament:
 		Weapon: DroneBlaster
-		PauseOnCondition: !ammo
 	WithAttackAnimation:
 		Sequence: shoot
 	Aircraft:
 		Speed: 250
-		AltitudeVelocity: 240
-		VTOL: true
-		Repulsable: false
-		LandAltitude: 0c0
+		CruiseAltitude: 2570
 	AttackAircraft:
 		FacingTolerance: 92
 		Voice: Attack
-	AmmoPool:
-		Ammo: 5
-		AmmoCondition: ammo
 	CarrierChild:
 		LandingDistance: 8c0
 	Rearmable:
 		RearmActors: carrier
-	-MapEditorData:
 
 DRONE2:
-	Inherits: ^SpawnedPlane
-	Valued:
-		Cost: 100
+	Inherits: ^BaseDrone
 	Tooltip:
 		Name: actor-drone2.name
 	Health:
-		HP: 7500
-	Armor:
-		Type: Light
-	RevealsShroud:
-		Range: 4c0
-		MinRange: 2c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 2c0
-		Type: GroundPosition
+		HP: 11250
 	Armament:
 		Weapon: DronePulseGun
 		MuzzleSequence: muzzle
 		LocalOffset: -75,75,0, -75,-75,0
-		PauseOnCondition: !ammo
 	Aircraft:
 		Speed: 200
-		AltitudeVelocity: 240
-		VTOL: true
-		Repulsable: false
-		LandAltitude: 0c0
+		CruiseAltitude: 2571
 	AttackAircraft:
 		FacingTolerance: 256
 		Voice: Attack
-	AmmoPool:
-		Ammo: 250
-		ReloadCount: 15
-		AmmoCondition: ammo
 	CarrierChild:
 		LandingDistance: 16c0
 	Rearmable:
 		RearmActors: mothership
 	WithMuzzleOverlay:
-	-MapEditorData:
 
 DROPPOD1:
 	Inherits: ^DropPod
 	SpawnActorOnDeath:
-		Actor: rifleman
+		Actor: mortar
 	-MapEditorData:
 
 DROPPOD2:
@@ -823,7 +763,7 @@ LANDEDPOD:
 		StartIfBelow: 101
 		Delay: 6
 	Health:
-		HP: 10000
+		HP: 15000
 	Tooltip:
 		Name: actor-landedpod-name
 	HitShape:
@@ -873,6 +813,7 @@ BOMBER:
 		Speed: 450
 		Repulsable: false
 		Voice: Move
+		CruiseAltitude: 2550
 	RejectsOrders:
 	AttackBomber:
 		FacingTolerance: 512
@@ -891,7 +832,7 @@ CARGOSHIP:
 		Speed: 150
 		VTOL: True
 		MaximumPitch: 36
-		CruiseAltitude: 2560
+		CruiseAltitude: 2564
 		TurnToLand: False
 	Tooltip:
 		Name: actor-cargoship-name
@@ -911,7 +852,7 @@ AIRLIFTER:
 		Speed: 200
 		VTOL: True
 		MaximumPitch: 36
-		CruiseAltitude: 2560
+		CruiseAltitude: 2565
 		TurnToLand: False
 	Tooltip:
 		Name: actor-airlifter-name
@@ -923,7 +864,7 @@ MOTHERSHIP:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
 	Valued:
-		Cost: 12000
+		Cost: 15000
 	Tooltip:
 		Name: actor-mothership.name
 	Buildable:
@@ -940,7 +881,7 @@ MOTHERSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 250000
+		HP: 375000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -954,7 +895,7 @@ MOTHERSHIP:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 100
-		CruiseAltitude: 3c0
+		CruiseAltitude: 2525
 		AltitudeVelocity: 0c56
 		InitialFacing: 512
 	HitShape:
@@ -1056,7 +997,7 @@ BATTLESHIP:
 	Inherits@Smoke: ^SmokeEmitter
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 12000
+		Cost: 15000
 	Tooltip:
 		Name: actor-battleship.name
 	Buildable:
@@ -1073,7 +1014,7 @@ BATTLESHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 250000
+		HP: 375000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1087,7 +1028,7 @@ BATTLESHIP:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 100
-		CruiseAltitude: 3c0
+		CruiseAltitude: 2525
 		AltitudeVelocity: 0c56
 		InitialFacing: 512
 	HitShape:
