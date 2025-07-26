@@ -203,7 +203,7 @@
 		FallbackSequence: die
 	Crushable:
 		CrushClasses: Pods
-		WarnProbability: 15
+		WarnProbability: 50
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
