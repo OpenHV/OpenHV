@@ -77,11 +77,11 @@ Cursors:
 			Start: 0
 			Length: 6
 		attackoutsiderange:
-			Start: 0
-			Length: 6
+			Start: 47
+			Length: 1
 		attackoutsiderange-minimap:
-			Start: 0
-			Length: 6
+			Start: 47
+			Length: 1
 		ability:
 			Start: 36
 			Length: 6
