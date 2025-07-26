@@ -238,9 +238,6 @@ Actors:
 	Actor78: darklight
 		Owner: Neutral
 		Location: 97,119
-	Actor105: watchtower
-		Owner: Neutral
-		Location: 27,63
 	Actor108: baselight
 		Owner: Neutral
 		Location: 112,6
@@ -1417,9 +1414,6 @@ Actors:
 	Actor660: darklight
 		Owner: Neutral
 		Location: 22,115
-	Actor661: darklight
-		Owner: Neutral
-		Location: 28,62
 	Actor662: darklight
 		Owner: Neutral
 		Location: 30,62
@@ -2248,12 +2242,6 @@ Actors:
 	Actor677: darklight
 		Owner: Neutral
 		Location: 40,37
-	Actor104: watchtower
-		Owner: Neutral
-		Location: 101,65
-	Actor379: small_blue_light
-		Owner: Neutral
-		Location: 102,66
 	Actor116: darklight
 		Owner: Neutral
 		Location: 118,14
@@ -2568,46 +2556,6 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 92,127
-	Actor1018: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 127,122
-	Actor1019: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 72,126
-	Actor1020: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 111,4
-	Actor1021: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 126,45
-	Actor1022: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 96,68
-	Actor1023: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 18,125
-	Actor1024: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 3,84
-	Actor1025: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 33,61
-	Actor1026: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 2,7
-	Actor1027: beast
-		Owner: Neutral
-		Facing: 384
-		Location: 57,3
 	Actor1028: prop5
 		Owner: Neutral
 		Location: 64,64
@@ -2650,38 +2598,6 @@ Actors:
 	Actor349: streetlamp8
 		Owner: Neutral
 		Location: 117,111
-	Actor1041: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 92,28
-	Actor1042: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 119,23
-	Actor1043: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 78,114
-	Actor1044: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 122,79
-	Actor1045: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 7,50
-	Actor1046: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 37,101
-	Actor1047: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 10,106
-	Actor1048: seed
-		Owner: Neutral
-		Facing: 384
-		Location: 51,15
 	Actor505: darklight
 		Owner: Neutral
 		Location: 122,114
@@ -3000,5 +2916,33 @@ Actors:
 	Actor1119: stnrock13
 		Owner: Neutral
 		Location: 31,78
+	Actor105: watchtower
+		Owner: Neutral
+		Location: 28,63
+	Actor104: watchtower
+		Owner: Neutral
+		Location: 100,65
+	Actor379: small_blue_light
+		Owner: Neutral
+		Location: 101,66
+	Actor661: darklight
+		Owner: Neutral
+		Location: 28,62
+	Actor1020: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 108,10
+	Actor1023: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 21,119
+	Actor1018: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 64,56
+	Actor1019: beast
+		Owner: Neutral
+		Facing: 384
+		Location: 60,72
 
 Rules: rules.yaml
