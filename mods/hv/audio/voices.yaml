@@ -278,3 +278,13 @@ CarVoice:
 		Move: car_action1, car_action2, car_action3
 		Action: car_attack1, car_attack2, car_attack3
 		Guard: guarding
+
+RadarTankVoice:
+	DefaultVariant: .ogg
+	Voices:
+		Select: radar_tank_awaiting_orders, radar_tank_copy, radar_tank_online, radar_tank_ready, radar_tank_standing_by, radar_tank_sir, radar_tank_systems_online
+		Move: radar_tank_as_you_wish, radar_tank_at_once, radar_tank_good_copy, radar_tank_heading_out, radar_tank_moving_out, radar_tank_on_my_way, radar_tank_understood
+		Action: radar_tank_as_you_wish, radar_tank_at_once, radar_tank_good_copy, radar_tank_heading_out, radar_tank_moving_out, radar_tank_on_my_way, radar_tank_understood
+		Deploy: radar_tank_deploying, radar_tank_searching_for_enemies, radar_tank_understood
+		Guard: guarding
+
