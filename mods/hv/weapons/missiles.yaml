@@ -82,7 +82,7 @@ MissileTankRocket:
 	Warhead@Damage: SpreadDamage
 		Damage: 2750
 		Versus:
-			None: 8
+			None: 40
 			Steel: 50
 			Light: 75
 			Heavy: 95
