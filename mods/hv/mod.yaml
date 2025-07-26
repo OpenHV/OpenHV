@@ -41,6 +41,7 @@ FileSystem: DefaultFileSystem
 		hv|bits/audio/flamewh33l/
 		hv|bits/audio/timbeek/
 		hv|bits/audio/pd/
+		hv|bits/audio/raxi88/radartank
 
 MapFolders:
 	hv|maps: System

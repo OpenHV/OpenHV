@@ -293,7 +293,7 @@ RADARTANK:
 		UndeployOnPickup: true
 		Facing: 512
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Black Sand, Black Sand Ramp, Stone, Tech, Dirt
-		Voice: Move
+		Voice: Deploy
 	Repairable:
 		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
@@ -312,6 +312,8 @@ RADARTANK:
 		Range: 16c0
 		RequiresCondition: !jammed && deployed
 		DetectionTypes: Cloak, Underwater
+	Voiced:
+		VoiceSet: RadarTankVoice
 
 REPAIRTANK:
 	Inherits: ^TrackedVehicle
