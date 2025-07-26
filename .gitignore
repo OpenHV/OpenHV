@@ -12,3 +12,5 @@ StyleCopViolations.xml
 .directory
 /.vscode/settings.json
 /.vs
+launchSettings.json
+.csproj.user

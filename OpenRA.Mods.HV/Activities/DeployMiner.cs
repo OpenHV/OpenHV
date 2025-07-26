@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Activities
 					self.World.IssueOrder(order);
 
 				QueueChild(movement.MoveTo(location.Value));
-				self.Trait<Transforms>().DeployTransform(true);
+				QueueChild(self.Trait<Transforms>().GetTransformActivity());
 			}
 
 			return true;
