@@ -569,9 +569,6 @@ Actors:
 	Actor115: prop20
 		Owner: Neutral
 		Location: 35,37
-	Actor204: prop10
-		Owner: Neutral
-		Location: 50,51
 	Actor222: prop18
 		Owner: Neutral
 		Location: 138,145
@@ -1546,5 +1543,8 @@ Actors:
 	Actor538: mntmisc11
 		Owner: Neutral
 		Location: 49,95
+	Actor204: prop10
+		Owner: Neutral
+		Location: 50,51
 
 Rules: rules.yaml
