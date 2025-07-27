@@ -294,6 +294,7 @@ RADARTANK:
 		Facing: 512
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Black Sand, Black Sand Ramp, Stone, Tech, Dirt
 		Voice: Deploy
+		SmartDeploy: true
 	Repairable:
 		RequireForceMoveCondition: !undeployed
 	WithSpriteBody@DEPLOYED:
@@ -989,6 +990,7 @@ HACKERTANK:
 		RequiresCondition: !controlling
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
+		SmartDeploy: true
 	CreatesShroud:
 		Range: 7c0
 		RequiresCondition: deployed
