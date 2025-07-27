@@ -15615,3 +15615,432 @@ MultiBrushCollections:
 				Inner: Cliff Black Sand Water
 				End: Cliff Black Sand Water.D
 				Points: 1,1
+
+	# Shore Grass
+
+		MultiBrush@1354:
+			Template: 1354
+			Segment:
+				Start: Shore Grass.U
+				Inner: Shore Grass
+				End: Shore Grass.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@1355:
+			Template: 1355
+			Segment:
+				Start: Shore Grass.U
+				Inner: Shore Grass
+				End: Shore Grass.U
+				Points: 0,1, 0,0
+		MultiBrush@1356:
+			Template: 1356
+			Segment:
+				Start: Shore Grass.L
+				Inner: Shore Grass
+				End: Shore Grass.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@1357:
+			Template: 1357
+			Segment:
+				Start: Shore Grass.R
+				Inner: Shore Grass
+				End: Shore Grass.R
+				Points: 0,0, 1,0
+		MultiBrush@1358:
+			Template: 1358
+			Segment:
+				Start: Shore Grass.L
+				Inner: Shore Grass
+				End: Shore Grass.L
+				Points: 1,1, 0,1
+		MultiBrush@1359:
+			Template: 1359
+			Segment:
+				Start: Shore Grass.R
+				Inner: Shore Grass
+				End: Shore Grass.U
+				Points: 0,0
+		MultiBrush@1360:
+			Template: 1360
+			Segment:
+				Start: Shore Grass.U
+				Inner: Shore Grass
+				End: Shore Grass.L
+				Points: 0,1
+		MultiBrush@1361:
+			Template: 1361
+			Segment:
+				Start: Shore Grass.R
+				Inner: Shore Grass
+				End: Shore Grass.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@1362:
+			Template: 1362
+			Segment:
+				Start: Shore Grass.D
+				Inner: Shore Grass
+				End: Shore Grass.D
+				Points: 1,0, 1,1
+		MultiBrush@1363:
+			Template: 1363
+			Segment:
+				Start: Shore Grass.D
+				Inner: Shore Grass
+				End: Shore Grass.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@1364:
+			Template: 1364
+			Segment:
+				Start: Shore Grass.D
+				Inner: Shore Grass
+				End: Shore Grass.R
+				Points: 1,0
+		MultiBrush@1365:
+			Template: 1365
+			Segment:
+				Start: Shore Grass.L
+				Inner: Shore Grass
+				End: Shore Grass.D
+				Points: 1,1
+		MultiBrush@1366:
+			Template: 1366
+			Segment:
+				Start: Shore Grass.R
+				Inner: Shore Grass
+				End: Cliff Grass Water.R
+				Points: 0,0, 1,0
+		MultiBrush@1367:
+			Template: 1367
+			Segment:
+				Start: Cliff Grass Water.L
+				Inner: Shore Grass
+				End: Shore Grass.L
+				Points: 1,1, 0,1
+		MultiBrush@1368:
+			Template: 1368
+			Segment:
+				Start: Cliff Grass Water.U
+				Inner: Shore Grass
+				End: Shore Grass.U
+				Points: 0,1, 0,0
+		MultiBrush@1369:
+			Template: 1369
+			Segment:
+				Start: Cliff Grass Water.D
+				Inner: Shore Grass
+				End: Shore Grass.D
+				Points: 1,0, 1,1
+		MultiBrush@1370:
+			Template: 1370
+			Segment:
+				Start: Cliff Grass Water.R
+				Inner: Shore Grass
+				End: Shore Grass.R
+				Points: 0,0, 1,0
+		MultiBrush@1371:
+			Template: 1371
+			Segment:
+				Start: Shore Grass.L
+				Inner: Shore Grass
+				End: Cliff Grass Water.L
+				Points: 1,1, 0,1
+		MultiBrush@1372:
+			Template: 1372
+			Segment:
+				Start: Shore Grass.U
+				Inner: Shore Grass
+				End: Cliff Grass Water.U
+				Points: 0,1, 0,0
+		MultiBrush@1373:
+			Template: 1373
+			Segment:
+				Start: Shore Grass.D
+				Inner: Shore Grass
+				End: Cliff Grass Water.D
+				Points: 1,0, 1,1
+
+	# Shore Sand
+
+		MultiBrush@1374:
+			Template: 1374
+			Segment:
+				Start: Shore Sand.U
+				Inner: Shore Sand
+				End: Shore Sand.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@1375:
+			Template: 1375
+			Segment:
+				Start: Shore Sand.U
+				Inner: Shore Sand
+				End: Shore Sand.U
+				Points: 0,1, 0,0
+		MultiBrush@1376:
+			Template: 1376
+			Segment:
+				Start: Shore Sand.L
+				Inner: Shore Sand
+				End: Shore Sand.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@1377:
+			Template: 1377
+			Segment:
+				Start: Shore Sand.R
+				Inner: Shore Sand
+				End: Shore Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@1378:
+			Template: 1378
+			Segment:
+				Start: Shore Sand.L
+				Inner: Shore Sand
+				End: Shore Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@1379:
+			Template: 1379
+			Segment:
+				Start: Shore Sand.R
+				Inner: Shore Sand
+				End: Shore Sand.U
+				Points: 0,0
+		MultiBrush@1380:
+			Template: 1380
+			Segment:
+				Start: Shore Sand.U
+				Inner: Shore Sand
+				End: Shore Sand.L
+				Points: 0,1
+		MultiBrush@1381:
+			Template: 1381
+			Segment:
+				Start: Shore Sand.R
+				Inner: Shore Sand
+				End: Shore Sand.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@1382:
+			Template: 1382
+			Segment:
+				Start: Shore Sand.D
+				Inner: Shore Sand
+				End: Shore Sand.D
+				Points: 1,0, 1,1
+		MultiBrush@1383:
+			Template: 1383
+			Segment:
+				Start: Shore Sand.D
+				Inner: Shore Sand
+				End: Shore Sand.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@1384:
+			Template: 1384
+			Segment:
+				Start: Shore Sand.D
+				Inner: Shore Sand
+				End: Shore Sand.R
+				Points: 1,0
+		MultiBrush@1385:
+			Template: 1385
+			Segment:
+				Start: Shore Sand.L
+				Inner: Shore Sand
+				End: Shore Sand.D
+				Points: 1,1
+		MultiBrush@1386:
+			Template: 1386
+			Segment:
+				Start: Shore Sand.R
+				Inner: Shore Sand
+				End: Cliff Sand Water.R
+				Points: 0,0, 1,0
+		MultiBrush@1387:
+			Template: 1387
+			Segment:
+				Start: Cliff Sand Water.L
+				Inner: Shore Sand
+				End: Shore Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@1388:
+			Template: 1388
+			Segment:
+				Start: Cliff Sand Water.U
+				Inner: Shore Sand
+				End: Shore Sand.U
+				Points: 0,1, 0,0
+		MultiBrush@1389:
+			Template: 1389
+			Segment:
+				Start: Cliff Sand Water.D
+				Inner: Shore Sand
+				End: Shore Sand.D
+				Points: 1,0, 1,1
+		MultiBrush@1390:
+			Template: 1390
+			Segment:
+				Start: Cliff Sand Water.R
+				Inner: Shore Sand
+				End: Shore Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@1391:
+			Template: 1391
+			Segment:
+				Start: Shore Sand.L
+				Inner: Shore Sand
+				End: Cliff Sand Water.L
+				Points: 1,1, 0,1
+		MultiBrush@1392:
+			Template: 1392
+			Segment:
+				Start: Shore Sand.U
+				Inner: Shore Sand
+				End: Cliff Sand Water.U
+				Points: 0,1, 0,0
+		MultiBrush@1393:
+			Template: 1393
+			Segment:
+				Start: Shore Sand.D
+				Inner: Shore Sand
+				End: Cliff Sand Water.D
+				Points: 1,0, 1,1
+
+	# Shore Black Sand
+
+		MultiBrush@1744:
+			Template: 1744
+			Segment:
+				Start: Shore Black Sand.U
+				Inner: Shore Black Sand
+				End: Shore Black Sand.R
+				Points: 0,1, 0,0, 1,0
+		MultiBrush@1745:
+			Template: 1745
+			Segment:
+				Start: Shore Black Sand.U
+				Inner: Shore Black Sand
+				End: Shore Black Sand.U
+				Points: 0,1, 0,0
+		MultiBrush@1746:
+			Template: 1746
+			Segment:
+				Start: Shore Black Sand.L
+				Inner: Shore Black Sand
+				End: Shore Black Sand.U
+				Points: 1,1, 0,1, 0,0
+		MultiBrush@1747:
+			Template: 1747
+			Segment:
+				Start: Shore Black Sand.R
+				Inner: Shore Black Sand
+				End: Shore Black Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@1748:
+			Template: 1748
+			Segment:
+				Start: Shore Black Sand.L
+				Inner: Shore Black Sand
+				End: Shore Black Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@1749:
+			Template: 1749
+			Segment:
+				Start: Shore Black Sand.R
+				Inner: Shore Black Sand
+				End: Shore Black Sand.U
+				Points: 0,0
+		MultiBrush@1750:
+			Template: 1750
+			Segment:
+				Start: Shore Black Sand.U
+				Inner: Shore Black Sand
+				End: Shore Black Sand.L
+				Points: 0,1
+		MultiBrush@1751:
+			Template: 1751
+			Segment:
+				Start: Shore Black Sand.R
+				Inner: Shore Black Sand
+				End: Shore Black Sand.D
+				Points: 0,0, 1,0, 1,1
+		MultiBrush@1752:
+			Template: 1752
+			Segment:
+				Start: Shore Black Sand.D
+				Inner: Shore Black Sand
+				End: Shore Black Sand.D
+				Points: 1,0, 1,1
+		MultiBrush@1753:
+			Template: 1753
+			Segment:
+				Start: Shore Black Sand.D
+				Inner: Shore Black Sand
+				End: Shore Black Sand.L
+				Points: 1,0, 1,1, 0,1
+		MultiBrush@1754:
+			Template: 1754
+			Segment:
+				Start: Shore Black Sand.D
+				Inner: Shore Black Sand
+				End: Shore Black Sand.R
+				Points: 1,0
+		MultiBrush@1755:
+			Template: 1755
+			Segment:
+				Start: Shore Black Sand.L
+				Inner: Shore Black Sand
+				End: Shore Black Sand.D
+				Points: 1,1
+		MultiBrush@1756:
+			Template: 1756
+			Segment:
+				Start: Shore Black Sand.R
+				Inner: Shore Black Sand
+				End: Cliff Black Sand Water.R
+				Points: 0,0, 1,0
+		MultiBrush@1757:
+			Template: 1757
+			Segment:
+				Start: Cliff Black Sand Water.L
+				Inner: Shore Black Sand
+				End: Shore Black Sand.L
+				Points: 1,1, 0,1
+		MultiBrush@1758:
+			Template: 1758
+			Segment:
+				Start: Cliff Black Sand Water.U
+				Inner: Shore Black Sand
+				End: Shore Black Sand.U
+				Points: 0,1, 0,0
+		MultiBrush@1759:
+			Template: 1759
+			Segment:
+				Start: Cliff Black Sand Water.D
+				Inner: Shore Black Sand
+				End: Shore Black Sand.D
+				Points: 1,0, 1,1
+		MultiBrush@1760:
+			Template: 1760
+			Segment:
+				Start: Cliff Black Sand Water.R
+				Inner: Shore Black Sand
+				End: Shore Black Sand.R
+				Points: 0,0, 1,0
+		MultiBrush@1761:
+			Template: 1761
+			Segment:
+				Start: Shore Black Sand.L
+				Inner: Shore Black Sand
+				End: Cliff Black Sand Water.L
+				Points: 1,1, 0,1
+		MultiBrush@1762:
+			Template: 1762
+			Segment:
+				Start: Shore Black Sand.U
+				Inner: Shore Black Sand
+				End: Cliff Black Sand Water.U
+				Points: 0,1, 0,0
+		MultiBrush@1763:
+			Template: 1763
+			Segment:
+				Start: Shore Black Sand.D
+				Inner: Shore Black Sand
+				End: Cliff Black Sand Water.D
+				Points: 1,0, 1,1
