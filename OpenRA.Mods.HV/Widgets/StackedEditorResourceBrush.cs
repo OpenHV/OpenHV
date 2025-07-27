@@ -148,7 +148,7 @@ namespace OpenRA.Mods.Common.Widgets
 		{
 			foreach (var resourceCell in cellResources)
 			{
-				var density = resourceLayer.GetResource(resourceCell.Cell).Density + 1;
+				var density = (byte)(resourceLayer.GetResource(resourceCell.Cell).Density + 1);
 				resourceLayer.ClearResources(resourceCell.Cell);
 				resourceLayer.AddResource(resourceCell.NewResourceType, resourceCell.Cell, density);
 			}
@@ -166,7 +166,7 @@ namespace OpenRA.Mods.Common.Widgets
 
 		public void Add(CellResource resourceCell)
 		{
-			var density = resourceLayer.GetResource(resourceCell.Cell).Density + 1;
+			var density = (byte)(resourceLayer.GetResource(resourceCell.Cell).Density + 1);
 			resourceLayer.ClearResources(resourceCell.Cell);
 			resourceLayer.AddResource(resourceCell.NewResourceType, resourceCell.Cell, density);
 			cellResources.Add(resourceCell);
