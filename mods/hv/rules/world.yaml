@@ -1,7 +1,6 @@
 # License: CC-BY-SA-4.0
 
 ^BaseWorld:
-	AlwaysVisible:
 	ActorMap:
 	ScreenMap:
 	Selection:
