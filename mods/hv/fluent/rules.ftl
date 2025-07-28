@@ -575,6 +575,46 @@ actor-light-name = Invisible Light Source
 actor-camera-name = Area Reveal Camera
 actor-fountain-name = Water Source
 
+label-random-map = Random Map
+
+label-clear-map-generator-option-tile = Tile
+label-clear-map-generator-choice-tile-crater =
+   .label = Crater
+label-clear-map-generator-choice-tile-littoral =
+   .label = Littoral
+label-clear-map-generator-choice-tile-grass =
+   .label = Grass
+label-clear-map-generator-choice-tile-grass-pit =
+   .label = Grass Pit
+label-clear-map-generator-choice-tile-mountain =
+   .label = Mountain
+label-clear-map-generator-choice-tile-ice =
+   .label = Ice
+label-clear-map-generator-choice-tile-lava =
+   .label = Lava
+label-clear-map-generator-choice-tile-sand =
+   .label = Sand
+label-clear-map-generator-choice-tile-red-snow =
+   .label = Red Snow
+label-clear-map-generator-choice-tile-snow =
+   .label = Snow
+label-clear-map-generator-choice-tile-stone =
+   .label = Stone
+label-clear-map-generator-choice-tile-swamp =
+   .label = Swamp
+label-clear-map-generator-choice-tile-tech =
+   .label = Tech
+label-clear-map-generator-choice-tile-pelagic =
+   .label = Pelagic
+label-clear-map-generator-choice-tile-tree-grass =
+   .label = Tree Gras
+label-clear-map-generator-choice-tile-tree-snow =
+   .label = Tree Snow
+label-clear-map-generator-choice-tile-dirt =
+   .label = Dirt
+label-clear-map-generator-choice-tile-black-sand =
+   .label = Black Sand
+
 ## Mothership
 actor-mother2c-name = Mothership
 actor-mother-name = Mothership Base

@@ -34,6 +34,8 @@ button-editor-world-root-autotile =
 button-select-categories-buttons-all = All
 button-select-categories-buttons-none = None
 
+map-generator-clear = Clear Terrain
+
 ## encyclopedia.yaml
 label-encyclopedia-content-title = Encyclopedia
 
