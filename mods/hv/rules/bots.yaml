@@ -147,7 +147,9 @@ Player:
 			balloon: 1
 			observer: 1
 			torpedoboat: 2
+			submarine: 2
 			lightboat: 2
+			patrolboat: 2
 			railgunboat: 2
 			lightningboat: 2
 			boomer: 2
@@ -164,7 +166,6 @@ Player:
 			observer: 2
 			radartank: 2
 			minelayer: 1
-			flamer: 3
 			boomer: 4
 			carrier: 4
 			mineship: 1
@@ -180,7 +181,9 @@ Player:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician
 		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
-		MaximumCaptureTargetOptions: 15
+		MinimumCaptureDelay: 0
+		MaximumCaptureTargetOptions: 25
+		CheckCaptureTargetsForVisibility: False
 	MinerBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: miner
