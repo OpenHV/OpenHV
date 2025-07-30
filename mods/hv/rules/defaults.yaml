@@ -290,6 +290,7 @@
 		LandAltitude: 0c64
 		CanHover: True
 		WaitDistanceFromResupplyBase: 4c0
+		RepulsionSpeed: 125
 	Hovers@Cruising:
 		RequiresCondition: cruising
 		BobDistance: -64

@@ -997,6 +997,7 @@ MOTHERSHIP:
 		CruiseAltitude: 3c0
 		AltitudeVelocity: 0c56
 		InitialFacing: 512
+		RepulsionSpeed: -1
 	HitShape:
 		Type: Circle
 			Radius: 1024
@@ -1147,6 +1148,7 @@ BATTLESHIP:
 		CruiseAltitude: 3c0
 		AltitudeVelocity: 0c56
 		InitialFacing: 512
+		RepulsionSpeed: -1
 	HitShape:
 		Type: Circle
 			Radius: 1024
