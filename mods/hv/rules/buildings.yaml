@@ -6,7 +6,7 @@ BASE:
 	Selectable:
 		Bounds: 2048, 3072, 0, -512
 	Valued:
-		Cost: 3500
+		Cost: 5000
 	Tooltip:
 		Name: actor-base.name
 	Building:
