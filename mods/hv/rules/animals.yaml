@@ -56,7 +56,7 @@ CROW:
 	Tooltip:
 		Name: actor-crow-name
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2540
 		Repulsable: false
 		Speed: 70
 		CruisingCondition: cruising
@@ -82,16 +82,22 @@ CROW2:
 	Inherits: CROW
 	Tooltip:
 		Name: actor-crow2-name
+	Aircraft:
+		CruiseAltitude: 2539
 
 GULL:
 	Inherits: CROW
 	Tooltip:
 		Name: actor-gull-name
+	Aircraft:
+		CruiseAltitude: 2538
 
 GULL2:
 	Inherits: CROW
 	Tooltip:
 		Name: actor-gull2-name
+	Aircraft:
+		CruiseAltitude: 2537
 
 SEED:
 	Inherits: BEAST
@@ -168,7 +174,7 @@ FLYINGMONSTER:
 	Tooltip:
 		Name: actor-flyingmonster-name
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2536
 		Repulsable: false
 		Speed: 80
 		CruisingCondition: cruising
