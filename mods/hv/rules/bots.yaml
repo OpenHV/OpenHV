@@ -45,8 +45,8 @@ Player:
 			orepurifier: 2
 			trader: 1
 			techcenter: 1
-			harbor: 1
-			harbor2: 1
+			harbor: 4
+			harbor2: 4
 			field: 1
 			howitzer: 1
 			uplink: 1
@@ -134,16 +134,19 @@ Player:
 			rocketeer: 1
 			mortar: 1
 			jetpacker: 1
+			jetfoiler: 1
 			sniper: 1
-			shocker: 1
+			shocker: 3
 			technician: 1
 			flamer: 1
 			blaster: 1
 			missiletank: 5
-			jet: 5
 			gunship: 5
 			copter: 5
 			banshee: 5
+			jet2: 5
+			turtle: 5
+			jet: 5
 			balloon: 1
 			observer: 1
 			torpedoboat: 2
@@ -159,6 +162,7 @@ Player:
 			battleship: 1
 			mothership: 1
 		UnitLimits:
+			sniper: 6
 			miner: 2
 			builder: 1
 			builder2: 1
@@ -202,7 +206,7 @@ Player:
 		ExcludedUnitTypes: miner, tanker1, tanker2, broker
 	CargoBotModule:
 		RequiresCondition: enable-rogue-ai
-		TransportTypes: apc
+		TransportTypes: apc, apc2
 		PassengerTypes: mortar, flamer, shocker, rifleman, rocketeer
 	DeployActorBotModule:
 		RequiresCondition: enable-rogue-ai
