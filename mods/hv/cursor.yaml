@@ -45,8 +45,8 @@ Cursors:
 			Y: -8
 		default-minimap:
 			Start: 0
-			X: 0
-			Y: -4
+			X: -3
+			Y: -8
 		generic-blocked:
 			Start: 14
 			X: 0
