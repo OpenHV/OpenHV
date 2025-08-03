@@ -31,6 +31,19 @@ gunship:
 	icon:
 		Filename: gunship-icon.png
 
+gunship2:
+	idle:
+		Filename: bits/gunship2.png
+		Facings: 8
+	shoot:
+		Filename: bits/gunship2.png
+		Start: 8
+		Length: 3
+		Facings: 8
+		Tick: 50
+	icon:
+		Filename: gunship2-icon.png
+
 jet:
 	idle:
 		Filename: bits/jet.png
