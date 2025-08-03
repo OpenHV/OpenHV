@@ -44,7 +44,7 @@ GUNSHIP:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2c512
 		InitialFacing: 768
 		TurnSpeed: 20
 		Speed: 200
@@ -105,7 +105,7 @@ JET:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2c512
 		InitialFacing: 768
 		TurnSpeed: 40
 		Speed: 220
@@ -177,7 +177,7 @@ JET2:
 		PersistentTargeting: false
 		OpportunityFire: false
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 2c512
 		InitialFacing: 768
 		TurnSpeed: 20
 		Speed: 155
@@ -891,7 +891,7 @@ CARGOSHIP:
 		Speed: 150
 		VTOL: True
 		MaximumPitch: 36
-		CruiseAltitude: 2560
+		CruiseAltitude: 2c512
 		TurnToLand: False
 	Tooltip:
 		Name: actor-cargoship-name
@@ -911,7 +911,7 @@ AIRLIFTER:
 		Speed: 200
 		VTOL: True
 		MaximumPitch: 36
-		CruiseAltitude: 2560
+		CruiseAltitude: 2c512
 		TurnToLand: False
 	Tooltip:
 		Name: actor-airlifter-name
