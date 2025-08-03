@@ -67,6 +67,69 @@ GUNSHIP:
 	Selectable:
 		Bounds: 1024, 1024
 
+GUNSHIP2:
+	Inherits: ^Helicopter
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: actor-gunship.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: ~disabled
+		Description: actor-gunship.description
+	Encyclopedia:
+		Description: actor-gunship.encyclopedia
+		Order: 5
+		Scale: 3
+		Category: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 115
+	Voiced:
+		VoiceSet: GunshipVoice
+	AttackFrontal:
+		RequiresCondition: airborne
+		FacingTolerance: 8
+	Armament@Ground:
+		Name: primary
+		Weapon: HelicopterChainGunGround
+		LocalOffset: 50,0,0
+	Armament@Air:
+		Name: secondary
+		Weapon: HelicopterChainGunAir
+		LocalOffset: 50,0,0
+	Selectable:
+		Bounds: 1228, 1228
+	WithAttackAnimation@Primary:
+		Sequence: shoot
+	WithAttackAnimation@Secondary:
+		Armament: secondary
+		Sequence: shoot		
+	Contrail@Right:
+		Offset: -620,-130,0
+		TrailLength: 10
+		ZOffset: -64
+	Contrail@Left:
+		Offset: -620,130,0
+		TrailLength: 10
+		ZOffset: -64
+
 JET:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
