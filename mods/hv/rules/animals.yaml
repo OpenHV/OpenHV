@@ -56,7 +56,7 @@ CROW:
 	Tooltip:
 		Name: actor-crow-name
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 1c0
 		Repulsable: false
 		Speed: 70
 		CruisingCondition: cruising
@@ -168,7 +168,7 @@ FLYINGMONSTER:
 	Tooltip:
 		Name: actor-flyingmonster-name
 	Aircraft:
-		CruiseAltitude: 2560
+		CruiseAltitude: 1c0
 		Repulsable: false
 		Speed: 80
 		CruisingCondition: cruising
