@@ -627,6 +627,40 @@ clear-map-generator-choice-tile-dirt =
 clear-map-generator-choice-tile-black-sand =
    .label = Black Sand
 
+label-random-map-generator = Random Map Generator
+label-random-map-generator-option-seed = Seed
+label-random-map-generator-option-players = Players
+label-random-map-generator-option-symmetry = Symmetry
+
+random-map-generator-choice-mirror-none =
+   .label = None
+random-map-generator-choice-symmetry-mirror-horizontal =
+   .label = Mirror Horizontal
+random-map-generator-choice-symmetry-mirror-vertical =
+   .label = Mirror Vertical
+random-map-generator-choice-symmetry-mirror-diagonal-tl =
+   .label = Mirror Diagonal (Top-Left)
+random-map-generator-choice-symmetry-mirror-diagonal-tr =
+   .label = Mirror Diagonal (Top-Right)
+random-map-generator-choice-symmetry-mirror-2-rotations =
+   .label = 2 Rotations
+random-map-generator-choice-symmetry-mirror-3-rotations =
+   .label = 3 Rotations
+random-map-generator-choice-symmetry-mirror-4-rotations =
+   .label = 4 Rotations
+random-map-generator-choice-symmetry-mirror-5-rotations =
+   .label = 5 Rotations
+random-map-generator-choice-symmetry-mirror-6-rotations =
+   .label = 6 Rotations
+random-map-generator-choice-symmetry-mirror-7-rotations =
+   .label = 7 Rotations
+random-map-generator-choice-symmetry-mirror-8-rotations =
+   .label = 8 Rotations
+
+label-random-map-generator-option-terrain-type = Terrain Type
+random-map-generator-choice-terrain-type-dirty-grassland =
+   .label = Dirty Grassland
+
 ## Mothership
 actor-mother2c-name = Mothership
 actor-mother-name = Mothership Base

@@ -191,6 +191,112 @@ EditorWorld:
 		DefaultStart: Cliff: Grass
 		DefaultInner: Cliff: Grass
 		DefaultEnd: Cliff: Grass
+	RandomMapGenerator:
+		Type: experimental
+		Name: label-random-map-generator
+		Tilesets: PLANET
+		Settings:
+			MultiChoiceOption@HiddenDefaults:
+				Choice@HiddenDefaults:
+					Settings:
+						Mirror: None
+						Rotations: 1
+						EnforceSymmetry: 0
+						GrassTile: 121
+						CraterTile: 5
+						TerrainSmoothing: 4
+						RoughnessRadius: 5
+						CraterRoughness: 350
+						Crater: 350
+						SmoothingThreshold: 833
+						MinimumGrassCraterThickness: 6
+						MinimumCraterSmoothLength: 6
+						MinimumCraterStraight: 3
+						CraterSmoothSegmentType: Biome: Grass Crater
+			IntegerOption@Seed:
+				Label: label-random-map-generator-option-seed
+				Parameter: Seed
+				Default: 0
+			MultiIntegerChoiceOption@Players:
+				Label: label-random-map-generator-option-players
+				Parameter: Players
+				Choices: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+				Default: 2
+				Priority: 1
+			MultiChoiceOption@Symmetry:
+				Label: label-random-map-generator-option-symmetry
+				Default: 2Rotations
+				Priority: 1
+				Choice@None:
+					Label: random-map-generator-choice-mirror-none
+					Settings:
+						Mirror: None
+				Choice@LeftMatchesRight:
+					Label: random-map-generator-choice-symmetry-mirror-horizontal
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Settings:
+						Mirror: LeftMatchesRight
+				Choice@TopLeftMatchesBottomRight:
+					Label: random-map-generator-choice-symmetry-mirror-diagonal-tl
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Settings:
+						Mirror: TopLeftMatchesBottomRight
+				Choice@TopMatchesBottom:
+					Label: random-map-generator-choice-symmetry-mirror-vertical
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Settings:
+						Mirror: TopMatchesBottom
+				Choice@TopRightMatchesBottomLeft:
+					Label: random-map-generator-choice-symmetry-mirror-diagonal-tr
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Settings:
+						Mirror: TopRightMatchesBottomLeft
+				Choice@2Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-2-rotations
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Settings:
+						Rotations: 2
+				Choice@3Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-3-rotations
+					Players: 3, 6, 9, 12, 15
+					Settings:
+						Rotations: 3
+				Choice@4Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-4-rotations
+					Players: 4, 8, 12, 16
+					Settings:
+						Rotations: 4
+				Choice@5Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-5-rotations
+					Players: 5, 10, 15
+					Settings:
+						Rotations: 5
+				Choice@6Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-6-rotations
+					Players: 6, 12
+					Settings:
+						Rotations: 6
+				Choice@7Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-7-rotations
+					Players: 7, 14
+					Settings:
+						Rotations: 7
+				Choice@8Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-8-rotations
+					Players: 8, 16
+					Settings:
+						Rotations: 8
+			MultiChoiceOption@TerrainType:
+				Label: label-random-map-generator-option-terrain-type
+				Priority: 2
+				Default: Flat
+				Choice@Flat:
+					Label: random-map-generator-choice-terrain-type-dirty-grassland
+					Settings:
+						TerrainFeatureSize: 10240
+						CraterRoughness: 0
+						GrassRoughness: 0
+						Crater: 250
 
 EditorPlayer:
 	Inherits: ^BasePlayer
