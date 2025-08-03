@@ -32,7 +32,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly Color textColor;
 		readonly Color notificationColor;
 		readonly Color playerColor;
-		readonly Color historyColor;
 
 		[ObjectCreator.UseCtor]
 		public GlobalChatLogic(Widget widget, ModData modData, Dictionary<string, MiniYaml> logicArgs)
@@ -45,7 +44,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			textColor = ChromeMetrics.Get<Color>("GlobalChatTextColor");
 			notificationColor = ChromeMetrics.Get<Color>("GlobalChatNotificationColor");
 			playerColor = ChromeMetrics.Get<Color>("GlobalChatPlayerNameColor");
-			historyColor = ChromeMetrics.Get<Color>("GlobalChatHistoryColor");
 
 			var textLabel = chatTemplate.Get<LabelWidget>("TEXT");
 			textLabel.GetColor = () => textColor;
@@ -107,14 +105,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		Widget MakeHistoryWidget(object o)
 		{
 			var message = (ChatMessage)o;
-			var from = message.Type == ChatMessageType.Notification ? "Battlefield Control" : message.Nick;
-			var prefixColor = message.Type == ChatMessageType.Notification ? notificationColor : playerColor;
-			prefixColor = message.Type == ChatMessageType.PrivateMessage ? historyColor : prefixColor;
-			var messageColor = message.Type == ChatMessageType.PrivateMessage ? historyColor : textColor;
 			var template = chatTemplate.Clone();
-			var notification = new TextNotification(TextNotificationPool.Chat, -1, from, message.Message, prefixColor, messageColor);
-			var timestamp = message.Type != ChatMessageType.PrivateMessage;
-			WidgetUtils.SetupTextNotification(template, notification, historyPanel.Bounds.Width - historyPanel.ScrollbarWidth, timestamp);
+			SetupChatNotification(template, message, historyPanel.Bounds.Width - historyPanel.ScrollbarWidth);
 
 			template.Id = message.UID;
 			return template;
@@ -163,6 +155,60 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			nicknamePanel.Unbind();
 
 			disposed = true;
+		}
+
+		void SetupChatNotification(Widget notificationWidget, ChatMessage chatMessage, int boxWidth)
+		{
+			var timeLabel = notificationWidget.GetOrNull<LabelWidget>("TIME");
+			var prefixLabel = notificationWidget.GetOrNull<LabelWidget>("PREFIX");
+			var textLabel = notificationWidget.Get<LabelWidget>("TEXT");
+
+			var from = chatMessage.Type == ChatMessageType.Notification ? "Battlefield Control" : chatMessage.Nick;
+			var prefixColor = chatMessage.Type == ChatMessageType.Notification ? notificationColor : playerColor;
+
+			var textFont = Game.Renderer.Fonts[textLabel.Font];
+			var textWidth = boxWidth - notificationWidget.Bounds.X - textLabel.Bounds.X;
+
+			var timeOffset = 0;
+
+			if (timeLabel != null)
+			{
+				var time = $"{chatMessage.Time.Hour:D2}:{chatMessage.Time.Minute:D2}";
+				timeOffset = timeLabel.Bounds.Width + timeLabel.Bounds.X;
+
+				timeLabel.GetText = () => time;
+
+				textWidth -= timeOffset;
+				textLabel.Bounds.X += timeOffset;
+
+				prefixLabel.Bounds.X += timeOffset;
+			}
+
+			var prefix = from + ":";
+			var prefixSize = Game.Renderer.Fonts[prefixLabel.Font].Measure(prefix);
+			var prefixOffset = prefixSize.X + prefixLabel.Bounds.X;
+
+			prefixLabel.GetColor = () => prefixColor;
+			prefixLabel.GetText = () => prefix;
+			prefixLabel.Bounds.Width = prefixSize.X;
+
+			textWidth -= prefixOffset;
+			textLabel.Bounds.X += prefixOffset - timeOffset;
+
+			textLabel.GetColor = () => textColor;
+			textLabel.Bounds.Width = textWidth;
+
+			// Hack around our hacky wordwrap behavior: need to resize the widget to fit the text
+			var text = WidgetUtils.WrapText(chatMessage.Message, textLabel.Bounds.Width, textFont);
+			textLabel.GetText = () => text;
+			var deltaHeight = textFont.Measure(text).Y - textLabel.Bounds.Height;
+			if (deltaHeight > 0)
+			{
+				textLabel.Bounds.Height += deltaHeight;
+				notificationWidget.Bounds.Height += deltaHeight;
+			}
+
+			notificationWidget.Bounds.Width = boxWidth - notificationWidget.Bounds.X;
 		}
 	}
 }

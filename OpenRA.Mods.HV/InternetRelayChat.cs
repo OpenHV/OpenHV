@@ -19,7 +19,7 @@ using OpenRA.Primitives;
 namespace OpenRA.Mods.HV
 {
 	public enum ChatConnectionStatus { Disconnected, Connecting, Connected, Disconnecting, Joined, Error }
-	public enum ChatMessageType { Message, PrivateMessage, Notification }
+	public enum ChatMessageType { Message, Notification }
 
 	public sealed class ChatUser
 	{
@@ -119,6 +119,7 @@ namespace OpenRA.Mods.HV
 
 			client.OnChannelMessage += OnChannelMessage;
 			client.OnChannelNotice += OnChannelNotice;
+			client.OnQueryNotice += OnQueryNotice;
 			client.OnOp += OnOp;
 			client.OnDeop += OnDeop;
 			client.OnVoice += OnVoice;
@@ -129,7 +130,14 @@ namespace OpenRA.Mods.HV
 
 		void OnChannelMessage(object sender, IrcEventArgs e)
 		{
-			AddMessage(e.Data.Nick, e.Data.Message, e.Data.RawMessageArray[1]);
+			var message = new ChatMessage(DateTime.Now, TimeStampFormat, ChatMessageType.Message, e.Data.Nick, e.Data.Message);
+			Game.RunAfterTick(() => History.Add(message));
+		}
+
+		void OnQueryNotice(object sender, IrcEventArgs e)
+		{
+			if (e.Data.Nick == "HistServ")
+				AddHistory(e.Data);
 		}
 
 		void OnChannelNotice(object sender, IrcEventArgs e)
@@ -225,15 +233,15 @@ namespace OpenRA.Mods.HV
 			});
 		}
 
-		void AddMessage(string nick, string text, string code = "")
+		void AddHistory(IrcMessageData data)
 		{
-			var type = code == "PRIVMSG" ? ChatMessageType.PrivateMessage : ChatMessageType.Message;
-			var message = new ChatMessage(DateTime.Now, TimeStampFormat, type, nick, text);
-			Game.RunAfterTick(() =>
+			if (DateTime.TryParseExact(data.MessageArray[0], "HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var time))
 			{
-				History.Add(message);
-				Log.Write("irc", text);
-			});
+				var nick = data.MessageArray[1].Trim('<', '>');
+				var text = string.Join(" ", data.MessageArray.Skip(2));
+				var message = new ChatMessage(time, TimeStampFormat, ChatMessageType.Message, nick, text);
+				Game.RunAfterTick(() => History.Add(message));
+			}
 		}
 
 		void OnConnecting(object sender, EventArgs e)
@@ -313,7 +321,7 @@ namespace OpenRA.Mods.HV
 				Game.RunAfterTick(() =>
 					Users.Add(user.Nick, new ChatUser(user.Nick, user.IsOp, user.IsVoice)));
 
-			client.WriteLine($"history {channel.Name} 24h");
+			client.WriteLine($"HISTSERV PLAY {channel.Name} 24h");
 		}
 
 		void OnTopic(object sender, TopicEventArgs e)
@@ -399,7 +407,8 @@ namespace OpenRA.Mods.HV
 			try
 			{
 				client.SendMessage(SendType.Message, channel.Name, text);
-				AddMessage(client.Nickname, text);
+				var message = new ChatMessage(DateTime.Now, TimeStampFormat, ChatMessageType.Message, client.Nickname, text);
+				Game.RunAfterTick(() => History.Add(message));
 			}
 			catch (NotConnectedException) { }
 		}
@@ -460,6 +469,7 @@ namespace OpenRA.Mods.HV
 
 			client.OnChannelMessage -= OnChannelMessage;
 			client.OnChannelNotice -= OnChannelNotice;
+			client.OnQueryNotice -= OnQueryNotice;
 			client.OnOp -= OnOp;
 			client.OnDeop -= OnDeop;
 			client.OnVoice -= OnVoice;
