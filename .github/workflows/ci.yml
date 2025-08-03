@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   linux:
-    name: Linux (.NET 8)
+    name: Linux
     runs-on: ubuntu-22.04
 
     steps:
@@ -64,7 +64,7 @@ jobs:
           make TREAT_WARNINGS_AS_ERRORS=true test
 
   windows:
-    name: Windows (.NET 8.0)
+    name: Windows
     runs-on: windows-2022
 
     steps:
