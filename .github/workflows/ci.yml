@@ -2,13 +2,13 @@ name: Continuous Integration
 
 on:
   push:
-      paths-ignore:
-        - 'sources/**'
-        - '*.md'
+    paths-ignore:
+      - 'sources/**'
+      - '*.md'
   pull_request:
-      paths-ignore:
-        - 'sources/**'
-        - '*.md'
+    paths-ignore:
+      - 'sources/**'
+      - '*.md'
 
 permissions:
   contents: read
