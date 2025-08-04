@@ -98,10 +98,11 @@ GUNSHIP2:
 		MuzzleSequence: muzzle
 		LocalOffset: 300,0,0
 	AttackAircraft:
-		FacingTolerance: 32
-		PersistentTargeting: false
-		OpportunityFire: false
+		FacingTolerance: 48
+		PersistentTargeting: true
+		OpportunityFire: true
 	Aircraft:
+		CanHover: False
 		CruiseAltitude: 2c512
 		InitialFacing: 768
 		TurnSpeed: 20
