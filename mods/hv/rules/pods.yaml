@@ -351,7 +351,6 @@ JETPACKER:
 		HP: 13500
 	Aircraft:
 		TurnSpeed: 50
-		CruiseAltitude: 1c0
 		Speed: 100
 		IdealSeparation: 1c0
 	UpdatesPlayerStatistics:
@@ -398,7 +397,6 @@ JETFOILER:
 		HP: 10800
 	Aircraft:
 		TurnSpeed: 60
-		CruiseAltitude: 1c0
 		Speed: 180
 		IdealSeparation: 1c0
 	UpdatesPlayerStatistics:

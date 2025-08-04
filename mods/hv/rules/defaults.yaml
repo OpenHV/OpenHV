@@ -279,7 +279,7 @@
 	Aircraft:
 		CruisingCondition: cruising
 		AirborneCondition: airborne
-		CruiseAltitude: 2c0
+		CruiseAltitude: 2600
 		InitialFacing: 768
 		Voice: Move
 		TakeOffOnResupply: true
@@ -334,6 +334,8 @@
 
 ^AirCreature:
 	Inherits: ^Plane
+	Aircraft:
+		CruiseAltitude: 2560
 	DeathSounds:
 	-AppearsOnRadar:
 	-Guard:
