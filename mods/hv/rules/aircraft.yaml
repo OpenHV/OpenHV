@@ -1001,6 +1001,9 @@ MOTHERSHIP:
 		VoiceSet: MotherShipVoice
 	-GrantRandomCondition@SpawnPilot:
 	-FireWarheadsOnDeath@SpawnPilot:
+	Hovers@Cruising:
+		BobDistance: -32
+		InitialHeight: 32
 
 MOTHERSHIP.Husk:
 	Inherits: ^PlaneHusk
@@ -1141,6 +1144,9 @@ BATTLESHIP:
 		Palette: shadow
 	-GrantRandomCondition@SpawnPilot:
 	-FireWarheadsOnDeath@SpawnPilot:
+	Hovers@Cruising:
+		BobDistance: -32
+		InitialHeight: 32
 
 BATTLESHIP.Husk:
 	Inherits: ^PlaneHusk
