@@ -443,6 +443,10 @@
 		CanSlide: True
 	Hovers@Cruising:
 		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+		FallTicks: 8
+		RiseTicks: 8
 	BodyOrientation:
 
 ^1x1Shape:
