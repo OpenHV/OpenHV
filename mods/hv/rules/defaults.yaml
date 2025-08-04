@@ -277,6 +277,7 @@
 	Selectable:
 		Bounds: 1024, 1024
 	Aircraft:
+		CruisingCondition: cruising
 		AirborneCondition: airborne
 		CruiseAltitude: 2c0
 		InitialFacing: 768
@@ -285,6 +286,12 @@
 		LandAltitude: 0c64
 		CanHover: True
 		WaitDistanceFromResupplyBase: 4c0
+	Hovers@Cruising:
+		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+		FallTicks: 8
+		RiseTicks: 8
 	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -477,19 +484,10 @@
 	Tooltip:
 		GenericName: meta-helicopter-generic-name
 	Aircraft:
-		CanHover: true
-		AirborneCondition: airborne
-		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
 		VTOL: true
 		InitialFacing: 896
 		CanSlide: True
-	Hovers@Cruising:
-		RequiresCondition: cruising
-		BobDistance: -64
-		InitialHeight: 64
-		FallTicks: 8
-		RiseTicks: 8
 	BodyOrientation:
 
 ^1x1Shape:
