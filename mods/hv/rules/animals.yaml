@@ -56,7 +56,6 @@ CROW:
 	Tooltip:
 		Name: actor-crow-name
 	Aircraft:
-		CruiseAltitude: 1c0
 		Repulsable: false
 		Speed: 70
 		CruisingCondition: cruising
@@ -160,7 +159,6 @@ BIGBIRD:
 		Name: actor-bigbird.name
 		GenericName: actor-bigbird.generic-name
 	Aircraft:
-		CruiseAltitude: 1c0
 		Repulsable: false
 		Speed: 80
 		CruisingCondition: cruising
