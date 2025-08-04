@@ -2,13 +2,72 @@
 
 GUNSHIP:
 	Inherits: ^Plane
+	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@Smoke: ^SmokeEmitter
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: actor-gunship.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 30
+		Prerequisites: ~starport.yi
+		Description: actor-gunship.description
+	Encyclopedia:
+		Description: actor-gunship.encyclopedia
+		Order: 2
+		Scale: 3
+		Category: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	RevealsShroud:
+		Range: 10c0
+		MinRange: 5c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 5c0
+		Type: GroundPosition
+	Aircraft:
+		CruiseAltitude: 2c512
+		InitialFacing: 768
+		TurnSpeed: 20
+		Speed: 200
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	Voiced:
+		VoiceSet: GunshipVoice
+	AttackFrontal:
+		RequiresCondition: airborne
+		FacingTolerance: 32
+	Armament:
+		Weapon: AircraftChainGunGround
+		LocalOffset: 300,0,0
+	Selectable:
+		Bounds: 1228, 1228
+	WithAttackAnimation:
+		Sequence: shoot
+	Contrail@Right:
+		Offset: -620,-130,0
+		TrailLength: 10
+		ZOffset: -64
+	Contrail@Left:
+		Offset: -620,130,0
+		TrailLength: 10
+		ZOffset: -64
+
+GUNSHIP2:
+	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Inherits@MagazineCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 30
-		Prerequisites: ~starport.yi
+		Prerequisites: ~disabled
 		Description: actor-gunship.description
 	Encyclopedia:
 		Description: actor-gunship.encyclopedia
@@ -62,69 +121,6 @@ GUNSHIP:
 		TrailLength: 12
 	Selectable:
 		Bounds: 1024, 1024
-
-GUNSHIP2:
-	Inherits: ^Helicopter
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits@MagazineCasing: ^DropShellCasing
-	Inherits@Smoke: ^SmokeEmitter
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: actor-gunship.name
-	Buildable:
-		Queue: Aircraft
-		BuildPaletteOrder: 30
-		Prerequisites: ~disabled
-		Description: actor-gunship.description
-	Encyclopedia:
-		Description: actor-gunship.encyclopedia
-		Order: 5
-		Scale: 3
-		Category: Aircraft
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 10000
-	RevealsShroud:
-		Range: 10c0
-		MinRange: 4c0
-		Type: GroundPosition
-		RevealGeneratedShroud: False
-	RevealsShroud@Hacked:
-		Range: 4c0
-		Type: GroundPosition
-	Aircraft:
-		TurnSpeed: 20
-		Speed: 115
-	Voiced:
-		VoiceSet: GunshipVoice
-	AttackFrontal:
-		RequiresCondition: airborne
-		FacingTolerance: 8
-	Armament@Ground:
-		Name: primary
-		Weapon: HelicopterChainGunGround
-		LocalOffset: 50,0,0
-	Armament@Air:
-		Name: secondary
-		Weapon: HelicopterChainGunAir
-		LocalOffset: 50,0,0
-	Selectable:
-		Bounds: 1228, 1228
-	WithAttackAnimation@Primary:
-		Sequence: shoot
-	WithAttackAnimation@Secondary:
-		Armament: secondary
-		Sequence: shoot		
-	Contrail@Right:
-		Offset: -620,-130,0
-		TrailLength: 10
-		ZOffset: -64
-	Contrail@Left:
-		Offset: -620,130,0
-		TrailLength: 10
-		ZOffset: -64
 
 JET:
 	Inherits: ^Plane
