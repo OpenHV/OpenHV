@@ -202,6 +202,7 @@
 		DeathSequencePalette: green
 		FallbackSequence: die
 	Crushable:
+		RequiresCondition: !shield
 		CrushClasses: Pods
 		WarnProbability: 15
 	RevealsShroud:
