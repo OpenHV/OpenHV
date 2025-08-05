@@ -8,8 +8,10 @@ explosion:
 		Filename: bits/expsmall.png
 	small_2:
 		Filename: bits/expsmall2.png
+		Scale: 1.1
 	medium:
 		Filename: bits/explosn.png
+		Scale: 1.1
 	medium_2:
 		Filename: bits/explosn2.png
 	medium_3:

@@ -8,44 +8,49 @@ BuildingExplode:
 ^Explosion:
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
 		Spread: 426
-		Damage: 5000
-		Versus:
-			None: 90
-			Steel: 75
+		Damage: 0
 	Warhead@Incendiary: TreeDamage
 		Spread: 426
-		Damage: 5000
+		Damage: 0
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: explosion02.ogg, explosion03.ogg
 
-ArtilleryExplode:
-	Inherits: ^Explosion
-	Warhead@Damage: SpreadDamage
-		Damage: 15000
-	Warhead@Effect: CreateEffect
-		Explosions: medium
-		ImpactSounds: explosion04.ogg, explosion05.ogg
-
 UnitExplodeSmall:
 	Inherits: ^Explosion
-	Warhead@Damage: SpreadDamage
-		Damage: 4000
+	Warhead@Effect: CreateEffect
+		Explosions: small_2
+
+UnitExplodeMedium:
+	Inherits: ^Explosion
+	Warhead@Effect: CreateEffect
+		Explosions: medium_2
 
 UnitExplodeLarge:
 	Inherits: ^Explosion
 	Warhead@Effect: CreateEffect
 		Explosions: large
+
+UnitExplodeLargeDamaging:
+	Inherits: UnitExplodeLarge
+	Warhead@Effect: CreateEffect
+		Explosions: large
 	Warhead@Damage: SpreadDamage
 		Damage: 8000
+	Warhead@Incendiary: TreeDamage
+		Damage: 8000
+
+UnitExplodeHuge:
+	Inherits: ^Explosion
+	Warhead@Effect: CreateEffect
+		Explosions: large_3
 
 PropExplode:
 	Inherits: ^Explosion
 	Warhead@Damage: SpreadDamage
-		Damage: 4000
+		Damage: 0
 	Warhead@Effect: CreateEffect
 		Explosions: medium
 
@@ -128,7 +133,7 @@ BlasterExplosion:
 			Concrete: 50
 	Warhead@Effect: CreateEffect
 		Image: explosion
-		Explosions: medium, medium_2
+		Explosions: medium
 		ImpactSounds: explosion02.ogg, explosion03.ogg
 		ValidTargets: Ground, Water, Ship, Air, Structure
 
