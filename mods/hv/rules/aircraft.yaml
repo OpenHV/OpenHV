@@ -593,6 +593,10 @@ CHOPPER:
 	-GrantRandomCondition@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+		RequiresCondition: !airborne
 
 CHOPPER.Husk:
 	Inherits: ^PlaneHusk
@@ -602,7 +606,7 @@ CHOPPER.Husk:
 		TurnSpeed: 24
 		Speed: 86
 	FallsToEarth:
-		Explosion: UnitExplodeLarge
+		Explosion: UnitExplodeLargeDamaging
 		Velocity: 43
 		MaximumSpinSpeed: 64
 	LeavesTrails:
@@ -611,6 +615,23 @@ CHOPPER.Husk:
 		Image: smoke
 		SpawnAtLastPosition: false
 		Type: CenterPosition
+	LeavesTrails@ExplosionMain:
+		Offsets: 250,0,0
+		MovingInterval: 5
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@ExplosionSides:
+		Offsets: 550,0,0, 250,300,0, -50,0,0, 250,-300,0
+		MovingInterval: 6
+		Image: explosion
+		Sequences: small_2
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	AmbientSound:
+		SoundFiles: flame_explode_magnuswaker.ogg
+		Interval: 8
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
@@ -742,6 +763,10 @@ DROPSHIP:
 	-FireWarheadsOnDeath@SpawnPilot:
 	WithAircraftLandingEffect:
 		Image: landing
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
+		RequiresCondition: !airborne
 
 DROPSHIP.Husk:
 	Inherits: ^PlaneHusk
@@ -751,14 +776,31 @@ DROPSHIP.Husk:
 		TurnSpeed: 24
 		Speed: 86
 	FallsToEarth:
-		Explosion: UnitExplodeLarge
+		Explosion: UnitExplodeLargeDamaging
 		Velocity: 43
 	LeavesTrails:
-		Offsets: -853,0,171
+		Offsets: -250,0,171
 		MovingInterval: 2
 		Image: smoke
 		SpawnAtLastPosition: false
 		Type: CenterPosition
+	LeavesTrails@ExplosionMain:
+		Offsets: 250,0,0
+		MovingInterval: 5
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@ExplosionSides:
+		Offsets: 550,0,0, 250,300,0, -50,0,0, 250,-300,0
+		MovingInterval: 6
+		Image: explosion
+		Sequences: small_2
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	AmbientSound:
+		SoundFiles: flame_explode_magnuswaker.ogg
+		Interval: 8
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
@@ -941,6 +983,9 @@ BOMBER:
 		FacingTolerance: 512
 	Armament:
 		Weapon: Bomb
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 
 CARGOSHIP:
 	Inherits: ^CargoPlane
@@ -1096,15 +1141,29 @@ MOTHERSHIP.Husk:
 		Image: smoke
 		SpawnAtLastPosition: false
 		Type: CenterPosition
-	LeavesTrails@Explosion:
-		Offsets: 0,0,171
-		MovingInterval: 10
+	LeavesTrails@ExplosionMain:
+		Offsets: 500,0,0
+		MovingInterval: 5
 		Image: explosion
 		Sequences: medium_3
 		SpawnAtLastPosition: false
 		Type: CenterPosition
+	LeavesTrails@ExplosionSides:
+		Offsets: 1100,0,0, 500,600,0, -100,0,0, 500,-600,0
+		MovingInterval: 6
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@ExplosionDiagonals:
+		Offsets: 800,300,0, 800,-300,0, 200,300,0, 200,-300,0
+		MovingInterval: 4
+		Image: explosion
+		Sequences: small_2
+		SpawnAtLastPosition: false
+		Type: CenterPosition
 	AmbientSound:
-		SoundFiles: explosion02.ogg, explosion03.ogg
+		SoundFiles: flame_explode_magnuswaker.ogg
 		Interval: 5
 	RevealsShroud:
 		Range: 4c0
@@ -1239,15 +1298,29 @@ BATTLESHIP.Husk:
 		Image: smoke
 		SpawnAtLastPosition: false
 		Type: CenterPosition
-	LeavesTrails@Explosion:
-		Offsets: 0,0,171
-		MovingInterval: 10
+	LeavesTrails@ExplosionMain:
+		Offsets: 500,0,0
+		MovingInterval: 5
 		Image: explosion
 		Sequences: medium_3
 		SpawnAtLastPosition: false
 		Type: CenterPosition
+	LeavesTrails@ExplosionSides:
+		Offsets: 1100,0,0, 500,600,0, -100,0,0, 500,-600,0
+		MovingInterval: 6
+		Image: explosion
+		Sequences: medium_3
+		SpawnAtLastPosition: false
+		Type: CenterPosition
+	LeavesTrails@ExplosionDiagonals:
+		Offsets: 800,300,0, 800,-300,0, 200,300,0, 200,-300,0
+		MovingInterval: 4
+		Image: explosion
+		Sequences: small_2
+		SpawnAtLastPosition: false
+		Type: CenterPosition
 	AmbientSound:
-		SoundFiles: explosion02.ogg, explosion03.ogg
+		SoundFiles: flame_explode_magnuswaker.ogg
 		Interval: 5
 	RevealsShroud:
 		Range: 4c0
