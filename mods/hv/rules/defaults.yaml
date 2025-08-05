@@ -163,8 +163,8 @@
 	Voiced:
 		VoiceSet: GenericVoice3
 	FireWarheadsOnDeath:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech
@@ -228,6 +228,9 @@
 		Condition: concealed
 	Cloak@Foliage:
 		RequiresCondition: concealed
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 
 ^Scrap:
 	Interactable:
@@ -323,6 +326,9 @@
 		Weapon: PilotSpawn
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
@@ -356,6 +362,9 @@
 	Aircraft:
 		IdleBehavior: None
 		Repulsable: False
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 
 ^CargoPlane:
 	Inherits@Exists: ^ExistsInWorld
@@ -963,8 +972,8 @@
 	ProximityCaptor:
 		Types: Ship
 	FireWarheadsOnDeath:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 	Guard:
 		Voice: Guard
 	Guardable:

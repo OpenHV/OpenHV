@@ -189,6 +189,9 @@ APC:
 		Image: energyball
 		Sequence: teleport-large
 	-Passenger:
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeLarge
+		EmptyWeapon: UnitExplodeLarge
 
 ARTILLERY:
 	Inherits: ^TrackedVehicle
@@ -238,9 +241,8 @@ ARTILLERY:
 		FacingTolerance: 0
 	WithMuzzleOverlay:
 	FireWarheadsOnDeath:
-		Weapon: ArtilleryExplode
-		EmptyWeapon: UnitExplodeSmall
-		LoadedChance: 75
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 
 RADARTANK:
 	Inherits: ^TrackedVehicle
