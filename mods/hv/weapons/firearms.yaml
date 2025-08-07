@@ -2,7 +2,7 @@
 
 ^Tracers:
 	Projectile: InstantHitWithTracers
-		Blockable: true
+		Blockable: false
 		TracerAmount: 2
 		TracerSpeed: 1536
 		TracerSpawnInterval: 3
@@ -18,7 +18,7 @@
 
 ^BlueTracers:
 	Projectile: InstantHitWithTracers
-		Blockable: true
+		Blockable: false
 		TracerAmount: 2
 		TracerSpeed: 1536
 		TracerSpawnInterval: 3
@@ -40,7 +40,6 @@ LightMachineGun:
 	Report: machinegunburst01.ogg, machinegunburst02.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
-		Blockable: true
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000
@@ -103,6 +102,7 @@ BuggyChainGun:
 		ContrailLength: 3
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
+		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1100
@@ -240,6 +240,7 @@ BoatMachineGunGround:
 		ContrailLength: 3
 		ContrailStartWidth: 0c32
 		ContrailStartColor: F4AC00
+		Blockable: false
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Damage: 1000
@@ -344,7 +345,7 @@ DronePulseGun:
 	Report: pulsegun_silverillusionist.ogg
 	Projectile: InstantHitWithTracers
 		Inaccuracy: 0c256
-		Blockable: true
+		Blockable: false
 	Warhead@Damage: SpreadDamage
 		ValidTargets: Air
 		Spread: 24
