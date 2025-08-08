@@ -187,6 +187,10 @@ EditorWorld:
 					Label: label-clear-map-generator-choice-tile-black-sand
 					Settings:
 						Tile: 1680
+	TilingPathTool:
+		DefaultStart: Cliff Grass
+		DefaultInner: Cliff Grass
+		DefaultEnd: Cliff Grass
 
 EditorPlayer:
 	Inherits: ^BasePlayer
