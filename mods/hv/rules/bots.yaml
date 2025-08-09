@@ -180,7 +180,7 @@ Player:
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician, broker
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone
+		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2
 		MinimumCaptureDelay: 0
 		MaximumCaptureTargetOptions: 25
 		CheckCaptureTargetsForVisibility: False
