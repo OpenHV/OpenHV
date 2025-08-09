@@ -163,8 +163,8 @@
 	Voiced:
 		VoiceSet: GenericVoice3
 	FireWarheadsOnDeath:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 	SpawnScrapOnDeath:
 		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
 		TerrainTypes: Clear, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech
@@ -176,7 +176,7 @@
 		TextNotification: notification-enemy-units-detected
 	Passenger:
 		CargoType: Vehicle
-		Weight: 5
+		Weight: 4
 
 ^Pod:
 	Inherits: ^Vehicle
@@ -188,7 +188,7 @@
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: None
 	Passenger:
@@ -202,8 +202,9 @@
 		DeathSequencePalette: green
 		FallbackSequence: die
 	Crushable:
+		RequiresCondition: !shield
 		CrushClasses: Pods
-		WarnProbability: 15
+		WarnProbability: 50
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
@@ -227,6 +228,9 @@
 		Condition: concealed
 	Cloak@Foliage:
 		RequiresCondition: concealed
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 
 ^Scrap:
 	Interactable:
@@ -277,12 +281,21 @@
 	Selectable:
 		Bounds: 1024, 1024
 	Aircraft:
+		CruisingCondition: cruising
 		AirborneCondition: airborne
-		CruiseAltitude: 2c0
+		CruiseAltitude: 2600
 		InitialFacing: 768
 		Voice: Move
 		TakeOffOnResupply: true
 		LandAltitude: 0c64
+		CanHover: True
+		WaitDistanceFromResupplyBase: 4c0
+	Hovers@Cruising:
+		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+		FallTicks: 8
+		RiseTicks: 8
 	Targetable@Ground:
 		RequiresCondition: !airborne
 		TargetTypes: Ground, Vehicle
@@ -322,6 +335,27 @@
 		Weapon: PilotSpawn
 		EmptyWeapon: PilotSpawn
 		RequiresCondition: spawn-pilot && !dont-spawn-pilot
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
+
+^AirCreature:
+	Inherits: ^Plane
+	Aircraft:
+		CruiseAltitude: 2560
+	DeathSounds:
+	-AppearsOnRadar:
+	-Guard:
+	-Repairable:
+	-MustBeDestroyed:
+	-GrantRandomCondition@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
+	-Selectable:
+	Interactable:
+	-ProximityCaptor:
 
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
@@ -355,6 +389,30 @@
 	Aircraft:
 		IdleBehavior: None
 		Repulsable: False
+
+^BaseDrone:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 60
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+		AirborneCondition: airborne
+		CanHover: False
+		LandAltitude: 0c0
+	-MapEditorData:
 
 ^CargoPlane:
 	Inherits@Exists: ^ExistsInWorld
@@ -435,18 +493,10 @@
 	Tooltip:
 		GenericName: meta-helicopter-generic-name
 	Aircraft:
-		CanHover: true
-		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
 		VTOL: true
 		InitialFacing: 896
 		CanSlide: True
-	Hovers@Cruising:
-		RequiresCondition: cruising
-		BobDistance: -64
-		InitialHeight: 64
-		FallTicks: 8
-		RiseTicks: 8
 	BodyOrientation:
 
 ^1x1Shape:
@@ -519,7 +569,7 @@
 	Armor:
 		Type: Steel
 	Health:
-		HP: 40000
+		HP: 60000
 	Building:
 		Footprint: x
 	ActorPreviewPlaceBuildingPreview:
@@ -962,8 +1012,8 @@
 	ProximityCaptor:
 		Types: Ship
 	FireWarheadsOnDeath:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 	Guard:
 		Voice: Guard
 	Guardable:
@@ -1236,7 +1286,7 @@
 	Valued:
 		Cost: 300
 	Health:
-		HP: 75000
+		HP: 112500
 	Armor:
 		Type: Concrete
 	LineBuildNode:

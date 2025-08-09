@@ -68,8 +68,8 @@ Player:
 		OnHoldTextNotification: notification-on-hold
 		CancelledAudio: Cancelled
 		CancelledTextNotification: notification-cancelled
-		SpeedUp: false
-		BuildTimeSpeedReduction: 100
+		SpeedUp: true
+		BuildTimeSpeedReduction: 100, 75, 50, 25
 		BuildDurationModifier: 70
 		InfiniteBuildLimit: 10
 	ClassicProductionQueue@Defense:

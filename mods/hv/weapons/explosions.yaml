@@ -8,32 +8,25 @@ BuildingExplode:
 ^Explosion:
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
 		Spread: 426
-		Damage: 5000
-		Versus:
-			None: 90
-			Steel: 75
+		Damage: 0
 	Warhead@Incendiary: TreeDamage
 		Spread: 426
-		Damage: 5000
+		Damage: 0
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: explosion02.ogg, explosion03.ogg
 
-ArtilleryExplode:
-	Inherits: ^Explosion
-	Warhead@Damage: SpreadDamage
-		Damage: 15000
-	Warhead@Effect: CreateEffect
-		Explosions: medium
-		ImpactSounds: explosion04.ogg, explosion05.ogg
-
 UnitExplodeSmall:
 	Inherits: ^Explosion
-	Warhead@Damage: SpreadDamage
-		Damage: 4000
+	Warhead@Effect: CreateEffect
+		Explosions: small_2
+
+UnitExplodeMedium:
+	Inherits: ^Explosion
+	Warhead@Effect: CreateEffect
+		Explosions: medium
 
 UnitExplodeLarge:
 	Inherits: ^Explosion
@@ -42,10 +35,11 @@ UnitExplodeLarge:
 	Warhead@Damage: SpreadDamage
 		Damage: 8000
 
+
 PropExplode:
 	Inherits: ^Explosion
 	Warhead@Damage: SpreadDamage
-		Damage: 4000
+		Damage: 0
 	Warhead@Effect: CreateEffect
 		Explosions: medium
 
@@ -146,28 +140,28 @@ ExplosiveCharge:
 	Warhead@Damage: TargetDamage
 		DamageTypes: Fire
 		Spread: 512
-		Damage: 10000
+		Damage: 7500
 		Versus:
-			None: 150
-			Steel: 320
+			None: 300
+			Steel: 425
 			Light: 350
-			Heavy: 350
+			Heavy: 700
 			Wood: 350
-			Concrete: 350
+			Concrete: 700
 
 BlasterExplosion:
 	ValidTargets: Ground, Structure
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
-		Spread: 512
-		Damage: 7500
+		Spread: 256
+		Damage: 2500
 		Versus:
-			None: 125
-			Steel: 50
-			Light: 50
-			Heavy: 50
-			Wood: 100
-			Concrete: 50
+			None: 300
+			Steel: 425
+			Light: 350
+			Heavy: 700
+			Wood: 350
+			Concrete: 700
 	Warhead@Effect: CreateEffect
 		Image: explosion
 		Explosions: medium, medium_2
