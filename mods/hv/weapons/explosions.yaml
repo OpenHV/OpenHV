@@ -97,48 +97,6 @@ DropPodExplode:
 		ValidTargets: Ground, Air, Water, Lava, Swamp
 		ImpactSounds: explosion02.ogg, explosion03.ogg
 
-MortarExplode:
-	ValidTargets: Ground, Air, Water, Lava, Swamp
-	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
-		Spread: 512
-		Damage: 7500
-		Versus:
-			None: 100
-			Steel: 50
-			Light: 25
-			Heavy: 25
-			Wood: 50
-	Warhead@Incendiary: TreeDamage
-		Spread: 512
-		Damage: 7500
-		Percentage: 50
-	Warhead@Effect: CreateEffect
-		Explosions: small_2
-		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: explosion01.ogg
-
-FlameExplode:
-	ValidTargets: Ground, Air, Water, Lava, Swamp
-	Warhead@Damage: SpreadDamage
-		DamageTypes: Fire
-		Spread: 512
-		Damage: 7500
-		Versus:
-			None: 125
-			Steel: 50
-			Light: 5
-			Heavy: 5
-			Wood: 100
-	Warhead@Incendiary: TreeDamage
-		Spread: 512
-		Damage: 7500
-		Percentage: 50
-	Warhead@Effect: CreateEffect
-		Explosions: small_2
-		ValidTargets: Ground, Air, Water, Lava, Swamp
-		ImpactSounds: flame_explode_magnuswaker.ogg
-
 ExplosiveCharge:
 	ValidTargets: Ground, Structure
 	Range: 2c0
