@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Remove System .NET
         run: sudo apt-get remove -y dotnet*
@@ -69,7 +69,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install .NET 8
         uses: actions/setup-dotnet@v4
