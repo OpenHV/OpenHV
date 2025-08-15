@@ -238,6 +238,10 @@ Fonts:
 		Font: hv|Inconsolata-Bold.ttf
 		Size: 18
 		Ascender: 14
+	LargeBold:
+		Font: hv|Inconsolata-Bold.ttf
+		Size: 16
+		Ascender: 7
 	BigBold:
 		Font: hv|Inconsolata-Bold.ttf
 		Size: 24

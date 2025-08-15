@@ -40,42 +40,42 @@ Container@MAINMENU:
 							Width: 140
 							Height: 30
 							Text: label-singleplayer-title
-							Font: Bold
+							Font: LargeBold
 						Button@MULTIPLAYER_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
 							Text: label-multiplayer-title
-							Font: Bold
+							Font: LargeBold
 						Button@SETTINGS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
 							Text: button-settings-title
-							Font: Bold
+							Font: LargeBold
 						Button@EXTRAS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
 							Text: button-extras-title
-							Font: Bold
+							Font: LargeBold
 						Button@ENCYCLOPEDIA_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 220
 							Width: 140
 							Height: 30
 							Text: button-main-menu-encyclopedia
-							Font: Bold
+							Font: LargeBold
 						Button@QUIT_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 260
 							Width: 140
 							Height: 30
 							Text: button-quit
-							Font: Bold
+							Font: LargeBold
 				Background@SINGLEPLAYER_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
@@ -87,28 +87,28 @@ Container@MAINMENU:
 							Height: 30
 							Text: label-singleplayer-title
 							Align: Center
-							Font: Bold
+							Font: LargeBold
 						Button@SKIRMISH_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 60
 							Width: 140
 							Height: 30
 							Text: button-singleplayer-menu-skirmish
-							Font: Bold
+							Font: LargeBold
 						Button@MISSIONS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
 							Text: label-missions-title
-							Font: Bold
+							Font: LargeBold
 						Button@LOAD_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
 							Text: button-singleplayer-menu-load
-							Font: Bold
+							Font: LargeBold
 						Button@BACK_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Key: escape
@@ -116,7 +116,7 @@ Container@MAINMENU:
 							Width: 140
 							Height: 30
 							Text: button-back
-							Font: Bold
+							Font: LargeBold
 				Background@EXTRAS_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
@@ -128,42 +128,42 @@ Container@MAINMENU:
 							Height: 30
 							Text: button-extras-title
 							Align: Center
-							Font: Bold
+							Font: LargeBold
 						Button@REPLAYS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 60
 							Width: 140
 							Height: 30
 							Text: button-extras-menu-replays
-							Font: Bold
+							Font: LargeBold
 						Button@MUSIC_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
 							Text: label-music-title
-							Font: Bold
+							Font: LargeBold
 						Button@MAP_EDITOR_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
 							Text: label-map-editor-title
-							Font: Bold
+							Font: LargeBold
 						Button@ASSETBROWSER_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
 							Text: button-extras-menu-assetbrowser
-							Font: Bold
+							Font: LargeBold
 						Button@CREDITS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 220
 							Width: 140
 							Height: 30
 							Text: label-credits-title
-							Font: Bold
+							Font: LargeBold
 						Button@BACK_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Key: escape
@@ -171,7 +171,7 @@ Container@MAINMENU:
 							Width: 140
 							Height: 30
 							Text: button-back
-							Font: Bold
+							Font: LargeBold
 				Background@MAP_EDITOR_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
@@ -183,21 +183,21 @@ Container@MAINMENU:
 							Height: 30
 							Text: label-map-editor-title
 							Align: Center
-							Font: Bold
+							Font: LargeBold
 						Button@NEW_MAP_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 60
 							Width: 140
 							Height: 30
 							Text: button-map-editor-new-map
-							Font: Bold
+							Font: LargeBold
 						Button@LOAD_MAP_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
 							Text: button-map-editor-load-map
-							Font: Bold
+							Font: LargeBold
 						Button@BACK_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Key: escape
@@ -205,7 +205,7 @@ Container@MAINMENU:
 							Width: 140
 							Height: 30
 							Text: button-back
-							Font: Bold
+							Font: LargeBold
 		Container@PERFORMANCE_INFO:
 			Logic: PerfDebugLogic
 			Children:
