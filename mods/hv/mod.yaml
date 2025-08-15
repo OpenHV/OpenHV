@@ -217,31 +217,31 @@ Fonts:
 	Tiny:
 		Font: hv|Inconsolata-Regular.ttf
 		Size: 10
-		Ascender: 9
+		Ascender: 8
 	TinyBold:
 		Font: hv|Inconsolata-Bold.ttf
 		Size: 10
-		Ascender: 9
+		Ascender: 8
 	Small:
 		Font: hv|Inconsolata-Regular.ttf
 		Size: 12
-		Ascender: 10
+		Ascender: 9
 	Regular:
 		Font: hv|Inconsolata-Regular.ttf
-		Size: 13
-		Ascender: 10
+		Size: 14
+		Ascender: 11
 	Bold:
 		Font: hv|Inconsolata-Bold.ttf
-		Size: 16
-		Ascender: 7
+		Size: 14
+		Ascender: 11
 	MediumBold:
 		Font: hv|Inconsolata-Bold.ttf
-		Size: 20
-		Ascender: 10
+		Size: 18
+		Ascender: 14
 	BigBold:
 		Font: hv|Inconsolata-Bold.ttf
-		Size: 22
-		Ascender: 12
+		Size: 24
+		Ascender: 18
 	Title:
 		Font: hv|PressStart2P.ttf
 		Size: 20
