@@ -11,7 +11,7 @@ LIGHTBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi
+		Prerequisites: ~harbor.sc
 		BuildPaletteOrder: 10
 		Description: actor-lightboat.description
 	Encyclopedia:
@@ -22,18 +22,18 @@ LIGHTBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Light
 	Mobile:
 		Speed: 125
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 10c0
+		MinRange: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 120
 	Armament@Air:
@@ -60,7 +60,7 @@ PATROLBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc
+		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 10
 		Description: actor-patrolboat.description
 	Encyclopedia:
@@ -71,18 +71,18 @@ PATROLBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Light
 	Mobile:
 		Speed: 125
 		TurnSpeed: 60
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 10c0
+		MinRange: 5c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 120
 		Offset: 300,0,0
@@ -94,7 +94,6 @@ PATROLBOAT:
 		LocalOffset: 250,-25,50, 250,25,50
 	Armament@Ground:
 		Weapon: BoatMissileAntiGround
-		MuzzleSequence: muzzle
 		Recoil: 100
 		RecoilRecovery: 38
 		LocalOffset: 250,-25,50, 250,25,50
@@ -125,7 +124,7 @@ MERCBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -161,7 +160,7 @@ TORPEDOBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.yi, radar
+		Prerequisites: ~harbor.sc, radar
 		BuildPaletteOrder: 30
 		Description: actor-torpedoboat.description
 	Encyclopedia:
@@ -172,7 +171,7 @@ TORPEDOBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -205,7 +204,7 @@ SUBMARINE:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, radar
+		Prerequisites: ~harbor.yi, radar
 		BuildPaletteOrder: 30
 		Description: actor-submarine.description
 	Encyclopedia:
@@ -216,7 +215,7 @@ SUBMARINE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 45000
+		HP: 67500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -242,7 +241,7 @@ RAILGUNBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 4000
+		Cost: 5000
 	Tooltip:
 		Name: actor-railgunboat.name
 		GenericName: actor-railgunboat.generic-name
@@ -260,7 +259,7 @@ RAILGUNBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -287,7 +286,7 @@ LIGHTNINGBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 4000
+		Cost: 5000
 	Tooltip:
 		Name: actor-lightningboat.name
 		GenericName: actor-lightningboat.generic-name
@@ -305,7 +304,7 @@ LIGHTNINGBOAT:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 90000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -333,14 +332,14 @@ BOOMER:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 5000
+		Cost: 6250
 	Tooltip:
 		Name: actor-boomer.name
 		GenericName: actor-boomer.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, techcenter
+		Prerequisites: ~harbor.yi, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-boomer.description
 	Encyclopedia:
@@ -351,7 +350,7 @@ BOOMER:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -389,7 +388,7 @@ SLCM:
 	Tooltip:
 		Name: actor-slcm-name
 	Health:
-		HP: 5000
+		HP: 7500
 	Armor:
 		Type: Light
 	BallisticMissile:
@@ -402,7 +401,7 @@ SLCM:
 		HitAcceleration: 0
 		LaunchSounds: missile_julien-nicolas.ogg
 	LeavesTrails:
-		Image: smoke
+		Image: stealthtank-trail
 		MovingInterval: 2
 		Type: CenterPosition
 		SpawnAtLastPosition: false
@@ -417,7 +416,7 @@ CARRIER:
 	Buildable:
 		Queue: Ship
 		BuildPaletteOrder: 60
-		Prerequisites: ~harbor.yi, techcenter
+		Prerequisites: ~harbor.sc, techcenter
 		Description: actor-carrier.description
 	Encyclopedia:
 		Description: actor-carrier.encyclopedia
@@ -425,11 +424,11 @@ CARRIER:
 		Scale: 3
 		Category: Ships
 	Valued:
-		Cost: 5000
+		Cost: 6250
 	Tooltip:
 		Name: actor-carrier.name
 	Health:
-		HP: 80000
+		HP: 120000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -476,7 +475,7 @@ FERRY:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor
+		Prerequisites: ~harbor.yi
 		BuildPaletteOrder: 20
 		Description: actor-ferry.description
 	Encyclopedia:
@@ -487,13 +486,13 @@ FERRY:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 50000
+		HP: 74250
 	Armor:
 		Type: Heavy
 	Mobile:
 		Locomotor: ferry
-		Speed: 80
-		TurnSpeed: 50
+		Speed: 88
+		TurnSpeed: 55
 	RevealsShroud:
 		Range: 6c0
 		MinRange: 4c0
@@ -505,11 +504,27 @@ FERRY:
 	Cargo:
 		Types: Pod, Vehicle
 		MaxWeight: 10
-		AfterUnloadDelay: 40
+		AfterUnloadDelay: 0
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		Margin: 1, -1
 		RequiresSelection: true
+
+FERRY2:
+	Inherits: FERRY
+	Tooltip:
+		Name: actor-ferry2.name
+		GenericName: actor-ferry2.generic-name
+	Buildable:
+		Prerequisites: ~harbor.sc
+		Description: actor-ferry2.description
+	Encyclopedia:
+		Description: actor-ferry2.encyclopedia
+	Health:
+		HP: 90750
+	Mobile:
+		Speed: 72
+		TurnSpeed: 45
 
 MINESHIP:
 	Inherits: ^Ship
@@ -533,7 +548,7 @@ MINESHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 21000
+		HP: 31500
 	Armor:
 		Type: Light
 	Mobile:
