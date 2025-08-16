@@ -439,7 +439,7 @@ BLASTER:
 	Tooltip:
 		Name: actor-blaster.name
 	Health:
-		HP: 15000
+		HP: 20000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
