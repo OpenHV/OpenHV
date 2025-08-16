@@ -1063,11 +1063,11 @@ BUGGY:
 		TurnSpeed: 50
 		Speed: 140
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 7c0
+		MinRange: 3c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 3c0
 	Passenger:
 		CargoType: Vehicle
 		Weight: 2
@@ -1111,7 +1111,7 @@ BIKE:
 		TurnSpeed: 100
 		Speed: 170
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 		MinRange: 4c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
