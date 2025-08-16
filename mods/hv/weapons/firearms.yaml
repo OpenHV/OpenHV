@@ -108,10 +108,10 @@ BuggyChainGun:
 		Damage: 1100
 		Versus:
 			None: 270
-			Steel: 10
+			Steel: 8
 			Light: 30
 			Heavy: 10
-			Concrete: 5
+			Concrete: 4
 
 BikeChainGun:
 	Inherits: BuggyChainGun
@@ -123,10 +123,10 @@ BikeChainGun:
 		Damage: 1000
 		Versus:
 			None: 270
-			Steel: 10
+			Steel: 8
 			Light: 30
 			Heavy: 10
-			Concrete: 5
+			Concrete: 4
 
 HelicopterChainGunGround:
 	Inherits: ^AircraftChainGun
