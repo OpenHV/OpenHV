@@ -333,8 +333,6 @@
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
 	Inherits@Sprite: ^SpriteActor
-	Targetable:
-		TargetTypes: Air, Husk, NoAutoTarget
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
