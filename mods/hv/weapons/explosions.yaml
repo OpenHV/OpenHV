@@ -9,10 +9,8 @@ BuildingExplode:
 	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 426
-		Damage: 0
 	Warhead@Incendiary: TreeDamage
 		Spread: 426
-		Damage: 0
 	Warhead@Effect: CreateEffect
 		Explosions: small_2
 		ValidTargets: Ground, Air, Water, Lava, Swamp
@@ -49,8 +47,6 @@ UnitExplodeHuge:
 
 PropExplode:
 	Inherits: ^Explosion
-	Warhead@Damage: SpreadDamage
-		Damage: 0
 	Warhead@Effect: CreateEffect
 		Explosions: medium
 
