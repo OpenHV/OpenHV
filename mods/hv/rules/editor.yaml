@@ -188,9 +188,9 @@ EditorWorld:
 					Settings:
 						Tile: 1680
 	TilingPathTool:
-		DefaultStart: Cliff Grass
-		DefaultInner: Cliff Grass
-		DefaultEnd: Cliff Grass
+		DefaultStart: Cliff: Grass
+		DefaultInner: Cliff: Grass
+		DefaultEnd: Cliff: Grass
 
 EditorPlayer:
 	Inherits: ^BasePlayer
