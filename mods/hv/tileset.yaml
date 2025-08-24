@@ -14088,7 +14088,7 @@ MultiBrushCollections:
 				Start: Cliff: Grass.D
 				Inner: Cliff: Grass
 				End: Grass.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1310:
 			Template: 1310
 			Segment:
@@ -14224,14 +14224,14 @@ MultiBrushCollections:
 				Start: Crater.D
 				Inner: Cliff: Crater
 				End: Cliff: Crater.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1317:
 			Template: 1317
 			Segment:
 				Start: Cliff: Crater.D
 				Inner: Cliff: Crater
 				End: Crater.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1318:
 			Template: 1318
 			Segment:
@@ -14374,7 +14374,7 @@ MultiBrushCollections:
 				Start: Cliff: Red Snow.D
 				Inner: Cliff: Red Snow
 				End: Red Snow.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1326:
 			Template: 1326
 			Segment:
@@ -14517,7 +14517,7 @@ MultiBrushCollections:
 				Start: Cliff: Sand.D
 				Inner: Cliff: Sand
 				End: Sand.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1334:
 			Template: 1334
 			Segment:
@@ -14660,7 +14660,7 @@ MultiBrushCollections:
 				Start: Cliff: Snow.D
 				Inner: Cliff: Snow
 				End: Snow.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1342:
 			Template: 1342
 			Segment:
@@ -14803,7 +14803,7 @@ MultiBrushCollections:
 				Start: Cliff: Stone.D
 				Inner: Cliff: Stone
 				End: Stone.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
@@ -17080,7 +17080,7 @@ MultiBrushCollections:
 				Start: Ice Water.D
 				Inner: Ice Water
 				End: Ice Water.D
-				Points: 1,0, 1,1		
+				Points: 1,0, 1,1
 		MultiBrush@267:
 			Template: 267
 			Segment:
@@ -17167,7 +17167,7 @@ MultiBrushCollections:
 				Start: Ice Cracked Water.D
 				Inner: Ice Cracked Water
 				End: Ice Cracked Water.D
-				Points: 1,0, 1,1		
+				Points: 1,0, 1,1
 		MultiBrush@281:
 			Template: 281
 			Segment:
@@ -17176,91 +17176,91 @@ MultiBrushCollections:
 				End: Ice Cracked Water.L
 				Points: 1,0, 1,1, 0,1
 
-	# Ice Cracked Alt Water
+	# Ice Floes Water
 
 		MultiBrush@282:
 			Template: 282
 			Segment:
-				Start: Ice Cracked Alt Water.U
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.R
+				Start: Ice Floes Water.U
+				Inner: Ice Floes Water
+				End: Ice Floes Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@283:
 			Template: 283
 			Segment:
-				Start: Ice Cracked Alt Water.U
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.U
+				Start: Ice Floes Water.U
+				Inner: Ice Floes Water
+				End: Ice Floes Water.U
 				Points: 0,1, 0,0
 		MultiBrush@284:
 			Template: 284
 			Segment:
-				Start: Ice Cracked Alt Water.L
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.U
+				Start: Ice Floes Water.L
+				Inner: Ice Floes Water
+				End: Ice Floes Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@285:
 			Template: 285
 			Segment:
-				Start: Ice Cracked Alt Water.R
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.U
+				Start: Ice Floes Water.R
+				Inner: Ice Floes Water
+				End: Ice Floes Water.U
 				Points: 0,0
 		MultiBrush@286:
 			Template: 286
 			Segment:
-				Start: Ice Cracked Alt Water.U
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.L
+				Start: Ice Floes Water.U
+				Inner: Ice Floes Water
+				End: Ice Floes Water.L
 				Points: 0,1
 		MultiBrush@287:
 			Template: 287
 			Segment:
-				Start: Ice Cracked Alt Water.R
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.R
+				Start: Ice Floes Water.R
+				Inner: Ice Floes Water
+				End: Ice Floes Water.R
 				Points: 0,0, 1,0
 		MultiBrush@289:
 			Template: 289
 			Segment:
-				Start: Ice Cracked Alt Water.L
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.L
+				Start: Ice Floes Water.L
+				Inner: Ice Floes Water
+				End: Ice Floes Water.L
 				Points: 1,1, 0,1
 		MultiBrush@290:
 			Template: 290
 			Segment:
-				Start: Ice Cracked Alt Water.D
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.R
+				Start: Ice Floes Water.D
+				Inner: Ice Floes Water
+				End: Ice Floes Water.R
 				Points: 1,0
 		MultiBrush@291:
 			Template: 291
 			Segment:
-				Start: Ice Cracked Alt Water.L
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.D
+				Start: Ice Floes Water.L
+				Inner: Ice Floes Water
+				End: Ice Floes Water.D
 				Points: 1,1
 		MultiBrush@292:
 			Template: 292
 			Segment:
-				Start: Ice Cracked Alt Water.R
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.D
+				Start: Ice Floes Water.R
+				Inner: Ice Floes Water
+				End: Ice Floes Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@293:
 			Template: 293
 			Segment:
-				Start: Ice Cracked Alt Water.D
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.D
-				Points: 1,0, 1,1		
+				Start: Ice Floes Water.D
+				Inner: Ice Floes Water
+				End: Ice Floes Water.D
+				Points: 1,0, 1,1
 		MultiBrush@294:
 			Template: 294
 			Segment:
-				Start: Ice Cracked Alt Water.D
-				Inner: Ice Cracked Alt Water
-				End: Ice Cracked Alt Water.L
+				Start: Ice Floes Water.D
+				Inner: Ice Floes Water
+				End: Ice Floes Water.L
 				Points: 1,0, 1,1, 0,1
 
 	# Lava Flow
@@ -19116,7 +19116,7 @@ MultiBrushCollections:
 				Start: Cliff: Tech.D
 				Inner: Cliff: Tech
 				End: Tech.D
-				Points: 1,0, 1,1	
+				Points: 1,0, 1,1
 		MultiBrush@1505:
 			Template: 1505
 			Segment:
@@ -22017,290 +22017,290 @@ MultiBrushCollections:
 				End: Road: Swamp.D
 				Points: 1,1
 
-	# Tech: Misc
+	# Tech: Rails
 
 		MultiBrush@1182:
 			Template: 1182
 			Segment:
-				Start: Tech: Misc.R
-				Inner: Tech: Misc
-				End: Tech: Misc.R
+				Start: Tech: Rails.R
+				Inner: Tech: Rails
+				End: Tech: Rails.R
 				Points: 0,1, 1,1
 		MultiBrush@1182reverse:
 			Template: 1182
 			Segment:
-				Start: Tech: Misc.L
-				Inner: Tech: Misc
-				End: Tech: Misc.L
+				Start: Tech: Rails.L
+				Inner: Tech: Rails
+				End: Tech: Rails.L
 				Points: 1,0, 0,0
 		MultiBrush@1183:
 			Template: 1183
 			Segment:
-				Start: Tech: Misc.U
-				Inner: Tech: Misc
-				End: Tech: Misc.R
+				Start: Tech: Rails.U
+				Inner: Tech: Rails
+				End: Tech: Rails.R
 				Points: 1,1
 		MultiBrush@1183reverse:
 			Template: 1183
 			Segment:
-				Start: Tech: Misc.L
-				Inner: Tech: Misc
-				End: Tech: Misc.D
+				Start: Tech: Rails.L
+				Inner: Tech: Rails
+				End: Tech: Rails.D
 				Points: 1,0, 0,0, 0,1
 		MultiBrush@1184:
 			Template: 1184
 			Segment:
-				Start: Tech: Misc.L
-				Inner: Tech: Misc
-				End: Tech: Misc.U
+				Start: Tech: Rails.L
+				Inner: Tech: Rails
+				End: Tech: Rails.U
 				Points: 1,0
 		MultiBrush@1184reverse:
 			Template: 1184
 			Segment:
-				Start: Tech: Misc.D
-				Inner: Tech: Misc
-				End: Tech: Misc.R
+				Start: Tech: Rails.D
+				Inner: Tech: Rails
+				End: Tech: Rails.R
 				Points: 0,0, 0,1, 1,1
 		MultiBrush@1187:
 			Template: 1187
 			Segment:
-				Start: Tech: Misc.D
-				Inner: Tech: Misc
-				End: Tech: Misc.D
+				Start: Tech: Rails.D
+				Inner: Tech: Rails
+				End: Tech: Rails.D
 				Points: 0,0, 0,1
 		MultiBrush@1187reverse:
 			Template: 1187
 			Segment:
-				Start: Tech: Misc.U
-				Inner: Tech: Misc
-				End: Tech: Misc.U
+				Start: Tech: Rails.U
+				Inner: Tech: Rails
+				End: Tech: Rails.U
 				Points: 1,1, 1,0
 		MultiBrush@1188:
 			Template: 1188
 			Segment:
-				Start: Tech: Misc.R
-				Inner: Tech: Misc
-				End: Tech: Misc.D
+				Start: Tech: Rails.R
+				Inner: Tech: Rails
+				End: Tech: Rails.D
 				Points: 0,1
 		MultiBrush@1188reverse:
 			Template: 1188
 			Segment:
-				Start: Tech: Misc.U
-				Inner: Tech: Misc
-				End: Tech: Misc.L
+				Start: Tech: Rails.U
+				Inner: Tech: Rails
+				End: Tech: Rails.L
 				Points: 1,1, 1,0, 0,0
 		MultiBrush@1189:
 			Template: 1189
 			Segment:
-				Start: Tech: Misc.D
-				Inner: Tech: Misc
-				End: Tech: Misc.L
+				Start: Tech: Rails.D
+				Inner: Tech: Rails
+				End: Tech: Rails.L
 				Points: 0,0
 		MultiBrush@1189reverse:
 			Template: 1189
 			Segment:
-				Start: Tech: Misc.R
-				Inner: Tech: Misc
-				End: Tech: Misc.U
+				Start: Tech: Rails.R
+				Inner: Tech: Rails
+				End: Tech: Rails.U
 				Points: 0,1, 1,1, 1,0
 		MultiBrush@1193:
 			Template: 1193
 			Segment:
-				Start: Tech: Misc.D
-				Inner: Tech: Misc
+				Start: Tech: Rails.D
+				Inner: Tech: Rails
 				End: Tech.D
 				Points: 0,0, 0,1
 		MultiBrush@1193reverse:
 			Template: 1193
 			Segment:
 				Start: Tech.U
-				Inner: Tech: Misc
-				End: Tech: Misc.U
+				Inner: Tech: Rails
+				End: Tech: Rails.U
 				Points: 1,1, 1,0
 		MultiBrush@1194:
 			Template: 1194
 			Segment:
-				Start: Tech: Misc.U
-				Inner: Tech: Misc
+				Start: Tech: Rails.U
+				Inner: Tech: Rails
 				End: Tech.U
 				Points: 1,1, 1,0
 		MultiBrush@1194reverse:
 			Template: 1194
 			Segment:
 				Start: Tech.D
-				Inner: Tech: Misc
-				End: Tech: Misc.D
+				Inner: Tech: Rails
+				End: Tech: Rails.D
 				Points: 0,0, 0,1
 		MultiBrush@1195:
 			Template: 1195
 			Segment:
-				Start: Tech: Misc.R
-				Inner: Tech: Misc
+				Start: Tech: Rails.R
+				Inner: Tech: Rails
 				End: Tech.R
 				Points: 0,1, 1,1
 		MultiBrush@1195reverse:
 			Template: 1195
 			Segment:
 				Start: Tech.L
-				Inner: Tech: Misc
-				End: Tech: Misc.L
+				Inner: Tech: Rails
+				End: Tech: Rails.L
 				Points: 1,0, 0,0
 		MultiBrush@1196:
 			Template: 1196
 			Segment:
-				Start: Tech: Misc.L
-				Inner: Tech: Misc
+				Start: Tech: Rails.L
+				Inner: Tech: Rails
 				End: Tech.L
 				Points: 1,0, 0,0
 		MultiBrush@1196reverse:
 			Template: 1196
 			Segment:
 				Start: Tech.R
-				Inner: Tech: Misc
-				End: Tech: Misc.R
+				Inner: Tech: Rails
+				End: Tech: Rails.R
 				Points: 0,1, 1,1
 
-	# Tech: Misc 2
+	# Tech: Stripes
 
 		MultiBrush@1521:
 			Template: 1521
 			Segment:
-				Start: Tech: Misc 2.R
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.R
+				Start: Tech: Stripes.R
+				Inner: Tech: Stripes
+				End: Tech: Stripes.R
 				Points: 0,1, 1,1
 		MultiBrush@1521reverse:
 			Template: 1521
 			Segment:
-				Start: Tech: Misc 2.L
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.L
+				Start: Tech: Stripes.L
+				Inner: Tech: Stripes
+				End: Tech: Stripes.L
 				Points: 1,0, 0,0
 		MultiBrush@1522:
 			Template: 1522
 			Segment:
-				Start: Tech: Misc 2.U
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.R
+				Start: Tech: Stripes.U
+				Inner: Tech: Stripes
+				End: Tech: Stripes.R
 				Points: 1,1
 		MultiBrush@1522reverse:
 			Template: 1522
 			Segment:
-				Start: Tech: Misc 2.L
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.D
+				Start: Tech: Stripes.L
+				Inner: Tech: Stripes
+				End: Tech: Stripes.D
 				Points: 1,0, 0,0, 0,1
 		MultiBrush@1523:
 			Template: 1523
 			Segment:
-				Start: Tech: Misc 2.L
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.U
+				Start: Tech: Stripes.L
+				Inner: Tech: Stripes
+				End: Tech: Stripes.U
 				Points: 1,0
 		MultiBrush@1523reverse:
 			Template: 1523
 			Segment:
-				Start: Tech: Misc 2.D
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.R
+				Start: Tech: Stripes.D
+				Inner: Tech: Stripes
+				End: Tech: Stripes.R
 				Points: 0,0, 0,1, 1,1
 		MultiBrush@1526:
 			Template: 1526
 			Segment:
-				Start: Tech: Misc 2.D
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.D
+				Start: Tech: Stripes.D
+				Inner: Tech: Stripes
+				End: Tech: Stripes.D
 				Points: 0,0, 0,1
 		MultiBrush@1526reverse:
 			Template: 1526
 			Segment:
-				Start: Tech: Misc 2.U
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.U
+				Start: Tech: Stripes.U
+				Inner: Tech: Stripes
+				End: Tech: Stripes.U
 				Points: 1,1, 1,0
 		MultiBrush@1527:
 			Template: 1527
 			Segment:
-				Start: Tech: Misc 2.R
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.D
+				Start: Tech: Stripes.R
+				Inner: Tech: Stripes
+				End: Tech: Stripes.D
 				Points: 0,1
 		MultiBrush@1527reverse:
 			Template: 1527
 			Segment:
-				Start: Tech: Misc 2.U
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.L
+				Start: Tech: Stripes.U
+				Inner: Tech: Stripes
+				End: Tech: Stripes.L
 				Points: 1,1, 1,0, 0,0
 		MultiBrush@1528:
 			Template: 1528
 			Segment:
-				Start: Tech: Misc 2.D
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.L
+				Start: Tech: Stripes.D
+				Inner: Tech: Stripes
+				End: Tech: Stripes.L
 				Points: 0,0
 		MultiBrush@1528reverse:
 			Template: 1528
 			Segment:
-				Start: Tech: Misc 2.R
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.U
+				Start: Tech: Stripes.R
+				Inner: Tech: Stripes
+				End: Tech: Stripes.U
 				Points: 0,1, 1,1, 1,0
 		MultiBrush@1532:
 			Template: 1532
 			Segment:
-				Start: Tech: Misc 2.D
-				Inner: Tech: Misc 2
+				Start: Tech: Stripes.D
+				Inner: Tech: Stripes
 				End: Tech.D
 				Points: 0,0, 0,1
 		MultiBrush@1532reverse:
 			Template: 1532
 			Segment:
 				Start: Tech.U
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.U
+				Inner: Tech: Stripes
+				End: Tech: Stripes.U
 				Points: 1,1, 1,0
 		MultiBrush@1533:
 			Template: 1533
 			Segment:
-				Start: Tech: Misc 2.U
-				Inner: Tech: Misc 2
+				Start: Tech: Stripes.U
+				Inner: Tech: Stripes
 				End: Tech.U
 				Points: 1,1, 1,0
 		MultiBrush@1533reverse:
 			Template: 1533
 			Segment:
 				Start: Tech.D
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.D
+				Inner: Tech: Stripes
+				End: Tech: Stripes.D
 				Points: 0,0, 0,1
 		MultiBrush@1534:
 			Template: 1534
 			Segment:
-				Start: Tech: Misc 2.R
-				Inner: Tech: Misc 2
+				Start: Tech: Stripes.R
+				Inner: Tech: Stripes
 				End: Tech.R
 				Points: 0,1, 1,1
 		MultiBrush@1534reverse:
 			Template: 1534
 			Segment:
 				Start: Tech.L
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.L
+				Inner: Tech: Stripes
+				End: Tech: Stripes.L
 				Points: 1,0, 0,0
 		MultiBrush@1535:
 			Template: 1535
 			Segment:
-				Start: Tech: Misc 2.L
-				Inner: Tech: Misc 2
+				Start: Tech: Stripes.L
+				Inner: Tech: Stripes
 				End: Tech.L
 				Points: 1,0, 0,0
 		MultiBrush@1535reverse:
 			Template: 1535
 			Segment:
 				Start: Tech.R
-				Inner: Tech: Misc 2
-				End: Tech: Misc 2.R
+				Inner: Tech: Stripes
+				End: Tech: Stripes.R
 				Points: 0,1, 1,1
 
 	# Dirt Tracks
