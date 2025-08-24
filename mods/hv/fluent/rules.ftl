@@ -23,22 +23,43 @@ faction-yuruki =
     Their colonial defense forces helped pave the way for
     an aggressive expansion throughout the solar system.
 
-    Faction Variations:
-        - Uses fighter jets as air units
+    Strategy:
+        - Focuses on stealth and specialized combat units
+        - Transport and aerial scout units are faster but
+          less resistant
 
-    Special Units:
-        - Shocker Pod
-        - Blaster Pod
-        - Sniper Pod
-        - Gatling Bike
-        - Hacker Tank
-        - Lightning Tank
-        - Stealth Tank
-        - Battleship
+    Specific Combat Units:
 
-    Superweapon:
+        Pods:
+        - Sniper (cloaked anti-pod)
+        - Shocker (anti-vehicle, anti-building and anti-air)
+        - Bomber (suicidal anti-ground)
+        - Jetfoiler (floating anti-vehicle)
+
+        Vehicles:
+        - Lightning Tank (anti-vehicle and anti-building)
+        - Mobile AA Tank (anti-air)
+        - Gatling Bike (anti-pod)
+        - Countermeasure Tank (specialist)
+        - Stealth Tank (cloaked anti-ground)
+
+        Aircraft:
+        - Gun Ship (anti-ground and anti-air)
+        - Speeder (anti-air)
+        - Athmospheric Bomber (cloaked anti-ground)
+
+        Navy:
+        - Patrol Boat (anti-ground and anti-air)
+        - Submarine (underwater anti-navy)
+        - Lightning Boat (anti-ground)
+        - Missile Submarine (underwater anti-ground)
+
+    Superunit:
+        - Battleship (anti-ground)
+
+    Superweapons:
         - Air Strike
-        - Field Generator
+        - Force Field Generator
         - Orbital Railgun Strike
 
 faction-synapol =
@@ -48,21 +69,41 @@ faction-synapol =
     everything from common household appliances to armaments.
     Their security department became a large paramilitary force.
 
-    Faction Variations:
-        - Uses helicopters as air units
-        - Uses submarines as advanced naval units
+    Strategy:
+        - Focuses on brute force and flexible combat units
+        - Transport and aerial scout units are slower but
+          more resistant
 
-    Special Units:
-        - Rocketeer Pod
-        - Flamer Pod
-        - Mortar Pod
-        - Ramp Buggy
-        - Countermeasure Tank
-        - Railgun Tank
-        - Missile Tank
-        - Mothership
+    Specific Combat Units:
 
-    Superweapon:
+        Pods:
+        - Mortar Pod (anti-ground)
+        - Rocketeer Pod (anti-vehicle, anti-building and anti-air)
+        - Flamer Pod (anti-ground)
+        - Jetpacker Pod (floating anti-pod)
+
+        Vehicles:
+        - Missile Tank (anti-vehicle, anti-building and anti-air)
+        - Artillery Tank (anti-ground)
+        - Ramp Buggy (anti-pod)
+        - Hacker Tank (specialist)
+        - Railgun Tank (anti-ground)
+
+        Aircraft:
+        - Assault Helicopter (anti-ground and anti-air)
+        - Turtle (anti-air)
+        - Banshee (anti-ground)
+
+        Navy:
+        - Light Boat (anti-ground and anti-air)
+        - Torpedo Boat (anti-navy)
+        - Laser Boat (anti-ground)
+        - Drone Ship (anti-ground)
+
+    Superunit:
+        - Mothership (anti-ground and anti-air)
+
+    Superweapons:
         - Drop Pods
         - Grand Howitzer
         - Thermonuclear Bomb
@@ -183,11 +224,11 @@ actor-jet2 =
      Availability: Yuruki
 
 actor-copter =
-   .name = Attack Helicopter
+   .name = Assault Helicopter
    .description = Small Helicopter Gunship
       Strong vs Pods, Buildings and Aircraft
       Weak vs Tanks
-   .encyclopedia = The attack helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
+   .encyclopedia = The assault helicopter is a small helicopter, armed with a turret heavy machine gun. It's a versatile unit, often used to harass the opponents' mining towers and outposts.
 
      {actor-copter.description}
 
@@ -207,7 +248,7 @@ actor-observer =
    .name = Observer
    .description = Reconnaissance air unit.
       Unarmed
-   .encyclopedia = An orb shaped helicopter with good maneuverability. It's not suited for combat, but for reconnaissance missions.
+   .encyclopedia = An orb shaped helicopter with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      {actor-observer.description}
 
@@ -238,10 +279,10 @@ actor-turtle =
 
 actor-chopper =
    .name = Transport Helicopter
-   .description = Vehicle Transport Helicopter.
+   .description = Transport Helicopter.
       Can load pods
       and lift one vehicle.
-   .encyclopedia = The chopper is a heavy transport aircraft that can load a group of pods. It can also lift one vehicle.
+   .encyclopedia = The chopper is a heavy transport aircraft that can load a group of pods or vehicles.
 
      {actor-chopper.description}
 
@@ -253,18 +294,18 @@ actor-balloon =
    .name = Scout Balloon
    .description = Reconnaissance air unit.
      Unarmed
-   .encyclopedia = A reconnaissance air unit. It's slower than Synapol's observer, but it grants more visibility range.
+   .encyclopedia = A reconnaissance air unit with scouting capabilities. It's not suited for combat, but for reconnaissance missions.
 
      Unarmed
 
      Availability: Yuruki
 
 actor-dropship =
-   .name = Heavy Transport Dropship
-   .description = Vehicle Transport Shuttle.
+   .name = Transport Dropship
+   .description = Transport Shuttle.
       Can load pods
       and lift one vehicle.
-   .encyclopedia = The dropship is a heavy transport aircraft, than can load up a group of pods. It can also lift one vehicle.
+   .encyclopedia = The dropship is a fast transport aircraft, than can load up a group of pods or vehicles.
 
      {actor-dropship.description}
 
@@ -697,6 +738,7 @@ actor-broker =
     Capable of remotely stealing money
     from bases and storages.
       Unarmed
+      Only 5 can be built.
    .name = Broker
    .encyclopedia = The broker pod is an advanced pod that can invest in the stock market for a constant stream of revenue. It can also tap into an opponent's base or storage and initiate forged wire transfers to remotely steal that enemy's cash.
 
@@ -706,15 +748,29 @@ actor-broker =
 
 actor-jetpacker =
    .description = Elite airborne vehicle.
-    Armed with heavy machine gun.
-      Strong vs Pods, Light Vehicles and Aircraft
-      Weak vs Tanks and Buildings
+    Armed with heavy missiles.
+      Strong vs Pods
+      Weak vs Vehicles, Navy and Buildings
+      Can't attack Aircraft
    .name = Jetpacker
-   .encyclopedia = The ultimate pod: the jetpacker. It was designed by an independent lab, allowing its universal availability. It can handle pods, light vehicles and aircraft well. The fact that it's an airborne pod makes it less vulnerable to other pods.
+   .encyclopedia = The ultimate Synapol pod: the jetpacker. It was designed to weaken Yuruki pod masses. The fact that it's an airborne pod makes it less vulnerable to other pods.
 
      {actor-jetpacker.description}
 
-     Availability: Universal
+     Availability: Synapol
+
+actor-jetfoiler =
+   .description = Elite airborne vehicle.
+    Armed with scatter gun.
+      Strong vs Vehicles, Navy
+      Weak vs Pods and Buildings
+      Can't attack Aircraft
+   .name = Jetfoiler
+   .encyclopedia = The ultimate Yuruki pod: the jetpacker. It was designed for quick maneuverability and hit-and-run tactics to weaken Synapol's vehicle and navy forces. The fact that it's an airborne pod makes it less vulnerable to other pods.
+
+     {actor-jetfoiler.description}
+
+     Availability: Yuruki
 
 actor-blaster =
    .description = Remote controlled mine.
@@ -783,7 +839,7 @@ actor-lightboat =
 
      {actor-lightboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-patrolboat =
    .name = Patrol boat
@@ -795,7 +851,7 @@ actor-patrolboat =
 
      {actor-patrolboat.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-mercboat =
    .name = Mercenary Boat
@@ -819,7 +875,7 @@ actor-torpedoboat =
 
      {actor-torpedoboat.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-submarine =
    .name = Submarine
@@ -831,7 +887,7 @@ actor-submarine =
 
      {actor-submarine.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-railgunboat =
    .name = Railgun Boat
@@ -864,7 +920,7 @@ actor-boomer =
 
      {actor-boomer.description}
 
-     Availability: Synapol
+     Availability: Yuruki
 
 actor-slcm-name = Submarine-launched cruise missile
 
@@ -876,11 +932,11 @@ actor-carrier =
 
      {actor-carrier.description}
 
-     Availability: Yuruki
+     Availability: Synapol
 
 actor-ferry =
-   .name = Ferry
-   .generic-name = Naval Transporter
+   .name = Light Naval transporter
+   .generic-name = Ferry
    .description = General-purpose naval transport.
     Can carry pods.
       Unarmed
@@ -888,7 +944,19 @@ actor-ferry =
 
      {actor-ferry.description}
 
-     Availability: Universal
+     Availability: Yuruki
+
+actor-ferry2 =
+   .name = Heavy Naval Transporter
+   .generic-name = Ferry
+   .description = General-purpose naval transport.
+    Can carry pods.
+      Unarmed
+   .encyclopedia = The ferry is a heavy naval transporter based on liquid leviation technology that only works on water. It is quite slow but very durable. It can land on shores to load or unload its cargo.
+
+     {actor-ferry2.description}
+
+     Availability: Synapol
 
 actor-mineship =
    .name = Naval Minelayer
@@ -937,12 +1005,20 @@ actor-aatank2 =
      Availability: Yuruki
 
 actor-apc =
-   .name = APC
+   .name = Light APC
    .description = Can transport pods.
       Has fireports for garrisoned units.
    .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
 
-     Availability: Universal
+     Availability: Yuruki
+
+actor-apc2 =
+   .name = Heavy APC
+   .description = Can transport pods.
+      Has fireports for garrisoned units.
+   .encyclopedia = The Armored Personal Carriers (APC) is a durable transport tank. It is used to carry pods, giving them better protection, while still being able to fire through firing ports. It was designed to conduct assault missions, when you don't have enough resources to produce tanks.
+
+     Availability: Synapol
 
 actor-artillery =
    .name = Artillery
@@ -1095,9 +1171,9 @@ actor-missiletank =
    .name = Missile Tank
    .generic-name = Tank
    .description = A tank which shoots missiles.
-      Strong vs Vehicles and Buildings
+      Strong vs Vehicles, Aircraft, Navy and Buildings
       Weak vs Pods
-   .encyclopedia = The missile tank is an agile tank, able to fire from a turret, while still moving decently fast. It is armed with a powerful missile launcher, extremely powerful against buildings. It is yet less versatile than the railgun tank, it is stronger against buildings.
+   .encyclopedia = The missile tank is slow but powerful, able to fire from a turret. It is armed with a powerful missile launcher, good against buildings, vehicles and air units.
 
      {actor-missiletank.description}
 
@@ -1168,7 +1244,7 @@ actor-mothership =
    .description = Launches aerial autonomous attack vessels.
       Only one can be built.
       Strong vs Everything
-   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with two powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
+   .encyclopedia = When the Yuruki colony on Mars started their battleship design program, the Synapol Corporations had to design themselves a massive air unit to counter the battleship. The mothership was their solution. It's a real floating city: it regroups a crew of 2,500 men, and has many different quarters, some being science labs, other armament testing... It is armed with four powerful plasma turreted canon that can target ground structures, and with a drone bay, containing five of them. When a drone is destroyed, another one is immediately reproduced.
 
      {actor-mothership.description}
 
