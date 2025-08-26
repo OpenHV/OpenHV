@@ -267,6 +267,31 @@ generator2:
 	icon:
 		Filename: bits/generator2-icon.png
 
+generator3:
+	Inherits: generator
+	Inherits@Flame: ^BuildingFlame2
+	Defaults:
+		Filename: generator3
+		Offset: 0, -8
+	idle:
+		Filename: bits/generator3.png
+		Length: 16
+		Tick: 60
+	shadow-overlay:
+		Filename: bits/generator3-shadow.png
+		ZOffset: 1768
+		Offset: 11, 11
+	damaged-idle:
+		Filename: bits/generator3.png
+		Start: 16
+	damaged-shadow-overlay:
+		Filename: bits/generator3-shadow.png
+		Start: 1
+		ZOffset: 1768
+		Offset: 11, 11
+	icon:
+		Filename: bits/generator3-icon.png
+
 radar:
 	Inherits@Flame: ^BuildingFlame
 	Defaults:

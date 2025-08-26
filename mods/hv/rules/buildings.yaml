@@ -335,7 +335,7 @@ GENERATOR:
 	RenderSprites:
 		Image: generator
 		FactionImages:
-			sc: generator2
+			sc: generator3
 			yi: generator
 
 RADAR:
