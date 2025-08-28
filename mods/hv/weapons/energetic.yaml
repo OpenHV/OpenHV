@@ -208,7 +208,7 @@ TankVoltageArc:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 4000
+		Damage: 4200
 		Versus:
 			None: 80
 			Steel: 75
