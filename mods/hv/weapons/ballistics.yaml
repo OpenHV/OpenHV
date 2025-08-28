@@ -504,7 +504,7 @@ BattleShipGun:
 		TrailInterval: 0
 		TrailDelay: 1
 	Warhead@Damage: SpreadDamage
-		Spread: 250
+		Spread: 318
 		Damage: 15000
 		Falloff: 100, 80, 60, 40, 20, 10, 5
 		Versus:
@@ -516,7 +516,7 @@ BattleShipGun:
 			Concrete: 50
 	Warhead@Incendiary: TreeDamage
 		Damage: 15000
-		Spread: 250
+		Spread: 318
 		Percentage: 40
 	Warhead@Smudge: LeaveSmudge
 		SmudgeType: Crater
