@@ -264,7 +264,7 @@ OUTPOST:
 	Health:
 		HP: 75000
 	Building:
-		Footprint: = x
+		Footprint: x x
 		Dimensions: 1,2
 	HitShape:
 		Type: Circle
@@ -1137,7 +1137,7 @@ ORESMELT:
 	Power:
 		Amount: -80
 	Building:
-		Footprint: = x
+		Footprint: x x
 		Dimensions: 1,2
 	RevealsShroud:
 		Range: 4c0
