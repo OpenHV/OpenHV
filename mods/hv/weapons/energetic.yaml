@@ -57,7 +57,7 @@ ElectronicCountermeasure:
 		AllowSnapping: true
 		Jammable: False
 		Arm: 0
-		RangeLimit: -1
+		RangeLimit: 1024c0
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 90
