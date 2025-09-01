@@ -15,7 +15,7 @@
 		CruiseAltitude: 128
 		AllowSnapping: true
 		Arm: 0
-		RangeLimit: -1
+		RangeLimit: 1024c0
 		Image: bullet6
 		TrailImage: smoke
 	Warhead@Smudge: LeaveSmudge
