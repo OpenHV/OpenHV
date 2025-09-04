@@ -26,7 +26,7 @@ jobs:
         run: sudo apt-get remove -y dotnet*
 
       - name: Install .NET 8
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
 
@@ -72,7 +72,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Install .NET 8
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
 
