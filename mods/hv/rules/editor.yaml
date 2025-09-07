@@ -114,77 +114,77 @@ EditorWorld:
 		Tilesets: PLANET
 		Settings:
 			MultiChoiceOption@Tile:
-				Label: label-clear-map-generator-option-tile
+				Label: clear-map-generator-option-tile
 				Choice@Crater:
-					Label: label-clear-map-generator-choice-tile-crater
+					Label: clear-map-generator-choice-tile-crater
 					Settings:
 						Tile: 5
 				Choice@Littoral:
-					Label: label-clear-map-generator-choice-tile-littoral
+					Label: clear-map-generator-choice-tile-littoral
 					Settings:
 						Tile: 33
 				Choice@Grass:
-					Label: label-clear-map-generator-choice-tile-grass
+					Label: clear-map-generator-choice-tile-grass
 					Settings:
 						Tile: 121
 				Choice@GrassPit:
-					Label: label-clear-map-generator-choice-tile-grass-pit
+					Label: clear-map-generator-choice-tile-grass-pit
 					Settings:
 						Tile: 138
 				Choice@Mountain:
-					Label: label-clear-map-generator-choice-tile-mountain
+					Label: clear-map-generator-choice-tile-mountain
 					Settings:
 						Tile: 195
 				Choice@Ice:
-					Label: label-clear-map-generator-choice-tile-ice
+					Label: clear-map-generator-choice-tile-ice
 					Settings:
 						Tile: 246
 				Choice@Lava:
-					Label: label-clear-map-generator-choice-tile-lava
+					Label: clear-map-generator-choice-tile-lava
 					Settings:
 						Tile: 323
 				Choice@Sand:
-					Label: label-clear-map-generator-choice-tile-sand
+					Label: clear-map-generator-choice-tile-sand
 					Settings:
 						Tile: 567
 				Choice@RedSnow:
-					Label: label-clear-map-generator-choice-tile-red-snow
+					Label: clear-map-generator-choice-tile-red-snow
 					Settings:
 						Tile: 635
 				Choice@Snow:
-					Label: label-clear-map-generator-choice-tile-snow
+					Label: clear-map-generator-choice-tile-snow
 					Settings:
 						Tile: 769
 				Choice@Stone:
-					Label: label-clear-map-generator-choice-tile-stone
+					Label: clear-map-generator-choice-tile-stone
 					Settings:
 						Tile: 982
 				Choice@Swamp:
-					Label: label-clear-map-generator-choice-tile-swamp
+					Label: clear-map-generator-choice-tile-swamp
 					Settings:
 						Tile: 1070
 				Choice@Tech:
-					Label: label-clear-map-generator-choice-tile-tech
+					Label: clear-map-generator-choice-tile-tech
 					Settings:
 						Tile: 1181
 				Choice@Pelagic:
-					Label: label-clear-map-generator-choice-tile-pelagic
+					Label: clear-map-generator-choice-tile-pelagic
 					Settings:
 						Tile: 1240
 				Choice@TreeGrass:
-					Label: label-clear-map-generator-choice-tile-tree-grass
+					Label: clear-map-generator-choice-tile-tree-grass
 					Settings:
 						Tile: 1276
 				Choice@TreeSnow:
-					Label: label-clear-map-generator-choice-tile-tree-snow
+					Label: clear-map-generator-choice-tile-tree-snow
 					Settings:
 						Tile: 1292
 				Choice@Dirt:
-					Label: label-clear-map-generator-choice-tile-dirt
+					Label: clear-map-generator-choice-tile-dirt
 					Settings:
 						Tile: 1567
 				Choice@BlackSand:
-					Label: label-clear-map-generator-choice-tile-black-sand
+					Label: clear-map-generator-choice-tile-black-sand
 					Settings:
 						Tile: 1680
 	TilingPathTool:
