@@ -159,6 +159,18 @@ actor-gunship =
 
      Availability: Yuruki
 
+actor-gunship3 =
+   .description = Attack Bomber
+      Strong vs Buildings
+      Weak vs Tanks and Pods
+      Can't target Aircraft
+   .name = Bomber
+   .encyclopedia = The bomber is an air-to-ground plane, armed with a plasma cannon that can destroy buildings easily. It is slower but more durable than the gunship.
+
+     {actor-gunship3.description}
+
+     Availability: Yuruki
+
 actor-jet =
    .description = Super Fast Interceptor
       Strong vs Aircraft

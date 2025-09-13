@@ -44,6 +44,13 @@ gunship2:
 	icon:
 		Filename: gunship2-icon.png
 
+gunship3:
+	idle:
+		Filename: bits/gunship3.png
+		Facings: 8
+	icon:
+		Filename: gunship3-icon.png
+
 jet:
 	idle:
 		Filename: bits/jet.png

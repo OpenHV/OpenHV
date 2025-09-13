@@ -130,6 +130,66 @@ GUNSHIP2:
 		TrailLength: 10
 		ZOffset: -64
 
+GUNSHIP3:
+	Inherits: ^Helicopter
+	Inherits@Smoke: ^SmokeEmitter
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: actor-gunship3.name
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 55
+		Prerequisites: ~disabled
+		Description: actor-gunship3.description
+	Encyclopedia:
+		Description: actor-gunship3.encyclopedia
+		Order: 10
+		Scale: 3
+		Category: Aircraft
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	RevealsShroud:
+		Range: 11c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 112
+	Voiced:
+		VoiceSet: SpeederVoice
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: AttackAnything
+	AutoTargetPriority:
+		InvalidTargets: Structure
+	AttackFrontal:
+		RequiresCondition: airborne
+		FacingTolerance: 8
+	Selectable:
+		Bounds: 1228, 1228	
+	Armament:
+		Weapon: Plasma
+		LocalOffset: 750,-400,0, 750,400,0
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 8
+		AmmoCondition: ammo
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		Margin: 4, 3
+		RequiresSelection: true
+		PipCount: 8
+	ReloadAmmoPool:
+		Delay: 100
+		Count: 1
+
 JET:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetAirAssaultMove
