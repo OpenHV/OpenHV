@@ -1008,6 +1008,8 @@ Background@AUTOTILER_TOOL_PANEL:
 			Height: 25
 			Text: button-auto-tile.label
 			TooltipText: button-auto-tile.tooltip
+			TooltipTemplate: BUTTON_TOOLTIP
+			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
 
 ScrollPanel@MAP_GENERATOR_TOOL_PANEL:
