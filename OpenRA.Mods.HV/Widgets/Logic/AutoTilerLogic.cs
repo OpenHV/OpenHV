@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
@@ -25,9 +26,14 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		public AutoTilerLogic(Widget widget, World world, ModData modData, WorldRenderer worldRenderer, Dictionary<string, MiniYaml> logicArgs)
 		{
 			var editorActionManager = world.WorldActor.Trait<EditorActionManager>();
+			var editor = widget.Parent.Parent.Parent.Parent.Get<EditorViewportControllerWidget>("MAP_EDITOR");
 
 			var autoTileButton = widget.Get<ButtonWidget>("AUTOTILE_BUTTON");
-			autoTileButton.OnClick = () => editorActionManager.Add(new AutoConnectEditorAction(world.Map));
+			autoTileButton.OnClick = () =>
+			{
+				var area = editor.DefaultBrush.Selection.Area ?? world.Map.AllCells;
+				editorActionManager.Add(new AutoConnectEditorAction(world.Map, area));
+			};
 		}
 	}
 }

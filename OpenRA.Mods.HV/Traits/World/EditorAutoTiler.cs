@@ -71,12 +71,15 @@ namespace OpenRA.Mods.HV.Traits
 		public string Text { get; }
 
 		readonly Map map;
+		readonly CellRegion selection;
 		readonly ITemplatedTerrainInfo terrainInfo;
 		readonly Queue<UndoTile> undoTiles = new();
 
-		public AutoConnectEditorAction(Map map)
+		public AutoConnectEditorAction(Map map, CellRegion selection)
 		{
 			this.map = map;
+			this.selection = selection;
+
 			terrainInfo = (ITemplatedTerrainInfo)map.Rules.TerrainInfo;
 
 			Text = "Auto connect tile transitions.";
@@ -168,7 +171,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public void Do()
 		{
-			foreach (var cell in map.AllCells)
+			foreach (var cell in selection)
 			{
 				var customTerrainTemplate = (CustomTerrainTemplateInfo)terrainInfo.Templates[map.Tiles[cell].Type];
 				foreach (var autoConnect in customTerrainTemplate.AutoConnect)
@@ -185,7 +188,7 @@ namespace OpenRA.Mods.HV.Traits
 				}
 			}
 
-			foreach (var cell in map.AllCells)
+			foreach (var cell in selection)
 			{
 				var customTerrainTemplate = (CustomTerrainTemplateInfo)terrainInfo.Templates[map.Tiles[cell].Type];
 				foreach (var autoConnect in customTerrainTemplate.AutoConnect)
