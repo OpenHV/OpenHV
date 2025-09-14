@@ -12,7 +12,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Graphics;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Terrain;
@@ -20,6 +19,36 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
+	[IncludeStaticFluentReferences(typeof(EditorAutoTiler))]
+	public class EditorAutoTilerInfo : TraitInfo
+	{
+		public override object Create(ActorInitializer init)
+		{
+			return new EditorAutoTiler(this);
+		}
+	}
+
+	[TraitLocation(SystemActors.EditorWorld)]
+	public class EditorAutoTiler : IEditorTool
+	{
+		[FluentReference]
+		const string Label = "label-tool-autotiler";
+
+		[Desc("The widget tree to open when the tool is selected.")]
+		const string PanelWidget = "AUTOTILER_TOOL_PANEL";
+
+		string IEditorTool.Label => Label;
+		string IEditorTool.PanelWidget => PanelWidget;
+
+		public TraitInfo TraitInfo { get; }
+		public bool IsEnabled => true;
+
+		public EditorAutoTiler(EditorAutoTilerInfo info)
+		{
+			TraitInfo = info;
+		}
+	}
+
 	[Flags]
 	public enum BitMask : byte
 	{
@@ -35,27 +64,6 @@ namespace OpenRA.Mods.HV.Traits
 		BottomRight = 0x80,
 
 		All = Left | Top | Right | Bottom | TopLeft | TopRight | BottomLeft | BottomRight
-	}
-
-	public class EditorAutoTilerInfo : TraitInfo<EditorAutoTiler> { }
-
-	[TraitLocation(SystemActors.EditorWorld)]
-	public class EditorAutoTiler : IWorldLoaded
-	{
-		Map map;
-		EditorActionManager editorActionManager;
-
-		public void WorldLoaded(World w, WorldRenderer wr)
-		{
-			map = w.Map;
-			editorActionManager = w.WorldActor.Trait<EditorActionManager>();
-		}
-
-		public void CleanEdges()
-		{
-			var action = new AutoConnectEditorAction(map);
-			editorActionManager.Add(action);
-		}
 	}
 
 	sealed class AutoConnectEditorAction : IEditorAction

@@ -204,7 +204,7 @@ Container@EDITOR_ROOT:
 		TooltipContainer@TOOLTIP_CONTAINER:
 
 Container@EDITOR_WORLD_ROOT:
-	Logic: LoadIngamePerfLogic, CustomMapEditorLogic, ActorEditLogic, CustomMapOverlaysLogic, MapEditorSelectionLogic
+	Logic: LoadIngamePerfLogic, MapEditorLogic, ActorEditLogic, CustomMapOverlaysLogic, MapEditorSelectionLogic
 		ToggleGridOverlayKey: EditorToggleGridOverlay
 		ToggleBuildableOverlayKey: EditorToggleBuildableOverlay
 		ToggleMarkerOverlayKey: EditorToggleMarkerOverlay
@@ -807,15 +807,6 @@ Container@EDITOR_WORLD_ROOT:
 			Height: 25
 			Text: dropdownbutton-editor-world-root-overlay-button
 			Font: Bold
-		Button@AUTOTILE_BUTTON:
-			X: 525
-			Width: 95
-			Height: 25
-			Text: button-editor-world-root-autotile.label
-			TooltipTemplate: BUTTON_TOOLTIP
-			TooltipText: button-editor-world-root-autotile.tooltip
-			TooltipContainer: TOOLTIP_CONTAINER
-			Font: Bold
 		Label@COORDINATE_LABEL:
 			X: 630
 			Width: 50
@@ -1000,6 +991,24 @@ Background@MARKER_TOOL_PANEL:
 			Height: 25
 			Align: Left
 			Visible: false
+
+Background@AUTOTILER_TOOL_PANEL:
+	X: 10
+	Y: 35
+	Width: PARENT_WIDTH - 20
+	Height: WINDOW_HEIGHT - 490
+	Background: scrollpanel-bg
+	Visible: false
+	Logic: AutoTilerLogic
+	Children:
+		Button@AUTOTILE_BUTTON:
+			X: 5
+			Y: 5
+			Width: 95
+			Height: 25
+			Text: button-auto-tile.label
+			TooltipText: button-auto-tile.tooltip
+			Font: Bold
 
 ScrollPanel@MAP_GENERATOR_TOOL_PANEL:
 	X: 9

@@ -27,7 +27,8 @@ button-editor-world-root-redo =
 
 dropdownbutton-editor-world-root-overlay-button = Overlays
 
-button-editor-world-root-autotile =
+label-tool-autotiler = Auto Tiler
+button-auto-tile =
    .label = Auto Tile
    .tooltip = Even out tile transitions
 
