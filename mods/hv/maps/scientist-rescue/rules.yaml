@@ -26,7 +26,6 @@ Entry:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-entry-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	WithSpriteBody:

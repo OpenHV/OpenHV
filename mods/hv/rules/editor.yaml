@@ -4,7 +4,6 @@ MpSpawn:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-mpspawn-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	WithSpriteBody:
@@ -316,7 +315,6 @@ LIGHT:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-light-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	RenderSpritesEditorOnly:
@@ -340,7 +338,6 @@ CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-camera-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	RevealsShroud:
@@ -359,7 +356,6 @@ Fountain:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-fountain-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	BodyOrientation:

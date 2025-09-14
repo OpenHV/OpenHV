@@ -104,7 +104,6 @@ GOLDBALL:
 
 RADARSWEEP:
 	Interactable:
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	DetectCloaked:

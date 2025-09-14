@@ -1,7 +1,6 @@
 # License: CC-BY-SA-4.0
 
 ^BasePlayer:
-	AlwaysVisible:
 	Shroud:
 		ExploredMapCheckboxEnabled: True
 	PlayerResources:

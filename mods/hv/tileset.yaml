@@ -13981,140 +13981,120 @@ MultiBrushCollections:
 			Template: 78
 			Segment:
 				Start: Cliff: Grass.U
-				Inner: Cliff: Grass
 				End: Cliff: Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@79:
 			Template: 79
 			Segment:
 				Start: Cliff: Grass.U
-				Inner: Cliff: Grass
 				End: Cliff: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@80:
 			Template: 80
 			Segment:
 				Start: Cliff: Grass.L
-				Inner: Cliff: Grass
 				End: Cliff: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@81:
 			Template: 81
 			Segment:
 				Start: Cliff: Grass.R
-				Inner: Cliff: Grass
 				End: Cliff: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@83:
 			Template: 83
 			Segment:
 				Start: Cliff: Grass.L
-				Inner: Cliff: Grass
 				End: Cliff: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@84:
 			Template: 84
 			Segment:
 				Start: Cliff: Grass.R
-				Inner: Cliff: Grass
 				End: Cliff: Grass.U
 				Points: 0,0
 		MultiBrush@85:
 			Template: 85
 			Segment:
 				Start: Cliff: Grass.U
-				Inner: Cliff: Grass
 				End: Cliff: Grass.L
 				Points: 0,1
 		MultiBrush@86:
 			Template: 86
 			Segment:
 				Start: Cliff: Grass.R
-				Inner: Cliff: Grass
 				End: Cliff: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@87:
 			Template: 87
 			Segment:
 				Start: Cliff: Grass.D
-				Inner: Cliff: Grass
 				End: Cliff: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@88:
 			Template: 88
 			Segment:
 				Start: Cliff: Grass.D
-				Inner: Cliff: Grass
 				End: Cliff: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@89:
 			Template: 89
 			Segment:
 				Start: Cliff: Grass.D
-				Inner: Cliff: Grass
 				End: Cliff: Grass.R
 				Points: 1,0
 		MultiBrush@90:
 			Template: 90
 			Segment:
 				Start: Cliff: Grass.L
-				Inner: Cliff: Grass
 				End: Cliff: Grass.D
 				Points: 1,1
 		MultiBrush@1306:
 			Template: 1306
 			Segment:
 				Start: Grass.R
-				Inner: Cliff: Grass
 				End: Cliff: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1307:
 			Template: 1307
 			Segment:
 				Start: Cliff: Grass.R
-				Inner: Cliff: Grass
 				End: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1308:
 			Template: 1308
 			Segment:
 				Start: Grass.D
-				Inner: Cliff: Grass
 				End: Cliff: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1309:
 			Template: 1309
 			Segment:
 				Start: Cliff: Grass.D
-				Inner: Cliff: Grass
 				End: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1310:
 			Template: 1310
 			Segment:
 				Start: Cliff: Grass.L
-				Inner: Cliff: Grass
 				End: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1311:
 			Template: 1311
 			Segment:
 				Start: Grass.L
-				Inner: Cliff: Grass
 				End: Cliff: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1312:
 			Template: 1312
 			Segment:
 				Start: Cliff: Grass.U
-				Inner: Cliff: Grass
 				End: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1313:
 			Template: 1313
 			Segment:
 				Start: Grass.U
-				Inner: Cliff: Grass
 				End: Cliff: Grass.U
 				Points: 0,1, 0,0
 
@@ -14124,140 +14104,120 @@ MultiBrushCollections:
 			Template: 1
 			Segment:
 				Start: Cliff: Crater.U
-				Inner: Cliff: Crater
 				End: Cliff: Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@2:
 			Template: 2
 			Segment:
 				Start: Cliff: Crater.R
-				Inner: Cliff: Crater
 				End: Cliff: Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@3:
 			Template: 3
 			Segment:
 				Start: Cliff: Crater.R
-				Inner: Cliff: Crater
 				End: Cliff: Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@4:
 			Template: 4
 			Segment:
 				Start: Cliff: Crater.U
-				Inner: Cliff: Crater
 				End: Cliff: Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@6:
 			Template: 6
 			Segment:
 				Start: Cliff: Crater.D
-				Inner: Cliff: Crater
 				End: Cliff: Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@7:
 			Template: 7
 			Segment:
 				Start: Cliff: Crater.L
-				Inner: Cliff: Crater
 				End: Cliff: Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@8:
 			Template: 8
 			Segment:
 				Start: Cliff: Crater.L
-				Inner: Cliff: Crater
 				End: Cliff: Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@9:
 			Template: 9
 			Segment:
 				Start: Cliff: Crater.D
-				Inner: Cliff: Crater
 				End: Cliff: Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@10:
 			Template: 10
 			Segment:
 				Start: Cliff: Crater.R
-				Inner: Cliff: Crater
 				End: Cliff: Crater.U
 				Points: 0,0
 		MultiBrush@11:
 			Template: 11
 			Segment:
 				Start: Cliff: Crater.D
-				Inner: Cliff: Crater
 				End: Cliff: Crater.R
 				Points: 1,0
 		MultiBrush@12:
 			Template: 12
 			Segment:
 				Start: Cliff: Crater.U
-				Inner: Cliff: Crater
 				End: Cliff: Crater.L
 				Points: 0,1
 		MultiBrush@13:
 			Template: 13
 			Segment:
 				Start: Cliff: Crater.L
-				Inner: Cliff: Crater
 				End: Cliff: Crater.D
 				Points: 1,1
 		MultiBrush@1314:
 			Template: 1314
 			Segment:
 				Start: Crater.R
-				Inner: Cliff: Crater
 				End: Cliff: Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@1315:
 			Template: 1315
 			Segment:
 				Start: Cliff: Crater.R
-				Inner: Cliff: Crater
 				End: Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@1316:
 			Template: 1316
 			Segment:
 				Start: Crater.D
-				Inner: Cliff: Crater
 				End: Cliff: Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@1317:
 			Template: 1317
 			Segment:
 				Start: Cliff: Crater.D
-				Inner: Cliff: Crater
 				End: Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@1318:
 			Template: 1318
 			Segment:
 				Start: Cliff: Crater.L
-				Inner: Cliff: Crater
 				End: Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@1319:
 			Template: 1319
 			Segment:
 				Start: Crater.L
-				Inner: Cliff: Crater
 				End: Cliff: Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@1320:
 			Template: 1320
 			Segment:
 				Start: Cliff: Crater.U
-				Inner: Cliff: Crater
 				End: Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@1321:
 			Template: 1321
 			Segment:
 				Start: Crater.U
-				Inner: Cliff: Crater
 				End: Cliff: Crater.U
 				Points: 0,1, 0,0
 
@@ -14267,140 +14227,120 @@ MultiBrushCollections:
 			Template: 668
 			Segment:
 				Start: Cliff: Red Snow.U
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@669:
 			Template: 669
 			Segment:
 				Start: Cliff: Red Snow.U
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@670:
 			Template: 670
 			Segment:
 				Start: Cliff: Red Snow.L
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@671:
 			Template: 671
 			Segment:
 				Start: Cliff: Red Snow.R
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@673:
 			Template: 673
 			Segment:
 				Start: Cliff: Red Snow.L
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@674:
 			Template: 674
 			Segment:
 				Start: Cliff: Red Snow.R
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.U
 				Points: 0,0
 		MultiBrush@675:
 			Template: 675
 			Segment:
 				Start: Cliff: Red Snow.U
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.L
 				Points: 0,1
 		MultiBrush@676:
 			Template: 676
 			Segment:
 				Start: Cliff: Red Snow.R
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@677:
 			Template: 677
 			Segment:
 				Start: Cliff: Red Snow.D
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@678:
 			Template: 678
 			Segment:
 				Start: Cliff: Red Snow.D
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@679:
 			Template: 679
 			Segment:
 				Start: Cliff: Red Snow.D
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.R
 				Points: 1,0
 		MultiBrush@680:
 			Template: 680
 			Segment:
 				Start: Cliff: Red Snow.L
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.D
 				Points: 1,1
 		MultiBrush@1322:
 			Template: 1322
 			Segment:
 				Start: Red Snow.R
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1323:
 			Template: 1323
 			Segment:
 				Start: Cliff: Red Snow.R
-				Inner: Cliff: Red Snow
 				End: Red Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1324:
 			Template: 1324
 			Segment:
 				Start: Red Snow.D
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1325:
 			Template: 1325
 			Segment:
 				Start: Cliff: Red Snow.D
-				Inner: Cliff: Red Snow
 				End: Red Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1326:
 			Template: 1326
 			Segment:
 				Start: Cliff: Red Snow.L
-				Inner: Cliff: Red Snow
 				End: Red Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1327:
 			Template: 1327
 			Segment:
 				Start: Red Snow.L
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1328:
 			Template: 1328
 			Segment:
 				Start: Cliff: Red Snow.U
-				Inner: Cliff: Red Snow
 				End: Red Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@1329:
 			Template: 1329
 			Segment:
 				Start: Red Snow.U
-				Inner: Cliff: Red Snow
 				End: Cliff: Red Snow.U
 				Points: 0,1, 0,0
 
@@ -14410,140 +14350,120 @@ MultiBrushCollections:
 			Template: 752
 			Segment:
 				Start: Cliff: Sand.U
-				Inner: Cliff: Sand
 				End: Cliff: Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@753:
 			Template: 753
 			Segment:
 				Start: Cliff: Sand.U
-				Inner: Cliff: Sand
 				End: Cliff: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@754:
 			Template: 754
 			Segment:
 				Start: Cliff: Sand.L
-				Inner: Cliff: Sand
 				End: Cliff: Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@755:
 			Template: 755
 			Segment:
 				Start: Cliff: Sand.R
-				Inner: Cliff: Sand
 				End: Cliff: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@757:
 			Template: 757
 			Segment:
 				Start: Cliff: Sand.L
-				Inner: Cliff: Sand
 				End: Cliff: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@758:
 			Template: 758
 			Segment:
 				Start: Cliff: Sand.R
-				Inner: Cliff: Sand
 				End: Cliff: Sand.U
 				Points: 0,0
 		MultiBrush@759:
 			Template: 759
 			Segment:
 				Start: Cliff: Sand.U
-				Inner: Cliff: Sand
 				End: Cliff: Sand.L
 				Points: 0,1
 		MultiBrush@760:
 			Template: 760
 			Segment:
 				Start: Cliff: Sand.R
-				Inner: Cliff: Sand
 				End: Cliff: Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@761:
 			Template: 761
 			Segment:
 				Start: Cliff: Sand.D
-				Inner: Cliff: Sand
 				End: Cliff: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@762:
 			Template: 762
 			Segment:
 				Start: Cliff: Sand.D
-				Inner: Cliff: Sand
 				End: Cliff: Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@763:
 			Template: 763
 			Segment:
 				Start: Cliff: Sand.D
-				Inner: Cliff: Sand
 				End: Cliff: Sand.R
 				Points: 1,0
 		MultiBrush@764:
 			Template: 764
 			Segment:
 				Start: Cliff: Sand.L
-				Inner: Cliff: Sand
 				End: Cliff: Sand.D
 				Points: 1,1
 		MultiBrush@1330:
 			Template: 1330
 			Segment:
 				Start: Sand.R
-				Inner: Cliff: Sand
 				End: Cliff: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1331:
 			Template: 1331
 			Segment:
 				Start: Cliff: Sand.R
-				Inner: Cliff: Sand
 				End: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1332:
 			Template: 1332
 			Segment:
 				Start: Sand.D
-				Inner: Cliff: Sand
 				End: Cliff: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1333:
 			Template: 1333
 			Segment:
 				Start: Cliff: Sand.D
-				Inner: Cliff: Sand
 				End: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1334:
 			Template: 1334
 			Segment:
 				Start: Cliff: Sand.L
-				Inner: Cliff: Sand
 				End: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1335:
 			Template: 1335
 			Segment:
 				Start: Sand.L
-				Inner: Cliff: Sand
 				End: Cliff: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1336:
 			Template: 1336
 			Segment:
 				Start: Cliff: Sand.U
-				Inner: Cliff: Sand
 				End: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1337:
 			Template: 1337
 			Segment:
 				Start: Sand.U
-				Inner: Cliff: Sand
 				End: Cliff: Sand.U
 				Points: 0,1, 0,0
 
@@ -14553,140 +14473,120 @@ MultiBrushCollections:
 			Template: 885
 			Segment:
 				Start: Cliff: Snow.U
-				Inner: Cliff: Snow
 				End: Cliff: Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@886:
 			Template: 886
 			Segment:
 				Start: Cliff: Snow.U
-				Inner: Cliff: Snow
 				End: Cliff: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@887:
 			Template: 887
 			Segment:
 				Start: Cliff: Snow.L
-				Inner: Cliff: Snow
 				End: Cliff: Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@888:
 			Template: 888
 			Segment:
 				Start: Cliff: Snow.R
-				Inner: Cliff: Snow
 				End: Cliff: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@890:
 			Template: 890
 			Segment:
 				Start: Cliff: Snow.L
-				Inner: Cliff: Snow
 				End: Cliff: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@891:
 			Template: 891
 			Segment:
 				Start: Cliff: Snow.R
-				Inner: Cliff: Snow
 				End: Cliff: Snow.U
 				Points: 0,0
 		MultiBrush@892:
 			Template: 892
 			Segment:
 				Start: Cliff: Snow.U
-				Inner: Cliff: Snow
 				End: Cliff: Snow.L
 				Points: 0,1
 		MultiBrush@893:
 			Template: 893
 			Segment:
 				Start: Cliff: Snow.R
-				Inner: Cliff: Snow
 				End: Cliff: Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@894:
 			Template: 894
 			Segment:
 				Start: Cliff: Snow.D
-				Inner: Cliff: Snow
 				End: Cliff: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@895:
 			Template: 895
 			Segment:
 				Start: Cliff: Snow.D
-				Inner: Cliff: Snow
 				End: Cliff: Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@896:
 			Template: 896
 			Segment:
 				Start: Cliff: Snow.D
-				Inner: Cliff: Snow
 				End: Cliff: Snow.R
 				Points: 1,0
 		MultiBrush@897:
 			Template: 897
 			Segment:
 				Start: Cliff: Snow.L
-				Inner: Cliff: Snow
 				End: Cliff: Snow.D
 				Points: 1,1
 		MultiBrush@1338:
 			Template: 1338
 			Segment:
 				Start: Snow.R
-				Inner: Cliff: Snow
 				End: Cliff: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1339:
 			Template: 1339
 			Segment:
 				Start: Cliff: Snow.R
-				Inner: Cliff: Snow
 				End: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1340:
 			Template: 1340
 			Segment:
 				Start: Snow.D
-				Inner: Cliff: Snow
 				End: Cliff: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1341:
 			Template: 1341
 			Segment:
 				Start: Cliff: Snow.D
-				Inner: Cliff: Snow
 				End: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1342:
 			Template: 1342
 			Segment:
 				Start: Cliff: Snow.L
-				Inner: Cliff: Snow
 				End: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1343:
 			Template: 1343
 			Segment:
 				Start: Snow.L
-				Inner: Cliff: Snow
 				End: Cliff: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1344:
 			Template: 1344
 			Segment:
 				Start: Cliff: Snow.U
-				Inner: Cliff: Snow
 				End: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@1345:
 			Template: 1345
 			Segment:
 				Start: Snow.U
-				Inner: Cliff: Snow
 				End: Cliff: Snow.U
 				Points: 0,1, 0,0
 
@@ -14696,140 +14596,120 @@ MultiBrushCollections:
 			Template: 979
 			Segment:
 				Start: Cliff: Stone.U
-				Inner: Cliff: Stone
 				End: Cliff: Stone.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@980:
 			Template: 980
 			Segment:
 				Start: Cliff: Stone.U
-				Inner: Cliff: Stone
 				End: Cliff: Stone.U
 				Points: 0,1, 0,0
 		MultiBrush@981:
 			Template: 981
 			Segment:
 				Start: Cliff: Stone.L
-				Inner: Cliff: Stone
 				End: Cliff: Stone.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@984:
 			Template: 984
 			Segment:
 				Start: Cliff: Stone.R
-				Inner: Cliff: Stone
 				End: Cliff: Stone.R
 				Points: 0,0, 1,0
 		MultiBrush@986:
 			Template: 986
 			Segment:
 				Start: Cliff: Stone.L
-				Inner: Cliff: Stone
 				End: Cliff: Stone.L
 				Points: 1,1, 0,1
 		MultiBrush@987:
 			Template: 987
 			Segment:
 				Start: Cliff: Stone.R
-				Inner: Cliff: Stone
 				End: Cliff: Stone.U
 				Points: 0,0
 		MultiBrush@988:
 			Template: 988
 			Segment:
 				Start: Cliff: Stone.U
-				Inner: Cliff: Stone
 				End: Cliff: Stone.L
 				Points: 0,1
 		MultiBrush@989:
 			Template: 989
 			Segment:
 				Start: Cliff: Stone.R
-				Inner: Cliff: Stone
 				End: Cliff: Stone.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@990:
 			Template: 990
 			Segment:
 				Start: Cliff: Stone.D
-				Inner: Cliff: Stone
 				End: Cliff: Stone.D
 				Points: 1,0, 1,1
 		MultiBrush@991:
 			Template: 991
 			Segment:
 				Start: Cliff: Stone.D
-				Inner: Cliff: Stone
 				End: Cliff: Stone.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@992:
 			Template: 992
 			Segment:
 				Start: Cliff: Stone.D
-				Inner: Cliff: Stone
 				End: Cliff: Stone.R
 				Points: 1,0
 		MultiBrush@993:
 			Template: 993
 			Segment:
 				Start: Cliff: Stone.L
-				Inner: Cliff: Stone
 				End: Cliff: Stone.D
 				Points: 1,1
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
 				Start: Stone.R
-				Inner: Cliff: Stone
 				End: Cliff: Stone.R
 				Points: 0,0, 1,0
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
 				Start: Cliff: Stone.R
-				Inner: Cliff: Stone
 				End: Stone.R
 				Points: 0,0, 1,0
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
 				Start: Stone.D
-				Inner: Cliff: Stone
 				End: Cliff: Stone.D
 				Points: 1,0, 1,1
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
 				Start: Cliff: Stone.D
-				Inner: Cliff: Stone
 				End: Stone.D
 				Points: 1,0, 1,1
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
 				Start: Cliff: Stone.L
-				Inner: Cliff: Stone
 				End: Stone.L
 				Points: 1,1, 0,1
 		MultiBrush@1346:
 			Template: 1346
 			Segment:
 				Start: Stone.L
-				Inner: Cliff: Stone
 				End: Cliff: Stone.L
 				Points: 1,1, 0,1
 		MultiBrush@1347:
 			Template: 1347
 			Segment:
 				Start: Cliff: Stone.U
-				Inner: Cliff: Stone
 				End: Stone.U
 				Points: 0,1, 0,0
 		MultiBrush@1348:
 			Template: 1348
 			Segment:
 				Start: Stone.U
-				Inner: Cliff: Stone
 				End: Cliff: Stone.U
 				Points: 0,1, 0,0
 
@@ -14839,84 +14719,72 @@ MultiBrushCollections:
 			Template: 28
 			Segment:
 				Start: Cliff: Crater Water.U
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@29:
 			Template: 29
 			Segment:
 				Start: Cliff: Crater Water.U
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.U
 				Points: 0,1, 0,0
 		MultiBrush@30:
 			Template: 30
 			Segment:
 				Start: Cliff: Crater Water.L
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@32:
 			Template: 32
 			Segment:
 				Start: Cliff: Crater Water.R
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.R
 				Points: 0,0, 1,0
 		MultiBrush@34:
 			Template: 34
 			Segment:
 				Start: Cliff: Crater Water.L
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.L
 				Points: 1,1, 0,1
 		MultiBrush@35:
 			Template: 35
 			Segment:
 				Start: Cliff: Crater Water.R
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.U
 				Points: 0,0
 		MultiBrush@36:
 			Template: 36
 			Segment:
 				Start: Cliff: Crater Water.U
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.L
 				Points: 0,1
 		MultiBrush@37:
 			Template: 37
 			Segment:
 				Start: Cliff: Crater Water.R
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@38:
 			Template: 38
 			Segment:
 				Start: Cliff: Crater Water.D
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.D
 				Points: 1,0, 1,1
 		MultiBrush@39:
 			Template: 39
 			Segment:
 				Start: Cliff: Crater Water.D
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@40:
 			Template: 40
 			Segment:
 				Start: Cliff: Crater Water.D
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.R
 				Points: 1,0
 		MultiBrush@41:
 			Template: 41
 			Segment:
 				Start: Cliff: Crater Water.L
-				Inner: Cliff: Crater Water
 				End: Cliff: Crater Water.D
 				Points: 1,1
 
@@ -14926,84 +14794,72 @@ MultiBrushCollections:
 			Template: 14
 			Segment:
 				Start: Cliff: Crater Lava.U
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@15:
 			Template: 15
 			Segment:
 				Start: Cliff: Crater Lava.U
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@16:
 			Template: 16
 			Segment:
 				Start: Cliff: Crater Lava.L
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@18:
 			Template: 18
 			Segment:
 				Start: Cliff: Crater Lava.R
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@20:
 			Template: 20
 			Segment:
 				Start: Cliff: Crater Lava.L
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@21:
 			Template: 21
 			Segment:
 				Start: Cliff: Crater Lava.R
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.U
 				Points: 0,0
 		MultiBrush@22:
 			Template: 22
 			Segment:
 				Start: Cliff: Crater Lava.U
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.L
 				Points: 0,1
 		MultiBrush@23:
 			Template: 23
 			Segment:
 				Start: Cliff: Crater Lava.R
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@24:
 			Template: 24
 			Segment:
 				Start: Cliff: Crater Lava.D
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@25:
 			Template: 25
 			Segment:
 				Start: Cliff: Crater Lava.D
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@26:
 			Template: 26
 			Segment:
 				Start: Cliff: Crater Lava.D
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.R
 				Points: 1,0
 		MultiBrush@27:
 			Template: 27
 			Segment:
 				Start: Cliff: Crater Lava.L
-				Inner: Cliff: Crater Lava
 				End: Cliff: Crater Lava.D
 				Points: 1,1
 
@@ -15013,84 +14869,72 @@ MultiBrushCollections:
 			Template: 204
 			Segment:
 				Start: Cliff: Grass Water.U
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@205:
 			Template: 205
 			Segment:
 				Start: Cliff: Grass Water.U
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.U
 				Points: 0,1, 0,0
 		MultiBrush@206:
 			Template: 206
 			Segment:
 				Start: Cliff: Grass Water.L
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@208:
 			Template: 208
 			Segment:
 				Start: Cliff: Grass Water.R
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.R
 				Points: 0,0, 1,0
 		MultiBrush@210:
 			Template: 210
 			Segment:
 				Start: Cliff: Grass Water.L
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.L
 				Points: 1,1, 0,1
 		MultiBrush@211:
 			Template: 211
 			Segment:
 				Start: Cliff: Grass Water.R
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.U
 				Points: 0,0
 		MultiBrush@212:
 			Template: 212
 			Segment:
 				Start: Cliff: Grass Water.U
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.L
 				Points: 0,1
 		MultiBrush@213:
 			Template: 213
 			Segment:
 				Start: Cliff: Grass Water.R
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@214:
 			Template: 214
 			Segment:
 				Start: Cliff: Grass Water.D
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.D
 				Points: 1,0, 1,1
 		MultiBrush@215:
 			Template: 215
 			Segment:
 				Start: Cliff: Grass Water.D
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@216:
 			Template: 216
 			Segment:
 				Start: Cliff: Grass Water.D
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.R
 				Points: 1,0
 		MultiBrush@217:
 			Template: 217
 			Segment:
 				Start: Cliff: Grass Water.L
-				Inner: Cliff: Grass Water
 				End: Cliff: Grass Water.D
 				Points: 1,1
 
@@ -15100,84 +14944,72 @@ MultiBrushCollections:
 			Template: 218
 			Segment:
 				Start: Cliff: Grass Lava.U
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@219:
 			Template: 219
 			Segment:
 				Start: Cliff: Grass Lava.U
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@220:
 			Template: 220
 			Segment:
 				Start: Cliff: Grass Lava.L
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@222:
 			Template: 222
 			Segment:
 				Start: Cliff: Grass Lava.R
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@224:
 			Template: 224
 			Segment:
 				Start: Cliff: Grass Lava.L
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@225:
 			Template: 225
 			Segment:
 				Start: Cliff: Grass Lava.R
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.U
 				Points: 0,0
 		MultiBrush@226:
 			Template: 226
 			Segment:
 				Start: Cliff: Grass Lava.U
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.L
 				Points: 0,1
 		MultiBrush@227:
 			Template: 227
 			Segment:
 				Start: Cliff: Grass Lava.R
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@228:
 			Template: 228
 			Segment:
 				Start: Cliff: Grass Lava.D
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@229:
 			Template: 229
 			Segment:
 				Start: Cliff: Grass Lava.D
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@230:
 			Template: 230
 			Segment:
 				Start: Cliff: Grass Lava.D
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.R
 				Points: 1,0
 		MultiBrush@231:
 			Template: 231
 			Segment:
 				Start: Cliff: Grass Lava.L
-				Inner: Cliff: Grass Lava
 				End: Cliff: Grass Lava.D
 				Points: 1,1
 
@@ -15187,84 +15019,72 @@ MultiBrushCollections:
 			Template: 576
 			Segment:
 				Start: Cliff: Sand Lava.U
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@577:
 			Template: 577
 			Segment:
 				Start: Cliff: Sand Lava.U
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@578:
 			Template: 578
 			Segment:
 				Start: Cliff: Sand Lava.L
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@580:
 			Template: 580
 			Segment:
 				Start: Cliff: Sand Lava.R
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@582:
 			Template: 582
 			Segment:
 				Start: Cliff: Sand Lava.L
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@583:
 			Template: 583
 			Segment:
 				Start: Cliff: Sand Lava.R
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.U
 				Points: 0,0
 		MultiBrush@584:
 			Template: 584
 			Segment:
 				Start: Cliff: Sand Lava.U
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.L
 				Points: 0,1
 		MultiBrush@585:
 			Template: 585
 			Segment:
 				Start: Cliff: Sand Lava.R
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@586:
 			Template: 586
 			Segment:
 				Start: Cliff: Sand Lava.D
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@587:
 			Template: 587
 			Segment:
 				Start: Cliff: Sand Lava.D
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@588:
 			Template: 588
 			Segment:
 				Start: Cliff: Sand Lava.D
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.R
 				Points: 1,0
 		MultiBrush@589:
 			Template: 589
 			Segment:
 				Start: Cliff: Sand Lava.L
-				Inner: Cliff: Sand Lava
 				End: Cliff: Sand Lava.D
 				Points: 1,1
 
@@ -15274,84 +15094,72 @@ MultiBrushCollections:
 			Template: 400
 			Segment:
 				Start: Cliff: Mountain Lava.U
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@401:
 			Template: 401
 			Segment:
 				Start: Cliff: Mountain Lava.U
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@402:
 			Template: 402
 			Segment:
 				Start: Cliff: Mountain Lava.L
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@404:
 			Template: 404
 			Segment:
 				Start: Cliff: Mountain Lava.R
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@406:
 			Template: 406
 			Segment:
 				Start: Cliff: Mountain Lava.L
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@407:
 			Template: 407
 			Segment:
 				Start: Cliff: Mountain Lava.R
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.U
 				Points: 0,0
 		MultiBrush@408:
 			Template: 408
 			Segment:
 				Start: Cliff: Mountain Lava.U
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.L
 				Points: 0,1
 		MultiBrush@409:
 			Template: 409
 			Segment:
 				Start: Cliff: Mountain Lava.R
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@410:
 			Template: 410
 			Segment:
 				Start: Cliff: Mountain Lava.D
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@411:
 			Template: 411
 			Segment:
 				Start: Cliff: Mountain Lava.D
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@412:
 			Template: 412
 			Segment:
 				Start: Cliff: Mountain Lava.D
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.R
 				Points: 1,0
 		MultiBrush@413:
 			Template: 413
 			Segment:
 				Start: Cliff: Mountain Lava.L
-				Inner: Cliff: Mountain Lava
 				End: Cliff: Mountain Lava.D
 				Points: 1,1
 
@@ -15361,84 +15169,72 @@ MultiBrushCollections:
 			Template: 796
 			Segment:
 				Start: Cliff: Red Snow Lava.U
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@797:
 			Template: 797
 			Segment:
 				Start: Cliff: Red Snow Lava.U
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@798:
 			Template: 798
 			Segment:
 				Start: Cliff: Red Snow Lava.L
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@800:
 			Template: 800
 			Segment:
 				Start: Cliff: Red Snow Lava.R
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@802:
 			Template: 802
 			Segment:
 				Start: Cliff: Red Snow Lava.L
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@803:
 			Template: 803
 			Segment:
 				Start: Cliff: Red Snow Lava.R
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.U
 				Points: 0,0
 		MultiBrush@804:
 			Template: 804
 			Segment:
 				Start: Cliff: Red Snow Lava.U
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.L
 				Points: 0,1
 		MultiBrush@805:
 			Template: 805
 			Segment:
 				Start: Cliff: Red Snow Lava.R
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@806:
 			Template: 806
 			Segment:
 				Start: Cliff: Red Snow Lava.D
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@807:
 			Template: 807
 			Segment:
 				Start: Cliff: Red Snow Lava.D
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@808:
 			Template: 808
 			Segment:
 				Start: Cliff: Red Snow Lava.D
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.R
 				Points: 1,0
 		MultiBrush@809:
 			Template: 809
 			Segment:
 				Start: Cliff: Red Snow Lava.L
-				Inner: Cliff: Red Snow Lava
 				End: Cliff: Red Snow Lava.D
 				Points: 1,1
 
@@ -15448,84 +15244,72 @@ MultiBrushCollections:
 			Template: 937
 			Segment:
 				Start: Cliff: Stone Lava.U
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@938:
 			Template: 938
 			Segment:
 				Start: Cliff: Stone Lava.U
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@939:
 			Template: 939
 			Segment:
 				Start: Cliff: Stone Lava.L
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@941:
 			Template: 941
 			Segment:
 				Start: Cliff: Stone Lava.R
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@943:
 			Template: 943
 			Segment:
 				Start: Cliff: Stone Lava.L
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@944:
 			Template: 944
 			Segment:
 				Start: Cliff: Stone Lava.R
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.U
 				Points: 0,0
 		MultiBrush@945:
 			Template: 945
 			Segment:
 				Start: Cliff: Stone Lava.U
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.L
 				Points: 0,1
 		MultiBrush@946:
 			Template: 946
 			Segment:
 				Start: Cliff: Stone Lava.R
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@947:
 			Template: 947
 			Segment:
 				Start: Cliff: Stone Lava.D
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@948:
 			Template: 948
 			Segment:
 				Start: Cliff: Stone Lava.D
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@949:
 			Template: 949
 			Segment:
 				Start: Cliff: Stone Lava.D
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.R
 				Points: 1,0
 		MultiBrush@950:
 			Template: 950
 			Segment:
 				Start: Cliff: Stone Lava.L
-				Inner: Cliff: Stone Lava
 				End: Cliff: Stone Lava.D
 				Points: 1,1
 
@@ -15535,84 +15319,72 @@ MultiBrushCollections:
 			Template: 1689
 			Segment:
 				Start: Cliff: Black Sand Lava.U
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1690:
 			Template: 1690
 			Segment:
 				Start: Cliff: Black Sand Lava.U
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@1691:
 			Template: 1691
 			Segment:
 				Start: Cliff: Black Sand Lava.L
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1692:
 			Template: 1692
 			Segment:
 				Start: Cliff: Black Sand Lava.R
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@1693:
 			Template: 1693
 			Segment:
 				Start: Cliff: Black Sand Lava.L
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@1694:
 			Template: 1694
 			Segment:
 				Start: Cliff: Black Sand Lava.R
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.U
 				Points: 0,0
 		MultiBrush@1695:
 			Template: 1695
 			Segment:
 				Start: Cliff: Black Sand Lava.U
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.L
 				Points: 0,1
 		MultiBrush@1696:
 			Template: 1696
 			Segment:
 				Start: Cliff: Black Sand Lava.R
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1697:
 			Template: 1697
 			Segment:
 				Start: Cliff: Black Sand Lava.D
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@1698:
 			Template: 1698
 			Segment:
 				Start: Cliff: Black Sand Lava.D
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1699:
 			Template: 1699
 			Segment:
 				Start: Cliff: Black Sand Lava.D
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.R
 				Points: 1,0
 		MultiBrush@1700:
 			Template: 1700
 			Segment:
 				Start: Cliff: Black Sand Lava.L
-				Inner: Cliff: Black Sand Lava
 				End: Cliff: Black Sand Lava.D
 				Points: 1,1
 
@@ -15622,84 +15394,72 @@ MultiBrushCollections:
 			Template: 654
 			Segment:
 				Start: Cliff: Red Snow Water.U
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@655:
 			Template: 655
 			Segment:
 				Start: Cliff: Red Snow Water.U
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.U
 				Points: 0,1, 0,0
 		MultiBrush@656:
 			Template: 656
 			Segment:
 				Start: Cliff: Red Snow Water.L
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@658:
 			Template: 658
 			Segment:
 				Start: Cliff: Red Snow Water.R
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.R
 				Points: 0,0, 1,0
 		MultiBrush@660:
 			Template: 660
 			Segment:
 				Start: Cliff: Red Snow Water.L
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.L
 				Points: 1,1, 0,1
 		MultiBrush@661:
 			Template: 661
 			Segment:
 				Start: Cliff: Red Snow Water.R
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.U
 				Points: 0,0
 		MultiBrush@662:
 			Template: 662
 			Segment:
 				Start: Cliff: Red Snow Water.U
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.L
 				Points: 0,1
 		MultiBrush@663:
 			Template: 663
 			Segment:
 				Start: Cliff: Red Snow Water.R
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@664:
 			Template: 664
 			Segment:
 				Start: Cliff: Red Snow Water.D
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.D
 				Points: 1,0, 1,1
 		MultiBrush@665:
 			Template: 665
 			Segment:
 				Start: Cliff: Red Snow Water.D
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@666:
 			Template: 666
 			Segment:
 				Start: Cliff: Red Snow Water.D
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.R
 				Points: 1,0
 		MultiBrush@667:
 			Template: 667
 			Segment:
 				Start: Cliff: Red Snow Water.L
-				Inner: Cliff: Red Snow Water
 				End: Cliff: Red Snow Water.D
 				Points: 1,1
 
@@ -15709,84 +15469,72 @@ MultiBrushCollections:
 			Template: 738
 			Segment:
 				Start: Cliff: Sand Water.U
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@739:
 			Template: 739
 			Segment:
 				Start: Cliff: Sand Water.U
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.U
 				Points: 0,1, 0,0
 		MultiBrush@740:
 			Template: 740
 			Segment:
 				Start: Cliff: Sand Water.L
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@742:
 			Template: 742
 			Segment:
 				Start: Cliff: Sand Water.R
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.R
 				Points: 0,0, 1,0
 		MultiBrush@744:
 			Template: 744
 			Segment:
 				Start: Cliff: Sand Water.L
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.L
 				Points: 1,1, 0,1
 		MultiBrush@745:
 			Template: 745
 			Segment:
 				Start: Cliff: Sand Water.R
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.U
 				Points: 0,0
 		MultiBrush@746:
 			Template: 746
 			Segment:
 				Start: Cliff: Sand Water.U
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.L
 				Points: 0,1
 		MultiBrush@747:
 			Template: 747
 			Segment:
 				Start: Cliff: Sand Water.R
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@748:
 			Template: 748
 			Segment:
 				Start: Cliff: Sand Water.D
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.D
 				Points: 1,0, 1,1
 		MultiBrush@749:
 			Template: 749
 			Segment:
 				Start: Cliff: Sand Water.D
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@750:
 			Template: 750
 			Segment:
 				Start: Cliff: Sand Water.D
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.R
 				Points: 1,0
 		MultiBrush@751:
 			Template: 751
 			Segment:
 				Start: Cliff: Sand Water.L
-				Inner: Cliff: Sand Water
 				End: Cliff: Sand Water.D
 				Points: 1,1
 
@@ -15796,84 +15544,72 @@ MultiBrushCollections:
 			Template: 871
 			Segment:
 				Start: Cliff: Snow Water.U
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@872:
 			Template: 872
 			Segment:
 				Start: Cliff: Snow Water.U
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.U
 				Points: 0,1, 0,0
 		MultiBrush@873:
 			Template: 873
 			Segment:
 				Start: Cliff: Snow Water.L
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@875:
 			Template: 875
 			Segment:
 				Start: Cliff: Snow Water.R
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.R
 				Points: 0,0, 1,0
 		MultiBrush@877:
 			Template: 877
 			Segment:
 				Start: Cliff: Snow Water.L
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.L
 				Points: 1,1, 0,1
 		MultiBrush@878:
 			Template: 878
 			Segment:
 				Start: Cliff: Snow Water.R
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.U
 				Points: 0,0
 		MultiBrush@879:
 			Template: 879
 			Segment:
 				Start: Cliff: Snow Water.U
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.L
 				Points: 0,1
 		MultiBrush@880:
 			Template: 880
 			Segment:
 				Start: Cliff: Snow Water.R
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@881:
 			Template: 881
 			Segment:
 				Start: Cliff: Snow Water.D
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.D
 				Points: 1,0, 1,1
 		MultiBrush@882:
 			Template: 882
 			Segment:
 				Start: Cliff: Snow Water.D
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@883:
 			Template: 883
 			Segment:
 				Start: Cliff: Snow Water.D
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.R
 				Points: 1,0
 		MultiBrush@884:
 			Template: 884
 			Segment:
 				Start: Cliff: Snow Water.L
-				Inner: Cliff: Snow Water
 				End: Cliff: Snow Water.D
 				Points: 1,1
 
@@ -15883,84 +15619,72 @@ MultiBrushCollections:
 			Template: 965
 			Segment:
 				Start: Cliff: Stone Water.U
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@966:
 			Template: 966
 			Segment:
 				Start: Cliff: Stone Water.U
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.U
 				Points: 0,1, 0,0
 		MultiBrush@967:
 			Template: 967
 			Segment:
 				Start: Cliff: Stone Water.L
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@969:
 			Template: 969
 			Segment:
 				Start: Cliff: Stone Water.R
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.R
 				Points: 0,0, 1,0
 		MultiBrush@971:
 			Template: 971
 			Segment:
 				Start: Cliff: Stone Water.L
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.L
 				Points: 1,1, 0,1
 		MultiBrush@972:
 			Template: 972
 			Segment:
 				Start: Cliff: Stone Water.R
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.U
 				Points: 0,0
 		MultiBrush@973:
 			Template: 973
 			Segment:
 				Start: Cliff: Stone Water.U
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.L
 				Points: 0,1
 		MultiBrush@974:
 			Template: 974
 			Segment:
 				Start: Cliff: Stone Water.R
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@975:
 			Template: 975
 			Segment:
 				Start: Cliff: Stone Water.D
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.D
 				Points: 1,0, 1,1
 		MultiBrush@976:
 			Template: 976
 			Segment:
 				Start: Cliff: Stone Water.D
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@977:
 			Template: 977
 			Segment:
 				Start: Cliff: Stone Water.D
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.R
 				Points: 1,0
 		MultiBrush@978:
 			Template: 978
 			Segment:
 				Start: Cliff: Stone Water.L
-				Inner: Cliff: Stone Water
 				End: Cliff: Stone Water.D
 				Points: 1,1
 
@@ -15970,84 +15694,72 @@ MultiBrushCollections:
 			Template: 1800
 			Segment:
 				Start: Cliff: Black Sand Water.U
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1801:
 			Template: 1801
 			Segment:
 				Start: Cliff: Black Sand Water.U
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.U
 				Points: 0,1, 0,0
 		MultiBrush@1802:
 			Template: 1802
 			Segment:
 				Start: Cliff: Black Sand Water.L
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1803:
 			Template: 1803
 			Segment:
 				Start: Cliff: Black Sand Water.R
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.R
 				Points: 0,0, 1,0
 		MultiBrush@1804:
 			Template: 1804
 			Segment:
 				Start: Cliff: Black Sand Water.L
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.L
 				Points: 1,1, 0,1
 		MultiBrush@1805:
 			Template: 1805
 			Segment:
 				Start: Cliff: Black Sand Water.R
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.U
 				Points: 0,0
 		MultiBrush@1806:
 			Template: 1806
 			Segment:
 				Start: Cliff: Black Sand Water.U
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.L
 				Points: 0,1
 		MultiBrush@1807:
 			Template: 1807
 			Segment:
 				Start: Cliff: Black Sand Water.R
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1808:
 			Template: 1808
 			Segment:
 				Start: Cliff: Black Sand Water.D
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.D
 				Points: 1,0, 1,1
 		MultiBrush@1809:
 			Template: 1809
 			Segment:
 				Start: Cliff: Black Sand Water.D
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1810:
 			Template: 1810
 			Segment:
 				Start: Cliff: Black Sand Water.D
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.R
 				Points: 1,0
 		MultiBrush@1811:
 			Template: 1811
 			Segment:
 				Start: Cliff: Black Sand Water.L
-				Inner: Cliff: Black Sand Water
 				End: Cliff: Black Sand Water.D
 				Points: 1,1
 
@@ -16057,140 +15769,120 @@ MultiBrushCollections:
 			Template: 1354
 			Segment:
 				Start: Shore: Grass.U
-				Inner: Shore: Grass
 				End: Shore: Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1355:
 			Template: 1355
 			Segment:
 				Start: Shore: Grass.U
-				Inner: Shore: Grass
 				End: Shore: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1356:
 			Template: 1356
 			Segment:
 				Start: Shore: Grass.L
-				Inner: Shore: Grass
 				End: Shore: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1357:
 			Template: 1357
 			Segment:
 				Start: Shore: Grass.R
-				Inner: Shore: Grass
 				End: Shore: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1358:
 			Template: 1358
 			Segment:
 				Start: Shore: Grass.L
-				Inner: Shore: Grass
 				End: Shore: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1359:
 			Template: 1359
 			Segment:
 				Start: Shore: Grass.R
-				Inner: Shore: Grass
 				End: Shore: Grass.U
 				Points: 0,0
 		MultiBrush@1360:
 			Template: 1360
 			Segment:
 				Start: Shore: Grass.U
-				Inner: Shore: Grass
 				End: Shore: Grass.L
 				Points: 0,1
 		MultiBrush@1361:
 			Template: 1361
 			Segment:
 				Start: Shore: Grass.R
-				Inner: Shore: Grass
 				End: Shore: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1362:
 			Template: 1362
 			Segment:
 				Start: Shore: Grass.D
-				Inner: Shore: Grass
 				End: Shore: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1363:
 			Template: 1363
 			Segment:
 				Start: Shore: Grass.D
-				Inner: Shore: Grass
 				End: Shore: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1364:
 			Template: 1364
 			Segment:
 				Start: Shore: Grass.D
-				Inner: Shore: Grass
 				End: Shore: Grass.R
 				Points: 1,0
 		MultiBrush@1365:
 			Template: 1365
 			Segment:
 				Start: Shore: Grass.L
-				Inner: Shore: Grass
 				End: Shore: Grass.D
 				Points: 1,1
 		MultiBrush@1366:
 			Template: 1366
 			Segment:
 				Start: Shore: Grass.R
-				Inner: Shore: Grass
 				End: Cliff: Grass Water.R
 				Points: 0,0, 1,0
 		MultiBrush@1367:
 			Template: 1367
 			Segment:
 				Start: Cliff: Grass Water.L
-				Inner: Shore: Grass
 				End: Shore: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1368:
 			Template: 1368
 			Segment:
 				Start: Cliff: Grass Water.U
-				Inner: Shore: Grass
 				End: Shore: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1369:
 			Template: 1369
 			Segment:
 				Start: Cliff: Grass Water.D
-				Inner: Shore: Grass
 				End: Shore: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1370:
 			Template: 1370
 			Segment:
 				Start: Cliff: Grass Water.R
-				Inner: Shore: Grass
 				End: Shore: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1371:
 			Template: 1371
 			Segment:
 				Start: Shore: Grass.L
-				Inner: Shore: Grass
 				End: Cliff: Grass Water.L
 				Points: 1,1, 0,1
 		MultiBrush@1372:
 			Template: 1372
 			Segment:
 				Start: Shore: Grass.U
-				Inner: Shore: Grass
 				End: Cliff: Grass Water.U
 				Points: 0,1, 0,0
 		MultiBrush@1373:
 			Template: 1373
 			Segment:
 				Start: Shore: Grass.D
-				Inner: Shore: Grass
 				End: Cliff: Grass Water.D
 				Points: 1,0, 1,1
 
@@ -16200,140 +15892,120 @@ MultiBrushCollections:
 			Template: 1374
 			Segment:
 				Start: Shore: Sand.U
-				Inner: Shore: Sand
 				End: Shore: Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1375:
 			Template: 1375
 			Segment:
 				Start: Shore: Sand.U
-				Inner: Shore: Sand
 				End: Shore: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1376:
 			Template: 1376
 			Segment:
 				Start: Shore: Sand.L
-				Inner: Shore: Sand
 				End: Shore: Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1377:
 			Template: 1377
 			Segment:
 				Start: Shore: Sand.R
-				Inner: Shore: Sand
 				End: Shore: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1378:
 			Template: 1378
 			Segment:
 				Start: Shore: Sand.L
-				Inner: Shore: Sand
 				End: Shore: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1379:
 			Template: 1379
 			Segment:
 				Start: Shore: Sand.R
-				Inner: Shore: Sand
 				End: Shore: Sand.U
 				Points: 0,0
 		MultiBrush@1380:
 			Template: 1380
 			Segment:
 				Start: Shore: Sand.U
-				Inner: Shore: Sand
 				End: Shore: Sand.L
 				Points: 0,1
 		MultiBrush@1381:
 			Template: 1381
 			Segment:
 				Start: Shore: Sand.R
-				Inner: Shore: Sand
 				End: Shore: Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1382:
 			Template: 1382
 			Segment:
 				Start: Shore: Sand.D
-				Inner: Shore: Sand
 				End: Shore: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1383:
 			Template: 1383
 			Segment:
 				Start: Shore: Sand.D
-				Inner: Shore: Sand
 				End: Shore: Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1384:
 			Template: 1384
 			Segment:
 				Start: Shore: Sand.D
-				Inner: Shore: Sand
 				End: Shore: Sand.R
 				Points: 1,0
 		MultiBrush@1385:
 			Template: 1385
 			Segment:
 				Start: Shore: Sand.L
-				Inner: Shore: Sand
 				End: Shore: Sand.D
 				Points: 1,1
 		MultiBrush@1386:
 			Template: 1386
 			Segment:
 				Start: Shore: Sand.R
-				Inner: Shore: Sand
 				End: Cliff: Sand Water.R
 				Points: 0,0, 1,0
 		MultiBrush@1387:
 			Template: 1387
 			Segment:
 				Start: Cliff: Sand Water.L
-				Inner: Shore: Sand
 				End: Shore: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1388:
 			Template: 1388
 			Segment:
 				Start: Cliff: Sand Water.U
-				Inner: Shore: Sand
 				End: Shore: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1389:
 			Template: 1389
 			Segment:
 				Start: Cliff: Sand Water.D
-				Inner: Shore: Sand
 				End: Shore: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1390:
 			Template: 1390
 			Segment:
 				Start: Cliff: Sand Water.R
-				Inner: Shore: Sand
 				End: Shore: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1391:
 			Template: 1391
 			Segment:
 				Start: Shore: Sand.L
-				Inner: Shore: Sand
 				End: Cliff: Sand Water.L
 				Points: 1,1, 0,1
 		MultiBrush@1392:
 			Template: 1392
 			Segment:
 				Start: Shore: Sand.U
-				Inner: Shore: Sand
 				End: Cliff: Sand Water.U
 				Points: 0,1, 0,0
 		MultiBrush@1393:
 			Template: 1393
 			Segment:
 				Start: Shore: Sand.D
-				Inner: Shore: Sand
 				End: Cliff: Sand Water.D
 				Points: 1,0, 1,1
 
@@ -16343,140 +16015,120 @@ MultiBrushCollections:
 			Template: 1744
 			Segment:
 				Start: Shore: Black Sand.U
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1745:
 			Template: 1745
 			Segment:
 				Start: Shore: Black Sand.U
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1746:
 			Template: 1746
 			Segment:
 				Start: Shore: Black Sand.L
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1747:
 			Template: 1747
 			Segment:
 				Start: Shore: Black Sand.R
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1748:
 			Template: 1748
 			Segment:
 				Start: Shore: Black Sand.L
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1749:
 			Template: 1749
 			Segment:
 				Start: Shore: Black Sand.R
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.U
 				Points: 0,0
 		MultiBrush@1750:
 			Template: 1750
 			Segment:
 				Start: Shore: Black Sand.U
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.L
 				Points: 0,1
 		MultiBrush@1751:
 			Template: 1751
 			Segment:
 				Start: Shore: Black Sand.R
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1752:
 			Template: 1752
 			Segment:
 				Start: Shore: Black Sand.D
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1753:
 			Template: 1753
 			Segment:
 				Start: Shore: Black Sand.D
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1754:
 			Template: 1754
 			Segment:
 				Start: Shore: Black Sand.D
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.R
 				Points: 1,0
 		MultiBrush@1755:
 			Template: 1755
 			Segment:
 				Start: Shore: Black Sand.L
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.D
 				Points: 1,1
 		MultiBrush@1756:
 			Template: 1756
 			Segment:
 				Start: Shore: Black Sand.R
-				Inner: Shore: Black Sand
 				End: Cliff: Black Sand Water.R
 				Points: 0,0, 1,0
 		MultiBrush@1757:
 			Template: 1757
 			Segment:
 				Start: Cliff: Black Sand Water.L
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1758:
 			Template: 1758
 			Segment:
 				Start: Cliff: Black Sand Water.U
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1759:
 			Template: 1759
 			Segment:
 				Start: Cliff: Black Sand Water.D
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1760:
 			Template: 1760
 			Segment:
 				Start: Cliff: Black Sand Water.R
-				Inner: Shore: Black Sand
 				End: Shore: Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1761:
 			Template: 1761
 			Segment:
 				Start: Shore: Black Sand.L
-				Inner: Shore: Black Sand
 				End: Cliff: Black Sand Water.L
 				Points: 1,1, 0,1
 		MultiBrush@1762:
 			Template: 1762
 			Segment:
 				Start: Shore: Black Sand.U
-				Inner: Shore: Black Sand
 				End: Cliff: Black Sand Water.U
 				Points: 0,1, 0,0
 		MultiBrush@1763:
 			Template: 1763
 			Segment:
 				Start: Shore: Black Sand.D
-				Inner: Shore: Black Sand
 				End: Cliff: Black Sand Water.D
 				Points: 1,0, 1,1
 
@@ -16486,84 +16138,72 @@ MultiBrushCollections:
 			Template: 117
 			Segment:
 				Start: Ramp: Grass.U
-				Inner: Ramp: Grass
 				End: Ramp: Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@118:
 			Template: 118
 			Segment:
 				Start: Ramp: Grass.U
-				Inner: Ramp: Grass
 				End: Ramp: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@119:
 			Template: 119
 			Segment:
 				Start: Ramp: Grass.L
-				Inner: Ramp: Grass
 				End: Ramp: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@120:
 			Template: 120
 			Segment:
 				Start: Ramp: Grass.R
-				Inner: Ramp: Grass
 				End: Ramp: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@122:
 			Template: 122
 			Segment:
 				Start: Ramp: Grass.L
-				Inner: Ramp: Grass
 				End: Ramp: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@123:
 			Template: 123
 			Segment:
 				Start: Ramp: Grass.L
-				Inner: Ramp: Grass
 				End: Ramp: Grass.D
 				Points: 1,1
 		MultiBrush@124:
 			Template: 124
 			Segment:
 				Start: Ramp: Grass.U
-				Inner: Ramp: Grass
 				End: Ramp: Grass.L
 				Points: 0,1
 		MultiBrush@125:
 			Template: 125
 			Segment:
 				Start: Ramp: Grass.R
-				Inner: Ramp: Grass
 				End: Ramp: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@126:
 			Template: 126
 			Segment:
 				Start: Ramp: Grass.D
-				Inner: Ramp: Grass
 				End: Ramp: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@127:
 			Template: 127
 			Segment:
 				Start: Ramp: Grass.D
-				Inner: Ramp: Grass
 				End: Ramp: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@128:
 			Template: 128
 			Segment:
 				Start: Ramp: Grass.D
-				Inner: Ramp: Grass
 				End: Ramp: Grass.R
 				Points: 1,0
 		MultiBrush@129:
 			Template: 129
 			Segment:
 				Start: Ramp: Grass.R
-				Inner: Ramp: Grass
 				End: Ramp: Grass.U
 				Points: 0,0
 
@@ -16573,84 +16213,72 @@ MultiBrushCollections:
 			Template: 563
 			Segment:
 				Start: Ramp: Sand.U
-				Inner: Ramp: Sand
 				End: Ramp: Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@564:
 			Template: 564
 			Segment:
 				Start: Ramp: Sand.U
-				Inner: Ramp: Sand
 				End: Ramp: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@565:
 			Template: 565
 			Segment:
 				Start: Ramp: Sand.L
-				Inner: Ramp: Sand
 				End: Ramp: Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@566:
 			Template: 566
 			Segment:
 				Start: Ramp: Sand.R
-				Inner: Ramp: Sand
 				End: Ramp: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@568:
 			Template: 568
 			Segment:
 				Start: Ramp: Sand.L
-				Inner: Ramp: Sand
 				End: Ramp: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@569:
 			Template: 569
 			Segment:
 				Start: Ramp: Sand.R
-				Inner: Ramp: Sand
 				End: Ramp: Sand.U
 				Points: 0,0
 		MultiBrush@570:
 			Template: 570
 			Segment:
 				Start: Ramp: Sand.U
-				Inner: Ramp: Sand
 				End: Ramp: Sand.L
 				Points: 0,1
 		MultiBrush@571:
 			Template: 571
 			Segment:
 				Start: Ramp: Sand.R
-				Inner: Ramp: Sand
 				End: Ramp: Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@572:
 			Template: 572
 			Segment:
 				Start: Ramp: Sand.D
-				Inner: Ramp: Sand
 				End: Ramp: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@573:
 			Template: 573
 			Segment:
 				Start: Ramp: Sand.D
-				Inner: Ramp: Sand
 				End: Ramp: Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@574:
 			Template: 574
 			Segment:
 				Start: Ramp: Sand.D
-				Inner: Ramp: Sand
 				End: Ramp: Sand.R
 				Points: 1,0
 		MultiBrush@575:
 			Template: 575
 			Segment:
 				Start: Ramp: Sand.L
-				Inner: Ramp: Sand
 				End: Ramp: Sand.D
 				Points: 1,1
 
@@ -16660,84 +16288,72 @@ MultiBrushCollections:
 			Template: 1676
 			Segment:
 				Start: Ramp: Black Sand.U
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1677:
 			Template: 1677
 			Segment:
 				Start: Ramp: Black Sand.U
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1678:
 			Template: 1678
 			Segment:
 				Start: Ramp: Black Sand.L
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1679:
 			Template: 1679
 			Segment:
 				Start: Ramp: Black Sand.R
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1681:
 			Template: 1681
 			Segment:
 				Start: Ramp: Black Sand.L
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1682:
 			Template: 1682
 			Segment:
 				Start: Ramp: Black Sand.R
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.U
 				Points: 0,0
 		MultiBrush@1683:
 			Template: 1683
 			Segment:
 				Start: Ramp: Black Sand.U
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.L
 				Points: 0,1
 		MultiBrush@1684:
 			Template: 1684
 			Segment:
 				Start: Ramp: Black Sand.R
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1685:
 			Template: 1685
 			Segment:
 				Start: Ramp: Black Sand.D
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1686:
 			Template: 1686
 			Segment:
 				Start: Ramp: Black Sand.D
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1687:
 			Template: 1687
 			Segment:
 				Start: Ramp: Black Sand.D
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.R
 				Points: 1,0
 		MultiBrush@1688:
 			Template: 1688
 			Segment:
 				Start: Ramp: Black Sand.L
-				Inner: Ramp: Black Sand
 				End: Ramp: Black Sand.D
 				Points: 1,1
 
@@ -16747,84 +16363,72 @@ MultiBrushCollections:
 			Template: 130
 			Segment:
 				Start: Biome: Grass Dark Grass.R
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.U
 				Points: 0,0
 		MultiBrush@131:
 			Template: 131
 			Segment:
 				Start: Biome: Grass Dark Grass.D
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.R
 				Points: 1,0
 		MultiBrush@132:
 			Template: 132
 			Segment:
 				Start: Biome: Grass Dark Grass.U
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.L
 				Points: 0,1
 		MultiBrush@133:
 			Template: 133
 			Segment:
 				Start: Biome: Grass Dark Grass.L
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.D
 				Points: 1,1
 		MultiBrush@134:
 			Template: 134
 			Segment:
 				Start: Biome: Grass Dark Grass.D
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@135:
 			Template: 135
 			Segment:
 				Start: Biome: Grass Dark Grass.L
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@136:
 			Template: 136
 			Segment:
 				Start: Biome: Grass Dark Grass.L
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@137:
 			Template: 137
 			Segment:
 				Start: Biome: Grass Dark Grass.D
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@139:
 			Template: 139
 			Segment:
 				Start: Biome: Grass Dark Grass.U
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@140:
 			Template: 140
 			Segment:
 				Start: Biome: Grass Dark Grass.R
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@141:
 			Template: 141
 			Segment:
 				Start: Biome: Grass Dark Grass.R
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@142:
 			Template: 142
 			Segment:
 				Start: Biome: Grass Dark Grass.U
-				Inner: Biome: Grass Dark Grass
 				End: Biome: Grass Dark Grass.R
 				Points: 0,1, 0,0, 1,0
 
@@ -16834,84 +16438,72 @@ MultiBrushCollections:
 			Template: 172
 			Segment:
 				Start: Cliff: Grass Crater.U
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@173:
 			Template: 173
 			Segment:
 				Start: Cliff: Grass Crater.U
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@174:
 			Template: 174
 			Segment:
 				Start: Cliff: Grass Crater.L
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@176:
 			Template: 176
 			Segment:
 				Start: Cliff: Grass Crater.R
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@178:
 			Template: 178
 			Segment:
 				Start: Cliff: Grass Crater.L
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@179:
 			Template: 179
 			Segment:
 				Start: Cliff: Grass Crater.R
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.U
 				Points: 0,0
 		MultiBrush@180:
 			Template: 180
 			Segment:
 				Start: Cliff: Grass Crater.U
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.L
 				Points: 0,1
 		MultiBrush@181:
 			Template: 181
 			Segment:
 				Start: Cliff: Grass Crater.R
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@182:
 			Template: 182
 			Segment:
 				Start: Cliff: Grass Crater.D
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@183:
 			Template: 183
 			Segment:
 				Start: Cliff: Grass Crater.D
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@184:
 			Template: 184
 			Segment:
 				Start: Cliff: Grass Crater.D
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.R
 				Points: 1,0
 		MultiBrush@185:
 			Template: 185
 			Segment:
 				Start: Cliff: Grass Crater.L
-				Inner: Cliff: Grass Crater
 				End: Cliff: Grass Crater.D
 				Points: 1,1
 
@@ -16921,84 +16513,72 @@ MultiBrushCollections:
 			Template: 240
 			Segment:
 				Start: Biome: Snow Ice.U
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@241:
 			Template: 241
 			Segment:
 				Start: Biome: Snow Ice.U
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.U
 				Points: 0,1, 0,0
 		MultiBrush@242:
 			Template: 242
 			Segment:
 				Start: Biome: Snow Ice.L
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@245:
 			Template: 245
 			Segment:
 				Start: Biome: Snow Ice.R
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.R
 				Points: 0,0, 1,0
 		MultiBrush@247:
 			Template: 247
 			Segment:
 				Start: Biome: Snow Ice.L
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.L
 				Points: 1,1, 0,1
 		MultiBrush@248:
 			Template: 248
 			Segment:
 				Start: Biome: Snow Ice.R
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.U
 				Points: 0,0
 		MultiBrush@249:
 			Template: 249
 			Segment:
 				Start: Biome: Snow Ice.U
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.L
 				Points: 0,1
 		MultiBrush@250:
 			Template: 250
 			Segment:
 				Start: Biome: Snow Ice.R
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@251:
 			Template: 251
 			Segment:
 				Start: Biome: Snow Ice.D
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.D
 				Points: 1,0, 1,1
 		MultiBrush@252:
 			Template: 252
 			Segment:
 				Start: Biome: Snow Ice.D
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@253:
 			Template: 253
 			Segment:
 				Start: Biome: Snow Ice.D
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.R
 				Points: 1,0
 		MultiBrush@254:
 			Template: 254
 			Segment:
 				Start: Biome: Snow Ice.L
-				Inner: Biome: Snow Ice
 				End: Biome: Snow Ice.D
 				Points: 1,1
 
@@ -17008,84 +16588,72 @@ MultiBrushCollections:
 			Template: 255
 			Segment:
 				Start: Ice Water.U
-				Inner: Ice Water
 				End: Ice Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@256:
 			Template: 256
 			Segment:
 				Start: Ice Water.U
-				Inner: Ice Water
 				End: Ice Water.U
 				Points: 0,1, 0,0
 		MultiBrush@257:
 			Template: 257
 			Segment:
 				Start: Ice Water.L
-				Inner: Ice Water
 				End: Ice Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@258:
 			Template: 258
 			Segment:
 				Start: Ice Water.R
-				Inner: Ice Water
 				End: Ice Water.U
 				Points: 0,0
 		MultiBrush@259:
 			Template: 259
 			Segment:
 				Start: Ice Water.U
-				Inner: Ice Water
 				End: Ice Water.L
 				Points: 0,1
 		MultiBrush@260:
 			Template: 260
 			Segment:
 				Start: Ice Water.R
-				Inner: Ice Water
 				End: Ice Water.R
 				Points: 0,0, 1,0
 		MultiBrush@262:
 			Template: 262
 			Segment:
 				Start: Ice Water.L
-				Inner: Ice Water
 				End: Ice Water.L
 				Points: 1,1, 0,1
 		MultiBrush@263:
 			Template: 263
 			Segment:
 				Start: Ice Water.D
-				Inner: Ice Water
 				End: Ice Water.R
 				Points: 1,0
 		MultiBrush@264:
 			Template: 264
 			Segment:
 				Start: Ice Water.L
-				Inner: Ice Water
 				End: Ice Water.D
 				Points: 1,1
 		MultiBrush@265:
 			Template: 265
 			Segment:
 				Start: Ice Water.R
-				Inner: Ice Water
 				End: Ice Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@266:
 			Template: 266
 			Segment:
 				Start: Ice Water.D
-				Inner: Ice Water
 				End: Ice Water.D
 				Points: 1,0, 1,1
 		MultiBrush@267:
 			Template: 267
 			Segment:
 				Start: Ice Water.D
-				Inner: Ice Water
 				End: Ice Water.L
 				Points: 1,0, 1,1, 0,1
 
@@ -17095,84 +16663,72 @@ MultiBrushCollections:
 			Template: 269
 			Segment:
 				Start: Ice Cracked Water.U
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@270:
 			Template: 270
 			Segment:
 				Start: Ice Cracked Water.U
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.U
 				Points: 0,1, 0,0
 		MultiBrush@271:
 			Template: 271
 			Segment:
 				Start: Ice Cracked Water.L
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@272:
 			Template: 272
 			Segment:
 				Start: Ice Cracked Water.R
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.U
 				Points: 0,0
 		MultiBrush@273:
 			Template: 273
 			Segment:
 				Start: Ice Cracked Water.U
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.L
 				Points: 0,1
 		MultiBrush@274:
 			Template: 274
 			Segment:
 				Start: Ice Cracked Water.R
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.R
 				Points: 0,0, 1,0
 		MultiBrush@276:
 			Template: 276
 			Segment:
 				Start: Ice Cracked Water.L
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.L
 				Points: 1,1, 0,1
 		MultiBrush@277:
 			Template: 277
 			Segment:
 				Start: Ice Cracked Water.D
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.R
 				Points: 1,0
 		MultiBrush@278:
 			Template: 278
 			Segment:
 				Start: Ice Cracked Water.L
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.D
 				Points: 1,1
 		MultiBrush@279:
 			Template: 279
 			Segment:
 				Start: Ice Cracked Water.R
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@280:
 			Template: 280
 			Segment:
 				Start: Ice Cracked Water.D
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.D
 				Points: 1,0, 1,1
 		MultiBrush@281:
 			Template: 281
 			Segment:
 				Start: Ice Cracked Water.D
-				Inner: Ice Cracked Water
 				End: Ice Cracked Water.L
 				Points: 1,0, 1,1, 0,1
 
@@ -17182,84 +16738,72 @@ MultiBrushCollections:
 			Template: 282
 			Segment:
 				Start: Ice Floes Water.U
-				Inner: Ice Floes Water
 				End: Ice Floes Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@283:
 			Template: 283
 			Segment:
 				Start: Ice Floes Water.U
-				Inner: Ice Floes Water
 				End: Ice Floes Water.U
 				Points: 0,1, 0,0
 		MultiBrush@284:
 			Template: 284
 			Segment:
 				Start: Ice Floes Water.L
-				Inner: Ice Floes Water
 				End: Ice Floes Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@285:
 			Template: 285
 			Segment:
 				Start: Ice Floes Water.R
-				Inner: Ice Floes Water
 				End: Ice Floes Water.U
 				Points: 0,0
 		MultiBrush@286:
 			Template: 286
 			Segment:
 				Start: Ice Floes Water.U
-				Inner: Ice Floes Water
 				End: Ice Floes Water.L
 				Points: 0,1
 		MultiBrush@287:
 			Template: 287
 			Segment:
 				Start: Ice Floes Water.R
-				Inner: Ice Floes Water
 				End: Ice Floes Water.R
 				Points: 0,0, 1,0
 		MultiBrush@289:
 			Template: 289
 			Segment:
 				Start: Ice Floes Water.L
-				Inner: Ice Floes Water
 				End: Ice Floes Water.L
 				Points: 1,1, 0,1
 		MultiBrush@290:
 			Template: 290
 			Segment:
 				Start: Ice Floes Water.D
-				Inner: Ice Floes Water
 				End: Ice Floes Water.R
 				Points: 1,0
 		MultiBrush@291:
 			Template: 291
 			Segment:
 				Start: Ice Floes Water.L
-				Inner: Ice Floes Water
 				End: Ice Floes Water.D
 				Points: 1,1
 		MultiBrush@292:
 			Template: 292
 			Segment:
 				Start: Ice Floes Water.R
-				Inner: Ice Floes Water
 				End: Ice Floes Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@293:
 			Template: 293
 			Segment:
 				Start: Ice Floes Water.D
-				Inner: Ice Floes Water
 				End: Ice Floes Water.D
 				Points: 1,0, 1,1
 		MultiBrush@294:
 			Template: 294
 			Segment:
 				Start: Ice Floes Water.D
-				Inner: Ice Floes Water
 				End: Ice Floes Water.L
 				Points: 1,0, 1,1, 0,1
 
@@ -17269,84 +16813,72 @@ MultiBrushCollections:
 			Template: 332
 			Segment:
 				Start: Lava Flow.U
-				Inner: Lava Flow
 				End: Lava Flow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@333:
 			Template: 333
 			Segment:
 				Start: Lava Flow.U
-				Inner: Lava Flow
 				End: Lava Flow.U
 				Points: 0,1, 0,0
 		MultiBrush@334:
 			Template: 334
 			Segment:
 				Start: Lava Flow.L
-				Inner: Lava Flow
 				End: Lava Flow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@335:
 			Template: 335
 			Segment:
 				Start: Lava Flow.R
-				Inner: Lava Flow
 				End: Lava Flow.R
 				Points: 0,0, 1,0
 		MultiBrush@336:
 			Template: 336
 			Segment:
 				Start: Lava Flow.L
-				Inner: Lava Flow
 				End: Lava Flow.L
 				Points: 1,1, 0,1
 		MultiBrush@337:
 			Template: 337
 			Segment:
 				Start: Lava Flow.R
-				Inner: Lava Flow
 				End: Lava Flow.U
 				Points: 0,0
 		MultiBrush@338:
 			Template: 338
 			Segment:
 				Start: Lava Flow.U
-				Inner: Lava Flow
 				End: Lava Flow.L
 				Points: 0,1
 		MultiBrush@339:
 			Template: 339
 			Segment:
 				Start: Lava Flow.R
-				Inner: Lava Flow
 				End: Lava Flow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@340:
 			Template: 340
 			Segment:
 				Start: Lava Flow.D
-				Inner: Lava Flow
 				End: Lava Flow.D
 				Points: 1,0, 1,1
 		MultiBrush@341:
 			Template: 341
 			Segment:
 				Start: Lava Flow.D
-				Inner: Lava Flow
 				End: Lava Flow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@342:
 			Template: 342
 			Segment:
 				Start: Lava Flow.D
-				Inner: Lava Flow
 				End: Lava Flow.R
 				Points: 1,0
 		MultiBrush@343:
 			Template: 343
 			Segment:
 				Start: Lava Flow.L
-				Inner: Lava Flow
 				End: Lava Flow.D
 				Points: 1,1
 
@@ -17356,84 +16888,72 @@ MultiBrushCollections:
 			Template: 365
 			Segment:
 				Start: Biome: Mountain Crater.U
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@366:
 			Template: 366
 			Segment:
 				Start: Biome: Mountain Crater.U
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@367:
 			Template: 367
 			Segment:
 				Start: Biome: Mountain Crater.L
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@368:
 			Template: 368
 			Segment:
 				Start: Biome: Mountain Crater.R
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@370:
 			Template: 370
 			Segment:
 				Start: Biome: Mountain Crater.L
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@371:
 			Template: 371
 			Segment:
 				Start: Biome: Mountain Crater.R
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.U
 				Points: 0,0
 		MultiBrush@372:
 			Template: 372
 			Segment:
 				Start: Biome: Mountain Crater.U
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.L
 				Points: 0,1
 		MultiBrush@373:
 			Template: 373
 			Segment:
 				Start: Biome: Mountain Crater.R
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@374:
 			Template: 374
 			Segment:
 				Start: Biome: Mountain Crater.D
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@375:
 			Template: 375
 			Segment:
 				Start: Biome: Mountain Crater.D
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@376:
 			Template: 376
 			Segment:
 				Start: Biome: Mountain Crater.D
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.R
 				Points: 1,0
 		MultiBrush@377:
 			Template: 377
 			Segment:
 				Start: Biome: Mountain Crater.L
-				Inner: Biome: Mountain Crater
 				End: Biome: Mountain Crater.D
 				Points: 1,1
 
@@ -17443,84 +16963,72 @@ MultiBrushCollections:
 			Template: 191
 			Segment:
 				Start: Biome: Mountain Grass.U
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@192:
 			Template: 192
 			Segment:
 				Start: Biome: Mountain Grass.U
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@193:
 			Template: 193
 			Segment:
 				Start: Biome: Mountain Grass.L
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@194:
 			Template: 194
 			Segment:
 				Start: Biome: Mountain Grass.R
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@196:
 			Template: 196
 			Segment:
 				Start: Biome: Mountain Grass.L
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@197:
 			Template: 197
 			Segment:
 				Start: Biome: Mountain Grass.R
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.U
 				Points: 0,0
 		MultiBrush@198:
 			Template: 198
 			Segment:
 				Start: Biome: Mountain Grass.U
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.L
 				Points: 0,1
 		MultiBrush@199:
 			Template: 199
 			Segment:
 				Start: Biome: Mountain Grass.R
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@200:
 			Template: 200
 			Segment:
 				Start: Biome: Mountain Grass.D
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@201:
 			Template: 201
 			Segment:
 				Start: Biome: Mountain Grass.D
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@202:
 			Template: 202
 			Segment:
 				Start: Biome: Mountain Grass.D
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.R
 				Points: 1,0
 		MultiBrush@203:
 			Template: 203
 			Segment:
 				Start: Biome: Mountain Grass.L
-				Inner: Biome: Mountain Grass
 				End: Biome: Mountain Grass.D
 				Points: 1,1
 
@@ -17530,84 +17038,72 @@ MultiBrushCollections:
 			Template: 151
 			Segment:
 				Start: Biome: Grass Crater.U
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@152:
 			Template: 152
 			Segment:
 				Start: Biome: Grass Crater.U
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@153:
 			Template: 153
 			Segment:
 				Start: Biome: Grass Crater.L
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@154:
 			Template: 154
 			Segment:
 				Start: Biome: Grass Crater.R
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@156:
 			Template: 156
 			Segment:
 				Start: Biome: Grass Crater.L
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@157:
 			Template: 157
 			Segment:
 				Start: Biome: Grass Crater.R
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.U
 				Points: 0,0
 		MultiBrush@158:
 			Template: 158
 			Segment:
 				Start: Biome: Grass Crater.U
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.L
 				Points: 0,1
 		MultiBrush@159:
 			Template: 159
 			Segment:
 				Start: Biome: Grass Crater.R
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@160:
 			Template: 160
 			Segment:
 				Start: Biome: Grass Crater.D
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@161:
 			Template: 161
 			Segment:
 				Start: Biome: Grass Crater.D
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@162:
 			Template: 162
 			Segment:
 				Start: Biome: Grass Crater.D
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.R
 				Points: 1,0
 		MultiBrush@163:
 			Template: 163
 			Segment:
 				Start: Biome: Grass Crater.L
-				Inner: Biome: Grass Crater
 				End: Biome: Grass Crater.D
 				Points: 1,1
 
@@ -17617,84 +17113,72 @@ MultiBrushCollections:
 			Template: 414
 			Segment:
 				Start: Biome: Mountain Sand.U
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@415:
 			Template: 415
 			Segment:
 				Start: Biome: Mountain Sand.U
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@416:
 			Template: 416
 			Segment:
 				Start: Biome: Mountain Sand.L
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@417:
 			Template: 417
 			Segment:
 				Start: Biome: Mountain Sand.R
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@418:
 			Template: 418
 			Segment:
 				Start: Biome: Mountain Sand.L
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@419:
 			Template: 419
 			Segment:
 				Start: Biome: Mountain Sand.R
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.U
 				Points: 0,0
 		MultiBrush@420:
 			Template: 420
 			Segment:
 				Start: Biome: Mountain Sand.U
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.L
 				Points: 0,1
 		MultiBrush@421:
 			Template: 421
 			Segment:
 				Start: Biome: Mountain Sand.R
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@422:
 			Template: 422
 			Segment:
 				Start: Biome: Mountain Sand.D
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@423:
 			Template: 423
 			Segment:
 				Start: Biome: Mountain Sand.D
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@424:
 			Template: 424
 			Segment:
 				Start: Biome: Mountain Sand.D
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.R
 				Points: 1,0
 		MultiBrush@425:
 			Template: 425
 			Segment:
 				Start: Biome: Mountain Sand.L
-				Inner: Biome: Mountain Sand
 				End: Biome: Mountain Sand.D
 				Points: 1,1
 
@@ -17704,84 +17188,72 @@ MultiBrushCollections:
 			Template: 495
 			Segment:
 				Start: Ramp: Mountain.U
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@496:
 			Template: 496
 			Segment:
 				Start: Ramp: Mountain.U
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.U
 				Points: 0,1, 0,0
 		MultiBrush@497:
 			Template: 497
 			Segment:
 				Start: Ramp: Mountain.L
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@498:
 			Template: 498
 			Segment:
 				Start: Ramp: Mountain.R
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.R
 				Points: 0,0, 1,0
 		MultiBrush@500:
 			Template: 500
 			Segment:
 				Start: Ramp: Mountain.L
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.L
 				Points: 1,1, 0,1
 		MultiBrush@501:
 			Template: 501
 			Segment:
 				Start: Ramp: Mountain.R
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.U
 				Points: 0,0
 		MultiBrush@502:
 			Template: 502
 			Segment:
 				Start: Ramp: Mountain.U
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.L
 				Points: 0,1
 		MultiBrush@503:
 			Template: 503
 			Segment:
 				Start: Ramp: Mountain.R
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@504:
 			Template: 504
 			Segment:
 				Start: Ramp: Mountain.D
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.D
 				Points: 1,0, 1,1
 		MultiBrush@505:
 			Template: 505
 			Segment:
 				Start: Ramp: Mountain.D
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@506:
 			Template: 506
 			Segment:
 				Start: Ramp: Mountain.D
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.R
 				Points: 1,0
 		MultiBrush@507:
 			Template: 507
 			Segment:
 				Start: Ramp: Mountain.L
-				Inner: Ramp: Mountain
 				End: Ramp: Mountain.D
 				Points: 1,1
 
@@ -17791,84 +17263,72 @@ MultiBrushCollections:
 			Template: 632
 			Segment:
 				Start: Biome: Red Snow Crater.U
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@633:
 			Template: 633
 			Segment:
 				Start: Biome: Red Snow Crater.U
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@634:
 			Template: 634
 			Segment:
 				Start: Biome: Red Snow Crater.L
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@636:
 			Template: 636
 			Segment:
 				Start: Biome: Red Snow Crater.R
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@638:
 			Template: 638
 			Segment:
 				Start: Biome: Red Snow Crater.L
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@639:
 			Template: 639
 			Segment:
 				Start: Biome: Red Snow Crater.R
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.U
 				Points: 0,0
 		MultiBrush@640:
 			Template: 640
 			Segment:
 				Start: Biome: Red Snow Crater.U
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.L
 				Points: 0,1
 		MultiBrush@641:
 			Template: 641
 			Segment:
 				Start: Biome: Red Snow Crater.R
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@642:
 			Template: 642
 			Segment:
 				Start: Biome: Red Snow Crater.D
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@643:
 			Template: 643
 			Segment:
 				Start: Biome: Red Snow Crater.D
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@644:
 			Template: 644
 			Segment:
 				Start: Biome: Red Snow Crater.D
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.R
 				Points: 1,0
 		MultiBrush@645:
 			Template: 645
 			Segment:
 				Start: Biome: Red Snow Crater.L
-				Inner: Biome: Red Snow Crater
 				End: Biome: Red Snow Crater.D
 				Points: 1,1
 
@@ -17878,84 +17338,72 @@ MultiBrushCollections:
 			Template: 703
 			Segment:
 				Start: Biome: Sand Crater.U
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@704:
 			Template: 704
 			Segment:
 				Start: Biome: Sand Crater.U
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@705:
 			Template: 705
 			Segment:
 				Start: Biome: Sand Crater.L
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@706:
 			Template: 706
 			Segment:
 				Start: Biome: Sand Crater.R
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@708:
 			Template: 708
 			Segment:
 				Start: Biome: Sand Crater.L
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@709:
 			Template: 709
 			Segment:
 				Start: Biome: Sand Crater.R
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.U
 				Points: 0,0
 		MultiBrush@710:
 			Template: 710
 			Segment:
 				Start: Biome: Sand Crater.U
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.L
 				Points: 0,1
 		MultiBrush@711:
 			Template: 711
 			Segment:
 				Start: Biome: Sand Crater.R
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@712:
 			Template: 712
 			Segment:
 				Start: Biome: Sand Crater.D
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@713:
 			Template: 713
 			Segment:
 				Start: Biome: Sand Crater.D
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@714:
 			Template: 714
 			Segment:
 				Start: Biome: Sand Crater.D
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.R
 				Points: 1,0
 		MultiBrush@715:
 			Template: 715
 			Segment:
 				Start: Biome: Sand Crater.L
-				Inner: Biome: Sand Crater
 				End: Biome: Sand Crater.D
 				Points: 1,1
 
@@ -17965,84 +17413,72 @@ MultiBrushCollections:
 			Template: 765
 			Segment:
 				Start: Ramp: Snow.U
-				Inner: Ramp: Snow
 				End: Ramp: Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@766:
 			Template: 766
 			Segment:
 				Start: Ramp: Snow.U
-				Inner: Ramp: Snow
 				End: Ramp: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@767:
 			Template: 767
 			Segment:
 				Start: Ramp: Snow.L
-				Inner: Ramp: Snow
 				End: Ramp: Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@768:
 			Template: 768
 			Segment:
 				Start: Ramp: Snow.R
-				Inner: Ramp: Snow
 				End: Ramp: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@770:
 			Template: 770
 			Segment:
 				Start: Ramp: Snow.L
-				Inner: Ramp: Snow
 				End: Ramp: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@771:
 			Template: 771
 			Segment:
 				Start: Ramp: Snow.R
-				Inner: Ramp: Snow
 				End: Ramp: Snow.U
 				Points: 0,0
 		MultiBrush@772:
 			Template: 772
 			Segment:
 				Start: Ramp: Snow.U
-				Inner: Ramp: Snow
 				End: Ramp: Snow.L
 				Points: 0,1
 		MultiBrush@773:
 			Template: 773
 			Segment:
 				Start: Ramp: Snow.R
-				Inner: Ramp: Snow
 				End: Ramp: Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@774:
 			Template: 774
 			Segment:
 				Start: Ramp: Snow.D
-				Inner: Ramp: Snow
 				End: Ramp: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@775:
 			Template: 775
 			Segment:
 				Start: Ramp: Snow.D
-				Inner: Ramp: Snow
 				End: Ramp: Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@776:
 			Template: 776
 			Segment:
 				Start: Ramp: Snow.D
-				Inner: Ramp: Snow
 				End: Ramp: Snow.R
 				Points: 1,0
 		MultiBrush@777:
 			Template: 777
 			Segment:
 				Start: Ramp: Snow.L
-				Inner: Ramp: Snow
 				End: Ramp: Snow.D
 				Points: 1,1
 
@@ -18052,84 +17488,72 @@ MultiBrushCollections:
 			Template: 778
 			Segment:
 				Start: Biome: Snow Red Snow.U
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@779:
 			Template: 779
 			Segment:
 				Start: Biome: Snow Red Snow.U
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@780:
 			Template: 780
 			Segment:
 				Start: Biome: Snow Red Snow.L
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@781:
 			Template: 781
 			Segment:
 				Start: Biome: Snow Red Snow.R
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@783:
 			Template: 783
 			Segment:
 				Start: Biome: Snow Red Snow.L
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@784:
 			Template: 784
 			Segment:
 				Start: Biome: Snow Red Snow.R
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.U
 				Points: 0,0
 		MultiBrush@785:
 			Template: 785
 			Segment:
 				Start: Biome: Snow Red Snow.U
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.L
 				Points: 0,1
 		MultiBrush@786:
 			Template: 786
 			Segment:
 				Start: Biome: Snow Red Snow.R
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@787:
 			Template: 787
 			Segment:
 				Start: Biome: Snow Red Snow.D
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@788:
 			Template: 788
 			Segment:
 				Start: Biome: Snow Red Snow.D
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@789:
 			Template: 789
 			Segment:
 				Start: Biome: Snow Red Snow.D
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.R
 				Points: 1,0
 		MultiBrush@790:
 			Template: 790
 			Segment:
 				Start: Biome: Snow Red Snow.L
-				Inner: Biome: Snow Red Snow
 				End: Biome: Snow Red Snow.D
 				Points: 1,1
 
@@ -18139,84 +17563,72 @@ MultiBrushCollections:
 			Template: 810
 			Segment:
 				Start: Biome: Snow Crater.U
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@811:
 			Template: 811
 			Segment:
 				Start: Biome: Snow Crater.L
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@812:
 			Template: 812
 			Segment:
 				Start: Biome: Snow Crater.R
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@813:
 			Template: 813
 			Segment:
 				Start: Biome: Snow Crater.L
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@815:
 			Template: 815
 			Segment:
 				Start: Biome: Snow Crater.R
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.U
 				Points: 0,0
 		MultiBrush@816:
 			Template: 816
 			Segment:
 				Start: Biome: Snow Crater.U
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.L
 				Points: 0,1
 		MultiBrush@817:
 			Template: 817
 			Segment:
 				Start: Biome: Snow Crater.R
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@818:
 			Template: 818
 			Segment:
 				Start: Biome: Snow Crater.U
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@819:
 			Template: 819
 			Segment:
 				Start: Biome: Snow Crater.D
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@820:
 			Template: 820
 			Segment:
 				Start: Biome: Snow Crater.D
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@821:
 			Template: 821
 			Segment:
 				Start: Biome: Snow Crater.D
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.R
 				Points: 1,0
 		MultiBrush@822:
 			Template: 822
 			Segment:
 				Start: Biome: Snow Crater.L
-				Inner: Biome: Snow Crater
 				End: Biome: Snow Crater.D
 				Points: 1,1
 
@@ -18226,84 +17638,72 @@ MultiBrushCollections:
 			Template: 859
 			Segment:
 				Start: Biome: Mountain Snow.U
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@860:
 			Template: 860
 			Segment:
 				Start: Biome: Mountain Snow.U
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@861:
 			Template: 861
 			Segment:
 				Start: Biome: Mountain Snow.L
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@862:
 			Template: 862
 			Segment:
 				Start: Biome: Mountain Snow.R
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@863:
 			Template: 863
 			Segment:
 				Start: Biome: Mountain Snow.L
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@864:
 			Template: 864
 			Segment:
 				Start: Biome: Mountain Snow.R
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.U
 				Points: 0,0
 		MultiBrush@865:
 			Template: 865
 			Segment:
 				Start: Biome: Mountain Snow.U
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.L
 				Points: 0,1
 		MultiBrush@866:
 			Template: 866
 			Segment:
 				Start: Biome: Mountain Snow.R
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@867:
 			Template: 867
 			Segment:
 				Start: Biome: Mountain Snow.D
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@868:
 			Template: 868
 			Segment:
 				Start: Biome: Mountain Snow.D
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@869:
 			Template: 869
 			Segment:
 				Start: Biome: Mountain Snow.D
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.R
 				Points: 1,0
 		MultiBrush@870:
 			Template: 870
 			Segment:
 				Start: Biome: Mountain Snow.L
-				Inner: Biome: Mountain Snow
 				End: Biome: Mountain Snow.D
 				Points: 1,1
 
@@ -18313,84 +17713,72 @@ MultiBrushCollections:
 			Template: 901
 			Segment:
 				Start: Biome: Stone Crater.U
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@902:
 			Template: 902
 			Segment:
 				Start: Biome: Stone Crater.U
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@903:
 			Template: 903
 			Segment:
 				Start: Biome: Stone Crater.L
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@905:
 			Template: 905
 			Segment:
 				Start: Biome: Stone Crater.R
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@907:
 			Template: 907
 			Segment:
 				Start: Biome: Stone Crater.L
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@908:
 			Template: 908
 			Segment:
 				Start: Biome: Stone Crater.R
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.U
 				Points: 0,0
 		MultiBrush@909:
 			Template: 909
 			Segment:
 				Start: Biome: Stone Crater.U
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.L
 				Points: 0,1
 		MultiBrush@910:
 			Template: 910
 			Segment:
 				Start: Biome: Stone Crater.R
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@911:
 			Template: 911
 			Segment:
 				Start: Biome: Stone Crater.D
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@912:
 			Template: 912
 			Segment:
 				Start: Biome: Stone Crater.D
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@913:
 			Template: 913
 			Segment:
 				Start: Biome: Stone Crater.D
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.R
 				Points: 1,0
 		MultiBrush@914:
 			Template: 914
 			Segment:
 				Start: Biome: Stone Crater.L
-				Inner: Biome: Stone Crater
 				End: Biome: Stone Crater.D
 				Points: 1,1
 
@@ -18400,84 +17788,72 @@ MultiBrushCollections:
 			Template: 951
 			Segment:
 				Start: Biome: Stone Snow.U
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@952:
 			Template: 952
 			Segment:
 				Start: Biome: Stone Snow.U
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@953:
 			Template: 953
 			Segment:
 				Start: Biome: Stone Snow.L
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@956:
 			Template: 956
 			Segment:
 				Start: Biome: Stone Snow.R
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@957:
 			Template: 957
 			Segment:
 				Start: Biome: Stone Snow.L
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@958:
 			Template: 958
 			Segment:
 				Start: Biome: Stone Snow.R
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.U
 				Points: 0,0
 		MultiBrush@959:
 			Template: 959
 			Segment:
 				Start: Biome: Stone Snow.U
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.L
 				Points: 0,1
 		MultiBrush@960:
 			Template: 960
 			Segment:
 				Start: Biome: Stone Snow.R
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@961:
 			Template: 961
 			Segment:
 				Start: Biome: Stone Snow.D
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@962:
 			Template: 962
 			Segment:
 				Start: Biome: Stone Snow.D
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@963:
 			Template: 963
 			Segment:
 				Start: Biome: Stone Snow.D
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.R
 				Points: 1,0
 		MultiBrush@964:
 			Template: 964
 			Segment:
 				Start: Biome: Stone Snow.L
-				Inner: Biome: Stone Snow
 				End: Biome: Stone Snow.D
 				Points: 1,1
 
@@ -18487,84 +17863,72 @@ MultiBrushCollections:
 			Template: 1065
 			Segment:
 				Start: Cliff: Grass Swamp.U
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1066:
 			Template: 1066
 			Segment:
 				Start: Cliff: Grass Swamp.U
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.U
 				Points: 0,1, 0,0
 		MultiBrush@1067:
 			Template: 1067
 			Segment:
 				Start: Cliff: Grass Swamp.L
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1069:
 			Template: 1069
 			Segment:
 				Start: Cliff: Grass Swamp.R
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.R
 				Points: 0,0, 1,0
 		MultiBrush@1071:
 			Template: 1071
 			Segment:
 				Start: Cliff: Grass Swamp.L
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.L
 				Points: 1,1, 0,1
 		MultiBrush@1078:
 			Template: 1078
 			Segment:
 				Start: Cliff: Grass Swamp.R
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.U
 				Points: 0,0
 		MultiBrush@1077:
 			Template: 1077
 			Segment:
 				Start: Cliff: Grass Swamp.U
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.L
 				Points: 0,1
 		MultiBrush@1074:
 			Template: 1074
 			Segment:
 				Start: Cliff: Grass Swamp.R
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1075:
 			Template: 1075
 			Segment:
 				Start: Cliff: Grass Swamp.D
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.D
 				Points: 1,0, 1,1
 		MultiBrush@1076:
 			Template: 1076
 			Segment:
 				Start: Cliff: Grass Swamp.D
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1073:
 			Template: 1073
 			Segment:
 				Start: Cliff: Grass Swamp.D
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.R
 				Points: 1,0
 		MultiBrush@1072:
 			Template: 1072
 			Segment:
 				Start: Cliff: Grass Swamp.L
-				Inner: Cliff: Grass Swamp
 				End: Cliff: Grass Swamp.D
 				Points: 1,1
 
@@ -18574,84 +17938,72 @@ MultiBrushCollections:
 			Template: 1104
 			Segment:
 				Start: Biome: Tech Crater.U
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1105:
 			Template: 1105
 			Segment:
 				Start: Biome: Tech Crater.U
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@1106:
 			Template: 1106
 			Segment:
 				Start: Biome: Tech Crater.L
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1108:
 			Template: 1108
 			Segment:
 				Start: Biome: Tech Crater.R
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@1110:
 			Template: 1110
 			Segment:
 				Start: Biome: Tech Crater.L
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@1111:
 			Template: 1111
 			Segment:
 				Start: Biome: Tech Crater.R
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.U
 				Points: 0,0
 		MultiBrush@1112:
 			Template: 1112
 			Segment:
 				Start: Biome: Tech Crater.U
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.L
 				Points: 0,1
 		MultiBrush@1113:
 			Template: 1113
 			Segment:
 				Start: Biome: Tech Crater.R
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1114:
 			Template: 1114
 			Segment:
 				Start: Biome: Tech Crater.D
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@1115:
 			Template: 1115
 			Segment:
 				Start: Biome: Tech Crater.D
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1116:
 			Template: 1116
 			Segment:
 				Start: Biome: Tech Crater.D
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.R
 				Points: 1,0
 		MultiBrush@1117:
 			Template: 1117
 			Segment:
 				Start: Biome: Tech Crater.L
-				Inner: Biome: Tech Crater
 				End: Biome: Tech Crater.D
 				Points: 1,1
 
@@ -18661,84 +18013,72 @@ MultiBrushCollections:
 			Template: 1126
 			Segment:
 				Start: Cliff: Tech Crater.U
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1127:
 			Template: 1127
 			Segment:
 				Start: Cliff: Tech Crater.U
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@1128:
 			Template: 1128
 			Segment:
 				Start: Cliff: Tech Crater.L
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1130:
 			Template: 1130
 			Segment:
 				Start: Cliff: Tech Crater.R
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@1132:
 			Template: 1132
 			Segment:
 				Start: Cliff: Tech Crater.L
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@1133:
 			Template: 1133
 			Segment:
 				Start: Cliff: Tech Crater.R
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.U
 				Points: 0,0
 		MultiBrush@1134:
 			Template: 1134
 			Segment:
 				Start: Cliff: Tech Crater.U
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.L
 				Points: 0,1
 		MultiBrush@1135:
 			Template: 1135
 			Segment:
 				Start: Cliff: Tech Crater.R
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1136:
 			Template: 1136
 			Segment:
 				Start: Cliff: Tech Crater.D
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@1137:
 			Template: 1137
 			Segment:
 				Start: Cliff: Tech Crater.D
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1138:
 			Template: 1138
 			Segment:
 				Start: Cliff: Tech Crater.D
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.R
 				Points: 1,0
 		MultiBrush@1139:
 			Template: 1139
 			Segment:
 				Start: Cliff: Tech Crater.L
-				Inner: Cliff: Tech Crater
 				End: Cliff: Tech Crater.D
 				Points: 1,1
 
@@ -18748,84 +18088,72 @@ MultiBrushCollections:
 			Template: 1140
 			Segment:
 				Start: Cliff: Tech Lava.U
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1141:
 			Template: 1141
 			Segment:
 				Start: Cliff: Tech Lava.U
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@1142:
 			Template: 1142
 			Segment:
 				Start: Cliff: Tech Lava.L
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1144:
 			Template: 1144
 			Segment:
 				Start: Cliff: Tech Lava.R
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@1146:
 			Template: 1146
 			Segment:
 				Start: Cliff: Tech Lava.L
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@1147:
 			Template: 1147
 			Segment:
 				Start: Cliff: Tech Lava.R
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.U
 				Points: 0,0
 		MultiBrush@1148:
 			Template: 1148
 			Segment:
 				Start: Cliff: Tech Lava.U
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.L
 				Points: 0,1
 		MultiBrush@1149:
 			Template: 1149
 			Segment:
 				Start: Cliff: Tech Lava.R
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1150:
 			Template: 1150
 			Segment:
 				Start: Cliff: Tech Lava.D
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@1151:
 			Template: 1151
 			Segment:
 				Start: Cliff: Tech Lava.D
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1152:
 			Template: 1152
 			Segment:
 				Start: Cliff: Tech Lava.D
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.R
 				Points: 1,0
 		MultiBrush@1153:
 			Template: 1153
 			Segment:
 				Start: Cliff: Tech Lava.L
-				Inner: Cliff: Tech Lava
 				End: Cliff: Tech Lava.D
 				Points: 1,1
 
@@ -18835,84 +18163,72 @@ MultiBrushCollections:
 			Template: 1154
 			Segment:
 				Start: Cliff: Tech Water.U
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1155:
 			Template: 1155
 			Segment:
 				Start: Cliff: Tech Water.U
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.U
 				Points: 0,1, 0,0
 		MultiBrush@1156:
 			Template: 1156
 			Segment:
 				Start: Cliff: Tech Water.L
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1158:
 			Template: 1158
 			Segment:
 				Start: Cliff: Tech Water.R
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.R
 				Points: 0,0, 1,0
 		MultiBrush@1160:
 			Template: 1160
 			Segment:
 				Start: Cliff: Tech Water.L
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.L
 				Points: 1,1, 0,1
 		MultiBrush@1161:
 			Template: 1161
 			Segment:
 				Start: Cliff: Tech Water.R
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.U
 				Points: 0,0
 		MultiBrush@1162:
 			Template: 1162
 			Segment:
 				Start: Cliff: Tech Water.U
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.L
 				Points: 0,1
 		MultiBrush@1163:
 			Template: 1163
 			Segment:
 				Start: Cliff: Tech Water.R
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1164:
 			Template: 1164
 			Segment:
 				Start: Cliff: Tech Water.D
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.D
 				Points: 1,0, 1,1
 		MultiBrush@1165:
 			Template: 1165
 			Segment:
 				Start: Cliff: Tech Water.D
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1166:
 			Template: 1166
 			Segment:
 				Start: Cliff: Tech Water.D
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.R
 				Points: 1,0
 		MultiBrush@1167:
 			Template: 1167
 			Segment:
 				Start: Cliff: Tech Water.L
-				Inner: Cliff: Tech Water
 				End: Cliff: Tech Water.D
 				Points: 1,1
 
@@ -18922,84 +18238,72 @@ MultiBrushCollections:
 			Template: 1489
 			Segment:
 				Start: Cliff: Tech Swamp.U
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1490:
 			Template: 1490
 			Segment:
 				Start: Cliff: Tech Swamp.U
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.U
 				Points: 0,1, 0,0
 		MultiBrush@1491:
 			Template: 1491
 			Segment:
 				Start: Cliff: Tech Swamp.L
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1492:
 			Template: 1492
 			Segment:
 				Start: Cliff: Tech Swamp.R
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.R
 				Points: 0,0, 1,0
 		MultiBrush@1493:
 			Template: 1493
 			Segment:
 				Start: Cliff: Tech Swamp.L
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.L
 				Points: 1,1, 0,1
 		MultiBrush@1494:
 			Template: 1494
 			Segment:
 				Start: Cliff: Tech Swamp.R
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.U
 				Points: 0,0
 		MultiBrush@1495:
 			Template: 1495
 			Segment:
 				Start: Cliff: Tech Swamp.U
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.L
 				Points: 0,1
 		MultiBrush@1496:
 			Template: 1496
 			Segment:
 				Start: Cliff: Tech Swamp.R
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1497:
 			Template: 1497
 			Segment:
 				Start: Cliff: Tech Swamp.D
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.D
 				Points: 1,0, 1,1
 		MultiBrush@1498:
 			Template: 1498
 			Segment:
 				Start: Cliff: Tech Swamp.D
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1499:
 			Template: 1499
 			Segment:
 				Start: Cliff: Tech Swamp.D
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.R
 				Points: 1,0
 		MultiBrush@1500:
 			Template: 1500
 			Segment:
 				Start: Cliff: Tech Swamp.L
-				Inner: Cliff: Tech Swamp
 				End: Cliff: Tech Swamp.D
 				Points: 1,1
 
@@ -19009,140 +18313,120 @@ MultiBrushCollections:
 			Template: 1168
 			Segment:
 				Start: Cliff: Tech.U
-				Inner: Cliff: Tech
 				End: Cliff: Tech.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1169:
 			Template: 1169
 			Segment:
 				Start: Cliff: Tech.U
-				Inner: Cliff: Tech
 				End: Cliff: Tech.U
 				Points: 0,1, 0,0
 		MultiBrush@1170:
 			Template: 1170
 			Segment:
 				Start: Cliff: Tech.L
-				Inner: Cliff: Tech
 				End: Cliff: Tech.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1171:
 			Template: 1171
 			Segment:
 				Start: Cliff: Tech.R
-				Inner: Cliff: Tech
 				End: Cliff: Tech.R
 				Points: 0,0, 1,0
 		MultiBrush@1173:
 			Template: 1173
 			Segment:
 				Start: Cliff: Tech.L
-				Inner: Cliff: Tech
 				End: Cliff: Tech.L
 				Points: 1,1, 0,1
 		MultiBrush@1174:
 			Template: 1174
 			Segment:
 				Start: Cliff: Tech.R
-				Inner: Cliff: Tech
 				End: Cliff: Tech.U
 				Points: 0,0
 		MultiBrush@1175:
 			Template: 1175
 			Segment:
 				Start: Cliff: Tech.U
-				Inner: Cliff: Tech
 				End: Cliff: Tech.L
 				Points: 0,1
 		MultiBrush@1176:
 			Template: 1176
 			Segment:
 				Start: Cliff: Tech.R
-				Inner: Cliff: Tech
 				End: Cliff: Tech.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1177:
 			Template: 1177
 			Segment:
 				Start: Cliff: Tech.D
-				Inner: Cliff: Tech
 				End: Cliff: Tech.D
 				Points: 1,0, 1,1
 		MultiBrush@1178:
 			Template: 1178
 			Segment:
 				Start: Cliff: Tech.D
-				Inner: Cliff: Tech
 				End: Cliff: Tech.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1179:
 			Template: 1179
 			Segment:
 				Start: Cliff: Tech.D
-				Inner: Cliff: Tech
 				End: Cliff: Tech.R
 				Points: 1,0
 		MultiBrush@1180:
 			Template: 1180
 			Segment:
 				Start: Cliff: Tech.L
-				Inner: Cliff: Tech
 				End: Cliff: Tech.D
 				Points: 1,1
 		MultiBrush@1501:
 			Template: 1501
 			Segment:
 				Start: Tech.R
-				Inner: Cliff: Tech
 				End: Cliff: Tech.R
 				Points: 0,0, 1,0
 		MultiBrush@1502:
 			Template: 1502
 			Segment:
 				Start: Cliff: Tech.R
-				Inner: Cliff: Tech
 				End: Tech.R
 				Points: 0,0, 1,0
 		MultiBrush@1503:
 			Template: 1503
 			Segment:
 				Start: Tech.D
-				Inner: Cliff: Tech
 				End: Cliff: Tech.D
 				Points: 1,0, 1,1
 		MultiBrush@1504:
 			Template: 1504
 			Segment:
 				Start: Cliff: Tech.D
-				Inner: Cliff: Tech
 				End: Tech.D
 				Points: 1,0, 1,1
 		MultiBrush@1505:
 			Template: 1505
 			Segment:
 				Start: Cliff: Tech.L
-				Inner: Cliff: Tech
 				End: Tech.L
 				Points: 1,1, 0,1
 		MultiBrush@1506:
 			Template: 1506
 			Segment:
 				Start: Tech.L
-				Inner: Cliff: Tech
 				End: Cliff: Tech.L
 				Points: 1,1, 0,1
 		MultiBrush@1507:
 			Template: 1507
 			Segment:
 				Start: Cliff: Tech.U
-				Inner: Cliff: Tech
 				End: Tech.U
 				Points: 0,1, 0,0
 		MultiBrush@1508:
 			Template: 1508
 			Segment:
 				Start: Tech.U
-				Inner: Cliff: Tech
 				End: Cliff: Tech.U
 				Points: 0,1, 0,0
 
@@ -19152,84 +18436,72 @@ MultiBrushCollections:
 			Template: 1272
 			Segment:
 				Start: Trees: Grass.L
-				Inner: Trees: Grass
 				End: Trees: Grass.D
 				Points: 1,1
 		MultiBrush@1273:
 			Template: 1273
 			Segment:
 				Start: Trees: Grass.L
-				Inner: Trees: Grass
 				End: Trees: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1274:
 			Template: 1274
 			Segment:
 				Start: Trees: Grass.U
-				Inner: Trees: Grass
 				End: Trees: Grass.L
 				Points: 0,1
 		MultiBrush@1275:
 			Template: 1275
 			Segment:
 				Start: Trees: Grass.D
-				Inner: Trees: Grass
 				End: Trees: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1277:
 			Template: 1277
 			Segment:
 				Start: Trees: Grass.U
-				Inner: Trees: Grass
 				End: Trees: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1278:
 			Template: 1278
 			Segment:
 				Start: Trees: Grass.D
-				Inner: Trees: Grass
 				End: Trees: Grass.R
 				Points: 1,0
 		MultiBrush@1279:
 			Template: 1279
 			Segment:
 				Start: Trees: Grass.R
-				Inner: Trees: Grass
 				End: Trees: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1280:
 			Template: 1280
 			Segment:
 				Start: Trees: Grass.R
-				Inner: Trees: Grass
 				End: Trees: Grass.U
 				Points: 0,0
 		MultiBrush@1281:
 			Template: 1281
 			Segment:
 				Start: Trees: Grass.D
-				Inner: Trees: Grass
 				End: Trees: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1282:
 			Template: 1282
 			Segment:
 				Start: Trees: Grass.L
-				Inner: Trees: Grass
 				End: Trees: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1283:
 			Template: 1283
 			Segment:
 				Start: Trees: Grass.R
-				Inner: Trees: Grass
 				End: Trees: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1285:
 			Template: 1285
 			Segment:
 				Start: Trees: Grass.U
-				Inner: Trees: Grass
 				End: Trees: Grass.R
 				Points: 0,1, 0,0, 1,0
 
@@ -19239,84 +18511,72 @@ MultiBrushCollections:
 			Template: 1287
 			Segment:
 				Start: Trees: Snow.L
-				Inner: Trees: Snow
 				End: Trees: Snow.D
 				Points: 1,1
 		MultiBrush@1288:
 			Template: 1288
 			Segment:
 				Start: Trees: Snow.L
-				Inner: Trees: Snow
 				End: Trees: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1289:
 			Template: 1289
 			Segment:
 				Start: Trees: Snow.U
-				Inner: Trees: Snow
 				End: Trees: Snow.L
 				Points: 0,1
 		MultiBrush@1291:
 			Template: 1291
 			Segment:
 				Start: Trees: Snow.D
-				Inner: Trees: Snow
 				End: Trees: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1293:
 			Template: 1293
 			Segment:
 				Start: Trees: Snow.U
-				Inner: Trees: Snow
 				End: Trees: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@1294:
 			Template: 1294
 			Segment:
 				Start: Trees: Snow.D
-				Inner: Trees: Snow
 				End: Trees: Snow.R
 				Points: 1,0
 		MultiBrush@1295:
 			Template: 1295
 			Segment:
 				Start: Trees: Snow.R
-				Inner: Trees: Snow
 				End: Trees: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1296:
 			Template: 1296
 			Segment:
 				Start: Trees: Snow.R
-				Inner: Trees: Snow
 				End: Trees: Snow.U
 				Points: 0,0
 		MultiBrush@1298:
 			Template: 1298
 			Segment:
 				Start: Trees: Snow.D
-				Inner: Trees: Snow
 				End: Trees: Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1299:
 			Template: 1299
 			Segment:
 				Start: Trees: Snow.L
-				Inner: Trees: Snow
 				End: Trees: Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1301:
 			Template: 1301
 			Segment:
 				Start: Trees: Snow.R
-				Inner: Trees: Snow
 				End: Trees: Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1302:
 			Template: 1302
 			Segment:
 				Start: Trees: Snow.U
-				Inner: Trees: Snow
 				End: Trees: Snow.R
 				Points: 0,1, 0,0, 1,0
 
@@ -19326,84 +18586,72 @@ MultiBrushCollections:
 			Template: 1477
 			Segment:
 				Start: Water Flow.U
-				Inner: Water Flow
 				End: Water Flow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1478:
 			Template: 1478
 			Segment:
 				Start: Water Flow.U
-				Inner: Water Flow
 				End: Water Flow.U
 				Points: 0,1, 0,0
 		MultiBrush@1479:
 			Template: 1479
 			Segment:
 				Start: Water Flow.L
-				Inner: Water Flow
 				End: Water Flow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1481:
 			Template: 1481
 			Segment:
 				Start: Water Flow.R
-				Inner: Water Flow
 				End: Water Flow.R
 				Points: 0,0, 1,0
 		MultiBrush@1480:
 			Template: 1480
 			Segment:
 				Start: Water Flow.L
-				Inner: Water Flow
 				End: Water Flow.L
 				Points: 1,1, 0,1
 		MultiBrush@1486:
 			Template: 1486
 			Segment:
 				Start: Water Flow.R
-				Inner: Water Flow
 				End: Water Flow.U
 				Points: 0,0
 		MultiBrush@1483:
 			Template: 1483
 			Segment:
 				Start: Water Flow.U
-				Inner: Water Flow
 				End: Water Flow.L
 				Points: 0,1
 		MultiBrush@1484:
 			Template: 1484
 			Segment:
 				Start: Water Flow.R
-				Inner: Water Flow
 				End: Water Flow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1485:
 			Template: 1485
 			Segment:
 				Start: Water Flow.D
-				Inner: Water Flow
 				End: Water Flow.D
 				Points: 1,0, 1,1
 		MultiBrush@1482:
 			Template: 1482
 			Segment:
 				Start: Water Flow.D
-				Inner: Water Flow
 				End: Water Flow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1487:
 			Template: 1487
 			Segment:
 				Start: Water Flow.D
-				Inner: Water Flow
 				End: Water Flow.R
 				Points: 1,0
 		MultiBrush@1488:
 			Template: 1488
 			Segment:
 				Start: Water Flow.L
-				Inner: Water Flow
 				End: Water Flow.D
 				Points: 1,1
 
@@ -19413,84 +18661,72 @@ MultiBrushCollections:
 			Template: 1470
 			Segment:
 				Start: Biome: Snow Grass.U
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1463:
 			Template: 1463
 			Segment:
 				Start: Biome: Snow Grass.U
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1464:
 			Template: 1464
 			Segment:
 				Start: Biome: Snow Grass.L
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1465:
 			Template: 1465
 			Segment:
 				Start: Biome: Snow Grass.R
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1466:
 			Template: 1466
 			Segment:
 				Start: Biome: Snow Grass.L
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1467:
 			Template: 1467
 			Segment:
 				Start: Biome: Snow Grass.R
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.U
 				Points: 0,0
 		MultiBrush@1468:
 			Template: 1468
 			Segment:
 				Start: Biome: Snow Grass.U
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.L
 				Points: 0,1
 		MultiBrush@1469:
 			Template: 1469
 			Segment:
 				Start: Biome: Snow Grass.R
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1471:
 			Template: 1471
 			Segment:
 				Start: Biome: Snow Grass.D
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1472:
 			Template: 1472
 			Segment:
 				Start: Biome: Snow Grass.D
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1473:
 			Template: 1473
 			Segment:
 				Start: Biome: Snow Grass.D
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.R
 				Points: 1,0
 		MultiBrush@1474:
 			Template: 1474
 			Segment:
 				Start: Biome: Snow Grass.L
-				Inner: Biome: Snow Grass
 				End: Biome: Snow Grass.D
 				Points: 1,1
 
@@ -19500,84 +18736,72 @@ MultiBrushCollections:
 			Template: 1509
 			Segment:
 				Start: Biome: Grass Sand.U
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1510:
 			Template: 1510
 			Segment:
 				Start: Biome: Grass Sand.U
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1511:
 			Template: 1511
 			Segment:
 				Start: Biome: Grass Sand.L
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1512:
 			Template: 1512
 			Segment:
 				Start: Biome: Grass Sand.R
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1513:
 			Template: 1513
 			Segment:
 				Start: Biome: Grass Sand.L
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1514:
 			Template: 1514
 			Segment:
 				Start: Biome: Grass Sand.R
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.U
 				Points: 0,0
 		MultiBrush@1515:
 			Template: 1515
 			Segment:
 				Start: Biome: Grass Sand.U
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.L
 				Points: 0,1
 		MultiBrush@1516:
 			Template: 1516
 			Segment:
 				Start: Biome: Grass Sand.R
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1517:
 			Template: 1517
 			Segment:
 				Start: Biome: Grass Sand.D
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1518:
 			Template: 1518
 			Segment:
 				Start: Biome: Grass Sand.D
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1519:
 			Template: 1519
 			Segment:
 				Start: Biome: Grass Sand.D
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.R
 				Points: 1,0
 		MultiBrush@1520:
 			Template: 1520
 			Segment:
 				Start: Biome: Grass Sand.L
-				Inner: Biome: Grass Sand
 				End: Biome: Grass Sand.D
 				Points: 1,1
 
@@ -19587,84 +18811,72 @@ MultiBrushCollections:
 			Template: 1568
 			Segment:
 				Start: Biome: Grass Dirt.U
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1569:
 			Template: 1569
 			Segment:
 				Start: Biome: Grass Dirt.U
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.U
 				Points: 0,1, 0,0
 		MultiBrush@1570:
 			Template: 1570
 			Segment:
 				Start: Biome: Grass Dirt.L
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1571:
 			Template: 1571
 			Segment:
 				Start: Biome: Grass Dirt.R
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.R
 				Points: 0,0, 1,0
 		MultiBrush@1572:
 			Template: 1572
 			Segment:
 				Start: Biome: Grass Dirt.L
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.L
 				Points: 1,1, 0,1
 		MultiBrush@1573:
 			Template: 1573
 			Segment:
 				Start: Biome: Grass Dirt.R
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.U
 				Points: 0,0
 		MultiBrush@1574:
 			Template: 1574
 			Segment:
 				Start: Biome: Grass Dirt.U
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.L
 				Points: 0,1
 		MultiBrush@1575:
 			Template: 1575
 			Segment:
 				Start: Biome: Grass Dirt.R
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1576:
 			Template: 1576
 			Segment:
 				Start: Biome: Grass Dirt.D
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.D
 				Points: 1,0, 1,1
 		MultiBrush@1577:
 			Template: 1577
 			Segment:
 				Start: Biome: Grass Dirt.D
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1578:
 			Template: 1578
 			Segment:
 				Start: Biome: Grass Dirt.D
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.R
 				Points: 1,0
 		MultiBrush@1579:
 			Template: 1579
 			Segment:
 				Start: Biome: Grass Dirt.L
-				Inner: Biome: Grass Dirt
 				End: Biome: Grass Dirt.D
 				Points: 1,1
 
@@ -19674,84 +18886,72 @@ MultiBrushCollections:
 			Template: 1604
 			Segment:
 				Start: Biome: Snow Dirt.U
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1605:
 			Template: 1605
 			Segment:
 				Start: Biome: Snow Dirt.U
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.U
 				Points: 0,1, 0,0
 		MultiBrush@1606:
 			Template: 1606
 			Segment:
 				Start: Biome: Snow Dirt.L
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1607:
 			Template: 1607
 			Segment:
 				Start: Biome: Snow Dirt.R
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.R
 				Points: 0,0, 1,0
 		MultiBrush@1608:
 			Template: 1608
 			Segment:
 				Start: Biome: Snow Dirt.L
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.L
 				Points: 1,1, 0,1
 		MultiBrush@1609:
 			Template: 1609
 			Segment:
 				Start: Biome: Snow Dirt.R
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.U
 				Points: 0,0
 		MultiBrush@1610:
 			Template: 1610
 			Segment:
 				Start: Biome: Snow Dirt.U
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.L
 				Points: 0,1
 		MultiBrush@1611:
 			Template: 1611
 			Segment:
 				Start: Biome: Snow Dirt.R
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1612:
 			Template: 1612
 			Segment:
 				Start: Biome: Snow Dirt.D
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.D
 				Points: 1,0, 1,1
 		MultiBrush@1613:
 			Template: 1613
 			Segment:
 				Start: Biome: Snow Dirt.D
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1614:
 			Template: 1614
 			Segment:
 				Start: Biome: Snow Dirt.D
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.R
 				Points: 1,0
 		MultiBrush@1615:
 			Template: 1615
 			Segment:
 				Start: Biome: Snow Dirt.L
-				Inner: Biome: Snow Dirt
 				End: Biome: Snow Dirt.D
 				Points: 1,1
 
@@ -19761,84 +18961,72 @@ MultiBrushCollections:
 			Template: 1616
 			Segment:
 				Start: Biome: Sand Dirt.U
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1617:
 			Template: 1617
 			Segment:
 				Start: Biome: Sand Dirt.U
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.U
 				Points: 0,1, 0,0
 		MultiBrush@1618:
 			Template: 1618
 			Segment:
 				Start: Biome: Sand Dirt.L
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1619:
 			Template: 1619
 			Segment:
 				Start: Biome: Sand Dirt.R
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.R
 				Points: 0,0, 1,0
 		MultiBrush@1620:
 			Template: 1620
 			Segment:
 				Start: Biome: Sand Dirt.L
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.L
 				Points: 1,1, 0,1
 		MultiBrush@1621:
 			Template: 1621
 			Segment:
 				Start: Biome: Sand Dirt.R
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.U
 				Points: 0,0
 		MultiBrush@1622:
 			Template: 1622
 			Segment:
 				Start: Biome: Sand Dirt.U
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.L
 				Points: 0,1
 		MultiBrush@1623:
 			Template: 1623
 			Segment:
 				Start: Biome: Sand Dirt.R
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1624:
 			Template: 1624
 			Segment:
 				Start: Biome: Sand Dirt.D
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.D
 				Points: 1,0, 1,1
 		MultiBrush@1625:
 			Template: 1625
 			Segment:
 				Start: Biome: Sand Dirt.D
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1626:
 			Template: 1626
 			Segment:
 				Start: Biome: Sand Dirt.D
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.R
 				Points: 1,0
 		MultiBrush@1627:
 			Template: 1627
 			Segment:
 				Start: Biome: Sand Dirt.L
-				Inner: Biome: Sand Dirt
 				End: Biome: Sand Dirt.D
 				Points: 1,1
 
@@ -19848,84 +19036,72 @@ MultiBrushCollections:
 			Template: 1628
 			Segment:
 				Start: Biome: Tech Grass.U
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1629:
 			Template: 1629
 			Segment:
 				Start: Biome: Tech Grass.U
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1630:
 			Template: 1630
 			Segment:
 				Start: Biome: Tech Grass.L
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1631:
 			Template: 1631
 			Segment:
 				Start: Biome: Tech Grass.R
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1632:
 			Template: 1632
 			Segment:
 				Start: Biome: Tech Grass.L
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1633:
 			Template: 1633
 			Segment:
 				Start: Biome: Tech Grass.R
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.U
 				Points: 0,0
 		MultiBrush@1634:
 			Template: 1634
 			Segment:
 				Start: Biome: Tech Grass.U
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.L
 				Points: 0,1
 		MultiBrush@1635:
 			Template: 1635
 			Segment:
 				Start: Biome: Tech Grass.R
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1636:
 			Template: 1636
 			Segment:
 				Start: Biome: Tech Grass.D
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1637:
 			Template: 1637
 			Segment:
 				Start: Biome: Tech Grass.D
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1638:
 			Template: 1638
 			Segment:
 				Start: Biome: Tech Grass.D
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.R
 				Points: 1,0
 		MultiBrush@1639:
 			Template: 1639
 			Segment:
 				Start: Biome: Tech Grass.L
-				Inner: Biome: Tech Grass
 				End: Biome: Tech Grass.D
 				Points: 1,1
 
@@ -19935,84 +19111,72 @@ MultiBrushCollections:
 			Template: 1640
 			Segment:
 				Start: Biome: Tech Sand.U
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1641:
 			Template: 1641
 			Segment:
 				Start: Biome: Tech Sand.U
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1642:
 			Template: 1642
 			Segment:
 				Start: Biome: Tech Sand.L
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1643:
 			Template: 1643
 			Segment:
 				Start: Biome: Tech Sand.R
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1644:
 			Template: 1644
 			Segment:
 				Start: Biome: Tech Sand.L
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1645:
 			Template: 1645
 			Segment:
 				Start: Biome: Tech Sand.R
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.U
 				Points: 0,0
 		MultiBrush@1646:
 			Template: 1646
 			Segment:
 				Start: Biome: Tech Sand.U
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.L
 				Points: 0,1
 		MultiBrush@1647:
 			Template: 1647
 			Segment:
 				Start: Biome: Tech Sand.R
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1648:
 			Template: 1648
 			Segment:
 				Start: Biome: Tech Sand.D
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1649:
 			Template: 1649
 			Segment:
 				Start: Biome: Tech Sand.D
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1650:
 			Template: 1650
 			Segment:
 				Start: Biome: Tech Sand.D
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.R
 				Points: 1,0
 		MultiBrush@1651:
 			Template: 1651
 			Segment:
 				Start: Biome: Tech Sand.L
-				Inner: Biome: Tech Sand
 				End: Biome: Tech Sand.D
 				Points: 1,1
 
@@ -20022,84 +19186,72 @@ MultiBrushCollections:
 			Template: 1652
 			Segment:
 				Start: Biome: Tech Snow.U
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1653:
 			Template: 1653
 			Segment:
 				Start: Biome: Tech Snow.U
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@1654:
 			Template: 1654
 			Segment:
 				Start: Biome: Tech Snow.L
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1655:
 			Template: 1655
 			Segment:
 				Start: Biome: Tech Snow.R
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1656:
 			Template: 1656
 			Segment:
 				Start: Biome: Tech Snow.L
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1657:
 			Template: 1657
 			Segment:
 				Start: Biome: Tech Snow.R
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.U
 				Points: 0,0
 		MultiBrush@1658:
 			Template: 1658
 			Segment:
 				Start: Biome: Tech Snow.U
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.L
 				Points: 0,1
 		MultiBrush@1659:
 			Template: 1659
 			Segment:
 				Start: Biome: Tech Snow.R
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1660:
 			Template: 1660
 			Segment:
 				Start: Biome: Tech Snow.D
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1661:
 			Template: 1661
 			Segment:
 				Start: Biome: Tech Snow.D
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1662:
 			Template: 1662
 			Segment:
 				Start: Biome: Tech Snow.D
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.R
 				Points: 1,0
 		MultiBrush@1663:
 			Template: 1663
 			Segment:
 				Start: Biome: Tech Snow.L
-				Inner: Biome: Tech Snow
 				End: Biome: Tech Snow.D
 				Points: 1,1
 
@@ -20109,84 +19261,72 @@ MultiBrushCollections:
 			Template: 1764
 			Segment:
 				Start: Biome: Grass Black Sand.U
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1765:
 			Template: 1765
 			Segment:
 				Start: Biome: Grass Black Sand.U
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1766:
 			Template: 1766
 			Segment:
 				Start: Biome: Grass Black Sand.L
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1767:
 			Template: 1767
 			Segment:
 				Start: Biome: Grass Black Sand.R
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1768:
 			Template: 1768
 			Segment:
 				Start: Biome: Grass Black Sand.L
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1769:
 			Template: 1769
 			Segment:
 				Start: Biome: Grass Black Sand.R
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.U
 				Points: 0,0
 		MultiBrush@1770:
 			Template: 1770
 			Segment:
 				Start: Biome: Grass Black Sand.U
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.L
 				Points: 0,1
 		MultiBrush@1771:
 			Template: 1771
 			Segment:
 				Start: Biome: Grass Black Sand.R
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1772:
 			Template: 1772
 			Segment:
 				Start: Biome: Grass Black Sand.D
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1773:
 			Template: 1773
 			Segment:
 				Start: Biome: Grass Black Sand.D
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1774:
 			Template: 1774
 			Segment:
 				Start: Biome: Grass Black Sand.D
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.R
 				Points: 1,0
 		MultiBrush@1775:
 			Template: 1775
 			Segment:
 				Start: Biome: Grass Black Sand.L
-				Inner: Biome: Grass Black Sand
 				End: Biome: Grass Black Sand.D
 				Points: 1,1
 
@@ -20196,84 +19336,72 @@ MultiBrushCollections:
 			Template: 1776
 			Segment:
 				Start: Biome: Black Sand Dirt.U
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1777:
 			Template: 1777
 			Segment:
 				Start: Biome: Black Sand Dirt.U
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.U
 				Points: 0,1, 0,0
 		MultiBrush@1778:
 			Template: 1778
 			Segment:
 				Start: Biome: Black Sand Dirt.L
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1779:
 			Template: 1779
 			Segment:
 				Start: Biome: Black Sand Dirt.R
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.R
 				Points: 0,0, 1,0
 		MultiBrush@1780:
 			Template: 1780
 			Segment:
 				Start: Biome: Black Sand Dirt.L
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.L
 				Points: 1,1, 0,1
 		MultiBrush@1781:
 			Template: 1781
 			Segment:
 				Start: Biome: Black Sand Dirt.R
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.U
 				Points: 0,0
 		MultiBrush@1782:
 			Template: 1782
 			Segment:
 				Start: Biome: Black Sand Dirt.U
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.L
 				Points: 0,1
 		MultiBrush@1783:
 			Template: 1783
 			Segment:
 				Start: Biome: Black Sand Dirt.R
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1784:
 			Template: 1784
 			Segment:
 				Start: Biome: Black Sand Dirt.D
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.D
 				Points: 1,0, 1,1
 		MultiBrush@1785:
 			Template: 1785
 			Segment:
 				Start: Biome: Black Sand Dirt.D
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1786:
 			Template: 1786
 			Segment:
 				Start: Biome: Black Sand Dirt.D
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.R
 				Points: 1,0
 		MultiBrush@1787:
 			Template: 1787
 			Segment:
 				Start: Biome: Black Sand Dirt.L
-				Inner: Biome: Black Sand Dirt
 				End: Biome: Black Sand Dirt.D
 				Points: 1,1
 
@@ -20283,84 +19411,72 @@ MultiBrushCollections:
 			Template: 1788
 			Segment:
 				Start: Biome: Tech Black Sand.U
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1789:
 			Template: 1789
 			Segment:
 				Start: Biome: Tech Black Sand.U
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1790:
 			Template: 1790
 			Segment:
 				Start: Biome: Tech Black Sand.L
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1791:
 			Template: 1791
 			Segment:
 				Start: Biome: Tech Black Sand.R
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1792:
 			Template: 1792
 			Segment:
 				Start: Biome: Tech Black Sand.L
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1793:
 			Template: 1793
 			Segment:
 				Start: Biome: Tech Black Sand.R
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.U
 				Points: 0,0
 		MultiBrush@1794:
 			Template: 1794
 			Segment:
 				Start: Biome: Tech Black Sand.U
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.L
 				Points: 0,1
 		MultiBrush@1795:
 			Template: 1795
 			Segment:
 				Start: Biome: Tech Black Sand.R
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1796:
 			Template: 1796
 			Segment:
 				Start: Biome: Tech Black Sand.D
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1797:
 			Template: 1797
 			Segment:
 				Start: Biome: Tech Black Sand.D
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1798:
 			Template: 1798
 			Segment:
 				Start: Biome: Tech Black Sand.D
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.R
 				Points: 1,0
 		MultiBrush@1799:
 			Template: 1799
 			Segment:
 				Start: Biome: Tech Black Sand.L
-				Inner: Biome: Tech Black Sand
 				End: Biome: Tech Black Sand.D
 				Points: 1,1
 
@@ -20370,84 +19486,72 @@ MultiBrushCollections:
 			Template: 1812
 			Segment:
 				Start: Biome: Sand Black Sand.U
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1813:
 			Template: 1813
 			Segment:
 				Start: Biome: Sand Black Sand.U
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1814:
 			Template: 1814
 			Segment:
 				Start: Biome: Sand Black Sand.L
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1815:
 			Template: 1815
 			Segment:
 				Start: Biome: Sand Black Sand.R
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1816:
 			Template: 1816
 			Segment:
 				Start: Biome: Sand Black Sand.L
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1817:
 			Template: 1817
 			Segment:
 				Start: Biome: Sand Black Sand.R
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.U
 				Points: 0,0
 		MultiBrush@1818:
 			Template: 1818
 			Segment:
 				Start: Biome: Sand Black Sand.U
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.L
 				Points: 0,1
 		MultiBrush@1819:
 			Template: 1819
 			Segment:
 				Start: Biome: Sand Black Sand.R
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1820:
 			Template: 1820
 			Segment:
 				Start: Biome: Sand Black Sand.D
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1821:
 			Template: 1821
 			Segment:
 				Start: Biome: Sand Black Sand.D
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1822:
 			Template: 1822
 			Segment:
 				Start: Biome: Sand Black Sand.D
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.R
 				Points: 1,0
 		MultiBrush@1823:
 			Template: 1823
 			Segment:
 				Start: Biome: Sand Black Sand.L
-				Inner: Biome: Sand Black Sand
 				End: Biome: Sand Black Sand.D
 				Points: 1,1
 
@@ -20457,84 +19561,72 @@ MultiBrushCollections:
 			Template: 1394
 			Segment:
 				Start: Trees Crushed: Grass.U
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1395:
 			Template: 1395
 			Segment:
 				Start: Trees Crushed: Grass.R
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1396:
 			Template: 1396
 			Segment:
 				Start: Trees Crushed: Grass.R
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1397:
 			Template: 1397
 			Segment:
 				Start: Trees Crushed: Grass.U
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1399:
 			Template: 1399
 			Segment:
 				Start: Trees Crushed: Grass.D
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1400:
 			Template: 1400
 			Segment:
 				Start: Trees Crushed: Grass.L
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1401:
 			Template: 1401
 			Segment:
 				Start: Trees Crushed: Grass.L
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1402:
 			Template: 1402
 			Segment:
 				Start: Trees Crushed: Grass.D
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1403:
 			Template: 1403
 			Segment:
 				Start: Trees Crushed: Grass.R
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.U
 				Points: 0,0
 		MultiBrush@1404:
 			Template: 1404
 			Segment:
 				Start: Trees Crushed: Grass.D
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.R
 				Points: 1,0
 		MultiBrush@1405:
 			Template: 1405
 			Segment:
 				Start: Trees Crushed: Grass.U
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.L
 				Points: 0,1
 		MultiBrush@1406:
 			Template: 1406
 			Segment:
 				Start: Trees Crushed: Grass.L
-				Inner: Trees Crushed: Grass
 				End: Trees Crushed: Grass.D
 				Points: 1,1
 
@@ -20544,84 +19636,72 @@ MultiBrushCollections:
 			Template: 1420
 			Segment:
 				Start: Trees Crushed: Snow.U
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1421:
 			Template: 1421
 			Segment:
 				Start: Trees Crushed: Snow.R
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1422:
 			Template: 1422
 			Segment:
 				Start: Trees Crushed: Snow.R
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1423:
 			Template: 1423
 			Segment:
 				Start: Trees Crushed: Snow.U
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@1425:
 			Template: 1425
 			Segment:
 				Start: Trees Crushed: Snow.D
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1426:
 			Template: 1426
 			Segment:
 				Start: Trees Crushed: Snow.L
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1427:
 			Template: 1427
 			Segment:
 				Start: Trees Crushed: Snow.L
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1428:
 			Template: 1428
 			Segment:
 				Start: Trees Crushed: Snow.D
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1430:
 			Template: 1430
 			Segment:
 				Start: Trees Crushed: Snow.R
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.U
 				Points: 0,0
 		MultiBrush@1431:
 			Template: 1431
 			Segment:
 				Start: Trees Crushed: Snow.D
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.R
 				Points: 1,0
 		MultiBrush@1433:
 			Template: 1433
 			Segment:
 				Start: Trees Crushed: Snow.U
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.L
 				Points: 0,1
 		MultiBrush@1434:
 			Template: 1434
 			Segment:
 				Start: Trees Crushed: Snow.L
-				Inner: Trees Crushed: Snow
 				End: Trees Crushed: Snow.D
 				Points: 1,1
 
@@ -20631,84 +19711,72 @@ MultiBrushCollections:
 			Template: 1435
 			Segment:
 				Start: Trees Burnt: Grass.U
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1436:
 			Template: 1436
 			Segment:
 				Start: Trees Burnt: Grass.R
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1437:
 			Template: 1437
 			Segment:
 				Start: Trees Burnt: Grass.R
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1438:
 			Template: 1438
 			Segment:
 				Start: Trees Burnt: Grass.U
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1440:
 			Template: 1440
 			Segment:
 				Start: Trees Burnt: Grass.D
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1441:
 			Template: 1441
 			Segment:
 				Start: Trees Burnt: Grass.L
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1442:
 			Template: 1442
 			Segment:
 				Start: Trees Burnt: Grass.L
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1443:
 			Template: 1443
 			Segment:
 				Start: Trees Burnt: Grass.D
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1444:
 			Template: 1444
 			Segment:
 				Start: Trees Burnt: Grass.R
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.U
 				Points: 0,0
 		MultiBrush@1445:
 			Template: 1445
 			Segment:
 				Start: Trees Burnt: Grass.D
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.R
 				Points: 1,0
 		MultiBrush@1446:
 			Template: 1446
 			Segment:
 				Start: Trees Burnt: Grass.U
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.L
 				Points: 0,1
 		MultiBrush@1447:
 			Template: 1447
 			Segment:
 				Start: Trees Burnt: Grass.L
-				Inner: Trees Burnt: Grass
 				End: Trees Burnt: Grass.D
 				Points: 1,1
 
@@ -20718,84 +19786,72 @@ MultiBrushCollections:
 			Template: 1448
 			Segment:
 				Start: Trees Burnt: Snow.U
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1449:
 			Template: 1449
 			Segment:
 				Start: Trees Burnt: Snow.R
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@1450:
 			Template: 1450
 			Segment:
 				Start: Trees Burnt: Snow.R
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1451:
 			Template: 1451
 			Segment:
 				Start: Trees Burnt: Snow.U
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@1453:
 			Template: 1453
 			Segment:
 				Start: Trees Burnt: Snow.D
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@1454:
 			Template: 1454
 			Segment:
 				Start: Trees Burnt: Snow.L
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1455:
 			Template: 1455
 			Segment:
 				Start: Trees Burnt: Snow.L
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@1456:
 			Template: 1456
 			Segment:
 				Start: Trees Burnt: Snow.D
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1458:
 			Template: 1458
 			Segment:
 				Start: Trees Burnt: Snow.R
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.U
 				Points: 0,0
 		MultiBrush@1459:
 			Template: 1459
 			Segment:
 				Start: Trees Burnt: Snow.D
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.R
 				Points: 1,0
 		MultiBrush@1461:
 			Template: 1461
 			Segment:
 				Start: Trees Burnt: Snow.U
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.L
 				Points: 0,1
 		MultiBrush@1462:
 			Template: 1462
 			Segment:
 				Start: Trees Burnt: Snow.L
-				Inner: Trees Burnt: Snow
 				End: Trees Burnt: Snow.D
 				Points: 1,1
 
@@ -20805,84 +19861,72 @@ MultiBrushCollections:
 			Template: 1223
 			Segment:
 				Start: Water Pelagic.U
-				Inner: Water Pelagic
 				End: Water Pelagic.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1224:
 			Template: 1224
 			Segment:
 				Start: Water Pelagic.U
-				Inner: Water Pelagic
 				End: Water Pelagic.U
 				Points: 0,1, 0,0
 		MultiBrush@1225:
 			Template: 1225
 			Segment:
 				Start: Water Pelagic.L
-				Inner: Water Pelagic
 				End: Water Pelagic.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1226:
 			Template: 1226
 			Segment:
 				Start: Water Pelagic.R
-				Inner: Water Pelagic
 				End: Water Pelagic.R
 				Points: 0,0, 1,0
 		MultiBrush@1228:
 			Template: 1228
 			Segment:
 				Start: Water Pelagic.L
-				Inner: Water Pelagic
 				End: Water Pelagic.L
 				Points: 1,1, 0,1
 		MultiBrush@1229:
 			Template: 1229
 			Segment:
 				Start: Water Pelagic.R
-				Inner: Water Pelagic
 				End: Water Pelagic.U
 				Points: 0,0
 		MultiBrush@1230:
 			Template: 1230
 			Segment:
 				Start: Water Pelagic.U
-				Inner: Water Pelagic
 				End: Water Pelagic.L
 				Points: 0,1
 		MultiBrush@1231:
 			Template: 1231
 			Segment:
 				Start: Water Pelagic.R
-				Inner: Water Pelagic
 				End: Water Pelagic.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1232:
 			Template: 1232
 			Segment:
 				Start: Water Pelagic.D
-				Inner: Water Pelagic
 				End: Water Pelagic.D
 				Points: 1,0, 1,1
 		MultiBrush@1233:
 			Template: 1233
 			Segment:
 				Start: Water Pelagic.D
-				Inner: Water Pelagic
 				End: Water Pelagic.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1234:
 			Template: 1234
 			Segment:
 				Start: Water Pelagic.D
-				Inner: Water Pelagic
 				End: Water Pelagic.R
 				Points: 1,0
 		MultiBrush@1235:
 			Template: 1235
 			Segment:
 				Start: Water Pelagic.L
-				Inner: Water Pelagic
 				End: Water Pelagic.D
 				Points: 1,1
 
@@ -20892,84 +19936,72 @@ MultiBrushCollections:
 			Template: 1236
 			Segment:
 				Start: Water Littoral.U
-				Inner: Water Littoral
 				End: Water Littoral.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1237:
 			Template: 1237
 			Segment:
 				Start: Water Littoral.U
-				Inner: Water Littoral
 				End: Water Littoral.U
 				Points: 0,1, 0,0
 		MultiBrush@1238:
 			Template: 1238
 			Segment:
 				Start: Water Littoral.L
-				Inner: Water Littoral
 				End: Water Littoral.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1239:
 			Template: 1239
 			Segment:
 				Start: Water Littoral.R
-				Inner: Water Littoral
 				End: Water Littoral.R
 				Points: 0,0, 1,0
 		MultiBrush@1241:
 			Template: 1241
 			Segment:
 				Start: Water Littoral.L
-				Inner: Water Littoral
 				End: Water Littoral.L
 				Points: 1,1, 0,1
 		MultiBrush@1242:
 			Template: 1242
 			Segment:
 				Start: Water Littoral.R
-				Inner: Water Littoral
 				End: Water Littoral.U
 				Points: 0,0
 		MultiBrush@1243:
 			Template: 1243
 			Segment:
 				Start: Water Littoral.U
-				Inner: Water Littoral
 				End: Water Littoral.L
 				Points: 0,1
 		MultiBrush@1244:
 			Template: 1244
 			Segment:
 				Start: Water Littoral.R
-				Inner: Water Littoral
 				End: Water Littoral.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1245:
 			Template: 1245
 			Segment:
 				Start: Water Littoral.D
-				Inner: Water Littoral
 				End: Water Littoral.D
 				Points: 1,0, 1,1
 		MultiBrush@1246:
 			Template: 1246
 			Segment:
 				Start: Water Littoral.D
-				Inner: Water Littoral
 				End: Water Littoral.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1247:
 			Template: 1247
 			Segment:
 				Start: Water Littoral.D
-				Inner: Water Littoral
 				End: Water Littoral.R
 				Points: 1,0
 		MultiBrush@1248:
 			Template: 1248
 			Segment:
 				Start: Water Littoral.L
-				Inner: Water Littoral
 				End: Water Littoral.D
 				Points: 1,1
 
@@ -20979,84 +20011,72 @@ MultiBrushCollections:
 			Template: 91
 			Segment:
 				Start: Road: Grass.U
-				Inner: Road: Grass
 				End: Road: Grass.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@92:
 			Template: 92
 			Segment:
 				Start: Road: Grass.U
-				Inner: Road: Grass
 				End: Road: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@93:
 			Template: 93
 			Segment:
 				Start: Road: Grass.L
-				Inner: Road: Grass
 				End: Road: Grass.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@96:
 			Template: 96
 			Segment:
 				Start: Road: Grass.R
-				Inner: Road: Grass
 				End: Road: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@97:
 			Template: 97
 			Segment:
 				Start: Road: Grass.L
-				Inner: Road: Grass
 				End: Road: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@98:
 			Template: 98
 			Segment:
 				Start: Road: Grass.R
-				Inner: Road: Grass
 				End: Road: Grass.U
 				Points: 0,0
 		MultiBrush@99:
 			Template: 99
 			Segment:
 				Start: Road: Grass.U
-				Inner: Road: Grass
 				End: Road: Grass.L
 				Points: 0,1
 		MultiBrush@100:
 			Template: 100
 			Segment:
 				Start: Road: Grass.R
-				Inner: Road: Grass
 				End: Road: Grass.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@101:
 			Template: 101
 			Segment:
 				Start: Road: Grass.D
-				Inner: Road: Grass
 				End: Road: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@102:
 			Template: 102
 			Segment:
 				Start: Road: Grass.D
-				Inner: Road: Grass
 				End: Road: Grass.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@103:
 			Template: 103
 			Segment:
 				Start: Road: Grass.D
-				Inner: Road: Grass
 				End: Road: Grass.R
 				Points: 1,0
 		MultiBrush@104:
 			Template: 104
 			Segment:
 				Start: Road: Grass.L
-				Inner: Road: Grass
 				End: Road: Grass.D
 				Points: 1,1
 
@@ -21066,84 +20086,72 @@ MultiBrushCollections:
 			Template: 52
 			Segment:
 				Start: Road: Crater.U
-				Inner: Road: Crater
 				End: Road: Crater.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@53:
 			Template: 53
 			Segment:
 				Start: Road: Crater.U
-				Inner: Road: Crater
 				End: Road: Crater.U
 				Points: 0,1, 0,0
 		MultiBrush@54:
 			Template: 54
 			Segment:
 				Start: Road: Crater.L
-				Inner: Road: Crater
 				End: Road: Crater.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@57:
 			Template: 57
 			Segment:
 				Start: Road: Crater.R
-				Inner: Road: Crater
 				End: Road: Crater.R
 				Points: 0,0, 1,0
 		MultiBrush@58:
 			Template: 58
 			Segment:
 				Start: Road: Crater.L
-				Inner: Road: Crater
 				End: Road: Crater.L
 				Points: 1,1, 0,1
 		MultiBrush@59:
 			Template: 59
 			Segment:
 				Start: Road: Crater.R
-				Inner: Road: Crater
 				End: Road: Crater.U
 				Points: 0,0
 		MultiBrush@60:
 			Template: 60
 			Segment:
 				Start: Road: Crater.U
-				Inner: Road: Crater
 				End: Road: Crater.L
 				Points: 0,1
 		MultiBrush@61:
 			Template: 61
 			Segment:
 				Start: Road: Crater.R
-				Inner: Road: Crater
 				End: Road: Crater.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@62:
 			Template: 62
 			Segment:
 				Start: Road: Crater.D
-				Inner: Road: Crater
 				End: Road: Crater.D
 				Points: 1,0, 1,1
 		MultiBrush@63:
 			Template: 63
 			Segment:
 				Start: Road: Crater.D
-				Inner: Road: Crater
 				End: Road: Crater.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@64:
 			Template: 64
 			Segment:
 				Start: Road: Crater.D
-				Inner: Road: Crater
 				End: Road: Crater.R
 				Points: 1,0
 		MultiBrush@65:
 			Template: 65
 			Segment:
 				Start: Road: Crater.L
-				Inner: Road: Crater
 				End: Road: Crater.D
 				Points: 1,1
 
@@ -21153,84 +20161,72 @@ MultiBrushCollections:
 			Template: 469
 			Segment:
 				Start: Road: Mountain.U
-				Inner: Road: Mountain
 				End: Road: Mountain.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@470:
 			Template: 470
 			Segment:
 				Start: Road: Mountain.U
-				Inner: Road: Mountain
 				End: Road: Mountain.U
 				Points: 0,1, 0,0
 		MultiBrush@471:
 			Template: 471
 			Segment:
 				Start: Road: Mountain.L
-				Inner: Road: Mountain
 				End: Road: Mountain.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@474:
 			Template: 474
 			Segment:
 				Start: Road: Mountain.R
-				Inner: Road: Mountain
 				End: Road: Mountain.R
 				Points: 0,0, 1,0
 		MultiBrush@475:
 			Template: 475
 			Segment:
 				Start: Road: Mountain.L
-				Inner: Road: Mountain
 				End: Road: Mountain.L
 				Points: 1,1, 0,1
 		MultiBrush@476:
 			Template: 476
 			Segment:
 				Start: Road: Mountain.R
-				Inner: Road: Mountain
 				End: Road: Mountain.U
 				Points: 0,0
 		MultiBrush@477:
 			Template: 477
 			Segment:
 				Start: Road: Mountain.U
-				Inner: Road: Mountain
 				End: Road: Mountain.L
 				Points: 0,1
 		MultiBrush@478:
 			Template: 478
 			Segment:
 				Start: Road: Mountain.R
-				Inner: Road: Mountain
 				End: Road: Mountain.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@479:
 			Template: 479
 			Segment:
 				Start: Road: Mountain.D
-				Inner: Road: Mountain
 				End: Road: Mountain.D
 				Points: 1,0, 1,1
 		MultiBrush@480:
 			Template: 480
 			Segment:
 				Start: Road: Mountain.D
-				Inner: Road: Mountain
 				End: Road: Mountain.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@481:
 			Template: 481
 			Segment:
 				Start: Road: Mountain.D
-				Inner: Road: Mountain
 				End: Road: Mountain.R
 				Points: 1,0
 		MultiBrush@482:
 			Template: 482
 			Segment:
 				Start: Road: Mountain.L
-				Inner: Road: Mountain
 				End: Road: Mountain.D
 				Points: 1,1
 
@@ -21240,84 +20236,72 @@ MultiBrushCollections:
 			Template: 304
 			Segment:
 				Start: Road: Snow.U
-				Inner: Road: Snow
 				End: Road: Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@305:
 			Template: 305
 			Segment:
 				Start: Road: Snow.U
-				Inner: Road: Snow
 				End: Road: Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@306:
 			Template: 306
 			Segment:
 				Start: Road: Snow.L
-				Inner: Road: Snow
 				End: Road: Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@309:
 			Template: 309
 			Segment:
 				Start: Road: Snow.R
-				Inner: Road: Snow
 				End: Road: Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@310:
 			Template: 310
 			Segment:
 				Start: Road: Snow.L
-				Inner: Road: Snow
 				End: Road: Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@311:
 			Template: 311
 			Segment:
 				Start: Road: Snow.R
-				Inner: Road: Snow
 				End: Road: Snow.U
 				Points: 0,0
 		MultiBrush@312:
 			Template: 312
 			Segment:
 				Start: Road: Snow.U
-				Inner: Road: Snow
 				End: Road: Snow.L
 				Points: 0,1
 		MultiBrush@313:
 			Template: 313
 			Segment:
 				Start: Road: Snow.R
-				Inner: Road: Snow
 				End: Road: Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@314:
 			Template: 314
 			Segment:
 				Start: Road: Snow.D
-				Inner: Road: Snow
 				End: Road: Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@315:
 			Template: 315
 			Segment:
 				Start: Road: Snow.D
-				Inner: Road: Snow
 				End: Road: Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@316:
 			Template: 316
 			Segment:
 				Start: Road: Snow.D
-				Inner: Road: Snow
 				End: Road: Snow.R
 				Points: 1,0
 		MultiBrush@317:
 			Template: 317
 			Segment:
 				Start: Road: Snow.L
-				Inner: Road: Snow
 				End: Road: Snow.D
 				Points: 1,1
 
@@ -21327,84 +20311,72 @@ MultiBrushCollections:
 			Template: 508
 			Segment:
 				Start: Road.U
-				Inner: Road
 				End: Road.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@509:
 			Template: 509
 			Segment:
 				Start: Road.U
-				Inner: Road
 				End: Road.U
 				Points: 0,1, 0,0
 		MultiBrush@510:
 			Template: 510
 			Segment:
 				Start: Road.L
-				Inner: Road
 				End: Road.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@513:
 			Template: 513
 			Segment:
 				Start: Road.R
-				Inner: Road
 				End: Road.R
 				Points: 0,0, 1,0
 		MultiBrush@514:
 			Template: 514
 			Segment:
 				Start: Road.L
-				Inner: Road
 				End: Road.L
 				Points: 1,1, 0,1
 		MultiBrush@515:
 			Template: 515
 			Segment:
 				Start: Road.R
-				Inner: Road
 				End: Road.U
 				Points: 0,0
 		MultiBrush@516:
 			Template: 516
 			Segment:
 				Start: Road.U
-				Inner: Road
 				End: Road.L
 				Points: 0,1
 		MultiBrush@517:
 			Template: 517
 			Segment:
 				Start: Road.R
-				Inner: Road
 				End: Road.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@518:
 			Template: 518
 			Segment:
 				Start: Road.D
-				Inner: Road
 				End: Road.D
 				Points: 1,0, 1,1
 		MultiBrush@519:
 			Template: 519
 			Segment:
 				Start: Road.D
-				Inner: Road
 				End: Road.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@520:
 			Template: 520
 			Segment:
 				Start: Road.D
-				Inner: Road
 				End: Road.R
 				Points: 1,0
 		MultiBrush@521:
 			Template: 521
 			Segment:
 				Start: Road.L
-				Inner: Road
 				End: Road.D
 				Points: 1,1
 
@@ -21414,84 +20386,72 @@ MultiBrushCollections:
 			Template: 547
 			Segment:
 				Start: Road: Red Snow.U
-				Inner: Road: Red Snow
 				End: Road: Red Snow.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@548:
 			Template: 548
 			Segment:
 				Start: Road: Red Snow.U
-				Inner: Road: Red Snow
 				End: Road: Red Snow.U
 				Points: 0,1, 0,0
 		MultiBrush@549:
 			Template: 549
 			Segment:
 				Start: Road: Red Snow.L
-				Inner: Road: Red Snow
 				End: Road: Red Snow.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@552:
 			Template: 552
 			Segment:
 				Start: Road: Red Snow.R
-				Inner: Road: Red Snow
 				End: Road: Red Snow.R
 				Points: 0,0, 1,0
 		MultiBrush@553:
 			Template: 553
 			Segment:
 				Start: Road: Red Snow.L
-				Inner: Road: Red Snow
 				End: Road: Red Snow.L
 				Points: 1,1, 0,1
 		MultiBrush@515:
 			Template: 515
 			Segment:
 				Start: Road: Red Snow.R
-				Inner: Road: Red Snow
 				End: Road: Red Snow.U
 				Points: 0,0
 		MultiBrush@516:
 			Template: 516
 			Segment:
 				Start: Road: Red Snow.U
-				Inner: Road: Red Snow
 				End: Road: Red Snow.L
 				Points: 0,1
 		MultiBrush@556:
 			Template: 556
 			Segment:
 				Start: Road: Red Snow.R
-				Inner: Road: Red Snow
 				End: Road: Red Snow.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@557:
 			Template: 557
 			Segment:
 				Start: Road: Red Snow.D
-				Inner: Road: Red Snow
 				End: Road: Red Snow.D
 				Points: 1,0, 1,1
 		MultiBrush@558:
 			Template: 558
 			Segment:
 				Start: Road: Red Snow.D
-				Inner: Road: Red Snow
 				End: Road: Red Snow.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@520:
 			Template: 520
 			Segment:
 				Start: Road: Red Snow.D
-				Inner: Road: Red Snow
 				End: Road: Red Snow.R
 				Points: 1,0
 		MultiBrush@521:
 			Template: 521
 			Segment:
 				Start: Road: Red Snow.L
-				Inner: Road: Red Snow
 				End: Road: Red Snow.D
 				Points: 1,1
 
@@ -21501,84 +20461,72 @@ MultiBrushCollections:
 			Template: 606
 			Segment:
 				Start: Road: Sand.U
-				Inner: Road: Sand
 				End: Road: Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@607:
 			Template: 607
 			Segment:
 				Start: Road: Sand.U
-				Inner: Road: Sand
 				End: Road: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@608:
 			Template: 608
 			Segment:
 				Start: Road: Sand.L
-				Inner: Road: Sand
 				End: Road: Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@611:
 			Template: 611
 			Segment:
 				Start: Road: Sand.R
-				Inner: Road: Sand
 				End: Road: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@612:
 			Template: 612
 			Segment:
 				Start: Road: Sand.L
-				Inner: Road: Sand
 				End: Road: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@613:
 			Template: 613
 			Segment:
 				Start: Road: Sand.R
-				Inner: Road: Sand
 				End: Road: Sand.U
 				Points: 0,0
 		MultiBrush@614:
 			Template: 614
 			Segment:
 				Start: Road: Sand.U
-				Inner: Road: Sand
 				End: Road: Sand.L
 				Points: 0,1
 		MultiBrush@615:
 			Template: 615
 			Segment:
 				Start: Road: Sand.R
-				Inner: Road: Sand
 				End: Road: Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@616:
 			Template: 616
 			Segment:
 				Start: Road: Sand.D
-				Inner: Road: Sand
 				End: Road: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@617:
 			Template: 617
 			Segment:
 				Start: Road: Sand.D
-				Inner: Road: Sand
 				End: Road: Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@618:
 			Template: 618
 			Segment:
 				Start: Road: Sand.D
-				Inner: Road: Sand
 				End: Road: Sand.R
 				Points: 1,0
 		MultiBrush@619:
 			Template: 619
 			Segment:
 				Start: Road: Sand.L
-				Inner: Road: Sand
 				End: Road: Sand.D
 				Points: 1,1
 
@@ -21588,84 +20536,72 @@ MultiBrushCollections:
 			Template: 1015
 			Segment:
 				Start: Road: Stone.U
-				Inner: Road: Stone
 				End: Road: Stone.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1016:
 			Template: 1016
 			Segment:
 				Start: Road: Stone.U
-				Inner: Road: Stone
 				End: Road: Stone.U
 				Points: 0,1, 0,0
 		MultiBrush@1017:
 			Template: 1017
 			Segment:
 				Start: Road: Stone.L
-				Inner: Road: Stone
 				End: Road: Stone.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1020:
 			Template: 1020
 			Segment:
 				Start: Road: Stone.R
-				Inner: Road: Stone
 				End: Road: Stone.R
 				Points: 0,0, 1,0
 		MultiBrush@1021:
 			Template: 1021
 			Segment:
 				Start: Road: Stone.L
-				Inner: Road: Stone
 				End: Road: Stone.L
 				Points: 1,1, 0,1
 		MultiBrush@1022:
 			Template: 1022
 			Segment:
 				Start: Road: Stone.R
-				Inner: Road: Stone
 				End: Road: Stone.U
 				Points: 0,0
 		MultiBrush@1023:
 			Template: 1023
 			Segment:
 				Start: Road: Stone.U
-				Inner: Road: Stone
 				End: Road: Stone.L
 				Points: 0,1
 		MultiBrush@1024:
 			Template: 1024
 			Segment:
 				Start: Road: Stone.R
-				Inner: Road: Stone
 				End: Road: Stone.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1025:
 			Template: 1025
 			Segment:
 				Start: Road: Stone.D
-				Inner: Road: Stone
 				End: Road: Stone.D
 				Points: 1,0, 1,1
 		MultiBrush@1026:
 			Template: 1026
 			Segment:
 				Start: Road: Stone.D
-				Inner: Road: Stone
 				End: Road: Stone.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1027:
 			Template: 1027
 			Segment:
 				Start: Road: Stone.D
-				Inner: Road: Stone
 				End: Road: Stone.R
 				Points: 1,0
 		MultiBrush@1028:
 			Template: 1028
 			Segment:
 				Start: Road: Stone.L
-				Inner: Road: Stone
 				End: Road: Stone.D
 				Points: 1,1
 
@@ -21675,84 +20611,72 @@ MultiBrushCollections:
 			Template: 1717
 			Segment:
 				Start: Road: Black Sand.U
-				Inner: Road: Black Sand
 				End: Road: Black Sand.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1718:
 			Template: 1718
 			Segment:
 				Start: Road: Black Sand.U
-				Inner: Road: Black Sand
 				End: Road: Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1719:
 			Template: 1719
 			Segment:
 				Start: Road: Black Sand.L
-				Inner: Road: Black Sand
 				End: Road: Black Sand.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1720:
 			Template: 1720
 			Segment:
 				Start: Road: Black Sand.R
-				Inner: Road: Black Sand
 				End: Road: Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1721:
 			Template: 1721
 			Segment:
 				Start: Road: Black Sand.L
-				Inner: Road: Black Sand
 				End: Road: Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1722:
 			Template: 1722
 			Segment:
 				Start: Road: Black Sand.R
-				Inner: Road: Black Sand
 				End: Road: Black Sand.U
 				Points: 0,0
 		MultiBrush@1723:
 			Template: 1723
 			Segment:
 				Start: Road: Black Sand.U
-				Inner: Road: Black Sand
 				End: Road: Black Sand.L
 				Points: 0,1
 		MultiBrush@1724:
 			Template: 1724
 			Segment:
 				Start: Road: Black Sand.R
-				Inner: Road: Black Sand
 				End: Road: Black Sand.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1725:
 			Template: 1725
 			Segment:
 				Start: Road: Black Sand.D
-				Inner: Road: Black Sand
 				End: Road: Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1726:
 			Template: 1726
 			Segment:
 				Start: Road: Black Sand.D
-				Inner: Road: Black Sand
 				End: Road: Black Sand.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1727:
 			Template: 1727
 			Segment:
 				Start: Road: Black Sand.D
-				Inner: Road: Black Sand
 				End: Road: Black Sand.R
 				Points: 1,0
 		MultiBrush@1728:
 			Template: 1728
 			Segment:
 				Start: Road: Black Sand.L
-				Inner: Road: Black Sand
 				End: Road: Black Sand.D
 				Points: 1,1
 
@@ -21762,84 +20686,72 @@ MultiBrushCollections:
 			Template: 353
 			Segment:
 				Start: Road: Lava.U
-				Inner: Road: Lava
 				End: Road: Lava.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@354:
 			Template: 354
 			Segment:
 				Start: Road: Lava.U
-				Inner: Road: Lava
 				End: Road: Lava.U
 				Points: 0,1, 0,0
 		MultiBrush@355:
 			Template: 355
 			Segment:
 				Start: Road: Lava.L
-				Inner: Road: Lava
 				End: Road: Lava.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@356:
 			Template: 356
 			Segment:
 				Start: Road: Lava.R
-				Inner: Road: Lava
 				End: Road: Lava.R
 				Points: 0,0, 1,0
 		MultiBrush@357:
 			Template: 357
 			Segment:
 				Start: Road: Lava.L
-				Inner: Road: Lava
 				End: Road: Lava.L
 				Points: 1,1, 0,1
 		MultiBrush@358:
 			Template: 358
 			Segment:
 				Start: Road: Lava.R
-				Inner: Road: Lava
 				End: Road: Lava.U
 				Points: 0,0
 		MultiBrush@359:
 			Template: 359
 			Segment:
 				Start: Road: Lava.U
-				Inner: Road: Lava
 				End: Road: Lava.L
 				Points: 0,1
 		MultiBrush@360:
 			Template: 360
 			Segment:
 				Start: Road: Lava.R
-				Inner: Road: Lava
 				End: Road: Lava.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@361:
 			Template: 361
 			Segment:
 				Start: Road: Lava.D
-				Inner: Road: Lava
 				End: Road: Lava.D
 				Points: 1,0, 1,1
 		MultiBrush@362:
 			Template: 362
 			Segment:
 				Start: Road: Lava.D
-				Inner: Road: Lava
 				End: Road: Lava.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@363:
 			Template: 363
 			Segment:
 				Start: Road: Lava.D
-				Inner: Road: Lava
 				End: Road: Lava.R
 				Points: 1,0
 		MultiBrush@364:
 			Template: 364
 			Segment:
 				Start: Road: Lava.L
-				Inner: Road: Lava
 				End: Road: Lava.D
 				Points: 1,1
 
@@ -21849,84 +20761,72 @@ MultiBrushCollections:
 			Template: 1259
 			Segment:
 				Start: Road: Water.U
-				Inner: Road: Water
 				End: Road: Water.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1260:
 			Template: 1260
 			Segment:
 				Start: Road: Water.U
-				Inner: Road: Water
 				End: Road: Water.U
 				Points: 0,1, 0,0
 		MultiBrush@1261:
 			Template: 1261
 			Segment:
 				Start: Road: Water.L
-				Inner: Road: Water
 				End: Road: Water.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1262:
 			Template: 1262
 			Segment:
 				Start: Road: Water.R
-				Inner: Road: Water
 				End: Road: Water.R
 				Points: 0,0, 1,0
 		MultiBrush@1263:
 			Template: 1263
 			Segment:
 				Start: Road: Water.L
-				Inner: Road: Water
 				End: Road: Water.L
 				Points: 1,1, 0,1
 		MultiBrush@1264:
 			Template: 1264
 			Segment:
 				Start: Road: Water.R
-				Inner: Road: Water
 				End: Road: Water.U
 				Points: 0,0
 		MultiBrush@1265:
 			Template: 1265
 			Segment:
 				Start: Road: Water.U
-				Inner: Road: Water
 				End: Road: Water.L
 				Points: 0,1
 		MultiBrush@1266:
 			Template: 1266
 			Segment:
 				Start: Road: Water.R
-				Inner: Road: Water
 				End: Road: Water.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1267:
 			Template: 1267
 			Segment:
 				Start: Road: Water.D
-				Inner: Road: Water
 				End: Road: Water.D
 				Points: 1,0, 1,1
 		MultiBrush@1268:
 			Template: 1268
 			Segment:
 				Start: Road: Water.D
-				Inner: Road: Water
 				End: Road: Water.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1269:
 			Template: 1269
 			Segment:
 				Start: Road: Water.D
-				Inner: Road: Water
 				End: Road: Water.R
 				Points: 1,0
 		MultiBrush@1270:
 			Template: 1270
 			Segment:
 				Start: Road: Water.L
-				Inner: Road: Water
 				End: Road: Water.D
 				Points: 1,1
 
@@ -21936,84 +20836,72 @@ MultiBrushCollections:
 			Template: 1088
 			Segment:
 				Start: Road: Swamp.U
-				Inner: Road: Swamp
 				End: Road: Swamp.R
 				Points: 0,1, 0,0, 1,0
 		MultiBrush@1089:
 			Template: 1089
 			Segment:
 				Start: Road: Swamp.U
-				Inner: Road: Swamp
 				End: Road: Swamp.U
 				Points: 0,1, 0,0
 		MultiBrush@1090:
 			Template: 1090
 			Segment:
 				Start: Road: Swamp.L
-				Inner: Road: Swamp
 				End: Road: Swamp.U
 				Points: 1,1, 0,1, 0,0
 		MultiBrush@1091:
 			Template: 1091
 			Segment:
 				Start: Road: Swamp.R
-				Inner: Road: Swamp
 				End: Road: Swamp.R
 				Points: 0,0, 1,0
 		MultiBrush@1092:
 			Template: 1092
 			Segment:
 				Start: Road: Swamp.L
-				Inner: Road: Swamp
 				End: Road: Swamp.L
 				Points: 1,1, 0,1
 		MultiBrush@1093:
 			Template: 1093
 			Segment:
 				Start: Road: Swamp.R
-				Inner: Road: Swamp
 				End: Road: Swamp.U
 				Points: 0,0
 		MultiBrush@1097:
 			Template: 1097
 			Segment:
 				Start: Road: Swamp.U
-				Inner: Road: Swamp
 				End: Road: Swamp.L
 				Points: 0,1
 		MultiBrush@1098:
 			Template: 1098
 			Segment:
 				Start: Road: Swamp.R
-				Inner: Road: Swamp
 				End: Road: Swamp.D
 				Points: 0,0, 1,0, 1,1
 		MultiBrush@1099:
 			Template: 1099
 			Segment:
 				Start: Road: Swamp.D
-				Inner: Road: Swamp
 				End: Road: Swamp.D
 				Points: 1,0, 1,1
 		MultiBrush@1100:
 			Template: 1100
 			Segment:
 				Start: Road: Swamp.D
-				Inner: Road: Swamp
 				End: Road: Swamp.L
 				Points: 1,0, 1,1, 0,1
 		MultiBrush@1101:
 			Template: 1101
 			Segment:
 				Start: Road: Swamp.D
-				Inner: Road: Swamp
 				End: Road: Swamp.R
 				Points: 1,0
 		MultiBrush@1102:
 			Template: 1102
 			Segment:
 				Start: Road: Swamp.L
-				Inner: Road: Swamp
 				End: Road: Swamp.D
 				Points: 1,1
 
@@ -22023,140 +20911,120 @@ MultiBrushCollections:
 			Template: 1182
 			Segment:
 				Start: Tech: Rails.R
-				Inner: Tech: Rails
 				End: Tech: Rails.R
 				Points: 0,1, 1,1
 		MultiBrush@1182reverse:
 			Template: 1182
 			Segment:
 				Start: Tech: Rails.L
-				Inner: Tech: Rails
 				End: Tech: Rails.L
 				Points: 1,0, 0,0
 		MultiBrush@1183:
 			Template: 1183
 			Segment:
 				Start: Tech: Rails.U
-				Inner: Tech: Rails
 				End: Tech: Rails.R
 				Points: 1,1
 		MultiBrush@1183reverse:
 			Template: 1183
 			Segment:
 				Start: Tech: Rails.L
-				Inner: Tech: Rails
 				End: Tech: Rails.D
 				Points: 1,0, 0,0, 0,1
 		MultiBrush@1184:
 			Template: 1184
 			Segment:
 				Start: Tech: Rails.L
-				Inner: Tech: Rails
 				End: Tech: Rails.U
 				Points: 1,0
 		MultiBrush@1184reverse:
 			Template: 1184
 			Segment:
 				Start: Tech: Rails.D
-				Inner: Tech: Rails
 				End: Tech: Rails.R
 				Points: 0,0, 0,1, 1,1
 		MultiBrush@1187:
 			Template: 1187
 			Segment:
 				Start: Tech: Rails.D
-				Inner: Tech: Rails
 				End: Tech: Rails.D
 				Points: 0,0, 0,1
 		MultiBrush@1187reverse:
 			Template: 1187
 			Segment:
 				Start: Tech: Rails.U
-				Inner: Tech: Rails
 				End: Tech: Rails.U
 				Points: 1,1, 1,0
 		MultiBrush@1188:
 			Template: 1188
 			Segment:
 				Start: Tech: Rails.R
-				Inner: Tech: Rails
 				End: Tech: Rails.D
 				Points: 0,1
 		MultiBrush@1188reverse:
 			Template: 1188
 			Segment:
 				Start: Tech: Rails.U
-				Inner: Tech: Rails
 				End: Tech: Rails.L
 				Points: 1,1, 1,0, 0,0
 		MultiBrush@1189:
 			Template: 1189
 			Segment:
 				Start: Tech: Rails.D
-				Inner: Tech: Rails
 				End: Tech: Rails.L
 				Points: 0,0
 		MultiBrush@1189reverse:
 			Template: 1189
 			Segment:
 				Start: Tech: Rails.R
-				Inner: Tech: Rails
 				End: Tech: Rails.U
 				Points: 0,1, 1,1, 1,0
 		MultiBrush@1193:
 			Template: 1193
 			Segment:
 				Start: Tech: Rails.D
-				Inner: Tech: Rails
 				End: Tech.D
 				Points: 0,0, 0,1
 		MultiBrush@1193reverse:
 			Template: 1193
 			Segment:
 				Start: Tech.U
-				Inner: Tech: Rails
 				End: Tech: Rails.U
 				Points: 1,1, 1,0
 		MultiBrush@1194:
 			Template: 1194
 			Segment:
 				Start: Tech: Rails.U
-				Inner: Tech: Rails
 				End: Tech.U
 				Points: 1,1, 1,0
 		MultiBrush@1194reverse:
 			Template: 1194
 			Segment:
 				Start: Tech.D
-				Inner: Tech: Rails
 				End: Tech: Rails.D
 				Points: 0,0, 0,1
 		MultiBrush@1195:
 			Template: 1195
 			Segment:
 				Start: Tech: Rails.R
-				Inner: Tech: Rails
 				End: Tech.R
 				Points: 0,1, 1,1
 		MultiBrush@1195reverse:
 			Template: 1195
 			Segment:
 				Start: Tech.L
-				Inner: Tech: Rails
 				End: Tech: Rails.L
 				Points: 1,0, 0,0
 		MultiBrush@1196:
 			Template: 1196
 			Segment:
 				Start: Tech: Rails.L
-				Inner: Tech: Rails
 				End: Tech.L
 				Points: 1,0, 0,0
 		MultiBrush@1196reverse:
 			Template: 1196
 			Segment:
 				Start: Tech.R
-				Inner: Tech: Rails
 				End: Tech: Rails.R
 				Points: 0,1, 1,1
 
@@ -22166,140 +21034,120 @@ MultiBrushCollections:
 			Template: 1521
 			Segment:
 				Start: Tech: Stripes.R
-				Inner: Tech: Stripes
 				End: Tech: Stripes.R
 				Points: 0,1, 1,1
 		MultiBrush@1521reverse:
 			Template: 1521
 			Segment:
 				Start: Tech: Stripes.L
-				Inner: Tech: Stripes
 				End: Tech: Stripes.L
 				Points: 1,0, 0,0
 		MultiBrush@1522:
 			Template: 1522
 			Segment:
 				Start: Tech: Stripes.U
-				Inner: Tech: Stripes
 				End: Tech: Stripes.R
 				Points: 1,1
 		MultiBrush@1522reverse:
 			Template: 1522
 			Segment:
 				Start: Tech: Stripes.L
-				Inner: Tech: Stripes
 				End: Tech: Stripes.D
 				Points: 1,0, 0,0, 0,1
 		MultiBrush@1523:
 			Template: 1523
 			Segment:
 				Start: Tech: Stripes.L
-				Inner: Tech: Stripes
 				End: Tech: Stripes.U
 				Points: 1,0
 		MultiBrush@1523reverse:
 			Template: 1523
 			Segment:
 				Start: Tech: Stripes.D
-				Inner: Tech: Stripes
 				End: Tech: Stripes.R
 				Points: 0,0, 0,1, 1,1
 		MultiBrush@1526:
 			Template: 1526
 			Segment:
 				Start: Tech: Stripes.D
-				Inner: Tech: Stripes
 				End: Tech: Stripes.D
 				Points: 0,0, 0,1
 		MultiBrush@1526reverse:
 			Template: 1526
 			Segment:
 				Start: Tech: Stripes.U
-				Inner: Tech: Stripes
 				End: Tech: Stripes.U
 				Points: 1,1, 1,0
 		MultiBrush@1527:
 			Template: 1527
 			Segment:
 				Start: Tech: Stripes.R
-				Inner: Tech: Stripes
 				End: Tech: Stripes.D
 				Points: 0,1
 		MultiBrush@1527reverse:
 			Template: 1527
 			Segment:
 				Start: Tech: Stripes.U
-				Inner: Tech: Stripes
 				End: Tech: Stripes.L
 				Points: 1,1, 1,0, 0,0
 		MultiBrush@1528:
 			Template: 1528
 			Segment:
 				Start: Tech: Stripes.D
-				Inner: Tech: Stripes
 				End: Tech: Stripes.L
 				Points: 0,0
 		MultiBrush@1528reverse:
 			Template: 1528
 			Segment:
 				Start: Tech: Stripes.R
-				Inner: Tech: Stripes
 				End: Tech: Stripes.U
 				Points: 0,1, 1,1, 1,0
 		MultiBrush@1532:
 			Template: 1532
 			Segment:
 				Start: Tech: Stripes.D
-				Inner: Tech: Stripes
 				End: Tech.D
 				Points: 0,0, 0,1
 		MultiBrush@1532reverse:
 			Template: 1532
 			Segment:
 				Start: Tech.U
-				Inner: Tech: Stripes
 				End: Tech: Stripes.U
 				Points: 1,1, 1,0
 		MultiBrush@1533:
 			Template: 1533
 			Segment:
 				Start: Tech: Stripes.U
-				Inner: Tech: Stripes
 				End: Tech.U
 				Points: 1,1, 1,0
 		MultiBrush@1533reverse:
 			Template: 1533
 			Segment:
 				Start: Tech.D
-				Inner: Tech: Stripes
 				End: Tech: Stripes.D
 				Points: 0,0, 0,1
 		MultiBrush@1534:
 			Template: 1534
 			Segment:
 				Start: Tech: Stripes.R
-				Inner: Tech: Stripes
 				End: Tech.R
 				Points: 0,1, 1,1
 		MultiBrush@1534reverse:
 			Template: 1534
 			Segment:
 				Start: Tech.L
-				Inner: Tech: Stripes
 				End: Tech: Stripes.L
 				Points: 1,0, 0,0
 		MultiBrush@1535:
 			Template: 1535
 			Segment:
 				Start: Tech: Stripes.L
-				Inner: Tech: Stripes
 				End: Tech.L
 				Points: 1,0, 0,0
 		MultiBrush@1535reverse:
 			Template: 1535
 			Segment:
 				Start: Tech.R
-				Inner: Tech: Stripes
 				End: Tech: Stripes.R
 				Points: 0,1, 1,1
 
@@ -22309,139 +21157,119 @@ MultiBrushCollections:
 			Template: 1580
 			Segment:
 				Start: Dirt Tracks.D
-				Inner: Dirt Tracks
 				End: Dirt Tracks.D
 				Points: 0,0, 0,1
 		MultiBrush@1580reverse:
 			Template: 1580
 			Segment:
 				Start: Dirt Tracks.U
-				Inner: Dirt Tracks
 				End: Dirt Tracks.U
 				Points: 1,1, 1,0
 		MultiBrush@1581:
 			Template: 1581
 			Segment:
 				Start: Dirt Tracks.R
-				Inner: Dirt Tracks
 				End: Dirt Tracks.R
 				Points: 0,1, 1,1
 		MultiBrush@1581reverse:
 			Template: 1581
 			Segment:
 				Start: Dirt Tracks.L
-				Inner: Dirt Tracks
 				End: Dirt Tracks.L
 				Points: 1,0, 0,0
 		MultiBrush@1583:
 			Template: 1583
 			Segment:
 				Start: Dirt Tracks.U
-				Inner: Dirt Tracks
 				End: Dirt Tracks.R
 				Points: 1,1
 		MultiBrush@1583reverse:
 			Template: 1583
 			Segment:
 				Start: Dirt Tracks.L
-				Inner: Dirt Tracks
 				End: Dirt Tracks.D
 				Points: 1,0, 0,0, 0,1
 		MultiBrush@1584:
 			Template: 1584
 			Segment:
 				Start: Dirt Tracks.L
-				Inner: Dirt Tracks
 				End: Dirt Tracks.U
 				Points: 1,0
 		MultiBrush@1584reverse:
 			Template: 1584
 			Segment:
 				Start: Dirt Tracks.D
-				Inner: Dirt Tracks
 				End: Dirt Tracks.R
 				Points: 0,0, 0,1, 1,1
 		MultiBrush@1585:
 			Template: 1585
 			Segment:
 				Start: Dirt Tracks.D
-				Inner: Dirt Tracks
 				End: Dirt Tracks.L
 				Points: 0,0
 		MultiBrush@1585reverse:
 			Template: 1585
 			Segment:
 				Start: Dirt Tracks.R
-				Inner: Dirt Tracks
 				End: Dirt Tracks.U
 				Points: 0,1, 1,1, 1,0
 		MultiBrush@1586:
 			Template: 1586
 			Segment:
 				Start: Dirt Tracks.R
-				Inner: Dirt Tracks
 				End: Dirt Tracks.D
 				Points: 0,1
 		MultiBrush@1586reverse:
 			Template: 1586
 			Segment:
 				Start: Dirt Tracks.U
-				Inner: Dirt Tracks
 				End: Dirt Tracks.L
 				Points: 1,1, 1,0, 0,0
 		MultiBrush@1587:
 			Template: 1587
 			Segment:
 				Start: Dirt Tracks.U
-				Inner: Dirt Tracks
 				End: Dirt.U
 				Points: 1,1, 1,0
 		MultiBrush@1587reverse:
 			Template: 1587
 			Segment:
 				Start: Dirt.D
-				Inner: Dirt Tracks
 				End: Dirt Tracks.D
 				Points: 0,0, 0,1
 		MultiBrush@1588:
 			Template: 1588
 			Segment:
 				Start: Dirt Tracks.D
-				Inner: Dirt Tracks
 				End: Dirt.D
 				Points: 0,0, 0,1
 		MultiBrush@1588reverse:
 			Template: 1588
 			Segment:
 				Start: Dirt.U
-				Inner: Dirt Tracks
 				End: Dirt Tracks.U
 				Points: 1,1, 1,0
 		MultiBrush@1589:
 			Template: 1589
 			Segment:
 				Start: Dirt Tracks.L
-				Inner: Dirt Tracks
 				End: Dirt.L
 				Points: 1,0, 0,0
 		MultiBrush@1589reverse:
 			Template: 1589
 			Segment:
 				Start: Dirt.R
-				Inner: Dirt Tracks
 				End: Dirt Tracks.R
 				Points: 0,1, 1,1
 		MultiBrush@1590:
 			Template: 1590
 			Segment:
 				Start: Dirt Tracks.R
-				Inner: Dirt Tracks
 				End: Dirt.R
 				Points: 0,1, 1,1
 		MultiBrush@1590reverse:
 			Template: 1590
 			Segment:
 				Start: Dirt.L
-				Inner: Dirt Tracks
 				End: Dirt Tracks.L
 				Points: 1,0, 0,0
