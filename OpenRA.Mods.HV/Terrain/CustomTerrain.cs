@@ -45,6 +45,7 @@ namespace OpenRA.Mods.HV.Terrain
 		public readonly ushort[] BorderTransitions;
 		public readonly ushort[] Corners;
 		public readonly string[] BorderTypes;
+		public readonly bool Cliff;
 
 		public AutoConnectInfo(MiniYaml my) { FieldLoader.Load(this, my); }
 	}
@@ -58,12 +59,12 @@ namespace OpenRA.Mods.HV.Terrain
 		public readonly bool ClearTile;
 
 		[FieldLoader.Ignore]
-		public AutoConnectInfo[] AutoConnect;
+		public AutoConnectInfo[] AutoConnects;
 
 		public CustomTerrainTemplateInfo(ITerrainInfo terrainInfo, MiniYaml my)
 			: base(terrainInfo, my)
 		{
-			AutoConnect = my.Nodes.Where(n => n.Key.StartsWith("AutoConnect", StringComparison.Ordinal))
+			AutoConnects = my.Nodes.Where(n => n.Key.StartsWith("AutoConnect", StringComparison.Ordinal))
 				.Select(y => new AutoConnectInfo(y.Value))
 				.ToArray();
 		}

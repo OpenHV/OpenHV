@@ -155,6 +155,7 @@
 			Rapids: 50
 			Shore: 75
 			IceCliff: 75
+			IceFloes: 75
 	Faction@Yuruki:
 		Name: faction-yuruki.name
 		InternalName: yi

@@ -72,13 +72,15 @@ namespace OpenRA.Mods.HV.Traits
 
 		readonly Map map;
 		readonly CellRegion selection;
+		readonly bool cliff;
 		readonly ITemplatedTerrainInfo terrainInfo;
 		readonly Queue<UndoTile> undoTiles = new();
 
-		public AutoConnectEditorAction(Map map, CellRegion selection)
+		public AutoConnectEditorAction(Map map, CellRegion selection, bool cliff)
 		{
 			this.map = map;
 			this.selection = selection;
+			this.cliff = cliff;
 
 			terrainInfo = (ITemplatedTerrainInfo)map.Rules.TerrainInfo;
 
@@ -173,8 +175,7 @@ namespace OpenRA.Mods.HV.Traits
 		{
 			foreach (var cell in selection)
 			{
-				var customTerrainTemplate = (CustomTerrainTemplateInfo)terrainInfo.Templates[map.Tiles[cell].Type];
-				foreach (var autoConnect in customTerrainTemplate.AutoConnect)
+				foreach (var autoConnect in FilteredAutoConnects(cell))
 				{
 					var clear = FindAdjacentTerrain(map, cell, autoConnect.BorderTypes);
 					var index = BorderTileMap.IndexOf(clear);
@@ -190,8 +191,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			foreach (var cell in selection)
 			{
-				var customTerrainTemplate = (CustomTerrainTemplateInfo)terrainInfo.Templates[map.Tiles[cell].Type];
-				foreach (var autoConnect in customTerrainTemplate.AutoConnect)
+				foreach (var autoConnect in FilteredAutoConnects(cell))
 				{
 					var corner = FindCorners(map, cell, autoConnect.BorderTypes);
 					var index = CornerTileMap.IndexOf(corner);
@@ -203,6 +203,15 @@ namespace OpenRA.Mods.HV.Traits
 						map.Tiles[cell] = new TerrainTile(corners[index], 0x00);
 					}
 				}
+			}
+
+			IEnumerable<AutoConnectInfo> FilteredAutoConnects(CPos cell)
+			{
+				var customTerrainTemplateInfo = (CustomTerrainTemplateInfo)terrainInfo.Templates[map.Tiles[cell].Type];
+				return customTerrainTemplateInfo.AutoConnects
+					.Where(autoConnect => cliff
+						? autoConnect.BorderTypes.Any(b => b.Contains("Cliff"))
+						: autoConnect.BorderTypes.All(b => !b.Contains("Cliff")));
 			}
 		}
 

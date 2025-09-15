@@ -10,7 +10,6 @@
 #endregion
 
 using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
@@ -22,6 +21,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 	[IncludeStaticFluentReferences(typeof(EditorAutoTilerInfo))]
 	public sealed class AutoTilerLogic : ChromeLogic
 	{
+		bool cliff;
+
 		[ObjectCreator.UseCtor]
 		public AutoTilerLogic(Widget widget, World world, ModData modData, WorldRenderer worldRenderer, Dictionary<string, MiniYaml> logicArgs)
 		{
@@ -32,8 +33,13 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			autoTileButton.OnClick = () =>
 			{
 				var area = editor.DefaultBrush.Selection.Area ?? world.Map.AllCells;
-				editorActionManager.Add(new AutoConnectEditorAction(world.Map, area));
+				editorActionManager.Add(new AutoConnectEditorAction(world.Map, area, cliff));
 			};
+
+			var settingsPanel = widget.Get<ScrollPanelWidget>("SETTINGS_PANEL");
+			var cliffCheckboxWidget = settingsPanel.Get<CheckboxWidget>("CLIFF_CHECKBOX");
+			cliffCheckboxWidget.IsChecked = () => cliff;
+			cliffCheckboxWidget.OnClick = () => cliff ^= true;
 		}
 	}
 }

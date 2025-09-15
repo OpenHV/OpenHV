@@ -501,7 +501,7 @@ FERRY:
 	RevealsShroud@Hacked:
 		Range: 4c0
 	WithLandingCraftAnimation:
-		OpenTerrainTypes: Shore, IceCliff
+		OpenTerrainTypes: Shore, IceCliff, IceFloes
 	Cargo:
 		Types: Pod, Vehicle
 		MaxWeight: 10

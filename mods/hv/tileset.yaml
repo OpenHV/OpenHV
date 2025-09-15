@@ -93,6 +93,10 @@ Terrain:
 		Type: IceCliff
 		TargetTypes: Ground
 		Color: 8090A0
+	TerrainType@IceFloes:
+		Type: IceFloes
+		TargetTypes: Ground
+		Color: 8090A0
 	TerrainType@Snow:
 		Type: Snow
 		TargetTypes: Ground
@@ -202,12 +206,22 @@ Templates:
 			BorderTypes: Crater
 			BorderTransitions: 156, 152, 154, 160, 159, 161, 153, 151
 			Corners: 158, 157, 162, 163
+		AutoConnect@GrassCliff:
+			Type: Grass
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 178, 173, 176, 182, 181, 183, 174, 172
+			Corners: 180, 179, 184, 185
 		AutoConnect@Mountain:
 			Type: Mountain
 			BorderTypes: Crater
 			BorderTransitions: 370, 366, 368, 374, 373, 375, 367, 365
 			Corners: 372, 371, 376, 377
-		AutoConnect@Littoral:
+		AutoConnect@MountainCliff:
+			Type: Mountain
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 392, 387, 390, 396, 395, 397, 388, 386
+			Corners: 394, 393, 398, 399
+		AutoConnect@WaterCliff:
 			Type: Littoral
 			BorderTypes: Crater, Cliff
 			BorderTransitions: 32, 38, 34, 29, 36, 35, 40, 41
@@ -222,26 +236,51 @@ Templates:
 			BorderTypes: Crater
 			BorderTransitions: 638, 633, 636, 642, 641, 643, 634, 632
 			Corners: 640, 639, 644, 645
+		AutoConnect@RedSnowCliff:
+			Type: Red Snow
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 695, 690, 693, 699, 698, 700, 691, 689
+			Corners: 697, 696, 701, 702
 		AutoConnect@Sand:
 			Type: Sand
 			BorderTypes: Crater
 			BorderTransitions: 708, 704, 706, 712, 711, 713, 705, 703
 			Corners: 710, 709, 714, 715
+		AutoConnect@SandCliff:
+			Type: Sand
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 730, 725, 728, 734, 733, 735, 726, 724
+			Corners: 732, 731, 736, 737
 		AutoConnect@Snow:
 			Type: Snow
 			BorderTypes: Crater
 			BorderTransitions: 813, 810, 812, 819, 817, 820, 811, 818
 			Corners: 816, 815, 821, 822
+		AutoConnect@SnowCliff:
+			Type: Snow
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 837, 832, 835, 841, 840, 842, 833, 831
+			Corners: 839, 838, 843, 844
 		AutoConnect@Stone:
 			Type: Stone
 			BorderTypes: Crater
 			BorderTransitions: 907, 902, 905, 911, 910, 912, 903, 901
 			Corners: 909, 908, 913, 914
+		AutoConnect@StoneCliff:
+			Type: Stone
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 929, 924, 927, 933, 932, 934, 925, 923
+			Corners: 931, 930, 935, 936
 		AutoConnect@Tech:
 			Type: Tech
 			BorderTypes: Crater
 			BorderTransitions: 1110, 1105, 1108, 1114, 1113, 1115, 1106, 1104
 			Corners: 1112, 1111, 1116, 1117
+		AutoConnect@TechCliff:
+			Type: Tech
+			BorderTypes: Crater, Cliff
+			BorderTransitions: 1132, 1127, 1130, 1136, 1135, 1137, 1128, 1126
+			Corners: 1134, 1133, 1138, 1139
 		Tiles:
 			0: Crater
 	Template@6:
@@ -1063,11 +1102,16 @@ Templates:
 			BorderTypes: Grass
 			BorderTransitions: 196, 192, 194, 200, 199, 201, 193, 191
 			Corners: 198, 197, 202, 203
-		AutoConnect@Littoral:
+		AutoConnect@WaterCliff:
 			Type: Littoral
 			BorderTypes: Grass, Cliff
 			BorderTransitions: 208, 214, 210, 205, 212, 211, 216, 217
 			Corners: 213, 215, 206, 204
+		AutoConnect@Shore:
+			Type: Littoral
+			BorderTypes: Grass, Shore
+			BorderTransitions: 1357, 1362, 1358, 1355, 1360, 1359, 1364, 1365
+			Corners: 1361, 1363, 1356, 1354
 		AutoConnect@Lava:
 			Type: Lava
 			BorderTypes: Grass, Cliff
@@ -2057,11 +2101,16 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Terrain
 		ClearTile: true
-		AutoConnect@Littoral:
+		AutoConnect@WaterCliff:
 			Type: Littoral
 			BorderTypes: Ice, IceCliff
 			BorderTransitions: 260, 266, 262, 256, 259, 258, 263, 264
 			Corners: 265, 267, 257, 255
+		AutoConnect@IceFloes:
+			Type: Littoral
+			BorderTypes: Ice, IceFloes
+			BorderTransitions: 287, 293, 289, 283, 286, 285, 290, 291
+			Corners: 292, 294, 284, 282
 		Tiles:
 			0: Ice
 	Template@247:
@@ -2239,7 +2288,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@270:
 		Id: 270
 		Images: bits/terrain/icebrk.png
@@ -2247,7 +2296,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@271:
 		Id: 271
 		Images: bits/terrain/icebrk.png
@@ -2255,7 +2304,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@272:
 		Id: 272
 		Images: bits/terrain/icebrk.png
@@ -2263,7 +2312,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@273:
 		Id: 273
 		Images: bits/terrain/icebrk.png
@@ -2271,7 +2320,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@274:
 		Id: 274
 		Images: bits/terrain/icebrk.png
@@ -2279,7 +2328,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@275:
 		Id: 275
 		Images: bits/terrain/icebrk.png
@@ -2287,7 +2336,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@276:
 		Id: 276
 		Images: bits/terrain/icebrk.png
@@ -2295,7 +2344,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@277:
 		Id: 277
 		Images: bits/terrain/icebrk.png
@@ -2303,7 +2352,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@278:
 		Id: 278
 		Images: bits/terrain/icebrk.png
@@ -2311,7 +2360,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@279:
 		Id: 279
 		Images: bits/terrain/icebrk.png
@@ -2319,7 +2368,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@280:
 		Id: 280
 		Images: bits/terrain/icebrk.png
@@ -2327,7 +2376,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@281:
 		Id: 281
 		Images: bits/terrain/icebrk.png
@@ -2335,7 +2384,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@282:
 		Id: 282
 		Images: bits/terrain/icebrk.png
@@ -2343,7 +2392,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@283:
 		Id: 283
 		Images: bits/terrain/icebrk.png
@@ -2351,7 +2400,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@284:
 		Id: 284
 		Images: bits/terrain/icebrk.png
@@ -2359,7 +2408,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@285:
 		Id: 285
 		Images: bits/terrain/icebrk.png
@@ -2367,7 +2416,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@286:
 		Id: 286
 		Images: bits/terrain/icebrk.png
@@ -2375,7 +2424,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: Ice
+			0: IceFloes
 	Template@287:
 		Id: 287
 		Images: bits/terrain/icebrk.png
@@ -2383,7 +2432,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@288:
 		Id: 288
 		Images: bits/terrain/icebrk.png
@@ -2391,7 +2440,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@289:
 		Id: 289
 		Images: bits/terrain/icebrk.png
@@ -2399,7 +2448,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@290:
 		Id: 290
 		Images: bits/terrain/icebrk.png
@@ -2407,7 +2456,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@291:
 		Id: 291
 		Images: bits/terrain/icebrk.png
@@ -2415,7 +2464,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@292:
 		Id: 292
 		Images: bits/terrain/icebrk.png
@@ -2423,7 +2472,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@293:
 		Id: 293
 		Images: bits/terrain/icebrk.png
@@ -2431,7 +2480,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@294:
 		Id: 294
 		Images: bits/terrain/icebrk.png
@@ -2439,7 +2488,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: IceFloes
 	Template@295:
 		Id: 295
 		Images: bits/terrain/icedent.png
@@ -4380,11 +4429,16 @@ Templates:
 			BorderTypes: Sand, Cliff
 			BorderTransitions: 580, 586, 582, 577, 584, 583, 588, 589
 			Corners: 585, 587, 578, 576
-		AutoConnect@Littoral:
+		AutoConnect@WaterCliff:
 			Type: Littoral
 			BorderTypes: Sand, Cliff
 			BorderTransitions: 742, 748, 744, 739, 746, 745, 750, 751
 			Corners: 747, 749, 740, 738
+		AutoConnect@Shore:
+			Type: Littoral
+			BorderTypes: Sand, Shore
+			BorderTransitions: 1377, 1382, 1378, 1375, 1380, 1379, 1384, 1385
+			Corners: 1381, 1383, 1376, 1374 ##### TODO
 		AutoConnect@Dirt:
 			Type: Dirt
 			BorderTypes: Sand

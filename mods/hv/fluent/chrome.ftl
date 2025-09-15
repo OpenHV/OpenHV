@@ -31,6 +31,7 @@ label-tool-autotiler = Auto Tiler
 button-auto-tile =
    .label = Auto Tile
    .tooltip = Even out tile transitions
+label-tool-autotiler-cliff = Cliff
 
 button-select-categories-buttons-all = All
 button-select-categories-buttons-none = None
