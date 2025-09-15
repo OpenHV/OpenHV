@@ -846,7 +846,7 @@ ScrollPanel@CATEGORY_FILTER_PANEL:
 
 ScrollPanel@OVERLAY_PANEL:
 	Width: 140
-	Height: 80
+	Height: 105
 	ItemSpacing: 5
 	TopBottomSpacing: 0
 	Children:
