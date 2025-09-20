@@ -21,13 +21,23 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 	[IncludeStaticFluentReferences(typeof(EditorAutoTilerInfo))]
 	public sealed class AutoTilerLogic : ChromeLogic
 	{
+		[FluentReference]
+		const string AppliesToArea = "label-applies-to-area";
+
+		[FluentReference]
+		const string AppliesToWholeMap = "label-applies-to-whole-map";
+
+		public LabelWidget AreaSelectionLabel;
+
+		readonly EditorViewportControllerWidget editor;
+
 		bool cliff;
 
 		[ObjectCreator.UseCtor]
 		public AutoTilerLogic(Widget widget, World world, ModData modData, WorldRenderer worldRenderer, Dictionary<string, MiniYaml> logicArgs)
 		{
 			var editorActionManager = world.WorldActor.Trait<EditorActionManager>();
-			var editor = widget.Parent.Parent.Parent.Parent.Get<EditorViewportControllerWidget>("MAP_EDITOR");
+			editor = widget.Parent.Parent.Parent.Parent.Get<EditorViewportControllerWidget>("MAP_EDITOR");
 
 			var autoTileButton = widget.Get<ButtonWidget>("AUTOTILE_BUTTON");
 			autoTileButton.OnClick = () =>
@@ -36,10 +46,40 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				editorActionManager.Add(new AutoConnectEditorAction(world.Map, area, cliff));
 			};
 
-			var settingsPanel = widget.Get<ScrollPanelWidget>("SETTINGS_PANEL");
-			var cliffCheckboxWidget = settingsPanel.Get<CheckboxWidget>("CLIFF_CHECKBOX");
+			var cliffCheckboxWidget = widget.Get<CheckboxWidget>("CLIFF_CHECKBOX");
 			cliffCheckboxWidget.IsChecked = () => cliff;
 			cliffCheckboxWidget.OnClick = () => cliff ^= true;
+
+			editor.DefaultBrush.SelectionChanged += HandleSelectionChanged;
+			AreaSelectionLabel = widget.Get<LabelWidget>("AREA_SELECTION");
+			HandleSelectionChanged();
 		}
+
+		protected override void Dispose(bool disposing)
+		{
+			editor.DefaultBrush.SelectionChanged -= HandleSelectionChanged;
+			base.Dispose(disposing);
+		}
+
+		void HandleSelectionChanged()
+		{
+			var selectedRegion = editor.DefaultBrush.Selection.Area;
+			if (selectedRegion == null)
+			{
+				AreaSelectionLabel.GetText = () => FluentProvider.GetMessage(AppliesToWholeMap);
+				return;
+			}
+
+			var selectionSize = selectedRegion.BottomRight - selectedRegion.TopLeft + new CPos(1, 1);
+
+			var areaSelectionLabel =
+				$"{FluentProvider.GetMessage(AppliesToArea)} ({DimensionsAsString(selectionSize)}) " +
+				$"{PositionAsString(selectedRegion.TopLeft)} : {PositionAsString(selectedRegion.BottomRight)}";
+
+			AreaSelectionLabel.GetText = () => areaSelectionLabel;
+		}
+
+		static string PositionAsString(CPos cell) => $"{cell.X},{cell.Y}";
+		static string DimensionsAsString(CPos cell) => $"{cell.X}x{cell.Y}";
 	}
 }

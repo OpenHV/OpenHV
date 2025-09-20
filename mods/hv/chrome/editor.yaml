@@ -1011,16 +1011,19 @@ Background@AUTOTILER_TOOL_PANEL:
 			TooltipTemplate: BUTTON_TOOLTIP
 			TooltipContainer: TOOLTIP_CONTAINER
 			Font: Bold
-		ScrollPanel@SETTINGS_PANEL:
-			X: 0
-			Y: 35
+		Checkbox@CLIFF_CHECKBOX:
+			Text: label-tool-autotiler-cliff
+			X: 110
+			Y: 5
 			Width: PARENT_WIDTH
-			Height: PARENT_HEIGHT - 35
-			Children:
-				Checkbox@CLIFF_CHECKBOX:
-					Text: label-tool-autotiler-cliff
-					Width: PARENT_WIDTH
-					Height: 25
+			Height: 25
+		Label@AREA_SELECTION:
+			Y: 40
+			Width: PARENT_WIDTH
+			Height: 24
+			Align: Center
+			Font: Bold
+			Text: label-applies-to-area
 
 ScrollPanel@MAP_GENERATOR_TOOL_PANEL:
 	X: 9
