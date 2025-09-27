@@ -5,14 +5,15 @@ Player:
 			iron: 0
 
 World:
-	LuaScript:
-		Scripts: shellmap.lua
 	MusicPlaylist:
 		BackgroundMusic: background
 		AllowMuteBackgroundMusic: true
 		DisableWorldSounds: true
 	TerrainLighting:
 		Intensity: 0.65
+	CameraOvalMover:
+		DegreesPerSecond: 5
+		OvalRadius: 19200, 28800, 0
 
 ^DefenseBuilding:
 	Power:
