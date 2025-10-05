@@ -52,7 +52,7 @@ install_metadata() {
 
 	mkdir -p "${DATADIR}/mime/packages"
 	chmod 0644 temp.xml.in
-	sed "s/openra-{MODID}-{TAG}/openra-${MOD_ID}-${TAG}/g" temp.xml.in | sed "s/openra-{MODID}/openhv/g" | sed "s/{TAG}/${TAG}/g" > "${DATADIR}/mime/packages/openhv.xml"
+	sed "s/openra-{MODID}-{TAG}/openra-${MOD_ID}-${TAG}/g" temp.xml.in | sed "s/openra-{MODID}/openhv/g" | sed "s/{TAG}/${TAG}/g" | sed "s/OpenRA/OpenHV/g" > "${DATADIR}/mime/packages/openhv.xml"
 	rm temp.xml.in
 
 	if [ -f "${ARTWORK_DIR}/icon_scalable.svg" ]; then
