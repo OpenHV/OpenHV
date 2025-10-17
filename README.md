@@ -22,3 +22,6 @@ OpenHV just like the OpenRA engine and SDK scripts is made available under the [
 
 ## Content [![License: CC BY US 3.0](https://img.shields.io/badge/license-CC%20BY%203.0%20US-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/us/) [![License: CC BY 3.0](https://img.shields.io/badge/license-CC%20BY%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/) [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![License: CC BY-SA 4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/) [![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 The mod data files (artwork, sound files, game rules, etc.) are not part of the source code and are distributed under different terms. Various [Creative Commons](https://creativecommons.org/) licenses apply. Check the ReadMe files in the sub folders for details.
+
+# Sponsors
+Free code signing on Windows provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
