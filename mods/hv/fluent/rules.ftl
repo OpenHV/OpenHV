@@ -950,9 +950,13 @@ actor-railgunboat =
 actor-lightningboat =
    .name = Lightning Boat
    .generic-name = Boat
-   .description = A heavy boat with a lightning gun.
-      Strong vs Vehicles, Pods and Buildings
-   .encyclopedia = The lightning boat is a heavy ship capable of handling every situation possible. It's armed with a 360 degrees laser zap, that's particularly powerful against buildings.
+   .description = A heavy boat with a lightning
+   aura that increases the damage of most
+   friendly navy units nearby.
+      Unarmed
+   .encyclopedia = The lightning boat is a heavy ship that aids nearby navy units. It eletrifies the waters nearby and that makes all friendly navy unit projectiles electrified (except for Missile Submarine and Drone Ship), increasing their damage slightly
+
+   Unarmed
 
      {actor-lightningboat.description}
 

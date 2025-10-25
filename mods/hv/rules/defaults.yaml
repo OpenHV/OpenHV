@@ -1400,3 +1400,10 @@
 		Bounds: 512, 512
 	Voiced:
 		VoiceSet: CivilianVoice
+
+^WeaponDamageUpgrade:
+	FirepowerMultiplier:
+		Modifier: 125
+		RequiresCondition: lightningboat-damage-increase
+	ExternalCondition:
+		Condition: lightningboat-damage-increase
