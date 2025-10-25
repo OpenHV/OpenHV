@@ -209,6 +209,7 @@ mineship2:
 lightningboat:
 	idle:
 		Filename: bits/lightningboat.png
+	# TODO: Maybe unify idle, shoot and charge animations?
 	shoot:
 		Filename: bits/lightningboat.png
 		Start: 1

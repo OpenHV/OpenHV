@@ -3,6 +3,7 @@
 LIGHTBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -52,6 +53,7 @@ LIGHTBOAT:
 PATROLBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -105,6 +107,7 @@ PATROLBOAT:
 MERCBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -156,6 +159,7 @@ MERCBOAT:
 TORPEDOBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -200,6 +204,7 @@ TORPEDOBOAT:
 SUBMARINE:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -244,6 +249,7 @@ SUBMARINE:
 RAILGUNBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -267,6 +273,7 @@ RAILGUNBOAT:
 	Armor:
 		Type: Heavy
 	Mobile:
+		RequiresCondition: !deployed
 		Speed: 75
 		TurnSpeed: 40
 		CanMoveBackward: true
@@ -278,19 +285,38 @@ RAILGUNBOAT:
 		Range: 4c0
 	Turreted:
 		TurnSpeed: 40
-	Armament:
+	Armament@Primary:
+		RequiresCondition: !deployed
 		Weapon: Railgun
+		Recoil: 100
+		RecoilRecovery: 25
+		LocalOffset: 500,0,0
+	Armament@Secondary:
+		RequiresCondition: deployed
+		Weapon: RailgunLongRange
 		Recoil: 100
 		RecoilRecovery: 25
 		LocalOffset: 500,0,0
 	AttackTurreted:
 	WithSpriteTurret:
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Voice: Move
+	WithRangeCircle:
+		RequiresCondition: deployed
+		Color: FE03FE
+		Type: Turret
+		Width: 2
+		BorderWidth: 3
+		Range: 10c0
 
 LIGHTNINGBOAT:
 	Inherits: ^Ship
-	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Inherits@Amplifier: ^WeaponDamageUpgrade
 	Valued:
-		Cost: 5000
+		Cost: 4500
 	Tooltip:
 		Name: actor-lightningboat.name
 		GenericName: actor-lightningboat.generic-name
@@ -321,16 +347,16 @@ LIGHTNINGBOAT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 4c0
-	Turreted:
-		TurnSpeed: 40
-	Armament:
-		Weapon: VoltageArc
-		LocalOffset: 0,0,100
-	AttackTurreted:
-	WithAttackAnimation:
-		Sequence: shoot
-	WithAttackOverlay:
-		Sequence: charge
+	WithRangeCircle:
+		Color: 9999FA
+		Width: 2
+		BorderWidth: 3
+		Range: 4c0
+	ProximityExternalCondition:
+		Condition: lightningboat-damage-increase
+		Range: 4c0
+	ExternalCondition:
+		Condition: lightningboat-damage-increase
 
 BOOMER:
 	Inherits: ^Submarine

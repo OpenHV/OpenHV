@@ -33,6 +33,13 @@ Railgun:
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
 
+RailgunLongRange:
+	Inherits: Railgun
+	Range: 10c0
+	ReloadDelay: 62
+	Projectile: LaserZap
+		Color: FE03FE
+
 ElectronicCountermeasure:
 	ReloadDelay: 20
 	Range: 8c0
