@@ -562,7 +562,7 @@ MothershipLaser:
 		ValidTargets: Ground, Air, Ship, Tree
 
 ^BrokerWireTransfer:
-	Range: 8c0
+	Range: 5c0
 	ValidTargets: Defraudable
 	Report: coinflick.ogg
 	Projectile: ArcLaserZap

@@ -134,6 +134,7 @@ Player:
 			sniper: 1
 			shocker: 3
 			technician: 1
+			broker: 1
 			flamer: 1
 			blaster: 1
 			missiletank: 5
@@ -171,6 +172,7 @@ Player:
 			mineship: 1
 			mineship2: 1
 			technician: 1
+			broker: 1
 			blaster: 3
 			apc: 1
 			apc2: 1
@@ -179,7 +181,7 @@ Player:
 			builder2: 7500
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
-		CapturingActorTypes: technician
+		CapturingActorTypes: technician, broker
 		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2
 		MinimumCaptureDelay: 0
 		MaximumCaptureTargetOptions: 25

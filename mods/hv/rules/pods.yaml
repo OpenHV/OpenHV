@@ -230,7 +230,7 @@ TECHNICIAN:
 	Buildable:
 		Queue: Pod
 		Description: actor-technician.description
-		Prerequisites: ~module
+		Prerequisites: ~module.sc
 		BuildPaletteOrder: 30
 	Encyclopedia:
 		Description: actor-technician.encyclopedia
@@ -290,31 +290,42 @@ BROKER:
 	Buildable:
 		Queue: Pod
 		Description: actor-broker.description
-		Prerequisites: trader
-		BuildPaletteOrder: 70
-		BuildLimit: 5
+		Prerequisites: ~module.yi
+		BuildPaletteOrder: 30
 	Encyclopedia:
 		Description: actor-broker.encyclopedia
-		Order: 16
+		Order: 15
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1250
+		Cost: 1000
 	Tooltip:
 		Name: actor-broker.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
-		Range: 8c0
-		MinRange: 4c0
+		Range: 5c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 375
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+		RequiresCondition: !deployed && !jammed
 	Health:
-		HP: 26250
+		HP: 18750
+	Mobile:
+		Speed: 70
 	Voiced:
 		VoiceSet: BrokerVoice
 	GrantConditionOnAttack:
+		RequiresCondition: deployed
 		Condition: chargeup-wiretransfer
 		RevokeDelay: 220
 		MaximumInstances: 11
@@ -323,14 +334,16 @@ BROKER:
 		IsCyclic: true
 	Armament@PrepareStage1:
 		Weapon: BrokerPrepareWireTransferStage1
-		RequiresCondition: chargeup-wiretransfer < 6
+		RequiresCondition: deployed && chargeup-wiretransfer < 6
 	Armament@PrepareStage2:
 		Weapon: BrokerPrepareWireTransferStage2
-		RequiresCondition: chargeup-wiretransfer > 5 && chargeup-wiretransfer < 11
+		RequiresCondition: deployed && chargeup-wiretransfer > 5 && chargeup-wiretransfer < 11
 	Armament@Steal:
 		Weapon: BrokerWireTransfer
-		RequiresCondition: chargeup-wiretransfer == 11
+		RequiresCondition: deployed && chargeup-wiretransfer == 11
 	AttackFrontal:
+		RequiresCondition: deployed
+		PauseOnCondition: jammed
 		FacingTolerance: 10
 		Voice: Attack
 	AutoTarget:
@@ -339,6 +352,31 @@ BROKER:
 	AutoTargetPriority@Default:
 		ValidTargets: Defraudable
 		InvalidTargets: NoAutoTarget
+	GrantConditionOnDeploy:
+		PauseOnCondition: jammed
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Facing: 512
+		DeploySounds: broker_deploy_mincedbeats.ogg
+		UndeploySounds: broker_undeploy_mincedbeats.ogg
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
+		Voice: Deploying
+	WithMakeAnimation:
+		Sequence: extend
+		BodyNames: deployed
+	WithFacingSpriteBody:
+		RequiresCondition: undeployed
+	WithSpriteBody@DEPLOYED:
+		RequiresCondition: !undeployed
+		Sequence: extended
+		Name: deployed
+	WithRangeCircle:
+		Color: 03FE03
+		Width: 2
+		BorderWidth: 3
+		Range: 5c0
 
 JETPACKER:
 	Inherits: ^Helicopter

@@ -772,25 +772,26 @@ actor-technician =
     Repairs pods.
       Unarmed
    .name = Technician
-   .encyclopedia = The universal field engineer. Its first ability is to infiltrate and capture enemy structures, changing their allegiance: it is often used to capture enemy mining towers. Its second ability is to repair allied pods, on the battle field.
+   .encyclopedia = The Synapol's field engineer. Its first ability is to infiltrate and capture enemy structures, changing their allegiance. Its second ability is to repair allied pods, on the battle field.
 
      {actor-technician.description}
 
-     Availability: Universal
+     Availability: Synapol
 
 actor-broker =
    .description = Financial analyst.
+    Infiltrates and captures enemy structures.
     Invests into stock market for dividends.
     Capable of remotely stealing money
-    from bases and storages.
+    from bases, storages, mining towers, ore
+    smelters or ore purifiers, once deployed
       Unarmed
-      Only 5 can be built.
    .name = Broker
-   .encyclopedia = The broker pod is an advanced pod that can invest in the stock market for a constant stream of revenue. It can also tap into an opponent's base or storage and initiate forged wire transfers to remotely steal that enemy's cash.
+   .encyclopedia = The broker pod is an advanced pod that can tap into an opponent's base, storage, mining tower, ore smelter or ore purifier and initiate forged wire transfers to remotely steal that enemy's cash, when deployed. It can also infiltrate and capture enemy structures, when undeployed.
 
      {actor-broker.description}
 
-     Availability: Universal
+     Availability: Yuruki
 
 actor-jetpacker =
    .description = Elite airborne vehicle.
