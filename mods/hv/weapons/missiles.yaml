@@ -333,8 +333,8 @@ Torpedo:
 	Range: 6c0
 	Report: torpedo_murraysortz.ogg
 	Warhead@Damage: SpreadDamage
-		Spread: 256
-		Damage: 10000
+		Spread: 128
+		Damage: 9000
 		Versus:
 			None: 100
 			Steel: 50
@@ -358,7 +358,7 @@ BoatTorpedo:
 	Burst: 2
 	BurstDelays: 8
 	Warhead@Damage: SpreadDamage
-		Damage: 5000
+		Damage: 4500
 
 DiscThrower:
 	Inherits: ^AntiAirMissile
