@@ -15,11 +15,11 @@ Player:
 		MinimumBaseRadius: 15
 	BaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		MinimumExcessPower: 40
-		MaximumExcessPower: 500
+		MinimumExcessPower: 60
+		MaximumExcessPower: 1000
 		InititalMinimumRefineryCount: 1
 		AdditionalMinimumRefineryCount: 1
-		PlaceDefenseTowardsEnemyChance: 0
+		PlaceDefenseTowardsEnemyChance: 20
 		NewProductionCashThreshold: 7000
 		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
@@ -87,10 +87,6 @@ Player:
 			aaturret2: 150
 			turret: 150
 			turret2: 150
-			radar: 10000
-			radar2: 10000
-			factory: 11000
-			factory2: 11000
 			howitzer: 12000
 			field: 12000
 			silo: 13000
