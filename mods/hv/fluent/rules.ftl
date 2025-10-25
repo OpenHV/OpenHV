@@ -903,25 +903,26 @@ actor-mercboat =
    .name = Mercenary Boat
    .generic-name = Boat
    .description = A boat with a turret.
-      Strong vs Vehicles
+      Strong vs Vehicles, Navy and Buildings
       Weak vs Pods
-   .encyclopedia = The mercenary boat is a fast boat, armed with a turret. Its turret is powerful against other ships.
+      Can't attack Aircraft
+   .encyclopedia = The mercenary boat is a fast boat, armed with a turret, making it a flexible medium unit.
 
      {actor-mercboat.description}
 
-     Availability: Non-trainable
+     Availability: Synapol
 
 actor-torpedoboat =
    .name = Torpedo Boat
    .generic-name = Boat
    .description = A boat with torpedo launchers.
       Strong vs Water
-      Can't attack Ground or Air
+      Can't attack Ground or Aircraft
    .encyclopedia = The torpedo boat is designed to counter fast ship assaults. It has two torpedo launchers onboard that can take down multiple boats on its own.
 
      {actor-torpedoboat.description}
 
-     Availability: Synapol
+     Availability: Non-trainable
 
 actor-submarine =
    .name = Submarine

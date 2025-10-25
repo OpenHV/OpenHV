@@ -106,25 +106,25 @@ MERCBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 1600
+		Cost: 1200
 	Tooltip:
 		Name: actor-mercboat.name
 		GenericName: actor-mercboat.generic-name
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~disabled
-		BuildPaletteOrder: 90
+		Prerequisites: ~harbor.sc, radar
+		BuildPaletteOrder: 30
 		Description: actor-mercboat.description
 	Encyclopedia:
 		Description: actor-mercboat.encyclopedia
-		Order: 60
+		Order: 10
 		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 67500
+		HP: 71500
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -136,6 +136,10 @@ MERCBOAT:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 3c0
+	DetectCloaked:
+		Range: 5c0
+		DetectionTypes: Underwater
+	RenderDetectionCircle:
 	Turreted:
 		TurnSpeed: 60
 		Offset: 150,0,100
@@ -160,12 +164,12 @@ TORPEDOBOAT:
 	Buildable:
 		Queue: Ship
 		BuildAtProductionType: Ship
-		Prerequisites: ~harbor.sc, radar
-		BuildPaletteOrder: 30
+		Prerequisites: ~disabled
+		BuildPaletteOrder: 90
 		Description: actor-torpedoboat.description
 	Encyclopedia:
 		Description: actor-torpedoboat.encyclopedia
-		Order: 10
+		Order: 60
 		Scale: 3
 		Category: Ships
 	UpdatesPlayerStatistics:
@@ -215,7 +219,7 @@ SUBMARINE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 67500
+		HP: 66000
 	Armor:
 		Type: Heavy
 	Mobile:
