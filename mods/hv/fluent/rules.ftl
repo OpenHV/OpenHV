@@ -50,7 +50,7 @@ faction-yuruki =
 
         Navy:
         - Patrol Boat (anti-ground and anti-air)
-        - Submarine (underwater anti-navy)
+        - Submarine (underwater anti-water)
         - Lightning Boat (anti-ground)
         - Missile Submarine (underwater anti-ground)
 
@@ -96,7 +96,7 @@ faction-synapol =
 
         Navy:
         - Light Boat (anti-ground and anti-air)
-        - Torpedo Boat (anti-navy)
+        - Mercenary Boat (anti-ground)
         - Laser Boat (anti-ground)
         - Drone Ship (anti-ground)
 
