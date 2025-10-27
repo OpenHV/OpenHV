@@ -952,10 +952,10 @@ actor-lightningboat =
    .name = Lightning Boat
    .generic-name = Boat
    .description = A heavy boat with a lightning
-   aura that increases the damage of most
+   aura that increases the rate of fire of most
    friendly navy units nearby.
       Unarmed
-   .encyclopedia = The lightning boat is a heavy ship that aids nearby navy units. It eletrifies the waters nearby and that makes all friendly navy unit projectiles electrified (except for Missile Submarine and Drone Ship), increasing their damage slightly
+   .encyclopedia = The lightning boat is a heavy ship that aids nearby navy units. It eletrifies the waters nearby and that makes all friendly navy unit weapon mechanisms electrified (except for Missile Submarine and Drone Ship), increasing their rate of fire slightly.
 
    Unarmed
 

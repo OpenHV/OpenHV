@@ -1401,9 +1401,9 @@
 	Voiced:
 		VoiceSet: CivilianVoice
 
-^WeaponDamageUpgrade:
-	FirepowerMultiplier:
-		Modifier: 125
-		RequiresCondition: lightningboat-damage-increase
+^WeaponReloadDelayUpgrade:
+	ReloadDelayMultiplier:
+		Modifier: 75
+		RequiresCondition: lightningboat-reloaddelay-increase
 	ExternalCondition:
-		Condition: lightningboat-damage-increase
+		Condition: lightningboat-reloaddelay-increase

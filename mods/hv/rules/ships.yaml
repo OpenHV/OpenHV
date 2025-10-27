@@ -3,7 +3,7 @@
 LIGHTBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -53,7 +53,7 @@ LIGHTBOAT:
 PATROLBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -107,7 +107,7 @@ PATROLBOAT:
 MERCBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -159,7 +159,7 @@ MERCBOAT:
 TORPEDOBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -204,7 +204,7 @@ TORPEDOBOAT:
 SUBMARINE:
 	Inherits: ^Submarine
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -249,7 +249,7 @@ SUBMARINE:
 RAILGUNBOAT:
 	Inherits: ^Ship
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -315,7 +315,7 @@ RAILGUNBOAT:
 
 LIGHTNINGBOAT:
 	Inherits: ^Ship
-	Inherits@Amplifier: ^WeaponDamageUpgrade
+	Inherits@Amplifier: ^WeaponReloadDelayUpgrade
 	Valued:
 		Cost: 4500
 	Tooltip:
@@ -343,21 +343,21 @@ LIGHTNINGBOAT:
 		TurnSpeed: 40
 		CanMoveBackward: true
 	RevealsShroud:
-		Range: 9c0
-		MinRange: 4c0
+		Range: 4c0
+		MinRange: 2c0
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
-		Range: 4c0
+		Range: 2c0
 	WithRangeCircle:
 		Color: 9999FA
 		Width: 2
 		BorderWidth: 3
 		Range: 4c0
 	ProximityExternalCondition:
-		Condition: lightningboat-damage-increase
+		Condition: lightningboat-reloaddelay-increase
 		Range: 4c0
 	ExternalCondition:
-		Condition: lightningboat-damage-increase
+		Condition: lightningboat-reloaddelay-increase
 
 BOOMER:
 	Inherits: ^Submarine
