@@ -373,6 +373,7 @@ BROKER:
 		Sequence: extended
 		Name: deployed
 	WithRangeCircle:
+		RequiresCondition: deployed
 		Color: 03FE03
 		Width: 2
 		BorderWidth: 3

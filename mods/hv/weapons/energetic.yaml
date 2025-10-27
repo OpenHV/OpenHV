@@ -128,7 +128,7 @@ RepairTorch:
 	TargetActorCenter: true
 	Warhead@Repair: TargetDamage
 		DebugOverlayColor: 00FF00
-		Damage: -50
+		Damage: -250
 		ValidTargets: DamagedPod
 		Spread: 1
 	Warhead@Sparks: FireShrapnel
@@ -587,7 +587,7 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 200
+		Amount: 100
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 
