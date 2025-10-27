@@ -304,6 +304,7 @@ RAILGUNBOAT:
 		UndeployOnMove: true
 		UndeployOnPickup: true
 		Voice: Move
+		SmartDeploy: true
 	WithRangeCircle:
 		RequiresCondition: deployed
 		Color: FE03FE
