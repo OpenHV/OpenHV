@@ -363,6 +363,7 @@ BROKER:
 		UndeploySounds: broker_undeploy_mincedbeats.ogg
 		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
 		Voice: Deploying
+		SmartDeploy: true
 	WithMakeAnimation:
 		Sequence: extend
 		BodyNames: deployed
