@@ -166,7 +166,7 @@ ShipMissile:
 		Image: bullet18
 		TrailImage: smoke_blue
 	Warhead@Damage: SpreadDamage
-		Damage: 2000
+		Damage: 2200
 		Versus:
 			None: 45
 			Steel: 90
@@ -175,7 +175,7 @@ ShipMissile:
 			Concrete: 90
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 2000
+		Damage: 2200
 
 BoatMissileAntiGround:
 	Inherits: SmallSplash

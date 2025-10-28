@@ -492,7 +492,7 @@ BANSHEE:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 27000
+		HP: 27500
 	RevealsShroud:
 		Range: 12c0
 		MinRange: 6c0
