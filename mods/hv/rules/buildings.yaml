@@ -2787,7 +2787,7 @@ DROPZONE:
 	GrantConditionOnNeutralOwner:
 		Condition: ownerless
 	PeriodicProducer:
-		Actors: merctank, dualmerctank
+		Actors: MBT2
 		Type: Reinforcements
 		ChargeDuration: 1500
 		ShowSelectionBar: true
