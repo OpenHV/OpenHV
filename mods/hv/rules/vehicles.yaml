@@ -367,6 +367,7 @@ REPAIRTANK:
 		InitialStance: AttackAnything
 	AutoTargetPriority@Default:
 		ValidTargets: DamagedVehicle
+		TargetRelationships: Ally
 
 MINELAYER:
 	Inherits: ^TrackedVehicle
