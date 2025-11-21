@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.inputs.tag }}
 
@@ -31,7 +31,7 @@ jobs:
           make all
 
       - name: Clone Wiki
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: openhv/openhv.wiki
           token: ${{ secrets.DOCS_TOKEN }}
