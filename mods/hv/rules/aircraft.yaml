@@ -120,7 +120,7 @@ GUNSHIP2:
 		Sequence: shoot
 	WithAttackAnimation@Secondary:
 		Armament: secondary
-		Sequence: shoot		
+		Sequence: shoot
 	Contrail@Right:
 		Offset: -620,-130,0
 		TrailLength: 10
@@ -173,7 +173,7 @@ GUNSHIP3:
 		RequiresCondition: airborne
 		FacingTolerance: 8
 	Selectable:
-		Bounds: 1228, 1228	
+		Bounds: 1228, 1228
 	Armament:
 		Weapon: Plasma
 		LocalOffset: 750,-400,0, 750,400,0

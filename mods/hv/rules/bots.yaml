@@ -24,8 +24,6 @@ Player:
 		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
-		BarracksTypes: module, module2
-		VehiclesFactoryTypes: factory, factory2, base, base2
 		ProductionTypes: module, module2, factory, factory2, starport, starport2, harbor, harbor2, base, base2
 		NavalProductionTypes: harbor, harbor2
 		RefineryTypes: storage

@@ -14173,7 +14173,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Cliff Crater
-
 		MultiBrush@1:
 			Template: 1
 			Segment:
@@ -14316,7 +14315,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Cliff Red Snow
-
 		MultiBrush@668:
 			Template: 668
 			Segment:
@@ -14459,7 +14457,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Cliff Sand
-
 		MultiBrush@752:
 			Template: 752
 			Segment:
@@ -14602,7 +14599,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Cliff Snow
-
 		MultiBrush@885:
 			Template: 885
 			Segment:
@@ -14745,7 +14741,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Cliff Stone
-
 		MultiBrush@979:
 			Template: 979
 			Segment:
@@ -14888,7 +14883,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Cliff Crater Water
-
 		MultiBrush@28:
 			Template: 28
 			Segment:
@@ -14975,7 +14969,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Crater Lava
-
 		MultiBrush@14:
 			Template: 14
 			Segment:
@@ -15062,7 +15055,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Grass Water
-
 		MultiBrush@204:
 			Template: 204
 			Segment:
@@ -15149,7 +15141,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Grass Lava
-
 		MultiBrush@218:
 			Template: 218
 			Segment:
@@ -15236,7 +15227,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Sand Lava
-
 		MultiBrush@576:
 			Template: 576
 			Segment:
@@ -15323,7 +15313,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Mountain Lava
-
 		MultiBrush@400:
 			Template: 400
 			Segment:
@@ -15410,7 +15399,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Red Snow Lava
-
 		MultiBrush@796:
 			Template: 796
 			Segment:
@@ -15497,7 +15485,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Stone Lava
-
 		MultiBrush@937:
 			Template: 937
 			Segment:
@@ -15584,7 +15571,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Black Sand Lava
-
 		MultiBrush@1689:
 			Template: 1689
 			Segment:
@@ -15671,7 +15657,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Red Snow Water
-
 		MultiBrush@654:
 			Template: 654
 			Segment:
@@ -15758,7 +15743,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Sand Water
-
 		MultiBrush@738:
 			Template: 738
 			Segment:
@@ -15845,7 +15829,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Snow Water
-
 		MultiBrush@871:
 			Template: 871
 			Segment:
@@ -15932,7 +15915,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Stone Water
-
 		MultiBrush@965:
 			Template: 965
 			Segment:
@@ -16019,7 +16001,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Black Sand Water
-
 		MultiBrush@1800:
 			Template: 1800
 			Segment:
@@ -16106,7 +16087,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Shore Grass
-
 		MultiBrush@1354:
 			Template: 1354
 			Segment:
@@ -16249,7 +16229,6 @@ MultiBrushCollections:
 				Points: 1,0, 1,1
 
 	# Shore Sand
-
 		MultiBrush@1374:
 			Template: 1374
 			Segment:
@@ -16392,7 +16371,6 @@ MultiBrushCollections:
 				Points: 1,0, 1,1
 
 	# Shore Black Sand
-
 		MultiBrush@1744:
 			Template: 1744
 			Segment:
@@ -16535,7 +16513,6 @@ MultiBrushCollections:
 				Points: 1,0, 1,1
 
 	# Grass Ramp
-
 		MultiBrush@117:
 			Template: 117
 			Segment:
@@ -16622,7 +16599,6 @@ MultiBrushCollections:
 				Points: 0,0
 
 	# Sand Ramp
-
 		MultiBrush@563:
 			Template: 563
 			Segment:
@@ -16709,7 +16685,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Black Sand Ramp
-
 		MultiBrush@1676:
 			Template: 1676
 			Segment:
@@ -16796,7 +16771,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Grass Dark Grass
-
 		MultiBrush@130:
 			Template: 130
 			Segment:
@@ -16883,7 +16857,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0, 1,0
 
 	# Cliff Grass Crater
-
 		MultiBrush@172:
 			Template: 172
 			Segment:
@@ -16970,7 +16943,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Snow Ice
-
 		MultiBrush@240:
 			Template: 240
 			Segment:
@@ -17057,7 +17029,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Ice Water
-
 		MultiBrush@255:
 			Template: 255
 			Segment:
@@ -17144,7 +17115,6 @@ MultiBrushCollections:
 				Points: 1,0, 1,1, 0,1
 
 	# Ice Cracked Water
-
 		MultiBrush@269:
 			Template: 269
 			Segment:
@@ -17231,7 +17201,6 @@ MultiBrushCollections:
 				Points: 1,0, 1,1, 0,1
 
 	# Ice Floes Water
-
 		MultiBrush@282:
 			Template: 282
 			Segment:
@@ -17318,7 +17287,6 @@ MultiBrushCollections:
 				Points: 1,0, 1,1, 0,1
 
 	# Lava Flow
-
 		MultiBrush@332:
 			Template: 332
 			Segment:
@@ -17405,7 +17373,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Mountain Crater
-
 		MultiBrush@365:
 			Template: 365
 			Segment:
@@ -17492,7 +17459,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Mountain Grass
-
 		MultiBrush@191:
 			Template: 191
 			Segment:
@@ -17579,7 +17545,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Grass Crater
-
 		MultiBrush@151:
 			Template: 151
 			Segment:
@@ -17666,7 +17631,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Mountain Sand
-
 		MultiBrush@414:
 			Template: 414
 			Segment:
@@ -17753,7 +17717,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Ramp Mountain
-
 		MultiBrush@495:
 			Template: 495
 			Segment:
@@ -17840,7 +17803,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Red Snow Crater
-
 		MultiBrush@632:
 			Template: 632
 			Segment:
@@ -17927,7 +17889,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Sand Crater
-
 		MultiBrush@703:
 			Template: 703
 			Segment:
@@ -18014,7 +17975,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Ramp Snow
-
 		MultiBrush@765:
 			Template: 765
 			Segment:
@@ -18101,7 +18061,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Snow Red Snow
-
 		MultiBrush@778:
 			Template: 778
 			Segment:
@@ -18188,7 +18147,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Snow Crater
-
 		MultiBrush@810:
 			Template: 810
 			Segment:
@@ -18275,7 +18233,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Mountain Snow
-
 		MultiBrush@859:
 			Template: 859
 			Segment:
@@ -18362,7 +18319,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Stone Crater
-
 		MultiBrush@901:
 			Template: 901
 			Segment:
@@ -18449,7 +18405,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Stone Snow
-
 		MultiBrush@951:
 			Template: 951
 			Segment:
@@ -18536,7 +18491,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Grass Swamp
-
 		MultiBrush@1065:
 			Template: 1065
 			Segment:
@@ -18623,7 +18577,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Tech Crater
-
 		MultiBrush@1104:
 			Template: 1104
 			Segment:
@@ -18710,7 +18663,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Tech Crater
-
 		MultiBrush@1126:
 			Template: 1126
 			Segment:
@@ -18797,7 +18749,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Tech Lava
-
 		MultiBrush@1140:
 			Template: 1140
 			Segment:
@@ -18884,7 +18835,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Tech Water
-
 		MultiBrush@1154:
 			Template: 1154
 			Segment:
@@ -18971,7 +18921,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Tech Swamp
-
 		MultiBrush@1489:
 			Template: 1489
 			Segment:
@@ -19058,7 +19007,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Cliff Tech
-
 		MultiBrush@1168:
 			Template: 1168
 			Segment:
@@ -19201,7 +19149,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0
 
 	# Trees Grass
-
 		MultiBrush@1272:
 			Template: 1272
 			Segment:
@@ -19288,7 +19235,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0, 1,0
 
 	# Trees Snow
-
 		MultiBrush@1287:
 			Template: 1287
 			Segment:
@@ -19375,7 +19321,6 @@ MultiBrushCollections:
 				Points: 0,1, 0,0, 1,0
 
 	# Water Flow
-
 		MultiBrush@1477:
 			Template: 1477
 			Segment:
@@ -19462,7 +19407,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome: Snow Grass
-
 		MultiBrush@1470:
 			Template: 1470
 			Segment:
@@ -19549,7 +19493,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Grass Sand
-
 		MultiBrush@1509:
 			Template: 1509
 			Segment:
@@ -19636,7 +19579,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Grass Dirt
-
 		MultiBrush@1568:
 			Template: 1568
 			Segment:
@@ -19723,7 +19665,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Snow Dirt
-
 		MultiBrush@1604:
 			Template: 1604
 			Segment:
@@ -19810,7 +19751,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Sand Dirt
-
 		MultiBrush@1616:
 			Template: 1616
 			Segment:
@@ -19897,7 +19837,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Tech Grass
-
 		MultiBrush@1628:
 			Template: 1628
 			Segment:
@@ -19984,7 +19923,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Tech Sand
-
 		MultiBrush@1640:
 			Template: 1640
 			Segment:
@@ -20071,7 +20009,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Tech Snow
-
 		MultiBrush@1652:
 			Template: 1652
 			Segment:
@@ -20158,7 +20095,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Grass Black Sand
-
 		MultiBrush@1764:
 			Template: 1764
 			Segment:
@@ -20245,7 +20181,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Black Sand Dirt
-
 		MultiBrush@1776:
 			Template: 1776
 			Segment:
@@ -20332,7 +20267,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Tech Black Sand
-
 		MultiBrush@1788:
 			Template: 1788
 			Segment:
@@ -20419,7 +20353,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Biome Sand Black Sand
-
 		MultiBrush@1812:
 			Template: 1812
 			Segment:
@@ -20506,7 +20439,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Trees Crushed: Grass
-
 		MultiBrush@1394:
 			Template: 1394
 			Segment:
@@ -20593,7 +20525,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Trees Crushed: Snow
-
 		MultiBrush@1420:
 			Template: 1420
 			Segment:
@@ -20680,7 +20611,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Trees Burnt: Grass
-
 		MultiBrush@1435:
 			Template: 1435
 			Segment:
@@ -20767,7 +20697,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Trees Burnt: Snow
-
 		MultiBrush@1448:
 			Template: 1448
 			Segment:
@@ -20854,7 +20783,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Water Pelagic
-
 		MultiBrush@1223:
 			Template: 1223
 			Segment:
@@ -20941,7 +20869,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Water Littoral
-
 		MultiBrush@1236:
 			Template: 1236
 			Segment:
@@ -21028,7 +20955,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Grass
-
 		MultiBrush@91:
 			Template: 91
 			Segment:
@@ -21115,7 +21041,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Crater
-
 		MultiBrush@52:
 			Template: 52
 			Segment:
@@ -21202,7 +21127,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Mountain
-
 		MultiBrush@469:
 			Template: 469
 			Segment:
@@ -21289,7 +21213,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Snow
-
 		MultiBrush@304:
 			Template: 304
 			Segment:
@@ -21376,7 +21299,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road
-
 		MultiBrush@508:
 			Template: 508
 			Segment:
@@ -21463,7 +21385,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Red Snow
-
 		MultiBrush@547:
 			Template: 547
 			Segment:
@@ -21550,7 +21471,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Sand
-
 		MultiBrush@606:
 			Template: 606
 			Segment:
@@ -21637,7 +21557,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Stone
-
 		MultiBrush@1015:
 			Template: 1015
 			Segment:
@@ -21724,7 +21643,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Black Sand
-
 		MultiBrush@1717:
 			Template: 1717
 			Segment:
@@ -21811,7 +21729,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Lava
-
 		MultiBrush@353:
 			Template: 353
 			Segment:
@@ -21898,7 +21815,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Water
-
 		MultiBrush@1259:
 			Template: 1259
 			Segment:
@@ -21985,7 +21901,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Road: Swamp
-
 		MultiBrush@1088:
 			Template: 1088
 			Segment:
@@ -22072,7 +21987,6 @@ MultiBrushCollections:
 				Points: 1,1
 
 	# Tech: Rails
-
 		MultiBrush@1182:
 			Template: 1182
 			Segment:
@@ -22215,7 +22129,6 @@ MultiBrushCollections:
 				Points: 0,1, 1,1
 
 	# Tech: Stripes
-
 		MultiBrush@1521:
 			Template: 1521
 			Segment:
@@ -22358,7 +22271,6 @@ MultiBrushCollections:
 				Points: 0,1, 1,1
 
 	# Dirt Tracks
-
 		MultiBrush@1580:
 			Template: 1580
 			Segment:
