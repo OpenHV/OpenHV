@@ -292,7 +292,8 @@ Container@EDITOR_WORLD_ROOT:
 					Children:
 						ScrollItem@TILEPREVIEW_TEMPLATE:
 							Visible: false
-							Width: PARENT_WIDTH - 35
+							Width: (PARENT_WIDTH - 24) / 2 - 6
+							Height: PARENT_WIDTH / 2
 							TooltipContainer: TOOLTIP_CONTAINER
 							Children:
 								TerrainTemplatePreview@TILE_PREVIEW:
@@ -316,13 +317,14 @@ Container@EDITOR_WORLD_ROOT:
 					Children:
 						ScrollItem@LAYERPREVIEW_TEMPLATE:
 							Visible: false
+							Width: (PARENT_WIDTH - 24) / 2 - 6
+							Height: PARENT_WIDTH / 2
 							IgnoreChildMouseOver: true
 							TooltipContainer: TOOLTIP_CONTAINER
 							Children:
 								ResourcePreview@LAYER_PREVIEW:
 									X: 4
 									Y: 4
-									Visible: false
 		Container@ACTOR_WIDGETS:
 			X: WINDOW_WIDTH - 320
 			Y: 354
@@ -379,7 +381,8 @@ Container@EDITOR_WORLD_ROOT:
 					Children:
 						ScrollItem@ACTORPREVIEW_TEMPLATE:
 							Visible: false
-							Width: PARENT_WIDTH - 35
+							Width: (PARENT_WIDTH - 24) / 2 - 6
+							Height: PARENT_WIDTH / 2
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
 							IgnoreChildMouseOver: true
@@ -387,7 +390,6 @@ Container@EDITOR_WORLD_ROOT:
 								ActorPreview@ACTOR_PREVIEW:
 									X: 4
 									Y: 4
-									Visible: true
 		Container@TOOLS_WIDGETS:
 			X: WINDOW_WIDTH - 320
 			Y: 354

@@ -125,7 +125,7 @@ namespace OpenRA.Mods.Common.Widgets
 
 	sealed class AddResourcesEditorAction : IEditorAction
 	{
-		[FluentReference("amount", "type")]
+		[FluentReference("count", "type")]
 		const string AddedResource = "notification-added-resource";
 
 		public string Text { get; private set; }
