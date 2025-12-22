@@ -81,6 +81,7 @@ checkbox-crates =
 resource-generic = Mineable Resource Deposit
 resource-gold = Precious Metal Deposit
 resource-iron = Base Metal Deposit
+bridge-shadow = Bridge Shadow
 
 ## Player
 bot-rogue-ai =

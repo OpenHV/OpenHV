@@ -12,14 +12,15 @@
 using System;
 using System.Collections.Generic;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Used to render decorational shadows that can be manually placed without tooltips.")]
-	public class BridgeShadowRendererInfo : TraitInfo, Requires<IResourceLayerInfo>, IMapPreviewSignatureInfo
+	public class BridgeShadowRendererInfo : TraitInfo, Requires<BridgeShadowLayerInfo>, IMapPreviewSignatureInfo
 	{
 		public class BridgeShadowTypeInfo
 		{
@@ -41,16 +42,16 @@ namespace OpenRA.Mods.Common.Traits
 			}
 		}
 
-		[FieldLoader.LoadUsing(nameof(LoadResourceTypes))]
+		[FieldLoader.LoadUsing(nameof(LoadBridgeTypes))]
 		public readonly Dictionary<string, BridgeShadowTypeInfo> BridgeShadowTypes = null;
 
 		// Copied from ResourceLayerInfo
-		protected static object LoadResourceTypes(MiniYaml yaml)
+		protected static object LoadBridgeTypes(MiniYaml yaml)
 		{
 			var ret = new Dictionary<string, BridgeShadowTypeInfo>();
-			var resources = yaml.NodeWithKeyOrDefault("BridgeShadowTypes");
-			if (resources != null)
-				foreach (var r in resources.Value.Nodes)
+			var bridgeShadows = yaml.NodeWithKeyOrDefault("BridgeShadowTypes");
+			if (bridgeShadows != null)
+				foreach (var r in bridgeShadows.Value.Nodes)
 					ret[r.Key] = new BridgeShadowTypeInfo(r.Value);
 
 			return ret;
@@ -58,15 +59,13 @@ namespace OpenRA.Mods.Common.Traits
 
 		void IMapPreviewSignatureInfo.PopulateMapPreviewSignatureCells(Map map, ActorInfo ai, ActorReference s, List<(MPos Uv, Color Color)> destinationBuffer)
 		{
-			var resourceLayer = ai.TraitInfoOrDefault<IResourceLayerInfo>();
-			if (resourceLayer == null)
-				return;
+			var bridgeLayer = ai.TraitInfo<BridgeShadowLayerInfo>();
 
 			var terrainInfo = map.Rules.TerrainInfo;
 			var colors = new Dictionary<byte, Color>();
 			foreach (var r in BridgeShadowTypes.Keys)
 			{
-				if (!resourceLayer.TryGetResourceIndex(r, out var resourceIndex) || !resourceLayer.TryGetTerrainType(r, out var terrainType))
+				if (!bridgeLayer.TryGetResourceIndex(r, out var resourceIndex) || !bridgeLayer.TryGetTerrainType(r, out var terrainType))
 					continue;
 
 				var info = terrainInfo.TerrainTypes[terrainInfo.GetTerrainIndex(terrainType)];
@@ -90,7 +89,7 @@ namespace OpenRA.Mods.Common.Traits
 	public class BridgeShadowRenderer : IResourceRenderer, IWorldLoaded, IRenderOverlay, ITickRender, INotifyActorDisposing, IRadarTerrainLayer
 	{
 		protected readonly BridgeShadowRendererInfo Info;
-		protected readonly IResourceLayer ResourceLayer;
+		protected readonly BridgeShadowLayer BridgeShadowLayer;
 		protected readonly CellLayer<RendererCellContents> RenderContents;
 		protected readonly Dictionary<string, ISpriteSequence> Variants = [];
 		protected readonly World World;
@@ -104,15 +103,8 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			Info = info;
 			World = self.World;
-			ResourceLayer = self.Trait<IResourceLayer>();
-			ResourceLayer.CellChanged += AddDirtyCell;
+			BridgeShadowLayer = self.Trait<BridgeShadowLayer>();
 			RenderContents = new CellLayer<RendererCellContents>(self.World.Map);
-		}
-
-		void AddDirtyCell(CPos cell, string resourceType)
-		{
-			if (resourceType == null || Info.BridgeShadowTypes.ContainsKey(resourceType))
-				dirty.Add(cell);
 		}
 
 		protected virtual void WorldLoaded(World w, WorldRenderer wr)
@@ -136,7 +128,7 @@ namespace OpenRA.Mods.Common.Traits
 			// through the fog with the Explored Map option enabled
 			foreach (var cell in w.Map.AllCells)
 			{
-				var resource = ResourceLayer.GetResource(cell);
+				var resource = BridgeShadowLayer.GetResource(cell);
 				var rendererCellContents = CreateRenderCellContents(wr, resource, cell);
 				if (rendererCellContents.Type != null)
 				{
@@ -150,8 +142,12 @@ namespace OpenRA.Mods.Common.Traits
 
 		protected RendererCellContents CreateRenderCellContents(WorldRenderer wr, ResourceLayerContents contents, CPos cell)
 		{
-			if (contents.Type != null && contents.Density > 0 && Info.BridgeShadowTypes.TryGetValue(contents.Type, out var resourceInfo))
-				return new RendererCellContents(contents.Type, contents.Density, resourceInfo, ChooseVariant(contents.Type, cell), wr.Palette(resourceInfo.Palette));
+			if (contents.Type != null && contents.Density > 0 && Info.BridgeShadowTypes.TryGetValue(contents.Type, out var bridgeShadowInfo))
+			{
+				var variant = ChooseVariant(contents.Type, cell);
+				var palette = wr.Palette(bridgeShadowInfo.Palette);
+				return new RendererCellContents(contents.Type, contents.Density, bridgeShadowInfo, variant, palette);
+			}
 
 			return RendererCellContents.Empty;
 		}
@@ -174,11 +170,11 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			foreach (var cell in dirty)
 			{
-				if (!ResourceLayer.IsVisible(cell))
+				if (!BridgeShadowLayer.IsVisible(cell))
 					continue;
 
 				var rendererCellContents = RendererCellContents.Empty;
-				var contents = ResourceLayer.GetResource(cell);
+				var contents = BridgeShadowLayer.GetResource(cell);
 				if (contents.Density > 0)
 				{
 					rendererCellContents = RenderContents[cell];
@@ -203,7 +199,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			if (content.Density > 0)
 			{
-				var maxDensity = ResourceLayer.GetMaxDensity(content.Type);
+				var maxDensity = BridgeShadowLayer.GetMaxDensity(content.Type);
 				var frame = int2.Lerp(0, content.Sequence.Length - 1, content.Density, maxDensity);
 				UpdateSpriteLayers(cell, content.Sequence, frame, content.Palette);
 			}
@@ -217,8 +213,6 @@ namespace OpenRA.Mods.Common.Traits
 				return;
 
 			spriteLayer.Dispose();
-
-			ResourceLayer.CellChanged -= AddDirtyCell;
 
 			disposed = true;
 		}
@@ -284,7 +278,7 @@ namespace OpenRA.Mods.Common.Traits
 			if (type == null)
 				return false;
 
-			if (!ResourceLayer.Info.TryGetTerrainType(type, out var terrainType))
+			if (!BridgeShadowLayer.Info.TryGetTerrainType(type, out var terrainType))
 				return false;
 
 			var terrainInfo = World.Map.Rules.TerrainInfo;
@@ -304,11 +298,11 @@ namespace OpenRA.Mods.Common.Traits
 
 			public static readonly RendererCellContents Empty = default;
 
-			public RendererCellContents(string resourceType, int density,
+			public RendererCellContents(string bridgeType, int density,
 				BridgeShadowRendererInfo.BridgeShadowTypeInfo info,
 				ISpriteSequence sequence, PaletteReference palette)
 			{
-				Type = resourceType;
+				Type = bridgeType;
 				Density = density;
 				Info = info;
 				Sequence = sequence;

@@ -52,13 +52,13 @@ namespace OpenRA.Mods.HV.Traits
 		// Copied to EditorResourceLayerInfo, ResourceRendererInfo
 		protected static object LoadResourceTypes(MiniYaml yaml)
 		{
-			var ret = new Dictionary<string, ResourceTypeInfo>();
+			var dictionary = new Dictionary<string, ResourceTypeInfo>();
 			var resources = yaml.Nodes.FirstOrDefault(n => n.Key == "ResourceTypes");
 			if (resources != null)
 				foreach (var r in resources.Value.Nodes)
-					ret[r.Key] = new ResourceTypeInfo(r.Value);
+					dictionary[r.Key] = new ResourceTypeInfo(r.Value);
 
-			return ret;
+			return dictionary;
 		}
 
 		public static void PopulateMapPreviewSignatureCells(Map map, Dictionary<string, ResourceTypeInfo> resources, List<(MPos Uv, Color Color)> destinationBuffer)

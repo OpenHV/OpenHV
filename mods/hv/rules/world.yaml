@@ -310,41 +310,23 @@ World:
 				TerrainType: Ore
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Tech, Dirt
 				MaxDensity: 3
+	BridgeShadowLayer:
+		TerrainType: BridgeShadow
+		BridgeShadowTypes:
 			bridge-shadow-left:
 				ResourceIndex: 3
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 			bridge-shadow-bottom-left:
 				ResourceIndex: 4
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 			bridge-shadow-top-left:
 				ResourceIndex: 5
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 			bridge-shadow-top:
 				ResourceIndex: 6
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 			bridge-shadow-fadeout-right:
 				ResourceIndex: 7
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 			bridge-shadow-fadeout-left:
 				ResourceIndex: 8
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 			bridge-shadow-corner:
 				ResourceIndex: 9
-				TerrainType: BridgeShadow
-				MaxDensity: 1
-				AllowedTerrainTypes: *
 	ResourceRenderer:
 		ResourceTypes:
 			gold:
