@@ -49,8 +49,6 @@ Player:
 			howitzer: 1
 			uplink: 1
 			silo: 1
-			outpost: 2
-			outpost2: 2
 		BuildingFractions:
 			base: 1
 			storage: 1
