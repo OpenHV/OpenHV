@@ -13,12 +13,13 @@ using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Effects;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.World)]
-	public class TerrainTileAnimationInfo : TraitInfo, ILobbyCustomRulesIgnore
+	public class TerrainTileAnimationInfo : TraitInfo, ILobbyCustomRulesIgnore, Requires<BridgeShadowLayerInfo>
 	{
 		[FieldLoader.Require]
 		public readonly ImmutableArray<ushort> Tiles = default;
@@ -51,6 +52,8 @@ namespace OpenRA.Mods.HV.Traits
 		readonly TerrainTileAnimationInfo info;
 		readonly ImmutableArray<CPos> cells;
 
+		readonly BridgeShadowLayer bridgeShadowLayer;
+
 		int ticks;
 
 		public TerrainTileAnimation(Actor self, TerrainTileAnimationInfo info)
@@ -58,6 +61,8 @@ namespace OpenRA.Mods.HV.Traits
 			this.info = info;
 
 			ticks = info.InitialDelay;
+
+			bridgeShadowLayer = self.Trait<BridgeShadowLayer>();
 
 			var map = self.World.Map;
 			cells = map.AllCells.Where(cell => info.Tiles.Contains(map.Tiles[cell].Type)).ToImmutableArray();
@@ -74,8 +79,9 @@ namespace OpenRA.Mods.HV.Traits
 				ticks = Common.Util.RandomInRange(world.LocalRandom, info.Interval);
 				var cell = cells.Random(world.LocalRandom);
 
-				// Clashes with bridge shadows
-				if (world.Map.CustomTerrain[cell] != byte.MaxValue)
+				// Clashes with bridge shadows.
+				var resourceLayerContents = bridgeShadowLayer.GetResource(cell);
+				if (!resourceLayerContents.Equals(ResourceLayerContents.Empty))
 					return;
 
 				var position = world.Map.CenterOfCell(cell);
