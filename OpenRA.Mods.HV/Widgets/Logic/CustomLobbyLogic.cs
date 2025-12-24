@@ -174,8 +174,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			// TODO: This needs to be reworked to support per-map tech levels, bots, etc.
 			modRules = modData.DefaultRules;
 
-			services = modData.Manifest.Get<WebServices>();
-			internetRelayChat = modData.Manifest.Get<InternetRelayChat>();
+			services = modData.GetOrCreate<WebServices>();
+			internetRelayChat = modData.GetOrCreate<InternetRelayChat>();
 
 			Game.LobbyInfoChanged += UpdateCurrentMap;
 			Game.LobbyInfoChanged += UpdatePlayerList;

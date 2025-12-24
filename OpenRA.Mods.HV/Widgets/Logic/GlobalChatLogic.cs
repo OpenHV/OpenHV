@@ -50,7 +50,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			autoConnect = FieldLoader.GetValue<bool>("AutoConnect", logicArgs.First().Value.Value);
 
-			internetRelayChat = modData.Manifest.Get<InternetRelayChat>();
+			internetRelayChat = modData.GetOrCreate<InternetRelayChat>();
 
 			historyPanel.Bind(internetRelayChat.History, MakeHistoryWidget, HistoryWidgetEquals, true);
 			nicknamePanel.Bind(internetRelayChat.Users, MakeUserWidget, UserWidgetEquals, false);

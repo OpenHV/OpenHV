@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 {
 	public static class ActorStatsExport
 	{
-		public static DataTable GenerateTable(Ruleset rules)
+		public static DataTable GenerateTable(ModData modData)
 		{
 			var table = new DataTable();
 			table.Columns.Add("Name", typeof(string));
@@ -32,11 +32,11 @@ namespace OpenRA.Mods.HV.UtilityCommands
 			table.Columns.Add("Range", typeof(string));
 			table.Columns.Add("Damage /s", typeof(int));
 
-			var gameSpeeds = Game.ModData.Manifest.Get<GameSpeeds>();
+			var gameSpeeds = modData.GetOrCreate<GameSpeeds>();
 			var defaultGameSpeed = gameSpeeds.Speeds[gameSpeeds.DefaultSpeed];
 
 			var armorList = new List<string>();
-			foreach (var actorInfo in rules.Actors.Values)
+			foreach (var actorInfo in modData.DefaultRules.Actors.Values)
 			{
 				var armor = actorInfo.TraitInfoOrDefault<ArmorInfo>();
 				if (armor != null && !armorList.Contains(armor.Type))
@@ -47,7 +47,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 			foreach (var armorType in armorList)
 				table.Columns.Add("vs. " + armorType, typeof(int));
 
-			foreach (var actorInfo in rules.Actors.Values)
+			foreach (var actorInfo in modData.DefaultRules.Actors.Values)
 			{
 				if (actorInfo.Name.StartsWith('^'))
 					continue;
@@ -79,7 +79,7 @@ namespace OpenRA.Mods.HV.UtilityCommands
 					foreach (var armament in armaments)
 					{
 						row["Weapon"] = armament.Weapon;
-						var weapon = rules.Weapons[armament.Weapon.ToLowerInvariant()];
+						var weapon = modData.DefaultRules.Weapons[armament.Weapon.ToLowerInvariant()];
 
 						row["Range"] = weapon.Range;
 

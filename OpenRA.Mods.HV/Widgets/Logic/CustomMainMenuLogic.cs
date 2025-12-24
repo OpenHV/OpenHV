@@ -211,7 +211,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			Game.OnRemoteDirectConnect += OnRemoteDirectConnect;
 
 			// Check for updates in the background
-			var webServices = modData.Manifest.Get<GitHubWebServices>();
+			var webServices = modData.GetOrCreate<GitHubWebServices>();
 			if (Game.Settings.Debug.CheckVersion)
 				webServices.FetchRelease(() => LoadAndDisplayNews(webServices, newsBG));
 
