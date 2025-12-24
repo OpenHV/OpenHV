@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using OpenRA.Graphics;
@@ -59,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 			All = Left | Top | Right | Bottom | TopLeft | TopRight | BottomLeft | BottomRight,
 		}
 
-		static readonly Dictionary<BitMask, int> SpriteMap = new()
+		static readonly FrozenDictionary<BitMask, int> SpriteMap = new Dictionary<BitMask, int>()
 		{
 			{ BitMask.Bottom | BitMask.BottomLeft | BitMask.BottomRight, 0 },
 			{ BitMask.BottomRight, 1 },
@@ -73,7 +74,7 @@ namespace OpenRA.Mods.HV.Traits
 			{ BitMask.Top | BitMask.Right | BitMask.TopLeft | BitMask.TopRight | BitMask.BottomRight, 9 },
 			{ BitMask.Left | BitMask.Top | BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft, 10 },
 			{ BitMask.Left | BitMask.Bottom | BitMask.TopLeft | BitMask.BottomLeft | BitMask.BottomRight, 11 },
-		};
+		}.ToFrozenDictionary();
 
 		readonly LiquidTerrainLayer liquidTerrainLayer;
 		readonly LiquidEdgeRendererInfo info;

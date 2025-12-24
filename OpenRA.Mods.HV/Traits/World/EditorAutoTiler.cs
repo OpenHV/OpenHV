@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -105,7 +106,7 @@ namespace OpenRA.Mods.HV.Traits
 			BitMask.Bottom | BitMask.Right,
 		];
 
-		static readonly Dictionary<BitMask, CVec[]> MatchingBorderCells = new()
+		static readonly FrozenDictionary<BitMask, CVec[]> MatchingBorderCells = new Dictionary<BitMask, CVec[]>()
 		{
 			{ BitMask.Top | BitMask.Left | BitMask.Right, new[] { new CVec(0, 1) } },
 			{ BitMask.Top | BitMask.Right | BitMask.Bottom, new[] { new CVec(-1, 0) } },
@@ -119,7 +120,7 @@ namespace OpenRA.Mods.HV.Traits
 			{ BitMask.TopRight | BitMask.BottomLeft | BitMask.BottomRight, new[] { new CVec(-1, -1) } },
 			{ BitMask.TopLeft | BitMask.BottomLeft | BitMask.BottomRight, new[] { new CVec(1, -1) } },
 			{ BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft, new[] { new CVec(1, 1) } },
-		};
+		}.ToFrozenDictionary();
 
 		static readonly BitMask[] CornerTileMap =
 		[
