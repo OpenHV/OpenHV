@@ -28,7 +28,7 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new Teleportable(init, this); }
 	}
 
-	public class Teleportable : ConditionalTrait<TeleportableInfo>, ISync
+	public class Teleportable : ConditionalTrait<TeleportableInfo>
 	{
 		IPositionable positionable;
 
