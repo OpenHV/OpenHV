@@ -10,7 +10,9 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
@@ -54,24 +56,24 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Terrain types a tree can change into.")]
-		public readonly string[] TransformedTerrain = [];
+		public readonly ImmutableArray<string> TransformedTerrain = [];
 
 		[FieldLoader.Require]
 		[Desc("Which tile ID to replace with which munched variant")]
-		public readonly Dictionary<ushort, ushort> CrushedTiles = [];
+		public readonly FrozenDictionary<ushort, ushort> CrushedTiles = default;
 
 		[FieldLoader.Require]
 		[Desc("Which tile ID to replace with which scorched variant")]
-		public readonly Dictionary<ushort, ushort> BurnedTiles = [];
+		public readonly FrozenDictionary<ushort, ushort> BurnedTiles = default;
 
 		public void RulesetLoaded(Ruleset rules, ActorInfo actorInfo)
 		{
 			var distinctCrushedTiles = CrushedTiles.Keys.Distinct().Count();
-			if (CrushedTiles.Keys.Count > distinctCrushedTiles)
+			if (CrushedTiles.Keys.Length > distinctCrushedTiles)
 				throw new YamlException($"Duplicate tile in {nameof(CrushedTiles)}.");
 
 			var distinctBurnedTiles = BurnedTiles.Keys.Distinct().Count();
-			if (BurnedTiles.Keys.Count > distinctBurnedTiles)
+			if (BurnedTiles.Keys.Length > distinctBurnedTiles)
 				throw new YamlException($"Duplicate tile in {nameof(BurnedTiles)}.");
 
 			if (distinctCrushedTiles != distinctBurnedTiles)

@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
@@ -20,7 +21,7 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Used for bursted one-colored whole screen effects. Add this to the world actor.")]
 	public class FlashPaletteEffectInfo : TraitInfo
 	{
-		public readonly HashSet<string> ExcludePalettes = ["cursor", "chrome", "colorpicker", "fog", "shroud"];
+		public readonly FrozenSet<string> ExcludePalettes = new HashSet<string> { "cursor", "chrome", "colorpicker", "fog", "shroud" }.ToFrozenSet();
 
 		[Desc("Measured in ticks.")]
 		public readonly int Length = 20;

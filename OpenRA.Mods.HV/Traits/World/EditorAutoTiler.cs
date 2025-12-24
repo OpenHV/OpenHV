@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
@@ -128,12 +129,12 @@ namespace OpenRA.Mods.HV.Traits
 			BitMask.TopLeft | BitMask.TopRight | BitMask.BottomLeft,
 		];
 
-		static bool CellContains(Map map, CPos cell, string[] terrainTypes)
+		static bool CellContains(Map map, CPos cell, ImmutableArray<string> terrainTypes)
 		{
 			return map.Contains(cell) && terrainTypes.Contains(map.GetTerrainInfo(cell).Type);
 		}
 
-		static BitMask FindAdjacentTerrain(Map map, CPos cell, string[] terrainTypes)
+		static BitMask FindAdjacentTerrain(Map map, CPos cell, ImmutableArray<string> terrainTypes)
 		{
 			var adjacentTiles = BitMask.None;
 
@@ -152,7 +153,7 @@ namespace OpenRA.Mods.HV.Traits
 			return adjacentTiles;
 		}
 
-		static BitMask FindCorners(Map map, CPos cell, string[] terrainTypes)
+		static BitMask FindCorners(Map map, CPos cell, ImmutableArray<string> terrainTypes)
 		{
 			var cornerTile = BitMask.None;
 

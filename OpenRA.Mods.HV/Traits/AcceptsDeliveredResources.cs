@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
@@ -23,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class AcceptsDeliveredResourcesInfo : TraitInfo
 	{
 		[ActorReference(typeof(ResourceTransporterInfo))]
-		public readonly string[] DeliveryVehicleType = null;
+		public readonly ImmutableArray<string> DeliveryVehicleType = default;
 
 		public override object Create(ActorInitializer init) { return new AcceptsDeliveredResources(init.Self, this); }
 	}

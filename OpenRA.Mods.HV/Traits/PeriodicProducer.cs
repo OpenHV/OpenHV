@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
@@ -23,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Random actors to choose from.")]
-		public readonly string[] Actors = null;
+		public readonly ImmutableArray<string> Actors = [];
 
 		[FieldLoader.Require]
 		[Desc("Production queue type to use")]
@@ -76,7 +77,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (!IsTraitDisabled && --ticks < 0)
 			{
 				var production = self.TraitsImplementing<Production>()
-				.FirstOrDefault(p => !p.IsTraitDisabled && !p.IsTraitPaused && p.Info.Produces.Contains(info.Type));
+					.FirstOrDefault(p => !p.IsTraitDisabled && !p.IsTraitPaused && p.Info.Produces.Contains(info.Type));
 
 				var activated = false;
 

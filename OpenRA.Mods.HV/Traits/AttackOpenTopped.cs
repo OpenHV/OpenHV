@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
@@ -25,7 +26,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Fire port offsets in local coordinates.")]
-		public readonly WVec[] PortOffsets = null;
+		public readonly ImmutableArray<WVec> PortOffsets = default;
 
 		public override object Create(ActorInitializer init) { return new AttackOpenTopped(init.Self, this); }
 		public override void RulesetLoaded(Ruleset rules, ActorInfo ai)

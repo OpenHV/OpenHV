@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common;
@@ -64,7 +65,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string AirborneCondition = null;
 
 		[Desc("Sounds to play when the actor is taking off.")]
-		public readonly string[] LaunchSounds = [];
+		public readonly ImmutableArray<string> LaunchSounds = [];
 
 		public override object Create(ActorInitializer init) { return new BallisticMissile(init, this); }
 

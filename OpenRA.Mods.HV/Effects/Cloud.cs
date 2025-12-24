@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using OpenRA.Effects;
 using OpenRA.Graphics;
 using OpenRA.Mods.HV.Traits;
@@ -23,7 +24,7 @@ namespace OpenRA.Mods.HV.Effects
 		readonly string palette;
 		readonly WPos edge;
 		readonly int facing;
-		readonly WDist[] speed;
+		readonly ImmutableArray<WDist> speed;
 		readonly WDist closeEnough;
 
 		WPos position;

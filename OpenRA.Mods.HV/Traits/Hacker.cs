@@ -10,7 +10,10 @@
 #endregion
 
 using System;
+
+using System.Collections.Frozen;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -20,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class HackerInfo : PausableConditionalTraitInfo, Requires<ArmamentInfo>, Requires<HealthInfo>
 	{
 		[Desc("Name of the armaments that grant this condition.")]
-		public readonly HashSet<string> ArmamentNames = ["primary"];
+		public readonly FrozenSet<string> ArmamentNames = new HashSet<string>() { "primary" }.ToFrozenSet();
 
 		[Desc("Up to how many units can this unit control?",
 			"Use 0 or negative numbers for infinite.")]
@@ -36,7 +39,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string ControllingCondition = null;
 
 		[Desc("The sound played when the unit is hacked.")]
-		public readonly string[] Sounds = [];
+		public readonly ImmutableArray<string> Sounds = [];
 
 		public override object Create(ActorInitializer init) { return new Hacker(this); }
 	}

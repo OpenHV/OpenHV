@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
@@ -23,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		[FieldLoader.Require]
 		[ActorReference]
 		[Desc("Actor types that can deploy.")]
-		public readonly HashSet<string> DeployableActorTypes = [];
+		public readonly FrozenSet<string> DeployableActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
 		public readonly int MinimumScanDelay = 100;

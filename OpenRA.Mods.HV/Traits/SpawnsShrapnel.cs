@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common;
@@ -26,10 +27,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Weapon = null;
 
 		[Desc("Amount of shrapnels thrown. Two values indicate a range.")]
-		public readonly int[] Amount = [1];
+		public readonly ImmutableArray<int> Amount = [1];
 
 		[Desc("Delay between two spawns. Two values indicate a range.")]
-		public readonly int[] Delay = [50];
+		public readonly ImmutableArray<int> Delay = [50];
 
 		[Desc("The percentage of aiming this shrapnel to a suitable target actor.")]
 		public readonly int AimChance = 0;

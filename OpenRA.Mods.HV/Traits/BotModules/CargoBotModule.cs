@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Activities;
@@ -23,10 +24,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class CargoBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that can be targeted for load, must have " + nameof(Cargo) + ".")]
-		public readonly HashSet<string> TransportTypes = default;
+		public readonly FrozenSet<string> TransportTypes = FrozenSet<string>.Empty;
 
 		[Desc("Actor types that used for loading, must have " + nameof(Passenger) + ".")]
-		public readonly HashSet<string> PassengerTypes = default;
+		public readonly FrozenSet<string> PassengerTypes = FrozenSet<string>.Empty;
 
 		[Desc("Allow enter allied transport.")]
 		public readonly bool OnlyEnterOwnerPlayer = true;

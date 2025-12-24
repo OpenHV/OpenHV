@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
@@ -21,10 +22,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class GlobalLightingPaletteEffectInfo : TraitInfo, ILobbyCustomRulesIgnore
 	{
 		[Desc("Do not modify graphics that use any palette in this list.")]
-		public readonly HashSet<string> ExcludePalettes = ["cursor", "chrome", "colorpicker", "fog", "shroud", "alpha"];
+		public readonly FrozenSet<string> ExcludePalettes = new HashSet<string> { "cursor", "chrome", "colorpicker", "fog", "shroud", "alpha" }.ToFrozenSet();
 
 		[Desc("Do not modify graphics that start with these letters.")]
-		public readonly HashSet<string> ExcludePalettePrefixes = [];
+		public readonly FrozenSet<string> ExcludePalettePrefixes = default;
 
 		public readonly float Red = 1f;
 		public readonly float Green = 1f;

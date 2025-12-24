@@ -11,7 +11,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections.Immutable;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -33,8 +33,8 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Palette used for rendering the resource sprites.")]
 		public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
-		public readonly string[] BlockTerrainTypes = [];
-		public readonly string[] CoveredTerrainTypes = [];
+		public readonly ImmutableArray<string> BlockTerrainTypes = [];
+		public readonly ImmutableArray<string> CoveredTerrainTypes = [];
 
 		public override object Create(ActorInitializer init) { return new LiquidEdgeRenderer(init.Self, this); }
 	}

@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -29,7 +30,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string LastCondition = null;
 
 		[Desc("Possible connections left/right or top/bottom from top left origin.")]
-		public readonly CVec[] Edges = null;
+		public readonly ImmutableArray<CVec> Edges = default;
 
 		public override object Create(ActorInitializer init) { return new GrantConditionOnLineBuildConnection(init.Self, this); }
 	}

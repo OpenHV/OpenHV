@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
@@ -30,7 +31,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string MinerActorType = null;
 
 		[Desc("Apply only around these or all if not set.")]
-		public readonly HashSet<string> ResourceTypes = [];
+		public readonly FrozenSet<string> ResourceTypes = default;
 
 		public override object Create(ActorInitializer init) { return new NoBuildZone(init.Self, this); }
 	}

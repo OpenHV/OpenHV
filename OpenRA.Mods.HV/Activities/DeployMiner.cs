@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
@@ -24,12 +25,12 @@ namespace OpenRA.Mods.HV.Activities
 	{
 		readonly IMove movement;
 		CPos? location;
-		readonly HashSet<string> terrainTypes;
+		readonly FrozenSet<string> terrainTypes;
 		readonly Color targetLineColor;
 		readonly NoBuildZone noBuildZone;
 		readonly BuildingInfluence buildingInfluence;
 
-		public DeployMiner(Actor self, CPos? location, HashSet<string> terrainTypes, Color targetLineColor)
+		public DeployMiner(Actor self, CPos? location, FrozenSet<string> terrainTypes, Color targetLineColor)
 		{
 			movement = self.Trait<IMove>();
 			this.location = location;

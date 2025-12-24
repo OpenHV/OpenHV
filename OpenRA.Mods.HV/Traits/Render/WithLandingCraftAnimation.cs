@@ -9,7 +9,7 @@
  */
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.Frozen;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
@@ -20,7 +20,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 	public class WithLandingCraftAnimationInfo : TraitInfo, Requires<IMoveInfo>, Requires<WithSpriteBodyInfo>, Requires<CargoInfo>
 	{
 		[FieldLoader.Require]
-		public readonly HashSet<string> OpenTerrainTypes = null;
+		public readonly FrozenSet<string> OpenTerrainTypes = default;
 
 		[SequenceReference]
 		public readonly string OpenSequence = "open";

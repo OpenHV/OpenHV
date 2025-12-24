@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Effects;
@@ -20,10 +21,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class TerrainTileAnimationInfo : TraitInfo, ILobbyCustomRulesIgnore
 	{
 		[FieldLoader.Require]
-		public readonly ushort[] Tiles = null;
+		public readonly ImmutableArray<ushort> Tiles = default;
 
 		[Desc("Average time (ticks) between animations.")]
-		public readonly int[] Interval = [7 * 25, 13 * 25];
+		public readonly ImmutableArray<int> Interval = [7 * 25, 13 * 25];
 
 		[Desc("Delay (in ticks) before the first animation happens.")]
 		public readonly int InitialDelay = 0;
@@ -48,7 +49,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class TerrainTileAnimation : ITick
 	{
 		readonly TerrainTileAnimationInfo info;
-		readonly CPos[] cells;
+		readonly ImmutableArray<CPos> cells;
 
 		int ticks;
 
@@ -59,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 			ticks = info.InitialDelay;
 
 			var map = self.World.Map;
-			cells = map.AllCells.Where(cell => info.Tiles.Contains(map.Tiles[cell].Type)).ToArray();
+			cells = map.AllCells.Where(cell => info.Tiles.Contains(map.Tiles[cell].Type)).ToImmutableArray();
 		}
 
 		void ITick.Tick(Actor self)

@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
@@ -17,11 +18,11 @@ namespace OpenRA.Mods.HV.Graphics
 {
 	public class EnergyBoltRenderable : IRenderable, IFinalizedRenderable
 	{
-		readonly WPos[] offsets;
+		readonly ImmutableArray<WPos> offsets;
 		readonly WDist width;
 		readonly Color color;
 
-		public EnergyBoltRenderable(WPos[] offsets, int zOffset, WDist width, Color color)
+		public EnergyBoltRenderable(ImmutableArray<WPos> offsets, int zOffset, WDist width, Color color)
 		{
 			this.offsets = offsets;
 			ZOffset = zOffset;
@@ -38,7 +39,7 @@ namespace OpenRA.Mods.HV.Graphics
 		{
 			// Lambdas can't use 'in' variables, so capture a copy for later
 			var vector = vec;
-			return new EnergyBoltRenderable(offsets.Select(offset => offset + vector).ToArray(), ZOffset, width, color);
+			return new EnergyBoltRenderable(offsets.Select(offset => offset + vector).ToImmutableArray(), ZOffset, width, color);
 		}
 
 		public IRenderable AsDecoration() { return this; }

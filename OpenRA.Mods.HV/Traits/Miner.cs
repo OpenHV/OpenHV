@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.HV.Activities;
@@ -26,14 +27,14 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Terrain types that can be targeted for deployment.")]
-		public readonly HashSet<string> TerrainTypes = [];
+		public readonly FrozenSet<string> TerrainTypes = default;
 
 		[VoiceReference]
 		[Desc("Voice to use when deploying into a tower.")]
 		public readonly string Voice = "Action";
 
 		[Desc("Defines to which players the target lines are shown.")]
-		public readonly Dictionary<string, Color> Colors = [];
+		public readonly FrozenDictionary<string, Color> Colors = default;
 
 		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}

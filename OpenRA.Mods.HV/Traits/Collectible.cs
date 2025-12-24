@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
@@ -25,7 +26,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Duration = 0;
 
 		[Desc("Allowed to emerge on.")]
-		public readonly HashSet<string> TerrainTypes = [];
+		public readonly FrozenSet<string> TerrainTypes = default;
 
 		[Desc($"Define actors that can collect crates by setting this into the {nameof(LocomotorInfo.Crushes)} field from the {nameof(Locomotor)} trait.")]
 		public readonly string CrushClass = "crate";

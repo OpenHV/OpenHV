@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
@@ -18,7 +19,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class ProductionSoundInfo : ConditionalTraitInfo, Requires<RenderSpritesInfo>
 	{
 		[FieldLoader.Require]
-		public readonly string[] Files = null;
+		public readonly ImmutableArray<string> Files = [];
 
 		public override object Create(ActorInitializer init) { return new ProductionSound(this); }
 	}

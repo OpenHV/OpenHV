@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using OpenRA.Effects;
 using OpenRA.GameRules;
 using OpenRA.Graphics;
@@ -65,7 +66,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly float CircleBorderWidth = 3;
 
 		[Desc("Render circles based on these distance ranges while targeting.")]
-		public readonly WDist[] CircleRanges = null;
+		public readonly ImmutableArray<WDist> CircleRanges = default;
 
 		public WeaponInfo WeaponInfo { get; private set; }
 

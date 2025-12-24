@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -23,18 +24,18 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that can capture other actors (via `Captures`).")]
-		public readonly HashSet<string> CapturingActorTypes = [];
+		public readonly FrozenSet<string> CapturingActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Percentage chance of trying a priority capture.")]
 		public readonly int PriorityCaptureChance = 75;
 
 		[Desc("Actor types that should be priorizited to be captured.",
 			"Leave this empty to include all actors.")]
-		public readonly HashSet<string> PriorityCapturableActorTypes = [];
+		public readonly FrozenSet<string> PriorityCapturableActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Actor types that can be targeted for capturing.",
 			"Leave this empty to include all actors.")]
-		public readonly HashSet<string> CapturableActorTypes = [];
+		public readonly FrozenSet<string> CapturableActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Avoid enemy actors nearby when searching for capture opportunities. Should be somewhere near the max weapon range.")]
 		public readonly WDist EnemyAvoidanceRadius = WDist.FromCells(8);

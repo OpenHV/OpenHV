@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
@@ -47,7 +48,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[Desc("Name of the armaments that grants the LaunchingCondition.",
 		"The rate of fire of the dummy weapon determines the launch cycle as each shot.")]
-		public readonly HashSet<string> ArmamentNames = ["primary"];
+		public readonly FrozenSet<string> ArmamentNames = new HashSet<string>() { "primary" }.ToFrozenSet();
 
 		[Desc("What happens to the children when the parent is killed?")]
 		public readonly SpawnerChildDisposal ChildDisposalOnKill = SpawnerChildDisposal.KillChildren;

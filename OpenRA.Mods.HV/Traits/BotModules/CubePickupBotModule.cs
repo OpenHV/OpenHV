@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -23,10 +24,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class CubePickupBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that should not start hunting for cubes.")]
-		public readonly HashSet<string> ExcludedUnitTypes = [];
+		public readonly FrozenSet<string> ExcludedUnitTypes = FrozenSet<string>.Empty;
 
 		[Desc("Only these actor types should start hunting for cubes.")]
-		public readonly HashSet<string> IncludedUnitTypes = [];
+		public readonly FrozenSet<string> IncludedUnitTypes = FrozenSet<string>.Empty;
 
 		[Desc("Interval (in ticks) between giving out orders to idle units.")]
 		public readonly int ScanForCubesInterval = 50;

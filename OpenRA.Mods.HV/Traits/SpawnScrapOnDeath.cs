@@ -9,7 +9,8 @@
  */
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.Frozen;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
@@ -24,13 +25,13 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Random actor to spawn on death.")]
-		public readonly string[] Actors = null;
+		public readonly ImmutableArray<string> Actors = [];
 
 		[Desc("Probability the actor spawns.")]
 		public readonly int Probability = 100;
 
 		[Desc("Allowed to spawn on.")]
-		public readonly HashSet<string> TerrainTypes = [];
+		public readonly FrozenSet<string> TerrainTypes = default;
 
 		[Desc("Map player to use when 'InternalName' is defined on 'OwnerType'.")]
 		public readonly string InternalOwner = "Neutral";

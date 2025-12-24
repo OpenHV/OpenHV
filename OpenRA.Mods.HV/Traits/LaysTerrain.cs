@@ -9,7 +9,7 @@
  */
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.Frozen;
 using System.IO;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly ushort Template = 0;
 
 		[Desc("The terrain types that this template will be placed on.")]
-		public readonly HashSet<string> TerrainTypes = null;
+		public readonly FrozenSet<string> TerrainTypes = default;
 
 		[Desc("Offset relative to the actor TopLeft. Not used if the template is PickAny.",
 			"Tiles being offset out of the actor's footprint will not be placed.")]

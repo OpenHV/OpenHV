@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -31,7 +30,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		[FieldLoader.Require]
 		[Desc("Tilesets that are compatible with this map generator.")]
-		public readonly string[] Tilesets = null;
+		public readonly ImmutableArray<string> Tilesets = default;
 
 		[FluentReference]
 		[Desc("The title to use for generated maps.")]
@@ -51,7 +50,7 @@ namespace OpenRA.Mods.Common.Traits
 		string IMapGeneratorInfo.Type => Type;
 		string IMapGeneratorInfo.Name => Name;
 		string IMapGeneratorInfo.MapTitle => MapTitle;
-		string[] IEditorMapGeneratorInfo.Tilesets => Tilesets;
+		ImmutableArray<string> IEditorMapGeneratorInfo.Tilesets => Tilesets;
 
 		static MiniYaml SettingsLoader(MiniYaml my)
 		{

@@ -9,7 +9,8 @@
  */
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.Frozen;
+using System.Collections.Immutable;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
@@ -20,10 +21,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class VariedCostMultiplierInfo : TraitInfo<VariedCostMultiplier>, IProductionCostModifierInfo, IRulesetLoaded
 	{
 		[Desc("Only apply this cost change if the owner has these prerequisites.")]
-		public readonly string[] Prerequisites = [];
+		public readonly ImmutableArray<string> Prerequisites = [];
 
 		[Desc("Production queues that this cost will apply to.")]
-		public readonly HashSet<string> Queues = [];
+		public readonly FrozenSet<string> Queues = default;
 
 		[Desc("Set this if items should get the same random pricing.")]
 		public readonly string Group = null;

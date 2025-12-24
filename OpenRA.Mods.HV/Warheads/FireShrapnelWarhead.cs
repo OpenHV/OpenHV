@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common;
@@ -26,7 +27,7 @@ namespace OpenRA.Mods.HV.Warheads
 		public readonly string Weapon = null;
 
 		[Desc("Amount of shrapnels thrown.")]
-		public readonly int[] Amount = [1];
+		public readonly ImmutableArray<int> Amount = [1];
 
 		[Desc("The percentage of aiming this shrapnel to a suitable target actor.")]
 		public readonly int AimChance = 0;

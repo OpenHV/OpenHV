@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using OpenRA.Graphics;
@@ -78,7 +79,7 @@ namespace OpenRA.Mods.HV.Terrain
 						allFrames = frameCache[i];
 
 					var frameCount = allFrames.Length;
-					var indices = templateInfo.Frames ?? Exts.MakeArray(t.Value.TilesCount, j => j);
+					var indices = templateInfo.Frames != null ? templateInfo.Frames : Exts.MakeArray(t.Value.TilesCount, j => j).ToImmutableArray();
 
 					var start = indices.Min();
 					var end = indices.Max();

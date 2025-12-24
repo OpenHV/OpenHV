@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -21,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class BuilderBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that can deploy into outposts.")]
-		public readonly HashSet<string> BuilderTypes = [];
+		public readonly FrozenSet<string> BuilderTypes = FrozenSet<string>.Empty;
 
 		[Desc("Delay (in ticks) between looking for and giving out orders to new builders.")]
 		public readonly int ScanForNewBuilderInterval = 20;

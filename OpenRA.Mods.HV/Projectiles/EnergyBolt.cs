@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using OpenRA.GameRules;
 using OpenRA.Graphics;
 using OpenRA.Mods.HV.Graphics;
@@ -185,7 +186,7 @@ namespace OpenRA.Mods.HV.Projectiles
 
 			for (var i = 0; i < offsets.Length - 1; i++)
 				for (var j = 0; j < info.Radius; j++)
-					yield return new EnergyBoltRenderable(offsets, info.ZOffset, new WDist(32 + (info.Radius - j - 1) * 64), colors[j]);
+					yield return new EnergyBoltRenderable(offsets.ToImmutableArray(), info.ZOffset, new WDist(32 + (info.Radius - j - 1) * 64), colors[j]);
 		}
 	}
 }

@@ -10,7 +10,9 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
@@ -36,10 +38,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Capacity = 1000;
 
 		[ActorReference(typeof(ResourceTransporterInfo))]
-		public readonly string[] DeliveryVehicleType = null;
+		public readonly ImmutableArray<string> DeliveryVehicleType = [];
 
 		[Desc("How much can be mined in total before depletion.")]
-		public readonly Dictionary<string, int> Deposits = [];
+		public readonly FrozenDictionary<string, int> Deposits = default;
 
 		[Desc("Reduce payout by this percentage when resources are depleted.")]
 		public readonly int DepletionModifier = 10;
@@ -54,7 +56,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly PlayerRelationship DisplayRelationships = PlayerRelationship.Ally;
 
 		[Desc("Defines to which players the bar is to be shown.")]
-		public readonly Dictionary<string, Color> Colors = [];
+		public readonly FrozenDictionary<string, Color> Colors = default;
 
 		[NotificationReference("Speech")]
 		[Desc("The audio notification type to play when the resources are exhausted.")]

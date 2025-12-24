@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
@@ -22,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that are sent around the map.")]
-		public readonly HashSet<string> ScoutActorTypes = [];
+		public readonly FrozenSet<string> ScoutActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Minimum delay (in ticks) between searching for ScoutActorTypes.")]
 		public readonly int MinimumScanDelay = 200;

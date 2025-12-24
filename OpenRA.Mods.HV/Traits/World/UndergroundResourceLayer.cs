@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
@@ -35,7 +36,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			[Desc("Terrain types that this resource can spawn on.", "Use * for any.")]
-			public readonly HashSet<string> AllowedTerrainTypes = null;
+			public readonly FrozenSet<string> AllowedTerrainTypes = null;
 
 			[Desc("Maximum number of resource units allowed in a single cell.")]
 			public readonly byte MaxDensity = 10;

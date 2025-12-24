@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -24,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Actor types that can deploy onto resources.")]
-		public readonly HashSet<string> DeployableActorTypes = [];
+		public readonly FrozenSet<string> DeployableActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Where to request production of additional deployable actors.")]
 		public readonly string VehiclesQueue = "Vehicle";

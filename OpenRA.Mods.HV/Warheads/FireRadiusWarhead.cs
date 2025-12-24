@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common.Traits;
@@ -25,7 +26,7 @@ namespace OpenRA.Mods.HV.Warheads
 		public readonly string Weapon = null;
 
 		[Desc("Amount of weapons fired.")]
-		public readonly int[] Amount = [1];
+		public readonly ImmutableArray<int> Amount = [1];
 
 		[Desc("Should the weapons be fired around the intended target or at the explosion's epicenter.")]
 		public readonly bool AroundTarget = false;

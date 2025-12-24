@@ -9,7 +9,7 @@
  */
 #endregion
 
-using System;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 	{
 		[FieldLoader.Require]
 		[Desc("Exit offset associated with the animation.")]
-		public readonly CVec[] ExitCells = [];
+		public readonly ImmutableArray<CVec> ExitCells = default;
 
 		[SequenceReference]
 		public readonly string Sequence = "door";

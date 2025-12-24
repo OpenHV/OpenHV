@@ -10,6 +10,7 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -34,7 +35,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[Desc("Actors used for attack, and their base desire provided for attack desire.",
 			"When desire reach 100, AI will send them to attack.")]
-		public readonly Dictionary<string, int> ActorTypesAndAttackDesire = default;
+		public readonly FrozenDictionary<string, int> ActorTypesAndAttackDesire = FrozenDictionary<string, int>.Empty;
 
 		[Desc("Target types that can be targeted.")]
 		public readonly BitSet<TargetableType> ValidTargets = new("Structure");

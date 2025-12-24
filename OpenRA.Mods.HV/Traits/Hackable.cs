@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
@@ -23,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Condition = null;
 
 		[Desc("The sound played when the influence is revoked.")]
-		public readonly string[] RevokeControlSounds = [];
+		public readonly ImmutableArray<string> RevokeControlSounds = [];
 
 		[Desc("Map player to transfer this actor to if the owner lost the game.")]
 		public readonly string FallbackOwner = "Creeps";

@@ -9,7 +9,9 @@
  */
 #endregion
 
+using System.Collections.Frozen;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
@@ -23,10 +25,10 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("The list of units to spawn.")]
-		public readonly string[] Units = [];
+		public readonly ImmutableArray<string> Units = [];
 
 		[Desc("Factions that are allowed to trigger this action.")]
-		public readonly HashSet<string> ValidFactions = [];
+		public readonly FrozenSet<string> ValidFactions = default;
 
 		[Desc("Override the owner of the newly spawned unit: e.g. Creeps or Neutral")]
 		public readonly string Owner = null;

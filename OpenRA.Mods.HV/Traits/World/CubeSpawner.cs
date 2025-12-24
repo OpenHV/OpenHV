@@ -10,7 +10,9 @@
 #endregion
 
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
@@ -53,14 +55,14 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int InitialSpawnDelay = 0;
 
 		[Desc("Which terrain types can we drop on?")]
-		public readonly HashSet<string> ValidGround = ["Clear"];
+		public readonly FrozenSet<string> ValidGround = new HashSet<string> { "Clear" }.ToFrozenSet();
 
 		[ActorReference]
 		[Desc("Cube actors to drop.")]
-		public readonly string[] CubeActors = ["cube"];
+		public readonly ImmutableArray<string> CubeActors = ["cube"];
 
 		[Desc("Chance of each cube actor spawning.")]
-		public readonly int[] CubeActorShares = [10];
+		public readonly ImmutableArray<int> CubeActorShares = [10];
 
 		IEnumerable<LobbyOption> ILobbyOptions.LobbyOptions(MapPreview map)
 		{

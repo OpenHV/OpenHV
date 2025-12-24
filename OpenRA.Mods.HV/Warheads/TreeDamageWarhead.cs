@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Mods.Common;
@@ -25,10 +26,10 @@ namespace OpenRA.Mods.HV.Warheads
 		public readonly WDist Spread = new(43);
 
 		[Desc("Damage percentage at each range step")]
-		public readonly int[] Falloff = [100, 37, 14, 5, 0];
+		public readonly ImmutableArray<int> Falloff = [100, 37, 14, 5, 0];
 
 		[Desc("Ranges at which each Falloff step is defined. Overrides Spread.")]
-		public WDist[] Range = null;
+		public ImmutableArray<WDist> Range = default;
 
 		[Desc("How much damage to apply to wood armor.")]
 		public int Percentage = 100;
@@ -45,7 +46,7 @@ namespace OpenRA.Mods.HV.Warheads
 						throw new YamlException("Range values must be specified in an increasing order.");
 			}
 			else
-				Range = Exts.MakeArray(Falloff.Length, i => i * Spread);
+				Range = Exts.MakeArray(Falloff.Length, i => i * Spread).ToImmutableArray();
 		}
 
 		protected override void DoImpact(WPos pos, Actor firedBy, WarheadArgs args)

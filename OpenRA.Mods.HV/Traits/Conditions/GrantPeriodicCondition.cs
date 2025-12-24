@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -24,10 +25,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string Condition = null;
 
 		[Desc("The range of time (in ticks) with the condition being disabled. Two values imply a range.")]
-		public readonly int[] CooldownDuration = [1000];
+		public readonly ImmutableArray<int> CooldownDuration = [1000];
 
 		[Desc("The range of time (in ticks) with the condition being enabled. Two values imply a range.")]
-		public readonly int[] ActiveDuration = [100];
+		public readonly ImmutableArray<int> ActiveDuration = [100];
 
 		public readonly bool StartsGranted = false;
 

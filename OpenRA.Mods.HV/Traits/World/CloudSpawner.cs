@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.HV.Effects;
@@ -32,7 +33,7 @@ namespace OpenRA.Mods.HV.Traits
 		[FieldLoader.Require]
 		[Desc("Which sequence to use.")]
 		[SequenceReference(nameof(Image))]
-		public readonly string[] Sequences;
+		public readonly ImmutableArray<string> Sequences;
 
 		[FieldLoader.Require]
 		[Desc("Which palette to use.")]
@@ -47,7 +48,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Cloud forward movement. Two values mean the cloud speed randomizes between them.")]
-		public readonly WDist[] Speed;
+		public readonly ImmutableArray<WDist> Speed;
 
 		[Desc("The altitude of the cloud.")]
 		public readonly WDist CruiseAltitude = new(2560);

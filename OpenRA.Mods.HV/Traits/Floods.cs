@@ -9,8 +9,9 @@
  */
 #endregion
 
-using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -30,10 +31,10 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int MaxTiles = 10000;
 
 		[Desc("Which tile ID to replace with which flooded variant")]
-		public readonly Dictionary<ushort, ushort> ReplacementTiles = [];
+		public readonly FrozenDictionary<ushort, ushort> ReplacementTiles = default;
 
 		[Desc("Terrain type that should be converted albeit unpathable.")]
-		public readonly string[] StopTerrainTypes = [];
+		public readonly ImmutableArray<string> StopTerrainTypes = [];
 
 		[FieldLoader.Require]
 		[Desc("Locomotor to test pathability of barriers against.")]

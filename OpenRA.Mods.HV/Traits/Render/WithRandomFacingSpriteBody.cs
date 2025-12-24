@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Immutable;
 using OpenRA.Mods.Common.Traits.Render;
 
 namespace OpenRA.Mods.HV.Traits.Render
@@ -18,7 +19,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 	{
 		[FieldLoader.Require]
 		[Desc("The sequence names that define the actor sprites.")]
-		public readonly string[] Images = null;
+		public readonly ImmutableArray<string> Images = default;
 
 		public override object Create(ActorInitializer init) { return new WithRandomFacingSpriteBody(init, this); }
 	}
