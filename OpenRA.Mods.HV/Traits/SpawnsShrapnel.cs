@@ -68,7 +68,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly World world;
 		readonly BodyOrientation body;
 
-		[Sync]
+		[VerifySync]
 		int ticks;
 
 		public SpawnsShrapnel(Actor self, SpawnsShrapnelInfo info)

@@ -81,10 +81,10 @@ namespace OpenRA.Mods.HV.Traits
 		bool collected;
 		INotifyCenterPositionChanged[] notifyCenterPositionChanged;
 
-		[Sync]
+		[VerifySync]
 		int ticks;
 
-		[Sync]
+		[VerifySync]
 		public CPos Location;
 
 		public Collectible(ActorInitializer init, CollectibleInfo info)

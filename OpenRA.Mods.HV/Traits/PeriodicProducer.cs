@@ -58,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly PeriodicProducerInfo info;
 		readonly Actor self;
 
-		[Sync]
+		[VerifySync]
 		int ticks;
 
 		public PeriodicProducer(ActorInitializer init, PeriodicProducerInfo info)

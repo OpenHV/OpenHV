@@ -101,7 +101,7 @@ namespace OpenRA.Mods.HV.Traits
 		public Target Target;
 		public WVec MoveDirection;
 
-		[Sync]
+		[VerifySync]
 		public WAngle Facing
 		{
 			get => Orientation.Yaw;
@@ -122,7 +122,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public WRot Orientation { get; private set; }
 
-		[Sync]
+		[VerifySync]
 		public WPos CenterPosition { get; private set; }
 
 		public CPos TopLeft { get { return self.World.Map.CellContaining(CenterPosition); } }

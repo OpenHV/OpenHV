@@ -81,7 +81,7 @@ namespace OpenRA.Mods.HV.Traits
 		bool depleted;
 		bool suspended;
 
-		[Sync]
+		[VerifySync]
 		public int Truckload { get; private set; }
 
 		public ResourceCollector(Actor self, ResourceCollectorInfo info)

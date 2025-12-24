@@ -68,10 +68,10 @@ namespace OpenRA.Mods.HV.Projectiles
 		readonly MersenneTwister random;
 		readonly int fadeout;
 
-		[Sync]
+		[VerifySync]
 		readonly WPos target;
 
-		[Sync]
+		[VerifySync]
 		readonly WPos source;
 
 		int ticks;

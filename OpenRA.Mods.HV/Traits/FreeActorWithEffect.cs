@@ -40,7 +40,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly FreeActorWithEffectInfo info;
 
-		[Sync]
+		[VerifySync]
 		int delay;
 
 		public FreeActorWithEffect(ActorInitializer init, FreeActorWithEffectInfo info)
