@@ -179,12 +179,11 @@ namespace OpenRA.Mods.HV.Traits
 			readonly SupportPowerManager manager;
 			readonly string order;
 
-			public SelectTeleportTarget(World world, string order, SupportPowerManager manager, TeleportPower power)
-			{
-				// Clear selection if using Left-Click Orders
-				if (Game.Settings.Game.UseClassicMouseStyle)
-					manager.Self.World.Selection.Clear();
+			protected override MouseActionType ActionType => MouseActionType.SupportPower;
 
+			public SelectTeleportTarget(World world, string order, SupportPowerManager manager, TeleportPower power)
+				: base(world)
+			{
 				this.manager = manager;
 				this.order = order;
 				this.power = power;
@@ -257,7 +256,10 @@ namespace OpenRA.Mods.HV.Traits
 			readonly SupportPowerManager manager;
 			readonly string order;
 
+			protected override MouseActionType ActionType => MouseActionType.SupportPower;
+
 			public SelectDestination(World world, string order, SupportPowerManager manager, TeleportPower power, CPos sourceLocation)
+				: base(world)
 			{
 				this.manager = manager;
 				this.order = order;

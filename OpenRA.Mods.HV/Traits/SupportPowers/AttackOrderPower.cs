@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using OpenRA;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Orders;
@@ -57,7 +58,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public override void SelectTarget(Actor self, string order, SupportPowerManager manager)
 		{
-			self.World.OrderGenerator = new SelectAttackPowerTarget(self, order, manager, info.Cursor, info.BlockedCursor, MouseButton.Left, attack);
+			self.World.OrderGenerator = new SelectAttackPowerTarget(self, order, manager, info.Cursor, info.BlockedCursor, attack);
 		}
 
 		public override void Activate(Actor self, Order order, SupportPowerManager manager)
@@ -94,22 +95,18 @@ namespace OpenRA.Mods.HV.Traits
 		readonly string order;
 		readonly string cursor;
 		readonly string cursorBlocked;
-		readonly MouseButton expectedButton;
 		readonly AttackBase attack;
 
-		public SelectAttackPowerTarget(Actor self, string order, SupportPowerManager manager,
-			string cursor, string cursorBlocked, MouseButton button, AttackBase attack)
-		{
-			// Clear selection if using Left-Click Orders
-			if (Game.Settings.Game.UseClassicMouseStyle)
-				manager.Self.World.Selection.Clear();
+		protected override MouseActionType ActionType => MouseActionType.SupportPower;
 
+		public SelectAttackPowerTarget(Actor self, string order, SupportPowerManager manager, string cursor, string cursorBlocked, AttackBase attack)
+			: base(self.World)
+		{
 			instance = manager.GetPowersForActor(self).FirstOrDefault();
 			this.manager = manager;
 			this.order = order;
 			this.cursor = cursor;
 			this.cursorBlocked = cursorBlocked;
-			expectedButton = button;
 			this.attack = attack;
 		}
 
@@ -127,7 +124,7 @@ namespace OpenRA.Mods.HV.Traits
 		protected override IEnumerable<Order> OrderInner(World world, CPos cell, int2 worldPixel, MouseInput mi)
 		{
 			world.CancelInputMode();
-			if (mi.Button == expectedButton && IsValidTarget(world, cell))
+			if (mi.Button == ActionButton && IsValidTarget(world, cell))
 				yield return new Order(order, manager.Self, Target.FromCell(world, cell), false)
 				{
 					SuppressVisualFeedback = true

@@ -167,11 +167,11 @@ namespace OpenRA.Mods.HV.Traits
 		readonly string order;
 		readonly DetonateWeaponPower power;
 
-		public SelectDetonateWeaponPowerTarget(string order, SupportPowerManager manager, DetonateWeaponPower power)
-		{
-			if (Game.Settings.Game.UseClassicMouseStyle)
-				manager.Self.World.Selection.Clear();
+		protected override MouseActionType ActionType => MouseActionType.SupportPower;
 
+		public SelectDetonateWeaponPowerTarget(string order, SupportPowerManager manager, DetonateWeaponPower power)
+			: base(manager.Self.World)
+		{
 			this.manager = manager;
 			this.order = order;
 			this.power = power;

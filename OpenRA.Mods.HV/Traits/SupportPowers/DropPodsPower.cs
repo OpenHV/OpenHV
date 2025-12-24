@@ -69,7 +69,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		public override void SelectTarget(Actor self, string order, SupportPowerManager manager)
 		{
-			self.World.OrderGenerator = new SelectDropPodsTarget(order, manager, this, MouseButton.Left);
+			self.World.OrderGenerator = new SelectDropPodsTarget(order, manager, this);
 		}
 
 		public bool Validate(World world, CPos cell)
@@ -151,19 +151,17 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		readonly SupportPowerManager manager;
 		readonly DropPodsPower power;
-		readonly MouseButton expectedButton;
 
 		public string OrderKey { get; }
 
-		public SelectDropPodsTarget(string order, SupportPowerManager manager, DropPodsPower power, MouseButton button)
-		{
-			if (Game.Settings.Game.UseClassicMouseStyle)
-				manager.Self.World.Selection.Clear();
+		protected override MouseActionType ActionType => MouseActionType.SupportPower;
 
+		public SelectDropPodsTarget(string order, SupportPowerManager manager, DropPodsPower power)
+			: base(manager.Self.World)
+		{
 			this.manager = manager;
 			this.power = power;
 			OrderKey = order;
-			expectedButton = button;
 		}
 
 		protected override IEnumerable<Order> OrderInner(World world, CPos cell, int2 worldPixel, MouseInput mi)
@@ -173,7 +171,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (!power.Validate(world, cell))
 				yield break;
 
-			if (mi.Button == expectedButton)
+			if (mi.Button != ActionButton)
 				yield return new Order(OrderKey, manager.Self, Target.FromCell(world, cell), false) { SuppressVisualFeedback = true };
 		}
 
