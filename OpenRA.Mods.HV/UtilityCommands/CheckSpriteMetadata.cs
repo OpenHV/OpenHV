@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2021-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2021-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -12,8 +12,7 @@
 using System;
 using System.IO;
 using System.Linq;
-using DiffPlex.DiffBuilder;
-using DiffPlex.DiffBuilder.Model;
+using System.Text;
 using OpenRA.FileFormats;
 
 namespace OpenRA.Mods.HV.UtilityCommands
@@ -39,10 +38,8 @@ namespace OpenRA.Mods.HV.UtilityCommands
 
 			using (var spriteStream = File.OpenRead(pngPath))
 			{
+				var fileName = Path.GetFileName(pngPath);
 				var png = new Png(spriteStream);
-				var embeddedYaml = png.EmbeddedData.Select(m => new MiniYamlNode(m.Key, m.Value))
-					.ToList()
-					.WriteToString();
 
 				var yamlPath = Path.ChangeExtension(pngPath, "yaml");
 				if (!File.Exists(yamlPath))
@@ -51,45 +48,36 @@ namespace OpenRA.Mods.HV.UtilityCommands
 					Environment.Exit(1);
 				}
 
-				Console.WriteLine("Checking " + Path.GetFileName(pngPath));
+				var embeddedNodes = png.EmbeddedData.Select(m => new MiniYamlNode(m.Key, m.Value));
+				var embeddedYaml = MiniYaml.FromString(embeddedNodes.WriteToString(), fileName);
 
-				using (var metadataStream = File.OpenRead(yamlPath))
+				Console.WriteLine("Checking " + fileName);
+
+				var reader = new StreamReader(yamlPath, encoding: Encoding.UTF8);
+				var externalYaml = MiniYaml.FromStream(reader.BaseStream, Path.GetFileName(yamlPath));
+
+				var n = 0;
+				foreach (var node in externalYaml)
 				{
-					var externalYaml = metadataStream.ReadAllText()
-						.Replace('ä', '?') // TODO: fix this in the engine
+					// TODO: fix this in the engine
+					var unsanitizedValue = node.Value.Value
+						.Replace('ä', '?')
 						.Replace('ö', '?')
 						.Replace('ü', '?');
 
-					if (!externalYaml.Equals(embeddedYaml))
+					var embeddedNode = embeddedYaml.ElementAt(n);
+					if (embeddedNode.Key != node.Key || embeddedNode.Value.Value != unsanitizedValue)
 					{
-						Console.WriteLine($"{pngPath} embedded metadata does not match {yamlPath} file.");
-						var diff = InlineDiffBuilder.Diff(embeddedYaml, externalYaml);
-
-						var savedColor = Console.ForegroundColor;
-						foreach (var line in diff.Lines)
-						{
-							switch (line.Type)
-							{
-								case ChangeType.Inserted:
-									Console.ForegroundColor = ConsoleColor.Green;
-									Console.Write("+ ");
-									break;
-								case ChangeType.Deleted:
-									Console.ForegroundColor = ConsoleColor.Red;
-									Console.Write("- ");
-									break;
-								default:
-									Console.ForegroundColor = ConsoleColor.Gray;
-									Console.Write("  ");
-									break;
-							}
-
-							Console.WriteLine(line.Text);
-						}
-
-						Console.ForegroundColor = savedColor;
-						Environment.Exit(1);
+						var foregroundColor = Console.ForegroundColor;
+						Console.WriteLine($"Embedded metadata {embeddedNode.Location} does not match {node.Location}.");
+						Console.ForegroundColor = ConsoleColor.Green;
+						Console.WriteLine("+ " + node.Key + ": " + node.Value.Value);
+						Console.ForegroundColor = ConsoleColor.Red;
+						Console.WriteLine("- " + embeddedNode.Key + ": " + embeddedNode.Value.Value);
+						Console.ForegroundColor = foregroundColor;
 					}
+
+					n++;
 				}
 			}
 		}

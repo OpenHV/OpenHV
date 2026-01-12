@@ -180,7 +180,7 @@ ifneq ("$(PREVIEW_FILES)","")
 	done
 endif
 
-check-sprites: engine
+check-sprites: all
 ifneq ("$(SPRITE_FILES)","")
 	@echo "Checking PNG sheet metadata..."
 	@for SPRITE in $(SPRITE_FILES); do \
