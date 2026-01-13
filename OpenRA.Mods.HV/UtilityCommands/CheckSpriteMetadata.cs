@@ -59,14 +59,8 @@ namespace OpenRA.Mods.HV.UtilityCommands
 				var n = 0;
 				foreach (var node in externalYaml)
 				{
-					// TODO: fix this in the engine
-					var unsanitizedValue = node.Value.Value
-						.Replace('ä', '?')
-						.Replace('ö', '?')
-						.Replace('ü', '?');
-
 					var embeddedNode = embeddedYaml.ElementAt(n);
-					if (embeddedNode.Key != node.Key || embeddedNode.Value.Value != unsanitizedValue)
+					if (embeddedNode.Key != node.Key || embeddedNode.Value.Value != node.Value.Value)
 					{
 						var foregroundColor = Console.ForegroundColor;
 						Console.WriteLine($"Embedded metadata {embeddedNode.Location} does not match {node.Location}.");
