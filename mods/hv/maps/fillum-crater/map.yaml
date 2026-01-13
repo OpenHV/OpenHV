@@ -645,6 +645,6 @@ Actors:
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
-FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl, en.ftl
+FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl, en.ftl, map.ftl
 
 Sequences: sequences.yaml

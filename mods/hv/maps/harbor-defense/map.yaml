@@ -752,7 +752,7 @@ Actors:
 
 Rules: rules.yaml
 
-FluentMessages: hv|fluent/lua.ftl, en.ftl
+FluentMessages: hv|fluent/lua.ftl, en.ftl, map.ftl
 
 Sequences: sequences.yaml
 

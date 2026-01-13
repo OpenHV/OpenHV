@@ -174,4 +174,4 @@ Actors:
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
-FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl
+FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl, map.ftl
