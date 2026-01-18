@@ -95,4 +95,4 @@ Actors:
 		Location: 16,15
 
 Rules: rules.yaml
-FluentMessages: en.ftl
+FluentMessages: map.ftl

@@ -283,4 +283,4 @@ Actors:
 
 Rules: rules.yaml
 
-FluentMessages: en.ftl
+FluentMessages: map.ftl
