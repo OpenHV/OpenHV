@@ -9,7 +9,7 @@ actor-exit-name = Enemy Exit Waypoint
 
 ## fillum-crater.lua
 ally-reinforcement-incoming = Yuruki naval reinforcement has arrived
-build-techcenter = Build a techcenter.
+build-techcenter = Build a technology center.
 build-uplink = Build an orbital strike uplink.
 build-factory = Build a vehicle factory.
 destroy-enemy-communication = Destroy all Synapol communications.
