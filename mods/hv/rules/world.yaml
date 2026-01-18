@@ -225,7 +225,7 @@
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@Shadows:
 		Name: shadow-decoration
-		Filename: shadow-decoration.pal
+		Filename: shadow.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@Shadow:
 		Name: shadow
