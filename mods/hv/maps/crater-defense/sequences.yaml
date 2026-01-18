@@ -1,10 +1,10 @@
 entry:
 	idle:
-		Filename: bits/arrow-down.png
+		Filename: arrow-down.png
 
 exit:
 	idle:
-		Filename: bits/arrow-left.png
+		Filename: arrow-left.png
 
 clusterturret:
 	Inherits@Flame: ^BuildingFlame
@@ -12,40 +12,40 @@ clusterturret:
 		Filename: clusterturret
 		Offset: 0, -3
 	idle:
-		Filename: bits/clusterturret.png
+		Filename: clusterturret.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/clusterturret-shadow.png
+		Filename: clusterturret-shadow.png
 		ZOffset: -1768
 		Offset: 5, 5
 	damaged-idle:
-		Filename: bits/clusterturret.png
+		Filename: clusterturret.png
 		Start: 9
 	shoot:
-		Filename: bits/clusterturret.png
+		Filename: clusterturret.png
 		Start: 0
 		Length: 9
 		Reverses: True
 	shoot-damaged:
-		Filename: bits/clusterturret.png
+		Filename: clusterturret.png
 		Start: 9
 		Length: 9
 		Reverses: True
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 0, -2
 	icon:
-		Filename: bits/clusterturret-icon.png
+		Filename: clusterturret-icon.png
 		Offset: 0, 1
 
 amplifier:
@@ -54,33 +54,33 @@ amplifier:
 		Filename: amplifier
 		Offset: 7, -8
 	idle:
-		Filename: bits/amplifier.png
+		Filename: amplifier.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/amplifier-shadow.png
+		Filename: amplifier-shadow.png
 		ZOffset: -1768
 		Offset: 3, 3
 	damaged-idle:
-		Filename: bits/amplifier.png
+		Filename: amplifier.png
 		Start: 1
 	animation:
-		Filename: bits/amplifier.png
+		Filename: amplifier.png
 		Start: 2
 		Length: 7
 		Tick: 100
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 0, -2
 	icon:
-		Filename: bits/amplifier-icon.png
+		Filename: amplifier-icon.png
 		Offset: 0, 1

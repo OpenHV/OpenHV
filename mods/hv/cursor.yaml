@@ -1,7 +1,7 @@
 # License: CC-BY-SA-4.0
 
 Cursors:
-	bits/cursors1.png: cursor
+	cursors1.png: cursor
 		scroll-t:
 			Start: 18
 		scroll-tl:
@@ -34,11 +34,11 @@ Cursors:
 			Start: 32
 		scroll-tr-blocked:
 			Start: 33
-	bits/cursors2.png: cursor
+	cursors2.png: cursor
 		select:
 			Start: 15
 			Length: 8
-	bits/cursors2.png: cursor
+	cursors2.png: cursor
 		default:
 			Start: 0
 			X: -3
@@ -55,7 +55,7 @@ Cursors:
 			Start: 14
 			X: 0
 			Y: -4
-	bits/cursors1.png: cursor
+	cursors1.png: cursor
 		move:
 			Start: 6
 			Length: 6
@@ -69,7 +69,7 @@ Cursors:
 			Start: 34
 		move-blocked-minimap:
 			Start: 34
-	bits/cursors1.png: cursor
+	cursors1.png: cursor
 		attack:
 			Start: 0
 			Length: 6
@@ -88,14 +88,14 @@ Cursors:
 		ability-minimap:
 			Start: 36
 			Length: 6
-	bits/cursors1.png: cursor
+	cursors1.png: cursor
 		harvest:
 			Start: 0
 			Length: 6
 		harvest-minimap:
 			Start: 0
 			Length: 6
-	bits/cursors2.png: cursor
+	cursors2.png: cursor
 		enter:
 			Start: 23
 			Length: 3
@@ -116,7 +116,7 @@ Cursors:
 		capture-minimap:
 			Start: 23
 			Length: 3
-	bits/cursors2.png: cursor
+	cursors2.png: cursor
 		joystick-all:
 			Start: 1
 		joystick-t-blocked:
@@ -135,7 +135,7 @@ Cursors:
 			Start: 27
 		joystick-tl-blocked:
 			Start: 27
-	bits/cursors2.png: cursor
+	cursors2.png: cursor
 		deploy:
 			Start: 4
 			Length: 4
@@ -160,7 +160,7 @@ Cursors:
 			Start: 10
 		powerdown:
 			Start: 9
-	bits/cursors1.png: cursor
+	cursors1.png: cursor
 		attackmove:
 			Start: 12
 			Length: 6
@@ -182,7 +182,7 @@ Cursors:
 		assaultmove-blocked-minimap:
 			Start: 35
 
-	bits/cursors1.png: cursor
+	cursors1.png: cursor
 		railgun:
 			Start: 46
 		airstrike:
@@ -192,7 +192,7 @@ Cursors:
 		droppod:
 			Start: 44
 
-	bits/cursors2.png: cursor
+	cursors2.png: cursor
 		nuke:
 			Start: 29
 		force-field-blocked:

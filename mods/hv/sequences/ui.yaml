@@ -2,7 +2,7 @@
 
 overlay:
 	Defaults:
-		Filename: bits/overlay.png
+		Filename: overlay.png
 	build-valid:
 	build-invalid:
 		Start: 1
@@ -18,26 +18,26 @@ overlay:
 
 editor-overlay:
 	Defaults:
-		Filename: bits/hatching.png
+		Filename: hatching.png
 	copy:
 	paste:
 		Start: 1
 
 clock:
 	idle:
-		Filename: bits/progress.png
+		Filename: progress.png
 		Length: 64
 
 moveflsh:
 	idle:
-		Filename: bits/click.png
+		Filename: click.png
 		Length: 5
 		Tick: 80
 		ZOffset: 2047
 
 pips:
 	Defaults:
-		Filename: bits/pips.png
+		Filename: pips.png
 	pip-empty:
 		Start: 0
 	pip-green:
@@ -51,11 +51,11 @@ pips:
 	pip-blue:
 		Start: 5
 	pip-reconstructor:
-		Filename: bits/pip-reconstructor.png
+		Filename: pip-reconstructor.png
 
 rallypoint:
 	flag:
-		Filename: bits/flag.png
+		Filename: flag.png
 		Frames: 0, 1, 2, 3, 4, 3, 2, 1
 		Length: *
 		ZOffset: 3072
@@ -64,35 +64,35 @@ rallypoint:
 
 beacon:
 	idle:
-		Filename: bits/beacon.png
+		Filename: beacon.png
 		Length: 7
 		Reverses: true
 		ZOffset: 2047
 
 icon:
 	shield:
-		Filename: bits/shield-icon.png
+		Filename: shield-icon.png
 	nuke:
-		Filename: bits/nuke-icon.png
+		Filename: nuke-icon.png
 	railgun:
-		Filename: bits/railgun-icon.png
+		Filename: railgun-icon.png
 	droppods:
-		Filename: bits/droppods-icon.png
+		Filename: droppods-icon.png
 	airstrike:
-		Filename: bits/airstrike-icon.png
+		Filename: airstrike-icon.png
 	radar:
-		Filename: bits/satellite-icon.png
+		Filename: satellite-icon.png
 	howitzer:
-		Filename: bits/barrage-icon.png
+		Filename: barrage-icon.png
 	televator:
-		Filename: bits/teleport-icon.png
+		Filename: teleport-icon.png
 		Offset: 1,1
 	null:
-		Filename: bits/null.png
+		Filename: null.png
 
 outline:
 	Defaults:
-		Filename: bits/outline.png
+		Filename: outline.png
 	top-left:
 	top:
 		Start: 1
@@ -111,7 +111,7 @@ outline:
 
 outline-red:
 	Defaults:
-		Filename: bits/outline2.png
+		Filename: outline2.png
 	top-left:
 	top:
 		Start: 1
@@ -130,7 +130,7 @@ outline-red:
 
 outline-yellow:
 	Defaults:
-		Filename: bits/outline3.png
+		Filename: outline3.png
 	top-left:
 	top:
 		Start: 1
@@ -149,7 +149,7 @@ outline-yellow:
 
 repair:
 	idle:
-		Filename: bits/building-repair.png
+		Filename: building-repair.png
 		Length: *
 		Tick: 100
 
@@ -159,7 +159,7 @@ poweroff:
 
 direction:
 	Defaults:
-		Filename: bits/cursors1.png
+		Filename: cursors1.png
 	arrow-t:
 		Start: 18
 		Offset: 0, -19, 0
@@ -187,22 +187,22 @@ direction:
 
 mpspawn:
 	idle:
-		Filename: bits/mpspawn.png
+		Filename: mpspawn.png
 		Length: 1
 
 light:
 	idle:
-		Filename: bits/light.png
+		Filename: light.png
 		Length: 1
 
 camera:
 	idle:
-		Filename: bits/camera.png
+		Filename: camera.png
 		Length: 1
 
 surveillance_effect:
 	idle:
-		Filename: bits/surveillance_effect.png
+		Filename: surveillance_effect.png
 		Length: 25
 		Tick: 40
 		ZOffset: 2047

@@ -2,7 +2,7 @@
 
 ^BuildingFlame:
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -9
@@ -11,7 +11,7 @@
 ^BuildingFlame2:
 	Inherits: ^BuildingFlame
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -9
@@ -20,7 +20,7 @@
 ^BuildingFlame3:
 	Inherits: ^BuildingFlame2
 	flame3:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Length: *
 		ZOffset: 512
 		Offset: 0, -9
@@ -28,7 +28,7 @@
 
 treeflame:
 	idle:
-		Filename: bits/flame.png
+		Filename: flame.png
 		Length: *
 		ZOffset: 512
 		Tick: 60
@@ -39,137 +39,137 @@ base:
 		Filename: base
 		Offset: 10, -30
 	build:
-		Filename: bits/base.png
+		Filename: base.png
 		Frames: 4, 5, 6, 4, 5, 6, 4, 5 ,6
 		Length: *
 		Tick: 50
 		ZOffset: 2048
 	idle:
-		Filename: bits/base.png
+		Filename: base.png
 	shadow-overlay:
-		Filename: bits/base-shadow.png
+		Filename: base-shadow.png
 		ZOffset: 1768
 		Offset: 7, -18
 	damaged-idle:
-		Filename: bits/base.png
+		Filename: base.png
 		Start: 7
 		Length: 1
 	damaged-build:
-		Filename: bits/base.png
+		Filename: base.png
 		Start: 7
 		Length: 1
 	production-inprogress:
-		Filename: bits/base.png
+		Filename: base.png
 		Length: 3
 		Reverses: true
 		Tick: 150
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -10, -35
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 9, -16
 	flame3:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 6, -43
 	idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 10
 	damaged-idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -10, 10
 	make-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -10, 10
 	active-platform1:
-		Filename: bits/creation.png
+		Filename: creation.png
 		Length: 23
 		Offset: -11, 7
 		ZOffset: 2048
 	damaged-active-platform1:
-		Filename: bits/creation-damaged.png
+		Filename: creation-damaged.png
 		Length: 23
 		Offset: -11, 7
 		ZOffset: 2048
 	idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 10
 	damaged-idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 10
 	make-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 10, 10
 	active-platform2:
-		Filename: bits/creation.png
+		Filename: creation.png
 		Length: 23
 		Offset: 9, 7
 		ZOffset: 2048
 	damaged-active-platform2:
-		Filename: bits/creation-damaged.png
+		Filename: creation-damaged.png
 		Length: 23
 		Offset: 9, 7
 		ZOffset: 2048
 	icon:
-		Filename: bits/base-icon.png
+		Filename: base-icon.png
 		Offset: 0, 0
 
 base2:
 	Inherits: base
 	build:
-		Filename: bits/base2.png
+		Filename: base2.png
 	idle:
-		Filename: bits/base2.png
+		Filename: base2.png
 	damaged-idle:
-		Filename: bits/base2.png
+		Filename: base2.png
 	damaged-build:
-		Filename: bits/base2.png
+		Filename: base2.png
 	production-inprogress:
-		Filename: bits/base2.png
+		Filename: base2.png
 	idle-platform1:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	damaged-idle-platform1:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	make-platform1:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	active-platform1:
-		Filename: bits/creation-sc.png
+		Filename: creation-sc.png
 	damaged-active-platform1:
-		Filename: bits/creation2-damaged.png
+		Filename: creation2-damaged.png
 	idle-platform2:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	damaged-idle-platform2:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	make-platform2:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	active-platform2:
-		Filename: bits/creation-sc.png
+		Filename: creation-sc.png
 	damaged-active-platform2:
-		Filename: bits/creation2-damaged.png
+		Filename: creation2-damaged.png
 	icon:
-		Filename: bits/base2-icon.png
+		Filename: base2-icon.png
 		Offset: 0, 0
 
 outpost:
@@ -178,37 +178,37 @@ outpost:
 		Filename: outpost
 		Offset: 0, -5
 	idle:
-		Filename: bits/outpost.png
+		Filename: outpost.png
 		Length: 4
 		Tick: 180
 	damaged-idle:
-		Filename: bits/outpost.png
+		Filename: outpost.png
 		Start: 4
 		Length: 1
 	shadow-overlay:
-		Filename: bits/outpost-shadow.png
+		Filename: outpost-shadow.png
 		ZOffset: -1768
 		Offset: 6,17
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/null.png
+		Filename: null.png
 
 outpost2:
 	Inherits: outpost
 	Inherits@Flame: ^BuildingFlame
 	damaged-idle:
-		Filename: bits/outpost2.png
+		Filename: outpost2.png
 	idle:
-		Filename: bits/outpost2.png
+		Filename: outpost2.png
 
 generator:
 	Inherits@Flame: ^BuildingFlame2
@@ -216,18 +216,18 @@ generator:
 		Filename: generator
 		Offset: 0, -8
 	idle:
-		Filename: bits/generator.png
+		Filename: generator.png
 		Length: 15
 		Tick: 80
 	shadow-overlay:
-		Filename: bits/generator-shadow.png
+		Filename: generator-shadow.png
 		ZOffset: 1768
 		Offset: 11, 11
 	damaged-idle:
-		Filename: bits/generator.png
+		Filename: generator.png
 		Start: 15
 	damaged-shadow-overlay:
-		Filename: bits/generator-shadow.png
+		Filename: generator-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 11, 11
@@ -237,18 +237,18 @@ generator:
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 0, 2
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 3, -17
 	icon:
-		Filename: bits/generator-icon.png
+		Filename: generator-icon.png
 		Offset: 0, 0
 
 generator2:
@@ -258,14 +258,14 @@ generator2:
 		Filename: generator2
 		Offset: 0, -8
 	idle:
-		Filename: bits/generator2.png
+		Filename: generator2.png
 		Length: 16
 		Tick: 75
 	damaged-idle:
-		Filename: bits/generator2.png
+		Filename: generator2.png
 		Start: 16
 	icon:
-		Filename: bits/generator2-icon.png
+		Filename: generator2-icon.png
 
 generator3:
 	Inherits: generator
@@ -274,23 +274,23 @@ generator3:
 		Filename: generator3
 		Offset: 0, -8
 	idle:
-		Filename: bits/generator3.png
+		Filename: generator3.png
 		Length: 16
 		Tick: 60
 	shadow-overlay:
-		Filename: bits/generator3-shadow.png
+		Filename: generator3-shadow.png
 		ZOffset: 1768
 		Offset: 11, 11
 	damaged-idle:
-		Filename: bits/generator3.png
+		Filename: generator3.png
 		Start: 16
 	damaged-shadow-overlay:
-		Filename: bits/generator3-shadow.png
+		Filename: generator3-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 11, 11
 	icon:
-		Filename: bits/generator3-icon.png
+		Filename: generator3-icon.png
 
 radar:
 	Inherits@Flame: ^BuildingFlame
@@ -298,47 +298,47 @@ radar:
 		Filename: radar
 		Offset: 0, -4
 	idle:
-		Filename: bits/radar.png
+		Filename: radar.png
 	shadow-overlay:
-		Filename: bits/radar-shadow.png
+		Filename: radar-shadow.png
 		ZOffset: 1768
 		Offset: 6, 0
 	damaged-idle:
-		Filename: bits/radar.png
+		Filename: radar.png
 		Start: 1
 	damaged-shadow-overlay:
-		Filename: bits/radar-shadow.png
+		Filename: radar-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 6, 0
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/radar-icon.png
+		Filename: radar-icon.png
 		Offset: 0, 0
 
 radar2:
 	Inherits: radar
 	idle:
-		Filename: bits/radar2.png
+		Filename: radar2.png
 	shadow-overlay:
-		Filename: bits/radar2-shadow.png
+		Filename: radar2-shadow.png
 		Offset: 10, 7
 	damaged-shadow-overlay:
-		Filename: bits/radar2-shadow.png
+		Filename: radar2-shadow.png
 		Start: 0
 	damaged-idle:
-		Filename: bits/radar2.png
+		Filename: radar2.png
 	icon:
-		Filename: bits/radar2-icon.png
+		Filename: radar2-icon.png
 		Offset: 0, 0
 
 trader:
@@ -347,55 +347,55 @@ trader:
 		Filename: trader
 		Offset: 0, 1
 	idle:
-		Filename: bits/trader.png
+		Filename: trader.png
 		ZOffset: -1c511
 	shadow-overlay:
-		Filename: bits/trader-shadow.png
+		Filename: trader-shadow.png
 		Offset: 1, 3
 	damaged-idle:
-		Filename: bits/trader.png
+		Filename: trader.png
 		Start: 4
 		ZOffset: -1c511
 	damaged-shadow-overlay:
-		Filename: bits/trader-shadow.png
+		Filename: trader-shadow.png
 		Start: 1
 		Offset: 1, 3
 	active:
-		Filename: bits/trader.png
+		Filename: trader.png
 		Frames: 1, 2, 3, 2, 1
 		Length: 5
 		ZOffset: -1c511
 		Tick: 100
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -2, -6
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 12, -17
 	icon:
-		Filename: bits/trader-icon.png
+		Filename: trader-icon.png
 		Offset: 0, 0
 
 trader2:
 	Inherits: trader
 	idle:
-		Filename: bits/trader2.png
+		Filename: trader2.png
 	damaged-idle:
-		Filename: bits/trader2.png
+		Filename: trader2.png
 	active:
-		Filename: bits/trader2.png
+		Filename: trader2.png
 	icon:
-		Filename: bits/trader2-icon.png
+		Filename: trader2-icon.png
 
 module:
 	Inherits@Flame: ^BuildingFlame2
@@ -403,73 +403,73 @@ module:
 		Filename: module
 		Offset: 0, 2
 	door:
-		Filename: bits/module.png
+		Filename: module.png
 		Frames: 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		ZOffset: 1768
 	idle:
-		Filename: bits/module.png
+		Filename: module.png
 		Start: 8
 	shadow-overlay:
-		Filename: bits/module-shadow.png
+		Filename: module-shadow.png
 		Start: 0
 		ZOffset: 1768
 		Offset: 7, 14
 	damaged-idle:
-		Filename: bits/module.png
+		Filename: module.png
 		Start: 9
 	damaged-shadow-overlay:
-		Filename: bits/module-shadow.png
+		Filename: module-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 7, 14
 	production-inprogress:
-		Filename: bits/module.png
+		Filename: module.png
 		Start: 10
 		Length: 8
 		Tick: 80
 		ZOffset: 1536
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 8, 6
 		ZOffset: 1769
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -7, -11
 		ZOffset: 1769
 	icon:
-		Filename: bits/module-icon.png
+		Filename: module-icon.png
 		Offset: 0, 0
 
 module2:
 	Inherits: module
 	door:
-		Filename: bits/module2.png
+		Filename: module2.png
 	idle:
-		Filename: bits/module2.png
+		Filename: module2.png
 	damaged-idle:
-		Filename: bits/module2.png
+		Filename: module2.png
 	shadow-overlay:
-		Filename: bits/module2-shadow.png
+		Filename: module2-shadow.png
 		Offset: 5, 7
 	damaged-shadow-overlay:
-		Filename: bits/module2-shadow.png
+		Filename: module2-shadow.png
 		Offset: 5, 7
 	production-inprogress:
-		Filename: bits/module2.png
+		Filename: module2.png
 		Reverses: True
 	icon:
-		Filename: bits/module2-icon.png
+		Filename: module2-icon.png
 		Offset: 0, 0
 
 miner2:
@@ -484,11 +484,11 @@ miner2:
 		ShadowStart: 18
 		Combine:
 			0:
-				Filename: bits/miner2.png
+				Filename: miner2.png
 				Length: 18
 				Tick: 100
 			1:
-				Filename: bits/miner2-shadow.png
+				Filename: miner2-shadow.png
 				Offset: 15, 36
 				Length: 18
 				Tick: 100
@@ -498,11 +498,11 @@ miner2:
 		Length: 1
 		Combine:
 			0:
-				Filename: bits/miner2.png
+				Filename: miner2.png
 				Start: 18
 				Length: 1
 			1:
-				Filename: bits/miner2-shadow.png
+				Filename: miner2-shadow.png
 				Start: 18
 				Length: 1
 				Offset: 15, 36
@@ -512,11 +512,11 @@ miner2:
 		Length: 1
 		Combine:
 			0:
-				Filename: bits/miner2.png
+				Filename: miner2.png
 				Start: 21
 				Length: 1
 			1:
-				Filename: bits/miner2-shadow.png
+				Filename: miner2-shadow.png
 				Start: 21
 				Length: 1
 				Offset: 15, 36
@@ -527,12 +527,12 @@ miner2:
 		ShadowStart: 3
 		Combine:
 			0:
-				Filename: bits/miner2.png
+				Filename: miner2.png
 				Start: 18
 				Length: 3
 				Tick: 300
 			1:
-				Filename: bits/miner2-shadow.png
+				Filename: miner2-shadow.png
 				Start: 18
 				Length: 3
 				Tick: 300
@@ -544,12 +544,12 @@ miner2:
 		ShadowStart: 3
 		Combine:
 			0:
-				Filename: bits/miner2.png
+				Filename: miner2.png
 				Start: 18
 				Length: 3
 				Tick: 600
 			1:
-				Filename: bits/miner2-shadow.png
+				Filename: miner2-shadow.png
 				Start: 18
 				Length: 3
 				Tick: 600
@@ -560,26 +560,26 @@ miner2:
 		Length: 1
 		Combine:
 			0:
-				Filename: bits/miner2.png
+				Filename: miner2.png
 				Start: 21
 			1:
-				Filename: bits/miner2-shadow.png
+				Filename: miner2-shadow.png
 				Start: 21
 				Offset: 15, 36
 	silo:
-		Filename: bits/miner2.png
+		Filename: miner2.png
 		Start: 22
 		Length: 20
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 3, 16
 		ZOffset: 3072
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -13, 14
 		ZOffset: 3072
 	icon:
-		Filename: bits/miner2-icon.png
+		Filename: miner2-icon.png
 		Offset: 0, 0
 
 starport:
@@ -588,49 +588,49 @@ starport:
 		Filename: starport
 		Offset: 0, -2
 	idle:
-		Filename: bits/starport.png
+		Filename: starport.png
 		Start: 15
 	production-inprogress:
-		Filename: bits/starport.png
+		Filename: starport.png
 		Start: 16
 		Length: 6
 		Reverses: True
 		Tick: 100
 	production-done:
-		Filename: bits/starport.png
+		Filename: starport.png
 		Frames: 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
 		Length: *
 		Tick: 35
 	shadow-overlay:
-		Filename: bits/starport-shadow.png
+		Filename: starport-shadow.png
 		ZOffset: -1768
 		Offset: 5, 3
 	damaged-idle:
-		Filename: bits/starport.png
+		Filename: starport.png
 		Start: 22
 	damaged-shadow-overlay:
-		Filename: bits/starport-shadow.png
+		Filename: starport-shadow.png
 		Start: 1
 		ZOffset: -1768
 		Offset: 5, 3
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 0, -23
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -3, 17
 	icon:
-		Filename: bits/starport-icon.png
+		Filename: starport-icon.png
 		Offset: 0, 0
 
 starport2:
@@ -639,41 +639,41 @@ starport2:
 		Filename: starport2
 		Offset: 0, -2
 	idle:
-		Filename: bits/starport2.png
+		Filename: starport2.png
 	production-inprogress:
-		Filename: bits/starport2.png
+		Filename: starport2.png
 		Length: 5
 		Tick: 120
 	shadow-overlay:
-		Filename: bits/starport-shadow.png
+		Filename: starport-shadow.png
 		ZOffset: -1768
 		Offset: 5, 3
 	damaged-idle:
-		Filename: bits/starport2.png
+		Filename: starport2.png
 		Start: 5
 	damaged-shadow-overlay:
-		Filename: bits/starport-shadow.png
+		Filename: starport-shadow.png
 		Start: 1
 		ZOffset: -1768
 		Offset: 5, 3
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 0, -23
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -3, 17
 	icon:
-		Filename: bits/starport2-icon.png
+		Filename: starport2-icon.png
 		Offset: 0, 0
 
 factory:
@@ -682,129 +682,129 @@ factory:
 		Filename: factory
 		Offset: 0, -24
 	idle:
-		Filename: bits/null.png
+		Filename: null.png
 	idle-online:
-		Filename: bits/factory.png
+		Filename: factory.png
 	idle-offline:
-		Filename: bits/factory.png
+		Filename: factory.png
 	shadow-overlay:
-		Filename: bits/factory-shadow.png
+		Filename: factory-shadow.png
 		ZOffset: 1768
 		Offset: 7, -7
 	damaged-idle-online:
-		Filename: bits/factory.png
+		Filename: factory.png
 		Start: 11
 	damaged-idle-offline:
-		Filename: bits/factory.png
+		Filename: factory.png
 		Start: 11
 	damaged-shadow-overlay:
-		Filename: bits/factory-shadow.png
+		Filename: factory-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 7, -7
 	production-inprogress:
-		Filename: bits/factory.png
+		Filename: factory.png
 		Start: 5
 		Length: 6
 		Reverses: True
 		Tick: 100
 		ZOffset: 1500
 	production-done:
-		Filename: bits/factory.png
+		Filename: factory.png
 		Length: 4
 		Reverses: True
 		Tick: 30
 		ZOffset: 1500
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 		Offset: 0, -14
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 		Offset: 0, -14
 	idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 10
 	damaged-idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -10, 10
 	make-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -10, 10
 	idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 10
 	damaged-idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 10
 	make-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 10, 10
 	idle-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 30
 	damaged-idle-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -10, 30
 	make-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -10, 30
 	idle-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 30
 	damaged-idle-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 30
 	make-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 10, 30
 	active-creation:
-		Filename: bits/creation4.png
+		Filename: creation4.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
 	damaged-active-creation:
-		Filename: bits/creation4-damaged.png
+		Filename: creation4-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 0, -25
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 15, -26
 	icon:
-		Filename: bits/factory-icon.png
+		Filename: factory-icon.png
 		Offset: 0, 0
 
 factory2:
@@ -813,129 +813,129 @@ factory2:
 		Filename: factory2
 		Offset: -1, -22
 	idle:
-		Filename: bits/null.png
+		Filename: null.png
 	idle-online:
-		Filename: bits/factory2.png
+		Filename: factory2.png
 	idle-offline:
-		Filename: bits/factory2.png
+		Filename: factory2.png
 	shadow-overlay:
-		Filename: bits/factory2-shadow.png
+		Filename: factory2-shadow.png
 		ZOffset: 1768
 		Offset: 5, -12
 	damaged-idle-online:
-		Filename: bits/factory2.png
+		Filename: factory2.png
 		Start: 15
 	damaged-idle-offline:
-		Filename: bits/factory2.png
+		Filename: factory2.png
 		Start: 15
 	damaged-shadow-overlay:
-		Filename: bits/factory2-shadow.png
+		Filename: factory2-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 5, -12
 	production-inprogress:
-		Filename: bits/factory2.png
+		Filename: factory2.png
 		Start: 1
 		Length: 10
 		Reverses: True
 		Tick: 80
 		ZOffset: 1500
 	production-done:
-		Filename: bits/factory2.png
+		Filename: factory2.png
 		Frames: 11, 12, 13, 14, 13, 12, 11
 		Length: *
 		Tick: 80
 		ZOffset: 1500
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 		Offset: -1, -3
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 		Offset: -1, -3
 	idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 10
 	damaged-idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -10, 10
 	make-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -10, 10
 	idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 10
 	damaged-idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 10
 	make-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 10, 10
 	idle-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 30
 	damaged-idle-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -10, 30
 	make-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -10, 30
 	idle-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: 10, 30
 	damaged-idle-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 10, 30
 	make-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 10, 30
 	active-creation:
-		Filename: bits/creation4.png
+		Filename: creation4.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
 	damaged-active-creation:
-		Filename: bits/creation4-damaged.png
+		Filename: creation4-damaged.png
 		Length: 28
 		Offset: -1, 17
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 1, -22
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 9, -8
 	icon:
-		Filename: bits/factory2-icon.png
+		Filename: factory2-icon.png
 		Offset: 0, 0
 
 bunker:
@@ -944,43 +944,43 @@ bunker:
 		Filename: bunker
 		Offset: 0, -3
 	idle:
-		Filename: bits/bunker.png
+		Filename: bunker.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/bunker-shadow.png
+		Filename: bunker-shadow.png
 		ZOffset: -1768
 		Offset: 2, 5
 	damaged-idle:
-		Filename: bits/bunker.png
+		Filename: bunker.png
 		Start: 1
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 2, -12
 	icon:
-		Filename: bits/bunker-icon.png
+		Filename: bunker-icon.png
 		Offset: 0, 0
 
 bunker2:
 	Inherits: bunker
 	idle:
-		Filename: bits/bunker2.png
+		Filename: bunker2.png
 	shadow-overlay:
-		Filename: bits/bunker2-shadow.png
+		Filename: bunker2-shadow.png
 		Offset: 2, 2
 	damaged-idle:
-		Filename: bits/bunker2.png
+		Filename: bunker2.png
 	icon:
-		Filename: bits/bunker2-icon.png
+		Filename: bunker2-icon.png
 
 turret:
 	Inherits@Flame: ^BuildingFlame
@@ -988,63 +988,63 @@ turret:
 		Filename: turret
 		Offset: 0, -8
 	idle:
-		Filename: bits/turret.png
+		Filename: turret.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/turret-shadow.png
+		Filename: turret-shadow.png
 		ZOffset: -1768
 		Offset: 4, 3
 	damaged-idle:
-		Filename: bits/turret.png
+		Filename: turret.png
 		Start: 1
 	turret:
-		Filename: bits/turret.png
+		Filename: turret.png
 		Start: 2
 		Facings: 8
 	shoot:
-		Filename: bits/turret.png
+		Filename: turret.png
 		Start: 10
 		Tick: 100
 		Facings: 8
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 10, -12
 	icon:
-		Filename: bits/turret-icon.png
+		Filename: turret-icon.png
 		Offset: 0, 0
 
 turret2:
 	Inherits: turret
 	idle:
-		Filename: bits/turret2-base.png
+		Filename: turret2-base.png
 		Start: 0
 	damaged-idle:
-		Filename: bits/turret2-base.png
+		Filename: turret2-base.png
 		Start: 1
 	turret:
-		Filename: bits/turret2.png
+		Filename: turret2.png
 		Start: 0
 		Facings: 8
 		Offset: 0, -9
 	shoot:
-		Filename: bits/turret2.png
+		Filename: turret2.png
 		Start: 8
 		Length: 2
 		Tick: 50
 		Facings: 8
 		Offset: 0, -9
 	icon:
-		Filename: bits/turret2-icon.png
+		Filename: turret2-icon.png
 
 aaturret:
 	Inherits@Flame: ^BuildingFlame
@@ -1052,47 +1052,47 @@ aaturret:
 		Filename: aaturret
 		Offset: 0, -7
 	idle:
-		Filename: bits/aa-turret.png
+		Filename: aa-turret.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/aa-turret2-shadow.png
+		Filename: aa-turret2-shadow.png
 		ZOffset: -1768
 		Offset: 1, -2
 	damaged-shadow-overlay:
-		Filename: bits/aa-turret2-shadow.png
+		Filename: aa-turret2-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 1, -2
 	damaged-idle:
-		Filename: bits/aa-turret2.png
+		Filename: aa-turret2.png
 		Start: 1
 	turret:
-		Filename: bits/aa-turret.png
+		Filename: aa-turret.png
 		Start: 2
 	shoot:
-		Filename: bits/aa-turret.png
+		Filename: aa-turret.png
 		Start: 7
 		Tick: 100
 	charge:
-		Filename: bits/aa-turret.png
+		Filename: aa-turret.png
 		Start: 3
 		Length: 4
 		Tick: 25
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 10, -12
 	icon:
-		Filename: bits/aa-turret-icon.png
+		Filename: aa-turret-icon.png
 		Offset: 0, 0
 
 aaturret2:
@@ -1100,114 +1100,114 @@ aaturret2:
 	Defaults:
 		Offset: 0, -9
 	idle:
-		Filename: bits/aa-turret2.png
+		Filename: aa-turret2.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/aa-turret2-shadow.png
+		Filename: aa-turret2-shadow.png
 		ZOffset: -1768
 		Offset: 1, -2
 	damaged-shadow-overlay:
-		Filename: bits/aa-turret2-shadow.png
+		Filename: aa-turret2-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 1, -2
 	damaged-idle:
-		Filename: bits/aa-turret2.png
+		Filename: aa-turret2.png
 		Start: 1
 	turret:
-		Filename: bits/aa-turret2.png
+		Filename: aa-turret2.png
 		Start: 2
 		Facings: 8
 	shoot:
-		Filename: bits/aa-turret2.png
+		Filename: aa-turret2.png
 		Start: 2
 		Facings: 8
 	charge:
-		Filename: bits/aa-turret2.png
+		Filename: aa-turret2.png
 		Start: 3
 		Length: 4
 		Tick: 25
 	icon:
-		Filename: bits/aa-turret2-icon.png
+		Filename: aa-turret2-icon.png
 		Offset: 0, 0
 
 field:
 	Inherits@Flame: ^BuildingFlame
 	idle:
-		Filename: bits/field.png
+		Filename: field.png
 	shadow-overlay:
-		Filename: bits/field-shadow.png
+		Filename: field-shadow.png
 		ZOffset: -1768
 		Offset: 2, 3
 	charged:
-		Filename: bits/field.png
+		Filename: field.png
 		Length: 4
 		Tick: 100
 	loop:
-		Filename: bits/field.png
+		Filename: field.png
 		Start: 4
 		Length: 3
 		Reverses: True
 		Tick: 100
 	end:
-		Filename: bits/field.png
+		Filename: field.png
 		Frames: 4, 3, 2, 1
 		Length: 4
 		Tick: 100
 	damaged-idle:
-		Filename: bits/field.png
+		Filename: field.png
 		Start: 7
 	damaged-charged:
-		Filename: bits/field.png
+		Filename: field.png
 		Start: 7
 		Length: 3
 		Tick: 100
 	damaged-loop:
-		Filename: bits/field.png
+		Filename: field.png
 		Start: 11
 		Length: 3
 		Reverses: True
 		Tick: 100
 	damaged-end:
-		Filename: bits/field.png
+		Filename: field.png
 		Frames: 11, 10, 9, 8
 		Length: 4
 		Tick: 100
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 10, 0
 	icon:
-		Filename: bits/field2-icon.png
+		Filename: field2-icon.png
 		Offset: 0, 0
 
 field2:
 	Inherits: field
 	idle:
-		Filename: bits/field2.png
+		Filename: field2.png
 	charged:
-		Filename: bits/field2.png
+		Filename: field2.png
 	loop:
-		Filename: bits/field2.png
+		Filename: field2.png
 	end:
-		Filename: bits/field2.png
+		Filename: field2.png
 	damaged-idle:
-		Filename: bits/field2.png
+		Filename: field2.png
 	damaged-charged:
-		Filename: bits/field2.png
+		Filename: field2.png
 	damaged-loop:
-		Filename: bits/field2.png
+		Filename: field2.png
 	damaged-end:
-		Filename: bits/field2.png
+		Filename: field2.png
 
 silo:
 	Inherits@Flame: ^BuildingFlame2
@@ -1215,51 +1215,51 @@ silo:
 		Filename: silo
 		Offset: 0, -20
 	idle:
-		Filename: bits/silo.png
+		Filename: silo.png
 		Start: 0
 	animation_lights:
-		Filename: bits/silo.png
+		Filename: silo.png
 		Start: 2
 		Length: 4
 		Tick: 240
 		Reverses: true
 	animation_red_light:
-		Filename: bits/silo.png
+		Filename: silo.png
 		Start: 6
 		Length: 6
 		Tick: 100
 		Reverses: true
 		ZOffset: 550
 	damaged-idle:
-		Filename: bits/silo.png
+		Filename: silo.png
 		Start: 1
 	shadow-overlay:
-		Filename: bits/silo-shadow.png
+		Filename: silo-shadow.png
 		ZOffset: 1768
 		Offset: 12,11
 	damaged-shadow-overlay:
-		Filename: bits/silo-shadow.png
+		Filename: silo-shadow.png
 		Start: 1
 		ZOffset: 1768
 		Offset: 12,11
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -5, -22
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 8, -24
 	icon:
-		Filename: bits/silo-icon.png
+		Filename: silo-icon.png
 		Offset: 0, 0
 
 uplink:
@@ -1268,42 +1268,42 @@ uplink:
 		Filename: uplink
 		Offset: 0, 0
 	idle:
-		Filename: bits/uplink.png
+		Filename: uplink.png
 		Start: 0
 		ZOffset: 500
 	animation:
-		Filename: bits/uplink.png
+		Filename: uplink.png
 		Start: 2
 		Length: 6
 		Tick: 100
 		Reverses: true
 		ZOffset: 550
 	damaged-idle:
-		Filename: bits/uplink.png
+		Filename: uplink.png
 		Start: 1
 		ZOffset: 500
 	shadow-overlay:
-		Filename: bits/uplink-shadow.png
+		Filename: uplink-shadow.png
 		ZOffset: 1768
 		Offset: 16, 34
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -5, -22
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 8, -24
 	icon:
-		Filename: bits/uplink-icon.png
+		Filename: uplink-icon.png
 		Offset: 0, 0
 
 howitzer:
@@ -1312,41 +1312,41 @@ howitzer:
 		Filename: howitzer
 		Offset: 0, -20
 	idle:
-		Filename: bits/howitzer.png
+		Filename: howitzer.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/howitzer-shadow.png
+		Filename: howitzer-shadow.png
 		ZOffset: -1768
 		Offset: 1, 4
 	damaged-idle:
-		Filename: bits/howitzer.png
+		Filename: howitzer.png
 		Start: 1
 	turret:
-		Filename: bits/howitzer.png
+		Filename: howitzer.png
 		Start: 2
 		Facings: 8
 		ZOffset: 512
 	shoot:
-		Filename: bits/howitzer.png
+		Filename: howitzer.png
 		Start: 10
 		Facings: 8
 		Tick: 300
 		ZOffset: 512
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 10, -10
 	icon:
-		Filename: bits/howitzer-icon.png
+		Filename: howitzer-icon.png
 		Offset: 0, 0
 
 televator:
@@ -1355,21 +1355,21 @@ televator:
 		Filename: televator
 		ZOffset: -1c511
 	idle:
-		Filename: bits/televator.png
+		Filename: televator.png
 		Start: 15
 	shadow-overlay:
-		Filename: bits/televator-shadow.png
+		Filename: televator-shadow.png
 		ZOffset: -1768
 		Offset: 3, 3
 	damaged-idle:
-		Filename: bits/televator.png
+		Filename: televator.png
 		Start: 16
 	active:
-		Filename: bits/televator.png
+		Filename: televator.png
 		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
 		Length: *
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
@@ -1379,7 +1379,7 @@ televator:
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/televator-icon.png
+		Filename: televator-icon.png
 
 televator2:
 	Inherits@Flame: ^BuildingFlame
@@ -1387,31 +1387,31 @@ televator2:
 		Filename: televator2
 		ZOffset: -1c511
 	idle:
-		Filename: bits/televator2.png
+		Filename: televator2.png
 		Start: 7
 	shadow-overlay:
-		Filename: bits/televator2-shadow.png
+		Filename: televator2-shadow.png
 		ZOffset: -1768
 		Offset: 3, 3
 	damaged-idle:
-		Filename: bits/televator2.png
+		Filename: televator2.png
 		Start: 14
 	active:
-		Filename: bits/televator2.png
+		Filename: televator2.png
 		Frames: 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 		Length: *
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/televator2-icon.png
+		Filename: televator2-icon.png
 
 harbor:
 	Inherits@Flame: ^BuildingFlame2
@@ -1419,71 +1419,71 @@ harbor:
 		Filename: harbor
 		Offset: 2, -5
 	idle:
-		Filename: bits/harbor.png
+		Filename: harbor.png
 		ZOffset: 1000
 	idle-entry:
-		Filename: bits/harbor.png
+		Filename: harbor.png
 		Start: 2
 		ZOffset: -2000
 	shadow-overlay:
-		Filename: bits/harbor-shadow.png
+		Filename: harbor-shadow.png
 		ZOffset: -1768
 		Offset: 6, 4
 	production-inprogress:
-		Filename: bits/harbor.png
+		Filename: harbor.png
 		Start: 3
 		Length: 7
 		Reverses: true
 		Tick: 80
 		ZOffset: 1500
 	damaged-idle:
-		Filename: bits/harbor.png
+		Filename: harbor.png
 		Start: 1
 		ZOffset: 1000
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -10, -20
 		ZOffset: 1001
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 10, -15
 		ZOffset: 1001
 	icon:
-		Filename: bits/harbor-icon.png
+		Filename: harbor-icon.png
 		Offset: 0, 0
 
 harbor2:
 	Inherits: harbor
 	idle:
-		Filename: bits/harbor2.png
+		Filename: harbor2.png
 	idle-entry:
-		Filename: bits/harbor2.png
+		Filename: harbor2.png
 	shadow-overlay:
-		Filename: bits/harbor2-shadow.png
+		Filename: harbor2-shadow.png
 		Offset: 9, -2
 	production-inprogress:
-		Filename: bits/harbor2.png
+		Filename: harbor2.png
 	damaged-idle:
-		Filename: bits/harbor2.png
+		Filename: harbor2.png
 	icon:
-		Filename: bits/harbor2-icon.png
+		Filename: harbor2-icon.png
 		Offset: 0, 0
 
 mother:
 	idle:
-		Filename: bits/mother.png
+		Filename: mother.png
 	shadow-overlay:
-		Filename: bits/mother-shadow.png
+		Filename: mother-shadow.png
 		ZOffset: 1768
 		Offset: 11, 20
 
@@ -1491,263 +1491,263 @@ wall:
 	Defaults:
 		ZOffset: 1770
 	top:
-		Filename: bits/wall.png
+		Filename: wall.png
 	topleft:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 1
 	left:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 2
 	bottomleft:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 3
 	bottom:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 4
 	bottomright:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 5
 	right:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 6
 	topright:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 7
 	center:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 14
 	cornerbl:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 8
 	cornerbr:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 9
 	cornertl:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 12
 	cornertr:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 13
 	rightextra:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 10
 	leftextra:
-		Filename: bits/wall.png
+		Filename: wall.png
 		Start: 11
 	destroyed-right:
-		Filename: bits/walldest1.png
+		Filename: walldest1.png
 		Offset: 0, 10
 	destroyed-left:
-		Filename: bits/walldest1.png
+		Filename: walldest1.png
 		Start: 1
 		Offset: 0, 10
 	destroyed-bottomleft:
-		Filename: bits/walldest2.png
+		Filename: walldest2.png
 	destroyed-bottomright:
-		Filename: bits/walldest2.png
+		Filename: walldest2.png
 		Start: 1
 	destroyed-bottom:
-		Filename: bits/walldest2.png
+		Filename: walldest2.png
 		Start: 2
 	destroyed-topleft:
-		Filename: bits/walldest3.png
+		Filename: walldest3.png
 	destroyed-top:
-		Filename: bits/walldest3.png
+		Filename: walldest3.png
 		Start: 2
 	destroyed-topright:
-		Filename: bits/walldest3.png
+		Filename: walldest3.png
 		Start: 1
 	destroyed-center:
-		Filename: bits/walldest3.png
+		Filename: walldest3.png
 		Start: 3
 	destroyed-topleft2:
-		Filename: bits/walldest3.png
+		Filename: walldest3.png
 		Start: 4
 	destroyed-topright2:
-		Filename: bits/walldest3.png
+		Filename: walldest3.png
 		Start: 5
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 wall-shadow:
 	Defaults:
 		ZOffset: 1768
 	bottomleft:
-		Filename: bits/wall-bottomleft-shadow.png
+		Filename: wall-bottomleft-shadow.png
 		Offset: 2,30
 	bottom:
-		Filename: bits/wall-bottom-shadow.png
+		Filename: wall-bottom-shadow.png
 		Offset: 0,32
 	bottom2:
-		Filename: bits/wall-bottom-shadow2.png
+		Filename: wall-bottom-shadow2.png
 		Offset: 0,32
 	bottom3:
-		Filename: bits/wall-bottom-shadow3.png
+		Filename: wall-bottom-shadow3.png
 		Offset: 0,32
 	bottomright:
-		Filename: bits/wall-bottomright-shadow.png
+		Filename: wall-bottomright-shadow.png
 		Offset: 5,12
 	bottomright2:
-		Filename: bits/wall-bottomright-shadow2.png
+		Filename: wall-bottomright-shadow2.png
 		Offset: 5,12
 	bottomright3:
-		Filename: bits/wall-bottomright-shadow3.png
+		Filename: wall-bottomright-shadow3.png
 		Offset: 5,12
 	bottomright4:
-		Filename: bits/wall-bottomright-shadow4.png
+		Filename: wall-bottomright-shadow4.png
 		Offset: 5,12
 	left:
-		Filename: bits/wall-left-shadow.png
+		Filename: wall-left-shadow.png
 		Offset: -9,2
 	right:
-		Filename: bits/wall-right-shadow.png
+		Filename: wall-right-shadow.png
 		Offset: 14,0
 	right2:
-		Filename: bits/wall-right-shadow2.png
+		Filename: wall-right-shadow2.png
 		Offset: 14,0
 	right3:
-		Filename: bits/wall-right-shadow3.png
+		Filename: wall-right-shadow3.png
 		Offset: 9,0
 	right4:
-		Filename: bits/wall-right-shadow4.png
+		Filename: wall-right-shadow4.png
 		Offset: 14,0
 	cornerbl:
-		Filename: bits/wall-cornerbl-shadow.png
+		Filename: wall-cornerbl-shadow.png
 		Offset: 20,2
 	cornerbl2:
-		Filename: bits/wall-cornerbl-shadow2.png
+		Filename: wall-cornerbl-shadow2.png
 		Offset: 10,-6
 	destroyed-left:
-		Filename: bits/wall-destroyed-left-shadow.png
+		Filename: wall-destroyed-left-shadow.png
 		Offset: 0,52
 	destroyed-right:
-		Filename: bits/wall-destroyed-right-shadow.png
+		Filename: wall-destroyed-right-shadow.png
 		Offset: 1,42
 
 barrier:
 	Defaults:
 		Offset: 3,-2
 	idle:
-		Filename: bits/barrier.png
+		Filename: barrier.png
 		Length: 16
 		ShadowStart: 32
 	damaged-idle:
-		Filename: bits/barrier.png
+		Filename: barrier.png
 		Start: 16
 		Length: 16
 		ShadowStart: 32
 	make-overlay:
-		Filename: bits/barrier-teleport.png
+		Filename: barrier-teleport.png
 		Length: 15
 		Tick: 25
 		Offset: 0,-5
 		ZOffset: 2048
 	icon:
-		Filename: bits/barrier-icon.png
+		Filename: barrier-icon.png
 		Offset: 0, 0
 
 gate-horizontal:
 	Defaults:
 		Offset: 2,0
 	idle:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Length: 16
 		ShadowStart: 32
 	open:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 15
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 47
 	damaged-idle:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 16
 		Length: 16
 		ShadowStart: 32
 	damaged-open:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 31
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 47
 	idle-alone:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Length: 16
 		ShadowStart: 48
 	open-alone:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 15
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 48
 	damaged-idle-alone:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 16
 		Length: 16
 		ShadowStart: 48
 	damaged-open-alone:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 31
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 48
 	idle-left:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Length: 16
 		ShadowStart: 64
 	open-left:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 15
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 64
 	damaged-idle-left:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 16
 		Length: 16
 		ShadowStart: 64
 	damaged-open-left:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 31
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 64
 	idle-right:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Length: 16
 		ShadowStart: 80
 	open-right:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 15
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 80
 	damaged-idle-right:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 16
 		Length: 16
 		ShadowStart: 80
 	damaged-open-right:
-		Filename: bits/gate-horizontal.png
+		Filename: gate-horizontal.png
 		Start: 31
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 80
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 3096
 	icon:
-		Filename: bits/gate-horizontal-icon.png
+		Filename: gate-horizontal-icon.png
 		Offset: 0, 0
 
 gate-vertical:
@@ -1755,73 +1755,73 @@ gate-vertical:
 	Defaults:
 		Offset: 3,-4
 	idle:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 	open:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Offset: 3,-4,0
 	damaged-idle:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 	damaged-open:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Offset: 3,-4,0
 	idle-alone:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 	open-alone:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Offset: 3,-4,0
 	damaged-idle-alone:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 	damaged-open-alone:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Offset: 3,-4,0
 	idle-bottom:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Length: 16
 		ShadowStart: 64
 	open-bottom:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Start: 15
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 64
 	damaged-idle-bottom:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Start: 16
 		Length: 16
 		ShadowStart: 64
 	damaged-open-bottom:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Start: 31
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 64
 	idle-top:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Length: 16
 		ShadowStart: 80
 	open-top:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Start: 15
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 80
 	damaged-idle-top:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Start: 16
 		Length: 16
 		ShadowStart: 80
 	damaged-open-top:
-		Filename: bits/gate-vertical.png
+		Filename: gate-vertical.png
 		Start: 31
 		Offset: 2,0,0
 		ZRamp: 1
 		ZOffset: -3036
 		ShadowStart: 80
 	icon:
-		Filename: bits/gate-vertical-icon.png
+		Filename: gate-vertical-icon.png
 		Offset: 0, 0
 
 techcenter:
@@ -1830,59 +1830,59 @@ techcenter:
 		Filename: techcenter
 		Offset: 0, -9
 	idle:
-		Filename: bits/techcenter.png
+		Filename: techcenter.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/techcenter-shadow.png
+		Filename: techcenter-shadow.png
 		ZOffset: -1768
 		Offset: 6, -3
 	damaged-shadow-overlay:
-		Filename: bits/techcenter-shadow-damaged.png
+		Filename: techcenter-shadow-damaged.png
 		ZOffset: -1768
 		Offset: 6, -3
 	damaged-idle:
-		Filename: bits/techcenter.png
+		Filename: techcenter.png
 		Start: 1
 	animation:
-		Filename: bits/techcenter.png
+		Filename: techcenter.png
 		Start: 2
 		Length: 10
 		Tick: 50
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 2, -20
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 8, 4
 	icon:
-		Filename: bits/techcenter-icon.png
+		Filename: techcenter-icon.png
 		Offset: 0, 0
 
 techcenter2:
 	Inherits: techcenter
 	idle:
-		Filename: bits/techcenter2.png
+		Filename: techcenter2.png
 	shadow-overlay:
-		Filename: bits/techcenter2-shadow.png
+		Filename: techcenter2-shadow.png
 	damaged-shadow-overlay:
-		Filename: bits/techcenter2-shadow-damaged.png
+		Filename: techcenter2-shadow-damaged.png
 	damaged-idle:
-		Filename: bits/techcenter2.png
+		Filename: techcenter2.png
 	animation:
-		Filename: bits/techcenter2.png
+		Filename: techcenter2.png
 		Tick: 100
 	icon:
-		Filename: bits/techcenter2-icon.png
+		Filename: techcenter2-icon.png
 
 reconstructor:
 	Inherits@Flame: ^BuildingFlame2
@@ -1890,28 +1890,28 @@ reconstructor:
 		Filename: reconstructor
 		Offset: 0, -2
 	idle:
-		Filename: bits/reconstructor.png
+		Filename: reconstructor.png
 		Start: 0
 	shadow-overlay:
-		Filename: bits/reconstructor-shadow.png
+		Filename: reconstructor-shadow.png
 		ZOffset: -1768
 		Offset: 7, 17
 	damaged-idle:
-		Filename: bits/reconstructor.png
+		Filename: reconstructor.png
 		Start: 8
 	animation-lights:
-		Filename: bits/reconstructor.png
+		Filename: reconstructor.png
 		Start: 0
 		Length: 8
 		Tick: 150
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 4, -18
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 15, 8
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 storage2:
 	Inherits@Flame: ^BuildingFlame2
@@ -1919,104 +1919,104 @@ storage2:
 		Filename: storage2
 		Offset: 0, -1
 	idle:
-		Filename: bits/storage2.png
+		Filename: storage2.png
 		Start: 0
 		ZOffset: 1024
 	shadow-overlay:
-		Filename: bits/storage2-shadow.png
+		Filename: storage2-shadow.png
 		ZOffset: -1768
 		Offset: 2, 1
 	damaged-idle:
-		Filename: bits/storage2.png
+		Filename: storage2.png
 		Start: 1
 	animation:
-		Filename: bits/storage2.png
+		Filename: storage2.png
 		Frames: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2
 		Length: *
 		Reverses: True
 		Tick: 80
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 3096
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 3096
 	idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -30, -10
 	damaged-idle-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -30, -10
 	make-platform1:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -30, -10
 		ZOffset: -2c511
 	idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: 30, 10
 	damaged-idle-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: 30, 10
 	make-platform2:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 30, 10
 		ZOffset: -2c511
 	idle-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -1c511
 		Offset: -10, 30
 	damaged-idle-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -1c511
 		Offset: -10, 30
 	make-platform3:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: -10, 30
 		ZOffset: -2c511
 	idle-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 30
 		ZOffset: -2c511
 		Offset: 10, -30
 	damaged-idle-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Start: 31
 		ZOffset: -2c511
 		Offset: 10, -30
 	make-platform4:
-		Filename: bits/platform.png
+		Filename: platform.png
 		Length: 31
 		tick: 40
 		Offset: 10, -30
 		ZOffset: -2c511
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 4, -18
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 15, 8
 	icon:
-		Filename: bits/storage2-icon.png
+		Filename: storage2-icon.png
 		Offset: 0, 0
 
 storage:
@@ -2024,42 +2024,42 @@ storage:
 	Defaults:
 		Offset: 0, -1
 	idle:
-		Filename: bits/storage.png
+		Filename: storage.png
 		Start: 13
 	damaged-idle:
-		Filename: bits/storage.png
+		Filename: storage.png
 		Start: 14
 	animation:
-		Filename: bits/storage.png
+		Filename: storage.png
 		Frames: 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 		Length: *
 		Tick: 50
 	idle-platform1:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	damaged-idle-platform1:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	make-platform1:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	idle-platform2:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	damaged-idle-platform2:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	make-platform2:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	idle-platform3:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	damaged-idle-platform3:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	make-platform3:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	idle-platform4:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	damaged-idle-platform4:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	make-platform4:
-		Filename: bits/platform2.png
+		Filename: platform2.png
 	icon:
-		Filename: bits/storage-icon.png
+		Filename: storage-icon.png
 		Offset: 0, 0
 
 extractor:
@@ -2068,15 +2068,15 @@ extractor:
 		Filename: extractor
 		Offset: 0, -18
 	idle:
-		Filename: bits/extractor.png
+		Filename: extractor.png
 		Start: 2
 		Length: 8
 		Tick: 200
 	damaged-idle:
-		Filename: bits/extractor.png
+		Filename: extractor.png
 		Start: 1
 	shadow-overlay:
-		Filename: bits/extractor-shadow.png
+		Filename: extractor-shadow.png
 		Start: 0
 		Length: 5
 		Tick: 200
@@ -2084,18 +2084,18 @@ extractor:
 		ZOffset: 1768
 		Offset: 8,13
 	damaged-shadow-overlay:
-		Filename: bits/extractor-shadow.png
+		Filename: extractor-shadow.png
 		Start: 5
 		ZOffset: 1768
 		Offset: 8,13
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 3, -4
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 comlink:
 	Inherits@Flame: ^BuildingFlame2
@@ -2103,27 +2103,27 @@ comlink:
 		Filename: comlink
 		Offset: 0, -1
 	idle:
-		Filename: bits/comlink.png
+		Filename: comlink.png
 	damaged-idle:
-		Filename: bits/comlink.png
+		Filename: comlink.png
 		Start: 1
 	animation:
-		Filename: bits/comlink.png
+		Filename: comlink.png
 		Start: 2
 		Length: 4
 		Tick: 200
 	shadow-overlay:
-		Filename: bits/comlink-shadow.png
+		Filename: comlink-shadow.png
 		ZOffset: -1768
 		Offset: 4, 14
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 3, -4
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 watchtower:
 	Inherits@Flame: ^BuildingFlame2
@@ -2131,35 +2131,35 @@ watchtower:
 		Filename: watchtower
 		Offset: 0, -1
 	idle:
-		Filename: bits/watchtower.png
+		Filename: watchtower.png
 	damaged-idle:
-		Filename: bits/watchtower.png
+		Filename: watchtower.png
 		Start: 1
 	animation:
-		Filename: bits/watchtower.png
+		Filename: watchtower.png
 		Start: 2
 		Length: 4
 		Tick: 200
 	shadow-overlay:
-		Filename: bits/watchtower-shadow.png
+		Filename: watchtower-shadow.png
 		ZOffset: -1768
 		Offset: 3, 20
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 3, -4
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 rail:
 	idle:
-		Filename: bits/rail.png
+		Filename: rail.png
 		Length: 16
 		ZOffset: -1024
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 dropzone:
 	Inherits@Flame: ^BuildingFlame2
@@ -2167,28 +2167,28 @@ dropzone:
 		Filename: dropzone
 		Offset: 0, 1
 	idle:
-		Filename: bits/dropzone.png
+		Filename: dropzone.png
 		ZOffset: -1c511
 	active:
-		Filename: bits/dropzone.png
+		Filename: dropzone.png
 		Length: 8
 		ZOffset: -1c511
 		Tick: 150
 	damaged-idle:
-		Filename: bits/dropzone.png
+		Filename: dropzone.png
 		Start: 8
 		ZOffset: -1c511
 	shadow-overlay:
-		Filename: bits/dropzone-shadow.png
+		Filename: dropzone-shadow.png
 		ZOffset: -1c768
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 3, -4
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -13, -6
 	icon:
-		Filename: bits/icon.png
+		Filename: icon.png
 
 oresmelt:
 	Inherits@Flame: ^BuildingFlame
@@ -2197,32 +2197,32 @@ oresmelt:
 		ZOffset: 512
 		Offset: 0, -2
 	idle:
-		Filename: bits/oresmelt.png
+		Filename: oresmelt.png
 		Length: 1
 	active:
-		Filename: bits/oresmelt.png
+		Filename: oresmelt.png
 		Length: 10
 		Tick: 140
 	damaged-idle:
-		Filename: bits/oresmelt.png
+		Filename: oresmelt.png
 		Start: 11
 		Length: 1
 	shadow-overlay:
-		Filename: bits/oresmelt-shadow.png
+		Filename: oresmelt-shadow.png
 		ZOffset: -1768
 		Offset: 11,22
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/oresmelt-icon.png
+		Filename: oresmelt-icon.png
 		Offset: 0, 0
 
 orepurifier:
@@ -2235,10 +2235,10 @@ orepurifier:
 		Length: 1
 		Combine:
 			0:
-				Filename: bits/orepurifier.png
+				Filename: orepurifier.png
 				Length: 1
 			1:
-				Filename: bits/orepurifier-shadow.png
+				Filename: orepurifier-shadow.png
 				Length: 1
 				ZOffset: 1768
 				Offset: 13,24
@@ -2249,12 +2249,12 @@ orepurifier:
 		Tick: 100
 		Combine:
 			0:
-				Filename: bits/orepurifier.png
+				Filename: orepurifier.png
 				Length: 7
 				Reverses: True
 				Tick: 100
 			1:
-				Filename: bits/orepurifier-shadow.png
+				Filename: orepurifier-shadow.png
 				Length: 7
 				Reverses: True
 				Tick: 100
@@ -2264,24 +2264,24 @@ orepurifier:
 		ShadowStart: 1
 		Combine:
 			0:
-				Filename: bits/orepurifier.png
+				Filename: orepurifier.png
 				Start: 7
 			1:
-				Filename: bits/orepurifier-shadow.png
+				Filename: orepurifier-shadow.png
 				ZOffset: 1768
 				Offset: 13,24
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	icon:
-		Filename: bits/orepurifier-icon.png
+		Filename: orepurifier-icon.png
 		Offset: 0, 0
 
 flagpost:
@@ -2290,22 +2290,22 @@ flagpost:
 		Filename: flagpost
 		Offset: -2, -3
 	idle:
-		Filename: bits/flagpost.png
+		Filename: flagpost.png
 		Start: 5
 	damaged-idle:
-		Filename: bits/flagpost.png
+		Filename: flagpost.png
 		Start: 6
 	flag:
-		Filename: bits/flagpost.png
+		Filename: flagpost.png
 		Length: 5
 		Reverses: true
 		Tick: 180
 	shadow-overlay:
-		Filename: bits/flagpost-shadow.png
+		Filename: flagpost-shadow.png
 		ZOffset: -1768
 		Offset: 3,13
 	icon:
-		Filename: bits/null.png
+		Filename: null.png
 
 firedept:
 	Inherits@Flame: ^BuildingFlame3
@@ -2313,45 +2313,45 @@ firedept:
 		Filename: firedept
 		Offset: 0,-11
 	idle:
-		Filename: bits/firedept.png
+		Filename: firedept.png
 	idle-radar:
-		Filename: bits/firedept.png
+		Filename: firedept.png
 		Start: 15
 		Length: 8
 		Tick: 120
 		ZOffset: 2048
 	shadow-overlay:
-		Filename: bits/firedept-shadow.png
+		Filename: firedept-shadow.png
 		ZOffset: 1768
 		Offset: 8, 3
 	production-inprogress:
-		Filename: bits/firedept.png
+		Filename: firedept.png
 		Start: 7
 		Length: 8
 		Tick: 100
 		ZOffset: 2048
 	production-door:
-		Filename: bits/firedept.png
+		Filename: firedept.png
 		Start: 1
 		Length: 6
 	make:
-		Filename: bits/build.png
+		Filename: build.png
 		Length: 39
 		Tick: 30
 		ZOffset: 2048
 	make-overlay:
-		Filename: bits/build-vanish.png
+		Filename: build-vanish.png
 		Length: 26
 		Tick: 30
 		ZOffset: 2048
 	flame:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: -10, -35
 	flame2:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 9, -16
 	flame3:
-		Filename: bits/flame2.png
+		Filename: flame2.png
 		Offset: 6, -43
 	icon:
-		Filename: bits/blank.png
+		Filename: blank.png

@@ -2,41 +2,41 @@
 
 rifleman:
 	idle:
-		Filename: bits/rifleman.png
+		Filename: rifleman.png
 		Facings: 8
 	muzzle:
-		Filename: bits/muzzle2.png
+		Filename: muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/rifleman-icon.png
+		Filename: rifleman-icon.png
 
 rocketeer:
 	idle:
-		Filename: bits/rocketeer.png
+		Filename: rocketeer.png
 		Facings: 8
 	muzzle:
-		Filename: bits/muzzle2.png
+		Filename: muzzle2.png
 		Length: 3
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/rocketeer-icon.png
+		Filename: rocketeer-icon.png
 
 mortar:
 	idle:
-		Filename: bits/mortar.png
+		Filename: mortar.png
 		Facings: 8
 	muzzle:
 		Combine:
@@ -84,76 +84,76 @@ mortar:
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/mortar-icon.png
+		Filename: mortar-icon.png
 
 sniper:
 	idle:
-		Filename: bits/sniper.png
+		Filename: sniper.png
 		Facings: 8
 	muzzle:
-		Filename: bits/muzzle3.png
+		Filename: muzzle3.png
 		Length: 3
 		Facings: 8
 		Tick: 50
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/sniper-icon.png
+		Filename: sniper-icon.png
 
 technician:
 	idle:
-		Filename: bits/technician.png
+		Filename: technician.png
 		Facings: 8
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/technician-icon.png
+		Filename: technician-icon.png
 
 flamer:
 	idle:
-		Filename: bits/flamer.png
+		Filename: flamer.png
 		Facings: 8
 		Length: 2
 		Tick: 60
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/flamer-icon.png
+		Filename: flamer-icon.png
 
 broker:
 	idle:
-		Filename: bits/broker.png
+		Filename: broker.png
 		Facings: 8
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/broker-icon.png
+		Filename: broker-icon.png
 
 jetpacker:
 	idle:
-		Filename: bits/jetpacker.png
+		Filename: jetpacker.png
 		Frames: 0, 2, 4, 6, 8, 10, 12, 14
 		Facings: 8
 		ZOffset: 1024
 	move:
-		Filename: bits/jetpacker.png
+		Filename: jetpacker.png
 		Length: 2
 		Tick: 60
 		Facings: 8
@@ -205,100 +205,100 @@ jetpacker:
 		Tick: 50
 		ZOffset: 1024
 	icon:
-		Filename: bits/jetpacker-icon.png
+		Filename: jetpacker-icon.png
 
 blaster:
 	idle:
-		Filename: bits/blaster.png
+		Filename: blaster.png
 		Facings: 8
 		Offset: 0,-3
 	animation:
-		Filename: bits/blaster.png
+		Filename: blaster.png
 		Start: 8
 		Facings: 8
 		Tick: 30
 		Offset: 0,-3
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/blaster-icon.png
+		Filename: blaster-icon.png
 
 shocker:
 	idle:
-		Filename: bits/shocker.png
+		Filename: shocker.png
 		Facings: 8
 	shoot:
-		Filename: bits/shocker.png
+		Filename: shocker.png
 		Start: 8
 		Facings: 8
 		Length: 3
 		Tick: 60
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/shocker-icon.png
+		Filename: shocker-icon.png
 
 minipod1:
 	idle:
-		Filename: bits/minipod1.png
+		Filename: minipod1.png
 		Facings: 8
 	die:
-		Filename: bits/minipod1-death.png
+		Filename: minipod1-death.png
 		Length: 6
 		Tick: 80
 		Offset: 1,-1
 	icon:
-		Filename: bits/null.png
+		Filename: null.png
 
 minipod2:
 	Inherits: minipod1
 	idle:
-		Filename: bits/minipod2.png
+		Filename: minipod2.png
 	die:
-		Filename: bits/minipod2-death.png
+		Filename: minipod2-death.png
 
 minipod3:
 	Inherits: minipod1
 	idle:
-		Filename: bits/minipod3.png
+		Filename: minipod3.png
 	die:
-		Filename: bits/minipod3-death.png
+		Filename: minipod3-death.png
 
 minipod4:
 	Inherits: minipod1
 	idle:
-		Filename: bits/minipod4.png
+		Filename: minipod4.png
 	die:
-		Filename: bits/minipod4-death.png
+		Filename: minipod4-death.png
 
 minipod5:
 	Inherits: minipod1
 	idle:
-		Filename: bits/minipod5.png
+		Filename: minipod5.png
 	die:
-		Filename: bits/minipod5-death.png
+		Filename: minipod5-death.png
 
 minipod6:
 	Inherits: minipod1
 	idle:
-		Filename: bits/minipod6.png
+		Filename: minipod6.png
 	die:
-		Filename: bits/minipod6-death.png
+		Filename: minipod6-death.png
 
 firefighter:
 	idle:
-		Filename: bits/firefighter.png
+		Filename: firefighter.png
 		Facings: 8
 	die:
-		Filename: bits/pod-death.png
+		Filename: pod-death.png
 		Length: 7
 		Tick: 80
 		Offset: 0,-2
 	icon:
-		Filename: bits/firefighter-icon.png
+		Filename: firefighter-icon.png

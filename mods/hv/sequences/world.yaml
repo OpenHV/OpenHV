@@ -2,45 +2,45 @@
 
 cloud:
 	cloud1:
-		Filename: bits/cloud1.png
+		Filename: cloud1.png
 	cloud1f:
-		Filename: bits/cloud1.png
+		Filename: cloud1.png
 		FlipX: true
 		FlipY: true
 	cloud2:
-		Filename: bits/cloud2.png
+		Filename: cloud2.png
 	cloud2f:
-		Filename: bits/cloud2.png
+		Filename: cloud2.png
 		FlipX: true
 		FlipY: true
 	cloud3:
-		Filename: bits/cloud3.png
+		Filename: cloud3.png
 	cloud3f:
-		Filename: bits/cloud3.png
+		Filename: cloud3.png
 		FlipX: true
 		FlipY: true
 
 fountain:
 	idle:
-		Filename: bits/fountain.png
+		Filename: fountain.png
 
 shroud:
 	fow:
-		Filename: bits/dark.png
+		Filename: dark.png
 		Length: 12
 	full:
-		Filename: bits/dark.png
+		Filename: dark.png
 		Start: 12
 
 resources:
 	Defaults:
 		Length: 3
 	gold:
-		Filename: bits/gold.png
+		Filename: gold.png
 	iron:
-		Filename: bits/iron.png
+		Filename: iron.png
 	invisible:
-		Filename: bits/null.png
+		Filename: null.png
 		Length: 1
 
 twinkle:
@@ -48,39 +48,39 @@ twinkle:
 		ZOffset: 512
 		Tick: 60
 	twinkle1:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Length: 4
 	twinkle2:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Start: 4
 		Length: 4
 		Offset: -2,-2
 	twinkle3:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Start: 8
 		Length: 4
 		Offset: 2,1
 	twinkle4:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Start: 12
 		Length: 4
 		Offset: 2,2
 	twinkle5:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Length: 4
 		Offset: 2,3
 	twinkle6:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Start: 4
 		Length: 4
 		Offset: 3,-3
 	twinkle7:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Start: 8
 		Length: 4
 		Offset: 0,-4
 	twinkle8:
-		Filename: bits/twinkle.png
+		Filename: twinkle.png
 		Start: 12
 		Length: 4
 		Offset: 0,4

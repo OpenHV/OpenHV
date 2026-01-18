@@ -2,12 +2,12 @@
 
 refill:
 	idle:
-		Filename: maps/firewatch/refill.png
+		Filename: refill.png
 		Length: 9
 		Tick: 100
 
 airtanker:
 	idle:
-		Filename: bits/bomber.png
+		Filename: bomber.png
 		Facings: 8
 		ZOffset: 2048

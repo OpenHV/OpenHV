@@ -176,16 +176,16 @@
 		Description: faction-random.description
 	PaletteFromGimpOrJascFile@Terrain:
 		Name: terrain
-		Filename: bits/colors.pal
+		Filename: colors.pal
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@Player:
 		Name: player
-		Filename: bits/colors.pal
+		Filename: colors.pal
 		TransparentIndex: 255
 		Premultiply: false
 	PaletteFromGimpOrJascFile@Effect:
 		Name: effect
-		Filename: bits/colors.pal
+		Filename: colors.pal
 		TransparentIndex: 255
 		Premultiply: false
 	PlayerColorPalette:
@@ -205,13 +205,13 @@
 		RemapIndex: 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32
 	PaletteFromGimpOrJascFile@Cursor:
 		Name: cursor
-		Filename: bits/colors.pal
+		Filename: colors.pal
 		CursorPalette: true
 		AllowModifiers: false
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@Chrome:
 		Name: chrome
-		Filename: bits/colors.pal
+		Filename: colors.pal
 		AllowModifiers: false
 		TransparentIndex: 255
 	ColorPickerPalette:
@@ -221,11 +221,11 @@
 		AllowModifiers: false
 	PaletteFromGimpOrJascFile@Cube:
 		Name: cube
-		Filename: bits/cube.pal
+		Filename: cube.pal
 		TransparentIndex: 255
 	PaletteFromGimpOrJascFile@Shadows:
 		Name: shadow-decoration
-		Filename: bits/shadow-decoration.pal
+		Filename: shadow-decoration.pal
 		TransparentIndex: 255
 	PaletteFromRGBA@Shadow:
 		Name: shadow

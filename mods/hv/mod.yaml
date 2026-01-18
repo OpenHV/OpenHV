@@ -16,9 +16,6 @@ FileSystem: DefaultFileSystem
 		^EngineDir
 		$hv: hv
 		^EngineDir|mods/common: common
-		hv|bits
-		hv|bits/terrain
-		hv|bits/audio
 		hv|bits/audio/cc0
 		hv|bits/audio/cc-by-30
 		hv|bits/audio/cc-by-40
@@ -42,6 +39,17 @@ FileSystem: DefaultFileSystem
 		hv|bits/audio/timbeek/
 		hv|bits/audio/pd/
 		hv|bits/audio/raxi88/radartank
+		hv|bits/palettes
+		hv|bits/sprites
+		hv|bits/sprites/aircraft
+		hv|bits/sprites/animals
+		hv|bits/sprites/buildings
+		hv|bits/sprites/effects
+		hv|bits/sprites/infantry
+		hv|bits/sprites/props
+		hv|bits/sprites/ships
+		hv|bits/sprites/terrain
+		hv|bits/sprites/vehicles
 
 MapFolders:
 	hv|maps: System
@@ -197,7 +205,7 @@ Hotkeys:
 	hv|hotkeys/editor.yaml
 
 LoadScreen: PanelLoadScreen
-	Image: hv|uibits/loadscreen.png
+	Image: hv|bits/ui/loadscreen.png
 
 ServerTraits:
 	LobbyCommands
@@ -210,43 +218,43 @@ ChromeMetrics:
 
 Fonts:
 	TinyPixel:
-		Font: hv|terminal-grotesque.ttf
+		Font: hv|bits/fonts/terminal-grotesque.ttf
 		Size: 11
 		Ascender: 9
 	Tiny:
-		Font: hv|Inconsolata-Regular.ttf
+		Font: hv|bits/fonts/Inconsolata-Regular.ttf
 		Size: 10
 		Ascender: 8
 	TinyBold:
-		Font: hv|Inconsolata-Bold.ttf
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
 		Size: 10
 		Ascender: 8
 	Small:
-		Font: hv|Inconsolata-Regular.ttf
+		Font: hv|bits/fonts/Inconsolata-Regular.ttf
 		Size: 12
 		Ascender: 9
 	Regular:
-		Font: hv|Inconsolata-Regular.ttf
+		Font: hv|bits/fonts/Inconsolata-Regular.ttf
 		Size: 14
 		Ascender: 11
 	Bold:
-		Font: hv|Inconsolata-Bold.ttf
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
 		Size: 14
 		Ascender: 11
 	MediumBold:
-		Font: hv|Inconsolata-Bold.ttf
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
 		Size: 18
 		Ascender: 14
 	LargeBold:
-		Font: hv|Inconsolata-Bold.ttf
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
 		Size: 16
 		Ascender: 7
 	BigBold:
-		Font: hv|Inconsolata-Bold.ttf
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
 		Size: 24
 		Ascender: 18
 	Title:
-		Font: hv|PressStart2P.ttf
+		Font: hv|bits/fonts/PressStart2P.ttf
 		Size: 20
 		Ascender: 14
 

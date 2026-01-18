@@ -2,10 +2,10 @@
 
 buggy:
 	idle:
-		Filename: bits/buggy.png
+		Filename: buggy.png
 		Facings: 8
 	turret:
-		Filename: bits/buggy.png
+		Filename: buggy.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -54,27 +54,27 @@ buggy:
 		Facings: 8
 		Tick: 50
 	icon:
-		Filename: bits/buggy-icon.png
+		Filename: buggy-icon.png
 
 bike:
 	idle:
-		Filename: bits/bike.png
+		Filename: bike.png
 		Facings: 8
 	shoot:
-		Filename: bits/bike.png
+		Filename: bike.png
 		Start: 8
 		Facings: 8
 		Length: 5
 		Tick: 50
 	icon:
-		Filename: bits/bike-icon.png
+		Filename: bike-icon.png
 
 mbt:
 	idle:
-		Filename: bits/mbt.png
+		Filename: mbt.png
 		Facings: 8
 	turret:
-		Filename: bits/mbt.png
+		Filename: mbt.png
 		Start: 8
 		Facings: 8
 	muzzle:
@@ -123,104 +123,104 @@ mbt:
 		Facings: 8
 		Tick: 50
 	icon:
-		Filename: bits/mbt-icon.png
+		Filename: mbt-icon.png
 
 radartank:
 	idle:
-		Filename: bits/radartank.png
+		Filename: radartank.png
 		Facings: 8
 	extend:
-		Filename: bits/radartank.png
+		Filename: radartank.png
 		Start: 8
 		Length: 4
 		Tick: 100
 	extended:
-		Filename: bits/radartank.png
+		Filename: radartank.png
 		Start: 11
 		Length: 8
 		Tick: 120
 	icon:
-		Filename: bits/radartank-icon.png
+		Filename: radartank-icon.png
 
 tank4:
 	idle:
-		Filename: bits/tank4.png
+		Filename: tank4.png
 		Facings: 8
 	extend:
-		Filename: bits/tank4-extend.png
+		Filename: tank4-extend.png
 		Start: 3
 		Length: 3
 		Tick: 180
 	extended:
-		Filename: bits/tank4-extend.png
+		Filename: tank4-extend.png
 		Start: 5
 	icon:
-		Filename: bits/tank4-icon.png
+		Filename: tank4-icon.png
 
 railguntank:
 	idle:
-		Filename: bits/railguntank.png
+		Filename: railguntank.png
 		Facings: 8
 	icon:
-		Filename: bits/railguntank-icon.png
+		Filename: railguntank-icon.png
 
 minelayer:
 	idle:
-		Filename: bits/minelayer.png
+		Filename: minelayer.png
 		Facings: 8
 	deploy:
-		Filename: bits/minelayer.png
+		Filename: minelayer.png
 		Start: 8
 		Length: 5
 		Facings: 8
 		Tick: 40
 	icon:
-		Filename: bits/minelayer-icon.png
+		Filename: minelayer-icon.png
 
 stealthtank:
 	idle:
-		Filename: bits/stealthtank.png
+		Filename: stealthtank.png
 		Facings: 8
 	shoot:
-		Filename: bits/stealthtank.png
+		Filename: stealthtank.png
 		Start: 8
 		Facings: 8
 		Tick: 200
 	icon:
-		Filename: bits/stealthtank-icon.png
+		Filename: stealthtank-icon.png
 
 ecmtank:
 	idle:
-		Filename: bits/ecmtank.png
+		Filename: ecmtank.png
 		Facings: 8
 	icon:
-		Filename: bits/ecmtank-icon.png
+		Filename: ecmtank-icon.png
 
 tank9:
 	idle:
-		Filename: bits/tank9.png
+		Filename: tank9.png
 		Facings: 8
 	icon:
-		Filename: bits/tank9-icon.png
+		Filename: tank9-icon.png
 
 lightningtank:
 	idle:
-		Filename: bits/lightningtank.png
+		Filename: lightningtank.png
 		Facings: 8
 	shoot:
-		Filename: bits/lightningtank.png
+		Filename: lightningtank.png
 		Start: 8
 		Facings: 8
 		Length: 3
 		Tick: 60
 	icon:
-		Filename: bits/lightningtank-icon.png
+		Filename: lightningtank-icon.png
 
 merctank:
 	idle:
-		Filename: bits/merctank.png
+		Filename: merctank.png
 		Facings: 8
-	muzzle: bits/muzzle.png
+	muzzle: muzzle.png
 		Combine:
 			0: #N
 				Filename: muzzle.png
@@ -265,13 +265,13 @@ merctank:
 		Length: 8
 		Facings: 8
 	icon:
-		Filename: bits/merctank-icon.png
+		Filename: merctank-icon.png
 
 dualmerctank:
 	idle:
-		Filename: bits/dualmerctank.png
+		Filename: dualmerctank.png
 		Facings: 8
-	muzzle: bits/muzzle.png
+	muzzle: muzzle.png
 		Combine:
 			0: #N
 				Filename: muzzle.png
@@ -316,61 +316,61 @@ dualmerctank:
 		Length: 8
 		Facings: 8
 	icon:
-		Filename: bits/dualmerctank-icon.png
+		Filename: dualmerctank-icon.png
 
 cvit:
 	idle:
-		Filename: bits/cvit.png
+		Filename: cvit.png
 		Facings: 8
 	icon:
-		Filename: bits/cvit-icon.png
+		Filename: cvit-icon.png
 
 tank14:
 	idle:
-		Filename: bits/tank14.png
+		Filename: tank14.png
 		Facings: 8
 	icon:
-		Filename: bits/tank14-icon.png
+		Filename: tank14-icon.png
 
 hackertank:
 	idle:
-		Filename: bits/hackertank.png
+		Filename: hackertank.png
 		Facings: 8
 	icon:
-		Filename: bits/hackertank-icon.png
+		Filename: hackertank-icon.png
 
 repairtank:
 	idle:
-		Filename: bits/repairtank.png
+		Filename: repairtank.png
 		Facings: 8
 	icon:
-		Filename: bits/repairtank-icon.png
+		Filename: repairtank-icon.png
 
 apc:
 	idle:
-		Filename: bits/apc.png
+		Filename: apc.png
 		Facings: 8
 	icon:
-		Filename: bits/apc-icon.png
+		Filename: apc-icon.png
 
 artillery:
 	idle:
-		Filename: bits/artillery.png
+		Filename: artillery.png
 		Facings: 8
 	muzzle:
-		Filename: bits/artlflsh.png
+		Filename: artlflsh.png
 		Length: 3
 		Facings: 8
 		Tick: 100
 	icon:
-		Filename: bits/artillery-icon.png
+		Filename: artillery-icon.png
 
 dualartillery:
 	idle:
-		Filename: bits/dualartillery.png
+		Filename: dualartillery.png
 		Facings: 8
 	shoot:
-		Filename: bits/dualartillery.png
+		Filename: dualartillery.png
 		Start: 8
 		Facings: 8
 		Tick: 100
@@ -420,18 +420,18 @@ dualartillery:
 		Facings: 8
 		Tick: 80
 	icon:
-		Filename: bits/dualartillery-icon.png
+		Filename: dualartillery-icon.png
 
 mbt2:
 	idle:
-		Filename: bits/mbt2.png
+		Filename: mbt2.png
 		Start: 0
 		Facings: 8
 	turret:
-		Filename: bits/mbt2.png
+		Filename: mbt2.png
 		Start: 8
 		Facings: 8
-	muzzle: bits/muzzle.png
+	muzzle: muzzle.png
 		Combine:
 			0: #N
 				Filename: muzzle.png
@@ -476,173 +476,173 @@ mbt2:
 		Length: 8
 		Facings: 8
 	icon:
-		Filename: bits/mbt2-icon.png
+		Filename: mbt2-icon.png
 
 miner:
 	idle:
-		Filename: bits/miner.png
+		Filename: miner.png
 		Facings: 8
 	icon:
-		Filename: bits/miner-icon.png
+		Filename: miner-icon.png
 
 builder1:
 	idle:
-		Filename: bits/builder1.png
+		Filename: builder1.png
 		Facings: 8
 	icon:
-		Filename: bits/builder1-icon.png
+		Filename: builder1-icon.png
 
 builder2:
 	idle:
-		Filename: bits/builder2.png
+		Filename: builder2.png
 		Facings: 8
 	icon:
-		Filename: bits/builder2-icon.png
+		Filename: builder2-icon.png
 
 builder3:
 	idle:
-		Filename: bits/builder3.png
+		Filename: builder3.png
 		Facings: 8
 	icon:
-		Filename: bits/builder3-icon.png
+		Filename: builder3-icon.png
 
 builder4:
 	idle:
-		Filename: bits/builder4.png
+		Filename: builder4.png
 		Facings: 8
 	icon:
-		Filename: bits/builder4-icon.png
+		Filename: builder4-icon.png
 
 builder5:
 	idle:
-		Filename: bits/builder5.png
+		Filename: builder5.png
 		Facings: 8
 	icon:
-		Filename: bits/builder5-icon.png
+		Filename: builder5-icon.png
 
 missiletank:
 	idle:
-		Filename: bits/missiletank.png
+		Filename: missiletank.png
 		Start: 0
 		Facings: 8
 	turret:
-		Filename: bits/missiletank.png
+		Filename: missiletank.png
 		Start: 8
 		Facings: 8
 	muzzle:
-		Filename: bits/muzzle.png
+		Filename: muzzle.png
 		Length: 8
 		Facings: 8
 	icon:
-		Filename: bits/missiletank-icon.png
+		Filename: missiletank-icon.png
 
 tanker1:
 	idle:
-		Filename: bits/tanker.png
+		Filename: tanker.png
 		Start: 8
 		Facings: 8
 	icon:
-		Filename: bits/tanker-icon.png
+		Filename: tanker-icon.png
 
 tanker2:
 	idle:
-		Filename: bits/tanker.png
+		Filename: tanker.png
 		Start: 0
 		Facings: 8
 	icon:
-		Filename: bits/tanker-icon.png
+		Filename: tanker-icon.png
 
 tanker3:
 	idle:
-		Filename: bits/tanker2.png
+		Filename: tanker2.png
 		Start: 8
 		Facings: 8
 	icon:
-		Filename: bits/tanker2-icon.png
+		Filename: tanker2-icon.png
 
 tanker4:
 	idle:
-		Filename: bits/tanker2.png
+		Filename: tanker2.png
 		Start: 0
 		Facings: 8
 	icon:
-		Filename: bits/tanker2-icon.png
+		Filename: tanker2-icon.png
 
 aatank:
 	idle:
-		Filename: bits/aatank.png
+		Filename: aatank.png
 		Start: 0
 		Facings: 8
 	turret:
-		Filename: bits/aatank.png
+		Filename: aatank.png
 		Start: 8
 		Facings: 8
 	icon:
-		Filename: bits/aatank-icon.png
+		Filename: aatank-icon.png
 
 aatank2:
 	idle:
-		Filename: bits/aatank2.png
+		Filename: aatank2.png
 		Facings: 8
 	turret:
-		Filename: bits/aatank2.png
+		Filename: aatank2.png
 		Start: 8
 		Facings: 8
 	shoot:
-		Filename: bits/aatank2.png
+		Filename: aatank2.png
 		Start: 16
 		Facings: 8
 		Tick: 100
 	icon:
-		Filename: bits/aatank2-icon.png
+		Filename: aatank2-icon.png
 
 scrap1:
 	idle:
-		Filename: bits/objects.png
+		Filename: objects.png
 
 scrap2:
 	idle:
-		Filename: bits/objects.png
+		Filename: objects.png
 		Start: 1
 
 scrap3:
 	idle:
-		Filename: bits/objects.png
+		Filename: objects.png
 		Start: 2
 
 scrap4:
 	idle:
-		Filename: bits/objects.png
+		Filename: objects.png
 		Start: 3
 
 scrap5:
 	idle:
-		Filename: bits/objects.png
+		Filename: objects.png
 		Start: 4
 
 goldball:
 	idle:
-		Filename: bits/goldball.png
+		Filename: goldball.png
 
 energyball:
 	teleport:
-		Filename: bits/teleport.png
+		Filename: teleport.png
 		Length: 10
 	appear:
-		Filename: bits/teleport.png
+		Filename: teleport.png
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 50
 	teleport-large:
-		Filename: bits/teleprt2.png
+		Filename: teleprt2.png
 		Length: 9
 	teleport-group-in:
-		Filename: bits/teleprt3.png
+		Filename: teleprt3.png
 		Frames: 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 40
 	teleport-group-out:
-		Filename: bits/teleprt3.png
+		Filename: teleprt3.png
 		Frames: 8, 7, 6, 5, 4, 3, 2, 1
 		Length: *
 		Tick: 100
@@ -650,22 +650,22 @@ energyball:
 
 watertank:
 	idle:
-		Filename: bits/watertank.png
+		Filename: watertank.png
 		Facings: 8
 	turret:
-		Filename: bits/watertank.png
+		Filename: watertank.png
 		Start: 8
 		Facings: 8
 	icon:
-		Filename: bits/watertank-icon.png
+		Filename: watertank-icon.png
 
 firetruck:
 	idle:
-		Filename: bits/firetruck.png
+		Filename: firetruck.png
 		Facings: 8
 	turret:
-		Filename: bits/firetruck.png
+		Filename: firetruck.png
 		Start: 8
 		Facings: 8
 	icon:
-		Filename: bits/firetruck-icon.png
+		Filename: firetruck-icon.png
