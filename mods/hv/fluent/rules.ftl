@@ -1,10 +1,6 @@
 ## World
 
 ### StartingUnits
-dropdown-starting-units =
-    .label = Starting Units
-    .description = The units that players start the game with
-
 options-starting-units =
     .base-only = Base only
     .base-miner = Base + Miner
