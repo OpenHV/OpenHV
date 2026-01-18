@@ -5,26 +5,6 @@ label-new-map-bg-width = Width:
 label-new-map-bg-height = Height:
 button-new-map-bg-create = Create
 
-label-save-map-panel-author = Author:
-label-save-map-panel-visibility = Visibility:
-dropdownbutton-save-map-panel-visibility-dropdown = Map Visibility
-label-save-map-panel-directory = Directory:
-label-save-map-panel-filename = Filename:
-button-save-map-panel = Save
-label-actor-edit-panel-id = ID
-button-container-ok = OK
-label-tiles-bg-search = Search:
-label-actors-bg-search = Search:
-label-actor-bg-owner = Owner:
-
-button-editor-world-root-undo =
-   .label = Undo
-   .tooltip = Undo last step
-
-button-editor-world-root-redo =
-   .label = Redo
-   .tooltip = Redo last step
-
 dropdownbutton-editor-world-root-overlay-button = Overlays
 
 label-tool-autotiler = Auto Tiler
@@ -35,20 +15,11 @@ label-tool-autotiler-cliff = Cliff
 label-applies-to-area = Applies to
 label-applies-to-whole-map = Applies to whole map
 
-button-select-categories-buttons-all = All
-button-select-categories-buttons-none = None
 
 map-generator-clear = Clear Terrain
 
 ## encyclopedia.yaml
 label-encyclopedia-content-title = Encyclopedia
-
-## gamesave-loading.yaml
-label-gamesave-loading-screen-title = Loading Saved Game
-label-gamesave-loading-screen-desc = Press Escape to cancel loading and return to the main menu
-
-## ingame-menu.yaml
-label-menu-buttons-title = Options
 
 ## ingame-observer.yaml
 button-observer-widgets-options = Options (Esc)
@@ -232,114 +203,21 @@ label-globalchat-connect-panel-global-chat = Global Chat
 label-globalchat-connect-panel-nickname = Nickname:
 button-globalchat-connect-panel = Connect
 
-## lobby-options.yaml
-label-lobby-options-bin-title = Map Options
-
-## lobby-servers.yaml
-image-lobby-servers-bin-password-protected-tooltip = Requires Password
-image-lobby-servers-bin-requires-authentication-tooltip = Requires OpenRA forum account
-dropdownbutton-lobby-servers-bin-filters = Filter Games
-
 ## lobby-servers.yaml, multiplayer-browser.yaml
-label-container-name = Server
-label-container-players = Players
-label-container-location = Location
-label-container-status = Status
 label-notice-container-outdated-version = You are running an outdated version of OpenHV. Download the latest version from www.openhv.net
 label-notice-container-unknown-version = You are running an unrecognized version of OpenHV. Download the latest version from www.openhv.net
 label-notice-container-prerelease-available = A preview of the next OpenHV release is available for testing. Download the pre-release from www.openhv.net
 
 ## lobby.yaml
-dropdownbutton-server-lobby-slots = Slot Admin
-button-skirmish-tabs-players-tab = Players
-button-skirmish-tabs-options-tab = Options
-button-skirmish-tabs-music-tab = Music
-button-multiplayer-tabs-players-tab = Players
-button-multiplayer-tabs-options-tab = Options
-button-multiplayer-tabs-music-tab = Music
-button-multiplayer-tabs-servers-tab = Servers
-button-server-lobby-changemap = Change Map
 button-server-lobby-lobbychat-tab = Game
 button-server-lobby-globalchat-tab = Global
-
-button-lobbychat-chat-mode =
-   .label = Team
-   .tooltip = Toggle chat mode
-
-button-server-lobby-start-game = Start Game
-button-server-lobby-disconnect = Leave Game
 
 ## main-menu.yaml
 label-main-menu-mainmenu-title = OpenHV
 button-main-menu-encyclopedia = Encyclopedia
-button-singleplayer-menu-skirmish = Skirmish
-button-singleplayer-menu-load = Load
-button-extras-menu-replays = Replays
-button-extras-menu-assetbrowser = Asset Browser
 dropdownbutton-news-bg-button = Subspace Transmissions
 label-update-notice-a = You are running an outdated version of OpenHV.
 label-update-notice-b = Download the latest version from www.github.com
 
 ## mainmenu-prompts.yaml
 label-mainmenu-introduction-prompt-title = Incoming subspace transmission
-label-mainmenu-introduction-prompt-desc-a = Greetings Commander! Initialize combat parameters using the options below.
-label-mainmenu-introduction-prompt-desc-b = Additional options can be configured later from the Settings menu.
-
-label-section-header =
-   .label = Profile
-   .label = Input
-   .label = Display
-
-label-player-container = Player Name:
-label-playercolor-container-color = Preferred Color:
-label-mouse-control-container = Control Scheme:
-label-mouse-control-desc-classic-selection = - Select units using the <Left> mouse button
-label-mouse-control-desc-classic-commands = - Command units using the <Left> mouse button
-label-mouse-control-desc-classic-buildigs = - Place structures using the <Left> mouse button
-label-mouse-control-desc-classic-support = - Target support powers using the <Left> mouse button
-label-mouse-control-desc-classic-zoom = - Zoom the battlefield using the <Scroll Wheel>
-label-mouse-control-desc-classic-zoom-modifier = - Zoom the battlefield using <MODIFIER + Scroll Wheel>
-label-mouse-control-desc-classic-scroll-right = - Pan the battlefield using the <Right> mouse button
-label-mouse-control-desc-classic-scroll-middle = - Pan the battlefield using the <Middle> mouse button
-label-mouse-control-desc-classic-edgescroll = or by moving the cursor to the edge of the screen
-label-mouse-control-desc-modern-selection = - Select units using the <Left> mouse button
-label-mouse-control-desc-modern-commands = - Command units using the <Right> mouse button
-label-mouse-control-desc-modern-buildigs = - Place structures using the <Left> mouse button
-label-mouse-control-desc-modern-support = - Target support powers using the <Left> mouse button
-label-mouse-control-desc-modern-zoom = - Zoom the battlefield using the <Scroll Wheel>
-label-mouse-control-desc-modern-zoom-modifier = - Zoom the battlefield using <MODIFIER + Scroll Wheel>
-label-mouse-control-desc-modern-scroll-right = - Pan the battlefield using the <Right> mouse button
-label-mouse-control-desc-modern-scroll-middle = - Pan the battlefield using the <Middle> mouse button
-label-mouse-control-desc-modern-edgescroll = or by moving the cursor to the edge of the screen
-checkbox-edgescroll-container = Screen Edge Panning
-label-battlefield-camera-dropdown-container = Battlefield Camera:
-label-ui-scale-dropdown-container = UI Scale:
-checkbox-cursordouble-container = Increase Cursor Size
-button-mainmenu-introduction-prompt-continue = Continue
-
-## multiplayer-browser.yaml
-image-multiplayer-panel-password-protected-tooltip = Requires Password
-image-multiplayer-panel-requires-authentication-tooltip = Requires OpenRA forum account
-button-selected-server-join = Join
-dropdownbutton-multiplayer-panel-filters = Filter Games
-button-multiplayer-panel-directconnect = Direct IP
-button-multiplayer-panel-create = Create
-
-## settings-advanced.yaml
-label-network-section-header = Advanced
-checkbox-nat-discovery-container = Enable UPnP/NAT-PMP Discovery
-checkbox-fetch-news-container = Fetch Community News
-checkbox-perfgraph-container = Show Performance Graph
-checkbox-check-version-container = Check for Updates
-checkbox-perftext-container = Show Performance Text
-checkbox-sendsysinfo-container = Send System Information
-label-sendsysinfo-checkbox-container-desc = Your Operating System, OpenGL and .NET runtime versions, and language settings will be sent along with an anonymous ID to help prioritize future development.
-label-debug-section-header = Developer
-label-debug-hidden-container-a = Additional developer-specific options can be enabled via the
-label-debug-hidden-container-b = Debug.DisplayDeveloperSettings setting or launch flag
-checkbox-botdebug-container = Show Bot Debug Messages
-checkbox-checkbotsync-container = Check Sync around BotModule Code
-checkbox-luadebug-container = Show Map Debug Messages
-checkbox-checkunsynced-container = Check Sync around Unsynced Code
-checkbox-replay-commands-container = Enable Debug Commands in Replays
-checkbox-perflogging-container = Enable Tick Performance Logging
