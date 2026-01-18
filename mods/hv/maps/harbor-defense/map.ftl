@@ -14,3 +14,11 @@ actor-amplifier =
    .description = Weapon range amplifier.
       Requires power to operate.
    .name = Amplifier
+
+
+## harbor-defense.lua
+save-65-percent-buildings = Save 65 % of the buildings.
+buildings-lost-65-percent = More than 65 % of buildings lost
+harbors-destroyed = Harbors destroyed!
+extractors-destroyed = Extractors destroyed!
+midbuilds-destroyed = Radar and comlink destroyed!

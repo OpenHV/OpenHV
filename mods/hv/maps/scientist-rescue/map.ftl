@@ -6,3 +6,12 @@ briefing = A Yuruki scientist Lucy Chen, working on a new technology of sub-spat
 scientist =
    .name = Scientist Lucy Chen
    .generic-name = Scientist
+
+
+## scientist-rescue.lua
+rescue-scientist = Rescue the scientist.
+kill-guards = Kill the lab guards.
+find-scientist = Find the scientist.
+scientist-escaped = The scientist is out of the lab! Rescue him!
+radar = Radar Trigger
+dropzone-revealed = Dropzone localized: watch out for beacons!

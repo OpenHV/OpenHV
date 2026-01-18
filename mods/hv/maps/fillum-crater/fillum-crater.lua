@@ -39,7 +39,7 @@ Tick = function()
         SynapolReinforcementsGround = Reinforcements.Reinforce(Enemy, GroundReinforcementUnits, { SpawningWaypoint1.Location, DestinationWaypoint1.Location })
         SynapolReinforcementsAir = Reinforcements.Reinforce(Enemy, AirReinforcementUnits, { SpawningWaypoint2.Location, DestinationWaypoint2.Location })
         SynapolReinforcementsNaval = Reinforcements.Reinforce(Enemy, NavalReinforcementUnits, { SpawningWaypoint3.Location, DestinationWaypoint3.Location })
-        Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
+        Media.DisplayMessage(UserInterface.GetFluentMessage("synapol-reinforcements-incoming"), Warning)
     end
 
     if DateTime.GameTime == DateTime.Seconds(120) or DateTime.GameTime % DateTime.Seconds(180) == 0 and DateTime.GameTime > DateTime.Seconds(120) then-- spawn Yuruki reinforcements at 2 mins, and starting from there, every 3 mins

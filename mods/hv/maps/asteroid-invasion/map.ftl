@@ -6,3 +6,12 @@ actor-exit-name = Enemy Exit Waypoint
 actor-dropzone-asteroid-invasion =
    .description = Airborne reinforcement pad.
      Maximum 3 can be built
+
+
+## asteroid-invasion.lua
+destroy-colony = Annihilate the colony basement
+destroy-yuruki-military = Annihilate the military basement
+detected = Synapol forces have detected you
+reinforcements-near-colony = Reinforcements detected near colony basement
+enemy-production-started = Production movements detected at the Yuruki military basement
+enemy-uplink-activated = Yuruki uplink strike command activated

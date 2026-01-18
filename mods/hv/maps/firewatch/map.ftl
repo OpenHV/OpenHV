@@ -14,3 +14,14 @@ actor-firetruck =
 
 actor-firefighter =
    .description = Volunteer firefighter pod on duty.
+
+
+## firewatch.lua
+save-the-forests = Save the forests.
+save-95-percent = Save 95 % of the forest
+save-90-percent = Save 90 % of the forest.
+save-85-percent = Save 85 % of the forest
+save-80-percent = Save 80 % of the forest.
+save-75-percent = Save 75 % of the forest
+save-70-percent = Save 70 % of the forest.
+forest-destroyed = { $percentage } % of the forests destroyed.

@@ -5,3 +5,8 @@ briefing =
 
 actor-entry-name = Enemy Spawn Waypoint
 actor-exit-name = Enemy Exit Waypoint
+
+
+## magma-breach-claim.lua
+claim-land = Eliminate all Synapol signs in the area.
+build-all-towers = Place mining towers at all available resources.

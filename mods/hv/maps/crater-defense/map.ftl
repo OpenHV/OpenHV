@@ -14,3 +14,9 @@ actor-amplifier =
    .description = Weapon range amplifier.
       Requires power to operate.
    .name = Amplifier
+
+
+## crater-defense.lua
+not-too-many-enemies-through-trench = Do not allow too many enemies to exit the trench.
+tolerable-breaches = Tolerable Breaches: { $breaches }
+

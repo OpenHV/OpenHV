@@ -29,7 +29,7 @@ Tick = function()
 				end
 			end)
 		end)
-        Media.DisplayMessage(UserInterface.GetFluentMessage("reinforcements-incoming"), Warning)
+        Media.DisplayMessage(UserInterface.GetFluentMessage("synapol-reinforcements-incoming"), Warning)
     end
 
  	local towers = Human.GetActorsByType("miner2")
