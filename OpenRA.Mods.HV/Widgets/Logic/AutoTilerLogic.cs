@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2025-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -42,8 +42,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			var autoTileButton = widget.Get<ButtonWidget>("AUTOTILE_BUTTON");
 			autoTileButton.OnClick = () =>
 			{
-				var area = editor.DefaultBrush.Selection.Area ?? world.Map.AllCells;
-				editorActionManager.Add(new AutoConnectEditorAction(world.Map, area, cliff));
+				var selection = editor.DefaultBrush.Selection.Area ?? world.Map.AllCells.CellCoords;
+				editorActionManager.Add(new AutoConnectEditorAction(world.Map, selection, cliff));
 			};
 
 			var cliffCheckboxWidget = widget.Get<CheckboxWidget>("CLIFF_CHECKBOX");
@@ -70,11 +70,11 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				return;
 			}
 
-			var selectionSize = selectedRegion.BottomRight - selectedRegion.TopLeft + new CPos(1, 1);
+			var selectionSize = selectedRegion.Value.BottomRight - selectedRegion.Value.TopLeft + new CPos(1, 1);
 
 			var areaSelectionLabel =
 				$"{FluentProvider.GetMessage(AppliesToArea)} ({DimensionsAsString(selectionSize)}) " +
-				$"{PositionAsString(selectedRegion.TopLeft)} : {PositionAsString(selectedRegion.BottomRight)}";
+				$"{PositionAsString(selectedRegion.Value.TopLeft)} : {PositionAsString(selectedRegion.Value.BottomRight)}";
 
 			AreaSelectionLabel.GetText = () => areaSelectionLabel;
 		}

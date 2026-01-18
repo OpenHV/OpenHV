@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -73,12 +73,12 @@ namespace OpenRA.Mods.HV.Traits
 		public string Text { get; }
 
 		readonly Map map;
-		readonly CellRegion selection;
+		readonly CellCoordsRegion? selection;
 		readonly bool cliff;
 		readonly ITemplatedTerrainInfo terrainInfo;
 		readonly Queue<UndoTile> undoTiles = new();
 
-		public AutoConnectEditorAction(Map map, CellRegion selection, bool cliff)
+		public AutoConnectEditorAction(Map map, CellCoordsRegion? selection, bool cliff)
 		{
 			this.map = map;
 			this.selection = selection;
