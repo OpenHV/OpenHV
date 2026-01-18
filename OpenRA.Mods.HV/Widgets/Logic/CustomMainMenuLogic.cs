@@ -210,6 +210,9 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			Game.OnRemoteDirectConnect += OnRemoteDirectConnect;
 
+			var localisation = modData.GetOrCreate<Localisation>();
+			localisation.SwitchLanguage();
+
 			// Check for updates in the background
 			var webServices = modData.GetOrCreate<GitHubWebServices>();
 			if (Game.Settings.Debug.CheckVersion)
