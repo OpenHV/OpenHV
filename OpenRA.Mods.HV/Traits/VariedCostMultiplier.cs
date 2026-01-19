@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly ImmutableArray<string> Prerequisites = [];
 
 		[Desc("Production queues that this cost will apply to.")]
-		public readonly FrozenSet<string> Queues = default;
+		public readonly FrozenSet<string> Queues = FrozenSet<string>.Empty;
 
 		[Desc("Set this if items should get the same random pricing.")]
 		public readonly string Group = null;

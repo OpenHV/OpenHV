@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly FrozenSet<string> ExcludePalettes = new HashSet<string> { "cursor", "chrome", "colorpicker", "fog", "shroud", "alpha" }.ToFrozenSet();
 
 		[Desc("Do not modify graphics that start with these letters.")]
-		public readonly FrozenSet<string> ExcludePalettePrefixes = default;
+		public readonly FrozenSet<string> ExcludePalettePrefixes = FrozenSet<string>.Empty;
 
 		public readonly float Red = 1f;
 		public readonly float Green = 1f;

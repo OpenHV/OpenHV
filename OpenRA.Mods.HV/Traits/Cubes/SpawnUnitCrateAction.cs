@@ -28,7 +28,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly ImmutableArray<string> Units = [];
 
 		[Desc("Factions that are allowed to trigger this action.")]
-		public readonly FrozenSet<string> ValidFactions = default;
+		public readonly FrozenSet<string> ValidFactions = FrozenSet<string>.Empty;
 
 		[Desc("Override the owner of the newly spawned unit: e.g. Creeps or Neutral")]
 		public readonly string Owner = null;

@@ -27,14 +27,14 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Terrain types that can be targeted for deployment.")]
-		public readonly FrozenSet<string> TerrainTypes = default;
+		public readonly FrozenSet<string> TerrainTypes = FrozenSet<string>.Empty;
 
 		[VoiceReference]
 		[Desc("Voice to use when deploying into a tower.")]
 		public readonly string Voice = "Action";
 
 		[Desc("Defines to which players the target lines are shown.")]
-		public readonly FrozenDictionary<string, Color> Colors = default;
+		public readonly FrozenDictionary<string, Color> Colors = FrozenDictionary<string, Color>.Empty;
 
 		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
 	}

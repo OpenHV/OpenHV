@@ -60,11 +60,11 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Which tile ID to replace with which munched variant")]
-		public readonly FrozenDictionary<ushort, ushort> CrushedTiles = default;
+		public readonly FrozenDictionary<ushort, ushort> CrushedTiles = FrozenDictionary<ushort, ushort>.Empty;
 
 		[FieldLoader.Require]
 		[Desc("Which tile ID to replace with which scorched variant")]
-		public readonly FrozenDictionary<ushort, ushort> BurnedTiles = default;
+		public readonly FrozenDictionary<ushort, ushort> BurnedTiles = FrozenDictionary<ushort, ushort>.Empty;
 
 		public void RulesetLoaded(Ruleset rules, ActorInfo actorInfo)
 		{

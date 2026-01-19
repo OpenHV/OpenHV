@@ -26,7 +26,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Duration = 0;
 
 		[Desc("Allowed to emerge on.")]
-		public readonly FrozenSet<string> TerrainTypes = default;
+		public readonly FrozenSet<string> TerrainTypes = FrozenSet<string>.Empty;
 
 		[Desc($"Define actors that can collect crates by setting this into the {nameof(LocomotorInfo.Crushes)} field from the {nameof(Locomotor)} trait.")]
 		public readonly string CrushClass = "crate";

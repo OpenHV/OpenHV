@@ -31,7 +31,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly string MinerActorType = null;
 
 		[Desc("Apply only around these or all if not set.")]
-		public readonly FrozenSet<string> ResourceTypes = default;
+		public readonly FrozenSet<string> ResourceTypes = FrozenSet<string>.Empty;
 
 		public override object Create(ActorInitializer init) { return new NoBuildZone(init.Self, this); }
 	}

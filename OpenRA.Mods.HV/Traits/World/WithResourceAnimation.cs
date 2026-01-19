@@ -28,7 +28,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Resource types to animate.")]
-		public readonly FrozenSet<string> Types = null;
+		public readonly FrozenSet<string> Types = default;
 
 		[Desc("The percentage of resource cells to play the animation on.", "Use two values to randomize between them.")]
 		public readonly ImmutableArray<int> Ratio = [1, 10];

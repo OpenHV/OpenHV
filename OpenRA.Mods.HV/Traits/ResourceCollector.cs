@@ -41,7 +41,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly ImmutableArray<string> DeliveryVehicleType = [];
 
 		[Desc("How much can be mined in total before depletion.")]
-		public readonly FrozenDictionary<string, int> Deposits = default;
+		public readonly FrozenDictionary<string, int> Deposits = FrozenDictionary<string, int>.Empty;
 
 		[Desc("Reduce payout by this percentage when resources are depleted.")]
 		public readonly int DepletionModifier = 10;
@@ -56,7 +56,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly PlayerRelationship DisplayRelationships = PlayerRelationship.Ally;
 
 		[Desc("Defines to which players the bar is to be shown.")]
-		public readonly FrozenDictionary<string, Color> Colors = default;
+		public readonly FrozenDictionary<string, Color> Colors = FrozenDictionary<string, Color>.Empty;
 
 		[NotificationReference("Speech")]
 		[Desc("The audio notification type to play when the resources are exhausted.")]

@@ -31,7 +31,7 @@ namespace OpenRA.Mods.HV.Traits
 		public readonly int Probability = 100;
 
 		[Desc("Allowed to spawn on.")]
-		public readonly FrozenSet<string> TerrainTypes = default;
+		public readonly FrozenSet<string> TerrainTypes = FrozenSet<string>.Empty;
 
 		[Desc("Map player to use when 'InternalName' is defined on 'OwnerType'.")]
 		public readonly string InternalOwner = "Neutral";

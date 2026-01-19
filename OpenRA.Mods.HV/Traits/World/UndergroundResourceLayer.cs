@@ -36,7 +36,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			[Desc("Terrain types that this resource can spawn on.", "Use * for any.")]
-			public readonly FrozenSet<string> AllowedTerrainTypes = null;
+			public readonly FrozenSet<string> AllowedTerrainTypes = default;
 
 			[Desc("Maximum number of resource units allowed in a single cell.")]
 			public readonly byte MaxDensity = 10;
