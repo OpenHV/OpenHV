@@ -507,6 +507,7 @@ FERRY:
 		MaxWeight: 10
 		AfterUnloadDelay: 40
 	WithCargoPipsDecoration:
+		PipCount: 5
 		Position: BottomLeft
 		Margin: 1, -1
 		RequiresSelection: true
