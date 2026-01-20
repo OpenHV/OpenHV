@@ -171,7 +171,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (!power.Validate(world, cell))
 				yield break;
 
-			if (mi.Button != ActionButton)
+			if (mi.Button == ActionButton && mi.Event == MouseInputEvent.Down)
 				yield return new Order(OrderKey, manager.Self, Target.FromCell(world, cell), false) { SuppressVisualFeedback = true };
 		}
 
