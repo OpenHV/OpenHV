@@ -31,12 +31,12 @@ MOD_SEARCH_PATHS = "$(shell realpath "$0")/mods,./mods"
 
 MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
-LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua' 2> /dev/null)
+LUA_FILES = $(shell find mods/hv/maps/* -iname '*.lua' 2> /dev/null)
 MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
-SPRITE_FILES ?= $(shell find mods/*/bits/* -maxdepth 1 -iname '*.png' 2> /dev/null)
-PREVIEW_FILES = $(shell find mods/*/maps/* -maxdepth 1 -iname 'map.png' 2> /dev/null)
+SPRITE_FILES ?= $(shell find mods/hv/bits/sprites/* -maxdepth 1 -iname '*.png' 2> /dev/null)
+PREVIEW_FILES = $(shell find mods/hv/maps/* -maxdepth 1 -iname 'map.png' 2> /dev/null)
 MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
-OGG_FILES := $(shell find mods/*/bits/audio/* -maxdepth 2 -iname '*.ogg' 2> /dev/null | sed 's/ /\\ /g')
+OGG_FILES := $(shell find mods/hv/bits/audio/* -maxdepth 2 -iname '*.ogg' 2> /dev/null | sed 's/ /\\ /g')
 
 DOTNET = dotnet
 RUNTIME ?= net6
