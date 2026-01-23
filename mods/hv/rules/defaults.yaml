@@ -580,7 +580,7 @@
 	Armor:
 		Type: Steel
 	Health:
-		HP: 40000
+		HP: 60000
 	Building:
 		Footprint: x
 	ActorPreviewPlaceBuildingPreview:
@@ -1297,7 +1297,7 @@
 	Valued:
 		Cost: 300
 	Health:
-		HP: 75000
+		HP: 112500
 	Armor:
 		Type: Concrete
 	LineBuildNode:
