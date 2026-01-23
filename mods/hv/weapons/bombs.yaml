@@ -18,7 +18,7 @@ Bomb:
 	Warhead@Damage: SpreadDamage
 		Spread: 512
 		Falloff: 100, 50, 25, 12, 6, 3, 0
-		Damage: 10000
+		Damage: 15000
 		Versus:
 			None: 90
 			Steel: 75
@@ -28,7 +28,7 @@ Bomb:
 	Warhead@Incendiary: TreeDamage
 		Spread: 512
 		Falloff: 100, 50, 25, 12, 6, 3, 0
-		Damage: 10000
+		Damage: 15000
 		Percentage: 75
 	Warhead@GroundEffect: CreateEffect
 		Explosions: medium
