@@ -175,7 +175,7 @@ Actors:
 	Actor36: icicle4
 		Owner: Neutral
 		Location: 60,39
-	Actor37: flyingmonster
+	Actor37: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 57,39

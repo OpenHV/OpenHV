@@ -2486,11 +2486,11 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 19,16
-	Actor900: flyingmonster
+	Actor900: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 151,157
-	Actor901: flyingmonster
+	Actor901: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 38,37

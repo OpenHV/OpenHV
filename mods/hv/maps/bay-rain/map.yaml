@@ -337,15 +337,15 @@ Actors:
 	Actor113: stnrock4
 		Owner: Neutral
 		Location: 22,65
-	Actor114: flyingmonster
+	Actor114: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 120,50
-	Actor115: flyingmonster
+	Actor115: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 38,116
-	Actor116: flyingmonster
+	Actor116: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 130,146

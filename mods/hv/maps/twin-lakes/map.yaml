@@ -503,11 +503,11 @@ Actors:
 	Actor208: mpspawn
 		Owner: Neutral
 		Location: 39,146
-	Actor210: flyingmonster
+	Actor210: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 54,40
-	Actor211: flyingmonster
+	Actor211: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 126,133

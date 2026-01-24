@@ -313,7 +313,9 @@ actor-gull-name = Seagulls
 actor-gull2-name = Seagull
 actor-seamonster-name = Sea Monster
 actor-worm-generic-name = Worm
-actor-flyingmonster-name = Flying monster
+actor-bigbird =
+   .name = Big Bird
+   .generic-name = Flying monster
 
 ## Bonus
 actor-goldball =

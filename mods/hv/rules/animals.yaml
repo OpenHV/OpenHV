@@ -159,14 +159,15 @@ WORM:
 		VoiceSet: WormVoice
 	DeathSounds:
 
-FLYINGMONSTER:
+BIGBIRD:
 	Inherits: ^Plane
 	Valued:
 		Cost: 10
 	Health:
 		HP: 50000
 	Tooltip:
-		Name: actor-flyingmonster-name
+		Name: actor-bigbird.name
+		GenericName: actor-bigbird.generic-name
 	Aircraft:
 		CruiseAltitude: 1c0
 		Repulsable: false

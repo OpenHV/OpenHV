@@ -327,19 +327,19 @@ Actors:
 	Actor110: resourcelight
 		Owner: Neutral
 		Location: 57,77
-	Actor119: flyingmonster
+	Actor119: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 107,86
-	Actor120: flyingmonster
+	Actor120: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 91,86
-	Actor121: flyingmonster
+	Actor121: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 6,86
-	Actor122: flyingmonster
+	Actor122: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 22,86

@@ -100,9 +100,9 @@ worm:
 	icon:
 		Filename: icon.png
 
-flyingmonster:
+bigbird:
 	idle:
-		Filename: flyingmonster.png
+		Filename: bigbird.png
 		Length: 4
 		Facings: 8
 		Tick: 200

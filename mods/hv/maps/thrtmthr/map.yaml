@@ -683,19 +683,19 @@ Actors:
 	Actor260: icicle4
 		Owner: Neutral
 		Location: 4,4
-	Actor263: flyingmonster
+	Actor263: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 108,18
-	Actor266: flyingmonster
+	Actor266: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 21,111
-	Actor267: flyingmonster
+	Actor267: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 9,102
-	Actor268: flyingmonster
+	Actor268: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 120,27

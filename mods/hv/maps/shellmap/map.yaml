@@ -3853,11 +3853,11 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 27,127
-	Actor1547: flyingmonster
+	Actor1547: bigbird
 		Owner: Neutral
 		Location: 12,63
 		Facing: 658
-	Actor1548: flyingmonster
+	Actor1548: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 124,4
@@ -3916,7 +3916,7 @@ Actors:
 	Actor1526: swamp_light
 		Owner: Neutral
 		Location: 9,35
-	Actor1517: flyingmonster
+	Actor1517: bigbird
 		Owner: Neutral
 		Location: 110,67
 		Facing: 499

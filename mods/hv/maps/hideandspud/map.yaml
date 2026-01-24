@@ -298,35 +298,35 @@ Actors:
 	Actor121: baselight
 		Owner: Neutral
 		Location: 129,129
-	Actor120: flyingmonster
+	Actor120: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 60,64
-	Actor122: flyingmonster
+	Actor122: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 69,65
-	Actor125: flyingmonster
+	Actor125: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 127,127
-	Actor126: flyingmonster
+	Actor126: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 2,127
-	Actor127: flyingmonster
+	Actor127: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 2,2
-	Actor128: flyingmonster
+	Actor128: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 127,2
-	Actor129: flyingmonster
+	Actor129: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 42,42
-	Actor130: flyingmonster
+	Actor130: bigbird
 		Owner: Neutral
 		Facing: 384
 		Location: 87,87
