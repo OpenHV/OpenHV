@@ -23,7 +23,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, crater-defense.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-crater-defense
 	-MapStartingLocations:
 	-CubeSpawner:
 	StartingUnits@BaseYI:

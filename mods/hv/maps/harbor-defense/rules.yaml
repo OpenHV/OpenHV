@@ -23,7 +23,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, harbor-defense.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-harbor-defense
 	-MapStartingLocations:
 	-CubeSpawner:
 	StartingUnits@BaseYI:

@@ -34,7 +34,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, magma-breach-claim.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-magma-breach
 
 Entry:
 	Interactable:

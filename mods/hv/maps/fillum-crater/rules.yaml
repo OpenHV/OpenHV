@@ -34,7 +34,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, fillum-crater.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-fillum-crater
 
 Entry:
 	Interactable:

@@ -73,7 +73,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, ice-river.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-ice-river
 
 BARRIER:
 	Buildable:

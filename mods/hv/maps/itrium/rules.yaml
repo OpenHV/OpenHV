@@ -8,7 +8,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, itrium.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-itrium
 
 BASE:
 	-Sellable:

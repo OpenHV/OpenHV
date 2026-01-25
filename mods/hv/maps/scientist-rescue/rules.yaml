@@ -20,7 +20,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, scientist-rescue.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-scientist-rescue
 
 Entry:
 	Interactable:

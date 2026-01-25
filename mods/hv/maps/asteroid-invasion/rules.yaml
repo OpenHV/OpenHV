@@ -42,7 +42,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, asteroid-invasion.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-asteroid-invasion
 
 Entry:
 	Interactable:

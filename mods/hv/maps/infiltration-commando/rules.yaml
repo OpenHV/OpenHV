@@ -36,7 +36,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, infiltration-commando.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-infiltration-commando
 	ScriptLobbyDropdown@Difficulty:
 		Locked: false
 		Visible: true

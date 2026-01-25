@@ -98,7 +98,7 @@ World:
 	LuaScript:
 		Scripts: common|scripts/utils.lua, hv|scripts/campaign.lua, firewatch.lua
 	MissionData:
-		Briefing: briefing
+		Briefing: briefing-firewatch
 	ForestLayer:
 		FlameOwner: Flames
 		Damage: 25
