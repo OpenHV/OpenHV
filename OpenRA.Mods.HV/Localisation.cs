@@ -20,7 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV
 {
-	[YamlNode("Localisation", shared: true)]
+	[YamlNode("Localisation", shared: false)]
 	public class LocalisationSettings : SettingsModule
 	{
 		public static CultureInfo DefaultLocale = CultureInfo.GetCultureInfo("en");
