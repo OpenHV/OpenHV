@@ -26,20 +26,6 @@ button-observer-widgets-options = Options (Esc)
 label-economy-stats-miners-header = Miners
 
 ## ingame-player.yaml
-supportpowers-support-powers-palette =
-   .ready = READY
-   .hold = ON HOLD
-
-button-command-bar-attack-move =
-   .tooltip = Attack Move
-   .tooltipdesc = Selected units will move to the desired location
-    and attack any enemies they encounter en route.
-
-    Hold <(Ctrl)> while targeting to order an Assault Move
-    that attacks any units or structures encountered en route.
-
-    Left-click icon then right-click on target location.
-
 button-command-bar-force-move =
    .tooltip = Force Move
    .tooltipdesc = Selected units will move to the desired location
@@ -61,69 +47,16 @@ button-command-bar-force-attack =
     Left-click icon then right-click on target.
     Hold <(Ctrl)> to activate temporarily while commanding units.
 
-button-command-bar-guard =
-   .tooltip = Guard
-   .tooltipdesc = Selected units will follow the targeted unit.
-
-    Left-click icon then right-click on target unit.
-
 button-command-bar-deploy =
    .tooltip = Deploy
    .tooltipdesc = Selected units will perform their default deploy activity
      - Scouts will start scanning
      - Transports will unload their passengers
-     - Minelayers will deploy a mine
+     - Minelayers will place a mine
      - Aircraft will return to base
 
     Acts immediately on selected units.
 
-button-command-bar-scatter =
-   .tooltip = Scatter
-   .tooltipdesc = Selected units will stop their current activity
-    and move to a nearby location.
-
-    Acts immediately on selected units.
-
-button-command-bar-stop =
-   .tooltip = Stop
-   .tooltipdesc = Selected units will stop their current activity.
-
-    Acts immediately on selected units.
-
-button-command-bar-queue-orders =
-   .tooltip = Waypoint Mode
-   .tooltipdesc = Use Waypoint Mode to give multiple linking commands
-    to the selected units. Units will execute the commands
-    immediately upon receiving them.
-
-    Left-click icon then give commands in the game world.
-    Hold <(Shift)> to activate temporarily while commanding units.
-
-button-stance-bar-attackanything =
-   .tooltip = Attack Anything Stance
-   .tooltipdesc = Set the selected units to Attack Anything stance:
-     - Units will attack enemy units and structures on sight
-     - Units will pursue attackers across the battlefield
-
-button-stance-bar-defend =
-   .tooltip = Defend Stance
-   .tooltipdesc = Set the selected units to Defend stance:
-     - Units will attack enemy units on sight
-     - Units will not move or pursue enemies
-
-button-stance-bar-returnfire =
-   .tooltip = Return Fire Stance
-   .tooltipdesc = Set the selected units to Return Fire stance:
-     - Units will retaliate against enemies that attack them
-     - Units will not move or pursue enemies
-
-button-stance-bar-holdfire =
-   .tooltip = Hold Fire Stance
-   .tooltipdesc = Set the selected units to Hold Fire stance:
-     - Units will not fire upon enemies
-     - Units will not move or pursue enemies
-
-label-mute-indicator = Audio Muted
 button-top-buttons-beacon-tooltip = Place Beacon
 button-top-buttons-sell-tooltip = Sell
 button-top-buttons-power-tooltip = Power Down
@@ -133,10 +66,6 @@ button-top-buttons-debug-tooltip = Debug Menu
 labelwithtooltip-player-widgets-cash = <0>
 labelwithtooltip-player-widgets-power = <0>
 
-productionpalette-sidebar-production-palette =
-   .ready = READY
-   .hold = ON HOLD
-
 button-production-types-building-tooltip = Buildings
 button-production-types-defense-tooltip = Defense
 button-production-types-pod-tooltip = Pods
@@ -145,8 +74,6 @@ button-production-types-heavy-vehicle-tooltip = Tank
 button-production-types-aircraft-tooltip = Aircraft
 button-production-types-naval-tooltip = Naval
 button-production-types-trade-tooltip = Trade
-button-production-types-scroll-up-tooltip = Scroll up
-button-production-types-scroll-down-tooltip = Scroll down
 
 ## lobby-globalchat.yaml, multiplayer-globalchat.yaml
 button-globalchat-main-panel-disconnect = Leave Chat

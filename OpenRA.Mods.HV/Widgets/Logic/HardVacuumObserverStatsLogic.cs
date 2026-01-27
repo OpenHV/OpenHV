@@ -85,8 +85,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		readonly ScrollItemWidget combatPlayerTemplate;
 		readonly ContainerWidget incomeGraphContainer;
 		readonly ContainerWidget armyValueGraphContainer;
-		readonly LineGraphWidget incomeGraph;
-		readonly LineGraphWidget armyValueGraph;
+		readonly ScrollableLineGraphWidget incomeGraph;
+		readonly ScrollableLineGraphWidget armyValueGraph;
 		readonly ScrollItemWidget teamTemplate;
 		readonly Player[] players;
 		readonly IGrouping<int, Player>[] teams;
@@ -149,10 +149,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			combatPlayerTemplate = playerStatsPanel.Get<ScrollItemWidget>("COMBAT_PLAYER_TEMPLATE");
 
 			incomeGraphContainer = widget.Get<ContainerWidget>("INCOME_GRAPH_CONTAINER");
-			incomeGraph = incomeGraphContainer.Get<LineGraphWidget>("INCOME_GRAPH");
+			incomeGraph = incomeGraphContainer.Get<ScrollableLineGraphWidget>("INCOME_GRAPH");
 
 			armyValueGraphContainer = widget.Get<ContainerWidget>("ARMY_VALUE_GRAPH_CONTAINER");
-			armyValueGraph = armyValueGraphContainer.Get<LineGraphWidget>("ARMY_VALUE_GRAPH");
+			armyValueGraph = armyValueGraphContainer.Get<ScrollableLineGraphWidget>("ARMY_VALUE_GRAPH");
 
 			teamTemplate = playerStatsPanel.Get<ScrollItemWidget>("TEAM_TEMPLATE");
 
@@ -262,7 +262,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			incomeGraphContainer.Visible = true;
 
 			incomeGraph.GetSeries = () =>
-				players.Select(p => new LineGraphSeries(
+				players.Select(p => new ScrollableLineGraphSeries(
 					p.ResolvedPlayerName,
 					p.Color,
 					(p.PlayerActor.TraitOrDefault<PlayerStatistics>() ?? new PlayerStatistics(p.PlayerActor)).IncomeSamples.Select(s => (float)s)));
@@ -274,7 +274,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			armyValueGraphContainer.Visible = true;
 
 			armyValueGraph.GetSeries = () =>
-				players.Select(p => new LineGraphSeries(
+				players.Select(p => new ScrollableLineGraphSeries(
 					p.ResolvedPlayerName,
 					p.Color,
 					(p.PlayerActor.TraitOrDefault<PlayerStatistics>() ?? new PlayerStatistics(p.PlayerActor)).ArmySamples.Select(s => (float)s)));
@@ -440,31 +440,30 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			SetupPlayerColor(player, template, playerColor, playerGradient);
 
-			var res = player.PlayerActor.Trait<PlayerResources>();
 			var stats = player.PlayerActor.TraitOrDefault<PlayerStatistics>();
 			if (stats == null)
 				return template;
 
+			var playerResources = player.PlayerActor.Trait<PlayerResources>();
 			var cashText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
-			template.Get<LabelWidget>("CASH").GetText = () => cashText.Update(res.Cash + res.Resources);
+			template.Get<LabelWidget>("CASH").GetText = () => cashText.Update(playerResources.GetCashAndResources());
 
 			var incomeText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
 			template.Get<LabelWidget>("INCOME").GetText = () => incomeText.Update(stats.DisplayIncome);
 
 			var earnedText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
-			template.Get<LabelWidget>("EARNED").GetText = () => earnedText.Update(res.Earned);
+			template.Get<LabelWidget>("EARNED").GetText = () => earnedText.Update(playerResources.Earned);
 
 			var spentText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
-			template.Get<LabelWidget>("SPENT").GetText = () => spentText.Update(res.Spent);
+			template.Get<LabelWidget>("SPENT").GetText = () => spentText.Update(playerResources.Spent);
 
-			var assetsText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
-			var assets = template.Get<LabelWidget>("ASSETS");
-			assets.GetText = () => assetsText.Update(world.ActorsHavingTrait<Valued>()
-				.Where(a => a.Owner == player && !a.IsDead)
-				.Sum(a => a.Info.TraitInfos<ValuedInfo>().First().Cost));
+			var assetsText = new CachedTransform<int, string>(i => "$" + i);
+			template.Get<LabelWidget>("ASSETS").GetText = () => assetsText.Update(stats.AssetsValue);
 
 			var miners = template.Get<LabelWidget>("MINERS");
-			miners.GetText = () => world.ActorsHavingTrait<ResourceCollector>().Count(a => a.Owner == player && !a.IsDead).ToString(NumberFormatInfo.CurrentInfo);
+			miners.GetText = () => world.ActorsHavingTrait<ResourceCollector>()
+				.Count(a => a.Owner == player && !a.IsDead)
+				.ToString(NumberFormatInfo.CurrentInfo);
 
 			return template;
 		}
@@ -484,17 +483,17 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			SetupPlayerColor(player, template, playerColor, playerGradient);
 
-			var res = player.PlayerActor.Trait<PlayerResources>();
+			var playerResources = player.PlayerActor.Trait<PlayerResources>();
 			var cashText = new CachedTransform<int, string>(i => i.ToString("C0", englishDollar));
-			template.Get<LabelWidget>("CASH").GetText = () => cashText.Update(res.Cash + res.Resources);
+			template.Get<LabelWidget>("CASH").GetText = () => cashText.Update(playerResources.Cash + playerResources.Resources);
 
-			var powerRes = player.PlayerActor.TraitOrDefault<PowerManager>();
-			if (powerRes != null)
+			var powerManager = player.PlayerActor.TraitOrDefault<PowerManager>();
+			if (powerManager != null)
 			{
-				var power = template.Get<LabelWidget>("POWER");
+				var powerLabel = template.Get<LabelWidget>("POWER");
 				var powerText = new CachedTransform<(int PowerDrained, int PowerProvided), string>(p => p.PowerDrained + "/" + p.PowerProvided);
-				power.GetText = () => powerText.Update((powerRes.PowerDrained, powerRes.PowerProvided));
-				power.GetColor = () => GetPowerColor(powerRes.PowerState);
+				powerLabel.GetText = () => powerText.Update((powerManager.PowerDrained, powerManager.PowerProvided));
+				powerLabel.GetColor = () => GetPowerColor(powerManager.PowerState);
 			}
 
 			var stats = player.PlayerActor.TraitOrDefault<PlayerStatistics>();
@@ -541,10 +540,27 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		{
 			return ScrollItemWidget.Setup(template, () => false, () =>
 			{
-				var playerBase = world.ActorsHavingTrait<BaseBuilding>().FirstOrDefault(a => !a.IsDead && a.Owner == player);
-				if (playerBase != null)
-					worldRenderer.Viewport.Center(playerBase.CenterPosition);
+				var targetActor = FindPlayerBaseActor(player);
+				if (targetActor != null)
+					worldRenderer.Viewport.Center(targetActor.CenterPosition);
 			});
+		}
+
+		Actor FindPlayerBaseActor(Player player)
+		{
+			// First priority: main base
+			var primaryBase = world.ActorsHavingTrait<BaseBuilding>()
+				.FirstOrDefault(a => a.Owner == player);
+
+			if (primaryBase != null)
+				return primaryBase;
+
+			// Fallback: Any building closest to viewport
+			var building = world.ActorsHavingTrait<Building>()
+				.OrderBy(a => (worldRenderer.Viewport.CenterPosition - a.CenterPosition).LengthSquared)
+				.FirstOrDefault(a => a.Owner == player && a.Info.HasTraitInfo<SelectableInfo>());
+
+			return building;
 		}
 
 		void AdjustStatisticsPanel(Widget itemTemplate)

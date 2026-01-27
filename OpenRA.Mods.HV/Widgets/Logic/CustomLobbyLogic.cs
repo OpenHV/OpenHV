@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2023-2025 The OpenHV Developers (see AUTHORS)
+ * Copyright 2023-2026 The OpenHV Developers (see AUTHORS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -266,7 +266,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 							return;
 
 						lastGeneratedMap = args;
-						orderManager.IssueOrder(Order.FromTargetString("GenerateMap", args.Serialize(), true));
+						orderManager.IssueOrder(Order.FromTargetString("GenerateMap", args.Serialize().WriteToString(), true));
 						orderManager.IssueOrder(Order.Command("map " + args.Uid));
 						Game.Settings.Server.Map = args.Uid;
 						Game.Settings.Save();
@@ -275,6 +275,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 					// Check for updated maps, if the user has edited a map we'll preselect it for them
 					modData.MapCache.UpdateMaps();
 
+					var enableMapGenerator = Game.IsHost && orderManager.LobbyInfo.GlobalSettings.EnableMapGeneration;
 					Ui.OpenWindow("MAPCHOOSER_PANEL", new WidgetArgs()
 					{
 						{ "initialMap", modData.MapCache.PickLastModifiedMap(MapVisibility.Lobby) ?? map.Uid },
@@ -283,7 +284,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 						{ "initialTab", MapClassification.System },
 						{ "onExit", modData.MapCache.UpdateMaps },
 						{ "onSelect", Game.IsHost ? onSelect : null },
-						{ "onSelectGenerated", Game.IsHost ? onSelectGenerated : null },
+						{ "onSelectGenerated", enableMapGenerator ? onSelectGenerated : null },
 						{ "filter", MapVisibility.Lobby },
 					});
 				};
@@ -732,6 +733,8 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 				return;
 
 			map = modData.MapCache[uid];
+			if (map.GenerationArgs != null)
+				lastGeneratedMap = map.GenerationArgs;
 
 			// Tell the server that we have the map
 			mapAvailable = map.Status == MapStatus.Available;

@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2025-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -247,6 +247,26 @@ namespace OpenRA.Mods.Common.Traits
 			terraformer.BakeMap();
 
 			return map;
+		}
+
+		public bool TryGenerateMetadata(ModData modData, MapGenerationArgs args, out MapPlayers players, out Dictionary<string, MiniYaml> ruleDefinitions)
+		{
+			try
+			{
+				var playerCount = FieldLoader.GetValue<int>("Players", args.Settings.NodeWithKey("Players").Value.Value);
+
+				// Generated maps use the default ruleset
+				ruleDefinitions = [];
+				players = new MapPlayers(modData.DefaultRules, playerCount);
+
+				return true;
+			}
+			catch
+			{
+				players = null;
+				ruleDefinitions = null;
+				return false;
+			}
 		}
 
 		public override object Create(ActorInitializer init)
