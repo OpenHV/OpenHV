@@ -6,7 +6,7 @@ RIFLEMAN:
 	Buildable:
 		Queue: Pod
 		Description: actor-rifleman.description
-		Prerequisites: ~module
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-rifleman.encyclopedia
@@ -67,12 +67,20 @@ ROCKETEER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	Armament@Primary:
-		Weapon: LightPodRocket
+		Weapon: LightPodRocketGround
 		MuzzleSequence: muzzle
 		LocalOffset: 50,0,0
-	Armament@Garrisoned:
+	Armament@Secondary:
+		Weapon: LightPodRocketAir
+		MuzzleSequence: muzzle
+		LocalOffset: 50,0,0
+	Armament@Garrisoned@Primary:
 		Name: garrisoned
-		Weapon: RapidPodRocket
+		Weapon: RapidPodRocketGround
+		MuzzleSequence: muzzle
+	Armament@Garrisoned@Secondary:
+		Name: garrisoned
+		Weapon: RapidPodRocketAir
 		MuzzleSequence: muzzle
 	AttackFrontal:
 		PauseOnCondition: jammed
@@ -86,8 +94,8 @@ MORTAR:
 	Buildable:
 		Queue: Pod
 		Description: actor-mortar.description
-		Prerequisites: ~module.sc, factory
-		BuildPaletteOrder: 50
+		Prerequisites: ~module.sc
+		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-mortar.encyclopedia
 		Order: 35
@@ -127,24 +135,23 @@ SNIPER:
 	Buildable:
 		Queue: Pod
 		Description: actor-sniper.description
-		Prerequisites: ~module.yi, radar
-		BuildPaletteOrder: 50
+		Prerequisites: ~module.yi
+		BuildPaletteOrder: 10
 	Encyclopedia:
 		Description: actor-sniper.encyclopedia
 		Order: 30
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1000
+		Cost: 600
 	Tooltip:
 		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Health:
-		HP: 15000
 	Mobile:
 		Speed: 70
-		Locomotor: pod
+	Health:
+		HP: 15750
 	RevealsShroud:
 		Range: 10c0
 		MinRange: 5c0
@@ -166,12 +173,16 @@ SNIPER:
 	Cloak:
 		InitialDelay: 250
 		CloakDelay: 120
-		CloakSound:
-		UncloakSound:
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
 		UncloakOn: Attack, Unload, Move
+		PauseOnCondition: cloak-force-disabled || jammed
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 
 FLAMER:
 	Inherits: ^Pod
@@ -179,7 +190,7 @@ FLAMER:
 	Buildable:
 		Queue: Pod
 		Description: actor-flamer.description
-		Prerequisites: ~module.sc, factory
+		Prerequisites: ~module.sc, radar
 		BuildPaletteOrder: 40
 	Encyclopedia:
 		Description: actor-flamer.encyclopedia
@@ -187,15 +198,13 @@ FLAMER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 700
+		Cost: 750
 	Tooltip:
 		Name: actor-flamer.name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 15000
-	Mobile:
-		Speed: 70
+		HP: 30000
 	RevealsShroud:
 		Range: 5c0
 		MinRange: 2c0
@@ -221,7 +230,7 @@ TECHNICIAN:
 	Buildable:
 		Queue: Pod
 		Description: actor-technician.description
-		Prerequisites: ~module
+		Prerequisites: ~module.sc
 		BuildPaletteOrder: 30
 	Encyclopedia:
 		Description: actor-technician.encyclopedia
@@ -254,7 +263,7 @@ TECHNICIAN:
 	Guard:
 		Voice: Action
 	Health:
-		HP: 12500
+		HP: 18750
 	Mobile:
 		Speed: 70
 	AutoTarget:
@@ -281,15 +290,15 @@ BROKER:
 	Buildable:
 		Queue: Pod
 		Description: actor-broker.description
-		Prerequisites: trader
-		BuildPaletteOrder: 70
+		Prerequisites: ~module.yi
+		BuildPaletteOrder: 30
 	Encyclopedia:
 		Description: actor-broker.encyclopedia
-		Order: 16
+		Order: 15
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1400
+		Cost: 1000
 	Tooltip:
 		Name: actor-broker.name
 	UpdatesPlayerStatistics:
@@ -300,11 +309,23 @@ BROKER:
 		RevealGeneratedShroud: False
 	RevealsShroud@Hacked:
 		Range: 2c0
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 25
+		CaptureDelay: 375
+		ConsumedByCapture: false
+		EnterCursor: ability
+		EnterBlockedCursor: move-blocked
+		RequiresCondition: !deployed && !jammed
 	Health:
-		HP: 17500
+		HP: 18750
+	Mobile:
+		Speed: 70
 	Voiced:
 		VoiceSet: BrokerVoice
 	GrantConditionOnAttack:
+		RequiresCondition: deployed
 		Condition: chargeup-wiretransfer
 		RevokeDelay: 220
 		MaximumInstances: 11
@@ -313,14 +334,16 @@ BROKER:
 		IsCyclic: true
 	Armament@PrepareStage1:
 		Weapon: BrokerPrepareWireTransferStage1
-		RequiresCondition: chargeup-wiretransfer < 6
+		RequiresCondition: deployed && chargeup-wiretransfer < 6
 	Armament@PrepareStage2:
 		Weapon: BrokerPrepareWireTransferStage2
-		RequiresCondition: chargeup-wiretransfer > 5 && chargeup-wiretransfer < 11
+		RequiresCondition: deployed && chargeup-wiretransfer > 5 && chargeup-wiretransfer < 11
 	Armament@Steal:
 		Weapon: BrokerWireTransfer
-		RequiresCondition: chargeup-wiretransfer == 11
+		RequiresCondition: deployed && chargeup-wiretransfer == 11
 	AttackFrontal:
+		RequiresCondition: deployed
+		PauseOnCondition: jammed
 		FacingTolerance: 10
 		Voice: Attack
 	AutoTarget:
@@ -329,14 +352,41 @@ BROKER:
 	AutoTargetPriority@Default:
 		ValidTargets: Defraudable
 		InvalidTargets: NoAutoTarget
+	GrantConditionOnDeploy:
+		PauseOnCondition: jammed
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
+		UndeployOnMove: true
+		UndeployOnPickup: true
+		Facing: 512
+		DeploySounds: broker_deploy_mincedbeats.ogg
+		UndeploySounds: broker_undeploy_mincedbeats.ogg
+		AllowedTerrainTypes: Clear, Road, Crater, Grass, Grass Ramp, Grass Pit, Ore, Mountain, Mountain Ramp, Rock, Ice, Snow, Snow Ramp, Sand, Sand Ramp, Stone, Tech, Dirt
+		Voice: Deploying
+		SmartDeploy: true
+	WithMakeAnimation:
+		Sequence: extend
+		BodyNames: deployed
+	WithFacingSpriteBody:
+		RequiresCondition: undeployed
+	WithSpriteBody@DEPLOYED:
+		RequiresCondition: !undeployed
+		Sequence: extended
+		Name: deployed
+	WithRangeCircle:
+		RequiresCondition: deployed
+		Color: 03FE03
+		Width: 2
+		BorderWidth: 3
+		Range: 5c0
 
 JETPACKER:
 	Inherits: ^Helicopter
-	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Pod
 		Description: actor-jetpacker.description
-		Prerequisites: ~module, techcenter
+		Prerequisites: ~module.sc, techcenter
 		BuildPaletteOrder: 60
 	Encyclopedia:
 		Description: actor-jetpacker.encyclopedia
@@ -344,20 +394,20 @@ JETPACKER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1300
+		Cost: 1125
 	Tooltip:
 		Name: actor-jetpacker.name
 	Health:
-		HP: 9000
+		HP: 13500
 	Aircraft:
 		TurnSpeed: 50
-		CruiseAltitude: 1c0
 		Speed: 100
 		IdealSeparation: 1c0
+		CruiseAltitude: 1800
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Armament:
-		Weapon: HeavyMachineGun
+		Weapon: PodDrunkMissiles
 		MuzzleSequence: muzzle
 		LocalOffset: 0,-300,0,   0,300,0
 	AttackFrontal:
@@ -367,6 +417,49 @@ JETPACKER:
 	WithMoveAnimation:
 	-FireWarheadsOnDeath@SpawnPilot:
 	-GrantRandomCondition@SpawnPilot:
+	RevealsShroud:
+		Range: 8c0
+		MinRange: 4c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 4c0
+		Type: GroundPosition
+	Voiced:
+		VoiceSet: JetpackerVoice
+
+JETFOILER:
+	Inherits: ^Hovercraft
+	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Pod
+		Description: actor-jetfoiler.description
+		Prerequisites: ~module.yi, techcenter
+		BuildPaletteOrder: 60
+	Encyclopedia:
+		Description: actor-jetfoiler.encyclopedia
+		Order: 40
+		Category: Pods
+	Valued:
+		Cost: 1125
+	Tooltip:
+		Name: actor-jetfoiler.name
+	Health:
+		HP: 10800
+	Aircraft:
+		TurnSpeed: 60
+		Speed: 180
+		IdealSeparation: 1c0
+		CruiseAltitude: 1800
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Armament:
+		Weapon: HeavyMortarGun
+	AttackFrontal:
+		FacingTolerance: 10
+		Voice: Attack
+	WithMuzzleOverlay:
+	WithMoveAnimation:
 	RevealsShroud:
 		Range: 8c0
 		MinRange: 4c0
@@ -392,11 +485,11 @@ BLASTER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1200
+		Cost: 800
 	Tooltip:
 		Name: actor-blaster.name
 	Health:
-		HP: 10000
+		HP: 20000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	RevealsShroud:
@@ -426,8 +519,8 @@ BLASTER:
 	KillsSelf:
 		RequiresCondition: triggered
 	AutoTarget:
-		ScanRadius: 5
-		InitialStance: HoldFire
+		ScanRadius: 7
+		InitialStance: Defend
 	-WithDeathAnimation:
 
 SHOCKER:
@@ -458,16 +551,27 @@ SHOCKER:
 	RevealsShroud@Hacked:
 		Range: 3c0
 	Armament@Primary:
-		Weapon: PodVoltageArc
+		Name: primary
+		Weapon: PodVoltageArcGround
 		LocalOffset: 350,0,0
-	Armament@Garrisoned:
+	Armament@Secondary:
+		Name: secondary
+		Weapon: PodVoltageArcAir
+		LocalOffset: 350,0,0
+	Armament@Garrisoned@Primary:
 		Name: garrisoned
-		Weapon: RapidPodVoltageArc
+		Weapon: RapidPodVoltageArcGround
+	Armament@Garrisoned@Secondary:
+		Name: garrisoned
+		Weapon: RapidPodVoltageArcAir
 	AttackFrontal:
 		PauseOnCondition: jammed
 		FacingTolerance: 0
 		Voice: Attack
-	WithAttackAnimation:
+	WithAttackAnimation@Primary:
+		Sequence: shoot
+	WithAttackAnimation@Secondary:
+		Armament: secondary
 		Sequence: shoot
 
 MINIPOD1:
