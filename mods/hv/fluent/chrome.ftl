@@ -95,7 +95,7 @@ label-main-menu-mainmenu-title = OpenHV
 button-main-menu-encyclopedia = Encyclopedia
 dropdownbutton-news-bg-button = Subspace Transmissions
 label-update-notice-a = You are running an outdated version of OpenHV.
-label-update-notice-b = Download the latest version from www.github.com
+label-update-notice-b = Download the latest version from www.openhv.net
 
 ## mainmenu-prompts.yaml
 label-mainmenu-introduction-prompt-title = Incoming subspace transmission
