@@ -135,7 +135,7 @@ rm "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher
 install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
-rm -rf "${LAUNCHER_RESOURCES_DIR}/global mix database.dat"
+rm "${LAUNCHER_RESOURCES_DIR}/global mix database.dat"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 	mkdir -p "${LAUNCHER_RESOURCES_DIR}/$(dirname "${f}")"
@@ -147,6 +147,8 @@ install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx
 install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 cp -LR "${TEMPLATE_ROOT}mods/"* "${LAUNCHER_RESOURCES_DIR}/mods"
+rm "${LAUNCHER_RESOURCES_DIR}/mods/common/FreeSans.ttf"
+rm "${LAUNCHER_RESOURCES_DIR}/mods/common/FreeSansBold.ttf"
 
 set_engine_version "${ENGINE_VERSION}" "${LAUNCHER_RESOURCES_DIR}"
 if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then

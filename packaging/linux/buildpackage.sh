@@ -68,7 +68,7 @@ fi
 echo "Building core files"
 install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv" "linux-x64" "net6" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv"
-rm -rf "${APPDIR}${PREFIX}/lib/openhv/global mix database.dat"
+rm "${APPDIR}${PREFIX}/lib/openhv/global mix database.dat"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 	mkdir -p "${APPDIR}${PREFIX}/lib/openhv/$(dirname "${f}")"
@@ -79,6 +79,8 @@ echo "Building mod files"
 install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}${PREFIX}/lib/openhv" "linux-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}${PREFIX}/lib/openhv/mods"
+rm "${APPDIR}${PREFIX}/lib/openhv/mods/common/FreeSans.ttf"
+rm "${APPDIR}${PREFIX}/lib/openhv/mods/common/FreeSansBold.ttf"
 
 set_engine_version "${ENGINE_VERSION}" "${APPDIR}${PREFIX}/lib/openhv"
 if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then

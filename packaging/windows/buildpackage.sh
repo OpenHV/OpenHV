@@ -81,7 +81,7 @@ function build_platform()
 	echo "Building core files (${PLATFORM})"
 	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}" "win-${PLATFORM}" "net6" "False" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
 	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${BUILTDIR}"
-	rm -rf "${BUILTDIR}/global mix database.dat"
+	rm "${BUILTDIR}/global mix database.dat"
 
 	for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 		mkdir -p "${BUILTDIR}/$(dirname "${f}")"
@@ -92,6 +92,8 @@ function build_platform()
 	install_mod_assemblies "${TEMPLATE_ROOT}" "${BUILTDIR}" "win-${PLATFORM}" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 	cp -Lr "${TEMPLATE_ROOT}/mods/"* "${BUILTDIR}/mods"
+	rm "${BUILTDIR}/mods/common/FreeSans.ttf"
+	rm "${BUILTDIR}/mods/common/FreeSansBold.ttf"
 
 	set_engine_version "${ENGINE_VERSION}" "${BUILTDIR}"
 	if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then

@@ -57,6 +57,8 @@ install_data() (
 
 	echo "Installing common mod files to ${DEST_PATH}"
 	cp -r "${SRC_PATH}/mods/common" "${DEST_PATH}/mods/"
+	rm "${DEST_PATH}/mods/common/FreeSans.ttf"
+	rm "${DEST_PATH}/mods/common/FreeSansBold.ttf"
 
 	echo "Installing Hard Vacuum mod files to ${DEST_PATH}"
 	cp -r "${SRC_PATH}/../mods/hv" "${DEST_PATH}/mods/"
