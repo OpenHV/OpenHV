@@ -58,6 +58,9 @@ namespace OpenRA.Mods.HV
 		[UnsafeAccessor(UnsafeAccessorKind.Field, Name = "FluentMessages")]
 		internal static extern ref ImmutableArray<string> BodgePaths(Manifest manifest);
 
+		[UnsafeAccessor(UnsafeAccessorKind.Field, Name = "FluentCulture")]
+		internal static extern ref string BodgeCulture(Manifest manifest);
+
 		[IncludeFluentReferences(LintDictionaryReference.Values)]
 		[FieldLoader.LoadUsing(nameof(LoadLanguages))]
 		public readonly FrozenDictionary<string, Language> Languages = null;
@@ -87,6 +90,8 @@ namespace OpenRA.Mods.HV
 
 			if (selectedLanguage.Locale == LocalisationSettings.DefaultLocale)
 				return;
+
+			BodgeCulture(Game.ModData.Manifest) = selectedLanguage.Locale.TwoLetterISOLanguageName;
 
 			BodgePaths(Game.ModData.Manifest) = BodgePaths(Game.ModData.Manifest).ToArray()
 				.Append(selectedLanguage.FluentMessages.ToArray()).ToImmutableArray();
