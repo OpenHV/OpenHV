@@ -129,42 +129,52 @@ Container@MAINMENU:
 							Text: button-extras-title
 							Align: Center
 							Font: LargeBold
-						Button@REPLAYS_BUTTON:
+						MarqueeButton@REPLAYS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 60
 							Width: 140
 							Height: 30
 							Text: button-extras-menu-replays
 							Font: LargeBold
-						Button@MUSIC_BUTTON:
+							ScrollSpeed: 1.0
+							ScrollPauseMs: 2000
+						MarqueeButton@MUSIC_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
 							Text: label-music-title
 							Font: LargeBold
-						Button@MAP_EDITOR_BUTTON:
+							ScrollSpeed: 1.0
+							ScrollPauseMs: 2000
+						MarqueeButton@MAP_EDITOR_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
 							Text: label-map-editor-title
 							Font: LargeBold
-						Button@ASSETBROWSER_BUTTON:
+							ScrollSpeed: 1.0
+							ScrollPauseMs: 2000
+						MarqueeButton@ASSETBROWSER_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
 							Text: button-extras-menu-assetbrowser
 							Font: LargeBold
-						Button@CREDITS_BUTTON:
+							ScrollSpeed: 1.0
+							ScrollPauseMs: 2000
+						MarqueeButton@CREDITS_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Y: 220
 							Width: 140
 							Height: 30
 							Text: label-credits-title
 							Font: LargeBold
-						Button@BACK_BUTTON:
+							ScrollSpeed: 1.0
+							ScrollPauseMs: 2000
+						MarqueeButton@BACK_BUTTON:
 							X: PARENT_WIDTH / 2 - WIDTH / 2
 							Key: escape
 							Y: 260
@@ -172,6 +182,8 @@ Container@MAINMENU:
 							Height: 30
 							Text: button-back
 							Font: LargeBold
+							ScrollSpeed: 1.0
+							ScrollPauseMs: 2000
 				Background@MAP_EDITOR_MENU:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
