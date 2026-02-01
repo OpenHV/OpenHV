@@ -6,3 +6,8 @@ Localisation:
 				../mods/common/fluent/fr/common.ftl
 				../mods/common/fluent/fr/chrome.ftl
 				../mods/common/fluent/fr/rules.ftl
+		Polish:
+			Locale: pl
+			FluentMessages:
+				hv|fluent/pl/campaign.ftl
+				hv|fluent/pl/rules.ftl
