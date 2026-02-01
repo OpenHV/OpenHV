@@ -183,6 +183,8 @@ FluentMessages:
 	common|fluent/rules.ftl
 	hv|fluent/rules.ftl
 
+Include: translations.yaml
+
 Music:
 	hv|audio/music.yaml
 

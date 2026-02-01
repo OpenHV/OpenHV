@@ -1,0 +1,8 @@
+Localisation:
+	Languages:
+		French:
+			Locale: fr
+			FluentMessages:
+				../mods/common/fluent/fr/common.ftl
+				../mods/common/fluent/fr/chrome.ftl
+				../mods/common/fluent/fr/rules.ftl
