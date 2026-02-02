@@ -18,8 +18,8 @@ namespace OpenRA.Mods.HV.Widgets
 {
 	public class MarqueeLabelWidget : LabelWidget
 	{
-		public float ScrollSpeed = 1.0f;
-		public int ScrollPauseMs = 2000;
+		public float ScrollSpeed = 2.0f;
+		public int ScrollPauseMs = 300;
 
 		float scrollOffset;
 		long lastTickTime;
@@ -28,6 +28,7 @@ namespace OpenRA.Mods.HV.Widgets
 		bool scrollingBack;
 		string lastText = "";
 		int lastTextWidth;
+		bool wasHovered;
 
 		[ObjectCreator.UseCtor]
 		public MarqueeLabelWidget(ModData modData)
@@ -47,6 +48,12 @@ namespace OpenRA.Mods.HV.Widgets
 			pauseStartTime = Game.RunTime;
 			isPaused = true;
 			scrollingBack = false;
+			wasHovered = false;
+		}
+
+		bool IsHovered()
+		{
+			return Ui.MouseOverWidget == this;
 		}
 
 		public override void Tick()
@@ -65,6 +72,21 @@ namespace OpenRA.Mods.HV.Widgets
 				return;
 
 			if (WordWrap)
+				return;
+
+			var isHovered = IsHovered();
+
+			if (wasHovered && !isHovered)
+			{
+				scrollOffset = 0;
+				isPaused = true;
+				scrollingBack = false;
+				pauseStartTime = currentTime;
+			}
+
+			wasHovered = isHovered;
+
+			if (!isHovered)
 				return;
 
 			if (text != lastText)

@@ -16,7 +16,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets
 {
-	public class MarqueeButtonWidget : ButtonWidget
+	public class MarqueeDropDownButtonWidget : DropDownButtonWidget
 	{
 		public float ScrollSpeed = 2.0f;
 		public int ScrollPauseMs = 300;
@@ -30,15 +30,18 @@ namespace OpenRA.Mods.HV.Widgets
 		int lastTextWidth;
 		bool wasHovered;
 
+		CachedTransform<(bool Disabled, bool Pressed, bool Hover, bool Focused, bool Highlighted), Sprite> getMarkerImage;
+		CachedTransform<(bool Disabled, bool Pressed, bool Hover, bool Focused, bool Highlighted), Sprite> getSeparatorImage;
+
 		[ObjectCreator.UseCtor]
-		public MarqueeButtonWidget(ModData modData)
+		public MarqueeDropDownButtonWidget(ModData modData)
 			: base(modData)
 		{
 			lastTickTime = Game.RunTime;
 			pauseStartTime = Game.RunTime;
 		}
 
-		protected MarqueeButtonWidget(MarqueeButtonWidget other)
+		protected MarqueeDropDownButtonWidget(MarqueeDropDownButtonWidget other)
 			: base(other)
 		{
 			ScrollSpeed = other.ScrollSpeed;
@@ -167,19 +170,44 @@ namespace OpenRA.Mods.HV.Widgets
 			{
 				var position = GetTextPositionInternal(text, font, rb);
 				DrawText(font, text, position + stateOffset, disabled ? colorDisabled : color, bgDark, bgLight);
-				return;
+			}
+			else
+			{
+				var textAreaX = rb.X + LeftMargin;
+				var textAreaWidth = availableWidth;
+				var scissorRect = new Rectangle(textAreaX + stateOffset.X, rb.Y, textAreaWidth, rb.Height);
+
+				var textY = rb.Y + (Bounds.Height - textSize.Y - font.TopOffset) / 2;
+				var textPosition = new int2(textAreaX - (int)scrollOffset, textY) + stateOffset;
+
+				Game.Renderer.EnableScissor(scissorRect);
+				DrawText(font, text, textPosition, disabled ? colorDisabled : color, bgDark, bgLight);
+				Game.Renderer.DisableScissor();
 			}
 
-			var textAreaX = rb.X + LeftMargin;
-			var textAreaWidth = availableWidth;
-			var scissorRect = new Rectangle(textAreaX + stateOffset.X, rb.Y, textAreaWidth, rb.Height);
+			DrawDropDownDecorations(rb, stateOffset, disabled, hover, highlighted);
+		}
 
-			var textY = rb.Y + (Bounds.Height - textSize.Y - font.TopOffset) / 2;
-			var textPosition = new int2(textAreaX - (int)scrollOffset, textY) + stateOffset;
+		void DrawDropDownDecorations(Rectangle rb, int2 stateOffset, bool isDisabled, bool isHover, bool highlighted)
+		{
+			getMarkerImage ??= WidgetUtils.GetCachedStatefulImage(Decorations, DecorationMarker);
 
-			Game.Renderer.EnableScissor(scissorRect);
-			DrawText(font, text, textPosition, disabled ? colorDisabled : color, bgDark, bgLight);
-			Game.Renderer.DisableScissor();
+			var arrowImage = getMarkerImage.Update((isDisabled, Depressed, isHover, false, highlighted));
+			WidgetUtils.DrawSprite(
+				arrowImage,
+				stateOffset + new float2(
+					rb.Right - (int)((rb.Height + arrowImage.Size.X) / 2),
+					rb.Top + (int)((rb.Height - arrowImage.Size.Y) / 2)));
+
+			getSeparatorImage ??= WidgetUtils.GetCachedStatefulImage(Separators, SeparatorImage);
+
+			var separatorImage = getSeparatorImage.Update((isDisabled, Depressed, isHover, false, highlighted));
+			if (separatorImage != null)
+				WidgetUtils.DrawSprite(
+					separatorImage,
+					stateOffset + new float2(-3, 0) + new float2(
+						rb.Right - rb.Height + 4,
+						rb.Top + (int)((rb.Height - separatorImage.Size.Y) / 2)));
 		}
 
 		void DrawText(SpriteFont font, string text, int2 position, Color color, Color bgDark, Color bgLight)
@@ -209,6 +237,6 @@ namespace OpenRA.Mods.HV.Widgets
 			}
 		}
 
-		public override MarqueeButtonWidget Clone() { return new MarqueeButtonWidget(this); }
+		public override MarqueeDropDownButtonWidget Clone() { return new MarqueeDropDownButtonWidget(this); }
 	}
 }
