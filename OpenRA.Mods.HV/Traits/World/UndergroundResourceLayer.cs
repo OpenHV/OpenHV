@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -10,7 +10,6 @@
 #endregion
 
 using System;
-using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
@@ -24,45 +23,23 @@ namespace OpenRA.Mods.HV.Traits
 	[Desc("Allows resources below actors. Attach this to the world actor.")]
 	public class UndergroundResourceLayerInfo : TraitInfo, IResourceLayerInfo, IMapPreviewSignatureInfo
 	{
-		public class ResourceTypeInfo
-		{
-			[FieldLoader.Require]
-			[Desc("Resource index in the binary map data.")]
-			public readonly byte ResourceIndex = 0;
-
-			[FieldLoader.Require]
-			[Desc("Terrain type used to determine unit movement and minimap colors.")]
-			public readonly string TerrainType = null;
-
-			[FieldLoader.Require]
-			[Desc("Terrain types that this resource can spawn on.", "Use * for any.")]
-			public readonly FrozenSet<string> AllowedTerrainTypes = default;
-
-			[Desc("Maximum number of resource units allowed in a single cell.")]
-			public readonly byte MaxDensity = 10;
-
-			public ResourceTypeInfo(MiniYaml yaml)
-			{
-				FieldLoader.Load(this, yaml);
-			}
-		}
-
 		[FieldLoader.LoadUsing(nameof(LoadResourceTypes))]
-		public readonly Dictionary<string, ResourceTypeInfo> ResourceTypes = null;
+		public readonly Dictionary<string, ResourceLayerInfo.ResourceTypeInfo> ResourceTypes = null;
 
 		// Copied to EditorResourceLayerInfo, ResourceRendererInfo
 		protected static object LoadResourceTypes(MiniYaml yaml)
 		{
-			var dictionary = new Dictionary<string, ResourceTypeInfo>();
+			var dictionary = new Dictionary<string, ResourceLayerInfo.ResourceTypeInfo>();
 			var resources = yaml.Nodes.FirstOrDefault(n => n.Key == "ResourceTypes");
 			if (resources != null)
 				foreach (var r in resources.Value.Nodes)
-					dictionary[r.Key] = new ResourceTypeInfo(r.Value);
+					dictionary[r.Key] = new ResourceLayerInfo.ResourceTypeInfo(r.Value);
 
 			return dictionary;
 		}
 
-		public static void PopulateMapPreviewSignatureCells(Map map, Dictionary<string, ResourceTypeInfo> resources, List<(MPos Uv, Color Color)> destinationBuffer)
+		public static void PopulateMapPreviewSignatureCells(Map map,
+			Dictionary<string, ResourceLayerInfo.ResourceTypeInfo> resources, List<(MPos Uv, Color Color)> destinationBuffer)
 		{
 			var terrainInfo = map.Rules.TerrainInfo;
 			var colors = resources.Values.ToDictionary(
