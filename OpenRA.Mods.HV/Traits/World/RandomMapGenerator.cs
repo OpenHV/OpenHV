@@ -16,10 +16,11 @@ using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.MapGenerator;
 using OpenRA.Mods.Common.Terrain;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.EditorWorld)]
 	public sealed class RandomMapGeneratorInfo : TraitInfo, IEditorMapGeneratorInfo
