@@ -9,10 +9,13 @@
  */
 #endregion
 
+using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.MapGenerator;
+using OpenRA.Mods.Common.Terrain;
 using OpenRA.Support;
 using OpenRA.Traits;
 
@@ -121,6 +124,36 @@ namespace OpenRA.Mods.Common.Traits
 			[FieldLoader.Require]
 			public readonly int MinimumCraterStraight = default;
 
+			[FieldLoader.Require]
+			public readonly int SpawnBuildSize = default;
+
+			[FieldLoader.Ignore]
+			public readonly IReadOnlySet<byte> ZoneableTerrain;
+
+			[FieldLoader.Ignore]
+			public readonly IReadOnlySet<byte> PlayableTerrain;
+
+			[FieldLoader.Require]
+			public readonly int ExternalCircularBias = default;
+
+			[FieldLoader.Require]
+			public readonly int AreaEntityBonus = default;
+
+			[FieldLoader.Require]
+			public readonly int PlayerCountEntityBonus = default;
+
+			[FieldLoader.Require]
+			public readonly int CentralSpawnReservationFraction = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumSpawnRadius = default;
+
+			[FieldLoader.Require]
+			public readonly int SpawnRegionSize = default;
+
+			[FieldLoader.Require]
+			public readonly int SpawnReservation = default;
+
 			public Parameters(Map map, MiniYaml my)
 			{
 				FieldLoader.Load(this, my);
@@ -137,6 +170,19 @@ namespace OpenRA.Mods.Common.Traits
 				}
 
 				SegmentedBrushes = MultiBrush.LoadCollection(map, "Segmented");
+
+				var terrainInfo = (ITemplatedTerrainInfo)map.Rules.TerrainInfo;
+
+				IReadOnlySet<byte> ParseTerrainIndexes(string key)
+				{
+					return my.NodeWithKey(key).Value.Value
+						.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+						.Select(terrainInfo.GetTerrainIndex)
+						.ToFrozenSet();
+				}
+
+				PlayableTerrain = ParseTerrainIndexes("PlayableTerrain");
+				ZoneableTerrain = ParseTerrainIndexes("ZoneableTerrain");
 
 				Validate();
 			}
@@ -191,6 +237,7 @@ namespace OpenRA.Mods.Common.Traits
 			var elevationRandom = new MersenneTwister(random.Next());
 			var pickAnyRandom = new MersenneTwister(random.Next());
 			var craterTilingRandom = new MersenneTwister(random.Next());
+			var playerRandom = new MersenneTwister(random.Next());
 
 			terraformer.InitMap();
 
@@ -242,6 +289,55 @@ namespace OpenRA.Mods.Common.Traits
 					null,
 					[new MultiBrush().WithTemplate(map, param.CraterTile, CVec.Zero)])
 						?? throw new MapGenerationException("Could not fit tiles for crater spots.");
+			}
+
+			CellLayer<bool> playable;
+			{
+				// For circle-in-mountains, the outside is unplayable and should never count as
+				// the largest/preferred region.
+				CellLayer<bool> poison = null;
+				if (param.ExternalCircularBias > 0)
+					poison = terraformer.CenteredCircle(
+						false, true, CellLayerUtils.Radius(map.Tiles) - new WDist(1024));
+
+				playable = terraformer.ChoosePlayableRegion(
+					terraformer.CheckSpace(param.PlayableTerrain, true, false, true),
+					poison)
+						?? throw new MapGenerationException("could not find a playable region");
+
+				var minimumPlayableSpace = (int)(param.Players * Math.PI * param.SpawnBuildSize * param.SpawnBuildSize);
+				if (playable.Count(p => p) < minimumPlayableSpace)
+					throw new MapGenerationException("playable space is too small");
+			}
+
+			var zoneable = terraformer.GetZoneable(param.ZoneableTerrain, playable);
+
+			var zoneableArea = zoneable.Count(v => v);
+			var symmetryCount = Symmetry.RotateAndMirrorProjectionCount(param.Rotations, param.Mirror);
+			var entityMultiplier =
+				(long)zoneableArea * param.AreaEntityBonus +
+				(long)param.Players * param.PlayerCountEntityBonus;
+			var perSymmetryEntityMultiplier = entityMultiplier / symmetryCount;
+
+			// Spawn generation
+			var symmetryPlayers = param.Players / symmetryCount;
+			for (var iteration = 0; iteration < symmetryPlayers; iteration++)
+			{
+				var chosenSpawnLocation = terraformer.ChooseSpawnInZoneable(
+					playerRandom,
+					zoneable,
+					param.CentralSpawnReservationFraction,
+					param.MinimumSpawnRadius,
+					param.SpawnRegionSize,
+					param.SpawnReservation)
+						?? throw new MapGenerationException("Not enough room for player spawns");
+
+				var playerSpawn = new ActorPlan(map, "mpspawn")
+				{
+					Location = chosenSpawnLocation,
+				};
+
+				terraformer.ProjectPlaceDezoneActor(playerSpawn, zoneable, new WDist(param.SpawnReservation * 1024));
 			}
 
 			terraformer.BakeMap();

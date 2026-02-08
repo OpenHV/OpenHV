@@ -656,6 +656,27 @@ random-map-generator-choice-symmetry-mirror-7-rotations =
 random-map-generator-choice-symmetry-mirror-8-rotations =
    .label = 8 Rotations
 
+label-random-map-generator-option-shape = Boundary Shape
+label-random-map-generator-choice-shape-square =
+   .label = Rectangle
+   .description = Playable area is the full map
+
+label-random-map-generator-option-density = Expansion Opportunities
+label-random-map-generator-choice-density-players =
+   .label = Scale with players
+label-random-map-generator-choice-density-area-and-players =
+   .label = Scale with size and players
+label-random-map-generator-choice-density-area-very-low =
+   .label = Very Low
+label-random-map-generator-choice-density-area-low =
+   .label = Low
+label-random-map-generator-choice-density-area-medium =
+   .label = Medium
+label-random-map-generator-choice-density-area-high =
+   .label = High
+label-random-map-generator-choice-density-area-very-high =
+   .label = Very High
+
 label-random-map-generator-option-terrain-type = Terrain Type
 random-map-generator-choice-terrain-type-dirty-grassland =
    .label = Dirty Grassland
