@@ -96,16 +96,18 @@ namespace OpenRA.Mods.HV
 							if (jsonElement.TryGetProperty("prerelease", out var prereleaseJsonElement))
 								prerelease = jsonElement.GetProperty("prerelease").GetBoolean();
 
-							if (!int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version))
-								Log.Write("debug", "Error parsing version number.");
-
 							var status = ModVersionStatus.Unknown;
 							if (Game.ModData.Manifest.Metadata.Version == "{DEV_VERSION}")
 								status = ModVersionStatus.Unknown;
-							else if (parsedVersion > version)
-								status = prerelease ? ModVersionStatus.PrereleaseAvailable : ModVersionStatus.Outdated;
-							else if (parsedVersion == version)
-								status = ModVersionStatus.Latest;
+							else if (int.TryParse(Game.ModData.Manifest.Metadata.Version, out var version))
+							{
+								if (parsedVersion > version)
+									status = prerelease ? ModVersionStatus.PrereleaseAvailable : ModVersionStatus.Outdated;
+								if (parsedVersion == version)
+									status = ModVersionStatus.Latest;
+							}
+							else
+								Log.Write("debug", "Error parsing version number.");
 
 							ModVersionStatus = status;
 
