@@ -22,7 +22,7 @@ map-generator-clear = Clear Terrain
 label-encyclopedia-content-title = Encyclopedia
 
 ## ingame-observer.yaml
-button-observer-widgets-options = Options (Esc)
+button-observer-widgets-options = Options
 label-economy-stats-miners-header = Miners
 
 ## ingame-player.yaml
