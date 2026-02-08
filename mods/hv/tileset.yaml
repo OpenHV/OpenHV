@@ -90,11 +90,11 @@ Terrain:
 		TargetTypes: Ground
 		Color: 8090A0
 	TerrainType@IceCliff:
-		Type: IceCliff
+		Type: Ice Cliff
 		TargetTypes: Ground
 		Color: 8090A0
 	TerrainType@IceFloes:
-		Type: IceFloes
+		Type: Ice Floes
 		TargetTypes: Ground
 		Color: 8090A0
 	TerrainType@Snow:
@@ -2103,12 +2103,12 @@ Templates:
 		ClearTile: true
 		AutoConnect@WaterCliff:
 			Type: Littoral
-			BorderTypes: Ice, IceCliff
+			BorderTypes: Ice, Ice Cliff
 			BorderTransitions: 260, 266, 262, 256, 259, 258, 263, 264
 			Corners: 265, 267, 257, 255
 		AutoConnect@IceFloes:
 			Type: Littoral
-			BorderTypes: Ice, IceFloes
+			BorderTypes: Ice, Ice Floes
 			BorderTransitions: 287, 293, 289, 283, 286, 285, 290, 291
 			Corners: 292, 294, 284, 282
 		Tiles:
@@ -2184,7 +2184,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@256:
 		Id: 256
 		Images: ice2watr.png
@@ -2192,7 +2192,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@257:
 		Id: 257
 		Images: ice2watr.png
@@ -2200,7 +2200,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@258:
 		Id: 258
 		Images: ice2watr.png
@@ -2208,7 +2208,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@259:
 		Id: 259
 		Images: ice2watr.png
@@ -2216,7 +2216,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@260:
 		Id: 260
 		Images: ice2watr.png
@@ -2224,7 +2224,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@261:
 		Id: 261
 		Images: ice2watr.png
@@ -2240,7 +2240,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@263:
 		Id: 263
 		Images: ice2watr.png
@@ -2248,7 +2248,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@264:
 		Id: 264
 		Images: ice2watr.png
@@ -2256,7 +2256,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@265:
 		Id: 265
 		Images: ice2watr.png
@@ -2264,7 +2264,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@266:
 		Id: 266
 		Images: ice2watr.png
@@ -2272,7 +2272,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@267:
 		Id: 267
 		Images: ice2watr.png
@@ -2280,7 +2280,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceCliff
+			0: Ice Cliff
 	Template@269:
 		Id: 269
 		Images: icebrk.png
@@ -2288,7 +2288,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@270:
 		Id: 270
 		Images: icebrk.png
@@ -2296,7 +2296,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@271:
 		Id: 271
 		Images: icebrk.png
@@ -2304,7 +2304,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@272:
 		Id: 272
 		Images: icebrk.png
@@ -2312,7 +2312,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@273:
 		Id: 273
 		Images: icebrk.png
@@ -2320,7 +2320,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@274:
 		Id: 274
 		Images: icebrk.png
@@ -2328,7 +2328,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@275:
 		Id: 275
 		Images: icebrk.png
@@ -2336,7 +2336,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@276:
 		Id: 276
 		Images: icebrk.png
@@ -2344,7 +2344,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@277:
 		Id: 277
 		Images: icebrk.png
@@ -2352,7 +2352,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@278:
 		Id: 278
 		Images: icebrk.png
@@ -2360,7 +2360,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@279:
 		Id: 279
 		Images: icebrk.png
@@ -2368,7 +2368,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@280:
 		Id: 280
 		Images: icebrk.png
@@ -2376,7 +2376,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@281:
 		Id: 281
 		Images: icebrk.png
@@ -2384,7 +2384,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@282:
 		Id: 282
 		Images: icebrk.png
@@ -2392,7 +2392,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@283:
 		Id: 283
 		Images: icebrk.png
@@ -2400,7 +2400,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@284:
 		Id: 284
 		Images: icebrk.png
@@ -2408,7 +2408,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@285:
 		Id: 285
 		Images: icebrk.png
@@ -2416,7 +2416,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@286:
 		Id: 286
 		Images: icebrk.png
@@ -2424,7 +2424,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@287:
 		Id: 287
 		Images: icebrk.png
@@ -2432,7 +2432,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@288:
 		Id: 288
 		Images: icebrk.png
@@ -2440,7 +2440,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@289:
 		Id: 289
 		Images: icebrk.png
@@ -2448,7 +2448,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@290:
 		Id: 290
 		Images: icebrk.png
@@ -2456,7 +2456,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@291:
 		Id: 291
 		Images: icebrk.png
@@ -2464,7 +2464,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@292:
 		Id: 292
 		Images: icebrk.png
@@ -2472,7 +2472,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@293:
 		Id: 293
 		Images: icebrk.png
@@ -2480,7 +2480,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@294:
 		Id: 294
 		Images: icebrk.png
@@ -2488,7 +2488,7 @@ Templates:
 		Size: 1,1
 		Categories: Ice, Littoral
 		Tiles:
-			0: IceFloes
+			0: Ice Floes
 	Template@295:
 		Id: 295
 		Images: icedent.png

@@ -154,8 +154,8 @@
 			Oceanic: 100
 			Rapids: 50
 			Shore: 75
-			IceCliff: 75
-			IceFloes: 75
+			Ice Cliff: 75
+			Ice Floes: 75
 	Faction@Yuruki:
 		Name: faction-yuruki.name
 		InternalName: yi
