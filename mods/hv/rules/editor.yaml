@@ -215,9 +215,11 @@ EditorWorld:
 						EnforceSymmetry: 0
 						SpawnRegionSize: 12
 						SpawnReservation: 16
+						ResourceSpawnsPerPlayer: 6
 						SpawnBuildSize: 8
 						CentralSpawnReservationFraction: 250
 						MinimumSpawnRadius: 5
+						DefaultResource: gold
 						PlayableTerrain: Ore, Crater, Grass
 						ZoneableTerrain: Crater, Grass
 						GrassTile: 121
@@ -323,45 +325,29 @@ EditorWorld:
 						CraterRoughness: 0
 						GrassRoughness: 0
 						Crater: 250
-			MultiChoiceOption@Density:
-				Label: label-random-map-generator-option-density
-				Default: Players
-				Priority: 1
-				Choice@Players:
-					Label: label-random-map-generator-choice-density-players
+			MultiChoiceOption@Resources:
+				Label: label-random-map-generator-option-resources
+				Default: Medium
+				Choice@None:
+					Label: label-random-map-generator-choice-resources-none
 					Settings:
-						AreaEntityBonus: 0
-						PlayerCountEntityBonus: 1000000
-				Choice@AreaAndPlayers:
-					Label: label-random-map-generator-choice-density-area-and-players
+						ResourceSpawnsPerPlayer: 0
+				Choice@Low:
+					Label: label-random-map-generator-choice-resources-low
 					Settings:
-						AreaEntityBonus: 200
-						PlayerCountEntityBonus: 500000
-				Choice@AreaVeryLow:
-					Label: label-random-map-generator-choice-density-area-very-low
+						ResourceSpawnsPerPlayer: 2
+				Choice@Medium:
+					Label: label-random-map-generator-choice-resources-medium
 					Settings:
-						AreaEntityBonus: 100
-						PlayerCountEntityBonus: 0
-				Choice@AreaLow:
-					Label: label-random-map-generator-choice-density-area-low
+						ResourceSpawnsPerPlayer: 4
+				Choice@High:
+					Label: label-random-map-generator-choice-resources-high
 					Settings:
-						AreaEntityBonus: 200
-						PlayerCountEntityBonus: 0
-				Choice@AreaMedium:
-					Label: label-random-map-generator-choice-density-area-medium
+						ResourceSpawnsPerPlayer: 6
+				Choice@VeryHigh:
+					Label: label-random-map-generator-choice-resources-very-high
 					Settings:
-						AreaEntityBonus: 400
-						PlayerCountEntityBonus: 0
-				Choice@AreaHigh:
-					Label: label-random-map-generator-choice-density-area-high
-					Settings:
-						AreaEntityBonus: 600
-						PlayerCountEntityBonus: 0
-				Choice@AreaVeryHigh:
-					Label: label-random-map-generator-choice-density-area-very-high
-					Settings:
-						AreaEntityBonus: 800
-						PlayerCountEntityBonus: 0
+						ResourceSpawnsPerPlayer: 8
 
 EditorPlayer:
 	Inherits: ^BasePlayer

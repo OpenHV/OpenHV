@@ -661,20 +661,16 @@ label-random-map-generator-choice-shape-square =
    .label = Rectangle
    .description = Playable area is the full map
 
-label-random-map-generator-option-density = Expansion Opportunities
-label-random-map-generator-choice-density-players =
-   .label = Scale with players
-label-random-map-generator-choice-density-area-and-players =
-   .label = Scale with size and players
-label-random-map-generator-choice-density-area-very-low =
-   .label = Very Low
-label-random-map-generator-choice-density-area-low =
+label-random-map-generator-option-resources = Resources
+label-random-map-generator-choice-resources-none =
+   .label = None
+label-random-map-generator-choice-resources-low =
    .label = Low
-label-random-map-generator-choice-density-area-medium =
+label-random-map-generator-choice-resources-medium =
    .label = Medium
-label-random-map-generator-choice-density-area-high =
+label-random-map-generator-choice-resources-high =
    .label = High
-label-random-map-generator-choice-density-area-very-high =
+label-random-map-generator-choice-resources-very-high =
    .label = Very High
 
 label-random-map-generator-option-terrain-type = Terrain Type

@@ -17,6 +17,7 @@ using System.Linq;
 using OpenRA.Mods.Common.MapGenerator;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.HV.MapGenerator;
 using OpenRA.Support;
 using OpenRA.Traits;
 
@@ -138,12 +139,6 @@ namespace OpenRA.Mods.HV.Traits
 			public readonly int ExternalCircularBias = default;
 
 			[FieldLoader.Require]
-			public readonly int AreaEntityBonus = default;
-
-			[FieldLoader.Require]
-			public readonly int PlayerCountEntityBonus = default;
-
-			[FieldLoader.Require]
 			public readonly int CentralSpawnReservationFraction = default;
 
 			[FieldLoader.Require]
@@ -154,6 +149,12 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly int SpawnReservation = default;
+
+			[FieldLoader.Require]
+			public readonly int ResourceSpawnsPerPlayer = default;
+
+			[FieldLoader.Ignore]
+			public readonly ResourceLayerInfo.ResourceTypeInfo DefaultResource;
 
 			public Parameters(Map map, MiniYaml my)
 			{
@@ -184,6 +185,10 @@ namespace OpenRA.Mods.HV.Traits
 
 				PlayableTerrain = ParseTerrainIndexes("PlayableTerrain");
 				ZoneableTerrain = ParseTerrainIndexes("ZoneableTerrain");
+
+				var resourceTypes = map.Rules.Actors[SystemActors.World].TraitInfo<UndergroundResourceLayerInfo>().ResourceTypes;
+				if (!resourceTypes.TryGetValue(my.NodeWithKey("DefaultResource").Value.Value, out DefaultResource))
+					throw new YamlException("DefaultResource is not valid");
 
 				Validate();
 			}
@@ -225,7 +230,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			var param = new Parameters(map, args.Settings);
 
-			var terraformer = new Terraformer(args, map, modData, actorPlans, param.Mirror, param.Rotations);
+			var terraformer = new CustomTerraformer(args, map, modData, actorPlans, param.Mirror, param.Rotations);
 
 			var craterSmoothZone = new Terraformer.PathPartitionZone()
 			{
@@ -239,6 +244,7 @@ namespace OpenRA.Mods.HV.Traits
 			var pickAnyRandom = new MersenneTwister(random.Next());
 			var craterTilingRandom = new MersenneTwister(random.Next());
 			var playerRandom = new MersenneTwister(random.Next());
+			var resourceRandom = new MersenneTwister(random.Next());
 
 			terraformer.InitMap();
 
@@ -315,10 +321,6 @@ namespace OpenRA.Mods.HV.Traits
 
 			var zoneableArea = zoneable.Count(v => v);
 			var symmetryCount = Symmetry.RotateAndMirrorProjectionCount(param.Rotations, param.Mirror);
-			var entityMultiplier =
-				(long)zoneableArea * param.AreaEntityBonus +
-				(long)param.Players * param.PlayerCountEntityBonus;
-			var perSymmetryEntityMultiplier = entityMultiplier / symmetryCount;
 
 			// Spawn generation
 			var symmetryPlayers = param.Players / symmetryCount;
@@ -339,6 +341,23 @@ namespace OpenRA.Mods.HV.Traits
 				};
 
 				terraformer.ProjectPlaceDezoneActor(playerSpawn, zoneable, new WDist(param.SpawnReservation * 1024));
+			}
+
+			{
+				var targetResourceSpawnCount = param.ResourceSpawnsPerPlayer * param.Players;
+				for (var i = 0; i < targetResourceSpawnCount; i++)
+				{
+					var added = terraformer.AddResource(
+						param.DefaultResource,
+						resourceRandom,
+						zoneable,
+						"miner", // account for space
+						new WDist(param.SpawnReservation * 1024));
+					if (!added)
+						break;
+				}
+
+				terraformer.ZoneFromResources(zoneable, false);
 			}
 
 			terraformer.BakeMap();
