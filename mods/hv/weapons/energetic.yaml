@@ -17,21 +17,28 @@ Railgun:
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Versus:
-			None: 200
+			None: 150
 			Steel: 75
 			Light: 125
 			Heavy: 155
 			Wood: 10
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 6500
 		Percentage: 10
 	Warhead@GroundEffect: CreateEffect
 		Explosions: small
 		ValidTargets: Ground
 		ImpactSounds: explosion06.ogg
+
+RailgunLongRange:
+	Inherits: Railgun
+	Range: 10c0
+	ReloadDelay: 62
+	Projectile: LaserZap
+		Color: FE03FE
 
 ElectronicCountermeasure:
 	ReloadDelay: 20
@@ -50,7 +57,7 @@ ElectronicCountermeasure:
 		AllowSnapping: true
 		Jammable: False
 		Arm: 0
-		RangeLimit: -1
+		RangeLimit: 1024c0
 	Warhead@ECM: GrantExternalCondition
 		Range: 1c0
 		Duration: 90
@@ -121,7 +128,7 @@ RepairTorch:
 	TargetActorCenter: true
 	Warhead@Repair: TargetDamage
 		DebugOverlayColor: 00FF00
-		Damage: -50
+		Damage: -250
 		ValidTargets: DamagedPod
 		Spread: 1
 	Warhead@Sparks: FireShrapnel
@@ -135,7 +142,7 @@ Plasma:
 	Inherits: BigSplash
 	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 10
-	Range: 8c0
+	Range: 9c0
 	MinRange: 1c0
 	Report: lasercannon_newlocknew.ogg
 	Projectile: Missile
@@ -149,12 +156,12 @@ Plasma:
 		Chance: 25
 		InvalidTargets: Vehicle, Structure
 	Warhead@Damage: SpreadDamage
-		Damage: 1750
+		Damage: 800
 		Versus:
 			None: 43
 			Steel: 85
-			Light: 43
-			Heavy: 43
+			Light: 129
+			Heavy: 129
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -165,7 +172,7 @@ Plasma:
 		ValidTargets: Ground, Air, Ship, Tree
 
 VoltageArc:
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Range: 8c0
 	Report: lightningbolt.ogg
 	Projectile: EnergyBolt
@@ -181,7 +188,7 @@ VoltageArc:
 	ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 	Warhead@Damage: SpreadDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Versus:
 			None: 200
 			Steel: 75
@@ -192,7 +199,7 @@ VoltageArc:
 		DamageTypes: Electricity
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
-		Damage: 8000
+		Damage: 5200
 		Percentage: 10
 	Warhead@Sparks: FireShrapnel
 		Weapon: ElectricSpark
@@ -200,11 +207,31 @@ VoltageArc:
 		AffectsParent: true
 		ValidTargets: Ground, Water, Vehicle, Lava, Swamp
 
-PodVoltageArc:
+TankVoltageArc:
+	Inherits: VoltageArc
+	ReloadDelay: 70
+	Range: 7c0
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		ValidTargets: Ground, Water, Tree, Lava, Swamp
+		Spread: 128
+		Damage: 4200
+		Versus:
+			None: 80
+			Steel: 75
+			Light: 100
+			Heavy: 155
+			Wood: 75
+	Warhead@Incendiary: TreeDamage
+		Damage: 4000
+		Spread: 128
+		Percentage: 75
+
+PodVoltageArcGround:
 	Inherits: VoltageArc
 	Range: 5c512
 	Report: lighting_gun_freqman.ogg
-	ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
+	ValidTargets: Ground, Water, Tree, Lava, Swamp
 	ReloadDelay: 60
 	Projectile: EnergyBolt
 		Radius: 2
@@ -218,19 +245,28 @@ PodVoltageArc:
 			Heavy: 110
 			Concrete: 50
 		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
-	Warhead@Incendiary: TreeDamage
-		Spread: 128
-		Damage: 2500
-		ValidTargets: Ground, Water, Air, Tree, Lava, Swamp
 
-RapidPodVoltageArc:
-	Inherits: PodVoltageArc
+PodVoltageArcAir:
+	Inherits: PodVoltageArcGround
+	ValidTargets: Air
+	Warhead@Damage: SpreadDamage
+		Versus:
+			Steel: 0
+			Concrete: 0
+
+RapidPodVoltageArcGround:
+	Inherits: PodVoltageArcGround
+	Range: 8c0
+	ReloadDelay: 30
+
+RapidPodVoltageArcAir:
+	Inherits: PodVoltageArcAir
 	Range: 8c0
 	ReloadDelay: 30
 
 LightningBolt:
 	ReloadDelay: 60
-	Range: 9c0
+	Range: 10c0
 	Report: lightningbolt.ogg
 	ValidTargets: Air
 	Projectile: EnergyBolt
@@ -250,8 +286,8 @@ LightningBolt:
 		Versus:
 			None: 30
 			Wood: 90
-			Light: 90
-			Heavy: 300
+			Light: 117
+			Heavy: 390
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -270,7 +306,7 @@ LightningBolt:
 LightningBoltLight:
 	Inherits: LightningBolt
 	ReloadDelay: 60
-	Range: 8c0
+	Range: 10c0
 	Report: lightningbolt.ogg
 	Warhead@Damage: SpreadDamage
 		Spread: 128
@@ -279,8 +315,8 @@ LightningBoltLight:
 		Versus:
 			None: 30
 			Wood: 90
-			Light: 90
-			Heavy: 300
+			Light: 117
+			Heavy: 390
 			Concrete: 100
 	Warhead@Incendiary: TreeDamage
 		Spread: 128
@@ -526,7 +562,7 @@ MothershipLaser:
 		ValidTargets: Ground, Air, Ship, Tree
 
 ^BrokerWireTransfer:
-	Range: 12c0
+	Range: 5c0
 	ValidTargets: Defraudable
 	Report: coinflick.ogg
 	Projectile: ArcLaserZap
@@ -551,7 +587,7 @@ BrokerWireTransfer:
 	ReloadDelay: 5
 	Report: klink.ogg
 	Warhead@Leech: RobMoney
-		Amount: 500
+		Amount: 100
 		RobbedTextNotification: robbed-notification
 		RobTextNotification: rob-notification
 
@@ -573,9 +609,8 @@ PlasmaMachineGun:
 		DamageTypes: Fire
 		ValidTargets: Air
 		Spread: 256
-		Damage: 2500
+		Damage: 725
 		Versus:
-			Steel: 50
 			Light: 50
 			Heavy: 50
 	Warhead@GroundEffect: CreateEffect
