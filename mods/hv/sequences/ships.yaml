@@ -137,7 +137,28 @@ watertrail:
 		Tick: 80
 		ZOffset: -2048
 
+# TODO: Change one of them both below later
 ferry:
+	idle:
+		Filename: ferry.png
+	open:
+		Filename: ferry.png
+		Length: 4
+		Tick: 150
+	close:
+		Filename: ferry.png
+		Frames: 3, 2, 1, 0
+		Length: 4
+		Tick: 150
+	unload:
+		Filename: ferry.png
+		Start: 3
+		ZOffset: -511
+	icon:
+		Filename: ferry-icon.png
+		Offset: 2, 0
+
+ferry2:
 	idle:
 		Filename: ferry.png
 	open:
@@ -188,6 +209,7 @@ mineship2:
 lightningboat:
 	idle:
 		Filename: lightningboat.png
+	# TODO: Maybe unify idle, shoot and charge animations?
 	shoot:
 		Filename: lightningboat.png
 		Start: 1

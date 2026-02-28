@@ -19,10 +19,10 @@
 		Spread: 128
 		Damage: 4000
 		Versus:
-			None: 20
+			None: 80
 			Steel: 75
 			Light: 100
-			Heavy: 130
+			Heavy: 150
 			Wood: 75
 	Warhead@Incendiary: TreeDamage
 		Damage: 4000
@@ -39,12 +39,12 @@ TankCannon:
 CannonSynapol:
 	Inherits: ^Cannon
 	Projectile: Bullet
-		Image: bullet1
+		Image: bullet5
 
 CannonYuruki:
 	Inherits: ^Cannon
 	Projectile: Bullet
-		Image: bullet5
+		Image: bullet1
 
 ^Artillery:
 	Inherits: ^Cannon
@@ -83,11 +83,80 @@ SmallArtillery:
 	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
+		Image: bullet5
 		Inaccuracy: 1c138
 	Warhead@Damage: SpreadDamage
 		Falloff: 100, 55, 20, 5
 		Versus:
 			None: 60
+
+SmallArtilleryLongDistance:
+	Inherits: SmallArtillery
+	MinRange: 6c0
+	Range: 18c0
+	ReloadDelay: 170
+	Projectile: Bullet
+		Image: bullet3
+		Inaccuracy: 3c138
+
+ArtilleryCluster:
+	Inherits: SmallArtillery
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: blaster_flyingsaucerinvasion.ogg
+	ReloadDelay: 170
+	Burst: 6
+	BurstDelays: 5
+	MinRange: 4c0
+	Range: 12c0
+	Projectile: Bullet
+		Inaccuracy: 0c256
+		Image: bullet12
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 426
+		Damage: 2300
+		Versus:
+			Steel: 30
+			Concrete: 30
+	Warhead@Cluster: FireCluster
+		Weapon: ClusterProjectileArtillery
+		RandomClusterCount: -1
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+		AirThreshold: 0c0
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.ogg
+		ImpactActors: false
+
+ClusterProjectileArtillery:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 250
+		Inaccuracy: 0c512
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 2500
+		Versus:
+			None: 50
+			Steel: 25
+			Light: 50
+			Heavy: 50
+			Concrete: 25
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2500
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.ogg
 
 DoubleBarrelledArtillery:
 	Inherits: ^Artillery
@@ -255,7 +324,7 @@ TurretArtillery:
 		Image: bullet2
 		Shadow: true
 	Warhead@Damage: SpreadDamage
-		Damage: 25000
+		Damage: 37500
 		Spread: 850
 		Versus:
 			None: 150
@@ -264,7 +333,7 @@ TurretArtillery:
 			Heavy: 60
 			Wood: 40
 	Warhead@Incendiary: TreeDamage
-		Damage: 25000
+		Damage: 37500
 		Spread: 850
 		Percentage: 40
 	Warhead@Effect: CreateEffect
@@ -308,31 +377,30 @@ DoubleCannon:
 MortarGun:
 	Inherits: SmallSplash
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 50
+	ReloadDelay: 49
 	Report: grenade-launcher_lemudcrab.ogg
-	Range: 6c0
-	MinRange: 1c0
+	Range: 7c0
 	Projectile: Bullet
 		Image: bullet1
 		Speed: 360
 		Blockable: false
 		LaunchAngle: 80
-		Inaccuracy: 0c512
 		ContrailLength: 10
 		ContrailStartColor: 811000
 	Warhead@Damage: SpreadDamage
 		DamageTypes: Fire
 		ValidTargets: Ground, Water, Tree, Lava, Swamp
-		Spread: 256
+		Spread: 128
 		Damage: 6000
 		Versus:
 			None: 70
-			Steel: 40
+			Steel: 15
 			Light: 25
 			Heavy: 25
 			Wood: 75
+			Concrete: 15
 	Warhead@Incendiary: TreeDamage
-		Spread: 256
+		Spread: 128
 		Damage: 6000
 		Percentage: 75
 	Warhead@Smudge: LeaveSmudge
@@ -345,9 +413,77 @@ MortarGun:
 
 BunkerMortarGun:
 	Inherits: MortarGun
-	Range: 9c0
+	Range: 10c0
 	ReloadDelay: 25
 	MinRange: 0
+
+HeavyMortarGun:
+	Inherits: SmallArtillery
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	Report: ccbygrenadelaunch01.ogg
+	Range: 6c0
+	MinRange: 1c0
+	Projectile: Bullet
+		Image: bullet12
+		LaunchAngle: 40
+		Inaccuracy: 512
+		ContrailStartColor: 9bc2eb
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		ValidTargets: Water, Ground, Tree, Lava, Swamp
+		Spread: 256
+		Damage: 300
+		Versus:
+			None: 35
+			Steel: 5
+			Light: 1100
+			Heavy: 1000
+			Concrete: 3
+	Warhead@Cluster: FireCluster
+		Weapon: PodClusterProjectileArtillery
+		RandomClusterCount: -1
+		Dimensions: 3,3
+		Footprint: xxx xXx xxx
+		AirThreshold: 0c0
+	Warhead@Incendiary: TreeDamage
+		Spread: 256
+		Damage: 300
+		Percentage: 75
+	Warhead@Smudge: LeaveSmudge
+		SmudgeType: Crater
+		Chance: 25
+	Warhead@Effect: CreateEffect
+		Explosions: small
+		ImpactSounds: explosion06.ogg
+		ImpactActors: false
+
+PodClusterProjectileArtillery:
+	Inherits: BigSplash
+	ValidTargets: Water, Ground, Tree, Lava, Swamp
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 250
+		Inaccuracy: 0c512
+		Image: bullet3
+		Shadow: false
+	Warhead@Damage: SpreadDamage
+		DamageTypes: Fire
+		Spread: 128
+		Damage: 2500
+		Versus:
+			None: 10
+			Steel: 2
+			Light: 100
+			Heavy: 200
+			Concrete: 1
+	Warhead@Incendiary: TreeDamage
+		Spread: 128
+		Damage: 2500
+	Warhead@GroundEffect: CreateEffect
+		Explosions: small
+		ValidTargets: Ground
+		ImpactSounds: explosion06.ogg
 
 BattleShipGun:
 	Inherits: BigSplash
@@ -365,7 +501,7 @@ BattleShipGun:
 		Image: bullet12
 		Shadow: true
 		TrailImage: battleship-trail
-		TrailInterval: 2
+		TrailInterval: 0
 		TrailDelay: 1
 	Warhead@Damage: SpreadDamage
 		Spread: 250
