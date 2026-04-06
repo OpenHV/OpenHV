@@ -20,7 +20,7 @@ Player:
 		InititalMinimumRefineryCount: 1
 		AdditionalMinimumRefineryCount: 1
 		PlaceDefenseTowardsEnemyChance: 20
-		NewProductionCashThreshold: 7000
+		NewProductionCashThreshold: 7500
 		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
@@ -77,12 +77,10 @@ Player:
 			field: 1
 			silo: 1
 		BuildingDelays:
-			bunker: 150
-			bunker2: 150
-			aaturret: 150
-			aaturret2: 150
-			turret: 150
-			turret2: 150
+			module: 100
+			module2: 100
+			factory: 2000
+			factory2: 2000
 			radar: 7500
 			radar2: 7500
 			howitzer: 12000
@@ -110,8 +108,8 @@ Player:
 			radartank: 1
 			buggy: 3
 			bike: 3
-			mbt: 5
-			mbt2: 5
+			mbt: 2
+			mbt2: 2
 			railguntank: 5
 			lightningtank: 8
 			minelayer: 1
@@ -175,7 +173,13 @@ Player:
 			lightningboat: 6
 			jetpacker: 4
 			jetfoiler: 4
+			mbt: 6
+			mbt2: 6
 		UnitDelays:
+			mortar: 1500
+			sniper: 1500
+			rocketeer: 3000
+			shocker: 3000
 			builder: 7500
 			builder2: 7500
 	PriorityCaptureManagerBotModule:
