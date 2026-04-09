@@ -20,7 +20,7 @@ Player:
 		InititalMinimumRefineryCount: 1
 		AdditionalMinimumRefineryCount: 1
 		PlaceDefenseTowardsEnemyChance: 20
-		NewProductionCashThreshold: 7500
+		NewProductionCashThreshold: 7000
 		WaterTerrainTypes: Littoral
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
@@ -64,8 +64,8 @@ Player:
 			starport: 1
 			starport2: 1
 			techcenter: 1
-			oresmelt: 20
-			orepurifier: 20
+			oresmelt: 10
+			orepurifier: 10
 			bunker: 12
 			bunker2: 12
 			turret: 12
@@ -77,10 +77,10 @@ Player:
 			field: 1
 			silo: 1
 		BuildingDelays:
-			module: 100
-			module2: 100
-			factory: 2000
-			factory2: 2000
+			factory: 2250
+			factory2: 2250
+			harbor: 2250
+			harbor2: 2250
 			radar: 7500
 			radar2: 7500
 			howitzer: 12000
@@ -155,7 +155,7 @@ Player:
 			battleship: 1
 			mothership: 1
 		UnitLimits:
-			sniper: 6
+			sniper: 4
 			miner: 2
 			builder: 1
 			builder2: 1
@@ -176,12 +176,17 @@ Player:
 			mbt: 6
 			mbt2: 6
 		UnitDelays:
-			mortar: 1500
-			sniper: 1500
+			mortar: 1000
+			sniper: 1000
 			rocketeer: 3000
 			shocker: 3000
+			aatank: 5000
+			aatank2: 5000
 			builder: 7500
 			builder2: 7500
+			repairtank: 8500
+			blaster: 12500
+			radartank: 20000
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician, broker
