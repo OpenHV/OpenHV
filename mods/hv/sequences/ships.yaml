@@ -201,7 +201,7 @@ lightningboat:
 
 torpedoboat:
 	idle:
-		Filename: torpedo_boat.png
+		Filename: torpedoboat.png
 		Facings: 8
 	icon:
-		Filename: torpedo_boat-icon.png
+		Filename: torpedoboat-icon.png
