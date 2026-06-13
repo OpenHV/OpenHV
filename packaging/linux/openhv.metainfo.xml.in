@@ -33,6 +33,7 @@
     <color type="primary" scheme_preference="dark">#333333</color>
   </branding>
   <url type="homepage">https://www.openhv.net/</url>
+  <url type="vcs-browser">https://github.com/OpenHV/OpenHV/</url>
   <url type="bugtracker">https://github.com/OpenHV/OpenHV/issues</url>
   <url type="help">https://github.com/OpenHV/OpenHV/wiki</url>
   <url type="faq">https://github.com/OpenHV/OpenHV/wiki/FAQ</url>
