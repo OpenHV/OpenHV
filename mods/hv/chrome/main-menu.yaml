@@ -31,7 +31,7 @@ Container@MAINMENU:
 							Y: 22
 							Width: 200
 							Height: 30
-							Text: label-main-menu-mainmenu-title
+							Text: label-main-menu-title
 							Align: Center
 							Font: Title
 						Button@SINGLEPLAYER_BUTTON:

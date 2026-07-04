@@ -91,7 +91,7 @@ button-server-lobby-lobbychat-tab = Game
 button-server-lobby-globalchat-tab = Global
 
 ## main-menu.yaml
-label-main-menu-mainmenu-title = OpenHV
+label-main-menu-title = OpenHV
 button-main-menu-encyclopedia = Encyclopedia
 dropdownbutton-news-bg-button = Subspace Transmissions
 label-update-notice-a = You are running an outdated version of OpenHV.
