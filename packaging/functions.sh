@@ -10,7 +10,7 @@
 # Arguments:
 #   SRC_PATH: Path to the root SDK directory
 #   DEST_PATH: Path to the root of the install destination (will be created if necessary)
-#   TARGETPLATFORM: Platform type (win-x64, osx-x64, linux-x64, unix-generic)
+#   TARGETPLATFORM: Platform type (win-x64, osx-x64, linux-x64)
 #   ENGINE_PATH: Path to the engine root directory
 install_mod_assemblies() {
 	SRC_PATH="${1}"
