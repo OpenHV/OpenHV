@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2024-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -17,7 +17,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Draws an arc between a " + nameof(Hacker) + " and all its victims",
+	[Desc($"Draws an arc between a `{nameof(Hacker)}` and all its victims",
 		"or an actively exploited actor and it's controller.")]
 	public class WithHackedConnectionArcInfo : TraitInfo
 	{

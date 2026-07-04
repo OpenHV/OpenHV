@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2020-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2020-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -16,8 +16,8 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
 {
-	[Desc("Modifies the production cost of this actor for a specific queue or when a prerequisite is granted. " +
-		"Requires " + nameof(VariedCostManager) + " on the " + nameof(World) + " actor.")]
+	[Desc("Modifies the production cost of this actor for a specific queue or when a prerequisite is granted. ",
+		$"Requires {nameof(VariedCostManager)} on the {nameof(World)} actor.")]
 	public class VariedCostMultiplierInfo : TraitInfo<VariedCostMultiplier>, IProductionCostModifierInfo, IRulesetLoaded
 	{
 		[Desc("Only apply this cost change if the owner has these prerequisites.")]

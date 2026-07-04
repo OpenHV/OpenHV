@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class PriorityCaptureManagerBotModuleInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
-		[Desc("Actor types that can capture other actors (via `Captures`).")]
+		[Desc($"Actor types that can capture other actors (via `{nameof(Captures)}`).")]
 		public readonly FrozenSet<string> CapturingActorTypes = FrozenSet<string>.Empty;
 
 		[Desc("Percentage chance of trying a priority capture.")]

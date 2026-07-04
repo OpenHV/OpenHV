@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2021 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -21,7 +21,7 @@ namespace OpenRA.Mods.HV.Warheads
 {
 	[Desc("Warhead extension class using `ValidTargets`/`InvalidTargets` to specify trigger conditions during an explosion,",
 		"compared against the \"always trigger, filtering applies to actors in range\" logic followed by most OpenRA warheads.",
-		"Model is abstracted from " + nameof(CreateEffectWarhead) + ".",
+		$"Model is abstracted from {nameof(CreateEffectWarhead)}.",
 		"Checks against the `Air` TargetType when the explosion was outside of an actor's hitbox",
 		"and happened above `Warhead.AirThreshold`.")]
 	public abstract class ValidateTriggerWarhead : Warhead

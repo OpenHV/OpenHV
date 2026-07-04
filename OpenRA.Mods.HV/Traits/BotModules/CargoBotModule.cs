@@ -1,6 +1,6 @@
 ﻿#region Copyright & License Information
 /*
- * Copyright 2023-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2023-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -20,13 +20,13 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.Player)]
-	[Desc("Manages AI load unit related with " + nameof(Cargo) + " and " + nameof(Passenger) + " traits.")]
+	[Desc($"Manages AI load unit related with `{nameof(Cargo)}` and `{nameof(Passenger)}` traits.")]
 	public class CargoBotModuleInfo : ConditionalTraitInfo
 	{
-		[Desc("Actor types that can be targeted for load, must have " + nameof(Cargo) + ".")]
+		[Desc($"Actor types that can be targeted for load, must have `{nameof(Cargo)}`.")]
 		public readonly FrozenSet<string> TransportTypes = FrozenSet<string>.Empty;
 
-		[Desc("Actor types that used for loading, must have " + nameof(Passenger) + ".")]
+		[Desc($"Actor types that used for loading, must have `{nameof(Passenger)}`.")]
 		public readonly FrozenSet<string> PassengerTypes = FrozenSet<string>.Empty;
 
 		[Desc("Allow enter allied transport.")]
