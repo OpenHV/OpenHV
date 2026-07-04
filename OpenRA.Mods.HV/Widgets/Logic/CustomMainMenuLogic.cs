@@ -102,7 +102,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			skirmishButton.Disabled = !hasMaps;
 
 			var loadButton = singleplayerMenu.Get<ButtonWidget>("LOAD_BUTTON");
-			loadButton.IsDisabled = () => !GameSaveBrowserLogic.IsLoadPanelEnabled(modData.Manifest);
+			loadButton.IsDisabled = () => !LoadGameBrowserLogic.IsLoadPanelEnabled(modData.Manifest);
 			loadButton.OnClick = OpenGameSaveBrowserPanel;
 
 			singleplayerMenu.Get<ButtonWidget>("BACK_BUTTON").OnClick = () => SwitchMenu(MenuType.Main);
@@ -406,12 +406,10 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 		void OpenGameSaveBrowserPanel()
 		{
 			SwitchMenu(MenuType.None);
-			Ui.OpenWindow("GAMESAVE_BROWSER_PANEL", new WidgetArgs
+			Ui.OpenWindow("LOAD_GAME_BROWSER_PANEL", new WidgetArgs
 			{
 				{ "onExit", () => SwitchMenu(MenuType.Singleplayer) },
-				{ "onStart", () => { RemoveShellmapUI(); lastGameState = MenuPanel.GameSaves; } },
-				{ "isSavePanel", false },
-				{ "world", null }
+				{ "onStart", () => { RemoveShellmapUI(); lastGameState = MenuPanel.GameSaves; } }
 			});
 		}
 
