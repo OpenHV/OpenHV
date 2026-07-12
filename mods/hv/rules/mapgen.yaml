@@ -1,0 +1,226 @@
+^MapGenerators:
+	RandomMapGenerator:
+		Type: experimental
+		Name: label-random-map-generator
+		Tilesets: PLANET
+		Options:
+			MultiChoiceOption@HiddenDefaults:
+				Choice@HiddenDefaults:
+					Parameters:
+						Mirror: None
+						Rotations: 1
+						EnforceSymmetry: 0
+						SpawnRegionSize: 12
+						SpawnReservation: 16
+						ResourceSpawnsPerPlayer: 6
+						SpawnBuildSize: 8
+						CentralSpawnReservationFraction: 250
+						MinimumSpawnRadius: 5
+						DefaultResource: gold
+						PlayableTerrain: Ore, Crater, Grass
+						ZoneableTerrain: Crater, Grass
+						GrassTile: 121
+						CraterTile: 5
+						TerrainSmoothing: 4
+						RoughnessRadius: 5
+						CraterRoughness: 350
+						Crater: 350
+						SmoothingThreshold: 833
+						MinimumGrassCraterThickness: 6
+						MinimumCraterSmoothLength: 6
+						MinimumCraterStraight: 3
+						CraterSmoothSegmentType: Biome: Grass Crater
+			IntegerOption@Seed:
+				Label: label-random-map-generator-option-seed
+				Parameter: Seed
+				Default: 0
+			MultiChoiceOption@Shape:
+				Label: label-random-map-generator-option-shape
+				Default: Square
+				Priority: 1
+				Choice@Square:
+					Label: label-random-map-generator-choice-shape-square
+					Parameters:
+						ExternalCircularBias: 0
+			MultiIntegerChoiceOption@Players:
+				Label: label-random-map-generator-option-players
+				Parameter: Players
+				Choices: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+				Default: 2
+				Priority: 1
+			MultiChoiceOption@Symmetry:
+				Label: label-random-map-generator-option-symmetry
+				Default: 2Rotations
+				Priority: 1
+				Choice@None:
+					Label: random-map-generator-choice-mirror-none
+					Parameters:
+						Mirror: None
+				Choice@LeftMatchesRight:
+					Label: random-map-generator-choice-symmetry-mirror-horizontal
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Parameters:
+						Mirror: LeftMatchesRight
+				Choice@TopLeftMatchesBottomRight:
+					Label: random-map-generator-choice-symmetry-mirror-diagonal-tl
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Parameters:
+						Mirror: TopLeftMatchesBottomRight
+				Choice@TopMatchesBottom:
+					Label: random-map-generator-choice-symmetry-mirror-vertical
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Parameters:
+						Mirror: TopMatchesBottom
+				Choice@TopRightMatchesBottomLeft:
+					Label: random-map-generator-choice-symmetry-mirror-diagonal-tr
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Parameters:
+						Mirror: TopRightMatchesBottomLeft
+				Choice@2Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-2-rotations
+					Players: 2, 4, 6, 8, 10, 12, 14, 16
+					Parameters:
+						Rotations: 2
+				Choice@3Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-3-rotations
+					Players: 3, 6, 9, 12, 15
+					Parameters:
+						Rotations: 3
+				Choice@4Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-4-rotations
+					Players: 4, 8, 12, 16
+					Parameters:
+						Rotations: 4
+				Choice@5Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-5-rotations
+					Players: 5, 10, 15
+					Parameters:
+						Rotations: 5
+				Choice@6Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-6-rotations
+					Players: 6, 12
+					Parameters:
+						Rotations: 6
+				Choice@7Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-7-rotations
+					Players: 7, 14
+					Parameters:
+						Rotations: 7
+				Choice@8Rotations:
+					Label: random-map-generator-choice-symmetry-mirror-8-rotations
+					Players: 8, 16
+					Parameters:
+						Rotations: 8
+			MultiChoiceOption@TerrainType:
+				Label: label-random-map-generator-option-terrain-type
+				Priority: 2
+				Default: Flat
+				Choice@Flat:
+					Label: random-map-generator-choice-terrain-type-dirty-grassland
+					Parameters:
+						TerrainFeatureSize: 10240
+						CraterRoughness: 0
+						GrassRoughness: 0
+						Crater: 250
+			MultiChoiceOption@Resources:
+				Label: label-random-map-generator-option-resources
+				Default: Medium
+				Choice@None:
+					Label: label-random-map-generator-choice-resources-none
+					Parameters:
+						ResourceSpawnsPerPlayer: 0
+				Choice@Low:
+					Label: label-random-map-generator-choice-resources-low
+					Parameters:
+						ResourceSpawnsPerPlayer: 2
+				Choice@Medium:
+					Label: label-random-map-generator-choice-resources-medium
+					Parameters:
+						ResourceSpawnsPerPlayer: 4
+				Choice@High:
+					Label: label-random-map-generator-choice-resources-high
+					Parameters:
+						ResourceSpawnsPerPlayer: 6
+				Choice@VeryHigh:
+					Label: label-random-map-generator-choice-resources-very-high
+					Parameters:
+						ResourceSpawnsPerPlayer: 8
+	ClearMapGenerator:
+		Type: clear
+		Name: map-generator-clear
+		Tilesets: PLANET
+		Options:
+			MultiChoiceOption@Tile:
+				Label: clear-map-generator-option-tile
+				Choice@Crater:
+					Label: clear-map-generator-choice-tile-crater
+					Parameters:
+						Tile: 5
+				Choice@Littoral:
+					Label: clear-map-generator-choice-tile-littoral
+					Parameters:
+						Tile: 33
+				Choice@Grass:
+					Label: clear-map-generator-choice-tile-grass
+					Parameters:
+						Tile: 121
+				Choice@GrassPit:
+					Label: clear-map-generator-choice-tile-grass-pit
+					Parameters:
+						Tile: 138
+				Choice@Mountain:
+					Label: clear-map-generator-choice-tile-mountain
+					Parameters:
+						Tile: 195
+				Choice@Ice:
+					Label: clear-map-generator-choice-tile-ice
+					Parameters:
+						Tile: 246
+				Choice@Lava:
+					Label: clear-map-generator-choice-tile-lava
+					Parameters:
+						Tile: 323
+				Choice@Sand:
+					Label: clear-map-generator-choice-tile-sand
+					Parameters:
+						Tile: 567
+				Choice@RedSnow:
+					Label: clear-map-generator-choice-tile-red-snow
+					Parameters:
+						Tile: 635
+				Choice@Snow:
+					Label: clear-map-generator-choice-tile-snow
+					Parameters:
+						Tile: 769
+				Choice@Stone:
+					Label: clear-map-generator-choice-tile-stone
+					Parameters:
+						Tile: 982
+				Choice@Swamp:
+					Label: clear-map-generator-choice-tile-swamp
+					Parameters:
+						Tile: 1070
+				Choice@Tech:
+					Label: clear-map-generator-choice-tile-tech
+					Parameters:
+						Tile: 1181
+				Choice@Pelagic:
+					Label: clear-map-generator-choice-tile-pelagic
+					Parameters:
+						Tile: 1240
+				Choice@TreeGrass:
+					Label: clear-map-generator-choice-tile-tree-grass
+					Parameters:
+						Tile: 1276
+				Choice@TreeSnow:
+					Label: clear-map-generator-choice-tile-tree-snow
+					Parameters:
+						Tile: 1292
+				Choice@Dirt:
+					Label: clear-map-generator-choice-tile-dirt
+					Parameters:
+						Tile: 1567
+				Choice@BlackSand:
+					Label: clear-map-generator-choice-tile-black-sand
+					Parameters:
+						Tile: 1680

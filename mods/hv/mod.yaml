@@ -57,6 +57,7 @@ MapFolders:
 
 Rules:
 	hv|rules/editor.yaml
+	hv|rules/mapgen.yaml
 	hv|rules/player.yaml
 	hv|rules/infantry.yaml
 	hv|rules/vehicles.yaml

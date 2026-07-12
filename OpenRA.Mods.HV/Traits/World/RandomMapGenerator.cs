@@ -12,7 +12,6 @@
 using System;
 using System.Collections.Frozen;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Mods.Common.MapGenerator;
 using OpenRA.Mods.Common.Terrain;
@@ -24,50 +23,8 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.HV.Traits
 {
 	[TraitLocation(SystemActors.EditorWorld)]
-	public sealed class RandomMapGeneratorInfo : TraitInfo, IEditorMapGeneratorInfo
+	public sealed class RandomMapGeneratorInfo : MapGeneratorBaseInfo
 	{
-		[FieldLoader.Require]
-		public readonly string Type = null;
-
-		[FieldLoader.Require]
-		[FluentReference]
-		public readonly string Name = null;
-
-		[FieldLoader.Require]
-		[Desc("Tilesets that are compatible with this map generator.")]
-		public readonly ImmutableArray<string> Tilesets = default;
-
-		[FluentReference]
-		[Desc("The title to use for generated maps.")]
-		public readonly string MapTitle = "label-random-map";
-
-		[Desc("The widget tree to open when the tool is selected.")]
-		public readonly string PanelWidget = "MAP_GENERATOR_TOOL_PANEL";
-
-		// This is purely of interest to the linter.
-		[FieldLoader.LoadUsing(nameof(FluentReferencesLoader))]
-		[FluentReference]
-		public readonly List<string> FluentReferences = null;
-
-		[FieldLoader.LoadUsing(nameof(SettingsLoader))]
-		public readonly MiniYaml Settings;
-
-		string IMapGeneratorInfo.Type => Type;
-		string IMapGeneratorInfo.Name => Name;
-		string IMapGeneratorInfo.MapTitle => MapTitle;
-		ImmutableArray<string> IEditorMapGeneratorInfo.Tilesets => Tilesets;
-
-		static MiniYaml SettingsLoader(MiniYaml my)
-		{
-			return my.NodeWithKey("Settings").Value;
-		}
-
-		static List<string> FluentReferencesLoader(MiniYaml my)
-		{
-			return new MapGeneratorSettings(null, my.NodeWithKey("Settings").Value)
-				.Options.SelectMany(o => o.GetFluentReferences()).ToList();
-		}
-
 		const int FractionMax = Terraformer.FractionMax;
 
 		sealed class Parameters
@@ -215,20 +172,12 @@ namespace OpenRA.Mods.HV.Traits
 			}
 		}
 
-		public IMapGeneratorSettings GetSettings()
-		{
-			return new MapGeneratorSettings(this, Settings);
-		}
-
-		public Map Generate(ModData modData, MapGenerationArgs args)
+		public override Map Generate(ModData modData, MapGenerationArgs args)
 		{
 			var terrainInfo = modData.DefaultTerrainInfo[args.Tileset];
-			var size = args.Size;
-
-			var map = new Map(modData, terrainInfo, size);
+			var map = new Map(modData, terrainInfo, args.Size);
 			var actorPlans = new List<ActorPlan>();
-
-			var param = new Parameters(map, args.Settings);
+			var param = new Parameters(map, GenerateParameterYaml(modData, args));
 
 			var terraformer = new CustomTerraformer(args, map, modData, actorPlans, param.Mirror, param.Rotations);
 
@@ -365,45 +314,15 @@ namespace OpenRA.Mods.HV.Traits
 			return map;
 		}
 
-		public bool TryGenerateMetadata(ModData modData, MapGenerationArgs args, out MapPlayers players, out Dictionary<string, MiniYaml> ruleDefinitions)
-		{
-			try
-			{
-				var playerCount = FieldLoader.GetValue<int>("Players", args.Settings.NodeWithKey("Players").Value.Value);
-
-				// Generated maps use the default ruleset
-				ruleDefinitions = [];
-				players = new MapPlayers(modData.DefaultRules, playerCount);
-
-				return true;
-			}
-			catch
-			{
-				players = null;
-				ruleDefinitions = null;
-				return false;
-			}
-		}
-
 		public override object Create(ActorInitializer init)
 		{
 			return new RandomMapGenerator(init, this);
 		}
 	}
 
-	public class RandomMapGenerator : IEditorTool
+	public class RandomMapGenerator : MapGeneratorBase
 	{
-		public string Label { get; }
-		public string PanelWidget { get; }
-		public TraitInfo TraitInfo { get; }
-		public bool IsEnabled { get; }
-
 		public RandomMapGenerator(ActorInitializer init, RandomMapGeneratorInfo info)
-		{
-			Label = info.Name;
-			PanelWidget = info.PanelWidget;
-			TraitInfo = info;
-			IsEnabled = info.Tilesets.Contains(init.Self.World.Map.Tileset);
-		}
+			: base(init, info) { }
 	}
 }
