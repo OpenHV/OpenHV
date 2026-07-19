@@ -92,7 +92,7 @@ Player:
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
 		SquadSize: 12
-		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster
+		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster, rifleman
 		NavalUnitsTypes: mercboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier, lightningboat
 		AirUnitsTypes: gunship2, gunship3, jet, copter, turtle, banshee
 		ConstructionYardTypes: base, base2
