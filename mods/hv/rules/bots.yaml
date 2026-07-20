@@ -91,7 +91,7 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		SquadSize: 12
+		SquadSize: 28
 		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster, rifleman
 		NavalUnitsTypes: mercboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier, lightningboat
 		AirUnitsTypes: gunship2, gunship3, jet, copter, turtle, banshee
@@ -156,6 +156,8 @@ Player:
 			mothership: 1
 		UnitLimits:
 			sniper: 4
+			buggy: 2
+			bike: 2
 			miner: 2
 			builder: 1
 			builder2: 1
@@ -171,8 +173,8 @@ Player:
 			broker: 1
 			blaster: 3
 			lightningboat: 6
-			jetpacker: 4
-			jetfoiler: 4
+			jetpacker: 2
+			jetfoiler: 2
 			mbt: 6
 			mbt2: 6
 		UnitDelays:
@@ -190,7 +192,7 @@ Player:
 	PriorityCaptureManagerBotModule:
 		RequiresCondition: enable-rogue-ai
 		CapturingActorTypes: technician, broker
-		PriorityCapturableActorTypes: reconstructor, extractor, comlink, dropzone, miner2
+		PriorityCapturableActorTypes: reconstructor, extractor, miner2
 		MinimumCaptureDelay: 0
 		MaximumCaptureTargetOptions: 25
 		CheckCaptureTargetsForVisibility: False
