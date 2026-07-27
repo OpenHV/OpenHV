@@ -15,7 +15,7 @@ Player:
 		MinimumBaseRadius: 15
 	BaseBuilderBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
-		MinimumExcessPower: 60
+		MinimumExcessPower: 50
 		MaximumExcessPower: 1000
 		InititalMinimumRefineryCount: 1
 		AdditionalMinimumRefineryCount: 1
@@ -25,12 +25,14 @@ Player:
 		ConstructionYardTypes: base, base2
 		PowerTypes: generator
 		ProductionTypes: module, module2, factory, factory2, starport, starport2, harbor, harbor2, base, base2
+		BarracksTypes: module, module2
+		VehiclesFactoryTypes: factory, factory2
 		NavalProductionTypes: harbor, harbor2
 		RefineryTypes: storage
 		DefenseTypes: turret, turret2, aaturret, aaturret2, bunker, bunker2
 		BuildingLimits:
 			base: 1
-			storage: 3
+			storage: 4
 			module: 4
 			module2: 4
 			factory: 4
@@ -77,12 +79,9 @@ Player:
 			field: 1
 			silo: 1
 		BuildingDelays:
-			factory: 2250
-			factory2: 2250
-			harbor: 2250
-			harbor2: 2250
-			radar: 7500
-			radar2: 7500
+			storage: 50
+			radar: 1500
+			radar2: 1500
 			howitzer: 12000
 			field: 12000
 			silo: 13000
@@ -91,6 +90,9 @@ Player:
 		RequiresCondition: enable-rogue-ai
 	SquadManagerBotModule@RogueAI:
 		RequiresCondition: enable-rogue-ai
+		IdleScanRadius: 20
+		DangerScanRadius: 20
+		AttackScanRadius: 20
 		SquadSize: 16
 		ExcludeFromSquadsTypes: miner, builder, builder2, tanker1, tanker2, minelayer, technician, broker, mineship, mineship2, blaster, rifleman
 		NavalUnitsTypes: mercboat, railgunboat, lightboat, patrolboat, boomer, submarine, carrier, lightningboat
@@ -155,7 +157,7 @@ Player:
 			battleship: 1
 			mothership: 1
 		UnitLimits:
-			sniper: 4
+			sniper: 3
 			buggy: 2
 			bike: 2
 			miner: 2
@@ -172,20 +174,20 @@ Player:
 			technician: 1
 			broker: 1
 			blaster: 3
-			lightningboat: 6
+			lightningboat: 4
 			jetpacker: 2
 			jetfoiler: 2
 			mbt: 6
 			mbt2: 6
 		UnitDelays:
-			mortar: 1000
-			sniper: 1000
 			rocketeer: 3000
 			shocker: 3000
 			aatank: 5000
 			aatank2: 5000
 			builder: 7500
 			builder2: 7500
+			turtle: 7500
+			jet: 7500
 			repairtank: 8500
 			blaster: 12500
 			radartank: 20000
@@ -258,7 +260,7 @@ Player:
 				MinimumAttractiveness: 5
 				Consideration@1:
 					Against: Enemy
-					Types: Structure, Air, Tank, Vehicle, Infantry
+					Types: Structure, Tank, Vehicle, Infantry
 					Attractiveness: 1
 					TargetMetric: Value
 					CheckRadius: 8c0
