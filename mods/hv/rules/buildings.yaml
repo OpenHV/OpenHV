@@ -842,7 +842,7 @@ FACTORY:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: -150
+		Amount: -120
 	ProvidesPrerequisite@BuildingName:
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Generic:
@@ -1096,7 +1096,7 @@ TECHCENTER:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: -250
+		Amount: -240
 	Targetable:
 		TargetTypes: Ground, Structure
 	RenderSprites:
@@ -1604,7 +1604,7 @@ SILO:
 		CircleWidth: 2
 	SupportPowerChargeBar:
 	Power:
-		Amount: -250
+		Amount: -240
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	WithIdleOverlay@Lights:
