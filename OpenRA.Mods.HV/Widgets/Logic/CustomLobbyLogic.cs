@@ -316,9 +316,9 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 								{
 									foreach (var slot in orderManager.LobbyInfo.Slots)
 									{
-										var bot = botTypes.Random(Game.CosmeticRandom);
+										var bot = botTypes.RandomOrDefault(Game.CosmeticRandom);
 										var c = orderManager.LobbyInfo.ClientInSlot(slot.Key);
-										if (slot.Value.AllowBots && (c == null || c.Bot != null))
+										if (slot.Value.AllowBots && bot != null && (c == null || c.Bot != null))
 											orderManager.IssueOrder(Order.Command($"slot_bot {slot.Key} {botController.Index} {bot}"));
 									}
 								}
