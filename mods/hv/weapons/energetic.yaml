@@ -19,7 +19,7 @@ Railgun:
 		Spread: 128
 		Damage: 6500
 		Versus:
-			None: 150
+			None: 155
 			Steel: 75
 			Light: 125
 			Heavy: 155

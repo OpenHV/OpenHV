@@ -244,7 +244,7 @@ StealthTankMissile:
 	Warhead@Damage: SpreadDamage
 		Damage: 7250
 		Versus:
-			None: 105
+			None: 138
 			Steel: 70
 			Light: 100
 			Heavy: 105
