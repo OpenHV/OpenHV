@@ -50,7 +50,7 @@ Container@PLAYER_WIDGETS:
 			ImageName: background
 			ClickThrough: False
 		Container@COMMAND_BAR:
-			Logic: CommandBarLogic
+			Logic: CustomCommandBarLogic
 			X: 14
 			Y: WINDOW_HEIGHT - HEIGHT - 14
 			Width: 275
