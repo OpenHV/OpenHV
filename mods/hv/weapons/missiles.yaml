@@ -239,15 +239,16 @@ StealthTankMissile:
 	Projectile: Missile
 		Speed: 213
 		CloseEnough: 213
+		Jammable: false
 		Image: bullet14
 		TrailImage: stealthtank-trail
 	Warhead@Damage: SpreadDamage
 		Damage: 7250
 		Versus:
 			None: 138
-			Steel: 70
+			Steel: 76
 			Light: 100
-			Heavy: 105
+			Heavy: 115
 			Concrete: 85
 	Warhead@Incendiary: TreeDamage
 		Damage: 7250

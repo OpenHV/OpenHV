@@ -555,7 +555,7 @@ STEALTHTANK:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 60000
+		HP: 63000
 	Armor:
 		Type: Heavy
 	AttackFrontal:
