@@ -32,6 +32,16 @@
 		ContrailStartWidth: 18
 		ContrailZOffset: 3000
 
+^BlueSniperTracers:
+	Inherits: ^BlueTracers
+	Projectile: InstantHitWithTracers
+		TracerAmount: 1
+		TracerSpeed: 5000
+		TracerSpawnInterval: 0
+		TracerInaccuracy: 0
+		ContrailLength: 4
+		ContrailStartWidth: 48
+
 LightMachineGun:
 	Inherits: SmallSplash
 	Inherits: Ricochet
@@ -205,8 +215,10 @@ ShellCasing:
 
 SniperRifle:
 	Inherits: LightMachineGun
+	Inherits: ^BlueSniperTracers
 	Report: twisterman_silenced-gun-1.ogg
-	Projectile: InstantHit
+	Projectile: InstantHitWithTracers
+		Inaccuracy: 0
 	Warhead@Damage: SpreadDamage
 		Spread: 24
 		Versus:
