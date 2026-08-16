@@ -14,7 +14,7 @@ RIFLEMAN:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 200
+		Cost: 400
 	Tooltip:
 		Name: actor-rifleman.name
 	UpdatesPlayerStatistics:
@@ -55,7 +55,7 @@ ROCKETEER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 450
+		Cost: 900
 	Tooltip:
 		Name: actor-rocketeer.name
 	UpdatesPlayerStatistics:
@@ -102,7 +102,7 @@ MORTAR:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 300
+		Cost: 600
 	Tooltip:
 		Name: actor-mortar.name
 	UpdatesPlayerStatistics:
@@ -143,7 +143,7 @@ SNIPER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 600
+		Cost: 1200
 	Tooltip:
 		Name: actor-sniper.name
 	UpdatesPlayerStatistics:
@@ -198,7 +198,7 @@ FLAMER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 750
+		Cost: 1500
 	Tooltip:
 		Name: actor-flamer.name
 	UpdatesPlayerStatistics:
@@ -238,7 +238,7 @@ TECHNICIAN:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: actor-technician.name
 	UpdatesPlayerStatistics:
@@ -298,7 +298,7 @@ BROKER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: actor-broker.name
 	UpdatesPlayerStatistics:
@@ -394,7 +394,7 @@ JETPACKER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 1125
+		Cost: 2250
 	Tooltip:
 		Name: actor-jetpacker.name
 	Health:
@@ -441,7 +441,7 @@ JETFOILER:
 		Order: 40
 		Category: Pods
 	Valued:
-		Cost: 1125
+		Cost: 2250
 	Tooltip:
 		Name: actor-jetfoiler.name
 	Health:
@@ -485,7 +485,7 @@ BLASTER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 800
+		Cost: 1600
 	Tooltip:
 		Name: actor-blaster.name
 	Health:
@@ -537,7 +537,7 @@ SHOCKER:
 		Scale: 3
 		Category: Pods
 	Valued:
-		Cost: 450
+		Cost: 900
 	Tooltip:
 		Name: actor-shocker.name
 	Voiced:
