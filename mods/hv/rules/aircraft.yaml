@@ -1035,7 +1035,7 @@ MOTHERSHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 375000
+		HP: 187500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1186,7 +1186,7 @@ BATTLESHIP:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Health:
-		HP: 375000
+		HP: 187500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
