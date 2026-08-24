@@ -840,7 +840,7 @@ FACTORY:
 	RevealsShroud@Hacked:
 		Range: 2c0
 	Power:
-		Amount: -150
+		Amount: -120
 	ProvidesPrerequisite@BuildingName:
 		RequiresCondition: !powerdown
 	ProvidesPrerequisite@Generic:
