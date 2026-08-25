@@ -422,7 +422,7 @@ RADAR2:
 		Name: actor-radar2.droppodspower-name
 		Description: actor-radar2.droppodspower-description
 		DisplayRadarPing: true
-		ChargeInterval: 3750
+		ChargeInterval: 4500
 		UnitTypes: droppod1, droppod2
 		CameraActor: camera
 		PodScatter: 5
@@ -1434,7 +1434,7 @@ HOWITZER:
 		BlockedCursor: howitzer-blocked
 		Icon: howitzer
 		OrderName: FireMission
-		ChargeInterval: 4500
+		ChargeInterval: 6000
 		DisplayRadarPing: true
 		Name: actor-howitzer.attackorderpower-name
 		Description: actor-howitzer.attackorderpower-description
