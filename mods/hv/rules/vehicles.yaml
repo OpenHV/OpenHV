@@ -672,7 +672,7 @@ ECMTANK:
 		Class: ecmtank
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.yi, radar, trader
+		Prerequisites: ~factory.yi, techcenter
 		BuildPaletteOrder: 60
 		Description: actor-ecmtank.description
 	Encyclopedia:
@@ -971,7 +971,7 @@ HACKERTANK:
 	Buildable:
 		Queue: Tank
 		BuildPaletteOrder: 60
-		Prerequisites: ~factory.sc, radar, trader
+		Prerequisites: ~factory.sc, techcenter
 		Description: actor-hackertank.description
 	Encyclopedia:
 		Description: actor-hackertank.encyclopedia
