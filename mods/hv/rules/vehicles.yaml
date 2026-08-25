@@ -221,7 +221,7 @@ ARTILLERY:
 		Class: artillery
 	Buildable:
 		Queue: Tank
-		Prerequisites: ~factory.sc, radar
+		Prerequisites: ~disabled
 		BuildPaletteOrder: 20
 		Description: actor-artillery.description
 	Encyclopedia:
@@ -714,7 +714,7 @@ DUALARTILLERY:
 	Inherits: ^TrackedVehicle
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
 	Valued:
-		Cost: 7000
+		Cost: 3200
 	Tooltip:
 		Name: actor-dualartillery.name
 	Selectable:
@@ -723,8 +723,8 @@ DUALARTILLERY:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Tank
-		BuildPaletteOrder: 100
-		Prerequisites: ~disabled
+		Prerequisites: ~factory.sc, radar
+		BuildPaletteOrder: 20
 		Description: actor-dualartillery.description
 	Encyclopedia:
 		Description: actor-dualartillery.encyclopedia
@@ -732,12 +732,12 @@ DUALARTILLERY:
 		Scale: 3
 		Category: Tanks
 	Health:
-		HP: 52500
+		HP: 22500
 	Armor:
 		Type: Light
 	Mobile:
-		TurnSpeed: 8
-		Speed: 85
+		TurnSpeed: 15
+		Speed: 95
 		Locomotor: wheeled
 	RevealsShroud:
 		Range: 6c0
@@ -748,7 +748,7 @@ DUALARTILLERY:
 	Armament:
 		Weapon: DoubleBarrelledArtillery
 		MuzzleSequence: muzzle
-		LocalOffset: 800,0,600
+		LocalOffset: 800,-100,600, 800,100,600
 	AttackFrontal:
 		Armaments: primary
 		TargetFrozenActors: true
@@ -759,9 +759,11 @@ DUALARTILLERY:
 	WithAttackAnimation:
 		Sequence: shoot
 	WithMuzzleOverlay:
+	FireWarheadsOnDeath:
+		Weapon: UnitExplodeMedium
+		EmptyWeapon: UnitExplodeMedium
 	Selectable:
 		DecorationBounds: 1536, 1536
-	-Passenger:
 
 BUILDER:
 	Inherits: ^Vehicle
