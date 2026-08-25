@@ -164,14 +164,18 @@ SNIPER:
 		Voice: Attack
 	WithMuzzleOverlay:
 	Cloak:
-		InitialDelay: 250
-		CloakDelay: 120
-		CloakSound:
-		UncloakSound:
-		UncloakOn: Attack, Unload, Move
+		InitialDelay: 200
+		CloakDelay: 200
+		CloakSound: stealth_on_humanoide9000.ogg
+		UncloakSound: stealth_off_humanoide9000.ogg
+		UncloakOn: Attack, Unload
+		PauseOnCondition: cloak-force-disabled || jammed
 		IsPlayerPalette: true
 		CloakedPalette: cloak
 		CloakStyle: Palette
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
 
 FLAMER:
 	Inherits: ^Pod
