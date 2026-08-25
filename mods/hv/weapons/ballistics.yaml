@@ -160,30 +160,21 @@ ClusterProjectileArtillery:
 
 DoubleBarrelledArtillery:
 	Inherits: ^Artillery
-	ReloadDelay: 200
-	Range: 18c0
-	MinRange: 5c0
+	Report: howitzerfire02.ogg
 	Burst: 2
-	BurstDelays: 8
-	Report: ccbygrenadelaunch01.ogg
+	BurstDelays: 0
+	MinRange: 4c0
 	TargetActorCenter: true
 	Projectile: Bullet
-		LaunchAngle: 165
-		Inaccuracy: 2c0
-		Image: bullet12
-	Warhead@Damage: SpreadDamage
-		Spread: 500
-		Damage: 23000
-		Versus:
-			None: 150
-			Steel: 60
-			Light: 60
-			Heavy: 50
-			Wood: 40
+		Image: bullet5
+		Inaccuracy: 1c138
 	Warhead@Incendiary: TreeDamage
-		Damage: 23000
-		Spread: 500
-		Percentage: 40
+		Damage: 11500
+	Warhead@Damage: SpreadDamage
+		Damage: 11500
+		Falloff: 100, 55, 20, 5
+		Versus:
+			None: 60
 
 TurretCannon:
 	Inherits: BigSplash
