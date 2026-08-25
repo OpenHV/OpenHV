@@ -181,6 +181,7 @@ APC:
 		RequiresCondition: loaded
 		Armaments: primary
 	Selectable:
+		Bounds: 2048, 1843
 		DecorationBounds: 2048, 1843
 		Class: apc
 	WithCargoPipsDecoration:
@@ -763,6 +764,7 @@ DUALARTILLERY:
 		Weapon: UnitExplodeMedium
 		EmptyWeapon: UnitExplodeMedium
 	Selectable:
+		Bounds: 1536, 1536
 		DecorationBounds: 1536, 1536
 
 BUILDER:
