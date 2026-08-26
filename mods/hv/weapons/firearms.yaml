@@ -143,7 +143,7 @@ HelicopterChainGunGround:
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
 	ReloadDelay: 10
 	Range: 6c0
-	MinRange: 0c768
+	MinRange: 1c0
 	Burst: 4
 	Warhead@Damage: SpreadDamage
 		Damage: 250
@@ -165,10 +165,9 @@ HelicopterChainGunAir:
 AircraftChainGunGround:
 	Inherits: ^AircraftChainGun
 	ValidTargets: Water, Ground, Tree, Lava, Swamp
-	ReloadDelay: 6
+	ReloadDelay: 5
 	Range: 6c0
 	MinRange: 1c0
-	Burst: 16
 	Warhead@Damage: SpreadDamage
 		Damage: 375
 		Versus:
