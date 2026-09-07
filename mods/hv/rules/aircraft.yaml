@@ -525,6 +525,7 @@ BANSHEE:
 		Delay: 100
 		Count: 1
 	Selectable:
+		Bounds: 1228, 1228
 		DecorationBounds: 1228, 1228
 	WithMuzzleOverlay:
 
@@ -629,6 +630,7 @@ CHOPPER:
 		Name: fly
 		RequiresCondition: airborne
 	Selectable:
+		Bounds: 2048, 1843
 		DecorationBounds: 2048, 1843
 	Cargo:
 		Types: Pod
@@ -742,6 +744,7 @@ BALLOON:
 	Repairable:
 		Voice: Move
 	Selectable:
+		Bounds: 1228, 1638
 		DecorationBounds: 1228, 1638
 	-WithShadow:
 	WithIdleOverlayOnGround:
@@ -796,6 +799,7 @@ DROPSHIP:
 		Name: fly
 		RequiresCondition: airborne
 	Selectable:
+		Bounds: 2048, 1848
 		DecorationBounds: 2048, 1848
 	Cargo:
 		Types: Pod
@@ -1129,6 +1133,7 @@ MOTHERSHIP:
 		Type: Circle
 			Radius: 1024
 	Selectable:
+		Bounds: 2048, 2048
 		DecorationBounds: 2048, 2048
 	SpawnActorOnDeath:
 		Actor: MOTHERSHIP.Husk
@@ -1279,6 +1284,7 @@ BATTLESHIP:
 		Type: Circle
 			Radius: 1024
 	Selectable:
+		Bounds: 2048, 2048
 		DecorationBounds: 2048, 2048
 	SpawnActorOnDeath:
 		Actor: BATTLESHIP.Husk
