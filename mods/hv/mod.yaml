@@ -160,6 +160,7 @@ ChromeLayout:
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
+	common|chrome/load-game-browser.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
