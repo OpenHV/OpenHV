@@ -46,7 +46,7 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Number of ticks to keep the camera alive")]
 		public readonly int CameraRemoveDelay = 25;
 
-		public readonly FrozenSet<string> AllowedTerrainTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> AllowedTerrainTypes = [];
 
 		public override object Create(ActorInitializer init) { return new DropPodsPower(init.Self, this); }
 	}

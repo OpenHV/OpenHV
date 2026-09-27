@@ -24,10 +24,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class CargoBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc($"Actor types that can be targeted for load, must have `{nameof(Cargo)}`.")]
-		public readonly FrozenSet<string> TransportTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> TransportTypes = [];
 
 		[Desc($"Actor types that used for loading, must have `{nameof(Passenger)}`.")]
-		public readonly FrozenSet<string> PassengerTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> PassengerTypes = [];
 
 		[Desc("Allow enter allied transport.")]
 		public readonly bool OnlyEnterOwnerPlayer = true;
