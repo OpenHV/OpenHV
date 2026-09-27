@@ -46,6 +46,8 @@ install_data() (
 	DEST_PATH="${2}"
 	shift 2
 
+	"${SRC_PATH}"/fetch-geoip.sh
+
 	echo "Installing engine files to ${DEST_PATH}"
 	for FILE in VERSION AUTHORS COPYING IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP; do
 		install -m644 "${SRC_PATH}/${FILE}" "${DEST_PATH}"
@@ -57,8 +59,6 @@ install_data() (
 
 	echo "Installing common mod files to ${DEST_PATH}"
 	cp -r "${SRC_PATH}/mods/common" "${DEST_PATH}/mods/"
-	rm "${DEST_PATH}/mods/common/FreeSans.ttf"
-	rm "${DEST_PATH}/mods/common/FreeSansBold.ttf"
 
 	echo "Installing Hard Vacuum mod files to ${DEST_PATH}"
 	cp -r "${SRC_PATH}/../mods/hv" "${DEST_PATH}/mods/"
