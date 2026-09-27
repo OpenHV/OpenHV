@@ -109,6 +109,8 @@ install_executables "${BINDIR}" "${TEMPLATE_ROOT}" "${ENGINE_DIRECTORY}" "${MOD_
 DATADIR="${APPDIR}${PREFIX}/share"
 install_metadata "${DATADIR}" "${TEMPLATE_ROOT}" "${ENGINE_DIRECTORY}"  "${MOD_ID}" "${TAG}" "${PACKAGING_DISPLAY_NAME}" "${PACKAGING_DISCORD_APPID}" "${PACKAGING_DIR}" "${ARTWORK_DIR}"
 cp "${DATADIR}/applications/openhv.desktop" "${APPDIR}/openhv.desktop"
+mkdir ${APPDIR}/metainfo/
+cp "${DATADIR}/metainfo/openhv.metainfo.xml" "${APPDIR}/metainfo/openhv.metainfo.xml"
 cp "${DATADIR}/icons/hicolor/256x256/apps/openhv.png" "${APPDIR}/openhv.png"
 
 install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${BINDIR}/gtk-dialog.py"
