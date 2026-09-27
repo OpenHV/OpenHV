@@ -32,7 +32,7 @@ MOD_SEARCH_PATHS = "$(shell realpath "$0")/mods,./mods"
 MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/hv/maps/* -iname '*.lua' 2> /dev/null)
-MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.sln' 2> /dev/null)
+MOD_SOLUTION_FILES = $(shell find . -maxdepth 1 -iname '*.slnx' 2> /dev/null)
 SPRITE_FILES ?= $(shell find mods/hv/bits/sprites/* -maxdepth 1 -iname '*.png' 2> /dev/null)
 PREVIEW_FILES = $(shell find mods/hv/maps/* -maxdepth 1 -iname 'map.png' 2> /dev/null)
 MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
@@ -79,7 +79,7 @@ engine: fetch-engine
 	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
 
 all: engine
-	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
+	@find . -maxdepth 1 -name '*.slnx' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
 
 install: install-assemblies install-executables install-metadata install-data install-man
 
@@ -110,7 +110,7 @@ install-man:
 
 clean: engine
 ifneq ("$(MOD_SOLUTION_FILES)","")
-	@find . -maxdepth 1 -name '*.sln' -exec $(DOTNET) clean \;
+	@find . -maxdepth 1 -name '*.slnx' -exec $(DOTNET) clean \;
 endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 
