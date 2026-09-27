@@ -24,7 +24,7 @@ namespace OpenRA.Mods.HV.Traits
 		[FieldLoader.Require]
 		[ActorReference]
 		[Desc("Actor types that can deploy.")]
-		public readonly FrozenSet<string> DeployableActorTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> DeployableActorTypes = [];
 
 		[Desc("Minimum delay (in ticks) between trying to deploy with DeployableActorTypes.")]
 		public readonly int MinimumScanDelay = 100;

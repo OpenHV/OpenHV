@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		[ActorReference]
 		[FieldLoader.Require]
 		[Desc("Actor types that can deploy onto resources.")]
-		public readonly FrozenSet<string> DeployableActorTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> DeployableActorTypes = [];
 
 		[Desc("Where to request production of additional deployable actors.")]
 		public readonly string VehiclesQueue = "Vehicle";

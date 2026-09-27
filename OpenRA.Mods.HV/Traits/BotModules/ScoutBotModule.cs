@@ -23,7 +23,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		[FieldLoader.Require]
 		[Desc("Actor types that are sent around the map.")]
-		public readonly FrozenSet<string> ScoutActorTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> ScoutActorTypes = [];
 
 		[Desc("Minimum delay (in ticks) between searching for ScoutActorTypes.")]
 		public readonly int MinimumScanDelay = 200;

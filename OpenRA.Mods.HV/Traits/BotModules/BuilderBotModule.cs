@@ -22,7 +22,7 @@ namespace OpenRA.Mods.HV.Traits
 	public class BuilderBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that can deploy into outposts.")]
-		public readonly FrozenSet<string> BuilderTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> BuilderTypes = [];
 
 		[Desc("Delay (in ticks) between looking for and giving out orders to new builders.")]
 		public readonly int ScanForNewBuilderInterval = 20;

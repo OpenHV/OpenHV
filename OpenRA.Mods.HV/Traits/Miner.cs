@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 
 		[FieldLoader.Require]
 		[Desc("Terrain types that can be targeted for deployment.")]
-		public readonly FrozenSet<string> TerrainTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> TerrainTypes = [];
 
 		[VoiceReference]
 		[Desc("Voice to use when deploying into a tower.")]

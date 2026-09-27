@@ -24,10 +24,10 @@ namespace OpenRA.Mods.HV.Traits
 	public class CubePickupBotModuleInfo : ConditionalTraitInfo
 	{
 		[Desc("Actor types that should not start hunting for cubes.")]
-		public readonly FrozenSet<string> ExcludedUnitTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> ExcludedUnitTypes = [];
 
 		[Desc("Only these actor types should start hunting for cubes.")]
-		public readonly FrozenSet<string> IncludedUnitTypes = FrozenSet<string>.Empty;
+		public readonly FrozenSet<string> IncludedUnitTypes = [];
 
 		[Desc("Interval (in ticks) between giving out orders to idle units.")]
 		public readonly int ScanForCubesInterval = 50;
