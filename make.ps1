@@ -16,8 +16,10 @@ function All-Command
 		return
 	}
 
-	Write-Host "Building $modID in" $configuration "configuration..." -ForegroundColor Cyan
-	dotnet build -c $configuration --nologo -p:TargetPlatform=win-x64
+	$arch = $env:PROCESSOR_ARCHITECTURE
+	Write-Host "Building" $modID "in" $configuration "configuration for" $arch "..." -ForegroundColor Cyan
+	$rid = if ($arch -eq "ARM64") { "win-arm64" } else { "win-x64" }
+	dotnet build -c $configuration --nologo -p:TargetPlatform=$rid
 
 	if ($lastexitcode -ne 0)
 	{
@@ -120,7 +122,8 @@ function Check-Command
 	Write-Host "Compiling $modID in Debug configuration..." -ForegroundColor Cyan
 
 	dotnet clean -c Debug --nologo --verbosity minimal
-	dotnet build -c Debug --nologo -warnaserror -p:TargetPlatform=win-x64 -p:EnforceCodeStyleInBuild=true -p:GenerateDocumentationFile=true
+	$rid = if ($env:PROCESSOR_ARCHITECTURE -eq "ARM64") { "win-arm64" } else { "win-x64" }
+	dotnet build -c Debug --nologo -warnaserror -p:TargetPlatform=$rid
 	if ($lastexitcode -ne 0)
 	{
 		Write-Host "Build failed." -ForegroundColor Red
@@ -174,7 +177,7 @@ function CheckForDotnet
 {
 	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null)
 	{
-		Write-Host "The 'dotnet' tool is required to compile OpenHV. Please install the .NET 8.0 SDK and try again. https://dotnet.microsoft.com/download/dotnet/8.0" -ForegroundColor Red
+		Write-Host "The 'dotnet' tool is required to compile OpenHV. Please install the .NET 10.0 SDK and try again. https://dotnet.microsoft.com/download/dotnet/10.0" -ForegroundColor Red
 		return 1
 	}
 
