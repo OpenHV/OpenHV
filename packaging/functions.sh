@@ -23,7 +23,7 @@ install_mod_assemblies() {
 
 	mkdir -p "${DEST_PATH}"
 
-	find . -maxdepth 1 -name '*.sln' -exec dotnet publish -c Release -p:TargetPlatform="${TARGETPLATFORM}" -r "${TARGETPLATFORM}" --property:PublishDir="${DEST_PATH}" --self-contained true \;
+	find . -maxdepth 1 -name '*.slnx' -exec dotnet publish -c Release -p:TargetPlatform="${TARGETPLATFORM}" -r "${TARGETPLATFORM}" --property:PublishDir="${DEST_PATH}" --self-contained true \;
 	cd "${ORIG_PWD}" || exit 1
 }
 

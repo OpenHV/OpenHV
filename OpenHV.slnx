@@ -1,0 +1,5 @@
+<Solution>
+	<Project Path="OpenRA.Mods.HV\OpenRA.Mods.HV.csproj" />
+	<Project Path="engine\OpenRA.Game\OpenRA.Game.csproj" />
+	<Project Path="engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj" />
+</Solution>
