@@ -48,7 +48,7 @@ BEAST:
 	-ProximityCaptor:
 
 CROW:
-	Inherits: ^Plane
+	Inherits: ^AirCreature
 	Valued:
 		Cost: 10
 	Health:
@@ -56,7 +56,6 @@ CROW:
 	Tooltip:
 		Name: actor-crow-name
 	Aircraft:
-		CruiseAltitude: 1c0
 		Repulsable: false
 		Speed: 70
 		CruisingCondition: cruising
@@ -68,15 +67,6 @@ CROW:
 	WithShadow:
 		Offset: 200, 128, 0
 		ZOffset: -129
-	-Repairable:
-	-AppearsOnRadar:
-	-Selectable:
-	Interactable:
-	-Targetable@Airborne:
-	-ChangesHealth@Reconstructor:
-	-WithDecoration@Reconstructor:
-	-GrantConditionOnPrerequisite@Reconstructor:
-	-ProximityCaptor:
 
 CROW2:
 	Inherits: CROW
@@ -160,7 +150,7 @@ WORM:
 	DeathSounds:
 
 BIGBIRD:
-	Inherits: ^Plane
+	Inherits: ^AirCreature
 	Valued:
 		Cost: 10
 	Health:
@@ -169,7 +159,6 @@ BIGBIRD:
 		Name: actor-bigbird.name
 		GenericName: actor-bigbird.generic-name
 	Aircraft:
-		CruiseAltitude: 1c0
 		Repulsable: false
 		Speed: 80
 		CruisingCondition: cruising
@@ -185,16 +174,3 @@ BIGBIRD:
 		DeathPaletteIsPlayerPalette: false
 	Voiced:
 		VoiceSet: FlyingMonsterVoice
-	DeathSounds:
-	-Guard:
-	-Repairable:
-	-MustBeDestroyed:
-	-FireWarheadsOnDeath:
-	-FireWarheadsOnDeath@SpawnPilot:
-	-GrantRandomCondition@SpawnPilot:
-	-ChangesHealth@Reconstructor:
-	-WithDecoration@Reconstructor:
-	-GrantConditionOnPrerequisite@Reconstructor:
-	-Selectable:
-	Interactable:
-	-ProximityCaptor:

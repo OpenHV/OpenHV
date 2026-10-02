@@ -2,7 +2,7 @@
 
 Metadata:
 	Title: mod-title
-	Version: {DEV_VERSION}
+	Version: git-8bb01f49
 	Website: https://www.openhv.net
 	WebIcon32: https://www.openhv.net/images/web/icon.png
 	WindowTitle: mod-windowtitle
@@ -53,7 +53,7 @@ FileSystem: DefaultFileSystem
 
 MapFolders:
 	hv|maps: System
-	~^SupportDir|maps/hv/{DEV_VERSION}: User
+	~^SupportDir|maps/hv/git-8bb01f49: User
 
 Rules:
 	hv|rules/editor.yaml

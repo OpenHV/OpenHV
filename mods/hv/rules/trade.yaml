@@ -96,6 +96,18 @@ ARTILLERY.TRADE:
 	UpdatesPlayerStatistics:
 		OverrideActor: artillery
 
+DUALARTILLERY.TRADE:
+	Inherits: DUALARTILLERY
+	Buildable:
+		Queue: Trade
+	VariedCostMultiplier:
+		Queues: Trade
+	-MapEditorData:
+	RenderSprites:
+		Image: dualartillery
+	UpdatesPlayerStatistics:
+		OverrideActor: dualartillery
+
 RADARTANK.TRADE:
 	Inherits: RADARTANK
 	Buildable:

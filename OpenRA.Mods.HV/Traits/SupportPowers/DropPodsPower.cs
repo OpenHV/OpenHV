@@ -56,6 +56,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly DropPodsPowerInfo info;
 		readonly AircraftInfo aircraftInfo;
 		readonly FallsToEarthInfo fallsToEarthInfo;
+		public readonly int DropAmount = 8;
 
 		public DropPodsPower(Actor self, DropPodsPowerInfo info)
 			: base(self, info)
@@ -122,15 +123,14 @@ namespace OpenRA.Mods.HV.Traits
 
 				PlayLaunchSounds();
 
-				var drops = self.World.SharedRandom.Next(info.Drops.X, info.Drops.Y);
-				for (var i = 0; i < drops; i++)
+				var dropTypes = info.UnitTypes.Length;
+
+				for (var i = 0; i < DropAmount; i++)
 				{
-					var unitType = info.UnitTypes.Random(self.World.SharedRandom);
 					var podLocation = podLocations.Random(self.World.SharedRandom);
-					var podTarget = Target.FromCell(w, podLocation);
 					var location = self.World.Map.CenterOfCell(podLocation) - delta + new WVec(0, 0, altitude);
 
-					var pod = w.CreateActor(false, unitType,
+					var pod = w.CreateActor(false, info.UnitTypes[i % dropTypes],
 					[
 						new CenterPositionInit(location),
 						new OwnerInit(self.Owner),
