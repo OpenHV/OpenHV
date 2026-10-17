@@ -678,6 +678,8 @@ random-map-generator-choice-terrain-type-dirty-grassland =
    .label = Dirty Grassland
 random-map-generator-choice-terrain-type-icy-snowland =
    .label = Icy Snowland
+random-map-generator-choice-terrain-type-swampy-meadows =
+   .label = Swampy Meadows
 
 ## Mothership
 actor-mother2c-name = Mothership

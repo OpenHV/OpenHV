@@ -49,6 +49,23 @@
 						WaterContourSpacing: 3
 						MinimumWaterThickness: 3
 						WaterSegmentType: Ice Water
+						DarkGrassTile: 138
+						SwampTile: 1070
+						TreesTile: 1276
+						DarkGrassRoughness: 350
+						DarkGrass: 250
+						MinimumGrassDarkGrassThickness: 6
+						MinimumDarkGrassSmoothLength: 6
+						MinimumDarkGrassStraight: 3
+						DarkGrassSmoothSegmentType: Biome: Grass Dark Grass
+						Swamp: 200
+						SwampContourSpacing: 3
+						MinimumSwampThickness: 3
+						SwampSegmentType: Cliff: Grass Swamp
+						Trees: 200
+						TreesContourSpacing: 3
+						MinimumTreesThickness: 3
+						TreesSegmentType: Trees: Grass
 			IntegerOption@Seed:
 				Label: label-random-map-generator-option-seed
 				Parameter: Seed
@@ -150,6 +167,14 @@
 						IceRoughness: 0
 						PlayableTerrain: Ore, Snow, Ice, Red Snow
 						ZoneableTerrain: Snow, Red Snow
+				Choice@SwampyMeadows:
+					Label: random-map-generator-choice-terrain-type-swampy-meadows
+					Parameters:
+						Landscape: SwampyMeadows
+						TerrainFeatureSize: 10240
+						DarkGrassRoughness: 0
+						PlayableTerrain: Ore, Grass, Grass Pit
+						ZoneableTerrain: Grass, Grass Pit
 			MultiChoiceOption@Resources:
 				Label: label-random-map-generator-option-resources
 				Default: Medium

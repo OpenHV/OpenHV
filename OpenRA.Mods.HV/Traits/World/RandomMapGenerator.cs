@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		const int FractionMax = Terraformer.FractionMax;
 
-		public enum Landscape { DirtyGrassland, IcySnowland }
+		public enum Landscape { DirtyGrassland, IcySnowland, SwampyMeadows }
 
 		sealed class Parameters
 		{
@@ -63,6 +63,15 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly ushort WaterTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort DarkGrassTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort SwampTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort TreesTile = default;
 
 			[FieldLoader.Require]
 			public readonly Landscape Landscape = default;
@@ -141,6 +150,48 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly string WaterSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int DarkGrassRoughness = default;
+
+			[FieldLoader.Require]
+			public readonly int DarkGrass = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumGrassDarkGrassThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string DarkGrassSmoothSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumDarkGrassSmoothLength = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumDarkGrassStraight = default;
+
+			[FieldLoader.Require]
+			public readonly int Swamp = default;
+
+			[FieldLoader.Require]
+			public readonly int SwampContourSpacing = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumSwampThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string SwampSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int Trees = default;
+
+			[FieldLoader.Require]
+			public readonly int TreesContourSpacing = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumTreesThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string TreesSegmentType = default;
 
 			[FieldLoader.Require]
 			public readonly int SpawnBuildSize = default;
@@ -254,6 +305,13 @@ namespace OpenRA.Mods.HV.Traits
 				MaximumDeviation = 10,
 			};
 
+			var darkGrassSmoothZone = new Terraformer.PathPartitionZone()
+			{
+				SegmentType = param.DarkGrassSmoothSegmentType,
+				MinimumLength = param.MinimumDarkGrassSmoothLength,
+				MaximumDeviation = 10,
+			};
+
 			var random = new MersenneTwister(param.Seed);
 			var elevationRandom = new MersenneTwister(random.Next());
 			var pickAnyRandom = new MersenneTwister(random.Next());
@@ -263,6 +321,9 @@ namespace OpenRA.Mods.HV.Traits
 			var iceTilingRandom = new MersenneTwister(random.Next());
 			var redSnowTilingRandom = new MersenneTwister(random.Next());
 			var waterTilingRandom = new MersenneTwister(random.Next());
+			var darkGrassTilingRandom = new MersenneTwister(random.Next());
+			var swampTilingRandom = new MersenneTwister(random.Next());
+			var treesTilingRandom = new MersenneTwister(random.Next());
 
 			terraformer.InitMap();
 
@@ -325,22 +386,22 @@ namespace OpenRA.Mods.HV.Traits
 						?? throw new MapGenerationException($"Could not fit tiles for {description}.");
 			}
 
-			// Spots of another terrain within one side of previously painted spots
-			void PaintNestedSpots(
+			// Spots of another terrain within a region outside of previously painted spots.
+			// Reversed segment types have the spot terrain on the outside of their loops.
+			CellLayer<Terraformer.Side> PaintNestedSpots(
 				MersenneTwister tilingRandom,
 				Matrix<int> spotElevation,
-				CellLayer<Terraformer.Side> sides,
-				Terraformer.Side side,
+				CellLayer<bool> region,
 				int fraction,
 				int contourSpacing,
 				int minimumThickness,
 				string segmentType,
+				bool reversedSegmentType,
 				ushort tile,
 				string description)
 			{
 				var mask = CellLayerUtils.ToMatrix(
-					terraformer.ImproveSymmetry(
-						CellLayerUtils.Map(sides, s => s == side), true, (a, b) => a && b),
+					terraformer.ImproveSymmetry(region, true, (a, b) => a && b),
 					true);
 
 				var plan = terraformer.SliceElevation(
@@ -358,6 +419,9 @@ namespace OpenRA.Mods.HV.Traits
 				var contours = CellLayerUtils.FromMatrixPoints(
 					MatrixUtils.BordersToPoints(plan),
 					map.Tiles);
+				if (reversedSegmentType)
+					contours = contours.Select(contour => contour.Reverse().ToArray()).ToArray();
+
 				var tilingPaths = contours
 					.Select(contour =>
 						TilingPath.QuickCreate(
@@ -370,13 +434,17 @@ namespace OpenRA.Mods.HV.Traits
 							.ExtendEdge(4))
 					.ToArray();
 
-				_ = terraformer.PaintLoopsAndFill(
+				MultiBrush[] brushes = [new MultiBrush().WithTemplate(map, tile, CVec.Zero)];
+				var sides = terraformer.PaintLoopsAndFill(
 					tilingRandom,
 					tilingPaths,
-					plan[0] ? Terraformer.Side.In : Terraformer.Side.Out,
-					null,
-					[new MultiBrush().WithTemplate(map, tile, CVec.Zero)])
+					plan[0] != reversedSegmentType ? Terraformer.Side.In : Terraformer.Side.Out,
+					reversedSegmentType ? brushes : null,
+					reversedSegmentType ? null : brushes)
 						?? throw new MapGenerationException($"Could not fit tiles for {description}.");
+
+				// Always report the spots as being inside
+				return reversedSegmentType ? CellLayerUtils.Map(sides, s => (Terraformer.Side)(-(sbyte)s)) : sides;
 			}
 
 			switch (param.Landscape)
@@ -409,12 +477,12 @@ namespace OpenRA.Mods.HV.Traits
 						PaintNestedSpots(
 							redSnowTilingRandom,
 							elevation.Map(v => -v),
-							snowIce,
-							Terraformer.Side.Out,
+							CellLayerUtils.Map(snowIce, s => s == Terraformer.Side.Out),
 							param.RedSnow,
 							param.RedSnowContourSpacing,
 							param.MinimumRedSnowThickness,
 							param.RedSnowSegmentType,
+							false,
 							param.RedSnowTile,
 							"red snow spots");
 
@@ -423,14 +491,62 @@ namespace OpenRA.Mods.HV.Traits
 						PaintNestedSpots(
 							waterTilingRandom,
 							null,
-							snowIce,
-							Terraformer.Side.In,
+							CellLayerUtils.Map(snowIce, s => s == Terraformer.Side.In),
 							param.Water,
 							param.WaterContourSpacing,
 							param.MinimumWaterThickness,
 							param.WaterSegmentType,
+							false,
 							param.WaterTile,
 							"water");
+
+					break;
+
+				case Landscape.SwampyMeadows:
+					var grassDarkGrass = PaintSpots(
+						darkGrassTilingRandom,
+						param.DarkGrassRoughness,
+						param.DarkGrass,
+						param.MinimumGrassDarkGrassThickness,
+						darkGrassSmoothZone,
+						param.MinimumDarkGrassStraight,
+						param.DarkGrassTile,
+						"dark grass spots");
+
+					var meadow = CellLayerUtils.Map(grassDarkGrass, s => s == Terraformer.Side.Out);
+
+					// Swamp in the lowlands of the grass
+					if (param.Swamp > 0)
+					{
+						var grassSwamp = PaintNestedSpots(
+							swampTilingRandom,
+							elevation.Map(v => -v),
+							meadow,
+							param.Swamp,
+							param.SwampContourSpacing,
+							param.MinimumSwampThickness,
+							param.SwampSegmentType,
+							false,
+							param.SwampTile,
+							"swamp");
+
+						meadow = CellLayerUtils.Intersect(
+							[meadow, CellLayerUtils.Map(grassSwamp, s => s == Terraformer.Side.Out)]);
+					}
+
+					// Trees on the slopes below the dark grass
+					if (param.Trees > 0)
+						PaintNestedSpots(
+							treesTilingRandom,
+							elevation,
+							meadow,
+							param.Trees,
+							param.TreesContourSpacing,
+							param.MinimumTreesThickness,
+							param.TreesSegmentType,
+							true,
+							param.TreesTile,
+							"trees");
 
 					break;
 			}
