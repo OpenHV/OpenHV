@@ -27,6 +27,8 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		const int FractionMax = Terraformer.FractionMax;
 
+		public enum Landscape { DirtyGrassland, IcySnowland }
+
 		sealed class Parameters
 		{
 			[FieldLoader.Require]
@@ -49,6 +51,21 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly ushort CraterTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort SnowTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort IceTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort RedSnowTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort WaterTile = default;
+
+			[FieldLoader.Require]
+			public readonly Landscape Landscape = default;
 
 			[FieldLoader.Require]
 			public readonly int TerrainFeatureSize = default;
@@ -82,6 +99,48 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly int MinimumCraterStraight = default;
+
+			[FieldLoader.Require]
+			public readonly int IceRoughness = default;
+
+			[FieldLoader.Require]
+			public readonly int Ice = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumSnowIceThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string IceSmoothSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumIceSmoothLength = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumIceStraight = default;
+
+			[FieldLoader.Require]
+			public readonly int RedSnow = default;
+
+			[FieldLoader.Require]
+			public readonly int RedSnowContourSpacing = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumRedSnowThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string RedSnowSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int Water = default;
+
+			[FieldLoader.Require]
+			public readonly int WaterContourSpacing = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumWaterThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string WaterSegmentType = default;
 
 			[FieldLoader.Require]
 			public readonly int SpawnBuildSize = default;
@@ -188,17 +247,28 @@ namespace OpenRA.Mods.HV.Traits
 				MaximumDeviation = 10,
 			};
 
+			var iceSmoothZone = new Terraformer.PathPartitionZone()
+			{
+				SegmentType = param.IceSmoothSegmentType,
+				MinimumLength = param.MinimumIceSmoothLength,
+				MaximumDeviation = 10,
+			};
+
 			var random = new MersenneTwister(param.Seed);
 			var elevationRandom = new MersenneTwister(random.Next());
 			var pickAnyRandom = new MersenneTwister(random.Next());
 			var craterTilingRandom = new MersenneTwister(random.Next());
 			var playerRandom = new MersenneTwister(random.Next());
 			var resourceRandom = new MersenneTwister(random.Next());
+			var iceTilingRandom = new MersenneTwister(random.Next());
+			var redSnowTilingRandom = new MersenneTwister(random.Next());
+			var waterTilingRandom = new MersenneTwister(random.Next());
 
 			terraformer.InitMap();
 
+			var baseTile = param.Landscape == Landscape.IcySnowland ? param.SnowTile : param.GrassTile;
 			foreach (var mpos in map.AllCells.MapCoords)
-				map.Tiles[mpos] = terraformer.PickTile(pickAnyRandom, param.GrassTile);
+				map.Tiles[mpos] = terraformer.PickTile(pickAnyRandom, baseTile);
 
 			var elevation = terraformer.ElevationNoiseMatrix(
 				elevationRandom,
@@ -209,42 +279,160 @@ namespace OpenRA.Mods.HV.Traits
 				elevation,
 				param.RoughnessRadius);
 
-			// grassland to crater smooth transition generation
-			CellLayer<Terraformer.Side> craterSmoothGrass;
+			// Smooth transitions from the base terrain to spots of another terrain
+			CellLayer<Terraformer.Side> PaintSpots(
+				MersenneTwister tilingRandom,
+				int roughness,
+				int fraction,
+				int minimumThickness,
+				Terraformer.PathPartitionZone smoothZone,
+				int minimumStraight,
+				ushort tile,
+				string description)
 			{
 				var cliffMask = MatrixUtils.CalibratedBooleanThreshold(
 					roughnessMatrix,
-					param.CraterRoughness, FractionMax);
+					roughness, FractionMax);
 
-				var plan = terraformer.SliceElevation(elevation, null, param.Crater);
+				var plan = terraformer.SliceElevation(elevation, null, fraction);
 				plan = MatrixUtils.BooleanBlotch(
 					plan,
 					param.TerrainSmoothing,
 					param.SmoothingThreshold, FractionMax,
-					param.MinimumGrassCraterThickness,
+					minimumThickness,
 					true);
 
 				var contours = MatrixUtils.BordersToPoints(plan);
-				var partitionMask = cliffMask.Map(masked => masked ? craterSmoothZone : craterSmoothZone);
+				var partitionMask = cliffMask.Map(masked => masked ? smoothZone : smoothZone);
 				var tilingPaths = terraformer.PartitionPaths(
 					contours,
-					[craterSmoothZone],
+					[smoothZone],
 					partitionMask,
 					param.SegmentedBrushes,
-					param.MinimumCraterStraight);
+					minimumStraight);
 
 				foreach (var tilingPath in tilingPaths)
 					tilingPath
 						.OptimizeLoop()
 						.ExtendEdge(4);
 
-				craterSmoothGrass = terraformer.PaintLoopsAndFill(
-					craterTilingRandom,
+				return terraformer.PaintLoopsAndFill(
+					tilingRandom,
 					tilingPaths,
 					plan[0] ? Terraformer.Side.In : Terraformer.Side.Out,
 					null,
-					[new MultiBrush().WithTemplate(map, param.CraterTile, CVec.Zero)])
-						?? throw new MapGenerationException("Could not fit tiles for crater spots.");
+					[new MultiBrush().WithTemplate(map, tile, CVec.Zero)])
+						?? throw new MapGenerationException($"Could not fit tiles for {description}.");
+			}
+
+			// Spots of another terrain within one side of previously painted spots
+			void PaintNestedSpots(
+				MersenneTwister tilingRandom,
+				Matrix<int> spotElevation,
+				CellLayer<Terraformer.Side> sides,
+				Terraformer.Side side,
+				int fraction,
+				int contourSpacing,
+				int minimumThickness,
+				string segmentType,
+				ushort tile,
+				string description)
+			{
+				var mask = CellLayerUtils.ToMatrix(
+					terraformer.ImproveSymmetry(
+						CellLayerUtils.Map(sides, s => s == side), true, (a, b) => a && b),
+					true);
+
+				var plan = terraformer.SliceElevation(
+					spotElevation ?? MatrixUtils.ChebyshevRoom(mask, false),
+					mask,
+					fraction,
+					contourSpacing);
+				plan = MatrixUtils.BooleanBlotch(
+					plan,
+					param.TerrainSmoothing,
+					param.SmoothingThreshold, FractionMax,
+					minimumThickness,
+					false);
+
+				var contours = CellLayerUtils.FromMatrixPoints(
+					MatrixUtils.BordersToPoints(plan),
+					map.Tiles);
+				var tilingPaths = contours
+					.Select(contour =>
+						TilingPath.QuickCreate(
+								map,
+								param.SegmentedBrushes,
+								contour,
+								(minimumThickness - 1) / 2,
+								segmentType,
+								segmentType)
+							.ExtendEdge(4))
+					.ToArray();
+
+				_ = terraformer.PaintLoopsAndFill(
+					tilingRandom,
+					tilingPaths,
+					plan[0] ? Terraformer.Side.In : Terraformer.Side.Out,
+					null,
+					[new MultiBrush().WithTemplate(map, tile, CVec.Zero)])
+						?? throw new MapGenerationException($"Could not fit tiles for {description}.");
+			}
+
+			switch (param.Landscape)
+			{
+				case Landscape.DirtyGrassland:
+					PaintSpots(
+						craterTilingRandom,
+						param.CraterRoughness,
+						param.Crater,
+						param.MinimumGrassCraterThickness,
+						craterSmoothZone,
+						param.MinimumCraterStraight,
+						param.CraterTile,
+						"crater spots");
+					break;
+
+				case Landscape.IcySnowland:
+					var snowIce = PaintSpots(
+						iceTilingRandom,
+						param.IceRoughness,
+						param.Ice,
+						param.MinimumSnowIceThickness,
+						iceSmoothZone,
+						param.MinimumIceStraight,
+						param.IceTile,
+						"ice spots");
+
+					// Red snow in the lowlands of the snow
+					if (param.RedSnow > 0)
+						PaintNestedSpots(
+							redSnowTilingRandom,
+							elevation.Map(v => -v),
+							snowIce,
+							Terraformer.Side.Out,
+							param.RedSnow,
+							param.RedSnowContourSpacing,
+							param.MinimumRedSnowThickness,
+							param.RedSnowSegmentType,
+							param.RedSnowTile,
+							"red snow spots");
+
+					// Open water in the middle of the ice
+					if (param.Water > 0)
+						PaintNestedSpots(
+							waterTilingRandom,
+							null,
+							snowIce,
+							Terraformer.Side.In,
+							param.Water,
+							param.WaterContourSpacing,
+							param.MinimumWaterThickness,
+							param.WaterSegmentType,
+							param.WaterTile,
+							"water");
+
+					break;
 			}
 
 			CellLayer<bool> playable;

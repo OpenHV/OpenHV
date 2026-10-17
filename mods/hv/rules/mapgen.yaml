@@ -30,6 +30,25 @@
 						MinimumCraterSmoothLength: 6
 						MinimumCraterStraight: 3
 						CraterSmoothSegmentType: Biome: Grass Crater
+						Landscape: DirtyGrassland
+						SnowTile: 769
+						IceTile: 246
+						RedSnowTile: 635
+						WaterTile: 33
+						IceRoughness: 350
+						Ice: 350
+						MinimumSnowIceThickness: 6
+						MinimumIceSmoothLength: 6
+						MinimumIceStraight: 3
+						IceSmoothSegmentType: Biome: Snow Ice
+						RedSnow: 250
+						RedSnowContourSpacing: 3
+						MinimumRedSnowThickness: 3
+						RedSnowSegmentType: Biome: Snow Red Snow
+						Water: 350
+						WaterContourSpacing: 3
+						MinimumWaterThickness: 3
+						WaterSegmentType: Ice Water
 			IntegerOption@Seed:
 				Label: label-random-map-generator-option-seed
 				Parameter: Seed
@@ -118,10 +137,19 @@
 				Choice@Flat:
 					Label: random-map-generator-choice-terrain-type-dirty-grassland
 					Parameters:
+						Landscape: DirtyGrassland
 						TerrainFeatureSize: 10240
 						CraterRoughness: 0
 						GrassRoughness: 0
 						Crater: 250
+				Choice@IcySnowland:
+					Label: random-map-generator-choice-terrain-type-icy-snowland
+					Parameters:
+						Landscape: IcySnowland
+						TerrainFeatureSize: 10240
+						IceRoughness: 0
+						PlayableTerrain: Ore, Snow, Ice, Red Snow
+						ZoneableTerrain: Snow, Red Snow
 			MultiChoiceOption@Resources:
 				Label: label-random-map-generator-option-resources
 				Default: Medium
