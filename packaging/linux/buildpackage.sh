@@ -81,7 +81,7 @@ for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 done
 
 echo "Building mod files"
-install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}${PREFIX}/lib/openhv" ${TARGETPLATFORM} "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}${PREFIX}/lib/openhv" ${TARGETPLATFORM} "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}${PREFIX}/lib/openhv/mods"
 rm "${APPDIR}${PREFIX}/lib/openhv/mods/common/FreeSans.ttf"
