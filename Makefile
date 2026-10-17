@@ -4,7 +4,7 @@
 #   make
 #
 # to compile using system libraries for native dependencies, run:
-#   make TARGETPLATFORM=unix-generic
+#   make DEPENDENCIES=system
 #
 # to remove the files created by compiling, run:
 #   make clean
@@ -39,14 +39,14 @@ MAP_FOLDERS = $(shell find mods/hv/maps/* -maxdepth 0 -type d 2> /dev/null)
 OGG_FILES := $(shell find mods/hv/bits/audio/* -maxdepth 2 -iname '*.ogg' 2> /dev/null | sed 's/ /\\ /g')
 
 DOTNET = dotnet
-RUNTIME ?= net6
 DOTNET_RID = $(shell ${DOTNET} --info | grep RID: | cut -w -f3)
 
+# Detect target platform if not given by the user
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
 UNAME_M := $(shell uname -m)
 ifeq ($(UNAME_S),Darwin)
-ifeq ($(RUNTIME)-$(DOTNET_RID),net6-osx-arm64)
+ifeq ($(ARCH_X64),)
 TARGETPLATFORM = osx-arm64
 else
 TARGETPLATFORM = osx-x64
@@ -57,8 +57,6 @@ TARGETPLATFORM = linux-x64
 else
 ifeq ($(UNAME_M),aarch64)
 TARGETPLATFORM = linux-arm64
-else
-TARGETPLATFORM = unix-generic
 endif
 endif
 endif
@@ -76,7 +74,7 @@ fetch-engine:
 
 engine: fetch-engine
 	@echo "Compiling engine..."
-	@cd $(ENGINE_DIRECTORY) && make RUNTIME=$(RUNTIME) TARGETPLATFORM=$(TARGETPLATFORM) all
+	@cd $(ENGINE_DIRECTORY) && make DEPENDENCIES=$(DEPENDENCIES) TARGETPLATFORM=$(TARGETPLATFORM) all
 
 all: engine
 	@find . -maxdepth 1 -name '*.slnx' -exec $(DOTNET) build -c Release -p:TargetPlatform=$(TARGETPLATFORM) \;
