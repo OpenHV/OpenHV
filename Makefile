@@ -41,6 +41,9 @@ OGG_FILES := $(shell find mods/hv/bits/audio/* -maxdepth 2 -iname '*.ogg' 2> /de
 DOTNET = dotnet
 DOTNET_RID = $(shell ${DOTNET} --info | grep RID: | cut -w -f3)
 
+# Or use system dependencies on Unix:
+DEPENDENCIES ?= bundled
+
 # Detect target platform if not given by the user
 ifndef TARGETPLATFORM
 UNAME_S := $(shell uname -s)
