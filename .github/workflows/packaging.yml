@@ -10,9 +10,16 @@ permissions:
 
 jobs:
   linux:
-    name: Linux AppImages
-    runs-on: ubuntu-22.04
-
+    name: Linux AppImages (${{ matrix.arch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            runner: ubuntu-22.04
+          - arch: arm64
+            runner: ubuntu-22.04-arm
+    runs-on: ${{ matrix.runner }}
     steps:
       - name: Clone Repository
         uses: actions/checkout@v7
@@ -23,13 +30,13 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Prepare Environment
-        run: echo "GIT_TAG=${GITHUB_REF#refs/tags/}" >> ${GITHUB_ENV}
+        run: echo "GIT_TAG=${GITHUB_REF#refs/tags/}" >> "${GITHUB_ENV}"
 
       - name: Package AppImage
         run: |
           make engine
           mkdir -p build/linux
-          sudo apt install desktop-file-utils
+          sudo apt-get install -y desktop-file-utils
           ./packaging/linux/buildpackage.sh "${GIT_TAG}" "${PWD}/build/linux"
 
       - name: Upload Packages
@@ -37,7 +44,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          gh release upload ${{ github.ref_name }} build/linux/*
+          gh release upload "${{ github.ref_name }}" build/linux/*
 
   macos:
     name: macOS Disk Image

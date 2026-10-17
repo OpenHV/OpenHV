@@ -25,6 +25,12 @@ fi
 PACKAGING_DIR=$(dirname $(realpath "$0"))
 TEMPLATE_ROOT="${PACKAGING_DIR}/../../"
 ARTWORK_DIR="${PACKAGING_DIR}/../artwork/"
+ARCH=$(uname -m)
+if [[ "${ARCH}" == "aarch64" ]]; then
+	TARGETPLATFORM="linux-arm64"
+else
+	TARGETPLATFORM="linux-x64"
+fi
 
 # shellcheck source=mod.config
 . "${TEMPLATE_ROOT}/mod.config"
@@ -66,7 +72,7 @@ if [ ! -d "${OUTPUTDIR}" ]; then
 fi
 
 echo "Building core files"
-install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv" "linux-x64" "True" "False" "False"
+install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv" ${TARGETPLATFORM} "True" "False" "False"
 install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${APPDIR}${PREFIX}/lib/openhv"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
@@ -75,7 +81,7 @@ for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 done
 
 echo "Building mod files"
-install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}${PREFIX}/lib/openhv" "linux-x64" "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+install_mod_assemblies "${TEMPLATE_ROOT}" "${APPDIR}${PREFIX}/lib/openhv" ${TARGETPLATFORM} "net6" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
 
 cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}${PREFIX}/lib/openhv/mods"
 rm "${APPDIR}${PREFIX}/lib/openhv/mods/common/FreeSans.ttf"
@@ -92,9 +98,9 @@ fi
 # Add native libraries
 echo "Downloading appimagetool"
 if command -v curl >/dev/null 2>&1; then
-	curl -s -L -O https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage || exit 3
+	curl -s -L -O https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-${ARCH}.AppImage || exit 3
 else
-	wget -cq https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage || exit 3
+	wget -cq https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-${ARCH}.AppImage || exit 3
 fi
 
 echo "Building AppImage"
@@ -115,10 +121,10 @@ cp "${DATADIR}/icons/hicolor/256x256/apps/openhv.png" "${APPDIR}/openhv.png"
 
 install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${BINDIR}/gtk-dialog.py"
 
-chmod a+x appimagetool-x86_64.AppImage
-APPIMAGE="${PACKAGING_INSTALLER_NAME}-${TAG}-x86_64.AppImage"
-ARCH=x86_64 ./appimagetool-x86_64.AppImage -u "gh-releases-zsync|OpenHV|OpenHV|latest|OpenHV-*.AppImage.zsync" "${APPDIR}" "${OUTPUTDIR}/${APPIMAGE}"
+chmod a+x appimagetool-${ARCH}.AppImage
+APPIMAGE="${PACKAGING_INSTALLER_NAME}-${TAG}-${ARCH}.AppImage"
+ARCH=${ARCH} ./appimagetool-${ARCH}.AppImage -u "gh-releases-zsync|OpenHV|OpenHV|latest|OpenHV-*.AppImage.zsync" "${APPDIR}" "${OUTPUTDIR}/${APPIMAGE}"
 zsyncmake -u "https://github.com/OpenHV/OpenHV/releases/download/${TAG}/${APPIMAGE}" -o "${OUTPUTDIR}/${APPIMAGE}.zsync" "${OUTPUTDIR}/${APPIMAGE}"
 
 # Clean up
-rm -rf appimagetool-x86_64.AppImage "${PACKAGING_APPIMAGE_DEPENDENCIES_TEMP_ARCHIVE_NAME}" "${APPDIR}"
+rm -rf appimagetool-${ARCH}.AppImage "${PACKAGING_APPIMAGE_DEPENDENCIES_TEMP_ARCHIVE_NAME}" "${APPDIR}"
