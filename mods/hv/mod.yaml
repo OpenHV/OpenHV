@@ -278,7 +278,7 @@ SpriteFormats: PngSheet
 
 SoundFormats: Wav, Ogg
 
-SpriteSequenceFormat: DefaultSpriteSequence
+SpriteSequenceFormat: PaddedSpriteSequence
 
 AssetBrowser:
 	SpriteExtensions: .png
