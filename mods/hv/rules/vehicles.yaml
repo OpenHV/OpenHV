@@ -179,6 +179,7 @@ APC:
 		RequiresCondition: loaded
 		Armaments: primary
 	Selectable:
+		Bounds: 2048, 1843
 		DecorationBounds: 2048, 1843
 		Class: apc
 	WithCargoPipsDecoration:
@@ -742,6 +743,7 @@ DUALARTILLERY:
 		Sequence: shoot
 	WithMuzzleOverlay:
 	Selectable:
+		Bounds: 1536, 1536
 		DecorationBounds: 1536, 1536
 	-Passenger:
 
