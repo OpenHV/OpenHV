@@ -8102,14 +8102,6 @@ Templates:
 		Categories: Grass, Cliff, Swamp
 		Tiles:
 			0: Cliff
-	Template@1068:
-		Id: 1068
-		Images: swamp.png
-		Frames: 3
-		Size: 1,1
-		Categories: Grass
-		Tiles:
-			0: Grass
 	Template@1069:
 		Id: 1069
 		Images: swamp.png
