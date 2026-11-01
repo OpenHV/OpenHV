@@ -15,3 +15,4 @@ Metrics:
 	GlobalChatNotificationColor: FFFF00
 	GlobalChatTextColor: FFFFFF
 	GlobalChatPlayerNameColor: FFFFFF
+	HiddenMapPreviewPng: bits/ui/hidden-map-preview.png
