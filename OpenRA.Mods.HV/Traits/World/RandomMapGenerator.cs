@@ -152,6 +152,66 @@ namespace OpenRA.Mods.HV.Traits
 			public readonly string WaterSegmentType = default;
 
 			[FieldLoader.Require]
+			public readonly string ShoreSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumShoreLength = default;
+
+			[FieldLoader.Require]
+			public readonly string WaterCliffSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumWaterCliffLength = default;
+
+			[FieldLoader.Require]
+			public readonly int WaterCliffRoughness = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumCoastStraight = default;
+
+			[FieldLoader.Require]
+			public readonly int Cliffs = default;
+
+			[FieldLoader.Require]
+			public readonly int CliffClearance = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumCliffThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string CliffSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumCliffLength = default;
+
+			[FieldLoader.Require]
+			public readonly string CliffGapSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumCliffGapLength = default;
+
+			[FieldLoader.Require]
+			public readonly int CliffRoughness = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumCliffStraight = default;
+
+			[FieldLoader.Require]
+			public readonly int Ramps = default;
+
+			[FieldLoader.Require]
+			public readonly int RampFeatureSize = default;
+
+			[FieldLoader.Require]
+			public readonly int RampContourSpacing = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumRampThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string RampSegmentType = default;
+
+			[FieldLoader.Require]
 			public readonly int DarkGrassRoughness = default;
 
 			[FieldLoader.Require]
@@ -192,6 +252,24 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly string TreesSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int ForestFeatureSize = default;
+
+			[FieldLoader.Require]
+			public readonly int RockClustersPerPlayer = default;
+
+			[FieldLoader.Require]
+			public readonly int MaximumRocksPerCluster = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumRockClusterSize = default;
+
+			[FieldLoader.Require]
+			public readonly int MaximumRockClusterSize = default;
+
+			[FieldLoader.LoadUsing(nameof(RockWeightsLoader))]
+			public readonly IReadOnlyDictionary<string, int> RockWeights = default;
 
 			[FieldLoader.Require]
 			public readonly int SpawnBuildSize = default;
@@ -268,6 +346,17 @@ namespace OpenRA.Mods.HV.Traits
 					throw new YamlException($"Invalid Mirror value `{my.NodeWithKey("Mirror").Value.Value}`");
 			}
 
+			static object RockWeightsLoader(MiniYaml my)
+			{
+				return my.NodeWithKey("RockWeights").Value.ToDictionary(subMy =>
+					{
+						if (Exts.TryParseInt32Invariant(subMy.Value, out var weight))
+							return weight;
+						else
+							throw new YamlException($"Invalid rock weight `{subMy.Value}`");
+					});
+			}
+
 			public void Validate()
 			{
 				if (Rotations < 1)
@@ -311,6 +400,60 @@ namespace OpenRA.Mods.HV.Traits
 				};
 			}
 
+			/// <summary>Follows contours with one of the zones, depending on how rough the terrain is.</summary>
+			List<TilingPath> PartitionContours(
+				IEnumerable<int2[]> contours,
+				Terraformer.PathPartitionZone smoothZone,
+				Terraformer.PathPartitionZone roughZone,
+				int spotRoughness,
+				int minimumStraight)
+			{
+				var roughMask = MatrixUtils.CalibratedBooleanThreshold(
+					roughness,
+					spotRoughness, FractionMax);
+
+				var partitionMask = roughMask.Map(masked => masked ? roughZone : smoothZone);
+				var tilingPaths = terraformer.PartitionPaths(
+					contours,
+					[.. new[] { smoothZone, roughZone }.Distinct()],
+					partitionMask,
+					param.SegmentedBrushes,
+					minimumStraight);
+
+				foreach (var tilingPath in tilingPaths)
+					tilingPath
+						.OptimizeLoop()
+						.ExtendEdge(4);
+
+				return tilingPaths;
+			}
+
+			/// <summary>Plans spots of another terrain within a region, keeping away from its borders.</summary>
+			Matrix<bool> PlanNestedSpots(
+				Matrix<int> spotElevation,
+				CellLayer<bool> region,
+				int fraction,
+				int contourSpacing,
+				int minimumThickness)
+			{
+				var mask = CellLayerUtils.ToMatrix(
+					terraformer.ImproveSymmetry(region, true, (a, b) => a && b),
+					true);
+
+				var plan = terraformer.SliceElevation(
+					spotElevation ?? MatrixUtils.ChebyshevRoom(mask, false),
+					mask,
+					fraction,
+					contourSpacing);
+
+				return MatrixUtils.BooleanBlotch(
+					plan,
+					param.TerrainSmoothing,
+					param.SmoothingThreshold, FractionMax,
+					minimumThickness,
+					false);
+			}
+
 			/// <summary>Smooth transitions from the base terrain to spots of another terrain.</summary>
 			public CellLayer<Terraformer.Side> PaintSpots(
 				MersenneTwister tilingRandom,
@@ -322,10 +465,6 @@ namespace OpenRA.Mods.HV.Traits
 				ushort tile,
 				string description)
 			{
-				var cliffMask = MatrixUtils.CalibratedBooleanThreshold(
-					roughness,
-					spotRoughness, FractionMax);
-
 				var plan = terraformer.SliceElevation(Elevation, null, fraction);
 				plan = MatrixUtils.BooleanBlotch(
 					plan,
@@ -334,19 +473,12 @@ namespace OpenRA.Mods.HV.Traits
 					minimumThickness,
 					true);
 
-				var contours = MatrixUtils.BordersToPoints(plan);
-				var partitionMask = cliffMask.Map(masked => masked ? smoothZone : smoothZone);
-				var tilingPaths = terraformer.PartitionPaths(
-					contours,
-					[smoothZone],
-					partitionMask,
-					param.SegmentedBrushes,
+				var tilingPaths = PartitionContours(
+					MatrixUtils.BordersToPoints(plan),
+					smoothZone,
+					smoothZone,
+					spotRoughness,
 					minimumStraight);
-
-				foreach (var tilingPath in tilingPaths)
-					tilingPath
-						.OptimizeLoop()
-						.ExtendEdge(4);
 
 				return terraformer.PaintLoopsAndFill(
 					tilingRandom,
@@ -373,21 +505,7 @@ namespace OpenRA.Mods.HV.Traits
 				ushort tile,
 				string description)
 			{
-				var mask = CellLayerUtils.ToMatrix(
-					terraformer.ImproveSymmetry(region, true, (a, b) => a && b),
-					true);
-
-				var plan = terraformer.SliceElevation(
-					spotElevation ?? MatrixUtils.ChebyshevRoom(mask, false),
-					mask,
-					fraction,
-					contourSpacing);
-				plan = MatrixUtils.BooleanBlotch(
-					plan,
-					param.TerrainSmoothing,
-					param.SmoothingThreshold, FractionMax,
-					minimumThickness,
-					false);
+				var plan = PlanNestedSpots(spotElevation, region, fraction, contourSpacing, minimumThickness);
 
 				var contours = CellLayerUtils.FromMatrixPoints(
 					MatrixUtils.BordersToPoints(plan),
@@ -419,6 +537,96 @@ namespace OpenRA.Mods.HV.Traits
 				// Always report the spots as being inside
 				return reversedSegmentType ? CellLayerUtils.Map(sides, s => (Terraformer.Side)(-(sbyte)s)) : sides;
 			}
+
+			/// <summary>Lakes in the lowlands of a region, with beaches where the terrain is gentle.</summary>
+			public CellLayer<Terraformer.Side> PaintLakes(
+				MersenneTwister tilingRandom,
+				CellLayer<bool> region,
+				int fraction,
+				int contourSpacing,
+				int minimumThickness,
+				Terraformer.PathPartitionZone shoreZone,
+				Terraformer.PathPartitionZone waterCliffZone,
+				int waterCliffRoughness,
+				int minimumStraight,
+				ushort tile)
+			{
+				var plan = PlanNestedSpots(Elevation.Map(v => -v), region, fraction, contourSpacing, minimumThickness);
+				var tilingPaths = PartitionContours(
+					MatrixUtils.BordersToPoints(plan),
+					shoreZone,
+					waterCliffZone,
+					waterCliffRoughness,
+					minimumStraight);
+
+				return terraformer.PaintLoopsAndFill(
+					tilingRandom,
+					tilingPaths,
+					plan[0] ? Terraformer.Side.In : Terraformer.Side.Out,
+					null,
+					[new MultiBrush().WithTemplate(map, tile, CVec.Zero)])
+						?? throw new MapGenerationException("Could not fit tiles for lakes.");
+			}
+
+			/// <summary>
+			/// Plateaus that enclose all craters and leave out all lakes, with gaps in their cliffs
+			/// where the terrain is gentle. Segment types have the plateau on the left of their paths.
+			/// A contour too rough for any gap is left out, so that no plateau is walled off.
+			/// </summary>
+			public void PaintPlateaus(
+				MersenneTwister tilingRandom,
+				CellLayer<Terraformer.Side> craters,
+				CellLayer<Terraformer.Side> lakes,
+				int fraction,
+				int clearance,
+				int minimumThickness,
+				Terraformer.PathPartitionZone gapZone,
+				Terraformer.PathPartitionZone cliffZone,
+				int cliffRoughness,
+				int minimumStraight)
+			{
+				const int SeamThickness = 3;
+
+				static Matrix<int> Room(CellLayer<Terraformer.Side> sides)
+				{
+					return MatrixUtils.ChebyshevRoom(
+						CellLayerUtils.ToMatrix(CellLayerUtils.Map(sides, s => s != Terraformer.Side.In), true),
+						true);
+				}
+
+				var craterRoom = Room(craters);
+				var lakeRoom = Room(lakes);
+
+				var plan = MatrixUtils.BooleanBlotch(
+					terraformer.SliceElevation(Elevation, null, fraction),
+					param.TerrainSmoothing,
+					param.SmoothingThreshold, FractionMax,
+					minimumThickness,
+					false);
+
+				for (var n = 0; n < plan.Data.Length; n++)
+					plan[n] = (plan[n] || craterRoom[n] <= clearance) && lakeRoom[n] > clearance;
+
+				// Only clean up the seams: smoothing would erode what was just added, and
+				// when thickness fixes fight each other the bias is painted over a wide area.
+				plan = MatrixUtils.BooleanBlotch(
+					plan,
+					0,
+					param.SmoothingThreshold, FractionMax,
+					SeamThickness,
+					true);
+
+				var contours = MatrixUtils.BordersToPoints(plan)
+					.Select(contour => contour.Reverse().ToArray());
+				var tilingPaths = PartitionContours(contours, gapZone, cliffZone, cliffRoughness, minimumStraight);
+
+				foreach (var tilingPath in tilingPaths)
+				{
+					var brush = tilingPath.Tile(tilingRandom)
+						?? throw new MapGenerationException("Could not fit tiles for plateaus.");
+					terraformer.PaintTiling(tilingRandom, brush);
+				}
+			}
 		}
 
 		public override Map Generate(ModData modData, MapGenerationArgs args)
@@ -443,6 +651,11 @@ namespace OpenRA.Mods.HV.Traits
 			var darkGrassTilingRandom = new MersenneTwister(random.Next());
 			var swampTilingRandom = new MersenneTwister(random.Next());
 			var treesTilingRandom = new MersenneTwister(random.Next());
+			var cliffTilingRandom = new MersenneTwister(random.Next());
+			var forestRandom = new MersenneTwister(random.Next());
+			var rockRandom = new MersenneTwister(random.Next());
+			var rampRandom = new MersenneTwister(random.Next());
+			var rampTilingRandom = new MersenneTwister(random.Next());
 
 			terraformer.InitMap();
 
@@ -458,7 +671,17 @@ namespace OpenRA.Mods.HV.Traits
 			switch (param.Landscape)
 			{
 				case Landscape.DirtyGrassland:
-					PaintDirtyGrassland(spotPainter, param, craterTilingRandom);
+					PaintDirtyGrassland(
+						terraformer,
+						spotPainter,
+						param,
+						craterTilingRandom,
+						waterTilingRandom,
+						cliffTilingRandom,
+						rampRandom,
+						rampTilingRandom,
+						forestRandom,
+						treesTilingRandom);
 					break;
 
 				case Landscape.IcySnowland:
@@ -475,6 +698,7 @@ namespace OpenRA.Mods.HV.Traits
 
 			PlacePlayerSpawns(map, terraformer, param, playerRandom, zoneable);
 			PlaceResources(terraformer, param, resourceRandom, zoneable);
+			PlaceRocks(terraformer, param, rockRandom, zoneable);
 
 			terraformer.BakeMap();
 
@@ -488,9 +712,19 @@ namespace OpenRA.Mods.HV.Traits
 				map.Tiles[mpos] = terraformer.PickTile(pickAnyRandom, baseTile);
 		}
 
-		static void PaintDirtyGrassland(SpotPainter spotPainter, Parameters param, MersenneTwister craterTilingRandom)
+		static void PaintDirtyGrassland(
+			CustomTerraformer terraformer,
+			SpotPainter spotPainter,
+			Parameters param,
+			MersenneTwister craterTilingRandom,
+			MersenneTwister waterTilingRandom,
+			MersenneTwister cliffTilingRandom,
+			MersenneTwister rampRandom,
+			MersenneTwister rampTilingRandom,
+			MersenneTwister forestRandom,
+			MersenneTwister treesTilingRandom)
 		{
-			spotPainter.PaintSpots(
+			var craters = spotPainter.PaintSpots(
 				craterTilingRandom,
 				param.CraterRoughness,
 				param.Crater,
@@ -499,6 +733,85 @@ namespace OpenRA.Mods.HV.Traits
 				param.MinimumCraterStraight,
 				param.CraterTile,
 				"crater spots");
+
+			// Lakes in the lowlands, which are far from the craters on the high ground
+			var lakes = CellLayerUtils.Map(craters, _ => Terraformer.Side.Out);
+			if (param.Water > 0)
+				lakes = spotPainter.PaintLakes(
+					waterTilingRandom,
+					terraformer.CheckSpace(param.GrassTile),
+					param.Water,
+					param.WaterContourSpacing,
+					param.MinimumWaterThickness,
+					new Terraformer.PathPartitionZone()
+					{
+						RequiredSomewhere = true,
+						SegmentType = param.ShoreSegmentType,
+						MinimumLength = param.MinimumShoreLength,
+						MaximumDeviation = param.MinimumWaterThickness - 1,
+					},
+					new Terraformer.PathPartitionZone()
+					{
+						SegmentType = param.WaterCliffSegmentType,
+						MinimumLength = param.MinimumWaterCliffLength,
+						MaximumDeviation = param.MinimumWaterThickness - 1,
+					},
+					param.WaterCliffRoughness,
+					param.MinimumCoastStraight,
+					param.WaterTile);
+
+			if (param.Cliffs > 0)
+				spotPainter.PaintPlateaus(
+					cliffTilingRandom,
+					craters,
+					lakes,
+					param.Cliffs,
+					param.CliffClearance,
+					param.MinimumCliffThickness,
+					new Terraformer.PathPartitionZone()
+					{
+						ShouldTile = false,
+						RequiredSomewhere = true,
+						SegmentType = param.CliffGapSegmentType,
+						MinimumLength = param.MinimumCliffGapLength,
+						MaximumDeviation = (param.MinimumCliffThickness - 1) / 2,
+					},
+					new Terraformer.PathPartitionZone()
+					{
+						SegmentType = param.CliffSegmentType,
+						MinimumLength = param.MinimumCliffLength,
+						MaximumDeviation = (param.MinimumCliffThickness - 1) / 2,
+					},
+					param.CliffRoughness,
+					param.MinimumCliffStraight);
+
+			// Forests wherever there is still plain grass
+			if (param.Trees > 0)
+				spotPainter.PaintNestedSpots(
+					treesTilingRandom,
+					terraformer.ElevationNoiseMatrix(forestRandom, param.ForestFeatureSize, param.TerrainSmoothing),
+					terraformer.CheckSpace(param.GrassTile),
+					param.Trees,
+					param.TreesContourSpacing,
+					param.MinimumTreesThickness,
+					param.TreesSegmentType,
+					true,
+					param.TreesTile,
+					"trees");
+
+			// Gentle hills on their own, away from the cliffs and forests
+			if (param.Ramps > 0)
+				spotPainter.PaintNestedSpots(
+					rampTilingRandom,
+					terraformer.ElevationNoiseMatrix(rampRandom, param.RampFeatureSize, param.TerrainSmoothing),
+					terraformer.CheckSpace(param.GrassTile),
+					param.Ramps,
+					param.RampContourSpacing,
+					param.MinimumRampThickness,
+					param.RampSegmentType,
+					true,
+					param.GrassTile,
+					"ramps");
 		}
 
 		static void PaintIcySnowland(
@@ -670,6 +983,34 @@ namespace OpenRA.Mods.HV.Traits
 			}
 
 			terraformer.ZoneFromResources(zoneable, false);
+		}
+
+		static void PlaceRocks(
+			CustomTerraformer terraformer,
+			Parameters param,
+			MersenneTwister rockRandom,
+			CellLayer<bool> zoneable)
+		{
+			// Rocks are projected but resources are not, so keep clear of every projection of them
+			var rockZoneable = terraformer.ImproveSymmetry(zoneable, false, (a, b) => a && b);
+
+			var symmetryCount = Symmetry.RotateAndMirrorProjectionCount(param.Rotations, param.Mirror);
+			var targetClusterCount = param.RockClustersPerPlayer * param.Players / symmetryCount;
+			for (var i = 0; i < targetClusterCount; i++)
+			{
+				var added = terraformer.AddActorCluster(
+					rockRandom,
+					rockZoneable,
+					param.RockWeights,
+					rockRandom.Next(param.MaximumRocksPerCluster) + 1,
+					1,
+					param.MinimumRockClusterSize,
+					param.MaximumRockClusterSize,
+					1,
+					true);
+				if (added == 0)
+					break;
+			}
 		}
 
 		public override object Create(ActorInitializer init)

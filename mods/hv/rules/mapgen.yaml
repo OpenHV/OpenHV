@@ -17,7 +17,7 @@
 						CentralSpawnReservationFraction: 250
 						MinimumSpawnRadius: 5
 						DefaultResource: gold
-						PlayableTerrain: Ore, Crater, Grass
+						PlayableTerrain: Ore, Crater, Grass, Grass Ramp
 						ZoneableTerrain: Crater, Grass
 						GrassTile: 121
 						CraterTile: 5
@@ -49,6 +49,26 @@
 						WaterContourSpacing: 3
 						MinimumWaterThickness: 3
 						WaterSegmentType: Ice Water
+						ShoreSegmentType: Shore: Grass
+						MinimumShoreLength: 8
+						WaterCliffSegmentType: Cliff: Grass Water
+						MinimumWaterCliffLength: 8
+						WaterCliffRoughness: 400
+						MinimumCoastStraight: 2
+						Cliffs: 0
+						CliffClearance: 3
+						MinimumCliffThickness: 5
+						CliffSegmentType: Cliff: Grass
+						MinimumCliffLength: 8
+						CliffGapSegmentType: Grass
+						MinimumCliffGapLength: 6
+						CliffRoughness: 600
+						MinimumCliffStraight: 2
+						Ramps: 0
+						RampFeatureSize: 15360
+						RampContourSpacing: 4
+						MinimumRampThickness: 4
+						RampSegmentType: Ramp: Grass
 						DarkGrassTile: 138
 						SwampTile: 1070
 						TreesTile: 1276
@@ -66,6 +86,19 @@
 						TreesContourSpacing: 3
 						MinimumTreesThickness: 3
 						TreesSegmentType: Trees: Grass
+						ForestFeatureSize: 15360
+						RockClustersPerPlayer: 0
+						MaximumRocksPerCluster: 6
+						MinimumRockClusterSize: 2
+						MaximumRockClusterSize: 4
+						RockWeights:
+							rock1: 1
+							rock3: 1
+							rock6: 1
+							rock9: 1
+							rock10: 1
+							rock11: 1
+							rock12: 1
 			IntegerOption@Seed:
 				Label: label-random-map-generator-option-seed
 				Parameter: Seed
@@ -159,6 +192,13 @@
 						CraterRoughness: 0
 						GrassRoughness: 0
 						Crater: 250
+						Water: 400
+						WaterContourSpacing: 8
+						MinimumWaterThickness: 4
+						Cliffs: 450
+						Ramps: 800
+						Trees: 350
+						RockClustersPerPlayer: 5
 				Choice@IcySnowland:
 					Label: random-map-generator-choice-terrain-type-icy-snowland
 					Parameters:

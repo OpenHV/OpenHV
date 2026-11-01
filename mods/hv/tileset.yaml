@@ -16182,28 +16182,28 @@ MultiBrushCollections:
 			Template: 1367
 			Segment:
 				Start: Cliff: Grass Water.L
-				Inner: Shore: Grass
+				Inner: Cliff: Grass Water
 				End: Shore: Grass.L
 				Points: 1,1, 0,1
 		MultiBrush@1368:
 			Template: 1368
 			Segment:
 				Start: Cliff: Grass Water.U
-				Inner: Shore: Grass
+				Inner: Cliff: Grass Water
 				End: Shore: Grass.U
 				Points: 0,1, 0,0
 		MultiBrush@1369:
 			Template: 1369
 			Segment:
 				Start: Cliff: Grass Water.D
-				Inner: Shore: Grass
+				Inner: Cliff: Grass Water
 				End: Shore: Grass.D
 				Points: 1,0, 1,1
 		MultiBrush@1370:
 			Template: 1370
 			Segment:
 				Start: Cliff: Grass Water.R
-				Inner: Shore: Grass
+				Inner: Cliff: Grass Water
 				End: Shore: Grass.R
 				Points: 0,0, 1,0
 		MultiBrush@1371:
