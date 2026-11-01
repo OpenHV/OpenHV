@@ -66,6 +66,7 @@
 	Parachutable:
 		FallRate: 26
 		KilledOnImpassableTerrain: true
+		WaterTerrainTypes: Littoral, Pelagic, Oceanic, Rapids
 		ParachutingCondition: parachute
 	Targetable:
 		RequiresCondition: !parachute
