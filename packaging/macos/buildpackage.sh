@@ -70,6 +70,10 @@ if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CER
 	echo "Importing signing certificate"
 	echo "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" | base64 --decode > build.p12
 	security create-keychain -p build build.keychain
+
+	# Ensure keychain is deleted upon script exit, even on failure
+	trap 'security delete-keychain build.keychain 2>/dev/null || true' EXIT
+
 	security default-keychain -s build.keychain
 	security unlock-keychain -p build build.keychain
 	security import build.p12 -k build.keychain -P "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" -T /usr/bin/codesign >/dev/null 2>&1
@@ -91,6 +95,9 @@ fi
 
 BUILTDIR="${PACKAGING_DIR}/build"
 PACKAGING_OSX_APP_NAME="${PACKAGING_DISPLAY_NAME}.app"
+
+# Clean up any leftover build directories from previous aborted runs
+rm -rf "${BUILTDIR}"
 
 # Set the working dir to the location of this script
 cd "${PACKAGING_DIR}"
@@ -115,7 +122,7 @@ cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/Info.plist.in" "${LAUNC
 modify_plist "{DEV_VERSION}" "${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.11" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.15" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 if [ -n "${DISCORD_APPID}" ]; then
@@ -127,10 +134,7 @@ fi
 # Compile universal (x86_64 + arm64) Launcher and arch-specific apphosts
 clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/apphost.c" -o "${LAUNCHER_ASSEMBLY_DIR}/apphost-x86_64" -framework AppKit -target x86_64-apple-macos10.15
 clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/apphost.c" -o "${LAUNCHER_ASSEMBLY_DIR}/apphost-arm64" -framework AppKit -target arm64-apple-macos10.15
-clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" -framework AppKit -target x86_64-apple-macos10.11
-clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64" -framework AppKit -target arm64-apple-macos10.15
-lipo -create -output "${LAUNCHER_ASSEMBLY_DIR}/Launcher" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64"
-rm "${LAUNCHER_ASSEMBLY_DIR}/Launcher-x86_64" "${LAUNCHER_ASSEMBLY_DIR}/Launcher-arm64"
+clang "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -arch x86_64 -arch arm64 -mmacosx-version-min=10.15
 
 install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/x86_64" "osx-x64" "True" "False" "False"
 install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}/arm64" "osx-arm64" "True" "False" "False"
@@ -159,7 +163,7 @@ fi
 
 # Assemble multi-resolution icon
 mkdir "${BUILTDIR}/mod.iconset"
-cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_16x16@2.png"
+cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_16x16@2x.png"
 cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_32x32.png"
 cp "${ARTWORK_DIR}/icon_64x64.png" "${BUILTDIR}/mod.iconset/icon_32x32@2x.png"
 cp "${ARTWORK_DIR}/icon_128x128.png" "${BUILTDIR}/mod.iconset/icon_128x128.png"
@@ -174,6 +178,17 @@ if [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
 	codesign -s "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/entitlements.plist" --deep "${LAUNCHER_DIR}"
 fi
 
+# Replace duplicate .NET runtime files with hard links to improve compression
+echo "Deduplicating runtime files between architectures"
+for f in "${LAUNCHER_ASSEMBLY_DIR}/x86_64"/*; do
+	g="${LAUNCHER_ASSEMBLY_DIR}/arm64/"$(basename "${f}")
+	if [ -e "${g}" ] && cmp -s "${f}" "${g}"; then
+		echo "Deduplicating ${f}"
+		rm "${f}"
+		ln "${g}" "${f}"
+	fi
+done
+
 echo "Packaging disk image"
 hdiutil create "build.dmg" -format UDRW -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -srcfolder "${BUILTDIR}"
 DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${PACKAGING_DIR}/build.dmg" | egrep '^/dev/' | sed 1q | awk '{print $1}')
@@ -186,28 +201,28 @@ tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/ma
 cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
 
 echo '
-   tell application "Finder"
-     tell disk "'${PACKAGING_DISPLAY_NAME}'"
-           open
-           set current view of container window to icon view
-           set toolbar visible of container window to false
-           set statusbar visible of container window to false
-           set the bounds of container window to {400, 100, 1000, 550}
-           set theViewOptions to the icon view options of container window
-           set arrangement of theViewOptions to not arranged
-           set icon size of theViewOptions to 72
-           set background picture of theViewOptions to file ".background:background.tiff"
-           make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
-           set position of item "'${PACKAGING_OSX_APP_NAME}'" of container window to {'${PACKAGING_OSX_DMG_MOD_ICON_POSITION}'}
-           set position of item "Applications" of container window to {'${PACKAGING_OSX_DMG_APPLICATION_ICON_POSITION}'}
-           set position of item ".background" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
-           set position of item ".fseventsd" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
-           set position of item ".VolumeIcon.icns" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
-           update without registering applications
-           delay 5
-           close
-     end tell
-   end tell
+tell application "Finder"
+	tell disk "'${PACKAGING_DISPLAY_NAME}'"
+		open
+		set current view of container window to icon view
+		set toolbar visible of container window to false
+		set statusbar visible of container window to false
+		set the bounds of container window to {400, 100, 1000, 550}
+		set theViewOptions to the icon view options of container window
+		set arrangement of theViewOptions to not arranged
+		set icon size of theViewOptions to 72
+		set background picture of theViewOptions to file ".background:background.tiff"
+		make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
+		set position of item "'${PACKAGING_OSX_APP_NAME}'" of container window to {'${PACKAGING_OSX_DMG_MOD_ICON_POSITION}'}
+		set position of item "Applications" of container window to {'${PACKAGING_OSX_DMG_APPLICATION_ICON_POSITION}'}
+		set position of item ".background" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+		set position of item ".fseventsd" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+		set position of item ".VolumeIcon.icns" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+		update without registering applications
+		delay 5
+		close
+	end tell
+end tell
 ' | osascript
 
 # HACK: Copy the volume icon again - something in the previous step seems to delete it...?
@@ -222,35 +237,25 @@ sync
 hdiutil detach "${DMG_DEVICE}"
 rm -rf "${BUILTDIR}"
 
-if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
-	security delete-keychain build.keychain
-fi
+DMG_NAME="${PACKAGING_INSTALLER_NAME}-${TAG}.dmg"
+FINAL_DMG_PATH="${OUTPUTDIR}/${DMG_NAME}"
 
+hdiutil convert "build.dmg" -format ULFO -ov -o "${FINAL_DMG_PATH}"
+rm "build.dmg"
+
+# Submit build for notarization
 if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
 	echo "Submitting build for notarization"
 
-	# Reset xcode search path to fix xcrun not finding altool
+	# Reset xcode search path to fix xcrun not finding altool/notarytool
 	sudo xcode-select -r
 
-	# Create a temporary read-only dmg for submission (notarization service rejects read/write images)
-	hdiutil convert "build.dmg" -format ULFO -ov -o "build-notarization.dmg"
+	# Submit the final DMG directly to notarytool
+	xcrun notarytool submit "${FINAL_DMG_PATH}" --wait --apple-id "${MACOS_DEVELOPER_USERNAME}" --password "${MACOS_DEVELOPER_PASSWORD}" --team-id "${MACOS_DEVELOPER_IDENTITY}"
 
-	xcrun notarytool submit "build-notarization.dmg" --wait --apple-id "${MACOS_DEVELOPER_USERNAME}" --password "${MACOS_DEVELOPER_PASSWORD}" --team-id "${MACOS_DEVELOPER_IDENTITY}"
-
-	rm "build-notarization.dmg"
-
-	echo "Stapling tickets"
-	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "build.dmg" | egrep '^/dev/' | sed 1q | awk '{print $1}')
-	sleep 2
-
-	xcrun stapler staple "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
-	xcrun stapler validate "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
-
-	sync
-	sync
-
-	hdiutil detach "${DMG_DEVICE}"
+	echo "Stapling tickets to DMG"
+	xcrun stapler staple "${FINAL_DMG_PATH}"
+	xcrun stapler validate "${FINAL_DMG_PATH}"
 fi
 
-hdiutil convert "build.dmg" -format ULFO -ov -o "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}.dmg"
-rm "build.dmg"
+echo "Packaging complete: ${FINAL_DMG_PATH}"
