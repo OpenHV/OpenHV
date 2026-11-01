@@ -56,3 +56,7 @@ DARK_LIGHT:
 		RedTint: -0.20
 		GreenTint: -0.35
 		BlueTint: -0.35
+
+Player:
+	BaseBuilderBotModule@RogueAI:
+		CheckForWaterRadius: 64

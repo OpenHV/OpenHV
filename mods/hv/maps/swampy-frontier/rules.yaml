@@ -57,3 +57,7 @@ NEGA-LIGHT:
 		RedTint: -0.10
 		GreenTint: -0.35
 		BlueTint: -0.30
+
+Player:
+	BaseBuilderBotModule@RogueAI:
+		CheckForWaterRadius: 128

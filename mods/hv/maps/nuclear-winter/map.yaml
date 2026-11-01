@@ -794,3 +794,5 @@ Actors:
 		Owner: Neutral
 		Facing: 384
 		Location: 32,39
+
+Rules: rules.yaml

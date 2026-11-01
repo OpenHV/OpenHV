@@ -56,3 +56,7 @@ PITLIGHT:
 		RedTint: -0.1
 		GreenTint: -0.2
 		BlueTint: -0.2
+
+Player:
+	BaseBuilderBotModule@RogueAI:
+		CheckForWaterRadius: 32

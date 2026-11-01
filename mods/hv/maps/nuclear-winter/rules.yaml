@@ -1,0 +1,3 @@
+Player:
+	BaseBuilderBotModule@RogueAI:
+		CheckForWaterRadius: 32
