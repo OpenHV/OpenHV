@@ -38,5 +38,8 @@ if [ ! -f "${ENGINE_DIRECTORY}/bin/OpenRA.dll" ] || [ "$(cat "${ENGINE_DIRECTORY
 	exit 1
 fi
 
+# Electron based terminals export EGL_PLATFORM=wayland which crashes Mesa when SDL 2 uses EGL on X11
+unset EGL_PLATFORM
+
 cd "${ENGINE_DIRECTORY}"
 dotnet bin/OpenRA.dll Engine.EngineDir=".." Engine.LaunchPath="${TEMPLATE_LAUNCHER}" "Engine.ModSearchPaths=${MOD_SEARCH_PATHS}" Game.Mod="${MOD_ID}" "$@"
