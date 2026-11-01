@@ -295,16 +295,17 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			{
 				slotsButton.IsVisible = () => panel != PanelType.Servers && panel != PanelType.Options;
 				slotsButton.IsDisabled = () => configurationDisabled() || panel != PanelType.Players ||
+					(orderManager.LobbyInfo.Clients.Count == 1 && map.PlayerActorInfo.TraitInfos<IBotInfo>().Count == 0) ||
 					(orderManager.LobbyInfo.Slots.Values.All(s => !s.AllowBots) &&
 					!orderManager.LobbyInfo.Slots.Any(s => !s.Value.LockTeam && orderManager.LobbyInfo.ClientInSlot(s.Key) != null));
 
 				slotsButton.OnMouseDown = _ =>
 				{
-					var botTypes = map.PlayerActorInfo.TraitInfos<IBotInfo>().Select(t => t.Type);
+					var botTypes = map.PlayerActorInfo.TraitInfos<IBotInfo>();
 					var options = new Dictionary<string, IEnumerable<DropDownOption>>();
 
 					var botController = orderManager.LobbyInfo.Clients.FirstOrDefault(c => c.IsAdmin);
-					if (orderManager.LobbyInfo.Slots.Values.Any(s => s.AllowBots))
+					if (botTypes.Count > 0 && orderManager.LobbyInfo.Slots.Values.Any(s => s.AllowBots))
 					{
 						var botOptions = new List<DropDownOption>()
 						{
@@ -316,9 +317,9 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 								{
 									foreach (var slot in orderManager.LobbyInfo.Slots)
 									{
-										var bot = botTypes.RandomOrDefault(Game.CosmeticRandom);
+										var bot = botTypes.Random(Game.CosmeticRandom).Type;
 										var c = orderManager.LobbyInfo.ClientInSlot(slot.Key);
-										if (slot.Value.AllowBots && bot != null && (c == null || c.Bot != null))
+										if (slot.Value.AllowBots && (c == null || c.Bot != null))
 											orderManager.IssueOrder(Order.Command($"slot_bot {slot.Key} {botController.Index} {bot}"));
 									}
 								}
@@ -356,7 +357,7 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 							OnClick = () => orderManager.IssueOrder(Order.Command($"assignteams {d}"))
 						}).ToList();
 
-						if (orderManager.LobbyInfo.Slots.Any(s => s.Value.AllowBots))
+						if (botTypes.Count > 0 && orderManager.LobbyInfo.Slots.Any(s => s.Value.AllowBots))
 						{
 							teamOptions.Add(new DropDownOption
 							{
