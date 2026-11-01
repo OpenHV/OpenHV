@@ -257,11 +257,6 @@ AMPLIFIER:
 	ExternalCondition:
 		Condition: weapon-range-upgrade
 
-^Ship:
-	SpawnScrapOnDeath:
-		Actors: scrap1, scrap2, scrap3, scrap4, scrap5
-		TerrainTypes: Water
-
 EXTRACTOR:
 	Health:
 		HP: 100000
