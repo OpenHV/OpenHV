@@ -56,7 +56,7 @@ namespace OpenRA.Mods.HV.Traits.Render
 					() => body.PlayCustomAnimationRepeating(self, info.LoopSequence));
 		}
 
-		void INotifySupportPower.Activated(Actor self)
+		void INotifySupportPower.Activated(Actor self, string orderName)
 		{
 			if (!IsTraitDisabled && !string.IsNullOrEmpty(info.EndSequence))
 				body.PlayCustomAnimation(self, info.EndSequence);
