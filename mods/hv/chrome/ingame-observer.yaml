@@ -648,8 +648,10 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
-									X: 2
-									Y: 2
+									X: 5
+									Y: 4
+									Width: 35
+									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
 								LabelWithTooltip@PLAYER:
@@ -736,8 +738,10 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
-									X: 2
-									Y: 2
+									X: 5
+									Y: 4
+									Width: 35
+									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
 								LabelWithTooltip@PLAYER:
@@ -810,8 +814,10 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
-									X: 2
-									Y: 2
+									X: 5
+									Y: 4
+									Width: 35
+									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
 								LabelWithTooltip@PLAYER:
@@ -849,8 +855,10 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
-									X: 2
-									Y: 2
+									X: 5
+									Y: 4
+									Width: 35
+									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
 								LabelWithTooltip@PLAYER:
@@ -928,8 +936,10 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Image@FLAG:
-									X: 2
-									Y: 2
+									X: 5
+									Y: 4
+									Width: 35
+									Height: PARENT_HEIGHT - 4
 									ImageName: random
 									ImageCollection: flags
 								LabelWithTooltip@PLAYER:
