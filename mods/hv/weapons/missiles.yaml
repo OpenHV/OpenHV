@@ -49,25 +49,6 @@
 	Warhead@Effect: CreateEffect
 		ImpactActors: false
 
-AntiAirRocket:
-	Inherits: ^AntiAirMissile
-	ReloadDelay: 60
-	MinRange: 1c256
-	Burst: 2
-	BurstDelays: 10
-	Projectile: Missile
-		Speed: 384
-		CloseEnough: 384
-		TrailImage: smoke
-	Warhead@Damage: SpreadDamage
-		Damage: 4000
-		ValidTargets: Air
-		Versus:
-			Steel: 75
-			Light: 75
-	Warhead@Incendiary: TreeDamage
-		Damage: 4000
-
 MissileTankRocket:
 	Inherits: BigSplash
 	Inherits: ^AntiGroundMissile

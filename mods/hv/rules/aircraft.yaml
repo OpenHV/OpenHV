@@ -3,7 +3,7 @@
 GUNSHIP:
 	Inherits: ^Plane
 	Inherits@AutoTarget: ^AutoTargetGroundAssaultMove
-	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@ShellCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Buildable:
 		Queue: Aircraft
@@ -70,7 +70,7 @@ GUNSHIP:
 GUNSHIP2:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@ShellCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
 		Cost: 2000
@@ -333,7 +333,7 @@ JET2:
 COPTER:
 	Inherits: ^Helicopter
 	Inherits@AutoTarget: ^AutoTargetAllAssaultMove
-	Inherits@MagazineCasing: ^DropShellCasing
+	Inherits@ShellCasing: ^DropShellCasing
 	Inherits@Smoke: ^SmokeEmitter
 	Valued:
 		Cost: 2000

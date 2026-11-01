@@ -1189,20 +1189,11 @@
 		Prerequisites: reconstructor
 
 ^DropShellCasing:
-	SpawnsShrapnel@shell:
+	SpawnsShrapnel@Shell:
 		Weapon: ShellCasing
 		RequiresCondition: shell
-	GrantConditionOnAttack@shell:
+	GrantConditionOnAttack@Shell:
 		Condition: shell
-		ArmamentNames: primary
-		RevokeDelay: 1
-
-^DropMagazineCasing:
-	SpawnsShrapnel@magazine:
-		Weapon: ShellCasing
-		RequiresCondition: magazine
-	GrantConditionOnBurstComplete@magazine:
-		Condition: magazine
 		ArmamentNames: primary
 		RevokeDelay: 1
 
