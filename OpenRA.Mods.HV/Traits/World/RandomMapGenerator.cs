@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		const int FractionMax = Terraformer.FractionMax;
 
-		public enum Landscape { DirtyGrassland, IcySnowland, SwampyMeadows }
+		public enum Landscape { DirtyGrassland, IcySnowland, SwampyMeadows, SandyDunes }
 
 		sealed class Parameters
 		{
@@ -72,6 +72,9 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly ushort TreesTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort SandTile = default;
 
 			[FieldLoader.Require]
 			public readonly Landscape Landscape = default;
@@ -671,10 +674,12 @@ namespace OpenRA.Mods.HV.Traits
 			switch (param.Landscape)
 			{
 				case Landscape.DirtyGrassland:
-					PaintDirtyGrassland(
+				case Landscape.SandyDunes:
+					PaintCratersAndPlateaus(
 						terraformer,
 						spotPainter,
 						param,
+						BaseTile(param),
 						craterTilingRandom,
 						waterTilingRandom,
 						cliffTilingRandom,
@@ -705,17 +710,33 @@ namespace OpenRA.Mods.HV.Traits
 			return map;
 		}
 
+		static ushort BaseTile(Parameters param)
+		{
+			switch (param.Landscape)
+			{
+				case Landscape.IcySnowland:
+					return param.SnowTile;
+
+				case Landscape.SandyDunes:
+					return param.SandTile;
+
+				default:
+					return param.GrassTile;
+			}
+		}
+
 		static void PaintBaseTerrain(Map map, CustomTerraformer terraformer, Parameters param, MersenneTwister pickAnyRandom)
 		{
-			var baseTile = param.Landscape == Landscape.IcySnowland ? param.SnowTile : param.GrassTile;
+			var baseTile = BaseTile(param);
 			foreach (var mpos in map.AllCells.MapCoords)
 				map.Tiles[mpos] = terraformer.PickTile(pickAnyRandom, baseTile);
 		}
 
-		static void PaintDirtyGrassland(
+		static void PaintCratersAndPlateaus(
 			CustomTerraformer terraformer,
 			SpotPainter spotPainter,
 			Parameters param,
+			ushort baseTile,
 			MersenneTwister craterTilingRandom,
 			MersenneTwister waterTilingRandom,
 			MersenneTwister cliffTilingRandom,
@@ -739,7 +760,7 @@ namespace OpenRA.Mods.HV.Traits
 			if (param.Water > 0)
 				lakes = spotPainter.PaintLakes(
 					waterTilingRandom,
-					terraformer.CheckSpace(param.GrassTile),
+					terraformer.CheckSpace(baseTile),
 					param.Water,
 					param.WaterContourSpacing,
 					param.MinimumWaterThickness,
@@ -785,12 +806,12 @@ namespace OpenRA.Mods.HV.Traits
 					param.CliffRoughness,
 					param.MinimumCliffStraight);
 
-			// Forests wherever there is still plain grass
+			// Forests wherever the base terrain is still bare
 			if (param.Trees > 0)
 				spotPainter.PaintNestedSpots(
 					treesTilingRandom,
 					terraformer.ElevationNoiseMatrix(forestRandom, param.ForestFeatureSize, param.TerrainSmoothing),
-					terraformer.CheckSpace(param.GrassTile),
+					terraformer.CheckSpace(baseTile),
 					param.Trees,
 					param.TreesContourSpacing,
 					param.MinimumTreesThickness,
@@ -804,13 +825,13 @@ namespace OpenRA.Mods.HV.Traits
 				spotPainter.PaintNestedSpots(
 					rampTilingRandom,
 					terraformer.ElevationNoiseMatrix(rampRandom, param.RampFeatureSize, param.TerrainSmoothing),
-					terraformer.CheckSpace(param.GrassTile),
+					terraformer.CheckSpace(baseTile),
 					param.Ramps,
 					param.RampContourSpacing,
 					param.MinimumRampThickness,
 					param.RampSegmentType,
 					true,
-					param.GrassTile,
+					baseTile,
 					"ramps");
 		}
 

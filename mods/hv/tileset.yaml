@@ -16324,28 +16324,28 @@ MultiBrushCollections:
 			Template: 1387
 			Segment:
 				Start: Cliff: Sand Water.L
-				Inner: Shore: Sand
+				Inner: Cliff: Sand Water
 				End: Shore: Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1388:
 			Template: 1388
 			Segment:
 				Start: Cliff: Sand Water.U
-				Inner: Shore: Sand
+				Inner: Cliff: Sand Water
 				End: Shore: Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1389:
 			Template: 1389
 			Segment:
 				Start: Cliff: Sand Water.D
-				Inner: Shore: Sand
+				Inner: Cliff: Sand Water
 				End: Shore: Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1390:
 			Template: 1390
 			Segment:
 				Start: Cliff: Sand Water.R
-				Inner: Shore: Sand
+				Inner: Cliff: Sand Water
 				End: Shore: Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1391:

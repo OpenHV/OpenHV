@@ -72,6 +72,7 @@
 						DarkGrassTile: 138
 						SwampTile: 1070
 						TreesTile: 1276
+						SandTile: 567
 						DarkGrassRoughness: 350
 						DarkGrass: 250
 						MinimumGrassDarkGrassThickness: 6
@@ -199,6 +200,28 @@
 						Ramps: 800
 						Trees: 350
 						RockClustersPerPlayer: 5
+				Choice@SandyDunes:
+					Label: random-map-generator-choice-terrain-type-sandy-dunes
+					Parameters:
+						Landscape: SandyDunes
+						TerrainFeatureSize: 10240
+						PlayableTerrain: Ore, Crater, Sand, Sand Ramp
+						ZoneableTerrain: Crater, Sand
+						CraterRoughness: 0
+						Crater: 250
+						CraterSmoothSegmentType: Biome: Sand Crater
+						Water: 200
+						WaterContourSpacing: 8
+						MinimumWaterThickness: 4
+						ShoreSegmentType: Shore: Sand
+						WaterCliffSegmentType: Cliff: Sand Water
+						Cliffs: 450
+						CliffSegmentType: Cliff: Sand
+						CliffGapSegmentType: Sand
+						Ramps: 800
+						RampSegmentType: Ramp: Sand
+						Trees: 0
+						RockClustersPerPlayer: 8
 				Choice@IcySnowland:
 					Label: random-map-generator-choice-terrain-type-icy-snowland
 					Parameters:
