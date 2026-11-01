@@ -10642,14 +10642,6 @@ Templates:
 		Categories: Grass, Plant
 		Tiles:
 			0: Crater
-	Template@1407:
-		Id: 1407
-		Images: treegrsmnch.png
-		Frames: 13
-		Size: 1,1
-		Categories: Grass, Plant
-		Tiles:
-			0: Crater
 	Template@1408:
 		Id: 1408
 		Images: roadplain.png
@@ -11189,7 +11181,7 @@ Templates:
 	Template@1475:
 		Id: 1475
 		Images: treegrsmnch.png
-		Frames: 14
+		Frames: 13
 		Size: 1,1
 		Categories: Grass, Plant
 		Tiles:
