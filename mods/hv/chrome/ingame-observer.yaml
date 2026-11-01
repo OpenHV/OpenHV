@@ -2,6 +2,26 @@ Container@OBSERVER_WIDGETS:
 	Logic: MenuButtonsChromeLogic, LoadIngameChatLogic
 	Children:
 		Container@CHAT_ROOT:
+		Container@MUTE_INDICATOR:
+			Logic: MuteIndicatorLogic
+			X: WINDOW_WIDTH - WIDTH - 260
+			Y: 10
+			Width: 200
+			Height: 25
+			Children:
+				Image@ICON:
+					X: PARENT_WIDTH - WIDTH
+					Y: 1
+					Width: 24
+					Height: 24
+					ImageCollection: sidebar-bits
+					ImageName: indicator-muted
+				Label@LABEL:
+					Width: PARENT_WIDTH - 30
+					Height: 25
+					Align: Right
+					Text: label-mute-indicator
+					Contrast: true
 		LogicKeyListener@OBSERVER_KEY_LISTENER:
 		MenuButton@OPTIONS_BUTTON:
 			X: 5
