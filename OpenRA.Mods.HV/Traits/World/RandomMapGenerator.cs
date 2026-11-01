@@ -27,7 +27,7 @@ namespace OpenRA.Mods.HV.Traits
 	{
 		const int FractionMax = Terraformer.FractionMax;
 
-		public enum Landscape { DirtyGrassland, IcySnowland, SwampyMeadows, SandyDunes }
+		public enum Landscape { DirtyGrassland, IcySnowland, SwampyMeadows, SandyDunes, VolcanicPlains }
 
 		sealed class Parameters
 		{
@@ -75,6 +75,12 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly ushort SandTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort BlackSandTile = default;
+
+			[FieldLoader.Require]
+			public readonly ushort LavaTile = default;
 
 			[FieldLoader.Require]
 			public readonly Landscape Landscape = default;
@@ -171,6 +177,21 @@ namespace OpenRA.Mods.HV.Traits
 
 			[FieldLoader.Require]
 			public readonly int MinimumCoastStraight = default;
+
+			[FieldLoader.Require]
+			public readonly int Lava = default;
+
+			[FieldLoader.Require]
+			public readonly int LavaContourSpacing = default;
+
+			[FieldLoader.Require]
+			public readonly int MinimumLavaThickness = default;
+
+			[FieldLoader.Require]
+			public readonly string LavaSegmentType = default;
+
+			[FieldLoader.Require]
+			public readonly int LavaFeatureSize = default;
 
 			[FieldLoader.Require]
 			public readonly int Cliffs = default;
@@ -659,6 +680,8 @@ namespace OpenRA.Mods.HV.Traits
 			var rockRandom = new MersenneTwister(random.Next());
 			var rampRandom = new MersenneTwister(random.Next());
 			var rampTilingRandom = new MersenneTwister(random.Next());
+			var lavaRandom = new MersenneTwister(random.Next());
+			var lavaTilingRandom = new MersenneTwister(random.Next());
 
 			terraformer.InitMap();
 
@@ -675,6 +698,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				case Landscape.DirtyGrassland:
 				case Landscape.SandyDunes:
+				case Landscape.VolcanicPlains:
 					PaintCratersAndPlateaus(
 						terraformer,
 						spotPainter,
@@ -686,7 +710,9 @@ namespace OpenRA.Mods.HV.Traits
 						rampRandom,
 						rampTilingRandom,
 						forestRandom,
-						treesTilingRandom);
+						treesTilingRandom,
+						lavaRandom,
+						lavaTilingRandom);
 					break;
 
 				case Landscape.IcySnowland:
@@ -720,6 +746,9 @@ namespace OpenRA.Mods.HV.Traits
 				case Landscape.SandyDunes:
 					return param.SandTile;
 
+				case Landscape.VolcanicPlains:
+					return param.BlackSandTile;
+
 				default:
 					return param.GrassTile;
 			}
@@ -743,7 +772,9 @@ namespace OpenRA.Mods.HV.Traits
 			MersenneTwister rampRandom,
 			MersenneTwister rampTilingRandom,
 			MersenneTwister forestRandom,
-			MersenneTwister treesTilingRandom)
+			MersenneTwister treesTilingRandom,
+			MersenneTwister lavaRandom,
+			MersenneTwister lavaTilingRandom)
 		{
 			var craters = spotPainter.PaintSpots(
 				craterTilingRandom,
@@ -805,6 +836,20 @@ namespace OpenRA.Mods.HV.Traits
 					},
 					param.CliffRoughness,
 					param.MinimumCliffStraight);
+
+			// Lava pools wherever the base terrain is still bare
+			if (param.Lava > 0)
+				spotPainter.PaintNestedSpots(
+					lavaTilingRandom,
+					terraformer.ElevationNoiseMatrix(lavaRandom, param.LavaFeatureSize, param.TerrainSmoothing),
+					terraformer.CheckSpace(baseTile),
+					param.Lava,
+					param.LavaContourSpacing,
+					param.MinimumLavaThickness,
+					param.LavaSegmentType,
+					false,
+					param.LavaTile,
+					"lava");
 
 			// Forests wherever the base terrain is still bare
 			if (param.Trees > 0)

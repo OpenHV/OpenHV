@@ -55,6 +55,11 @@
 						MinimumWaterCliffLength: 8
 						WaterCliffRoughness: 400
 						MinimumCoastStraight: 2
+						Lava: 0
+						LavaContourSpacing: 4
+						MinimumLavaThickness: 4
+						LavaSegmentType: Cliff: Black Sand Lava
+						LavaFeatureSize: 10240
 						Cliffs: 0
 						CliffClearance: 3
 						MinimumCliffThickness: 5
@@ -73,6 +78,8 @@
 						SwampTile: 1070
 						TreesTile: 1276
 						SandTile: 567
+						BlackSandTile: 1680
+						LavaTile: 323
 						DarkGrassRoughness: 350
 						DarkGrass: 250
 						MinimumGrassDarkGrassThickness: 6
@@ -220,6 +227,27 @@
 						CliffGapSegmentType: Sand
 						Ramps: 800
 						RampSegmentType: Ramp: Sand
+						Trees: 0
+						RockClustersPerPlayer: 8
+				Choice@VolcanicPlains:
+					Label: random-map-generator-choice-terrain-type-volcanic-plains
+					Parameters:
+						Landscape: VolcanicPlains
+						TerrainFeatureSize: 10240
+						PlayableTerrain: Ore, Dirt, Black Sand, Black Sand Ramp
+						ZoneableTerrain: Dirt, Black Sand
+						CraterTile: 1567
+						CraterRoughness: 0
+						Crater: 250
+						CraterSmoothSegmentType: Biome: Black Sand Dirt
+						Water: 300
+						WaterContourSpacing: 8
+						MinimumWaterThickness: 4
+						ShoreSegmentType: Shore: Black Sand
+						WaterCliffSegmentType: Cliff: Black Sand Water
+						Lava: 350
+						Ramps: 800
+						RampSegmentType: Ramp: Black Sand
 						Trees: 0
 						RockClustersPerPlayer: 8
 				Choice@IcySnowland:

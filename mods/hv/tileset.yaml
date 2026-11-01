@@ -16466,28 +16466,28 @@ MultiBrushCollections:
 			Template: 1757
 			Segment:
 				Start: Cliff: Black Sand Water.L
-				Inner: Shore: Black Sand
+				Inner: Cliff: Black Sand Water
 				End: Shore: Black Sand.L
 				Points: 1,1, 0,1
 		MultiBrush@1758:
 			Template: 1758
 			Segment:
 				Start: Cliff: Black Sand Water.U
-				Inner: Shore: Black Sand
+				Inner: Cliff: Black Sand Water
 				End: Shore: Black Sand.U
 				Points: 0,1, 0,0
 		MultiBrush@1759:
 			Template: 1759
 			Segment:
 				Start: Cliff: Black Sand Water.D
-				Inner: Shore: Black Sand
+				Inner: Cliff: Black Sand Water
 				End: Shore: Black Sand.D
 				Points: 1,0, 1,1
 		MultiBrush@1760:
 			Template: 1760
 			Segment:
 				Start: Cliff: Black Sand Water.R
-				Inner: Shore: Black Sand
+				Inner: Cliff: Black Sand Water
 				End: Shore: Black Sand.R
 				Points: 0,0, 1,0
 		MultiBrush@1761:
