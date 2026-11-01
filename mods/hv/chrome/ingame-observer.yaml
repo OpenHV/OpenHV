@@ -476,7 +476,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 200
 									Height: PARENT_HEIGHT
 								Label@PLAYER_HEADER:
-									X: 40
+									X: 35
 									Y: 0
 									Width: 120
 									Height: PARENT_HEIGHT
