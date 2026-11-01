@@ -1816,6 +1816,7 @@ TELEVATOR:
 		RequiresCondition: !build-incomplete && !beam-incomplete
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
+		RangeFromTelevators: 32c0
 		DisplayRadarPing: True
 		ChargeInterval: 3000
 		OrderName: BeamUsUp
