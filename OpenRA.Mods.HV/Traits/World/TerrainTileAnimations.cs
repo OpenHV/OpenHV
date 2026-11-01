@@ -9,11 +9,12 @@
  */
 #endregion
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using OpenRA.Graphics;
-using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.HV.Traits
@@ -47,14 +48,29 @@ namespace OpenRA.Mods.HV.Traits
 		public override object Create(ActorInitializer init) { return new TerrainTileAnimation(init.Self, this); }
 	}
 
-	public class TerrainTileAnimation : ITick
+	public class TerrainTileAnimation : IWorldLoaded, ITick, IRenderOverlay, INotifyActorDisposing
 	{
+		// Sequences define their frame time in milliseconds.
+		const int TickLength = 40;
+
+		sealed class AnimatedTile
+		{
+			public CPos Cell;
+			public int Ticks;
+			public int Frame;
+		}
+
 		readonly TerrainTileAnimationInfo info;
-		readonly ImmutableArray<CPos> cells;
-
 		readonly BridgeShadowLayer bridgeShadowLayer;
+		readonly List<AnimatedTile> animations = [];
 
+		ImmutableArray<CPos> cells = [];
+		TerrainSpriteLayer spriteLayer;
+		ISpriteSequence sequence;
+		PaletteReference palette;
+		int duration;
 		int ticks;
+		bool disposed;
 
 		public TerrainTileAnimation(Actor self, TerrainTileAnimationInfo info)
 		{
@@ -63,9 +79,27 @@ namespace OpenRA.Mods.HV.Traits
 			ticks = info.InitialDelay;
 
 			bridgeShadowLayer = self.Trait<BridgeShadowLayer>();
+		}
 
-			var map = self.World.Map;
-			cells = map.AllCells.Where(cell => info.Tiles.Contains(map.Tiles[cell].Type)).ToImmutableArray();
+		void IWorldLoaded.WorldLoaded(World world, WorldRenderer worldRenderer)
+		{
+			// Clashes with bridge shadows.
+			cells = world.Map.AllCells
+				.Where(cell => info.Tiles.Contains(world.Map.Tiles[cell].Type)
+					&& bridgeShadowLayer.GetResource(cell).Equals(ResourceLayerContents.Empty))
+				.ToImmutableArray();
+
+			if (cells.Length < 1)
+				return;
+
+			sequence = world.Map.Sequences.GetSequence(info.Image, info.Sequence);
+			palette = worldRenderer.Palette(info.Palette);
+
+			var first = sequence.GetSprite(0);
+			var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
+			spriteLayer = new TerrainSpriteLayer(world, worldRenderer, emptySprite, first.BlendMode, world.Type != WorldType.Editor);
+
+			duration = Exts.IntegerDivisionRoundingAwayFromZero(sequence.Length * sequence.Tick, TickLength);
 		}
 
 		void ITick.Tick(Actor self)
@@ -73,20 +107,59 @@ namespace OpenRA.Mods.HV.Traits
 			if (cells.Length < 1)
 				return;
 
+			var world = self.World;
+			for (var i = animations.Count - 1; i >= 0; i--)
+			{
+				var animation = animations[i];
+				if (--animation.Ticks <= 0)
+				{
+					spriteLayer.Clear(animation.Cell);
+					animations.RemoveAt(i);
+					continue;
+				}
+
+				var frame = (duration - animation.Ticks) * TickLength / sequence.Tick;
+				if (frame == animation.Frame)
+					continue;
+
+				animation.Frame = frame;
+				DrawFrame(world, animation.Cell, frame);
+			}
+
 			if (--ticks <= 0)
 			{
-				var world = self.World;
 				ticks = Common.Util.RandomInRange(world.LocalRandom, info.Interval);
 				var cell = cells.Random(world.LocalRandom);
 
-				// Clashes with bridge shadows.
-				var resourceLayerContents = bridgeShadowLayer.GetResource(cell);
-				if (!resourceLayerContents.Equals(ResourceLayerContents.Empty))
+				// The sprite layer only has room for a single animation per tile.
+				if (animations.Exists(animation => animation.Cell == cell))
 					return;
 
-				var position = world.Map.CenterOfCell(cell);
-				world.AddFrameEndTask(w => w.Add(new SpriteEffect(position, w, info.Image, info.Sequence, info.Palette)));
+				animations.Add(new AnimatedTile { Cell = cell, Ticks = duration });
+				DrawFrame(world, cell, 0);
 			}
+		}
+
+		void DrawFrame(World world, CPos cell, int frame)
+		{
+			if (world.FogObscures(cell))
+				spriteLayer.Clear(cell);
+			else
+				spriteLayer.Update(cell, sequence, palette, frame);
+		}
+
+		void IRenderOverlay.Render(WorldRenderer wr)
+		{
+			spriteLayer?.Draw(wr.Viewport);
+		}
+
+		void INotifyActorDisposing.Disposing(Actor self)
+		{
+			if (disposed)
+				return;
+
+			spriteLayer?.Dispose();
+			disposed = true;
 		}
 	}
 }

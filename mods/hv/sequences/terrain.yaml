@@ -434,21 +434,18 @@ wateranim:
 		Filename: water-animation.png
 		Length: *
 		Tick: 240
-		ZOffset: -3072
 
 wateranim2:
 	idle:
 		Filename: water-animation2.png
 		Length: *
 		Tick: 240
-		ZOffset: -3072
 
 wateranim3:
 	idle:
 		Filename: water-animation3.png
 		Length: *
 		Tick: 240
-		ZOffset: -3072
 
 cactimud:
 	idle:
