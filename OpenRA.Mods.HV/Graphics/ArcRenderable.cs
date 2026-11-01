@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Numerics;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
 
@@ -47,7 +48,7 @@ namespace OpenRA.Mods.HV.Graphics
 		{
 			var screenWidth = wr.ScreenVector(new WVec(width, WDist.Zero, WDist.Zero))[0];
 
-			var points = new float3[segments + 1];
+			var points = new Vector3[segments + 1];
 			for (var i = 0; i <= segments; i++)
 				points[i] = wr.Screen3DPosition(WPos.LerpQuadratic(Pos, end, angle, i, segments));
 

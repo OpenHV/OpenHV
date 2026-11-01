@@ -12,6 +12,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Primitives;
@@ -36,7 +37,7 @@ namespace OpenRA.Mods.HV.Graphics
 			public SpriteFrameType Type => SpriteFrameType.Indexed8;
 			public Size Size { get; }
 			public Size FrameSize { get; }
-			public float2 Offset { get; }
+			public Vector2 Offset { get; }
 			public byte[] Data { get; }
 			public bool DisableExportPadding { get; }
 

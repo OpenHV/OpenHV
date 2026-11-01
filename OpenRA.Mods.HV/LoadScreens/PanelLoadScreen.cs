@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Numerics;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.LoadScreens;
 using OpenRA.Primitives;
@@ -17,7 +18,7 @@ namespace OpenRA.Mods.HV.LoadScreens
 {
 	public sealed class PanelLoadScreen : SheetLoadScreen
 	{
-		float2 panelPosition;
+		Vector2 panelPosition;
 		Sprite panel;
 
 		Sheet lastSheet;
@@ -36,11 +37,11 @@ namespace OpenRA.Mods.HV.LoadScreens
 			if (r.Resolution != lastResolution)
 			{
 				lastResolution = r.Resolution;
-				panelPosition = new float2(lastResolution.Width / 2 - 256, lastResolution.Height / 2 - 256);
+				panelPosition = new Vector2(lastResolution.Width / 2 - 256, lastResolution.Height / 2 - 256);
 			}
 
 			if (panel != null)
-				r.RgbaSpriteRenderer.DrawSprite(panel, panelPosition);
+				r.RgbaSpriteRenderer.DrawSprite(panel, panelPosition.AsVector3());
 		}
 	}
 }

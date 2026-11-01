@@ -14,6 +14,7 @@ using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Numerics;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -250,7 +251,7 @@ namespace OpenRA.Mods.HV.Traits
 					{
 						// Terrain tiles define their origin at the topleft
 						var s = terrainRenderer.TileSprite(tile.Value);
-						var sprite = new Sprite(s.Sheet, s.Bounds, s.ZRamp, float2.Zero, s.Channel, s.BlendMode);
+						var sprite = new Sprite(s.Sheet, s.Bounds, s.ZRamp, Vector3.Zero, s.Channel, s.BlendMode);
 						render.Update(kv.Key, sprite, paletteReference);
 					}
 					else

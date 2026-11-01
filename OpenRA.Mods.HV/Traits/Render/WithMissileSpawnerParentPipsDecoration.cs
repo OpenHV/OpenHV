@@ -60,7 +60,7 @@ namespace OpenRA.Mods.HV.Traits
 			pips.PlayRepeating(Info.EmptySequence);
 
 			var palette = wr.Palette(Info.Palette);
-			var pipSize = pips.Image.Size.XY.ToInt2();
+			var pipSize = int2.FromVector(pips.Image.Size);
 			var pipStride = Info.PipStride != int2.Zero ? Info.PipStride : new int2(pipSize.X, 0);
 
 			screenPos -= pipSize / 2;
@@ -71,7 +71,7 @@ namespace OpenRA.Mods.HV.Traits
 			{
 				var sequence = i < childrenInsideCount ? Info.FullSequence : Info.EmptySequence;
 				pips.PlayRepeating(sequence);
-				yield return new UISpriteRenderable(pips.Image, self.CenterPosition, screenPos, 0, palette, 1f);
+				yield return new UISpriteRenderable(pips.Image, self.CenterPosition, screenPos.ToVector2(), 0, palette, 1f);
 
 				screenPos += pipStride;
 			}

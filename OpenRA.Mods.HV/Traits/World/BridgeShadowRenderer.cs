@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -245,7 +246,7 @@ namespace OpenRA.Mods.HV.Traits
 			var sprite = variant.GetSprite(variant.Length - 1);
 			var palette = wr.Palette(shadowInfo.Palette);
 
-			yield return new UISpriteRenderable(sprite, WPos.Zero, origin, 0, palette, scale);
+			yield return new UISpriteRenderable(sprite, WPos.Zero, origin.ToVector2(), 0, palette, scale);
 		}
 
 		IEnumerable<IRenderable> IResourceRenderer.RenderPreview(WorldRenderer wr, string shadowType, WPos origin)
@@ -261,7 +262,7 @@ namespace OpenRA.Mods.HV.Traits
 			var palette = wr.Palette(shadowInfo.Palette);
 			var tintModifiers = variant.IgnoreWorldTint ? TintModifiers.IgnoreWorldTint : TintModifiers.None;
 
-			yield return new SpriteRenderable(sprite, origin, WVec.Zero, 0, palette, variant.Scale, alpha, float3.Ones, tintModifiers, false);
+			yield return new SpriteRenderable(sprite, origin, WVec.Zero, 0, palette, variant.Scale, alpha, Vector3.One, tintModifiers, false);
 		}
 
 		event Action<CPos> IRadarTerrainLayer.CellEntryChanged

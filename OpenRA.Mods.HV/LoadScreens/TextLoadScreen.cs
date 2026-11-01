@@ -10,6 +10,7 @@
 #endregion
 
 using System.Diagnostics;
+using System.Numerics;
 using OpenRA.Mods.Common.LoadScreens;
 using OpenRA.Primitives;
 
@@ -42,7 +43,7 @@ namespace OpenRA.Mods.HV.LoadScreens
 			if (r.Fonts != null)
 			{
 				var textSize = r.Fonts["Bold"].Measure(text);
-				r.Fonts["Bold"].DrawText(text, new float2(r.Resolution.Width - textSize.X - 20, r.Resolution.Height - textSize.Y - 20), Color.White);
+				r.Fonts["Bold"].DrawText(text, new Vector2(r.Resolution.Width - textSize.X - 20, r.Resolution.Height - textSize.Y - 20), Color.White);
 			}
 		}
 	}
