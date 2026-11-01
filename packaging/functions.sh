@@ -18,12 +18,16 @@ install_mod_assemblies() {
 	TARGETPLATFORM="${3}"
 	ENGINE_PATH="${4}"
 
+	ABS_SRC_PATH=$(realpath "${SRC_PATH}")
+
 	ORIG_PWD=$(pwd)
 	cd "${SRC_PATH}" || exit 1
 
 	mkdir -p "${DEST_PATH}"
 
-	find . -maxdepth 1 -name '*.slnx' -exec dotnet publish -c Release -p:TargetPlatform="${TARGETPLATFORM}" -r "${TARGETPLATFORM}" --property:PublishDir="${DEST_PATH}" --self-contained true \;
+	find . -maxdepth 1 -name '*.slnx' -exec dotnet publish -c Release -p:TargetPlatform="${TARGETPLATFORM}" \
+		-r "${TARGETPLATFORM}" --property:PublishDir="${DEST_PATH}" -p:Deterministic=true -p:PathMap="${ABS_SRC_PATH}=." \
+		--self-contained true \;
 	cd "${ORIG_PWD}" || exit 1
 }
 
