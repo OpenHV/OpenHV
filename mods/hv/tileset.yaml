@@ -15,9 +15,14 @@ Terrain:
 		Type: Blocked
 		TargetTypes: Ground
 		Color: FF0000
-	TerrainType@Ore:
-		Type: Ore
+	TerrainType@Gold:
+		Type: Gold
 		TargetTypes: Ground
+		Color: F07000
+	TerrainType@Iron:
+		Type: Iron
+		TargetTypes: Ground
+		Color: 878787
 	TerrainType@Crater:
 		Type: Crater
 		TargetTypes: Ground

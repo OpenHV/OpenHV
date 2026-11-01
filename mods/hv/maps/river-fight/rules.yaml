@@ -172,7 +172,7 @@ Player:
 	MinerBotModule:
 		RequiresCondition: enable-waterconquest-ai
 		DeployableActorTypes: miner
-		DeployableTerrainTypes: Ore
+		DeployableTerrainTypes: Gold, Iron
 		DeployedActorTypes: miner2
 		VehiclesQueue: Utility
 	MinelayerBotModule:

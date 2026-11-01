@@ -23,7 +23,8 @@
 		Name: foot
 		TerrainSpeeds:
 			Clear: 100
-			Ore: 100
+			Gold: 100
+			Iron: 100
 			Crater: 100
 			Dirt: 100
 			Grass: 100
@@ -51,7 +52,8 @@
 		SharesCell: true
 		TerrainSpeeds:
 			Clear: 90
-			Ore: 90
+			Gold: 90
+			Iron: 90
 			Crater: 90
 			Dirt: 90
 			Grass: 90
@@ -78,7 +80,8 @@
 		Crushes: Cube, Scrap, Mine
 		TerrainSpeeds:
 			Clear: 90
-			Ore: 90
+			Gold: 90
+			Iron: 90
 			Crater: 90
 			Dirt: 90
 			Grass: 90
@@ -105,7 +108,8 @@
 		CrushDamageTypes: Crush
 		TerrainSpeeds:
 			Clear: 100
-			Ore: 100
+			Gold: 100
+			Iron: 100
 			Crater: 100
 			Dirt: 100
 			Grass: 100
@@ -139,7 +143,8 @@
 		Name: water
 		TerrainSpeeds:
 			Clear: 100
-			Ore: 100
+			Gold: 100
+			Iron: 100
 			Crater: 100
 			Snow: 100
 			Grass: 100
@@ -303,12 +308,12 @@ World:
 		ResourceTypes:
 			gold:
 				ResourceIndex: 1
-				TerrainType: Ore
+				TerrainType: Gold
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Tech, Dirt
 				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
-				TerrainType: Ore
+				TerrainType: Iron
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Tech, Dirt
 				MaxDensity: 3
 	BridgeShadowLayer:

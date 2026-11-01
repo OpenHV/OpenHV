@@ -183,7 +183,7 @@ Player:
 	MinerBotModule:
 		RequiresCondition: enable-rogue-ai
 		DeployableActorTypes: miner
-		DeployableTerrainTypes: Ore
+		DeployableTerrainTypes: Gold, Iron
 		DeployedActorTypes: miner2
 		VehiclesQueue: Utility
 	MinelayerBotModule:

@@ -17,7 +17,7 @@
 						CentralSpawnReservationFraction: 250
 						MinimumSpawnRadius: 5
 						DefaultResource: gold
-						PlayableTerrain: Ore, Crater, Grass, Grass Ramp
+						PlayableTerrain: Gold, Iron, Crater, Grass, Grass Ramp
 						ZoneableTerrain: Crater, Grass
 						GrassTile: 121
 						CraterTile: 5
@@ -212,7 +212,7 @@
 					Parameters:
 						Landscape: SandyDunes
 						TerrainFeatureSize: 10240
-						PlayableTerrain: Ore, Crater, Sand, Sand Ramp
+						PlayableTerrain: Gold, Iron, Crater, Sand, Sand Ramp
 						ZoneableTerrain: Crater, Sand
 						CraterRoughness: 0
 						Crater: 250
@@ -234,7 +234,7 @@
 					Parameters:
 						Landscape: VolcanicPlains
 						TerrainFeatureSize: 10240
-						PlayableTerrain: Ore, Dirt, Black Sand, Black Sand Ramp
+						PlayableTerrain: Gold, Iron, Dirt, Black Sand, Black Sand Ramp
 						ZoneableTerrain: Dirt, Black Sand
 						CraterTile: 1567
 						CraterRoughness: 0
@@ -256,7 +256,7 @@
 						Landscape: IcySnowland
 						TerrainFeatureSize: 10240
 						IceRoughness: 0
-						PlayableTerrain: Ore, Snow, Ice, Red Snow
+						PlayableTerrain: Gold, Iron, Snow, Ice, Red Snow
 						ZoneableTerrain: Snow, Red Snow
 				Choice@SwampyMeadows:
 					Label: random-map-generator-choice-terrain-type-swampy-meadows
@@ -264,7 +264,7 @@
 						Landscape: SwampyMeadows
 						TerrainFeatureSize: 10240
 						DarkGrassRoughness: 0
-						PlayableTerrain: Ore, Grass, Grass Pit
+						PlayableTerrain: Gold, Iron, Grass, Grass Pit
 						ZoneableTerrain: Grass, Grass Pit
 			MultiChoiceOption@Resources:
 				Label: label-random-map-generator-option-resources

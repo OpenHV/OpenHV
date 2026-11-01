@@ -415,7 +415,7 @@ SAUCER:
 		TurnSpeed: 16
 		Speed: 80
 		CanForceLand: false
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Gold, Iron, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: SaucerVoice
 	-WithShadow:
@@ -458,7 +458,7 @@ OBSERVER:
 		TurnSpeed: 50
 		Speed: 80
 		CanForceLand: false
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Gold, Iron, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: ObserverVoice
 	-WithShadow:
@@ -619,7 +619,7 @@ CHOPPER:
 		Speed: 135
 		AltitudeVelocity: 0c58
 		LandAltitude: 0c0
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Gold, Iron, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: TransportHelicopterVoice
 	WithFacingSpriteBody:
@@ -734,7 +734,7 @@ BALLOON:
 	Aircraft:
 		Speed: 70
 		CanForceLand: false
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Gold, Iron, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: BalloonVoice
 	Guard:
@@ -786,7 +786,7 @@ DROPSHIP:
 		LandAltitude: 0c0
 		AltitudeVelocity: 0c58
 		InitialFacing: 512
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Gold, Iron, Crater, Road, Grass, Grass Pit, Mountain, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	Voiced:
 		VoiceSet: DropshipVoice
 	WithFacingSpriteBody:

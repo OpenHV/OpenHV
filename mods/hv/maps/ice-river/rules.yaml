@@ -21,7 +21,7 @@ Player:
 	MinerBotModule:
 		RequiresCondition: gentle-ai-enabled
 		DeployableActorTypes: miner
-		DeployableTerrainTypes: Ore
+		DeployableTerrainTypes: Gold, Iron
 		DeployedActorTypes: miner2
 		VehiclesQueue: Utility
 	CargoBotModule:

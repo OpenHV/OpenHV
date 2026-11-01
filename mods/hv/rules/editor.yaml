@@ -24,12 +24,12 @@ EditorWorld:
 		ResourceTypes:
 			gold:
 				ResourceIndex: 1
-				TerrainType: Ore
+				TerrainType: Gold
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Tech, Dirt
 				MaxDensity: 3
 			iron:
 				ResourceIndex: 2
-				TerrainType: Ore
+				TerrainType: Iron
 				AllowedTerrainTypes: Clear, Crater, Grass, Grass Pit, Road, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Plant, Stone, Tech, Dirt
 				MaxDensity: 3
 			bridge-shadow-left:

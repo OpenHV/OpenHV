@@ -408,7 +408,7 @@
 		Speed: 300
 		CruiseAltitude: 16c0
 		MaximumPitch: 110
-		LandableTerrainTypes: Clear, Ore, Crater, Road, Grass, Grass Pit, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
+		LandableTerrainTypes: Clear, Gold, Iron, Crater, Road, Grass, Grass Pit, Mountain, Ice, Snow, Red Snow, Sand, Black Sand, Stone, Tech, Rail, Blocked, Dirt
 	HiddenUnderFog:
 		Type: CenterPosition
 	BodyOrientation:
