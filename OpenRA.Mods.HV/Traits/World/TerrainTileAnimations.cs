@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -25,7 +25,7 @@ namespace OpenRA.Mods.HV.Traits
 		[FieldLoader.Require]
 		public readonly ImmutableArray<ushort> Tiles = default;
 
-		[Desc("Average time (ticks) between animations.")]
+		[Desc("Average time (ticks) between animations per 1000 tiles.")]
 		public readonly ImmutableArray<int> Interval = [7 * 25, 13 * 25];
 
 		[Desc("Delay (in ticks) before the first animation happens.")]
@@ -53,6 +53,9 @@ namespace OpenRA.Mods.HV.Traits
 		// Sequences define their frame time in milliseconds.
 		const int TickLength = 40;
 
+		// Keeps the animation rate of a tile independent of the amount of tiles.
+		const int TilesPerInterval = 1000;
+
 		sealed class AnimatedTile
 		{
 			public CPos Cell;
@@ -63,6 +66,7 @@ namespace OpenRA.Mods.HV.Traits
 		readonly TerrainTileAnimationInfo info;
 		readonly BridgeShadowLayer bridgeShadowLayer;
 		readonly List<AnimatedTile> animations = [];
+		readonly HashSet<CPos> animatedCells = [];
 
 		ImmutableArray<CPos> cells = [];
 		TerrainSpriteLayer spriteLayer;
@@ -70,6 +74,7 @@ namespace OpenRA.Mods.HV.Traits
 		PaletteReference palette;
 		int duration;
 		int ticks;
+		int pendingTiles;
 		bool disposed;
 
 		public TerrainTileAnimation(Actor self, TerrainTileAnimationInfo info)
@@ -114,6 +119,7 @@ namespace OpenRA.Mods.HV.Traits
 				if (--animation.Ticks <= 0)
 				{
 					spriteLayer.Clear(animation.Cell);
+					animatedCells.Remove(animation.Cell);
 					animations.RemoveAt(i);
 					continue;
 				}
@@ -129,14 +135,21 @@ namespace OpenRA.Mods.HV.Traits
 			if (--ticks <= 0)
 			{
 				ticks = Common.Util.RandomInRange(world.LocalRandom, info.Interval);
-				var cell = cells.Random(world.LocalRandom);
 
-				// The sprite layer only has room for a single animation per tile.
-				if (animations.Exists(animation => animation.Cell == cell))
-					return;
+				pendingTiles += cells.Length;
+				while (pendingTiles >= TilesPerInterval)
+				{
+					pendingTiles -= TilesPerInterval;
 
-				animations.Add(new AnimatedTile { Cell = cell, Ticks = duration });
-				DrawFrame(world, cell, 0);
+					var cell = cells.Random(world.LocalRandom);
+
+					// The sprite layer only has room for a single animation per tile.
+					if (!animatedCells.Add(cell))
+						continue;
+
+					animations.Add(new AnimatedTile { Cell = cell, Ticks = duration });
+					DrawFrame(world, cell, 0);
+				}
 			}
 		}
 

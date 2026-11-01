@@ -516,17 +516,19 @@ World:
 		CubeActorShares: 90, 10, 40, 20, 90, 50
 	TerrainTileAnimation@LavaBubble:
 		Tiles: 323
+		Interval: 34, 52
 		Image: lavabubl
 		Sequence: active
 		Palette: effect
 	TerrainTileAnimation@SwampBubble:
 		Tiles: 1070
+		Interval: 125, 190
 		Image: swmpbubl
 		Sequence: active
 		Palette: effect
 	TerrainTileAnimation@Swamp:
 		Tiles: 1070
-		Interval: 25
+		Interval: 16
 		Image: swmpani
 		Sequence: idle
 		Palette: effect

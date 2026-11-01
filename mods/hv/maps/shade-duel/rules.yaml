@@ -9,7 +9,7 @@
 
 World:
 	TerrainTileAnimation@LavaBubble:
-		Interval: 3
+		Interval: 1
 
 LAVALIGHT:
 	Inherits: LIGHT
