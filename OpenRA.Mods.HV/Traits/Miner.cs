@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2025 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -36,18 +36,34 @@ namespace OpenRA.Mods.HV.Traits
 		[Desc("Defines to which players the target lines are shown.")]
 		public readonly FrozenDictionary<string, Color> Colors = FrozenDictionary<string, Color>.Empty;
 
-		public override object Create(ActorInitializer init) { return new Miner(this, init.Self); }
+		[Desc("Automatically deploy when the rally point of the producing building is on suitable terrain.")]
+		public readonly bool DeployOnRallyPoint = true;
+
+		public override object Create(ActorInitializer init) { return new Miner(this, init); }
 	}
 
-	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice
+	public class Miner : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated
 	{
 		public readonly MinerInfo Info;
 		readonly IResourceLayer resourceLayer;
+		readonly CPos[] rallyPoint;
 
-		public Miner(MinerInfo info, Actor self)
+		public Miner(MinerInfo info, ActorInitializer init)
 		{
 			Info = info;
-			resourceLayer = self.World.WorldActor.Trait<IResourceLayer>();
+			resourceLayer = init.Self.World.WorldActor.Trait<IResourceLayer>();
+			rallyPoint = init.GetOrDefault<RallyPointInit>()?.Value;
+		}
+
+		void INotifyCreated.Created(Actor self)
+		{
+			if (!Info.DeployOnRallyPoint || rallyPoint == null || rallyPoint.Length == 0)
+				return;
+
+			// Queued after the creation activity that moves the miner to the rally point.
+			var cell = rallyPoint[^1];
+			if (IsCellAcceptable(self, cell))
+				self.QueueActivity(new DeployMiner(self, cell, Info.TerrainTypes, TargetLineColor(cell)));
 		}
 
 		IEnumerable<IOrderTargeter> IIssueOrder.Orders
@@ -76,9 +92,8 @@ namespace OpenRA.Mods.HV.Traits
 				return;
 
 			var cell = self.World.Map.CellContaining(order.Target.CenterPosition);
-			var targetLineColor = Info.Colors[resourceLayer.GetResource(cell).Type];
 			if (IsCellAcceptable(self, cell))
-				self.QueueActivity(order.Queued, new DeployMiner(self, cell, Info.TerrainTypes, targetLineColor));
+				self.QueueActivity(order.Queued, new DeployMiner(self, cell, Info.TerrainTypes, TargetLineColor(cell)));
 
 			self.ShowTargetLines();
 		}
@@ -89,6 +104,11 @@ namespace OpenRA.Mods.HV.Traits
 				return Info.Voice;
 
 			return null;
+		}
+
+		Color TargetLineColor(CPos cell)
+		{
+			return Info.Colors[resourceLayer.GetResource(cell).Type];
 		}
 
 		public bool IsCellAcceptable(Actor self, CPos cell)
