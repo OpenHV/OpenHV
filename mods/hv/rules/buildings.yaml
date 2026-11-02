@@ -65,11 +65,14 @@ BASE:
 		ProductionType: Utility
 	ProductionSound:
 		Files: Quedicemipez__teleportation.ogg
-	RallyPoint:
+	ResourceRallyPoint:
 		CirclesSequence:
 		IsPlayerPalette: true
 		Palette: green
 		LineWidth: 2
+		Colors:
+			iron: 878787
+			gold: F07000
 	ExitsDebugOverlay:
 	Exit@South1:
 		RequiresCondition: !being-captured
