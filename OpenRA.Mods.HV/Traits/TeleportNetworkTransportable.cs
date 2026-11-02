@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2019-2024 The OpenHV Developers (see CREDITS)
+ * Copyright 2019-2026 The OpenHV Developers (see CREDITS)
  * This file is part of OpenHV, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -30,16 +30,40 @@ namespace OpenRA.Mods.HV.Traits
 		[CursorReference]
 		public readonly string EnterBlockedCursor = "enter-blocked";
 
-		public override object Create(ActorInitializer init) { return new TeleportNetworkTransportable(this); }
+		[Desc("Automatically enter the teleport network when the rally point of the producing building is on an entrance.")]
+		public readonly bool EnterOnRallyPoint = true;
+
+		public override object Create(ActorInitializer init) { return new TeleportNetworkTransportable(this, init); }
 	}
 
-	public class TeleportNetworkTransportable : IIssueOrder, IResolveOrder, IOrderVoice
+	public class TeleportNetworkTransportable : IIssueOrder, IResolveOrder, IOrderVoice, INotifyCreated
 	{
 		readonly TeleportNetworkTransportableInfo info;
+		readonly CPos[] rallyPoint;
 
-		public TeleportNetworkTransportable(TeleportNetworkTransportableInfo info)
+		public TeleportNetworkTransportable(TeleportNetworkTransportableInfo info, ActorInitializer init)
 		{
 			this.info = info;
+			rallyPoint = init.GetOrDefault<RallyPointInit>()?.Value;
+		}
+
+		void INotifyCreated.Created(Actor self)
+		{
+			if (!info.EnterOnRallyPoint || rallyPoint == null || rallyPoint.Length == 0)
+				return;
+
+			var entrance = self.World.ActorMap.GetActorsAt(rallyPoint[^1])
+				.FirstOrDefault(a => a.TraitOrDefault<TeleportNetwork>() != null);
+
+			if (entrance == null)
+				return;
+
+			var teleportNetwork = entrance.Trait<TeleportNetwork>();
+			if (!teleportNetwork.IsTraitEnabled() || !entrance.IsValidTeleportNetworkUser(self) || !HasEnoughCanals(entrance, teleportNetwork.Info.Type))
+				return;
+
+			// Queued after the creation activity that moves the actor to the rally point.
+			self.QueueActivity(new EnterTeleportNetwork(self, Target.FromActor(entrance), teleportNetwork.Info.Type));
 		}
 
 		public IEnumerable<IOrderTargeter> Orders
