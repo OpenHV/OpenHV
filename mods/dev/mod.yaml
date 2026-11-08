@@ -217,7 +217,7 @@ SpriteSequenceFormat: PaddedSpriteSequence
 
 AssetBrowser:
 	SpriteExtensions: .png
-	AudioExtensions: .wav
+	AudioExtensions: .ogg
 
 GameSpeeds:
 	DefaultSpeed: default
