@@ -132,6 +132,7 @@ FluentMessages:
 	hv|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
 	hv|fluent/rules.ftl
+	dev|fluent/chrome.ftl
 
 Include: ../hv/translations.yaml
 

@@ -9,19 +9,31 @@
  */
 #endregion
 
+using OpenRA.Mods.Common.Widgets;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
 {
-	public class AssetBrowserLauncherLogic : ChromeLogic
+	public class DevMainMenuLogic : ChromeLogic
 	{
+		bool menuVisible = true;
+
 		[ObjectCreator.UseCtor]
-		public AssetBrowserLauncherLogic()
+		public DevMainMenuLogic(Widget widget)
 		{
-			Game.OpenWindow("ASSETBROWSER_PANEL", new WidgetArgs
+			var mainMenu = widget.Get("MAIN_MENU");
+			mainMenu.IsVisible = () => menuVisible;
+
+			mainMenu.Get<ButtonWidget>("ASSETBROWSER_BUTTON").OnClick = () =>
 			{
-				{ "onExit", Game.Exit },
-			});
+				menuVisible = false;
+				Game.OpenWindow("ASSETBROWSER_PANEL", new WidgetArgs
+				{
+					{ "onExit", () => menuVisible = true },
+				});
+			};
+
+			mainMenu.Get<ButtonWidget>("QUIT_BUTTON").OnClick = Game.Exit;
 		}
 	}
 }

@@ -1,4 +1,39 @@
 Container@DEV_ROOT:
-	Logic: AssetBrowserLauncherLogic
+	Logic: DevMainMenuLogic
 	Width: WINDOW_WIDTH
 	Height: WINDOW_HEIGHT
+	Children:
+		Label@VERSION_LABEL:
+			Logic: VersionLabelLogic
+			X: WINDOW_WIDTH - 10
+			Y: WINDOW_HEIGHT - 19
+			Align: Right
+			Font: Regular
+			Shadow: True
+		Background@MAIN_MENU:
+			X: (WINDOW_WIDTH - WIDTH) / 2
+			Y: (WINDOW_HEIGHT - HEIGHT) / 2
+			Width: 260
+			Height: 160
+			Children:
+				Label@MAINMENU_LABEL_TITLE:
+					Y: 22
+					Width: PARENT_WIDTH
+					Height: 30
+					Text: label-dev-menu-title
+					Align: Center
+					Font: Title
+				Button@ASSETBROWSER_BUTTON:
+					X: PARENT_WIDTH / 2 - WIDTH / 2
+					Y: 60
+					Width: 140
+					Height: 30
+					Text: button-extras-menu-assetbrowser
+					Font: LargeBold
+				Button@QUIT_BUTTON:
+					X: PARENT_WIDTH / 2 - WIDTH / 2
+					Y: 100
+					Width: 140
+					Height: 30
+					Text: button-quit
+					Font: LargeBold
