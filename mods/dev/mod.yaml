@@ -1,0 +1,250 @@
+# License: CC-BY-SA-4.0
+
+Metadata:
+	Title: mod-title
+	Version: {DEV_VERSION}
+	Website: https://www.openhv.net
+	WebIcon32: https://www.openhv.net/images/web/icon.png
+	WindowTitle: mod-windowtitle
+	Hidden: true
+
+ModCredits:
+	ModTabTitle: OpenHV
+	ModCreditsFile: hv|CREDITS
+
+FileSystem: DefaultFileSystem
+	Packages:
+		^EngineDir
+		$hv: hv
+		$dev: dev
+		^EngineDir|mods/common: common
+		hv|bits/audio/cc0
+		hv|bits/audio/cc-by-30
+		hv|bits/audio/cc-by-40
+		hv|bits/audio/graion
+		hv|bits/audio/dzierzan
+		hv|bits/audio/dzierzan/miner
+		hv|bits/audio/dzierzan/technician
+		hv|bits/audio/dzierzan/announcer
+		hv|bits/audio/dzierzan/stealthtank
+		hv|bits/audio/dzierzan/beast
+		hv|bits/audio/dzierzan/seed
+		hv|bits/audio/dzierzan/builder
+		hv|bits/audio/dzierzan/flamer
+		hv|bits/audio/dzierzan/broker
+		hv|bits/audio/dzierzan/jetpacker
+		hv|bits/audio/dzierzan/civilian
+		hv|bits/audio/dzierzan/shocker
+		hv|bits/audio/dzierzan/common
+		hv|bits/audio/dzierzan/assaulttank
+		hv|bits/audio/flamewh33l/
+		hv|bits/audio/timbeek/
+		hv|bits/audio/pd/
+		hv|bits/audio/raxi88/radartank
+		hv|bits/palettes
+		hv|bits/sprites
+		hv|bits/sprites/aircraft
+		hv|bits/sprites/animals
+		hv|bits/sprites/buildings
+		hv|bits/sprites/effects
+		hv|bits/sprites/infantry
+		hv|bits/sprites/props
+		hv|bits/sprites/ships
+		hv|bits/sprites/terrain
+		hv|bits/sprites/vehicles
+
+MapFolders:
+	hv|maps: System
+
+SupportsMapsFrom: hv
+
+Rules:
+	hv|rules/editor.yaml
+	hv|rules/mapgen.yaml
+	hv|rules/player.yaml
+	hv|rules/infantry.yaml
+	hv|rules/vehicles.yaml
+	hv|rules/aircraft.yaml
+	hv|rules/ships.yaml
+	hv|rules/animals.yaml
+	hv|rules/bonus.yaml
+	hv|rules/weapons.yaml
+	hv|rules/bots.yaml
+	hv|rules/buildings.yaml
+	hv|rules/world.yaml
+	hv|rules/props.yaml
+	hv|rules/defaults.yaml
+	hv|rules/terrain.yaml
+	hv|rules/mothership.yaml
+	hv|rules/trade.yaml
+	dev|rules.yaml
+
+Sequences:
+	hv|sequences/animals.yaml
+	hv|sequences/world.yaml
+	hv|sequences/ui.yaml
+	hv|sequences/infantry.yaml
+	hv|sequences/vehicles.yaml
+	hv|sequences/aircraft.yaml
+	hv|sequences/buildings.yaml
+	hv|sequences/props.yaml
+	hv|sequences/weapons.yaml
+	hv|sequences/terrain.yaml
+	hv|sequences/ships.yaml
+
+Weapons:
+	hv|weapons/explosions.yaml
+	hv|weapons/ballistics.yaml
+	hv|weapons/firearms.yaml
+	hv|weapons/missiles.yaml
+	hv|weapons/energetic.yaml
+	hv|weapons/bombs.yaml
+	hv|weapons/debris.yaml
+	hv|weapons/fake.yaml
+	hv|weapons/common.yaml
+	hv|weapons/firefighting.yaml
+
+TileSets:
+	hv|tileset.yaml
+
+Cursors:
+	hv|cursor.yaml
+
+Chrome:
+	hv|chrome.yaml
+
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.HV.dll
+
+ChromeLayout:
+	common|chrome/assetbrowser.yaml
+	common|chrome/color-picker.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/tooltips.yaml
+	dev|chrome/dev.yaml
+
+FluentMessages:
+	common|fluent/common.ftl
+	hv|fluent/common.ftl
+	common|fluent/chrome.ftl
+	hv|fluent/chrome.ftl
+	common|fluent/ingame-debug.ftl
+	common|fluent/hotkeys.ftl
+	hv|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	hv|fluent/rules.ftl
+
+Include: ../hv/translations.yaml
+
+Music:
+	hv|audio/music.yaml
+
+Notifications:
+	hv|audio/notifications.yaml
+
+Voices:
+	hv|audio/voices.yaml
+
+Hotkeys:
+
+LoadScreen: PanelLoadScreen
+	Image: hv|bits/ui/loadscreen.png
+
+ChromeMetrics:
+	common|metrics.yaml
+	hv|metrics.yaml
+
+Fonts:
+	TinyPixel:
+		Font: hv|bits/fonts/terminal-grotesque.ttf
+		Size: 11
+		Ascender: 9
+	Tiny:
+		Font: hv|bits/fonts/Inconsolata-Regular.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
+		Size: 10
+		Ascender: 8
+	Small:
+		Font: hv|bits/fonts/Inconsolata-Regular.ttf
+		Size: 12
+		Ascender: 9
+	Regular:
+		Font: hv|bits/fonts/Inconsolata-Regular.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
+		Size: 18
+		Ascender: 14
+	LargeBold:
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
+		Size: 16
+		Ascender: 7
+	BigBold:
+		Font: hv|bits/fonts/Inconsolata-Bold.ttf
+		Size: 24
+		Ascender: 18
+	Title:
+		Font: hv|bits/fonts/PressStart2P.ttf
+		Size: 20
+		Ascender: 14
+
+MapGrid:
+	Type: Rectangular
+	SubCellOffsets: 0,0,0, -256,-256,0, 256,-256,0, 0,256,0
+	DefaultSubCell: 1
+
+DefaultOrderGenerator: UnitOrderGenerator
+
+TerrainFormat: CustomTerrain
+
+VideoFormats:
+
+SpriteFormats: PngSheet
+
+SoundFormats: Wav, Ogg
+
+SpriteSequenceFormat: PaddedSpriteSequence
+
+AssetBrowser:
+	SpriteExtensions: .png
+	AudioExtensions: .wav
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: options-game-speed.slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: options-game-speed.slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: options-game-speed.normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: options-game-speed.fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: options-game-speed.faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: options-game-speed.fastest
+			Timestep: 20
+			OrderLatency: 6
+
+WorldViewportSizes:
+	CloseWindowHeights: 320, 640
+	MediumWindowHeights: 640, 800
+	FarWindowHeights: 800, 1024

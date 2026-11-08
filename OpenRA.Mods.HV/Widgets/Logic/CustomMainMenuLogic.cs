@@ -125,17 +125,6 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 
 			extrasMenu.Get<ButtonWidget>("MAP_EDITOR_BUTTON").OnClick = () => SwitchMenu(MenuType.MapEditor);
 
-			var assetBrowserButton = extrasMenu.GetOrNull<ButtonWidget>("ASSETBROWSER_BUTTON");
-			if (assetBrowserButton != null)
-				assetBrowserButton.OnClick = () =>
-				{
-					SwitchMenu(MenuType.None);
-					Game.OpenWindow("ASSETBROWSER_PANEL", new WidgetArgs
-					{
-						{ "onExit", () => SwitchMenu(MenuType.Extras) },
-					});
-				};
-
 			extrasMenu.Get<ButtonWidget>("CREDITS_BUTTON").OnClick = () =>
 			{
 				SwitchMenu(MenuType.None);

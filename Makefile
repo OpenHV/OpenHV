@@ -147,6 +147,9 @@ test: all
 	@echo
 	@echo "Checking $(MOD_ID) sprite sequences..."
 	@./utility.sh --check-missing-sprites
+	@echo
+	@echo "Testing dev mod MiniYAML..."
+	@Mod=dev ./utility.sh --check-yaml
 
 docs: engine
 	@echo

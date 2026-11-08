@@ -1,0 +1,4 @@
+Container@DEV_ROOT:
+	Logic: AssetBrowserLauncherLogic
+	Width: WINDOW_WIDTH
+	Height: WINDOW_HEIGHT

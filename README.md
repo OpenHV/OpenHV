@@ -6,7 +6,7 @@ A mod for [OpenRA](https://www.openra.net) based on the [Hard Vacuum](https://lo
 
 # Getting Started [![Packaging status](https://repology.org/badge/tiny-repos/openhv.svg)](https://repology.org/project/openhv/versions)
 
-To launch the project from the development environment you must first compile the project by running `make.cmd` (Windows), or opening a terminal in the SDK directory and running `make` (Linux / macOS). You can then run `launch-game.cmd` (Windows) or `launch-game.sh` (Linux / macOS) to run the game. More details on [building](https://github.com/OpenHV/OpenHV/wiki/Build) the game are available at the wiki.
+To launch the project from the development environment you must first compile the project by running `make.cmd` (Windows), or opening a terminal in the SDK directory and running `make` (Linux / macOS). You can then run `launch-game.cmd` (Windows) or `launch-game.sh` (Linux / macOS) to run the game. There is also a separate developer mod that can be started with `Game.Mod=dev` as parameter. More details on [building](https://github.com/OpenHV/OpenHV/wiki/Build) the game are available at the wiki.
 
 ![MiniYAML](https://www.openhv.net/images/readme/miniyaml.png)
 
