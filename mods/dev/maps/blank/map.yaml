@@ -1,0 +1,30 @@
+MapFormat: 12
+
+RequiresMod: hv
+
+Title: Blank
+
+Author: Matt
+
+Tileset: PLANET
+
+MapSize: 7,7
+
+Bounds: 1,1,5,5
+
+Visibility: Shellmap
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: yi
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: yi
+
+Actors:

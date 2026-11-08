@@ -50,7 +50,7 @@ FileSystem: DefaultFileSystem
 		hv|bits/sprites/vehicles
 
 MapFolders:
-	hv|maps: System
+	dev|maps: System
 
 SupportsMapsFrom: hv
 
