@@ -149,8 +149,7 @@ Voices:
 
 Hotkeys:
 
-LoadScreen: PanelLoadScreen
-	Image: hv|bits/ui/loadscreen.png
+LoadScreen: TextLoadScreen
 
 ChromeMetrics:
 	common|metrics.yaml
