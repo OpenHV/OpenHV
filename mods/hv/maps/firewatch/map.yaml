@@ -64,6 +64,8 @@ Actors:
 
 Rules: hv|rules/campaign.yaml, rules.yaml
 
+Weapons: weapons.yaml
+
 FluentMessages: hv|fluent/campaign.ftl, hv|fluent/lua.ftl, map.ftl
 
 Sequences: sequences.yaml
