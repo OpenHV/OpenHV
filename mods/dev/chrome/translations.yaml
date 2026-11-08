@@ -1,0 +1,121 @@
+Background@TRANSLATIONS_PANEL:
+	Logic: TranslationsLogic
+	X: (WINDOW_WIDTH - WIDTH) / 2
+	Y: (WINDOW_HEIGHT - HEIGHT) / 2
+	Width: 900
+	Height: 640
+	Children:
+		Label@TITLE:
+			Y: 16
+			Width: PARENT_WIDTH
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: label-translations-title
+		Label@LANGUAGE_DESC:
+			X: 20
+			Y: 40
+			Width: 260
+			Height: 25
+			Font: TinyBold
+			Text: label-translations-language
+		DropDownButton@LANGUAGE_DROPDOWN:
+			X: 20
+			Y: 62
+			Width: 260
+			Height: 25
+			Font: Bold
+		Label@FILE_DESC:
+			X: 300
+			Y: 40
+			Width: PARENT_WIDTH - 320
+			Height: 25
+			Font: TinyBold
+			Text: label-translations-file
+		DropDownButton@FILE_DROPDOWN:
+			X: 300
+			Y: 62
+			Width: PARENT_WIDTH - 320
+			Height: 25
+			Font: Bold
+		Label@SOURCE_HEADER:
+			X: 32
+			Y: 95
+			Width: 400
+			Height: 25
+			Font: Bold
+			Text: label-translations-source
+		Label@TRANSLATION_HEADER:
+			X: 443
+			Y: 95
+			Width: 400
+			Height: 25
+			Font: Bold
+			Text: label-translations-translation
+		ScrollPanel@MESSAGE_LIST:
+			X: 20
+			Y: 120
+			Width: PARENT_WIDTH - 40
+			Height: PARENT_HEIGHT - 300
+			Children:
+				ScrollItem@MESSAGE_TEMPLATE:
+					X: 2
+					Width: PARENT_WIDTH - 27
+					Height: 25
+					Visible: false
+					Children:
+						Label@SOURCE:
+							X: 10
+							Width: (PARENT_WIDTH - 30) / 2
+							Height: 25
+							Font: Regular
+						Label@TRANSLATION:
+							X: PARENT_WIDTH / 2 + 5
+							Width: (PARENT_WIDTH - 30) / 2
+							Height: 25
+							Font: Regular
+		Label@SOURCE_DESC:
+			X: 20
+			Y: PARENT_HEIGHT - 175
+			Width: PARENT_WIDTH - 40
+			Height: 20
+			Font: TinyBold
+			Text: label-translations-source
+		ReadOnlyTextField@SOURCE_TEXT:
+			X: 20
+			Y: PARENT_HEIGHT - 155
+			Width: PARENT_WIDTH - 40
+			Height: 25
+		Label@TRANSLATION_DESC:
+			X: 20
+			Y: PARENT_HEIGHT - 125
+			Width: PARENT_WIDTH - 40
+			Height: 20
+			Font: TinyBold
+			Text: label-translations-translation
+		TextField@TRANSLATION_TEXT:
+			X: 20
+			Y: PARENT_HEIGHT - 105
+			Width: PARENT_WIDTH - 40
+			Height: 25
+		Label@STATUS:
+			X: 20
+			Y: PARENT_HEIGHT - 50
+			Width: PARENT_WIDTH - 300
+			Height: 30
+			Font: Regular
+		Button@SAVE_BUTTON:
+			X: PARENT_WIDTH - 260
+			Y: PARENT_HEIGHT - 50
+			Width: 110
+			Height: 30
+			Font: Bold
+			Text: button-translations-save
+		Button@BACK_BUTTON:
+			X: PARENT_WIDTH - 130
+			Y: PARENT_HEIGHT - 50
+			Width: 110
+			Height: 30
+			Font: Bold
+			Text: button-back
+			Key: escape

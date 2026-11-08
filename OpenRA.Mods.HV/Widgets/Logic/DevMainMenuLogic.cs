@@ -14,12 +14,12 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.HV.Widgets.Logic
 {
-	public class DevMainMenuLogic : ChromeLogic
+	public class DevelopmentMainMenuLogic : ChromeLogic
 	{
 		bool menuVisible = true;
 
 		[ObjectCreator.UseCtor]
-		public DevMainMenuLogic(Widget widget)
+		public DevelopmentMainMenuLogic(Widget widget)
 		{
 			var mainMenu = widget.Get("MAIN_MENU");
 			mainMenu.IsVisible = () => menuVisible;
@@ -28,6 +28,15 @@ namespace OpenRA.Mods.HV.Widgets.Logic
 			{
 				menuVisible = false;
 				Game.OpenWindow("ASSETBROWSER_PANEL", new WidgetArgs
+				{
+					{ "onExit", () => menuVisible = true },
+				});
+			};
+
+			mainMenu.Get<ButtonWidget>("TRANSLATIONS_BUTTON").OnClick = () =>
+			{
+				menuVisible = false;
+				Game.OpenWindow("TRANSLATIONS_PANEL", new WidgetArgs
 				{
 					{ "onExit", () => menuVisible = true },
 				});

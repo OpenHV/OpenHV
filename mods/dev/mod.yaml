@@ -118,9 +118,11 @@ Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.HV.dll
 ChromeLayout:
 	common|chrome/assetbrowser.yaml
 	common|chrome/color-picker.yaml
+	common|chrome/confirmation-dialogs.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/tooltips.yaml
-	dev|chrome/dev.yaml
+	dev|chrome/development.yaml
+	dev|chrome/translations.yaml
 
 FluentMessages:
 	common|fluent/common.ftl

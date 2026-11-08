@@ -1,5 +1,5 @@
 Container@DEV_ROOT:
-	Logic: DevMainMenuLogic
+	Logic: DevelopmentMainMenuLogic
 	Width: WINDOW_WIDTH
 	Height: WINDOW_HEIGHT
 	Children:
@@ -14,7 +14,7 @@ Container@DEV_ROOT:
 			X: (WINDOW_WIDTH - WIDTH) / 2
 			Y: (WINDOW_HEIGHT - HEIGHT) / 2
 			Width: 260
-			Height: 160
+			Height: 200
 			Children:
 				Label@MAINMENU_LABEL_TITLE:
 					Y: 22
@@ -30,9 +30,16 @@ Container@DEV_ROOT:
 					Height: 30
 					Text: button-extras-menu-assetbrowser
 					Font: LargeBold
-				Button@QUIT_BUTTON:
+				Button@TRANSLATIONS_BUTTON:
 					X: PARENT_WIDTH / 2 - WIDTH / 2
 					Y: 100
+					Width: 140
+					Height: 30
+					Text: button-dev-menu-translations
+					Font: LargeBold
+				Button@QUIT_BUTTON:
+					X: PARENT_WIDTH / 2 - WIDTH / 2
+					Y: 140
 					Width: 140
 					Height: 30
 					Text: button-quit
