@@ -69,9 +69,9 @@ namespace OpenRA.Mods.HV
 
 	public sealed class InternetRelayChat : IGlobalModData
 	{
-		public readonly string Hostname = "irc.f-hub.org";
+		public readonly string Hostname = "irc.libera.chat";
 		public readonly int Port = 6697;
-		public readonly string Channel = "openhv-lobby";
+		public readonly string Channel = "openhv";
 		public readonly string QuitMessage = "Battle control terminated!";
 		public readonly string TimeStampFormat = "HH:mm";
 
