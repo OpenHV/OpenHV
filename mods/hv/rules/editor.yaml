@@ -129,12 +129,12 @@ EditorPlayer:
 	Inherits: ^BasePlayer
 
 DROPSHIP.colorpicker:
-	Inherits: DROPSHIP
-	-Buildable:
-	-MapEditorData:
-	-GrantConditionOnDamageState:
-	-FloatingSpriteEmitter@Smoke:
-	-Encyclopedia:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: false
+	QuantizeFacingsFromSequence:
+	Aircraft:
+		InitialFacing: 512
+	WithFacingSpriteBody:
 	RenderSprites:
 		Image: dropship
 		Palette: colorpicker
