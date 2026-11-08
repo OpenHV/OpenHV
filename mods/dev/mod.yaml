@@ -8,10 +8,6 @@ Metadata:
 	WindowTitle: mod-windowtitle
 	Hidden: true
 
-ModCredits:
-	ModTabTitle: OpenHV
-	ModCreditsFile: hv|CREDITS
-
 FileSystem: DefaultFileSystem
 	Packages:
 		^EngineDir
