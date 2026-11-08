@@ -177,7 +177,7 @@
 		TextNotification: notification-enemy-units-detected
 	Passenger:
 		CargoType: Vehicle
-		Weight: 5
+		Weight: 4
 
 ^Pod:
 	Inherits: ^Vehicle
@@ -189,7 +189,7 @@
 	Voiced:
 		VoiceSet: GenericVoice2
 	Health:
-		HP: 15000
+		HP: 22500
 	Armor:
 		Type: None
 	Passenger:
@@ -205,7 +205,7 @@
 	Crushable:
 		RequiresCondition: !shield
 		CrushClasses: Pods
-		WarnProbability: 15
+		WarnProbability: 50
 	RevealsShroud:
 		Range: 4c0
 		MinRange: 2c0
@@ -283,7 +283,7 @@
 		Bounds: 1024, 1024
 	Aircraft:
 		AirborneCondition: airborne
-		CruiseAltitude: 2c0
+		CruiseAltitude: 2600
 		InitialFacing: 768
 		Voice: Move
 		TakeOffOnResupply: true
@@ -331,6 +331,24 @@
 		Weapon: UnitExplodeMedium
 		EmptyWeapon: UnitExplodeMedium
 
+^AirCreature:
+	Inherits: ^Plane
+	Aircraft:
+		CruiseAltitude: 2560
+	DeathSounds:
+	-AppearsOnRadar:
+	-Guard:
+	-Repairable:
+	-MustBeDestroyed:
+	-GrantRandomCondition@SpawnPilot:
+	-FireWarheadsOnDeath@SpawnPilot:
+	-ChangesHealth@Reconstructor:
+	-WithDecoration@Reconstructor:
+	-GrantConditionOnPrerequisite@Reconstructor:
+	-Selectable:
+	Interactable:
+	-ProximityCaptor:
+
 ^PlaneHusk:
 	Inherits@Husk: ^Husk
 	Inherits@Sprite: ^SpriteActor
@@ -364,6 +382,30 @@
 	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
+
+^BaseDrone:
+	Inherits: ^SpawnedPlane
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 4c0
+		MinRange: 2c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	RevealsShroud@Hacked:
+		Range: 2c0
+		Type: GroundPosition
+	Aircraft:
+		TurnSpeed: 60
+		AltitudeVelocity: 240
+		VTOL: true
+		Repulsable: false
+		AirborneCondition: airborne
+		CanHover: False
+		LandAltitude: 0c0
+	-MapEditorData:
 
 ^CargoPlane:
 	Inherits@Exists: ^ExistsInWorld
@@ -458,6 +500,19 @@
 		RiseTicks: 8
 	BodyOrientation:
 
+^Hovercraft:
+	Inherits: ^Plane
+	Aircraft:
+		CanHover: True
+		CruisingCondition: cruising
+		WaitDistanceFromResupplyBase: 4c0
+	Hovers@Cruising:
+		RequiresCondition: cruising
+		BobDistance: -64
+		InitialHeight: 64
+		FallTicks: 8
+		RiseTicks: 8
+
 ^1x1Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -528,7 +583,7 @@
 	Armor:
 		Type: Steel
 	Health:
-		HP: 40000
+		HP: 60000
 	Building:
 		Footprint: x
 	ActorPreviewPlaceBuildingPreview:
@@ -1236,7 +1291,7 @@
 	Valued:
 		Cost: 300
 	Health:
-		HP: 75000
+		HP: 112500
 	Armor:
 		Type: Concrete
 	LineBuildNode:
@@ -1337,3 +1392,10 @@
 		Bounds: 512, 512
 	Voiced:
 		VoiceSet: CivilianVoice
+
+^WeaponReloadDelayUpgrade:
+	ReloadDelayMultiplier:
+		Modifier: 75
+		RequiresCondition: lightningboat-reloaddelay-increase
+	ExternalCondition:
+		Condition: lightningboat-reloaddelay-increase
