@@ -48,7 +48,7 @@ jobs:
 
   macos:
     name: macOS Disk Image
-    runs-on: macos-14
+    runs-on: macos-15
 
     steps:
       - name: Clone Repository
